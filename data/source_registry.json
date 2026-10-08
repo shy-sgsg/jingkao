@@ -1680,6 +1680,28 @@
     "notes": "逐岗详情列出职位代码、学历/学位、经济学/管理学专业、用人部门、岗位简介、其他条件、专业能力测试、面试比例及山区夜班备注；第三方镜像，官方逐码核验未完成。"
   },
   {
+    "sourceId": "gwy-2026-ttby-list-row",
+    "title": "上岸鸭职位库：2026昌平天通苑北街道列表行（第59页）",
+    "publisher": "上岸鸭职位库（高顿教育）",
+    "level": "secondary",
+    "evidenceType": "position_mirror_partial",
+    "year": 2026,
+    "url": "https://zw.gwy.com/bj/?isLimit=1&isflag=0&page=59",
+    "accessedAt": "2026-10-08",
+    "notes": "可见列表摘录列出普通京考天通苑北街道“政法专项岗”，本科法学类（0301）、研究生法学（0301）/法律（0351），本科及以上，2026应届毕业生；摘录未提供职位代码和招录人数，详情页未取得，故仅作候选发现，不导入职位表。"
+  },
+  {
+    "sourceId": "gwy-2026-yanshou-list-row",
+    "title": "上岸鸭职位库：2026昌平延寿镇列表行（第61页）",
+    "publisher": "上岸鸭职位库（高顿教育）",
+    "level": "secondary",
+    "evidenceType": "position_mirror_partial",
+    "year": 2026,
+    "url": "https://zw.gwy.com/bj/?isLimit=1&isflag=0&page=61",
+    "accessedAt": "2026-10-08",
+    "notes": "可见列表摘录列出延寿镇“综合行政执法岗”和“统计专项岗”及专业/学历条件；摘录未提供职位代码和招录人数。统计专项岗另有京考职位网详情代码241264902；本条仅记录尚未取得代码的执法岗线索，不由年度单位汇总倒推出代码或人数。"
+  },
+  {
     "sourceId": "fenbi-2026-selection-ttby",
     "title": "粉笔职位库：2026定向选调/优培天通苑北街道职位",
     "publisher": "粉笔职位库",
