@@ -17,8 +17,8 @@ test('research findings derive sample coverage, score distribution, and evidence
     reportedRecruits: [142, 199],
   });
   assert.deepEqual(byId['coverage-2026'].facts, {
-    samplePositions: 83,
-    sampleRecruits: 130,
+    samplePositions: 86,
+    sampleRecruits: 136,
     reportedPositions: [88, 88],
     reportedRecruits: [138, 138],
   });
@@ -28,11 +28,11 @@ test('research findings derive sample coverage, score distribution, and evidence
     minimum: 106.25,
     maximum: 139.5,
     median: 127.75,
-    linkedRows: 24,
+    linkedRows: 25,
     ambiguousRows: 6,
   });
   assert.deepEqual(byId['qualification-coverage'].facts, {
-    positions: 83,
+    positions: 86,
     structuredRequirements: 11,
     completeEligibility: 0,
     officialPositionRows: 0,
@@ -71,7 +71,7 @@ test('the research route presents expandable source lineage and its topic filter
   await unlockTestAccount(listeners, accountId);
 
   assert.match(root.innerHTML, /<h1>研究结论<\/h1>/);
-  assert.match(root.innerHTML, /2026 年收录 83 条岗位样例/);
+  assert.match(root.innerHTML, /2026 年收录 86 条岗位样例/);
   assert.match(root.innerHTML, /95 条职位样例/);
   assert.match(root.innerHTML, /查看证据与限制/);
   assert.match(root.innerHTML, /href="#\/evidence"/);

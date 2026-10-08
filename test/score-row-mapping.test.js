@@ -14,6 +14,7 @@ test('2026 cutoff rows link only to a unique exact year, unit, and title match',
     '2026-cgzj-11': '821263101',
     '2026-cgzj-12': '821261401',
     '2026-cgzj-13': '221262601',
+    '2026-cgzj-18': '821261502',
     '2026-cgzj-24': '231263301',
     '2026-cgzj-25': '231263901',
     '2026-cgzj-26': '241264902',
@@ -48,11 +49,11 @@ test('2026 cutoff rows link only to a unique exact year, unit, and title match',
     scoreRows.reduce((counts, row) => ({ ...counts, [row.mappingConfidence]: counts[row.mappingConfidence] + 1 }), {
       high: 0, ambiguous: 0, unmatched: 0,
     }),
-    { high: 24, ambiguous: 6, unmatched: 1 },
+    { high: 25, ambiguous: 6, unmatched: 0 },
   );
 });
 
-test('same-name multi-position rows stay ambiguous and missing rows stay unmatched', () => {
+test('same-name multi-position rows stay ambiguous while source-backed matches use the exact code', () => {
   const ambiguousIds = [
     '2026-cgzj-01', '2026-cgzj-06', '2026-cgzj-09',
     '2026-cgzj-14', '2026-cgzj-20', '2026-cgzj-22',
@@ -69,12 +70,13 @@ test('same-name multi-position rows stay ambiguous and missing rows stay unmatch
     assert.equal(row.mappingConfidence, 'ambiguous');
   }
 
-  const missingRow = scoreRows.find((item) => item.id === '2026-cgzj-18');
-  const missingMatches = positions.filter((position) => position.year === missingRow.year
-    && position.unit === missingRow.unit
-    && position.title === missingRow.title);
+  const resolvedRow = scoreRows.find((item) => item.id === '2026-cgzj-18');
+  const resolvedMatches = positions.filter((position) => position.year === resolvedRow.year
+    && position.unit === resolvedRow.unit
+    && position.title === resolvedRow.title);
 
-  assert.equal(missingMatches.length, 0);
-  assert.equal(missingRow.positionCode, null);
-  assert.equal(missingRow.mappingConfidence, 'unmatched');
+  assert.equal(resolvedMatches.length, 1);
+  assert.equal(resolvedMatches[0].code, '821261502');
+  assert.equal(resolvedRow.positionCode, '821261502');
+  assert.equal(resolvedRow.mappingConfidence, 'high');
 });

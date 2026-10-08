@@ -103,11 +103,11 @@ class WorkbookEvidenceTests(unittest.TestCase):
         target_codes = {
             "121262901", "221262201", "221262301", "221262401", "221262601",
             "821263001", "821263101", "241264201", "231264601", "241264202", "241264902",
-            "231264401", "231264602",
+            "231264401", "231264602", "821261501", "821261502", "821261503",
         }
         matches = {row["code"]: row for row in positions if row.get("code") in target_codes}
         self.assertEqual(set(matches), target_codes)
-        self.assertEqual(sum(row["year"] == 2026 for row in positions), 83)
+        self.assertEqual(sum(row["year"] == 2026 for row in positions), 86)
         source_ids = {source["sourceId"] for source in sources}
         for code, position in matches.items():
             with self.subTest(code=code):
@@ -116,14 +116,16 @@ class WorkbookEvidenceTests(unittest.TestCase):
                 self.assertGreater(position["recruitCount"], 0)
                 self.assertTrue(position["sources"])
                 self.assertTrue(set(position["sources"]).issubset(source_ids))
+        for code in ("821261501", "821261502", "821261503"):
+            self.assertIn("fenbi-2026-changping-list", matches[code]["sources"])
 
     def test_imports_all_visible_position_cutoffs_and_only_unique_code_matches(self):
         rows = build_score_rows()
         self.assertEqual(len(rows), 31)
         self.assertEqual(len({row["id"] for row in rows}), 31)
-        self.assertEqual(sum(row["mappingConfidence"] == "high" for row in rows), 24)
+        self.assertEqual(sum(row["mappingConfidence"] == "high" for row in rows), 25)
         self.assertEqual(sum(row["mappingConfidence"] == "ambiguous" for row in rows), 6)
-        self.assertEqual(sum(row["mappingConfidence"] == "unmatched" for row in rows), 1)
+        self.assertEqual(sum(row["mappingConfidence"] == "unmatched" for row in rows), 0)
         self.assertTrue(all(row["positionCode"] is None for row in rows if row["mappingConfidence"] != "high"))
         self.assertEqual({row["orgType"] for row in rows}, {"区直", "街道", "镇"})
         self.assertEqual(min(row["score"] for row in rows), 106.25)
@@ -213,12 +215,12 @@ class DataValidatorTests(unittest.TestCase):
             result.stdout,
         )
         self.assertIn(
-            "2026 coverage: org type 区直 55, 街道 10, 镇 18, 垂直/驻区 0; "
-            "major codes 59/83; structured requirements 11/83; eligibility complete 0/83; "
-            "cross verified 0/83; position sources official 0, secondary 83, other 0",
+            "2026 coverage: org type 区直 58, 街道 10, 镇 18, 垂直/驻区 0; "
+            "major codes 62/86; structured requirements 11/86; eligibility complete 0/86; "
+            "cross verified 0/86; position sources official 0, secondary 86, other 0",
             result.stdout,
         )
-        self.assertIn("Score mappings: high 24, ambiguous 6, unmatched 1 (31 rows)", result.stdout)
+        self.assertIn("Score mappings: high 25, ambiguous 6, unmatched 0 (31 rows)", result.stdout)
         self.assertIn(
             "Observation metric rows: registered 0, qualified 12, paid 0, confirmed 0, actual test takers 0",
             result.stdout,

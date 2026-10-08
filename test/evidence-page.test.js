@@ -71,24 +71,25 @@ test('the rendered position library exposes 2025 mirror coverage and the vertica
   const years = [...root.innerHTML.matchAll(/<span class="year-pill">(\d{4})<\/span>/g)].map((match) => Number(match[1]));
 
   assert.match(root.innerHTML, /2024 年收录 95 条镜像行，2025 年收录 91 条镜像明细/);
-  assert.match(root.innerHTML, /2026 年已收录 83 条逐岗镜像明细 \/ 130 人；华图分类页汇总 88 岗 \/ 138 人，仍有 5 岗 \/ 8 人尚未取得逐岗明细/);
+  assert.match(root.innerHTML, /2026 年已收录 86 条逐岗镜像明细 \/ 136 人；华图分类页汇总 88 岗 \/ 138 人，仍有 2 岗 \/ 2 人尚未取得逐岗明细/);
   assert.match(root.innerHTML, /option value="垂直\/驻区"/);
   assert.match(root.innerHTML, /id="job-search"/);
-  assert.match(root.innerHTML, /显示 1–25 条，共 269 条/);
+  assert.match(root.innerHTML, /显示 1–25 条，共 272 条/);
   assert.ok(dataset.positions.some((position) => position.code === '221264501'), 'the searched role remains in the year-filterable dataset');
   assert.match(root.innerHTML, /90 条明细在两处二手镜像逐字段一致/);
   assert.ok(years.every((year, index) => index === 0 || years[index - 1] >= year), 'position rows should be grouped newest year first');
 });
 
-test('the evidence page displays secondary 2026 unit gaps without presenting them as imported positions', async () => {
+test('the evidence page displays the remaining secondary 2026 unit gaps without overstating resolved units', async () => {
   const { root } = await renderSourceApp('#/evidence');
 
   assert.match(root.innerHTML, /职位明细缺口定位/);
-  assert.match(root.innerHTML, /北京市昌平区人力资源和社会保障局/);
-  assert.match(root.innerHTML, /0 \/ 3 岗/);
+  assert.match(root.innerHTML, /北京市昌平区天通苑北街道/);
+  assert.match(root.innerHTML, /0 \/ 1 岗/);
+  assert.match(root.innerHTML, /北京市昌平区延寿镇/);
   assert.match(root.innerHTML, /1 \/ 2 岗/);
-  assert.match(root.innerHTML, /阳坊镇/);
-  assert.match(root.innerHTML, /北七家镇/);
+  const gapTable = root.innerHTML.match(/<table[^>]*class="data-table unit-gap-table"[\s\S]*?<\/table>/)?.[0] || '';
+  assert.doesNotMatch(gapTable, /人力资源和社会保障局|阳坊镇|北七家镇/);
   assert.match(root.innerHTML, /二手线索/);
   assert.match(root.innerHTML, /不补造职位记录，也不视为官方核验/);
   assert.match(root.innerHTML, /京考职位网：2026昌平职位汇总/);
@@ -140,7 +141,7 @@ test('the source page exposes evidence-based coverage without presenting mirror 
   assert.match(root.innerHTML, /年度职位样例与第三方汇总对照/);
   assert.match(root.innerHTML, /2024[\s\S]*?95 \/ 95 条/);
   assert.match(root.innerHTML, /2025[\s\S]*?91 \/ 91 条/);
-  assert.match(root.innerHTML, /2026[\s\S]*?83 \/ 88 条/);
+  assert.match(root.innerHTML, /2026[\s\S]*?86 \/ 88 条/);
   assert.match(root.innerHTML, /31 条具名分数记录[\s\S]*?部分样本/);
   assert.match(root.innerHTML, /年度官方职位分母未知/);
   assert.match(root.innerHTML, /条数相同不代表职位代码集合一致/);

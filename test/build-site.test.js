@@ -107,8 +107,8 @@ test('standalone site executes and renders the homepage from its embedded app mo
   const { root: homepage } = await renderStandaloneRoute(script, '');
   const markup = homepage.innerHTML;
   assert.match(markup, /2026 职位覆盖/);
-  assert.match(markup, /83<small> \/ 88 个职位<\/small>/);
-  assert.match(markup, /130 \/ 138 人已收录 · 第三方汇总对照/);
+  assert.match(markup, /86<small> \/ 88 个职位<\/small>/);
+  assert.match(markup, /136 \/ 138 人已收录 · 第三方汇总对照/);
 
   const routes = [
     ['guide', '使用指南'], ['plan', '50 天复习计划'], ['aptitude', '行测能力'],
@@ -121,7 +121,7 @@ test('standalone site executes and renders the homepage from its embedded app mo
     const rendered = await renderStandaloneRoute(script, route);
     assert.match(rendered.root.innerHTML, new RegExp(title), `the standalone ${route} route should render`);
     if (route === 'research') {
-      assert.match(rendered.root.innerHTML, /2026 年收录 83 条岗位样例/);
+      assert.match(rendered.root.innerHTML, /2026 年收录 86 条岗位样例/);
       assert.match(rendered.root.innerHTML, /31 条部分样本/);
       assert.match(rendered.root.innerHTML, /data-action="filter-research-topic"/);
     }
@@ -295,7 +295,7 @@ test('score scenario exposes every requested segment and labels the narrower mat
   const { root, listeners } = await renderStandaloneRoute(script, 'scenarios');
 
   assert.match(root.innerHTML, /<select id="scenario-scope"/);
-  for (const [segment, sampleCount] of [['全部昌平', 31], ['区直', 23], ['街道', 3], ['镇', 5], ['普通职位', 14], ['行政执法', 7], ['公共管理相关', 4]]) {
+  for (const [segment, sampleCount] of [['全部昌平', 31], ['区直', 23], ['街道', 3], ['镇', 5], ['普通职位', 15], ['行政执法', 7], ['公共管理相关', 4]]) {
     assert.ok(root.innerHTML.includes(`${segment} · n=${sampleCount}`), `score scope selector should show ${segment}'s ${sampleCount} source-backed rows`);
   }
   assert.match(root.innerHTML, /岗位类别仅纳入代码、单位与岗位名均唯一匹配的分数记录/);
