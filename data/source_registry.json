@@ -1678,5 +1678,16 @@
     "reportedPositionCount": 1,
     "reportedRecruitCount": 1,
     "notes": "逐岗详情列出职位代码、学历/学位、经济学/管理学专业、用人部门、岗位简介、其他条件、专业能力测试、面试比例及山区夜班备注；第三方镜像，官方逐码核验未完成。"
+  },
+  {
+    "sourceId": "fenbi-2026-selection-ttby",
+    "title": "粉笔职位库：2026定向选调/优培天通苑北街道职位",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "separate_selection_program",
+    "year": 2026,
+    "url": "https://www.fenbi.com/page/positions/3/414026?department=%E5%8C%97%E4%BA%AC%E5%B8%82%E6%98%8C%E5%B9%B3%E5%8C%BA%E5%A4%A9%E9%80%9A%E8%8B%91%E5%8C%97%E8%A1%97%E9%81%93",
+    "accessedAt": "2026-10-08",
+    "notes": "该页属于2026年度定向选调和“优培计划”职位库，列出天通苑北街道规划建设岗221221501（1岗/1人）。此项目与2026年度普通考试录用公务员职位表分列，不纳入昌平京考88岗/138人，也不能作为普通京考天通苑北缺失岗位的替代。"
   }
 ]
