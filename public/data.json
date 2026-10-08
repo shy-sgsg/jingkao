@@ -2,12 +2,130 @@
   "schemaVersion": 1,
   "generatedAt": "2026-10-08",
   "dataAsOf": "2026-10-08",
-  "scopeNote": "职位库为可追溯候选，不是昌平区全量官方职位表。2024年收录华图镜像95条职位行/197人，其他二手汇总为93/142与97/199，范围差异未由官方附件对账。2025年收录91条二手镜像职位行，其中90条与另一处镜像字段一致、1条仅单一镜像可见；来源独立性未验证。2026年仍为部分镜像样例。职位事实与区级报名快照、部分面试分数样本分开保存。",
+  "scopeNote": "职位库仍为可追溯候选，不是北京全市全量官方职位表。现有2024—2026年职位行主要是昌平二手镜像样例；年度官方全市分母及逐代码核验尚未完成。区目录按北京市民政局2026年行政区划代码标准化；职位区县仅在招录单位名匹配标准区名或经审阅别名时赋值，其余保留未知。职位事实与报名快照、部分面试分数样本分开保存。",
   "studyMeta": {
     "days": 50,
     "plannedQuestions": 5520,
     "plannedHours": 341.0
   },
+  "districts": [
+    {
+      "id": "dongcheng",
+      "code": "110101",
+      "name": "东城区",
+      "unitMatchAliases": [],
+      "sourceId": "beijing-district-codes-2026"
+    },
+    {
+      "id": "xicheng",
+      "code": "110102",
+      "name": "西城区",
+      "unitMatchAliases": [],
+      "sourceId": "beijing-district-codes-2026"
+    },
+    {
+      "id": "chaoyang",
+      "code": "110105",
+      "name": "朝阳区",
+      "unitMatchAliases": [],
+      "sourceId": "beijing-district-codes-2026"
+    },
+    {
+      "id": "fengtai",
+      "code": "110106",
+      "name": "丰台区",
+      "unitMatchAliases": [],
+      "sourceId": "beijing-district-codes-2026"
+    },
+    {
+      "id": "shijingshan",
+      "code": "110107",
+      "name": "石景山区",
+      "unitMatchAliases": [],
+      "sourceId": "beijing-district-codes-2026"
+    },
+    {
+      "id": "haidian",
+      "code": "110108",
+      "name": "海淀区",
+      "unitMatchAliases": [],
+      "sourceId": "beijing-district-codes-2026"
+    },
+    {
+      "id": "mentougou",
+      "code": "110109",
+      "name": "门头沟区",
+      "unitMatchAliases": [],
+      "sourceId": "beijing-district-codes-2026"
+    },
+    {
+      "id": "fangshan",
+      "code": "110111",
+      "name": "房山区",
+      "unitMatchAliases": [],
+      "sourceId": "beijing-district-codes-2026"
+    },
+    {
+      "id": "tongzhou",
+      "code": "110112",
+      "name": "通州区",
+      "unitMatchAliases": [],
+      "sourceId": "beijing-district-codes-2026"
+    },
+    {
+      "id": "shunyi",
+      "code": "110113",
+      "name": "顺义区",
+      "unitMatchAliases": [],
+      "sourceId": "beijing-district-codes-2026"
+    },
+    {
+      "id": "changping",
+      "code": "110114",
+      "name": "昌平区",
+      "unitMatchAliases": [
+        "昌平分局",
+        "昌平公路分局",
+        "昌平园管理委员会"
+      ],
+      "sourceId": "beijing-district-codes-2026"
+    },
+    {
+      "id": "daxing",
+      "code": "110115",
+      "name": "大兴区",
+      "unitMatchAliases": [],
+      "sourceId": "beijing-district-codes-2026"
+    },
+    {
+      "id": "huairou",
+      "code": "110116",
+      "name": "怀柔区",
+      "unitMatchAliases": [],
+      "sourceId": "beijing-district-codes-2026"
+    },
+    {
+      "id": "pinggu",
+      "code": "110117",
+      "name": "平谷区",
+      "unitMatchAliases": [],
+      "sourceId": "beijing-district-codes-2026"
+    },
+    {
+      "id": "miyun",
+      "code": "110118",
+      "name": "密云区",
+      "unitMatchAliases": [],
+      "sourceId": "beijing-district-codes-2026"
+    },
+    {
+      "id": "yanqing",
+      "code": "110119",
+      "name": "延庆区",
+      "unitMatchAliases": [],
+      "sourceId": "beijing-district-codes-2026"
+    }
+  ],
   "positions": [
     {
       "year": 2024,
@@ -45,7 +163,9 @@
       "verification": "待官方逐码复核",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -72,7 +192,9 @@
       "verification": "待官方逐码复核",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -111,7 +233,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -136,7 +260,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -155,7 +281,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -190,7 +318,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -218,7 +348,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -243,7 +375,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -274,7 +408,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -308,7 +444,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -333,7 +471,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -373,7 +513,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -406,7 +548,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -434,7 +578,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -469,7 +615,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -503,7 +651,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -541,7 +691,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -576,7 +728,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -613,7 +767,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -650,7 +806,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -679,7 +837,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -708,7 +868,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -738,7 +900,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -778,7 +942,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -820,7 +986,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -852,7 +1020,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -882,7 +1052,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -909,7 +1081,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -941,7 +1115,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -970,7 +1146,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -997,7 +1175,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -1022,7 +1202,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -1041,7 +1223,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平分局"
     },
     {
       "year": 2024,
@@ -1060,7 +1244,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平分局"
     },
     {
       "year": 2024,
@@ -1092,7 +1278,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -1117,7 +1305,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -1148,7 +1338,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -1179,7 +1371,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -1209,7 +1403,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -1235,7 +1431,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -1266,7 +1464,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -1285,7 +1485,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -1321,7 +1523,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -1349,7 +1553,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -1377,7 +1583,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -1410,7 +1618,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -1438,7 +1648,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -1472,7 +1684,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -1500,7 +1714,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -1528,7 +1744,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -1561,7 +1779,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -1601,7 +1821,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -1627,7 +1849,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -1662,7 +1886,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -1690,7 +1916,9 @@
       "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -1750,7 +1978,9 @@
         "gwyzwb-2025-example",
         "huatu-2025-list",
         "gwyzwb-2025-org-21"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -1775,7 +2005,9 @@
         "huatu-2025-job-231266001",
         "huatu-2025-list",
         "gwyzwb-2025-org-33"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -1808,7 +2040,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-1"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平分局"
     },
     {
       "year": 2025,
@@ -1828,7 +2062,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-1"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平分局"
     },
     {
       "year": 2025,
@@ -1866,7 +2102,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-2"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平分局"
     },
     {
       "year": 2025,
@@ -1894,7 +2132,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-2"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平分局"
     },
     {
       "year": 2025,
@@ -1933,7 +2173,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-2"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平分局"
     },
     {
       "year": 2025,
@@ -1971,7 +2213,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-3"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平公路分局"
     },
     {
       "year": 2025,
@@ -2002,7 +2246,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-3"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平公路分局"
     },
     {
       "year": 2025,
@@ -2034,7 +2280,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-4"
-      ]
+      ],
+      "districtId": null,
+      "districtMatch": null
     },
     {
       "year": 2025,
@@ -2065,7 +2313,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-5"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -2091,7 +2341,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-5"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -2117,7 +2369,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-5"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -2148,7 +2402,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-6"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -2181,7 +2437,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-6"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -2208,7 +2466,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-6"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -2235,7 +2495,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-6"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -2267,7 +2529,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-6"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -2287,7 +2551,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-6"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -2328,7 +2594,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-7"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -2364,7 +2632,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-8"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -2407,7 +2677,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-9"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -2437,7 +2709,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-10"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -2469,7 +2743,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-11"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -2514,7 +2790,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-11"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -2540,7 +2818,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-12"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -2567,7 +2847,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-12"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -2596,7 +2878,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-13"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -2622,7 +2906,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-14"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -2658,7 +2944,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-15"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -2692,7 +2980,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-16"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -2727,7 +3017,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-16"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -2766,7 +3058,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-16"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -2797,7 +3091,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-16"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -2826,7 +3122,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-16"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -2863,7 +3161,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-17"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -2897,7 +3197,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-18"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -2933,7 +3235,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-18"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -2964,7 +3268,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-19"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -2990,7 +3296,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-19"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -3017,7 +3325,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-19"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -3037,7 +3347,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-19"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -3071,7 +3383,9 @@
       "eligibilityText": "单一镜像单位明细记录；其他资格条件与官方职位表均待核验。",
       "sources": [
         "gwyzwb-2025-org-19"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -3109,7 +3423,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-20"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -3135,7 +3451,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-22"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -3169,7 +3487,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-23"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -3205,7 +3525,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-24"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -3225,7 +3547,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-24"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -3261,7 +3585,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-24"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -3290,7 +3616,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-24"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -3326,7 +3654,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-25"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -3360,7 +3690,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-26"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -3391,7 +3723,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-26"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -3421,7 +3755,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-26"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -3451,7 +3787,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-26"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -3482,7 +3820,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-26"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -3514,7 +3854,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-26"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -3547,7 +3889,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-26"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -3578,7 +3922,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-26"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -3606,7 +3952,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-26"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -3626,7 +3974,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-26"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -3659,7 +4009,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-26"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -3690,7 +4042,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-27"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -3718,7 +4072,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-28"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -3750,7 +4106,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-29"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -3781,7 +4139,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-30"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -3814,7 +4174,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-31"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -3840,7 +4202,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-32"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -3871,7 +4235,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-34"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -3891,7 +4257,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-35"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -3911,7 +4279,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-35"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -3937,7 +4307,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-36"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -3957,7 +4329,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-37"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -3977,7 +4351,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-37"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -3997,7 +4373,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-37"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -4028,7 +4406,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-38"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -4066,7 +4446,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-39"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -4086,7 +4468,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-39"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -4112,7 +4496,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-40"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -4143,7 +4529,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-40"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -4170,7 +4558,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-41"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -4196,7 +4586,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-42"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -4216,7 +4608,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-42"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -4236,7 +4630,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-42"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -4256,7 +4652,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-43"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -4276,7 +4674,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-43"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -4296,7 +4696,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-44"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -4329,7 +4731,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-44"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -4349,7 +4753,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-44"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -4369,7 +4775,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-45"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2025,
@@ -4389,7 +4797,9 @@
       "sources": [
         "huatu-2025-list",
         "gwyzwb-2025-org-46"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -4420,7 +4830,9 @@
       "sources": [
         "huatu-2026-special-role",
         "gwyzwb-2026-org-45"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -4450,7 +4862,9 @@
         "huatu-2026-special-role",
         "huatu-2026-org-20",
         "huatu-2026-job-821262001"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -4482,7 +4896,9 @@
       "sources": [
         "huatu-2024-list",
         "fenbi-2024-longzeyuan"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -4499,7 +4915,9 @@
       "verification": "华图2024职位列表；待官方逐码复核",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -4516,7 +4934,9 @@
       "verification": "华图2024职位列表；待官方逐码复核",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -4533,7 +4953,9 @@
       "verification": "华图2024职位列表；待官方逐码复核",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -4550,7 +4972,9 @@
       "verification": "华图2024职位列表；待官方逐码复核",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -4567,7 +4991,9 @@
       "verification": "华图2024职位列表；待官方逐码复核",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -4584,7 +5010,9 @@
       "verification": "华图2024职位列表；待官方逐码复核",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -4601,7 +5029,9 @@
       "verification": "华图2024职位列表；待官方逐码复核",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -4618,7 +5048,9 @@
       "verification": "华图2024职位列表；待官方逐码复核",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -4635,7 +5067,9 @@
       "verification": "华图2024职位列表；待官方逐码复核",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -4652,7 +5086,9 @@
       "verification": "华图2024职位列表；待官方逐码复核",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -4669,7 +5105,9 @@
       "verification": "华图2024职位列表；待官方逐码复核",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -4686,7 +5124,9 @@
       "verification": "华图2024职位列表；待官方逐码复核",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -4703,7 +5143,9 @@
       "verification": "华图2024职位列表；待官方逐码复核",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -4720,7 +5162,9 @@
       "verification": "华图2024职位列表；待官方逐码复核",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -4737,7 +5181,9 @@
       "verification": "华图2024职位列表；待官方逐码复核",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -4754,7 +5200,9 @@
       "verification": "华图2024职位列表；待官方逐码复核",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -4771,7 +5219,9 @@
       "verification": "华图2024职位列表；待官方逐码复核",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -4788,7 +5238,9 @@
       "verification": "华图2024职位列表；待官方逐码复核",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -4805,7 +5257,9 @@
       "verification": "华图2024职位列表；待官方逐码复核",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -4822,7 +5276,9 @@
       "verification": "华图2024职位列表；待官方逐码复核",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -4839,7 +5295,9 @@
       "verification": "华图2024职位列表；待官方逐码复核",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -4856,7 +5314,9 @@
       "verification": "华图2024职位列表；待官方逐码复核",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -4873,7 +5333,9 @@
       "verification": "华图2024职位列表；待官方逐码复核",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -4890,7 +5352,9 @@
       "verification": "华图2024职位列表；待官方逐码复核",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -4907,7 +5371,9 @@
       "verification": "华图2024职位列表；待官方逐码复核",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -4924,7 +5390,9 @@
       "verification": "华图2024职位列表；待官方逐码复核",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -4941,7 +5409,9 @@
       "verification": "华图2024职位列表；待官方逐码复核",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -4958,7 +5428,9 @@
       "verification": "华图2024职位列表；待官方逐码复核",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -4975,7 +5447,9 @@
       "verification": "华图2024职位列表；待官方逐码复核",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -4992,7 +5466,9 @@
       "verification": "华图2024职位列表；待官方逐码复核",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -5009,7 +5485,9 @@
       "verification": "华图2024职位列表；待官方逐码复核",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -5026,7 +5504,9 @@
       "verification": "华图2024职位列表；待官方逐码复核",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -5043,7 +5523,9 @@
       "verification": "华图2024职位列表；待官方逐码复核",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -5060,7 +5542,9 @@
       "verification": "华图2024职位列表；待官方逐码复核",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -5077,7 +5561,9 @@
       "verification": "华图2024职位列表；待官方逐码复核",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -5094,7 +5580,9 @@
       "verification": "华图2024职位列表；待官方逐码复核",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -5111,7 +5599,9 @@
       "verification": "华图2024职位列表；待官方逐码复核",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -5128,7 +5618,9 @@
       "verification": "华图2024职位列表；待官方逐码复核",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2024,
@@ -5145,7 +5637,9 @@
       "verification": "华图2024职位列表；待官方逐码复核",
       "sources": [
         "huatu-2024-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -5161,7 +5655,9 @@
       "verification": "华图逐岗镜像；其他资格字段待官方逐码复核",
       "sources": [
         "huatu-2026-org-2"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平分局"
     },
     {
       "year": 2026,
@@ -5177,7 +5673,9 @@
       "verification": "华图逐岗镜像；其他资格字段待官方逐码复核",
       "sources": [
         "huatu-2026-org-2"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平分局"
     },
     {
       "year": 2026,
@@ -5193,7 +5691,9 @@
       "verification": "华图逐岗镜像；其他资格字段待官方逐码复核",
       "sources": [
         "huatu-2026-org-2"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平分局"
     },
     {
       "year": 2026,
@@ -5209,7 +5709,9 @@
       "verification": "华图逐岗镜像；其他资格字段待官方逐码复核",
       "sources": [
         "huatu-2026-org-3"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平公路分局"
     },
     {
       "year": 2026,
@@ -5225,7 +5727,9 @@
       "verification": "华图逐岗镜像；其他资格字段待官方逐码复核",
       "sources": [
         "huatu-2026-org-3"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平公路分局"
     },
     {
       "year": 2026,
@@ -5241,7 +5745,9 @@
       "verification": "华图逐岗镜像；其他资格字段待官方逐码复核",
       "sources": [
         "huatu-2026-org-5"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -5257,7 +5763,9 @@
       "verification": "华图逐岗镜像；其他资格字段待官方逐码复核",
       "sources": [
         "huatu-2026-org-5"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -5273,7 +5781,9 @@
       "verification": "华图逐岗镜像；其他资格字段待官方逐码复核",
       "sources": [
         "huatu-2026-org-5"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -5295,7 +5805,9 @@
       "verification": "华图逐岗镜像；其他资格字段待官方逐码复核",
       "sources": [
         "huatu-2026-org-6"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -5311,7 +5823,9 @@
       "verification": "华图逐岗镜像；其他资格字段待官方逐码复核",
       "sources": [
         "huatu-2026-org-6"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -5327,7 +5841,9 @@
       "verification": "华图逐岗镜像；其他资格字段待官方逐码复核",
       "sources": [
         "huatu-2026-org-6"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -5349,7 +5865,9 @@
       "verification": "华图逐岗镜像；其他资格字段待官方逐码复核",
       "sources": [
         "huatu-2026-org-6"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -5370,7 +5888,9 @@
       "verification": "华图逐岗镜像；研究生宽泛学科范围及其他资格字段待官方逐码复核",
       "sources": [
         "huatu-2026-org-8"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -5386,7 +5906,9 @@
       "verification": "华图逐岗镜像；专业范围未细化到管理学下属代码，其他资格字段待官方复核",
       "sources": [
         "huatu-2026-org-11"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -5402,7 +5924,9 @@
       "verification": "华图逐岗镜像；其他资格字段待官方逐码复核",
       "sources": [
         "huatu-2026-org-11"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -5418,7 +5942,9 @@
       "verification": "华图逐岗镜像；其他资格字段待官方逐码复核",
       "sources": [
         "huatu-2026-org-12"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -5434,7 +5960,9 @@
       "verification": "华图逐岗镜像；其他资格字段待官方逐码复核",
       "sources": [
         "huatu-2026-org-17"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -5450,7 +5978,9 @@
       "verification": "华图逐岗镜像；其他资格字段待官方逐码复核",
       "sources": [
         "huatu-2026-org-17"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -5466,7 +5996,9 @@
       "verification": "华图逐岗镜像；其他资格字段待官方逐码复核",
       "sources": [
         "huatu-2026-org-17"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -5482,7 +6014,9 @@
       "verification": "华图逐岗镜像；其他资格字段待官方逐码复核",
       "sources": [
         "huatu-2026-org-19"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -5498,7 +6032,9 @@
       "verification": "华图逐岗镜像；其他资格字段待官方逐码复核",
       "sources": [
         "huatu-2026-org-19"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -5519,7 +6055,9 @@
       "verification": "华图逐岗详情；待官方逐码复核",
       "sources": [
         "huatu-2026-job-221261803"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -5535,7 +6073,9 @@
       "verification": "华图逐岗镜像；宽泛专业范围及其他资格字段待官方复核",
       "sources": [
         "huatu-2026-org-28"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平园管理委员会"
     },
     {
       "year": 2026,
@@ -5551,7 +6091,9 @@
       "verification": "华图逐岗镜像；其他资格字段待官方逐码复核",
       "sources": [
         "huatu-2026-org-34"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -5591,7 +6133,9 @@
       "verification": "华图逐岗详情；定向资格及其他字段待官方逐码复核",
       "sources": [
         "huatu-2026-job-231264501"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -5615,7 +6159,9 @@
       "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-org-25"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -5644,7 +6190,9 @@
       "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-org-25"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -5671,7 +6219,9 @@
       "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-org-25"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -5697,7 +6247,9 @@
       "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-org-25"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -5725,7 +6277,9 @@
       "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-org-25"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -5751,7 +6305,9 @@
       "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-org-25"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -5778,7 +6334,9 @@
       "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-org-25"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -5805,7 +6363,9 @@
       "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-org-25"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -5840,7 +6400,9 @@
       "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-org-27"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -5875,7 +6437,9 @@
       "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-org-27"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -5919,7 +6483,9 @@
       "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-org-21"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -5956,7 +6522,9 @@
       "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-org-21"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -5990,7 +6558,9 @@
       "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-org-36"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -6019,7 +6589,9 @@
       "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-org-36"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -6045,7 +6617,9 @@
       "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-org-36"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -6063,7 +6637,9 @@
       "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-org-1"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平分局"
     },
     {
       "year": 2026,
@@ -6108,7 +6684,9 @@
       "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-org-1"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平分局"
     },
     {
       "year": 2026,
@@ -6134,7 +6712,9 @@
       "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-org-4"
-      ]
+      ],
+      "districtId": null,
+      "districtMatch": null
     },
     {
       "year": 2026,
@@ -6164,7 +6744,9 @@
       "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-org-9"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -6188,7 +6770,9 @@
       "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-org-10"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -6212,7 +6796,9 @@
       "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-org-13"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -6248,7 +6834,9 @@
       "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-org-14"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -6277,7 +6865,9 @@
       "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-org-14"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -6307,7 +6897,9 @@
       "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-org-18"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -6331,7 +6923,9 @@
       "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-org-18"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -6349,7 +6943,9 @@
       "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-org-18"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -6385,7 +6981,9 @@
       "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-org-45"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -6414,7 +7012,9 @@
       "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-org-35"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -6440,7 +7040,9 @@
       "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-org-37"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -6481,7 +7083,9 @@
       "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-org-37"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -6509,7 +7113,9 @@
       "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-org-37"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -6565,7 +7171,9 @@
       "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-org-37"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -6594,7 +7202,9 @@
       "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-org-38"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -6622,7 +7232,9 @@
       "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-org-38"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -6655,7 +7267,9 @@
       "verification": "粉笔职位库列表行可见字段；逐岗详情页及官方职位表未核验",
       "sources": [
         "fenbi-2026-job-231264301"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -6674,7 +7288,9 @@
       "verification": "粉笔职位库列表行可见字段；逐岗详情页及官方职位表未核验",
       "sources": [
         "fenbi-2026-page-162"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -6700,7 +7316,9 @@
       "verification": "粉笔职位库列表行可见字段；逐岗详情页及官方职位表未核验",
       "sources": [
         "fenbi-2026-page-162"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -6728,7 +7346,9 @@
       "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-org-39"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -6757,7 +7377,9 @@
       "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-org-42"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -6781,7 +7403,9 @@
       "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-org-43"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -6808,7 +7432,9 @@
       "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-org-43"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -6837,7 +7463,9 @@
       "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-org-31"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -6863,7 +7491,9 @@
       "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-org-32"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -6887,7 +7517,9 @@
       "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-org-32"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -6918,7 +7550,9 @@
       "verification": "京考职位网职位详情可见字段；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-job-221261601"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -6958,7 +7592,9 @@
       "sources": [
         "xduim-2026-changping-list",
         "fenbi-2026-changping-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -6986,7 +7622,9 @@
       "sources": [
         "xduim-2026-changping-list",
         "huatu-2026-job-221262201"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -7022,7 +7660,9 @@
       "sources": [
         "xduim-2026-changping-list",
         "fenbi-2026-changping-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -7065,7 +7705,9 @@
       "sources": [
         "xduim-2026-changping-list",
         "huatu-2026-job-221262401"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -7102,7 +7744,9 @@
       "verification": "京考职位网逐岗详情；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-job-221262601"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -7144,7 +7788,9 @@
       "verification": "京考职位网单位职位表；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-org-29"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -7184,7 +7830,9 @@
       "sources": [
         "huatu-2026-job-821263101",
         "gwyzwb-2026-org-30"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -7211,7 +7859,9 @@
       "verification": "京考职位网逐岗详情；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-job-231264601"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -7247,7 +7897,9 @@
       "verification": "京考职位网逐岗详情；定向身份与其他条件待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-job-241264201"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -7274,7 +7926,9 @@
       "verification": "京考职位网逐岗详情；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-job-241264202"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -7312,7 +7966,9 @@
       "verification": "京考职位网逐岗详情；待官方职位表逐码复核",
       "sources": [
         "gwyzwb-2026-job-241264902"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -7346,7 +8002,9 @@
       "verification": "粉笔职位列表行级镜像；尚待官方逐码核验",
       "sources": [
         "fenbi-2026-changping-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -7382,7 +8040,9 @@
       "verification": "粉笔职位列表行级镜像；尚待官方逐码核验",
       "sources": [
         "fenbi-2026-changping-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     },
     {
       "year": 2026,
@@ -7420,7 +8080,9 @@
       "verification": "粉笔职位列表行级镜像；尚待官方逐码核验",
       "sources": [
         "fenbi-2026-changping-list"
-      ]
+      ],
+      "districtId": "changping",
+      "districtMatch": "昌平区"
     }
   ],
   "observations": [
@@ -7690,6 +8352,20 @@
       "publishedAt": "2025-11-10",
       "accessedAt": "2026-10-08",
       "notes": "官方公告将本附件列为招考简章；尚未完成原表导入和逐代码核对，现有职位样例继续按二手镜像展示，不将年度汇总当作逐职位核验。"
+    },
+    {
+      "sourceId": "fenbi-2026-citywide-summary",
+      "title": "粉笔资讯：北京市2026年度公务员招考职位总量摘要",
+      "publisher": "粉笔资讯（粉笔职位库）",
+      "level": "secondary",
+      "evidenceType": "aggregate_summary",
+      "year": 2026,
+      "geographicScope": "citywide",
+      "reportedPositionCount": 1690,
+      "reportedRecruitCount": 3694,
+      "url": "https://www.fenbi.com/page/exam-information-detail/462092853335040",
+      "accessedAt": "2026-10-08",
+      "notes": "页面称2026年全市招聘3694人、1690个岗位；属于第三方汇总，不是官方原表逐行复算。本项目仅作为全市级二手参照展示，不与昌平职位样例比较差额或计算覆盖率。"
     },
     {
       "sourceId": "beijing-2026-outline",
@@ -9456,6 +10132,17 @@
       "url": "https://www.fenbi.com/page/positions/3/414026?department=%E5%8C%97%E4%BA%AC%E5%B8%82%E6%98%8C%E5%B9%B3%E5%8C%BA%E5%A4%A9%E9%80%9A%E8%8B%91%E5%8C%97%E8%A1%97%E9%81%93",
       "accessedAt": "2026-10-08",
       "notes": "该页属于2026年度定向选调和“优培计划”职位库，列出天通苑北街道规划建设岗221221501（1岗/1人）。此项目与2026年度普通考试录用公务员职位表分列，不纳入昌平京考88岗/138人，也不能作为普通京考天通苑北缺失岗位的替代。"
+    },
+    {
+      "sourceId": "beijing-district-codes-2026",
+      "title": "2026年北京市行政区划名称和行政区划代码",
+      "publisher": "北京市民政局",
+      "level": "official",
+      "evidenceType": "district_dictionary",
+      "year": 2026,
+      "url": "https://mzj.beijing.gov.cn/art/2026/7/16/art_9984_692516.html",
+      "accessedAt": "2026-10-08",
+      "notes": "区级代码及名称截至2026年6月30日；仅用于标准化区目录，不据此推断具体职位的区县归属。"
     }
   ],
   "studyPlan": [

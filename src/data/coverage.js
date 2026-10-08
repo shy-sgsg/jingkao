@@ -72,6 +72,7 @@ export function summarizePositionCoverage(dataset, years = [2024, 2025, 2026]) {
     const secondarySummary = sources.find((source) => (
       Number(source.year) === Number(year)
       && source.level === 'secondary'
+      && source.geographicScope !== 'citywide'
       && Number.isFinite(source.reportedPositionCount)
       && source.reportedPositionCount > 0
     ));

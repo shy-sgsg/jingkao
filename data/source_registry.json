@@ -46,6 +46,20 @@
     "notes": "官方公告将本附件列为招考简章；尚未完成原表导入和逐代码核对，现有职位样例继续按二手镜像展示，不将年度汇总当作逐职位核验。"
   },
   {
+    "sourceId": "fenbi-2026-citywide-summary",
+    "title": "粉笔资讯：北京市2026年度公务员招考职位总量摘要",
+    "publisher": "粉笔资讯（粉笔职位库）",
+    "level": "secondary",
+    "evidenceType": "aggregate_summary",
+    "year": 2026,
+    "geographicScope": "citywide",
+    "reportedPositionCount": 1690,
+    "reportedRecruitCount": 3694,
+    "url": "https://www.fenbi.com/page/exam-information-detail/462092853335040",
+    "accessedAt": "2026-10-08",
+    "notes": "页面称2026年全市招聘3694人、1690个岗位；属于第三方汇总，不是官方原表逐行复算。本项目仅作为全市级二手参照展示，不与昌平职位样例比较差额或计算覆盖率。"
+  },
+  {
     "sourceId": "beijing-2026-outline",
     "title": "北京市2026年度考试录用公务员公共科目笔试考试大纲",
     "publisher": "北京市公务员局",
@@ -1711,5 +1725,16 @@
     "url": "https://www.fenbi.com/page/positions/3/414026?department=%E5%8C%97%E4%BA%AC%E5%B8%82%E6%98%8C%E5%B9%B3%E5%8C%BA%E5%A4%A9%E9%80%9A%E8%8B%91%E5%8C%97%E8%A1%97%E9%81%93",
     "accessedAt": "2026-10-08",
     "notes": "该页属于2026年度定向选调和“优培计划”职位库，列出天通苑北街道规划建设岗221221501（1岗/1人）。此项目与2026年度普通考试录用公务员职位表分列，不纳入昌平京考88岗/138人，也不能作为普通京考天通苑北缺失岗位的替代。"
+  },
+  {
+    "sourceId": "beijing-district-codes-2026",
+    "title": "2026年北京市行政区划名称和行政区划代码",
+    "publisher": "北京市民政局",
+    "level": "official",
+    "evidenceType": "district_dictionary",
+    "year": 2026,
+    "url": "https://mzj.beijing.gov.cn/art/2026/7/16/art_9984_692516.html",
+    "accessedAt": "2026-10-08",
+    "notes": "区级代码及名称截至2026年6月30日；仅用于标准化区目录，不据此推断具体职位的区县归属。"
   }
 ]

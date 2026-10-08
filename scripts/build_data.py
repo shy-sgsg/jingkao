@@ -46,6 +46,40 @@ def load_json(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def assign_district(unit: str | None, districts: list[dict[str, Any]]) -> tuple[str | None, str | None]:
+    if not unit:
+        return None, None
+    matches = [
+        (district["id"], term)
+        for district in districts
+        for term in [district["name"], *district.get("unitMatchAliases", [])]
+        if term and term in unit
+    ]
+    matched_districts = {district_id for district_id, _ in matches}
+    if len(matched_districts) != 1:
+        return None, None
+    district_id = next(iter(matched_districts))
+    match_term = max(
+        (term for matched_id, term in matches if matched_id == district_id),
+        key=len,
+    )
+    return district_id, match_term
+
+
+def build_positions(
+    positions: list[dict[str, Any]], districts: list[dict[str, Any]]
+) -> list[dict[str, Any]]:
+    result = []
+    for position in positions:
+        district_id, district_match = assign_district(position.get("unit"), districts)
+        result.append({
+            **position,
+            "districtId": district_id,
+            "districtMatch": district_match,
+        })
+    return result
+
+
 def build_study_plan() -> tuple[list[dict[str, Any]], dict[str, int | float]]:
     rows = nonempty_rows("50天计划")
     days: list[dict[str, Any]] = []
@@ -397,6 +431,7 @@ def render_coverage_report(dataset: dict[str, Any]) -> str:
             source for source in sources
             if source.get("year") == year
             and source.get("level") == "secondary"
+            and source.get("geographicScope") != "citywide"
             and (has_value(source.get("reportedPositionCount")) or has_value(source.get("reportedRecruitCount")))
         ]
         reference_text = "; ".join(
@@ -424,6 +459,30 @@ def render_coverage_report(dataset: dict[str, Any]) -> str:
         else:
             relation = "无可比二手分母；年度覆盖率未知"
         lines.append(f"| {year} | {reference_text} | {relation} |")
+
+    citywide_references = [
+        source for source in sources
+        if source.get("level") == "secondary"
+        and source.get("geographicScope") == "citywide"
+        and (has_value(source.get("reportedPositionCount")) or has_value(source.get("reportedRecruitCount")))
+    ]
+    if citywide_references:
+        lines.extend([
+            "",
+            "## 全市级职位表参照汇总",
+            "",
+            "以下为全市范围的二手汇总，仅作外部参照；不是官方原表复算结果，不与昌平逐岗样本计算差额，也不作为官方覆盖率分母。",
+            "",
+            "| 年度 | 来源 | 全市职位 / 招录 | 说明 |",
+            "| ---: | --- | ---: | --- |",
+        ])
+        for source in citywide_references:
+            lines.append(
+                f"| {source.get('year', '未知')} | {link_source(source)} | "
+                f"{source.get('reportedPositionCount', '未知')} 岗 / "
+                f"{source.get('reportedRecruitCount', '未知')} 人 | "
+                "不与昌平逐岗样本计算差额 |"
+            )
 
     unit_reference_source = next((
         source for source in sources
@@ -499,7 +558,8 @@ def render_coverage_report(dataset: dict[str, Any]) -> str:
 
 def main() -> None:
     sources = load_json(ROOT / "data/source_registry.json")
-    positions = load_json(ROOT / "data/positions_seed.json")
+    districts = load_json(ROOT / "data/districts.json")
+    positions = build_positions(load_json(ROOT / "data/positions_seed.json"), districts)
     study_plan, study_meta = build_study_plan()
     score_rows = build_score_rows(sources)
     observations, conflicts, score_samples = build_aggregate_evidence(sources, score_rows)
@@ -507,8 +567,9 @@ def main() -> None:
         "schemaVersion": 1,
         "generatedAt": date.today().isoformat(),
         "dataAsOf": date.today().isoformat(),
-        "scopeNote": "职位库为可追溯候选，不是昌平区全量官方职位表。2024年收录华图镜像95条职位行/197人，其他二手汇总为93/142与97/199，范围差异未由官方附件对账。2025年收录91条二手镜像职位行，其中90条与另一处镜像字段一致、1条仅单一镜像可见；来源独立性未验证。2026年仍为部分镜像样例。职位事实与区级报名快照、部分面试分数样本分开保存。",
+        "scopeNote": "职位库仍为可追溯候选，不是北京全市全量官方职位表。现有2024—2026年职位行主要是昌平二手镜像样例；年度官方全市分母及逐代码核验尚未完成。区目录按北京市民政局2026年行政区划代码标准化；职位区县仅在招录单位名匹配标准区名或经审阅别名时赋值，其余保留未知。职位事实与报名快照、部分面试分数样本分开保存。",
         "studyMeta": study_meta,
+        "districts": districts,
         "positions": positions,
         "observations": observations,
         "sources": sources,

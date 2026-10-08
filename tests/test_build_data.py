@@ -182,6 +182,88 @@ class CoverageReportTests(unittest.TestCase):
         self.assertNotIn("两处二手汇总均报 88 岗 / 138 人", report)
         self.assertIn("python3 scripts/validate_data.py", report)
 
+    def test_citywide_secondary_totals_are_separate_from_district_sample_comparisons(self):
+        dataset = {
+            "dataAsOf": "2026-10-08",
+            "coverage": {},
+            "positions": [
+                {"year": 2026, "code": "A1", "unit": "示例单位", "orgType": "街道", "recruitCount": 1,
+                 "majorCriteria": {}, "requirements": {}, "sourceLevel": "secondary", "crossVerified": False},
+                {"year": 2026, "code": "A2", "unit": "另一单位", "orgType": "区直", "recruitCount": 2,
+                 "majorCriteria": {}, "requirements": {}, "sourceLevel": "secondary", "crossVerified": False},
+            ],
+            "scoreRows": [],
+            "scoreSamples": [],
+            "observations": [],
+            "sources": [
+                {"sourceId": "changping-mirror", "level": "secondary", "year": 2026,
+                 "reportedPositionCount": 4, "reportedRecruitCount": 6},
+                {"sourceId": "fenbi-citywide", "level": "secondary", "year": 2026,
+                 "geographicScope": "citywide", "reportedPositionCount": 1690,
+                 "reportedRecruitCount": 3694, "url": "https://example.test/citywide"},
+            ],
+        }
+
+        report = render_coverage_report(dataset)
+        district_comparison = report.split("## 二手年度汇总与职位差额", 1)[1].split("\n## ", 1)[0]
+        citywide_summary = report.split("## 全市级职位表参照汇总", 1)[1]
+
+        self.assertIn("2 / 4 岗、3 / 6 人；相差 2 岗 / 3 人", district_comparison)
+        self.assertNotIn("fenbi-citywide", district_comparison)
+        self.assertIn("fenbi-citywide", citywide_summary)
+        self.assertIn("1690 岗 / 3694 人", citywide_summary)
+        self.assertIn("不与昌平逐岗样本计算差额", citywide_summary)
+
+
+class DistrictRegistryTests(unittest.TestCase):
+    def test_generated_positions_use_the_official_16_district_registry_conservatively(self):
+        root = Path(__file__).resolve().parents[1]
+        result = subprocess.run(
+            [sys.executable, str(root / "scripts" / "build_data.py")],
+            cwd=root,
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        self.assertEqual(result.returncode, 0, result.stderr + result.stdout)
+        dataset = json.loads((root / "public" / "data.json").read_text(encoding="utf-8"))
+
+        districts = dataset.get("districts", [])
+        self.assertEqual(len(districts), 16)
+        self.assertEqual(len({district["id"] for district in districts}), 16)
+        self.assertEqual(len({district["code"] for district in districts}), 16)
+        self.assertEqual(
+            {district["name"] for district in districts},
+            {
+                "东城区", "西城区", "朝阳区", "丰台区", "石景山区", "海淀区",
+                "门头沟区", "房山区", "通州区", "顺义区", "昌平区", "大兴区",
+                "怀柔区", "平谷区", "密云区", "延庆区",
+            },
+        )
+        self.assertEqual(
+            {district["id"]: district["code"] for district in districts},
+            {
+                "dongcheng": "110101", "xicheng": "110102", "chaoyang": "110105",
+                "fengtai": "110106", "shijingshan": "110107", "haidian": "110108",
+                "mentougou": "110109", "fangshan": "110111", "tongzhou": "110112",
+                "shunyi": "110113", "changping": "110114", "daxing": "110115",
+                "huairou": "110116", "pinggu": "110117", "miyun": "110118",
+                "yanqing": "110119",
+            },
+        )
+        source_ids = {source["sourceId"] for source in dataset["sources"]}
+        self.assertTrue(all(district["sourceId"] in source_ids for district in districts))
+
+        positions_by_code = {position["code"]: position for position in dataset["positions"]}
+        self.assertEqual(positions_by_code["121256001"]["districtId"], "changping")
+        self.assertEqual(positions_by_code["121256001"]["districtMatch"], "昌平区")
+        self.assertEqual(positions_by_code["829909404"]["districtId"], None)
+        self.assertEqual(positions_by_code["829909404"]["districtMatch"], None)
+        self.assertEqual(positions_by_code["829910403"]["districtId"], None)
+        cp_division = next(p for p in dataset["positions"] if p["unit"] == "北京市公安局昌平分局")
+        self.assertEqual(cp_division["districtId"], "changping")
+        self.assertEqual(cp_division["districtMatch"], "昌平分局")
+
 
 class DataValidatorTests(unittest.TestCase):
     def test_validator_separates_structure_from_year_coverage(self):

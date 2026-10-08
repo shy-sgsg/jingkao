@@ -32,6 +32,22 @@ test('home coverage spotlight labels mirror totals as references, not verified c
   });
 });
 
+test('citywide secondary totals never become district coverage denominators', () => {
+  const result = coverage.getCoverageSpotlight({
+    positions: [{ year: 2026, recruitCount: 2 }],
+    sources: [
+      { sourceId: 'fenbi-citywide', year: 2026, level: 'secondary', geographicScope: 'citywide',
+        reportedPositionCount: 1690, reportedRecruitCount: 3694 },
+      { sourceId: 'changping-mirror', year: 2026, level: 'secondary', geographicScope: 'district',
+        reportedPositionCount: 88, reportedRecruitCount: 138 },
+    ],
+  }, 2026);
+
+  assert.equal(result.referencePositions, 88);
+  assert.equal(result.referenceRecruits, 138);
+  assert.equal(result.sourceId, 'changping-mirror');
+});
+
 test('home coverage spotlight keeps unavailable denominators null', () => {
   assert.equal(typeof coverage.getCoverageSpotlight, 'function', 'the home should have a data-backed coverage summary');
   const result = coverage.getCoverageSpotlight({ positions: [{ year: 2026, recruitCount: null }] }, 2026);
