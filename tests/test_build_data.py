@@ -214,7 +214,7 @@ class DataValidatorTests(unittest.TestCase):
         )
         self.assertIn(
             "2026 coverage: org type 区直 55, 街道 10, 镇 18, 垂直/驻区 0; "
-            "major codes 59/83; structured requirements 10/83; eligibility complete 0/83; "
+            "major codes 59/83; structured requirements 11/83; eligibility complete 0/83; "
             "cross verified 0/83; position sources official 0, secondary 83, other 0",
             result.stdout,
         )

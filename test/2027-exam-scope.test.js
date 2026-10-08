@@ -12,8 +12,14 @@ test('2027 guidance distinguishes the published selection program from the regul
   assert.equal(selection.level, 'official');
   assert.equal(selection.year, 2027);
   assert.match(selection.url, /beijing\.gov\.cn/);
+  assert.match(selection.notes, /网上报名.*2026年9月20日9:00至2026年9月23日18:00/);
+  assert.match(selection.notes, /定向选调和优培计划Ⅰ类统一笔试计划于2026年10月17日9:00至11:30/);
+  assert.match(selection.notes, /成绩于2026年10月28日后查询/);
   assert.ok(publishedData.sources.some((source) => source.sourceId === 'beijing-2027-selection'));
   assert.match(app, /2027年度定向选调和“优培计划”已发布/);
+  assert.match(app, /网上报名已于2026年9月23日18:00截止/);
+  assert.match(app, /定向选调和优培计划Ⅰ类统一笔试计划于2026年10月17日9:00至11:30/);
+  assert.match(app, /成绩于2026年10月28日后查询/);
   assert.match(app, /sourceLink\('beijing-2027-selection'/);
   assert.match(app, /examStatusAsOf = sourceFor\('beijing-index'\)\?\.accessedAt/);
   assert.match(app, /普通京考职位表截至 \$\{escapeHtml\(examStatusAsOf\)\}/);

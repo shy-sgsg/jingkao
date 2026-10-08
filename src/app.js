@@ -494,7 +494,7 @@ function renderOverview() {
       <article class="panel evidence-panel"><div class="panel-heading"><div><div class="eyebrow muted">EVIDENCE CHECK</div><h2>昌平竞争观察</h2></div><a class="panel-link" href="#/evidence">岗位时序与口径 →</a></div><div class="snapshot-list">${snapshotCards}<div class="snapshot-row snapshot-2026"><span class="snapshot-year">2026</span><div><strong>报道区平均竞争比 18.24:1</strong><small>报名时点快照 · 算法与分子未完整披露</small></div><span class="snapshot-ratio snapshot-unknown">不可直接比较</span></div></div><div class="notice notice-soft"><span>ⓘ</span><p>区级记录不能下放到岗位；岗位行是第三方“资格审查通过”快照，不等同最终报名、缴费或实考人数。</p></div></article>
     </section>
     <section class="content-grid overview-grid"><article class="panel chart-panel"><div class="panel-heading"><div><div class="eyebrow muted">MOCK REVIEW</div><h2>模考分数走势</h2></div><a class="panel-link" href="#/mocks">进入模考复盘 →</a></div><div class="chart-summary">${latest ? `<strong>${fmt(latest.total, 1)}<small> 分</small></strong><span>${escapeHtml(latestTargetSummary)}</span>` : `<strong class="placeholder-value">尚未开始</strong><span>${escapeHtml(latestTargetSummary)}</span>`}</div>${chartSvg(mocks)}</article>${renderSevenDayPanel(weekly)}</section>
-    <section class="notice notice-2027"><span class="notice-icon">◎</span><div><strong>2027年度定向选调和“优培计划”已发布；普通京考职位表截至 ${escapeHtml(examStatusAsOf)} 尚未在官方目录检出</strong><p>定向选调与“优培计划”是独立项目，不等同普通公务员考试录用。普通京考状态仅代表本次目录核查结果，并非官方确认尚未发布；2024–2026 岗位仅作历史参考。${sourceLink('beijing-2027-selection', '查看2027定向选调/优培公告 ↗')} ${sourceLink('beijing-index', '查看官方招考目录 ↗')}</p></div><a class="notice-close" data-action="dismiss-notice" href="#" aria-label="关闭">×</a></section>
+    <section class="notice notice-2027"><span class="notice-icon">◎</span><div><strong>2027年度定向选调和“优培计划”已发布，网上报名已于2026年9月23日18:00截止</strong><p>定向选调和优培计划Ⅰ类统一笔试计划于2026年10月17日9:00至11:30，成绩于2026年10月28日后查询；优培计划Ⅱ类招聘流程由各单位自行组织。普通京考职位表截至 ${escapeHtml(examStatusAsOf)} 尚未在官方目录检出——这只是本次检索结果，并非官方确认未发布。定向选调/优培与普通京考不是同一项目；2024–2026 岗位仅作历史参考。${sourceLink('beijing-2027-selection', '查看2027定向选调/优培公告 ↗')} ${sourceLink('beijing-index', '查看官方招考目录 ↗')}</p></div><a class="notice-close" data-action="dismiss-notice" href="#" aria-label="关闭">×</a></section>
   </div>`;
 }
 
@@ -1076,6 +1076,7 @@ function openJob(code) {
   const professionalTest = position.professionalTest === true
     ? `是${position.physicalTest === true ? '（含体能测试）' : ''}`
     : position.professionalTest === false ? '否' : null;
+  const politicalStatus = position.requirements?.politicalStatus ?? position.politicalStatus;
   const completeness = getPositionDataCompleteness(position, dataset);
   const completenessDescription = completeness.missingSections.length
     ? `已收录 ${completeness.availableSections}/${completeness.totalSections} 类；缺少：${completeness.missingSections.join('、')}`
@@ -1088,6 +1089,7 @@ function openJob(code) {
     { label: '招录人数', value: Number.isFinite(position.recruitCount) ? `${fmt(position.recruitCount)} 人` : '待核验' },
     { label: '学历条件', value: position.education || '待核验' },
     { label: '学位要求', value: position.degreeRequirement },
+    { label: '政治面貌', value: politicalStatus },
     { label: '应届届别', value: position.newGraduateYear ? `${position.newGraduateYear} 届应届毕业生` : null },
     { label: '专业能力测试', value: professionalTest },
     { label: '面试比例', value: position.interviewRatio },

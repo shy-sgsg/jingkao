@@ -7284,7 +7284,10 @@
       "orgType": "镇",
       "jobType": "专业岗位",
       "recruitCount": 1,
+      "department": "农业农村和经济发展办公室（统计所）",
+      "positionDescription": "负责统计数据的收集、整理、分析等工作。",
       "education": "本科及以上",
+      "degreeRequirement": "与最高学历相对应的学位",
       "majorText": "本科：经济学（02），管理学（12）；研究生：经济学（02），管理学（12）",
       "majorCriteria": {
         "undergraduate": [
@@ -7296,8 +7299,14 @@
           "12"
         ]
       },
+      "requirements": {
+        "politicalStatus": "不限"
+      },
+      "professionalTest": false,
       "eligibilityComplete": false,
       "interviewRatio": "3:1",
+      "otherConditions": "本科及研究生阶段均有学历和学位；应届高校毕业生就读最高学历期间不得与任何单位存在劳动（录用、聘用）关系，不得缴纳社会保险。",
+      "remarks": "基层一线，工作条件艰苦，山区需要值夜班。",
       "eligibilityText": "职位详情列明本科及研究生阶段均需学历和学位，最高学历在读期间不得与单位建立劳动关系或缴纳社保；备注为基层一线、山区夜班。完整资格条件待官方职位表核验。",
       "sourceLevel": "secondary",
       "verification": "京考职位网逐岗详情；待官方职位表逐码复核",
@@ -7548,7 +7557,7 @@
       "url": "https://www.beijing.gov.cn/gongkai/rsxx/gwyzk/202609/t20260910_4858146.html",
       "publishedAt": "2026-09-10",
       "accessedAt": "2026-10-08",
-      "notes": "该公告覆盖定向选调与“优培计划”，属于不同于普通年度公务员考试录用的项目；不可用于替代普通京考职位表。"
+      "notes": "公告计划定向选调472名、优培招聘278名；网上报名时间为2026年9月20日9:00至2026年9月23日18:00，截至2026-10-08报名窗口已结束。定向选调和优培计划Ⅰ类统一笔试计划于2026年10月17日9:00至11:30，成绩于2026年10月28日后查询；优培Ⅱ类招聘流程由各单位自行组织。属于不同于普通年度公务员考试录用的项目，计划数不可作为昌平普通京考名额，也不可替代普通京考职位表。"
     },
     {
       "sourceId": "beijing-2026-announcement",
@@ -9305,7 +9314,7 @@
       "accessedAt": "2026-10-08",
       "reportedPositionCount": 1,
       "reportedRecruitCount": 1,
-      "notes": "逐岗详情列出职位代码、学历、经济学/管理学专业和招录数；第三方镜像，官方逐码核验未完成。"
+      "notes": "逐岗详情列出职位代码、学历/学位、经济学/管理学专业、用人部门、岗位简介、其他条件、专业能力测试、面试比例及山区夜班备注；第三方镜像，官方逐码核验未完成。"
     }
   ],
   "studyPlan": [

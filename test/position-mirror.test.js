@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { evaluateEligibility } from '../src/data/decision.js';
+import { classifyPublicManagementMatch } from '../src/data/positions.js';
 
 const projectRoot = new URL('../', import.meta.url);
 
@@ -246,4 +247,29 @@ test('the 2025 water bureau role exposes its full mirrored detail without claimi
   for (const field of ['positionDescription', 'department', 'degreeRequirement', 'professionalTest', 'interviewRatio', 'otherConditions', 'remarks']) {
     assert.ok(app.includes(`position.${field}`), `the position detail dialog should render ${field}`);
   }
+});
+
+test('the 2026 Yanshou statistics role exposes its verified mirror details without inventing a physical test or eligibility match', async () => {
+  const positions = JSON.parse(await readFile(new URL('data/positions_seed.json', projectRoot), 'utf8'));
+  const sources = JSON.parse(await readFile(new URL('data/source_registry.json', projectRoot), 'utf8'));
+  const dataset = JSON.parse(await readFile(new URL('public/data.json', projectRoot), 'utf8'));
+  const app = await readFile(new URL('src/app.js', projectRoot), 'utf8');
+  const role = positions.find((row) => row.code === '241264902');
+  const source = sources.find((row) => row.sourceId === 'gwyzwb-2026-job-241264902');
+
+  assert.equal(role.department, '农业农村和经济发展办公室（统计所）');
+  assert.equal(role.positionDescription, '负责统计数据的收集、整理、分析等工作。');
+  assert.equal(role.degreeRequirement, '与最高学历相对应的学位');
+  assert.deepEqual(role.requirements, { politicalStatus: '不限' });
+  assert.equal(role.professionalTest, false);
+  assert.equal(role.physicalTest, undefined, 'a negative professional-test field does not establish a physical-test fact');
+  assert.equal(role.otherConditions, '本科及研究生阶段均有学历和学位；应届高校毕业生就读最高学历期间不得与任何单位存在劳动（录用、聘用）关系，不得缴纳社会保险。');
+  assert.equal(role.remarks, '基层一线，工作条件艰苦，山区需要值夜班。');
+  assert.equal(role.eligibilityComplete, false);
+  assert.equal(classifyPublicManagementMatch(role).status, 'manual-review', 'the broad management category must not count as explicit public-administration code coverage');
+  assert.equal(role.requirements.graduationStatus, undefined, 'a condition about graduates must not be promoted to a formal graduate-only requirement');
+  assert.equal(source?.level, 'secondary');
+  assert.ok(dataset.positions.some((row) => row.code === '241264902' && row.remarks === role.remarks));
+  assert.match(app, /const politicalStatus = position\.requirements\?\.politicalStatus \?\? position\.politicalStatus/);
+  assert.match(app, /label: '政治面貌', value: politicalStatus/);
 });
