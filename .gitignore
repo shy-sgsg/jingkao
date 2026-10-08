@@ -1,0 +1,11 @@
+/dist/
+/data/raw/study_plan.xlsx
+/backups/
+/.superpowers/
+/__pycache__/
+**/__pycache__/
+*.py[cod]
+*-personal-backup-*.json
+*-encrypted-backup-*.json
+.env*
+!.env.example

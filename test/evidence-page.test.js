@@ -1,0 +1,148 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
+import { installAccountBrowserAPIs, memoryLocalStorage, seedUnlockedTestAccount, unlockTestAccount } from './helpers/accountTestHarness.js';
+
+async function renderSourceApp(hash = '#/evidence') {
+  const dataset = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const listeners = {};
+  const root = { innerHTML: '' };
+  const documentElement = { dataset: {}, classList: { toggle() {} } };
+  globalThis.document = {
+    title: '',
+    documentElement,
+    querySelector(selector) {
+      return selector === '#root' ? root : { innerHTML: '', textContent: '', classList: { add() {}, remove() {} } };
+    },
+    addEventListener(type, handler) { listeners[type] = handler; },
+  };
+  globalThis.window = { addEventListener() {}, matchMedia: () => ({ matches: false }) };
+  globalThis.location = { hash };
+  globalThis.localStorage = memoryLocalStorage();
+  installAccountBrowserAPIs();
+  const accountId = await seedUnlockedTestAccount(globalThis.localStorage);
+  globalThis.fetch = async () => ({ ok: true, json: async () => dataset });
+  await import(`../src/app.js?evidence-test=${Date.now()}`);
+  for (let attempt = 0; attempt < 5 && !root.innerHTML; attempt += 1) await new Promise(setImmediate);
+  await unlockTestAccount(listeners, accountId);
+  return { root, listeners, documentElement };
+}
+
+test('the site renders source-linked annual findings and filters the year cards', async () => {
+  const { root, listeners, documentElement } = await renderSourceApp();
+
+  assert.equal(documentElement.dataset.density, 'comfortable');
+  assert.match(root.innerHTML, /先看清证据/);
+  assert.equal((root.innerHTML.match(/class="panel evidence-year-card/g) || []).length, 3);
+  assert.match(root.innerHTML, /93–97 岗/);
+  assert.match(root.innerHTML, /142–199 人/);
+  assert.match(root.innerHTML, /95 岗/);
+  assert.match(root.innerHTML, /class="evidence-source-notes"/);
+  assert.match(root.innerHTML, /华图.*页面列出95条昌平职位\/197人/s);
+  assert.match(root.innerHTML, /去除后恰为93岗\/142人/);
+  assert.match(root.innerHTML, /二手年度汇总，与其他镜像冲突/);
+
+  const selectedYearButton = {
+    dataset: { action: 'filter-evidence-year', year: '2025' },
+  };
+  await listeners.click({
+    target: { closest: (selector) => selector === '[data-action]' ? selectedYearButton : null },
+  });
+
+  assert.equal((root.innerHTML.match(/class="panel evidence-year-card/g) || []).length, 1);
+  assert.match(root.innerHTML, /90–91 岗/);
+  assert.match(root.innerHTML, /176–177 人/);
+  assert.match(root.innerHTML, /aria-pressed="true">2025<\/button>/);
+});
+
+test('the competition matrix directs annual reconciliation to the evidence center', async () => {
+  const { root } = await renderSourceApp('#/matrix');
+  const styles = await readFile(new URL('../src/styles.css', import.meta.url), 'utf8');
+
+  assert.match(root.innerHTML, /<h2>垂直\/驻区<\/h2>/);
+  assert.match(styles, /\.matrix-grid\s*\{[^}]*grid-template-columns:\s*repeat\(4,\s*minmax\(0,\s*1fr\)\)/);
+  assert.match(root.innerHTML, /class="panel conflict-panel"[\s\S]*?href="#\/evidence"[^>]*>查看覆盖与冲突中心/);
+  assert.doesNotMatch(root.innerHTML, /93–97 岗/);
+});
+
+test('the rendered position library exposes 2025 mirror coverage and the vertical-unit filter', async () => {
+  const { root } = await renderSourceApp('#/positions');
+  const dataset = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const years = [...root.innerHTML.matchAll(/<span class="year-pill">(\d{4})<\/span>/g)].map((match) => Number(match[1]));
+
+  assert.match(root.innerHTML, /2024 年收录 95 条镜像行，2025 年收录 91 条镜像明细/);
+  assert.match(root.innerHTML, /2026 年已收录 83 条逐岗镜像明细 \/ 130 人；华图分类页汇总 88 岗 \/ 138 人，仍有 5 岗 \/ 8 人尚未取得逐岗明细/);
+  assert.match(root.innerHTML, /option value="垂直\/驻区"/);
+  assert.match(root.innerHTML, /id="job-search"/);
+  assert.match(root.innerHTML, /显示 1–25 条，共 269 条/);
+  assert.ok(dataset.positions.some((position) => position.code === '221264501'), 'the searched role remains in the year-filterable dataset');
+  assert.match(root.innerHTML, /90 条明细在两处二手镜像逐字段一致/);
+  assert.ok(years.every((year, index) => index === 0 || years[index - 1] >= year), 'position rows should be grouped newest year first');
+});
+
+test('the evidence page displays secondary 2026 unit gaps without presenting them as imported positions', async () => {
+  const { root } = await renderSourceApp('#/evidence');
+
+  assert.match(root.innerHTML, /职位明细缺口定位/);
+  assert.match(root.innerHTML, /北京市昌平区人力资源和社会保障局/);
+  assert.match(root.innerHTML, /0 \/ 3 岗/);
+  assert.match(root.innerHTML, /1 \/ 2 岗/);
+  assert.match(root.innerHTML, /阳坊镇/);
+  assert.match(root.innerHTML, /北七家镇/);
+  assert.match(root.innerHTML, /二手线索/);
+  assert.match(root.innerHTML, /不补造职位记录，也不视为官方核验/);
+  assert.match(root.innerHTML, /京考职位网：2026昌平职位汇总/);
+  assert.match(root.innerHTML, /href="https:\/\/bj\.gwyzwb\.com\/changping\/"/);
+  assert.match(root.innerHTML, /多源数值一致/);
+});
+
+test('the evidence center lists dated position-level qualification snapshots with their third-party sources', async () => {
+  const { root } = await renderSourceApp('#/evidence');
+
+  assert.match(root.innerHTML, /岗位级资格审查快照/);
+  assert.match(root.innerHTML, /821261102/);
+  assert.match(root.innerHTML, /821263001/);
+  assert.match(root.innerHTML, /2025-11-19 18:00/);
+  assert.match(root.innerHTML, /424 人/);
+  assert.match(root.innerHTML, /150 人/);
+  assert.match(root.innerHTML, /eoffcn\.com\/kszx\/detail\/1903982\.html/);
+  assert.match(root.innerHTML, /资格审查通过人数.*不等同最终报名人数、缴费人数或实考人数/s);
+  assert.match(root.innerHTML, /岗位级资格审查快照[\s\S]*?覆盖 2 个岗位/);
+});
+
+test('the overview highlights the latest position snapshots without flooding the first screen with history rows', async () => {
+  const { root } = await renderSourceApp('#/overview');
+
+  assert.equal((root.innerHTML.match(/class="snapshot-row/g) || []).length, 6);
+  assert.match(root.innerHTML, /821261102 · 综合管理岗/);
+  assert.match(root.innerHTML, /821263001 · 文秘岗/);
+  assert.match(root.innerHTML, /424 人资格审查通过/);
+  assert.match(root.innerHTML, /150 人资格审查通过/);
+  assert.doesNotMatch(root.innerHTML, /44 人资格审查通过/);
+});
+
+test('the source page keeps the unmatched Fenbi joint-exam list out of Jingkao totals', async () => {
+  const { root } = await renderSourceApp('#/sources');
+
+  assert.match(root.innerHTML, /北京市2026年度考试录用公务员各职位报考人数查询/);
+  assert.match(root.innerHTML, /粉笔.*2026.*联考\/统考/);
+  assert.match(root.innerHTML, /135岗、158人/);
+  assert.match(root.innerHTML, /16位.*9位/);
+  assert.match(root.innerHTML, /暂不纳入京考职位或年度汇总/);
+  assert.match(root.innerHTML, /成公教育：北京京考昌平进面分数页（年度待核）/);
+  assert.match(root.innerHTML, /标题标为2025.*2026年北京公务员考试即将开始/);
+});
+
+test('the source page exposes evidence-based coverage without presenting mirror parity as official completeness', async () => {
+  const { root } = await renderSourceApp('#/sources');
+
+  assert.match(root.innerHTML, /当前研究完成度/);
+  assert.match(root.innerHTML, /年度职位样例与第三方汇总对照/);
+  assert.match(root.innerHTML, /2024[\s\S]*?95 \/ 95 条/);
+  assert.match(root.innerHTML, /2025[\s\S]*?91 \/ 91 条/);
+  assert.match(root.innerHTML, /2026[\s\S]*?83 \/ 88 条/);
+  assert.match(root.innerHTML, /31 条具名分数记录[\s\S]*?部分样本/);
+  assert.match(root.innerHTML, /年度官方职位分母未知/);
+  assert.match(root.innerHTML, /条数相同不代表职位代码集合一致/);
+  assert.doesNotMatch(root.innerHTML, /官方覆盖率[：:]\s*100%/);
+});

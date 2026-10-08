@@ -1,0 +1,5903 @@
+[
+  {
+    "year": 2024,
+    "code": "121256001",
+    "unit": "中共北京市昌平区委办公室",
+    "title": "综合调研岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "硕士研究生及以上",
+    "majorText": "研究生：应用经济学（0202），金融（0251），法学（0301），政治学（0302），社会学（0303），马克思主义理论（0305），法律（0351），社会工作（0352），中国语言文学（0501），新闻传播学（0503），新闻与传播（0552），城乡规划学（0833），城乡规划（0853），生物与医药（0860），公共管理学（1204），公共管理（1252），国家安全学（1402）",
+    "majorCriteria": { "graduate": ["0202", "0251", "0301", "0302", "0303", "0305", "0351", "0352", "0501", "0503", "0552", "0833", "0853", "0860", "1204", "1252", "1402"] },
+    "eligibilityText": "仅录入目前可见的专业与学历片段；其余报考条件需回到当年官方职位表核验。",
+    "sourceLevel": "secondary",
+    "verification": "待官方逐码复核",
+    "sources": ["huatu-2024-list"]
+  },
+  {
+    "year": 2024,
+    "code": "221256601",
+    "unit": "北京市昌平区民政局",
+    "title": "综合管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "仅限硕士研究生",
+    "majorText": "研究生：社会学（0303），中共党史党建学（0307），法律（0351），法学（0301），社会工作（0352），公共管理（1252）",
+    "majorCriteria": { "graduate": ["0303", "0307", "0351", "0301", "0352", "1252"] },
+    "eligibilityText": "完整专业范围及其他限制条件待官方职位表核验。",
+    "sourceLevel": "secondary",
+    "verification": "待官方逐码复核",
+    "sources": ["huatu-2024-list"]
+  },
+  {
+    "year": 2024,
+    "code": "121258401",
+    "unit": "中共北京市昌平区纪律检查委员会、北京市昌平区监察委员会",
+    "title": "纪检监察岗",
+    "orgType": "区直",
+    "jobType": "纪检监察",
+    "recruitCount": 2,
+    "education": "本科及以上",
+    "majorText": "本科：金融学类（0203），法学类（0301），中国语言文学类（0501），侦查学（030602K），技术侦查学（030616TK），人工智能（080717T），网络安全与执法（083108TK）研究生：金融（0251），法学（0301），法律（0351），中国语言文学（0501），公安学（0306），公安技术（0838），智能科学与技术（1405）",
+    "majorCriteria": {
+      "undergraduate": [
+        "0203",
+        "0301",
+        "0501",
+        "030602K",
+        "030616TK",
+        "080717T",
+        "083108TK"
+      ],
+      "graduate": [
+        "0251",
+        "0301",
+        "0351",
+        "0501",
+        "0306",
+        "0838",
+        "1405"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "221256301",
+    "unit": "北京市昌平区发展和改革委员会",
+    "title": "综合管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 2,
+    "education": "硕士研究生及以上",
+    "majorText": "研究生：应用经济学（0202），数字经济（0258）",
+    "majorCriteria": {
+      "graduate": [
+        "0202",
+        "0258"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "221256401",
+    "unit": "北京市昌平区教育委员会",
+    "title": "中小学教育教学管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "不限",
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "221256501",
+    "unit": "北京市昌平区科学技术委员会",
+    "title": "科技服务管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 2,
+    "education": "硕士研究生及以上",
+    "majorText": "研究生：应用经济学（0202），金融（0251），法学（0301），法律（0351），文学（05），计算机科学与技术（0812），软件工程（0835），生物工程（0836），生物与医药（0860），会计（1253），智能科学与技术（1405），会计学（120201）",
+    "majorCriteria": {
+      "graduate": [
+        "0202",
+        "0251",
+        "0301",
+        "0351",
+        "05",
+        "0812",
+        "0835",
+        "0836",
+        "0860",
+        "1253",
+        "1405",
+        "120201"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "221256701",
+    "unit": "北京市昌平区财政局",
+    "title": "预算管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 2,
+    "education": "仅限本科",
+    "majorText": "本科：工商管理（120201K），市场营销（120202），会计学（120203K），财务管理（120204），审计学（120207）",
+    "majorCriteria": {
+      "undergraduate": [
+        "120201K",
+        "120202",
+        "120203K",
+        "120204",
+        "120207"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "221256702",
+    "unit": "北京市昌平区财政局",
+    "title": "政府债务管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "仅限硕士研究生",
+    "majorText": "研究生：金融（0251），管理学（12）",
+    "majorCriteria": {
+      "graduate": [
+        "0251",
+        "12"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "221256901",
+    "unit": "北京市昌平区住房和城乡建设委员会",
+    "title": "建筑行业管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：土木工程（081001），给排水科学与工程（081003），建筑学（082801）研究生：建筑学（0813），土木工程（0814），建筑（0851）",
+    "majorCriteria": {
+      "undergraduate": [
+        "081001",
+        "081003",
+        "082801"
+      ],
+      "graduate": [
+        "0813",
+        "0814",
+        "0851"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "221256902",
+    "unit": "北京市昌平区住房和城乡建设委员会",
+    "title": "房屋安全管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：金融学（020301K），土木工程（081001），地理信息科学（070504），工程管理（120103），物业管理（120209）研究生：金融（0251），土木工程（0814），管理科学与工程（1201），工程管理（1256）",
+    "majorCriteria": {
+      "undergraduate": [
+        "020301K",
+        "081001",
+        "070504",
+        "120103",
+        "120209"
+      ],
+      "graduate": [
+        "0251",
+        "0814",
+        "1201",
+        "1256"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "221257001",
+    "unit": "北京市昌平区城市管理委员会",
+    "title": "燃气行业管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "仅限本科",
+    "majorText": "本科：能源动力类（0805），电气类（0806）",
+    "majorCriteria": {
+      "undergraduate": [
+        "0805",
+        "0806"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "221257101",
+    "unit": "北京市昌平区交通局",
+    "title": "综合管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 2,
+    "education": "本科及以上",
+    "majorText": "本科：秘书学（050107T），新闻学（050301），交通工程（081802），城乡规划（082802），信息管理与信息系统（120102），人力资源管理（120206），行政管理（120402）研究生：新闻传播学（0503），交通运输工程（0823），城乡规划学（0833），城乡规划（0853），交通运输（0861），管理科学与工程（1201），公共管理学（1204），公共管理（1252）",
+    "majorCriteria": {
+      "undergraduate": [
+        "050107T",
+        "050301",
+        "081802",
+        "082802",
+        "120102",
+        "120206",
+        "120402"
+      ],
+      "graduate": [
+        "0503",
+        "0823",
+        "0833",
+        "0853",
+        "0861",
+        "1201",
+        "1204",
+        "1252"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "221257201",
+    "unit": "北京市昌平区水务局",
+    "title": "供排水管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 2,
+    "education": "本科及以上",
+    "majorText": "本科：土木类（0810），水利类（0811），环境科学与工程类（0825）研究生：土木工程（0814），水利工程（0815），环境科学与工程（0830），资源与环境（0857），土木水利（0859）",
+    "majorCriteria": {
+      "undergraduate": [
+        "0810",
+        "0811",
+        "0825"
+      ],
+      "graduate": [
+        "0814",
+        "0815",
+        "0830",
+        "0857",
+        "0859"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "221257401",
+    "unit": "北京市昌平区文化和旅游局",
+    "title": "文旅融合政策研究岗",
+    "orgType": "区直",
+    "jobType": "专业岗位",
+    "recruitCount": 2,
+    "education": "硕士研究生及以上",
+    "majorText": "研究生：应用经济学（0202），考古学（0601），中国史（0602），博物馆（0651），旅游管理（1254）",
+    "majorCriteria": {
+      "graduate": [
+        "0202",
+        "0601",
+        "0602",
+        "0651",
+        "1254"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "221257601",
+    "unit": "北京市昌平区审计局",
+    "title": "审计岗",
+    "orgType": "区直",
+    "jobType": "财务审计",
+    "recruitCount": 2,
+    "education": "本科及以上",
+    "majorText": "本科：通信工程（080703），计算机科学与技术（080901），土木工程（081001），会计学（120203K），财务管理（120204），审计学（120207）研究生：计算机科学与技术（0812），会计学（120201），会计（1253），审计（1257）",
+    "majorCriteria": {
+      "undergraduate": [
+        "080703",
+        "080901",
+        "081001",
+        "120203K",
+        "120204",
+        "120207"
+      ],
+      "graduate": [
+        "0812",
+        "120201",
+        "1253",
+        "1257"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "221257701",
+    "unit": "北京市昌平区体育局",
+    "title": "综合管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：法学类（0301），政治学类（0302），社会学类（0303），体育学类（0402）研究生：法学（0301），政治学（0302），社会学（0303），体育学（0403），法律（0351）",
+    "majorCriteria": {
+      "undergraduate": [
+        "0301",
+        "0302",
+        "0303",
+        "0402"
+      ],
+      "graduate": [
+        "0301",
+        "0302",
+        "0303",
+        "0403",
+        "0351"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "221257901",
+    "unit": "北京市昌平区园林绿化局",
+    "title": "行业管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 2,
+    "education": "本科或硕士研究生",
+    "majorText": "本科：城乡规划（082802），风景园林（082803），水土保持与荒漠化防治（090203），国家公园建设与管理（090207TK），林学（090501），园林（090502），森林保护（090503）研究生：森林培育（090702），森林经理学（090704），林业工程（0829），城乡规划学（0833），城乡规划（0853），风景园林（0862）",
+    "majorCriteria": {
+      "undergraduate": [
+        "082802",
+        "082803",
+        "090203",
+        "090207TK",
+        "090501",
+        "090502",
+        "090503"
+      ],
+      "graduate": [
+        "090702",
+        "090704",
+        "0829",
+        "0833",
+        "0853",
+        "0862"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "221258001",
+    "unit": "北京市昌平区国防动员办公室",
+    "title": "综合管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 2,
+    "education": "本科及以上",
+    "majorText": "本科：法学（030101K），城市地下空间工程（081005T），建筑学（082801），城乡规划（082802）研究生：法学（0301），法律（0351），建筑学（0813），建筑（0851），土木工程（0814），战时政治工作（1155）",
+    "majorCriteria": {
+      "undergraduate": [
+        "030101K",
+        "081005T",
+        "082801",
+        "082802"
+      ],
+      "graduate": [
+        "0301",
+        "0351",
+        "0813",
+        "0851",
+        "0814",
+        "1155"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "231257102",
+    "unit": "北京市昌平区交通局",
+    "title": "行政执法岗",
+    "orgType": "区直",
+    "jobType": "行政执法",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：法学（030101K），秘书学（050107T），新闻学（050301），交通运输（081801），交通管理工程（083103TK），信息管理与信息系统（120102），交通管理（120407T）研究生：法学（0301），法律（0351），新闻传播学（0503），交通运输（0861），管理科学与工程（1201）",
+    "majorCriteria": {
+      "undergraduate": [
+        "030101K",
+        "050107T",
+        "050301",
+        "081801",
+        "083103TK",
+        "120102",
+        "120407T"
+      ],
+      "graduate": [
+        "0301",
+        "0351",
+        "0503",
+        "0861",
+        "1201"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "231257103",
+    "unit": "北京市昌平区交通局",
+    "title": "行政执法岗",
+    "orgType": "区直",
+    "jobType": "行政执法",
+    "recruitCount": 2,
+    "education": "本科及以上",
+    "majorText": "本科：法学（030101K），交通运输（081801），交通工程（081802），城乡规划（082802），交通管理工程（083103TK），交通管理（120407T）研究生：法学（0301），法律（0351），交通运输工程（0823），城乡规划学（0833），城乡规划（0853），交通运输（0861）",
+    "majorCriteria": {
+      "undergraduate": [
+        "030101K",
+        "081801",
+        "081802",
+        "082802",
+        "083103TK",
+        "120407T"
+      ],
+      "graduate": [
+        "0301",
+        "0351",
+        "0823",
+        "0833",
+        "0853",
+        "0861"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "231257301",
+    "unit": "北京市昌平区农业农村局",
+    "title": "综合执法岗",
+    "orgType": "区直",
+    "jobType": "行政执法",
+    "recruitCount": 2,
+    "education": "本科及以上",
+    "majorText": "本科：法学（03），农学（09）研究生：法学（03），农学（09）",
+    "majorCriteria": {
+      "undergraduate": [
+        "03",
+        "09"
+      ],
+      "graduate": [
+        "03",
+        "09"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "231257501",
+    "unit": "北京市昌平区市场监督管理局",
+    "title": "综合管理岗二",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "仅限本科",
+    "majorText": "本科：法学（030101K），机械工程（080201），材料科学与工程（080401），电气类（0806），自动化类（0808），计算机类（0809）",
+    "majorCriteria": {
+      "undergraduate": [
+        "030101K",
+        "080201",
+        "080401",
+        "0806",
+        "0808",
+        "0809"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "231257502",
+    "unit": "北京市昌平区市场监督管理局",
+    "title": "综合管理岗一",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "仅限本科",
+    "majorText": "本科：法学（030101K），化工与制药类（0813），生物医学工程（082601），食品科学与工程类（0827），预防医学（100401K），食品卫生与营养学（100402），药学类（1007）",
+    "majorCriteria": {
+      "undergraduate": [
+        "030101K",
+        "0813",
+        "082601",
+        "0827",
+        "100401K",
+        "100402",
+        "1007"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "231257503",
+    "unit": "北京市昌平区市场监督管理局",
+    "title": "综合管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：法学（030101K），机械工程（080201），计算机类（0809），化工与制药类（0813），食品科学与工程类（0827），药学类（1007），工商管理类（1202）研究生：法学（0301），法律（0351），机械工程（0802），计算机科学与技术（0812），食品科学与工程（0832），材料与化工（0856），药学（1007），工商管理学（1202）",
+    "majorCriteria": {
+      "undergraduate": [
+        "030101K",
+        "080201",
+        "0809",
+        "0813",
+        "0827",
+        "1007",
+        "1202"
+      ],
+      "graduate": [
+        "0301",
+        "0351",
+        "0802",
+        "0812",
+        "0832",
+        "0856",
+        "1007",
+        "1202"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "231257504",
+    "unit": "北京市昌平区市场监督管理局",
+    "title": "综合管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：法学（030101K），社会工作（030302），机械工程（080201），电子信息类（0807），计算机类（0809），化工与制药类（0813），食品科学与工程类（0827），药学类（1007）研究生：法学（0301），社会学（0303），法律（0351），机械工程（0802），计算机科学与技术（0812），食品科学与工程（0832），电子信息（0854），材料与化工（0856），药学（1007）",
+    "majorCriteria": {
+      "undergraduate": [
+        "030101K",
+        "030302",
+        "080201",
+        "0807",
+        "0809",
+        "0813",
+        "0827",
+        "1007"
+      ],
+      "graduate": [
+        "0301",
+        "0303",
+        "0351",
+        "0802",
+        "0812",
+        "0832",
+        "0854",
+        "0856",
+        "1007"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "231257505",
+    "unit": "北京市昌平区市场监督管理局",
+    "title": "综合管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "仅限本科",
+    "majorText": "本科：法学（030101K），材料科学与工程（080401），电子信息类（0807），生物医学工程（082601），化工与制药类（0813），食品科学与工程类（0827），预防医学（100401K），食品卫生与营养学（100402），药学类（1007）",
+    "majorCriteria": {
+      "undergraduate": [
+        "030101K",
+        "080401",
+        "0807",
+        "082601",
+        "0813",
+        "0827",
+        "100401K",
+        "100402",
+        "1007"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "231257506",
+    "unit": "北京市昌平区市场监督管理局",
+    "title": "综合管理岗一",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "仅限本科",
+    "majorText": "本科：法学（030101K），化工与制药类（0813），生物医学工程（082601），食品科学与工程类（0827），预防医学（100401K），食品卫生与营养学（100402），药学类（1007）",
+    "majorCriteria": {
+      "undergraduate": [
+        "030101K",
+        "0813",
+        "082601",
+        "0827",
+        "100401K",
+        "100402",
+        "1007"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "231257507",
+    "unit": "北京市昌平区市场监督管理局",
+    "title": "综合管理岗二",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "仅限本科",
+    "majorText": "本科：法学（030101K），材料科学与工程（080401），电子信息类（0807），计算机类（0809）",
+    "majorCriteria": {
+      "undergraduate": [
+        "030101K",
+        "080401",
+        "0807",
+        "0809"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "231257508",
+    "unit": "北京市昌平区市场监督管理局",
+    "title": "综合管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "仅限本科",
+    "majorText": "本科：法学（030101K），材料科学与工程（080401），化工与制药类（0813），生物医学工程（082601），食品科学与工程类（0827），预防医学（100401K），食品卫生与营养学（100402），药学类（1007），工商管理类（1202）",
+    "majorCriteria": {
+      "undergraduate": [
+        "030101K",
+        "080401",
+        "0813",
+        "082601",
+        "0827",
+        "100401K",
+        "100402",
+        "1007",
+        "1202"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "231257509",
+    "unit": "北京市昌平区市场监督管理局",
+    "title": "综合管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "仅限本科",
+    "majorText": "本科：法学（030101K），计算机类（0809），化工与制药类（0813），食品科学与工程类（0827），药学类（1007），工商管理类（1202）",
+    "majorCriteria": {
+      "undergraduate": [
+        "030101K",
+        "0809",
+        "0813",
+        "0827",
+        "1007",
+        "1202"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "231258201",
+    "unit": "北京市昌平区城市管理委员会",
+    "title": "行政执法岗",
+    "orgType": "区直",
+    "jobType": "行政执法",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：管理学（12）研究生：管理学（12）",
+    "majorCriteria": {
+      "undergraduate": [
+        "12"
+      ],
+      "graduate": [
+        "12"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "231258202",
+    "unit": "北京市昌平区城市管理委员会",
+    "title": "行政执法岗",
+    "orgType": "区直",
+    "jobType": "行政执法",
+    "recruitCount": 1,
+    "education": "仅限本科",
+    "majorText": "本科：电子信息类（0807），计算机类（0809）",
+    "majorCriteria": {
+      "undergraduate": [
+        "0807",
+        "0809"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "232502901",
+    "unit": "北京市公安局昌平分局",
+    "title": "一线执法岗二",
+    "orgType": "垂直/驻区",
+    "jobType": "行政执法",
+    "recruitCount": 6,
+    "education": "本科及以上",
+    "majorText": "不限",
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "232502902",
+    "unit": "北京市公安局昌平分局",
+    "title": "一线执法岗一",
+    "orgType": "垂直/驻区",
+    "jobType": "行政执法",
+    "recruitCount": 49,
+    "education": "本科及以上",
+    "majorText": "不限",
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "421258301",
+    "unit": "中国人民政治协商会议北京市昌平区委员会",
+    "title": "综合管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "硕士研究生及以上",
+    "majorText": "研究生：法学（03），哲学（01），体育学（0403），建筑学（0813），土木工程（0814），水利工程（0815），农业工程（0828），林业工程（0829），环境科学与工程（0830）",
+    "majorCriteria": {
+      "graduate": [
+        "03",
+        "01",
+        "0403",
+        "0813",
+        "0814",
+        "0815",
+        "0828",
+        "0829",
+        "0830"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "526011201",
+    "unit": "北京市昌平区人民法院",
+    "title": "法官助理岗",
+    "orgType": "区直",
+    "jobType": "法院岗位",
+    "recruitCount": 16,
+    "education": "硕士研究生及以上",
+    "majorText": "研究生：法学（0301），法律（0351）",
+    "majorCriteria": {
+      "graduate": [
+        "0301",
+        "0351"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "526011202",
+    "unit": "北京市昌平区人民法院",
+    "title": "司法警察岗",
+    "orgType": "区直",
+    "jobType": "警务岗位",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：法学类（0301），公安学类（0306）研究生：法学（0301），公安学（0306），法律（0351），警务（0353）",
+    "majorCriteria": {
+      "undergraduate": [
+        "0301",
+        "0306"
+      ],
+      "graduate": [
+        "0301",
+        "0306",
+        "0351",
+        "0353"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "526011203",
+    "unit": "北京市昌平区人民法院",
+    "title": "司法警察岗",
+    "orgType": "区直",
+    "jobType": "警务岗位",
+    "recruitCount": 2,
+    "education": "本科及以上",
+    "majorText": "本科：法学类（0301），公安学类（0306）研究生：法学（0301），公安学（0306），法律（0351），警务（0353）",
+    "majorCriteria": {
+      "undergraduate": [
+        "0301",
+        "0306"
+      ],
+      "graduate": [
+        "0301",
+        "0306",
+        "0351",
+        "0353"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "625013201",
+    "unit": "北京市昌平区人民检察院",
+    "title": "检察技术岗",
+    "orgType": "区直",
+    "jobType": "检察岗位",
+    "recruitCount": 1,
+    "education": "本科或硕士研究生",
+    "majorText": "本科：计算机科学与技术（080901），软件工程（080902），数据科学与大数据技术（080910T）研究生：计算机科学与技术（0812），软件工程（0835）",
+    "majorCriteria": {
+      "undergraduate": [
+        "080901",
+        "080902",
+        "080910T"
+      ],
+      "graduate": [
+        "0812",
+        "0835"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "625013202",
+    "unit": "北京市昌平区人民检察院",
+    "title": "检察业务岗",
+    "orgType": "区直",
+    "jobType": "检察岗位",
+    "recruitCount": 10,
+    "education": "硕士研究生及以上",
+    "majorText": "研究生：法学（0301），公安学（0306），法律（0351）",
+    "majorCriteria": {
+      "graduate": [
+        "0301",
+        "0306",
+        "0351"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "625013203",
+    "unit": "北京市昌平区人民检察院",
+    "title": "检察综合岗",
+    "orgType": "区直",
+    "jobType": "检察岗位",
+    "recruitCount": 2,
+    "education": "本科或硕士研究生",
+    "majorText": "本科：法学类（0301）研究生：法学（0301），法律（0351），中国语言文学（0501），新闻传播学（0503），新闻与传播（0552）",
+    "majorCriteria": {
+      "undergraduate": [
+        "0301"
+      ],
+      "graduate": [
+        "0301",
+        "0351",
+        "0501",
+        "0503",
+        "0552"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "625013204",
+    "unit": "北京市昌平区人民检察院",
+    "title": "司法警察岗",
+    "orgType": "区直",
+    "jobType": "警务岗位",
+    "recruitCount": 1,
+    "education": "本科或硕士研究生",
+    "majorText": "不限",
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "821256201",
+    "unit": "中共北京市昌平区委员会党校",
+    "title": "培训管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：哲学（010101），经济学（020101），法学（030101K），马克思主义理论（030504T），教育学（040101）研究生：哲学（0101），理论经济学（0201），法学（0301），政治学（0302），马克思主义理论（0305），教育学（0401）",
+    "majorCriteria": {
+      "undergraduate": [
+        "010101",
+        "020101",
+        "030101K",
+        "030504T",
+        "040101"
+      ],
+      "graduate": [
+        "0101",
+        "0201",
+        "0301",
+        "0302",
+        "0305",
+        "0401"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "831256101",
+    "unit": "中共北京市昌平区委老干部局",
+    "title": "财会岗",
+    "orgType": "区直",
+    "jobType": "财务审计",
+    "recruitCount": 2,
+    "education": "硕士研究生及以上",
+    "majorText": "研究生：会计学（120201），会计（1253），审计（1257），应用经济学（0202），金融（0251）",
+    "majorCriteria": {
+      "graduate": [
+        "120201",
+        "1253",
+        "1257",
+        "0202",
+        "0251"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "831256801",
+    "unit": "北京市昌平区人力资源和社会保障局",
+    "title": "财务岗",
+    "orgType": "区直",
+    "jobType": "财务审计",
+    "recruitCount": 2,
+    "education": "仅限本科",
+    "majorText": "本科：经济学类（0201），金融学类（0203），会计学（120203K），财务管理（120204），审计学（120207）",
+    "majorCriteria": {
+      "undergraduate": [
+        "0201",
+        "0203",
+        "120203K",
+        "120204",
+        "120207"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "831256802",
+    "unit": "北京市昌平区人力资源和社会保障局",
+    "title": "稽核岗",
+    "orgType": "区直",
+    "jobType": "其他岗位",
+    "recruitCount": 2,
+    "education": "本科及以上",
+    "majorText": "本科：法学类（0301），工商管理类（1202），公共管理类（1204）研究生：金融（0251），保险（0255），法学（0301），法律（0351），管理学（12）",
+    "majorCriteria": {
+      "undergraduate": [
+        "0301",
+        "1202",
+        "1204"
+      ],
+      "graduate": [
+        "0251",
+        "0255",
+        "0301",
+        "0351",
+        "12"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "831256803",
+    "unit": "北京市昌平区人力资源和社会保障局",
+    "title": "信息建设岗",
+    "orgType": "区直",
+    "jobType": "其他岗位",
+    "recruitCount": 1,
+    "education": "仅限本科",
+    "majorText": "本科：计算机科学与技术（080901），软件工程（080902），网络工程（080903），信息安全（080904K），数字媒体技术（080906）",
+    "majorCriteria": {
+      "undergraduate": [
+        "080901",
+        "080902",
+        "080903",
+        "080904K",
+        "080906"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "831256804",
+    "unit": "北京市昌平区人力资源和社会保障局",
+    "title": "业务经办岗",
+    "orgType": "区直",
+    "jobType": "其他岗位",
+    "recruitCount": 2,
+    "education": "本科及以上",
+    "majorText": "本科：经济学类（0201），金融学类（0203），会计学（120203K），财务管理（120204），审计学（120207）研究生：经济学（02），工商管理学（1202），会计（1253），审计（1257）",
+    "majorCriteria": {
+      "undergraduate": [
+        "0201",
+        "0203",
+        "120203K",
+        "120204",
+        "120207"
+      ],
+      "graduate": [
+        "02",
+        "1202",
+        "1253",
+        "1257"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "831256805",
+    "unit": "北京市昌平区人力资源和社会保障局",
+    "title": "综合宣传岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "仅限本科",
+    "majorText": "本科：汉语言文学（050101），应用语言学（050106T），新闻学（050301），广播电视学（050302），网络与新媒体（050306T）",
+    "majorCriteria": {
+      "undergraduate": [
+        "050101",
+        "050106T",
+        "050301",
+        "050302",
+        "050306T"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "831256806",
+    "unit": "北京市昌平区人力资源和社会保障局",
+    "title": "综合业务岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "仅限本科",
+    "majorText": "本科：汉语言文学（050101），应用语言学（050106T），秘书学（050107T），档案学（120502），信息资源管理（120503）",
+    "majorCriteria": {
+      "undergraduate": [
+        "050101",
+        "050106T",
+        "050107T",
+        "120502",
+        "120503"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "831256807",
+    "unit": "北京市昌平区人力资源和社会保障局",
+    "title": "信息化管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：电子信息工程（080701），计算机科学与技术（080901），软件工程（080902），数字媒体技术（080906），数据科学与大数据技术（080910T）研究生：信息与通信工程（0810），计算机科学与技术（0812），软件工程（0835）",
+    "majorCriteria": {
+      "undergraduate": [
+        "080701",
+        "080901",
+        "080902",
+        "080906",
+        "080910T"
+      ],
+      "graduate": [
+        "0810",
+        "0812",
+        "0835"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "831256808",
+    "unit": "北京市昌平区人力资源和社会保障局",
+    "title": "综合业务受理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：法学类（0301），中国语言文学类（0501），基础医学类（1001），临床医学类（1002），中西医结合类（1006），工商管理（120201K），人力资源管理（120206），劳动关系（120211T）研究生：法学（0301），法律（0351），中国语言文学（0501），工商管理学（1202），基础医学（1001），临床医学（1002），中西医结合（1006）",
+    "majorCriteria": {
+      "undergraduate": [
+        "0301",
+        "0501",
+        "1001",
+        "1002",
+        "1006",
+        "120201K",
+        "120206",
+        "120211T"
+      ],
+      "graduate": [
+        "0301",
+        "0351",
+        "0501",
+        "1202",
+        "1001",
+        "1002",
+        "1006"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "831256809",
+    "unit": "北京市昌平区人力资源和社会保障局",
+    "title": "调解岗",
+    "orgType": "区直",
+    "jobType": "其他岗位",
+    "recruitCount": 1,
+    "education": "仅限本科",
+    "majorText": "本科：法学类（0301），人力资源管理（120206），劳动与社会保障（120403）",
+    "majorCriteria": {
+      "undergraduate": [
+        "0301",
+        "120206",
+        "120403"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "831257202",
+    "unit": "北京市昌平区水务局",
+    "title": "工程质量和安全管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 2,
+    "education": "本科及以上",
+    "majorText": "本科：土木类（0810），水利类（0811），环境科学与工程类（0825），安全科学与工程类（0829）研究生：土木工程（0814），水利工程（0815），环境科学与工程（0830），安全科学与工程（0837），资源与环境（0857），土木水利（0859）",
+    "majorCriteria": {
+      "undergraduate": [
+        "0810",
+        "0811",
+        "0825",
+        "0829"
+      ],
+      "graduate": [
+        "0814",
+        "0815",
+        "0830",
+        "0837",
+        "0857",
+        "0859"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2024,
+    "code": "831257801",
+    "unit": "北京市昌平区统计局",
+    "title": "综合统计岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "仅限本科",
+    "majorText": "本科：统计学（071201），应用统计学（071202），电子与计算机工程（080909T），数据科学与大数据技术（080910T），会计学（120203K）",
+    "majorCriteria": {
+      "undergraduate": [
+        "071201",
+        "071202",
+        "080909T",
+        "080910T",
+        "120203K"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "华图2024昌平职位列表镜像明细；未与官方职位表逐代码核验",
+    "eligibilityText": "镜像列表仅提供职位名称、学历、专业与招录数字段；其他资格条件需以官方职位表核验。",
+    "sources": [
+      "huatu-2024-list"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "221264701",
+    "unit": "北京市昌平区水务局",
+    "title": "综合行政岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "department": "办公室",
+    "organizationNature": "行政机关",
+    "positionLevel": "区级机关",
+    "positionDescription": "负责文电、会务、机要、档案、文稿等工作。",
+    "recruitCount": 2,
+    "education": "硕士研究生及以上",
+    "degreeRequirement": "与最高学历相对应的学位",
+    "majorText": "研究生：哲学（0101），法学（0301），政治学（0302），社会学（0303），马克思主义理论（0305），法律（0351），社会工作（0352），中国语言文学（0501），新闻传播学（0503），新闻与传播（0552），管理科学与工程（1201），公共管理学（1204），信息资源管理（1205），公共管理（1252），图书情报（1255），工程管理（1256）",
+    "majorCriteria": { "graduate": ["0101", "0301", "0302", "0303", "0305", "0351", "0352", "0501", "0503", "0552", "1201", "1204", "1205", "1252", "1255", "1256"] },
+    "requirements": { "politicalStatus": "中共党员", "graduationStatus": "应届毕业生", "graduationYear": ["2025"] },
+    "eligibilityComplete": false,
+    "otherConditions": "按照男女比例1:1录取；本科及研究生阶段均有学历和学位；考生需以最高学历对应的专业报考；应届毕业生就读最高学历期间不得与任何单位存在劳动（录用、聘用）关系，不得缴纳社会保险。",
+    "professionalTest": false,
+    "interviewRatio": "3:1",
+    "newGraduateYear": 2025,
+    "remarks": "具有较强的文字功底、沟通协调、统筹策划和理论研究能力。",
+    "consultPhone": "010-89748584 / 010-80106267",
+    "unitWebsite": "https://www.bjchp.gov.cn/",
+    "eligibilityText": "中共党员；限2025年应届毕业生。本科及研究生阶段的学历学位、最高学历对应专业、在校劳动关系与社保条件仍须逐项核验。",
+    "sourceLevel": "secondary",
+    "crossVerified": true,
+    "verification": "两处二手镜像职位列表字段逐项一致；详情来源更丰富但独立性未验证，官方表仍待核",
+    "sources": ["gwyzwb-2025-example", "huatu-2025-list", "gwyzwb-2025-org-21"]
+  },
+  {
+    "year": 2025,
+    "code": "231266001",
+    "unit": "北京市昌平区天通苑南街道办事处",
+    "title": "综合管理岗",
+    "orgType": "街道",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "不限",
+    "requirements": { "graduationStatus": "应届毕业生" },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "interviewRatio": "3:1",
+    "eligibilityText": "华图详情标注应届毕业生就读最高学历期间不得与任何单位存在劳动（录用、聘用）关系、不得缴纳社会保险；职位备注为基层任务较重、经常值班加班，并写有“适合男性报考”，这是适岗提示而非职位表中的性别硬性限制。完整条件仍待官方职位表逐码核验。",
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像职位列表字段逐项一致；华图详情字段更丰富，官方表仍待核",
+    "sources": ["huatu-2025-job-231266001", "huatu-2025-list", "gwyzwb-2025-org-33"]
+  },
+  {
+    "year": 2025,
+    "code": "232502601",
+    "unit": "北京市公安局昌平分局",
+    "title": "特殊专业岗",
+    "orgType": "垂直/驻区",
+    "jobType": "专业岗位",
+    "recruitCount": 5,
+    "education": "本科及以上",
+    "majorText": "本科：数据科学与大数据技术（080910T），信息与计算科学（070102），土木工程（081001）研究生：计算机科学与技术（0812），网络空间安全（0839），土木工程（0814），土木工程（085901）",
+    "majorCriteria": {
+      "undergraduate": [
+        "080910T",
+        "070102",
+        "081001"
+      ],
+      "graduate": [
+        "0812",
+        "0839",
+        "0814",
+        "085901"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-1"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "232502602",
+    "unit": "北京市公安局昌平分局",
+    "title": "一线执法岗",
+    "orgType": "垂直/驻区",
+    "jobType": "行政执法",
+    "recruitCount": 35,
+    "education": "本科及以上",
+    "majorText": "不限",
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-1"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "823106001",
+    "unit": "北京市规划和自然资源委员会昌平分局",
+    "title": "不动产登记岗",
+    "orgType": "垂直/驻区",
+    "jobType": "专业岗位",
+    "recruitCount": 2,
+    "education": "本科及以上",
+    "majorText": "本科：土木类（0810），建筑类（0828），城市管理（120405），自然资源登记与管理（120417T）研究生：建筑学（0813），土木工程（0814），城乡规划学（0833），建筑（0851），城乡规划（0853），土木水利（0859），环境科学与工程（0830），资源与环境（0857）",
+    "majorCriteria": {
+      "undergraduate": [
+        "0810",
+        "0828",
+        "120405",
+        "120417T"
+      ],
+      "graduate": [
+        "0813",
+        "0814",
+        "0833",
+        "0851",
+        "0853",
+        "0859",
+        "0830",
+        "0857"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-2"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "223106002",
+    "unit": "北京市规划和自然资源委员会昌平分局",
+    "title": "财务管理岗",
+    "orgType": "垂直/驻区",
+    "jobType": "财务审计",
+    "recruitCount": 1,
+    "education": "硕士研究生及以上",
+    "majorText": "研究生：审计（1257），会计（1253），会计学（120201），财政学（020203）",
+    "majorCriteria": {
+      "graduate": [
+        "1257",
+        "1253",
+        "120201",
+        "020203"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-2"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "223106003",
+    "unit": "北京市规划和自然资源委员会昌平分局",
+    "title": "执法岗",
+    "orgType": "垂直/驻区",
+    "jobType": "行政执法",
+    "recruitCount": 2,
+    "education": "本科及以上",
+    "majorText": "本科：土木类（0810），建筑类（0828），城市管理（120405），应急技术与管理（082902T），安全生产监管（082904T）研究生：建筑学（0813），土木工程（0814），城乡规划学（0833），建筑（0851），城乡规划（0853），土木水利（0859），环境科学与工程（0830），资源与环境（0857）",
+    "majorCriteria": {
+      "undergraduate": [
+        "0810",
+        "0828",
+        "120405",
+        "082902T",
+        "082904T"
+      ],
+      "graduate": [
+        "0813",
+        "0814",
+        "0833",
+        "0851",
+        "0853",
+        "0859",
+        "0830",
+        "0857"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-2"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "829908101",
+    "unit": "北京市交通委员会昌平公路分局",
+    "title": "工程管理岗",
+    "orgType": "垂直/驻区",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "本科或硕士研究生",
+    "majorText": "本科：土木工程（081001），给排水科学与工程（081003），交通工程（081802），工程管理（120103），道路桥梁与渡河工程（081006T），交通设备与控制工程（081806T）研究生：岩土工程（081401），结构工程（081402），市政工程（081403），桥梁与隧道工程（081406），交通信息工程及控制（082302），市政工程（含给排水等）（085905）",
+    "majorCriteria": {
+      "undergraduate": [
+        "081001",
+        "081003",
+        "081802",
+        "120103",
+        "081006T",
+        "081806T"
+      ],
+      "graduate": [
+        "081401",
+        "081402",
+        "081403",
+        "081406",
+        "082302",
+        "085905"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-3"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "829908102",
+    "unit": "北京市交通委员会昌平公路分局",
+    "title": "综合管理岗",
+    "orgType": "垂直/驻区",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "仅限硕士研究生",
+    "majorText": "研究生：法学（0301），政治学（0302），马克思主义理论（0305），法律（0351），中国语言文学（0501），新闻传播学（0503），新闻与传播（0552）",
+    "majorCriteria": {
+      "graduate": [
+        "0301",
+        "0302",
+        "0305",
+        "0351",
+        "0501",
+        "0503",
+        "0552"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-3"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "829909404",
+    "unit": "北京市统计局",
+    "title": "专业统计岗",
+    "orgType": "垂直/驻区",
+    "jobType": "专业岗位",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：经济学（02），统计学类（0712），计算机科学与技术（080901），软件工程（080902）研究生：经济学（02），统计学（0714），计算机科学与技术（0812），软件工程（0835）",
+    "majorCriteria": {
+      "undergraduate": [
+        "0712",
+        "080901",
+        "080902"
+      ],
+      "graduate": [
+        "0714",
+        "0812",
+        "0835"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-4"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "526012401",
+    "unit": "北京市昌平区人民法院",
+    "title": "财务会计岗",
+    "orgType": "区直",
+    "jobType": "财务审计",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：会计学（120203K），财务管理（120204），审计学（120207）研究生：会计学（120201），会计（1253）",
+    "majorCriteria": {
+      "undergraduate": [
+        "120203K",
+        "120204",
+        "120207"
+      ],
+      "graduate": [
+        "120201",
+        "1253"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-5"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "526012402",
+    "unit": "北京市昌平区人民法院",
+    "title": "法官助理岗",
+    "orgType": "区直",
+    "jobType": "法院岗位",
+    "recruitCount": 8,
+    "education": "硕士研究生及以上",
+    "majorText": "研究生：法学（0301），法律（0351）",
+    "majorCriteria": {
+      "graduate": [
+        "0301",
+        "0351"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-5"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "526012403",
+    "unit": "北京市昌平区人民法院",
+    "title": "法官助理岗",
+    "orgType": "区直",
+    "jobType": "法院岗位",
+    "recruitCount": 1,
+    "education": "硕士研究生及以上",
+    "majorText": "研究生：法学（0301），法律（0351）",
+    "majorCriteria": {
+      "graduate": [
+        "0301",
+        "0351"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-5"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "625014501",
+    "unit": "北京市昌平区人民检察院",
+    "title": "司法警察岗",
+    "orgType": "区直",
+    "jobType": "警务岗位",
+    "recruitCount": 1,
+    "education": "本科或硕士研究生",
+    "majorText": "本科：法学类（0301），公安学类（0306）研究生：法学（0301），公安学（0306），法律（0351）",
+    "majorCriteria": {
+      "undergraduate": [
+        "0301",
+        "0306"
+      ],
+      "graduate": [
+        "0301",
+        "0306",
+        "0351"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-6"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "625014503",
+    "unit": "北京市昌平区人民检察院",
+    "title": "检察技术岗",
+    "orgType": "区直",
+    "jobType": "检察岗位",
+    "recruitCount": 2,
+    "education": "本科或硕士研究生",
+    "majorText": "本科：计算机科学与技术（080901），软件工程（080902），数据科学与大数据技术（080910T），网络空间安全（080911TK），信息管理与信息系统（120102），法学和信息管理与信息系统（0301R1）研究生：计算机科学与技术（0812），软件工程（0835），网络空间安全（0839）",
+    "majorCriteria": {
+      "undergraduate": [
+        "080901",
+        "080902",
+        "080910T",
+        "120102"
+      ],
+      "graduate": [
+        "0812",
+        "0835",
+        "0839"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-6"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "625014504",
+    "unit": "北京市昌平区人民检察院",
+    "title": "检察业务岗1",
+    "orgType": "区直",
+    "jobType": "检察岗位",
+    "recruitCount": 10,
+    "education": "仅限硕士研究生",
+    "majorText": "研究生：法学（0301），公安学（0306），法律（0351）",
+    "majorCriteria": {
+      "graduate": [
+        "0301",
+        "0306",
+        "0351"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-6"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "625014505",
+    "unit": "北京市昌平区人民检察院",
+    "title": "检察业务岗2",
+    "orgType": "区直",
+    "jobType": "检察岗位",
+    "recruitCount": 6,
+    "education": "仅限硕士研究生",
+    "majorText": "研究生：法学（0301），公安学（0306），法律（0351）",
+    "majorCriteria": {
+      "graduate": [
+        "0301",
+        "0306",
+        "0351"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-6"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "625014506",
+    "unit": "北京市昌平区人民检察院",
+    "title": "检察综合岗",
+    "orgType": "区直",
+    "jobType": "检察岗位",
+    "recruitCount": 2,
+    "education": "本科或硕士研究生",
+    "majorText": "本科：法学类（0301）研究生：法学（0301），法律（0351），中国语言文学（0501），新闻传播学（0503），新闻与传播（0552）",
+    "majorCriteria": {
+      "undergraduate": [
+        "0301"
+      ],
+      "graduate": [
+        "0301",
+        "0351",
+        "0501",
+        "0503",
+        "0552"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-6"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "625014502",
+    "unit": "北京市昌平区人民检察院",
+    "title": "司法警察岗",
+    "orgType": "区直",
+    "jobType": "警务岗位",
+    "recruitCount": 1,
+    "education": "本科或硕士研究生",
+    "majorText": "不限",
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-6"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "121265801",
+    "unit": "中共北京市昌平区纪律检查委员会、北京市昌平区监察委员会",
+    "title": "纪检监察岗",
+    "orgType": "区直",
+    "jobType": "其他岗位",
+    "recruitCount": 2,
+    "education": "硕士研究生及以上",
+    "majorText": "研究生：法学（0301），法律（0351），金融学（020204），金融（0251），统计学（020208），应用统计（0252），纪检监察学（0308），中国语言文学（0501），统计学（0714），信息与通信工程（0810），计算机科学与技术（0812），软件工程（0835），电子信息（0854），会计学（120201），会计（1253），审计（1257），智能科学与技术（1405），国家监察学（0302J2）",
+    "majorCriteria": {
+      "graduate": [
+        "0301",
+        "0351",
+        "020204",
+        "0251",
+        "020208",
+        "0252",
+        "0308",
+        "0501",
+        "0714",
+        "0810",
+        "0812",
+        "0835",
+        "0854",
+        "120201",
+        "1253",
+        "1257",
+        "1405"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-7"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "121263301",
+    "unit": "中国共产党北京市昌平区委员会宣传部",
+    "title": "文字综合岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "硕士研究生及以上",
+    "majorText": "研究生：法学理论（030101），宪法学与行政法学（030103），民商法学（030105），诉讼法学（030106），经济法学（030107），语言学及应用语言学（050102），汉语言文字学（050103），中国古代文学（050105），中国现当代文学（050106），比较文学与世界文学（050108），新闻传播学（0503），新闻与传播（0552）",
+    "majorCriteria": {
+      "graduate": [
+        "030101",
+        "030103",
+        "030105",
+        "030106",
+        "030107",
+        "050102",
+        "050103",
+        "050105",
+        "050106",
+        "050108",
+        "0503",
+        "0552"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-8"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "821263401",
+    "unit": "中共北京市昌平区委老干部局",
+    "title": "综合文秘岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 2,
+    "education": "本科及以上",
+    "majorText": "本科：法学（030101K），政治学与行政学（030201），汉语言文学（050101），汉语言（050102），新闻学（050301），哲学（010101）研究生：政治学理论（030201），中共党史（030204），马克思主义基本原理（030501），马克思主义中国化研究（030503），思想政治教育（030505），中共党史党建学（0307），语言学及应用语言学（050102），汉语言文字学（050103），中国现当代文学（050106），新闻学（050301），马克思主义与思想政治教育（030205）",
+    "majorCriteria": {
+      "undergraduate": [
+        "030101K",
+        "030201",
+        "050101",
+        "050102",
+        "050301",
+        "010101"
+      ],
+      "graduate": [
+        "030201",
+        "030204",
+        "030501",
+        "030503",
+        "030505",
+        "0307",
+        "050102",
+        "050103",
+        "050106",
+        "050301",
+        "030205"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-9"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "821263501",
+    "unit": "中国共产党北京市昌平区委员会党史办公室",
+    "title": "史志书籍编纂岗",
+    "orgType": "区直",
+    "jobType": "其他岗位",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：中国共产党历史（030502），历史学类（0601）研究生：中共党史（030204），中共党史党建学（0307），历史学（06）",
+    "majorCriteria": {
+      "undergraduate": [
+        "030502",
+        "0601"
+      ],
+      "graduate": [
+        "030204",
+        "0307"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-10"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "821263601",
+    "unit": "中国共产党北京市昌平区委员会党校",
+    "title": "综合管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "硕士研究生及以上",
+    "majorText": "研究生：哲学（0101），政治学（0302），马克思主义理论（0305），中共党史党建学（0307），纪检监察学（0308），中国语言文学（0501），新闻传播学（0503），新闻与传播（0552）",
+    "majorCriteria": {
+      "graduate": [
+        "0101",
+        "0302",
+        "0305",
+        "0307",
+        "0308",
+        "0501",
+        "0503",
+        "0552"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-11"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "821263602",
+    "unit": "中国共产党北京市昌平区委员会党校",
+    "title": "综合管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：哲学（010101），政治学类（0302），社会学（030301），马克思主义理论类（0305），教育学（040101），中国语言文学类（0501），新闻学（050301），传播学（050304），行政管理（120402）研究生：哲学（0101），政治学（0302），社会学（0303），马克思主义理论（0305），教育学（0401），中国语言文学（0501），新闻传播学（0503），新闻与传播（0552），公共管理学（1204），公共管理（1252）",
+    "majorCriteria": {
+      "undergraduate": [
+        "010101",
+        "0302",
+        "030301",
+        "0305",
+        "040101",
+        "0501",
+        "050301",
+        "050304",
+        "120402"
+      ],
+      "graduate": [
+        "0101",
+        "0302",
+        "0303",
+        "0305",
+        "0401",
+        "0501",
+        "0503",
+        "0552",
+        "1204",
+        "1252"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-11"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "221263801",
+    "unit": "北京市昌平区发展和改革委员会",
+    "title": "综合管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 2,
+    "education": "硕士研究生及以上",
+    "majorText": "研究生：应用经济学（0202），数字经济（0258）",
+    "majorCriteria": {
+      "graduate": [
+        "0202",
+        "0258"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-12"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "821263802",
+    "unit": "北京市昌平区发展和改革委员会",
+    "title": "项目管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "硕士研究生及以上",
+    "majorText": "研究生：应用经济学（0202），法学（0301），法律（0351）",
+    "majorCriteria": {
+      "graduate": [
+        "0202",
+        "0301",
+        "0351"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-12"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "221263901",
+    "unit": "北京市昌平区经济和信息化局",
+    "title": "综合管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 2,
+    "education": "仅限本科",
+    "majorText": "本科：经济统计学（020102），机器人工程（080803T），计算机科学与技术（080901），软件工程（080902），信息管理与信息系统（120102）",
+    "majorCriteria": {
+      "undergraduate": [
+        "020102",
+        "080803T",
+        "080901",
+        "080902",
+        "120102"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-13"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "221264001",
+    "unit": "北京市昌平区司法局",
+    "title": "政法专项岗",
+    "orgType": "区直",
+    "jobType": "其他岗位",
+    "recruitCount": 1,
+    "education": "硕士研究生及以上",
+    "majorText": "研究生：法学（0301），法律（0351）",
+    "majorCriteria": {
+      "graduate": [
+        "0301",
+        "0351"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-14"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "221264101",
+    "unit": "北京市昌平区财政局",
+    "title": "综合管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 2,
+    "education": "本科及以上",
+    "majorText": "本科：纪检监察（030108TK），计算机科学与技术（080901），工商管理（120201K），市场营销（120202），会计学（120203K），财务管理（120204）研究生：纪检监察学（0308），计算机科学与技术（0812），工商管理学（1202），工商管理（1251），会计（1253）",
+    "majorCriteria": {
+      "undergraduate": [
+        "080901",
+        "120201K",
+        "120202",
+        "120203K",
+        "120204"
+      ],
+      "graduate": [
+        "0308",
+        "0812",
+        "1202",
+        "1251",
+        "1253"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-15"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "821264201",
+    "unit": "北京市昌平区人力资源和社会保障局",
+    "title": "稽核岗",
+    "orgType": "区直",
+    "jobType": "其他岗位",
+    "recruitCount": 2,
+    "education": "本科及以上",
+    "majorText": "本科：法学类（0301），工商管理类（1202），公共管理类（1204）研究生：金融学（020204），金融（0251），保险（0255），法学（0301），法律（0351），管理学（12）",
+    "majorCriteria": {
+      "undergraduate": [
+        "0301",
+        "1202",
+        "1204"
+      ],
+      "graduate": [
+        "020204",
+        "0251",
+        "0255",
+        "0301",
+        "0351"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-16"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "821264203",
+    "unit": "北京市昌平区人力资源和社会保障局",
+    "title": "业务经办岗",
+    "orgType": "区直",
+    "jobType": "其他岗位",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：经济学类（0201），金融学类（0203），财务管理（120204），会计学（120203K），审计学（120207）研究生：经济学（02），工商管理学（1202），会计（1253），审计（1257），工商管理（1251）",
+    "majorCriteria": {
+      "undergraduate": [
+        "0201",
+        "0203",
+        "120204",
+        "120203K",
+        "120207"
+      ],
+      "graduate": [
+        "1202",
+        "1253",
+        "1257",
+        "1251"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-16"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "821264205",
+    "unit": "北京市昌平区人力资源和社会保障局",
+    "title": "综合管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 2,
+    "education": "本科及以上",
+    "majorText": "本科：经济学类（0201），法学类（0301），中国语言文学类（0501），新闻传播学类（0503），工商管理类（1202）研究生：理论经济学（0201），法学（0301），中国语言文学（0501），法律（0351），新闻传播学（0503），新闻与传播（0552），工商管理学（1202），工商管理（1251）",
+    "majorCriteria": {
+      "undergraduate": [
+        "0201",
+        "0301",
+        "0501",
+        "0503",
+        "1202"
+      ],
+      "graduate": [
+        "0201",
+        "0301",
+        "0501",
+        "0351",
+        "0503",
+        "0552",
+        "1202",
+        "1251"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-16"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "821264202",
+    "unit": "北京市昌平区人力资源和社会保障局",
+    "title": "宣传岗",
+    "orgType": "区直",
+    "jobType": "其他岗位",
+    "recruitCount": 2,
+    "education": "本科及以上",
+    "majorText": "本科：法学类（0301），中国语言文学类（0501）研究生：法学（0301），法律（0351），中国语言文学（0501）",
+    "majorCriteria": {
+      "undergraduate": [
+        "0301",
+        "0501"
+      ],
+      "graduate": [
+        "0301",
+        "0351",
+        "0501"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-16"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "821264204",
+    "unit": "北京市昌平区人力资源和社会保障局",
+    "title": "仲裁岗",
+    "orgType": "区直",
+    "jobType": "其他岗位",
+    "recruitCount": 2,
+    "education": "本科及以上",
+    "majorText": "本科：法学类（0301）研究生：法学（0301），法律（0351）",
+    "majorCriteria": {
+      "undergraduate": [
+        "0301"
+      ],
+      "graduate": [
+        "0301",
+        "0351"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-16"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "221264301",
+    "unit": "北京市昌平区生态环境局",
+    "title": "行政执法岗",
+    "orgType": "区直",
+    "jobType": "行政执法",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：法学类（0301），大气科学类（0706），车辆工程（080207），遥感科学与技术（081202），环境科学与工程类（0825）研究生：法学（0301），法律（0351），大气科学（0706），生态学（0713），核科学与技术（0827），环境科学与工程（0830）",
+    "majorCriteria": {
+      "undergraduate": [
+        "0301",
+        "0706",
+        "080207",
+        "081202",
+        "0825"
+      ],
+      "graduate": [
+        "0301",
+        "0351",
+        "0706",
+        "0713",
+        "0827",
+        "0830"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-17"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "221264401",
+    "unit": "北京市昌平区住房和城乡建设委员会",
+    "title": "综合管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：土木类（0810），测绘类（0812），建筑类（0828）研究生：建筑学（0813），土木工程（0814），测绘科学与技术（0816），建筑（0851），土木工程（085901）",
+    "majorCriteria": {
+      "undergraduate": [
+        "0810",
+        "0812",
+        "0828"
+      ],
+      "graduate": [
+        "0813",
+        "0814",
+        "0816",
+        "0851",
+        "085901"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-18"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "221264402",
+    "unit": "北京市昌平区住房和城乡建设委员会",
+    "title": "行政执法岗",
+    "orgType": "区直",
+    "jobType": "行政执法",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：土木类（0810），测绘类（0812），建筑类（0828），工程管理（120103）研究生：建筑学（0813），土木工程（0814），测绘科学与技术（0816），建筑（0851），土木工程（085901），工程管理（1256）",
+    "majorCriteria": {
+      "undergraduate": [
+        "0810",
+        "0812",
+        "0828",
+        "120103"
+      ],
+      "graduate": [
+        "0813",
+        "0814",
+        "0816",
+        "0851",
+        "085901",
+        "1256"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-18"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "221264502",
+    "unit": "北京市昌平区城市管理委员会",
+    "title": "行政执法岗1",
+    "orgType": "区直",
+    "jobType": "行政执法",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：生物科学类（0710），环境科学与工程类（0825）研究生：生物学（0710），生态学（0713），环境科学与工程（0830）",
+    "majorCriteria": {
+      "undergraduate": [
+        "0710",
+        "0825"
+      ],
+      "graduate": [
+        "0710",
+        "0713",
+        "0830"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-19"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "221264503",
+    "unit": "北京市昌平区城市管理委员会",
+    "title": "行政执法岗2",
+    "orgType": "区直",
+    "jobType": "行政执法",
+    "recruitCount": 1,
+    "education": "仅限硕士研究生",
+    "majorText": "研究生：法学（0301），法律（0351）",
+    "majorCriteria": {
+      "graduate": [
+        "0301",
+        "0351"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-19"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "221264505",
+    "unit": "北京市昌平区城市管理委员会",
+    "title": "信息建设岗",
+    "orgType": "区直",
+    "jobType": "其他岗位",
+    "recruitCount": 1,
+    "education": "仅限本科",
+    "majorText": "本科：电子信息类（0807），计算机类（0809），管理科学与工程类（1201）",
+    "majorCriteria": {
+      "undergraduate": [
+        "0807",
+        "0809",
+        "1201"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-19"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "221264504",
+    "unit": "北京市昌平区城市管理委员会",
+    "title": "行政执法岗",
+    "orgType": "区直",
+    "jobType": "行政执法",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "不限",
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-19"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "221264501",
+    "unit": "北京市昌平区城市管理委员会",
+    "title": "财务管理岗",
+    "orgType": "区直",
+    "jobType": "财务审计",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：财政学类（0202），金融学类（0203），会计学（120203K），财务管理（120204），审计学（120207）研究生：应用经济学（0202），金融（0251），会计（1253），审计（1257）",
+    "majorCriteria": {
+      "undergraduate": [
+        "0202",
+        "0203",
+        "120203K",
+        "120204",
+        "120207"
+      ],
+      "graduate": [
+        "0202",
+        "0251",
+        "1253",
+        "1257"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "sourceLevel": "secondary",
+    "verification": "仅一处二手单位明细可见；待其他来源与官方职位表核验",
+    "eligibilityText": "单一镜像单位明细记录；其他资格条件与官方职位表均待核验。",
+    "sources": [
+      "gwyzwb-2025-org-19"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "221264601",
+    "unit": "北京市昌平区交通局",
+    "title": "行政执法岗",
+    "orgType": "区直",
+    "jobType": "行政执法",
+    "recruitCount": 2,
+    "education": "本科及以上",
+    "majorText": "本科：金融学（020301K），法学（030101K），信用风险管理与法律防控（030104T），电信工程及管理（080715T），交通运输（081801），交通管理（120407T）研究生：金融学（020204），金融（0251），法学（0301），法律（0351），交通运输规划与管理（082303），交通运输（0861）",
+    "majorCriteria": {
+      "undergraduate": [
+        "020301K",
+        "030101K",
+        "030104T",
+        "080715T",
+        "081801",
+        "120407T"
+      ],
+      "graduate": [
+        "020204",
+        "0251",
+        "0301",
+        "0351",
+        "082303",
+        "0861"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-20"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "221264801",
+    "unit": "北京市昌平区商务局",
+    "title": "综合宣传岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "仅限硕士研究生",
+    "majorText": "研究生：新闻传播学（0503），新闻与传播（0552）",
+    "majorCriteria": {
+      "graduate": [
+        "0503",
+        "0552"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-22"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "221264901",
+    "unit": "北京市昌平区文化和旅游局",
+    "title": "行政执法岗",
+    "orgType": "区直",
+    "jobType": "行政执法",
+    "recruitCount": 3,
+    "education": "本科及以上",
+    "majorText": "本科：法学类（0301），新闻传播学类（0503），艺术学理论类（1301）研究生：法学（0301），法律（0351），新闻传播学（0503），新闻与传播（0552），艺术学（1301）",
+    "majorCriteria": {
+      "undergraduate": [
+        "0301",
+        "0503",
+        "1301"
+      ],
+      "graduate": [
+        "0301",
+        "0351",
+        "0503",
+        "0552",
+        "1301"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-23"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "221265001",
+    "unit": "北京市昌平区卫生健康委员会",
+    "title": "综合管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "硕士研究生及以上",
+    "majorText": "研究生：法学（0301），政治学（0302），社会学（0303），社会工作（0352），马克思主义理论（0305），中国语言文学（0501），新闻传播学（0503），新闻与传播（0552），工商管理学（1202），公共管理学（1204），工商管理（1251），公共管理（1252）",
+    "majorCriteria": {
+      "graduate": [
+        "0301",
+        "0302",
+        "0303",
+        "0352",
+        "0305",
+        "0501",
+        "0503",
+        "0552",
+        "1202",
+        "1204",
+        "1251",
+        "1252"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-24"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "221265004",
+    "unit": "北京市昌平区卫生健康委员会",
+    "title": "综合管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：医学（10）研究生：医学（10）",
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-24"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "221265002",
+    "unit": "北京市昌平区卫生健康委员会",
+    "title": "综合管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "硕士研究生及以上",
+    "majorText": "研究生：法学（0301），政治学（0302），社会学（0303），马克思主义理论（0305），社会工作（0352），中国语言文学（0501），新闻传播学（0503），新闻与传播（0552），工商管理学（1202），公共管理学（1204），工商管理（1251），公共管理（1252）",
+    "majorCriteria": {
+      "graduate": [
+        "0301",
+        "0302",
+        "0303",
+        "0305",
+        "0352",
+        "0501",
+        "0503",
+        "0552",
+        "1202",
+        "1204",
+        "1251",
+        "1252"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-24"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "221265003",
+    "unit": "北京市昌平区卫生健康委员会",
+    "title": "卫生监督执法岗",
+    "orgType": "区直",
+    "jobType": "行政执法",
+    "recruitCount": 6,
+    "education": "本科及以上",
+    "majorText": "本科：医学（10），法学类（0301）研究生：法学（0301），法律（0351），医学（10）",
+    "majorCriteria": {
+      "undergraduate": [
+        "0301"
+      ],
+      "graduate": [
+        "0301",
+        "0351"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-24"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "221265101",
+    "unit": "北京市昌平区应急管理局",
+    "title": "行政执法岗",
+    "orgType": "区直",
+    "jobType": "行政执法",
+    "recruitCount": 2,
+    "education": "本科及以上",
+    "majorText": "本科：法学（030101K），化学（070301），防灾减灾科学与工程（070803T），安全生产监管（082904T），应急管理（120111T）研究生：宪法学与行政法学（030103），防灾减灾工程及防护工程（081405），化学工程（081701），应用化学（081704），安全科学与工程（0837）",
+    "majorCriteria": {
+      "undergraduate": [
+        "030101K",
+        "070301",
+        "070803T",
+        "082904T",
+        "120111T"
+      ],
+      "graduate": [
+        "030103",
+        "081405",
+        "081701",
+        "081704",
+        "0837"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-25"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "221265208",
+    "unit": "北京市昌平区市场监督管理局",
+    "title": "综合管理岗1",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 2,
+    "education": "仅限本科",
+    "majorText": "本科：法学（030101K），生物科学类（0710），机械类（0802），电子信息类（0807），计算机类（0809），化工与制药类（0813），食品科学与工程类（0827），生物工程类（0830），药学类（1007），工商管理类（1202）",
+    "majorCriteria": {
+      "undergraduate": [
+        "030101K",
+        "0710",
+        "0802",
+        "0807",
+        "0809",
+        "0813",
+        "0827",
+        "0830",
+        "1007",
+        "1202"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-26"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "231265202",
+    "unit": "北京市昌平区市场监督管理局",
+    "title": "综合管理岗2",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "仅限本科",
+    "majorText": "本科：法学（030101K），机械工程（080201），计算机类（0809），化工与制药类（0813），食品科学与工程类（0827），药学类（1007），工商管理类（1202）",
+    "majorCriteria": {
+      "undergraduate": [
+        "030101K",
+        "080201",
+        "0809",
+        "0813",
+        "0827",
+        "1007",
+        "1202"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-26"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "231265201",
+    "unit": "北京市昌平区市场监督管理局",
+    "title": "综合管理岗3",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "仅限硕士研究生",
+    "majorText": "研究生：法学（0301），法律（0351），生物医学工程（0831），食品科学与工程（0832），农业（0951），药学（1007）",
+    "majorCriteria": {
+      "graduate": [
+        "0301",
+        "0351",
+        "0831",
+        "0832",
+        "0951",
+        "1007"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-26"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "231265203",
+    "unit": "北京市昌平区市场监督管理局",
+    "title": "综合管理岗4",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "仅限本科",
+    "majorText": "本科：法学（030101K），材料科学与工程（080401），计算机类（0809），化工与制药类（0813），食品科学与工程类（0827），药学类（1007）",
+    "majorCriteria": {
+      "undergraduate": [
+        "030101K",
+        "080401",
+        "0809",
+        "0813",
+        "0827",
+        "1007"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-26"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "231265204",
+    "unit": "北京市昌平区市场监督管理局",
+    "title": "综合管理岗5",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "仅限本科",
+    "majorText": "本科：法学（030101K），机械工程（080201），仪器类（0803），材料科学与工程（080401），电气类（0806），自动化类（0808），计算机类（0809）",
+    "majorCriteria": {
+      "undergraduate": [
+        "030101K",
+        "080201",
+        "0803",
+        "080401",
+        "0806",
+        "0808",
+        "0809"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-26"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "231265207",
+    "unit": "北京市昌平区市场监督管理局",
+    "title": "综合管理岗6",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "仅限本科",
+    "majorText": "本科：法学（030101K），化工与制药类（0813），生物医学工程（082601），食品科学与工程类（0827），预防医学（100401K），食品卫生与营养学（100402），药学类（1007），工商管理类（1202）",
+    "majorCriteria": {
+      "undergraduate": [
+        "030101K",
+        "0813",
+        "082601",
+        "0827",
+        "100401K",
+        "100402",
+        "1007",
+        "1202"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-26"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "231265206",
+    "unit": "北京市昌平区市场监督管理局",
+    "title": "综合管理岗7",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "仅限本科",
+    "majorText": "本科：法学（030101K），马克思主义理论（030504T），材料科学与工程（080401），计算机类（0809），化工与制药类（0813），生物医学工程（082601），食品科学与工程类（0827），食品卫生与营养学（100402），药学类（1007）",
+    "majorCriteria": {
+      "undergraduate": [
+        "030101K",
+        "030504T",
+        "080401",
+        "0809",
+        "0813",
+        "082601",
+        "0827",
+        "100402",
+        "1007"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-26"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "231265205",
+    "unit": "北京市昌平区市场监督管理局",
+    "title": "综合管理岗8",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "仅限本科",
+    "majorText": "本科：法学（030101K），马克思主义理论（030504T），材料科学与工程（080401），化工与制药类（0813），生物医学工程（082601），食品科学与工程类（0827），工商管理类（1202）",
+    "majorCriteria": {
+      "undergraduate": [
+        "030101K",
+        "030504T",
+        "080401",
+        "0813",
+        "082601",
+        "0827",
+        "1202"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-26"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "221265211",
+    "unit": "北京市昌平区市场监督管理局",
+    "title": "综合管理岗9",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "仅限硕士研究生",
+    "majorText": "研究生：药学（1007），工商管理学（1202），工商管理（1251），工程管理（1256）",
+    "majorCriteria": {
+      "graduate": [
+        "1007",
+        "1202",
+        "1251",
+        "1256"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-26"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "221265209",
+    "unit": "北京市昌平区市场监督管理局",
+    "title": "综合管理岗10",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "仅限本科",
+    "majorText": "不限",
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-26"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "221265210",
+    "unit": "北京市昌平区市场监督管理局",
+    "title": "综合管理岗11",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "仅限本科",
+    "majorText": "本科：法学（030101K），机械类（0802），电气类（0806），电子信息类（0807），计算机类（0809），化工与制药类（0813），食品科学与工程类（0827），药学类（1007），工商管理类（1202）",
+    "majorCriteria": {
+      "undergraduate": [
+        "030101K",
+        "0802",
+        "0806",
+        "0807",
+        "0809",
+        "0813",
+        "0827",
+        "1007",
+        "1202"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-26"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "221265301",
+    "unit": "北京市昌平区审计局",
+    "title": "审计岗",
+    "orgType": "区直",
+    "jobType": "财务审计",
+    "recruitCount": 2,
+    "education": "本科及以上",
+    "majorText": "本科：会计学（120203K），审计学（120207）研究生：会计学（120201），会计（1253），审计（1257）",
+    "majorCriteria": {
+      "undergraduate": [
+        "120203K",
+        "120207"
+      ],
+      "graduate": [
+        "120201",
+        "1253",
+        "1257"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-27"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "221265401",
+    "unit": "北京市昌平区人民政府国有资产监督管理委员会",
+    "title": "综合管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "硕士研究生及以上",
+    "majorText": "研究生：应用经济学（0202），金融（0251），经济法学（030107），理学（07），企业管理（120202）",
+    "majorCriteria": {
+      "graduate": [
+        "0202",
+        "0251",
+        "030107",
+        "120202"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-28"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "221265501",
+    "unit": "北京市昌平区园林绿化局",
+    "title": "综合管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：风景园林（082803），林学类（0905）研究生：林学（0907），风景园林（0953），林业（0954），风景园林学（0834）",
+    "majorCriteria": {
+      "undergraduate": [
+        "082803",
+        "0905"
+      ],
+      "graduate": [
+        "0907",
+        "0953",
+        "0954",
+        "0834"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-29"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "221265601",
+    "unit": "北京市昌平区政务服务和数据管理局",
+    "title": "数据管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：信息管理与信息系统（120102），大数据管理与应用（120108T）研究生：系统科学（0711），信息与通信工程（0810），计算机科学与技术（0812）",
+    "majorCriteria": {
+      "undergraduate": [
+        "120102",
+        "120108T"
+      ],
+      "graduate": [
+        "0711",
+        "0810",
+        "0812"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-30"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "821265701",
+    "unit": "北京市昌平区农村合作经济经营管理站",
+    "title": "农村三资管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 2,
+    "education": "本科及以上",
+    "majorText": "本科：会计学（120203K），财务管理（120204），审计学（120207）研究生：税务（0253），会计学（120201），会计（1253），审计（1257）",
+    "majorCriteria": {
+      "undergraduate": [
+        "120203K",
+        "120204",
+        "120207"
+      ],
+      "graduate": [
+        "0253",
+        "120201",
+        "1253",
+        "1257"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-31"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "231265901",
+    "unit": "北京市昌平区城南街道办事处",
+    "title": "政法专项岗",
+    "orgType": "街道",
+    "jobType": "其他岗位",
+    "recruitCount": 1,
+    "education": "硕士研究生及以上",
+    "majorText": "研究生：法学（0301），法律（0351）",
+    "majorCriteria": {
+      "graduate": [
+        "0301",
+        "0351"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-32"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "231266101",
+    "unit": "北京市昌平区天通苑北街道办事处",
+    "title": "统计专项岗",
+    "orgType": "街道",
+    "jobType": "其他岗位",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：经济学类（0201），统计学类（0712）研究生：应用经济学（0202），应用统计（0252），统计学（0714）",
+    "majorCriteria": {
+      "undergraduate": [
+        "0201",
+        "0712"
+      ],
+      "graduate": [
+        "0202",
+        "0252",
+        "0714"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-34"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "231266202",
+    "unit": "北京市昌平区史各庄街道办事处",
+    "title": "综合管理岗",
+    "orgType": "街道",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：经济学（02），法学（03）研究生：经济学（02），法学（03）",
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-35"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "231266201",
+    "unit": "北京市昌平区史各庄街道办事处",
+    "title": "综合行政执法岗",
+    "orgType": "街道",
+    "jobType": "行政执法",
+    "recruitCount": 2,
+    "education": "本科及以上",
+    "majorText": "不限",
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-35"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "231266401",
+    "unit": "北京市昌平区沙河镇",
+    "title": "宣传设计岗",
+    "orgType": "镇",
+    "jobType": "其他岗位",
+    "recruitCount": 1,
+    "education": "仅限本科",
+    "majorText": "本科：新闻传播学类（0503），设计学类（1305）",
+    "majorCriteria": {
+      "undergraduate": [
+        "0503",
+        "1305"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-36"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "231266501",
+    "unit": "北京市昌平区南口镇",
+    "title": "城乡建设岗",
+    "orgType": "镇",
+    "jobType": "其他岗位",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：工学（08），管理学（12）研究生：工学（08），管理学（12）",
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-37"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "231266502",
+    "unit": "北京市昌平区南口镇",
+    "title": "综合管理岗",
+    "orgType": "镇",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "仅限硕士研究生",
+    "majorText": "研究生：法学（03），管理学（12）",
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-37"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "231266503",
+    "unit": "北京市昌平区南口镇",
+    "title": "综合行政执法岗",
+    "orgType": "镇",
+    "jobType": "行政执法",
+    "recruitCount": 1,
+    "education": "仅限本科",
+    "majorText": "本科：工学（08），管理学（12）",
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-37"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "231266601",
+    "unit": "北京市昌平区十三陵镇",
+    "title": "综合管理岗",
+    "orgType": "镇",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "硕士研究生及以上",
+    "majorText": "研究生：农业工程（0828），城乡规划学（0833），城乡规划（0853），农业资源与环境（0903），林学（0907），农业（0951），林业（0954）",
+    "majorCriteria": {
+      "graduate": [
+        "0828",
+        "0833",
+        "0853",
+        "0903",
+        "0907",
+        "0951",
+        "0954"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-38"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "231266701",
+    "unit": "北京市昌平区北七家镇",
+    "title": "综合管理岗",
+    "orgType": "镇",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "硕士研究生及以上",
+    "majorText": "研究生：经济学（02），法学（0301），政治学（0302），社会学（0303），法律（0351），社会工作（0352），中国语言文学（0501），新闻传播学（0503），新闻与传播（0552），土木工程（0814），城乡规划学（0833），城乡规划（0853），公共管理学（1204），公共管理（1252），土木工程（085901）",
+    "majorCriteria": {
+      "graduate": [
+        "0301",
+        "0302",
+        "0303",
+        "0351",
+        "0352",
+        "0501",
+        "0503",
+        "0552",
+        "0814",
+        "0833",
+        "0853",
+        "1204",
+        "1252",
+        "085901"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-39"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "231266702",
+    "unit": "北京市昌平区北七家镇",
+    "title": "综合行政执法岗",
+    "orgType": "镇",
+    "jobType": "行政执法",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "不限",
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-39"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "231266801",
+    "unit": "北京市昌平区百善镇",
+    "title": "综合行政执法岗",
+    "orgType": "镇",
+    "jobType": "行政执法",
+    "recruitCount": 1,
+    "education": "仅限硕士研究生",
+    "majorText": "研究生：法学（0301），法律（0351）",
+    "majorCriteria": {
+      "graduate": [
+        "0301",
+        "0351"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-40"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "231266802",
+    "unit": "北京市昌平区百善镇",
+    "title": "综合管理岗",
+    "orgType": "镇",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：农业经济管理类（1203），旅游管理类（1209）研究生：旅游管理（120203），农林经济管理（1203），旅游管理（1254）",
+    "majorCriteria": {
+      "undergraduate": [
+        "1203",
+        "1209"
+      ],
+      "graduate": [
+        "120203",
+        "1203",
+        "1254"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-40"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "231266901",
+    "unit": "北京市昌平区流村镇",
+    "title": "统计管理岗",
+    "orgType": "镇",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "仅限本科",
+    "majorText": "本科：经济学类（0201），金融学类（0203），统计学类（0712）",
+    "majorCriteria": {
+      "undergraduate": [
+        "0201",
+        "0203",
+        "0712"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-41"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "231267001",
+    "unit": "北京市昌平区小汤山镇",
+    "title": "政法专项岗",
+    "orgType": "镇",
+    "jobType": "其他岗位",
+    "recruitCount": 1,
+    "education": "硕士研究生及以上",
+    "majorText": "研究生：法学（0301），法律（0351）",
+    "majorCriteria": {
+      "graduate": [
+        "0301",
+        "0351"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-42"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "231267002",
+    "unit": "北京市昌平区小汤山镇",
+    "title": "综合行政执法岗",
+    "orgType": "镇",
+    "jobType": "行政执法",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "不限",
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-42"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "231267003",
+    "unit": "北京市昌平区小汤山镇",
+    "title": "综合行政执法岗",
+    "orgType": "镇",
+    "jobType": "行政执法",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "不限",
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-42"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "231267101",
+    "unit": "北京市昌平区南邵镇",
+    "title": "综合管理岗",
+    "orgType": "镇",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "仅限本科",
+    "majorText": "本科：经济学（02），文学（05）",
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-43"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "231267102",
+    "unit": "北京市昌平区南邵镇",
+    "title": "综合管理岗",
+    "orgType": "镇",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：法学（03），工学（08），农学（09）研究生：法学（03），工学（08），农学（09）",
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-43"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "231267202",
+    "unit": "北京市昌平区延寿镇",
+    "title": "综合管理岗",
+    "orgType": "镇",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "不限",
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-44"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "231267203",
+    "unit": "北京市昌平区延寿镇",
+    "title": "财源建设岗",
+    "orgType": "镇",
+    "jobType": "其他岗位",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：财政学类（0202），金融学类（0203），工商管理类（1202）研究生：应用经济学（0202），金融（0251），工商管理学（1202），会计（1253）",
+    "majorCriteria": {
+      "undergraduate": [
+        "0202",
+        "0203",
+        "1202"
+      ],
+      "graduate": [
+        "0202",
+        "0251",
+        "1202",
+        "1253"
+      ]
+    },
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-44"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "231267201",
+    "unit": "北京市昌平区延寿镇",
+    "title": "政法专项岗",
+    "orgType": "镇",
+    "jobType": "其他岗位",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "不限",
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-44"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "821263701",
+    "unit": "北京市昌平区档案馆",
+    "title": "综合管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "不限",
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-45"
+    ]
+  },
+  {
+    "year": 2025,
+    "code": "231266301",
+    "unit": "北京市昌平区龙泽园街道办事处",
+    "title": "党群工作岗",
+    "orgType": "街道",
+    "jobType": "其他岗位",
+    "recruitCount": 1,
+    "education": "本科或硕士研究生",
+    "majorText": "不限",
+    "eligibilityComplete": false,
+    "crossVerified": true,
+    "sourceLevel": "secondary",
+    "verification": "两处二手镜像逐字段一致；非官方核验，来源独立性未验证",
+    "eligibilityText": "镜像列表仅提供学历、专业与招录数字段；其他限制需以官方职位表核验。",
+    "sources": [
+      "huatu-2025-list",
+      "gwyzwb-2025-org-46"
+    ]
+  },
+  {
+    "year": 2026,
+    "code": "231263802",
+    "unit": "北京市昌平区龙泽园街道",
+    "title": "综合行政执法岗",
+    "orgType": "街道",
+    "jobType": "行政执法",
+    "recruitCount": 1,
+    "education": "本科或硕士研究生",
+    "majorText": "本科：法学类（0301），公共管理类（1204）；研究生：法学（0301），法律（0351），公共管理学（1204），公共管理（1252）",
+    "majorCriteria": { "undergraduate": ["0301", "1204"], "graduate": ["0301", "0351", "1204", "1252"] },
+    "eligibilityComplete": false,
+    "eligibilityText": "工作簿引用的第三方详情称：本科公共管理类（1204）专业范围可报，但该职位仅面向退役大学生士兵，组织体能测试，面试比例3:1；须核对官方职位表。",
+    "sourceLevel": "secondary",
+    "verification": "待官方逐码复核",
+    "sources": ["huatu-2026-special-role", "gwyzwb-2026-org-45"]
+  },
+  {
+    "year": 2026,
+    "code": "821262001",
+    "unit": "北京市昌平区水务局",
+    "title": "综合管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 2,
+    "education": "硕士研究生及以上",
+    "majorText": "研究生：法学（0301），法律（0351），教育学（0401），教育（0451），水利工程（0815），环境科学与工程（0830），安全科学与工程（0837），环境工程（085701），安全工程（085702），水利工程（085902），管理科学与工程（1201），公共管理学（1204），公共管理（1252），工程管理（1256）",
+    "majorCriteria": { "graduate": ["1204", "1252"] },
+    "requirements": { "graduationStatus": "应届毕业生" },
+    "eligibilityComplete": false,
+    "eligibilityText": "华图镜像要求2026届应届毕业生；最高学历须有学历和学位、按最高学历专业报考，双学位限主修；最高学历期间必修课不得重修或补考；应届在读期间不得与单位存在劳动关系或缴纳社保。镜像还注明按男女比例1:1招录。资格与备注仍须核对官方职位表。",
+    "sourceLevel": "secondary",
+    "verification": "待官方逐码复核",
+    "sources": ["gwyzwb-2026-example", "huatu-2026-special-role", "huatu-2026-org-20", "huatu-2026-job-821262001"]
+  },
+  {
+    "year": 2024,
+    "code": "231259102",
+    "unit": "北京市昌平区龙泽园街道综合行政执法队",
+    "title": "综合行政执法岗一",
+    "orgType": "街道",
+    "jobType": "行政执法",
+    "recruitCount": 2,
+    "education": "本科或硕士",
+    "majorText": "本科：政治学类（0302），社会学类（0303），公共管理类（1204）；研究生：政治学（0302），社会学（0303），马克思主义理论（0305），社会工作（0352），公共管理学（1204）",
+    "majorCriteria": { "undergraduate": ["0302", "0303", "1204"], "graduate": ["0302", "0303", "0305", "0352", "1204"] },
+    "eligibilityText": "华图列表单位名为“北京市昌平区龙泽园街道”，粉笔详细页标为“北京市昌平区龙泽园街道综合行政执法队”；专业片段为本科含公共管理类（1204）、研究生含公共管理学（1204），未列专业学位代码1252。其他资格条件和单位规范名称待官方职位表核验。",
+    "sourceLevel": "secondary",
+    "verification": "华图与粉笔二手镜像可见；待官方逐码复核",
+    "sources": ["huatu-2024-list", "fenbi-2024-longzeyuan"]
+  },
+  {
+    "year": 2024, "code": "231258501", "unit": "北京市昌平区城北街道", "title": "城市规划岗", "orgType": "街道", "jobType": "专业岗位", "recruitCount": 2,
+    "education": "本科或硕士研究生", "majorText": "本科：土木工程（081001），建筑类（0828）；研究生：建筑学（0813），土木工程（0814），城乡规划学（0833），建筑（0851），城乡规划（0853）",
+    "eligibilityText": "按华图职位列表录入学历、专业及招录数；完整资格条件须以官方职位表核验。", "sourceLevel": "secondary", "verification": "华图2024职位列表；待官方逐码复核", "sources": ["huatu-2024-list"]
+  },
+  {
+    "year": 2024, "code": "231258502", "unit": "北京市昌平区城北街道", "title": "综合行政执法岗", "orgType": "街道", "jobType": "行政执法", "recruitCount": 1,
+    "education": "本科或硕士研究生", "majorText": "本科：法学类（0301），公安学类（0306）；研究生：法学（0301），公安学（0306），法律（0351）",
+    "eligibilityText": "按华图职位列表录入学历、专业及招录数；完整资格条件须以官方职位表核验。", "sourceLevel": "secondary", "verification": "华图2024职位列表；待官方逐码复核", "sources": ["huatu-2024-list"]
+  },
+  {
+    "year": 2024, "code": "231258503", "unit": "北京市昌平区城北街道", "title": "综合行政执法岗", "orgType": "街道", "jobType": "行政执法", "recruitCount": 1,
+    "education": "本科或硕士研究生", "majorText": "本科：工学（08）；研究生：工学（08）",
+    "eligibilityText": "按华图职位列表录入学历、专业及招录数；完整资格条件须以官方职位表核验。", "sourceLevel": "secondary", "verification": "华图2024职位列表；待官方逐码复核", "sources": ["huatu-2024-list"]
+  },
+  {
+    "year": 2024, "code": "231258601", "unit": "北京市昌平区城南街道", "title": "综合管理岗", "orgType": "街道", "jobType": "综合管理", "recruitCount": 1,
+    "education": "硕士研究生及以上", "majorText": "研究生：应用经济学（0202），金融（0251），应用统计（0252），税务（0253），国际商务（0254）",
+    "eligibilityText": "按华图职位列表录入学历、专业及招录数；完整资格条件须以官方职位表核验。", "sourceLevel": "secondary", "verification": "华图2024职位列表；待官方逐码复核", "sources": ["huatu-2024-list"]
+  },
+  {
+    "year": 2024, "code": "231258602", "unit": "北京市昌平区城南街道", "title": "党建工作岗", "orgType": "街道", "jobType": "党建", "recruitCount": 1,
+    "education": "硕士研究生及以上", "majorText": "研究生：法学（0301），政治学（0302），马克思主义理论（0305），中共党史党建学（0307），法律（0351），工商管理学（1202），工商管理（1251）",
+    "eligibilityText": "按华图职位列表录入学历、专业及招录数；完整资格条件须以官方职位表核验。", "sourceLevel": "secondary", "verification": "华图2024职位列表；待官方逐码复核", "sources": ["huatu-2024-list"]
+  },
+  {
+    "year": 2024, "code": "231258603", "unit": "北京市昌平区城南街道", "title": "城市建设岗", "orgType": "街道", "jobType": "专业岗位", "recruitCount": 1,
+    "education": "硕士研究生及以上", "majorText": "研究生：土木工程（0814），环境科学与工程（0830），城乡规划学（0833），城乡规划（0853）",
+    "eligibilityText": "按华图职位列表录入学历、专业及招录数；完整资格条件须以官方职位表核验。", "sourceLevel": "secondary", "verification": "华图2024职位列表；待官方逐码复核", "sources": ["huatu-2024-list"]
+  },
+  {
+    "year": 2024, "code": "231258604", "unit": "北京市昌平区城南街道", "title": "社区治理岗", "orgType": "街道", "jobType": "社区治理", "recruitCount": 1,
+    "education": "硕士研究生及以上", "majorText": "研究生：法学（0301），法律（0351）",
+    "eligibilityText": "按华图职位列表录入学历、专业及招录数；完整资格条件须以官方职位表核验。", "sourceLevel": "secondary", "verification": "华图2024职位列表；待官方逐码复核", "sources": ["huatu-2024-list"]
+  },
+  {
+    "year": 2024, "code": "231258701", "unit": "北京市昌平区天通苑南街道", "title": "综合行政执法岗", "orgType": "街道", "jobType": "行政执法", "recruitCount": 1,
+    "education": "本科及以上", "majorText": "本科：土木类（0810），工业工程类（1207）；研究生：土木工程（0814），工程管理（1256）",
+    "eligibilityText": "按华图职位列表录入学历、专业及招录数；完整资格条件须以官方职位表核验。", "sourceLevel": "secondary", "verification": "华图2024职位列表；待官方逐码复核", "sources": ["huatu-2024-list"]
+  },
+  {
+    "year": 2024, "code": "231258801", "unit": "北京市昌平区霍营街道", "title": "综合行政执法岗", "orgType": "街道", "jobType": "行政执法", "recruitCount": 1,
+    "education": "硕士研究生及以上", "majorText": "研究生：土木工程（0814），环境科学与工程（0830），城乡规划学（0833），建筑（0851），城乡规划（0853），资源与环境（0857），风景园林（0862）",
+    "eligibilityText": "按华图职位列表录入学历、专业及招录数；完整资格条件须以官方职位表核验。", "sourceLevel": "secondary", "verification": "华图2024职位列表；待官方逐码复核", "sources": ["huatu-2024-list"]
+  },
+  {
+    "year": 2024, "code": "231258901", "unit": "北京市昌平区回龙观街道", "title": "综合行政执法岗", "orgType": "街道", "jobType": "行政执法", "recruitCount": 1,
+    "education": "本科及以上", "majorText": "本科：土木类（0810），环境科学与工程类（0825），建筑类（0828）；研究生：建筑学（0813），土木工程（0814），环境科学与工程（0830），城乡规划学（0833），城乡规划（0853）",
+    "eligibilityText": "按华图职位列表录入学历、专业及招录数；完整资格条件须以官方职位表核验。", "sourceLevel": "secondary", "verification": "华图2024职位列表；待官方逐码复核", "sources": ["huatu-2024-list"]
+  },
+  {
+    "year": 2024, "code": "231259001", "unit": "北京市昌平区史各庄街道", "title": "政法专项岗", "orgType": "街道", "jobType": "政法专项", "recruitCount": 1,
+    "education": "本科及以上", "majorText": "本科：法学（03）；研究生：法学（03）",
+    "eligibilityText": "按华图职位列表录入学历、专业及招录数；完整资格条件须以官方职位表核验。", "sourceLevel": "secondary", "verification": "华图2024职位列表；待官方逐码复核", "sources": ["huatu-2024-list"]
+  },
+  {
+    "year": 2024, "code": "231259002", "unit": "北京市昌平区史各庄街道", "title": "综合行政执法岗", "orgType": "街道", "jobType": "行政执法", "recruitCount": 1,
+    "education": "本科及以上", "majorText": "本科：法学（03）；研究生：法学（03）",
+    "eligibilityText": "按华图职位列表录入学历、专业及招录数；完整资格条件须以官方职位表核验。", "sourceLevel": "secondary", "verification": "华图2024职位列表；待官方逐码复核", "sources": ["huatu-2024-list"]
+  },
+  {
+    "year": 2024, "code": "231259101", "unit": "北京市昌平区龙泽园街道", "title": "综合行政执法岗二", "orgType": "街道", "jobType": "行政执法", "recruitCount": 2,
+    "education": "本科或硕士研究生", "majorText": "本科：计算机类（0809），建筑类（0828），环境科学与工程类（0825）；研究生：计算机科学与技术（0812），环境科学与工程（0830），城乡规划学（0833），网络空间安全（0839），城乡规划（0853），资源与环境（0857）",
+    "eligibilityText": "按华图职位列表录入学历、专业及招录数；完整资格条件须以官方职位表核验。", "sourceLevel": "secondary", "verification": "华图2024职位列表；待官方逐码复核", "sources": ["huatu-2024-list"]
+  },
+  {
+    "year": 2024, "code": "231259201", "unit": "北京市昌平区东小口镇", "title": "城乡规划岗", "orgType": "镇", "jobType": "专业岗位", "recruitCount": 1,
+    "education": "本科及以上", "majorText": "本科：建筑学（082801），城乡规划（082802），风景园林（082803），人居环境科学与技术（082805T），城市设计（082806T）；研究生：建筑学（0813），城乡规划学（0833），建筑（0851），城乡规划（0853）",
+    "eligibilityText": "按华图职位列表录入学历、专业及招录数；完整资格条件须以官方职位表核验。", "sourceLevel": "secondary", "verification": "华图2024职位列表；待官方逐码复核", "sources": ["huatu-2024-list"]
+  },
+  {
+    "year": 2024, "code": "231259202", "unit": "北京市昌平区东小口镇", "title": "综合行政执法岗", "orgType": "镇", "jobType": "行政执法", "recruitCount": 1,
+    "education": "本科及以上", "majorText": "本科：法学（03），管理学（12）；研究生：经济学（02），管理学（12）",
+    "eligibilityText": "按华图职位列表录入学历、专业及招录数；完整资格条件须以官方职位表核验。", "sourceLevel": "secondary", "verification": "华图2024职位列表；待官方逐码复核", "sources": ["huatu-2024-list"]
+  },
+  {
+    "year": 2024, "code": "231259301", "unit": "北京市昌平区南口镇", "title": "综合文秘岗", "orgType": "镇", "jobType": "专业岗位", "recruitCount": 1,
+    "education": "本科及以上", "majorText": "本科：经济学（02），历史学（06），理学（07），工学（08），管理学（12），艺术学（13）；研究生：经济学（02），历史学（06），理学（07），工学（08），管理学（12），艺术学（13）",
+    "eligibilityText": "按华图职位列表录入学历、专业及招录数；完整资格条件须以官方职位表核验。", "sourceLevel": "secondary", "verification": "华图2024职位列表；待官方逐码复核", "sources": ["huatu-2024-list"]
+  },
+  {
+    "year": 2024, "code": "231259302", "unit": "北京市昌平区南口镇", "title": "政法专项岗", "orgType": "镇", "jobType": "政法专项", "recruitCount": 1,
+    "education": "硕士研究生及以上", "majorText": "研究生：法学（03）",
+    "eligibilityText": "按华图职位列表录入学历、专业及招录数；完整资格条件须以官方职位表核验。", "sourceLevel": "secondary", "verification": "华图2024职位列表；待官方逐码复核", "sources": ["huatu-2024-list"]
+  },
+  {
+    "year": 2024, "code": "231259303", "unit": "北京市昌平区南口镇", "title": "综合行政执法岗", "orgType": "镇", "jobType": "行政执法", "recruitCount": 1,
+    "education": "仅限本科", "majorText": "本科：机械设计制造及其自动化（080202），电气工程及其自动化（080601），自动化（080801），工业智能（080807T），软件工程（080902）",
+    "eligibilityText": "按华图职位列表录入学历、专业及招录数；完整资格条件须以官方职位表核验。", "sourceLevel": "secondary", "verification": "华图2024职位列表；待官方逐码复核", "sources": ["huatu-2024-list"]
+  },
+  {
+    "year": 2024, "code": "231259401", "unit": "北京市昌平区十三陵镇", "title": "政法专项岗", "orgType": "镇", "jobType": "政法专项", "recruitCount": 1,
+    "education": "硕士研究生及以上", "majorText": "研究生：法学（0301），法律（0351）",
+    "eligibilityText": "按华图职位列表录入学历、专业及招录数；完整资格条件须以官方职位表核验。", "sourceLevel": "secondary", "verification": "华图2024职位列表；待官方逐码复核", "sources": ["huatu-2024-list"]
+  },
+  {
+    "year": 2024, "code": "231259402", "unit": "北京市昌平区十三陵镇", "title": "城乡规划岗", "orgType": "镇", "jobType": "专业岗位", "recruitCount": 2,
+    "education": "硕士研究生及以上", "majorText": "研究生：建筑学（0813），土木工程（0814），城乡规划学（0833），建筑（0851），城乡规划（0853）",
+    "eligibilityText": "按华图职位列表录入学历、专业及招录数；完整资格条件须以官方职位表核验。", "sourceLevel": "secondary", "verification": "华图2024职位列表；待官方逐码复核", "sources": ["huatu-2024-list"]
+  },
+  {
+    "year": 2024, "code": "231259403", "unit": "北京市昌平区十三陵镇", "title": "综合行政执法岗", "orgType": "镇", "jobType": "行政执法", "recruitCount": 1,
+    "education": "大专及以上", "majorText": "不限",
+    "eligibilityText": "按华图职位列表录入学历、专业及招录数；完整资格条件须以官方职位表核验。", "sourceLevel": "secondary", "verification": "华图2024职位列表；待官方逐码复核", "sources": ["huatu-2024-list"]
+  },
+  {
+    "year": 2024, "code": "231259501", "unit": "北京市昌平区马池口镇", "title": "政法专项岗", "orgType": "镇", "jobType": "政法专项", "recruitCount": 1,
+    "education": "本科及以上", "majorText": "本科：法学类（0301）；研究生：法学（0301），法律（0351）",
+    "eligibilityText": "按华图职位列表录入学历、专业及招录数；完整资格条件须以官方职位表核验。", "sourceLevel": "secondary", "verification": "华图2024职位列表；待官方逐码复核", "sources": ["huatu-2024-list"]
+  },
+  {
+    "year": 2024, "code": "231259502", "unit": "北京市昌平区马池口镇", "title": "统计专项岗一", "orgType": "镇", "jobType": "统计专项", "recruitCount": 1,
+    "education": "本科及以上", "majorText": "不限",
+    "eligibilityText": "按华图职位列表录入学历、专业及招录数；完整资格条件须以官方职位表核验。", "sourceLevel": "secondary", "verification": "华图2024职位列表；待官方逐码复核", "sources": ["huatu-2024-list"]
+  },
+  {
+    "year": 2024, "code": "231259503", "unit": "北京市昌平区马池口镇", "title": "统计专项岗二", "orgType": "镇", "jobType": "统计专项", "recruitCount": 1,
+    "education": "本科及以上", "majorText": "不限",
+    "eligibilityText": "按华图职位列表录入学历、专业及招录数；完整资格条件须以官方职位表核验。", "sourceLevel": "secondary", "verification": "华图2024职位列表；待官方逐码复核", "sources": ["huatu-2024-list"]
+  },
+  {
+    "year": 2024, "code": "231259601", "unit": "北京市昌平区北七家镇", "title": "规划建设岗", "orgType": "镇", "jobType": "专业岗位", "recruitCount": 1,
+    "education": "本科及以上", "majorText": "本科：电气类（0806），建筑类（0828）；研究生：城乡规划学（0833），城乡规划（0853）",
+    "eligibilityText": "按华图职位列表录入学历、专业及招录数；完整资格条件须以官方职位表核验。", "sourceLevel": "secondary", "verification": "华图2024职位列表；待官方逐码复核", "sources": ["huatu-2024-list"]
+  },
+  {
+    "year": 2024, "code": "231259602", "unit": "北京市昌平区北七家镇", "title": "综合行政执法岗", "orgType": "镇", "jobType": "行政执法", "recruitCount": 1,
+    "education": "本科及以上", "majorText": "不限",
+    "eligibilityText": "按华图职位列表录入学历、专业及招录数；完整资格条件须以官方职位表核验。", "sourceLevel": "secondary", "verification": "华图2024职位列表；待官方逐码复核", "sources": ["huatu-2024-list"]
+  },
+  {
+    "year": 2024, "code": "231259701", "unit": "北京市昌平区兴寿镇", "title": "综合管理岗", "orgType": "镇", "jobType": "综合管理", "recruitCount": 1,
+    "education": "本科及以上", "majorText": "本科：经济学类（0201），新闻传播学类（0503），工商管理类（1202），农业经济管理类（1203），旅游管理类（1209）；研究生：应用经济学（0202），新闻传播学（0503），农业资源与环境（0903），工商管理学（1202），农林经济管理（1203），旅游管理（1254）",
+    "eligibilityText": "按华图职位列表录入学历、专业及招录数；完整资格条件须以官方职位表核验。", "sourceLevel": "secondary", "verification": "华图2024职位列表；待官方逐码复核", "sources": ["huatu-2024-list"]
+  },
+  {
+    "year": 2024, "code": "231259801", "unit": "北京市昌平区百善镇", "title": "综合管理岗", "orgType": "镇", "jobType": "综合管理", "recruitCount": 1,
+    "education": "本科及以上", "majorText": "本科：社会学类（0303），交通运输类（0818），旅游管理类（1209），设计学类（1305）；研究生：社会工作（0352），交通运输工程（0823），工商管理学（1202），工商管理（1251），设计学（1305）",
+    "eligibilityText": "按华图职位列表录入学历、专业及招录数；完整资格条件须以官方职位表核验。", "sourceLevel": "secondary", "verification": "华图2024职位列表；待官方逐码复核", "sources": ["huatu-2024-list"]
+  },
+  {
+    "year": 2024, "code": "231259901", "unit": "北京市昌平区流村镇", "title": "财源建设岗", "orgType": "镇", "jobType": "专业岗位", "recruitCount": 2,
+    "education": "本科及以上", "majorText": "本科：金融学类（0203），工商管理类（1202）；研究生：应用经济学（0202），金融（0251），工商管理学（1202），工商管理（1251）",
+    "eligibilityText": "按华图职位列表录入学历、专业及招录数；完整资格条件须以官方职位表核验。", "sourceLevel": "secondary", "verification": "华图2024职位列表；待官方逐码复核", "sources": ["huatu-2024-list"]
+  },
+  {
+    "year": 2024, "code": "231259902", "unit": "北京市昌平区流村镇", "title": "综合管理岗", "orgType": "镇", "jobType": "综合管理", "recruitCount": 2,
+    "education": "本科及以上", "majorText": "本科：城乡规划（082802），植物生产类（0901），自然保护与环境生态类（0902），林学类（0905）；研究生：城乡规划学（0833），城乡规划（0853），农业资源与环境（0903），植物保护（0904），林学（0907），林业（0954）",
+    "eligibilityText": "按华图职位列表录入学历、专业及招录数；完整资格条件须以官方职位表核验。", "sourceLevel": "secondary", "verification": "华图2024职位列表；待官方逐码复核", "sources": ["huatu-2024-list"]
+  },
+  {
+    "year": 2024, "code": "231260001", "unit": "北京市昌平区崔村镇", "title": "综合管理岗", "orgType": "镇", "jobType": "综合管理", "recruitCount": 1,
+    "education": "仅限本科", "majorText": "本科：工商管理（1202），农林经济管理（1203）",
+    "eligibilityText": "按华图职位列表录入学历、专业及招录数；完整资格条件须以官方职位表核验。", "sourceLevel": "secondary", "verification": "华图2024职位列表；待官方逐码复核", "sources": ["huatu-2024-list"]
+  },
+  {
+    "year": 2024, "code": "231260002", "unit": "北京市昌平区崔村镇", "title": "政法专项岗", "orgType": "镇", "jobType": "政法专项", "recruitCount": 1,
+    "education": "仅限本科", "majorText": "本科：法学（0301），社会学（0303）",
+    "eligibilityText": "按华图职位列表录入学历、专业及招录数；完整资格条件须以官方职位表核验。", "sourceLevel": "secondary", "verification": "华图2024职位列表；待官方逐码复核", "sources": ["huatu-2024-list"]
+  },
+  {
+    "year": 2024, "code": "231260003", "unit": "北京市昌平区崔村镇", "title": "城乡建设岗", "orgType": "镇", "jobType": "专业岗位", "recruitCount": 1,
+    "education": "仅限本科", "majorText": "本科：材料科学与工程（0804），环境科学与工程（0825）",
+    "eligibilityText": "按华图职位列表录入学历、专业及招录数；完整资格条件须以官方职位表核验。", "sourceLevel": "secondary", "verification": "华图2024职位列表；待官方逐码复核", "sources": ["huatu-2024-list"]
+  },
+  {
+    "year": 2024, "code": "231260004", "unit": "北京市昌平区崔村镇", "title": "综合行政执法岗", "orgType": "镇", "jobType": "行政执法", "recruitCount": 1,
+    "education": "仅限本科", "majorText": "不限",
+    "eligibilityText": "按华图职位列表录入学历、专业及招录数；完整资格条件须以官方职位表核验。", "sourceLevel": "secondary", "verification": "华图2024职位列表；待官方逐码复核", "sources": ["huatu-2024-list"]
+  },
+  {
+    "year": 2024, "code": "231260101", "unit": "北京市昌平区小汤山镇", "title": "综合统计岗", "orgType": "镇", "jobType": "统计专项", "recruitCount": 1,
+    "education": "硕士研究生及以上", "majorText": "不限",
+    "eligibilityText": "按华图职位列表录入学历、专业及招录数；完整资格条件须以官方职位表核验。", "sourceLevel": "secondary", "verification": "华图2024职位列表；待官方逐码复核", "sources": ["huatu-2024-list"]
+  },
+  {
+    "year": 2024, "code": "231260201", "unit": "北京市昌平区南邵镇", "title": "综合管理岗", "orgType": "镇", "jobType": "综合管理", "recruitCount": 1,
+    "education": "本科及以上", "majorText": "本科：法学类（0301），新闻传播学类（0503），电气类（0806），土木类（0810），设计学类（1305）；研究生：法学（0301），法律（0351），新闻传播学（0503），新闻与传播（0552），电气工程（0808），土木工程（0814），设计（1357），设计学（1403）",
+    "eligibilityText": "按华图职位列表录入学历、专业及招录数；完整资格条件须以官方职位表核验。", "sourceLevel": "secondary", "verification": "华图2024职位列表；待官方逐码复核", "sources": ["huatu-2024-list"]
+  },
+  {
+    "year": 2024, "code": "231260202", "unit": "北京市昌平区南邵镇", "title": "综合管理岗", "orgType": "镇", "jobType": "综合管理", "recruitCount": 1,
+    "education": "本科及以上", "majorText": "本科：法学类（0301），机械类（0802），电气类（0806），土木类（0810），建筑类（0828）；研究生：法学（0301），法律（0351），机械工程（0802），电气工程（0808），建筑（0851），建筑学（0813），土木工程（0814）",
+    "eligibilityText": "按华图职位列表录入学历、专业及招录数；完整资格条件须以官方职位表核验。", "sourceLevel": "secondary", "verification": "华图2024职位列表；待官方逐码复核", "sources": ["huatu-2024-list"]
+  },
+  {
+    "year": 2024, "code": "231260203", "unit": "北京市昌平区南邵镇", "title": "综合行政执法岗", "orgType": "镇", "jobType": "行政执法", "recruitCount": 1,
+    "education": "本科及以上", "majorText": "不限",
+    "eligibilityText": "按华图职位列表录入学历、专业及招录数；完整资格条件须以官方职位表核验。", "sourceLevel": "secondary", "verification": "华图2024职位列表；待官方逐码复核", "sources": ["huatu-2024-list"]
+  },
+  {
+    "year": 2024, "code": "231260301", "unit": "北京市昌平区延寿镇", "title": "综合管理岗", "orgType": "镇", "jobType": "综合管理", "recruitCount": 1,
+    "education": "仅限本科", "majorText": "本科：历史学类（0601），美术学类（1304）",
+    "eligibilityText": "按华图职位列表录入学历、专业及招录数；完整资格条件须以官方职位表核验。", "sourceLevel": "secondary", "verification": "华图2024职位列表；待官方逐码复核", "sources": ["huatu-2024-list"]
+  },
+  {
+    "year": 2026,
+    "code": "823106301",
+    "unit": "北京市规划和自然资源委员会昌平分局",
+    "title": "不动产登记岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 3,
+    "education": "本科及以上",
+    "majorText": "本科：土木类（0810），建筑类（0828），智慧城市与空间规划（083206T），城市管理（120405），自然资源登记与管理（120417T）；研究生：国土空间规划（070526），建筑学（0813），土木工程（0814），道路与铁道工程（082301），城乡规划学（0833），建筑（0851），城乡规划（0853），土木工程（085901），市政工程（含给排水等）（085905）",
+    "sourceLevel": "secondary",
+    "verification": "华图逐岗镜像；其他资格字段待官方逐码复核",
+    "sources": ["huatu-2026-org-2"]
+  },
+  {
+    "year": 2026,
+    "code": "223106302",
+    "unit": "北京市规划和自然资源委员会昌平分局",
+    "title": "执法巡查岗",
+    "orgType": "区直",
+    "jobType": "行政执法",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：土木类（0810），土地整治工程（082306T），建筑类（0828），智慧城市与空间规划（083206T），城市管理（120405）；研究生：国土空间规划（070526），建筑学（0813），土木工程（0814），道路与铁道工程（082301），城乡规划学（0833），建筑（0851），城乡规划（0853），土木工程（085901），市政工程（含给排水等）（085905）",
+    "sourceLevel": "secondary",
+    "verification": "华图逐岗镜像；其他资格字段待官方逐码复核",
+    "sources": ["huatu-2026-org-2"]
+  },
+  {
+    "year": 2026,
+    "code": "223106303",
+    "unit": "北京市规划和自然资源委员会昌平分局",
+    "title": "综合执法岗",
+    "orgType": "区直",
+    "jobType": "行政执法",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：土木类（0810），土地整治工程（082306T），建筑类（0828），智慧城市与空间规划（083206T），城市管理（120405）；研究生：国土空间规划（070526），建筑学（0813），土木工程（0814），道路与铁道工程（082301），城乡规划学（0833），建筑（0851），城乡规划（0853），土木工程（085901），市政工程（含给排水等）（085905）",
+    "sourceLevel": "secondary",
+    "verification": "华图逐岗镜像；其他资格字段待官方逐码复核",
+    "sources": ["huatu-2026-org-2"]
+  },
+  {
+    "year": 2026,
+    "code": "829908601",
+    "unit": "北京市交通委员会昌平公路分局",
+    "title": "工程管理岗",
+    "orgType": "区直",
+    "jobType": "工程管理",
+    "recruitCount": 2,
+    "education": "本科或硕士研究生",
+    "majorText": "本科：土木类（0810）；研究生：土木工程（0814），交通运输工程（0823），土木水利（0859）",
+    "sourceLevel": "secondary",
+    "verification": "华图逐岗镜像；其他资格字段待官方逐码复核",
+    "sources": ["huatu-2026-org-3"]
+  },
+  {
+    "year": 2026,
+    "code": "829908602",
+    "unit": "北京市交通委员会昌平公路分局",
+    "title": "综合管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "仅限硕士研究生",
+    "majorText": "研究生：法学（0301），政治学（0302），社会学（0303），马克思主义理论（0305），法律（0351），中国语言文学（0501），新闻传播学（0503），新闻与传播（0552）",
+    "sourceLevel": "secondary",
+    "verification": "华图逐岗镜像；其他资格字段待官方逐码复核",
+    "sources": ["huatu-2026-org-3"]
+  },
+  {
+    "year": 2026,
+    "code": "526012901",
+    "unit": "北京市昌平区人民法院",
+    "title": "法官助理岗",
+    "orgType": "区直",
+    "jobType": "司法业务",
+    "recruitCount": 4,
+    "education": "硕士研究生及以上",
+    "majorText": "研究生：法学（0301），法律（0351）",
+    "sourceLevel": "secondary",
+    "verification": "华图逐岗镜像；其他资格字段待官方逐码复核",
+    "sources": ["huatu-2026-org-5"]
+  },
+  {
+    "year": 2026,
+    "code": "526012902",
+    "unit": "北京市昌平区人民法院",
+    "title": "司法行政岗",
+    "orgType": "区直",
+    "jobType": "司法行政",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：法学类（0301），新闻传播学类（0503）；研究生：法学（0301），法律（0351），新闻传播学（0503），新闻与传播（0552）",
+    "sourceLevel": "secondary",
+    "verification": "华图逐岗镜像；其他资格字段待官方逐码复核",
+    "sources": ["huatu-2026-org-5"]
+  },
+  {
+    "year": 2026,
+    "code": "526012903",
+    "unit": "北京市昌平区人民法院",
+    "title": "司法警察岗",
+    "orgType": "区直",
+    "jobType": "司法警察",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：法学类（0301），公安学类（0306）；研究生：法学（0301），公安学（0306），法律（0351），警务（0353）",
+    "sourceLevel": "secondary",
+    "verification": "华图逐岗镜像；其他资格字段待官方逐码复核",
+    "sources": ["huatu-2026-org-5"]
+  },
+  {
+    "year": 2026,
+    "code": "625015001",
+    "unit": "北京市昌平区人民检察院",
+    "title": "司法警察岗",
+    "orgType": "区直",
+    "jobType": "司法警察",
+    "recruitCount": 1,
+    "education": "本科或硕士研究生",
+    "majorText": "本科：法学类（0301），公安学类（0306）；研究生：法学（0301），政治学（0302），马克思主义理论（0305），公安学（0306），法律（0351），中国语言文学（0501），新闻传播学（0503），新闻与传播（0552），公共管理学（1204），公共管理（1252）",
+    "majorCriteria": { "graduate": ["1204", "1252"] },
+    "sourceLevel": "secondary",
+    "verification": "华图逐岗镜像；其他资格字段待官方逐码复核",
+    "sources": ["huatu-2026-org-6"]
+  },
+  {
+    "year": 2026,
+    "code": "625015002",
+    "unit": "北京市昌平区人民检察院",
+    "title": "检察业务岗1",
+    "orgType": "区直",
+    "jobType": "检察业务",
+    "recruitCount": 4,
+    "education": "仅限硕士研究生",
+    "majorText": "研究生：法学（0301），公安学（0306），法律（0351）",
+    "sourceLevel": "secondary",
+    "verification": "华图逐岗镜像；其他资格字段待官方逐码复核",
+    "sources": ["huatu-2026-org-6"]
+  },
+  {
+    "year": 2026,
+    "code": "625015003",
+    "unit": "北京市昌平区人民检察院",
+    "title": "检察业务岗2",
+    "orgType": "区直",
+    "jobType": "检察业务",
+    "recruitCount": 1,
+    "education": "仅限硕士研究生",
+    "majorText": "研究生：法学（0301），公安学（0306），法律（0351）",
+    "sourceLevel": "secondary",
+    "verification": "华图逐岗镜像；其他资格字段待官方逐码复核",
+    "sources": ["huatu-2026-org-6"]
+  },
+  {
+    "year": 2026,
+    "code": "625015004",
+    "unit": "北京市昌平区人民检察院",
+    "title": "检察综合岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 2,
+    "education": "本科或硕士研究生",
+    "majorText": "本科：法学类（0301）；研究生：法学（0301），政治学（0302），马克思主义理论（0305），法律（0351），中国语言文学（0501），新闻传播学（0503），新闻与传播（0552），公共管理学（1204），公共管理（1252）",
+    "majorCriteria": { "graduate": ["1204", "1252"] },
+    "sourceLevel": "secondary",
+    "verification": "华图逐岗镜像；其他资格字段待官方逐码复核",
+    "sources": ["huatu-2026-org-6"]
+  },
+  {
+    "year": 2026,
+    "code": "121260801",
+    "unit": "中共北京市昌平区委统战部",
+    "title": "综合管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：哲学类（0101），政治学类（0302），中国语言文学类（0501），计算机类（0809），管理科学与工程类（1201），公共管理类（1204）；研究生：哲学（01），法学（03），文学（05），计算机科学与技术（0812），计算机技术（085404），管理学（12）",
+    "majorCriteria": { "undergraduate": ["1204"] },
+    "sourceLevel": "secondary",
+    "verification": "华图逐岗镜像；研究生宽泛学科范围及其他资格字段待官方逐码复核",
+    "sources": ["huatu-2026-org-8"]
+  },
+  {
+    "year": 2026,
+    "code": "821261102",
+    "unit": "北京市昌平区档案馆",
+    "title": "综合管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 2,
+    "education": "本科及以上",
+    "majorText": "本科及研究生：哲学（01），经济学（02），文学（05），历史学（06），理学（07），工学（08），管理学（12），艺术学（13）",
+    "sourceLevel": "secondary",
+    "verification": "华图逐岗镜像；专业范围未细化到管理学下属代码，其他资格字段待官方复核",
+    "sources": ["huatu-2026-org-11"]
+  },
+  {
+    "year": 2026,
+    "code": "821261101",
+    "unit": "北京市昌平区档案馆",
+    "title": "综合管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "不限",
+    "sourceLevel": "secondary",
+    "verification": "华图逐岗镜像；其他资格字段待官方逐码复核",
+    "sources": ["huatu-2026-org-11"]
+  },
+  {
+    "year": 2026,
+    "code": "221261201",
+    "unit": "北京市昌平区发展和改革委员会",
+    "title": "经济管理岗",
+    "orgType": "区直",
+    "jobType": "经济管理",
+    "recruitCount": 2,
+    "education": "硕士研究生及以上",
+    "majorText": "研究生：应用经济学（0202），城乡规划学（0833），城乡规划（0853），管理科学与工程（1201），工程管理（1256）",
+    "sourceLevel": "secondary",
+    "verification": "华图逐岗镜像；其他资格字段待官方逐码复核",
+    "sources": ["huatu-2026-org-12"]
+  },
+  {
+    "year": 2026,
+    "code": "221261701",
+    "unit": "北京市昌平区住房和城乡建设委员会",
+    "title": "房屋安全管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：安全科学与工程类（0829），工程管理（120103），工商管理类（1202）；研究生：安全科学与工程（0837），安全工程（085702），管理科学与工程（1201），工商管理学（1202），工商管理（1251），工程管理（1256）",
+    "sourceLevel": "secondary",
+    "verification": "华图逐岗镜像；其他资格字段待官方逐码复核",
+    "sources": ["huatu-2026-org-17"]
+  },
+  {
+    "year": 2026,
+    "code": "821261703",
+    "unit": "北京市昌平区住房和城乡建设委员会",
+    "title": "安全质量监督岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 2,
+    "education": "本科及以上",
+    "majorText": "本科：电气类（0806），土木工程（081001），给排水科学与工程（081003），工程管理（120103）；研究生：电气工程（0808），土木工程（0814），土木水利（0859），管理科学与工程（1201），工程管理（1256）",
+    "sourceLevel": "secondary",
+    "verification": "华图逐岗镜像；其他资格字段待官方逐码复核",
+    "sources": ["huatu-2026-org-17"]
+  },
+  {
+    "year": 2026,
+    "code": "221261702",
+    "unit": "北京市昌平区住房和城乡建设委员会",
+    "title": "综合行政执法岗",
+    "orgType": "区直",
+    "jobType": "行政执法",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：电气工程及其自动化（080601），环境科学与工程类（0825），工程管理（120103），环境设计（130503）；研究生：电气工程（0808），环境科学与工程（0830），资源与环境（0857），管理科学与工程（1201），工程管理（1256）",
+    "sourceLevel": "secondary",
+    "verification": "华图逐岗镜像；其他资格字段待官方逐码复核",
+    "sources": ["huatu-2026-org-17"]
+  },
+  {
+    "year": 2026,
+    "code": "221261901",
+    "unit": "北京市昌平区交通局",
+    "title": "综合管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "硕士研究生及以上",
+    "majorText": "研究生：工学（08）",
+    "sourceLevel": "secondary",
+    "verification": "华图逐岗镜像；其他资格字段待官方逐码复核",
+    "sources": ["huatu-2026-org-19"]
+  },
+  {
+    "year": 2026,
+    "code": "221261902",
+    "unit": "北京市昌平区交通局",
+    "title": "行政执法岗",
+    "orgType": "区直",
+    "jobType": "行政执法",
+    "recruitCount": 2,
+    "education": "硕士研究生及以上",
+    "majorText": "研究生：法学（0301），法律（0351）",
+    "sourceLevel": "secondary",
+    "verification": "华图逐岗镜像；其他资格字段待官方逐码复核",
+    "sources": ["huatu-2026-org-19"]
+  },
+  {
+    "year": 2026,
+    "code": "221261803",
+    "unit": "北京市昌平区城市管理委员会",
+    "title": "行政执法岗2",
+    "orgType": "区直",
+    "jobType": "行政执法",
+    "recruitCount": 2,
+    "education": "本科及以上",
+    "majorText": "本科：交通运输类（0818），物流管理与工程类（1206），旅游管理类（1209）；研究生：交通运输工程（0823），交通运输（0861），旅游管理（1254）",
+    "physicalTest": true,
+    "professionalTest": true,
+    "interviewRatio": "3:1",
+    "eligibilityComplete": false,
+    "eligibilityText": "华图逐岗镜像注明按男女比例1:1招录、组织专业能力测试（体能测试）、一线工作且节假日和夜间需值班备勤；完整资格字段仍须核对官方职位表。",
+    "sourceLevel": "secondary",
+    "verification": "华图逐岗详情；待官方逐码复核",
+    "sources": ["huatu-2026-job-221261803"]
+  },
+  {
+    "year": 2026,
+    "code": "221262801",
+    "unit": "中关村科技园区昌平园管理委员会",
+    "title": "服务体系建设岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "硕士研究生及以上",
+    "majorText": "研究生：经济学（02），法学（0301），法律（0351），工学（08），管理学（12）",
+    "sourceLevel": "secondary",
+    "verification": "华图逐岗镜像；宽泛专业范围及其他资格字段待官方复核",
+    "sources": ["huatu-2026-org-28"]
+  },
+  {
+    "year": 2026,
+    "code": "231263501",
+    "unit": "北京市昌平区霍营街道",
+    "title": "综合管理岗",
+    "orgType": "街道",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：土木类（0810），建筑类（0828）；研究生：建筑学（0813），土木工程（0814），环境科学与工程（0830），城乡规划学（0833），建筑（0851），城乡规划（0853），资源与环境（0857），土木水利（0859），风景园林（0862）",
+    "sourceLevel": "secondary",
+    "verification": "华图逐岗镜像；其他资格字段待官方逐码复核",
+    "sources": ["huatu-2026-org-34"]
+  },
+  {
+    "year": 2026,
+    "code": "231264501",
+    "unit": "北京市昌平区兴寿镇",
+    "title": "综合管理岗",
+    "orgType": "镇",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：法学类（0301），统计学类（0712），电子信息类（0807），工商管理类（1202），设计学类（1305）；研究生：法学（0301），法律（0351），统计学（0714），电子信息（0854），工商管理学（1202），工商管理（1251），设计（1357）",
+    "majorCriteria": {
+      "undergraduate": ["0301", "0712", "0807", "1202", "1305"],
+      "graduate": ["0301", "0351", "0714", "0854", "1202", "1251", "1357"]
+    },
+    "requirements": { "politicalStatus": "中共党员" },
+    "eligibilityComplete": false,
+    "interviewRatio": "3:1",
+    "eligibilityText": "华图详情标注该职位面向乡村振兴协理员等服务基层项目人员，要求中共党员，本科及研究生阶段均有学历和学位；职位代码、资格范围及定向条件仍待官方职位表逐码核验。",
+    "sourceLevel": "secondary",
+    "verification": "华图逐岗详情；定向资格及其他字段待官方逐码复核",
+    "sources": ["huatu-2026-job-231264501"]
+  },
+  {
+    "year": 2026,
+    "code": "221262501",
+    "unit": "北京市昌平区市场监督管理局",
+    "title": "行政执法岗",
+    "orgType": "区直",
+    "jobType": "行政执法",
+    "recruitCount": 2,
+    "education": "仅限硕士研究生",
+    "majorText": "研究生：计算机科学与技术（0812），电子信息（0854）",
+    "majorCriteria": { "graduate": ["0812", "0854"] },
+    "eligibilityComplete": false,
+    "eligibilityText": "第三方职位表页列出职位代码、名称、学历、专业和招录人数；其他资格条件待核官方职位表。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-org-25"]
+  },
+  {
+    "year": 2026,
+    "code": "231262502",
+    "unit": "北京市昌平区市场监督管理局",
+    "title": "综合管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：机械类（0802），管理学（12）；研究生：机械工程（0802），机械（0855），管理学（12）",
+    "majorCriteria": { "undergraduate": ["0802", "12"], "graduate": ["0802", "0855", "12"] },
+    "eligibilityComplete": false,
+    "eligibilityText": "第三方职位表页列出职位代码、名称、学历、专业和招录人数；管理学按页面门类范围录入，其他资格条件待核官方职位表。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-org-25"]
+  },
+  {
+    "year": 2026,
+    "code": "231262503",
+    "unit": "北京市昌平区市场监督管理局",
+    "title": "知识产权岗",
+    "orgType": "区直",
+    "jobType": "专业岗位",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：知识产权（030102T）；研究生：知识产权（0301Z1），知识产权（0354）",
+    "majorCriteria": { "undergraduate": ["030102T"], "graduate": ["0301Z1", "0354"] },
+    "eligibilityComplete": false,
+    "eligibilityText": "第三方职位表页列出职位代码、名称、学历、专业和招录人数；其他资格条件待核官方职位表。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-org-25"]
+  },
+  {
+    "year": 2026,
+    "code": "231262504",
+    "unit": "北京市昌平区市场监督管理局",
+    "title": "综合管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "仅限硕士研究生",
+    "majorText": "研究生：国际商务（0254），数字经济（0258），机械工程（0802），机械（0855）",
+    "majorCriteria": { "graduate": ["0254", "0258", "0802", "0855"] },
+    "eligibilityComplete": false,
+    "eligibilityText": "第三方职位表页列出职位代码、名称、学历、专业和招录人数；其他资格条件待核官方职位表。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-org-25"]
+  },
+  {
+    "year": 2026,
+    "code": "231262505",
+    "unit": "北京市昌平区市场监督管理局",
+    "title": "综合管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "仅限硕士研究生",
+    "majorText": "研究生：经济学（02），法学（03），文学（05），历史学（06），理学（07），工学（08）",
+    "majorCriteria": { "graduate": ["02", "03", "05", "06", "07", "08"] },
+    "eligibilityComplete": false,
+    "eligibilityText": "第三方职位表页列出较宽的学科门类范围；门类代码按前缀匹配展示，其他资格条件待核官方职位表。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-org-25"]
+  },
+  {
+    "year": 2026,
+    "code": "231262506",
+    "unit": "北京市昌平区市场监督管理局",
+    "title": "综合管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "仅限硕士研究生",
+    "majorText": "研究生：机械工程（0802），机械（0855），工商管理学（1202），工商管理（1251）",
+    "majorCriteria": { "graduate": ["0802", "0855", "1202", "1251"] },
+    "eligibilityComplete": false,
+    "eligibilityText": "第三方职位表页列出职位代码、名称、学历、专业和招录人数；其他资格条件待核官方职位表。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-org-25"]
+  },
+  {
+    "year": 2026,
+    "code": "241262507",
+    "unit": "北京市昌平区市场监督管理局",
+    "title": "综合管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "仅限硕士研究生",
+    "majorText": "研究生：法学（03），文学（05），历史学（06），理学（07），工学（08）",
+    "majorCriteria": { "graduate": ["03", "05", "06", "07", "08"] },
+    "eligibilityComplete": false,
+    "eligibilityText": "第三方职位表页列出较宽的学科门类范围；门类代码按前缀匹配展示，其他资格条件待核官方职位表。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-org-25"]
+  },
+  {
+    "year": 2026,
+    "code": "231262508",
+    "unit": "北京市昌平区市场监督管理局",
+    "title": "综合管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "仅限硕士研究生",
+    "majorText": "研究生：经济学（02），文学（05），历史学（06），理学（07），工学（08）",
+    "majorCriteria": { "graduate": ["02", "05", "06", "07", "08"] },
+    "eligibilityComplete": false,
+    "eligibilityText": "第三方职位表页列出较宽的学科门类范围；门类代码按前缀匹配展示，其他资格条件待核官方职位表。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-org-25"]
+  },
+  {
+    "year": 2026,
+    "code": "221262701",
+    "unit": "北京市昌平区统计局",
+    "title": "综合统计岗",
+    "orgType": "区直",
+    "jobType": "专业岗位",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：统计学（071201），应用统计学（071202），计算机科学与技术（080901），软件工程（080902），数据科学与大数据技术（080910T）；研究生：统计学（020208），应用统计（0252），统计学（0714），计算机科学与技术（0812），软件工程（0835），电子信息（0854）",
+    "majorCriteria": { "undergraduate": ["071201", "071202", "080901", "080902", "080910T"], "graduate": ["020208", "0252", "0714", "0812", "0835", "0854"] },
+    "eligibilityComplete": false,
+    "eligibilityText": "第三方职位表页列出职位代码、名称、学历、专业和招录人数；其他资格条件待核官方职位表。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-org-27"]
+  },
+  {
+    "year": 2026,
+    "code": "821262702",
+    "unit": "北京市昌平区统计局",
+    "title": "综合统计岗",
+    "orgType": "区直",
+    "jobType": "专业岗位",
+    "recruitCount": 2,
+    "education": "本科及以上",
+    "majorText": "本科：统计学（071201），应用统计学（071202），计算机科学与技术（080901），软件工程（080902），数据科学与大数据技术（080910T）；研究生：统计学（020208），应用统计（0252），统计学（0714），计算机科学与技术（0812），软件工程（0835），电子信息（0854）",
+    "majorCriteria": { "undergraduate": ["071201", "071202", "080901", "080902", "080910T"], "graduate": ["020208", "0252", "0714", "0812", "0835", "0854"] },
+    "eligibilityComplete": false,
+    "eligibilityText": "第三方职位表页列出职位代码、名称、学历、专业和招录人数；其他资格条件待核官方职位表。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-org-27"]
+  },
+  {
+    "year": 2026,
+    "code": "221262101",
+    "unit": "北京市昌平区农业农村局",
+    "title": "综合行政执法岗1",
+    "orgType": "区直",
+    "jobType": "行政执法",
+    "recruitCount": 2,
+    "education": "本科及以上",
+    "majorText": "本科：法学类（0301），教育学类（0401），中国语言文学类（0501），农业工程类（0823），建筑类（0828），管理科学与工程类（1201），农业经济管理类（1203）；研究生：法学（0301），法律（0351），教育学（0401），教育（0451），中国语言文学（0501），建筑学（0813），农业工程（0828），城乡规划学（0833），建筑（0851），城乡规划（0853），管理科学与工程（1201），农林经济管理（1203），工程管理（1256）",
+    "majorCriteria": { "undergraduate": ["0301", "0401", "0501", "0823", "0828", "1201", "1203"], "graduate": ["0301", "0351", "0401", "0451", "0501", "0813", "0828", "0833", "0851", "0853", "1201", "1203", "1256"] },
+    "eligibilityComplete": false,
+    "eligibilityText": "第三方职位表页列出职位代码、名称、学历、专业和招录人数；其他资格条件待核官方职位表。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-org-21"]
+  },
+  {
+    "year": 2026,
+    "code": "221262102",
+    "unit": "北京市昌平区农业农村局",
+    "title": "综合行政执法岗2",
+    "orgType": "区直",
+    "jobType": "行政执法",
+    "recruitCount": 2,
+    "education": "本科及以上",
+    "majorText": "本科：生物科学类（0710），食品科学与工程类（0827），生物工程类（0830），动物生产类（0903），动物医学类（0904），水产类（0906）；研究生：生物学（0710），食品科学与工程（0832），生物工程（0836），畜牧学（0905），兽医学（0906），水产（0908），兽医（0952）",
+    "majorCriteria": { "undergraduate": ["0710", "0827", "0830", "0903", "0904", "0906"], "graduate": ["0710", "0832", "0836", "0905", "0906", "0908", "0952"] },
+    "eligibilityComplete": false,
+    "eligibilityText": "第三方职位表页列出职位代码、名称、学历、专业和招录人数；其他资格条件待核官方职位表。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-org-21"]
+  },
+  {
+    "year": 2026,
+    "code": "231263701",
+    "unit": "北京市昌平区史各庄街道",
+    "title": "综合管理岗",
+    "orgType": "街道",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：马克思主义理论类（0305），中国语言文学类（0501），新闻传播学类（0503），工学（08）；研究生：马克思主义理论（0305），中共党史党建学（0307），中国语言文学（0501），新闻传播学（0503），新闻与传播（0552），工学（08）",
+    "majorCriteria": { "undergraduate": ["0305", "0501", "0503", "08"], "graduate": ["0305", "0307", "0501", "0503", "0552", "08"] },
+    "eligibilityComplete": false,
+    "eligibilityText": "第三方职位表页列出职位代码、名称、学历、专业和招录人数；工学门类按前缀匹配，其他资格条件待核官方职位表。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-org-36"]
+  },
+  {
+    "year": 2026,
+    "code": "231263702",
+    "unit": "北京市昌平区史各庄街道",
+    "title": "政法专项岗",
+    "orgType": "街道",
+    "jobType": "政法专项",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：法学类（0301）；研究生：法学（0301），纪检监察学（0308），法律（0351），知识产权（0354）",
+    "majorCriteria": { "undergraduate": ["0301"], "graduate": ["0301", "0308", "0351", "0354"] },
+    "eligibilityComplete": false,
+    "eligibilityText": "第三方职位表页列出职位代码、名称、学历、专业和招录人数；政法专项相关资格条件待核官方职位表。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-org-36"]
+  },
+  {
+    "year": 2026,
+    "code": "231263703",
+    "unit": "北京市昌平区史各庄街道",
+    "title": "综合管理岗",
+    "orgType": "街道",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：工学（08）；研究生：工学（08）",
+    "majorCriteria": { "undergraduate": ["08"], "graduate": ["08"] },
+    "eligibilityComplete": false,
+    "eligibilityText": "第三方职位表页列出职位代码、名称、学历、专业和招录人数；工学门类按前缀匹配，其他资格条件待核官方职位表。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-org-36"]
+  },
+  {
+    "year": 2026,
+    "code": "232502801",
+    "unit": "北京市公安局昌平分局",
+    "title": "一线执法岗",
+    "orgType": "区直",
+    "jobType": "行政执法",
+    "recruitCount": 10,
+    "education": "本科及以上",
+    "majorText": "不限",
+    "eligibilityComplete": false,
+    "eligibilityText": "第三方职位表页列出岗位代码、名称、学历、专业和招录人数；公安岗位其他资格与专业科目要求待核官方职位表。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-org-1"]
+  },
+  {
+    "year": 2026,
+    "code": "232502802",
+    "unit": "北京市公安局昌平分局",
+    "title": "专业岗",
+    "orgType": "区直",
+    "jobType": "专业岗位",
+    "recruitCount": 5,
+    "education": "本科及以上",
+    "majorText": "本科：经济学（020101），经济统计学（020102），金融学（020301K），经济与金融（020307T），计算机科学与技术（080901），网络工程（080903），信息安全（080904K），电子与计算机工程（080909T），网络空间安全（080911TK），会计学（120203K），审计学（120207）；研究生：应用经济学（0202），金融（0251），税务（0253），信息与通信工程（0810），计算机科学与技术（0812），网络空间安全（0839），电子信息（0854），会计学（120201），会计（1253），审计（1257）",
+    "majorCriteria": { "undergraduate": ["020101", "020102", "020301K", "020307T", "080901", "080903", "080904K", "080909T", "080911TK", "120203K", "120207"], "graduate": ["0202", "0251", "0253", "0810", "0812", "0839", "0854", "120201", "1253", "1257"] },
+    "eligibilityComplete": false,
+    "eligibilityText": "第三方职位表页列出岗位代码、名称、学历、专业和招录人数；公安专业考试与其他资格条件待核官方职位表。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-org-1"]
+  },
+  {
+    "year": 2026,
+    "code": "829910403",
+    "unit": "北京市统计局",
+    "title": "专业统计岗",
+    "orgType": "区直",
+    "jobType": "专业岗位",
+    "recruitCount": 1,
+    "education": "硕士研究生及以上",
+    "majorText": "研究生：经济学（02），统计学（0714），计算机科学与技术（0812），软件工程（0835）",
+    "majorCriteria": { "graduate": ["02", "0714", "0812", "0835"] },
+    "eligibilityComplete": false,
+    "eligibilityText": "第三方职位表页列出岗位代码、名称、学历、专业和招录人数；其他资格条件待核官方职位表。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-org-4"]
+  },
+  {
+    "year": 2026,
+    "code": "121260901",
+    "unit": "中共北京市昌平区委机构编制委员会办公室",
+    "title": "综合管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "硕士研究生及以上",
+    "majorText": "研究生：理论经济学（0201），中国语言文学（0501），信息与通信工程（0810），计算机科学与技术（0812），网络空间安全（0839），电子信息（0854），公共管理学（1204），公共管理（1252）",
+    "majorCriteria": { "graduate": ["0201", "0501", "0810", "0812", "0839", "0854", "1204", "1252"] },
+    "eligibilityComplete": false,
+    "eligibilityText": "第三方职位表页列出岗位代码、名称、学历、专业和招录人数；其他资格条件待核官方职位表。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-org-9"]
+  },
+  {
+    "year": 2026,
+    "code": "821261001",
+    "unit": "中共北京市昌平区委党校",
+    "title": "综合管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 2,
+    "education": "硕士研究生及以上",
+    "majorText": "研究生：工学（08），管理学（12）",
+    "majorCriteria": { "graduate": ["08", "12"] },
+    "eligibilityComplete": false,
+    "eligibilityText": "第三方职位表页列出较宽的学科门类范围；门类代码按前缀匹配展示，其他资格条件待核官方职位表。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-org-10"]
+  },
+  {
+    "year": 2026,
+    "code": "221261301",
+    "unit": "北京市昌平区司法局",
+    "title": "政法专项岗",
+    "orgType": "区直",
+    "jobType": "政法专项",
+    "recruitCount": 2,
+    "education": "硕士研究生及以上",
+    "majorText": "研究生：法学（0301），法律（0351）",
+    "majorCriteria": { "graduate": ["0301", "0351"] },
+    "eligibilityComplete": false,
+    "eligibilityText": "第三方职位表页列出岗位代码、名称、学历、专业和招录人数；政法专项相关资格条件待核官方职位表。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-org-13"]
+  },
+  {
+    "year": 2026,
+    "code": "821261401",
+    "unit": "北京市昌平区财政局",
+    "title": "考评综合岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：财政学（020201K），计算机科学与技术（080901），工商管理（120201K），市场营销（120202），会计学（120203K），财务管理（120204）；研究生：财政学（020203），计算机科学与技术（0812），计算机技术（085404），工商管理学（1202），工商管理（1251），会计（1253）",
+    "majorCriteria": { "undergraduate": ["020201K", "080901", "120201K", "120202", "120203K", "120204"], "graduate": ["020203", "0812", "085404", "1202", "1251", "1253"] },
+    "eligibilityComplete": false,
+    "eligibilityText": "第三方职位表页列出岗位代码、名称、学历、专业和招录人数；其他资格条件待核官方职位表。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-org-14"]
+  },
+  {
+    "year": 2026,
+    "code": "821261402",
+    "unit": "北京市昌平区财政局",
+    "title": "财务管理岗",
+    "orgType": "区直",
+    "jobType": "财务管理",
+    "recruitCount": 2,
+    "education": "仅限硕士研究生",
+    "majorText": "研究生：金融学（020204），金融（0251），计算机科学与技术（0812），计算机技术（085404），工商管理学（1202），工商管理（1251），会计（1253）",
+    "majorCriteria": { "graduate": ["020204", "0251", "0812", "085404", "1202", "1251", "1253"] },
+    "eligibilityComplete": false,
+    "eligibilityText": "第三方职位表页列出岗位代码、名称、学历、专业和招录人数；其他资格条件待核官方职位表。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-org-14"]
+  },
+  {
+    "year": 2026,
+    "code": "221261801",
+    "unit": "北京市昌平区城市管理委员会",
+    "title": "综合管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "仅限硕士研究生",
+    "majorText": "研究生：教育学（0401），教育（0451），环境科学与工程（0830），资源与环境（0857），工商管理学（1202），公共管理学（1204），工商管理（1251），公共管理（1252）",
+    "majorCriteria": { "graduate": ["0401", "0451", "0830", "0857", "1202", "1204", "1251", "1252"] },
+    "eligibilityComplete": false,
+    "eligibilityText": "第三方职位表页列出岗位代码、名称、学历、专业和招录人数；其他资格条件待核官方职位表。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-org-18"]
+  },
+  {
+    "year": 2026,
+    "code": "221261802",
+    "unit": "北京市昌平区城市管理委员会",
+    "title": "行政执法岗1",
+    "orgType": "区直",
+    "jobType": "行政执法",
+    "recruitCount": 1,
+    "education": "硕士研究生及以上",
+    "majorText": "研究生：环境科学与工程（0830），资源与环境（0857）",
+    "majorCriteria": { "graduate": ["0830", "0857"] },
+    "eligibilityComplete": false,
+    "eligibilityText": "第三方职位表页列出岗位代码、名称、学历、专业和招录人数；其他资格条件待核官方职位表。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-org-18"]
+  },
+  {
+    "year": 2026,
+    "code": "221261804",
+    "unit": "北京市昌平区城市管理委员会",
+    "title": "行政执法岗",
+    "orgType": "区直",
+    "jobType": "行政执法",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "不限",
+    "eligibilityComplete": false,
+    "eligibilityText": "第三方职位表页标注专业不限；其他资格条件仍待官方职位表核验。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-org-18"]
+  },
+  {
+    "year": 2026,
+    "code": "231263801",
+    "unit": "北京市昌平区龙泽园街道",
+    "title": "城市管理岗",
+    "orgType": "街道",
+    "jobType": "城市管理",
+    "recruitCount": 1,
+    "education": "本科或硕士研究生",
+    "majorText": "本科：土木类（0810），环境科学与工程类（0825），建筑类（0828），城市管理（120405）；研究生：建筑学（0813），土木工程（0814），环境科学与工程（0830），城乡规划学（0833），建筑（0851），城乡规划（0853），资源与环境（0857），土木水利（0859）",
+    "majorCriteria": { "undergraduate": ["0810", "0825", "0828", "120405"], "graduate": ["0813", "0814", "0830", "0833", "0851", "0853", "0857", "0859"] },
+    "eligibilityComplete": false,
+    "eligibilityText": "第三方职位表页列出岗位代码、名称、学历、专业和招录人数；其他资格条件待核官方职位表。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-org-45"]
+  },
+  {
+    "year": 2026,
+    "code": "231263601",
+    "unit": "北京市昌平区回龙观街道",
+    "title": "综合行政执法岗",
+    "orgType": "街道",
+    "jobType": "行政执法",
+    "recruitCount": 2,
+    "education": "本科及以上",
+    "majorText": "本科：法学类（0301），工学（08）；研究生：法学（0301），法律（0351），工学（08）",
+    "majorCriteria": { "undergraduate": ["0301", "08"], "graduate": ["0301", "0351", "08"] },
+    "eligibilityComplete": false,
+    "eligibilityText": "第三方职位表页列出岗位代码、名称、学历、专业和招录人数；工学门类按前缀匹配，其他资格条件待核官方职位表。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-org-35"]
+  },
+  {
+    "year": 2026,
+    "code": "231263901",
+    "unit": "北京市昌平区东小口镇",
+    "title": "政法专项岗",
+    "orgType": "镇",
+    "jobType": "政法专项",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：法学（03）；研究生：法学（03）",
+    "majorCriteria": { "undergraduate": ["03"], "graduate": ["03"] },
+    "eligibilityComplete": false,
+    "eligibilityText": "第三方职位表页列出较宽的法学门类范围；代码按前缀匹配，政法专项及其他资格条件待核官方职位表。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-org-37"]
+  },
+  {
+    "year": 2026,
+    "code": "231263902",
+    "unit": "北京市昌平区东小口镇",
+    "title": "城乡建设岗",
+    "orgType": "镇",
+    "jobType": "专业岗位",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：土木类（0810），水利类（0811），测绘类（0812），地质类（0814），建筑类（0828），交叉工程类（0832），城市管理（120405）；研究生：建筑学（0813），土木工程（0814），水利工程（0815），测绘科学与技术（0816），建筑（0851），城乡规划（0853），测绘工程（085704），土木水利（0859），管理科学与工程（1201），工程管理（1256）",
+    "majorCriteria": { "undergraduate": ["0810", "0811", "0812", "0814", "0828", "0832", "120405"], "graduate": ["0813", "0814", "0815", "0816", "0851", "0853", "085704", "0859", "1201", "1256"] },
+    "eligibilityComplete": false,
+    "eligibilityText": "第三方职位表页列出岗位代码、名称、学历、专业和招录人数；专业代码按目录前缀匹配，其他资格条件待核官方职位表。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-org-37"]
+  },
+  {
+    "year": 2026,
+    "code": "231263903",
+    "unit": "北京市昌平区东小口镇",
+    "title": "综合行政执法岗",
+    "orgType": "镇",
+    "jobType": "行政执法",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：法学（03），工学（08）；研究生：法学（03），工学（08）",
+    "majorCriteria": { "undergraduate": ["03", "08"], "graduate": ["03", "08"] },
+    "eligibilityComplete": false,
+    "eligibilityText": "第三方职位表页列出较宽的法学、工学门类范围；代码按前缀匹配，其他资格条件待核官方职位表。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-org-37"]
+  },
+  {
+    "year": 2026,
+    "code": "231263904",
+    "unit": "北京市昌平区东小口镇",
+    "title": "综合管理岗",
+    "orgType": "镇",
+    "jobType": "综合管理",
+    "recruitCount": 2,
+    "education": "本科及以上",
+    "majorText": "本科：社会学类（0303），土木类（0810），水利类（0811），农业工程类（0823），建筑类（0828），植物生产类（0901），自然保护与环境生态类（0902），林学类（0905），审计学（120207），内部审计（120218T），城市管理（120405），养老服务管理（120414T）；研究生：社会学（0303），社会工作（0352），建筑学（0813），土木工程（0814），水利工程（0815），测绘科学与技术（0816），农业工程（0828），环境科学与工程（0830），城乡规划学（0833），建筑（0851），城乡规划（0853），资源与环境（0857），土木水利（0859），风景园林（0862），林学（0907），林业（0954），管理科学与工程（1201），农林经济管理（1203），工程管理（1256），审计（1257）",
+    "majorCriteria": { "undergraduate": ["0303", "0810", "0811", "0823", "0828", "0901", "0902", "0905", "120207", "120218T", "120405", "120414T"], "graduate": ["0303", "0352", "0813", "0814", "0815", "0816", "0828", "0830", "0833", "0851", "0853", "0857", "0859", "0862", "0907", "0954", "1201", "1203", "1256", "1257"] },
+    "eligibilityComplete": false,
+    "eligibilityText": "第三方职位表页列出岗位代码、名称、学历、专业和招录人数；专业代码按目录前缀匹配，其他资格条件待核官方职位表。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-org-37"]
+  },
+  {
+    "year": 2026,
+    "code": "231264001",
+    "unit": "北京市昌平区沙河镇",
+    "title": "农业推广岗",
+    "orgType": "镇",
+    "jobType": "专业岗位",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：自然保护与环境生态类（0902），设计学类（1305）；研究生：农业资源与环境（0903），农业（0951），设计（1357）",
+    "majorCriteria": { "undergraduate": ["0902", "1305"], "graduate": ["0903", "0951", "1357"] },
+    "eligibilityComplete": false,
+    "eligibilityText": "第三方职位表页列出岗位代码、名称、学历、专业和招录人数；其他资格条件待核官方职位表。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-org-38"]
+  },
+  {
+    "year": 2026,
+    "code": "231264002",
+    "unit": "北京市昌平区沙河镇",
+    "title": "综合行政执法岗",
+    "orgType": "镇",
+    "jobType": "行政执法",
+    "recruitCount": 2,
+    "education": "本科及以上",
+    "majorText": "本科：法学（03），工学（08）；研究生：法学（03），工学（08）",
+    "majorCriteria": { "undergraduate": ["03", "08"], "graduate": ["03", "08"] },
+    "eligibilityComplete": false,
+    "eligibilityText": "第三方职位表页列出较宽的法学、工学门类范围；代码按前缀匹配，其他资格条件待核官方职位表。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-org-38"]
+  },
+  {
+    "year": 2026,
+    "code": "231264301",
+    "unit": "北京市昌平区北七家镇",
+    "title": "综合管理岗",
+    "orgType": "镇",
+    "jobType": "综合管理",
+    "department": "经济发展办公室（统计所）",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：经济学（02），理学（07），工学（08），农学（09）；研究生：经济学（02），理学（07），工学（08），农学（09）",
+    "majorCriteria": { "undergraduate": ["02", "07", "08", "09"], "graduate": ["02", "07", "08", "09"] },
+    "eligibilityComplete": false,
+    "eligibilityText": "粉笔职位库分页列表行列出岗位代码、名称、用人部门、学历、专业和招录人数；其他资格条件及官方职位表待核验。",
+    "sourceLevel": "secondary",
+    "verification": "粉笔职位库列表行可见字段；逐岗详情页及官方职位表未核验",
+    "sources": ["fenbi-2026-job-231264301"]
+  },
+  {
+    "year": 2026,
+    "code": "231264401",
+    "unit": "北京市昌平区阳坊镇",
+    "title": "综合行政执法岗",
+    "orgType": "镇",
+    "jobType": "行政执法",
+    "department": "综合行政执法队",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "不限",
+    "eligibilityComplete": false,
+    "eligibilityText": "粉笔职位库分页列表行列出岗位代码、名称、用人部门、学历、专业和招录人数；其他资格条件及官方职位表待核验。",
+    "sourceLevel": "secondary",
+    "verification": "粉笔职位库列表行可见字段；逐岗详情页及官方职位表未核验",
+    "sources": ["fenbi-2026-page-162"]
+  },
+  {
+    "year": 2026,
+    "code": "231264602",
+    "unit": "北京市昌平区百善镇",
+    "title": "综合行政执法岗",
+    "orgType": "镇",
+    "jobType": "行政执法",
+    "department": "综合行政执法队",
+    "recruitCount": 1,
+    "education": "硕士研究生及以上",
+    "majorText": "研究生：法学（03），理学（07），工学（08）",
+    "majorCriteria": { "graduate": ["03", "07", "08"] },
+    "eligibilityComplete": false,
+    "eligibilityText": "粉笔职位库分页列表行列出岗位代码、名称、用人部门、学历、专业和招录人数；其他资格条件及官方职位表待核验。",
+    "sourceLevel": "secondary",
+    "verification": "粉笔职位库列表行可见字段；逐岗详情页及官方职位表未核验",
+    "sources": ["fenbi-2026-page-162"]
+  },
+  {
+    "year": 2026,
+    "code": "241264101",
+    "unit": "北京市昌平区南口镇",
+    "title": "综合管理岗",
+    "orgType": "镇",
+    "jobType": "综合管理",
+    "recruitCount": 2,
+    "education": "本科及以上",
+    "majorText": "本科：理学（07），工学（08）；研究生：理学（07），工学（08）",
+    "majorCriteria": { "undergraduate": ["07", "08"], "graduate": ["07", "08"] },
+    "eligibilityComplete": false,
+    "eligibilityText": "第三方职位表页列出较宽的理学、工学门类范围；代码按前缀匹配，其他资格条件待核官方职位表。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-org-39"]
+  },
+  {
+    "year": 2026,
+    "code": "241264701",
+    "unit": "北京市昌平区流村镇",
+    "title": "统计管理岗",
+    "orgType": "镇",
+    "jobType": "专业岗位",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：经济学类（0201），金融学类（0203），统计学类（0712）；研究生：经济学（02），统计学（0714）",
+    "majorCriteria": { "undergraduate": ["0201", "0203", "0712"], "graduate": ["02", "0714"] },
+    "eligibilityComplete": false,
+    "eligibilityText": "第三方职位表页列出较宽的专业类、门类范围；代码按前缀匹配，其他资格条件待核官方职位表。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-org-42"]
+  },
+  {
+    "year": 2026,
+    "code": "231264801",
+    "unit": "北京市昌平区小汤山镇",
+    "title": "政法专项岗",
+    "orgType": "镇",
+    "jobType": "政法专项",
+    "recruitCount": 1,
+    "education": "仅限硕士研究生",
+    "majorText": "研究生：法学（0301），法律（0351）",
+    "majorCriteria": { "graduate": ["0301", "0351"] },
+    "eligibilityComplete": false,
+    "eligibilityText": "第三方职位表页列出岗位代码、名称、学历、专业和招录人数；政法专项及其他资格条件待核官方职位表。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-org-43"]
+  },
+  {
+    "year": 2026,
+    "code": "231264802",
+    "unit": "北京市昌平区小汤山镇",
+    "title": "社区建设岗",
+    "orgType": "镇",
+    "jobType": "专业岗位",
+    "recruitCount": 1,
+    "education": "仅限硕士研究生",
+    "majorText": "研究生：社会学（0303），社会工作（0352），文学（05），历史学（06），工学（08）",
+    "majorCriteria": { "graduate": ["0303", "0352", "05", "06", "08"] },
+    "eligibilityComplete": false,
+    "eligibilityText": "第三方职位表页列出岗位代码、名称、学历、专业和招录人数；文学、历史学及工学按门类代码前缀匹配，其他资格条件待核官方职位表。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-org-43"]
+  },
+  {
+    "year": 2026,
+    "code": "231263201",
+    "unit": "北京市昌平区城北街道",
+    "title": "综合行政执法岗",
+    "orgType": "街道",
+    "jobType": "行政执法",
+    "recruitCount": 2,
+    "education": "本科及以上",
+    "majorText": "本科：法学类（0301），工学（08）；研究生：法学（0301），法律（0351），工学（08）",
+    "majorCriteria": { "undergraduate": ["0301", "08"], "graduate": ["0301", "0351", "08"] },
+    "eligibilityComplete": false,
+    "eligibilityText": "第三方职位表页列出较宽的法学、工学门类范围；代码按前缀匹配，其他资格条件待核官方职位表。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-org-31"]
+  },
+  {
+    "year": 2026,
+    "code": "231263301",
+    "unit": "北京市昌平区城南街道",
+    "title": "综合行政执法岗",
+    "orgType": "街道",
+    "jobType": "行政执法",
+    "recruitCount": 2,
+    "education": "硕士研究生及以上",
+    "majorText": "研究生：环境科学与工程（0830），城乡规划学（0833），城乡规划（0853），资源与环境（0857）",
+    "majorCriteria": { "graduate": ["0830", "0833", "0853", "0857"] },
+    "eligibilityComplete": false,
+    "eligibilityText": "第三方职位表页列出岗位代码、名称、学历、专业和招录人数；其他资格条件待核官方职位表。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-org-32"]
+  },
+  {
+    "year": 2026,
+    "code": "231263302",
+    "unit": "北京市昌平区城南街道",
+    "title": "政法专项岗",
+    "orgType": "街道",
+    "jobType": "政法专项",
+    "recruitCount": 1,
+    "education": "硕士研究生及以上",
+    "majorText": "研究生：法学（0301），法律（0351）",
+    "majorCriteria": { "graduate": ["0301", "0351"] },
+    "eligibilityComplete": false,
+    "eligibilityText": "第三方职位表页列出岗位代码、名称、学历、专业和招录人数；政法专项相关资格条件待核官方职位表。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位表页可见字段；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-org-32"]
+  },
+  {
+    "year": 2026,
+    "code": "221261601",
+    "unit": "北京市昌平区生态环境局",
+    "title": "综合管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 2,
+    "education": "本科或硕士研究生",
+    "majorText": "本科：环境科学与工程类（0825）；研究生：环境科学与工程（0830），环境工程（085701）",
+    "majorCriteria": { "undergraduate": ["0825"], "graduate": ["0830", "085701"] },
+    "requirements": { "graduationStatus": "应届毕业生" },
+    "eligibilityComplete": false,
+    "interviewRatio": "3:1",
+    "eligibilityText": "第三方职位详情还注明最高学历应具相应学位、按最高学历专业报考，双学位限主修；最高学历期间不得与单位建立劳动（录用、聘用）关系或缴纳社保。职位要求代码、完整资格条件仍待官方核验。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位详情可见字段；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-job-221261601"]
+  },
+  {
+    "year": 2026,
+    "code": "121262901",
+    "unit": "中共北京市昌平区纪律检查委员会、北京市昌平区监察委员会",
+    "title": "纪检监察岗",
+    "orgType": "区直",
+    "jobType": "纪检监察",
+    "recruitCount": 2,
+    "education": "硕士研究生及以上",
+    "majorText": "研究生：金融学（020204），金融（0251），法学（0301），国家监察学（0302J2），纪检监察学（0308），法律（0351），信息与通信工程（0810），计算机科学与技术（0812），软件工程（0835），电子信息（0854），会计学（120201），会计（1253），智能科学与技术（1405）",
+    "majorCriteria": { "graduate": ["020204", "0251", "0301", "0302J2", "0308", "0351", "0810", "0812", "0835", "0854", "120201", "1253", "1405"] },
+    "requirements": { "graduationStatus": "应届毕业生", "politicalStatus": "中共党员" },
+    "eligibilityComplete": false,
+    "eligibilityText": "职位代码、学历、专业、政治面貌及招录数来自相对面职位列表；“纪检监察岗”名称依据粉笔列表中同一单位、同为招录2人的岗位作匹配，尚非逐码交叉确认。全部条件待官方职位表核验。",
+    "sourceLevel": "secondary",
+    "verification": "代码与条件来自相对面列表；岗位名称按粉笔单位及招录数匹配，待官方逐码复核",
+    "sources": ["xduim-2026-changping-list", "fenbi-2026-changping-list"]
+  },
+  {
+    "year": 2026,
+    "code": "221262201",
+    "unit": "北京市昌平区商务局",
+    "title": "对外商务合作交流岗",
+    "orgType": "区直",
+    "jobType": "专业岗位",
+    "recruitCount": 1,
+    "education": "仅限硕士研究生",
+    "majorText": "研究生：国际贸易学（020206），外国语言文学（0502）",
+    "majorCriteria": { "graduate": ["020206", "0502"] },
+    "requirements": { "graduationStatus": "应届毕业生" },
+    "eligibilityComplete": false,
+    "eligibilityText": "华图详情另列英语专八，或雅思不低于7分、托福不低于105分；最高学历必修课不得重修或补考，在读期间不得有劳动关系或社保记录。英语成绩未纳入结构化资格核验，完整条件仍待官方职位表确认。",
+    "sourceLevel": "secondary",
+    "verification": "相对面列表与华图逐岗详情；待官方职位表逐码复核",
+    "sources": ["xduim-2026-changping-list", "huatu-2026-job-221262201"]
+  },
+  {
+    "year": 2026,
+    "code": "221262301",
+    "unit": "北京市昌平区卫生健康委员会",
+    "title": "卫生监督执法岗",
+    "orgType": "区直",
+    "jobType": "行政执法",
+    "recruitCount": 2,
+    "education": "本科及以上",
+    "majorText": "本科：法学类（0301），医学（10），公共管理类（1204）；研究生：法学（0301），法律（0351），医学（10），公共管理学（1204），公共管理（1252）",
+    "majorCriteria": { "undergraduate": ["0301", "10", "1204"], "graduate": ["0301", "0351", "10", "1204", "1252"] },
+    "requirements": { "graduationStatus": "应届毕业生" },
+    "eligibilityComplete": false,
+    "eligibilityText": "代码、专业及招录数来自相对面列表；“卫生监督执法岗”名称按粉笔列表中同一用人单位且招录2人的条目匹配，尚非逐码交叉确认。全部资格条件待官方职位表核验。",
+    "sourceLevel": "secondary",
+    "verification": "代码与条件来自相对面列表；岗位名称按粉笔单位及招录数匹配，待官方逐码复核",
+    "sources": ["xduim-2026-changping-list", "fenbi-2026-changping-list"]
+  },
+  {
+    "year": 2026,
+    "code": "221262401",
+    "unit": "北京市昌平区应急管理局",
+    "title": "行政执法岗",
+    "orgType": "区直",
+    "jobType": "行政执法",
+    "recruitCount": 2,
+    "education": "本科及以上",
+    "majorText": "本科：法学（030101K），防灾减灾科学与工程（070803T），化学工程与工艺（081301），安全科学与工程类（0829），应急管理（120111T）；研究生：宪法学与行政法学（030103），防灾减灾工程及防护工程（081405），化学工程与技术（0817），安全科学与工程（0837），材料与化工（0856），安全工程（085702）",
+    "majorCriteria": { "undergraduate": ["030101K", "070803T", "081301", "0829", "120111T"], "graduate": ["030103", "081405", "0817", "0837", "0856", "085702"] },
+    "requirements": { "graduationStatus": "应届毕业生", "politicalStatus": "中共党员" },
+    "eligibilityComplete": false,
+    "interviewRatio": "3:1",
+    "professionalTest": true,
+    "physicalTest": true,
+    "eligibilityText": "华图逐岗详情标注2026届、中共党员、男女比例1:1、面试3:1及体能测试；最高学历须有学位、按最高学历专业报考，在读期间不得有劳动关系或社保记录。性别比例不是个人性别硬筛字段，完整条件仍待官方核验。",
+    "sourceLevel": "secondary",
+    "verification": "相对面职位列表及华图逐岗详情；待官方职位表逐码复核",
+    "sources": ["xduim-2026-changping-list", "huatu-2026-job-221262401"]
+  },
+  {
+    "year": 2026,
+    "code": "221262601",
+    "unit": "北京市昌平区体育局",
+    "title": "综合管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：法学类（0301），体育学类（0402），工学（08）；研究生：法学（0301），法律（0351），体育学（0403），体育（0452），工学（08）",
+    "majorCriteria": { "undergraduate": ["0301", "0402", "08"], "graduate": ["0301", "0351", "0403", "0452", "08"] },
+    "requirements": { "graduationStatus": "应届毕业生" },
+    "eligibilityComplete": false,
+    "professionalTest": false,
+    "interviewRatio": "3:1",
+    "eligibilityText": "职位详情列出本科及研究生阶段均需学历、学位，按最高学历专业报考，最高学历期间不得重修或补考；应届在读期间不得有劳动关系或社保记录。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网逐岗详情；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-job-221262601"]
+  },
+  {
+    "year": 2026,
+    "code": "821263001",
+    "unit": "北京市昌平区总工会",
+    "title": "文秘岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：哲学（01），经济学（02），法学（03），教育学（04），文学（05），理学（07），工学（08），农学（09），管理学（12）；研究生：哲学（01），经济学（02），法学（03），教育学（04），文学（05），理学（07），工学（08），农学（09），管理学（12）",
+    "majorCriteria": { "undergraduate": ["01", "02", "03", "04", "05", "07", "08", "09", "12"], "graduate": ["01", "02", "03", "04", "05", "07", "08", "09", "12"] },
+    "eligibilityComplete": false,
+    "eligibilityText": "第三方职位表列出职位代码、名称、学历、专业和招录数；专业门类代码按前缀匹配。其余资格条件待官方职位表核验。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网单位职位表；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-org-29"]
+  },
+  {
+    "year": 2026,
+    "code": "821263101",
+    "unit": "北京市昌平区残疾人联合会",
+    "title": "综合管理岗",
+    "orgType": "区直",
+    "jobType": "综合管理",
+    "recruitCount": 2,
+    "education": "本科或硕士研究生",
+    "majorText": "本科：社会学类（0303），中国语言文学类（0501），计算机类（0809），公共管理类（1204）；研究生：社会学（0303），社会工作（0352），中国语言文学（0501），计算机科学与技术（0812），计算机技术（085404），公共管理学（1204），公共管理（1252）",
+    "majorCriteria": { "undergraduate": ["0303", "0501", "0809", "1204"], "graduate": ["0303", "0352", "0501", "0812", "085404", "1204", "1252"] },
+    "requirements": { "graduationStatus": "应届毕业生" },
+    "eligibilityComplete": false,
+    "interviewRatio": "3:1",
+    "eligibilityText": "华图详情注明按男女比例1:1招录，并要求本科及研究生阶段均有学历和学位、按最高学历专业报考；在读期间不得有劳动关系或社保记录。比例不是个人性别硬性筛选字段，完整资格条件仍待官方核验。",
+    "sourceLevel": "secondary",
+    "verification": "华图逐岗详情与京考职位网单位职位表；待官方职位表逐码复核",
+    "sources": ["huatu-2026-job-821263101", "gwyzwb-2026-org-30"]
+  },
+  {
+    "year": 2026,
+    "code": "231264601",
+    "unit": "北京市昌平区百善镇",
+    "title": "综合行政执法岗",
+    "orgType": "镇",
+    "jobType": "行政执法",
+    "recruitCount": 1,
+    "education": "硕士研究生及以上",
+    "majorText": "研究生：法学（03），工学（08）",
+    "majorCriteria": { "graduate": ["03", "08"] },
+    "eligibilityComplete": false,
+    "professionalTest": true,
+    "physicalTest": true,
+    "interviewRatio": "3:1",
+    "eligibilityText": "详情列出最高学历在读期间不得建立劳动关系或缴纳社保；行政执法岗位有体能测试，一线值班备勤，备注为“适合男性报考”。此适岗提示不是性别硬筛条件。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网逐岗详情；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-job-231264601"]
+  },
+  {
+    "year": 2026,
+    "code": "241264201",
+    "unit": "北京市昌平区十三陵镇",
+    "title": "综合管理岗",
+    "orgType": "镇",
+    "jobType": "综合管理",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：法学类（0301），计算机类（0809），设计学类（1305）；研究生：法学（0301），法律（0351），计算机科学与技术（0812），计算机技术（085404），设计（1357）",
+    "majorCriteria": { "undergraduate": ["0301", "0809", "1305"], "graduate": ["0301", "0351", "0812", "085404", "1357"] },
+    "requirements": { "grassrootsProjectStatus": "是" },
+    "eligibilityComplete": false,
+    "interviewRatio": "3:1",
+    "eligibilityText": "该职位面向乡村振兴协理员等服务基层项目人员，是硬性招考对象条件；备注称工作强度较大、需值夜班并写有“适合男性报考”，此为适岗提示而非性别硬筛。需先在个人资料中确认服务基层项目人员身份，并最终核对官方职位表。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网逐岗详情；定向身份与其他条件待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-job-241264201"]
+  },
+  {
+    "year": 2026,
+    "code": "241264202",
+    "unit": "北京市昌平区十三陵镇",
+    "title": "综合行政执法岗",
+    "orgType": "镇",
+    "jobType": "行政执法",
+    "recruitCount": 1,
+    "education": "硕士研究生及以上",
+    "majorText": "研究生：历史学（06），工学（08）",
+    "majorCriteria": { "graduate": ["06", "08"] },
+    "eligibilityComplete": false,
+    "professionalTest": true,
+    "physicalTest": true,
+    "interviewRatio": "3:1",
+    "eligibilityText": "职位详情要求本科及研究生阶段均有学历和学位，最高学历在读期间不得与单位建立劳动关系或缴纳社保；行政执法职位组织体能测试，夜班和值守较多。备注“适合男性报考”是适岗提示，不作为性别硬筛条件。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网逐岗详情；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-job-241264202"]
+  },
+  {
+    "year": 2026,
+    "code": "241264902",
+    "unit": "北京市昌平区延寿镇",
+    "title": "统计专项岗",
+    "orgType": "镇",
+    "jobType": "专业岗位",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "本科：经济学（02），管理学（12）；研究生：经济学（02），管理学（12）",
+    "majorCriteria": { "undergraduate": ["02", "12"], "graduate": ["02", "12"] },
+    "eligibilityComplete": false,
+    "interviewRatio": "3:1",
+    "eligibilityText": "职位详情列明本科及研究生阶段均需学历和学位，最高学历在读期间不得与单位建立劳动关系或缴纳社保；备注为基层一线、山区夜班。完整资格条件待官方职位表核验。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网逐岗详情；待官方职位表逐码复核",
+    "sources": ["gwyzwb-2026-job-241264902"]
+  }
+]
