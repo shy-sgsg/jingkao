@@ -8,6 +8,12 @@ test('science navigation resolves to the dedicated science page', () => {
   assert.ok(app.includes('science: renderScience'), 'the science route must map to its dedicated page');
 });
 
+test('official and public source catalog follows all four subject modules', () => {
+  const subjects = app.indexOf('<div class="science-subject-grid">${subjects}</div>');
+  const sources = app.indexOf('<section class="panel science-source-panel">');
+  assert.ok(subjects >= 0 && sources > subjects, 'the source catalog must appear after the subject modules');
+});
+
 test('science exam clock follows the exact session in the route', () => {
   const clock = app.slice(app.indexOf('function startScienceExamClock()'), app.indexOf('function syncSciencePlanTaskCompletion'));
   assert.match(clock, /activeScienceSessionId/);
