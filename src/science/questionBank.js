@@ -805,4 +805,59 @@ addPublishedReferenceQuestion({
   correctAnswer: 'B', explanation: '以梯子底端为支点，工人沿梯子向上时，其重力对支点的力矩增大；墙面对梯子的支持力力矩臂（梯子顶部高度）不变，因此墙面对梯子的支持力增大。水平方向地面摩擦力与墙面支持力平衡，也随之增大；竖直方向地面支持力支撑梯子和工人总重，保持不变。工人匀速运动时，梯子对人的合接触力与其重力平衡，不会逐渐减小。',
 });
 
+addPublishedReferenceQuestion({
+  id: 'gd-2022-recall-water-purification', subjectId: 'chemistry', topicId: 'chemistry:environment-life',
+  knowledgePointIds: ['chemistry:water-purification'], difficulty: 'medium', reasoningType: 'classification',
+  sourceType: 'recalled', sourceId: 'gd-2022-township-recall',
+  sourceTitle: '2022 年广东省考乡镇卷回忆题 · 水的净化方法', region: '广东', examYear: 2022, presentationMode: 'adapted',
+  sourceNote: '据考生回忆题改述；答案 D 与公开解析核对。为避免“蒸馏可去除所有杂质”的绝对化说法，将该选项限定为去除非挥发性溶解物。',
+  stem: '关于常见水处理方法的作用，下列说法不准确的是：',
+  options: ['静置沉淀可帮助去除水中较大的不溶性颗粒', '消毒剂可通过化学作用杀灭部分微生物', '蒸馏可分离水并去除大多数非挥发性溶解物', '过滤可降低硬水硬度，使硬水软化'],
+  correctAnswer: 'D', explanation: '过滤主要截留不溶性颗粒，不能除去造成硬度的溶解钙、镁离子；蒸馏可通过汽化、冷凝分离水与大多数非挥发性杂质。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'gd-2022-recall-thermal-expansion', subjectId: 'physics', topicId: 'physics:thermal',
+  knowledgePointIds: ['physics:thermal-expansion'], difficulty: 'medium', reasoningType: 'classification',
+  sourceType: 'recalled', sourceId: 'gd-2022-township-recall',
+  sourceTitle: '2022 年广东省考乡镇卷回忆题 · 热胀冷缩', region: '广东', examYear: 2022, presentationMode: 'adapted',
+  sourceNote: '据乡镇卷回忆题改述；同一热胀冷缩判断也见县级卷回忆资料，答案 A 与公开解析核对。',
+  stem: '关于物体的热胀冷缩现象，下列说法不准确的是：',
+  options: ['温度升高时，物体内的分子本身会变大', '金属受热时，长度通常会增加', '温度变化可引起物体体积变化', '物体受热膨胀通常与微观粒子平均间距变化有关'],
+  correctAnswer: 'A', explanation: '热胀冷缩通常来自粒子热运动增强后平均间距改变；分子本身的大小不会因升温而变大。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'gd-2022-recall-pendulum-energy', subjectId: 'physics', topicId: 'physics:mechanics',
+  knowledgePointIds: ['physics:mechanical-energy'], difficulty: 'medium', reasoningType: 'causal_inference',
+  sourceType: 'recalled', sourceId: 'gd-2022-township-recall',
+  sourceTitle: '2022 年广东省考乡镇卷回忆题 · 单摆机械能', region: '广东', examYear: 2022, presentationMode: 'adapted',
+  sourceNote: '据考生回忆题改述；答案 D 与公开解析核对。',
+  stem: '将单摆小球从 A 点释放，使其经过最低点 B 后摆到 C 点。忽略空气阻力，下列说法不正确的是：',
+  options: ['小球从 A 到 B 的过程中动能增大', '小球从 B 到 C 的过程中重力势能增大', '小球经过 B 点时动能最大', '小球从 A 到 C 的过程中机械能逐渐增大'],
+  correctAnswer: 'D', explanation: '忽略空气阻力时，摆动过程中动能和重力势能相互转化，机械能守恒，不会逐渐增大。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'gd-2022-recall-excavator-tracks', subjectId: 'physics', topicId: 'physics:pressure',
+  knowledgePointIds: ['physics:solid-pressure'], difficulty: 'easy', reasoningType: 'causal_inference',
+  sourceType: 'recalled', sourceId: 'gd-2022-township-recall',
+  sourceTitle: '2022 年广东省考乡镇卷回忆题 · 挖掘机履带', region: '广东', examYear: 2022, presentationMode: 'adapted',
+  sourceNote: '据考生回忆题改述；答案 A 与华图公开解析核对。',
+  stem: '挖掘机装有宽大的履带，主要有助于：',
+  options: ['增大与地面的接触面积，减小对地面的压强', '减小与地面的接触面积，增大对地面的压强', '增大挖掘机对地面的压力', '减小挖掘机自身重力'],
+  correctAnswer: 'A', explanation: '挖掘机的重力近似不变，宽履带增大受力面积；由 p=F/S 可知，对地面的压强减小，能降低陷入松软地面的风险。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'gd-2022-recall-floating-density', subjectId: 'physics', topicId: 'physics:pressure',
+  knowledgePointIds: ['physics:buoyancy', 'physics:floating-sinking'], difficulty: 'medium', reasoningType: 'comparison',
+  sourceType: 'recalled', sourceId: 'gd-2022-township-recall',
+  sourceTitle: '2022 年广东省考回忆题 · 漂浮小球与液体密度', region: '广东', examYear: 2022, presentationMode: 'adapted',
+  sourceNote: '据乡镇卷回忆图示改写为文字；同类题见县级卷回忆资料。选项顺序已调整，答案 B 与浮力关系及公开解析核对。',
+  stem: '两个相同小球分别静止漂浮在甲、乙两种液体中。已知小球在甲液体中排开液体的体积大于在乙液体中的排开体积。下列判断正确的是：',
+  options: ['甲液体密度大于乙液体密度', '甲液体密度小于乙液体密度', '小球在甲液体中受到的浮力大于在乙液体中受到的浮力', '小球在乙液体中受到的浮力大于在甲液体中受到的浮力'],
+  correctAnswer: 'B', explanation: '相同小球都处于漂浮静止状态，浮力分别等于各自小球的重力，因此两处浮力相等。由 F浮=ρ液gV排，在浮力相等时排开体积较大的甲液体密度较小。',
+});
+
 export { SCIENCE_QUESTION_BANK };

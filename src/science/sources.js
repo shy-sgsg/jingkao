@@ -117,11 +117,17 @@ export const SCIENCE_SOURCES = [
   },
   {
     id: 'gd-2022-township-recall', title: '2022 年广东省公务员考试行测真题（乡镇卷，考生回忆版）',
-    organization: '星光公考（回忆题整理）', sourceType: 'recalled', region: '广东', examYear: 2022,
+    organization: '星光公考、Aipta（考生回忆整理及答案解析）', sourceType: 'recalled', region: '广东', examYear: 2022,
     authority: 'third-party-recollection', verificationStatus: 'verified', copyrightStatus: 'reference_only',
     url: 'https://upload.xingguanggongkao.com/pdf/2022%E5%B9%B4%E5%B9%BF%E4%B8%9C%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88%E4%B9%A1%E9%95%87%E5%8D%B7-%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.pdf',
-    relatedUrls: ['https://upload.xingguanggongkao.com/pdf/2022%E5%B9%B4%E5%B9%BF%E4%B8%9C%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88%E4%B9%A1%E9%95%87%E5%8D%B7-%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.pdf'],
-    note: '非官方回忆版；只收录题面、答案可复核且不依赖缺失图表的条目。',
+    relatedUrls: [
+      'https://www.aipta.com/article/3494.html',
+      'https://m.aipta.com/article/3493.html',
+      'https://www.wensiedu.cn/wp-content/uploads/2022/06/4ea273a28d7543f.pdf',
+      'https://www.xingguanggongkao.com/Pc/XingQuestion/search/subject_id/2/keywords/%E8%80%B6%E7%A8%A3%E5%92%8C%E5%A1%91%E6%96%99/p/100.html',
+      'https://ah.huatu.com/2022/0110/2218067.html',
+    ],
+    note: '非官方回忆版；5 道文字题的答案可由公开解析交叉核对。热胀冷缩题也见县级卷回忆资料；漂浮题将原图信息改写为文字并调整选项顺序。',
   },
   {
     id: 'gd-2023-township-recall', title: '2023 年广东省公务员考试行测真题（乡镇卷，回忆整理）',
