@@ -377,4 +377,54 @@ export const GENERAL_KNOWLEDGE_SOURCES = [
     url: 'https://www.ipcc.ch/report/ar6/syr/', verificationStatus: 'verified', publishStatus: 'published',
     copyrightStatus: '科学结论概述并链接报告', note: '用于温室气体、气候变化影响、减缓与适应的综合科学证据；具体评估结论应保留报告年份与置信度。',
   },
+  {
+    id: 'beijing-city-master-plan', sourceType: 'official_policy', title: '北京城市总体规划（2016年—2035年）', organization: '北京市人民政府',
+    url: 'https://www.beijing.gov.cn/gongkai/guihua/wngh/csztgh/201907/t20190701_100008.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '规划内容概述并链接原文', note: '用于首都战略定位、城市空间结构、中心城区、平原新城、生态涵养区和城市功能的知识点核对；规划实施情况应关注后续政策。',
+  },
+  {
+    id: 'unesco-beijing-central-axis', sourceType: 'official_reference', title: '北京中轴线：展现中国理想都城秩序的建筑群', organization: '联合国教科文组织世界遗产中心',
+    url: 'https://whc.unesco.org/en/list/1714/', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '遗产价值和历史事实概述并链接原文', note: '世界遗产中心资料载明北京中轴线于2024年列入《世界遗产名录》，用于其空间格局、历史沿革和保护价值核对。',
+  },
+  {
+    id: 'ndrc-jingjinji-coordination', sourceType: 'official_policy', title: '京津冀协同发展规划纲要与区域协调资料', organization: '国家发展和改革委员会',
+    url: 'https://www.ndrc.gov.cn/gjzl/jjjxtfz/201911/t20191127_1213171.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '区域发展政策事实概述并链接原文', note: '用于京津冀协同发展的战略背景、重点领域和非首都功能疏解等内容；阶段任务需按新文件更新。',
+  },
+  {
+    id: 'beijing-street-office-regulation', sourceType: 'official_law', title: '北京市街道办事处条例', organization: '北京市人民代表大会常务委员会 / 首都之窗',
+    url: 'https://www.beijing.gov.cn/zhengce/dfxfg/201912/t20191217_1243859.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '法规内容摘要并链接原文', note: '用于街道办事处职责、基层公共服务和“街乡吹哨、部门报到”机制；使用前仍应核对条例当前有效状态。',
+  },
+  {
+    id: 'beijing-public-culture-regulation', sourceType: 'official_law', title: '北京市公共文化服务保障条例', organization: '北京市人民代表大会常务委员会 / 首都之窗',
+    url: 'https://www.beijing.gov.cn/zhengce/dfxfg/202210/t20221012_2833474.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '法规内容摘要并链接原文', note: '用于公共文化服务主体、设施、基本服务和公众参与等知识点；条例自2023年1月1日起施行，使用前应复核现行状态。',
+  },
+  {
+    id: 'beijing-science-center-regulation', sourceType: 'official_law', title: '北京国际科技创新中心建设条例', organization: '北京市人民代表大会常务委员会 / 首都之窗',
+    url: 'https://www.beijing.gov.cn/zhengce/dfxfg/202401/t20240126_3547046.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '法规内容摘要并链接原文', note: '用于北京科技创新中心的平台布局、创新主体协同和基础研究支持等知识点；使用前仍应核对法规状态。',
+  },
+  {
+    id: 'beijing-urban-renewal-plan', sourceType: 'official_policy', title: '北京市城市更新专项规划', organization: '北京市发展和改革委员会 / 北京市规划和自然资源委员会',
+    url: 'https://fgw.beijing.gov.cn/fgwzwgk/2024zcwj/ghjhwb/wngh/202206/W020240628680193553139.pdf', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '规划内容概述并链接原文', note: '用于城市更新的空间统筹、存量提质、公共设施补充和历史文化保护协同。',
+  },
+  {
+    id: 'beijing-subcenter-regulation-2026', sourceType: 'official_law', title: '北京城市副中心条例', organization: '北京市人民代表大会常务委员会 / 首都之窗',
+    url: 'https://www.beijing.gov.cn/zhengce/dfxfg/202602/t20260203_4487890.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '法规内容摘要并链接原文', note: '用于城市副中心空间结构、生产生活生态统筹和公共空间等知识点；法规事实按2026年官方页面核对。',
+  },
+  {
+    id: 'beijing-transport-governance-2026', sourceType: 'official_policy', title: '2026年北京市交通综合治理行动计划', organization: '北京市人民政府',
+    url: 'https://www.beijing.gov.cn/zhengce/zhengcefagui/202602/t20260202_4484508.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '行动计划要点概述并链接原文', note: '用于公交与轨道接驳、慢行交通、绿色出行和综合治理知识点；目标数字均保留计划年份。',
+  },
+  {
+    id: 'beijing-smart-city-action', sourceType: 'official_policy', title: '北京市“十四五”时期智慧城市发展行动纲要', organization: '北京市人民政府',
+    url: 'https://www.beijing.gov.cn/zhengce/zhengcefagui/202103/t20210323_2317136.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '规划概念摘要并链接原文', note: '用于“一网通办”“一网统管”等数字治理概念；该纲要属于“十四五”时期文件，后续阶段任务应以新规划为准。',
+  },
 ];
