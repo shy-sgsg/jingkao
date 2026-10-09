@@ -1,0 +1,11 @@
+candidate_id,region,exam_year,candidate_title,url,status,reason_and_next_action
+bj-2026-full-recall,北京,2026,2026 京考行测回忆卷候选,https://www.jike.vip/shuati/category/100984/100990.html,pending_source_access,官方公告确认考试于 2025-12-07 举行；即刻题库列有回忆卷条目，但需取得可逐题核对的公开卷面后再建完整套卷记录。
+bj-2025-full-recall,北京,2025,2025 京考（2024-12-08）回忆卷候选,https://m.bj.huatu.com/2024/1208/1244828.html,pending_full_paper,华图页提供模块题量分析，不是完整题本；另有第三方题本版本之间的题量/内容冲突，先不作为整卷模考。
+bj-2024-full-recall,北京,2024,2024 京考回忆卷候选,https://www.jike.vip/shuati/category/100984/100990.html,catalog_only,目录列出 2024-12-08 卷名；需核具体年份标注、题量与公开题本后再加入可用整卷。
+bj-2023-question-gaps,北京,2023,2023 京考回忆资料缺题,https://www.aipta.com/article/5377.html,incomplete,Aipta 页面注明 128–135 题缺失；星光 PDF 另有多个题号暂无收集提示。现有来源只可抽取逐题核验通过的条目，不可标完整套卷。
+bj-2025-book118,北京,2025,第三方《2025北京行测真题及解析》候选,https://max.book118.com/html/2025/0429/8007116034007060.shtm,suspect,页面上传时间为 2025-04，题本内容含随后月份的时政叙述，且与考试后分析中的题量结构对不上；暂不导入，需找到独立回忆卷交叉验证。
+bj-2026-book118,北京,2026,第三方 2026 京考真题解析候选,https://max.book118.com/html/2026/0723/6114045140012202.shtm,pending,属于用户上传的解析文档，暂缺可交叉核验的题本/答案来源；仅留待核线索。
+bj-2024-baiduwenku,北京,2024,百度文库北京行测题本候选,https://wenku.baidu.com/view/a1c56c700f1c59eef8c75fbfc77da26925c596ad.html,suspect,可访问文本题量很少且题面与年份/整卷结构不匹配，不能用作完整北京卷。
+huatu-2025-mock-content,全国省考模拟,2025,华图万人模考题本,https://www.huatu.com/z/2025ghttts/,gated,公开页列出两场活动，题本/解析需经华图在线 APP 获取；保留来源与活动信息，暂不复制题面。
+jiangsu-2025-mock-files,江苏,2025,江苏省考全真模拟卷一至六,https://gongkao.rh86.com/11192.html,directory_only,资源目录列出题本和答案文件，需逐套确认文件实际来源、内容完整性和解析对应关系。
+2025-province-mock-scribd,全国省考模拟,2025,《2025 省考行测模拟卷（二十）》候选,https://www.scribd.com/document/992341244/2025%E7%9C%81%E8%80%83-%E8%A1%8C%E6%B5%8B-%E6%A8%A1%E6%8B%9F%E5%8D%B7-%E5%9B%9B-%E8%A7%A3%E6%9E%90,needs_original_publisher,搜索页出现模拟卷及解析文本，但标题和内容版本不一致；暂不建立正式卷记录，先确认原发布机构与题本对应关系。
