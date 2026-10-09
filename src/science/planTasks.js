@@ -1,4 +1,5 @@
 import { getKnowledgePoint, getScienceTree } from './knowledge.js';
+import { normalizeGeneralKnowledgeConfig } from '../general-knowledge/planConfig.js';
 
 const VALID_TASK_TYPES = new Set([
   'verbal', 'data_analysis', 'reasoning', 'quantitative', 'general_knowledge',
@@ -124,6 +125,9 @@ export function createPlanTask(input, { id = createTaskId(), now = new Date().to
   const scienceConfig = input.taskType === 'science_reasoning'
     ? normalizeScienceConfig(input.scienceConfig || { activityType: 'free' })
     : null;
+  const generalKnowledgeConfig = input.taskType === 'general_knowledge'
+    ? normalizeGeneralKnowledgeConfig(input.generalKnowledgeConfig || { activityType: 'free' })
+    : null;
 
   return {
     id,
@@ -137,6 +141,7 @@ export function createPlanTask(input, { id = createTaskId(), now = new Date().to
     status,
     completionSource,
     scienceConfig,
+    generalKnowledgeConfig,
     createdAt: input.createdAt || now,
     updatedAt: now,
     archivedAt: input.archivedAt || null,
@@ -153,11 +158,17 @@ export function updatePlanTask(tasks, id, changes, { now = new Date().toISOStrin
     : nextType === 'science_reasoning' && current.taskType === 'science_reasoning'
       ? current.scienceConfig
       : nextType === 'science_reasoning' ? { activityType: 'free' } : null;
+  const nextGeneralKnowledgeConfig = changes.generalKnowledgeConfig !== undefined
+    ? changes.generalKnowledgeConfig
+    : nextType === 'general_knowledge' && current.taskType === 'general_knowledge'
+      ? current.generalKnowledgeConfig
+      : nextType === 'general_knowledge' ? { activityType: 'free' } : null;
   const updated = createPlanTask({
     ...current,
     ...changes,
     taskType: nextType,
     scienceConfig: nextConfig,
+    generalKnowledgeConfig: nextGeneralKnowledgeConfig,
     id: current.id,
     createdAt: current.createdAt,
     archivedAt: current.archivedAt,

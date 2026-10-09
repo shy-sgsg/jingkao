@@ -15,6 +15,9 @@ test('older account state receives empty science collections without losing exis
   assert.deepEqual(normalized.scienceStudy, {
     knowledgeProgress: {}, sessions: [], answers: [], mistakes: {}, favorites: [], favoriteKnowledgePointIds: [], unclearKnowledgePointIds: [],
   });
+  assert.deepEqual(normalized.generalKnowledgeStudy, {
+    knowledgeProgress: {}, sessions: [], answers: [], mistakes: {}, favorites: [], favoriteKnowledgePointIds: [], unclearKnowledgePointIds: [], flashcards: [], flashcardReviews: [],
+  });
   assert.deepEqual(normalized.dayLogs, oldState.dayLogs);
   assert.deepEqual(normalized.planOverrides, oldState.planOverrides);
 });
@@ -36,7 +39,12 @@ test('normalized account state preserves task links, exam attempts, mistakes, an
     },
   };
 
-  assert.deepEqual(persistence.normalizeStudyState(studyState), studyState);
+  assert.deepEqual(persistence.normalizeStudyState(studyState), {
+    ...studyState,
+    generalKnowledgeStudy: {
+      knowledgeProgress: {}, sessions: [], answers: [], mistakes: {}, favorites: [], favoriteKnowledgePointIds: [], unclearKnowledgePointIds: [], flashcards: [], flashcardReviews: [],
+    },
+  });
 });
 
 test('knowledge point study status preserves its first start time and can be flagged', async () => {

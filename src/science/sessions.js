@@ -47,13 +47,19 @@ export function createScienceSession(bank, sourceStudy, options = {}, { id, now 
     examYear: options.examYear || undefined,
     onlyUnanswered: options.onlyUnanswered === true,
     onlyMistakes: options.onlyMistakes === true,
+    onlyFavorites: options.onlyFavorites === true,
     excludeQuestionIds: Array.isArray(options.excludeQuestionIds) ? options.excludeQuestionIds : [],
     answeredQuestionIds: scienceStudy.answers.map((answer) => answer.questionId),
     mistakeQuestionIds: Object.keys(scienceStudy.mistakes),
     favoriteQuestionIds: scienceStudy.favorites,
   };
+  const sourcePriority = Array.isArray(options.sourcePriorityOrder)
+    ? new Map(options.sourcePriorityOrder.map((sourceType, index) => [sourceType, index]))
+    : null;
   const candidates = filterQuestions((Array.isArray(bank) ? bank : []).filter((question) => question.publishStatus === 'published'), filters)
-    .sort((left, right) => questionSourcePriority(left) - questionSourcePriority(right));
+    .sort((left, right) => sourcePriority
+      ? (sourcePriority.get(left.sourceType) ?? 999) - (sourcePriority.get(right.sourceType) ?? 999)
+      : questionSourcePriority(left) - questionSourcePriority(right));
   if (candidates.length < targetQuestionCount) {
     throw new Error(`当前筛选仅有 ${candidates.length} 道可用题目，少于目标题量 ${targetQuestionCount}。`);
   }

@@ -16,6 +16,15 @@ import { getKnowledgePoint, getScienceTree } from './science/knowledge.js';
 import { SCIENCE_QUESTION_BANK } from './science/questionBank.js';
 import { SCIENCE_SOURCES } from './science/sources.js';
 import { advanceExamQuestion, answerScienceQuestion, continueScienceSession, createScienceSession, expireScienceSession, finishExamSession, getScienceStats, goToExamQuestion, selectExamAnswer, toggleScienceFavorite } from './science/sessions.js';
+import { GENERAL_KNOWLEDGE_QUESTION_BANK } from './general-knowledge/questionBank.js';
+import { GENERAL_KNOWLEDGE_SOURCES } from './general-knowledge/sources.js';
+import { getGeneralKnowledgePoint, getGeneralKnowledgeTree } from './general-knowledge/knowledge.js';
+import { GENERAL_KNOWLEDGE_LESSONS } from './general-knowledge/lessonContent.js';
+import { setGeneralKnowledgePointStatus, toggleGeneralKnowledgePointFlag, reviewFlashcard, toggleGeneralKnowledgeFavorite } from './general-knowledge/persistence.js';
+import { getGeneralKnowledgeStats, combinePracticeSummary } from './general-knowledge/analytics.js';
+import { createGeneralKnowledgeSession, answerGeneralKnowledgeQuestion, continueGeneralKnowledgeSession, selectGeneralKnowledgeAnswer, advanceGeneralKnowledgeQuestion, goToGeneralKnowledgeQuestion, finishGeneralKnowledgeSession, expireGeneralKnowledgeSession } from './general-knowledge/sessions.js';
+import { getGeneralKnowledgeTaskProgress, reconcileGeneralKnowledgePlanTaskProgress } from './general-knowledge/planTasks.js';
+import { APTITUDE_MODULES, getAptitudeMockModules } from './aptitude/modules.js';
 import { renderEligibilityChecks } from './ui/eligibility.js';
 import { renderScoreBreakdown } from './ui/scoreBreakdown.js';
 
@@ -58,19 +67,7 @@ const navGroups = [
   { label: '北京京考职位决策', items: [['positions', '职位库'], ['compare', '岗位比较'], ['assistant', '选岗助手'], ['scenarios', '分数情景'], ['matrix', '竞争矩阵']] },
   { label: '个人与数据', items: [['profile', '个人资料'], ['research', '研究结论'], ['evidence', '数据覆盖'], ['sources', '数据与来源'], ['settings', '设置与显示']] },
 ];
-const mockModules = [
-  ['dataAnalysis', '资料分析'], ['reasoning', '判断推理'], ['science', '科学推理'],
-  ['quantitative', '数量关系'], ['verbal', '言语理解'], ['politicalAndGeneral', '政治理论 + 常识'],
-];
-const APTITUDE_MODULES = [
-  { id: 'political-theory', area: '政治理论', symbol: '政', hint: '理论政策与时政辨析' },
-  { id: 'general-knowledge', area: '常识判断', symbol: '常', hint: '法律、经济、科技、人文与北京市情' },
-  { id: 'verbal', area: '言语', symbol: '言', hint: '中心理解、逻辑填空与语句表达' },
-  { id: 'quantitative', area: '数量关系', symbol: '数', hint: '数字推理、应用题与数量模型' },
-  { id: 'reasoning', area: '判断推理', symbol: '判', hint: '图形、演绎、定义、类比与排序' },
-  { id: 'science', area: '科学推理', symbol: '理', hint: '知识点学习、专项练习与错题复习' },
-  { id: 'data-analysis', area: '资料分析', symbol: '资', hint: '增长率、比重与综合判断' },
-];
+const mockModules = getAptitudeMockModules();
 
 let dataset;
 function readRoute(hash = location.hash) {
@@ -102,6 +99,10 @@ let activeAptitudeModuleId = initialRoute.aptitudeModuleId;
 let activeSciencePlanTaskId = initialRoute.taskId;
 let selectedScienceKnowledgePointId = initialRoute.knowledgePointId;
 let activeScienceSessionId = initialRoute.sessionId;
+let activeGeneralKnowledgePlanTaskId = initialRoute.page === 'generalKnowledge' ? initialRoute.taskId : null;
+let selectedGeneralKnowledgePointId = initialRoute.page === 'generalKnowledge' ? initialRoute.knowledgePointId : null;
+let activeGeneralKnowledgeSessionId = initialRoute.page === 'generalKnowledge' ? initialRoute.sessionId : null;
+let revealedGeneralKnowledgeFlashcardId = null;
 let pageTransition = true;
 let resultTransition = false;
 let filters = {
@@ -120,6 +121,7 @@ let assistantFilter = 'all';
 let assistantFilterChanged = false;
 let pageRevealObserver = null;
 let scienceExamTimer = null;
+let generalKnowledgeExamTimer = null;
 let selectedDay = null;
 let storageUnavailable = false;
 let pendingBackup = null;
@@ -139,7 +141,7 @@ function emptyStorage() {
   const studyState = normalizeStudyState();
   return {
     profile: { major: '公共管理' }, dayLogs: {}, planOverrides: {}, studyPlanTasks: studyState.studyPlanTasks,
-    scienceStudy: studyState.scienceStudy, aptitudeLogs: {}, essayLogs: {},
+    scienceStudy: studyState.scienceStudy, generalKnowledgeStudy: studyState.generalKnowledgeStudy, aptitudeLogs: {}, essayLogs: {},
     mocks: [], favorites: [], compared: [],
     settings: { density: 'comfortable', fontSize: 'standard', motion: 'enhanced' },
     onboarding: { step: 0, hidden: false, completed: false },
@@ -157,6 +159,7 @@ function readStorage(source = {}, densityFallback = 'comfortable') {
       planOverrides: parsed.planOverrides || {},
       studyPlanTasks: studyState.studyPlanTasks,
       scienceStudy: studyState.scienceStudy,
+      generalKnowledgeStudy: studyState.generalKnowledgeStudy,
       aptitudeLogs: parsed.aptitudeLogs || {},
       essayLogs: parsed.essayLogs || {},
       mocks: Array.isArray(parsed.mocks) ? parsed.mocks : [],
@@ -506,6 +509,9 @@ function renderOverview() {
   const todayScienceTasks = getTasksForDate(storage.studyPlanTasks, todayString())
     .filter((task) => task.taskType === 'science_reasoning' && task.status !== 'completed');
   const scienceReminder = todayScienceTasks.length ? `<section class="panel science-reminder-panel"><div class="panel-heading"><div><div class="eyebrow muted">TODAY · SCIENCE REASONING</div><h2>今天的科学推理任务</h2><p>${todayScienceTasks.length} 项待完成；从这里可直接进入对应训练。</p></div><a class="panel-link" href="#/plan">管理计划 →</a></div><div class="science-reminder-list">${todayScienceTasks.map((task) => `<a class="science-reminder-item" href="#/aptitude/science?task=${encodeURIComponent(task.id)}"><span class="science-reminder-icon">⚗</span><span><strong>${escapeHtml(task.title)}</strong><small>${escapeHtml(planTaskTypeLabel(task))} · ${escapeHtml(planTaskStatusLabel(task.status))}${task.estimatedMinutes ? ` · ${task.estimatedMinutes} 分钟` : ''}</small></span><b>开始 ↗</b></a>`).join('')}</div></section>` : '';
+  const todayGeneralKnowledgeTasks = getTasksForDate(storage.studyPlanTasks, todayString())
+    .filter((task) => task.taskType === 'general_knowledge' && task.status !== 'completed');
+  const generalKnowledgeReminder = todayGeneralKnowledgeTasks.length ? `<section class="panel science-reminder-panel general-knowledge-reminder"><div class="panel-heading"><div><div class="eyebrow muted">TODAY · GENERAL KNOWLEDGE</div><h2>今天的常识判断任务</h2><p>${todayGeneralKnowledgeTasks.length} 项待完成；从这里直接进入知识点或训练。</p></div><a class="panel-link" href="#/plan">管理计划 →</a></div><div class="science-reminder-list">${todayGeneralKnowledgeTasks.map((task) => `<a class="science-reminder-item" href="#/aptitude/general-knowledge?task=${encodeURIComponent(task.id)}"><span class="science-reminder-icon">常</span><span><strong>${escapeHtml(task.title)}</strong><small>${escapeHtml(planTaskTypeLabel(task))} · ${escapeHtml(planTaskStatusLabel(task.status))}${task.estimatedMinutes ? ` · ${task.estimatedMinutes} 分钟` : ''}</small></span><b>开始 ↗</b></a>`).join('')}</div></section>` : '';
   const profileFields = ['undergraduateMajor', 'undergraduateMajorCode', 'graduateMajor', 'graduateMajorCode', 'degree', 'degreeType', 'graduationStatus', 'graduationYear', 'politicalStatus', 'hukou', 'studentOrigin', 'grassrootsYears', 'credentials', 'retiredStatus', 'grassrootsProjectStatus'];
   const completedProfileFields = profileFields.filter((key) => storage.profile[key] !== null
     && storage.profile[key] !== undefined && String(storage.profile[key]).trim() !== '').length;
@@ -539,7 +545,7 @@ function renderOverview() {
     <section class="metric-grid">${metric('复习计划完成度', fmtPct(progress), `${done} / ${days.length} 天标记完成`, '↗', 'blue')}${metric('计划训练量', `${plannedTotals.questions.toLocaleString('zh-CN')}<small>题</small>`, `${fmt(plannedTotals.hours)} 小时计划投入`, '⌁', 'mint')}${metric('有效模考', `${mocks.length}<small> / 12</small>`, mocks.length ? `最近总分 ${fmt(latest.total, 1)} · 目标 ${fmt(target)}` : '尚无真实成绩记录', '◉', 'amber')}${coverageTile}</section>
     <section class="score-target-section" aria-label="真实模考与目标分差距"><div class="score-target-heading"><div><div class="eyebrow muted">REAL MOCK · TARGET DISTANCE</div><h2>离目标分还有多远？</h2><p>${latest ? `最近一次真实模考：${escapeHtml(latest.date || '日期待定')} · ${fmt(latest.total, 1)} 分` : '录入模考后，按真实总分计算目标差距；空白不会当作 0 分。'}</p></div><a class="panel-link" href="#/mocks">记录或复盘成绩 →</a></div><div class="score-target-grid">${scoreTargets}</div></section>
     <section class="quick-start-section"><div class="quick-start-heading"><div><div class="eyebrow muted">QUICK START</div><h2>我应该先做什么？</h2></div><button type="button" class="text-button" data-action="open-onboarding">第一次使用？3 分钟完成初始化 →</button></div><div class="quick-start-grid"><a class="quick-start-card" href="#/profile"><span class="quick-start-icon icon-profile">01</span><span class="quick-start-copy"><strong>完善个人报考条件</strong><small>${completedProfileFields} / ${profileFields.length} 项有内容</small></span><span class="quick-start-arrow">↗</span></a><a class="quick-start-card" href="#/plan"><span class="quick-start-icon icon-plan">02</span><span class="quick-start-copy"><strong>安排今天的学习</strong><small>${todayPlan ? `从 Day ${todayPlan.day} 开始 · ${escapeHtml(todayPlan.focus)}` : '打开 50 天学习计划'}</small></span><span class="quick-start-arrow">↗</span></a><button type="button" class="quick-start-card" data-action="add-mock"><span class="quick-start-icon icon-mock">03</span><span class="quick-start-copy"><strong>记录一次模考</strong><small>${mocks.length ? `已有 ${mocks.length} 次真实记录，继续复盘` : '录入首场成绩，建立自己的起点'}</small></span><span class="quick-start-arrow">↗</span></button><a class="quick-start-card" href="#/positions"><span class="quick-start-icon icon-jobs">04</span><span class="quick-start-copy"><strong>浏览北京京考职位库</strong><small>${dataset.positions.length} 条有来源样例 · 当前覆盖 ${new Set(dataset.positions.map((position) => position.districtId).filter(Boolean)).size} 个区县</small></span><span class="quick-start-arrow">↗</span></a></div></section>
-    ${scienceReminder}<section class="content-grid overview-grid"><article class="panel next-task-panel"><div class="panel-heading"><div><div class="eyebrow muted">STUDY PLAN</div><h2>${escapeHtml(dateNote)}</h2></div><a class="panel-link" href="#/plan">查看全部 50 天 →</a></div>${todayPlan ? `<div class="next-day"><div class="day-date"><strong>${String(todayPlan.day).padStart(2, '0')}</strong><small>${escapeHtml(fmtDate(todayPlan.date))}</small></div><div class="next-day-content"><div class="next-day-title"><strong>${escapeHtml(todayPlan.focus)}</strong>${chip(todayPlan.status, statusTone(todayPlan.status))}</div><p>${escapeHtml(todayPlan.coreTask)}</p><div class="task-tags"><span>▣ ${fmt(todayPlan.plannedQuestions)} 题</span><span>◷ ${fmt(todayPlan.plannedHours, 1)} 小时</span>${todayPlan.stage ? `<span>${escapeHtml(todayPlan.stage.replace(/^阶段\d+：/, ''))}</span>` : ''}</div></div></div><div class="task-footer"><span class="mini-progress-label">本日记录完成度</span><strong>${fmtPct(calculateDayCompletion(todayPlan))}</strong></div><div class="progress-track"><span style="width:${Math.round(calculateDayCompletion(todayPlan) * 100)}%"></span></div><a class="task-open" href="#/plan">记录今天的进度 <span>↗</span></a>` : `<div class="empty-state">工作簿中没有可显示的计划数据。</div>`}</article>
+    ${scienceReminder}${generalKnowledgeReminder}<section class="content-grid overview-grid"><article class="panel next-task-panel"><div class="panel-heading"><div><div class="eyebrow muted">STUDY PLAN</div><h2>${escapeHtml(dateNote)}</h2></div><a class="panel-link" href="#/plan">查看全部 50 天 →</a></div>${todayPlan ? `<div class="next-day"><div class="day-date"><strong>${String(todayPlan.day).padStart(2, '0')}</strong><small>${escapeHtml(fmtDate(todayPlan.date))}</small></div><div class="next-day-content"><div class="next-day-title"><strong>${escapeHtml(todayPlan.focus)}</strong>${chip(todayPlan.status, statusTone(todayPlan.status))}</div><p>${escapeHtml(todayPlan.coreTask)}</p><div class="task-tags"><span>▣ ${fmt(todayPlan.plannedQuestions)} 题</span><span>◷ ${fmt(todayPlan.plannedHours, 1)} 小时</span>${todayPlan.stage ? `<span>${escapeHtml(todayPlan.stage.replace(/^阶段\d+：/, ''))}</span>` : ''}</div></div></div><div class="task-footer"><span class="mini-progress-label">本日记录完成度</span><strong>${fmtPct(calculateDayCompletion(todayPlan))}</strong></div><div class="progress-track"><span style="width:${Math.round(calculateDayCompletion(todayPlan) * 100)}%"></span></div><a class="task-open" href="#/plan">记录今天的进度 <span>↗</span></a>` : `<div class="empty-state">工作簿中没有可显示的计划数据。</div>`}</article>
       ${cityCoveragePanel}
     </section>
     <section class="content-grid overview-grid"><article class="panel chart-panel"><div class="panel-heading"><div><div class="eyebrow muted">MOCK REVIEW</div><h2>模考分数走势</h2></div><a class="panel-link" href="#/mocks">进入模考复盘 →</a></div><div class="chart-summary">${latest ? `<strong>${fmt(latest.total, 1)}<small> 分</small></strong><span>${escapeHtml(latestTargetSummary)}</span>` : `<strong class="placeholder-value">尚未开始</strong><span>${escapeHtml(latestTargetSummary)}</span>`}</div>${chartSvg(mocks)}</article>${renderSevenDayPanel(weekly)}</section>
@@ -590,23 +596,32 @@ function renderPlanTaskList() {
     .slice().sort((a, b) => a.date.localeCompare(b.date) || a.createdAt.localeCompare(b.createdAt));
   const taskCards = tasks.map((task) => {
     const config = task.scienceConfig;
+    const generalKnowledgeConfig = task.generalKnowledgeConfig;
     const progress = task.taskType === 'science_reasoning'
       ? getPlanTaskProgress(task, storage.scienceStudy.sessions, storage.scienceStudy.answers)
       : null;
+    const generalKnowledgeProgress = task.taskType === 'general_knowledge'
+      ? getGeneralKnowledgeTaskProgress(task, storage.generalKnowledgeStudy.sessions, storage.generalKnowledgeStudy.answers)
+      : null;
     const sciencePoint = config?.knowledgePointIds?.map(getKnowledgePoint).filter(Boolean)[0];
+    const generalKnowledgePoint = generalKnowledgeConfig?.knowledgePointIds?.map(getGeneralKnowledgePoint).filter(Boolean)[0];
     const activity = SCIENCE_ACTIVITY_TYPES.find(([value]) => value === config?.activityType)?.[1];
+    const generalKnowledgeActivity = SCIENCE_ACTIVITY_TYPES.find(([value]) => value === generalKnowledgeConfig?.activityType)?.[1];
     const scienceDetail = task.taskType === 'science_reasoning'
       ? `<span>${escapeHtml(activity || '自由学习')}${sciencePoint ? ` · ${escapeHtml(sciencePoint.title)}` : ''}${config?.targetQuestionCount ? ` · ${config.targetQuestionCount} 题` : ''}</span>${progress?.targetCount ? `<span>进度 ${progress.displayCount}/${progress.targetCount} ${progress.activityType === 'knowledge' ? '个知识点' : '题'}</span>` : ''}`
+      : '';
+    const generalKnowledgeDetail = task.taskType === 'general_knowledge'
+      ? `<span>${escapeHtml(generalKnowledgeActivity || '自由学习')}${generalKnowledgePoint ? ` · ${escapeHtml(generalKnowledgePoint.title)}` : ''}${generalKnowledgeConfig?.targetQuestionCount ? ` · ${generalKnowledgeConfig.targetQuestionCount} 题` : ''}</span>${generalKnowledgeProgress?.targetCount ? `<span>进度 ${generalKnowledgeProgress.displayCount}/${generalKnowledgeProgress.targetCount} ${generalKnowledgeProgress.activityType === 'knowledge' ? '个知识点' : '题'}</span>` : ''}`
       : '';
     const completionLabel = task.completionSource === 'system_verified' ? '系统核验完成' : '手动完成';
     return `<article class="plan-task-card ${task.status === 'completed' ? 'is-complete' : ''}">
       <div class="plan-task-date"><strong>${escapeHtml(fmtDate(task.date))}</strong><small>${escapeHtml(task.date)}</small></div>
       <div class="plan-task-main"><div class="plan-task-title-row"><span class="plan-task-type">${escapeHtml(planTaskTypeLabel(task))}</span><h3>${escapeHtml(task.title)}</h3>${chip(planTaskStatusLabel(task.status), task.status === 'completed' ? 'green' : task.status === 'in_progress' ? 'blue' : 'neutral')}</div>
-        ${task.description ? `<p>${escapeHtml(task.description)}</p>` : ''}<div class="plan-task-meta">${scienceDetail}${task.estimatedMinutes !== null ? `<span>◷ ${fmt(task.estimatedMinutes)} 分钟</span>` : ''}<span>${task.priority === 'high' ? '高优先级' : task.priority === 'low' ? '低优先级' : '普通优先级'}</span>${task.status === 'completed' ? `<span>${completionLabel}</span>` : ''}</div>
-      </div><div class="plan-task-actions">${task.taskType === 'science_reasoning' ? `<a class="button button-secondary button-small" href="#/aptitude/science?task=${encodeURIComponent(task.id)}">开始</a>` : ''}${button('编辑', 'edit-plan-task', 'button button-quiet button-small', `data-task-id="${escapeHtml(task.id)}"`)}${task.status === 'completed' ? button('标为未完成', 'reopen-plan-task', 'button button-quiet button-small', `data-task-id="${escapeHtml(task.id)}"`) : button('完成', 'complete-plan-task', 'button button-secondary button-small', `data-task-id="${escapeHtml(task.id)}"`)}${button('归档', 'archive-plan-task', 'button button-quiet button-small', `data-task-id="${escapeHtml(task.id)}"`)}</div>
+        ${task.description ? `<p>${escapeHtml(task.description)}</p>` : ''}<div class="plan-task-meta">${scienceDetail}${generalKnowledgeDetail}${task.estimatedMinutes !== null ? `<span>◷ ${fmt(task.estimatedMinutes)} 分钟</span>` : ''}<span>${task.priority === 'high' ? '高优先级' : task.priority === 'low' ? '低优先级' : '普通优先级'}</span>${task.status === 'completed' ? `<span>${completionLabel}</span>` : ''}</div>
+      </div><div class="plan-task-actions">${task.taskType === 'science_reasoning' ? `<a class="button button-secondary button-small" href="#/aptitude/science?task=${encodeURIComponent(task.id)}">开始</a>` : ''}${task.taskType === 'general_knowledge' ? `<a class="button button-secondary button-small" href="#/aptitude/general-knowledge?task=${encodeURIComponent(task.id)}">开始</a>` : ''}${button('编辑', 'edit-plan-task', 'button button-quiet button-small', `data-task-id="${escapeHtml(task.id)}"`)}${task.status === 'completed' ? button('标为未完成', 'reopen-plan-task', 'button button-quiet button-small', `data-task-id="${escapeHtml(task.id)}"`) : button('完成', 'complete-plan-task', 'button button-secondary button-small', `data-task-id="${escapeHtml(task.id)}"`)}${button('归档', 'archive-plan-task', 'button button-quiet button-small', `data-task-id="${escapeHtml(task.id)}"`)}</div>
     </article>`;
   }).join('');
-  return `<section class="panel plan-task-panel"><div class="panel-heading"><div><div class="eyebrow muted">FLEXIBLE STUDY TASKS</div><h2>学习任务 <span class="heading-count">${tasks.length}</span></h2><p>新增任务与 50 天原始日程分开保存；归档会保留关联学习记录。</p></div><button type="button" class="button button-primary" data-action="add-plan-task" data-date="${todayString()}">＋ 新增学习任务</button></div>${tasks.length ? `<div class="plan-task-list">${taskCards}</div>` : '<div class="empty-state plan-task-empty">还没有自定义学习任务。你可以按日期添加普通任务或科学推理训练。</div>'}</section>`;
+  return `<section class="panel plan-task-panel"><div class="panel-heading"><div><div class="eyebrow muted">FLEXIBLE STUDY TASKS</div><h2>学习任务 <span class="heading-count">${tasks.length}</span></h2><p>新增任务与 50 天原始日程分开保存；归档会保留关联学习记录。</p></div><button type="button" class="button button-primary" data-action="add-plan-task" data-date="${todayString()}">＋ 新增学习任务</button></div>${tasks.length ? `<div class="plan-task-list">${taskCards}</div>` : '<div class="empty-state plan-task-empty">还没有自定义学习任务。你可以按日期添加常识判断或科学推理训练。</div>'}</section>`;
 }
 
 function renderPlan() {
@@ -780,23 +795,30 @@ function renderAptitude() {
     items: aptitude.filter((item) => item.area === module.area),
   })).filter((module) => module.items.length);
   const scienceStats = getScienceStats(storage.scienceStudy);
-  const overall = combineAptitudeSummary(summarizeAptitudeItems(aptitude), scienceStats);
+  const generalKnowledgeStats = getGeneralKnowledgeStats(storage.generalKnowledgeStudy, GENERAL_KNOWLEDGE_QUESTION_BANK);
+  const overall = combineAptitudeSummary(summarizeAptitudeItems(aptitude), scienceStats, generalKnowledgeStats);
   const modulesWithRecords = modules.filter((module) => summarizeAptitudeItems(module.items).hasManualRecords
-    || (module.id === 'science' && scienceStats.attemptedCount > 0)).length;
+    || (module.id === 'science' && scienceStats.attemptedCount > 0)
+    || (module.id === 'general-knowledge' && generalKnowledgeStats.attemptedCount > 0)).length;
   const cards = modules.map((module) => {
     const manualSummary = summarizeAptitudeItems(module.items);
-    const summary = module.id === 'science' ? combineAptitudeSummary(manualSummary, scienceStats) : manualSummary;
+    const summary = module.id === 'science' ? combineAptitudeSummary(manualSummary, scienceStats)
+      : module.id === 'general-knowledge' ? combineAptitudeSummary(manualSummary, generalKnowledgeStats) : manualSummary;
     const href = module.id === 'science'
       ? '#/aptitude/science'
       : module.id === 'general-knowledge'
         ? '#/aptitude/general-knowledge'
         : `#/aptitude/module/${module.id}`;
-    return `<a class="panel aptitude-entry-card" href="${href}"><span class="aptitude-entry-icon module-${module.id}">${escapeHtml(module.symbol)}</span><span class="aptitude-entry-copy"><strong>${escapeHtml(module.area)}</strong><small>${escapeHtml(module.hint)}</small></span><span class="aptitude-entry-stat aptitude-entry-accuracy"><strong>${fmtPct(summary.accuracy)}</strong><small>${module.id === 'science' ? '合并正确率' : '手动正确率'}</small></span><span class="aptitude-entry-stat aptitude-entry-attempts"><strong>${summary.hasAttempted ? fmt(summary.attemptedCount) : '待记录'}</strong><small>已录题量</small></span><b aria-hidden="true">↗</b></a>`;
+    const accuracyLabel = ['science', 'general-knowledge'].includes(module.id) ? '合并正确率' : '手动正确率';
+    return `<a class="panel aptitude-entry-card" href="${href}"><span class="aptitude-entry-icon module-${module.id}">${escapeHtml(module.symbol)}</span><span class="aptitude-entry-copy"><strong>${escapeHtml(module.area)}</strong><small>${escapeHtml(module.hint)}</small></span><span class="aptitude-entry-stat aptitude-entry-accuracy"><strong>${fmtPct(summary.accuracy)}</strong><small>${accuracyLabel}</small></span><span class="aptitude-entry-stat aptitude-entry-attempts"><strong>${summary.hasAttempted ? fmt(summary.attemptedCount) : '待记录'}</strong><small>已录题量</small></span><b aria-hidden="true">↗</b></a>`;
   }).join('');
-  const onlineAccuracyNote = scienceStats.accuracy === null
-    ? '科学推理尚无站内答题记录'
-    : `站内已答 ${scienceStats.attemptedCount} 题 · ${fmt(scienceStats.correctCount)} 题答对`;
-  return `<div class="page-body aptitude-page"><div class="page-heading-row"><div><div class="eyebrow muted">APTITUDE · MODULE OVERVIEW</div><h1>行测能力</h1><p>先看训练总览，再进入对应模块学习、练习或手动更新记录。</p></div><a class="button button-secondary" href="#/plan">查看学习计划 →</a></div><section class="metric-grid four-metrics aptitude-overview" aria-label="行测训练总览">${metric('整体正确率', fmtPct(overall.accuracy), overall.accuracy === null ? '录入练习记录后统计' : `按 ${fmt(overall.accuracyQuestionCount)} 道有正确数依据的题量合并`, '◎', 'blue')}${metric('累计记录题量', overall.hasAttempted ? `${fmt(overall.attemptedCount)}<small> 题</small>` : '待记录', `${overall.hasManualRecordsCount} 个手动训练子项已填写`, '▤', 'mint')}${metric('站内答题正确率', fmtPct(scienceStats.accuracy), onlineAccuracyNote, '✓', 'amber')}${metric('已记录模块', `${modulesWithRecords}<small> / ${modules.length}</small>`, '包含手动记录和站内答题', '⌁', 'purple')}</section><section class="aptitude-module-section"><div class="aptitude-section-heading"><div><span class="eyebrow muted">MODULES</span><h2>行测模块</h2></div><span>${modules.length} 个入口</span></div><div class="aptitude-entry-grid">${cards}</div></section><div class="notice notice-soft"><span>ⓘ</span><p>手动正确率按训练子项的已录题量加权，并与科学推理站内作答合并；不要把站内已答题再次计入手动累计。</p></div></div>`;
+  const onlineAttempted = scienceStats.attemptedCount + generalKnowledgeStats.attemptedCount;
+  const onlineCorrect = scienceStats.correctCount + generalKnowledgeStats.correctCount;
+  const onlineAccuracy = onlineAttempted ? onlineCorrect / onlineAttempted : null;
+  const onlineAccuracyNote = onlineAttempted
+    ? `常识判断与科学推理站内共答 ${onlineAttempted} 题 · ${onlineCorrect} 题答对`
+    : '常识判断与科学推理尚无站内答题记录';
+  return `<div class="page-body aptitude-page"><div class="page-heading-row"><div><div class="eyebrow muted">APTITUDE · MODULE OVERVIEW</div><h1>行测能力</h1><p>先看训练总览，再进入对应模块学习、练习或手动更新记录。</p></div><a class="button button-secondary" href="#/plan">查看学习计划 →</a></div><section class="metric-grid four-metrics aptitude-overview" aria-label="行测训练总览">${metric('整体正确率', fmtPct(overall.accuracy), overall.accuracy === null ? '录入练习记录后统计' : `按 ${fmt(overall.accuracyQuestionCount)} 道有正确数依据的题量合并`, '◎', 'blue')}${metric('累计记录题量', overall.hasAttempted ? `${fmt(overall.attemptedCount)}<small> 题</small>` : '待记录', `${overall.hasManualRecordsCount} 个手动训练子项已填写`, '▤', 'mint')}${metric('站内答题正确率', fmtPct(onlineAccuracy), onlineAccuracyNote, '✓', 'amber')}${metric('已记录模块', `${modulesWithRecords}<small> / ${modules.length}</small>`, '包含手动记录和站内答题', '⌁', 'purple')}</section><section class="aptitude-module-section"><div class="aptitude-section-heading"><div><span class="eyebrow muted">MODULES</span><h2>行测模块</h2></div><span>${modules.length} 个入口</span></div><div class="aptitude-entry-grid">${cards}</div></section><div class="notice notice-soft"><span>ⓘ</span><p>常识判断和科学推理按站内答题与对应模块的手动记录合并正确率；如果手动累计已经包含站内答题，请调整手动数据以避免重复。</p></div></div>`;
 }
 
 function summarizeAptitudeItems(items) {
@@ -817,18 +839,8 @@ function summarizeAptitudeItems(items) {
   };
 }
 
-function combineAptitudeSummary(manualSummary, scienceStats) {
-  const accuracyQuestionCount = manualSummary.accuracyQuestionCount + scienceStats.attemptedCount;
-  const correctEstimate = manualSummary.correctEstimate + scienceStats.correctCount;
-  const attemptedCount = manualSummary.attemptedCount + scienceStats.attemptedCount;
-  return {
-    ...manualSummary,
-    attemptedCount,
-    hasAttempted: manualSummary.hasAttempted || scienceStats.attemptedCount > 0,
-    accuracyQuestionCount,
-    correctEstimate,
-    accuracy: accuracyQuestionCount ? correctEstimate / accuracyQuestionCount : null,
-  };
+function combineAptitudeSummary(manualSummary, ...onlineStats) {
+  return combinePracticeSummary(manualSummary, ...onlineStats);
 }
 
 function aptitudeItemsForArea(area) {
@@ -863,8 +875,130 @@ function renderAptitudeModule(moduleId) {
   return `<div class="page-body aptitude-module-page"><div class="page-heading-row"><div><div class="eyebrow muted">APTITUDE MODULE</div><h1>${escapeHtml(module.area)}</h1><p>${escapeHtml(module.hint)}。可以先浏览站内学习入口，也可以手动记录已有训练。</p></div><a class="button button-secondary" href="#/aptitude">返回行测总览 →</a></div><div class="metric-grid three-metrics aptitude-module-overview">${metric('手动记录正确率', fmtPct(summary.accuracy), summary.accuracy === null ? '录入题量和正确率后统计' : `按 ${fmt(summary.accuracyQuestionCount)} 道有正确率记录的题量加权`, '◎', 'blue')}${metric('手动记录题量', summary.hasAttempted ? `${fmt(summary.attemptedCount)}<small> 题</small>` : '待记录', `共 ${items.length} 个训练子项`, '▤', 'mint')}${metric('计划题量进度', accuracyProgress === null ? '待记录' : fmtPct(accuracyProgress), progressNote, '↗', 'amber')}</div>${renderAptitudeModuleContent(module)}${renderAptitudeRecords(module, items)}</div>`;
 }
 
+function renderGeneralKnowledgeLesson(point, task = null) {
+  if (!point) return `<div class="page-body"><div class="empty-state">没有找到这个常识知识点。</div><a class="button button-secondary" href="#/aptitude/general-knowledge">返回常识判断</a></div>`;
+  const content = GENERAL_KNOWLEDGE_LESSONS[point.id];
+  const study = storage.generalKnowledgeStudy;
+  const progress = study.knowledgeProgress[point.id];
+  const pointQuestions = GENERAL_KNOWLEDGE_QUESTION_BANK.filter((question) => question.knowledgePointIds?.includes(point.id) && question.publishStatus === 'published');
+  const sourceLinks = (content?.sourceIds || []).map((id) => GENERAL_KNOWLEDGE_SOURCES.find((source) => source.id === id)).filter(Boolean)
+    .map((source) => `<a href="${escapeHtml(source.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.title)} ↗</a>`).join(' · ');
+  if (!content) return `<div class="page-body science-page general-knowledge-page"><div class="page-heading-row"><div><div class="eyebrow muted">${escapeHtml(point.subjectTitle)} · ${escapeHtml(point.topicTitle)}</div><h1>${escapeHtml(point.title)}</h1><p>已收录在知识目录中，完整讲解正在编校；提纲状态不会计入已学完。</p></div><a class="button button-secondary" href="#/aptitude/general-knowledge">返回知识目录</a></div><section class="panel science-outline-panel"><span class="science-content-status">目录提纲</span><h2>关联练习</h2><p>${pointQuestions.length} 道已发布题目。每道题均显示题源、核验状态和适用年份。</p><button type="button" class="button button-primary" data-action="open-general-knowledge-practice" data-point-id="${escapeHtml(point.id)}">按此知识点练习</button></section></div>`;
+  const status = progress?.status === 'completed' ? '已学完' : progress?.status === 'learning' ? '学习中' : '未开始';
+  const nextTaskPointId = task?.generalKnowledgeConfig?.activityType === 'knowledge'
+    ? task.generalKnowledgeConfig.knowledgePointIds.find((id) => id !== point.id && study.knowledgeProgress[id]?.status !== 'completed') : null;
+  const memory = content.memory?.length ? `<section><span class="science-section-kicker">记忆要点</span><ul>${content.memory.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul></section>` : '';
+  const mistakes = content.commonMistakes?.length ? `<section class="science-mistakes-note"><span class="science-section-kicker">常见混淆</span><ul>${content.commonMistakes.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul></section>` : '';
+  const statusToneName = status === '已学完' ? 'green' : status === '学习中' ? 'blue' : 'neutral';
+  return `<div class="page-body science-page general-knowledge-page"><div class="page-heading-row"><div><div class="eyebrow muted">${escapeHtml(point.subjectTitle)} · ${escapeHtml(point.topicTitle)} · KNOWLEDGE</div><h1>${escapeHtml(point.title)}</h1><p>${escapeHtml(content.examAngle)}</p></div><div class="heading-actions"><a class="button button-secondary" href="#/aptitude/general-knowledge">知识目录</a>${chip(status, statusToneName)}</div></div>
+    <div class="science-lesson-layout"><article class="panel science-lesson-main"><section><span class="science-section-kicker">核心讲解</span><p>${escapeHtml(content.explanation)}</p></section><section class="science-principle"><span class="science-section-kicker">一句话记忆</span><p>${escapeHtml(content.principle)}</p></section>${memory}${mistakes}<section><span class="science-section-kicker">题目怎么考</span><p>${escapeHtml(content.examAngle)}</p></section><section class="science-lesson-footer"><button type="button" class="button button-secondary" data-action="start-general-knowledge-knowledge" data-point-id="${escapeHtml(point.id)}" ${progress?.status === 'learning' || progress?.status === 'completed' ? 'disabled' : ''}>${progress?.status === 'learning' ? '正在学习' : '标记正在学习'}</button><button type="button" class="button button-primary" data-action="complete-general-knowledge-knowledge" data-point-id="${escapeHtml(point.id)}" ${progress?.status === 'completed' ? 'disabled' : ''}>${progress?.status === 'completed' ? '已完成学习' : '完成知识点学习'}</button><button type="button" class="button button-quiet" data-action="toggle-general-knowledge-point-favorite" data-point-id="${escapeHtml(point.id)}">${study.favoriteKnowledgePointIds.includes(point.id) ? '★ 已收藏' : '☆ 收藏知识点'}</button><button type="button" class="button button-quiet" data-action="toggle-general-knowledge-point-unclear" data-point-id="${escapeHtml(point.id)}">${study.unclearKnowledgePointIds.includes(point.id) ? '已标记不理解 · 取消' : '标记不理解'}</button><button type="button" class="button button-secondary" data-action="open-general-knowledge-practice" data-point-id="${escapeHtml(point.id)}">练习此知识点</button>${task ? `<span>计划任务：${escapeHtml(task.title)}</span>` : ''}${nextTaskPointId ? `<button type="button" class="button button-quiet" data-action="next-general-knowledge-task-point" data-task-id="${escapeHtml(task.id)}" data-point-id="${escapeHtml(nextTaskPointId)}">下一个计划知识点 →</button>` : ''}</section><div class="science-source-attribution">讲解来源：${sourceLinks || '稳定基础概念归纳'}<small>内容核对日期：${escapeHtml(content.contentAsOf || '待补')}；法律和政策状态以来源原文当前版本为准。</small></div></article><aside class="science-lesson-aside"><section class="panel"><span class="eyebrow muted">关联题目</span><strong class="science-aside-number">${pointQuestions.length}</strong><p>道已发布练习</p><small>来源不完整或展示权待确认的题目只列入来源索引。</small></section><section class="panel"><span class="eyebrow muted">学习状态</span><strong>${status}</strong><p>${progress?.lastViewedAt ? `最近学习 ${escapeHtml(fmtDate(progress.lastViewedAt.slice(0, 10)))}` : '开始与完成状态由你记录。'}</p></section></aside></div></div>`;
+}
+
+function renderGeneralKnowledgeSession(session) {
+  const study = storage.generalKnowledgeStudy;
+  const answers = study.answers.filter((answer) => answer.sessionId === session.id);
+  const isExam = session.mode === 'exam';
+  const questionCount = session.questionIds.length;
+  const answeredIds = new Set(Object.keys(session.draftAnswers || {}));
+  if (['completed', 'timed_out'].includes(session.status)) {
+    const correct = answers.filter((answer) => answer.isCorrect).length;
+    const rows = session.questionIds.map((id, index) => {
+      const question = GENERAL_KNOWLEDGE_QUESTION_BANK.find((item) => item.id === id);
+      const answer = answers.find((item) => item.questionId === id);
+      if (!question) return '';
+      return `<article class="science-result-row ${!answer ? 'is-unanswered' : answer.isCorrect ? 'is-correct' : 'is-wrong'}"><div><strong>第 ${index + 1} 题 · ${!answer ? '未作答' : answer.isCorrect ? '答对' : '答错'} · ${escapeHtml(question.subjectTitle || question.subjectId)}</strong><span>${escapeHtml(question.stem)}</span></div><p>${escapeHtml(question.explanation)}</p><small>${answer ? `你的选择 ${escapeHtml(answer.selectedOptionId)}` : '未提交答案'} · 正确答案 ${escapeHtml(question.correctAnswer)}</small></article>`;
+    }).join('');
+    const resultHref = session.planTaskId ? '#/plan' : '#/aptitude/general-knowledge';
+    return `<div class="page-body science-page general-knowledge-page"><div class="page-heading-row"><div><div class="eyebrow muted">${isExam ? 'TIMED MOCK REVIEW' : 'PRACTICE REVIEW'}</div><h1>${session.status === 'timed_out' ? '模拟已到时' : isExam ? '模拟已交卷' : '训练完成'}</h1><p>${isExam ? `${correct}/${questionCount} 题 · 得分率 ${Math.round((session.scoreRate || 0) * 100)}% · 已答准确率 ${session.answeredAccuracy === null ? '—' : `${Math.round(session.answeredAccuracy * 100)}%`}` : `${correct}/${answers.length} 题答对 · ${answers.length ? Math.round(correct / answers.length * 100) : 0}% 正确`}</p></div><a class="button button-secondary" href="${resultHref}">${session.planTaskId ? '返回学习计划' : '返回常识判断'}</a></div><section class="panel science-results-panel"><div class="science-result-summary"><strong>${correct}<small> / ${questionCount}</small></strong><span>${isExam ? '答对 / 本场总题数' : '正确题数'}</span><p>逐题解析已保存；错题自动进入常识判断错题本。</p></div><div class="science-result-list">${rows || '<div class="empty-state">本次没有可复盘题目。</div>'}</div><button type="button" class="button button-primary" data-action="open-general-knowledge-practice">再练一组</button></section></div>`;
+  }
+  if (isExam && session.currentIndex >= questionCount) {
+    const map = session.questionIds.map((id, index) => `<button type="button" class="science-exam-number ${answeredIds.has(id) ? 'is-answered' : 'is-unanswered'}" data-action="go-to-general-knowledge-question" data-session-id="${escapeHtml(session.id)}" data-index="${index}">${index + 1}</button>`).join('');
+    const unanswered = questionCount - answeredIds.size;
+    return `<div class="page-body science-page general-knowledge-page"><div class="page-heading-row"><div><div class="eyebrow muted">TIMED MOCK · ANSWER SHEET</div><h1>检查答题卡</h1><p>已选 ${answeredIds.size} 题 · 未答 ${unanswered} 题。</p></div><div class="science-session-clock"><span class="eyebrow muted">剩余时间</span><strong id="general-knowledge-exam-countdown" data-deadline="${escapeHtml(session.deadline)}">计算中</strong><button type="button" class="button button-quiet" data-action="leave-general-knowledge-session">暂时退出</button></div></div><section class="panel science-exam-sheet"><div class="science-exam-question-map">${map}</div><div class="science-question-footer"><button type="button" class="button button-secondary" data-action="go-to-general-knowledge-question" data-session-id="${escapeHtml(session.id)}" data-index="0">返回第一题</button><button type="button" class="button button-primary" data-action="finish-general-knowledge-exam" data-session-id="${escapeHtml(session.id)}">${unanswered ? `确认交卷（${unanswered} 题未答）` : '确认交卷'}</button></div></section></div>`;
+  }
+  const question = GENERAL_KNOWLEDGE_QUESTION_BANK.find((item) => item.id === session.questionIds[session.currentIndex]);
+  if (!question) return `<div class="page-body science-page"><div class="empty-state">题目数据缺失。</div></div>`;
+  const answer = session.reviewingAnswerId ? answers.find((item) => item.id === session.reviewingAnswerId) : null;
+  const selected = session.draftAnswers?.[question.id]?.optionId;
+  const options = question.options.map((option) => {
+    if (isExam) return `<button type="button" class="science-answer-option ${selected === option.id ? 'is-selected' : ''}" data-action="select-general-knowledge-answer" data-session-id="${escapeHtml(session.id)}" data-option-id="${escapeHtml(option.id)}"><span>${escapeHtml(option.id)}</span><strong>${escapeHtml(option.text)}</strong><small>${selected === option.id ? '已选' : '选择'}</small></button>`;
+    if (answer) {
+      const correct = option.id === question.correctAnswer;
+      const wrong = option.id === answer.selectedOptionId && !answer.isCorrect;
+      return `<div class="science-answer-option ${correct ? 'is-correct' : wrong ? 'is-wrong' : ''}"><span>${escapeHtml(option.id)}</span><strong>${escapeHtml(option.text)}</strong><small>${correct ? '正确答案' : wrong ? '你的答案' : ''}</small></div>`;
+    }
+    return `<button type="button" class="science-answer-option" data-action="answer-general-knowledge-question" data-session-id="${escapeHtml(session.id)}" data-option-id="${escapeHtml(option.id)}"><span>${escapeHtml(option.id)}</span><strong>${escapeHtml(option.text)}</strong><small>选择</small></button>`;
+  }).join('');
+  const source = GENERAL_KNOWLEDGE_SOURCES.find((item) => item.id === question.sourceId);
+  const sourceTitle = question.sourceTitle || source?.title || '题源信息待补';
+  const sourceLabel = ({ official_outline_example: '官方大纲例题', verified_exam: '核验真题', recalled: '考生回忆版', third_party_mock: '机构模拟题', original: '本站原创' })[question.sourceType] || '来源待核';
+  const review = isExam
+    ? selected ? '<div class="notice notice-soft"><span>✓</span><p>答案已保存，交卷前可修改；模拟结束前不会显示正确答案。</p></div>' : ''
+    : answer ? `<div class="science-answer-explanation ${answer.isCorrect ? 'is-correct' : 'is-wrong'}"><strong>${answer.isCorrect ? '回答正确' : `回答不正确 · 正确答案 ${escapeHtml(question.correctAnswer)}`}</strong><p>${escapeHtml(question.explanation)}</p></div>` : '';
+  const actions = isExam
+    ? `<div class="science-exam-controls"><button type="button" class="button button-secondary" data-action="go-to-general-knowledge-question" data-session-id="${escapeHtml(session.id)}" data-index="${Math.max(0, session.currentIndex - 1)}" ${session.currentIndex === 0 ? 'disabled' : ''}>上一题</button><span>第 ${session.currentIndex + 1}/${questionCount} 题 · 已答 ${answeredIds.size} 题</span><button type="button" class="button button-primary" data-action="advance-general-knowledge-question" data-session-id="${escapeHtml(session.id)}">${session.currentIndex + 1 === questionCount ? '检查答题卡' : '下一题'}</button><button type="button" class="button button-quiet" data-action="finish-general-knowledge-exam" data-session-id="${escapeHtml(session.id)}">交卷</button></div>`
+    : answer ? `<button type="button" class="button button-primary" data-action="continue-general-knowledge-session" data-session-id="${escapeHtml(session.id)}">${session.currentIndex + 1 >= questionCount ? '完成练习' : '下一题'}</button>`
+      : `<div class="science-question-actions"><button type="button" class="button button-quiet" data-action="toggle-general-knowledge-favorite" data-question-id="${escapeHtml(question.id)}">${storage.generalKnowledgeStudy.favorites.includes(question.id) ? '★ 已收藏' : '☆ 收藏题目'}</button><span>答题后自动保存解析和来源信息。</span></div>`;
+  return `<div class="page-body science-page general-knowledge-page"><div class="page-heading-row"><div><div class="eyebrow muted">${isExam ? 'TIMED MOCK' : 'PRACTICE'} · ${escapeHtml(question.subjectTitle || question.subjectId)}</div><h1>${isExam ? '常识判断限时模拟' : '常识判断练习'}</h1><p>第 ${session.currentIndex + 1}/${questionCount} 题${isExam ? ` · 已答 ${answeredIds.size} 题` : ''}</p></div><div class="science-session-clock">${isExam ? `<span class="eyebrow muted">剩余时间</span><strong id="general-knowledge-exam-countdown" data-deadline="${escapeHtml(session.deadline)}">计算中</strong>` : ''}<button type="button" class="button button-quiet" data-action="leave-general-knowledge-session">暂时退出</button></div></div><section class="panel science-question-panel"><div class="science-question-meta"><span>${escapeHtml(question.topicTitle || question.topicId)}</span><span>${escapeHtml(question.difficulty === 'easy' ? '基础' : question.difficulty === 'hard' ? '进阶' : '中等')}</span><span>${sourceLabel}${question.presentationMode === 'adapted' ? ' · 题意重述' : ''}</span></div><h2>${escapeHtml(question.stem)}</h2><div class="science-answer-options">${options}</div><div class="science-source-attribution">题目来源：${source?.url ? `<a href="${escapeHtml(source.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(sourceTitle)} ↗</a>` : `<span>${escapeHtml(sourceTitle)}</span>`}${question.sourceNote ? `<small>${escapeHtml(question.sourceNote)}</small>` : ''}</div>${review}<div class="science-question-footer">${actions}</div></section></div>`;
+}
+
 function renderGeneralKnowledge() {
-  return renderAptitudeModule('general-knowledge');
+  const study = storage.generalKnowledgeStudy;
+  const stats = getGeneralKnowledgeStats(study, GENERAL_KNOWLEDGE_QUESTION_BANK);
+  const task = activeGeneralKnowledgePlanTaskId
+    ? storage.studyPlanTasks.find((item) => item.id === activeGeneralKnowledgePlanTaskId && item.taskType === 'general_knowledge') : null;
+  const taskSession = task ? study.sessions.find((item) => item.planTaskId === task.id && item.status === 'active') : null;
+  const session = activeGeneralKnowledgeSessionId
+    ? study.sessions.find((item) => item.id === activeGeneralKnowledgeSessionId)
+    : taskSession || (!task && !selectedGeneralKnowledgePointId ? study.sessions.find((item) => item.status === 'active') : null);
+  if (session) return renderGeneralKnowledgeSession(session);
+  let pointId = selectedGeneralKnowledgePointId;
+  if (!pointId && task?.generalKnowledgeConfig?.activityType === 'knowledge') {
+    pointId = task.generalKnowledgeConfig.knowledgePointIds.find((id) => study.knowledgeProgress[id]?.status !== 'completed')
+      || task.generalKnowledgeConfig.knowledgePointIds[0];
+  }
+  if (pointId) return renderGeneralKnowledgeLesson(getGeneralKnowledgePoint(pointId), task);
+  if (task && ['practice', 'exam', 'mistakes'].includes(task.generalKnowledgeConfig.activityType)) {
+    const progress = getGeneralKnowledgeTaskProgress(task, study.sessions, study.answers);
+    const modeLabel = task.generalKnowledgeConfig.activityType === 'exam' ? '限时模拟' : task.generalKnowledgeConfig.activityType === 'mistakes' ? '错题复习' : '专项练习';
+    return `<div class="page-body science-page general-knowledge-page"><div class="page-heading-row"><div><div class="eyebrow muted">PLAN TASK · ${escapeHtml(task.date)}</div><h1>${escapeHtml(task.title)}</h1><p>${modeLabel} · 目标 ${task.generalKnowledgeConfig.targetQuestionCount} 题${task.generalKnowledgeConfig.durationSeconds ? ` · ${Math.round(task.generalKnowledgeConfig.durationSeconds / 60)} 分钟` : ''}</p></div><a class="button button-secondary" href="#/plan">返回计划</a></div><section class="panel science-task-start"><span class="eyebrow muted">${escapeHtml(getGeneralKnowledgePoint(task.generalKnowledgeConfig.knowledgePointIds[0])?.title || '全部常识学科')}</span><h2>开始计划训练</h2><p>已完成 ${progress.progressCount}/${progress.targetCount} 题；本轮只会安排剩余题量。</p><button type="button" class="button button-primary" data-action="start-general-knowledge-task" data-task-id="${escapeHtml(task.id)}">开始${modeLabel}</button></section></div>`;
+  }
+  const tree = getGeneralKnowledgeTree();
+  const subjects = tree.map((subject) => {
+    const topics = subject.topics.map((topic) => {
+      const points = topic.knowledgePoints.map((point) => {
+        const count = GENERAL_KNOWLEDGE_QUESTION_BANK.filter((question) => question.knowledgePointIds?.includes(point.id) && question.publishStatus === 'published').length;
+        const content = GENERAL_KNOWLEDGE_LESSONS[point.id];
+        const pointState = study.knowledgeProgress[point.id]?.status === 'completed' ? '已学完' : study.knowledgeProgress[point.id]?.status === 'learning' ? '学习中' : content ? '讲解已发布' : '目录提纲';
+        return `<a class="science-point-link ${content ? 'published' : ''}" href="#/aptitude/general-knowledge?knowledge=${encodeURIComponent(point.id)}"><span>${escapeHtml(point.title)}</span><small>${pointState} · ${count} 题</small></a>`;
+      }).join('');
+      return `<details class="science-topic-card"><summary><strong>${escapeHtml(topic.title)}</strong><span>${topic.knowledgePoints.length} 个知识点</span></summary><div class="science-point-links">${points}</div></details>`;
+    }).join('');
+    const pointCount = subject.topics.reduce((sum, topic) => sum + topic.knowledgePoints.length, 0);
+    const questionCount = GENERAL_KNOWLEDGE_QUESTION_BANK.filter((question) => question.subjectId === subject.id && question.publishStatus === 'published').length;
+    return `<section class="panel science-subject-card"><div class="science-subject-heading"><span>${escapeHtml(subject.symbol)}</span><div><h2>${escapeHtml(subject.title)}</h2><small>${pointCount} 个知识点 · ${questionCount} 道已发布题</small></div></div><div class="science-topic-list">${topics}</div></section>`;
+  }).join('');
+  const mistakes = Object.keys(study.mistakes);
+  const dueCards = tree.flatMap((subject) => subject.topics.flatMap((topic) => topic.knowledgePoints))
+    .filter((point) => GENERAL_KNOWLEDGE_LESSONS[point.id])
+    .filter((point) => !study.flashcards.some((card) => card.knowledgePointId === point.id)
+      || study.flashcards.find((card) => card.knowledgePointId === point.id)?.nextReviewAt <= new Date().toISOString());
+  const flashcard = dueCards[0];
+  const flashcardContent = flashcard ? GENERAL_KNOWLEDGE_LESSONS[flashcard.id] : null;
+  const sourceRows = GENERAL_KNOWLEDGE_SOURCES.map((source) => {
+    const count = GENERAL_KNOWLEDGE_QUESTION_BANK.filter((question) => question.sourceId === source.id && question.publishStatus === 'published').length;
+    const kind = ({ official_outline_example: '官方大纲例题', official_law: '官方法规', official_policy: '官方政策', official_statistics: '官方统计', official_reference: '公开参考', third_party_mock: '第三方题源索引' })[source.sourceType] || source.sourceType;
+    return `<article class="science-source-row"><div><strong>${escapeHtml(source.title)}</strong><span>${escapeHtml(source.organization)} · ${kind}${source.examYear ? ` · ${source.examYear}` : ''}</span><small>${escapeHtml(source.note)}</small></div><div class="science-source-actions"><span class="science-source-status ${source.verificationStatus}">${source.verificationStatus === 'verified' ? '已核验来源' : source.verificationStatus === 'reviewed' ? '已核对索引' : '待补原始材料'}</span><small>${count ? `${count} 道公开练习` : '来源索引'}</small><a href="${escapeHtml(source.url)}" target="_blank" rel="noopener noreferrer">打开来源 ↗</a></div></article>`;
+  }).join('');
+  const sourceCounts = Object.fromEntries(['official_outline_example', 'verified_exam', 'third_party_mock', 'recalled', 'original']
+    .map((type) => [type, GENERAL_KNOWLEDGE_QUESTION_BANK.filter((question) => question.publishStatus === 'published' && question.sourceType === type).length]));
+  const manualItems = aptitudeItemsForArea('常识判断');
+  return `<div class="page-body science-page general-knowledge-page"><div class="page-heading-row"><div><div class="eyebrow muted">11 KNOWLEDGE AREAS · SOURCED QUESTIONS</div><h1>常识判断</h1><p>独立记录讲解进度、练习答案、错题、收藏与模拟成绩；题源和展示方式逐题标明。</p></div><div class="heading-actions"><button type="button" class="button button-primary" data-action="open-general-knowledge-practice">开始练习</button><a class="button button-secondary" href="#/plan">安排学习任务</a></div></div>
+    <div class="metric-grid science-metrics">${metric('已发布题库', `${sourceCounts.official_outline_example + sourceCounts.verified_exam + sourceCounts.third_party_mock + sourceCounts.recalled + sourceCounts.original}<small> 道</small>`, `${sourceCounts.official_outline_example + sourceCounts.verified_exam} 道官方例题/真题 · ${sourceCounts.third_party_mock} 道模拟 · ${sourceCounts.original} 道原创`, '常', 'blue')}${metric('站内已作答', `${stats.attemptedCount}<small> 题</small>`, `${stats.completedSessionCount} 次训练完成`, '✓', 'mint')}${metric('站内正确率', fmtPct(stats.accuracy), stats.accuracy === null ? '暂无答题记录' : '只按常识判断站内答案计算', '◎', 'amber')}${metric('错题 / 收藏', `${mistakes.length}<small> / ${study.favorites.length}</small>`, '错题和收藏按常识判断独立保存', '☆', 'purple')}</div>
+    ${renderAptitudeRecords(APTITUDE_MODULES.find((module) => module.id === 'general-knowledge'), manualItems)}
+    <section class="science-shortcuts">${study.sessions.some((item) => item.status === 'active') ? `<a class="panel science-shortcut-card science-resume-card" href="#/aptitude/general-knowledge?session=${encodeURIComponent(study.sessions.find((item) => item.status === 'active').id)}"><span>继续未完成训练</span><strong>恢复答题</strong><small>进度和已选答案保存在本机加密档案中</small></a>` : ''}<button type="button" class="panel science-shortcut-card" data-action="open-general-knowledge-practice" data-mode="mistakes"><span>错题复习</span><strong>${mistakes.length} 道</strong><small>只抽取常识判断错题</small></button><button type="button" class="panel science-shortcut-card" data-action="open-general-knowledge-practice" data-mode="exam"><span>限时模拟</span><strong>题量与时长可选</strong><small>交卷后显示成绩、空题数和逐题解析</small></button><button type="button" class="panel science-shortcut-card" data-action="open-general-knowledge-practice" data-mode="favorites"><span>收藏题复习</span><strong>${study.favorites.length} 道</strong><small>按自己的收藏清单练习</small></button></section>
+    <section class="panel science-source-panel general-knowledge-flashcards"><div class="science-panel-heading"><div><span class="eyebrow muted">SPACED REVIEW</span><h2>知识闪卡 · 到期 ${dueCards.length} 张</h2><p>根据自评安排下次复习；熟悉程度由你判断。</p></div><a class="panel-link" href="#/aptitude/general-knowledge">查看全部知识点 →</a></div>${flashcard ? `<article class="science-example"><h3>${escapeHtml(flashcard.title)}</h3>${revealedGeneralKnowledgeFlashcardId === flashcard.id ? `<p>${escapeHtml(flashcardContent.principle)}</p><p>${escapeHtml(flashcardContent.memory?.join(' · ') || flashcardContent.explanation)}</p>` : `<p>先回忆这个知识点的核心判断方法，再显示答案。</p><button type="button" class="button button-secondary button-small" data-action="reveal-general-knowledge-flashcard" data-point-id="${escapeHtml(flashcard.id)}">显示答案</button>`}${revealedGeneralKnowledgeFlashcardId === flashcard.id ? `<div class="science-lesson-footer">${[['again', '没记住'], ['hard', '有些困难'], ['good', '记得'], ['easy', '很熟']].map(([rating, label]) => `<button type="button" class="button button-quiet button-small" data-action="review-general-knowledge-flashcard" data-point-id="${escapeHtml(flashcard.id)}" data-rating="${rating}">${label}</button>`).join('')}</div>` : ''}</article>` : '<div class="empty-state">当前没有到期闪卡；完成知识点讲解后可开始复习。</div>'}</section>
+    <div class="science-subject-grid">${subjects}</div><section class="panel science-source-panel"><div class="science-panel-heading"><div><span class="eyebrow muted">SOURCE CATALOG</span><h2>题源与内容参考</h2><p>官方例题经过题意重述；未核实展示授权的第三方题面只保留来源链接。</p></div><span>${GENERAL_KNOWLEDGE_SOURCES.length} 个来源</span></div><div class="science-source-list">${sourceRows}</div></section></div>`;
 }
 
 function renderEssay() {
@@ -1549,14 +1683,42 @@ function openSciencePracticeSetup({ pointId = '', mode = 'practice' } = {}) {
   </div><div class="notice notice-soft compact-notice"><span>ⓘ</span><p>筛选后题量不足时，系统会显示实际可用题数，不会重复拼题或伪造题目。</p></div></div><div class="modal-footer"><button type="button" class="button button-quiet" data-action="close-modal">取消</button><button type="submit" class="button button-primary">开始训练</button></div></form>`);
 }
 
+function openGeneralKnowledgePracticeSetup({ pointId = '', mode = 'practice' } = {}) {
+  const points = getGeneralKnowledgeTree().flatMap((subject) => subject.topics.flatMap((topic) => topic.knowledgePoints));
+  const point = points.find((item) => item.id === pointId);
+  const onlyMistakes = mode === 'mistakes';
+  const onlyFavorites = mode === 'favorites';
+  const filteredCount = GENERAL_KNOWLEDGE_QUESTION_BANK.filter((question) => question.publishStatus === 'published'
+    && (!point || question.knowledgePointIds?.includes(point.id))
+    && (!onlyMistakes || storage.generalKnowledgeStudy.mistakes[question.id])
+    && (!onlyFavorites || storage.generalKnowledgeStudy.favorites.includes(question.id))).length;
+  const defaultCount = Math.max(1, Math.min(mode === 'mistakes' || mode === 'favorites' ? 10 : 15, filteredCount));
+  const subjectOptions = `<option value="">全部学科</option>${getGeneralKnowledgeTree().map((subject) => `<option value="${subject.id}" ${subject.id === point?.subjectId ? 'selected' : ''}>${escapeHtml(subject.title)}</option>`).join('')}`;
+  const topicOptions = `<option value="">全部专题</option>${points.filter((item) => !point || item.subjectId === point.subjectId).map((item) => `<option value="${item.topicId}" ${item.id === pointId ? 'selected' : ''}>${escapeHtml(item.subjectTitle)} · ${escapeHtml(item.topicTitle)}</option>`).filter((option, index, all) => all.indexOf(option) === index).join('')}`;
+  const pointOptions = `<option value="">不限定知识点</option>${points.map((item) => `<option value="${item.id}" ${item.id === pointId ? 'selected' : ''}>${escapeHtml(item.subjectTitle)} · ${escapeHtml(item.topicTitle)} · ${escapeHtml(item.title)}</option>`).join('')}`;
+  renderModal(`<form id="general-knowledge-session-setup"><div class="modal-head"><div><div class="eyebrow muted">GENERAL KNOWLEDGE</div><h2>设置常识判断训练</h2><p>题目显示来源和改写方式；当前题库不足以支持大规模模考时会提示实际题量。</p></div><button type="button" class="modal-close" data-action="close-modal" aria-label="关闭">×</button></div><div class="modal-body"><div class="form-grid">
+    <label class="form-field"><span>训练方式</span><select name="mode"><option value="practice" ${mode === 'practice' ? 'selected' : ''}>专项练习</option><option value="exam" ${mode === 'exam' ? 'selected' : ''}>限时模拟</option><option value="mistakes" ${onlyMistakes ? 'selected' : ''}>错题复习</option><option value="favorites" ${onlyFavorites ? 'selected' : ''}>收藏题复习</option></select></label>
+    <label class="form-field"><span>学科筛选</span><select name="subjectId" id="general-knowledge-subject">${subjectOptions}</select></label>
+    <label class="form-field"><span>专题筛选</span><select name="topicId" id="general-knowledge-topic">${topicOptions}</select></label>
+    <label class="form-field form-field-wide"><span>知识点筛选</span><select name="knowledgePointId" id="general-knowledge-point">${pointOptions}</select></label>
+    <label class="form-field"><span>目标题量</span><input name="targetQuestionCount" type="number" min="1" max="${GENERAL_KNOWLEDGE_QUESTION_BANK.length}" value="${defaultCount}" required/></label>
+    <label class="form-field"><span>模拟时长（分钟）</span><input name="durationMinutes" type="number" min="1" value="20"/></label>
+    <label class="form-field"><span>难度</span><select name="difficultyFilter"><option value="all">全部难度</option><option value="easy">基础</option><option value="medium">中等</option><option value="hard">进阶</option></select></label>
+    <label class="form-field"><span>题源</span><select name="sourceFilter"><option value="all">全部题源</option><option value="official">官方大纲例题 / 真题</option><option value="verified_exam">核验真题</option><option value="third_party_mock">机构模拟题</option><option value="recalled">考生回忆版</option><option value="original">本站原创</option></select></label>
+    <label class="form-field"><span><input name="onlyUnanswered" type="checkbox" value="true"/> 只做未答题</span></label>
+  </div><div class="notice notice-soft compact-notice"><span>ⓘ</span><p>题量不足时会显示实际可用数量，不会重复拼题。未经确认展示授权的第三方题面不会直接入库。</p></div></div><div class="modal-footer"><button type="button" class="button button-quiet" data-action="close-modal">取消</button><button type="submit" class="button button-primary">开始训练</button></div></form>`);
+  syncGeneralKnowledgeTaskControls(modalRoot.querySelector('#general-knowledge-session-setup'));
+}
+
 function openPlanTaskEditor(taskId = null, date = todayString()) {
   const existing = taskId ? storage.studyPlanTasks.find((task) => task.id === taskId) : null;
   if (taskId && !existing) { notify('找不到这条学习任务。'); return; }
   const task = existing || {
     date, taskType: 'custom', customTypeName: '', title: '', description: '', estimatedMinutes: '',
-    priority: 'normal', status: 'not_started', scienceConfig: { activityType: 'free' },
+    priority: 'normal', status: 'not_started', scienceConfig: { activityType: 'free' }, generalKnowledgeConfig: { activityType: 'free' },
   };
   const config = task.scienceConfig || { activityType: 'free' };
+  const generalKnowledgeConfig = task.generalKnowledgeConfig || { activityType: 'free' };
   const subjects = getScienceTree();
   const subjectId = config.subjectId || '';
   const subject = subjects.find((item) => item.id === subjectId) || null;
@@ -1565,6 +1727,13 @@ function openPlanTaskEditor(taskId = null, date = todayString()) {
   const topic = topics.find((item) => item.id === topicId) || null;
   const points = topic?.knowledgePoints || [];
   const pointId = config.knowledgePointIds?.[0] || '';
+  const generalKnowledgeSubjects = getGeneralKnowledgeTree();
+  const generalKnowledgeSubjectId = generalKnowledgeConfig.subjectId || '';
+  const generalKnowledgeSubject = generalKnowledgeSubjects.find((item) => item.id === generalKnowledgeSubjectId) || null;
+  const generalKnowledgeTopicId = generalKnowledgeConfig.topicId || '';
+  const generalKnowledgeTopic = generalKnowledgeSubject?.topics.find((item) => item.id === generalKnowledgeTopicId) || null;
+  const generalKnowledgePoints = generalKnowledgeTopic?.knowledgePoints || (generalKnowledgeSubject ? generalKnowledgeSubject.topics.flatMap((item) => item.knowledgePoints) : []);
+  const generalKnowledgePointId = generalKnowledgeConfig.knowledgePointIds?.[0] || '';
   const typeOptions = PLAN_TASK_TYPES.map(([value, label]) => `<option value="${value}" ${task.taskType === value ? 'selected' : ''}>${label}</option>`).join('');
   const statusOptions = PLAN_TASK_STATUSES.map(([value, label]) => `<option value="${value}" ${task.status === value ? 'selected' : ''}>${label}</option>`).join('');
   const subjectOptions = `<option value="" ${!subjectId ? 'selected' : ''}>全部学科</option>${subjects.map((item) => `<option value="${item.id}" ${item.id === subjectId ? 'selected' : ''}>${escapeHtml(item.title)}</option>`).join('')}`;
@@ -1572,6 +1741,7 @@ function openPlanTaskEditor(taskId = null, date = todayString()) {
   const pointOptions = `<option value="" ${!pointId ? 'selected' : ''}>不限定知识点</option>${points.map((item) => `<option value="${item.id}" ${item.id === pointId ? 'selected' : ''}>${escapeHtml(item.title)}${item.contentStatus === 'outline' ? '（提纲）' : ''}</option>`).join('')}`;
   const activityOptions = SCIENCE_ACTIVITY_TYPES.map(([value, label]) => `<option value="${value}" ${config.activityType === value ? 'selected' : ''}>${label}</option>`).join('');
   const isScience = task.taskType === 'science_reasoning';
+  const isGeneralKnowledge = task.taskType === 'general_knowledge';
   const questionCount = config.targetQuestionCount ?? (config.activityType === 'exam' ? 10 : '');
   renderModal(`<form id="plan-task-form" ${existing ? `data-task-id="${escapeHtml(existing.id)}"` : ''}>
     <div class="modal-head"><div><div class="eyebrow muted">FLEXIBLE STUDY PLAN</div><h2>${existing ? '编辑学习任务' : '新增学习任务'}</h2><p>任务安排、原始 50 天日程和学习记录分别保存。</p></div><button type="button" class="modal-close" data-action="close-modal" aria-label="关闭">×</button></div>
@@ -1597,9 +1767,22 @@ function openPlanTaskEditor(taskId = null, date = todayString()) {
         <label class="form-field"><span>难度筛选</span><select name="difficultyFilter"><option value="all">全部难度</option><option value="easy" ${config.difficultyFilter === 'easy' ? 'selected' : ''}>基础</option><option value="medium" ${config.difficultyFilter === 'medium' ? 'selected' : ''}>中等</option><option value="hard" ${config.difficultyFilter === 'hard' ? 'selected' : ''}>进阶</option></select></label>
       </div><div class="notice notice-soft compact-notice"><span>ⓘ</span><p>题目与答题记录在本机加密保存；练习题数和模拟考试完成情况会按实际答题自动核验。</p></div>
     </section></div>
+    <section class="science-task-config general-knowledge-task-config" data-general-knowledge-config ${isGeneralKnowledge ? '' : 'hidden'} aria-label="常识判断训练配置">
+      <div class="science-config-heading"><span class="eyebrow muted">GENERAL KNOWLEDGE</span><h3>常识判断训练配置</h3><p>选择常识知识领域、专题和学习方式；任务进度仅计入常识判断模块自己的答题记录。</p></div>
+      <div class="form-grid"><label class="form-field"><span>训练方式</span><select name="generalKnowledgeActivityType" id="general-knowledge-activity-type">${SCIENCE_ACTIVITY_TYPES.map(([value, label]) => `<option value="${value}" ${generalKnowledgeConfig.activityType === value ? 'selected' : ''}>${label}</option>`).join('')}</select></label>
+        <label class="form-field"><span>学科</span><select name="generalKnowledgeSubjectId" id="general-knowledge-subject"><option value="">全部学科</option>${generalKnowledgeSubjects.map((item) => `<option value="${item.id}" ${item.id === generalKnowledgeSubjectId ? 'selected' : ''}>${escapeHtml(item.title)}</option>`).join('')}</select></label>
+        <label class="form-field"><span>专题</span><select name="generalKnowledgeTopicId" id="general-knowledge-topic"><option value="">全部专题</option>${generalKnowledgeSubject?.topics.map((item) => `<option value="${item.id}" ${item.id === generalKnowledgeTopicId ? 'selected' : ''}>${escapeHtml(item.title)}</option>`).join('') || ''}</select></label>
+        <label class="form-field"><span>知识点</span><select name="generalKnowledgePointId" id="general-knowledge-point"><option value="">不限定知识点</option>${generalKnowledgePoints.map((item) => `<option value="${item.id}" ${item.id === generalKnowledgePointId ? 'selected' : ''}>${escapeHtml(item.title)}${item.contentStatus === 'outline' ? '（提纲）' : ''}</option>`).join('')}</select></label>
+        <label class="form-field general-knowledge-question-field" data-general-knowledge-question-field><span>目标题量</span><input name="generalKnowledgeTargetQuestionCount" type="number" min="1" step="1" value="${escapeHtml(generalKnowledgeConfig.targetQuestionCount ?? (generalKnowledgeConfig.activityType === 'exam' ? 10 : ''))}" placeholder="例如 10"/></label>
+        <label class="form-field general-knowledge-exam-field" data-general-knowledge-exam-field ${generalKnowledgeConfig.activityType === 'exam' ? '' : 'hidden'}><span>限时（分钟）</span><input name="generalKnowledgeDurationMinutes" type="number" min="1" step="1" value="${generalKnowledgeConfig.durationSeconds ? Math.round(generalKnowledgeConfig.durationSeconds / 60) : 10}"/></label>
+        <label class="form-field"><span>题源筛选</span><select name="generalKnowledgeSourceFilter"><option value="all">全部题源</option><option value="official" ${generalKnowledgeConfig.sourceFilter === 'official' ? 'selected' : ''}>官方例题 / 真题</option><option value="verified_exam" ${generalKnowledgeConfig.sourceFilter === 'verified_exam' ? 'selected' : ''}>已核验真题</option><option value="third_party_mock" ${generalKnowledgeConfig.sourceFilter === 'third_party_mock' ? 'selected' : ''}>机构模拟题</option><option value="recalled" ${generalKnowledgeConfig.sourceFilter === 'recalled' ? 'selected' : ''}>考生回忆版</option><option value="original" ${generalKnowledgeConfig.sourceFilter === 'original' ? 'selected' : ''}>本站原创</option></select></label>
+        <label class="form-field"><span>难度筛选</span><select name="generalKnowledgeDifficultyFilter"><option value="all">全部难度</option><option value="easy" ${generalKnowledgeConfig.difficultyFilter === 'easy' ? 'selected' : ''}>基础</option><option value="medium" ${generalKnowledgeConfig.difficultyFilter === 'medium' ? 'selected' : ''}>中等</option><option value="hard" ${generalKnowledgeConfig.difficultyFilter === 'hard' ? 'selected' : ''}>进阶</option></select></label>
+      </div><div class="notice notice-soft compact-notice"><span>ⓘ</span><p>法律与时政题优先回链到官方现行文件；各来源题型和年份会显示在训练复盘中。</p></div>
+    </section></div>
     <div class="modal-footer"><button type="button" class="button button-quiet" data-action="close-modal">取消</button><button type="submit" class="button button-primary">${existing ? '保存任务' : '创建任务'}</button></div>
   </form>`);
   syncPlanTaskScienceControls(modalRoot.querySelector('#plan-task-form'));
+  syncGeneralKnowledgeTaskControls(modalRoot.querySelector('#plan-task-form'));
 }
 
 function syncPlanTaskScienceControls(form) {
@@ -1607,6 +1790,8 @@ function syncPlanTaskScienceControls(form) {
   const type = form.querySelector('#plan-task-type')?.value;
   const config = form.querySelector('[data-science-config]');
   if (config) config.hidden = type !== 'science_reasoning';
+  const generalKnowledgeConfig = form.querySelector('[data-general-knowledge-config]');
+  if (generalKnowledgeConfig) generalKnowledgeConfig.hidden = type !== 'general_knowledge';
   const customField = form.querySelector('[data-custom-type-field]');
   if (customField) customField.hidden = type !== 'custom';
   const subjectSelect = form.querySelector('#science-subject');
@@ -1629,6 +1814,32 @@ function syncPlanTaskScienceControls(form) {
   const questionField = form.querySelector('[data-science-question-field]');
   if (questionField) questionField.hidden = !['practice', 'exam', 'mistakes'].includes(activity);
   const examField = form.querySelector('[data-science-exam-field]');
+  if (examField) examField.hidden = activity !== 'exam';
+}
+
+function syncGeneralKnowledgeTaskControls(form) {
+  if (!form) return;
+  const subjectSelect = form.querySelector('#general-knowledge-subject');
+  const topicSelect = form.querySelector('#general-knowledge-topic');
+  const pointSelect = form.querySelector('#general-knowledge-point');
+  if (subjectSelect && topicSelect && pointSelect) {
+    const subjects = getGeneralKnowledgeTree();
+    const subject = subjects.find((item) => item.id === subjectSelect.value) || null;
+    const oldTopicId = topicSelect.value;
+    const topics = subject?.topics || subjects.flatMap((item) => item.topics.map((topic) => ({ ...topic, subjectTitle: item.title })));
+    const selectedTopicId = topics.some((item) => item.id === oldTopicId) ? oldTopicId : '';
+    topicSelect.innerHTML = `<option value="">全部专题</option>${topics.map((item) => `<option value="${item.id}" ${item.id === selectedTopicId ? 'selected' : ''}>${item.subjectTitle ? `${escapeHtml(item.subjectTitle)} · ` : ''}${escapeHtml(item.title)}</option>`).join('')}`;
+    const topic = topics.find((item) => item.id === selectedTopicId);
+    const allPoints = subject?.topics.flatMap((item) => item.knowledgePoints) || subjects.flatMap((item) => item.topics.flatMap((topicItem) => topicItem.knowledgePoints));
+    const points = topic ? topic.knowledgePoints : allPoints;
+    const oldPointId = pointSelect.value;
+    const selectedPointId = points.some((item) => item.id === oldPointId) ? oldPointId : '';
+    pointSelect.innerHTML = `<option value="">不限定知识点</option>${points.map((item) => `<option value="${item.id}" ${item.id === selectedPointId ? 'selected' : ''}>${escapeHtml(item.title)}${item.contentStatus === 'outline' ? '（提纲）' : ''}</option>`).join('')}`;
+  }
+  const activity = form.querySelector('#general-knowledge-activity-type')?.value;
+  const questionField = form.querySelector('[data-general-knowledge-question-field]');
+  if (questionField) questionField.hidden = !['practice', 'exam', 'mistakes'].includes(activity);
+  const examField = form.querySelector('[data-general-knowledge-exam-field]');
   if (examField) examField.hidden = activity !== 'exam';
 }
 
@@ -1662,6 +1873,7 @@ function render() {
   const enteringPage = pageTransition;
   root.innerHTML = renderLayout();
   startScienceExamClock();
+  startGeneralKnowledgeExamClock();
   if (enteringPage) {
     pageRevealObserver = observePageSections({
       root,
@@ -1704,6 +1916,32 @@ function startScienceExamClock() {
   void update();
 }
 
+function startGeneralKnowledgeExamClock() {
+  clearTimeout(generalKnowledgeExamTimer);
+  generalKnowledgeExamTimer = null;
+  if (page !== 'generalKnowledge') return;
+  const session = activeGeneralKnowledgeSessionId
+    ? storage.generalKnowledgeStudy.sessions.find((item) => item.id === activeGeneralKnowledgeSessionId)
+    : activeGeneralKnowledgePlanTaskId
+      ? storage.generalKnowledgeStudy.sessions.find((item) => item.planTaskId === activeGeneralKnowledgePlanTaskId && item.status === 'active')
+      : storage.generalKnowledgeStudy.sessions.find((item) => item.status === 'active');
+  if (!session || session.mode !== 'exam' || session.status !== 'active' || !session.deadline) return;
+  const update = async () => {
+    const remainingSeconds = Math.max(0, Math.ceil((new Date(session.deadline).valueOf() - Date.now()) / 1000));
+    const clock = document.querySelector('#general-knowledge-exam-countdown');
+    if (clock) clock.textContent = `${String(Math.floor(remainingSeconds / 60)).padStart(2, '0')}:${String(remainingSeconds % 60).padStart(2, '0')}`;
+    if (remainingSeconds <= 0) {
+      storage.generalKnowledgeStudy = expireGeneralKnowledgeSession(GENERAL_KNOWLEDGE_QUESTION_BANK, storage.generalKnowledgeStudy, session.id);
+      const expired = storage.generalKnowledgeStudy.sessions.find((item) => item.id === session.id);
+      syncGeneralKnowledgePlanTaskCompletion(expired);
+      await persistAndRender('常识判断模拟到时，已保存已选答案');
+      return;
+    }
+    generalKnowledgeExamTimer = setTimeout(update, 500);
+  };
+  void update();
+}
+
 function syncSciencePlanTaskCompletion(session) {
   if (!session?.planTaskId) return false;
   const practiceComplete = session.mode === 'practice' && session.status === 'completed';
@@ -1719,19 +1957,34 @@ function syncSciencePlanTaskCompletion(session) {
   return !wasComplete && updated?.status === 'completed' && updated.completionSource === 'system_verified';
 }
 
+function syncGeneralKnowledgePlanTaskCompletion(session) {
+  if (!session?.planTaskId || !['completed', 'timed_out'].includes(session.status)) return false;
+  const task = storage.studyPlanTasks.find((item) => item.id === session.planTaskId && item.taskType === 'general_knowledge');
+  if (!task) return false;
+  const wasComplete = task.status === 'completed' && task.completionSource === 'system_verified';
+  storage.studyPlanTasks = reconcileGeneralKnowledgePlanTaskProgress(
+    storage.studyPlanTasks, task.id, storage.generalKnowledgeStudy.sessions, storage.generalKnowledgeStudy.answers,
+  );
+  const updated = storage.studyPlanTasks.find((item) => item.id === task.id);
+  return !wasComplete && updated?.status === 'completed' && updated.completionSource === 'system_verified';
+}
+
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'instant' });
 }
 
 function navigate(id, query = '') {
   page = pageMeta[id] ? id : 'overview';
-  const querySuffix = page === 'science' && query ? `?${query}` : '';
+  const querySuffix = ['science', 'generalKnowledge'].includes(page) && query ? `?${query}` : '';
   const routePath = page === 'science' ? 'aptitude/science' : page === 'generalKnowledge' ? 'aptitude/general-knowledge' : page;
   const route = `#/${routePath}${querySuffix}`;
   const parsedRoute = readRoute(route);
   activeSciencePlanTaskId = parsedRoute.taskId;
   selectedScienceKnowledgePointId = parsedRoute.knowledgePointId;
   activeScienceSessionId = parsedRoute.sessionId;
+  activeGeneralKnowledgePlanTaskId = page === 'generalKnowledge' ? parsedRoute.taskId : null;
+  selectedGeneralKnowledgePointId = page === 'generalKnowledge' ? parsedRoute.knowledgePointId : null;
+  activeGeneralKnowledgeSessionId = page === 'generalKnowledge' ? parsedRoute.sessionId : null;
   document.querySelector('.sidebar')?.classList.remove('mobile-open');
   document.querySelector('.sidebar-scrim')?.classList.remove('visible');
   pageTransition = true;
@@ -1898,6 +2151,142 @@ document.addEventListener('click', async (event) => {
       await persistAndRender('学习任务已归档，关联记录已保留');
     } catch (error) { notify(error.message); }
   }
+  if (action === 'open-general-knowledge-practice') openGeneralKnowledgePracticeSetup({ pointId: actionEl.dataset.pointId || '', mode: actionEl.dataset.mode || 'practice' });
+  if (action === 'start-general-knowledge-task') {
+    const task = storage.studyPlanTasks.find((item) => item.id === actionEl.dataset.taskId && item.taskType === 'general_knowledge');
+    if (!task) { notify('找不到这条常识判断任务。'); return; }
+    const config = task.generalKnowledgeConfig;
+    if (config.activityType === 'knowledge') {
+      const pointId = config.knowledgePointIds.find((id) => storage.generalKnowledgeStudy.knowledgeProgress[id]?.status !== 'completed')
+        || config.knowledgePointIds[0];
+      if (!pointId) { notify('这项计划任务没有待学知识点。'); return; }
+      storage.studyPlanTasks = markPlanTaskInProgress(storage.studyPlanTasks, task.id);
+      await persist();
+      navigate('generalKnowledge', `task=${encodeURIComponent(task.id)}&knowledge=${encodeURIComponent(pointId)}`);
+    } else {
+      const progress = getGeneralKnowledgeTaskProgress(task, storage.generalKnowledgeStudy.sessions, storage.generalKnowledgeStudy.answers);
+      const targetQuestionCount = progress.targetCount === null ? config.targetQuestionCount : progress.remainingCount;
+      if (!Number.isInteger(targetQuestionCount) || targetQuestionCount < 1) { notify('这项计划任务的目标题量已经完成。'); return; }
+      try {
+        const started = createGeneralKnowledgeSession(GENERAL_KNOWLEDGE_QUESTION_BANK, storage.generalKnowledgeStudy, {
+          mode: config.activityType === 'exam' ? 'exam' : 'practice', planTaskId: task.id,
+          subjectId: config.subjectId, topicId: config.topicId, knowledgePointIds: config.knowledgePointIds,
+          targetQuestionCount, durationSeconds: config.durationSeconds || 600,
+          sourceFilter: config.sourceFilter, difficultyFilter: config.difficultyFilter,
+          onlyMistakes: config.activityType === 'mistakes', excludeQuestionIds: progress.questionIds,
+        });
+        storage.generalKnowledgeStudy = started.generalKnowledgeStudy;
+        storage.studyPlanTasks = markPlanTaskInProgress(storage.studyPlanTasks, task.id);
+        await persist();
+        navigate('generalKnowledge', `task=${encodeURIComponent(task.id)}&session=${encodeURIComponent(started.session.id)}`);
+      } catch (error) { notify(error.message); }
+    }
+  }
+  if (action === 'answer-general-knowledge-question') {
+    try {
+      storage.generalKnowledgeStudy = answerGeneralKnowledgeQuestion(GENERAL_KNOWLEDGE_QUESTION_BANK, storage.generalKnowledgeStudy, actionEl.dataset.sessionId, actionEl.dataset.optionId);
+      await persistAndRender('答案已加密保存');
+    } catch (error) {
+      const session = storage.generalKnowledgeStudy.sessions.find((item) => item.id === actionEl.dataset.sessionId);
+      if (session?.deadline && Date.now() >= new Date(session.deadline).valueOf()) {
+        storage.generalKnowledgeStudy = expireGeneralKnowledgeSession(GENERAL_KNOWLEDGE_QUESTION_BANK, storage.generalKnowledgeStudy, session.id);
+        syncGeneralKnowledgePlanTaskCompletion(storage.generalKnowledgeStudy.sessions.find((item) => item.id === session.id));
+        await persistAndRender('常识判断模拟到时，已停止接收答案');
+      } else notify(error.message);
+    }
+  }
+  if (action === 'continue-general-knowledge-session') {
+    try {
+      storage.generalKnowledgeStudy = continueGeneralKnowledgeSession(GENERAL_KNOWLEDGE_QUESTION_BANK, storage.generalKnowledgeStudy, actionEl.dataset.sessionId);
+      const session = storage.generalKnowledgeStudy.sessions.find((item) => item.id === actionEl.dataset.sessionId);
+      const complete = syncGeneralKnowledgePlanTaskCompletion(session);
+      await persistAndRender(session?.status === 'completed' ? complete ? '训练完成；学习计划已核验完成' : '训练完成；计划题量尚未满足' : '已进入下一题');
+    } catch (error) { notify(error.message); }
+  }
+  if (action === 'select-general-knowledge-answer') {
+    try {
+      storage.generalKnowledgeStudy = selectGeneralKnowledgeAnswer(GENERAL_KNOWLEDGE_QUESTION_BANK, storage.generalKnowledgeStudy, actionEl.dataset.sessionId, actionEl.dataset.optionId);
+      await persistAndRender('选项已保存，可在交卷前修改');
+    } catch (error) {
+      const session = storage.generalKnowledgeStudy.sessions.find((item) => item.id === actionEl.dataset.sessionId);
+      if (session?.deadline && Date.now() >= new Date(session.deadline).valueOf()) {
+        storage.generalKnowledgeStudy = expireGeneralKnowledgeSession(GENERAL_KNOWLEDGE_QUESTION_BANK, storage.generalKnowledgeStudy, session.id);
+        syncGeneralKnowledgePlanTaskCompletion(storage.generalKnowledgeStudy.sessions.find((item) => item.id === session.id));
+        await persistAndRender('常识判断模拟到时，已保存已选答案');
+      } else notify(error.message);
+    }
+  }
+  if (action === 'advance-general-knowledge-question') {
+    try {
+      storage.generalKnowledgeStudy = advanceGeneralKnowledgeQuestion(storage.generalKnowledgeStudy, actionEl.dataset.sessionId);
+      await persistAndRender('已保存答题进度');
+    } catch (error) { notify(error.message); }
+  }
+  if (action === 'go-to-general-knowledge-question') {
+    try {
+      storage.generalKnowledgeStudy = goToGeneralKnowledgeQuestion(storage.generalKnowledgeStudy, actionEl.dataset.sessionId, Number(actionEl.dataset.index));
+      await persistAndRender('已返回所选题目');
+    } catch (error) { notify(error.message); }
+  }
+  if (action === 'finish-general-knowledge-exam') {
+    const active = storage.generalKnowledgeStudy.sessions.find((item) => item.id === actionEl.dataset.sessionId && item.status === 'active');
+    if (!active) { notify('这场常识判断模拟已经结束。'); return; }
+    const unanswered = active.questionIds.length - Object.keys(active.draftAnswers || {}).length;
+    if (unanswered && !window.confirm(`还有 ${unanswered} 题未作答，仍要交卷吗？`)) return;
+    try {
+      storage.generalKnowledgeStudy = finishGeneralKnowledgeSession(GENERAL_KNOWLEDGE_QUESTION_BANK, storage.generalKnowledgeStudy, active.id);
+      const finished = storage.generalKnowledgeStudy.sessions.find((item) => item.id === active.id);
+      const complete = syncGeneralKnowledgePlanTaskCompletion(finished);
+      await persistAndRender(complete ? '交卷完成；学习计划已核验完成' : '交卷完成；未答题不计入计划完成量');
+    } catch (error) { notify(error.message); }
+  }
+  if (action === 'toggle-general-knowledge-favorite') {
+    storage.generalKnowledgeStudy = toggleGeneralKnowledgeFavorite(storage.generalKnowledgeStudy, actionEl.dataset.questionId);
+    await persistAndRender(storage.generalKnowledgeStudy.favorites.includes(actionEl.dataset.questionId) ? '题目已收藏' : '已取消收藏');
+  }
+  if (action === 'start-general-knowledge-knowledge') {
+    const pointId = actionEl.dataset.pointId;
+    if (!GENERAL_KNOWLEDGE_LESSONS[pointId]) { notify('该知识点讲解尚未发布，不能记录完成。'); return; }
+    storage.generalKnowledgeStudy = setGeneralKnowledgePointStatus(storage.generalKnowledgeStudy, pointId, 'learning');
+    await persistAndRender('已记录正在学习');
+  }
+  if (action === 'next-general-knowledge-task-point') {
+    const task = storage.studyPlanTasks.find((item) => item.id === actionEl.dataset.taskId && item.taskType === 'general_knowledge');
+    const point = task?.generalKnowledgeConfig?.knowledgePointIds.includes(actionEl.dataset.pointId)
+      ? getGeneralKnowledgePoint(actionEl.dataset.pointId) : null;
+    if (!task || !point) { notify('找不到这条计划知识点。'); return; }
+    navigate('generalKnowledge', `task=${encodeURIComponent(task.id)}&knowledge=${encodeURIComponent(point.id)}`);
+  }
+  if (action === 'toggle-general-knowledge-point-favorite' || action === 'toggle-general-knowledge-point-unclear') {
+    const flag = action === 'toggle-general-knowledge-point-favorite' ? 'favorite' : 'unclear';
+    storage.generalKnowledgeStudy = toggleGeneralKnowledgePointFlag(storage.generalKnowledgeStudy, actionEl.dataset.pointId, flag);
+    const enabled = storage.generalKnowledgeStudy[flag === 'favorite' ? 'favoriteKnowledgePointIds' : 'unclearKnowledgePointIds'].includes(actionEl.dataset.pointId);
+    await persistAndRender(flag === 'favorite' ? enabled ? '知识点已收藏' : '已取消收藏' : enabled ? '已标记为不理解' : '已取消不理解标记');
+  }
+  if (action === 'complete-general-knowledge-knowledge') {
+    const pointId = actionEl.dataset.pointId;
+    if (!GENERAL_KNOWLEDGE_LESSONS[pointId]) { notify('该知识点讲解尚未发布，不能标记为学完。'); return; }
+    const completedAt = new Date().toISOString();
+    const wasComplete = storage.generalKnowledgeStudy.knowledgeProgress[pointId]?.status === 'completed';
+    if (!wasComplete) {
+      const point = getGeneralKnowledgePoint(pointId);
+      const session = { id: `gk_knowledge_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 7)}`, moduleId: 'general_knowledge', mode: 'knowledge', status: 'completed', planTaskId: activeGeneralKnowledgePlanTaskId, knowledgePointId: pointId, filters: { subjectId: point?.subjectId || null, topicId: point?.topicId || null }, completionSource: 'manual', startedAt: completedAt, completedAt };
+      storage.generalKnowledgeStudy = setGeneralKnowledgePointStatus(storage.generalKnowledgeStudy, pointId, 'completed', completedAt);
+      storage.generalKnowledgeStudy.sessions = [...storage.generalKnowledgeStudy.sessions, session];
+      syncGeneralKnowledgePlanTaskCompletion(session);
+      await persistAndRender('知识点学习记录已保存');
+    }
+  }
+  if (action === 'reveal-general-knowledge-flashcard') {
+    revealedGeneralKnowledgeFlashcardId = actionEl.dataset.pointId;
+    render();
+  }
+  if (action === 'review-general-knowledge-flashcard') {
+    storage.generalKnowledgeStudy = reviewFlashcard(storage.generalKnowledgeStudy, actionEl.dataset.pointId, actionEl.dataset.rating);
+    revealedGeneralKnowledgeFlashcardId = null;
+    await persistAndRender('闪卡复习进度已保存');
+  }
+  if (action === 'leave-general-knowledge-session') navigate('generalKnowledge');
   if (action === 'open-science-practice') openSciencePracticeSetup({ pointId: actionEl.dataset.pointId || '', mode: actionEl.dataset.mode || 'practice' });
   if (action === 'start-science-task') {
     const task = storage.studyPlanTasks.find((item) => item.id === actionEl.dataset.taskId && item.taskType === 'science_reasoning');
@@ -2228,6 +2617,16 @@ document.addEventListener('submit', async (event) => {
       sourceFilter: values.sourceFilter || 'all',
       difficultyFilter: values.difficultyFilter || 'all',
     } : null;
+    const generalKnowledgeConfig = values.taskType === 'general_knowledge' ? {
+      activityType: values.generalKnowledgeActivityType || 'free',
+      subjectId: values.generalKnowledgeSubjectId || null,
+      topicId: values.generalKnowledgeTopicId || null,
+      knowledgePointIds: values.generalKnowledgePointId ? [values.generalKnowledgePointId] : [],
+      targetQuestionCount: values.generalKnowledgeTargetQuestionCount === '' ? null : Number(values.generalKnowledgeTargetQuestionCount),
+      durationSeconds: values.generalKnowledgeDurationMinutes === '' ? null : Number(values.generalKnowledgeDurationMinutes) * 60,
+      sourceFilter: values.generalKnowledgeSourceFilter || 'all',
+      difficultyFilter: values.generalKnowledgeDifficultyFilter || 'all',
+    } : null;
     const input = {
       date: values.date,
       taskType: values.taskType,
@@ -2240,6 +2639,7 @@ document.addEventListener('submit', async (event) => {
       completionSource: existing && existing.status === 'completed' && values.status === 'completed'
         ? existing.completionSource : values.status === 'completed' ? 'manual' : 'not_completed',
       scienceConfig,
+      generalKnowledgeConfig,
     };
     try {
       if (existing) {
@@ -2251,12 +2651,37 @@ document.addEventListener('submit', async (event) => {
             storage.studyPlanTasks, existing.id, storage.scienceStudy.sessions, storage.scienceStudy.answers,
           );
         }
+        const generalKnowledgeConfigChanged = values.taskType === 'general_knowledge'
+          && (existing.taskType !== 'general_knowledge' || JSON.stringify(existing.generalKnowledgeConfig) !== JSON.stringify(input.generalKnowledgeConfig));
+        if (generalKnowledgeConfigChanged) {
+          storage.studyPlanTasks = reconcileGeneralKnowledgePlanTaskProgress(
+            storage.studyPlanTasks, existing.id, storage.generalKnowledgeStudy.sessions, storage.generalKnowledgeStudy.answers,
+          );
+        }
       } else storage.studyPlanTasks = [...storage.studyPlanTasks, createPlanTask(input)];
       await persistAndRender(existing ? '学习任务已更新并加密保存' : '学习任务已创建并加密保存');
       modalRoot.innerHTML = '';
     } catch (error) {
       notify(error.message);
     }
+  }
+  if (form.id === 'general-knowledge-session-setup') {
+    const questionCount = Number(values.targetQuestionCount);
+    const mode = values.mode === 'exam' ? 'exam' : 'practice';
+    try {
+      const started = createGeneralKnowledgeSession(GENERAL_KNOWLEDGE_QUESTION_BANK, storage.generalKnowledgeStudy, {
+        mode, subjectId: values.subjectId || undefined, topicId: values.topicId || undefined,
+        knowledgePointId: values.knowledgePointId || undefined, targetQuestionCount: questionCount,
+        durationSeconds: mode === 'exam' ? Number(values.durationMinutes) * 60 : null,
+        sourceFilter: values.sourceFilter || 'all', difficultyFilter: values.difficultyFilter || 'all',
+        onlyMistakes: values.mode === 'mistakes', onlyFavorites: values.mode === 'favorites',
+        onlyUnanswered: values.onlyUnanswered === 'true',
+      });
+      storage.generalKnowledgeStudy = started.generalKnowledgeStudy;
+      modalRoot.innerHTML = '';
+      await persist();
+      navigate('generalKnowledge', `session=${encodeURIComponent(started.session.id)}`);
+    } catch (error) { notify(error.message); }
   }
   if (form.id === 'science-session-setup') {
     const point = values.knowledgePointId ? getKnowledgePoint(values.knowledgePointId) : null;
@@ -2398,6 +2823,9 @@ document.addEventListener('change', async (event) => {
   if (['plan-task-type', 'science-subject', 'science-topic', 'science-activity-type'].includes(event.target.id)) {
     syncPlanTaskScienceControls(event.target.closest('#plan-task-form'));
   }
+  if (['plan-task-type', 'general-knowledge-subject', 'general-knowledge-topic', 'general-knowledge-activity-type'].includes(event.target.id)) {
+    syncGeneralKnowledgeTaskControls(event.target.closest('#plan-task-form') || event.target.closest('#general-knowledge-session-setup'));
+  }
   const positionFilter = {
     'job-district': 'districtId', 'decision-district': 'districtId',
     'job-year': 'year', 'decision-year': 'year', 'job-type': 'orgType', 'job-jobtype': 'jobType',
@@ -2462,6 +2890,9 @@ window.addEventListener('hashchange', () => {
   activeSciencePlanTaskId = route.taskId;
   selectedScienceKnowledgePointId = route.knowledgePointId;
   activeScienceSessionId = route.sessionId;
+  activeGeneralKnowledgePlanTaskId = route.page === 'generalKnowledge' ? route.taskId : null;
+  selectedGeneralKnowledgePointId = route.page === 'generalKnowledge' ? route.knowledgePointId : null;
+  activeGeneralKnowledgeSessionId = route.page === 'generalKnowledge' ? route.sessionId : null;
   pageTransition = true;
   runViewTransition(document, () => {
     render();
