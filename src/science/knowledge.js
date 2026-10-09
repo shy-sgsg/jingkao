@@ -36,6 +36,7 @@ export const SCIENCE_TREE = [
         sciencePoint('physics:solid-pressure', '固体压强'),
         sciencePoint('physics:liquid-pressure', '液体压强'),
         sciencePoint('physics:atmospheric-pressure', '大气压强'),
+        sciencePoint('physics:fluid-flow', '气流与流体压强'),
         sciencePoint('physics:density', '密度'),
         sciencePoint('physics:buoyancy', '浮力与阿基米德原理', {
           summary: '液体或气体对浸在其中的物体产生向上的浮力，其大小等于物体排开流体的重力。',
@@ -107,6 +108,7 @@ export const SCIENCE_TREE = [
         sciencePoint('physics:internal-energy', '内能'),
         sciencePoint('physics:specific-heat', '比热容'),
         sciencePoint('physics:heat-transfer', '热传递'),
+        sciencePoint('physics:thermal-radiation', '热辐射与红外成像'),
         sciencePoint('physics:thermal-expansion', '热胀冷缩'),
       ]),
       scienceTopic('physics:sound-electromagnetism', '声学与电磁学', [
@@ -139,6 +141,8 @@ export const SCIENCE_TREE = [
         sciencePoint('chemistry:metal-activity', '金属活动性'),
         sciencePoint('chemistry:metal-corrosion', '金属腐蚀'),
         sciencePoint('chemistry:experiments', '化学实验'),
+        sciencePoint('chemistry:electrochemical-cells', '电化学与电池'),
+        sciencePoint('chemistry:polymer-materials', '高分子材料'),
         sciencePoint('chemistry:substance-identification', '物质鉴别'),
       ]),
       scienceTopic('chemistry:environment-life', '生活与环境化学', [

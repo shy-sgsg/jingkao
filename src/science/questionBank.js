@@ -627,4 +627,94 @@ addPublishedReferenceQuestion({
   correctAnswer: 'D', explanation: 'D 表明白鹳经历更多次迁徙后，路线效率持续提高，最符合“通过学习不断改进路线”的判断。A 说明它们可能学习捕食技能，B 是在越冬地附近探索，C 只是临时避险，都没有直接说明迁徙路线因经验而优化。',
 });
 
+addPublishedReferenceQuestion({
+  id: 'sh-2026-bci-decoding', subjectId: 'biology', topicId: 'biology:human-body', knowledgePointIds: ['biology:nervous-regulation'],
+  difficulty: 'medium', reasoningType: 'classification', sourceType: 'recalled', sourceId: 'sh-2026-science-literacy-recall',
+  sourceTitle: '2026 上海市考回忆题 · 脑机接口实时解码', region: '上海', examYear: 2026, presentationMode: 'adapted',
+  sourceNote: '据回忆卷第 82 题改述；题面属于“科学素养”部分，答案 A 与公开答案页核对。该来源是第三方回忆版，非官方原卷。',
+  stem: '侵入式脑机接口让受试者借助设备完成游戏操作。以下哪一环节是把脑活动转成可执行指令的关键？',
+  options: ['实时在线解码', '脑功能成像', '高精度导航', '语言合成'],
+  correctAnswer: 'A', explanation: '系统需连续采集脑信号并实时解码用户意图，再把结果转成设备指令。成像、导航或语言合成可以服务于其他任务，但不能代替实时解码。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'sh-2026-bladeless-fan-airflow', subjectId: 'physics', topicId: 'physics:pressure', knowledgePointIds: ['physics:fluid-flow'],
+  difficulty: 'medium', reasoningType: 'causal_inference', sourceType: 'recalled', sourceId: 'sh-2026-science-literacy-recall',
+  sourceTitle: '2026 上海市考回忆题 · 无叶风扇气流', region: '上海', examYear: 2026, presentationMode: 'adapted',
+  sourceNote: '据回忆卷第 83 题改述；题面属于“科学素养”部分，答案 C 与公开答案页核对。该来源是第三方回忆版，非官方原卷。',
+  stem: '无叶风扇从底座吸入空气，再由环形窄缝高速喷出。下列说法错误的是：',
+  options: ['高速喷流可带动周围空气形成更大的气流', '电机输入的电能有一部分转化为空气的动能', '没有外露扇叶，所以运行时空气不会因摩擦而产生热量', '喷流与周围空气混合后，整体气流速度会逐渐减小'],
+  correctAnswer: 'C', explanation: '没有外露扇叶不等于没有空气摩擦。空气与风道、周围空气相互作用时会有能量损耗，部分机械能转化为内能。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'sh-2026-capacitive-touchscreen', subjectId: 'physics', topicId: 'physics:electricity', knowledgePointIds: ['physics:electrostatics'],
+  difficulty: 'medium', reasoningType: 'causal_inference', sourceType: 'recalled', sourceId: 'sh-2026-science-literacy-recall',
+  sourceTitle: '2026 上海市考回忆题 · 电容触屏与导电手套', region: '上海', examYear: 2026, presentationMode: 'adapted',
+  sourceNote: '据回忆卷第 84 题改述；题面属于“科学素养”部分，答案 D 与公开答案页核对。该来源是第三方回忆版，非官方原卷。',
+  stem: '电容式手机屏幕能识别指尖带导电纤维的触屏手套。对此现象，哪项解释正确？',
+  options: ['指尖被水浸湿绝不会影响触屏性能', '环境温度低就必定无法操作触屏', '手和屏幕之间组成了微型变压器', '手指接触时会改变屏幕表面的局部电场或电容'],
+  correctAnswer: 'D', explanation: '电容屏通过检测局部电场或电容变化定位触点，导电纤维可帮助手指与屏幕形成有效的电容耦合。水分、温度和手套结构会影响识别，不能据此断言完全不受影响或必定失效。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'sh-2026-fast-charging-battery', subjectId: 'chemistry', topicId: 'chemistry:materials-experiments', knowledgePointIds: ['chemistry:electrochemical-cells'],
+  difficulty: 'medium', reasoningType: 'data_interpretation', sourceType: 'recalled', sourceId: 'sh-2026-science-literacy-recall',
+  sourceTitle: '2026 上海市考回忆题 · 锂电池快速充电', region: '上海', examYear: 2026, presentationMode: 'adapted',
+  sourceNote: '据回忆卷第 86 题改述；题面属于“科学素养”部分，答案 B 与公开答案页核对。该来源是第三方回忆版，非官方原卷。',
+  stem: '实验发现，改变锂电池的充电电流密度后，锂离子在电解液中的迁移速度明显变化，充电时间也随之改变。哪项最能解释其快充性能？',
+  options: ['电池外壳隔热，阻止所有能量损耗', '锂离子迁移较快，提高了电荷传输效率', '电极颜色稳定，说明充电速度快', '电池屏蔽电磁波，减少外部干扰'],
+  correctAnswer: 'B', explanation: '电流密度变化会影响电解液中离子的迁移；迁移更快有助于电荷传输并缩短充电时间。低温升本身不能单独说明快充机制。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'sh-2026-mask-layers', subjectId: 'chemistry', topicId: 'chemistry:materials-experiments', knowledgePointIds: ['chemistry:polymer-materials'],
+  difficulty: 'easy', reasoningType: 'classification', sourceType: 'recalled', sourceId: 'sh-2026-science-literacy-recall',
+  sourceTitle: '2026 上海市考回忆题 · 口罩聚丙烯材料层次', region: '上海', examYear: 2026, presentationMode: 'adapted',
+  sourceNote: '据回忆卷第 87 题改述；题面属于“科学素养”部分，答案 B 与公开答案页核对。该来源是第三方回忆版，非官方原卷。',
+  stem: '某多层口罩使用三种聚丙烯材料：A 拒水并抑制微生物，B 由细纤维构成、适于过滤颗粒，C 柔软且透气。由外向内的合理排列是：',
+  options: ['C—A—B', 'A—B—C', 'B—C—A', 'B—A—C'],
+  correctAnswer: 'B', explanation: '外层主要阻挡飞沫和液态水，中间层负责过滤颗粒，贴肤内层兼顾舒适与透气，因此排列为 A—B—C。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'sh-2026-click-chemistry', subjectId: 'chemistry', topicId: 'chemistry:changes-reactions', knowledgePointIds: ['chemistry:common-reactions'],
+  difficulty: 'medium', reasoningType: 'classification', sourceType: 'recalled', sourceId: 'sh-2026-science-literacy-recall',
+  sourceTitle: '2026 上海市考回忆题 · 点击化学反应特征', region: '上海', examYear: 2026, presentationMode: 'adapted',
+  sourceNote: '据回忆卷第 89 题改述；题面属于“科学素养”部分，答案 C 与公开答案页核对。选项改写以保留“题干给定特征不符”这一判断；该来源是第三方回忆版，非官方原卷。',
+  stem: '题干给出的点击化学反应特征包括条件温和、选择性较强、副产物少且无害，并且不产生无关气体。下列案例中，哪项不符合这些条件？',
+  options: ['在温和溶液条件下专一连接分子，用于细胞成像', '无需金属催化且不放气，完成活细胞表面标记', '反应虽能快速配对目标分子，却持续释放大量无关气体', '通过偶联反应形成环状结构，用于材料表面功能化'],
+  correctAnswer: 'C', explanation: '按题干列出的特征逐项判断，C 明确说明反应释放大量无关气体，因此不符合题设。不同点击反应的具体条件和副产物可能不同，不能把题干的特征推广成所有反应的绝对规律。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'sh-2026-infrared-thermal-imaging', subjectId: 'physics', topicId: 'physics:thermal', knowledgePointIds: ['physics:thermal-radiation'],
+  difficulty: 'medium', reasoningType: 'causal_inference', sourceType: 'recalled', sourceId: 'sh-2026-science-literacy-recall',
+  sourceTitle: '2026 上海市考回忆题 · 红外热像与辐射', region: '上海', examYear: 2026, presentationMode: 'adapted',
+  sourceNote: '据回忆卷第 91 题改述；题面属于“科学素养”部分，答案 B 与公开答案页核对。该来源是第三方回忆版，非官方原卷。',
+  stem: '关于红外热像仪的成像和反侦察原理，下列说法错误的是：',
+  options: ['高于绝对零度的物体会发出热辐射', '人体核心体温相对稳定，所以人体发出的红外辐射强度始终不变', '高温火源可产生较强红外辐射，干扰探测', '具有反射性的材料可能改变热像仪接收到的红外信号'],
+  correctAnswer: 'B', explanation: '核心体温稳定不代表各处皮肤表面温度、发射率和环境条件都不变；衣物、出汗、风和背景反射都会影响热像仪接收到的红外信号。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'sh-2026-bowl-water-resonance', subjectId: 'physics', topicId: 'physics:sound-electromagnetism', knowledgePointIds: ['physics:pitch-loudness'],
+  difficulty: 'easy', reasoningType: 'causal_inference', sourceType: 'recalled', sourceId: 'sh-2026-science-literacy-recall',
+  sourceTitle: '2026 上海市考回忆题 · 盛水铜碗的音调变化', region: '上海', examYear: 2026, presentationMode: 'adapted',
+  sourceNote: '据回忆卷第 92 题改述；题面属于“科学素养”部分，答案 B 与公开答案页核对。该来源是第三方回忆版，非官方原卷。',
+  stem: '敲击盛水铜碗时，加入的水参与振动。下列解释正确的是：',
+  options: ['水晃动改变了铜的材料密度', '水增大了振动系统的有效质量，使固有频率降低、音调变低', '水的晃动产生次声波并改变铜碗音调', '铜碗表面的花纹改变了声音在空气中的传播速度'],
+  correctAnswer: 'B', explanation: '水会改变铜碗—水组成的振动系统的有效质量和阻尼；有效质量增大时，固有频率通常降低，因此音调变低。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'sh-2026-vr-force-feedback', subjectId: 'physics', topicId: 'physics:sound-electromagnetism', knowledgePointIds: ['physics:motors-generators'],
+  difficulty: 'medium', reasoningType: 'causal_inference', sourceType: 'recalled', sourceId: 'sh-2026-science-literacy-recall',
+  sourceTitle: '2026 上海市考回忆题 · VR 手套电磁力反馈', region: '上海', examYear: 2026, presentationMode: 'adapted',
+  sourceNote: '据回忆卷第 93 题改述；题面属于“科学素养”部分，答案 B 与公开答案页核对。该来源是第三方回忆版，非官方原卷。',
+  stem: 'VR 手套通过电磁模块给手部施加随虚拟物体设置变化的反向力，以模拟虚拟物体的重量和移动阻力。其工作原理最可能是：',
+  options: ['控制手套温度来模拟重量感', '动态调整机械阻力，对抗手部运动以模拟负载', '用颜色刺激诱发触觉错觉', '让高频电流直接传递虚拟物体的真实重量'],
+  correctAnswer: 'B', explanation: '电磁执行器把控制电流转成可调机械力，在手部运动时提供反向阻力，以模拟虚拟负载；用户感受到的是设备施加的力，不是虚拟物体真实的重力。',
+});
+
 export { SCIENCE_QUESTION_BANK };

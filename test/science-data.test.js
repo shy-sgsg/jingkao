@@ -71,7 +71,7 @@ test('published questions distinguish the existing original bank from sourced ex
   const { SCIENCE_SOURCES } = await import('../src/science/sources.js');
   const originalBank = bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType === 'original');
   assert.equal(originalBank.length, 153);
-  assert.equal(bankModule.SCIENCE_QUESTION_BANK.length, 193);
+  assert.equal(bankModule.SCIENCE_QUESTION_BANK.length, 202);
   const subjectCounts = Object.fromEntries(['physics', 'chemistry', 'biology', 'geography']
     .map((subjectId) => [subjectId, originalBank.filter((question) => question.subjectId === subjectId).length]));
   assert.deepEqual(subjectCounts, { physics: 42, chemistry: 37, biology: 36, geography: 38 });
@@ -92,6 +92,9 @@ test('published questions distinguish the existing original bank from sourced ex
     'zj-2024-c-knuckle-evidence', 'zj-2024-c-animal-aging', 'zj-2024-c-cholera-transmission', 'zj-2024-c-breath-biometrics',
     'zj-2025-c-stork-migration',
     'zj-2026-c-corn-rows', 'zj-2026-c-hair-follicle-stem-cells',
+    'sh-2026-bci-decoding', 'sh-2026-bladeless-fan-airflow', 'sh-2026-capacitive-touchscreen',
+    'sh-2026-fast-charging-battery', 'sh-2026-mask-layers', 'sh-2026-click-chemistry',
+    'sh-2026-infrared-thermal-imaging', 'sh-2026-bowl-water-resonance', 'sh-2026-vr-force-feedback',
     'zj-2025-mock-mars-microbes', 'mock-huatu-buoyancy-load',
   ]) {
     assert.ok(bankModule.SCIENCE_QUESTION_BANK.some((question) => question.id === id), `${id} is published`);
@@ -101,9 +104,9 @@ test('published questions distinguish the existing original bank from sourced ex
   assert.ok(bankModule.SCIENCE_QUESTION_BANK.some((question) => question.sourceType === 'third_party_mock'));
   assert.ok(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType !== 'original')
     .every((question) => question.sourceId && question.sourceNote));
-  assert.equal(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType === 'recalled').length, 32);
+  assert.equal(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType === 'recalled').length, 41);
   assert.equal(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType === 'third_party_mock').length, 4);
-  assert.equal(SCIENCE_SOURCES.length, 22);
+  assert.equal(SCIENCE_SOURCES.length, 23);
 });
 
 test('published knowledge lessons cover all four disciplines with practical explanations', async () => {
@@ -116,12 +119,15 @@ test('published knowledge lessons cover all four disciplines with practical expl
       && point.content.everydayExample && point.content.quickMethod), `${subject.id} lessons contain actionable explanations`);
     return [subject.id, lessons.length];
   }));
-  assert.equal(Object.values(counts).reduce((sum, count) => sum + count, 0), 51);
+  assert.equal(Object.values(counts).reduce((sum, count) => sum + count, 0), 60);
   for (const pointId of [
     'physics:elastic-force', 'physics:optical-phenomena', 'physics:gravity', 'physics:magnetic-field',
     'biology:hormonal-regulation', 'biology:microorganisms', 'biology:musculoskeletal-system',
     'biology:reproduction-inheritance', 'biology:stem-cell-regeneration',
     'biology:organisms-environment', 'biology:respiratory-circulatory-systems',
+    'biology:nervous-regulation', 'physics:fluid-flow', 'physics:electrostatics',
+    'physics:thermal-radiation', 'physics:pitch-loudness', 'physics:motors-generators',
+    'chemistry:electrochemical-cells', 'chemistry:polymer-materials', 'chemistry:common-reactions',
   ]) {
     const point = tree.flatMap((subject) => subject.topics).flatMap((topic) => topic.knowledgePoints).find((item) => item.id === pointId);
     assert.equal(point.contentStatus, 'published', `${pointId} has a lesson for the newly collected Shanghai questions`);

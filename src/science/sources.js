@@ -73,6 +73,14 @@ export const SCIENCE_SOURCES = [
     note: '第三方考生回忆卷，不是官方原卷；本库只收入题面可读且答案可交叉核对的条目，并用改述呈现。',
   },
   {
+    id: 'sh-2026-science-literacy-recall', title: '2026 年上海市公务员录用考试《行测》题（网友回忆版）',
+    organization: '粉笔题库（网友回忆版）；公开真题库（答案页）', sourceType: 'recalled', region: '上海', examYear: 2026,
+    authority: 'third-party-recollection', verificationStatus: 'verified', copyrightStatus: 'reference_only',
+    url: 'https://gwy.gkzhenti.cn/paper/1775360735040',
+    relatedUrls: ['https://gwy.gkzhenti.cn/answer/1775360735040'],
+    note: '第三方考生回忆卷，非官方原卷；卷面设有“科学素养”部分，本库收录其中 9 道题面和答案可核对的题目，按原意改述。',
+  },
+  {
     id: 'gd-2019-township-recall', title: '2019 年广东省公务员考试行测真题（乡镇卷，网友回忆版）',
     organization: '公考网（回忆题整理）', sourceType: 'recalled', region: '广东', examYear: 2019,
     authority: 'third-party-recollection', verificationStatus: 'verified', copyrightStatus: 'reference_only',
