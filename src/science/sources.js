@@ -176,14 +176,15 @@ export const SCIENCE_SOURCES = [
   },
   {
     id: 'gd-2026-science-reasoning-recall', title: '2026 年广东省公务员录用考试《行测》题（网友回忆版）',
-    organization: '粉笔题库（网友回忆版）；公开真题库（答案页）；中公网校（回忆分析）', sourceType: 'recalled', region: '广东', examYear: 2026,
+    organization: '粉笔题库（网友回忆版）；爱题库（题面与答案）；中公网校（题干与解析）', sourceType: 'recalled', region: '广东', examYear: 2026,
     authority: 'third-party-recollection', verificationStatus: 'pending', copyrightStatus: 'reference_only',
     url: 'https://gwy.gkzhenti.cn/paper/1767342832062',
     relatedUrls: [
       'https://gwy.gkzhenti.cn/answer/1767342832062',
+      'https://iget100.com/exam/civil-service/0bf9be8c-93db-4573-8eb1-8ebed591627b',
       'https://www.eoffcn.com/kszx/detail/1918990.html',
     ],
-    note: '第三方考生回忆卷，非官方原卷；第 66–70 题共 5 道科学推理题，但均依赖原图、图表或电路示意。当前可核对文本未显示这些图像，中公网校也提示回忆题答案次序可能有出入，暂保留来源待核验，不发布题目。',
+    note: '第三方考生回忆卷，非官方原卷。爱题库与中公网校均载有锋面雨题干并给出 D；中公网校提示回忆题号可能有出入。本库仅发布该题的文字化改述，不复刻原图和原选项；其余图示/电路题仍待原图可读后核验。',
   },
   {
     id: 'zj-2024-c-recall', title: '2024 年浙江省公务员录用考试《行测》C 类（考生回忆版）',

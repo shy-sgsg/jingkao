@@ -729,6 +729,17 @@ addPublishedReferenceQuestion({
 });
 
 addPublishedReferenceQuestion({
+  id: 'gd-2026-recall-front-rain', subjectId: 'geography', topicId: 'geography:atmosphere-weather',
+  knowledgePointIds: ['geography:fronts-precipitation'], difficulty: 'medium', reasoningType: 'data_interpretation',
+  sourceType: 'recalled', sourceId: 'gd-2026-science-reasoning-recall',
+  sourceTitle: '2026 广东省考回忆题 · 锋面雨形成示意', region: '广东', examYear: 2026, presentationMode: 'adapted',
+  sourceNote: '据公开回忆题及中公网校分析改述；两处页面都给出锋面雨题干与答案 D，中公网校说明回忆题号顺序可能有出入。原题要求选图，本题改为文字化选项，未复刻原图或原选项；这是第三方回忆版，不是官方原卷。',
+  stem: '春季华南地区，暖湿空气与干冷空气交汇形成锋面雨。若把原题的剖面示意图改写为文字，下列哪种气流关系符合降水形成过程？',
+  options: ['冷空气位于暖空气上方，并将暖湿空气压向地面', '暖湿空气停留在冷空气下方，沿地面水平流动而不抬升', '冷暖空气相遇后，暖湿空气下沉并逐渐增温', '冷空气从下方楔入，暖湿空气沿锋面爬升、冷却并凝结'],
+  correctAnswer: 'D', explanation: '冷空气密度较大，锋面处通常位于下方；暖湿空气被迫抬升后冷却，水汽达到饱和时可凝结成云并降水。是否形成降水还取决于水汽和大气层结等条件，不能推为所有锋面都必然降雨。',
+});
+
+addPublishedReferenceQuestion({
   id: 'mock-zhonggong-2027-red-object-color', subjectId: 'physics', topicId: 'physics:optics',
   knowledgePointIds: ['physics:optical-phenomena'], difficulty: 'medium', reasoningType: 'classification',
   sourceType: 'third_party_mock', sourceId: 'mock-zhonggong-2027-light',
