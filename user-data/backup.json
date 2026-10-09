@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "backupId": "6968ebc3-fd8c-4a7a-8d1c-49919ca0967d",
-  "updatedAt": "2026-10-09T15:33:05.878Z",
+  "updatedAt": "2026-10-09T15:46:03.118Z",
   "data": {
     "profile": {
       "major": "公共管理",
@@ -94,6 +94,48 @@
           "reviewingAnswerId": null,
           "startedAt": "2026-10-09T15:29:11.482Z",
           "status": "completed"
+        },
+        {
+          "id": "science_mv14l6wv_enleq8",
+          "mode": "practice",
+          "status": "active",
+          "planTaskId": null,
+          "questionIds": [
+            "beijing-2026-outline-dragonfly",
+            "sh-2020-outline-bicycle-friction",
+            "sh-2026-outline-hall-effect",
+            "gd-2025-outline-grain-storage",
+            "gd-2026-outline-slope-forces",
+            "gd-2021-outline-ladder-climber",
+            "gd-2019-township-wind-energy",
+            "gd-2019-township-ear-pressure",
+            "gd-2019-township-hammer-lever",
+            "gd-2021-township-steelmaking",
+            "gd-2021-township-cooling-rate",
+            "gd-2023-township-karting-friction",
+            "gd-2023-township-sunlit-city",
+            "gd-2020-township-seed-storage",
+            "gd-2020-township-snowline"
+          ],
+          "currentIndex": 2,
+          "correctCount": 1,
+          "reviewingAnswerId": null,
+          "draftAnswers": {},
+          "startedAt": "2026-10-09T15:33:55.903Z",
+          "deadline": null,
+          "durationSeconds": null,
+          "filters": {
+            "onlyUnanswered": false,
+            "onlyMistakes": false,
+            "onlyFavorites": false,
+            "excludeQuestionIds": [],
+            "answeredQuestionIds": [
+              "beijing-2026-outline-dragonfly"
+            ],
+            "mistakeQuestionIds": [],
+            "favoriteQuestionIds": []
+          },
+          "completedAt": null
         }
       ],
       "answers": [
@@ -308,9 +350,43 @@
           "knowledgePointIds": [
             "geography:snowline"
           ]
+        },
+        {
+          "id": "answer_science_mv14l6wv_enleq8_1",
+          "sessionId": "science_mv14l6wv_enleq8",
+          "questionId": "beijing-2026-outline-dragonfly",
+          "selectedOptionId": "A",
+          "correctAnswer": "A",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-10-09T15:34:23.553Z",
+          "knowledgePointIds": [
+            "physics:uniform-motion"
+          ]
+        },
+        {
+          "id": "answer_science_mv14l6wv_enleq8_2",
+          "sessionId": "science_mv14l6wv_enleq8",
+          "questionId": "sh-2020-outline-bicycle-friction",
+          "selectedOptionId": "C",
+          "correctAnswer": "A",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-10-09T15:45:26.131Z",
+          "knowledgePointIds": [
+            "physics:friction"
+          ]
         }
       ],
-      "mistakes": {},
+      "mistakes": {
+        "sh-2020-outline-bicycle-friction": {
+          "count": 1,
+          "firstMissedAt": "2026-10-09T15:45:26.131Z",
+          "lastMissedAt": "2026-10-09T15:45:26.131Z",
+          "lastSelectedOptionId": "C",
+          "correctAnswer": "A"
+        }
+      },
       "favorites": [],
       "favoriteKnowledgePointIds": [],
       "unclearKnowledgePointIds": []
