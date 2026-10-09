@@ -487,4 +487,44 @@ addPublishedReferenceQuestion({
   correctAnswer: 'D', explanation: '同步轨道外的配重用于维持缆绳张力和整体旋转平衡，不只是抵消缆绳重力。赤道位置和同步旋转来自轨道几何条件；同角速度下，离转轴越远线速度越大。',
 });
 
+addPublishedReferenceQuestion({
+  id: 'sh-2026-outline-hall-effect', subjectId: 'physics', topicId: 'physics:sound-electromagnetism', knowledgePointIds: ['physics:magnetic-field'],
+  difficulty: 'medium', reasoningType: 'causal_inference', sourceType: 'official_outline_example', sourceId: 'sh-2026-official-outline',
+  sourceTitle: '上海市 2026 年公务员大纲科学素养例题 · 霍尔传感器', region: '上海', examYear: 2026, presentationMode: 'adapted',
+  sourceNote: '题意改述自上海市公务员局官方大纲例题；原题答案 C，改写后正确项仍为 C。该年度大纲将相关考查称为“科学素养”。',
+  stem: '工业机器人用传感器测量关节转速和位置，器件在磁场作用下按磁场强度输出电压信号。最可能利用什么原理？',
+  options: ['安培力使关节直接转动', '洛伦兹力直接推动整个关节运动', '霍尔效应使载流元件两侧形成横向电压', '光电效应使元件受光后发射电子'],
+  correctAnswer: 'C', explanation: '霍尔元件中的载流子在磁场作用下发生偏转并在两侧积累电荷，形成横向霍尔电压。测量该电压可推知磁场变化，进而检测转速或位置。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'gd-2024-soot-ink', subjectId: 'chemistry', topicId: 'chemistry:changes-reactions', knowledgePointIds: ['chemistry:combustion'],
+  difficulty: 'medium', reasoningType: 'causal_inference', sourceType: 'recalled', sourceId: 'gd-2024-recall',
+  sourceTitle: '2024 广东省考回忆题 · 蜡烛制墨', region: '广东', examYear: 2024, presentationMode: 'adapted',
+  sourceNote: '据 2024 年广东省考考生回忆版改述，答案 A 与公开解析核对；原题及答案非官方发布。',
+  stem: '传统制墨时，可将冷器皿置于蜡烛火焰上方收集黑色炭质物。下列对这一过程的说法不正确的是哪一项？',
+  options: ['蜡烛燃料主要由收集到的炭黑制成', '炭黑中的碳在一定条件下可作还原剂', '冷器皿可能影响氧气补充，使蜡烛不完全燃烧', '冷器皿能带走热量，使附着的炭黑不易继续燃烧'],
+  correctAnswer: 'A', explanation: '蜡烛通常以石蜡为燃料，炭黑是燃烧不充分时形成的含碳颗粒，并非制造蜡烛的主要燃料。碳在适当条件下有还原性；器皿遮挡和冷却会影响局部供氧及炭黑继续燃烧。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'gd-2024-insulin-glucose', subjectId: 'biology', topicId: 'biology:human-body', knowledgePointIds: ['biology:hormonal-regulation'],
+  difficulty: 'easy', reasoningType: 'classification', sourceType: 'recalled', sourceId: 'gd-2024-recall',
+  sourceTitle: '2024 广东省考回忆题 · 胰岛素与血糖', region: '广东', examYear: 2024, presentationMode: 'adapted',
+  sourceNote: '据 2024 年广东省考考生回忆版改述，答案 D 与公开解析核对；原题及答案非官方发布。',
+  stem: '胰岛素是一种蛋白质激素。下列关于胰岛素的说法，哪一项正确？',
+  options: ['胰岛素会抑制血糖被组织利用', '胰岛素主要由肝脏分泌', '通常通过口服胰岛素治疗糖尿病', '血液中胰岛素过多可能导致低血糖'],
+  correctAnswer: 'D', explanation: '胰岛素由胰岛 β 细胞分泌，促进葡萄糖摄取和利用；分泌或用量过多时可能使血糖过低。它是蛋白质，通常采用注射而非口服给药。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'mock-huatu-buoyancy-load', subjectId: 'physics', topicId: 'physics:pressure', knowledgePointIds: ['physics:floating-sinking'],
+  difficulty: 'medium', reasoningType: 'comparison', sourceType: 'third_party_mock', sourceId: 'huatu-2022-science-examples',
+  sourceTitle: '华图科学推理例题 · 轮船装载', region: '广东', examYear: null, presentationMode: 'adapted',
+  sourceNote: '华图科学推理讲解中的机构例题，按题意重述；非历年真题。',
+  stem: '下列情形中，物体受到的浮力会增大的是哪一项？',
+  options: ['游泳者从深水处走向浅滩', '漂浮的轮船从长江驶入大海', '正在下沉的潜水艇保持完全浸没', '漂浮在码头的轮船装载更多货物'],
+  correctAnswer: 'D', explanation: '漂浮轮船静止时浮力等于总重力。装载货物使轮船总重力增加，船体下沉并排开更多水，浮力随之增加。其余情形中浮力不增大：浅水处游泳者浸入体积减小；漂浮船在不同盐度水域始终以浮力平衡重力；完全浸没且体积不变的潜水艇浮力不变。',
+});
+
 export { SCIENCE_QUESTION_BANK };
