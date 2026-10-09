@@ -468,6 +468,56 @@ addPublishedReferenceQuestion({
 });
 
 addPublishedReferenceQuestion({
+  id: 'sh-2020-b-metal-smelting-order', subjectId: 'chemistry', topicId: 'chemistry:materials-experiments', knowledgePointIds: ['chemistry:metal-activity'],
+  difficulty: 'easy', reasoningType: 'causal_inference', sourceType: 'recalled', sourceId: 'sh-2020-b-recall',
+  sourceTitle: '2020 上海市考 B 卷回忆题 · 金属利用顺序', region: '上海', examYear: 2020, presentationMode: 'adapted',
+  sourceNote: '据回忆题第 26 题改述；答案 B 与华图公开解析及金属活动性规律核对。',
+  stem: '人类较早利用铜，之后广泛使用铁，铝的大规模应用则较晚。造成这种先后差异最相关的因素是什么？',
+  options: ['金属在地壳中的含量', '金属冶炼的难易程度', '金属的导电性与延展性', '金属制品的用途'],
+  correctAnswer: 'B', explanation: '金属活动性越强，越难从矿石中冶炼。铜的活动性较弱、较易冶炼；铁更难冶炼；铝活动性强，工业制取还需电解，因此应用较晚。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'sh-2020-b-food-allergy-protein', subjectId: 'biology', topicId: 'biology:human-body', knowledgePointIds: ['biology:immunity'],
+  difficulty: 'easy', reasoningType: 'classification', sourceType: 'recalled', sourceId: 'sh-2020-b-recall',
+  sourceTitle: '2020 上海市考 B 卷回忆题 · 食物过敏成分', region: '上海', examYear: 2020, presentationMode: 'adapted',
+  sourceNote: '据回忆题第 27 题改述；蛋白质选项与华图公开解析核对。',
+  stem: '食物过敏是免疫系统对摄入成分产生异常应答。以下哪类营养成分更常见于食物过敏原？',
+  options: ['蛋白质', '维生素', '膳食纤维', '脂肪'],
+  correctAnswer: 'A', explanation: '许多食物过敏原是蛋白质或多肽等大分子，它们可能被免疫系统识别并触发过敏应答。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'sh-2020-b-peroxide-concentration', subjectId: 'chemistry', topicId: 'chemistry:materials-experiments', knowledgePointIds: ['chemistry:boiling-point'],
+  difficulty: 'medium', reasoningType: 'causal_inference', sourceType: 'recalled', sourceId: 'sh-2020-b-recall',
+  sourceTitle: '2020 上海市考 B 卷回忆题 · 双氧水减压浓缩', region: '上海', examYear: 2020, presentationMode: 'adapted',
+  sourceNote: '据回忆题第 30 题改述；答案 B 与星光公考公开解析核对。',
+  stem: '过氧化氢溶液受热容易分解。需要把稀溶液浓缩时，以下哪种蒸馏方式更合适？',
+  options: ['常压蒸馏并持续加热', '减压蒸馏，降低液体沸点', '加压蒸馏，提高液体沸点', '加入生石灰后常压蒸馏'],
+  correctAnswer: 'B', explanation: '减小外界压强会降低液体的沸点，可在较低温度下蒸出水，减少过氧化氢受热分解。加入生石灰会放热，也不适合该浓缩过程。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'sh-2020-b-binary-star-force', subjectId: 'physics', topicId: 'physics:mechanics', knowledgePointIds: ['physics:centripetal-force'],
+  difficulty: 'medium', reasoningType: 'comparison', sourceType: 'recalled', sourceId: 'sh-2020-b-recall',
+  sourceTitle: '2020 上海市考 B 卷回忆题 · 双星系统向心力', region: '上海', examYear: 2020, presentationMode: 'adapted',
+  sourceNote: '据回忆题第 34 题改述，去掉不影响判断的示意图；答案 A 按作用力与反作用力关系核对。',
+  stem: '质量分别为 3m 和 m 的两颗恒星只受彼此引力作用，绕共同质心以相同角速度运动。下列说法正确的是？',
+  options: ['两颗恒星受到的向心力大小相等', '两颗恒星的轨道半径相等', '两颗恒星的线速度相等', '两颗恒星的运动周期不同'],
+  correctAnswer: 'A', explanation: '两颗恒星之间的引力是一对大小相等、方向相反的作用力与反作用力，分别提供两星的向心力，所以向心力大小相等。相同角速度对应相同周期；质量不同，轨道半径和线速度不相等。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'sh-2020-b-ultrasound-vacuum', subjectId: 'physics', topicId: 'physics:sound-electromagnetism', knowledgePointIds: ['physics:sound-propagation'],
+  difficulty: 'easy', reasoningType: 'causal_inference', sourceType: 'recalled', sourceId: 'sh-2020-b-recall',
+  sourceTitle: '2020 上海市考 B 卷回忆题 · 超声波传播介质', region: '上海', examYear: 2020, presentationMode: 'adapted',
+  sourceNote: '据回忆题第 35 题改述；答案 C 与小麦公考公开解析核对。',
+  stem: '超声波属于声波。若用一层很薄的隔层阻断其传播，下列哪种隔层最有效？',
+  options: ['半导体薄层', '磁性材料薄层', '真空层', '绝缘材料薄层'],
+  correctAnswer: 'C', explanation: '声波传播需要介质，不能在真空中传播。半导体、磁性材料和绝缘材料仍是物质介质，不能仅凭这些属性阻断声波。',
+});
+
+addPublishedReferenceQuestion({
   id: 'sh-2021-b-pressure-estimate', subjectId: 'physics', topicId: 'physics:pressure', knowledgePointIds: ['physics:solid-pressure'],
   difficulty: 'medium', reasoningType: 'data_interpretation', sourceType: 'recalled', sourceId: 'sh-2021-b-recall',
   sourceTitle: '2021 上海市考 B 卷回忆题 · 常见物理量估测', region: '上海', examYear: 2021, presentationMode: 'adapted',

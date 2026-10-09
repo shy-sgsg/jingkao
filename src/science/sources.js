@@ -70,6 +70,22 @@ export const SCIENCE_SOURCES = [
     note: '第三方回忆整理，非官方原卷；收录第 26、27、30、31、35 题共 5 道不依赖缺失图示的题目，题意改述并与公开答案解析交叉核对。',
   },
   {
+    id: 'sh-2020-b-recall', title: '2020 年上海市公务员考试行测 B 卷（考生回忆版）',
+    organization: '爱真题、星光公考、中国公考网（回忆题面）；华图、星光公考、小麦公考（答案交叉核对）', sourceType: 'recalled', region: '上海', examYear: 2020,
+    authority: 'third-party-recollection', verificationStatus: 'verified', copyrightStatus: 'reference_only',
+    url: 'https://www.aipta.com/article/1228.html',
+    relatedUrls: [
+      'https://upload.xingguanggongkao.com/pdf/2020%E5%B9%B4%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88B%E5%8D%B7-%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.pdf?time=1733729615',
+      'https://www.chinagwy.org/files/20211227161415_77220.pdf',
+      'https://ha.huatu.com/2022/0905/4239750.html',
+      'https://www.huatu.com/2023/0918/2686935.html',
+      'https://www.xingguanggongkao.com/Pc/XingQuestion/search/subject_id/2/keywords/R7XFIR-07DMA-XGVDI/p/51.html',
+      'https://www.renrendoc.com/paper/320361449.html',
+      'https://www.xiaomaigongkao.com/Portal/Question/search/keywords/%E5%9C%9F%E5%9C%B0%2B%E7%9B%B8%E7%B6%9A%2B%E5%90%8D%E7%BE%A9%E5%A4%89%E6%9B%B4%2B%E8%B2%BB%E7%94%A8/p/100.html',
+    ],
+    note: '第三方回忆整理，非官方原卷；收录第 26、27、30、34、35 题共 5 道可独立作答的文字题，题意改述并与公开解析或物理、化学原理交叉核对。依赖缺失图表的题目未收入。',
+  },
+  {
     id: 'sh-2014-a-recall', title: '2014 年上海市公务员录用考试《行测》A 卷（考生回忆版）',
     organization: '星光公考（回忆卷）；中公网校（同题解析）', sourceType: 'recalled', region: '上海', examYear: 2014,
     authority: 'third-party-recollection', verificationStatus: 'verified', copyrightStatus: 'reference_only',
