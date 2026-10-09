@@ -152,6 +152,7 @@ export const SCIENCE_TREE = [
     id: 'biology', title: '生物', topics: [
       scienceTopic('biology:cells-metabolism', '细胞与生命活动', [
         sciencePoint('biology:cells', '细胞'),
+        sciencePoint('biology:stem-cell-regeneration', '干细胞与组织再生'),
         sciencePoint('biology:photosynthesis', '光合作用'),
         sciencePoint('biology:respiration', '呼吸作用'),
         sciencePoint('biology:transpiration', '蒸腾作用'),

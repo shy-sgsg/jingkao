@@ -597,4 +597,24 @@ addPublishedReferenceQuestion({
   correctAnswer: 'D', explanation: 'D 把更强的杀菌作用放在接近火星表面的照射条件下，补强了实验结果与结论之间的联系。其他选项没有说明火星表面条件下微生物的存活情况。',
 });
 
+addPublishedReferenceQuestion({
+  id: 'zj-2026-c-corn-rows', subjectId: 'biology', topicId: 'biology:inheritance-microbes', knowledgePointIds: ['biology:reproduction-inheritance'],
+  difficulty: 'medium', reasoningType: 'causal_inference', sourceType: 'recalled', sourceId: 'zj-2026-c-recall',
+  sourceTitle: '2026 浙江省考 C 类回忆题 · 玉米穗行数与转基因识别', region: '浙江', examYear: 2026, presentationMode: 'adapted',
+  sourceNote: '据 2026 年浙江省考 C 类回忆卷第 90 题改述；出自判断推理中的科学论证题，不标为专项科学推理题；参考答案 D 与公开答案页核对。',
+  stem: '有说法称，只看玉米果穗的籽粒行数就能识别转基因玉米：恰好 12 行的是非转基因，多于 12 行的就是转基因。以下哪项不能反驳这一判断？',
+  options: ['现有技术很难通过转基因直接改变玉米穗行数', '转入玉米的基因通常针对抗虫、抗倒等性状，一般不改变外观', '同一玉米品种的穗行数也会因遗传和环境等因素而波动', '玉米穗行数通常为偶数，因为穗轴上的小花成对排列'],
+  correctAnswer: 'D', explanation: 'A、B、C 都在质疑穗行数能否稳定区分转基因与非转基因玉米。D 只说明行数的奇偶规律；“12 行或多于 12 行”的划分仍可能成立，因此没有反驳原判断。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'zj-2026-c-hair-follicle-stem-cells', subjectId: 'biology', topicId: 'biology:cells-metabolism', knowledgePointIds: ['biology:stem-cell-regeneration'],
+  difficulty: 'medium', reasoningType: 'causal_inference', sourceType: 'recalled', sourceId: 'zj-2026-c-recall',
+  sourceTitle: '2026 浙江省考 C 类回忆题 · miR-205 与毛囊再生', region: '浙江', examYear: 2026, presentationMode: 'adapted',
+  sourceNote: '据 2026 年浙江省考 C 类回忆卷第 91 题改述；出自判断推理中的科学论证题，不标为专项科学推理题；参考答案 D 与公开答案页核对，研究机制另与小鼠实验论文交叉核对。',
+  stem: '研究发现，衰老会使毛囊干细胞变得僵硬，妨碍毛发再生；当细胞骨架软化时，老龄小鼠的毛发再生会增强。因此，有人推断，提高毛囊干细胞中 miR-205 的表达可促进毛发生长。要使这一推断成立，以下哪项必须为真？',
+  options: ['miR-205 会改变毛发本身的软硬程度', '可以用基因技术提高 miR-205 的表达', 'miR-205 会抑制毛囊干细胞增殖和分化', 'miR-205 能调节细胞骨架的收缩作用并促使其软化'],
+  correctAnswer: 'D', explanation: '结论需要连接“提高 miR-205 表达”与“细胞骨架软化”这两步。D 补上了该机制联系；A 说的是毛发而非毛囊干细胞，B 只说明技术上可操作，C 与毛发生长所需的细胞增殖和分化方向相反。',
+});
+
 export { SCIENCE_QUESTION_BANK };

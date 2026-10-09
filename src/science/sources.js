@@ -151,6 +151,18 @@ export const SCIENCE_SOURCES = [
     note: '第三方机构模拟卷，不是浙江省考真题；第 92 题按公开题意改述，答案与卷内解析核对，微生物实验背景另与公开研究论文交叉核对。',
   },
   {
+    id: 'zj-2026-c-recall', title: '2026 年浙江省公务员录用考试《行测》C 类（考生回忆版）',
+    organization: '星光公考（考生回忆卷）；公开真题库（答案页）', sourceType: 'recalled', region: '浙江', examYear: 2026,
+    authority: 'third-party-recollection', verificationStatus: 'verified', copyrightStatus: 'reference_only',
+    url: 'https://gwy.gkzhenti.cn/paper/1767342832464',
+    relatedUrls: [
+      'https://upload.xingguanggongkao.com/pdf/2026%E5%B9%B4%E6%B5%99%E6%B1%9F%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88C%E5%8D%B7-%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.pdf?time=1773041225',
+      'https://gwy.gkzhenti.cn/answer/1767342832464',
+      'https://pubmed.ncbi.nlm.nih.gov/37216502/',
+    ],
+    note: '第三方考生回忆版，非官方原卷；第 90、91 题改述收录于判断推理部分，不标为专项科学推理题。答案参考公开答案页，毛囊研究背景与小鼠实验论文核对。',
+  },
+  {
     id: 'gd-2027-zhonggong-mock', title: '广东公务员行测科学推理模拟题（中公解析转载页）',
     organization: '中公教育（E 考试网转载）', sourceType: 'third_party_mock', region: '广东', examYear: null,
     authority: 'third-party-publisher', verificationStatus: 'verified', copyrightStatus: 'reference_only',
