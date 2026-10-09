@@ -59,9 +59,10 @@ test('encrypted accounts round-trip while the serialized envelope hides the name
   assert.equal(envelope.cipher, 'AES-GCM-256');
   assert.equal(Buffer.from(envelope.salt, 'base64').length, 16);
   assert.equal(Buffer.from(envelope.iv, 'base64').length, 12);
-  for (const privateValue of ['correct horse battery staple 2026', 'PROFILE ALPHA', 'PUBLIC MANAGEMENT', 'PRIVATE PLAN NOTE', 'PRIVATE PLAN TEXT', '140']) {
+  for (const privateValue of ['correct horse battery staple 2026', 'PROFILE ALPHA', 'PUBLIC MANAGEMENT', 'PRIVATE PLAN NOTE', 'PRIVATE PLAN TEXT']) {
     assert.equal(serialized.includes(privateValue), false, `envelope leaked ${privateValue}`);
   }
+  assert.equal(serialized.includes('"total":140'), false, 'envelope leaked the private mock total');
 });
 
 test('separate accounts receive different identifiers and password-derivation salts', async () => {
