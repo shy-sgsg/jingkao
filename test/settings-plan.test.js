@@ -191,7 +191,7 @@ test('the assistant shows work-preference conflicts separately from eligibility'
   });
 
   const townEnforcementCard = site.root.innerHTML.split('<article class="panel assistant-job')
-    .find((markup) => markup.includes('data-code="241264202"'));
+    .find((markup) => markup.includes('data-position-key="2026:241264202"'));
   assert.ok(townEnforcementCard, 'the sourced town enforcement position should be visible in the assistant');
   assert.match(townEnforcementCard, /<details class="assistant-preference-checks"><summary>/, 'per-position preference details should stay collapsed until requested');
   assert.match(townEnforcementCard, /个人工作偏好核对/);
@@ -244,6 +244,100 @@ test('editing a daily schedule changes plan fields without overwriting actual pr
 
   await clickAction(site, 'edit-day', { day: '1' });
   assert.match(site.modal.innerHTML, /name="actualQuestions"[^>]*value="27"/);
+});
+
+test('plan editor saves a custom task named science reasoning without activating science linkage', async () => {
+  const site = await loadStandaloneRoute('plan', { onboarding: { hidden: true, completed: true } });
+  assert.match(site.root.innerHTML, /新增学习任务/);
+
+  await clickAction(site, 'add-plan-task', { date: '2026-10-09' });
+  assert.match(site.modal.innerHTML, /id="plan-task-form"/);
+  assert.match(site.modal.innerHTML, /data-science-config/);
+  const form = new site.FormElement('plan-task-form', {}, {
+    date: '2026-10-09', taskType: 'custom', title: '科学推理', description: '阅读自己的笔记',
+    estimatedMinutes: '25', priority: 'normal', status: 'not_started',
+    activityType: 'exam', scienceSubjectId: 'physics', targetQuestionCount: '10', durationMinutes: '10',
+  });
+  await site.listeners.get('submit')({ target: form, preventDefault() {} });
+
+  const saved = await savedState(site);
+  assert.equal(saved.studyPlanTasks.length, 1);
+  assert.equal(saved.studyPlanTasks[0].title, '科学推理');
+  assert.equal(saved.studyPlanTasks[0].taskType, 'custom');
+  assert.equal(saved.studyPlanTasks[0].scienceConfig, null);
+});
+
+test('plan editor stores structured knowledge point configuration for explicit science tasks', async () => {
+  const site = await loadStandaloneRoute('plan', { onboarding: { hidden: true, completed: true } });
+  await clickAction(site, 'add-plan-task', { date: '2026-10-09' });
+  const form = new site.FormElement('plan-task-form', {}, {
+    date: '2026-10-09', taskType: 'science_reasoning', title: '浮力专项练习15题', description: '',
+    estimatedMinutes: '', priority: 'normal', status: 'not_started', activityType: 'practice',
+    scienceSubjectId: 'physics', scienceTopicId: 'physics:pressure',
+    scienceKnowledgePointId: 'physics:buoyancy', targetQuestionCount: '15', durationMinutes: '',
+    sourceFilter: 'all', difficultyFilter: 'all',
+  });
+  await site.listeners.get('submit')({ target: form, preventDefault() {} });
+
+  const saved = await savedState(site);
+  assert.equal(saved.studyPlanTasks[0].taskType, 'science_reasoning');
+  assert.equal(saved.studyPlanTasks[0].scienceConfig.activityType, 'practice');
+  assert.equal(saved.studyPlanTasks[0].scienceConfig.knowledgePointIds[0], 'physics:buoyancy');
+  assert.equal(saved.studyPlanTasks[0].scienceConfig.targetQuestionCount, 15);
+});
+
+test('science knowledge deep links show the lesson and preserve explicit completion progress', async () => {
+  const site = await loadStandaloneRoute('science?knowledge=physics%3Abuoyancy', {
+    onboarding: { hidden: true, completed: true },
+  });
+
+  assert.match(site.root.innerHTML, /浮力与阿基米德原理/);
+  assert.match(site.root.innerHTML, /F浮 = ρ液 g V排/);
+  assert.match(site.root.innerHTML, /role="img" aria-label="物体浸入液体时/);
+  await clickAction(site, 'complete-science-knowledge', { pointId: 'physics:buoyancy' });
+
+  const saved = await savedState(site);
+  assert.equal(saved.scienceStudy.knowledgeProgress['physics:buoyancy'].status, 'completed');
+  assert.equal(saved.scienceStudy.sessions.at(-1).mode, 'knowledge');
+  assert.equal(saved.scienceStudy.sessions.at(-1).completionSource, 'manual');
+});
+
+test('science plan deep links record actual answers and complete the linked task after review', async () => {
+  const task = {
+    id: 'science-task-1', date: '2026-10-09', taskType: 'science_reasoning', title: '浮力专项练习',
+    description: '', estimatedMinutes: 20, priority: 'normal', status: 'not_started', completionSource: 'not_completed',
+    createdAt: '2026-10-09T00:00:00.000Z', updatedAt: '2026-10-09T00:00:00.000Z', archivedAt: null,
+    scienceConfig: {
+      activityType: 'practice', subjectId: 'physics', topicId: 'physics:pressure',
+      knowledgePointIds: ['physics:buoyancy'], targetQuestionCount: 1, durationSeconds: null,
+      sourceFilter: 'all', difficultyFilter: 'all',
+    },
+  };
+  const site = await loadStandaloneRoute('science?task=science-task-1', {
+    studyPlanTasks: [task], onboarding: { hidden: true, completed: true },
+  });
+
+  assert.match(site.root.innerHTML, /浮力专项练习/);
+  await clickAction(site, 'start-science-task', { taskId: task.id });
+  let saved = await savedState(site);
+  const session = saved.scienceStudy.sessions[0];
+  assert.equal(session.planTaskId, task.id);
+  assert.equal(session.questionIds.length, 1);
+
+  const { SCIENCE_QUESTION_BANK } = await import('../src/science/questionBank.js');
+  const question = SCIENCE_QUESTION_BANK.find((item) => item.id === session.questionIds[0]);
+  const wrongOption = question.options.find((option) => option.id !== question.correctAnswer);
+  await clickAction(site, 'answer-science-question', { sessionId: session.id, optionId: wrongOption.id });
+  saved = await savedState(site);
+  assert.equal(saved.scienceStudy.answers.length, 1);
+  assert.equal(saved.scienceStudy.answers[0].isCorrect, false);
+  assert.equal(saved.scienceStudy.mistakes[question.id].count, 1);
+
+  await clickAction(site, 'continue-science-session', { sessionId: session.id });
+  saved = await savedState(site);
+  assert.equal(saved.scienceStudy.sessions[0].status, 'completed');
+  assert.equal(saved.studyPlanTasks[0].status, 'completed');
+  assert.equal(saved.studyPlanTasks[0].completionSource, 'system_verified');
 });
 
 test('plan editor keeps restored numeric field values inside their input attributes', async () => {

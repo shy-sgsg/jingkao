@@ -6,7 +6,7 @@ const projectRoot = new URL('../', import.meta.url);
 
 test('2024 Changping position rows cover the visible 95-position, 197-recruit mirror list', async () => {
   const positions = JSON.parse(await readFile(new URL('data/positions_seed.json', projectRoot), 'utf8'))
-    .filter((position) => Number(position.year) === 2024);
+    .filter((position) => Number(position.year) === 2024 && position.sources.includes('huatu-2024-list'));
   const sources = JSON.parse(await readFile(new URL('data/source_registry.json', projectRoot), 'utf8'));
   const sourceById = new Map(sources.map((source) => [source.sourceId, source]));
 

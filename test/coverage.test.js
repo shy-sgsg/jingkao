@@ -115,6 +115,37 @@ test('secondary annual totals can contextualize intake without becoming official
   assert.equal(row.status, 'INCOMPLETE');
 });
 
+test('district-scoped mirrors compare only positions assigned to the same district', () => {
+  const [row] = summarizePositionCoverage({
+    districts: [
+      { id: 'changping', name: '昌平区' },
+      { id: 'shijingshan', name: '石景山区' },
+    ],
+    positions: [
+      { year: 2024, districtId: 'changping', recruitCount: 2 },
+      { year: 2024, districtId: 'shijingshan', recruitCount: 3, sources: ['shijingshan-list'] },
+      { year: 2024, districtId: null, recruitCount: 1, sources: ['changping-org-list'] },
+    ],
+    sources: [
+      {
+        sourceId: 'changping-mirror',
+        year: 2024,
+        level: 'secondary',
+        geographicScope: '昌平区',
+        reportedPositionCount: 95,
+        reportedRecruitCount: 197,
+      },
+      { sourceId: 'shijingshan-list', title: '2024石景山区职位页', geographicScope: '石景山区' },
+      { sourceId: 'changping-org-list', title: '京考职位网昌平职位明细' },
+    ],
+  }, [2024]);
+
+  assert.equal(row.visiblePositions, 2);
+  assert.equal(row.knownRecruitCount, 3);
+  assert.equal(row.secondaryReference.visiblePositionRatio, 2 / 95);
+  assert.equal(row.secondaryReference.knownRecruitRatio, 3 / 197);
+});
+
 test('coverage identifies unit-level position gaps from explicitly secondary references', () => {
   const [row] = summarizePositionCoverage({
     positions: [

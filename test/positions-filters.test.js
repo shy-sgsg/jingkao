@@ -78,9 +78,9 @@ test('position library filters real rows and keeps advanced controls open after 
 
   assert.match(root.innerHTML, new RegExp(`<span class="filter-count">${unitCount} 条结果</span>`));
   assert.match(root.innerHTML, /<details id="job-advanced-filters"[^>]*\sopen>/);
-  const visibleCodes = [...root.innerHTML.matchAll(/class="position-title-link" data-action="open-job" data-code="([^"]+)"/g)].map((match) => match[1]);
-  assert.ok(visibleCodes.length > 0);
-  assert.ok(visibleCodes.every((code) => dataset.positions.find((position) => position.code === code)?.unit === unit));
+  const visibleKeys = [...root.innerHTML.matchAll(/class="position-title-link" data-action="open-job" data-position-key="([^"]+)"/g)].map((match) => match[1]);
+  assert.ok(visibleKeys.length > 0);
+  assert.ok(visibleKeys.every((key) => dataset.positions.find((position) => `${position.year}:${position.code}` === key)?.unit === unit));
 
   const unknownPoliticalCount = dataset.positions.filter((position) => position.unit === unit && !position.requirements?.politicalStatus && !position.politicalStatus).length;
   await listeners.change({ target: { id: 'job-politics', value: '__missing' } });
@@ -93,10 +93,27 @@ test('position library filters real rows and keeps advanced controls open after 
   await listeners.click({ target: { closest: (selector) => (selector === '[data-action]' ? reviewAction : null) } });
   const manualReviewPositions = dataset.positions.filter((position) => classifyPublicManagementMatch(position).status === 'manual-review');
   assert.match(root.innerHTML, new RegExp(`<span class="filter-count">${manualReviewPositions.length} 条结果</span>`));
-  const reviewCodes = [...root.innerHTML.matchAll(/class="position-title-link" data-action="open-job" data-code="([^"]+)"/g)].map((match) => match[1]);
-  assert.ok(reviewCodes.length > 0);
-  assert.ok(reviewCodes.every((code) => classifyPublicManagementMatch(dataset.positions.find((position) => position.code === code)).status === 'manual-review'));
+  const reviewKeys = [...root.innerHTML.matchAll(/class="position-title-link" data-action="open-job" data-position-key="([^"]+)"/g)].map((match) => match[1]);
+  assert.ok(reviewKeys.length > 0);
+  assert.ok(reviewKeys.every((key) => classifyPublicManagementMatch(dataset.positions.find((position) => `${position.year}:${position.code}` === key)).status === 'manual-review'));
 
   await listeners.click({ target: { closest: (selector) => (selector === '[data-action]' ? reviewAction : null) } });
   assert.match(root.innerHTML, new RegExp(`<span class="filter-count">${dataset.positions.length} 条结果</span>`));
+});
+
+test('district selector limits the visible sample to records assigned to that district', async () => {
+  const { dataset, listeners, root } = await renderPositionApp();
+  const yanqing = dataset.positions.filter((position) => position.districtId === 'yanqing');
+  assert.ok(yanqing.length > 0);
+  assert.match(root.innerHTML, /id="job-district"/);
+
+  await listeners.change({ target: { id: 'job-district', value: 'yanqing' } });
+
+  assert.match(root.innerHTML, new RegExp(`<span class="filter-count">${yanqing.length} 条结果</span>`));
+  assert.match(root.innerHTML, /<option value="yanqing" selected>/);
+  const yanqingKeys = new Set(yanqing.map((position) => `${position.year}:${position.code}`));
+  const visibleKeys = [...root.innerHTML.matchAll(/class="position-title-link" data-action="open-job" data-position-key="([^"]+)"/g)]
+    .map((match) => match[1]);
+  assert.ok(visibleKeys.length > 0);
+  assert.ok(visibleKeys.every((key) => yanqingKeys.has(key)));
 });

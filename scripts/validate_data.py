@@ -9,10 +9,13 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = json.loads((ROOT / "public/data.json").read_text(encoding="utf-8"))
 errors: list[str] = []
 
-codes = [position.get("code") for position in DATA.get("positions", [])]
-for code, count in Counter(codes).items():
-    if not code or count > 1:
-        errors.append(f"duplicate or empty position code: {code!r}")
+position_keys = [
+    (position.get("year"), position.get("code"))
+    for position in DATA.get("positions", [])
+]
+for position_key, count in Counter(position_keys).items():
+    if not all(position_key) or count > 1:
+        errors.append(f"duplicate or empty position year/code: {position_key!r}")
 
 source_ids = {source.get("sourceId") for source in DATA.get("sources", [])}
 for position in DATA.get("positions", []):
@@ -22,15 +25,18 @@ for position in DATA.get("positions", []):
     if not position.get("sources") or any(source_id not in source_ids for source_id in position.get("sources", [])):
         errors.append(f"missing source reference: {position.get('code')}")
 
-positions_by_code = {position.get("code"): position for position in DATA.get("positions", [])}
+positions_by_year_code = {
+    (position.get("year"), position.get("code")): position
+    for position in DATA.get("positions", [])
+}
 for observation in DATA.get("observations", []):
     for field in ("applicantsRegistered", "applicantsQualified", "applicantsPaid", "applicantsConfirmed", "actualTestTakers"):
         value = observation.get(field)
         if value is not None and (not isinstance(value, (int, float)) or value < 0):
             errors.append(f"invalid {field}: {observation.get('year')}={value!r}")
     code = observation.get("positionCode")
-    if code and code not in positions_by_code:
-        errors.append(f"observation references unknown position: {code}")
+    if code and (observation.get("year"), code) not in positions_by_year_code:
+        errors.append(f"observation references unknown position: {observation.get('year')}/{code}")
     if observation.get("sourceId") not in source_ids:
         errors.append(f"observation has no source: {observation.get('sourceId')!r}")
     if observation.get("actualTestTakers") == 0 and observation.get("applicantsQualified") is None:
@@ -44,10 +50,14 @@ score_rows = DATA.get("scoreRows", [])
 score_row_ids = [row.get("id") for row in score_rows]
 if any(not row_id for row_id in score_row_ids) or len(set(score_row_ids)) != len(score_row_ids):
     errors.append("score sample rows must have unique, nonempty ids")
-score_codes = Counter(row.get("positionCode") for row in score_rows if row.get("positionCode"))
-for code, count in score_codes.items():
+score_position_keys = Counter(
+    (row.get("year"), row.get("positionCode"))
+    for row in score_rows
+    if row.get("positionCode")
+)
+for year_code, count in score_position_keys.items():
     if count > 1:
-        errors.append(f"multiple score rows reference the same position code: {code}")
+        errors.append(f"multiple score rows reference the same position year/code: {year_code}")
 
 for score_row in score_rows:
     if score_row.get("sourceId") not in source_ids:
@@ -60,8 +70,8 @@ for score_row in score_rows:
     if confidence not in {"high", "ambiguous", "unmatched"}:
         errors.append(f"invalid score position mapping confidence: {score_row.get('name')!r}={confidence!r}")
     if code:
-        position = positions_by_code.get(code)
-        if not position or position.get("year") != score_row.get("year"):
+        position = positions_by_year_code.get((score_row.get("year"), code))
+        if not position:
             errors.append(f"score sample references unknown year/code: {score_row.get('year')}/{code}")
         elif position.get("unit") != score_row.get("unit") or position.get("title") != score_row.get("title"):
             errors.append(f"score sample code does not match exact unit/title: {score_row.get('name')!r}")

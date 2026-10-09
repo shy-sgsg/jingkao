@@ -83,18 +83,46 @@ function finding(id, topic, icon, title, summary, evidence, sourceIds, href, act
   return { id, topic, icon, title, summary, evidence, sourceIds, href, actionLabel, facts };
 }
 
+function conflictDistrict(dataset, conflicts, year) {
+  const sources = Array.isArray(dataset?.sources) ? dataset.sources : [];
+  const districts = Array.isArray(dataset?.districts) ? dataset.districts : [];
+  const sourceById = new Map(sources.map((source) => [source.sourceId, source]));
+  const scopes = new Set(conflicts
+    .filter((row) => Number(row.year) === Number(year))
+    .map((row) => sourceById.get(row.sourceId)?.geographicScope)
+    .filter(Boolean));
+  if (scopes.size !== 1) return null;
+  return districts.find((district) => district.name === [...scopes][0]) || null;
+}
+
+function matchesSourceDistrictScope(position, district, sourceById) {
+  if (position.districtId === district.id) return true;
+  const districtLabel = district.name.replace(/区$/, '');
+  return (Array.isArray(position.sources) ? position.sources : []).some((sourceId) => {
+    const source = sourceById.get(sourceId);
+    return source?.districtId === district.id
+      || source?.geographicScope === district.name
+      || source?.geographicScope === districtLabel
+      || String(source?.title || '').includes(districtLabel);
+  });
+}
+
 export function buildResearchFindings(dataset) {
   const positions = Array.isArray(dataset?.positions) ? dataset.positions : [];
   const observations = Array.isArray(dataset?.observations) ? dataset.observations : [];
   const scoreSamples = Array.isArray(dataset?.scoreSamples) ? dataset.scoreSamples : [];
   const scoreRows = Array.isArray(dataset?.scoreRows) ? dataset.scoreRows : [];
   const conflicts = Array.isArray(dataset?.conflicts) ? dataset.conflicts : [];
+  const sources = Array.isArray(dataset?.sources) ? dataset.sources : [];
+  const sourceById = new Map(sources.map((source) => [source.sourceId, source]));
   const years = [2024, 2025, 2026];
   const annualSummaries = summarizeAnnualConflicts(conflicts, years);
   const findings = [];
 
   for (const year of [2024, 2025]) {
-    const annualPositions = positions.filter((position) => Number(position.year) === year);
+    const scopeDistrict = conflictDistrict(dataset, conflicts, year);
+    const annualPositions = positions.filter((position) => Number(position.year) === year
+      && (!scopeDistrict || matchesSourceDistrictScope(position, scopeDistrict, sourceById)));
     const annualSummary = annualSummaries.find((item) => item.year === year);
     const sampleRecruits = countKnownRecruits(annualPositions);
     const reportedPositions = [annualSummary.positionCount.minimum, annualSummary.positionCount.maximum];
@@ -107,7 +135,7 @@ export function buildResearchFindings(dataset) {
       `coverage-${year}`,
       '岗位覆盖',
       '↔',
-      `${year} 年：${annualPositions.length} 条职位样例，来源汇总为 ${positionRange}`,
+      `${year} 年${scopeDistrict ? `${scopeDistrict.name}来源清单列出 ` : ''}${annualPositions.length} 条职位样例，来源汇总为 ${positionRange}`,
       `当前样例已知招录 ${sampleRecruits ?? '—'} 人；第三方汇总范围为 ${recruitRange}。保留各来源原值，不把样例当作年度全量。`,
       '职位数与招录数在不同镜像来源间存在差异。当前职位库条数是已收录样例，不是官方覆盖分母。',
       uniqueSourceIds([...conflicts.filter((row) => Number(row.year) === year), ...annualPositions]),
@@ -119,7 +147,11 @@ export function buildResearchFindings(dataset) {
 
   const positions2026 = positions.filter((position) => Number(position.year) === 2026);
   const summary2026 = annualSummaries.find((item) => item.year === 2026);
-  const sampleRecruits2026 = countKnownRecruits(positions2026);
+  const scopeDistrict2026 = conflictDistrict(dataset, conflicts, 2026);
+  const comparedPositions2026 = positions2026.filter((position) => (
+    !scopeDistrict2026 || matchesSourceDistrictScope(position, scopeDistrict2026, sourceById)
+  ));
+  const sampleRecruits2026 = countKnownRecruits(comparedPositions2026);
   const reportedPositions2026 = [summary2026.positionCount.minimum, summary2026.positionCount.maximum];
   const reportedRecruits2026 = [summary2026.recruitCount.minimum, summary2026.recruitCount.maximum];
   const reportedPositionTotal2026 = summary2026.positionCount.maximum;
@@ -128,14 +160,14 @@ export function buildResearchFindings(dataset) {
     'coverage-2026',
     '岗位覆盖',
     '＋',
-    `2026 年收录 ${positions2026.length} 条岗位样例`,
+    `2026 年${scopeDistrict2026 ? `${scopeDistrict2026.name}来源清单列出 ` : ''}${comparedPositions2026.length} 条岗位样例`,
     `样例已知 ${sampleRecruits2026 ?? '—'} 人；第三方汇总为 ${reportedPositionTotal2026 ?? '—'} 岗 / ${reportedRecruitTotal2026 ?? '—'} 人。差额用于定位待补明细，不代表官方核验结果。`,
     '单位级二手汇总可帮助找到可能缺失的单位；在取得官方职位代码并逐条核对前，不据此补造岗位。',
-    uniqueSourceIds([...conflicts.filter((row) => Number(row.year) === 2026), ...positions2026]),
+    uniqueSourceIds([...conflicts.filter((row) => Number(row.year) === 2026), ...comparedPositions2026]),
     '#/evidence',
     '查看单位缺口与数据覆盖',
     {
-      samplePositions: positions2026.length,
+      samplePositions: comparedPositions2026.length,
       sampleRecruits: sampleRecruits2026,
       reportedPositions: reportedPositions2026,
       reportedRecruits: reportedRecruits2026,
