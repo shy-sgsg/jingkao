@@ -75,7 +75,7 @@ test('published questions distinguish the existing original bank from sourced ex
   const { SCIENCE_SOURCES } = await import('../src/science/sources.js');
   const originalBank = bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType === 'original');
   assert.equal(originalBank.length, 153);
-  assert.equal(bankModule.SCIENCE_QUESTION_BANK.length, 249);
+  assert.equal(bankModule.SCIENCE_QUESTION_BANK.length, 251);
   const subjectCounts = Object.fromEntries(['physics', 'chemistry', 'biology', 'geography']
     .map((subjectId) => [subjectId, originalBank.filter((question) => question.subjectId === subjectId).length]));
   assert.deepEqual(subjectCounts, { physics: 42, chemistry: 37, biology: 36, geography: 38 });
@@ -95,6 +95,7 @@ test('published questions distinguish the existing original bank from sourced ex
   assert.ok(official.some((question) => question.sourceId === 'gd-2026-official-outline'));
   for (const id of [
     'gd-2024-soot-ink', 'gd-2024-insulin-glucose', 'gd-2025-outline-grain-storage', 'gd-2025-recall-bacteria',
+    'gd-2025-recall-ph-neutralization', 'gd-2025-recall-sea-land-breeze',
     'zj-2024-c-knuckle-evidence', 'zj-2024-c-animal-aging', 'zj-2024-c-cholera-transmission', 'zj-2024-c-breath-biometrics',
     'zj-2025-c-stork-migration',
     'zj-2026-c-corn-rows', 'zj-2026-c-hair-follicle-stem-cells',
@@ -128,7 +129,7 @@ test('published questions distinguish the existing original bank from sourced ex
   assert.ok(bankModule.SCIENCE_QUESTION_BANK.some((question) => question.sourceType === 'third_party_mock'));
   assert.ok(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType !== 'original')
     .every((question) => question.sourceId && question.sourceNote));
-  assert.equal(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType === 'recalled').length, 76);
+  assert.equal(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType === 'recalled').length, 78);
   assert.equal(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType === 'third_party_mock').length, 14);
   assert.equal(SCIENCE_SOURCES.length, 33);
 });
@@ -154,8 +155,9 @@ test('published knowledge lessons cover all four disciplines with practical expl
       && point.content.everydayExample && point.content.quickMethod), `${subject.id} lessons contain actionable explanations`);
     return [subject.id, lessons.length];
   }));
-  assert.equal(Object.values(counts).reduce((sum, count) => sum + count, 0), 77);
-  assert.equal(counts.geography, 13);
+  assert.equal(Object.values(counts).reduce((sum, count) => sum + count, 0), 79);
+  assert.equal(counts.chemistry, 14);
+  assert.equal(counts.geography, 14);
   for (const pointId of [
     'physics:elastic-force', 'physics:optical-phenomena', 'physics:gravity', 'physics:magnetic-field', 'physics:lens-imaging',
     'biology:hormonal-regulation', 'biology:microorganisms', 'biology:musculoskeletal-system',
@@ -168,7 +170,8 @@ test('published knowledge lessons cover all four disciplines with practical expl
     'physics:centripetal-force', 'geography:plate-tectonics',
     'physics:wetting-adhesion',
     'chemistry:experiments', 'biology:digestion', 'geography:terrain-reading',
-    'geography:fronts-precipitation', 'geography:volcanoes',
+    'geography:fronts-precipitation', 'geography:volcanoes', 'geography:atmospheric-motion',
+    'chemistry:neutralization',
     'physics:quantum-tunneling', 'chemistry:boiling-point',
   ]) {
     const point = tree.flatMap((subject) => subject.topics).flatMap((topic) => topic.knowledgePoints).find((item) => item.id === pointId);

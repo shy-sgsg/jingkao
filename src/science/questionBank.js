@@ -588,6 +588,38 @@ addPublishedReferenceQuestion({
 });
 
 addPublishedReferenceQuestion({
+  id: 'gd-2025-recall-ph-neutralization', subjectId: 'chemistry', topicId: 'chemistry:solutions-acids-bases',
+  knowledgePointIds: ['chemistry:ph', 'chemistry:neutralization', 'chemistry:acids-bases-salts'],
+  difficulty: 'easy', reasoningType: 'classification', sourceType: 'recalled', sourceId: 'gd-2025-recall',
+  sourceTitle: '2025 广东省考回忆题第 66 题 · 溶液酸碱性与中和', region: '广东', examYear: 2025, presentationMode: 'adapted',
+  sourceNote: '据 2025 年广东省考考生回忆卷第 66 题改述；题面、pH 数据和答案 D 与星光公考题面及解析页核对。原卷和答案均非官方发布。',
+  stem: '题目给出的数据为：食醋 pH=2、苹果汁 pH=3、肥皂水 pH=10、草木灰水 pH=11。根据这些信息，下列哪项应用判断不合理？',
+  options: [
+    '草木灰水呈碱性，可用于中和酸性土壤中的部分酸性物质',
+    '食醋呈酸性，可与皮蛋中的部分碱性物质发生中和反应',
+    '蚂蚁分泌物呈酸性，可用呈碱性的肥皂水与之中和',
+    '苹果汁呈酸性，胃酸过多时多喝苹果汁有助于降低胃内酸度',
+  ],
+  correctAnswer: 'D', explanation: '常温下 pH 小于 7 的溶液呈酸性，大于 7 呈碱性。A 至 C 符合题目所用的酸碱中和判断；苹果汁呈酸性，不能按中和原理降低胃内酸度，因此 D 不合理。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'gd-2025-recall-sea-land-breeze', subjectId: 'geography', topicId: 'geography:atmosphere-weather',
+  knowledgePointIds: ['geography:wind', 'geography:atmospheric-motion'],
+  difficulty: 'medium', reasoningType: 'causal_inference', sourceType: 'recalled', sourceId: 'gd-2025-recall',
+  sourceTitle: '2025 广东省考回忆题第 68 题 · 海陆风', region: '广东', examYear: 2025, presentationMode: 'adapted',
+  sourceNote: '据 2025 年广东省考考生回忆卷第 68 题改述；答案 A 和选项判断与星光公考逐题解析核对。移除原图依赖并将图示选项改为文字，来源仍为考生回忆版。',
+  stem: '海水与陆地比热容不同，白天和夜间的升温、降温速度也不同。下列关于海陆风的说法正确的是哪一项？',
+  options: [
+    '白天陆地升温较快、气温高于海面；夜间陆地降温较快、气温低于海面',
+    '白天近地面的风由陆地吹向海面',
+    '海面昼夜温差通常大于陆地',
+    '近地面空气由海面吹向陆地时，表示夜间陆风',
+  ],
+  correctAnswer: 'A', explanation: '陆地比热容较小，白天升温快、夜间降温快，因此昼间海面较凉、夜间海面较暖。白天近地面海风由海面吹向陆地，夜间陆风由陆地吹向海面，海水昼夜温差通常较小；所以 B、C、D 均错误。',
+});
+
+addPublishedReferenceQuestion({
   id: 'mock-huatu-buoyancy-load', subjectId: 'physics', topicId: 'physics:pressure', knowledgePointIds: ['physics:floating-sinking'],
   difficulty: 'medium', reasoningType: 'comparison', sourceType: 'third_party_mock', sourceId: 'huatu-2022-science-examples',
   sourceTitle: '华图科学推理例题 · 轮船装载', region: '广东', examYear: null, presentationMode: 'adapted',

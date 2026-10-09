@@ -162,11 +162,15 @@ export const SCIENCE_SOURCES = [
   },
   {
     id: 'gd-2025-recall', title: '2025 年广东省公务员考试行测真题（考生回忆版）',
-    organization: '星光公考（考生回忆版）；Scribd 文本页（交叉核对）', sourceType: 'recalled', region: '广东', examYear: 2025,
+    organization: '星光公考（考生回忆版及逐题解析）；Scribd 文本页（交叉核对）', sourceType: 'recalled', region: '广东', examYear: 2025,
     authority: 'third-party-recollection', verificationStatus: 'verified', copyrightStatus: 'reference_only',
     url: 'https://upload.xingguanggongkao.com/pdf/2025%E5%B9%B4%E5%B9%BF%E4%B8%9C%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.pdf?time=1760927301',
-    relatedUrls: ['https://www.scribd.com/document/1028513470/2025%E5%B9%B4%E5%B9%BF%E4%B8%9C%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95-%E8%A1%8C%E6%B5%8B-%E9%A2%98'],
-    note: '第三方整理的考生回忆版，非官方原卷；第 70 题题面可在 PDF 和文本页核对，练习题意已改述。',
+    relatedUrls: [
+      'https://www.scribd.com/document/1028513470/2025%E5%B9%B4%E5%B9%BF%E4%B8%9C%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95-%E8%A1%8C%E6%B5%8B-%E9%A2%98',
+      'https://www.xingguanggongkao.com/pc/wb/quesView/id/52884.html',
+      'https://www.xingguanggongkao.com/pc/wb/quesView/id/52886.html',
+    ],
+    note: '第三方整理的考生回忆版，非官方原卷；第 66、68、70 题按公开题面和答案解析改述收录。第 67 题依赖木块示意图，第 69 题依赖电路图，未进入题库。',
   },
   {
     id: 'gd-2026-official-outline', title: '广东省 2026 年考试录用公务员笔试大纲',
