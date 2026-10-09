@@ -101,19 +101,67 @@ test('2025 Haidian detail rows reconcile to secondary area totals', async () => 
   }
 });
 
-test('2024 Haidian remains aggregate-only while secondary sources disagree', async () => {
+test('2024 Haidian imports only traceable detail rows and retains conflicting area totals', async () => {
   const seed = JSON.parse(await readFile(new URL('data/positions_seed.json', projectRoot), 'utf8'));
+  const published = JSON.parse(await readFile(new URL('public/data.json', projectRoot), 'utf8'));
   const registry = JSON.parse(await readFile(new URL('data/source_registry.json', projectRoot), 'utf8'));
   const rows = seed.filter((row) => row.year === 2024
     && row.sources.some((sourceId) => sourceId.startsWith('haidian-2024-')));
-  assert.equal(rows.length, 0, 'area totals must not be manufactured into position rows');
+  const expectedCodes = [
+    '120630101', '120631801', '120631802', '120631803',
+    '220630301', '220630302', '220630303', '220630401', '220630402', '220630501', '220630502',
+    '220630601', '220630701', '220630702', '220630801', '220631001', '220631101', '220631201',
+    '220631202', '220631401', '230630602', '230630603', '230630901', '230630902', '230630903',
+    '230632101', '230632201', '230632202', '230632203', '230632301', '230632302', '230632303',
+    '230632401', '230632402', '230632501', '230632502', '230632601', '230632701', '230632801',
+    '230632802', '230632803', '230632901', '230633001', '230633002', '230633003', '230633101',
+    '230633102', '230633201', '230633202', '230633301', '230633401', '230633402', '230633501',
+    '230633601', '230633602', '230633701', '230633702', '230633703', '230633801', '230633802',
+    '230633901', '230633902', '230634001', '230634002', '230634101', '230634201', '230634202',
+    '230634203', '230634301', '230634302', '230634401', '230634402', '230634403', '230634501',
+    '230634502', '230634503', '230634601', '230634602', '230634603', '232502201', '232502202',
+    '232502203', '526010501', '526010502', '526010503', '625012501', '625012502', '625012503',
+    '820630201', '820631501', '820631601', '820631701', '820631901', '820632001', '820632002',
+    '823105301', '829908106', '830630403', '830631301', '830631302',
+  ];
+  assert.equal(expectedCodes.length, 100);
+  assert.deepEqual(rows.map((row) => row.code).sort(), expectedCodes.sort());
+  assert.equal(new Set(rows.map((row) => row.code)).size, 100);
+  assert.equal(rows.reduce((sum, row) => sum + row.recruitCount, 0), 341);
+  assert.ok(rows.every((row) => row.sourceLevel === 'secondary' && row.crossVerified === false));
+  assert.ok(rows.every((row) => row.eligibilityComplete === false));
+  assert.ok(rows.every((row) => row.education && row.majorText && row.eligibilityText));
+
+  const sourceById = new Map(registry.map((source) => [source.sourceId, source]));
+  for (const row of rows) {
+    const pageSources = row.sources.filter((sourceId) => sourceId.startsWith('haidian-2024-'));
+    assert.ok(pageSources.length > 0, `${row.code} needs a page-level source`);
+    assert.ok(pageSources.every((sourceId) => sourceById.get(sourceId)?.level === 'secondary'), `${row.code} remains a mirror row`);
+    assert.match(row.eligibilityText, /官方职位表核验/);
+  }
+
+  for (const source of registry.filter((item) => item.sourceId.startsWith('haidian-2024-'))) {
+    const linked = rows.filter((row) => row.sources.includes(source.sourceId));
+    assert.equal(linked.length, source.reportedPositionCount, `${source.sourceId} position count`);
+    assert.equal(linked.reduce((sum, row) => sum + row.recruitCount, 0), source.reportedRecruitCount, `${source.sourceId} recruit count`);
+  }
+
+  assert.match(rows.find((row) => row.code === '230630903').eligibilityText, /两年（含两年）以上市场监管相关工作经历/);
+  assert.match(rows.find((row) => row.code === '220630501').eligibilityText, /中共党员/);
+  assert.match(rows.find((row) => row.code === '220630502').eligibilityText, /初级及以上会计职称资格证书/);
+
+  const haidianRows = published.positions.filter((row) => row.year === 2024
+    && row.districtId === 'haidian'
+    && row.sources.some((sourceId) => sourceId.startsWith('haidian-2024-')));
+  assert.equal(haidianRows.length, 99, 'do not assign the city-level Statistics Bureau row from the area index alone');
+  assert.equal(haidianRows.reduce((sum, row) => sum + row.recruitCount, 0), 340);
+  assert.equal(published.positions.find((row) => row.year === 2024 && row.code === '829908106')?.districtId, null);
 
   const expectedSummaries = new Map([
     ['gwyzwb-2024-haidian-summary', [95, 213]],
     ['huatu-2024-haidian-summary', [100, 341]],
     ['eoffcn-2024-haidian-summary', [99, 340]],
   ]);
-  const sourceById = new Map(registry.map((source) => [source.sourceId, source]));
   for (const [sourceId, [positions, recruits]] of expectedSummaries) {
     const source = sourceById.get(sourceId);
     assert.ok(source, `${sourceId} must stay traceable`);

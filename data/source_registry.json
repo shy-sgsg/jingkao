@@ -4800,5 +4800,9 @@
     "reportedPositionCount": 1,
     "reportedRecruitCount": 2,
     "notes": "职位明细页提供职位代码、名称、学历、专业与招录数；未采集完整资格条件，未与官方简章逐代码核验。"
-  }
+  },
+  {"sourceId":"haidian-2024-huatu-position-index","title":"华图 2024 海淀区逐岗检索明细：100岗/341人","publisher":"华图教育（第三方职位镜像）","level":"secondary","evidenceType":"position_mirror","year":2024,"geographicScope":"海淀区检索页；区县归属仍按职位单位名称判断","url":"https://ah.huatu.com/zw/bjgwy/haidianzw/2024.html","accessedAt":"2026-10-09","reportedPositionCount":100,"reportedRecruitCount":341,"notes":"列表逐行展示代码、单位、职位、学历、专业和招录人数；其余资格条件不完整。100岗/341人为镜像页报告值，未与官方职位表逐代码核验；北京市统计局候选行不能仅凭检索页归属海淀。"},
+  {"sourceId":"haidian-2024-gwy-role-220630501","title":"中公网校 2024 海淀城管委职位详情：220630501","publisher":"北京公务员职位网（第三方职位镜像）","level":"secondary","evidenceType":"position_mirror","year":2024,"geographicScope":"海淀区","url":"https://bj.gwyzwb.com/2024/272.html","accessedAt":"2026-10-09","reportedPositionCount":1,"reportedRecruitCount":1,"notes":"详情页补充政治面貌、面试比例和基层经历字段；仍未与官方职位表逐代码核验。"},
+  {"sourceId":"haidian-2024-huatu-role-220630502","title":"华图 2024 海淀城管委职位详情：220630502","publisher":"华图教育（第三方职位镜像）","level":"secondary","evidenceType":"position_mirror","year":2024,"geographicScope":"海淀区","url":"https://ah.huatu.com/zw/bjgwy/2024/273.html","accessedAt":"2026-10-09","reportedPositionCount":1,"reportedRecruitCount":1,"notes":"详情检索摘要补充会计职称资格条件；详情页当前未能直接打开，仍需官方逐代码核验。"},
+  {"sourceId":"haidian-2024-gwy-role-230630903","title":"中公网校 2024 海淀市场监管职位详情：230630903","publisher":"北京公务员职位网（第三方职位镜像）","level":"secondary","evidenceType":"position_mirror","year":2024,"geographicScope":"海淀区","url":"https://bj.gwyzwb.com/2024/760.html","accessedAt":"2026-10-09","reportedPositionCount":1,"reportedRecruitCount":2,"notes":"详情页补充其他条件、专业能力测试、基层经历与备注；仍未与官方职位表逐代码核验。"}
 ]
