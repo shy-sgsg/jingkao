@@ -794,4 +794,15 @@ addPublishedReferenceQuestion({
   correctAnswer: 'C', explanation: '题干将附着作用较强与润湿联系起来。雨衣和防水布料不易被水润湿，附着作用应减弱；普通玻璃上的雨水会铺展，说明附着作用相对较强。憎水涂层通过降低水对玻璃的附着作用减少铺展，因此 C 正确。',
 });
 
+addPublishedReferenceQuestion({
+  id: 'gd-2021-outline-ladder-climber', subjectId: 'physics', topicId: 'physics:mechanics',
+  knowledgePointIds: ['physics:levers', 'physics:force-equilibrium', 'physics:force-analysis'],
+  difficulty: 'medium', reasoningType: 'causal_inference', sourceType: 'official_outline_example', sourceId: 'gd-2021-official-outline',
+  sourceTitle: '广东省 2021 年公务员笔试大纲例题 · 梯子与工人', region: '广东', examYear: 2021, presentationMode: 'adapted',
+  sourceNote: '据 2021 年官方笔试大纲科学推理示例改述；答案 B 与公开大纲文本核对。属于官方大纲例题，不是已举行考试的历年真题。',
+  stem: '一架梯子靠在光滑的竖直墙面上，底端放在水平地面，梯子保持静止。一名工人沿梯子匀速向上攀爬。下列判断正确的是：',
+  options: ['地面对梯子的支持力逐渐减小', '墙面对梯子的支持力逐渐增大', '地面对梯子的摩擦力保持不变', '梯子对工人的作用力逐渐减小'],
+  correctAnswer: 'B', explanation: '以梯子底端为支点，工人沿梯子向上时，其重力对支点的力矩增大；墙面对梯子的支持力力矩臂（梯子顶部高度）不变，因此墙面对梯子的支持力增大。水平方向地面摩擦力与墙面支持力平衡，也随之增大；竖直方向地面支持力支撑梯子和工人总重，保持不变。工人匀速运动时，梯子对人的合接触力与其重力平衡，不会逐渐减小。',
+});
+
 export { SCIENCE_QUESTION_BANK };

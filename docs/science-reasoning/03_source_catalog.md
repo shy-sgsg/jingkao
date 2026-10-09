@@ -11,6 +11,7 @@
 | `sh-2026-official-outline` | 官方大纲例题 / 上海 / 2026 | 1 | [上海市公务员局](https://shacs.gov.cn/recruits/407/article/1238) |
 | `gd-2019-township-recall` | 考生回忆 / 广东 / 2019 | 3 | [公考网回忆题](https://www.gwysk.cn/shengkao/guangdong/zhenti/3551.html) |
 | `gd-2020-township-recall` | 考生回忆 / 广东 / 2020 | 9 | [公考通 PDF](https://www.chinagwy.org/files/20200809170605_99216.pdf)；另有闻思、华图解析 |
+| `gd-2021-official-outline` | 官方大纲例题 / 广东 / 2021 | 1 | [广东省人事考试局公告及附件 7 说明](https://rsks.gd.gov.cn/kswj/bkwj/content/post_3191353.html)；[华图大纲文本](https://gd.huatu.com/2021/0125/1969639.html)；[中公大纲文本](https://xzgwy.offcn.com/2021/bkzd_0129/10483_4.html) |
 | `gd-2021-township-recall` | 考生回忆 / 广东 / 2021 | 2 | [闻思教育 PDF](https://www.wensiedu.cn/wp-content/uploads/2022/06/2b4904641c02bd7.pdf) |
 | `gd-2022-township-recall` | 考生回忆 / 广东 / 2022 | 0 | [星光公考 PDF](https://upload.xingguanggongkao.com/pdf/2022%E5%B9%B4%E5%B9%BF%E4%B8%9C%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88%E4%B9%A1%E9%95%87%E5%8D%B7-%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.pdf) |
 | `gd-2023-township-recall` | 考生回忆 / 广东 / 2023 | 2 | [上岸鸭回忆整理](https://m.gwy.com/gdgwy/309527.html) |
@@ -34,4 +35,4 @@
 | mock-zhonggong-2027-light | 机构模拟 / 广东 | 1 | [中公网校光学模拟题](https://www.eoffcn.com/kszx/detail/2214061.html) |
 | `zhanhong-zhejiang-mock` | 机构模拟 / 浙江 | 4 | [展鸿行测模拟卷 PDF](https://static.32xueyuan.com/zq/u/cms/zj/202406/19110417oqg8.pdf) |
 
-合计 28 条来源记录：6 条官方大纲、17 条回忆资料、5 条机构材料。来源记录数不等于已发布题数；没有可用题目的来源仍保留在目录中并说明原因。
+合计 29 条来源记录：7 条官方大纲、17 条回忆资料、5 条机构材料。来源记录数不等于已发布题数；没有可用题目的来源仍保留在目录中并说明原因。

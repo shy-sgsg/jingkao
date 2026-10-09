@@ -45,6 +45,17 @@ export const SCIENCE_SOURCES = [
     note: '非官方回忆版；所收题目按公开题意改述，答案与公开参考解析交叉核对，不代表官方答案。',
   },
   {
+    id: 'gd-2021-official-outline', title: '广东省 2021 年考试录用公务员公共科目笔试大纲',
+    organization: '中共广东省委组织部 / 广东省人力资源和社会保障厅', sourceType: 'official_outline_example', region: '广东', examYear: 2021,
+    authority: 'official', verificationStatus: 'verified', copyrightStatus: 'reference_only',
+    url: 'https://rsks.gd.gov.cn/kswj/bkwj/content/post_3191353.html',
+    relatedUrls: [
+      'https://gd.huatu.com/2021/0125/1969639.html',
+      'https://xzgwy.offcn.com/2021/bkzd_0129/10483_4.html',
+    ],
+    note: '广东省 2021 年公务员招考公告将公共科目笔试大纲列为附件 7；本题按公开大纲文本核对题面和答案 B。属于官方大纲例题，不是已举行考试的历年真题。',
+  },
+  {
     id: 'sh-2019-b-recall', title: '2019 年上海市公务员考试行测 B 卷（考生回忆版）',
     organization: '公考网（回忆版试题与解析）', sourceType: 'recalled', region: '上海', examYear: 2019,
     authority: 'third-party-recollection', verificationStatus: 'verified', copyrightStatus: 'reference_only',
