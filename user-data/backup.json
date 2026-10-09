@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "backupId": "6968ebc3-fd8c-4a7a-8d1c-49919ca0967d",
-  "updatedAt": "2026-10-09T15:00:17.662Z",
+  "updatedAt": "2026-10-09T15:31:57.177Z",
   "data": {
     "profile": {
       "major": "公共管理",
@@ -52,6 +52,48 @@
           "reviewingAnswerId": null,
           "startedAt": "2026-10-09T14:52:34.498Z",
           "status": "active"
+        },
+        {
+          "id": "science_mv14f3ga_fzl77c",
+          "mode": "practice",
+          "status": "completed",
+          "planTaskId": null,
+          "questionIds": [
+            "beijing-2026-outline-dragonfly",
+            "sh-2020-outline-bicycle-friction",
+            "sh-2026-outline-hall-effect",
+            "gd-2025-outline-grain-storage",
+            "gd-2026-outline-slope-forces",
+            "gd-2021-outline-ladder-climber",
+            "gd-2019-township-wind-energy",
+            "gd-2019-township-ear-pressure",
+            "gd-2019-township-hammer-lever",
+            "gd-2021-township-steelmaking",
+            "gd-2021-township-cooling-rate",
+            "gd-2023-township-karting-friction",
+            "gd-2023-township-sunlit-city",
+            "gd-2020-township-seed-storage",
+            "gd-2020-township-snowline"
+          ],
+          "currentIndex": 15,
+          "correctCount": 15,
+          "reviewingAnswerId": null,
+          "draftAnswers": {},
+          "startedAt": "2026-10-09T15:29:11.482Z",
+          "deadline": null,
+          "durationSeconds": null,
+          "filters": {
+            "onlyUnanswered": false,
+            "onlyMistakes": false,
+            "onlyFavorites": false,
+            "excludeQuestionIds": [],
+            "answeredQuestionIds": [
+              "beijing-2026-outline-dragonfly"
+            ],
+            "mistakeQuestionIds": [],
+            "favoriteQuestionIds": []
+          },
+          "completedAt": "2026-10-09T15:31:30.459Z"
         }
       ],
       "answers": [
@@ -66,6 +108,205 @@
           "answeredAt": "2026-10-09T14:52:36.001Z",
           "knowledgePointIds": [
             "physics:uniform-motion"
+          ]
+        },
+        {
+          "id": "answer_science_mv14f3ga_fzl77c_1",
+          "sessionId": "science_mv14f3ga_fzl77c",
+          "questionId": "beijing-2026-outline-dragonfly",
+          "selectedOptionId": "A",
+          "correctAnswer": "A",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-10-09T15:29:15.693Z",
+          "knowledgePointIds": [
+            "physics:uniform-motion"
+          ]
+        },
+        {
+          "id": "answer_science_mv14f3ga_fzl77c_2",
+          "sessionId": "science_mv14f3ga_fzl77c",
+          "questionId": "sh-2020-outline-bicycle-friction",
+          "selectedOptionId": "A",
+          "correctAnswer": "A",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-10-09T15:29:39.605Z",
+          "knowledgePointIds": [
+            "physics:friction"
+          ]
+        },
+        {
+          "id": "answer_science_mv14f3ga_fzl77c_3",
+          "sessionId": "science_mv14f3ga_fzl77c",
+          "questionId": "sh-2026-outline-hall-effect",
+          "selectedOptionId": "C",
+          "correctAnswer": "C",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-10-09T15:29:43.252Z",
+          "knowledgePointIds": [
+            "physics:magnetic-field"
+          ]
+        },
+        {
+          "id": "answer_science_mv14f3ga_fzl77c_4",
+          "sessionId": "science_mv14f3ga_fzl77c",
+          "questionId": "gd-2025-outline-grain-storage",
+          "selectedOptionId": "C",
+          "correctAnswer": "C",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-10-09T15:29:50.561Z",
+          "knowledgePointIds": [
+            "biology:plant-growth"
+          ]
+        },
+        {
+          "id": "answer_science_mv14f3ga_fzl77c_5",
+          "sessionId": "science_mv14f3ga_fzl77c",
+          "questionId": "gd-2026-outline-slope-forces",
+          "selectedOptionId": "D",
+          "correctAnswer": "D",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-10-09T15:30:06.203Z",
+          "knowledgePointIds": [
+            "physics:friction",
+            "physics:work",
+            "physics:mechanical-energy"
+          ]
+        },
+        {
+          "id": "answer_science_mv14f3ga_fzl77c_6",
+          "sessionId": "science_mv14f3ga_fzl77c",
+          "questionId": "gd-2021-outline-ladder-climber",
+          "selectedOptionId": "B",
+          "correctAnswer": "B",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-10-09T15:30:14.381Z",
+          "knowledgePointIds": [
+            "physics:levers",
+            "physics:force-equilibrium",
+            "physics:force-analysis"
+          ]
+        },
+        {
+          "id": "answer_science_mv14f3ga_fzl77c_7",
+          "sessionId": "science_mv14f3ga_fzl77c",
+          "questionId": "gd-2019-township-wind-energy",
+          "selectedOptionId": "D",
+          "correctAnswer": "D",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-10-09T15:30:18.273Z",
+          "knowledgePointIds": [
+            "physics:mechanical-energy"
+          ]
+        },
+        {
+          "id": "answer_science_mv14f3ga_fzl77c_8",
+          "sessionId": "science_mv14f3ga_fzl77c",
+          "questionId": "gd-2019-township-ear-pressure",
+          "selectedOptionId": "C",
+          "correctAnswer": "C",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-10-09T15:30:22.638Z",
+          "knowledgePointIds": [
+            "physics:atmospheric-pressure"
+          ]
+        },
+        {
+          "id": "answer_science_mv14f3ga_fzl77c_9",
+          "sessionId": "science_mv14f3ga_fzl77c",
+          "questionId": "gd-2019-township-hammer-lever",
+          "selectedOptionId": "A",
+          "correctAnswer": "A",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-10-09T15:30:33.467Z",
+          "knowledgePointIds": [
+            "physics:levers"
+          ]
+        },
+        {
+          "id": "answer_science_mv14f3ga_fzl77c_10",
+          "sessionId": "science_mv14f3ga_fzl77c",
+          "questionId": "gd-2021-township-steelmaking",
+          "selectedOptionId": "B",
+          "correctAnswer": "B",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-10-09T15:30:37.680Z",
+          "knowledgePointIds": [
+            "chemistry:physical-chemical-change"
+          ]
+        },
+        {
+          "id": "answer_science_mv14f3ga_fzl77c_11",
+          "sessionId": "science_mv14f3ga_fzl77c",
+          "questionId": "gd-2021-township-cooling-rate",
+          "selectedOptionId": "B",
+          "correctAnswer": "B",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-10-09T15:30:41.268Z",
+          "knowledgePointIds": [
+            "physics:heat-transfer"
+          ]
+        },
+        {
+          "id": "answer_science_mv14f3ga_fzl77c_12",
+          "sessionId": "science_mv14f3ga_fzl77c",
+          "questionId": "gd-2023-township-karting-friction",
+          "selectedOptionId": "C",
+          "correctAnswer": "C",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-10-09T15:30:50.427Z",
+          "knowledgePointIds": [
+            "physics:friction"
+          ]
+        },
+        {
+          "id": "answer_science_mv14f3ga_fzl77c_13",
+          "sessionId": "science_mv14f3ga_fzl77c",
+          "questionId": "gd-2023-township-sunlit-city",
+          "selectedOptionId": "A",
+          "correctAnswer": "A",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-10-09T15:30:54.976Z",
+          "knowledgePointIds": [
+            "geography:solar-altitude"
+          ]
+        },
+        {
+          "id": "answer_science_mv14f3ga_fzl77c_14",
+          "sessionId": "science_mv14f3ga_fzl77c",
+          "questionId": "gd-2020-township-seed-storage",
+          "selectedOptionId": "B",
+          "correctAnswer": "B",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-10-09T15:31:03.626Z",
+          "knowledgePointIds": [
+            "biology:plant-growth"
+          ]
+        },
+        {
+          "id": "answer_science_mv14f3ga_fzl77c_15",
+          "sessionId": "science_mv14f3ga_fzl77c",
+          "questionId": "gd-2020-township-snowline",
+          "selectedOptionId": "D",
+          "correctAnswer": "D",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-10-09T15:31:28.761Z",
+          "knowledgePointIds": [
+            "geography:snowline"
           ]
         }
       ],
