@@ -9,8 +9,10 @@ test('science tree uses one stable four-discipline catalog for point lookup', as
   assert.deepEqual(tree.map((subject) => subject.id), ['physics', 'chemistry', 'biology', 'geography']);
   const pointIds = tree.flatMap((subject) => subject.topics.flatMap((topic) => topic.knowledgePoints.map((point) => point.id)));
   assert.equal(new Set(pointIds).size, pointIds.length);
-  assert.equal(pointIds.length, 123);
+  assert.equal(pointIds.length, 125);
   assert.ok(pointIds.includes('physics:buoyancy'));
+  assert.ok(pointIds.includes('physics:centripetal-force'));
+  assert.ok(pointIds.includes('geography:plate-tectonics'));
   assert.equal(knowledge.getKnowledgePoint('physics:buoyancy').title, '浮力与阿基米德原理');
   assert.equal(knowledge.getKnowledgePoint('unknown:point'), null);
 });
@@ -72,7 +74,7 @@ test('published questions distinguish the existing original bank from sourced ex
   const { SCIENCE_SOURCES } = await import('../src/science/sources.js');
   const originalBank = bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType === 'original');
   assert.equal(originalBank.length, 153);
-  assert.equal(bankModule.SCIENCE_QUESTION_BANK.length, 220);
+  assert.equal(bankModule.SCIENCE_QUESTION_BANK.length, 230);
   const subjectCounts = Object.fromEntries(['physics', 'chemistry', 'biology', 'geography']
     .map((subjectId) => [subjectId, originalBank.filter((question) => question.subjectId === subjectId).length]));
   assert.deepEqual(subjectCounts, { physics: 42, chemistry: 37, biology: 36, geography: 38 });
@@ -104,6 +106,10 @@ test('published questions distinguish the existing original bank from sourced ex
     'mock-zhanhong-blind-path-pressure', 'mock-zhanhong-gas-identification',
     'sh-2014-a-wetting-adhesion',
     'gd-2021-outline-ladder-climber',
+    'sh-2022-b-microgravity-filtering', 'sh-2022-b-ship-buoyancy', 'sh-2022-b-washer-resonance',
+    'sh-2022-b-powerbank-capacity', 'gd-2021-county-curving-car', 'gd-2021-county-foam-extinguisher',
+    'gd-2021-county-plate-boundary', 'mock-sh-2022-v5-camera-distance',
+    'mock-sh-2022-v5-galileo-thermometer', 'mock-sh-2022-v5-static-friction',
     'zj-2025-mock-mars-microbes', 'mock-huatu-buoyancy-load',
   ]) {
     assert.ok(bankModule.SCIENCE_QUESTION_BANK.some((question) => question.id === id), `${id} is published`);
@@ -113,9 +119,9 @@ test('published questions distinguish the existing original bank from sourced ex
   assert.ok(bankModule.SCIENCE_QUESTION_BANK.some((question) => question.sourceType === 'third_party_mock'));
   assert.ok(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType !== 'original')
     .every((question) => question.sourceId && question.sourceNote));
-  assert.equal(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType === 'recalled').length, 51);
-  assert.equal(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType === 'third_party_mock').length, 10);
-  assert.equal(SCIENCE_SOURCES.length, 30);
+  assert.equal(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType === 'recalled').length, 58);
+  assert.equal(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType === 'third_party_mock').length, 13);
+  assert.equal(SCIENCE_SOURCES.length, 33);
 });
 
 test('2018 Shanghai B recall questions are attributed and connect to complete lens knowledge', async () => {
@@ -139,8 +145,8 @@ test('published knowledge lessons cover all four disciplines with practical expl
       && point.content.everydayExample && point.content.quickMethod), `${subject.id} lessons contain actionable explanations`);
     return [subject.id, lessons.length];
   }));
-  assert.equal(Object.values(counts).reduce((sum, count) => sum + count, 0), 70);
-  assert.equal(counts.geography, 12);
+  assert.equal(Object.values(counts).reduce((sum, count) => sum + count, 0), 74);
+  assert.equal(counts.geography, 13);
   for (const pointId of [
     'physics:elastic-force', 'physics:optical-phenomena', 'physics:gravity', 'physics:magnetic-field', 'physics:lens-imaging',
     'biology:hormonal-regulation', 'biology:microorganisms', 'biology:musculoskeletal-system',
@@ -149,7 +155,8 @@ test('published knowledge lessons cover all four disciplines with practical expl
     'biology:nervous-regulation', 'physics:fluid-flow', 'physics:electrostatics',
     'physics:thermal-radiation', 'physics:pitch-loudness', 'physics:motors-generators',
     'chemistry:electrochemical-cells', 'chemistry:polymer-materials', 'chemistry:common-reactions',
-    'physics:specific-heat',
+    'physics:specific-heat', 'physics:atmospheric-pressure', 'physics:electric-work',
+    'physics:centripetal-force', 'geography:plate-tectonics',
     'physics:wetting-adhesion',
     'chemistry:experiments', 'biology:digestion', 'geography:terrain-reading',
     'geography:fronts-precipitation', 'geography:volcanoes',

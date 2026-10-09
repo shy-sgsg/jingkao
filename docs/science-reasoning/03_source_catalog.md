@@ -12,12 +12,14 @@
 | `gd-2019-township-recall` | 考生回忆 / 广东 / 2019 | 3 | [公考网回忆题](https://www.gwysk.cn/shengkao/guangdong/zhenti/3551.html) |
 | `gd-2020-township-recall` | 考生回忆 / 广东 / 2020 | 9 | [公考通 PDF](https://www.chinagwy.org/files/20200809170605_99216.pdf)；另有闻思、华图解析 |
 | `gd-2021-official-outline` | 官方大纲例题 / 广东 / 2021 | 1 | [广东省人事考试局公告及附件 7 说明](https://rsks.gd.gov.cn/kswj/bkwj/content/post_3191353.html)；[华图大纲文本](https://gd.huatu.com/2021/0125/1969639.html)；[中公大纲文本](https://xzgwy.offcn.com/2021/bkzd_0129/10483_4.html) |
-| `gd-2021-township-recall` | 考生回忆 / 广东 / 2021 | 2 | [闻思教育 PDF](https://www.wensiedu.cn/wp-content/uploads/2022/06/2b4904641c02bd7.pdf) |
+| `gd-2021-township-recall` | 考生回忆 / 广东 / 2021 乡镇卷 | 2 | [闻思教育 PDF](https://www.wensiedu.cn/wp-content/uploads/2022/06/2b4904641c02bd7.pdf) |
+| `gd-2021-county-recall` | 考生回忆 / 广东 / 2021 县级卷 | 3 | [闻思教育 PDF](https://www.wensiedu.cn/wp-content/uploads/2022/06/4a964ad0fe9053d.pdf)；[华图分析](https://www.huatu.com/2021/1029/2316497.html) |
 | `gd-2022-township-recall` | 考生回忆 / 广东 / 2022 | 5 | [星光公考 PDF](https://upload.xingguanggongkao.com/pdf/2022%E5%B9%B4%E5%B9%BF%E4%B8%9C%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88%E4%B9%A1%E9%95%87%E5%8D%B7-%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.pdf)；[Aipta 乡镇卷解析](https://www.aipta.com/article/3494.html)；[闻思教育县级卷 PDF](https://www.wensiedu.cn/wp-content/uploads/2022/06/4ea273a28d7543f.pdf)；[Aipta 县级卷解析](https://m.aipta.com/article/3493.html)；[星光答案解析](https://www.xingguanggongkao.com/Pc/XingQuestion/search/subject_id/2/keywords/%E8%80%B6%E7%A8%A3%E5%92%8C%E5%A1%91%E6%96%99/p/100.html)；[华图履带题解析](https://ah.huatu.com/2022/0110/2218067.html) |
 | `gd-2023-township-recall` | 考生回忆 / 广东 / 2023 | 2 | [上岸鸭回忆整理](https://m.gwy.com/gdgwy/309527.html) |
 | `gd-2024-recall` | 考生回忆 / 广东 / 2024 | 2 | [星光公考 PDF](https://upload.xingguanggongkao.com/pdf/2024%E5%B9%B4%E5%B9%BF%E4%B8%9C%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.pdf)；[答案解析](https://www.kkgwy.com/stk/gd/14637.html) |
 | `sh-2019-b-recall` | 考生回忆 / 上海 / 2019 | 2 | [公考网回忆题](https://m.gwysk.cn/shengkao/shanghai/zhenti/3436.html) |
 | `sh-2021-b-recall` | 考生回忆 / 上海 / 2021 | 1 | [星光公考 PDF](https://upload.xingguanggongkao.com/pdf/2021%E5%B9%B4%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88B%E5%8D%B7-%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.pdf) |
+| `sh-2022-b-recall` | 考生回忆 / 上海 / 2022 B 类 | 4 | [Aipta 回忆题面](https://www.aipta.com/article/1232.html)；[人人文库答案汇总](https://www.renrendoc.com/paper/334955264.html) |
 | `sh-2025-b-recall` | 考生回忆 / 上海 / 2025 | 3 | [星光公考 PDF](https://upload.xingguanggongkao.com/pdf/2025%E5%B9%B4%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88B%E5%8D%B7-%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.pdf)；[答案页](https://gwy.gkzhenti.cn/answer/1743902341993) |
 | `sh-2026-science-literacy-recall` | 考生回忆 / 上海 / 2026 | 9 | [网友回忆卷](https://gwy.gkzhenti.cn/paper/1775360735040)；[答案页](https://gwy.gkzhenti.cn/answer/1775360735040) |
 | `sh-2018-b-recall` | 考生回忆 / 上海 / 2018 B 类 | 3 | [试题与答案解析 PDF](https://www.chinagwy.org/files/20180409144717_34399.pdf)；第三方整理，不是官方原卷 |
@@ -30,10 +32,11 @@
 | `gd-2027-zhonggong-mock` | 机构模拟 / 广东 | 3 | [中公解析转载页 09.21](https://www.eoffcn.com/kszx/detail/2210484.html)；[中公模拟题 08.28](https://www.eoffcn.com/kszx/detail/2196566.html) |
 | `huatu-2022-science-examples` | 机构例题 / 广东 | 1 | [华图科学推理讲解页](https://www.huatu.com/2022/0208/2471720.html) |
 | `sh-2018-recalled-example` | 回忆题 / 上海 / 2018 | 0（待核验） | [中公回顾页](https://www.eoffcn.com/kszx/detail/1239326.html)；所需原图未取得 |
+| `sh-2022-sohu-mock-v5` | 机构模拟 / 上海 / 2022 模拟卷五 | 3 | [搜狐号模拟卷及解析](https://www.sohu.com/a/506739088_120707913) |
 
 | gd-2026-official-outline | 官方大纲例题 / 广东 / 2026 | 1 | [广东省委组织部公告](https://www.gdzz.gov.cn/tzgg/content/mpost_24016.html)；[官方大纲附件](https://www.jiangmen.gov.cn/jmkjj/attachment/0/373/373115/3383802.doc)；[全文核对页](https://yn.huatu.com/2025/1019/1978599_5.html) |
 | `gd-2026-science-reasoning-recall` | 考生回忆 / 广东 / 2026 | 1（锋面雨，文字化改述） | [网友回忆卷](https://gwy.gkzhenti.cn/paper/1767342832062)；[爱题库题面与答案](https://iget100.com/exam/civil-service/0bf9be8c-93db-4573-8eb1-8ebed591627b)；[中公题干与分析](https://www.eoffcn.com/kszx/detail/1918990.html) |
 | mock-zhonggong-2027-light | 机构模拟 / 广东 | 1 | [中公网校光学模拟题](https://www.eoffcn.com/kszx/detail/2214061.html) |
 | `zhanhong-zhejiang-mock` | 机构模拟 / 浙江 | 4 | [展鸿行测模拟卷 PDF](https://static.32xueyuan.com/zq/u/cms/zj/202406/19110417oqg8.pdf) |
 
-合计 30 条来源记录：7 条官方大纲、18 条回忆资料、5 条机构材料。来源记录数不等于已发布题数；没有可用题目的来源仍保留在目录中并说明原因。
+合计 33 条来源记录：7 条官方大纲、20 条回忆资料、6 条机构材料。来源记录数不等于已发布题数；没有可用题目的来源仍保留在目录中并说明原因。

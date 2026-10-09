@@ -915,4 +915,115 @@ addPublishedReferenceQuestion({
   correctAnswer: 'A', explanation: '传统电流方向由正电荷流向负电荷，题设中可近似看作竖直向下。将磁场方向标为向北，依据左手定则判断，载流导体受力方向约为正东。',
 });
 
+
+addPublishedReferenceQuestion({
+  id: 'sh-2022-b-microgravity-filtering', subjectId: 'physics', topicId: 'physics:mechanics',
+  knowledgePointIds: ['physics:gravity'], difficulty: 'medium', reasoningType: 'causal_inference',
+  sourceType: 'recalled', sourceId: 'sh-2022-b-recall',
+  sourceTitle: '2022 上海市考 B 类回忆题 · 微重力下的过滤实验', region: '上海', examYear: 2022, presentationMode: 'adapted',
+  sourceNote: '据 Aipta 回忆版第 56 题改述；答案 C 与公开答案汇总及微重力下液体缺少常规沉降、过滤条件的原理交叉核对。考试材料为第三方考生回忆版，不是官方原卷。',
+  stem: '在轨道舱的微重力环境中，以下哪项操作最难按地面常规方式完成？',
+  options: ['混合两种金属粉末', '将牛奶倒入水中并搅匀', '用漏斗和滤纸从水中滤除泥沙', '在金属环上拉出一层水膜'],
+  correctAnswer: 'C', explanation: '常规过滤依靠液体在重力作用下流过滤纸并留下固体颗粒。微重力环境中液体不会像地面那样自然下流，过滤操作最难按常规方式进行；混合和形成水膜不依赖这种重力排液过程。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'sh-2022-b-ship-buoyancy', subjectId: 'physics', topicId: 'physics:pressure',
+  knowledgePointIds: ['physics:gravity', 'physics:buoyancy', 'physics:floating-sinking'],
+  difficulty: 'medium', reasoningType: 'causal_inference', sourceType: 'recalled', sourceId: 'sh-2022-b-recall',
+  sourceTitle: '2022 上海市考 B 类回忆题 · 货轮驶向赤道', region: '上海', examYear: 2022, presentationMode: 'adapted',
+  sourceNote: '据 Aipta 回忆版第 61 题改述；答案 A 与人人文库公布的答案汇总及漂浮平衡关系交叉核对。原卷为第三方考生回忆版。',
+  stem: '一艘货轮从中纬度海域驶向赤道附近。若当地重力加速度略有减小、海水密度不变且货轮始终漂浮，货轮受到的浮力和排开海水的体积分别怎样变化？',
+  options: ['浮力减小，排水体积不变', '浮力增大，排水体积减小', '浮力不变，排水体积不变', '浮力减小，排水体积增大'],
+  correctAnswer: 'A', explanation: '漂浮时浮力等于货轮重力。质量不变而当地 g 略减，重力和浮力都减小；由漂浮平衡及阿基米德原理可得排水体积 V=m/ρ，海水密度不变时排水体积不变。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'sh-2022-b-washer-resonance', subjectId: 'physics', topicId: 'physics:mechanics',
+  knowledgePointIds: ['physics:elastic-force'], difficulty: 'medium', reasoningType: 'causal_inference',
+  sourceType: 'recalled', sourceId: 'sh-2022-b-recall',
+  sourceTitle: '2022 上海市考 B 类回忆题 · 洗衣机停机后的振动', region: '上海', examYear: 2022, presentationMode: 'adapted',
+  sourceNote: '据 Aipta 回忆版第 64 题改述；答案 A 与人人文库答案汇总及受迫振动、共振原理交叉核对。原卷为第三方考生回忆版。',
+  stem: '洗衣机运转时机身较平稳；断电后，机身振动先增强再逐渐减弱。以下哪种解释最合理？',
+  options: ['转速下降时经过与机身固有频率接近的区间，振动因共振暂时增强', '断电后机身质量突然增加，导致振动加剧', '断电使机身固有频率瞬间变为零', '振动增强说明波轮仍在持续加速'],
+  correctAnswer: 'A', explanation: '洗衣机停机后驱动频率逐渐下降；若经过与机身系统固有频率接近的区间，受迫振动会暂时增强。继续减速并受阻尼影响后，振动逐渐减弱。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'sh-2022-b-powerbank-capacity', subjectId: 'physics', topicId: 'physics:electricity',
+  knowledgePointIds: ['physics:electric-work'], difficulty: 'medium', reasoningType: 'calculation',
+  sourceType: 'recalled', sourceId: 'sh-2022-b-recall',
+  sourceTitle: '2022 上海市考 B 类回忆题 · 充电宝与手机电量', region: '上海', examYear: 2022, presentationMode: 'adapted',
+  sourceNote: '据 Aipta 回忆版第 65 题改述；答案 C 与人人文库答案汇总和容量、电流、时间关系交叉核对。按题目给出的标称容量作理想估算；回忆材料不是官方原卷。',
+  stem: '充电宝标称容量为 20000 mAh，当前剩余 45%；手机电池为 4200 mAh，当前电量 55%。忽略转换损耗，以 2 A 恒流补足手机电量，所需时间最接近哪项？',
+  options: ['约 15 分钟', '约 30 分钟', '约 1 小时', '约 2 小时'],
+  correctAnswer: 'C', explanation: '手机还需补充 45%×4200=1890 mAh=1.89 Ah。按 2 A 恒流估算，时间 t=Q/I=1.89/2≈0.95 小时，最接近 1 小时。充电宝剩余标称容量约 9000 mAh，足以覆盖这部分需求。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'mock-sh-2022-v5-camera-distance', subjectId: 'physics', topicId: 'physics:optics',
+  knowledgePointIds: ['physics:lens-imaging'], difficulty: 'medium', reasoningType: 'causal_inference',
+  sourceType: 'third_party_mock', sourceId: 'sh-2022-sohu-mock-v5',
+  sourceTitle: '2022 上海科学推理模拟卷五 · 半身照改拍全身照', region: '上海', examYear: null, presentationMode: 'adapted',
+  sourceNote: '据搜狐号“上海公务员考试备考”模拟卷第 26 题改述；答案 C 与原页面解析核对。属于第三方模拟题，不是省考真题。',
+  stem: '相机焦距不变，被摄者站在原处。摄影者要把半身照改为同尺寸的全身照，应怎样调整？',
+  options: ['向被摄者靠近，并让镜头向机身内移', '向被摄者靠近，并让镜头远离机身', '向后退远，并让镜头向机身内移', '向后退远，并让镜头远离机身'],
+  correctAnswer: 'C', explanation: '拍摄全身照需要缩小像的放大率，摄影者应增加物距。凸透镜成实像时，物距增大通常使像距减小，因此镜头需向机身内移动。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'mock-sh-2022-v5-galileo-thermometer', subjectId: 'physics', topicId: 'physics:pressure',
+  knowledgePointIds: ['physics:atmospheric-pressure'], difficulty: 'medium', reasoningType: 'causal_inference',
+  sourceType: 'third_party_mock', sourceId: 'sh-2022-sohu-mock-v5',
+  sourceTitle: '2022 上海科学推理模拟卷五 · 伽利略式测温装置', region: '上海', examYear: null, presentationMode: 'adapted',
+  sourceNote: '据搜狐号“上海公务员考试备考”模拟卷第 28 题改述；答案 A 与原页面解析及气体状态变化、液柱压强关系核对。原题示意图已用文字补足装置结构，属于第三方模拟题。',
+  stem: '一套测温装置由封闭空气的玻璃泡和一根下端插入水中的玻璃管组成。玻璃泡导热良好，管内水柱上升时，哪种外界变化组合可能造成这一现象？',
+  options: ['温度降低且外界气压升高', '温度升高且外界气压不变', '温度升高且外界气压降低', '温度不变且外界气压降低'],
+  correctAnswer: 'A', explanation: '气体降温时，在体积近似不变的条件下泡内气压降低；外界气压升高也会把水柱向上推。其余组合会使泡内气压相对升高或外压降低，不能解释水柱上升。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'mock-sh-2022-v5-static-friction', subjectId: 'physics', topicId: 'physics:mechanics',
+  knowledgePointIds: ['physics:friction'], difficulty: 'easy', reasoningType: 'classification',
+  sourceType: 'third_party_mock', sourceId: 'sh-2022-sohu-mock-v5',
+  sourceTitle: '2022 上海科学推理模拟卷五 · 静摩擦力', region: '上海', examYear: null, presentationMode: 'adapted',
+  sourceNote: '据搜狐号“上海公务员考试备考”模拟卷第 30 题改述；答案 C 与原页面解析核对。属于第三方模拟题，不是省考真题。',
+  stem: '下列接触情形中，主要由静摩擦力维持正常运动的是哪一项？',
+  options: ['用橡皮擦纸时橡皮与纸之间', '急刹后已经滑动的轮胎与路面之间', '正常传动时皮带与皮带轮之间', '削铅笔时刀口与铅笔之间'],
+  correctAnswer: 'C', explanation: '皮带正常传动而不打滑时，皮带与皮带轮的接触点没有相对滑动，靠静摩擦力传递运动。其余情形存在接触面间的滑动，属于滑动摩擦。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'gd-2021-county-curving-car', subjectId: 'physics', topicId: 'physics:mechanics',
+  knowledgePointIds: ['physics:centripetal-force'], difficulty: 'medium', reasoningType: 'causal_inference',
+  sourceType: 'recalled', sourceId: 'gd-2021-county-recall',
+  sourceTitle: '2021 广东省考县级卷回忆题 · 赛车转弯与向心力', region: '广东', examYear: 2021, presentationMode: 'adapted',
+  sourceNote: '据闻思教育县级卷回忆版第 82 题改述；答案 B 按向心力关系独立核算。来源为第三方考生回忆版，不是官方原卷。',
+  stem: '赛车以较快速度驶入半径固定的水平弯道。下列说法正确的是哪一项？',
+  options: ['车速越大，赛车的惯性一定越大', '在质量和弯道半径不变时，车速越大，转弯所需向心力越大', '车辆转弯时发动机必须克服一个真实的离心力', '转向角增大必然使轮胎与地面间的摩擦因数减小'],
+  correctAnswer: 'B', explanation: '在同一弯道中半径不变，所需向心力 F=mv²/r。质量和半径相同时，速度越大，向心力越大；惯性由质量决定，离心力不是地面参考系中的真实作用力，摩擦因数也不由转向角决定。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'gd-2021-county-foam-extinguisher', subjectId: 'chemistry', topicId: 'chemistry:changes-reactions',
+  knowledgePointIds: ['chemistry:combustion'], difficulty: 'medium', reasoningType: 'causal_inference',
+  sourceType: 'recalled', sourceId: 'gd-2021-county-recall',
+  sourceTitle: '2021 广东省考县级卷回忆题 · 泡沫灭火器', region: '广东', examYear: 2021, presentationMode: 'adapted',
+  sourceNote: '据闻思教育县级卷回忆版第 83 题改述；答案 B 与同页解析交叉核对。属于第三方考生回忆题，不是官方原卷。',
+  stem: '传统泡沫灭火器使用时，两种溶液混合并喷出泡沫，泡沫覆盖燃烧物表面。下列关于其灭火作用的说法正确的是：',
+  options: ['泡沫会提高可燃物的着火点', '泡沫覆盖燃烧物并隔绝空气，有助于破坏燃烧条件', '泡沫可安全用于仍带电的设备火灾', '反应生成物静置后会全部变回液体'],
+  correctAnswer: 'B', explanation: '燃烧需要可燃物、助燃物和达到着火点等条件。泡沫覆盖燃烧物可减少其与空气接触，并能带走部分热量；泡沫灭火器不适用于带电设备，反应还会产生沉淀。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'gd-2021-county-plate-boundary', subjectId: 'geography', topicId: 'geography:geological-processes',
+  knowledgePointIds: ['geography:plate-tectonics'], difficulty: 'easy', reasoningType: 'classification',
+  sourceType: 'recalled', sourceId: 'gd-2021-county-recall',
+  sourceTitle: '2021 广东省考县级卷回忆题 · 冰岛板块边界', region: '广东', examYear: 2021, presentationMode: 'adapted',
+  sourceNote: '据闻思教育县级卷回忆版第 84 题改述；答案 A 与华图考情分析和板块边界知识交叉核对。属于第三方考生回忆题。',
+  stem: '按常见六大板块划分，下列哪一组板块的交界区域位于冰岛附近？',
+  options: ['亚欧板块与美洲板块', '非洲板块与印度洋板块', '亚欧板块与太平洋板块', '美洲板块与太平洋板块'],
+  correctAnswer: 'A', explanation: '冰岛位于大西洋中脊附近，是北美板块与亚欧板块交界区的一部分。其他三组分别不在蒙古、英国北部或美国东海岸交界。',
+});
+
 export { SCIENCE_QUESTION_BANK };
