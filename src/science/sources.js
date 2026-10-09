@@ -49,6 +49,18 @@ export const SCIENCE_SOURCES = [
     note: '回忆版试题；物理估测题同时见于华图公开解析页，练习题干已简化重述。',
   },
   {
+    id: 'sh-2025-b-recall', title: '2025 年上海市公务员考试行测 B 类（考生回忆版）',
+    organization: '星光公考 / 爱真题（回忆整理）；公考真题库（答案页）', sourceType: 'recalled', region: '上海', examYear: 2025,
+    authority: 'third-party-recollection', verificationStatus: 'verified', copyrightStatus: 'reference_only',
+    url: 'https://upload.xingguanggongkao.com/pdf/2025%E5%B9%B4%E4%B8%8A%E6%B5%B7%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88B%E5%8D%B7-%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.pdf',
+    relatedUrls: [
+      'https://www.aipta.com/article/10361.html',
+      'https://info.etest8.com/infodownload/2025/6-13725148-Lisa20251106.pdf',
+      'https://gwy.gkzhenti.cn/answer/1743902341993',
+    ],
+    note: '第三方考生回忆卷，不是官方原卷；本库只收入题面可读且答案可交叉核对的条目，并用改述呈现。',
+  },
+  {
     id: 'gd-2019-township-recall', title: '2019 年广东省公务员考试行测真题（乡镇卷，网友回忆版）',
     organization: '公考网（回忆题整理）', sourceType: 'recalled', region: '广东', examYear: 2019,
     authority: 'third-party-recollection', verificationStatus: 'verified', copyrightStatus: 'reference_only',

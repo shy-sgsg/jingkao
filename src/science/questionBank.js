@@ -457,4 +457,34 @@ addPublishedReferenceQuestion({
   correctAnswer: 'B', explanation: '忽略能量损失时机械能守恒。D 点较低，速度通常较大、动能较大；A 点较高，重力势能较大。',
 });
 
+addPublishedReferenceQuestion({
+  id: 'sh-2025-b-railway-resonance', subjectId: 'physics', topicId: 'physics:mechanics', knowledgePointIds: ['physics:elastic-force'],
+  difficulty: 'medium', reasoningType: 'causal_inference', sourceType: 'recalled', sourceId: 'sh-2025-b-recall',
+  sourceTitle: '2025 上海市考 B 类回忆题 · 动车减振与共振', region: '上海', examYear: 2025, presentationMode: 'adapted',
+  sourceNote: '按第三方回忆卷中的弹簧支撑车厢题改述；原题参考答案 D，改写后正确项为 A，答案与独立答案页交叉核对，非官方答案。',
+  stem: '动车车厢由弹簧支撑，并受到周期性轨道振动。若外部激励频率接近车厢的固有频率，最可能出现什么现象？',
+  options: ['发生共振，车厢振幅可能增大', '阻尼越大，车厢振幅一定越大', '车厢固有频率只由弹簧决定，与质量无关', '只要增加弹簧刚度，任何频率下的振幅都会减小'],
+  correctAnswer: 'A', explanation: '受迫振动的激励频率接近系统固有频率时可能发生共振，使振幅明显增大。阻尼通常会耗散振动能量；固有频率还与系统质量有关，单纯提高弹簧刚度也不能保证所有激励条件下振幅都减小。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'sh-2025-b-absorption-spectrum', subjectId: 'physics', topicId: 'physics:optics', knowledgePointIds: ['physics:optical-phenomena'],
+  difficulty: 'easy', reasoningType: 'causal_inference', sourceType: 'recalled', sourceId: 'sh-2025-b-recall',
+  sourceTitle: '2025 上海市考 B 类回忆题 · 光谱吸收', region: '上海', examYear: 2025, presentationMode: 'adapted',
+  sourceNote: '依据第三方回忆卷题意改述；参考答案 A 与独立答案页交叉核对，非官方答案。',
+  stem: '光谱仪把光分解成不同颜色；样品吸收某些波长后，对应位置会出现暗线。若入射光只含红、黄、蓝三种单色光，最可能看到什么？',
+  options: ['红、黄、蓝对应位置各有一条暗线', '三种颜色之间各有一条暗线', '三种颜色合成一个连续的宽暗带', '不会出现暗线'],
+  correctAnswer: 'A', explanation: '吸收线对应被样品吸收的特定波长。入射光只有三种离散波长时，暗线应分别出现在这三种颜色对应的位置。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'sh-2025-b-space-elevator', subjectId: 'physics', topicId: 'physics:mechanics', knowledgePointIds: ['physics:gravity'],
+  difficulty: 'medium', reasoningType: 'classification', sourceType: 'recalled', sourceId: 'sh-2025-b-recall',
+  sourceTitle: '2025 上海市考 B 类回忆题 · 太空电梯', region: '上海', examYear: 2025, presentationMode: 'adapted',
+  sourceNote: '依据第三方回忆卷题意改述；参考答案 D 与独立答案页交叉核对，非官方答案。',
+  stem: '设想太空电梯缆绳连接赤道附近地面与地球同步轨道。下列说法中错误的是哪一项？',
+  options: ['基座适合设置在赤道附近', '电梯与地球同步自转，离地轴越远线速度越大', '高强度轻质缆绳材料是建造难点之一', '同步轨道外的配重只用于抵消缆绳自身重力'],
+  correctAnswer: 'D', explanation: '同步轨道外的配重用于维持缆绳张力和整体旋转平衡，不只是抵消缆绳重力。赤道位置和同步旋转来自轨道几何条件；同角速度下，离转轴越远线速度越大。',
+});
+
 export { SCIENCE_QUESTION_BANK };
