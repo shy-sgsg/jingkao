@@ -57,11 +57,17 @@ export const SCIENCE_SOURCES = [
   },
   {
     id: 'sh-2019-b-recall', title: '2019 年上海市公务员考试行测 B 卷（考生回忆版）',
-    organization: '公考网（回忆版试题与解析）', sourceType: 'recalled', region: '上海', examYear: 2019,
+    organization: '爱真题（公开题面）；星光公考、中国公考网、小麦公考（答案交叉核对）', sourceType: 'recalled', region: '上海', examYear: 2019,
     authority: 'third-party-recollection', verificationStatus: 'verified', copyrightStatus: 'reference_only',
-    url: 'https://m.gwysk.cn/shengkao/shanghai/zhenti/3436.html',
-    relatedUrls: ['https://upload.xingguanggongkao.com/pdf/2019%E5%B9%B4%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88B%E5%8D%B7-%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.pdf'],
-    note: '题面和答案来自第三方回忆整理；练习中以简化重述呈现，非官方原卷。',
+    url: 'https://www.aipta.com/article/1226.html',
+    relatedUrls: [
+      'https://m.gwysk.cn/shengkao/shanghai/zhenti/3436.html',
+      'https://upload.xingguanggongkao.com/pdf/2019%E5%B9%B4%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88B%E5%8D%B7-%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.pdf',
+      'https://www.chinagwy.org/html/stzx/shanghai/201901/123_279949.html',
+      'https://www.chinagwy.org/files/20190114180836_51080.pdf',
+      'https://www.xiaomaigongkao.com/Portal/Question/search/keywords/%E9%92%B1%E5%9C%88%E6%B0%B4%E6%89%93%E4%B8%80%E6%88%90%E8%AF%AD/p/50.html',
+    ],
+    note: '第三方回忆整理，非官方原卷；收录第 26、27、30、31、35 题共 5 道不依赖缺失图示的题目，题意改述并与公开答案解析交叉核对。',
   },
   {
     id: 'sh-2014-a-recall', title: '2014 年上海市公务员录用考试《行测》A 卷（考生回忆版）',

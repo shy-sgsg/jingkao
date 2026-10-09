@@ -75,7 +75,7 @@ test('published questions distinguish the existing original bank from sourced ex
   const { SCIENCE_SOURCES } = await import('../src/science/sources.js');
   const originalBank = bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType === 'original');
   assert.equal(originalBank.length, 153);
-  assert.equal(bankModule.SCIENCE_QUESTION_BANK.length, 251);
+  assert.equal(bankModule.SCIENCE_QUESTION_BANK.length, 254);
   const subjectCounts = Object.fromEntries(['physics', 'chemistry', 'biology', 'geography']
     .map((subjectId) => [subjectId, originalBank.filter((question) => question.subjectId === subjectId).length]));
   assert.deepEqual(subjectCounts, { physics: 42, chemistry: 37, biology: 36, geography: 38 });
@@ -129,7 +129,7 @@ test('published questions distinguish the existing original bank from sourced ex
   assert.ok(bankModule.SCIENCE_QUESTION_BANK.some((question) => question.sourceType === 'third_party_mock'));
   assert.ok(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType !== 'original')
     .every((question) => question.sourceId && question.sourceNote));
-  assert.equal(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType === 'recalled').length, 78);
+  assert.equal(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType === 'recalled').length, 81);
   assert.equal(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType === 'third_party_mock').length, 14);
   assert.equal(SCIENCE_SOURCES.length, 33);
 });

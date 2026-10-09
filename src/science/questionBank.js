@@ -438,6 +438,36 @@ addPublishedReferenceQuestion({
 });
 
 addPublishedReferenceQuestion({
+  id: 'sh-2019-b-single-photon-interference', subjectId: 'physics', topicId: 'physics:optics', knowledgePointIds: ['physics:optical-phenomena'],
+  difficulty: 'medium', reasoningType: 'classification', sourceType: 'recalled', sourceId: 'sh-2019-b-recall',
+  sourceTitle: '2019 上海市考 B 卷回忆题 · 单光子双缝干涉', region: '上海', examYear: 2019, presentationMode: 'adapted',
+  sourceNote: '据回忆题第 30 题改述；答案 B 与公开解析核对。',
+  stem: '在双缝实验中，光子逐个通过狭缝。短时间曝光会留下零散光点，长时间曝光后逐渐出现干涉条纹。以下对实验现象的解释不正确的是？',
+  options: ['单个光子的传播不能按经典粒子的确定轨迹完整描述', '只有大量光子一起通过时，光才具有波动性', '亮条纹对应光子到达概率较高的区域', '短曝光时光子落点稀疏，统计分布尚不足以显出稳定条纹'],
+  correctAnswer: 'B', explanation: '波动性是光子的固有性质，不是光子数量增多后才出现。单个光子的落点无法按经典轨迹预测；大量探测事件使概率分布逐渐呈现干涉条纹。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'sh-2019-b-water-bath-boiling', subjectId: 'physics', topicId: 'physics:thermal', knowledgePointIds: ['physics:phase-change', 'physics:heat-transfer'],
+  difficulty: 'medium', reasoningType: 'causal_inference', sourceType: 'recalled', sourceId: 'sh-2019-b-recall',
+  sourceTitle: '2019 上海市考 B 卷回忆题 · 水浴加热与沸腾', region: '上海', examYear: 2019, presentationMode: 'adapted',
+  sourceNote: '据回忆题第 31 题改述；答案 B 与公开答案解析核对。',
+  stem: '隔水炖时，小碗中的汤由外锅水加热。题设水和汤的沸点均为 100℃，且汤只从锅水吸热。持续加热后，哪种情况成立？',
+  options: ['水和汤同时沸腾', '外锅水沸腾，碗中汤不沸腾', '外锅水先沸腾，之后汤也持续沸腾', '汤先于外锅水沸腾'],
+  correctAnswer: 'B', explanation: '外锅水达到 100℃后继续吸热并沸腾，温度保持在沸点。汤升到同温后与锅水之间没有温差，不能继续从锅水吸热，因此不会沸腾。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'sh-2019-b-semi-submersible-loading', subjectId: 'physics', topicId: 'physics:pressure', knowledgePointIds: ['physics:buoyancy'],
+  difficulty: 'medium', reasoningType: 'causal_inference', sourceType: 'recalled', sourceId: 'sh-2019-b-recall',
+  sourceTitle: '2019 上海市考 B 卷回忆题 · 半潜船装载流程', region: '上海', examYear: 2019, presentationMode: 'adapted',
+  sourceNote: '据回忆题第 35 题改述；答案 B 与小麦公考公开解析核对。',
+  stem: '半潜船运载不可拆分的大型设备，需要先下潜接货，再上浮离港。下列哪种流程符合压载水舱的工作顺序？',
+  options: ['货物上甲板 → 注水下潜 → 注入压缩空气 → 上浮 → 运走', '注水下潜 → 将货物移上甲板 → 注入压缩空气 → 上浮 → 运走', '注水下潜 → 上浮 → 将货物移上甲板 → 注入压缩空气 → 运走', '注入压缩空气 → 将货物移上甲板 → 注水下潜 → 上浮 → 运走'],
+  correctAnswer: 'B', explanation: '先向压载水舱注水使船体下潜，装载设备后再注入压缩空气、排出舱内海水，使船体上浮，最后运走货物。',
+});
+
+addPublishedReferenceQuestion({
   id: 'sh-2021-b-pressure-estimate', subjectId: 'physics', topicId: 'physics:pressure', knowledgePointIds: ['physics:solid-pressure'],
   difficulty: 'medium', reasoningType: 'data_interpretation', sourceType: 'recalled', sourceId: 'sh-2021-b-recall',
   sourceTitle: '2021 上海市考 B 卷回忆题 · 常见物理量估测', region: '上海', examYear: 2021, presentationMode: 'adapted',
