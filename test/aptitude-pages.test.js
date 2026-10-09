@@ -21,12 +21,27 @@ test('new and legacy module routes resolve to the shared or existing dedicated p
   assert.equal(resolveAptitudeModuleRoute('aptitude'), null);
 });
 
-test('all five general modules retain empty optional lessons and empty reserved question banks', () => {
-  const emptyModules = APTITUDE_MODULES.filter((module) => module.studyStore === 'aptitudeModuleStudies');
-  assert.equal(emptyModules.length, 5);
-  for (const module of emptyModules) {
-    assert.deepEqual(getAptitudeModuleContent(module.id), { directory: [], lessons: {} });
-    assert.deepEqual(getAptitudeQuestions(module.id), [], `${module.id} should expose an empty question provider`);
+test('five reserved modules expose useful outlines while lessons and question banks remain empty', () => {
+  const outlineModules = APTITUDE_MODULES.filter((module) => module.studyStore === 'aptitudeModuleStudies');
+  const firstTopicByModule = {
+    'political-theory': '党的创新理论',
+    verbal: '阅读理解',
+    quantitative: '数字推理',
+    reasoning: '图形推理',
+    'data-analysis': '资料解读',
+  };
+  assert.equal(outlineModules.length, 5);
+  for (const module of outlineModules) {
+    const content = getAptitudeModuleContent(module.id);
+    assert.equal(content.directory.length, 1, `${module.id} should have a subject directory`);
+    const topics = content.directory.flatMap((subject) => subject.topics || []);
+    const points = topics.flatMap((topic) => topic.knowledgePoints || []);
+    assert.ok(topics.some((topic) => topic.title === firstTopicByModule[module.id]), `${module.id} should expose its own topic outline`);
+    assert.ok(points.length >= 12, `${module.id} should have enough outline points to browse`);
+    assert.ok(points.every((point) => point.contentStatus === 'outline'), `${module.id} outline points must not claim published lessons`);
+    assert.equal(new Set(points.map((point) => point.id)).size, points.length, `${module.id} point IDs should be unique`);
+    assert.deepEqual(content.lessons, {}, `${module.id} should keep lesson text empty`);
+    assert.deepEqual(getAptitudeQuestions(module.id), [], `${module.id} should keep its question provider empty`);
   }
   assert.ok(getAptitudeModuleContent('science').directory.length > 0);
   assert.ok(getAptitudeModuleContent('general-knowledge').directory.length > 0);

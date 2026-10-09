@@ -38,6 +38,7 @@ const appModules = [
   '../src/aptitude/questionBank.js',
   '../src/general-knowledge/lessonContent.js',
   '../src/general-knowledge/knowledge.js',
+  '../src/aptitude/knowledge.js',
   '../src/aptitude/content.js',
   '../src/general-knowledge/planConfig.js',
   '../src/general-knowledge/planTasks.js',

@@ -184,15 +184,32 @@ test('all five reserved modules render their shared learning, records, and plan 
   await import('../scripts/build.mjs');
   const html = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8');
   const script = html.match(/<script>\s*([\s\S]*?)<\/script>/)?.[1];
+  const firstKnowledgePointByModule = {
+    'political-theory': ['political-theory:innovation-theory', '党的创新理论基本框架', '党的创新理论'],
+    verbal: ['verbal:main-idea', '主旨概括', '阅读理解'],
+    quantitative: ['quantitative:number-patterns', '数列规律识别', '数字推理'],
+    reasoning: ['reasoning:graphic-patterns', '图形规律识别', '图形推理'],
+    'data-analysis': ['data-analysis:material-types', '统计资料类型识别', '资料解读'],
+  };
 
   for (const moduleId of ['political-theory', 'verbal', 'quantitative', 'reasoning', 'data-analysis']) {
     const page = await renderStandaloneRoute(script, `aptitude/${moduleId}`);
     assert.match(page.root.innerHTML, /<h2>知识目录与讲解<\/h2>/, `${moduleId} should expose the knowledge provider section`);
+    assert.doesNotMatch(page.root.innerHTML, /知识目录待接入/, `${moduleId} should show its outline instead of an empty directory`);
+    assert.match(page.root.innerHTML, /science-topic-card/, `${moduleId} should use the existing expandable topic-card style`);
+    const [pointId, pointTitle, topicTitle] = firstKnowledgePointByModule[moduleId];
+    assert.match(page.root.innerHTML, new RegExp(topicTitle), `${moduleId} should show a module-specific topic`);
+    assert.match(page.root.innerHTML, new RegExp(pointTitle), `${moduleId} should show a clickable knowledge point`);
     assert.match(page.root.innerHTML, /<h2>专项练习与限时模拟<\/h2>/, `${moduleId} should expose the practice provider section`);
     assert.match(page.root.innerHTML, /错题与收藏/);
     assert.match(page.root.innerHTML, /data-section="aptitude-module-statistics"/);
     assert.match(page.root.innerHTML, /data-section="aptitude-module-plan"/);
     assert.match(page.root.innerHTML, /MANUAL PRACTICE LOG/);
+
+    const lessonPage = await renderStandaloneRoute(script, `aptitude/${moduleId}?knowledge=${pointId}`);
+    assert.match(lessonPage.root.innerHTML, new RegExp(`<h1>${pointTitle}<\\/h1>`), `${moduleId} should open the selected outline point`);
+    assert.match(lessonPage.root.innerHTML, /目录提纲/);
+    assert.match(lessonPage.root.innerHTML, /讲解待接入/);
   }
 
   const missingPoint = await renderStandaloneRoute(script, 'aptitude/verbal?knowledge=not-in-provider');

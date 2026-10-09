@@ -3,10 +3,16 @@ import { getScienceTree } from '../science/knowledge.js';
 import { SCIENCE_LESSONS } from '../science/lessonContent.js';
 import { getGeneralKnowledgeTree } from '../general-knowledge/knowledge.js';
 import { GENERAL_KNOWLEDGE_LESSONS } from '../general-knowledge/lessonContent.js';
+import { getAptitudeModuleKnowledgeTree } from './knowledge.js';
 
 const DIRECTORY_PROVIDERS = {
   science: getScienceTree,
   'general-knowledge': getGeneralKnowledgeTree,
+  'political-theory': () => getAptitudeModuleKnowledgeTree('political-theory'),
+  verbal: () => getAptitudeModuleKnowledgeTree('verbal'),
+  quantitative: () => getAptitudeModuleKnowledgeTree('quantitative'),
+  reasoning: () => getAptitudeModuleKnowledgeTree('reasoning'),
+  'data-analysis': () => getAptitudeModuleKnowledgeTree('data-analysis'),
 };
 
 const LESSON_PROVIDERS = {
@@ -15,7 +21,6 @@ const LESSON_PROVIDERS = {
 };
 
 for (const moduleId of ['political-theory', 'verbal', 'quantitative', 'reasoning', 'data-analysis']) {
-  DIRECTORY_PROVIDERS[moduleId] = () => [];
   LESSON_PROVIDERS[moduleId] = () => ({});
 }
 
