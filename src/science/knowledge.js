@@ -159,6 +159,7 @@ export const SCIENCE_TREE = [
       ]),
       scienceTopic('biology:human-body', '人体生命活动', [
         sciencePoint('biology:digestion', '人体消化'),
+        sciencePoint('biology:musculoskeletal-system', '骨骼、关节与运动'),
         sciencePoint('biology:hormonal-regulation', '激素调节与血糖'),
         sciencePoint('biology:respiratory-circulatory-systems', '呼吸与血液循环'),
         sciencePoint('biology:nervous-regulation', '神经调节'),

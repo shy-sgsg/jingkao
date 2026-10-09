@@ -518,6 +518,26 @@ addPublishedReferenceQuestion({
 });
 
 addPublishedReferenceQuestion({
+  id: 'gd-2025-outline-grain-storage', subjectId: 'biology', topicId: 'biology:cells-metabolism', knowledgePointIds: ['biology:plant-growth'],
+  difficulty: 'medium', reasoningType: 'causal_inference', sourceType: 'official_outline_example', sourceId: 'gd-2025-official-outline',
+  sourceTitle: '广东省 2025 年公务员考试笔试大纲例题 · 粮食储藏', region: '广东', examYear: 2025, presentationMode: 'adapted',
+  sourceNote: '据广东省 2025 年笔试大纲例题改述，答案 C；属于官方大纲例题，不是已举行考试的历年真题。',
+  stem: '为延长粮食储存时间，以下做法中最不合理的是哪一项？',
+  options: ['将粮库温度保持在较低水平', '对稻米进行真空包装以减少氧气接触', '向粮库洒水以提高空气湿度', '向粮库充入二氧化碳'],
+  correctAnswer: 'C', explanation: '低温、降低氧气供应或提高二氧化碳浓度有助于减缓种子呼吸和生物活动。提高湿度会增加种子萌发、霉变和储藏损耗的风险，因此 C 最不合理。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'gd-2025-recall-bacteria', subjectId: 'biology', topicId: 'biology:inheritance-microbes', knowledgePointIds: ['biology:microorganisms'],
+  difficulty: 'easy', reasoningType: 'classification', sourceType: 'recalled', sourceId: 'gd-2025-recall',
+  sourceTitle: '2025 广东省考回忆题 · 细菌的特征与用途', region: '广东', examYear: 2025, presentationMode: 'adapted',
+  sourceNote: '据 2025 年广东省考考生回忆卷第 70 题改述；原题及答案非官方发布，答案 D 按基础生物学事实核对。',
+  stem: '下列关于细菌的说法，哪一项错误？',
+  options: ['鼠疫由细菌引起', '有些细菌可用于食品生产、污水处理或生物分解', '细菌是有细胞结构的微生物，通常通过分裂繁殖', '杀灭细菌只能依靠人体自身的免疫力'],
+  correctAnswer: 'D', explanation: '细菌可由人体免疫系统清除，也可通过适当的物理或化学消毒方法杀灭，因此“只能依靠免疫力”错误。鼠疫由鼠疫耶尔森菌引起；一些细菌参与食品生产和有机物分解；细菌具有细胞结构并通常以分裂方式繁殖。',
+});
+
+addPublishedReferenceQuestion({
   id: 'mock-huatu-buoyancy-load', subjectId: 'physics', topicId: 'physics:pressure', knowledgePointIds: ['physics:floating-sinking'],
   difficulty: 'medium', reasoningType: 'comparison', sourceType: 'third_party_mock', sourceId: 'huatu-2022-science-examples',
   sourceTitle: '华图科学推理例题 · 轮船装载', region: '广东', examYear: null, presentationMode: 'adapted',
@@ -525,6 +545,56 @@ addPublishedReferenceQuestion({
   stem: '下列情形中，物体受到的浮力会增大的是哪一项？',
   options: ['游泳者从深水处走向浅滩', '漂浮的轮船从长江驶入大海', '正在下沉的潜水艇保持完全浸没', '漂浮在码头的轮船装载更多货物'],
   correctAnswer: 'D', explanation: '漂浮轮船静止时浮力等于总重力。装载货物使轮船总重力增加，船体下沉并排开更多水，浮力随之增加。其余情形中浮力不增大：浅水处游泳者浸入体积减小；漂浮船在不同盐度水域始终以浮力平衡重力；完全浸没且体积不变的潜水艇浮力不变。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'zj-2024-c-knuckle-evidence', subjectId: 'biology', topicId: 'biology:human-body', knowledgePointIds: ['biology:musculoskeletal-system'],
+  difficulty: 'medium', reasoningType: 'experiment_design', sourceType: 'recalled', sourceId: 'zj-2024-c-recall',
+  sourceTitle: '2024 浙江省考 C 类回忆题 · 掰指与关节炎', region: '浙江', examYear: 2024, presentationMode: 'adapted',
+  sourceNote: '据浙江省 2024 年 C 类行测回忆卷第 94 题改述；出自判断推理中的科学论证题，不标为省考专项科学推理题；参考答案 D 与公开答案页核对。',
+  stem: '一项对照观察未发现习惯性掰指与手指关节炎明显相关。以下哪项最可能是支持这一结果的实验观察？',
+  options: ['掰指的声响来自关节腔内气泡变化，而非骨面摩擦', '习惯性掰指者的手部握力和关节强度都低于对照组', '手指关节炎发生率与年龄明显相关', '习惯性掰指组中只有一人患关节炎，且该人有遗传风险'],
+  correctAnswer: 'D', explanation: 'D 描述了实验组关节炎病例很少，且病例存在其他风险因素，与“掰指本身和关节炎没有明显相关”的结果相符。A 是关于响声机制的另一类证据；B、C 并未直接显示实验组的关节炎发生情况。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'zj-2024-c-animal-aging', subjectId: 'biology', topicId: 'biology:ecology', knowledgePointIds: ['biology:organisms-environment'],
+  difficulty: 'medium', reasoningType: 'causal_inference', sourceType: 'recalled', sourceId: 'zj-2024-c-recall',
+  sourceTitle: '2024 浙江省考 C 类回忆题 · 变温动物与衰老', region: '浙江', examYear: 2024, presentationMode: 'adapted',
+  sourceNote: '据浙江省 2024 年 C 类行测回忆卷第 95 题改述；出自判断推理中的科学论证题，不标为省考专项科学推理题；参考答案 B 与公开答案解析核对。',
+  stem: '一种假说认为，变温动物因代谢率较低而比恒温动物衰老得慢。以下哪项最能削弱该假说？',
+  options: ['海龟的长寿也可能与外壳提供的保护有关', '相似体型的变温动物之间，衰老率差异很大，有些远高于、有些远低于恒温动物', '相关研究只涉及少数动物，现有证据还不充分', '部分变温动物在繁殖期后死亡率变化不明显'],
+  correctAnswer: 'B', explanation: 'B 直接显示变温动物并不都呈现同一种衰老模式，削弱了“变温动物普遍衰老更慢”的概括。A 只提供一种替代解释，C 质疑研究证据，D 的例子反而可能支持该假说。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'zj-2024-c-cholera-transmission', subjectId: 'biology', topicId: 'biology:inheritance-microbes', knowledgePointIds: ['biology:microorganisms'],
+  difficulty: 'easy', reasoningType: 'causal_inference', sourceType: 'recalled', sourceId: 'zj-2024-c-recall',
+  sourceTitle: '2024 浙江省考 C 类回忆题 · 霍乱传播途径', region: '浙江', examYear: 2024, presentationMode: 'adapted',
+  sourceNote: '据浙江省 2024 年 C 类行测回忆卷第 96 题改述；出自判断推理中的科学论证题，不标为省考专项科学推理题；参考答案 B 与公开答案解析核对，传播知识另经中国疾控中心资料核对。',
+  stem: '附近出现霍乱病例后，有人据此认为居民近期应减少外出，以降低感染风险。以下哪项最能削弱这一建议？',
+  options: ['我国近年霍乱病例较少，但不能据此判断此次感染风险', '霍乱主要经受污染的水和食物传播，普通户外活动本身不是主要传播途径', '接触患者或带菌者后及时清洁和消毒即可避免所有感染', '霍乱被列为甲类传染病，说明其发病和传播风险需要重视'],
+  correctAnswer: 'B', explanation: 'B 给出与感染有关的主要传播路径，说明“减少一般外出”与切断主要传播途径之间没有直接联系。题目考查论证强弱；实际预防应关注安全饮水、食品卫生和手卫生。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'zj-2024-c-breath-biometrics', subjectId: 'biology', topicId: 'biology:human-body', knowledgePointIds: ['biology:respiratory-circulatory-systems'],
+  difficulty: 'medium', reasoningType: 'data_interpretation', sourceType: 'recalled', sourceId: 'zj-2024-c-recall',
+  sourceTitle: '2024 浙江省考 C 类回忆题 · 呼气成分与身份识别', region: '浙江', examYear: 2024, presentationMode: 'adapted',
+  sourceNote: '据浙江省 2024 年 C 类行测回忆卷第 100 题改述；出自判断推理中的科学论证题，不标为省考专项科学推理题；参考答案 B 与公开答案页核对。',
+  stem: '研究者用传感器分析呼气成分，并据此区分受试者，进而提出呼气可用于身份识别。以下哪项最能削弱这一结论？',
+  options: ['实验受试者人数较少', '呼气样本容易受到饮食、环境和情绪等因素影响', '传感器通道数较少，识别准确率可能不稳定', '患呼吸道疾病后，人的呼吸动作特征仍可能保持较长时间'],
+  correctAnswer: 'B', explanation: '若呼气样本随饮食、环境或情绪大幅变化，同一人的样本可能不稳定，削弱了用呼气成分识别个人身份的结论。样本少和准确率不稳定也可能削弱证据，但 B 直接指出了关键特征的变化来源。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'zj-2025-mock-mars-microbes', subjectId: 'biology', topicId: 'biology:inheritance-microbes', knowledgePointIds: ['biology:microorganisms'],
+  difficulty: 'medium', reasoningType: 'causal_inference', sourceType: 'third_party_mock', sourceId: 'zj-2025-32xueyuan-mock',
+  sourceTitle: '浙江省考 2025 模拟卷 · 火星环境与微生物', region: '浙江', examYear: null, presentationMode: 'adapted',
+  sourceNote: '据 32 学苑第三方模拟卷第 92 题改述，不是省考真题；卷内答案为 D，实验背景与公开研究论文交叉核对。',
+  stem: '模拟火星紫外线环境的实验发现，高氯酸镁会使枯草芽孢杆菌在数分钟内失去活性。以下哪项新发现最能支持“火星表面目前不利于微生物存活”的判断？',
+  options: ['有些微生物可能在其他环境中利用高氯酸盐', '地球多数土壤中的高氯酸镁含量较低', '高氯酸镁接触人体皮肤时可能产生刺激', '在接近火星表面的紫外照射条件下，高氯酸镁的杀菌作用会进一步增强'],
+  correctAnswer: 'D', explanation: 'D 把更强的杀菌作用放在接近火星表面的照射条件下，补强了实验结果与结论之间的联系。其他选项没有说明火星表面条件下微生物的存活情况。',
 });
 
 export { SCIENCE_QUESTION_BANK };

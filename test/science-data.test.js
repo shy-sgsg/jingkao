@@ -71,7 +71,7 @@ test('published questions distinguish the existing original bank from sourced ex
   const { SCIENCE_SOURCES } = await import('../src/science/sources.js');
   const originalBank = bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType === 'original');
   assert.equal(originalBank.length, 153);
-  assert.equal(bankModule.SCIENCE_QUESTION_BANK.length, 183);
+  assert.equal(bankModule.SCIENCE_QUESTION_BANK.length, 190);
   const subjectCounts = Object.fromEntries(['physics', 'chemistry', 'biology', 'geography']
     .map((subjectId) => [subjectId, originalBank.filter((question) => question.subjectId === subjectId).length]));
   assert.deepEqual(subjectCounts, { physics: 42, chemistry: 37, biology: 36, geography: 38 });
@@ -85,9 +85,13 @@ test('published questions distinguish the existing original bank from sourced ex
     && question.copyrightStatus === 'original' && question.verificationStatus === 'verified'
     && question.publishStatus === 'published' && question.region === 'general' && question.examYear === null));
   const official = filterQuestions(bankModule.SCIENCE_QUESTION_BANK, { sourceType: 'official' });
-  assert.equal(official.length, 3);
+  assert.equal(official.length, 4);
   assert.ok(official.some((question) => question.sourceId === 'sh-2026-official-outline'));
-  for (const id of ['gd-2024-soot-ink', 'gd-2024-insulin-glucose', 'mock-huatu-buoyancy-load']) {
+  for (const id of [
+    'gd-2024-soot-ink', 'gd-2024-insulin-glucose', 'gd-2025-outline-grain-storage', 'gd-2025-recall-bacteria',
+    'zj-2024-c-knuckle-evidence', 'zj-2024-c-animal-aging', 'zj-2024-c-cholera-transmission', 'zj-2024-c-breath-biometrics',
+    'zj-2025-mock-mars-microbes', 'mock-huatu-buoyancy-load',
+  ]) {
     assert.ok(bankModule.SCIENCE_QUESTION_BANK.some((question) => question.id === id), `${id} is published`);
   }
   assert.ok(bankModule.SCIENCE_QUESTION_BANK.some((question) => question.sourceType === 'recalled' && question.examYear === 2019));
@@ -95,8 +99,9 @@ test('published questions distinguish the existing original bank from sourced ex
   assert.ok(bankModule.SCIENCE_QUESTION_BANK.some((question) => question.sourceType === 'third_party_mock'));
   assert.ok(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType !== 'original')
     .every((question) => question.sourceId && question.sourceNote));
-  assert.equal(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType === 'recalled').length, 24);
-  assert.equal(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType === 'third_party_mock').length, 3);
+  assert.equal(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType === 'recalled').length, 29);
+  assert.equal(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType === 'third_party_mock').length, 4);
+  assert.equal(SCIENCE_SOURCES.length, 20);
 });
 
 test('published knowledge lessons cover all four disciplines with practical explanations', async () => {
@@ -109,8 +114,12 @@ test('published knowledge lessons cover all four disciplines with practical expl
       && point.content.everydayExample && point.content.quickMethod), `${subject.id} lessons contain actionable explanations`);
     return [subject.id, lessons.length];
   }));
-  assert.equal(Object.values(counts).reduce((sum, count) => sum + count, 0), 45);
-  for (const pointId of ['physics:elastic-force', 'physics:optical-phenomena', 'physics:gravity', 'physics:magnetic-field', 'biology:hormonal-regulation']) {
+  assert.equal(Object.values(counts).reduce((sum, count) => sum + count, 0), 49);
+  for (const pointId of [
+    'physics:elastic-force', 'physics:optical-phenomena', 'physics:gravity', 'physics:magnetic-field',
+    'biology:hormonal-regulation', 'biology:microorganisms', 'biology:musculoskeletal-system',
+    'biology:organisms-environment', 'biology:respiratory-circulatory-systems',
+  ]) {
     const point = tree.flatMap((subject) => subject.topics).flatMap((topic) => topic.knowledgePoints).find((item) => item.id === pointId);
     assert.equal(point.contentStatus, 'published', `${pointId} has a lesson for the newly collected Shanghai questions`);
   }
