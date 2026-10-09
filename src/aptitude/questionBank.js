@@ -70,8 +70,14 @@ export const APTITUDE_MODULE_QUESTION_BANKS = Object.fromEntries(
   ['political-theory', 'verbal', 'quantitative', 'reasoning', 'data-analysis'].map((moduleId) => [moduleId, []]),
 );
 
+// Keep the previously published seed set available only to sessions already saved in local profiles.
+// New sessions read APTITUDE_MODULE_QUESTION_BANKS, which intentionally stays empty until content is approved.
+export const APTITUDE_MODULE_SESSION_ARCHIVE = Object.fromEntries(
+  Object.keys(APTITUDE_MODULE_QUESTION_BANKS).map((moduleId) => [moduleId, []]),
+);
+
 for (const [moduleId, subjectId, topicSlug, pointTitle, stem, optionTexts, correctAnswer, explanation, difficulty] of QUESTION_SEEDS) {
-  const bank = APTITUDE_MODULE_QUESTION_BANKS[moduleId];
+  const bank = APTITUDE_MODULE_SESSION_ARCHIVE[moduleId];
   bank.push({
     id: `apt-${moduleId}-${String(bank.length + 1).padStart(3, '0')}`,
     moduleId,

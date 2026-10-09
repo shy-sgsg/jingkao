@@ -27,7 +27,7 @@ import { getGeneralKnowledgeTaskProgress, reconcileGeneralKnowledgePlanTaskProgr
 import { APTITUDE_MODULES, getAptitudeMockModules, resolveAptitudeModuleRoute } from './aptitude/modules.js';
 import { getAptitudeModuleContent } from './aptitude/content.js';
 import { getAptitudeMockSessionRecords, getAptitudeModuleStats } from './aptitude/analytics.js';
-import { getAptitudeQuestions } from './aptitude/questions.js';
+import { getAptitudeQuestions, getAptitudeSessionQuestions } from './aptitude/questions.js';
 import { getAptitudeModuleForTaskType, getAptitudeModuleTaskProgress, reconcileAptitudeModuleTaskProgress } from './aptitude/planTasks.js';
 import { answerAptitudeModuleQuestion, continueAptitudeModuleSession, createAptitudeModuleSession, finishAptitudeModuleSession, goToAptitudeModuleQuestion, selectAptitudeModuleAnswer } from './aptitude/sessions.js';
 import { toggleAptitudeModuleFavorite } from './aptitude/persistence.js';
@@ -835,13 +835,18 @@ function renderAptitude() {
   const onlineAccuracyNote = onlineAttempted
     ? `七个行测模块站内共答 ${onlineAttempted} 题 · ${onlineCorrect} 题答对`
     : '七个行测模块尚无站内答题记录';
-  return `<div class="page-body aptitude-page"><div class="page-heading-row"><div><div class="eyebrow muted">APTITUDE · MODULE OVERVIEW</div><h1>行测能力</h1><p>七个模块都可直接自由刷题或开始限时模考；已完成的站内模考会同步出现在模考记录中。</p></div><a class="button button-secondary" href="#/plan">查看学习计划 →</a></div><section class="metric-grid four-metrics aptitude-overview" aria-label="行测训练总览">${metric('整体正确率', fmtPct(overall.accuracy), overall.accuracy === null ? '录入练习记录后统计' : `按 ${fmt(overall.accuracyQuestionCount)} 道有正确数依据的题量合并`, '◎', 'blue')}${metric('累计记录题量', overall.hasAttempted ? `${fmt(overall.attemptedCount)}<small> 题</small>` : '待记录', `${overall.hasManualRecordsCount} 个手动训练子项已填写`, '▤', 'mint')}${metric('站内答题正确率', fmtPct(onlineAccuracy), onlineAccuracyNote, '✓', 'amber')}${metric('已记录模块', `${modulesWithRecords}<small> / ${modules.length}</small>`, '包含手动记录和站内答题', '⌁', 'purple')}</section><section class="aptitude-module-section"><div class="aptitude-section-heading"><div><span class="eyebrow muted">MODULES</span><h2>行测模块</h2></div><span>${modules.length} 个入口 · 每项提供自由练习与限时模考</span></div><div class="aptitude-entry-grid">${cards}</div></section><div class="notice notice-soft"><span>ⓘ</span><p>各模块按站内作答与本模块手动记录合并正确率。手动题量请填写站外训练，避免把同一站内作答重复计入。</p></div></div>`;
+  return `<div class="page-body aptitude-page"><div class="page-heading-row"><div><div class="eyebrow muted">APTITUDE · MODULE OVERVIEW</div><h1>行测能力</h1><p>七个模块共用学习与计划架构；题库已接入的模块可开练，其他模块显示待接入状态。</p></div><a class="button button-secondary" href="#/plan">查看学习计划 →</a></div><section class="metric-grid four-metrics aptitude-overview" aria-label="行测训练总览">${metric('整体正确率', fmtPct(overall.accuracy), overall.accuracy === null ? '录入练习记录后统计' : `按 ${fmt(overall.accuracyQuestionCount)} 道有正确数依据的题量合并`, '◎', 'blue')}${metric('累计记录题量', overall.hasAttempted ? `${fmt(overall.attemptedCount)}<small> 题</small>` : '待记录', `${overall.hasManualRecordsCount} 个手动训练子项已填写`, '▤', 'mint')}${metric('站内答题正确率', fmtPct(onlineAccuracy), onlineAccuracyNote, '✓', 'amber')}${metric('已记录模块', `${modulesWithRecords}<small> / ${modules.length}</small>`, '包含手动记录和站内答题', '⌁', 'purple')}</section><section class="aptitude-module-section"><div class="aptitude-section-heading"><div><span class="eyebrow muted">MODULES</span><h2>行测模块</h2></div><span>${modules.length} 个入口 · 按题库状态启用练习</span></div><div class="aptitude-entry-grid">${cards}</div></section><div class="notice notice-soft"><span>ⓘ</span><p>各模块按站内作答与本模块手动记录合并正确率。手动题量请填写站外训练，避免把同一站内作答重复计入。</p></div></div>`;
 }
 
 function getAptitudeModuleOnlineStats(module) {
   if (module.id === 'science') return getScienceStats(storage.scienceStudy);
   if (module.id === 'general-knowledge') return getGeneralKnowledgeStats(storage.generalKnowledgeStudy, GENERAL_KNOWLEDGE_QUESTION_BANK);
   return getAptitudeModuleStats(module.id, storage.aptitudeModuleStudies[module.id]);
+}
+
+function getAptitudeModuleSessionQuestionBank(moduleId, sessionId) {
+  const session = storage.aptitudeModuleStudies[moduleId]?.sessions.find((item) => item.id === sessionId && item.moduleId === moduleId);
+  return getAptitudeSessionQuestions(moduleId, session?.questionIds || []);
 }
 
 function summarizeAptitudeItems(items) {
@@ -905,7 +910,7 @@ function renderAptitudeModuleContent(module, content, questionCount, study, task
 }
 
 function renderAptitudeModuleSession(module, session, study) {
-  const bank = getAptitudeQuestions(module.id);
+  const bank = getAptitudeSessionQuestions(module.id, session.questionIds);
   const questionById = new Map(bank.map((question) => [question.id, question]));
   const questions = session.questionIds.map((id) => questionById.get(id)).filter(Boolean);
   const answers = study.answers.filter((answer) => answer.moduleId === module.id && answer.sessionId === session.id);
@@ -2108,7 +2113,7 @@ function startAptitudeModuleExamClock() {
     const clock = document.querySelector('#aptitude-module-exam-countdown');
     if (clock) clock.textContent = `${String(Math.floor(remainingSeconds / 60)).padStart(2, '0')}:${String(remainingSeconds % 60).padStart(2, '0')}`;
     if (remainingSeconds <= 0) {
-      storage.aptitudeModuleStudies = finishAptitudeModuleSession(getAptitudeQuestions(module.id), storage.aptitudeModuleStudies, module.id, session.id, { status: 'timed_out' });
+      storage.aptitudeModuleStudies = finishAptitudeModuleSession(getAptitudeSessionQuestions(module.id, session.questionIds), storage.aptitudeModuleStudies, module.id, session.id, { status: 'timed_out' });
       const expired = storage.aptitudeModuleStudies[module.id].sessions.find((item) => item.id === session.id);
       syncAptitudeModulePlanTaskCompletion(expired);
       await persistAndRender('行测模拟到时，已保存已选答案');
@@ -2387,7 +2392,7 @@ document.addEventListener('click', async (event) => {
     const module = APTITUDE_MODULES.find((item) => item.id === moduleId);
     if (!module) { notify('找不到这条行测模块。'); return; }
     try {
-      storage.aptitudeModuleStudies = answerAptitudeModuleQuestion(getAptitudeQuestions(moduleId), storage.aptitudeModuleStudies, moduleId, actionEl.dataset.sessionId, actionEl.dataset.optionId);
+      storage.aptitudeModuleStudies = answerAptitudeModuleQuestion(getAptitudeModuleSessionQuestionBank(moduleId, actionEl.dataset.sessionId), storage.aptitudeModuleStudies, moduleId, actionEl.dataset.sessionId, actionEl.dataset.optionId);
       await persistAndRender('答案已加密保存');
     } catch (error) { notify(error.message); }
   }
@@ -2396,7 +2401,7 @@ document.addEventListener('click', async (event) => {
     const module = APTITUDE_MODULES.find((item) => item.id === moduleId);
     if (!module) { notify('找不到这条行测模块。'); return; }
     try {
-      storage.aptitudeModuleStudies = continueAptitudeModuleSession(getAptitudeQuestions(moduleId), storage.aptitudeModuleStudies, moduleId, actionEl.dataset.sessionId);
+      storage.aptitudeModuleStudies = continueAptitudeModuleSession(getAptitudeModuleSessionQuestionBank(moduleId, actionEl.dataset.sessionId), storage.aptitudeModuleStudies, moduleId, actionEl.dataset.sessionId);
       const session = storage.aptitudeModuleStudies[moduleId].sessions.find((item) => item.id === actionEl.dataset.sessionId);
       const complete = syncAptitudeModulePlanTaskCompletion(session);
       await persistAndRender(session?.status === 'completed' ? complete ? '训练完成；学习计划已核验完成' : '训练完成；计划目标尚未满足' : '已保存答题进度');
@@ -2407,7 +2412,7 @@ document.addEventListener('click', async (event) => {
     const module = APTITUDE_MODULES.find((item) => item.id === moduleId);
     if (!module) { notify('找不到这条行测模块。'); return; }
     try {
-      storage.aptitudeModuleStudies = selectAptitudeModuleAnswer(getAptitudeQuestions(moduleId), storage.aptitudeModuleStudies, moduleId, actionEl.dataset.sessionId, actionEl.dataset.optionId);
+      storage.aptitudeModuleStudies = selectAptitudeModuleAnswer(getAptitudeModuleSessionQuestionBank(moduleId, actionEl.dataset.sessionId), storage.aptitudeModuleStudies, moduleId, actionEl.dataset.sessionId, actionEl.dataset.optionId);
       await persistAndRender('选项已保存，可在交卷前修改');
     } catch (error) { notify(error.message); }
   }
@@ -2427,7 +2432,7 @@ document.addEventListener('click', async (event) => {
     const unanswered = active.questionIds.length - Object.keys(active.draftAnswers || {}).length;
     if (unanswered && !window.confirm(`还有 ${unanswered} 题未作答，仍要交卷吗？`)) return;
     try {
-      storage.aptitudeModuleStudies = finishAptitudeModuleSession(getAptitudeQuestions(moduleId), storage.aptitudeModuleStudies, moduleId, active.id);
+      storage.aptitudeModuleStudies = finishAptitudeModuleSession(getAptitudeModuleSessionQuestionBank(moduleId, active.id), storage.aptitudeModuleStudies, moduleId, active.id);
       const finished = storage.aptitudeModuleStudies[moduleId].sessions.find((item) => item.id === active.id);
       const complete = syncAptitudeModulePlanTaskCompletion(finished);
       await persistAndRender(complete ? '交卷完成；学习计划已核验完成' : '交卷完成；未答题不计入计划完成量');

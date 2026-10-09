@@ -43,15 +43,16 @@ test('practice answers, feedback, mistakes, and completion stay in the selected 
   assert.deepEqual(completed.reasoning.answers, []);
 });
 
-test('each connected general aptitude question bank starts a real module session', () => {
+test('empty published aptitude providers cannot create sessions or progress', () => {
+  const before = normalizeAptitudeModuleStudies();
   for (const moduleId of ['political-theory', 'verbal', 'quantitative', 'reasoning', 'data-analysis']) {
     const bank = getAptitudeQuestions(moduleId);
-    const started = createAptitudeModuleSession(bank, normalizeAptitudeModuleStudies(), moduleId, {
+    assert.deepEqual(bank, []);
+    assert.throws(() => createAptitudeModuleSession(bank, before, moduleId, {
       mode: 'practice', targetQuestionCount: 1,
-    }, { id: `${moduleId}-smoke-session`, now: '2026-10-09T00:00:00.000Z' });
-    assert.equal(started.session.moduleId, moduleId);
-    assert.equal(started.session.questionIds.length, 1);
-    assert.equal(started.aptitudeModuleStudies[moduleId].sessions.length, 1);
+    }, { id: `${moduleId}-empty-session`, now: '2026-10-09T00:00:00.000Z' }), /0 道/);
+    assert.deepEqual(before[moduleId].sessions, []);
+    assert.deepEqual(before[moduleId].answers, []);
   }
 });
 

@@ -157,7 +157,7 @@ test('standalone site executes and renders the homepage from its embedded app mo
   }
 });
 
-test('standalone aptitude routes render playable modules and preserve dedicated routes', async () => {
+test('standalone aptitude routes preserve dedicated pages and show empty-provider states', async () => {
   await import('../scripts/build.mjs');
   const html = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8');
   const script = html.match(/<script>\s*([\s\S]*?)<\/script>/)?.[1];
@@ -168,10 +168,9 @@ test('standalone aptitude routes render playable modules and preserve dedicated 
   const generalKnowledgePage = (await renderStandaloneRoute(script, 'aptitude/general-knowledge', storedState)).root.innerHTML;
 
   assert.match(modulePage, /<h1>言语<\/h1>/);
-  assert.match(modulePage, /当前有 13 道已发布题目/);
-  assert.match(modulePage, /data-action="start-aptitude-module-session" data-mode="practice"/);
-  assert.match(modulePage, /data-action="start-aptitude-module-session" data-mode="exam"/);
-  assert.doesNotMatch(modulePage, /data-mode="practice"[^>]*disabled/);
+  assert.match(modulePage, /题库待接入/);
+  assert.match(modulePage, /disabled aria-disabled="true" title="题库待接入">开始练习<\/button>/);
+  assert.match(modulePage, /disabled aria-disabled="true" title="题库待接入">限时模拟<\/button>/);
   assert.match(modulePage, /错题与收藏/);
   assert.match(modulePage, /MANUAL PRACTICE LOG/);
   assert.match(modulePage, /安排学习任务/);
@@ -181,54 +180,21 @@ test('standalone aptitude routes render playable modules and preserve dedicated 
   assert.match(generalKnowledgePage, /常识判断知识点目录|法律/);
 });
 
-test('homepage practice action opens a real module session on the correct route', async () => {
+test('homepage keeps module launch controls but disables modules without published questions', async () => {
   await import('../scripts/build.mjs');
   const html = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8');
   const script = html.match(/<script>\s*([\s\S]*?)<\/script>/)?.[1];
   const app = await renderStandaloneRoute(script, 'aptitude', { onboarding: { hidden: true, completed: true } });
 
-  for (const moduleId of ['political-theory', 'general-knowledge', 'verbal', 'quantitative', 'reasoning', 'science', 'data-analysis']) {
-    assert.match(app.root.innerHTML, new RegExp(`data-module-id="${moduleId}" data-mode="practice"`));
-    assert.match(app.root.innerHTML, new RegExp(`data-module-id="${moduleId}" data-mode="exam"`));
+  for (const moduleId of ['political-theory', 'verbal', 'quantitative', 'reasoning', 'data-analysis']) {
+    assert.match(app.root.innerHTML, new RegExp(`data-module-id="${moduleId}" data-mode="practice"[^>]*disabled`));
+    assert.match(app.root.innerHTML, new RegExp(`data-module-id="${moduleId}" data-mode="exam"[^>]*disabled`));
   }
-
-  const action = { dataset: { action: 'start-aptitude-module-session', moduleId: 'verbal', mode: 'practice' } };
-  await app.listeners.get('click')({
-    target: { closest(selector) { return selector === '[data-action]' ? action : null; } },
-    preventDefault() {},
-  });
-  assert.match(app.location.hash, /^#\/aptitude\/verbal\?session=/);
-  app.windowListeners.get('hashchange')();
-  assert.match(app.root.innerHTML, /<h1>专项练习<\/h1>/);
-  assert.match(app.root.innerHTML, /第 1\/10 题/);
-  assert.match(app.root.innerHTML, /data-action="answer-aptitude-module-question"/);
-
-  app.location.hash = '#/aptitude';
-  app.windowListeners.get('hashchange')();
-  const examAction = { dataset: { action: 'start-aptitude-module-session', moduleId: 'reasoning', mode: 'exam' } };
-  await app.listeners.get('click')({
-    target: { closest(selector) { return selector === '[data-action]' ? examAction : null; } },
-    preventDefault() {},
-  });
-  const sessionId = app.location.hash.match(/session=([^&]+)/)?.[1];
-  assert.ok(sessionId);
-  assert.equal(app.location.hash.startsWith('#/aptitude/reasoning?session='), true);
-  app.windowListeners.get('hashchange')();
-  assert.match(app.root.innerHTML, /TIMED MOCK · 判断推理/);
-
-  const finishSessionId = app.root.innerHTML.match(/data-action="finish-aptitude-module-exam"[^>]*data-session-id="([^"]+)"/)?.[1];
-  assert.equal(finishSessionId, sessionId);
-  const finishAction = { dataset: { action: 'finish-aptitude-module-exam', moduleId: 'reasoning', sessionId } };
-  await app.listeners.get('click')({
-    target: { closest(selector) { return selector === '[data-action]' ? finishAction : null; } },
-    preventDefault() {},
-  });
-  assert.match(app.root.innerHTML, /模拟已交卷/);
-
-  app.location.hash = '#/mocks';
-  app.windowListeners.get('hashchange')();
-  assert.ok(app.root.innerHTML.includes(`href="#/aptitude/reasoning?session=${sessionId}"`));
-  assert.match(app.root.innerHTML, /0\/10 题答对 · 已答 0 题/);
+  for (const [moduleId, actionName] of [['science', 'open-science-practice'], ['general-knowledge', 'open-general-knowledge-practice']]) {
+    const launchButton = app.root.innerHTML.match(new RegExp(`<button[^>]*data-action="${actionName}"[^>]*data-module-id="${moduleId}"[^>]*data-mode="practice"[^>]*>`))?.[0];
+    assert.ok(launchButton, `${moduleId} should have a direct practice entry`);
+    assert.doesNotMatch(launchButton, /disabled/);
+  }
 });
 
 test('completed in-app mock history links back to question review', async () => {
@@ -240,8 +206,8 @@ test('completed in-app mock history links back to question review', async () => 
     aptitudeModuleStudies: {
       reasoning: {
         moduleId: 'reasoning', knowledgeProgress: {},
-        sessions: [{ id: 'reasoning-exam-done', moduleId: 'reasoning', mode: 'exam', status: 'completed', questionIds: ['reasoning-q01', 'reasoning-q02'], completedAt: '2026-10-09T09:00:00.000Z' }],
-        answers: [{ id: 'answer-1', moduleId: 'reasoning', sessionId: 'reasoning-exam-done', questionId: 'reasoning-q01', isCorrect: true }],
+        sessions: [{ id: 'reasoning-exam-done', moduleId: 'reasoning', mode: 'exam', status: 'completed', questionIds: ['apt-reasoning-001', 'apt-reasoning-002'], completedAt: '2026-10-09T09:00:00.000Z' }],
+        answers: [{ id: 'answer-1', moduleId: 'reasoning', sessionId: 'reasoning-exam-done', questionId: 'apt-reasoning-001', isCorrect: true }],
         mistakes: {}, favorites: [], favoriteKnowledgePointIds: [], unclearKnowledgePointIds: [],
       },
     },
@@ -250,6 +216,19 @@ test('completed in-app mock history links back to question review', async () => 
   assert.match(app.root.innerHTML, /站内行测模考记录/);
   assert.match(app.root.innerHTML, /href="#\/aptitude\/reasoning\?session=reasoning-exam-done"/);
   assert.match(app.root.innerHTML, /1\/2 题答对 · 已答 1 题/);
+  const review = await renderStandaloneRoute(script, 'aptitude/reasoning?session=reasoning-exam-done', {
+    onboarding: { hidden: true, completed: true },
+    aptitudeModuleStudies: {
+      reasoning: {
+        moduleId: 'reasoning', knowledgeProgress: {},
+        sessions: [{ id: 'reasoning-exam-done', moduleId: 'reasoning', mode: 'exam', status: 'completed', questionIds: ['apt-reasoning-001', 'apt-reasoning-002'], completedAt: '2026-10-09T09:00:00.000Z' }],
+        answers: [{ id: 'answer-1', moduleId: 'reasoning', sessionId: 'reasoning-exam-done', questionId: 'apt-reasoning-001', isCorrect: true }],
+        mistakes: {}, favorites: [], favoriteKnowledgePointIds: [], unclearKnowledgePointIds: [],
+      },
+    },
+  });
+  assert.match(review.root.innerHTML, /必然能推出的是/);
+  assert.match(review.root.innerHTML, /正确答案 C/);
 });
 
 test('module cards and pages combine module-only site answers with manual training logs', async () => {

@@ -20,12 +20,12 @@ test('new and legacy module routes resolve to the shared or existing dedicated p
   assert.equal(resolveAptitudeModuleRoute('aptitude'), null);
 });
 
-test('all five general modules retain empty optional lessons and connect their question banks', () => {
+test('all five general modules retain empty optional lessons and empty reserved question banks', () => {
   const emptyModules = APTITUDE_MODULES.filter((module) => module.studyStore === 'aptitudeModuleStudies');
   assert.equal(emptyModules.length, 5);
   for (const module of emptyModules) {
     assert.deepEqual(getAptitudeModuleContent(module.id), { directory: [], lessons: {} });
-    assert.ok(getAptitudeQuestions(module.id).length > 0, `${module.id} should connect its question bank`);
+    assert.deepEqual(getAptitudeQuestions(module.id), [], `${module.id} should expose an empty question provider`);
   }
   assert.ok(getAptitudeModuleContent('science').directory.length > 0);
   assert.ok(getAptitudeModuleContent('general-knowledge').directory.length > 0);
@@ -65,7 +65,7 @@ test('overview and shared module page use registry routes and expose all learnin
   assert.match(app, /data-section="aptitude-module-plan"/);
 });
 
-test('the overview provides practice and timed-mock launch actions for all registered modules', () => {
+test('the overview reserves launch actions and disables modules with empty question banks', () => {
   assert.equal(typeof launch.getAptitudeModuleLaunchAction, 'function');
   assert.equal(typeof launch.renderAptitudeModuleLaunchButtons, 'function');
   for (const module of APTITUDE_MODULES) {
@@ -78,6 +78,8 @@ test('the overview provides practice and timed-mock launch actions for all regis
     assert.match(buttons, /模考刷题/);
     assert.match(buttons, /data-mode="practice"/);
     assert.match(buttons, /data-mode="exam"/);
+    const expectedUnavailable = ['political-theory', 'verbal', 'quantitative', 'reasoning', 'data-analysis'].includes(module.id);
+    assert.equal(/disabled aria-disabled="true"/.test(buttons), expectedUnavailable, `${module.id} launch availability should follow its question provider`);
   }
   assert.deepEqual(launch.getAptitudeModuleLaunchAction('science', 'exam'), {
     action: 'open-science-practice', moduleId: 'science', mode: 'exam',
