@@ -1,4 +1,4 @@
-source_id,source_type,organization,title_or_scope,url,access_status,verified_scope
+﻿source_id,source_type,organization,title_or_scope,url,access_status,verified_scope
 bj-official-2026-announcement,official_announcement,北京市人民政府,2026 年度招考公告：确认行测考试为 2025-12-07 上午；公告未提供真题题面,https://www.beijing.gov.cn/gongkai/rsxx/gwyzk/202511/t20251110_4267508.html,public,exam_schedule_only
 bj-official-2025-reference,official_announcement,北京市人民政府,2025 年度京考参考提示：核对 2024-12-08 考试日期,https://www.beijing.gov.cn/fuwu/bmfw/sy/jrts/202411/t20241120_3946064.html,public,exam_schedule_only
 bj-official-2026-outline,official_outline,北京市公务员局 / 北京市人民政府,2026 年公共科目笔试大纲及官方例题,https://www.beijing.gov.cn/gongkai/rsxx/gwyzk/202511/P020251110416492086501.pdf,public,outline_example_not_exam_paper
@@ -40,3 +40,4 @@ aipta-beijing-2022,third_party_exam_recall,Aipta,2022 北京行测题面页，�
 xingguang-beijing-2022-recall,third_party_exam_recall_pdf,星光公考,2022 北京行测考生回忆版 PDF，25 页,https://upload.xingguanggongkao.com/pdf/2022%E5%B9%B4%E5%8C%97%E4%BA%AC%E5%B8%82%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.pdf?time=1733729967,public,recall_pdf_title_and_25_page_file; item_text_assets_and_answers_not_audited
 anhui-2026-outline,official_outline_example,安徽省人力资源和社会保障厅 / 淮南市人力资源和社会保障局,安徽省2026年度公务员笔试考试大纲公开例题,https://rsj.huainan.gov.cn/group4/M00/11/14/rB40qWlooVmAFWHRAA3nByKSHRA495.pdf?attachDownload=1,official_pdf_verified,13 text-accessible cross-module examples; figure-based reasoning example held
 zhejiang-2025a-recall,third_party_exam_recall,公开真题库 / 考生回忆资料,2025年浙江省公务员考试行测A类回忆版及答案,https://gwy.gkzhenti.cn/paper/1739531137130,paper_and_answer_pages_verified,18 summarized items published after answer-key check; Q12 map and full paper held
+lasee-beijing-2023-answer,third_party_answer_key,拉西学习资源站（页面标注答案整理来源为1mi.xyz）,2023 北京行测答案与逐题解析；覆盖常识第1–14、16题答案核对,https://lasee.net/gongwuyuan/167886579811619.html,public_answer_key,answer_key_and_explanations_for_questions_1_to_14_and_16

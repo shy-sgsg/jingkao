@@ -230,4 +230,11 @@ export const GENERAL_KNOWLEDGE_SOURCES = [
     url: 'https://www.beijing.gov.cn/zhengce/zhengcefagui/202206/t20220621_2747230.html', verificationStatus: 'verified', publishStatus: 'published',
     copyrightStatus: '政策规则概述并链接原文', note: '条例区分政党协商与人民政协政治协商，并列明两类协商的对象。',
   },
+  {
+    id: 'beijing-2023-recall', sourceType: 'recalled', title: '2023年北京市公务员录用考试《行测》真题（考生回忆版）',
+    organization: '星光公考（题面回忆整理）；拉西学习资源站（答案解析，标注来源为1mi.xyz）', examYear: 2023, region: '北京',
+    url: 'https://upload.xingguanggongkao.com/pdf/2023%E5%B9%B4%E5%8C%97%E4%BA%AC%E5%B8%82%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.pdf?time=1733730281',
+    answerUrl: 'https://lasee.net/gongwuyuan/167886579811619.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: 'adapted_public_source', note: '题面与答案分别由公开回忆 PDF 和答案解析页核验；本站仅发布题意改述的常识第1–14、16题。第15题缺失，整卷有缺题且非官方原卷。',
+  },
 ];
