@@ -5,6 +5,7 @@ import { APTITUDE_MODULES, resolveAptitudeModuleRoute } from '../src/aptitude/mo
 import { getAptitudeModuleContent } from '../src/aptitude/content.js';
 import { getAptitudeQuestions } from '../src/aptitude/questions.js';
 import { getAptitudeModuleStats } from '../src/aptitude/analytics.js';
+const launch = await import('../src/aptitude/launch.js').catch(() => ({}));
 
 const app = await readFile(new URL('../src/app.js', import.meta.url), 'utf8');
 
@@ -19,12 +20,12 @@ test('new and legacy module routes resolve to the shared or existing dedicated p
   assert.equal(resolveAptitudeModuleRoute('aptitude'), null);
 });
 
-test('five new content providers stay empty while existing science and general knowledge adapters remain connected', () => {
+test('all five general modules retain empty optional lessons and connect their question banks', () => {
   const emptyModules = APTITUDE_MODULES.filter((module) => module.studyStore === 'aptitudeModuleStudies');
   assert.equal(emptyModules.length, 5);
   for (const module of emptyModules) {
     assert.deepEqual(getAptitudeModuleContent(module.id), { directory: [], lessons: {} });
-    assert.deepEqual(getAptitudeQuestions(module.id), []);
+    assert.ok(getAptitudeQuestions(module.id).length > 0, `${module.id} should connect its question bank`);
   }
   assert.ok(getAptitudeModuleContent('science').directory.length > 0);
   assert.ok(getAptitudeModuleContent('general-knowledge').directory.length > 0);
@@ -60,12 +61,33 @@ test('overview and shared module page use registry routes and expose all learnin
   assert.match(app, /题库待接入/);
   assert.match(app, /知识目录待接入/);
   assert.match(app, /错题与收藏/);
-  assert.match(app, /站内作答与手动记录合并/);
+  assert.match(app, /站内作答与手动记录/);
   assert.match(app, /data-section="aptitude-module-plan"/);
 });
 
-test('an empty module shows disabled practice and mock controls without start actions', () => {
-  assert.match(app, /button[^>]*disabled[^>]*题库待接入|button[^>]*disabled[^>]*aria-disabled="true"/);
-  assert.match(app, /当前模块没有已发布题目/);
-  assert.match(app, /getAptitudeQuestions\(module\.id\)/);
+test('the overview provides practice and timed-mock launch actions for all registered modules', () => {
+  assert.equal(typeof launch.getAptitudeModuleLaunchAction, 'function');
+  assert.equal(typeof launch.renderAptitudeModuleLaunchButtons, 'function');
+  for (const module of APTITUDE_MODULES) {
+    const practice = launch.getAptitudeModuleLaunchAction(module.id, 'practice');
+    const exam = launch.getAptitudeModuleLaunchAction(module.id, 'exam');
+    const buttons = launch.renderAptitudeModuleLaunchButtons(module.id);
+    assert.equal(practice.mode, 'practice');
+    assert.equal(exam.mode, 'exam');
+    assert.match(buttons, /自由刷题/);
+    assert.match(buttons, /模考刷题/);
+    assert.match(buttons, /data-mode="practice"/);
+    assert.match(buttons, /data-mode="exam"/);
+  }
+  assert.deepEqual(launch.getAptitudeModuleLaunchAction('science', 'exam'), {
+    action: 'open-science-practice', moduleId: 'science', mode: 'exam',
+  });
+  assert.deepEqual(launch.getAptitudeModuleLaunchAction('general-knowledge', 'practice'), {
+    action: 'open-general-knowledge-practice', moduleId: 'general-knowledge', mode: 'practice',
+  });
+  assert.deepEqual(launch.getAptitudeModuleLaunchAction('verbal', 'practice'), {
+    action: 'start-aptitude-module-session', moduleId: 'verbal', mode: 'practice',
+  });
+  assert.throws(() => launch.getAptitudeModuleLaunchAction('unknown', 'practice'), /module/i);
+  assert.throws(() => launch.getAptitudeModuleLaunchAction('verbal', 'knowledge'), /启动方式/);
 });

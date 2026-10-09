@@ -26,11 +26,12 @@ import { createGeneralKnowledgeSession, answerGeneralKnowledgeQuestion, continue
 import { getGeneralKnowledgeTaskProgress, reconcileGeneralKnowledgePlanTaskProgress } from './general-knowledge/planTasks.js';
 import { APTITUDE_MODULES, getAptitudeMockModules, resolveAptitudeModuleRoute } from './aptitude/modules.js';
 import { getAptitudeModuleContent } from './aptitude/content.js';
-import { getAptitudeModuleStats } from './aptitude/analytics.js';
+import { getAptitudeMockSessionRecords, getAptitudeModuleStats } from './aptitude/analytics.js';
 import { getAptitudeQuestions } from './aptitude/questions.js';
 import { getAptitudeModuleForTaskType, getAptitudeModuleTaskProgress, reconcileAptitudeModuleTaskProgress } from './aptitude/planTasks.js';
 import { answerAptitudeModuleQuestion, continueAptitudeModuleSession, createAptitudeModuleSession, finishAptitudeModuleSession, goToAptitudeModuleQuestion, selectAptitudeModuleAnswer } from './aptitude/sessions.js';
 import { toggleAptitudeModuleFavorite } from './aptitude/persistence.js';
+import { renderAptitudeModuleLaunchButtons } from './aptitude/launch.js';
 import { renderEligibilityChecks } from './ui/eligibility.js';
 import { renderScoreBreakdown } from './ui/scoreBreakdown.js';
 
@@ -826,7 +827,7 @@ function renderAptitude() {
   const cards = modules.map((module) => {
     const manualSummary = summarizeAptitudeItems(module.items);
     const summary = combineAptitudeSummary(manualSummary, onlineStatsByModule.get(module.id));
-    return `<a class="panel aptitude-entry-card" href="${escapeHtml(module.route)}"><span class="aptitude-entry-icon module-${module.id}">${escapeHtml(module.symbol)}</span><span class="aptitude-entry-copy"><strong>${escapeHtml(module.area)}</strong><small>${escapeHtml(module.hint)}</small></span><span class="aptitude-entry-stat aptitude-entry-accuracy"><strong>${fmtPct(summary.accuracy)}</strong><small>合并正确率</small></span><span class="aptitude-entry-stat aptitude-entry-attempts"><strong>${summary.hasAttempted ? fmt(summary.attemptedCount) : '待记录'}</strong><small>累计题量</small></span><b aria-hidden="true">↗</b></a>`;
+    return `<article class="panel aptitude-entry-card"><a class="aptitude-entry-icon module-${module.id}" href="${escapeHtml(module.route)}" aria-label="进入${escapeHtml(module.area)}">${escapeHtml(module.symbol)}</a><a class="aptitude-entry-copy" href="${escapeHtml(module.route)}"><strong>${escapeHtml(module.area)}</strong><small>${escapeHtml(module.hint)}</small></a><span class="aptitude-entry-stat aptitude-entry-accuracy"><strong>${fmtPct(summary.accuracy)}</strong><small>合并正确率</small></span><span class="aptitude-entry-stat aptitude-entry-attempts"><strong>${summary.hasAttempted ? fmt(summary.attemptedCount) : '待记录'}</strong><small>累计题量</small></span><a class="aptitude-entry-arrow" href="${escapeHtml(module.route)}" aria-label="查看${escapeHtml(module.area)}">↗</a>${renderAptitudeModuleLaunchButtons(module.id)}</article>`;
   }).join('');
   const onlineAttempted = onlineStats.reduce((sum, stats) => sum + stats.attemptedCount, 0);
   const onlineCorrect = onlineStats.reduce((sum, stats) => sum + stats.correctCount, 0);
@@ -834,7 +835,7 @@ function renderAptitude() {
   const onlineAccuracyNote = onlineAttempted
     ? `七个行测模块站内共答 ${onlineAttempted} 题 · ${onlineCorrect} 题答对`
     : '七个行测模块尚无站内答题记录';
-  return `<div class="page-body aptitude-page"><div class="page-heading-row"><div><div class="eyebrow muted">APTITUDE · MODULE OVERVIEW</div><h1>行测能力</h1><p>站内作答与手动记录合并汇总；从模块卡片继续学习、练习或查看计划。</p></div><a class="button button-secondary" href="#/plan">查看学习计划 →</a></div><section class="metric-grid four-metrics aptitude-overview" aria-label="行测训练总览">${metric('整体正确率', fmtPct(overall.accuracy), overall.accuracy === null ? '录入练习记录后统计' : `按 ${fmt(overall.accuracyQuestionCount)} 道有正确数依据的题量合并`, '◎', 'blue')}${metric('累计记录题量', overall.hasAttempted ? `${fmt(overall.attemptedCount)}<small> 题</small>` : '待记录', `${overall.hasManualRecordsCount} 个手动训练子项已填写`, '▤', 'mint')}${metric('站内答题正确率', fmtPct(onlineAccuracy), onlineAccuracyNote, '✓', 'amber')}${metric('已记录模块', `${modulesWithRecords}<small> / ${modules.length}</small>`, '包含手动记录和站内答题', '⌁', 'purple')}</section><section class="aptitude-module-section"><div class="aptitude-section-heading"><div><span class="eyebrow muted">MODULES</span><h2>行测模块</h2></div><span>${modules.length} 个入口</span></div><div class="aptitude-entry-grid">${cards}</div></section><div class="notice notice-soft"><span>ⓘ</span><p>各模块按站内作答与本模块手动记录合并正确率。手动题量请填写站外训练，避免把同一站内作答重复计入。</p></div></div>`;
+  return `<div class="page-body aptitude-page"><div class="page-heading-row"><div><div class="eyebrow muted">APTITUDE · MODULE OVERVIEW</div><h1>行测能力</h1><p>七个模块都可直接自由刷题或开始限时模考；已完成的站内模考会同步出现在模考记录中。</p></div><a class="button button-secondary" href="#/plan">查看学习计划 →</a></div><section class="metric-grid four-metrics aptitude-overview" aria-label="行测训练总览">${metric('整体正确率', fmtPct(overall.accuracy), overall.accuracy === null ? '录入练习记录后统计' : `按 ${fmt(overall.accuracyQuestionCount)} 道有正确数依据的题量合并`, '◎', 'blue')}${metric('累计记录题量', overall.hasAttempted ? `${fmt(overall.attemptedCount)}<small> 题</small>` : '待记录', `${overall.hasManualRecordsCount} 个手动训练子项已填写`, '▤', 'mint')}${metric('站内答题正确率', fmtPct(onlineAccuracy), onlineAccuracyNote, '✓', 'amber')}${metric('已记录模块', `${modulesWithRecords}<small> / ${modules.length}</small>`, '包含手动记录和站内答题', '⌁', 'purple')}</section><section class="aptitude-module-section"><div class="aptitude-section-heading"><div><span class="eyebrow muted">MODULES</span><h2>行测模块</h2></div><span>${modules.length} 个入口 · 每项提供自由练习与限时模考</span></div><div class="aptitude-entry-grid">${cards}</div></section><div class="notice notice-soft"><span>ⓘ</span><p>各模块按站内作答与本模块手动记录合并正确率。手动题量请填写站外训练，避免把同一站内作答重复计入。</p></div></div>`;
 }
 
 function getAptitudeModuleOnlineStats(module) {
@@ -1127,6 +1128,7 @@ function renderMocks() {
   const summary = summarizeMockScores(mocks);
   const margin = calculateSafeMargin(mocks, null);
   const moduleSummary = renderMockModuleSummary(mocks);
+  const aptitudeSessionHistory = renderAptitudeMockSessionHistory();
   const historyStats = [
     ['全部模考中位数', Number.isFinite(summary.median) ? `${fmt(summary.median, 1)} 分` : '待记录', `有效样本 ${summary.count} 次`],
     ['历史最低分', Number.isFinite(summary.minimum) ? `${fmt(summary.minimum, 1)} 分` : '待记录', '所有有效模考'],
@@ -1135,7 +1137,13 @@ function renderMocks() {
     ['最近 5 次均分', Number.isFinite(summary.last5Mean) ? `${fmt(summary.last5Mean, 1)} 分` : '不足数据', `${Math.min(summary.count, 5)} / 5 次有效`],
   ].map(([label, value, note]) => `<article class="mock-history-stat"><span>${escapeHtml(label)}</span><strong>${escapeHtml(value)}</strong><small>${escapeHtml(note)}</small></article>`).join('');
   const rows = [...mocks].reverse().map((mock) => `<tr><td>${escapeHtml(mock.date || '日期待定')}</td><td>${fmt(mock.aptitude, 1)}</td><td>${fmt(mock.essay, 1)}</td><td><strong>${fmt(mock.total, 1)}</strong></td><td>${fmt(mock.target)}</td><td>${Number.isFinite(mock.total) ? `${mock.total >= (mock.target || 138) ? '达成' : `差 ${fmt(mock.total - (mock.target || 138), 1)}`}` : '—'}</td></tr>`).join('');
-  return `<div class="page-body"><div class="page-heading-row"><div><div class="eyebrow muted">MOCK EXAM REVIEW</div><h1>模考记录与复盘</h1><p>工作簿有 12 个预留模考位；此处统计只依据你录入的真实成绩。</p></div>${button('＋ 录入一次模考', 'add-mock', 'button button-primary')}</div><div class="metric-grid four-metrics">${metric('有效模考', `${summary.count}<small> / 12</small>`, '只计有实际总分的记录', '◉', 'blue')}${metric('全部模考均分', Number.isFinite(summary.mean) ? `${fmt(summary.mean, 1)}<small> 分</small>` : '待记录', `有效样本 ${summary.count} 次`, '↗', 'mint')}${metric('分数标准差', Number.isFinite(summary.standardDeviation) ? `±${fmt(summary.standardDeviation, 1)}<small> 分</small>` : '至少 2 次', '描述已记录成绩的离散程度', '⌁', 'amber')}${metric('岗位安全垫', '暂不可算', margin.status, '▣', 'purple')}</div><section class="mock-history-strip" aria-label="模考分布与近期均分">${historyStats}</section><div class="panel chart-panel large-chart-panel"><div class="panel-heading"><div><div class="eyebrow muted">TOTAL SCORE</div><h2>行测 + 申论总分走势</h2></div><div class="chart-legend"><span><i></i>实际模考</span><span class="target-legend">目标 138</span></div></div>${chartSvg(mocks)}<div class="target-note">目标线 138 分 · 个人目标可在每次模考中单独设置</div></div>${moduleSummary}<div class="panel table-panel"><div class="panel-heading"><div><div class="eyebrow muted">MOCK LOG</div><h2>成绩明细</h2></div><span class="panel-hint">空白模考不显示为零分</span></div>${mocks.length ? `<div class="table-scroll"><table class="data-table"><thead><tr><th>日期</th><th>行测</th><th>申论</th><th>总分</th><th>目标</th><th>目标差值</th></tr></thead><tbody>${rows}</tbody></table></div>` : `<div class="table-empty"><span>◎</span><strong>还没有模考成绩</strong><small>完成第一套后，在这里记录各科成绩、模块正确率和复盘结论。</small>${button('＋ 录入第一次模考', 'add-mock', 'button button-primary')}</div>`}</div></div>`;
+  return `<div class="page-body"><div class="page-heading-row"><div><div class="eyebrow muted">MOCK EXAM REVIEW</div><h1>模考记录与复盘</h1><p>总分统计只依据你录入的真实成绩；站内模块模考见下方记录。</p></div>${button('＋ 录入一次模考', 'add-mock', 'button button-primary')}</div><div class="metric-grid four-metrics">${metric('有效模考', `${summary.count}<small> / 12</small>`, '只计有实际总分的记录', '◉', 'blue')}${metric('全部模考均分', Number.isFinite(summary.mean) ? `${fmt(summary.mean, 1)}<small> 分</small>` : '待记录', `有效样本 ${summary.count} 次`, '↗', 'mint')}${metric('分数标准差', Number.isFinite(summary.standardDeviation) ? `±${fmt(summary.standardDeviation, 1)}<small> 分</small>` : '至少 2 次', '描述已记录成绩的离散程度', '⌁', 'amber')}${metric('岗位安全垫', '暂不可算', margin.status, '▣', 'purple')}</div><section class="mock-history-strip" aria-label="模考分布与近期均分">${historyStats}</section><div class="panel chart-panel large-chart-panel"><div class="panel-heading"><div><div class="eyebrow muted">TOTAL SCORE</div><h2>行测 + 申论总分走势</h2></div><div class="chart-legend"><span><i></i>实际模考</span><span class="target-legend">目标 138</span></div></div>${chartSvg(mocks)}<div class="target-note">目标线 138 分 · 个人目标可在每次模考中单独设置</div></div>${aptitudeSessionHistory}${moduleSummary}<div class="panel table-panel"><div class="panel-heading"><div><div class="eyebrow muted">MOCK LOG</div><h2>成绩明细</h2></div><span class="panel-hint">空白模考不显示为零分</span></div>${mocks.length ? `<div class="table-scroll"><table class="data-table"><thead><tr><th>日期</th><th>行测</th><th>申论</th><th>总分</th><th>目标</th><th>目标差值</th></tr></thead><tbody>${rows}</tbody></table></div>` : `<div class="table-empty"><span>◎</span><strong>还没有模考成绩</strong><small>完成第一套后，在这里记录各科成绩、模块正确率和复盘结论。</small>${button('＋ 录入第一次模考', 'add-mock', 'button button-primary')}</div>`}</div></div>`;
+}
+
+function renderAptitudeMockSessionHistory() {
+  const sessions = getAptitudeMockSessionRecords(storage);
+  const rows = sessions.map((session) => `<a class="aptitude-mock-session-row" href="${escapeHtml(session.href)}"><span class="aptitude-mock-session-date">${escapeHtml(session.date || '日期待定')}<small>${session.status === 'timed_out' ? '时间到' : '已交卷'}</small></span><strong>${escapeHtml(session.moduleName)}<small>${session.correctCount}/${session.questionCount} 题答对 · 已答 ${session.answeredCount} 题</small></strong><span class="aptitude-mock-session-rate">得分率 ${fmtPct(session.scoreRate)}</span><b>复盘 →</b></a>`).join('');
+  return `<section class="panel aptitude-mock-history"><div class="panel-heading"><div><div class="eyebrow muted">IN-APP APTITUDE MOCKS</div><h2>站内行测模考记录</h2><p>从行测题库完成的限时模拟；点击记录可查看逐题答案与解析。这些分项成绩不计入真实整套模考总分。</p></div><a class="panel-link" href="#/aptitude">开始行测练习 →</a></div>${rows ? `<div class="aptitude-mock-session-list">${rows}</div>` : '<div class="empty-state compact">完成任一行测模块的限时模拟后，成绩会显示在这里。</div>'}</section>`;
 }
 
 function renderMockModuleSummary(mocks) {
@@ -2370,6 +2378,7 @@ document.addEventListener('click', async (event) => {
       storage.aptitudeModuleStudies = started.aptitudeModuleStudies;
       if (task) storage.studyPlanTasks = markPlanTaskInProgress(storage.studyPlanTasks, task.id);
       await persist();
+      activeAptitudeModuleId = module.id;
       navigate('aptitudeModule', `${task ? `task=${encodeURIComponent(task.id)}&` : ''}session=${encodeURIComponent(started.session.id)}`);
     } catch (error) { notify(error.message); }
   }

@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { getAptitudeQuestions } from '../src/aptitude/questions.js';
 const persistence = await import('../src/aptitude/persistence.js').catch(() => ({}));
 const sessions = await import('../src/aptitude/sessions.js').catch(() => ({}));
 const { normalizeAptitudeModuleStudies } = persistence;
@@ -40,6 +41,18 @@ test('practice answers, feedback, mistakes, and completion stay in the selected 
   });
   assert.equal(completed.verbal.sessions[0].status, 'completed');
   assert.deepEqual(completed.reasoning.answers, []);
+});
+
+test('each connected general aptitude question bank starts a real module session', () => {
+  for (const moduleId of ['political-theory', 'verbal', 'quantitative', 'reasoning', 'data-analysis']) {
+    const bank = getAptitudeQuestions(moduleId);
+    const started = createAptitudeModuleSession(bank, normalizeAptitudeModuleStudies(), moduleId, {
+      mode: 'practice', targetQuestionCount: 1,
+    }, { id: `${moduleId}-smoke-session`, now: '2026-10-09T00:00:00.000Z' });
+    assert.equal(started.session.moduleId, moduleId);
+    assert.equal(started.session.questionIds.length, 1);
+    assert.equal(started.aptitudeModuleStudies[moduleId].sessions.length, 1);
+  }
 });
 
 test('timed mock supports answer changes, navigation, one-time submission, and module-tagged results', () => {

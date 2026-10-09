@@ -1,5 +1,13 @@
-import { getAptitudeModule } from './modules.js';
+import { APTITUDE_MODULES, getAptitudeModule } from './modules.js';
 import { normalizeAptitudeModuleStudies } from './persistence.js';
+
+function sessionsFromStore(study) {
+  return Array.isArray(study?.sessions) ? study.sessions : [];
+}
+
+function answersFromStore(study) {
+  return Array.isArray(study?.answers) ? study.answers : [];
+}
 
 export function getAptitudeModuleStats(moduleId, sourceStudy = {}) {
   const module = getAptitudeModule(moduleId);
@@ -37,4 +45,40 @@ export function getAptitudeModuleStats(moduleId, sourceStudy = {}) {
       questionCount: examQuestionCount,
     },
   };
+}
+
+export function getAptitudeMockSessionRecords({ scienceStudy = {}, generalKnowledgeStudy = {}, aptitudeModuleStudies = {} } = {}) {
+  const records = [];
+  for (const module of APTITUDE_MODULES) {
+    const study = module.studyStore === 'scienceStudy' ? scienceStudy
+      : module.studyStore === 'generalKnowledgeStudy' ? generalKnowledgeStudy
+        : aptitudeModuleStudies[module.id] || {};
+    const sessions = sessionsFromStore(study);
+    const answers = answersFromStore(study);
+    for (const session of sessions) {
+      if (session.mode !== 'exam' || !['completed', 'timed_out'].includes(session.status)) continue;
+      if (module.studyStore === 'aptitudeModuleStudies' && session.moduleId !== module.id) continue;
+      const questionCount = Array.isArray(session.questionIds) ? session.questionIds.length : 0;
+      if (questionCount === 0) continue;
+      const sessionAnswers = answers.filter((answer) => answer.sessionId === session.id
+        && (answer.moduleId === undefined || answer.moduleId === module.id));
+      const correctCount = sessionAnswers.filter((answer) => answer.isCorrect === true).length;
+      const completedAt = session.completedAt || session.submittedAt || session.startedAt || '';
+      records.push({
+        id: session.id,
+        moduleId: module.id,
+        moduleName: module.area,
+        mode: session.mode,
+        status: session.status,
+        date: String(completedAt).slice(0, 10),
+        questionCount,
+        answeredCount: sessionAnswers.length,
+        correctCount,
+        scoreRate: correctCount / questionCount,
+        answeredAccuracy: sessionAnswers.length ? correctCount / sessionAnswers.length : null,
+        href: `${module.route}?session=${encodeURIComponent(session.id)}`,
+      });
+    }
+  }
+  return records.sort((left, right) => right.date.localeCompare(left.date) || left.moduleName.localeCompare(right.moduleName, 'zh-CN'));
 }

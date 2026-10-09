@@ -300,13 +300,13 @@ button { color: inherit; }
 .aptitude-section-heading h2 { margin: 3px 0 0; color: #3d526d; font-size: var(--font-base); }
 .aptitude-section-heading > span { color: #98a3b0; font-size: var(--font-xs); }
 .aptitude-entry-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
-.aptitude-entry-card { display: grid; grid-template-areas: "icon copy accuracy attempts arrow"; grid-template-columns: 40px minmax(0, 1fr) auto auto 15px; align-items: center; gap: 12px; min-width: 0; min-height: 88px; padding: 14px; color: inherit; text-decoration: none; transition: border-color .18s ease, transform .18s ease, box-shadow .18s ease; }
+.aptitude-entry-card { display: grid; grid-template-areas: "icon copy accuracy attempts arrow" "actions actions actions actions actions"; grid-template-columns: 40px minmax(0, 1fr) auto auto 15px; align-items: center; gap: 12px; min-width: 0; min-height: 112px; padding: 14px; transition: border-color .18s ease, transform .18s ease, box-shadow .18s ease; }
 .aptitude-entry-card:hover { transform: translateY(-2px); border-color: #cad7e7; box-shadow: 0 12px 24px #233b5910; }
-.aptitude-entry-icon { display: grid; grid-area: icon; width: 40px; height: 40px; place-items: center; border-radius: 12px; background: #eef3fb; color: #5774a8; font-size: var(--font-sm); font-weight: 700; }
+.aptitude-entry-icon { display: grid; grid-area: icon; width: 40px; height: 40px; place-items: center; border-radius: 12px; background: #eef3fb; color: #5774a8; font-size: var(--font-sm); font-weight: 700; text-decoration: none; }
 .aptitude-entry-icon.module-general-knowledge, .aptitude-entry-icon.module-quantitative { background: #f3eff9; color: #8065a4; }
 .aptitude-entry-icon.module-verbal, .aptitude-entry-icon.module-data-analysis { background: #edf8f3; color: #548e78; }
 .aptitude-entry-icon.module-reasoning, .aptitude-entry-icon.module-science { background: #fff5e7; color: #aa7d3d; }
-.aptitude-entry-copy { display: grid; grid-area: copy; min-width: 0; gap: 4px; }
+.aptitude-entry-copy { display: grid; grid-area: copy; min-width: 0; gap: 4px; color: inherit; text-decoration: none; }
 .aptitude-entry-copy strong { color: #405672; font-size: var(--font-sm); }
 .aptitude-entry-copy small { overflow: hidden; color: #8b98a8; font-size: var(--font-xs); line-height: 1.5; text-overflow: ellipsis; white-space: nowrap; }
 .aptitude-entry-stat { display: grid; gap: 3px; text-align: right; white-space: nowrap; }
@@ -314,7 +314,9 @@ button { color: inherit; }
 .aptitude-entry-attempts { grid-area: attempts; }
 .aptitude-entry-stat strong { color: #526c93; font-size: var(--font-sm); font-weight: 650; }
 .aptitude-entry-stat small { color: #9aa5b1; font-size: var(--font-xs); }
-.aptitude-entry-card > b { grid-area: arrow; color: #8b9bb0; font-size: var(--font-base); }
+.aptitude-entry-arrow { grid-area: arrow; color: #8b9bb0; font-size: var(--font-base); text-decoration: none; }
+.aptitude-entry-launchers { display: flex; grid-area: actions; flex-wrap: wrap; gap: 7px; padding-top: 8px; border-top: 1px solid #f0f2f5; }
+.aptitude-entry-launchers .button { min-height: 30px; padding: 5px 10px; }
 .aptitude-module-status { flex: 0 0 auto; margin-left: auto; padding: 4px 8px; border-radius: 20px; background: #f5f3ef; color: #9a886b; font-size: 13px; }
 .aptitude-content-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 .aptitude-content-card { display: flex; min-width: 0; align-items: center; gap: 12px; padding: 17px; }
@@ -362,6 +364,14 @@ button { color: inherit; }
 .module-score-card span { color: #8090a2; font-size: var(--font-xs); }
 .module-score-card strong { color: #536f9b; font-size: var(--font-sm); }
 .module-score-card small { color: #a1abb7; font-size: var(--font-xs); }
+.aptitude-mock-history { margin-bottom: 12px; padding: 16px; }
+.aptitude-mock-session-list { display: grid; }
+.aptitude-mock-session-row { display: grid; grid-template-columns: 118px minmax(0, 1fr) auto auto; align-items: center; gap: 14px; padding: 12px 2px; border-top: 1px solid #f0f2f5; color: inherit; text-decoration: none; }
+.aptitude-mock-session-row:hover { background: #fbfcfe; }
+.aptitude-mock-session-date, .aptitude-mock-session-row > strong { display: grid; gap: 4px; color: #50647f; font-size: var(--font-xs); }
+.aptitude-mock-session-row small { color: #98a3b0; font-size: var(--font-xs); font-weight: 400; }
+.aptitude-mock-session-rate { color: #6584ae; font-size: var(--font-xs); white-space: nowrap; }
+.aptitude-mock-session-row > b { color: #758cab; font-size: var(--font-xs); white-space: nowrap; }
 .mock-history-strip { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
 .mock-history-stat { display: flex; min-width: 0; min-height: 96px; flex-direction: column; justify-content: center; gap: 4px; padding: 13px 15px; border: 1px solid #e6ebf2; border-radius: 11px; background: linear-gradient(145deg, #fff, #fbfcfe); box-shadow: 0 5px 16px #263b5808; }
 .mock-history-stat > span { color: #7f8da0; font-size: var(--font-xs); }
@@ -373,6 +383,7 @@ button { color: inherit; }
 }
 @media (max-width: 1050px) { .mock-history-strip { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (max-width: 650px) { .mock-history-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; } .mock-history-stat { min-height: 88px; padding: 11px 12px; } }
+@media (max-width: 650px) { .aptitude-mock-session-row { grid-template-columns: minmax(0, 1fr) auto; gap: 8px; } .aptitude-mock-session-date { grid-column: 1 / 2; } .aptitude-mock-session-rate { grid-column: 2; grid-row: 1; } .aptitude-mock-session-row > strong { grid-column: 1; grid-row: 2; } .aptitude-mock-session-row > b { grid-column: 2; grid-row: 2; } }
 .modal-module-grid { margin-top: 6px; }
 
 .three-metrics + .table-panel { margin-top: 1px; }
@@ -867,7 +878,7 @@ button { color: inherit; }
   .assistant-badge { display: none; }
   .scenario-row { grid-template-columns: 28px 1fr 105px; }
   .aptitude-entry-grid { grid-template-columns: 1fr; }
-  .aptitude-entry-card { grid-template-areas: "icon copy copy copy arrow" "icon accuracy attempts attempts arrow"; grid-template-columns: 40px minmax(0, 1fr) auto auto 15px; row-gap: 6px; }
+  .aptitude-entry-card { grid-template-areas: "icon copy copy copy arrow" "icon accuracy attempts attempts arrow" "actions actions actions actions actions"; grid-template-columns: 40px minmax(0, 1fr) auto auto 15px; row-gap: 6px; }
   .aptitude-entry-stat { text-align: left; }
   .aptitude-content-grid { grid-template-columns: 1fr; }
   .aptitude-content-card { align-items: flex-start; flex-wrap: wrap; }

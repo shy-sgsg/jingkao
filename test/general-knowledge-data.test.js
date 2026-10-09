@@ -82,6 +82,8 @@ test('administrative penalty and reconsideration practice is traceable to curren
     'gk-original-admin-first-violation',
     'gk-original-admin-hearing-rights',
     'gk-original-review-deadline',
+    'gk-original-review-prerequisite',
+    'gk-original-review-oral-application',
   ];
   const questions = bank.GENERAL_KNOWLEDGE_QUESTION_BANK.filter(({ id }) => expectedIds.includes(id));
   const sourceIds = sources.GENERAL_KNOWLEDGE_SOURCES.map(({ id }) => id);
@@ -93,6 +95,36 @@ test('administrative penalty and reconsideration practice is traceable to curren
   assert.equal(sourceById.get('admin-penalty-law-2021')?.verificationStatus, 'verified');
   assert.equal(sourceById.get('admin-reconsideration-law-2023')?.verificationStatus, 'verified');
   assert.deepEqual(questionRules.validateGeneralKnowledgeQuestionBank(questions, {
+    knowledgePointIds: knowledge.getGeneralKnowledgePointIds(), sourceIds,
+  }).issues, []);
+});
+
+test('collected science and technology question themes have reviewed lessons and source-backed practice', async () => {
+  const [bank, sources, knowledge, lessons, questionRules] = await Promise.all([
+    import('../src/general-knowledge/questionBank.js'),
+    import('../src/general-knowledge/sources.js'),
+    import('../src/general-knowledge/knowledge.js'),
+    import('../src/general-knowledge/lessonContent.js'),
+    import('../src/general-knowledge/questions.js'),
+  ]);
+  const expected = [
+    ['gk-original-ballastless-track', 'technology:railway-track', 'railway-high-speed-design'],
+    ['gk-original-lunar-eclipse', 'geography:eclipse', 'lunar-eclipse-science'],
+    ['gk-original-thermal-printing', 'technology:thermal-printing', 'thermal-printing-science'],
+  ];
+  const sourceIds = sources.GENERAL_KNOWLEDGE_SOURCES.map(({ id }) => id);
+  const questionById = new Map(bank.GENERAL_KNOWLEDGE_QUESTION_BANK.map((question) => [question.id, question]));
+  for (const [id, pointId, sourceId] of expected) {
+    const question = questionById.get(id);
+    assert.equal(question?.knowledgePointIds[0], pointId);
+    assert.equal(question?.sourceId, sourceId);
+    assert.equal(question?.publishStatus, 'published');
+    assert.equal(question?.sourceType, 'original');
+    assert.ok(lessons.GENERAL_KNOWLEDGE_LESSONS[pointId]?.explanation);
+    assert.ok(lessons.GENERAL_KNOWLEDGE_LESSONS[pointId]?.examAngle);
+    assert.ok(question.sourceNote);
+  }
+  assert.deepEqual(questionRules.validateGeneralKnowledgeQuestionBank(bank.GENERAL_KNOWLEDGE_QUESTION_BANK, {
     knowledgePointIds: knowledge.getGeneralKnowledgePointIds(), sourceIds,
   }).issues, []);
 });

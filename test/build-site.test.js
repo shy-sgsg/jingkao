@@ -44,6 +44,18 @@ async function renderStandaloneRoute(script, route, storedState = null) {
     title: '',
   };
   documentLike.addEventListener = (type, listener) => listeners.set(type, listener);
+  let locationHash = route ? `#/${route}` : '';
+  const location = {
+    get hash() { return locationHash; },
+    set hash(value) { locationHash = value.startsWith('#') ? value : `#${value}`; },
+  };
+  const windowListeners = new Map();
+  const windowLike = {
+    addEventListener(type, listener) { windowListeners.set(type, listener); },
+    matchMedia: () => ({ matches: false }),
+    scrollTo() {},
+    confirm: () => true,
+  };
   const values = new Map();
   const localStorage = {
     getItem(key) { return values.has(key) ? values.get(key) : null; },
@@ -68,9 +80,9 @@ async function renderStandaloneRoute(script, route, storedState = null) {
 
   runInNewContext(script, {
     document: documentLike,
-    location: { hash: route ? `#/${route}` : '' },
+    location,
     localStorage,
-    window: { addEventListener() {}, matchMedia: () => ({ matches: false }), scrollTo() {} },
+    window: windowLike,
     URL,
     crypto: webcrypto,
     TextEncoder,
@@ -88,7 +100,7 @@ async function renderStandaloneRoute(script, route, storedState = null) {
   const unlockForm = new HTMLFormElement('', { accountId: account.id }, { password: TEST_PASSWORD });
   await listeners.get('submit')({ target: unlockForm, preventDefault() {} });
 
-  return { document: documentLike, root: elements.get('#root'), modalRoot: elements.get('#modal-root'), elements, listeners, localStorage, accountId: account.id };
+  return { document: documentLike, root: elements.get('#root'), modalRoot: elements.get('#modal-root'), elements, listeners, windowListeners, location, localStorage, accountId: account.id };
 }
 
 test('standalone site build embeds the route transition helper used by the app', async () => {
@@ -145,7 +157,7 @@ test('standalone site executes and renders the homepage from its embedded app mo
   }
 });
 
-test('standalone aptitude routes render the shared empty-bank page and preserve dedicated routes', async () => {
+test('standalone aptitude routes render playable modules and preserve dedicated routes', async () => {
   await import('../scripts/build.mjs');
   const html = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8');
   const script = html.match(/<script>\s*([\s\S]*?)<\/script>/)?.[1];
@@ -156,16 +168,88 @@ test('standalone aptitude routes render the shared empty-bank page and preserve 
   const generalKnowledgePage = (await renderStandaloneRoute(script, 'aptitude/general-knowledge', storedState)).root.innerHTML;
 
   assert.match(modulePage, /<h1>言语<\/h1>/);
-  assert.match(modulePage, /知识目录待接入/);
-  assert.match(modulePage, /题库待接入/);
+  assert.match(modulePage, /当前有 13 道已发布题目/);
+  assert.match(modulePage, /data-action="start-aptitude-module-session" data-mode="practice"/);
+  assert.match(modulePage, /data-action="start-aptitude-module-session" data-mode="exam"/);
+  assert.doesNotMatch(modulePage, /data-mode="practice"[^>]*disabled/);
   assert.match(modulePage, /错题与收藏/);
   assert.match(modulePage, /MANUAL PRACTICE LOG/);
   assert.match(modulePage, /安排学习任务/);
-  assert.match(modulePage, /<button[^>]*disabled[^>]*>开始练习<\/button>/);
   assert.match(legacyModulePage, /<h1>言语<\/h1>/);
   assert.match(sciencePage, /<h1>科学推理<\/h1>/);
   assert.match(generalKnowledgePage, /<h1>常识判断<\/h1>/);
   assert.match(generalKnowledgePage, /常识判断知识点目录|法律/);
+});
+
+test('homepage practice action opens a real module session on the correct route', async () => {
+  await import('../scripts/build.mjs');
+  const html = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8');
+  const script = html.match(/<script>\s*([\s\S]*?)<\/script>/)?.[1];
+  const app = await renderStandaloneRoute(script, 'aptitude', { onboarding: { hidden: true, completed: true } });
+
+  for (const moduleId of ['political-theory', 'general-knowledge', 'verbal', 'quantitative', 'reasoning', 'science', 'data-analysis']) {
+    assert.match(app.root.innerHTML, new RegExp(`data-module-id="${moduleId}" data-mode="practice"`));
+    assert.match(app.root.innerHTML, new RegExp(`data-module-id="${moduleId}" data-mode="exam"`));
+  }
+
+  const action = { dataset: { action: 'start-aptitude-module-session', moduleId: 'verbal', mode: 'practice' } };
+  await app.listeners.get('click')({
+    target: { closest(selector) { return selector === '[data-action]' ? action : null; } },
+    preventDefault() {},
+  });
+  assert.match(app.location.hash, /^#\/aptitude\/verbal\?session=/);
+  app.windowListeners.get('hashchange')();
+  assert.match(app.root.innerHTML, /<h1>专项练习<\/h1>/);
+  assert.match(app.root.innerHTML, /第 1\/10 题/);
+  assert.match(app.root.innerHTML, /data-action="answer-aptitude-module-question"/);
+
+  app.location.hash = '#/aptitude';
+  app.windowListeners.get('hashchange')();
+  const examAction = { dataset: { action: 'start-aptitude-module-session', moduleId: 'reasoning', mode: 'exam' } };
+  await app.listeners.get('click')({
+    target: { closest(selector) { return selector === '[data-action]' ? examAction : null; } },
+    preventDefault() {},
+  });
+  const sessionId = app.location.hash.match(/session=([^&]+)/)?.[1];
+  assert.ok(sessionId);
+  assert.equal(app.location.hash.startsWith('#/aptitude/reasoning?session='), true);
+  app.windowListeners.get('hashchange')();
+  assert.match(app.root.innerHTML, /TIMED MOCK · 判断推理/);
+
+  const finishSessionId = app.root.innerHTML.match(/data-action="finish-aptitude-module-exam"[^>]*data-session-id="([^"]+)"/)?.[1];
+  assert.equal(finishSessionId, sessionId);
+  const finishAction = { dataset: { action: 'finish-aptitude-module-exam', moduleId: 'reasoning', sessionId } };
+  await app.listeners.get('click')({
+    target: { closest(selector) { return selector === '[data-action]' ? finishAction : null; } },
+    preventDefault() {},
+  });
+  assert.match(app.root.innerHTML, /模拟已交卷/);
+
+  app.location.hash = '#/mocks';
+  app.windowListeners.get('hashchange')();
+  assert.ok(app.root.innerHTML.includes(`href="#/aptitude/reasoning?session=${sessionId}"`));
+  assert.match(app.root.innerHTML, /0\/10 题答对 · 已答 0 题/);
+});
+
+test('completed in-app mock history links back to question review', async () => {
+  await import('../scripts/build.mjs');
+  const html = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8');
+  const script = html.match(/<script>\s*([\s\S]*?)<\/script>/)?.[1];
+  const app = await renderStandaloneRoute(script, 'mocks', {
+    onboarding: { hidden: true, completed: true },
+    aptitudeModuleStudies: {
+      reasoning: {
+        moduleId: 'reasoning', knowledgeProgress: {},
+        sessions: [{ id: 'reasoning-exam-done', moduleId: 'reasoning', mode: 'exam', status: 'completed', questionIds: ['reasoning-q01', 'reasoning-q02'], completedAt: '2026-10-09T09:00:00.000Z' }],
+        answers: [{ id: 'answer-1', moduleId: 'reasoning', sessionId: 'reasoning-exam-done', questionId: 'reasoning-q01', isCorrect: true }],
+        mistakes: {}, favorites: [], favoriteKnowledgePointIds: [], unclearKnowledgePointIds: [],
+      },
+    },
+  });
+
+  assert.match(app.root.innerHTML, /站内行测模考记录/);
+  assert.match(app.root.innerHTML, /href="#\/aptitude\/reasoning\?session=reasoning-exam-done"/);
+  assert.match(app.root.innerHTML, /1\/2 题答对 · 已答 1 题/);
 });
 
 test('module cards and pages combine module-only site answers with manual training logs', async () => {

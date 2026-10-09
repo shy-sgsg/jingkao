@@ -1,10 +1,16 @@
 import { getAptitudeModule } from './modules.js';
 import { SCIENCE_QUESTION_BANK } from '../science/questionBank.js';
 import { GENERAL_KNOWLEDGE_QUESTION_BANK } from '../general-knowledge/questionBank.js';
+import { APTITUDE_MODULE_QUESTION_BANKS } from './questionBank.js';
 
 const QUESTION_BANK_PROVIDERS = {
+  'political-theory': () => APTITUDE_MODULE_QUESTION_BANKS['political-theory'],
   science: () => SCIENCE_QUESTION_BANK,
   'general-knowledge': () => GENERAL_KNOWLEDGE_QUESTION_BANK,
+  verbal: () => APTITUDE_MODULE_QUESTION_BANKS.verbal,
+  quantitative: () => APTITUDE_MODULE_QUESTION_BANKS.quantitative,
+  reasoning: () => APTITUDE_MODULE_QUESTION_BANKS.reasoning,
+  'data-analysis': () => APTITUDE_MODULE_QUESTION_BANKS['data-analysis'],
 };
 
 const FILTER_FIELDS = ['subjectId', 'topicId', 'sourceType', 'difficulty'];

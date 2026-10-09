@@ -22,6 +22,24 @@ export const GENERAL_KNOWLEDGE_SOURCES = [
     copyrightStatus: '法规事实摘述并链接原文', note: '法律时效核验主入口。题库不替代对最新法律文本的查询。',
   },
   {
+    id: 'railway-high-speed-design', sourceType: 'official_reference', title: '《高速铁路设计规范》专家解读', organization: '国家铁路局',
+    url: 'https://source.nra.gov.cn/xxgk/gkml/ztjg/gfzd/zcjd/202204/t20220405_280609.shtml',
+    verificationStatus: 'verified', publishStatus: 'published', copyrightStatus: '技术事实概述并链接原文',
+    note: '国家铁路局说明高速铁路规范中的无砟轨道结构、轨道稳定性和平顺性要求；题目为本站独立编写。',
+  },
+  {
+    id: 'lunar-eclipse-science', sourceType: 'official_reference', title: '月全食与“红月亮”', organization: '中国科学院紫金山天文台',
+    url: 'https://pmo.cas.cn/xwdt2019/kpdt2019/201909/t20190915_5385983.html',
+    verificationStatus: 'verified', publishStatus: 'published', copyrightStatus: '科学事实概述并链接原文',
+    note: '紫金山天文台解释月全食期间地球大气折射长波段光进入本影，月面呈微红或古铜色。',
+  },
+  {
+    id: 'thermal-printing-science', sourceType: 'official_reference', title: '热敏纸显色原理', organization: '江华瑶族自治县科学技术协会 / 县人民政府',
+    url: 'https://jh.gov.cn/jh/kpjh/202411/494c6fff7e1c41b8a7671a4517ec0f11.shtml',
+    verificationStatus: 'verified', publishStatus: 'published', copyrightStatus: '科学事实概述并链接原文',
+    note: '政府科普页面介绍热敏涂层受热后的显色反应；题目为本站独立编写，不采用原题面。',
+  },
+  {
     id: 'admin-penalty-law-2021', sourceType: 'official_law', title: '中华人民共和国行政处罚法（2021年修订）', organization: '工业和信息化部政府门户网站',
     url: 'https://www.miit.gov.cn/zwgk/zcwj/flfg/art/2022/art_76d37c09bd594d67b80ec2aa6fababcc.html',
     verificationStatus: 'verified', publishStatus: 'published', copyrightStatus: '法规事实摘述并链接法规全文',
