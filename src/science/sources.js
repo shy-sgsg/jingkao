@@ -163,6 +163,14 @@ export const SCIENCE_SOURCES = [
     note: '第三方考生回忆版，非官方原卷；第 90、91 题改述收录于判断推理部分，不标为专项科学推理题。答案参考公开答案页，毛囊研究背景与小鼠实验论文核对。',
   },
   {
+    id: 'zj-2025-c-recall', title: '2025 年浙江省公务员录用考试《行测》C 类（考生回忆版）',
+    organization: '粉笔题库回忆版；公开真题库（答案页）', sourceType: 'recalled', region: '浙江', examYear: 2025,
+    authority: 'third-party-recollection', verificationStatus: 'verified', copyrightStatus: 'reference_only',
+    url: 'https://gwy.gkzhenti.cn/paper/1739531136929',
+    relatedUrls: ['https://gwy.gkzhenti.cn/answer/1739531136929'],
+    note: '第三方考生回忆版，非官方原卷；第 95 题改述收录于判断推理部分，不标为专项科学推理题；参考答案与公开答案页核对。',
+  },
+  {
     id: 'gd-2027-zhonggong-mock', title: '广东公务员行测科学推理模拟题（中公解析转载页）',
     organization: '中公教育（E 考试网转载）', sourceType: 'third_party_mock', region: '广东', examYear: null,
     authority: 'third-party-publisher', verificationStatus: 'verified', copyrightStatus: 'reference_only',

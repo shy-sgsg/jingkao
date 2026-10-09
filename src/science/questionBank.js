@@ -617,4 +617,14 @@ addPublishedReferenceQuestion({
   correctAnswer: 'D', explanation: '结论需要连接“提高 miR-205 表达”与“细胞骨架软化”这两步。D 补上了该机制联系；A 说的是毛发而非毛囊干细胞，B 只说明技术上可操作，C 与毛发生长所需的细胞增殖和分化方向相反。',
 });
 
+addPublishedReferenceQuestion({
+  id: 'zj-2025-c-stork-migration', subjectId: 'biology', topicId: 'biology:ecology', knowledgePointIds: ['biology:organisms-environment'],
+  difficulty: 'medium', reasoningType: 'causal_inference', sourceType: 'recalled', sourceId: 'zj-2025-c-recall',
+  sourceTitle: '2025 浙江省考 C 类回忆题 · 白鹳迁徙路线学习', region: '浙江', examYear: 2025, presentationMode: 'adapted',
+  sourceNote: '据 2025 年浙江省考 C 类回忆卷第 95 题改述；出自判断推理中的科学论证题，不标为专项科学推理题；参考答案 D 与公开答案页核对。',
+  stem: '研究者多年跟踪白鹳迁徙路线，发现它们会经过新的地点。专家据此认为，白鹳能通过学习逐步改进迁徙路线。以下哪项最可能是专家作出这一判断的依据？',
+  options: ['成年白鹳会教幼鸟不同的捕食技能', '白鹳在越冬地附近探索新地点，以便更好地度过冬季', '迁徙途中遇到突发危险时，白鹳会临时绕行，但目的地不变', '随着迁徙次数增多，白鹳路线变得更高效，完成迁徙所需时间和能量都减少'],
+  correctAnswer: 'D', explanation: 'D 表明白鹳经历更多次迁徙后，路线效率持续提高，最符合“通过学习不断改进路线”的判断。A 说明它们可能学习捕食技能，B 是在越冬地附近探索，C 只是临时避险，都没有直接说明迁徙路线因经验而优化。',
+});
+
 export { SCIENCE_QUESTION_BANK };

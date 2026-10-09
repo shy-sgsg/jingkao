@@ -71,7 +71,7 @@ test('published questions distinguish the existing original bank from sourced ex
   const { SCIENCE_SOURCES } = await import('../src/science/sources.js');
   const originalBank = bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType === 'original');
   assert.equal(originalBank.length, 153);
-  assert.equal(bankModule.SCIENCE_QUESTION_BANK.length, 192);
+  assert.equal(bankModule.SCIENCE_QUESTION_BANK.length, 193);
   const subjectCounts = Object.fromEntries(['physics', 'chemistry', 'biology', 'geography']
     .map((subjectId) => [subjectId, originalBank.filter((question) => question.subjectId === subjectId).length]));
   assert.deepEqual(subjectCounts, { physics: 42, chemistry: 37, biology: 36, geography: 38 });
@@ -90,6 +90,7 @@ test('published questions distinguish the existing original bank from sourced ex
   for (const id of [
     'gd-2024-soot-ink', 'gd-2024-insulin-glucose', 'gd-2025-outline-grain-storage', 'gd-2025-recall-bacteria',
     'zj-2024-c-knuckle-evidence', 'zj-2024-c-animal-aging', 'zj-2024-c-cholera-transmission', 'zj-2024-c-breath-biometrics',
+    'zj-2025-c-stork-migration',
     'zj-2026-c-corn-rows', 'zj-2026-c-hair-follicle-stem-cells',
     'zj-2025-mock-mars-microbes', 'mock-huatu-buoyancy-load',
   ]) {
@@ -100,9 +101,9 @@ test('published questions distinguish the existing original bank from sourced ex
   assert.ok(bankModule.SCIENCE_QUESTION_BANK.some((question) => question.sourceType === 'third_party_mock'));
   assert.ok(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType !== 'original')
     .every((question) => question.sourceId && question.sourceNote));
-  assert.equal(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType === 'recalled').length, 31);
+  assert.equal(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType === 'recalled').length, 32);
   assert.equal(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType === 'third_party_mock').length, 4);
-  assert.equal(SCIENCE_SOURCES.length, 21);
+  assert.equal(SCIENCE_SOURCES.length, 22);
 });
 
 test('published knowledge lessons cover all four disciplines with practical explanations', async () => {
