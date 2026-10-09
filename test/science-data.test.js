@@ -138,7 +138,7 @@ test('published knowledge lessons cover all four disciplines with practical expl
       && point.content.everydayExample && point.content.quickMethod), `${subject.id} lessons contain actionable explanations`);
     return [subject.id, lessons.length];
   }));
-  assert.equal(Object.values(counts).reduce((sum, count) => sum + count, 0), 65);
+  assert.equal(Object.values(counts).reduce((sum, count) => sum + count, 0), 68);
   for (const pointId of [
     'physics:elastic-force', 'physics:optical-phenomena', 'physics:gravity', 'physics:magnetic-field', 'physics:lens-imaging',
     'biology:hormonal-regulation', 'biology:microorganisms', 'biology:musculoskeletal-system',
@@ -149,6 +149,7 @@ test('published knowledge lessons cover all four disciplines with practical expl
     'chemistry:electrochemical-cells', 'chemistry:polymer-materials', 'chemistry:common-reactions',
     'physics:specific-heat',
     'physics:wetting-adhesion',
+    'chemistry:experiments', 'biology:digestion', 'geography:terrain-reading',
   ]) {
     const point = tree.flatMap((subject) => subject.topics).flatMap((topic) => topic.knowledgePoints).find((item) => item.id === pointId);
     assert.equal(point.contentStatus, 'published', `${pointId} has a lesson for the newly collected Shanghai questions`);
