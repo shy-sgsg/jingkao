@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "python3 -m http.server 4173 --bind 127.0.0.1",
     "build": "node scripts/build.mjs",
-    "test": "node --test test/*.test.js",
-    "test:run": "node --test test/*.test.js",
+    "test": "node --test --test-concurrency=1 test/*.test.js",
+    "test:run": "node --test --test-concurrency=1 test/*.test.js",
     "data:build": "python3 scripts/build_data.py",
     "data:check": "python3 scripts/validate_data.py",
     "data:refresh": "bash scripts/rebuild_data.sh"

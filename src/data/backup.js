@@ -35,6 +35,21 @@ function isRecordMap(value) {
   return isRecord(value) && Object.values(value).every(isRecord);
 }
 
+function isScienceStudyRecord(value) {
+  return isRecord(value)
+    && isRecord(value.knowledgeProgress)
+    && Array.isArray(value.sessions) && value.sessions.every(isRecord)
+    && Array.isArray(value.answers) && value.answers.every(isRecord)
+    && isRecord(value.mistakes)
+    && Array.isArray(value.favorites) && value.favorites.every((id) => typeof id === 'string')
+    && (value.favoriteKnowledgePointIds === undefined || (Array.isArray(value.favoriteKnowledgePointIds) && value.favoriteKnowledgePointIds.every((id) => typeof id === 'string')))
+    && (value.unclearKnowledgePointIds === undefined || (Array.isArray(value.unclearKnowledgePointIds) && value.unclearKnowledgePointIds.every((id) => typeof id === 'string')));
+}
+
+function emptyScienceStudyRecord() {
+  return { knowledgeProgress: {}, sessions: [], answers: [], mistakes: {}, favorites: [], favoriteKnowledgePointIds: [], unclearKnowledgePointIds: [] };
+}
+
 export function createEncryptedUserBackup({ id, envelope }, exportedAt = new Date().toISOString()) {
   const data = { id, envelope };
   if (!validateEncryptedBackupData(data)) throw new Error('档案加密格式不受支持或已损坏，无法导出。');
@@ -80,6 +95,11 @@ export function parseUserBackup(input) {
     || !Array.isArray(state.mocks) || !Array.isArray(state.favorites) || !Array.isArray(state.compared)
     || !isRecord(state.onboarding)
     || (state.planOverrides !== undefined && !isRecordMap(state.planOverrides))
+    || (state.studyPlanTasks !== undefined && (!Array.isArray(state.studyPlanTasks)
+      || state.studyPlanTasks.some((task) => !isRecord(task) || typeof task.id !== 'string'
+        || !task.id || typeof task.title !== 'string' || !task.title.trim()
+        || typeof task.date !== 'string' || typeof task.taskType !== 'string')))
+    || (state.scienceStudy !== undefined && !isScienceStudyRecord(state.scienceStudy))
     || (state.settings !== undefined && !isRecord(state.settings))) {
     return { ok: false, error: '备份缺少必要的个人记录字段，未修改本机数据。' };
   }
@@ -106,6 +126,8 @@ export function parseUserBackup(input) {
       profile: state.profile,
       dayLogs: state.dayLogs,
       planOverrides: state.planOverrides || {},
+      studyPlanTasks: state.studyPlanTasks || [],
+      scienceStudy: state.scienceStudy || emptyScienceStudyRecord(),
       aptitudeLogs: state.aptitudeLogs,
       essayLogs: state.essayLogs,
       mocks: state.mocks,

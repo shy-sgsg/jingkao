@@ -20,9 +20,21 @@ const appModules = [
   '../src/ui/scoreBreakdown.js',
   '../src/ui/viewTransition.js',
   '../src/ui/scrollReveal.js',
+  '../src/science/persistence.js',
+  '../src/science/lessonContent.js',
+  '../src/science/knowledge.js',
+  '../src/science/planTasks.js',
+  '../src/science/questions.js',
+  '../src/science/sources.js',
+  '../src/science/questionBank.js',
+  '../src/science/sessions.js',
 ].map((path) => readFileSync(new URL(path, import.meta.url), 'utf8')
   .replace(/^export\s+/gm, '')
-  .replace("import { getPublicManagementMajorTypes, summarizePublicManagementPositions } from './positions.js';\n", ''));
+  .replace("import { getPublicManagementMajorTypes, summarizePublicManagementPositions } from './positions.js';\n", '')
+  .replace("import { getKnowledgePoint, getScienceTree } from './knowledge.js';\n", '')
+  .replace("import { SCIENCE_LESSONS } from './lessonContent.js';\n", '')
+  .replace("import { filterQuestions } from './questions.js';\n", '')
+  .replace("import { SCIENCE_SOURCES } from './sources.js';\n", ''));
 const app = readFileSync(new URL('../src/app.js', import.meta.url), 'utf8')
   .replace(/^import .*;\n/gm, '');
 const embedded = `<style>\n${css}\n</style>`;

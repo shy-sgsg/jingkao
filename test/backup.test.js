@@ -13,6 +13,14 @@ const state = {
   profile: { major: '公共管理', degree: '硕士' },
   dayLogs: { 1: { actualQuestions: 40, status: '已完成' } },
   planOverrides: { 1: { focus: '错题复盘', plannedQuestions: 60 } },
+  studyPlanTasks: [{ id: 'task-a', date: '2026-10-09', taskType: 'science_reasoning', title: '浮力专项练习' }],
+  scienceStudy: {
+    knowledgeProgress: { 'physics:buoyancy': { status: 'learning' } },
+    sessions: [{ id: 'session-a', mode: 'practice', planTaskId: 'task-a' }],
+    answers: [{ id: 'answer-a', sessionId: 'session-a', questionId: 'q-a' }],
+    mistakes: { 'q-a': { count: 1 } },
+    favorites: ['q-b'],
+  },
   aptitudeLogs: {}, essayLogs: {},
   mocks: [{ aptitude: 72, essay: 68, total: 140, date: '2026-10-08' }],
   favorites: ['231260001'], compared: ['231260001'],
@@ -40,12 +48,26 @@ test('restore rejects mock scores that are not actual numeric records', () => {
 });
 
 test('older personal backups remain importable and receive empty plan edits and default display settings', () => {
-  const { planOverrides, settings, ...olderState } = state;
+  const { planOverrides, settings, studyPlanTasks, scienceStudy, ...olderState } = state;
   const parsed = parseUserBackup(createUserBackup(olderState));
 
   assert.equal(parsed.ok, true);
   assert.deepEqual(parsed.state.planOverrides, {});
+  assert.deepEqual(parsed.state.studyPlanTasks, []);
+  assert.deepEqual(parsed.state.scienceStudy, {
+    knowledgeProgress: {}, sessions: [], answers: [], mistakes: {}, favorites: [], favoriteKnowledgePointIds: [], unclearKnowledgePointIds: [],
+  });
   assert.deepEqual(parsed.state.settings, { density: 'comfortable', fontSize: 'standard', motion: 'enhanced' });
+});
+
+test('personal backups preserve science plan and learning records and reject malformed science collections', () => {
+  const parsed = parseUserBackup(createUserBackup(state));
+  assert.equal(parsed.ok, true);
+  assert.deepEqual(parsed.state.studyPlanTasks, state.studyPlanTasks);
+  assert.deepEqual(parsed.state.scienceStudy, state.scienceStudy);
+
+  const malformed = { ...state, scienceStudy: { ...state.scienceStudy, answers: 'not-an-array' } };
+  assert.equal(parseUserBackup(createUserBackup(malformed)).ok, false);
 });
 
 test('encrypted backup contains only an anonymous account ID and opaque ciphertext', () => {
