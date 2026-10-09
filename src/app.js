@@ -2495,6 +2495,7 @@ document.addEventListener('click', async (event) => {
     const parsedRoute = readRoute(`#/${route}`);
     if (pageMeta[parsedRoute.page]) {
       event.preventDefault();
+      if (parsedRoute.page === 'aptitudeModule') activeAptitudeModuleId = parsedRoute.aptitudeModuleId;
       navigate(parsedRoute.page, query);
       return;
     }

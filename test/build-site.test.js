@@ -180,6 +180,30 @@ test('standalone aptitude routes preserve dedicated pages and expose available m
   assert.match(generalKnowledgePage, /常识判断知识点目录|法律/);
 });
 
+test('clicking each general module from the aptitude overview keeps the selected module route', async () => {
+  await import('../scripts/build.mjs');
+  const html = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8');
+  const script = html.match(/<script>\s*([\s\S]*?)<\/script>/)?.[1];
+  const modules = {
+    'political-theory': '政治理论', verbal: '言语', quantitative: '数量关系',
+    reasoning: '判断推理', 'data-analysis': '资料分析',
+  };
+
+  for (const [moduleId, title] of Object.entries(modules)) {
+    const app = await renderStandaloneRoute(script, 'aptitude', { onboarding: { hidden: true, completed: true } });
+    const href = `#/aptitude/${moduleId}`;
+    const link = { getAttribute: (name) => name === 'href' ? href : null };
+    const target = { closest: (selector) => selector === 'a[href^="#/"]' ? link : null };
+
+    await app.listeners.get('click')({ target, preventDefault() {} });
+    await app.windowListeners.get('hashchange')();
+
+    assert.equal(app.location.hash, href, `${moduleId} should keep the clicked route`);
+    assert.match(app.root.innerHTML, new RegExp(`<h1>${title}<\\/h1>`));
+    assert.doesNotMatch(app.root.innerHTML, /没有找到这个行测模块/);
+  }
+});
+
 test('general knowledge temporary exit returns to the directory and preserves the resumable session', async () => {
   await import('../scripts/build.mjs');
   const html = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8');
