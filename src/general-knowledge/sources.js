@@ -58,7 +58,7 @@ export const GENERAL_KNOWLEDGE_SOURCES = [
   },
   {
     id: 'gov-2026-work-report', sourceType: 'official_policy', title: '2026年政府工作报告', organization: '国务院',
-    url: 'https://big5.www.gov.cn/gate/big5/www.gov.cn/yaowen/liebiao/202603/content_7062625.htm',
+    url: 'https://www.gov.cn/yaowen/liebiao/202603/content_7062625.htm',
     verificationStatus: 'verified', publishStatus: 'published', copyrightStatus: '政策事实概述并链接原文',
     note: '时政内容保留年度标签；该条只表示报告资料来源，不代表下一年度仍适用。',
   },
@@ -426,5 +426,215 @@ export const GENERAL_KNOWLEDGE_SOURCES = [
     id: 'beijing-smart-city-action', sourceType: 'official_policy', title: '北京市“十四五”时期智慧城市发展行动纲要', organization: '北京市人民政府',
     url: 'https://www.beijing.gov.cn/zhengce/zhengcefagui/202103/t20210323_2317136.html', verificationStatus: 'verified', publishStatus: 'published',
     copyrightStatus: '规划概念摘要并链接原文', note: '用于“一网通办”“一网统管”等数字治理概念；该纲要属于“十四五”时期文件，后续阶段任务应以新规划为准。',
+  },
+  {
+    id: 'moe-physics-experiments-2022', sourceType: 'official_reference', title: '初中物理实验教学基本目录解读', organization: '中华人民共和国教育部',
+    url: 'https://www.moe.gov.cn/jyb_xwfb/moe_2082/2023/2023_zl24/202311/t20231123_1091839.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '基础科学事实概述并链接原文', note: '教育部说明物理实验目录依据2022年版课程标准制定，包含测量、探究和能量转化等实验；用于物理生活常识基础核对。',
+  },
+  {
+    id: 'moe-chemistry-curriculum-2022', sourceType: 'official_reference', title: '义务教育化学课程标准（2022年版）', organization: '中华人民共和国教育部',
+    url: 'https://www.moe.gov.cn/srcsite/A26/s8001/202204/W020230605524875861384.pdf', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '课程与科学事实概述并链接原文', note: '用于物质组成、化学变化、酸碱、溶液、实验探究和生活化学安全的基础核对。',
+  },
+  {
+    id: 'moe-information-tech-curriculum-2022', sourceType: 'official_reference', title: '义务教育信息科技课程标准（2022年版）', organization: '中华人民共和国教育部',
+    url: 'https://www.moe.gov.cn/srcsite/A26/s8001/202204/W020220420582361024968.pdf', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '课程与技术事实概述并链接原文', note: '用于互联网组成、TCP/IP分层、数据编码传输、网络安全和信息社会责任的基础核对。',
+  },
+  {
+    id: 'nhc-vaccine-science', sourceType: 'official_reference', title: '疫苗接种科普知识', organization: '中华人民共和国国家卫生健康委员会',
+    url: 'https://www.nhc.gov.cn/wjw/jbyfykz/201604/e73973a39ece42fdba98e3d8a001acd7.shtml', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '免疫原理概述并链接原文', note: '用于疫苗诱导特异性免疫反应的基础原理；接种程序和个体健康问题应核对现行卫生部门指南。',
+  },
+  {
+    id: 'cmse-space-station-system', sourceType: 'official_reference', title: '中国空间站系统组成与运行分工', organization: '中国载人航天工程办公室',
+    url: 'https://www.cmse.gov.cn/gygc/xtzc/kjzxt/', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '工程组成事实概述并链接原文', note: '官方工程页面介绍空间站的多模块实验平台、航天员长期驻留以及载人飞船和货运飞船的任务分工。',
+  },
+  {
+    id: 'cmse-space-station-orbit', sourceType: 'official_reference', title: '中国空间站轨道参数', organization: '中国载人航天工程办公室',
+    url: 'https://www.cmse.gov.cn/gfgg/zgkjzgdcs/', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '轨道参数查证入口并链接原文', note: '官方动态轨道参数发布页；具体数值随轨道控制变化，讲解只使用稳定的近地轨道概念。',
+  },
+  {
+    id: 'cmse-crewed-launcher', sourceType: 'official_reference', title: '长征二号F运载火箭系统', organization: '中国载人航天工程办公室',
+    url: 'https://www.cmse.gov.cn/gygc/xtzc/zzehfyzhjxt/', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '运载任务事实概述并链接原文', note: '官方工程页面介绍长征二号F火箭用于发射载人飞船与实验室；具体任务型号应以当次任务公告为准。',
+  },
+  {
+    id: 'cnsa-remote-sensing-science', sourceType: 'official_reference', title: '关于遥感卫星，你了解多少？', organization: '国家航天局',
+    url: 'https://www.cnsa.gov.cn/n6758968/n6758973/c10560080/content.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '技术原理概述并链接原文', note: '介绍遥感通过传感器接收远距离目标反射或辐射的电磁波信息，并经处理、反演和解译形成应用信息。',
+  },
+  {
+    id: 'cac-ipv6-internet-basics', sourceType: 'official_reference', title: '中国IPv6进行时', organization: '中央网络安全和信息化委员会办公室',
+    url: 'https://www.cac.gov.cn/2020-11/15/c_1607009489963634.htm', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '互联网基础概念概述并链接原文', note: '用于IP地址在网络识别和数据传输中的作用，以及IPv4、IPv6地址空间差异的基础核对。',
+  },
+  {
+    id: 'npc-network-security-law', sourceType: 'official_law', title: '中华人民共和国网络安全法（国家法律法规数据库）', organization: '全国人民代表大会常务委员会',
+    url: 'https://flk.npc.gov.cn/detail?fileId=&id=2c909fdd678bf17901678bf8276f093d&title=%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E6%B3%95&type=', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '法律框架概述并链接现行文本', note: '国家法律法规数据库的网络安全法条目；法律时效和关联修改文件应以数据库当前状态为准。',
+  },
+  {
+    id: 'npc-data-security-law-2021', sourceType: 'official_law', title: '中华人民共和国数据安全法', organization: '全国人民代表大会常务委员会 / 国家法律法规数据库',
+    url: 'https://flk.npc.gov.cn/detail?fileId=&id=ff80818179f5e0800179f885c7e70392&title=%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8%E6%B3%95&type=', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '法律概念摘要并链接现行文本', note: '用于数据定义、处理活动和数据安全基本框架；具体义务依数据库标示的有效文本判断。',
+  },
+  {
+    id: 'npc-personal-information-protection-law', sourceType: 'official_law', title: '中华人民共和国个人信息保护法', organization: '全国人民代表大会常务委员会 / 全国人大常委会公报',
+    url: 'https://wb.flk.npc.gov.cn/flfg/PDF/f67af9f12e1b4c83a998cf5a876ce0e4.pdf', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '法律概念摘要并链接公报原文', note: '用于个人信息权益、处理活动和敏感个人信息等基础概念；具体合规要求应核对现行法律法规。',
+  },
+  {
+    id: 'nea-photovoltaic-principle', sourceType: 'official_reference', title: '名词解释：光伏发电', organization: '国家能源局',
+    url: 'https://www.nea.gov.cn/2011-09/30/c_131169301.htm', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '能量转换原理概述并链接原文', note: '国家能源局资料解释光伏电池利用半导体光电效应发电，并区分组件、逆变器和储能等系统环节。',
+  },
+  {
+    id: 'miit-future-industries-2024', sourceType: 'official_policy', title: '工业和信息化部等七部门关于推动未来产业创新发展的实施意见', organization: '工业和信息化部等七部门',
+    url: 'https://www.miit.gov.cn/zwgk/zcwj/wjfb/yj/art/2024/art_ad15b0f08a714fd8888c0e31468b8c54.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '产业方向概述并链接政策原文', note: '文件按未来制造、未来信息、未来材料、未来能源、未来空间、未来健康等方向部署；只用于科技方向识别，不将规划目标当作既成事实。',
+  },
+  {
+    id: 'miit-new-battery-plan-2026', sourceType: 'official_policy', title: '新型电池产业发展“十五五”规划解读', organization: '工业和信息化部等七部门',
+    url: 'https://www.miit.gov.cn/zwgk/zcjd/art/2026/art_2d166bf3c90e45dfbdcd5fbaae9c9b17.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '电池技术方向概述并链接政策原文', note: '用于锂电、钠电、液流电池等储能与电化学转换概念；规划中的阶段目标应保留年份和文件属性。',
+  },
+  {
+    id: 'cas-synthetic-biology', sourceType: 'official_reference', title: '合成生物学学科战略研究', organization: '中国科学院学部 / 国家自然科学基金委员会',
+    url: 'https://academics.casad.cas.cn/cbw/zgxkjqyly2035fzzlcs/hcswx/', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '学科概念概述并链接原文', note: '介绍合成生物学将工程设计方法用于生命系统研究，涉及生物制造、健康、能源、环境和材料等交叉领域。',
+  },
+  {
+    id: 'npc-criminal-law', sourceType: 'official_law', title: '中华人民共和国刑法（国家法律法规数据库）', organization: '全国人民代表大会 / 国家法律法规数据库',
+    url: 'https://flk.npc.gov.cn/detail?fileId=&id=ff808181796a636a0179822a19640c92&title=&type=', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '犯罪构成和法律关系摘要并链接现行文本', note: '国家法律法规数据库刑法条目；共同犯罪、财产犯罪和具体刑责均应按数据库当前有效文本核对。',
+  },
+  {
+    id: 'samr-civil-servants-law-2018', sourceType: 'official_law', title: '中华人民共和国公务员法（2018年修订）', organization: '国家市场监督管理总局（官方全文转载）',
+    url: 'https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_6af2e9cf52224593b4dc15258bb34860.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '法定义务和权利摘要并链接法规全文', note: '用于公务员义务、权利、依法履职和管理监督等基础知识；引用具体条文前应核对现行版本。',
+  },
+  {
+    id: 'mee-ecological-environment-code-2026', sourceType: 'official_law', title: '中华人民共和国生态环境法典', organization: '全国人民代表大会 / 生态环境部',
+    url: 'https://www.mee.gov.cn/ywgz/fgbz/fl/202603/t20260313_1146496.shtml', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '法律原则摘要并链接法典全文', note: '法典于2026年3月12日通过、2026年8月15日起施行；用于生态环境治理原则、政府职责和公众参与等现行法知识核对。',
+  },
+  {
+    id: 'beijing-city-renewal-regulation', sourceType: 'official_law', title: '北京市城市更新条例', organization: '北京市人民代表大会常务委员会 / 首都之窗',
+    url: 'https://www.beijing.gov.cn/zhengce/dfxfg/202212/t20221206_2871600.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '法规制度摘要并链接原文', note: '条例自2023年3月1日起施行；用于居住、产业、设施、公共空间和区域综合性更新分类及基层参与机制核对。',
+  },
+  {
+    id: 'beijing-ecology-conservation-regulation', sourceType: 'official_law', title: '北京市生态涵养区生态保护和绿色发展条例', organization: '北京市人民代表大会常务委员会 / 首都之窗',
+    url: 'https://www.beijing.gov.cn/zhengce/dfxfg/202104/t20210421_2365099.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '法规空间与原则摘要并链接原文', note: '条例自2021年6月5日起施行；用于生态涵养区范围、生态优先、系统治理和绿色发展等北京地方知识核对。',
+  },
+  {
+    id: 'moe-curriculum-2022', sourceType: 'official_reference', title: '义务教育课程方案和课程标准（2022年版）发布通知', organization: '中华人民共和国教育部',
+    url: 'https://hudong.moe.gov.cn/srcsite/A26/s8001/202204/t20220420_619921.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '课程目标与基础概念概述并链接原文', note: '用于科学探究、科学素养和义务教育课程范围的基础核对。',
+  },
+  {
+    id: 'npc-social-insurance-law', sourceType: 'official_law', title: '中华人民共和国社会保险法', organization: '全国人民代表大会常务委员会 / 国家市场监督管理总局官方转载',
+    url: 'https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2023/art_e81d115419b4463ebb59ec46467fb136.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '法律制度摘要并链接法规全文', note: '用于五项法定社会保险制度、参保缴费与待遇框架核对；具体经办规则以现行法规为准。',
+  },
+  {
+    id: 'moj-social-assistance-law-2026', sourceType: 'official_law', title: '中华人民共和国社会救助法', organization: '司法部智慧普法平台 / 新华社',
+    url: 'https://legalinfo.moj.gov.cn/zhfxfzzx/fzzxyw/202604/t20260430_534433.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '法律框架摘要并链接官方发布信息', note: '2026年4月30日通过，2026年7月1日起施行；用于社会救助的法律框架和制度定位核对。',
+  },
+  {
+    id: 'beijing-emergency-response-law-2024', sourceType: 'official_law', title: '中华人民共和国突发事件应对法（2024年修订）', organization: '北京市人民政府 / 全国人大常委会公报',
+    url: 'https://www.beijing.gov.cn/zhengce/zhengcefagui/qtwj/202609/t20260904_4850732.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '法律类别与应对流程摘要并链接现行全文', note: '2024年修订文本自2024年11月1日起施行；用于突发事件分类、预防准备、监测预警、处置救援和恢复重建核对。',
+  },
+  {
+    id: 'mem-production-safety-law-2021', sourceType: 'official_law', title: '中华人民共和国安全生产法（2021年修正）', organization: '中华人民共和国应急管理部',
+    url: 'https://www.mem.gov.cn/fw/flfgbz/fg/202107/t20210716_416558.shtml', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '法律职责摘要并链接法规全文', note: '用于生产经营单位主体责任、从业人员权利义务、安全监管与事故应急等基础核对。',
+  },
+  {
+    id: 'state-council-government-information-disclosure', sourceType: 'official_law', title: '中华人民共和国政府信息公开条例（2019年修订）', organization: '中华人民共和国国务院',
+    url: 'https://www.gc.gov.cn/columns/c366fb5a-39d1-482d-8611-28eda5f83252/202004/04/9e3c8b2f-d421-4a9c-8137-e93afff52a31.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '法规制度摘要并链接全文', note: '用于政府信息主动公开、依申请公开和公开边界等制度框架核对；具体事项依现行条例处理。',
+  },
+  {
+    id: 'npc-resident-committee-law', sourceType: 'official_law', title: '中华人民共和国城市居民委员会组织法', organization: '全国人民代表大会常务委员会 / 政府门户全文转载',
+    url: 'https://www.xjhegs.gov.cn/xjhegs/c114406/202307/d6a22e164986411f8c0288da14b7d7f0.shtml', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '基层自治制度摘要并链接法律全文', note: '用于居民委员会的基层群众性自治组织属性及其与政府派出机关的关系核对。',
+  },
+  {
+    id: 'moj-production-safety-emergency-regulation', sourceType: 'official_law', title: '生产安全事故应急条例', organization: '国家行政法规库 / 司法部',
+    url: 'https://xzfg.moj.gov.cn/mobile/law/detail?LawID=441', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '法规职责摘要并链接全文', note: '用于生产安全事故风险辨识、应急预案编制、演练和应急响应的制度核对。',
+  },
+  {
+    id: 'beijing-2026-work-report', sourceType: 'official_policy', title: '2026年北京市政府工作报告', organization: '北京市人民政府',
+    url: 'https://www.beijing.gov.cn/cs/gncs/zcwj/202603/t20260327_4568183.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '年度政策要点概述并链接报告原文', note: '用于北京年度任务和规划目标核对；报告目标不代表已经实现的结果。',
+  },
+  {
+    id: 'mof-2026-budget-report', sourceType: 'official_policy', title: '关于2025年中央和地方预算执行情况与2026年中央和地方预算草案的报告', organization: '中华人民共和国财政部',
+    url: 'https://www.mof.gov.cn/zhengwuxinxi/caizhengxinwen/202603/t20260316_3985331.htm', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '预算制度与年度安排概述并链接报告原文', note: '用于一般公共预算、政府性基金预算、国有资本经营预算和社会保险基金预算的区分；数字只按对应年度与预算口径引用。',
+  },
+  {
+    id: 'ndrc-15th-five-year-plan', sourceType: 'official_policy', title: '中华人民共和国国民经济和社会发展第十五个五年规划纲要（2026—2030年）', organization: '国家发展和改革委员会 / 全国人大',
+    url: 'https://www.ndrc.gov.cn/fggz/fzzlgh/gjfzgh/202603/U020260317369114704096.pdf', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '规划框架摘要并链接纲要全文', note: '2026—2030年国家规划纲要；区分战略目标、阶段任务、年度行动和已完成成果。',
+  },
+  {
+    id: 'moe-senior-high-ideology-curriculum-2020', sourceType: 'official_reference', title: '普通高中思想政治等学科课程标准（2017年版2020年修订）发布通知', organization: '中华人民共和国教育部',
+    url: 'https://hudong.moe.gov.cn/srcsite/A26/s8001/202006/t20200603_462199.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '课程范围摘要并链接官方通知', note: '作为哲学、政治基础知识的课程范围参考；相关理论解释按课程标准和权威教材核对。',
+  },
+  {
+    id: 'un-system-official', sourceType: 'official_reference', title: '联合国系统组成说明', organization: '联合国',
+    url: 'https://www.un.org/en/about-us/un-system', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '组织结构摘要并链接官方页面', note: '联合国系统包括联合国本身以及基金、方案、专门机构等实体；专门机构为与联合国建立关系的自治国际组织。',
+  },
+  {
+    id: 'un-paris-agreement-ndc', sourceType: 'official_reference', title: '巴黎协定与国家自主贡献说明', organization: '联合国',
+    url: 'https://www.un.org/en/climatechange/all-about-ndcs', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '国际气候制度摘要并链接官方说明', note: '用于国家自主贡献（NDC）、五年更新周期、减缓和适应等知识核对；各国当期承诺须查看最新提交文本。',
+  },
+  {
+    id: 'un-dppa-regional-organizations', sourceType: 'official_reference', title: '联合国与区域组织合作说明', organization: '联合国政治和建设和平事务部',
+    url: 'https://dppa.un.org/en/node/133862', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '组织关系摘要并链接官方说明', note: '用于理解《联合国宪章》第八章框架下联合国与区域组织在预防、调解和危机应对中的互补合作。',
+  },
+  {
+    id: 'nhc-2026-health-work-report', sourceType: 'official_policy', title: '2026年全国卫生健康工作会议部署', organization: '中华人民共和国国家卫生健康委员会',
+    url: 'https://www.nhc.gov.cn/bgt/c100022/202601/b638f0d4af094fbda637b18a26892926.shtml', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '年度工作重点概述并链接官方发布', note: '用于卫生健康年度工作重点和服务体系建设核对；当年任务须与长期法律制度区分。',
+  },
+  {
+    id: 'mee-2026-environment-work-report', sourceType: 'official_policy', title: '2026年全国生态环境保护工作报告', organization: '中华人民共和国生态环境部',
+    url: 'https://www.mee.gov.cn/xxgk/hjyw/202601/t20260127_1142657.shtml', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '年度政策方向摘要并链接工作报告', note: '用于污染治理、生态保护和绿色转型年度部署核对；规划目标与实际监测结果分开表述。',
+  },
+  {
+    id: 'nda-2026-digital-society-work-points', sourceType: 'official_policy', title: '2026年数字社会发展工作要点', organization: '国家数据局',
+    url: 'https://www.nda.gov.cn/sjj/ywpd/szsh/0519/20260519194939282443663_pc.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '工作要点摘要并链接官方发布', note: '用于数字公共服务、智慧场景、数字治理和制度保障年度重点核对；规划任务不等于已全部落地。',
+  },
+  {
+    id: 'most-2026-science-work-report', sourceType: 'official_policy', title: '全国科技工作会议关于2025年科技进展与2026年重点工作的报告', organization: '中华人民共和国科学技术部',
+    url: 'https://www.most.gov.cn/kjbgz/202601/t20260127_195800.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '科技工作方向摘要并链接官方报告', note: '用于年度科技议题核验；具体获奖、成果和应用状态须回到科技部或科研机构原始发布。',
+  },
+  {
+    id: 'most-2025-science-awards', sourceType: 'official_reference', title: '2025年度国家科学技术奖获奖项目目录', organization: '中华人民共和国科学技术部',
+    url: 'https://www.most.gov.cn/cxfw/kjjlcx/kjjl2025/202607/t20260708_196987.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '成果类别与公布信息摘要并链接项目目录', note: '用于核对国家科学技术奖名称、年度和项目类别；获奖不等同于成果已大规模商业应用。',
+  },
+  {
+    id: 'mohrss-2026-public-employment-services', sourceType: 'official_policy', title: '2026年全国公共就业招聘专项活动通知', organization: '中华人民共和国人力资源和社会保障部',
+    url: 'https://www.mohrss.gov.cn/wap/zc/zcwj/202601/t20260120_565785.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '就业服务工作要点摘要并链接官方通知', note: '用于公共就业服务、岗位对接和重点群体帮扶等年度政策核对；阶段性活动信息注明年份。',
   },
 ];
