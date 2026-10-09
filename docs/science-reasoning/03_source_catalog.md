@@ -31,5 +31,6 @@
 | gd-2026-official-outline | 官方大纲例题 / 广东 / 2026 | 1 | [广东省委组织部公告](https://www.gdzz.gov.cn/tzgg/content/mpost_24016.html)；[官方大纲附件](https://www.jiangmen.gov.cn/jmkjj/attachment/0/373/373115/3383802.doc)；[全文核对页](https://yn.huatu.com/2025/1019/1978599_5.html) |
 | gd-2026-science-reasoning-recall | 考生回忆 / 广东 / 2026 | 0（图示待核验） | [网友回忆卷](https://gwy.gkzhenti.cn/paper/1767342832062)；[答案页](https://gwy.gkzhenti.cn/answer/1767342832062)；[中公分析](https://www.eoffcn.com/kszx/detail/1918990.html) |
 | mock-zhonggong-2027-light | 机构模拟 / 广东 | 1 | [中公网校光学模拟题](https://www.eoffcn.com/kszx/detail/2214061.html) |
+| `zhanhong-zhejiang-mock` | 机构模拟 / 浙江 | 4 | [展鸿行测模拟卷 PDF](https://static.32xueyuan.com/zq/u/cms/zj/202406/19110417oqg8.pdf) |
 
-合计 26 条来源记录：6 条官方大纲、16 条回忆资料、4 条机构材料。来源记录数不等于已发布题数；没有可用题目的来源仍保留在目录中并说明原因。
+合计 27 条来源记录：6 条官方大纲、16 条回忆资料、5 条机构材料。来源记录数不等于已发布题数；没有可用题目的来源仍保留在目录中并说明原因。

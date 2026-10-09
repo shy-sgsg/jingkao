@@ -215,6 +215,13 @@ export const SCIENCE_SOURCES = [
     note: '中公网校科学推理模拟题第 2 题，文字题面和答案解析可核对；按原意改述，属于机构模拟题，不是省考真题。',
   },
   {
+    id: 'zhanhong-zhejiang-mock', title: '展鸿公务员录用考试笔试试卷《行政职业能力测验》模拟卷',
+    organization: '展鸿教育（浙江）', sourceType: 'third_party_mock', region: '浙江', examYear: null,
+    authority: 'third-party-publisher', verificationStatus: 'verified', copyrightStatus: 'reference_only',
+    url: 'https://static.32xueyuan.com/zq/u/cms/zj/202406/19110417oqg8.pdf',
+    note: '模拟卷第 78、79、81、83 题有完整题面和答案解析，改述收录。图示题未收录；第 82 题答案解析结论绝对化，第 85 题与已收录气体用途题核心知识重复，均不重复发布。',
+  },
+  {
     id: 'huatu-2022-science-examples', title: '华图科学推理浮力例题',
     organization: '华图教育广东分院', sourceType: 'third_party_mock', region: '广东', examYear: null,
     authority: 'third-party-publisher', verificationStatus: 'verified', copyrightStatus: 'reference_only',

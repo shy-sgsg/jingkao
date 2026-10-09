@@ -739,4 +739,48 @@ addPublishedReferenceQuestion({
   correctAnswer: 'D', explanation: '物体呈现的颜色主要取决于它反射到眼中的可见光。红色物体主要反射红光、较多吸收其他波长的光，因此 D 把吸收和反射关系说反了。',
 });
 
+addPublishedReferenceQuestion({
+  id: 'mock-zhanhong-water-mechanical-energy', subjectId: 'physics', topicId: 'physics:mechanics',
+  knowledgePointIds: ['physics:mechanical-energy'], difficulty: 'medium', reasoningType: 'causal_inference',
+  sourceType: 'third_party_mock', sourceId: 'zhanhong-zhejiang-mock',
+  sourceTitle: '展鸿行测模拟卷第 78 题 · 爬山与矿泉水', region: '浙江', examYear: null, presentationMode: 'adapted',
+  sourceNote: '据展鸿模拟卷第 78 题改述；答案 A 与同卷解析核对。属于第三方模拟题，不是公务员考试真题。',
+  stem: '一名志愿者携带冰镇矿泉水从山脚爬到山腰，取出时发现水温升高。下列说法正确的是：',
+  options: ['水的位置升高，使它的重力势能和机械能增加', '水温上升只能由外界对水做功造成', '水分子运动加剧会使静止的水面明显起伏', '冲剂颗粒在水中很快溶解，说明它的熔点较低'],
+  correctAnswer: 'A', explanation: '矿泉水随志愿者升高，重力势能增加，因此机械能增加。水温升高主要来自与环境的热传递；分子热运动不等于液面出现明显宏观起伏，溶解也不等于熔化。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'mock-zhanhong-seashore-specific-heat', subjectId: 'physics', topicId: 'physics:thermal',
+  knowledgePointIds: ['physics:specific-heat'], difficulty: 'easy', reasoningType: 'causal_inference',
+  sourceType: 'third_party_mock', sourceId: 'zhanhong-zhejiang-mock',
+  sourceTitle: '展鸿行测模拟卷第 79 题 · 海滨与沙漠温差', region: '浙江', examYear: null, presentationMode: 'adapted',
+  sourceNote: '据展鸿模拟卷第 79 题改述；答案 C 与同卷解析核对。属于第三方模拟题，不是公务员考试真题。',
+  stem: '夏季海滨白天有海风，夜间仍较凉爽，而沙漠地区的昼夜温差较大。最主要的原因是：',
+  options: ['海滨地区日照时间总是更短', '海边白天有风而沙漠夜间没有风', '水的比热容通常大于沙石，同样吸放热时温度变化较小', '太阳光全年直射沙漠而斜射海边'],
+  correctAnswer: 'C', explanation: '水的比热容通常大于沙石，在相同质量和热量条件下温度变化较小。因此海水白天升温、夜间降温都较慢，海滨昼夜温差通常较小。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'mock-zhanhong-blind-path-pressure', subjectId: 'physics', topicId: 'physics:pressure',
+  knowledgePointIds: ['physics:solid-pressure'], difficulty: 'easy', reasoningType: 'causal_inference',
+  sourceType: 'third_party_mock', sourceId: 'zhanhong-zhejiang-mock',
+  sourceTitle: '展鸿行测模拟卷第 81 题 · 盲道与压强', region: '浙江', examYear: null, presentationMode: 'adapted',
+  sourceNote: '据展鸿模拟卷第 81 题改述；答案 B 与同卷解析核对。属于第三方模拟题，不是公务员考试真题。',
+  stem: '盲道表面凸起的条形砖和圆点砖能让使用者通过脚底感知路面提示。主要原因是凸起部分：',
+  options: ['增大脚底所受压力', '减小受力面积，使脚底局部压强增大', '减小脚底所受压力', '增大受力面积，使脚底局部压强减小'],
+  correctAnswer: 'B', explanation: '人体重力及脚底承受的总压力并未因盲道凸起而明显增加；凸起使局部接触面积减小，所以压强增大，更容易被脚底感知。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'mock-zhanhong-gas-identification', subjectId: 'chemistry', topicId: 'chemistry:materials-experiments',
+  knowledgePointIds: ['chemistry:common-gases'], difficulty: 'medium', reasoningType: 'experiment_design',
+  sourceType: 'third_party_mock', sourceId: 'zhanhong-zhejiang-mock',
+  sourceTitle: '展鸿行测模拟卷第 83 题 · 常见气体鉴别', region: '浙江', examYear: null, presentationMode: 'adapted',
+  sourceNote: '据展鸿模拟卷第 83 题改述；答案 C 与同卷解析核对。实际检验氢气需少量取样并遵守实验安全要求。属于第三方模拟题，不是公务员考试真题。',
+  stem: '三份少量气体样品分别为空气、氧气和氢气。按实验规范操作时，以下哪种方法最能区分它们？',
+  options: ['观察气体颜色', '分别倒入澄清石灰水', '用燃着的木条检验', '闻气体的气味'],
+  correctAnswer: 'C', explanation: '三种气体均无色、无明显气味。少量取样时，氧气能使木条燃烧更旺，氢气能燃烧，空气通常只支持木条正常燃烧，故燃着的木条可区分三者。真实操作须遵守氢气验纯和防火规范。',
+});
+
 export { SCIENCE_QUESTION_BANK };
