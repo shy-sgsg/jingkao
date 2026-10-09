@@ -5,6 +5,7 @@ const sourcedKnowledgeQuestion = (question, source) => ({
   sourceId: source.sourceId,
   sourceTitle: source.sourceTitle,
   sourceNote: source.sourceNote,
+  sourceUrl: source.url || null,
   region: source.region,
   examYear: source.examYear,
   paperId: source.paperId,
@@ -24,13 +25,14 @@ const anhuiOutlineSource = {
   sourceNote: '来自安徽省2026年度考试大纲中的公开例题。题干与选项作摘要改写，保留考点与答案，不是历年考试真题。',
   region: 'anhui', examYear: 2026, paperId: 'anhui-2026-outline',
   paperTitle: '安徽省2026年行测大纲例题',
+  url: 'https://rsj.huainan.gov.cn/group4/M00/11/14/rB40qWlooVmAFWHRAA3nByKSHRA495.pdf?attachDownload=1',
 };
 const zhejiangRecallSource = {
   sourceType: 'recalled', sourceId: 'zhejiang-2025a-recall',
   sourceTitle: '2025年浙江省考行测A类（考生回忆版，摘要改写）',
   sourceNote: '来源为第三方公开考生回忆版；题干与选项作摘要改写，答案与公开答案页核对。非官方发布原卷。',
   region: 'zhejiang', examYear: 2025, paperId: 'zhejiang-2025-A-类',
-  paperTitle: '2025年浙江A类行测回忆卷', answerUrl: 'https://gwy.gkzhenti.cn/answer/1739531137130',
+  paperTitle: '2025年浙江A类行测回忆卷', url: 'https://gwy.gkzhenti.cn/paper/1739531137130', answerUrl: 'https://gwy.gkzhenti.cn/answer/1739531137130',
 };
 
 export const GENERAL_KNOWLEDGE_QUESTION_BANK = [

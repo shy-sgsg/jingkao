@@ -10,6 +10,20 @@ function stringIds(value) {
   return Array.isArray(value) ? [...new Set(value.filter((id) => typeof id === 'string' && id.length > 0))] : [];
 }
 
+export function emptyAptitudeOverallStudy() {
+  return { sessions: [], answers: [], mistakes: {} };
+}
+
+export function normalizeAptitudeOverallStudy(source = {}) {
+  const state = isRecord(source) ? source : {};
+  return {
+    ...emptyAptitudeOverallStudy(),
+    sessions: Array.isArray(state.sessions) ? state.sessions.filter(isRecord) : [],
+    answers: Array.isArray(state.answers) ? state.answers.filter(isRecord) : [],
+    mistakes: isRecord(state.mistakes) ? state.mistakes : {},
+  };
+}
+
 function moduleRecords(value, moduleId) {
   return Array.isArray(value)
     ? value.filter((item) => isRecord(item) && (!item.moduleId || item.moduleId === moduleId))

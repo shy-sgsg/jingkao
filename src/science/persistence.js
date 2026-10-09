@@ -1,5 +1,5 @@
 import { normalizeGeneralKnowledgeStudy } from '../general-knowledge/persistence.js';
-import { normalizeAptitudeModuleStudies } from '../aptitude/persistence.js';
+import { normalizeAptitudeModuleStudies, normalizeAptitudeOverallStudy } from '../aptitude/persistence.js';
 
 function emptyScienceStudy() {
   return { knowledgeProgress: {}, sessions: [], answers: [], mistakes: {}, favorites: [], favoriteKnowledgePointIds: [], unclearKnowledgePointIds: [] };
@@ -17,6 +17,7 @@ export function normalizeStudyState(source = {}) {
     studyPlanTasks: Array.isArray(state.studyPlanTasks) ? state.studyPlanTasks : [],
     generalKnowledgeStudy: normalizeGeneralKnowledgeStudy(state.generalKnowledgeStudy),
     aptitudeModuleStudies: normalizeAptitudeModuleStudies(state.aptitudeModuleStudies),
+    aptitudeOverallStudy: normalizeAptitudeOverallStudy(state.aptitudeOverallStudy),
     scienceStudy: {
       knowledgeProgress: isScienceRecord(science.knowledgeProgress) ? science.knowledgeProgress : {},
       sessions: Array.isArray(science.sessions) ? science.sessions : [],

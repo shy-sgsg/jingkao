@@ -47,7 +47,7 @@ export function getAptitudeModuleStats(moduleId, sourceStudy = {}) {
   };
 }
 
-export function getAptitudeMockSessionRecords({ scienceStudy = {}, generalKnowledgeStudy = {}, aptitudeModuleStudies = {} } = {}) {
+export function getAptitudeMockSessionRecords({ scienceStudy = {}, generalKnowledgeStudy = {}, aptitudeModuleStudies = {}, aptitudeOverallStudy = {} } = {}) {
   const records = [];
   for (const module of APTITUDE_MODULES) {
     const study = module.studyStore === 'scienceStudy' ? scienceStudy
@@ -79,6 +79,33 @@ export function getAptitudeMockSessionRecords({ scienceStudy = {}, generalKnowle
         href: `${module.route}?session=${encodeURIComponent(session.id)}`,
       });
     }
+  }
+  const overallAnswers = answersFromStore(aptitudeOverallStudy);
+  for (const session of sessionsFromStore(aptitudeOverallStudy)) {
+    if (session.mode !== 'exam' || !['completed', 'timed_out'].includes(session.status)) continue;
+    const questionCount = Array.isArray(session.questionIds) ? session.questionIds.length : 0;
+    if (!questionCount) continue;
+    const sessionAnswers = overallAnswers.filter((answer) => answer.sessionId === session.id);
+    const correctCount = sessionAnswers.filter((answer) => answer.isCorrect === true).length;
+    const scopedModule = APTITUDE_MODULES.find((module) => module.id === session.scopeModuleId);
+    const moduleName = session.mockType === 'full_paper'
+      ? `${scopedModule ? `${scopedModule.area}分区卷` : '行测整卷'} · ${session.paperTitle || '来源卷'}`
+      : scopedModule ? `${scopedModule.area}随机组卷` : '行测跨模块随机卷';
+    const completedAt = session.completedAt || session.submittedAt || session.startedAt || '';
+    records.push({
+      id: session.id,
+      moduleId: session.scopeModuleId || 'aptitude-overall',
+      moduleName,
+      mode: session.mode,
+      status: session.status,
+      date: String(completedAt).slice(0, 10),
+      questionCount,
+      answeredCount: sessionAnswers.length,
+      correctCount,
+      scoreRate: correctCount / questionCount,
+      answeredAccuracy: sessionAnswers.length ? correctCount / sessionAnswers.length : null,
+      href: `#/aptitude?session=${encodeURIComponent(session.id)}`,
+    });
   }
   return records.sort((left, right) => right.date.localeCompare(left.date) || left.moduleName.localeCompare(right.moduleName, 'zh-CN'));
 }

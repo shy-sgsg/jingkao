@@ -109,6 +109,7 @@ const sourceQuestion = (question, source) => ({
   sourceId: source.sourceId,
   sourceTitle: source.sourceTitle,
   sourceNote: source.sourceNote,
+  sourceUrl: source.url || null,
   region: source.region,
   examYear: source.examYear,
   paperId: source.paperId,
@@ -132,6 +133,7 @@ const anhuiOutlineSource = {
   examYear: 2026,
   paperId: 'anhui-2026-outline',
   paperTitle: '安徽省2026年行测大纲例题',
+  url: 'https://rsj.huainan.gov.cn/group4/M00/11/14/rB40qWlooVmAFWHRAA3nByKSHRA495.pdf?attachDownload=1',
 };
 const zhejiangRecallSource = {
   sourceType: 'recalled',
@@ -142,6 +144,7 @@ const zhejiangRecallSource = {
   examYear: 2025,
   paperId: 'zhejiang-2025-A-类',
   paperTitle: '2025年浙江A类行测回忆卷',
+  url: 'https://gwy.gkzhenti.cn/paper/1739531137130',
   answerUrl: 'https://gwy.gkzhenti.cn/answer/1739531137130',
 };
 

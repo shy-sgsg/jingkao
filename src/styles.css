@@ -326,6 +326,21 @@ button { color: inherit; }
 .aptitude-content-card h2 { margin: 3px 0 4px; color: #405672; font-size: var(--font-sm); }
 .aptitude-content-card p { margin: 0; color: #8b98a8; font-size: var(--font-xs); line-height: 1.55; }
 .aptitude-module-overview { margin-bottom: 12px; }
+.aptitude-mock-mode-panel, .aptitude-module-mock-modes { margin-bottom: 12px; padding: 16px; }
+.aptitude-mock-mode-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.aptitude-mock-mode-panel > .panel-hint { margin: 10px 0 0; }
+.aptitude-module-mock-modes { display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+.aptitude-module-mock-modes > div:first-child { display: grid; gap: 4px; }
+.aptitude-module-mock-modes strong { color: #405672; font-size: var(--font-sm); }
+.aptitude-module-mock-modes small { color: #8492a4; font-size: var(--font-xs); }
+.aptitude-paper-choice { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 13px 0; border-top: 1px solid #edf0f4; }
+.aptitude-paper-choice:first-child { border-top: 0; }
+.aptitude-paper-choice > div { display: grid; gap: 5px; }
+.aptitude-paper-choice strong { color: #405672; font-size: var(--font-sm); }
+.aptitude-paper-choice small, .aptitude-paper-choice a { color: #8492a4; font-size: var(--font-xs); }
+.aptitude-shared-stimulus { margin-bottom: 12px; padding: 14px 16px; border: 1px solid #e4ebf1; border-radius: 9px; background: #f8fafc; color: #5d6f85; line-height: 1.65; }
+.aptitude-shared-stimulus p { margin: 0; }
+.aptitude-shared-stimulus img { display: block; max-width: 100%; margin: 10px auto 0; border-radius: 6px; }
 .aptitude-module-stats { margin-bottom: 12px; padding: 16px; }
 .aptitude-module-learning-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-bottom: 12px; }
 .aptitude-module-content-panel { min-width: 0; padding: 16px; }
@@ -1873,6 +1888,10 @@ button.science-answer-option:hover { border-color: #c9d9ee; background: #f7faff;
   .science-reminder-item { grid-template-columns: 34px minmax(0, 1fr); }
   .science-reminder-item b { display: none; }
   .aptitude-module-status { white-space: nowrap; }
+  .aptitude-module-mock-modes { align-items: stretch; flex-direction: column; }
+  .aptitude-mock-mode-actions { width: 100%; }
+  .aptitude-mock-mode-actions .button { flex: 1 1 auto; }
+  .aptitude-paper-choice { align-items: flex-start; flex-direction: column; }
   .science-shortcuts, .science-subject-grid { grid-template-columns: 1fr; }
   .science-shortcut-card { min-height: 95px; }
   .science-lesson-layout { grid-template-columns: 1fr; }

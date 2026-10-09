@@ -26,6 +26,7 @@ import { getGeneralKnowledgeStats, combinePracticeSummary } from './general-know
 import { createGeneralKnowledgeSession, answerGeneralKnowledgeQuestion, continueGeneralKnowledgeSession, selectGeneralKnowledgeAnswer, advanceGeneralKnowledgeQuestion, goToGeneralKnowledgeQuestion, finishGeneralKnowledgeSession, expireGeneralKnowledgeSession } from './general-knowledge/sessions.js';
 import { getGeneralKnowledgeTaskProgress, reconcileGeneralKnowledgePlanTaskProgress } from './general-knowledge/planTasks.js';
 import { APTITUDE_MODULES, getAptitudeMockModules, resolveAptitudeModuleRoute } from './aptitude/modules.js';
+import { getAptitudeMockQuestionBank, getCompleteAptitudePapers, getAptitudeModuleLabel } from './aptitude/mock.js';
 import { findAptitudeModuleKnowledgePoint, getAptitudeModuleContent, getAptitudeModuleKnowledgePoints } from './aptitude/content.js';
 import { getAptitudeMockSessionRecords, getAptitudeModuleStats } from './aptitude/analytics.js';
 import { getAptitudeQuestions, getAptitudeSessionQuestions } from './aptitude/questions.js';
@@ -104,6 +105,7 @@ function routeTaskIdForScience() {
 const initialRoute = readRoute();
 let page = initialRoute.page;
 let activeAptitudeModuleId = initialRoute.aptitudeModuleId;
+let activeAptitudeOverallSessionId = initialRoute.page === 'aptitude' ? initialRoute.sessionId : null;
 let activeAptitudeModulePlanTaskId = initialRoute.page === 'aptitudeModule' ? initialRoute.taskId : null;
 let activeAptitudeModuleSessionId = initialRoute.page === 'aptitudeModule' ? initialRoute.sessionId : null;
 let selectedAptitudeModuleKnowledgePointId = initialRoute.page === 'aptitudeModule' ? initialRoute.knowledgePointId : null;
@@ -134,6 +136,7 @@ let pageRevealObserver = null;
 let scienceExamTimer = null;
 let generalKnowledgeExamTimer = null;
 let aptitudeModuleExamTimer = null;
+let aptitudeOverallExamTimer = null;
 let selectedDay = null;
 let storageUnavailable = false;
 let pendingBackup = null;
@@ -154,7 +157,8 @@ function emptyStorage() {
   return {
     profile: { major: '公共管理' }, dayLogs: {}, planOverrides: {}, studyPlanTasks: studyState.studyPlanTasks,
     scienceStudy: studyState.scienceStudy, generalKnowledgeStudy: studyState.generalKnowledgeStudy,
-    aptitudeModuleStudies: studyState.aptitudeModuleStudies, aptitudeLogs: {}, essayLogs: {},
+    aptitudeModuleStudies: studyState.aptitudeModuleStudies, aptitudeOverallStudy: studyState.aptitudeOverallStudy,
+    aptitudeLogs: {}, essayLogs: {},
     mocks: [], favorites: [], compared: [],
     settings: { density: 'comfortable', fontSize: 'standard', motion: 'enhanced' },
     onboarding: { step: 0, hidden: false, completed: false },
@@ -174,6 +178,7 @@ function readStorage(source = {}, densityFallback = 'comfortable') {
       scienceStudy: studyState.scienceStudy,
       generalKnowledgeStudy: studyState.generalKnowledgeStudy,
       aptitudeModuleStudies: studyState.aptitudeModuleStudies,
+      aptitudeOverallStudy: studyState.aptitudeOverallStudy,
       aptitudeLogs: parsed.aptitudeLogs || {},
       essayLogs: parsed.essayLogs || {},
       mocks: Array.isArray(parsed.mocks) ? parsed.mocks : [],
@@ -269,6 +274,16 @@ function renderOriginalQuestionReference(question) {
     : String(originalNo);
   const paperLabel = question.paperTitle ? `${question.paperTitle} · ` : '';
   return `<span>${escapeHtml(`${paperLabel}${numberLabel}`)}</span>`;
+}
+
+function aptitudeQuestionSource(question) {
+  const catalog = question?.moduleId === 'science' ? SCIENCE_SOURCES
+    : question?.moduleId === 'general-knowledge' ? GENERAL_KNOWLEDGE_SOURCES : [];
+  const source = catalog.find((item) => item.id === question?.sourceId);
+  return {
+    title: question?.sourceTitle || source?.title || question?.sourceType || '来源待补',
+    url: question?.sourceUrl || source?.url || null,
+  };
 }
 
 function safeUrl(value) {
@@ -820,13 +835,53 @@ function renderScience() {
   return `<div class="page-body science-page"><div class="page-heading-row"><div><div class="eyebrow muted">FOUR SCIENCE SUBJECTS · SOURCED QUESTION BANK</div><h1>科学推理</h1><p>知识点学习、专项练习、限时模拟和错题复习会单独记录。现有原创练习保留发布；新收录题目均标注官方例题、回忆题或机构模拟来源。</p></div><div class="heading-actions"><button type="button" class="button button-primary" data-action="open-science-practice">开始自由练习</button><a class="button button-secondary" href="#/plan">安排学习任务</a></div></div>
     <div class="metric-grid science-metrics">${metric('练习题库', `${SCIENCE_QUESTION_BANK.length}<small> 道</small>`, `${questionCounts.official_outline_example} 道官方大纲例题 · ${questionCounts.recalled} 道回忆题 · ${questionCounts.third_party_mock} 道机构模拟 · ${questionCounts.original} 道现有原创`, '⚗', 'blue')}${metric('已作答', `${stats.attemptedCount}<small> 题</small>`, `${stats.completedSessionCount} 次练习完成`, '✓', 'mint')}${metric('实际正确率', fmtPct(stats.accuracy), stats.accuracy === null ? '暂无答案记录' : '按已提交答案计算', '◎', 'amber')}${metric('错题 / 收藏', `${mistakeIds.length}<small> / ${favoriteCount}</small>`, '错题和收藏独立保存', '☆', 'purple')}</div>
     ${renderAptitudeRecords(APTITUDE_MODULES.find((module) => module.id === 'science'), aptitudeItemsForArea('科学推理'))}
-    <section class="science-shortcuts">${activeSession ? `<a class="panel science-shortcut-card science-resume-card" href="#/aptitude/science?session=${encodeURIComponent(activeSession.id)}"><span>继续未完成训练 · ${activeSession.mode === 'exam' ? '限时模拟' : '专项练习'}</span><strong>第 ${activeSession.currentIndex + 1} / ${activeSession.questionIds.length} 题</strong><small>剩余答题和已选答案均已保存</small></a>` : ''}<button type="button" class="panel science-shortcut-card" data-action="open-science-practice" data-mode="mistakes"><span>错题复习</span><strong>${mistakeIds.length} 道</strong><small>仅从已记录错题中抽题</small></button><button type="button" class="panel science-shortcut-card" data-action="open-science-practice" data-mode="exam"><span>限时模拟</span><strong>自选题量与时长</strong><small>到时后停止答题，并保留已作答内容</small></button><a class="panel science-shortcut-card" href="#/plan"><span>学习计划</span><strong>把训练排进日程</strong><small>通过计划任务核验实际完成量</small></a></section>
+    <section class="science-shortcuts">${activeSession ? `<a class="panel science-shortcut-card science-resume-card" href="#/aptitude/science?session=${encodeURIComponent(activeSession.id)}"><span>继续未完成训练 · ${activeSession.mode === 'exam' ? '限时模拟' : '专项练习'}</span><strong>第 ${activeSession.currentIndex + 1} / ${activeSession.questionIds.length} 题</strong><small>剩余答题和已选答案均已保存</small></a>` : ''}<button type="button" class="panel science-shortcut-card" data-action="open-science-practice" data-mode="mistakes"><span>错题复习</span><strong>${mistakeIds.length} 道</strong><small>仅从已记录错题中抽题</small></button><button type="button" class="panel science-shortcut-card" data-action="open-science-practice" data-mode="exam"><span>随机组卷模考</span><strong>自选题量与时长</strong><small>从已核验题目抽题；专项练习和错题记录继续保留</small></button><a class="panel science-shortcut-card" href="#/plan"><span>学习计划</span><strong>把训练排进日程</strong><small>通过计划任务核验实际完成量</small></a></section>${renderAptitudeModuleMockModes('science', { includeRandom: false })}
     <div class="science-subject-grid">${subjects}</div>
     <section class="panel science-source-panel"><div class="science-panel-heading"><div><span class="eyebrow muted">SOURCE CATALOG</span><h2>官方与公开题源</h2><p>“官方大纲例题”来自考试大纲；“考生回忆版”和“机构模拟题”均明确标为非官方。</p></div><span>${SCIENCE_SOURCES.length} 个来源</span></div><div class="science-source-list">${sourceRows}</div></section>
   </div>`;
 }
 
+function renderAptitudeOverallMockModes() {
+  const bank = getAptitudeMockQuestionBank();
+  const papers = getCompleteAptitudePapers(null, bank).filter((paper) => paper.isFullPaper);
+  const activeSession = storage.aptitudeOverallStudy.sessions.find((session) => session.status === 'active' && session.mode === 'exam');
+  const resume = activeSession
+    ? `<a class="button button-quiet" href="#/aptitude?session=${encodeURIComponent(activeSession.id)}">继续未完成模考 · 第 ${activeSession.currentIndex + 1}/${activeSession.questionIds.length} 题</a>` : '';
+  return `<section class="panel aptitude-mock-mode-panel"><div class="panel-heading"><div><div class="eyebrow muted">APTITUDE MOCK</div><h2>行测整卷与随机组卷</h2><p>跨模块随机卷只抽题面、答案、解析和题源均已核验的题目；共用材料按题组抽取。</p></div><span>${bank.length} 道可组卷题</span></div><div class="aptitude-mock-mode-actions"><button type="button" class="button button-secondary" data-action="open-aptitude-paper-picker" data-scope="all">选择整套行测卷${papers.length ? ` · ${papers.length} 套` : ''}</button><button type="button" class="button button-primary" data-action="open-aptitude-overall-random-setup" ${bank.length ? '' : 'disabled aria-disabled="true"'}>开始跨模块随机卷</button>${resume}</div>${papers.length ? '' : '<p class="panel-hint">完整来源卷仍在核题；目前不把分模块摘录题合成整卷。</p>'}</section>`;
+}
+
+function renderAptitudeModuleMockModes(moduleId, { includeRandom = true } = {}) {
+  const bank = getAptitudeMockQuestionBank(moduleId);
+  const papers = getCompleteAptitudePapers(moduleId).filter((paper) => paper.moduleId === moduleId);
+  const module = APTITUDE_MODULES.find((item) => item.id === moduleId);
+  if (!module) return '';
+  const randomAction = moduleId === 'science' ? 'open-science-practice'
+    : moduleId === 'general-knowledge' ? 'open-general-knowledge-practice' : 'open-aptitude-module-practice';
+  const randomButton = includeRandom
+    ? `<button type="button" class="button button-primary button-small" data-action="${randomAction}" data-module-id="${escapeHtml(moduleId)}" data-mode="exam" ${bank.length ? '' : 'disabled aria-disabled="true"'}>本模块随机组卷</button>` : '';
+  return `<section class="panel aptitude-module-mock-modes"><div><div class="eyebrow muted">${escapeHtml(module.area)} · 模考</div><strong>来源卷完整分区与随机组卷</strong><small>${bank.length} 道题已通过题面、答案、解析和来源核验。</small></div><div class="aptitude-mock-mode-actions"><button type="button" class="button button-secondary button-small" data-action="open-aptitude-paper-picker" data-scope="${escapeHtml(moduleId)}">选择完整分区卷${papers.length ? ` · ${papers.length} 套` : ''}</button>${randomButton}</div></section>`;
+}
+
+function openAptitudeOverallRandomMockSetup() {
+  const bank = getAptitudeMockQuestionBank();
+  if (!bank.length) { notify('当前没有通过核验、可用于随机组卷的题目。'); return; }
+  const defaultCount = Math.min(60, bank.length);
+  renderModal(`<form id="aptitude-overall-random-setup"><div class="modal-head"><div><div class="eyebrow muted">APTITUDE · RANDOM MOCK</div><h2>设置行测跨模块随机卷</h2><p>从七个行测模块的已核验题目中抽题；共用材料会作为完整题组一起进入试卷。</p></div><button type="button" class="modal-close" data-action="close-modal" aria-label="关闭">×</button></div><div class="modal-body"><div class="form-grid"><label class="form-field"><span>目标题量</span><input name="targetQuestionCount" type="number" min="1" max="${bank.length}" value="${defaultCount}" required/></label><label class="form-field"><span>答题时长（分钟）</span><input name="durationMinutes" type="number" min="1" value="${defaultCount}" required/></label></div><p class="panel-hint">当前可用 ${bank.length} 道题。新收录题目只有在题面、答案、解析及来源通过核验后才会进入随机题池。</p></div><div class="modal-footer"><button type="button" class="button button-quiet" data-action="close-modal">取消</button><button type="submit" class="button button-primary">开始随机模考</button></div></form>`);
+}
+
+function openAptitudePaperPicker(scope = 'all') {
+  const moduleId = scope === 'all' ? null : scope;
+  const papers = getCompleteAptitudePapers(moduleId);
+  const cards = papers.map((paper) => `<article class="aptitude-paper-choice"><div><strong>${escapeHtml(paper.title)}</strong><small>${escapeHtml(paper.region)} · ${paper.examYear} · ${paper.questionCount} 题${paper.moduleId ? ` · ${escapeHtml(getAptitudeModuleLabel(paper.moduleId))}完整分区` : ' · 完整行测卷'}</small><a href="${escapeHtml(safeUrl(paper.sourceUrl))}" target="_blank" rel="noopener noreferrer">查看题源 ↗</a> · <a href="${escapeHtml(safeUrl(paper.answerUrl))}" target="_blank" rel="noopener noreferrer">查看答案来源 ↗</a></div><button type="button" class="button button-primary button-small" data-action="start-aptitude-paper" data-paper-id="${escapeHtml(paper.id)}" data-scope-module-id="${escapeHtml(paper.moduleId || '')}">开始整卷</button></article>`).join('');
+  const scopeName = moduleId ? getAptitudeModuleLabel(moduleId) : '行测';
+  renderModal(`<div class="modal-head"><div><div class="eyebrow muted">VERIFIED SOURCE PAPERS</div><h2>选择${scopeName}${moduleId ? '完整分区卷' : '整套卷'}</h2><p>只展示题号连续、题面与答案解析完整、必要材料齐全且来源可核验的试卷。</p></div><button type="button" class="modal-close" data-action="close-modal" aria-label="关闭">×</button></div><div class="modal-body">${cards || `<div class="empty-state"><strong>暂无可用${scopeName}${moduleId ? '完整分区卷' : '整套卷'}</strong><small>目前公开题源批次仍缺题或缺必要材料；对应题目已保留在已核验的随机题池中，不拼成不完整卷。</small></div>`}</div><div class="modal-footer"><button type="button" class="button button-secondary" data-action="close-modal">关闭</button></div>`);
+}
+
 function renderAptitude() {
+  const routedSession = activeAptitudeOverallSessionId
+    ? storage.aptitudeOverallStudy.sessions.find((session) => session.id === activeAptitudeOverallSessionId)
+    : null;
+  if (routedSession) return renderAptitudeOverallSession(routedSession);
   const aptitude = dataset.aptitude.map((item, index) => ({ ...item, ...(storage.aptitudeLogs[index] || {}), index }));
   const modules = APTITUDE_MODULES.map((module) => ({
     ...module,
@@ -848,7 +903,53 @@ function renderAptitude() {
   const onlineAccuracyNote = onlineAttempted
     ? `七个行测模块站内共答 ${onlineAttempted} 题 · ${onlineCorrect} 题答对`
     : '七个行测模块尚无站内答题记录';
-  return `<div class="page-body aptitude-page"><div class="page-heading-row"><div><div class="eyebrow muted">APTITUDE · MODULE OVERVIEW</div><h1>行测能力</h1><p>七个模块共用学习与计划架构；题库已接入的模块可开练，其他模块显示待接入状态。</p></div><a class="button button-secondary" href="#/plan">查看学习计划 →</a></div><section class="metric-grid four-metrics aptitude-overview" aria-label="行测训练总览">${metric('整体正确率', fmtPct(overall.accuracy), overall.accuracy === null ? '录入练习记录后统计' : `按 ${fmt(overall.accuracyQuestionCount)} 道有正确数依据的题量合并`, '◎', 'blue')}${metric('累计记录题量', overall.hasAttempted ? `${fmt(overall.attemptedCount)}<small> 题</small>` : '待记录', `${overall.hasManualRecordsCount} 个手动训练子项已填写`, '▤', 'mint')}${metric('站内答题正确率', fmtPct(onlineAccuracy), onlineAccuracyNote, '✓', 'amber')}${metric('已记录模块', `${modulesWithRecords}<small> / ${modules.length}</small>`, '包含手动记录和站内答题', '⌁', 'purple')}</section><section class="aptitude-module-section"><div class="aptitude-section-heading"><div><span class="eyebrow muted">MODULES</span><h2>行测模块</h2></div><span>${modules.length} 个入口 · 按题库状态启用练习</span></div><div class="aptitude-entry-grid">${cards}</div></section><div class="notice notice-soft"><span>ⓘ</span><p>各模块按站内作答与本模块手动记录合并正确率。手动题量请填写站外训练，避免把同一站内作答重复计入。</p></div></div>`;
+  return `<div class="page-body aptitude-page"><div class="page-heading-row"><div><div class="eyebrow muted">APTITUDE · MODULE OVERVIEW</div><h1>行测能力</h1><p>七个模块共用学习与计划架构；题库已接入的模块可开练，其他模块显示待接入状态。</p></div><a class="button button-secondary" href="#/plan">查看学习计划 →</a></div><section class="metric-grid four-metrics aptitude-overview" aria-label="行测训练总览">${metric('整体正确率', fmtPct(overall.accuracy), overall.accuracy === null ? '录入练习记录后统计' : `按 ${fmt(overall.accuracyQuestionCount)} 道有正确数依据的题量合并`, '◎', 'blue')}${metric('累计记录题量', overall.hasAttempted ? `${fmt(overall.attemptedCount)}<small> 题</small>` : '待记录', `${overall.hasManualRecordsCount} 个手动训练子项已填写`, '▤', 'mint')}${metric('站内答题正确率', fmtPct(onlineAccuracy), onlineAccuracyNote, '✓', 'amber')}${metric('已记录模块', `${modulesWithRecords}<small> / ${modules.length}</small>`, '包含手动记录和站内答题', '⌁', 'purple')}</section>${renderAptitudeOverallMockModes()}<section class="aptitude-module-section"><div class="aptitude-section-heading"><div><span class="eyebrow muted">MODULES</span><h2>行测模块</h2></div><span>${modules.length} 个入口 · 按题库状态启用练习</span></div><div class="aptitude-entry-grid">${cards}</div></section><div class="notice notice-soft"><span>ⓘ</span><p>各模块按站内作答与本模块手动记录合并正确率。手动题量请填写站外训练，避免把同一站内作答重复计入。</p></div></div>`;
+}
+
+function renderAptitudeOverallSession(session) {
+  const bank = getAptitudeMockQuestionBank();
+  const questionById = new Map(bank.map((question) => [question.id, question]));
+  const study = storage.aptitudeOverallStudy;
+  const answers = study.answers.filter((answer) => answer.sessionId === session.id);
+  const count = session.questionIds.length;
+  const selectedIds = new Set(Object.keys(session.draftAnswers || {}));
+  const isExam = session.mode === 'exam';
+  const sessionTitle = session.mockType === 'full_paper'
+    ? `${session.scopeModuleId ? `${getAptitudeModuleLabel(session.scopeModuleId)}分区卷` : '行测整套卷'} · ${session.paperTitle || '来源卷'}`
+    : session.scopeModuleId ? `${getAptitudeModuleLabel(session.scopeModuleId)}随机组卷` : '行测跨模块随机卷';
+  const clock = isExam && session.status === 'active'
+    ? `<div class="science-session-clock"><span class="eyebrow muted">剩余时间</span><strong id="aptitude-overall-exam-countdown" data-deadline="${escapeHtml(session.deadline)}">计算中</strong></div>` : '';
+  if (['completed', 'timed_out'].includes(session.status)) {
+    const correct = answers.filter((answer) => answer.isCorrect).length;
+    const rows = session.questionIds.map((id, index) => {
+      const question = questionById.get(id);
+      const answer = answers.find((item) => item.questionId === id);
+      if (!question) return '';
+      const source = aptitudeQuestionSource(question);
+      const reference = question.originalQuestionNo === null || question.originalQuestionNo === undefined
+        ? '' : ` · 原卷第 ${escapeHtml(question.originalQuestionNo)} 题`;
+      return `<article class="science-result-row ${!answer ? 'is-unanswered' : answer.isCorrect ? 'is-correct' : 'is-wrong'}"><div><strong>第 ${index + 1} 题 · ${escapeHtml(getAptitudeModuleLabel(question.moduleId))}${reference} · ${!answer ? '未作答' : answer.isCorrect ? '答对' : '答错'}</strong><span>${escapeHtml(question.stem)}</span></div><p>${escapeHtml(question.explanation)}</p><small>${answer ? `你的选择 ${escapeHtml(answer.selectedOptionId)}` : '未作答'} · 正确答案 ${escapeHtml(question.correctAnswer)} · ${source.url ? `<a href="${escapeHtml(safeUrl(source.url))}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.title)} ↗</a>` : escapeHtml(source.title)}</small></article>`;
+    }).join('');
+    return `<div class="page-body aptitude-page aptitude-overall-session"><div class="page-heading-row"><div><div class="eyebrow muted">APTITUDE MOCK REVIEW</div><h1>${session.status === 'timed_out' ? '模考已到时' : '模考已交卷'}</h1><p>${escapeHtml(sessionTitle)} · ${correct}/${count} 题答对 · 得分率 ${fmtPct(count ? correct / count : null)}</p></div><a class="button button-secondary" href="#/aptitude">返回行测总览</a></div><section class="panel science-results-panel"><div class="science-result-summary"><strong>${correct}<small> / ${count}</small></strong><span>答对 / 本场总题数</span><p>逐题答案、解析和题源已保存；未答题不计为答对。</p></div><div class="science-result-list">${rows || '<div class="empty-state">题目数据暂不可用。</div>'}</div></section></div>`;
+  }
+  if (isExam && session.currentIndex >= count) {
+    const map = session.questionIds.map((id, index) => `<button type="button" class="science-exam-number ${selectedIds.has(id) ? 'is-answered' : 'is-unanswered'}" data-action="go-to-aptitude-overall-question" data-session-id="${escapeHtml(session.id)}" data-index="${index}">${index + 1}</button>`).join('');
+    const unanswered = count - selectedIds.size;
+    return `<div class="page-body aptitude-page aptitude-overall-session"><div class="page-heading-row"><div><div class="eyebrow muted">APTITUDE MOCK · ANSWER SHEET</div><h1>检查答题卡</h1><p>${escapeHtml(sessionTitle)} · 已选 ${selectedIds.size} 题 · 未答 ${unanswered} 题。</p></div>${clock}<button type="button" class="button button-quiet" data-action="leave-aptitude-overall-session">暂时退出</button></div><section class="panel science-exam-sheet"><div class="science-exam-question-map">${map}</div><div class="science-question-footer"><button type="button" class="button button-primary" data-action="finish-aptitude-overall-exam" data-session-id="${escapeHtml(session.id)}">确认交卷${unanswered ? `（${unanswered} 题未答）` : ''}</button></div></section></div>`;
+  }
+  const questionId = session.questionIds[session.currentIndex];
+  const question = questionById.get(questionId);
+  if (!question) return `<div class="page-body aptitude-page"><div class="empty-state">题目数据暂不可用。请返回模考记录检查这场练习。</div><a class="button button-secondary" href="#/aptitude">返回行测总览</a></div>`;
+  const source = aptitudeQuestionSource(question);
+  const selected = session.draftAnswers?.[question.id]?.optionId;
+  const options = question.options.map((option) => `<button type="button" class="science-answer-option ${selected === option.id ? 'is-selected' : ''}" data-action="select-aptitude-overall-answer" data-session-id="${escapeHtml(session.id)}" data-option-id="${escapeHtml(option.id)}"><span>${escapeHtml(option.id)}</span><strong>${escapeHtml(option.text)}</strong><small>${selected === option.id ? '已选' : '选择'}</small></button>`).join('');
+  const sharedStimulus = question.sharedStimulus;
+  const stimulusText = typeof sharedStimulus === 'string' ? sharedStimulus : sharedStimulus?.text || sharedStimulus?.caption || '';
+  const stimulusImage = typeof sharedStimulus === 'object' ? safeUrl(sharedStimulus?.imageUrl || sharedStimulus?.assetUrl || '') : '#';
+  const stimulusMarkup = stimulusText || stimulusImage !== '#'
+    ? `<section class="aptitude-shared-stimulus">${stimulusText ? `<p>${escapeHtml(stimulusText)}</p>` : ''}${stimulusImage !== '#' ? `<img src="${escapeHtml(stimulusImage)}" alt="题组共用图表或材料"/>` : ''}</section>` : '';
+  const numberLabel = question.originalQuestionNo === null || question.originalQuestionNo === undefined ? '' : ` · 原卷第 ${escapeHtml(question.originalQuestionNo)} 题`;
+  return `<div class="page-body aptitude-page aptitude-overall-session"><div class="page-heading-row"><div><div class="eyebrow muted">APTITUDE · ${session.mockType === 'full_paper' ? 'SOURCE PAPER' : 'RANDOM MOCK'}</div><h1>${escapeHtml(sessionTitle)}</h1><p>第 ${session.currentIndex + 1}/${count} 题 · ${escapeHtml(getAptitudeModuleLabel(question.moduleId))}${numberLabel}</p></div>${clock}<button type="button" class="button button-quiet" data-action="leave-aptitude-overall-session">暂时退出</button></div><section class="panel science-question-panel">${stimulusMarkup}<div class="science-question-meta"><span>${escapeHtml(question.topicTitle || question.topicId || '')}</span><span>${escapeHtml(question.difficulty || '难度待补')}</span><span>${escapeHtml(source.title)}</span>${numberLabel ? `<span>${numberLabel.slice(3)}</span>` : ''}</div><h2>${escapeHtml(question.stem)}</h2><div class="science-answer-options">${options}</div><div class="science-source-attribution">题目来源：${source.url ? `<a href="${escapeHtml(safeUrl(source.url))}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.title)} ↗</a>` : `<span>${escapeHtml(source.title)}</span>`}${question.answerSourceUrl ? ` · <a href="${escapeHtml(safeUrl(question.answerSourceUrl))}" target="_blank" rel="noopener noreferrer">核对答案 ↗</a>` : ''}${question.sourceNote ? `<small>${escapeHtml(question.sourceNote)}</small>` : ''}</div><div class="science-exam-controls"><button type="button" class="button button-secondary" data-action="go-to-aptitude-overall-question" data-session-id="${escapeHtml(session.id)}" data-index="${Math.max(0, session.currentIndex - 1)}" ${session.currentIndex === 0 ? 'disabled' : ''}>上一题</button><span>已选 ${selectedIds.size} 题</span><button type="button" class="button button-primary" data-action="advance-aptitude-overall-question" data-session-id="${escapeHtml(session.id)}">${session.currentIndex + 1 === count ? '检查答题卡' : '下一题'}</button></div></section>${session.questionSelectionNote ? `<p class="panel-hint">${escapeHtml(session.questionSelectionNote)}</p>` : ''}</div>`;
 }
 
 function getAptitudeModuleOnlineStats(module) {
@@ -1070,7 +1171,7 @@ function renderAptitudeModule(moduleId) {
   const progressNote = summary.hasAttempted
     ? `${fmt(summary.attemptedCount)} / ${fmt(summary.plannedCount)} 题`
     : `尚未记录 · 计划 ${fmt(summary.plannedCount)} 题`;
-  return `<div class="page-body aptitude-module-page"><div class="page-heading-row"><div><div class="eyebrow muted">APTITUDE MODULE</div><h1>${escapeHtml(module.area)}</h1><p>${escapeHtml(module.hint)}。当前模块汇总站内作答与手动记录，内容入口按本模块 provider 显示。</p></div><div class="heading-actions"><a class="button button-primary" href="#/plan">安排学习任务</a><a class="button button-secondary" href="#/aptitude">返回行测总览 →</a></div></div>${taskStartPanel}<div class="metric-grid four-metrics aptitude-module-overview">${metric('合并正确率', fmtPct(summary.accuracy), summary.accuracy === null ? '完成站内答题或录入站外训练后统计' : `依据 ${fmt(summary.accuracyQuestionCount)} 道有效题量`, '◎', 'blue')}${metric('合并题量', summary.hasAttempted ? `${fmt(summary.attemptedCount)}<small> 题</small>` : '待记录', `${fmt(onlineStats.attemptedCount)} 道站内 · ${fmt(manualSummary.attemptedCount)} 道手动`, '▤', 'mint')}${metric('站内训练', `${fmt(onlineStats.completedSessionCount)}<small> 次完成</small>`, `${fmt(onlineStats.attemptedCount)} 道作答`, '✓', 'amber')}${metric('计划题量进度', accuracyProgress === null ? '待记录' : fmtPct(accuracyProgress), progressNote, '↗', 'purple')}</div><section class="panel aptitude-module-stats" data-section="aptitude-module-statistics"><div class="panel-heading"><div><div class="eyebrow muted">MODULE STATISTICS</div><h2>学习统计</h2><p>站内数据按 moduleId 隔离；手动数据来自当前板块的训练子项。</p></div></div><div class="aptitude-module-counts"><span><strong>${fmt(onlineStats.practice.attemptedCount)}</strong><small>练习作答</small></span><span><strong>${fmt(onlineStats.practice.correctCount)}</strong><small>练习答对</small></span><span><strong>${fmt(onlineStats.exam.sessionCount)}</strong><small>已交模拟</small></span><span><strong>${fmt(onlineStats.mistakeCount)} / ${fmt(onlineStats.favoriteCount)}</strong><small>错题 / 收藏</small></span></div></section>${renderAptitudeModuleContent(module, content, questionCount, study, tasks)}${renderAptitudeRecords(module, items)}</div>`;
+  return `<div class="page-body aptitude-module-page"><div class="page-heading-row"><div><div class="eyebrow muted">APTITUDE MODULE</div><h1>${escapeHtml(module.area)}</h1><p>${escapeHtml(module.hint)}。当前模块汇总站内作答与手动记录，内容入口按本模块 provider 显示。</p></div><div class="heading-actions"><a class="button button-primary" href="#/plan">安排学习任务</a><a class="button button-secondary" href="#/aptitude">返回行测总览 →</a></div></div>${taskStartPanel}<div class="metric-grid four-metrics aptitude-module-overview">${metric('合并正确率', fmtPct(summary.accuracy), summary.accuracy === null ? '完成站内答题或录入站外训练后统计' : `依据 ${fmt(summary.accuracyQuestionCount)} 道有效题量`, '◎', 'blue')}${metric('合并题量', summary.hasAttempted ? `${fmt(summary.attemptedCount)}<small> 题</small>` : '待记录', `${fmt(onlineStats.attemptedCount)} 道站内 · ${fmt(manualSummary.attemptedCount)} 道手动`, '▤', 'mint')}${metric('站内训练', `${fmt(onlineStats.completedSessionCount)}<small> 次完成</small>`, `${fmt(onlineStats.attemptedCount)} 道作答`, '✓', 'amber')}${metric('计划题量进度', accuracyProgress === null ? '待记录' : fmtPct(accuracyProgress), progressNote, '↗', 'purple')}</div>${renderAptitudeModuleMockModes(module.id)}<section class="panel aptitude-module-stats" data-section="aptitude-module-statistics"><div class="panel-heading"><div><div class="eyebrow muted">MODULE STATISTICS</div><h2>学习统计</h2><p>站内数据按 moduleId 隔离；手动数据来自当前板块的训练子项。</p></div></div><div class="aptitude-module-counts"><span><strong>${fmt(onlineStats.practice.attemptedCount)}</strong><small>练习作答</small></span><span><strong>${fmt(onlineStats.practice.correctCount)}</strong><small>练习答对</small></span><span><strong>${fmt(onlineStats.exam.sessionCount)}</strong><small>已交模拟</small></span><span><strong>${fmt(onlineStats.mistakeCount)} / ${fmt(onlineStats.favoriteCount)}</strong><small>错题 / 收藏</small></span></div></section>${renderAptitudeModuleContent(module, content, questionCount, study, tasks)}${renderAptitudeRecords(module, items)}</div>`;
 }
 
 function renderGeneralKnowledgeLesson(point, task = null) {
@@ -1197,7 +1298,7 @@ function renderGeneralKnowledge() {
   return `<div class="page-body science-page general-knowledge-page"><div class="page-heading-row"><div><div class="eyebrow muted">11 KNOWLEDGE AREAS · SOURCED QUESTIONS</div><h1>常识判断</h1><p>独立记录讲解进度、练习答案、错题、收藏与模拟成绩；题源和展示方式逐题标明。</p></div><div class="heading-actions"><button type="button" class="button button-primary" data-action="open-general-knowledge-practice">开始练习</button><a class="button button-secondary" href="#/plan">安排学习任务</a></div></div>
     <div class="metric-grid science-metrics">${metric('已发布题库', `${sourceCounts.official_outline_example + sourceCounts.verified_exam + sourceCounts.third_party_mock + sourceCounts.recalled + sourceCounts.original}<small> 道</small>`, `${sourceCounts.official_outline_example + sourceCounts.verified_exam} 道官方例题/真题 · ${sourceCounts.third_party_mock} 道模拟 · ${sourceCounts.original} 道原创`, '常', 'blue')}${metric('站内已作答', `${stats.attemptedCount}<small> 题</small>`, `${stats.completedSessionCount} 次训练完成`, '✓', 'mint')}${metric('站内正确率', fmtPct(stats.accuracy), stats.accuracy === null ? '暂无答题记录' : '只按常识判断站内答案计算', '◎', 'amber')}${metric('错题 / 收藏', `${mistakes.length}<small> / ${study.favorites.length}</small>`, '错题和收藏按常识判断独立保存', '☆', 'purple')}</div>
     ${renderAptitudeRecords(APTITUDE_MODULES.find((module) => module.id === 'general-knowledge'), manualItems)}
-    <section class="science-shortcuts">${study.sessions.some((item) => item.status === 'active') ? `<a class="panel science-shortcut-card science-resume-card" href="#/aptitude/general-knowledge?session=${encodeURIComponent(study.sessions.find((item) => item.status === 'active').id)}"><span>继续未完成训练</span><strong>恢复答题</strong><small>进度和已选答案保存在本机加密档案中</small></a>` : ''}<button type="button" class="panel science-shortcut-card" data-action="open-general-knowledge-practice" data-mode="mistakes"><span>错题复习</span><strong>${mistakes.length} 道</strong><small>只抽取常识判断错题</small></button><button type="button" class="panel science-shortcut-card" data-action="open-general-knowledge-practice" data-mode="exam"><span>限时模拟</span><strong>题量与时长可选</strong><small>交卷后显示成绩、空题数和逐题解析</small></button><button type="button" class="panel science-shortcut-card" data-action="open-general-knowledge-practice" data-mode="favorites"><span>收藏题复习</span><strong>${study.favorites.length} 道</strong><small>按自己的收藏清单练习</small></button></section>
+    <section class="science-shortcuts">${study.sessions.some((item) => item.status === 'active') ? `<a class="panel science-shortcut-card science-resume-card" href="#/aptitude/general-knowledge?session=${encodeURIComponent(study.sessions.find((item) => item.status === 'active').id)}"><span>继续未完成训练</span><strong>恢复答题</strong><small>进度和已选答案保存在本机加密档案中</small></a>` : ''}<button type="button" class="panel science-shortcut-card" data-action="open-general-knowledge-practice" data-mode="mistakes"><span>错题复习</span><strong>${mistakes.length} 道</strong><small>只抽取常识判断错题</small></button><button type="button" class="panel science-shortcut-card" data-action="open-general-knowledge-practice" data-mode="exam"><span>随机组卷模考</span><strong>题量与时长可选</strong><small>交卷后显示成绩、空题数和逐题解析</small></button><button type="button" class="panel science-shortcut-card" data-action="open-general-knowledge-practice" data-mode="favorites"><span>收藏题复习</span><strong>${study.favorites.length} 道</strong><small>按自己的收藏清单练习</small></button></section>${renderAptitudeModuleMockModes('general-knowledge', { includeRandom: false })}
     <section class="panel science-source-panel general-knowledge-flashcards"><div class="science-panel-heading"><div><span class="eyebrow muted">SPACED REVIEW</span><h2>知识闪卡 · 到期 ${dueCards.length} 张</h2><p>根据自评安排下次复习；熟悉程度由你判断。</p></div><a class="panel-link" href="#/aptitude/general-knowledge">查看全部知识点 →</a></div>${flashcard ? `<article class="science-example"><h3>${escapeHtml(flashcard.title)}</h3>${revealedGeneralKnowledgeFlashcardId === flashcard.id ? `<p>${escapeHtml(flashcardContent.principle)}</p><p>${escapeHtml(flashcardContent.memory?.join(' · ') || flashcardContent.explanation)}</p>` : `<p>先回忆这个知识点的核心判断方法，再显示答案。</p><button type="button" class="button button-secondary button-small" data-action="reveal-general-knowledge-flashcard" data-point-id="${escapeHtml(flashcard.id)}">显示答案</button>`}${revealedGeneralKnowledgeFlashcardId === flashcard.id ? `<div class="science-lesson-footer">${[['again', '没记住'], ['hard', '有些困难'], ['good', '记得'], ['easy', '很熟']].map(([rating, label]) => `<button type="button" class="button button-quiet button-small" data-action="review-general-knowledge-flashcard" data-point-id="${escapeHtml(flashcard.id)}" data-rating="${rating}">${label}</button>`).join('')}</div>` : ''}</article>` : '<div class="empty-state">当前没有到期闪卡；完成知识点讲解后可开始复习。</div>'}</section>
     <div class="science-subject-grid">${subjects}</div><section class="panel science-source-panel"><div class="science-panel-heading"><div><span class="eyebrow muted">SOURCE CATALOG</span><h2>题源与内容参考</h2><p>官方例题经过题意重述；未核实展示授权的第三方题面只保留来源链接。</p></div><span>${GENERAL_KNOWLEDGE_SOURCES.length} 个来源</span></div><div class="science-source-list">${sourceRows}</div></section></div>`;
 }
@@ -2184,6 +2285,7 @@ function render() {
   startScienceExamClock();
   startGeneralKnowledgeExamClock();
   startAptitudeModuleExamClock();
+  startAptitudeOverallExamClock();
   if (enteringPage) {
     pageRevealObserver = observePageSections({
       root,
@@ -2281,6 +2383,28 @@ function startAptitudeModuleExamClock() {
   void update();
 }
 
+function startAptitudeOverallExamClock() {
+  clearTimeout(aptitudeOverallExamTimer);
+  aptitudeOverallExamTimer = null;
+  if (page !== 'aptitude') return;
+  const session = activeAptitudeOverallSessionId
+    ? storage.aptitudeOverallStudy.sessions.find((item) => item.id === activeAptitudeOverallSessionId)
+    : storage.aptitudeOverallStudy.sessions.find((item) => item.status === 'active' && item.mode === 'exam');
+  if (!session || session.mode !== 'exam' || session.status !== 'active' || !session.deadline) return;
+  const update = async () => {
+    const remainingSeconds = Math.max(0, Math.ceil((new Date(session.deadline).valueOf() - Date.now()) / 1000));
+    const clock = document.querySelector('#aptitude-overall-exam-countdown');
+    if (clock) clock.textContent = `${String(Math.floor(remainingSeconds / 60)).padStart(2, '0')}:${String(remainingSeconds % 60).padStart(2, '0')}`;
+    if (remainingSeconds <= 0) {
+      storage.aptitudeOverallStudy = expireScienceSession(getAptitudeMockQuestionBank(), storage.aptitudeOverallStudy, session.id);
+      await persistAndRender('行测整卷模考到时，已保存已选答案');
+      return;
+    }
+    aptitudeOverallExamTimer = setTimeout(update, 500);
+  };
+  void update();
+}
+
 function syncSciencePlanTaskCompletion(session) {
   if (!session?.planTaskId) return false;
   const practiceComplete = session.mode === 'practice' && session.status === 'completed';
@@ -2328,7 +2452,7 @@ function scrollToTop() {
 
 function navigate(id, query = '') {
   page = pageMeta[id] ? id : 'overview';
-  const querySuffix = ['science', 'generalKnowledge', 'aptitudeModule'].includes(page) && query ? `?${query}` : '';
+  const querySuffix = ['aptitude', 'science', 'generalKnowledge', 'aptitudeModule'].includes(page) && query ? `?${query}` : '';
   const routePath = page === 'science' ? 'aptitude/science'
     : page === 'generalKnowledge' ? 'aptitude/general-knowledge'
       : page === 'aptitudeModule' ? `aptitude/${activeAptitudeModuleId}` : page;
@@ -2337,6 +2461,7 @@ function navigate(id, query = '') {
   activeSciencePlanTaskId = parsedRoute.taskId;
   selectedScienceKnowledgePointId = parsedRoute.knowledgePointId;
   activeScienceSessionId = parsedRoute.sessionId;
+  activeAptitudeOverallSessionId = page === 'aptitude' ? parsedRoute.sessionId : null;
   activeGeneralKnowledgePlanTaskId = page === 'generalKnowledge' ? parsedRoute.taskId : null;
   selectedGeneralKnowledgePointId = page === 'generalKnowledge' ? parsedRoute.knowledgePointId : null;
   activeGeneralKnowledgeSessionId = page === 'generalKnowledge' ? parsedRoute.sessionId : null;
@@ -2380,6 +2505,63 @@ document.addEventListener('click', async (event) => {
   const positionReference = actionEl.dataset.positionKey || code;
   if (action === 'account-lock') { lockAccount(); return; }
   if (!accountSession) return;
+  if (action === 'open-aptitude-overall-random-setup') { openAptitudeOverallRandomMockSetup(); return; }
+  if (action === 'open-aptitude-paper-picker') { openAptitudePaperPicker(actionEl.dataset.scope || 'all'); return; }
+  if (action === 'start-aptitude-paper') {
+    const scopeModuleId = actionEl.dataset.scopeModuleId || null;
+    const paper = getCompleteAptitudePapers(scopeModuleId).find((item) => item.id === actionEl.dataset.paperId
+      && item.moduleId === scopeModuleId);
+    if (!paper) { notify('这套来源卷未通过完整性核验，暂不能开始。'); return; }
+    try {
+      const created = createScienceSession(paper.questions, storage.aptitudeOverallStudy, {
+        mode: 'exam', targetQuestionCount: paper.questionCount,
+        durationSeconds: paper.questionCount * 60, preserveOrder: true,
+      });
+      const session = { ...created.session, mockType: 'full_paper', scopeModuleId, paperId: paper.id, paperTitle: paper.title, sourceUrl: paper.sourceUrl };
+      storage.aptitudeOverallStudy = {
+        ...created.scienceStudy,
+        sessions: created.scienceStudy.sessions.map((item) => item.id === session.id ? session : item),
+      };
+      modalRoot.innerHTML = '';
+      activeAptitudeOverallSessionId = session.id;
+      await persist();
+      navigate('aptitude', `session=${encodeURIComponent(session.id)}`);
+    } catch (error) { notify(error.message); }
+    return;
+  }
+  if (action === 'select-aptitude-overall-answer') {
+    try {
+      storage.aptitudeOverallStudy = selectExamAnswer(getAptitudeMockQuestionBank(), storage.aptitudeOverallStudy, actionEl.dataset.sessionId, actionEl.dataset.optionId);
+      await persistAndRender('选项已保存，可在交卷前修改');
+    } catch (error) { notify(error.message); }
+    return;
+  }
+  if (action === 'advance-aptitude-overall-question') {
+    try {
+      storage.aptitudeOverallStudy = advanceExamQuestion(storage.aptitudeOverallStudy, actionEl.dataset.sessionId);
+      await persistAndRender('答题进度已保存');
+    } catch (error) { notify(error.message); }
+    return;
+  }
+  if (action === 'go-to-aptitude-overall-question') {
+    try {
+      storage.aptitudeOverallStudy = goToExamQuestion(storage.aptitudeOverallStudy, actionEl.dataset.sessionId, Number(actionEl.dataset.index));
+      await persistAndRender('已返回所选题目');
+    } catch (error) { notify(error.message); }
+    return;
+  }
+  if (action === 'finish-aptitude-overall-exam') {
+    const session = storage.aptitudeOverallStudy.sessions.find((item) => item.id === actionEl.dataset.sessionId && item.status === 'active');
+    if (!session) { notify('这场模考已经结束。'); return; }
+    const unanswered = session.questionIds.length - Object.keys(session.draftAnswers || {}).length;
+    if (unanswered && !window.confirm(`还有 ${unanswered} 题未作答，仍要交卷吗？`)) return;
+    try {
+      storage.aptitudeOverallStudy = finishExamSession(getAptitudeMockQuestionBank(), storage.aptitudeOverallStudy, session.id);
+      await persistAndRender('交卷完成；逐题解析已保存到模考复盘');
+    } catch (error) { notify(error.message); }
+    return;
+  }
+  if (action === 'leave-aptitude-overall-session') { navigate('aptitude'); return; }
   if (action === 'open-matrix-scope') {
     filters.districtId = actionEl.dataset.district || 'all';
     filters.year = actionEl.dataset.year || 'all';
@@ -2543,7 +2725,8 @@ document.addEventListener('click', async (event) => {
     const targetQuestionCount = task ? progress.remainingCount : Math.min(10, bank.length);
     if (!Number.isInteger(targetQuestionCount) || targetQuestionCount < 1) { notify(bank.length ? '这项计划任务的目标题量已经完成。' : '题库待接入，无法创建空会话。'); return; }
     try {
-      const started = createAptitudeModuleSession(bank, storage.aptitudeModuleStudies, module.id, {
+      const sessionBank = mode === 'exam' ? getAptitudeMockQuestionBank(module.id) : bank;
+      const started = createAptitudeModuleSession(sessionBank, storage.aptitudeModuleStudies, module.id, {
         mode,
         planTaskId: task?.id || null,
         subjectId: config.subjectId || undefined,
@@ -2555,6 +2738,7 @@ document.addEventListener('click', async (event) => {
         difficultyFilter: config.difficultyFilter || 'all',
         onlyMistakes: task ? config.activityType === 'mistakes' : actionEl.dataset.mode === 'mistakes',
         excludeQuestionIds: progress?.questionIds || [],
+        randomize: mode === 'exam',
       });
       storage.aptitudeModuleStudies = started.aptitudeModuleStudies;
       if (task) storage.studyPlanTasks = markPlanTaskInProgress(storage.studyPlanTasks, task.id);
@@ -2686,12 +2870,17 @@ document.addEventListener('click', async (event) => {
       const targetQuestionCount = progress.targetCount === null ? config.targetQuestionCount : progress.remainingCount;
       if (!Number.isInteger(targetQuestionCount) || targetQuestionCount < 1) { notify('这项计划任务的目标题量已经完成。'); return; }
       try {
-        const started = createGeneralKnowledgeSession(GENERAL_KNOWLEDGE_QUESTION_BANK, storage.generalKnowledgeStudy, {
-          mode: config.activityType === 'exam' ? 'exam' : 'practice', planTaskId: task.id,
+        const examMode = config.activityType === 'exam';
+        const eligibleIds = new Set(getAptitudeMockQuestionBank('general-knowledge').map((question) => question.id));
+        const questionBank = examMode
+          ? GENERAL_KNOWLEDGE_QUESTION_BANK.filter((question) => eligibleIds.has(question.id))
+          : GENERAL_KNOWLEDGE_QUESTION_BANK;
+        const started = createGeneralKnowledgeSession(questionBank, storage.generalKnowledgeStudy, {
+          mode: examMode ? 'exam' : 'practice', planTaskId: task.id,
           subjectId: config.subjectId, topicId: config.topicId, knowledgePointIds: config.knowledgePointIds,
           targetQuestionCount, durationSeconds: config.durationSeconds || 600,
           sourceFilter: config.sourceFilter, difficultyFilter: config.difficultyFilter,
-          onlyMistakes: config.activityType === 'mistakes', excludeQuestionIds: progress.questionIds,
+          onlyMistakes: config.activityType === 'mistakes', excludeQuestionIds: progress.questionIds, randomize: examMode,
         });
         storage.generalKnowledgeStudy = started.generalKnowledgeStudy;
         storage.studyPlanTasks = markPlanTaskInProgress(storage.studyPlanTasks, task.id);
@@ -2814,7 +3003,10 @@ document.addEventListener('click', async (event) => {
     const targetQuestionCount = progress.targetCount === null ? config.targetQuestionCount : progress.remainingCount;
     if (!Number.isInteger(targetQuestionCount) || targetQuestionCount < 1) { notify('这项计划任务的题量目标已完成。'); return; }
     try {
-      const started = createScienceSession(SCIENCE_QUESTION_BANK, storage.scienceStudy, {
+      const verifiedBank = config.activityType === 'exam'
+        ? (() => { const eligibleIds = new Set(getAptitudeMockQuestionBank('science').map((question) => question.id)); return SCIENCE_QUESTION_BANK.filter((question) => eligibleIds.has(question.id)); })()
+        : SCIENCE_QUESTION_BANK;
+      const started = createScienceSession(verifiedBank, storage.scienceStudy, {
         mode: config.activityType === 'exam' ? 'exam' : 'practice',
         planTaskId: task.id,
         subjectId: config.subjectId,
@@ -2826,6 +3018,7 @@ document.addEventListener('click', async (event) => {
         difficultyFilter: config.difficultyFilter,
         onlyMistakes: config.activityType === 'mistakes',
         excludeQuestionIds: progress.questionIds,
+        randomize: config.activityType === 'exam',
       });
       storage.scienceStudy = started.scienceStudy;
       storage.studyPlanTasks = markPlanTaskInProgress(storage.studyPlanTasks, task.id);
@@ -3204,17 +3397,39 @@ document.addEventListener('submit', async (event) => {
       notify(error.message);
     }
   }
+  if (form.id === 'aptitude-overall-random-setup') {
+    const bank = getAptitudeMockQuestionBank();
+    try {
+      const created = createScienceSession(bank, storage.aptitudeOverallStudy, {
+        mode: 'exam', targetQuestionCount: Number(values.targetQuestionCount),
+        durationSeconds: Number(values.durationMinutes) * 60, randomize: true,
+      });
+      const session = { ...created.session, mockType: 'random', scopeModuleId: null, paperTitle: '行测跨模块随机卷' };
+      storage.aptitudeOverallStudy = {
+        ...created.scienceStudy,
+        sessions: created.scienceStudy.sessions.map((item) => item.id === session.id ? session : item),
+      };
+      modalRoot.innerHTML = '';
+      activeAptitudeOverallSessionId = session.id;
+      await persist();
+      navigate('aptitude', `session=${encodeURIComponent(session.id)}`);
+    } catch (error) { notify(error.message); }
+  }
   if (form.id === 'general-knowledge-session-setup') {
     const questionCount = Number(values.targetQuestionCount);
     const mode = values.mode === 'exam' ? 'exam' : 'practice';
+    const eligibleIds = new Set(getAptitudeMockQuestionBank('general-knowledge').map((question) => question.id));
+    const questionBank = mode === 'exam'
+      ? GENERAL_KNOWLEDGE_QUESTION_BANK.filter((question) => eligibleIds.has(question.id))
+      : GENERAL_KNOWLEDGE_QUESTION_BANK;
     try {
-      const started = createGeneralKnowledgeSession(GENERAL_KNOWLEDGE_QUESTION_BANK, storage.generalKnowledgeStudy, {
+      const started = createGeneralKnowledgeSession(questionBank, storage.generalKnowledgeStudy, {
         mode, subjectId: values.subjectId || undefined, topicId: values.topicId || undefined,
         knowledgePointId: values.knowledgePointId || undefined, targetQuestionCount: questionCount,
         durationSeconds: mode === 'exam' ? Number(values.durationMinutes) * 60 : null,
         sourceFilter: values.sourceFilter || 'all', difficultyFilter: values.difficultyFilter || 'all',
         onlyMistakes: values.mode === 'mistakes', onlyFavorites: values.mode === 'favorites',
-        onlyUnanswered: values.onlyUnanswered === 'true',
+        onlyUnanswered: values.onlyUnanswered === 'true', randomize: mode === 'exam',
       });
       storage.generalKnowledgeStudy = started.generalKnowledgeStudy;
       modalRoot.innerHTML = '';
@@ -3225,8 +3440,12 @@ document.addEventListener('submit', async (event) => {
   if (form.id === 'science-session-setup') {
     const point = values.knowledgePointId ? getKnowledgePoint(values.knowledgePointId) : null;
     const questionCount = Number(values.targetQuestionCount);
+    const eligibleIds = new Set(getAptitudeMockQuestionBank('science').map((question) => question.id));
+    const questionBank = values.mode === 'exam'
+      ? SCIENCE_QUESTION_BANK.filter((question) => eligibleIds.has(question.id))
+      : SCIENCE_QUESTION_BANK;
     try {
-      const started = createScienceSession(SCIENCE_QUESTION_BANK, storage.scienceStudy, {
+      const started = createScienceSession(questionBank, storage.scienceStudy, {
         mode: values.mode === 'exam' ? 'exam' : 'practice',
         subjectId: values.subjectId || point?.subjectId || undefined,
         topicId: values.topicId || point?.topicId || undefined,
@@ -3237,6 +3456,7 @@ document.addEventListener('submit', async (event) => {
         difficultyFilter: values.difficultyFilter,
         onlyMistakes: values.mode === 'mistakes',
         onlyUnanswered: values.onlyUnanswered === 'true',
+        randomize: values.mode === 'exam',
       });
       storage.scienceStudy = started.scienceStudy;
       modalRoot.innerHTML = '';
@@ -3250,7 +3470,8 @@ document.addEventListener('submit', async (event) => {
     if (!module) { notify('找不到这条行测模块。'); return; }
     const mode = values.mode === 'exam' ? 'exam' : 'practice';
     try {
-      const started = createAptitudeModuleSession(getAptitudeQuestions(module.id), storage.aptitudeModuleStudies, module.id, {
+      const bank = mode === 'exam' ? getAptitudeMockQuestionBank(module.id) : getAptitudeQuestions(module.id);
+      const started = createAptitudeModuleSession(bank, storage.aptitudeModuleStudies, module.id, {
         mode,
         subjectId: values.subjectId || undefined,
         topicId: values.topicId || undefined,
@@ -3262,6 +3483,7 @@ document.addEventListener('submit', async (event) => {
         onlyMistakes: values.mode === 'mistakes',
         onlyFavorites: values.mode === 'favorites',
         onlyUnanswered: values.onlyUnanswered === 'true',
+        randomize: mode === 'exam',
       });
       storage.aptitudeModuleStudies = started.aptitudeModuleStudies;
       modalRoot.innerHTML = '';
@@ -3459,6 +3681,7 @@ window.addEventListener('hashchange', () => {
   activeSciencePlanTaskId = route.taskId;
   selectedScienceKnowledgePointId = route.knowledgePointId;
   activeScienceSessionId = route.sessionId;
+  activeAptitudeOverallSessionId = page === 'aptitude' ? route.sessionId : null;
   activeGeneralKnowledgePlanTaskId = route.page === 'generalKnowledge' ? route.taskId : null;
   selectedGeneralKnowledgePointId = route.page === 'generalKnowledge' ? route.knowledgePointId : null;
   activeGeneralKnowledgeSessionId = route.page === 'generalKnowledge' ? route.sessionId : null;
