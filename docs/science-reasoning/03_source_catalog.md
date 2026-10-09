@@ -20,6 +20,7 @@
 | `sh-2021-b-recall` | 考生回忆 / 上海 / 2021 | 1 | [星光公考 PDF](https://upload.xingguanggongkao.com/pdf/2021%E5%B9%B4%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88B%E5%8D%B7-%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.pdf) |
 | `sh-2025-b-recall` | 考生回忆 / 上海 / 2025 | 3 | [星光公考 PDF](https://upload.xingguanggongkao.com/pdf/2025%E5%B9%B4%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88B%E5%8D%B7-%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.pdf)；[答案页](https://gwy.gkzhenti.cn/answer/1743902341993) |
 | `sh-2026-science-literacy-recall` | 考生回忆 / 上海 / 2026 | 9 | [网友回忆卷](https://gwy.gkzhenti.cn/paper/1775360735040)；[答案页](https://gwy.gkzhenti.cn/answer/1775360735040) |
+| `sh-2018-b-recall` | 考生回忆 / 上海 / 2018 B 类 | 3 | [试题与答案解析 PDF](https://www.chinagwy.org/files/20180409144717_34399.pdf)；第三方整理，不是官方原卷 |
 | `gd-2025-official-outline` | 官方大纲例题 / 广东 / 2025 | 1 | [广东省委组织部公告及大纲附件](https://www.gdzz.gov.cn/tzgg/content/post_22222.html)；[大纲例题转载页](https://gz.bendibao.com/job/2025113/355945_2.shtm) |
 | `gd-2025-recall` | 考生回忆 / 广东 / 2025 | 1 | [星光公考 PDF](https://upload.xingguanggongkao.com/pdf/2025%E5%B9%B4%E5%B9%BF%E4%B8%9C%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.pdf)；[文本复核页](https://www.scribd.com/document/1028513470/2025%E5%B9%B4%E5%B9%BF%E4%B8%9C%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95-%E8%A1%8C%E6%B5%8B-%E9%A2%98) |
 | `zj-2024-c-recall` | 考生回忆 / 浙江 / 2024 C 类 | 4 | [星光公考回忆卷](https://upload.xingguanggongkao.com/pdf/2024%E5%B9%B4%E6%B5%99%E6%B1%9F%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88C%E5%8D%B7-%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.pdf)；[答案页](https://gwy.gkzhenti.cn/answer/1723610466814)；[中国疾控中心传播资料](https://www.chinacdc.cn/jkkp/crb/jcr/202608/t20260805_1838681.html) |
@@ -35,4 +36,4 @@
 | mock-zhonggong-2027-light | 机构模拟 / 广东 | 1 | [中公网校光学模拟题](https://www.eoffcn.com/kszx/detail/2214061.html) |
 | `zhanhong-zhejiang-mock` | 机构模拟 / 浙江 | 4 | [展鸿行测模拟卷 PDF](https://static.32xueyuan.com/zq/u/cms/zj/202406/19110417oqg8.pdf) |
 
-合计 29 条来源记录：7 条官方大纲、17 条回忆资料、5 条机构材料。来源记录数不等于已发布题数；没有可用题目的来源仍保留在目录中并说明原因。
+合计 30 条来源记录：7 条官方大纲、18 条回忆资料、5 条机构材料。来源记录数不等于已发布题数；没有可用题目的来源仍保留在目录中并说明原因。

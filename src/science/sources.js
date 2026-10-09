@@ -255,6 +255,13 @@ export const SCIENCE_SOURCES = [
     note: '华图公开科学推理讲解中的机构例题，非历年真题；题意按原文改述。',
   },
   {
+    id: 'sh-2018-b-recall', title: '2018 年上海市考 B 类科学推理回忆题',
+    organization: '中国公考网（试题与答案解析整理）', sourceType: 'recalled', region: '上海', examYear: 2018,
+    authority: 'third-party-recollection', verificationStatus: 'verified', copyrightStatus: 'reference_only',
+    url: 'https://www.chinagwy.org/files/20180409144717_34399.pdf',
+    note: 'PDF 收录 2018 年上海 B 类行测试题与答案解析；第 29、32、35 题按题意改述并与解析核对。该 PDF 为第三方回忆整理，不是考试主办方发布的官方原卷。',
+  },
+  {
     id: 'sh-2018-recalled-example', title: '2018 年上海市考蜻蜓点水科学推理题（中公回顾页）',
     organization: '中公教育（E 考试网转载）', sourceType: 'recalled', region: '上海', examYear: 2018,
     authority: 'third-party-recollection', verificationStatus: 'pending', copyrightStatus: 'reference_only',

@@ -72,7 +72,7 @@ test('published questions distinguish the existing original bank from sourced ex
   const { SCIENCE_SOURCES } = await import('../src/science/sources.js');
   const originalBank = bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType === 'original');
   assert.equal(originalBank.length, 153);
-  assert.equal(bankModule.SCIENCE_QUESTION_BANK.length, 216);
+  assert.equal(bankModule.SCIENCE_QUESTION_BANK.length, 219);
   const subjectCounts = Object.fromEntries(['physics', 'chemistry', 'biology', 'geography']
     .map((subjectId) => [subjectId, originalBank.filter((question) => question.subjectId === subjectId).length]));
   assert.deepEqual(subjectCounts, { physics: 42, chemistry: 37, biology: 36, geography: 38 });
@@ -112,9 +112,20 @@ test('published questions distinguish the existing original bank from sourced ex
   assert.ok(bankModule.SCIENCE_QUESTION_BANK.some((question) => question.sourceType === 'third_party_mock'));
   assert.ok(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType !== 'original')
     .every((question) => question.sourceId && question.sourceNote));
-  assert.equal(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType === 'recalled').length, 47);
+  assert.equal(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType === 'recalled').length, 50);
   assert.equal(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType === 'third_party_mock').length, 10);
-  assert.equal(SCIENCE_SOURCES.length, 29);
+  assert.equal(SCIENCE_SOURCES.length, 30);
+});
+
+test('2018 Shanghai B recall questions are attributed and connect to complete lens knowledge', async () => {
+  const { SCIENCE_QUESTION_BANK } = await import('../src/science/questionBank.js');
+  const { getKnowledgePoint } = await import('../src/science/knowledge.js');
+  const questions = SCIENCE_QUESTION_BANK.filter((question) => question.sourceId === 'sh-2018-b-recall');
+
+  assert.equal(questions.length, 3);
+  assert.ok(questions.every((question) => question.sourceType === 'recalled' && question.examYear === 2018));
+  assert.equal(questions.find((question) => question.id === 'sh-2018-b-camera-lens')?.knowledgePointIds.includes('physics:lens-imaging'), true);
+  assert.equal(getKnowledgePoint('physics:lens-imaging')?.contentStatus, 'published');
 });
 
 test('published knowledge lessons cover all four disciplines with practical explanations', async () => {
@@ -127,9 +138,9 @@ test('published knowledge lessons cover all four disciplines with practical expl
       && point.content.everydayExample && point.content.quickMethod), `${subject.id} lessons contain actionable explanations`);
     return [subject.id, lessons.length];
   }));
-  assert.equal(Object.values(counts).reduce((sum, count) => sum + count, 0), 64);
+  assert.equal(Object.values(counts).reduce((sum, count) => sum + count, 0), 65);
   for (const pointId of [
-    'physics:elastic-force', 'physics:optical-phenomena', 'physics:gravity', 'physics:magnetic-field',
+    'physics:elastic-force', 'physics:optical-phenomena', 'physics:gravity', 'physics:magnetic-field', 'physics:lens-imaging',
     'biology:hormonal-regulation', 'biology:microorganisms', 'biology:musculoskeletal-system',
     'biology:reproduction-inheritance', 'biology:stem-cell-regeneration',
     'biology:organisms-environment', 'biology:respiratory-circulatory-systems',

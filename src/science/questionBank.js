@@ -871,4 +871,37 @@ addPublishedReferenceQuestion({
   correctAnswer: 'C', explanation: '以列车为参考系，两车和两人相对静止，两颗石子分别以相同速度沿相反方向飞向对方，初始距离相同，因此到达时间相同。',
 });
 
+addPublishedReferenceQuestion({
+  id: 'sh-2018-b-jump-landing-force', subjectId: 'physics', topicId: 'physics:mechanics',
+  knowledgePointIds: ['physics:mechanical-energy'], difficulty: 'medium', reasoningType: 'causal_inference',
+  sourceType: 'recalled', sourceId: 'sh-2018-b-recall',
+  sourceTitle: '2018 年上海 B 类回忆题 · 跳下窗台后的地面作用力', region: '上海', examYear: 2018, presentationMode: 'adapted',
+  sourceNote: '据上海 B 类回忆题第 29 题改述；答案 C 与公开 PDF 解析核对。该材料为第三方回忆整理，不是官方原卷。',
+  stem: '一名战士从离地 3 米的窗台跳下，双脚触地后屈膝，使重心继续下降 0.5 米。若用恒定的平均地面作用力近似缓冲过程，该力约为自身重力的几倍？',
+  options: ['4 倍', '6 倍', '7 倍', '10 倍'],
+  correctAnswer: 'C', explanation: '从开始下落到最终静止，重心共下降 3.5 米，重力势能减少 3.5mg。接触地面后的缓冲距离为 0.5 米，地面作用力所做的功需抵消这部分重力做功并耗尽动能，因此平均作用力约为 7mg，即自身重力的 7 倍。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'sh-2018-b-camera-lens', subjectId: 'physics', topicId: 'physics:optics',
+  knowledgePointIds: ['physics:lens-imaging'], difficulty: 'medium', reasoningType: 'causal_inference',
+  sourceType: 'recalled', sourceId: 'sh-2018-b-recall',
+  sourceTitle: '2018 年上海 B 类回忆题 · 合照改拍单人照', region: '上海', examYear: 2018, presentationMode: 'adapted',
+  sourceNote: '据上海 B 类回忆题第 32 题改述；答案 B 与公开 PDF 解析核对。该材料为第三方回忆整理，不是官方原卷。',
+  stem: '摄影师用同一台相机拍完集体照后，改为逐人拍摄单人照。为缩小视野并使人物在成像面上的像变大，应怎样调整？',
+  options: ['相机离人物近些，镜头向感光面移动', '相机离人物近些，镜头远离感光面移动', '相机离人物远些，镜头向感光面移动', '相机离人物远些，镜头远离感光面移动'],
+  correctAnswer: 'B', explanation: '拍单人照时相机靠近人物以缩小取景范围。物体仍在焦点外时，物距减小会使像距增大；为使实像重新落在感光面上，镜头应远离感光面移动，像的放大率也会增加。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'sh-2018-b-earth-magnetic-force', subjectId: 'physics', topicId: 'physics:sound-electromagnetism',
+  knowledgePointIds: ['physics:magnetic-field'], difficulty: 'medium', reasoningType: 'causal_inference',
+  sourceType: 'recalled', sourceId: 'sh-2018-b-recall',
+  sourceTitle: '2018 年上海 B 类回忆题 · 避雷针放电与地磁场', region: '上海', examYear: 2018, presentationMode: 'adapted',
+  sourceNote: '据上海 B 类回忆题第 35 题改述；答案 A 与公开 PDF 解析核对。该材料为第三方回忆整理，不是官方原卷。',
+  stem: '在赤道上方，带正电的云层经过竖直避雷针上方并开始向地面放电。已知当地地磁场方向由南向北，地磁场对避雷针中电流的作用力大致指向哪个方向？',
+  options: ['正东', '正南', '正西', '正北'],
+  correctAnswer: 'A', explanation: '传统电流方向由正电荷流向负电荷，题设中可近似看作竖直向下。将磁场方向标为向北，依据左手定则判断，载流导体受力方向约为正东。',
+});
+
 export { SCIENCE_QUESTION_BANK };

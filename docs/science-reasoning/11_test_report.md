@@ -1,10 +1,10 @@
 # 测试与构建报告
 
-本批验证：补充 1 道中公科学推理模拟题，并修复工作台科学推理页面路由。
+本批验证：收录 3 道上海 2018 B 类回忆题，补全“透镜成像规律”讲解，并扩充磁场方向判断说明。
 
 | 命令 | 结果 |
 |---|---|
-| `node --test --test-concurrency=1 test/science-*.test.js` | 5/5 个科学推理测试文件通过，0 失败 |
+| `node --test --test-concurrency=1 test/science-*.test.js` | 5/5 个科学推理测试文件通过，0 失败；`science-data.test.js` 内 6/6 项通过 |
 | `npm test` | 52/53 个测试文件通过；唯一失败是 `settings-plan.test.js` 中岗位助手样例职位可见性断言，科学推理相关断言通过 |
 | `npm run build` | 成功生成 `dist/index.html` |
 
