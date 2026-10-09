@@ -312,4 +312,69 @@ export const GENERAL_KNOWLEDGE_SOURCES = [
     url: 'https://resources.metmuseum.org/resources/metpublications/pdf/The_Art_of_South_and_Southeast_Asia_A_Resource_for_Educators.pdf', verificationStatus: 'verified', publishStatus: 'published',
     copyrightStatus: '宗教与艺术基础知识概述并链接教育资料', note: '用于印度教、佛教、耆那教与伊斯兰艺术的地域和文化语境参考。',
   },
+  {
+    id: 'moe-geography-curriculum-2022', sourceType: 'official_reference', title: '义务教育地理课程标准（2022年版）', organization: '中华人民共和国教育部',
+    url: 'https://www.moe.gov.cn/srcsite/A26/s8001/202204/W020220420582354066450.pdf', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '地理概念与课程事实概述并链接原文', note: '用于中国与世界地理、自然地理、资源、人口及区域认知方法的基础核对。',
+  },
+  {
+    id: 'moe-biology-curriculum-2022', sourceType: 'official_reference', title: '义务教育生物学课程标准（2022年版）', organization: '中华人民共和国教育部',
+    url: 'https://www.moe.gov.cn/srcsite/A26/s8001/202204/W020220420582359998122.pdf', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '生态学基础概念概述并链接原文', note: '用于生态系统成分、食物关系、自我调节能力、生物多样性和生态保护的基础核对。',
+  },
+  {
+    id: 'china-admin-divisions', sourceType: 'official_reference', title: '中国行政区划基本资料', organization: '中央人民政府驻香港特别行政区联络办公室（转载中国政府网资料）',
+    url: 'https://www.locpg.gov.cn/2022-06/07/c_1211652713.htm', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '行政区划知识概述并链接官方资料', note: '用于区分省级行政区类型与行政层级；具体数量和名称需按资料年份核对。',
+  },
+  {
+    id: 'beijing-geography-official', sourceType: 'official_reference', title: '北京概况：区划、地形与气候', organization: '北京市人民政府',
+    url: 'https://www.beijing.gov.cn/renwen/index.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '地理事实概述并链接原文', note: '用于北京山地—平原格局、气候特点及现行行政区划资料核对。',
+  },
+  {
+    id: 'beijing-rivers-resource', sourceType: 'official_reference', title: '北京市河流水系与水资源资料', organization: '北京市规划和自然资源委员会 / 北京市发展和改革委员会',
+    url: 'https://ghzrzyw.beijing.gov.cn/biaozhunguanli/bzxg/202507/P020250711369794779987.pdf', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '水系与水资源事实概述并链接原文', note: '用于核对北京河流水系、来水季节性及水资源空间差异。',
+  },
+  {
+    id: 'beijing-water-planning', sourceType: 'official_policy', title: '北京市水资源保护与利用规划资料', organization: '北京市发展和改革委员会',
+    url: 'https://fgw.beijing.gov.cn/fgwzwgk/2024zcwj/ghjhwb/wngh/202203/t20220303_3733060.htm', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '规划事实概述并链接原文', note: '用于北京水资源保护、供需管理与节约利用的政策背景参考。',
+  },
+  {
+    id: 'beijing-district-list', sourceType: 'official_reference', title: '北京市行政区划资料', organization: '北京市民政局',
+    url: 'https://mzj.beijing.gov.cn/col/col9984/index.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '区划事实概述并链接原文', note: '用于核对北京市现行区级行政区划；区名与代码变动时以民政部门更新为准。',
+  },
+  {
+    id: 'mee-biodiversity-plan-2023', sourceType: 'official_policy', title: '中国生物多样性保护战略与行动计划（2023—2030年）', organization: '生态环境部',
+    url: 'https://www.mee.gov.cn/xxgk/hjyw/202401/t20240118_1064111.shtml', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '政策目标和生态事实概述并链接原文', note: '用于生物多样性保护、生态系统完整性及保护行动的知识点核对。',
+  },
+  {
+    id: 'mee-solid-waste-guide', sourceType: 'official_reference', title: '固体废物资源化利用技术指南', organization: '中华人民共和国生态环境部',
+    url: 'https://www.mee.gov.cn/ywgz/fgbz/bz/bzwb/jcffbz/202001/t20200115_759463.shtml', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '环境治理概念概述并链接原文', note: '用于固体废物减量、资源化利用和规范处置的基础知识核对。',
+  },
+  {
+    id: 'state-council-protected-areas', sourceType: 'official_policy', title: '关于建立以国家公园为主体的自然保护地体系的指导意见', organization: '中共中央办公厅、国务院办公厅（中国政府网公开）',
+    url: 'https://app.www.gov.cn/govdata/gov/201906/26/444736/article.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '政策类别和保护目标概述并链接原文', note: '用于理解国家公园、自然保护区、自然公园等保护地的功能定位；具体管理规定应核对现行法律政策。',
+  },
+  {
+    id: 'state-council-waste-recycling', sourceType: 'official_policy', title: '加快构建废弃物循环利用体系的意见', organization: '国务院办公厅（生态环境部公开）',
+    url: 'https://www.mee.gov.cn/zcwj/gwywj/202402/t20240220_1066422.shtml', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '循环利用政策事实概述并链接原文', note: '用于理解废弃物减量化、资源化和循环利用之间的关系。',
+  },
+  {
+    id: 'forestry-carbon-sink', sourceType: 'official_reference', title: '森林碳汇基础知识', organization: '国家林业和草原局',
+    url: 'https://www.forestry.gov.cn/c/www/zhzs/655018.jhtml', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '生态与碳汇事实概述并链接原文', note: '用于森林吸收和储存二氧化碳的基本原理；碳汇能力受生态条件和管理影响。',
+  },
+  {
+    id: 'ipcc-ar6-synthesis', sourceType: 'official_reference', title: '气候变化2023：第六次评估综合报告', organization: '政府间气候变化专门委员会（IPCC）',
+    url: 'https://www.ipcc.ch/report/ar6/syr/', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '科学结论概述并链接报告', note: '用于温室气体、气候变化影响、减缓与适应的综合科学证据；具体评估结论应保留报告年份与置信度。',
+  },
 ];
