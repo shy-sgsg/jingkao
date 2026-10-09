@@ -22,6 +22,7 @@ test('general-knowledge tasks validate module-specific filters and retain a stab
   }, { id: 'gk-task', now: '2026-10-09T00:00:00.000Z' });
   assert.equal(task.generalKnowledgeConfig.targetQuestionCount, 15);
   assert.equal(task.scienceConfig, null);
+  assert.equal(task.aptitudeConfig, null);
 });
 
 test('task progress uses only its own module-linked distinct submitted question records', () => {

@@ -1,9 +1,11 @@
 import { getKnowledgePoint, getScienceTree } from './knowledge.js';
 import { normalizeGeneralKnowledgeConfig } from '../general-knowledge/planConfig.js';
+import { APTITUDE_MODULES } from '../aptitude/modules.js';
+import { getAptitudeModuleForTaskType, normalizeAptitudeConfig } from '../aptitude/planTasks.js';
 
 const VALID_TASK_TYPES = new Set([
-  'verbal', 'data_analysis', 'reasoning', 'quantitative', 'general_knowledge',
-  'essay', 'science_reasoning', 'comprehensive', 'review', 'custom',
+  ...APTITUDE_MODULES.map((module) => module.taskType),
+  'essay', 'comprehensive', 'review', 'custom',
 ]);
 const VALID_ACTIVITY_TYPES = new Set(['knowledge', 'practice', 'exam', 'mistakes', 'free']);
 const VALID_STATUSES = new Set(['not_started', 'in_progress', 'completed']);
@@ -128,6 +130,10 @@ export function createPlanTask(input, { id = createTaskId(), now = new Date().to
   const generalKnowledgeConfig = input.taskType === 'general_knowledge'
     ? normalizeGeneralKnowledgeConfig(input.generalKnowledgeConfig || { activityType: 'free' })
     : null;
+  const aptitudeModule = getAptitudeModuleForTaskType(input.taskType);
+  const aptitudeConfig = aptitudeModule
+    ? normalizeAptitudeConfig(aptitudeModule.id, input.aptitudeConfig || { activityType: 'free' })
+    : null;
 
   return {
     id,
@@ -142,6 +148,7 @@ export function createPlanTask(input, { id = createTaskId(), now = new Date().to
     completionSource,
     scienceConfig,
     generalKnowledgeConfig,
+    aptitudeConfig,
     createdAt: input.createdAt || now,
     updatedAt: now,
     archivedAt: input.archivedAt || null,
@@ -163,12 +170,19 @@ export function updatePlanTask(tasks, id, changes, { now = new Date().toISOStrin
     : nextType === 'general_knowledge' && current.taskType === 'general_knowledge'
       ? current.generalKnowledgeConfig
       : nextType === 'general_knowledge' ? { activityType: 'free' } : null;
+  const nextAptitudeModule = getAptitudeModuleForTaskType(nextType);
+  const nextAptitudeConfig = changes.aptitudeConfig !== undefined
+    ? changes.aptitudeConfig
+    : nextAptitudeModule && current.taskType === nextType
+      ? current.aptitudeConfig || { activityType: 'free' }
+      : nextAptitudeModule ? { activityType: 'free' } : null;
   const updated = createPlanTask({
     ...current,
     ...changes,
     taskType: nextType,
     scienceConfig: nextConfig,
     generalKnowledgeConfig: nextGeneralKnowledgeConfig,
+    aptitudeConfig: nextAptitudeConfig,
     id: current.id,
     createdAt: current.createdAt,
     archivedAt: current.archivedAt,

@@ -14,6 +14,8 @@ test('custom task text never creates science linkage and science tasks default t
 
   assert.equal(custom.scienceConfig, null);
   assert.equal(science.scienceConfig.activityType, 'free');
+  assert.equal(custom.aptitudeConfig, null);
+  assert.equal(science.aptitudeConfig, null);
   assert.equal(custom.completionSource, 'not_completed');
 });
 

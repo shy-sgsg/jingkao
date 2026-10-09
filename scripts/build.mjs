@@ -8,6 +8,7 @@ const css = readFileSync(new URL('../src/styles.css', import.meta.url), 'utf8');
 const appModules = [
   '../src/aptitude/modules.js',
   '../src/aptitude/persistence.js',
+  '../src/aptitude/planTasks.js',
   '../src/data/normalize.js',
   '../src/data/decision.js',
   '../src/data/onboarding.js',
