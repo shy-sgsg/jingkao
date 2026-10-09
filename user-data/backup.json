@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 1,
+  "backupId": "6968ebc3-fd8c-4a7a-8d1c-49919ca0967d",
+  "updatedAt": "2026-10-09T14:59:24.356Z",
+  "data": {
+    "profile": {
+      "major": "公共管理",
+      "degree": ""
+    },
+    "dayLogs": {},
+    "planOverrides": {},
+    "studyPlanTasks": [],
+    "scienceStudy": {
+      "knowledgeProgress": {},
+      "sessions": [
+        {
+          "id": "science_mv13408y_4qbiiw",
+          "mode": "practice",
+          "status": "active",
+          "planTaskId": null,
+          "questionIds": [
+            "beijing-2026-outline-dragonfly",
+            "sh-2020-outline-bicycle-friction",
+            "sh-2026-outline-hall-effect",
+            "gd-2025-outline-grain-storage",
+            "gd-2026-outline-slope-forces",
+            "gd-2021-outline-ladder-climber",
+            "gd-2019-township-wind-energy",
+            "gd-2019-township-ear-pressure",
+            "gd-2019-township-hammer-lever",
+            "gd-2021-township-steelmaking",
+            "gd-2021-township-cooling-rate",
+            "gd-2023-township-karting-friction",
+            "gd-2023-township-sunlit-city",
+            "gd-2020-township-seed-storage",
+            "gd-2020-township-snowline"
+          ],
+          "currentIndex": 1,
+          "correctCount": 1,
+          "reviewingAnswerId": null,
+          "draftAnswers": {},
+          "startedAt": "2026-10-09T14:52:34.498Z",
+          "deadline": null,
+          "durationSeconds": null,
+          "filters": {
+            "onlyUnanswered": false,
+            "onlyMistakes": false,
+            "onlyFavorites": false,
+            "excludeQuestionIds": [],
+            "answeredQuestionIds": [],
+            "mistakeQuestionIds": [],
+            "favoriteQuestionIds": []
+          },
+          "completedAt": null
+        }
+      ],
+      "answers": [
+        {
+          "id": "answer_science_mv13408y_4qbiiw_1",
+          "sessionId": "science_mv13408y_4qbiiw",
+          "questionId": "beijing-2026-outline-dragonfly",
+          "selectedOptionId": "A",
+          "correctAnswer": "A",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-10-09T14:52:36.001Z",
+          "knowledgePointIds": [
+            "physics:uniform-motion"
+          ]
+        }
+      ],
+      "mistakes": {},
+      "favorites": [],
+      "favoriteKnowledgePointIds": [],
+      "unclearKnowledgePointIds": []
+    },
+    "generalKnowledgeStudy": {
+      "knowledgeProgress": {},
+      "sessions": [],
+      "answers": [],
+      "mistakes": {},
+      "favorites": [],
+      "favoriteKnowledgePointIds": [],
+      "unclearKnowledgePointIds": []
+    },
+    "aptitudeModuleStudies": {
+      "political-theory": {
+        "knowledgeProgress": {},
+        "sessions": [],
+        "answers": [],
+        "mistakes": {},
+        "favorites": [],
+        "favoriteKnowledgePointIds": [],
+        "unclearKnowledgePointIds": []
+      },
+      "verbal": {
+        "knowledgeProgress": {},
+        "sessions": [],
+        "answers": [],
+        "mistakes": {},
+        "favorites": [],
+        "favoriteKnowledgePointIds": [],
+        "unclearKnowledgePointIds": []
+      },
+      "quantitative": {
+        "knowledgeProgress": {},
+        "sessions": [],
+        "answers": [],
+        "mistakes": {},
+        "favorites": [],
+        "favoriteKnowledgePointIds": [],
+        "unclearKnowledgePointIds": []
+      },
+      "reasoning": {
+        "knowledgeProgress": {},
+        "sessions": [],
+        "answers": [],
+        "mistakes": {},
+        "favorites": [],
+        "favoriteKnowledgePointIds": [],
+        "unclearKnowledgePointIds": []
+      },
+      "data-analysis": {
+        "knowledgeProgress": {},
+        "sessions": [],
+        "answers": [],
+        "mistakes": {},
+        "favorites": [],
+        "favoriteKnowledgePointIds": [],
+        "unclearKnowledgePointIds": []
+      }
+    },
+    "aptitudeLogs": {},
+    "essayLogs": {},
+    "mocks": [],
+    "favorites": [],
+    "compared": [],
+    "settings": {
+      "density": "comfortable",
+      "fontSize": "standard",
+      "motion": "enhanced"
+    },
+    "positionPreferences": {
+      "filters": {
+        "districtId": "all",
+        "year": "all",
+        "orgType": "all",
+        "jobType": "all",
+        "majorTopic": "all",
+        "sourceLevel": "all",
+        "unit": "all",
+        "education": "all",
+        "politicalStatus": "all",
+        "freshGraduate": "all",
+        "physicalTest": "all",
+        "professionalTest": "all",
+        "recruitmentGroup": "all"
+      },
+      "jobSort": "year-desc",
+      "scenarioYear": "2026",
+      "scenarioScope": "all"
+    },
+    "onboarding": {
+      "step": 0,
+      "hidden": true,
+      "completed": true
+    }
+  },
+  "tombstones": []
+}
