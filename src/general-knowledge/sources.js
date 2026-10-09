@@ -237,4 +237,79 @@ export const GENERAL_KNOWLEDGE_SOURCES = [
     answerUrl: 'https://lasee.net/gongwuyuan/167886579811619.html', verificationStatus: 'verified', publishStatus: 'published',
     copyrightStatus: 'adapted_public_source', note: '题面与答案分别由公开回忆 PDF 和答案解析页核验；本站仅发布题意改述的常识第1–14、16题。第15题缺失，整卷有缺题且非官方原卷。',
   },
+  {
+    id: 'moe-history-curriculum-2022', sourceType: 'official_reference', title: '义务教育历史课程标准（2022年版）', organization: '中华人民共和国教育部',
+    url: 'https://www.moe.gov.cn/srcsite/A26/s8001/202204/W020220420582345700037.pdf', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '课程范围与历史事实概述并链接原文', note: '用于历史时期、重大事件、制度与历史时序方法的基础核对。',
+  },
+  {
+    id: 'cpc-history-volume-one', sourceType: 'official_reference', title: '中国共产党历史·第一卷（1921—1949）', organization: '中共中央党史和文献研究院 / 中共党史出版社',
+    url: 'https://www.dswxyjy.org.cn/n1/2019/0627/c427919-31199220.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '历史事实概述并链接权威出版资料', note: '用于鸦片战争以来近代史、辛亥革命、五四运动和中国共产党成立等时间线核对。',
+  },
+  {
+    id: 'moe-chinese-textbook-intro', sourceType: 'official_reference', title: '普通高中语文教材介绍', organization: '中华人民共和国教育部',
+    url: 'https://www.moe.gov.cn/fbh/live/2019/51084/sfcl/201908/t20190827_395974.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '课程选文范围概述并链接原文', note: '用于古典诗文、文学体裁和中国文学史常见脉络的学习参考。',
+  },
+  {
+    id: 'unesco-intangible-china', sourceType: 'official_reference', title: '中国非物质文化遗产名录条目', organization: '联合国教科文组织',
+    url: 'https://ich.unesco.org/en/state/china-CN?info=elements-on-the-lists', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '遗产项目事实概述并链接原文', note: '用于核对中国列入 UNESCO 非物质文化遗产名录的戏曲、节庆、书法和传统工艺项目。',
+  },
+  {
+    id: 'unesco-ich-convention', sourceType: 'official_reference', title: '保护非物质文化遗产公约', organization: '联合国教科文组织',
+    url: 'https://ich.unesco.org/en/convention', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '公约定义与领域概述并链接原文', note: '用于非物质文化遗产的社区认定、代际传承、活态变化及主要领域。',
+  },
+  {
+    id: 'unesco-peking-opera', sourceType: 'official_reference', title: '京剧（人类非物质文化遗产）', organization: '联合国教科文组织',
+    url: 'https://ich.unesco.org/en/RL/peking-opera-00418', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '艺术形式事实概述并链接原文', note: '用于京剧唱、念、做、打及象征性舞台表达等知识。',
+  },
+  {
+    id: 'unesco-kunqu-opera', sourceType: 'official_reference', title: '昆曲（人类非物质文化遗产）', organization: '联合国教科文组织',
+    url: 'https://ich.unesco.org/en/RL/kun-qu-opera-00004', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '艺术形式事实概述并链接原文', note: '用于昆曲形成地域、历史时期和表演特点核对。',
+  },
+  {
+    id: 'unesco-xuan-paper', sourceType: 'official_reference', title: '宣纸传统制作技艺（人类非物质文化遗产）', organization: '联合国教科文组织',
+    url: 'https://ich.unesco.org/en/RL/traditional-handicrafts-of-making-xuan-paper-00201', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '工艺事实概述并链接原文', note: '用于宣纸原料、产地、制作技艺和书画用途核对。',
+  },
+  {
+    id: 'unesco-timber-craft', sourceType: 'official_reference', title: '中国传统木结构营造技艺', organization: '联合国教科文组织',
+    url: 'https://ich.unesco.org/en/RL/chinese-traditional-architectural-craftsmanship-for-timber-framed-structures-00223', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '建筑技艺事实概述并链接原文', note: '用于传统木结构建筑与营造技艺的活态传承知识。',
+  },
+  {
+    id: 'unesco-world-heritage-faq', sourceType: 'official_reference', title: '世界遗产文化、自然与混合类别说明', organization: '联合国教科文组织世界遗产中心',
+    url: 'https://whc.unesco.org/en/faq/319', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '公约类别事实概述并链接原文', note: '用于区分文化遗产、自然遗产和兼具两类价值的混合遗产。',
+  },
+  {
+    id: 'icom-museum-definition', sourceType: 'official_reference', title: '国际博物馆协会博物馆定义（2022）', organization: '国际博物馆协会',
+    url: 'https://icom.museum/en/resources/standards-guidelines/museum-definition/', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '机构定义概述并链接原文', note: '用于博物馆的研究、收藏、保护、诠释、展示与教育服务等职能。',
+  },
+  {
+    id: 'met-art-history-education', sourceType: 'official_reference', title: '世界艺术史与宗教艺术教育资料', organization: '大都会艺术博物馆',
+    url: 'https://resources.metmuseum.org/resources/metpublications/pdf/The_Art_of_South_and_Southeast_Asia_A_Resource_for_Educators.pdf', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '艺术与宗教基础事实概述并链接教育资料', note: '用于世界艺术史、南亚宗教艺术及文化语境的基础学习。',
+  },
+  {
+    id: 'met-renaissance-art', sourceType: 'official_reference', title: '文艺复兴欧洲艺术教育资料', organization: '大都会艺术博物馆',
+    url: 'https://www.metmuseum.org/-/media/files/learn/for-educators/publications-for-educators/renaissance.pdf', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '艺术史事实概述并链接原文', note: '用于文艺复兴时期欧洲艺术、人物与事件背景核对。',
+  },
+  {
+    id: 'met-ancient-greece-art', sourceType: 'official_reference', title: '古希腊艺术史时间线', organization: '大都会艺术博物馆',
+    url: 'https://www.metmuseum.org/pt/toah/ht/04/eusb', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '艺术史事实概述并链接原文', note: '用于古希腊几何、古风、古典与希腊化时期艺术的时序核对。',
+  },
+  {
+    id: 'met-world-religions', sourceType: 'official_reference', title: '南亚与东南亚宗教艺术教育资料', organization: '大都会艺术博物馆',
+    url: 'https://resources.metmuseum.org/resources/metpublications/pdf/The_Art_of_South_and_Southeast_Asia_A_Resource_for_Educators.pdf', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '宗教与艺术基础知识概述并链接教育资料', note: '用于印度教、佛教、耆那教与伊斯兰艺术的地域和文化语境参考。',
+  },
 ];
