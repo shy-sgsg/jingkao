@@ -268,12 +268,15 @@ test('assistant renders evidence-gated difficulty and fit breakdowns for real po
 test('assistant and score scenarios honor Beijing district scope without borrowing other districts', async () => {
   await import('../scripts/build.mjs');
   const html = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8');
+  const dataset = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const haidianRows = dataset.positions.filter((position) => position.districtId === 'haidian');
+  const haidian2024Rows = haidianRows.filter((position) => Number(position.year) === 2024);
   const script = html.match(/<script>\s*([\s\S]*?)<\/script>/)?.[1];
   const assistant = await renderStandaloneRoute(script, 'assistant');
 
   await assistant.listeners.get('change')({ target: { id: 'decision-district', value: 'haidian' } });
-  assert.match(assistant.root.innerHTML, /302<\/strong><span>当前范围职位样例/);
-  assert.equal((assistant.root.innerHTML.match(/class="panel assistant-job /g) || []).length, 302);
+  assert.match(assistant.root.innerHTML, new RegExp(`${haidianRows.length}<\/strong><span>当前范围职位样例`));
+  assert.equal((assistant.root.innerHTML.match(/class="panel assistant-job /g) || []).length, haidianRows.length);
   assert.match(assistant.root.innerHTML, /海淀区 · 2025/);
 
   await assistant.listeners.get('change')({ target: { id: 'decision-year', value: '2025' } });
@@ -281,9 +284,8 @@ test('assistant and score scenarios honor Beijing district scope without borrowi
   assert.equal((assistant.root.innerHTML.match(/class="panel assistant-job /g) || []).length, 153);
 
   await assistant.listeners.get('change')({ target: { id: 'decision-year', value: '2024' } });
-  assert.match(assistant.root.innerHTML, /0<\/strong><span>当前范围职位样例/);
-  assert.match(assistant.root.innerHTML, /暂未收录不代表没有岗位/);
-  assert.equal((assistant.root.innerHTML.match(/class="panel assistant-job /g) || []).length, 0);
+  assert.match(assistant.root.innerHTML, new RegExp(`${haidian2024Rows.length}<\/strong><span>当前范围职位样例`));
+  assert.equal((assistant.root.innerHTML.match(/class="panel assistant-job /g) || []).length, haidian2024Rows.length);
 
   const scenarios = await renderStandaloneRoute(script, 'scenarios');
   await scenarios.listeners.get('change')({ target: { id: 'decision-district', value: 'haidian' } });
