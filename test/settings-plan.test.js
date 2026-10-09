@@ -5,9 +5,9 @@ import { webcrypto } from 'node:crypto';
 import { runInNewContext } from 'node:vm';
 import { createStoredAccount, openStoredAccount } from '../src/data/encryptedStore.js';
 
-const TEST_PASSWORD = 'correct horse battery staple for settings tests';
+const TEST_PASSWORD = '1234567890123';
 
-async function loadStandaloneRoute(route, storedState = {}) {
+async function loadStandaloneRoute(route, storedState = {}, storageValues = null) {
   await import('../scripts/build.mjs');
   const html = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8');
   const dataText = await readFile(new URL('../public/data.json', import.meta.url), 'utf8');
@@ -28,13 +28,16 @@ async function loadStandaloneRoute(route, storedState = {}) {
     ['#modal-root', makeElement()],
     ['#toast', makeElement()],
   ]);
-  const values = new Map();
+  const values = storageValues || new Map();
   const localStorage = {
     getItem: (key) => values.get(key) ?? null,
     setItem: (key, value) => values.set(key, value),
     removeItem: (key) => values.delete(key),
   };
-  const account = await createStoredAccount({ name: 'TEST PROFILE', password: TEST_PASSWORD, state: storedState, storage: localStorage, cryptoApi: webcrypto });
+  const account = storageValues
+    ? { id: values.get('changping-jingkao-dashboard:fixed-profile-id:v1') }
+    : await createStoredAccount({ name: 'TEST PROFILE', password: TEST_PASSWORD, state: storedState, storage: localStorage, cryptoApi: webcrypto });
+  assert.ok(account.id, 'the fixed profile should be available when reloading');
   const documentLike = {
     documentElement: makeElement(),
     querySelector: (selector) => elements.get(selector) || null,
@@ -81,7 +84,8 @@ async function loadStandaloneRoute(route, storedState = {}) {
     clearTimeout() {},
   });
   await new Promise(setImmediate);
-  const unlockForm = new HTMLFormElement('', { accountId: account.id }, { password: TEST_PASSWORD });
+  localStorage.setItem('changping-jingkao-dashboard:fixed-profile-id:v1', account.id);
+  const unlockForm = new HTMLFormElement('site-access-form', {}, { password: TEST_PASSWORD });
   await listeners.get('submit')({ target: unlockForm, preventDefault() {} });
 
   return {
@@ -93,6 +97,7 @@ async function loadStandaloneRoute(route, storedState = {}) {
     location,
     scrollCalls,
     localStorage,
+    values,
     FormElement: HTMLFormElement,
     accountId: account.id,
   };
@@ -241,6 +246,11 @@ test('editing a daily schedule changes plan fields without overwriting actual pr
   assert.equal(saved.planOverrides['1'].plannedQuestions, 45);
   assert.equal(saved.planOverrides['1'].date, '2026-10-09');
   assert.equal(saved.dayLogs['1'].actualQuestions, 27);
+
+  const reloaded = await loadStandaloneRoute('plan', {}, site.values);
+  assert.match(reloaded.root.innerHTML, /复盘错题与薄弱模块/);
+  assert.match(reloaded.root.innerHTML, /完成资料分析错题整理/);
+  assert.equal((await savedState(reloaded)).planOverrides['1'].plannedQuestions, 45);
 
   await clickAction(site, 'edit-day', { day: '1' });
   assert.match(site.modal.innerHTML, /name="actualQuestions"[^>]*value="27"/);

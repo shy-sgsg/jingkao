@@ -7,7 +7,8 @@ test('display density defaults to comfortable, persists locally, and is exposed 
   const styles = await readFile(new URL('../src/styles.css', import.meta.url), 'utf8');
   const html = await readFile(new URL('../index.html', import.meta.url), 'utf8');
 
-  assert.match(app, /readDisplayDensity\(/, 'the app should restore the saved density on startup');
+  assert.match(app, /document\.documentElement\.dataset\.density = storage\.settings\.density/, 'the app should restore saved density from the unlocked encrypted profile');
+  assert.match(app, /function activateAccount\([\s\S]*?applyDisplaySettings\(\)/, 'saved density should be applied after the fixed access gate unlocks the profile');
   assert.match(app, /role="group" aria-label="页面密度"/, 'the two modes should be announced as a labeled control group');
   assert.match(app, /const options = \[\['comfortable', '舒适'\], \['compact', '紧凑'\]\]/, 'comfortable and compact modes should both be selectable');
   assert.match(app, /data-action="set-density" data-density="\$\{value\}"/, 'the density options should be wired to the UI action');

@@ -3,10 +3,12 @@ import { buildScoreEcdf, buildSevenDayRecommendations, calculateDayCompletion, c
 import { advanceOnboarding, shouldShowOnboarding } from './data/onboarding.js';
 import { buildGuideGroups, getPageHelp } from './data/pageHelp.js';
 import { createEncryptedUserBackup, parseEncryptedUserBackup, parseUserBackup } from './data/backup.js';
-import { createStoredAccount, listEncryptedAccounts, migrateLegacyAccount, openStoredAccount, saveStoredAccount, unlockEncryptedAccount } from './data/encryptedStore.js';
+import { createStoredAccount, openStoredAccount, saveStoredAccount, unlockEncryptedAccount } from './data/encryptedStore.js';
+import { createUserDataBackup, mergeUserData, normalizePositionPreferences, resolveUserDataConflicts, studyLogKey, validateUserDataBackup } from './data/sync.js';
+import { createSyncBranch, GITHUB_SYNC_TARGET, readRemoteBackup, writeUserDataBackup } from './data/github.js';
+import { clearGitHubToken, loadGitHubToken, saveGitHubToken } from './data/githubTokenStore.js';
 import { getPositionDataCompleteness, summarizePositionCoverage } from './data/coverage.js';
 import { buildResearchFindings, summarizeAnnualConflicts } from './data/findings.js';
-import { readDisplayDensity } from './data/displayDensity.js';
 import { buildDecisionCoverageMatrix, classifyPublicManagementMatch, filterAndSortPositions, filterScoreRowsByScope, filterScoreRowsBySegment, findPositionByReference, getPositionEvidenceGrade, getPositionFilterValue, hasPositionReference, paginateItems, positionIdentity, summarizePublicManagementPositions } from './data/positions.js';
 import { runViewTransition } from './ui/viewTransition.js';
 import { observePageSections } from './ui/scrollReveal.js';
@@ -38,8 +40,10 @@ import { renderEligibilityChecks } from './ui/eligibility.js';
 import { renderScoreBreakdown } from './ui/scoreBreakdown.js';
 
 const DATA_URL = './public/data.json';
-const STORAGE_KEY = 'changping-jingkao-dashboard:v1';
-const ACCOUNT_DENSITY_KEY = 'changping-jingkao:display-density';
+const FIXED_ACCESS_PASSWORD = '1234567890123';
+const FIXED_PROFILE_NAME = '京考个人学习记录';
+const FIXED_PROFILE_ID_KEY = 'changping-jingkao-dashboard:fixed-profile-id:v1';
+const ACCESS_SESSION_KEY = 'changping-jingkao-dashboard:access-unlocked:v1';
 const root = document.querySelector('#root');
 const modalRoot = document.querySelector('#modal-root');
 const toastRoot = document.querySelector('#toast');
@@ -142,6 +146,9 @@ let storageUnavailable = false;
 let pendingBackup = null;
 let pendingEncryptedBackup = null;
 let accountSession = null;
+let githubTokenMemory = null;
+let cloudSyncUi = { screen: 'panel', busy: false, pending: null, choices: {}, error: '', result: null, returnScreen: 'panel', tokenPersistence: 'none' };
+let cloudSyncStatus = 'not_synced';
 let storage = emptyStorage();
 
 function applyDisplaySettings() {
@@ -161,7 +168,22 @@ function emptyStorage() {
     aptitudeLogs: {}, essayLogs: {},
     mocks: [], favorites: [], compared: [],
     settings: { density: 'comfortable', fontSize: 'standard', motion: 'enhanced' },
+    positionPreferences: normalizePositionPreferences(),
     onboarding: { step: 0, hidden: false, completed: false },
+    cloudSync: { baseline: null, lastSyncedAt: null, publicNoticeAccepted: false },
+  };
+}
+
+function normalizeCloudSyncState(source) {
+  const value = source && typeof source === 'object' && !Array.isArray(source) ? source : {};
+  let baseline = null;
+  if (value.baseline && typeof value.baseline === 'object' && !Array.isArray(value.baseline)) {
+    try { baseline = JSON.parse(JSON.stringify(value.baseline)); } catch { baseline = null; }
+  }
+  return {
+    baseline,
+    lastSyncedAt: typeof value.lastSyncedAt === 'string' ? value.lastSyncedAt : null,
+    publicNoticeAccepted: value.publicNoticeAccepted === true,
   };
 }
 
@@ -189,9 +211,11 @@ function readStorage(source = {}, densityFallback = 'comfortable') {
         fontSize: ['small', 'standard', 'large'].includes(settings.fontSize) ? settings.fontSize : 'standard',
         motion: settings.motion === 'immersive' ? 'immersive' : 'enhanced',
       },
+      positionPreferences: normalizePositionPreferences(parsed.positionPreferences),
       onboarding: parsed.onboarding && typeof parsed.onboarding === 'object'
         ? { step: Number.isInteger(parsed.onboarding.step) ? parsed.onboarding.step : 0, hidden: parsed.onboarding.hidden === true, completed: parsed.onboarding.completed === true }
         : { step: 0, hidden: false, completed: false },
+      cloudSync: normalizeCloudSyncState(parsed.cloudSync),
     };
   } catch {
     return emptyStorage();
@@ -211,36 +235,52 @@ async function persist() {
   }
 }
 
-function renderAccountGate({ accounts = [], hasLegacy = false, error = '' } = {}) {
-  const unlockCards = accounts.map((account) => `<form class="account-unlock-card" data-account-id="${escapeHtml(account.id)}"><div><span class="account-slot-mark">${String(account.slot).padStart(2, '0')}</span><strong>${escapeHtml(account.name || `本地档案 ${account.slot}`)}</strong></div><label class="form-field"><span>档案密码</span><input name="password" type="password" autocomplete="current-password" required/></label><button type="submit" class="button button-primary">解锁</button></form>`).join('');
-  const accountForm = (id, action, heading, submitLabel, autocomplete = 'new-password') => `<form id="${id}" class="account-create-form"><h2>${heading}</h2><label class="form-field"><span>档案名称</span><input name="name" maxlength="60" value="我的备考档案" required autocomplete="off"/></label><label class="form-field"><span>设置密码</span><input name="password" type="password" minlength="12" autocomplete="${autocomplete}" required/><small>建议使用便于记忆的长口令；遗失后无法找回。</small></label><label class="form-field"><span>再次输入密码</span><input name="confirmPassword" type="password" minlength="12" autocomplete="${autocomplete}" required/></label><button type="submit" class="button button-primary">${submitLabel}</button></form>`;
-  let accessPanel;
-  if (hasLegacy) {
-    accessPanel = `<section class="account-panel account-migration-panel"><div class="account-panel-heading"><span>发现旧版本地记录</span><h2>为已有备考数据设置密码</h2><p>记录目前仍是旧版明文格式。输入档案名称和新密码后，网站会先加密并回读校验；校验通过后才移除旧记录。</p></div>${accountForm('account-migration-form', 'migrate', '迁移并加密旧记录', '加密并进入工作台')}</section>${unlockCards ? `<section class="account-panel"><h2>或解锁已有档案</h2><div class="account-unlock-list">${unlockCards}</div></section>` : ''}`;
-  } else if (accounts.length) {
-    accessPanel = `<section class="account-panel"><div class="account-panel-heading"><span>此浏览器中的加密档案</span><h2>解锁后继续</h2><p>档案只在此浏览器保存。网站没有账户服务器，也不会上传个人数据。</p><small class="account-name-storage-note">为方便辨认，档案名称会以明文保存在本机浏览器索引；个人计划、资料和成绩仍加密保存。</small></div><div class="account-unlock-list">${unlockCards}</div></section><details class="account-panel account-create-details"><summary>＋ 创建另一份独立档案</summary>${accountForm('account-create-form', 'create', '新建加密档案', '创建并进入工作台')}</details>`;
-  } else {
-    accessPanel = `<section class="account-panel account-first-create">${accountForm('account-create-form', 'create', '创建本地档案', '创建并进入工作台')}</section>`;
-  }
-  root.innerHTML = `<main class="account-gate"><section class="account-gate-card"><div class="account-gate-brand"><span>京</span><div><strong>京考备考台</strong><small>BEIJING · LOCAL ONLY</small></div></div><div class="account-gate-copy"><div class="eyebrow muted">PRIVATE STUDY SPACE</div><h1>${hasLegacy ? '先加密已有记录，再继续备考' : accounts.length ? '欢迎回来' : '把备考记录安全留在本机'}</h1><p>每个本地档案使用独立密码加密。解锁前不会载入个人计划、资料或成绩。</p></div>${error ? `<div class="account-gate-error" role="alert">${escapeHtml(error)}</div>` : ''}${accessPanel}<div class="account-gate-footnote"><span>▣</span><p><strong>只保存在当前浏览器</strong><br/>不注册、不上传、不跨设备同步。清理浏览器数据会删除档案；忘记密码后无法恢复。</p></div></section></main>`;
-  document.title = '本地档案 · 京考备考台';
+function renderAccountGate(error = '') {
+  root.innerHTML = `<main class="account-gate"><section class="account-gate-card"><div class="account-gate-brand"><span>京</span><div><strong>京考备考台</strong><small>PERSONAL STUDY DESK</small></div></div><div class="account-gate-copy"><div class="eyebrow muted">欢迎回来</div><h1>继续你的备考</h1><p>请输入访问密码，进入学习工作台。</p></div>${error ? `<div class="account-gate-error" role="alert">${escapeHtml(error)}</div>` : ''}<section class="account-panel account-first-create"><form id="site-access-form" class="account-create-form"><label class="form-field"><span>访问密码</span><input name="password" type="password" autocomplete="current-password" required/></label><div class="access-gate-actions"><button type="button" class="button button-quiet" data-action="toggle-site-password">显示密码</button><button type="button" class="button button-quiet" data-action="clear-site-password">清空</button></div><button type="submit" class="button button-primary">进入网站</button></form></section><div class="account-gate-footnote"><span>ⓘ</span><p><strong>这是单人使用的前端访问入口</strong><br/>学习记录会自动保存在当前设备；需要换设备时，可在网站内手动进行云端同步。</p></div></section></main>`;
+  document.title = '访问验证 · 京考备考台';
 }
 
 function showAccountGate(error = '') {
+  renderAccountGate(error);
+}
+
+function rememberAccessSession(unlocked) {
   try {
-    renderAccountGate({
-      accounts: listEncryptedAccounts(localStorage),
-      hasLegacy: localStorage.getItem(STORAGE_KEY) !== null,
-      error,
-    });
-  } catch (cause) {
-    renderAccountGate({ error: error || cause.message });
+    if (unlocked) sessionStorage.setItem(ACCESS_SESSION_KEY, 'true');
+    else sessionStorage.removeItem(ACCESS_SESSION_KEY);
+  } catch { /* this only remembers the front-end gate state */ }
+}
+
+function hasRememberedAccessSession() {
+  try { return sessionStorage.getItem(ACCESS_SESSION_KEY) === 'true'; }
+  catch { return false; }
+}
+
+async function openFixedLocalProfile() {
+  const id = localStorage.getItem(FIXED_PROFILE_ID_KEY);
+  if (id) return openStoredAccount({ id, password: FIXED_ACCESS_PASSWORD, storage: localStorage });
+
+  const created = await createStoredAccount({
+    name: FIXED_PROFILE_NAME,
+    password: FIXED_ACCESS_PASSWORD,
+    state: emptyStorage(),
+    storage: localStorage,
+  });
+  localStorage.setItem(FIXED_PROFILE_ID_KEY, created.id);
+  if (localStorage.getItem(FIXED_PROFILE_ID_KEY) !== created.id) {
+    throw new Error('本地档案标识保存失败，请检查浏览器存储空间。');
   }
+  return { session: created.session, state: emptyStorage() };
 }
 
 function activateAccount(session, accountState, message = '') {
   accountSession = session;
+  rememberAccessSession(true);
   storage = readStorage(accountState);
+  filters = { ...filters, ...storage.positionPreferences.filters, query: '' };
+  jobSort = storage.positionPreferences.jobSort;
+  scenarioYear = storage.positionPreferences.scenarioYear;
+  scenarioScope = storage.positionPreferences.scenarioScope;
   displayDensity = storage.settings.density;
   storageUnavailable = false;
   applyDisplaySettings();
@@ -251,6 +291,7 @@ function activateAccount(session, accountState, message = '') {
 }
 
 function lockAccount() {
+  rememberAccessSession(false);
   accountSession = null;
   storage = emptyStorage();
   displayDensity = 'comfortable';
@@ -313,6 +354,13 @@ function fmtDate(value) {
 function todayString() {
   const now = new Date();
   return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
+}
+
+function createPersonalId(prefix) {
+  const random = typeof globalThis.crypto?.randomUUID === 'function'
+    ? globalThis.crypto.randomUUID()
+    : `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 12)}`;
+  return `${prefix}_${random}`;
 }
 
 function getDay(day) {
@@ -504,7 +552,7 @@ function renderSidebar() {
     const active = page === id || (id === 'aptitude' && ['science', 'generalKnowledge', 'aptitudeModule'].includes(page));
     return `<a href="#/${id}" class="nav-item ${active ? 'active' : ''}" ${active ? 'aria-current="page"' : ''}><span class="nav-icon">${icons[id]}</span><span>${escapeHtml(label)}</span>${id === 'positions' ? `<span class="nav-count">${dataset.positions.length}</span>` : ''}</a>`;
   }).join('')}</div>`).join('');
-  return `<aside class="sidebar" id="sidebar"><a class="brand" href="#/overview"><span class="brand-mark">京</span><span><strong>京考备考台</strong><small>BEIJING · 2027</small></span></a><div class="data-status"><span class="status-dot"></span><span>本地运行 · 数据基准 ${escapeHtml(dataset.dataAsOf)}</span></div><nav aria-label="主导航">${nav}</nav><div class="sidebar-bottom"><div class="sidebar-note"><span class="lock-icon">▣</span><div><strong>仅保存在本机</strong><small>个人记录不会上传</small></div></div><div class="sidebar-version">个人备考工作台 <span>v1.0</span></div></div></aside>`;
+  return `<aside class="sidebar" id="sidebar"><a class="brand" href="#/overview"><span class="brand-mark">京</span><span><strong>京考备考台</strong><small>BEIJING · 2027</small></span></a><div class="data-status"><span class="status-dot"></span><span>本地运行 · 数据基准 ${escapeHtml(dataset.dataAsOf)}</span></div><nav aria-label="主导航">${nav}</nav><div class="sidebar-bottom"><div class="sidebar-note"><span class="lock-icon">▣</span><div><strong>本机加密保存</strong><small>仅手动确认后同步</small></div></div><div class="sidebar-version">个人备考工作台 <span>v1.0</span></div></div></aside>`;
 }
 
 function renderDensityControl() {
@@ -517,7 +565,7 @@ function renderSettingOptions(setting, label, options) {
 }
 
 function renderSettings() {
-  return `<div class="page-body settings-page"><div class="page-heading-row"><div><div class="eyebrow muted">PERSONAL DISPLAY</div><h1>设置与显示</h1><p>按自己的阅读习惯调整全站字号、动效和页面密度，修改会立即应用。</p></div><a class="button button-secondary" href="#/overview">返回工作台</a></div><section class="panel settings-panel"><div class="settings-panel-heading"><span class="settings-heading-icon">✦</span><div><h2>阅读与动效偏好</h2><p>设置保存在本机浏览器，并会包含在个人数据备份中。</p></div></div>${renderSettingOptions('fontSize', '字号', [['small', '偏小', '更多内容同时显示'], ['standard', '标准', '保持当前默认字号'], ['large', '大号', '提高正文与界面文字大小']])}${renderSettingOptions('motion', '动效强度', [['enhanced', '增强', '清晰的页面切换、错峰入场与卡片反馈；遵循系统“减少动态效果”偏好'], ['immersive', '沉浸', '选择沉浸后覆盖系统的“减少动态效果”偏好；更明显的空间过渡、层次入场与悬浮反馈']])}${renderSettingOptions('density', '页面密度', [['comfortable', '舒适', '留白更多，适合连续阅读'], ['compact', '紧凑', '减少间距，一屏呈现更多内容']])}<div class="notice notice-soft settings-note"><span>▣</span><p>所有个人偏好仅保存在此浏览器，不会修改原始 Excel。</p></div></section></div>`;
+  return `<div class="page-body settings-page"><div class="page-heading-row"><div><div class="eyebrow muted">PERSONAL DISPLAY</div><h1>设置与显示</h1><p>按自己的阅读习惯调整全站字号、动效和页面密度，修改会立即应用。</p></div><a class="button button-secondary" href="#/overview">返回工作台</a></div><section class="panel settings-panel"><div class="settings-panel-heading"><span class="settings-heading-icon">✦</span><div><h2>阅读与动效偏好</h2><p>设置保存在本机浏览器，并会包含在个人数据备份中。</p></div></div>${renderSettingOptions('fontSize', '字号', [['small', '偏小', '更多内容同时显示'], ['standard', '标准', '保持当前默认字号'], ['large', '大号', '提高正文与界面文字大小']])}${renderSettingOptions('motion', '动效强度', [['enhanced', '增强', '清晰的页面切换、错峰入场与卡片反馈；遵循系统“减少动态效果”偏好'], ['immersive', '沉浸', '选择沉浸后覆盖系统的“减少动态效果”偏好；更明显的空间过渡、层次入场与悬浮反馈']])}${renderSettingOptions('density', '页面密度', [['comfortable', '舒适', '留白更多，适合连续阅读'], ['compact', '紧凑', '减少间距，一屏呈现更多内容']])}<div class="notice notice-soft settings-note"><span>▣</span><p>个人偏好默认保存在本机；确认云端同步后会随备份上传。不会修改原始 Excel。</p></div></section></div>`;
 }
 
 function renderLayout() {
@@ -526,7 +574,7 @@ function renderLayout() {
     ? [aptitudeModule.area, `${aptitudeModule.hint} · 学习、练习与手动记录`]
     : pageMeta[page] || pageMeta.overview;
   const pageScope = ['positions', 'compare', 'assistant', 'scenarios', 'matrix'].includes(page) ? '北京京考职位决策' : ['aptitude', 'aptitudeModule', 'science', 'generalKnowledge'].includes(page) ? '行测能力' : page === 'overview' ? '备考工作台' : '昌平区';
-  return `${renderSidebar()}<div class="main-shell"><header class="topbar"><div class="topbar-left"><button class="mobile-menu" type="button" aria-label="打开导航" data-action="mobile-menu">☰</button><div><div class="breadcrumb">${pageScope} <span>/</span> <strong>${escapeHtml(title)}</strong></div><p class="page-subtitle">${escapeHtml(subtitle)}</p></div></div><div class="topbar-right"><a class="button button-secondary guide-trigger" href="#/guide">使用指南</a>${renderDensityControl()}<span class="today-pill"><span class="today-dot"></span>${escapeHtml(fmtDate(todayString()))}</span><button class="button button-quiet account-lock-button" type="button" data-action="account-lock" aria-label="锁定当前档案并切换账户">锁定 · ${escapeHtml(accountSession.name)}</button></div></header><main id="page-content" tabindex="-1">${renderPage()}</main><footer class="page-footer"><span>资料更新至 ${escapeHtml(dataset.dataAsOf)} · 使用前请回看官方当年职位表</span><a href="#/sources">数据口径说明 →</a></footer></div><div class="sidebar-scrim" data-action="close-menu"></div>`;
+  return `${renderSidebar()}<div class="main-shell"><header class="topbar"><div class="topbar-left"><button class="mobile-menu" type="button" aria-label="打开导航" data-action="mobile-menu">☰</button><div><div class="breadcrumb">${pageScope} <span>/</span> <strong>${escapeHtml(title)}</strong></div><p class="page-subtitle">${escapeHtml(subtitle)}</p></div></div><div class="topbar-right"><button class="button button-secondary cloud-sync-trigger" type="button" data-action="open-cloud-sync">☁ 云端同步</button><a class="button button-secondary guide-trigger" href="#/guide">使用指南</a>${renderDensityControl()}<span class="today-pill"><span class="today-dot"></span>${escapeHtml(fmtDate(todayString()))}</span><button class="button button-quiet account-lock-button" type="button" data-action="account-lock" aria-label="锁定当前页面">锁定</button></div></header><main id="page-content" tabindex="-1">${renderPage()}</main><footer class="page-footer"><span>资料更新至 ${escapeHtml(dataset.dataAsOf)} · 使用前请回看官方当年职位表</span><a href="#/sources">数据口径说明 →</a></footer></div><div class="sidebar-scrim" data-action="close-menu"></div>`;
 }
 
 function renderOverview() {
@@ -563,7 +611,7 @@ function renderOverview() {
     const note = latest ? `最近真实成绩 ${fmt(latest.total, 1)} 分` : '录入真实模考后显示分差';
     return `<article class="score-target-card score-target-${tone}" style="--target-index:${index}"><span>目标 ${targetScore} 分</span><strong>${status}</strong><small>${note}</small></article>`;
   }).join('');
-  const aptitude = dataset.aptitude.map((item, index) => ({ ...item, ...(storage.aptitudeLogs[index] || {}) }));
+  const aptitude = dataset.aptitude.map((item, index) => ({ ...item, ...(storage.aptitudeLogs[studyLogKey('aptitude', item)] || {}), index }));
   const weekly = buildSevenDayRecommendations({ days: getDays(), aptitude, mocks, today: todayString() });
   const dateNote = todayPlan?.date === todayString() ? '今天的任务' : `下一计划 · ${fmtDate(todayPlan?.date)}`;
   const decisionYears = [2024, 2025, 2026];
@@ -882,7 +930,7 @@ function renderAptitude() {
     ? storage.aptitudeOverallStudy.sessions.find((session) => session.id === activeAptitudeOverallSessionId)
     : null;
   if (routedSession) return renderAptitudeOverallSession(routedSession);
-  const aptitude = dataset.aptitude.map((item, index) => ({ ...item, ...(storage.aptitudeLogs[index] || {}), index }));
+  const aptitude = dataset.aptitude.map((item, index) => ({ ...item, ...(storage.aptitudeLogs[studyLogKey('aptitude', item)] || {}), index }));
   const modules = APTITUDE_MODULES.map((module) => ({
     ...module,
     items: aptitude.filter((item) => item.area === module.area),
@@ -987,7 +1035,7 @@ function combineAptitudeSummary(manualSummary, ...onlineStats) {
 
 function aptitudeItemsForArea(area) {
   return dataset.aptitude
-    .map((item, index) => ({ ...item, ...(storage.aptitudeLogs[index] || {}), index }))
+    .map((item, index) => ({ ...item, ...(storage.aptitudeLogs[studyLogKey('aptitude', item)] || {}), index }))
     .filter((item) => item.area === area);
 }
 
@@ -1304,7 +1352,7 @@ function renderGeneralKnowledge() {
 }
 
 function renderEssay() {
-  const essay = dataset.essay.map((item, index) => ({ ...item, ...(storage.essayLogs[index] || {}), index }));
+  const essay = dataset.essay.map((item, index) => ({ ...item, ...(storage.essayLogs[studyLogKey('essay', item)] || {}), index }));
   const rows = essay.map((item) => `<tr><td><strong>${escapeHtml(item.area)}</strong></td><td>${escapeHtml(item.practice)}</td><td>${Number.isFinite(item.completed) ? fmt(item.completed) : '待记录'} / ${fmt(item.planned)} 次</td><td>${Number.isFinite(item.selfScore) ? `${fmt(item.selfScore)} 分` : '待自评'}</td><td>${Number.isFinite(item.keywordCoverage) ? fmtPct(item.keywordCoverage) : '待记录'}</td><td>${item.timedPass === null ? '待记录' : item.timedPass ? '达标' : '未达标'}</td><td>${button('记录', 'edit-essay', 'button button-quiet button-small', `data-index="${item.index}"`)}</td></tr>`).join('');
   const hasCompleted = essay.some((item) => Number.isFinite(item.completed));
   const completed = hasCompleted ? essay.reduce((sum, item) => sum + (Number.isFinite(item.completed) ? item.completed : 0), 0) : null;
@@ -1667,7 +1715,7 @@ function renderProfile() {
   const graduateMajorCode = profile.graduateMajorCode || (isGraduate ? profile.majorCode : '');
   const legacyMajor = !isUndergraduate && !isGraduate && (profile.major || profile.majorCode);
   const avatarText = graduateMajor || undergraduateMajor || profile.major || '考';
-  return `<div class="page-body"><div class="page-heading-row"><div><div class="eyebrow muted">LOCAL PROFILE · BROWSER ONLY</div><h1>个人报考资料</h1><p>仅在这台设备的浏览器加密保存，不上传、不回写原始工作簿。</p></div><span class="private-pill">▣ 本地隐私</span></div><div class="profile-layout"><form id="profile-form" class="panel profile-form"><div class="panel-heading"><div><div class="eyebrow muted">BASIC INFORMATION</div><h2>基本条件</h2></div>${chip('由你确认', 'blue-soft')}</div><div class="form-grid">${field('undergraduateMajor', '本科专业', '按本科毕业证 / 学位材料填写。')}${field('undergraduateMajorCode', '本科专业代码', '例如 1204；请核对官方专业目录，不自动推断。')}${field('graduateMajor', '研究生专业', '无研究生学历可留空。')}${field('graduateMajorCode', '研究生专业代码', '例如 1204 或 1252；按研究生阶段填写。')}${field('degree', '最高学历', '建议填写：大专、本科、硕士研究生或博士研究生。')}${field('degreeType', '最高学位类型', '', 'select', ['学术学位', '专业学位', '其他'])}${field('graduationStatus', '毕业身份', '', 'select', ['应届毕业生', '非应届 / 社会人员', '留学回国人员', '其他'])}${field('graduationYear', '毕业年份', '', 'number')}${field('politicalStatus', '政治面貌', '', 'select', ['中共党员', '共青团员', '群众', '其他'])}${field('hukou', '户籍', '按职位表口径填写；未知时留空。')}${field('studentOrigin', '生源地', '与户籍分开记录；职位要求不明确时人工核对。')}${field('grassrootsYears', '基层工作经历（年）', '', 'number')}${field('credentials', '资格证书 / 职业资质', '多个项目可用逗号分隔。')}${field('retiredStatus', '退役身份', '', 'select', ['是', '否'])}${field('grassrootsProjectStatus', '服务基层项目人员资格', '如不确定请留空并人工核对。', 'select', ['是', '否'])}</div><div class="profile-preferences"><div class="eyebrow muted">PREFERENCES · NOT ELIGIBILITY</div><div class="form-grid">${field('preferredTypes', '偏好的岗位类型', '偏好不会替代硬性资格审查。')}${field('preferredLocation', '地点偏好', '', 'text')}${field('acceptAdministrativeEnforcement', '是否接受行政执法岗', '', 'select', ['接受', '不接受', '待确认'])}${field('acceptPhysicalTest', '是否接受体测', '', 'select', ['接受', '不接受', '待确认'])}${field('acceptNightShift', '是否接受夜班', '', 'select', ['接受', '不接受', '待确认'])}${field('acceptTown', '是否接受镇', '', 'select', ['接受', '不接受', '待确认'])}${field('prioritizeStreet', '是否优先街道', '', 'select', ['优先', '不优先', '待确认'])}${field('prioritizeDistrict', '是否优先区直', '', 'select', ['优先', '不优先', '待确认'])}</div></div><div class="form-actions"><button type="submit" class="button button-primary">加密保存</button><span id="profile-save-status">${Object.keys(profile).filter((key) => profile[key]).length} 项已有内容</span></div></form><aside class="profile-aside"><div class="panel profile-summary"><span class="summary-avatar">${escapeHtml(avatarText.slice(0, 1))}</span><div><strong>个人条件摘要</strong><small>不会自动判定岗位资格</small></div><div class="summary-line"><span>本科专业</span><strong>${escapeHtml(undergraduateMajor || '待补充')}</strong></div><div class="summary-line"><span>本科代码</span><strong>${escapeHtml(undergraduateMajorCode || '待补充')}</strong></div><div class="summary-line"><span>研究生专业</span><strong>${escapeHtml(graduateMajor || '待补充')}</strong></div><div class="summary-line"><span>研究生代码</span><strong>${escapeHtml(graduateMajorCode || '待补充')}</strong></div><div class="summary-line"><span>最高学历</span><strong>${escapeHtml(profile.degree || '待补充')}</strong></div>${legacyMajor ? `<div class="notice notice-soft compact-notice"><span>ⓘ</span><p>检测到未分层的旧专业记录“${escapeHtml([profile.major, profile.majorCode].filter(Boolean).join(' · '))}”；请核实学历层级后手动填入对应栏，系统不会自动归类。</p></div>` : ''}<div class="summary-line"><span>服务基层项目</span><strong>${escapeHtml(profile.grassrootsProjectStatus || '待确认')}</strong></div><div class="summary-line"><span>身份 / 户籍 / 生源</span><strong>${profile.graduationStatus || profile.hukou || profile.studentOrigin ? '部分填写' : '待补充'}</strong></div><div class="notice notice-soft compact-notice"><span>ⓘ</span><p>专业资格按最高学历对应代码核对；该层级缺代码时保持待核，不借用另一学历阶段的代码。</p></div></div><div class="panel privacy-card"><span>▣</span><strong>数据留在本机</strong><p>解锁期间的数据只在内存中明文使用；localStorage 只保存加密信封。清理浏览器数据会同时删除这些记录。</p></div><section class="panel backup-panel"><div class="backup-panel-heading"><div><strong>个人数据加密备份</strong><small>备份需档案密码才能恢复；不含职位库或原始 Excel</small></div><span aria-hidden="true">↗</span></div><div class="backup-actions"><button type="button" class="button button-secondary" data-action="backup-export">下载加密备份</button><button type="button" class="button button-quiet" data-action="backup-choose">恢复备份</button><input id="backup-import-file" type="file" accept="application/json,.json" hidden/></div></section></aside></div></div>`;
+  return `<div class="page-body"><div class="page-heading-row"><div><div class="eyebrow muted">PERSONAL PROFILE · MANUAL SYNC</div><h1>个人报考资料</h1><p>默认在这台设备加密保存；确认云端同步后会上传到公开仓库，不回写原始工作簿。</p></div><span class="private-pill">▣ 本机加密</span></div><div class="profile-layout"><form id="profile-form" class="panel profile-form"><div class="panel-heading"><div><div class="eyebrow muted">BASIC INFORMATION</div><h2>基本条件</h2></div>${chip('由你确认', 'blue-soft')}</div><div class="form-grid">${field('undergraduateMajor', '本科专业', '按本科毕业证 / 学位材料填写。')}${field('undergraduateMajorCode', '本科专业代码', '例如 1204；请核对官方专业目录，不自动推断。')}${field('graduateMajor', '研究生专业', '无研究生学历可留空。')}${field('graduateMajorCode', '研究生专业代码', '例如 1204 或 1252；按研究生阶段填写。')}${field('degree', '最高学历', '建议填写：大专、本科、硕士研究生或博士研究生。')}${field('degreeType', '最高学位类型', '', 'select', ['学术学位', '专业学位', '其他'])}${field('graduationStatus', '毕业身份', '', 'select', ['应届毕业生', '非应届 / 社会人员', '留学回国人员', '其他'])}${field('graduationYear', '毕业年份', '', 'number')}${field('politicalStatus', '政治面貌', '', 'select', ['中共党员', '共青团员', '群众', '其他'])}${field('hukou', '户籍', '按职位表口径填写；未知时留空。')}${field('studentOrigin', '生源地', '与户籍分开记录；职位要求不明确时人工核对。')}${field('grassrootsYears', '基层工作经历（年）', '', 'number')}${field('credentials', '资格证书 / 职业资质', '多个项目可用逗号分隔。')}${field('retiredStatus', '退役身份', '', 'select', ['是', '否'])}${field('grassrootsProjectStatus', '服务基层项目人员资格', '如不确定请留空并人工核对。', 'select', ['是', '否'])}</div><div class="profile-preferences"><div class="eyebrow muted">PREFERENCES · NOT ELIGIBILITY</div><div class="form-grid">${field('preferredTypes', '偏好的岗位类型', '偏好不会替代硬性资格审查。')}${field('preferredLocation', '地点偏好', '', 'text')}${field('acceptAdministrativeEnforcement', '是否接受行政执法岗', '', 'select', ['接受', '不接受', '待确认'])}${field('acceptPhysicalTest', '是否接受体测', '', 'select', ['接受', '不接受', '待确认'])}${field('acceptNightShift', '是否接受夜班', '', 'select', ['接受', '不接受', '待确认'])}${field('acceptTown', '是否接受镇', '', 'select', ['接受', '不接受', '待确认'])}${field('prioritizeStreet', '是否优先街道', '', 'select', ['优先', '不优先', '待确认'])}${field('prioritizeDistrict', '是否优先区直', '', 'select', ['优先', '不优先', '待确认'])}</div></div><div class="form-actions"><button type="submit" class="button button-primary">加密保存</button><span id="profile-save-status">${Object.keys(profile).filter((key) => profile[key]).length} 项已有内容</span></div></form><aside class="profile-aside"><div class="panel profile-summary"><span class="summary-avatar">${escapeHtml(avatarText.slice(0, 1))}</span><div><strong>个人条件摘要</strong><small>不会自动判定岗位资格</small></div><div class="summary-line"><span>本科专业</span><strong>${escapeHtml(undergraduateMajor || '待补充')}</strong></div><div class="summary-line"><span>本科代码</span><strong>${escapeHtml(undergraduateMajorCode || '待补充')}</strong></div><div class="summary-line"><span>研究生专业</span><strong>${escapeHtml(graduateMajor || '待补充')}</strong></div><div class="summary-line"><span>研究生代码</span><strong>${escapeHtml(graduateMajorCode || '待补充')}</strong></div><div class="summary-line"><span>最高学历</span><strong>${escapeHtml(profile.degree || '待补充')}</strong></div>${legacyMajor ? `<div class="notice notice-soft compact-notice"><span>ⓘ</span><p>检测到未分层的旧专业记录“${escapeHtml([profile.major, profile.majorCode].filter(Boolean).join(' · '))}”；请核实学历层级后手动填入对应栏，系统不会自动归类。</p></div>` : ''}<div class="summary-line"><span>服务基层项目</span><strong>${escapeHtml(profile.grassrootsProjectStatus || '待确认')}</strong></div><div class="summary-line"><span>身份 / 户籍 / 生源</span><strong>${profile.graduationStatus || profile.hukou || profile.studentOrigin ? '部分填写' : '待补充'}</strong></div><div class="notice notice-soft compact-notice"><span>ⓘ</span><p>专业资格按最高学历对应代码核对；该层级缺代码时保持待核，不借用另一学历阶段的代码。</p></div></div><div class="panel privacy-card"><span>▣</span><strong>本机加密保存，默认不上传</strong><p>解锁期间数据在内存中明文使用；localStorage 保存加密信封。只有在同步面板明确确认后，个人记录才会上传到公开仓库。清理浏览器数据会删除本地档案。</p></div><section class="panel backup-panel"><div class="backup-panel-heading"><div><strong>个人数据加密备份</strong><small>备份需档案密码才能恢复；不含职位库或原始 Excel</small></div><span aria-hidden="true">↗</span></div><div class="backup-actions"><button type="button" class="button button-secondary" data-action="backup-export">下载加密备份</button><button type="button" class="button button-quiet" data-action="backup-choose">恢复备份</button><input id="backup-import-file" type="file" accept="application/json,.json" hidden/></div></section></aside></div></div>`;
 }
 
 function renderCoveragePanel() {
@@ -1863,6 +1911,232 @@ function renderModal(content) {
   modalRoot.querySelector('input,select,textarea,button')?.focus();
 }
 
+function stableSyncJson(value) {
+  if (Array.isArray(value)) return `[${value.map(stableSyncJson).join(',')}]`;
+  if (value && typeof value === 'object') {
+    return `{${Object.keys(value).sort().map((key) => `${JSON.stringify(key)}:${stableSyncJson(value[key])}`).join(',')}}`;
+  }
+  return JSON.stringify(value);
+}
+
+function cloudSyncPendingCount() {
+  try {
+    const baseline = storage.cloudSync.baseline ? validateUserDataBackup(storage.cloudSync.baseline) : null;
+    const local = createUserDataBackup(storage, { tombstones: baseline?.tombstones || [] });
+    const empty = createUserDataBackup(emptyStorage());
+    return mergeUserData({
+      base: baseline?.data || null,
+      local: local.data,
+      remote: baseline?.data || empty.data,
+      baseTombstones: baseline?.tombstones || [],
+      localTombstones: local.tombstones,
+      remoteTombstones: baseline?.tombstones || [],
+    }).summary;
+  } catch {
+    return null;
+  }
+}
+
+function formatSyncTimestamp(value) {
+  if (typeof value !== 'string' || !Number.isFinite(Date.parse(value))) return '尚未同步';
+  return new Date(value).toLocaleString('zh-CN', { hour12: false });
+}
+
+function syncNoticeMarkup() {
+  if (storage.cloudSync.publicNoticeAccepted) return '';
+  return `<div class="notice notice-warning sync-public-warning"><span>!</span><p><strong>仓库公开，确认同步后任何人都可以查看备份。</strong>当前 jingkao 仓库是公开的。同步后的学习记录可以通过 GitHub 查看；网站访问密码不保护仓库公开文件。请勿同步不希望公开的内容。</p><button type="button" class="button button-secondary" data-action="accept-cloud-public-warning">我已了解，继续</button></div>`;
+}
+
+function renderCloudSyncModal() {
+  const screen = cloudSyncUi.screen;
+  const error = cloudSyncUi.error ? `<div class="account-gate-error" role="alert">${escapeHtml(cloudSyncUi.error)}</div>` : '';
+  const title = screen === 'warning' ? '同步前请先了解公开范围'
+    : screen === 'settings' ? 'GitHub 同步设置'
+      : screen === 'preview' ? '同步预览'
+        : screen === 'result' ? '同步完成' : '手动双向同步';
+  const eyebrow = screen === 'settings' ? 'DEVICE CREDENTIALS'
+    : 'MANUAL · TWO-WAY · USER DATA ONLY';
+  let body = '';
+  if (screen === 'warning') {
+    body = `<div class="modal-body"><div class="notice notice-warning sync-public-warning"><span>!</span><p><strong>仓库公开，确认同步后任何人都可以查看备份。</strong>当前 jingkao 仓库是公开的。同步后的学习记录可以通过 GitHub 查看；网站访问密码不保护仓库公开文件。请勿同步不希望公开的内容。</p></div><p>同步只会在你点击“开始双向同步”后读取 GitHub；写入或新建数据分支还需要再次确认。</p></div><div class="modal-footer"><button type="button" class="button button-quiet" data-action="close-cloud-sync">关闭</button><button type="button" class="button button-primary" data-action="accept-cloud-public-warning">我已了解，继续</button></div>`;
+  } else if (screen === 'panel') {
+    const summary = cloudSyncPendingCount();
+    const savedStatus = storageUnavailable ? '本机保存遇到问题' : '本机记录已加密保存';
+    const changeStatus = summary
+      ? (summary.localAdded || summary.updated || summary.deleted ? '有尚未同步的本机改动' : '与上次同步基线一致')
+      : '本机数据格式需要检查';
+    body = `<div class="modal-body">${error}${syncNoticeMarkup()}<div class="sync-target-card"><div><span>GitHub 仓库</span><strong>${GITHUB_SYNC_TARGET.owner}/${GITHUB_SYNC_TARGET.repo}</strong></div><div><span>个人数据分支</span><strong>${GITHUB_SYNC_TARGET.branch}</strong></div><div><span>本机状态</span><strong>${escapeHtml(savedStatus)}</strong></div><div><span>待同步状态</span><strong>${escapeHtml(changeStatus)}</strong></div><div><span>上次确认同步</span><strong>${escapeHtml(formatSyncTimestamp(storage.cloudSync.lastSyncedAt))}</strong></div><div><span>数据文件</span><strong>${escapeHtml(GITHUB_SYNC_TARGET.path)}</strong></div></div><p class="sync-explainer">每次同步都会先读取云端并展示合并预览。没有自动后台上传；本机学习记录继续保存在当前设备。</p></div><div class="modal-footer"><button type="button" class="button button-quiet" data-action="close-cloud-sync">关闭</button><button type="button" class="button button-secondary" data-action="cloud-sync-settings">同步设置</button><button type="button" class="button button-primary" data-action="start-cloud-sync" ${cloudSyncUi.busy ? 'disabled' : ''}>${cloudSyncUi.busy ? '正在读取…' : '开始双向同步'}</button></div>`;
+  } else if (screen === 'settings') {
+    const tokenState = cloudSyncUi.tokenPersistence === 'device'
+      ? '<div class="sync-token-state">Token 已加密保存在此设备。</div>'
+      : cloudSyncUi.tokenPersistence === 'session'
+        ? '<div class="sync-token-state sync-token-session">Token 仅保存在当前页面内存中；刷新或关闭页面后需要重新输入。</div>'
+        : '<div class="sync-token-state">尚未配置 Token。没有 Token 仍可读取公开云端并查看预览。</div>';
+    body = `<div class="modal-body">${error}<div class="notice sync-token-instructions"><span>i</span><p>请创建仅限 <strong>${GITHUB_SYNC_TARGET.owner}/${GITHUB_SYNC_TARGET.repo}</strong> 的 fine-grained personal access token，并只授予 <strong>Contents: Read and write</strong>。Token 只保存在本设备的 IndexedDB 加密凭据区；不会写入同步文件或 localStorage。</p></div>${tokenState}<form id="github-token-form" class="sync-token-form"><label class="form-field"><span>GitHub Token</span><input name="token" type="password" autocomplete="off" autocapitalize="off" spellcheck="false" required placeholder="粘贴 fine-grained token"/></label><button type="submit" class="button button-primary">安全保存 Token</button></form><div class="sync-settings-links"><a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noreferrer">创建 fine-grained token ↗</a>${cloudSyncUi.tokenPersistence !== 'none' || githubTokenMemory ? '<button type="button" class="button button-quiet" data-action="clear-github-token">清除此设备的 Token</button>' : ''}</div><p class="sync-explainer">同步仍由你手动启动和确认。Token 只用于 GitHub API；访问密码不是仓库安全边界。</p></div><div class="modal-footer"><button type="button" class="button button-quiet" data-action="cloud-sync-settings-back">返回</button><button type="button" class="button button-secondary" data-action="close-cloud-sync">关闭</button></div>`;
+  } else if (screen === 'preview') {
+    body = renderCloudSyncPreviewContent(error);
+  } else if (screen === 'result') {
+    const result = cloudSyncUi.result || {};
+    const outcome = result.wrote
+      ? '<div class="sync-success-callout"><strong>本机与云端已完成这次手动同步。</strong><span>云端备份已写入并回读校验，本机加密档案也已更新。</span></div>'
+      : '<div class="sync-success-callout"><strong>本机与云端已完成这次手动同步。</strong><span>云端备份已与合并结果一致，无需写入；本机加密档案已更新。</span></div>';
+    body = `<div class="modal-body">${error}${outcome}<div class="backup-preview-grid"><div><strong>${result.localAdded || 0}</strong><span>本机新增</span></div><div><strong>${result.cloudAdded || 0}</strong><span>云端新增</span></div><div><strong>${result.updated || 0}</strong><span>合并更新</span></div><div><strong>${result.deleted || 0}</strong><span>删除记录</span></div></div><p class="sync-explainer">已处理 ${result.conflictsResolved || 0} 项冲突 · ${escapeHtml(formatSyncTimestamp(result.syncedAt))}</p></div><div class="modal-footer"><button type="button" class="button button-secondary" data-action="start-cloud-sync">再次读取云端</button><button type="button" class="button button-primary" data-action="close-cloud-sync">完成</button></div>`;
+  }
+  renderModal(`<div class="cloud-sync-modal"><div class="modal-head"><div><div class="eyebrow muted">${eyebrow}</div><h2>${title}</h2><p>${GITHUB_SYNC_TARGET.owner}/${GITHUB_SYNC_TARGET.repo} · ${GITHUB_SYNC_TARGET.branch}</p></div><button type="button" class="modal-close" aria-label="关闭同步面板" data-action="close-cloud-sync">×</button></div>${body}</div>`);
+}
+
+function conflictValueMarkup(value, missing) {
+  if (missing) return '此端已删除';
+  if (value === null) return 'null';
+  const serialized = JSON.stringify(value);
+  return escapeHtml(serialized === undefined ? String(value) : serialized);
+}
+
+function renderCloudSyncPreviewContent(error = '') {
+  const pending = cloudSyncUi.pending;
+  if (!pending) return `<div class="modal-body">${error}<p>同步预览已失效，请重新读取云端。</p></div><div class="modal-footer"><button type="button" class="button button-quiet" data-action="close-cloud-sync">关闭</button></div>`;
+  const branchText = !pending.remote.branchExists
+    ? '数据分支尚不存在；确认后会从公开默认分支建立数据分支。'
+    : !pending.remote.backup && pending.baseline
+      ? '云端备份文件缺失；本次以此设备上次确认的基线参与合并，并在确认后尝试恢复云端文件。'
+      : !pending.remote.backup ? '分支存在但还没有个人数据文件；确认后会创建备份文件。'
+        : '已读取现有云端备份；确认前不会写入 GitHub。';
+  const conflicts = pending.preview.conflicts.map((conflict, index) => {
+    const selected = cloudSyncUi.choices[conflict.path];
+    return `<article class="sync-conflict"><div class="sync-conflict-heading"><strong>冲突 ${index + 1}</strong><code>${escapeHtml(conflict.path)}</code></div><div class="sync-conflict-values"><div><span>本机</span><pre>${conflictValueMarkup(conflict.local, conflict.localMissing)}</pre></div><div><span>云端</span><pre>${conflictValueMarkup(conflict.remote, conflict.remoteMissing)}</pre></div></div><div class="sync-conflict-choices"><button type="button" class="button ${selected === 'local' ? 'button-primary' : 'button-secondary'}" data-action="choose-sync-conflict" data-path="${escapeHtml(conflict.path)}" data-side="local" aria-pressed="${selected === 'local'}">保留本机</button><button type="button" class="button ${selected === 'remote' ? 'button-primary' : 'button-secondary'}" data-action="choose-sync-conflict" data-path="${escapeHtml(conflict.path)}" data-side="remote" aria-pressed="${selected === 'remote'}">保留云端</button></div></article>`;
+  }).join('');
+  const unresolved = pending.preview.conflicts.filter((conflict) => !['local', 'remote'].includes(cloudSyncUi.choices[conflict.path])).length;
+  const summary = pending.preview.summary;
+  const tokenNotice = cloudSyncUi.tokenPersistence === 'session'
+    ? '<p class="sync-token-state sync-token-session">Token 仅本次页面保存。下次刷新或打开页面需要重新输入。</p>' : '';
+  return `<div class="modal-body">${error}<div class="sync-preview-status"><strong>${escapeHtml(branchText)}</strong><span>读取时间：${escapeHtml(formatSyncTimestamp(pending.readAt))}</span></div>${tokenNotice}<div class="backup-preview-grid"><div><strong>${summary.localAdded}</strong><span>本机新增</span></div><div><strong>${summary.cloudAdded}</strong><span>云端新增</span></div><div><strong>${summary.updated}</strong><span>合并更新</span></div><div><strong>${summary.deleted}</strong><span>删除记录</span></div></div><div class="sync-conflicts">${conflicts || '<div class="sync-no-conflicts">没有字段冲突；双方独立改动可以直接合并。</div>'}</div><p class="sync-confirm-copy">确认后会将合并结果写入公开仓库，并更新此设备的加密记录。${pending.remote.branchExists ? '' : '这也会新建个人数据分支。'}取消不会更改本机记录。</p><div class="sync-preview-actions"><button type="button" class="button button-quiet" data-action="cloud-sync-settings">同步设置</button><button type="button" class="button button-secondary" data-action="start-cloud-sync" ${cloudSyncUi.busy ? 'disabled' : ''}>重新读取云端</button><button type="button" class="button button-quiet" data-action="cancel-cloud-preview">取消此次预览</button><button type="button" class="button button-primary" data-action="confirm-cloud-sync" ${unresolved || cloudSyncUi.busy ? 'disabled' : ''}>${cloudSyncUi.busy ? '正在同步…' : unresolved ? `先处理 ${unresolved} 项冲突` : '确认合并并同步'}</button></div></div>`;
+}
+
+async function loadCloudSyncToken() {
+  if (githubTokenMemory) return { token: githubTokenMemory, persistence: cloudSyncUi.tokenPersistence || 'session' };
+  const saved = await loadGitHubToken();
+  if (!saved) return null;
+  githubTokenMemory = saved.token;
+  cloudSyncUi.tokenPersistence = saved.persistence;
+  return saved;
+}
+
+async function startCloudSync() {
+  if (cloudSyncUi.busy) return;
+  cloudSyncUi.busy = true;
+  cloudSyncUi.error = '';
+  renderCloudSyncModal();
+  try {
+    if (!await persist()) throw new Error('本机加密保存失败，已停止读取云端。请先确认浏览器存储可用。');
+    const baseline = storage.cloudSync.baseline ? validateUserDataBackup(storage.cloudSync.baseline) : null;
+    const localBackup = createUserDataBackup(storage, { tombstones: baseline?.tombstones || [] });
+    const token = await loadCloudSyncToken();
+    const remote = await readRemoteBackup({ token: token?.token || null });
+    const remoteData = remote.backup?.data || baseline?.data || localBackup.data;
+    const preview = mergeUserData({
+      base: baseline?.data || null,
+      local: localBackup.data,
+      remote: remoteData,
+      baseTombstones: baseline?.tombstones || [],
+      localTombstones: localBackup.tombstones,
+      remoteTombstones: remote.backup?.tombstones || (baseline ? baseline.tombstones : []),
+    });
+    if (!remote.backup && !baseline) preview.summary.cloudAdded = 0;
+    cloudSyncUi.pending = { baseline, localBackup, remote, preview, readAt: new Date().toISOString() };
+    cloudSyncUi.choices = {};
+    cloudSyncUi.screen = 'preview';
+  } catch (error) {
+    cloudSyncUi.error = error.message || '读取云端失败；本机数据保持不变。';
+    cloudSyncUi.screen = error?.code === 'invalid_backup' ? 'panel' : cloudSyncUi.screen;
+  } finally {
+    cloudSyncUi.busy = false;
+    renderCloudSyncModal();
+  }
+}
+
+async function confirmCloudSync() {
+  const pending = cloudSyncUi.pending;
+  if (!pending || cloudSyncUi.busy) return;
+  cloudSyncUi.error = '';
+  let resolved;
+  try { resolved = resolveUserDataConflicts(pending.preview, cloudSyncUi.choices); }
+  catch (error) {
+    cloudSyncUi.error = error.message;
+    renderCloudSyncModal();
+    return;
+  }
+  const remoteBackup = pending.remote.backup;
+  const mergedContent = { data: resolved.data, tombstones: resolved.tombstones };
+  const needsWrite = !remoteBackup
+    || stableSyncJson(mergedContent) !== stableSyncJson({ data: remoteBackup.data, tombstones: remoteBackup.tombstones });
+  let token = null;
+  if (needsWrite) {
+    try { token = await loadCloudSyncToken(); }
+    catch (error) {
+      cloudSyncUi.error = `本机 Token 无法读取：${error.message} 请重新配置。`;
+      cloudSyncUi.returnScreen = 'preview';
+      cloudSyncUi.screen = 'settings';
+      renderCloudSyncModal();
+      return;
+    }
+    if (!token?.token) {
+      cloudSyncUi.error = '这次合并需要写入 GitHub。请先配置 Token；配置后返回预览并再次明确确认。';
+      cloudSyncUi.returnScreen = 'preview';
+      cloudSyncUi.screen = 'settings';
+      renderCloudSyncModal();
+      return;
+    }
+  }
+
+  cloudSyncUi.busy = true;
+  cloudSyncUi.error = '';
+  renderCloudSyncModal();
+  try {
+    let outputBackup;
+    if (needsWrite) {
+      if (!pending.remote.branchExists) await createSyncBranch({ token: token.token });
+      outputBackup = createUserDataBackup(resolved.data, {
+        backupId: remoteBackup?.backupId || pending.localBackup.backupId,
+        updatedAt: new Date().toISOString(),
+        tombstones: resolved.tombstones,
+      });
+      const written = await writeUserDataBackup({ backup: outputBackup, token: token.token, sha: pending.remote.sha });
+      outputBackup = written.backup;
+    } else {
+      outputBackup = remoteBackup;
+    }
+
+    const previousStorage = storage;
+    storage = readStorage({
+      ...outputBackup.data,
+      cloudSync: {
+        ...previousStorage.cloudSync,
+        baseline: outputBackup,
+        lastSyncedAt: new Date().toISOString(),
+        publicNoticeAccepted: true,
+      },
+    });
+    if (!await persist()) {
+      storage = previousStorage;
+      cloudSyncUi.error = needsWrite
+        ? '云端已写入并回读校验，但本机同步状态保存失败；本机原记录保持不变。再次手动同步可恢复。'
+        : '合并结果未能保存在本机；原有本机记录保持不变。请检查浏览器存储后重新同步。';
+      return;
+    }
+    const syncedAt = new Date().toISOString();
+    cloudSyncUi.result = { ...pending.preview.summary, conflictsResolved: resolved.resolvedConflicts, syncedAt, wrote: needsWrite };
+    cloudSyncUi.pending = null;
+    cloudSyncUi.screen = 'result';
+    render();
+  } catch (error) {
+    cloudSyncUi.error = error.message || '同步失败；本机原记录保持不变。';
+    cloudSyncUi.screen = 'preview';
+  } finally {
+    cloudSyncUi.busy = false;
+    renderCloudSyncModal();
+  }
+}
+
 function renderBackupPreview(state, { exportedAt = null, kind = 'encrypted', sourceName = '' } = {}) {
   pendingBackup = { state: readStorage(state), kind };
   const profileCount = Object.values(state.profile || {}).filter((value) => value !== '' && value !== null && value !== undefined).length;
@@ -1878,7 +2152,7 @@ function renderOnboarding(direction = 'initial') {
   const stepTitles = ['个人报考条件', '从 Day 1 开始', '记录第一次模考', '查看北京京考职位'];
   let body;
   if (step === 0) {
-    body = `<p class="onboarding-lead">这张工作台帮你完成四件事。专业方向预填为公共管理，请先改成自己的真实专业；其他信息可以稍后补。内容只保存在此浏览器。</p><ul class="onboarding-capabilities" aria-label="工作台功能"><li style="--capability-index:0"><span>01</span><strong>管理 50 天复习计划</strong></li><li style="--capability-index:1"><span>02</span><strong>记录并诊断模考成绩</strong></li><li style="--capability-index:2"><span>03</span><strong>查询北京京考历年职位</strong></li><li style="--capability-index:3"><span>04</span><strong>根据个人条件辅助选岗</strong></li></ul><form id="onboarding-profile-form"><div class="onboarding-fields"><label class="form-field"><span>专业方向</span><input name="major" value="${escapeHtml(storage.profile.major || '公共管理')}" autocomplete="off"/></label><label class="form-field"><span>最高学历</span><input name="degree" value="${escapeHtml(storage.profile.degree || '')}" placeholder="例如：本科 / 硕士" autocomplete="off"/></label></div><div class="modal-footer"><button type="button" class="button button-quiet" data-action="onboarding-later">稍后再看</button><button type="submit" class="button button-primary">保存并继续</button></div></form>`;
+    body = `<p class="onboarding-lead">这张工作台帮你完成四件事。专业方向预填为公共管理，请先改成自己的真实专业；其他信息可以稍后补。内容默认只保存在此浏览器；你也可在同步面板手动同步到公开仓库。</p><ul class="onboarding-capabilities" aria-label="工作台功能"><li style="--capability-index:0"><span>01</span><strong>管理 50 天复习计划</strong></li><li style="--capability-index:1"><span>02</span><strong>记录并诊断模考成绩</strong></li><li style="--capability-index:2"><span>03</span><strong>查询北京京考历年职位</strong></li><li style="--capability-index:3"><span>04</span><strong>根据个人条件辅助选岗</strong></li></ul><form id="onboarding-profile-form"><div class="onboarding-fields"><label class="form-field"><span>专业方向</span><input name="major" value="${escapeHtml(storage.profile.major || '公共管理')}" autocomplete="off"/></label><label class="form-field"><span>最高学历</span><input name="degree" value="${escapeHtml(storage.profile.degree || '')}" placeholder="例如：本科 / 硕士" autocomplete="off"/></label></div><div class="modal-footer"><button type="button" class="button button-quiet" data-action="onboarding-later">稍后再看</button><button type="submit" class="button button-primary">保存并继续</button></div></form>`;
   } else if (step === 1) {
     body = `<p class="onboarding-lead">计划来自你的 50 天复习表。先从第一天开始记录实际题量和用时，后续完成度就会按真实记录更新。</p><div class="onboarding-preview"><span>DAY 01</span><div><strong>${escapeHtml(dayOne?.focus || '打开 50 天计划')}</strong><small>${escapeHtml(dayOne?.coreTask || '查看第一天的学习安排')} · ${fmt(dayOne?.plannedQuestions)} 题 · ${fmt(dayOne?.plannedHours, 1)} 小时</small></div></div><div class="modal-footer"><button type="button" class="button button-quiet" data-action="onboarding-back">上一步</button><button type="button" class="button button-secondary" data-action="onboarding-open" data-page="plan" data-next-step="2">打开 Day 1 计划</button><button type="button" class="button button-primary" data-action="onboarding-next">下一步</button></div>`;
   } else if (step === 2) {
@@ -1964,7 +2238,7 @@ function openDayEditor(dayNumber) {
 function openPlanEditor(dayNumber) {
   const day = getDays().find((item) => item.day === Number(dayNumber));
   if (!day) return;
-  renderModal(`<form id="plan-edit-form" data-day="${day.day}"><div class="modal-head"><div><div class="eyebrow muted">DAY ${String(day.day).padStart(2, '0')}</div><h2>调整每日计划</h2><p>修改计划安排不会覆盖这一天的实际学习记录。</p></div><button type="button" class="modal-close" data-action="close-modal" aria-label="关闭">×</button></div><div class="modal-body"><div class="form-grid"><label class="form-field"><span>计划日期</span><input name="date" type="date" value="${escapeHtml(day.date || '')}" required/></label><label class="form-field"><span>复习阶段</span><input name="stage" value="${escapeHtml(day.stage || '')}" required/></label><label class="form-field"><span>今日主攻</span><input name="focus" value="${escapeHtml(day.focus || '')}" required/></label><label class="form-field"><span>计划题量</span><input name="plannedQuestions" type="number" min="0" step="1" value="${escapeHtml(day.plannedQuestions ?? '')}" placeholder="选填"/></label><label class="form-field"><span>计划用时（小时）</span><input name="plannedHours" type="number" min="0" step="0.25" value="${escapeHtml(day.plannedHours ?? '')}" placeholder="选填"/></label><label class="form-field form-field-wide"><span>核心任务</span><textarea name="coreTask" rows="4" required>${escapeHtml(day.coreTask || '')}</textarea></label></div><div class="notice notice-soft compact-notice"><span>ⓘ</span><p>调整值仅保存在此浏览器；不会改写原始工作簿。实际题量、用时与状态由“记录”单独管理。</p></div></div><div class="modal-footer"><button type="button" class="button button-quiet" data-action="close-modal">取消</button><button type="submit" class="button button-primary">保存计划</button></div></form>`);
+  renderModal(`<form id="plan-edit-form" data-day="${day.day}"><div class="modal-head"><div><div class="eyebrow muted">DAY ${String(day.day).padStart(2, '0')}</div><h2>调整每日计划</h2><p>修改计划安排不会覆盖这一天的实际学习记录。</p></div><button type="button" class="modal-close" data-action="close-modal" aria-label="关闭">×</button></div><div class="modal-body"><div class="form-grid"><label class="form-field"><span>计划日期</span><input name="date" type="date" value="${escapeHtml(day.date || '')}" required/></label><label class="form-field"><span>复习阶段</span><input name="stage" value="${escapeHtml(day.stage || '')}" required/></label><label class="form-field"><span>今日主攻</span><input name="focus" value="${escapeHtml(day.focus || '')}" required/></label><label class="form-field"><span>计划题量</span><input name="plannedQuestions" type="number" min="0" step="1" value="${escapeHtml(day.plannedQuestions ?? '')}" placeholder="选填"/></label><label class="form-field"><span>计划用时（小时）</span><input name="plannedHours" type="number" min="0" step="0.25" value="${escapeHtml(day.plannedHours ?? '')}" placeholder="选填"/></label><label class="form-field form-field-wide"><span>核心任务</span><textarea name="coreTask" rows="4" required>${escapeHtml(day.coreTask || '')}</textarea></label></div><div class="notice notice-soft compact-notice"><span>ⓘ</span><p>调整值默认保存在此浏览器；确认同步后会上传到公开仓库，不会改写原始工作簿。实际题量、用时与状态由“记录”单独管理。</p></div></div><div class="modal-footer"><button type="button" class="button button-quiet" data-action="close-modal">取消</button><button type="submit" class="button button-primary">保存计划</button></div></form>`);
 }
 
 function openSciencePracticeSetup({ pointId = '', mode = 'practice' } = {}) {
@@ -2254,13 +2528,15 @@ function syncAptitudeTaskControls(form) {
 }
 
 function openAptitudeEditor(index) {
-  const item = { ...dataset.aptitude[index], ...(storage.aptitudeLogs[index] || {}) };
+  const base = dataset.aptitude[index];
+  const item = { ...base, ...(storage.aptitudeLogs[studyLogKey('aptitude', base)] || {}) };
   if (!item.item) return;
   renderModal(`<form id="aptitude-form" data-index="${index}"><div class="modal-head"><div><div class="eyebrow muted">${escapeHtml(item.area)}</div><h2>记录行测训练</h2><p>${escapeHtml(item.item)}</p></div><button type="button" class="modal-close" data-action="close-modal" aria-label="关闭">×</button></div><div class="modal-body"><div class="form-grid"><label class="form-field"><span>累计完成题量</span><input name="attempted" type="number" min="0" step="1" value="${item.attempted ?? ''}" placeholder="尚未记录" required/></label><label class="form-field"><span>当前正确率（%）</span><input name="accuracy" type="number" min="0" max="100" step="1" value="${Number.isFinite(item.accuracy) ? Math.round(item.accuracy * 100) : ''}" placeholder="尚未记录"/></label><label class="form-field"><span>二刷正确率（%）</span><input name="retakeAccuracy" type="number" min="0" max="100" step="1" value="${Number.isFinite(item.retakeAccuracy) ? Math.round(item.retakeAccuracy * 100) : ''}" placeholder="选填"/></label><label class="form-field"><span>计划准确率目标</span><input value="${fmtPct(item.targetAccuracy)}" disabled/></label></div><div class="notice notice-soft compact-notice"><span>ⓘ</span><p>累计题量和正确率按最近一次自报值保存；掌握度根据题量完成与当前正确率推算，仅供个人复盘。</p></div></div><div class="modal-footer"><button type="button" class="button button-quiet" data-action="close-modal">取消</button><button type="submit" class="button button-primary">保存训练记录</button></div></form>`);
 }
 
 function openEssayEditor(index) {
-  const item = { ...dataset.essay[index], ...(storage.essayLogs[index] || {}) };
+  const base = dataset.essay[index];
+  const item = { ...base, ...(storage.essayLogs[studyLogKey('essay', base)] || {}) };
   if (!item.practice) return;
   renderModal(`<form id="essay-form" data-index="${index}"><div class="modal-head"><div><div class="eyebrow muted">${escapeHtml(item.area)}</div><h2>记录申论训练</h2><p>${escapeHtml(item.practice)}</p></div><button type="button" class="modal-close" data-action="close-modal" aria-label="关闭">×</button></div><div class="modal-body"><div class="form-grid"><label class="form-field"><span>累计完成次数</span><input name="completed" type="number" min="0" step="1" value="${item.completed ?? ''}" required/></label><label class="form-field"><span>个人自评分（0–100）</span><input name="selfScore" type="number" min="0" max="100" step="1" value="${item.selfScore ?? ''}" placeholder="选填"/></label><label class="form-field"><span>关键词覆盖率（%）</span><input name="keywordCoverage" type="number" min="0" max="100" step="1" value="${Number.isFinite(item.keywordCoverage) ? Math.round(item.keywordCoverage * 100) : ''}" placeholder="选填"/></label><label class="form-field"><span>限时达标</span><select name="timedPass"><option value="">尚未记录</option><option value="true" ${item.timedPass === true ? 'selected' : ''}>达标</option><option value="false" ${item.timedPass === false ? 'selected' : ''}>未达标</option></select></label></div><div class="notice notice-soft compact-notice"><span>ⓘ</span><p>自评分仅是个人复盘指标，不是官方评分。</p></div></div><div class="modal-footer"><button type="button" class="button button-quiet" data-action="close-modal">取消</button><button type="submit" class="button button-primary">保存训练记录</button></div></form>`);
 }
@@ -2487,6 +2763,16 @@ async function persistAndRender(message) {
   if (await persist() && message) notify(message);
 }
 
+async function persistPositionPreferences() {
+  storage.positionPreferences = normalizePositionPreferences({
+    filters,
+    jobSort,
+    scenarioYear,
+    scenarioScope,
+  });
+  return persist();
+}
+
 document.addEventListener('click', async (event) => {
   const nav = event.target.closest('a[href^="#/"]');
   if (nav) {
@@ -2504,7 +2790,90 @@ document.addEventListener('click', async (event) => {
   if (!actionEl) return;
   const { action, code } = actionEl.dataset;
   const positionReference = actionEl.dataset.positionKey || code;
+  if (action === 'toggle-site-password') {
+    const input = document.querySelector('#site-access-form input[name="password"]');
+    if (input) {
+      input.type = input.type === 'password' ? 'text' : 'password';
+      actionEl.textContent = input.type === 'password' ? '显示密码' : '隐藏密码';
+    }
+    return;
+  }
+  if (action === 'clear-site-password') {
+    const input = document.querySelector('#site-access-form input[name="password"]');
+    if (input) { input.value = ''; input.focus?.(); }
+    return;
+  }
   if (action === 'account-lock') { lockAccount(); return; }
+  if (action === 'open-cloud-sync') {
+    if (!accountSession) return;
+    cloudSyncUi = { screen: storage.cloudSync.publicNoticeAccepted ? 'panel' : 'warning', busy: false, pending: null, choices: {}, error: '', result: null, returnScreen: 'panel', tokenPersistence: cloudSyncUi.tokenPersistence || 'none' };
+    renderCloudSyncModal();
+    return;
+  }
+  if (action === 'close-cloud-sync') {
+    cloudSyncUi.pending = null;
+    cloudSyncUi.error = '';
+    modalRoot.innerHTML = '';
+    return;
+  }
+  if (action === 'accept-cloud-public-warning') {
+    storage.cloudSync.publicNoticeAccepted = true;
+    await persist();
+    cloudSyncUi.screen = 'panel';
+    cloudSyncUi.error = '';
+    renderCloudSyncModal();
+    return;
+  }
+  if (action === 'cloud-sync-settings') {
+    cloudSyncUi.returnScreen = cloudSyncUi.screen === 'preview' ? 'preview' : 'panel';
+    cloudSyncUi.screen = 'settings';
+    cloudSyncUi.error = '';
+    try { await loadCloudSyncToken(); }
+    catch (error) { cloudSyncUi.error = `本机 Token 无法读取：${error.message} 请重新配置。`; }
+    renderCloudSyncModal();
+    return;
+  }
+  if (action === 'cloud-sync-settings-back') {
+    cloudSyncUi.screen = cloudSyncUi.returnScreen || 'panel';
+    cloudSyncUi.error = '';
+    renderCloudSyncModal();
+    return;
+  }
+  if (action === 'start-cloud-sync') {
+    await startCloudSync();
+    return;
+  }
+  if (action === 'choose-sync-conflict') {
+    if (cloudSyncUi.pending && ['local', 'remote'].includes(actionEl.dataset.side)) {
+      cloudSyncUi.choices[actionEl.dataset.path] = actionEl.dataset.side;
+      cloudSyncUi.error = '';
+      renderCloudSyncModal();
+    }
+    return;
+  }
+  if (action === 'confirm-cloud-sync') {
+    await confirmCloudSync();
+    return;
+  }
+  if (action === 'cancel-cloud-preview') {
+    cloudSyncUi.pending = null;
+    cloudSyncUi.choices = {};
+    cloudSyncUi.error = '';
+    modalRoot.innerHTML = '';
+    return;
+  }
+  if (action === 'clear-github-token') {
+    try {
+      await clearGitHubToken();
+      githubTokenMemory = null;
+      cloudSyncUi.tokenPersistence = 'none';
+      cloudSyncUi.error = '';
+    } catch (error) {
+      cloudSyncUi.error = `清除 Token 失败：${error.message}`;
+    }
+    renderCloudSyncModal();
+    return;
+  }
   if (!accountSession) return;
   if (action === 'open-aptitude-overall-random-setup') { openAptitudeOverallRandomMockSetup(); return; }
   if (action === 'open-aptitude-paper-picker') { openAptitudePaperPicker(actionEl.dataset.scope || 'all'); return; }
@@ -2567,6 +2936,7 @@ document.addEventListener('click', async (event) => {
     filters.districtId = actionEl.dataset.district || 'all';
     filters.year = actionEl.dataset.year || 'all';
     scenarioYear = filters.year === 'all' ? scenarioYear : filters.year;
+    await persistPositionPreferences();
     jobPage = 1;
     navigate('positions');
     return;
@@ -2581,6 +2951,7 @@ document.addEventListener('click', async (event) => {
   }
   if (action === 'toggle-major-focus') {
     filters.majorTopic = filters.majorTopic === 'public-management' ? 'all' : 'public-management';
+    await persistPositionPreferences();
     jobPage = 1;
     resultTransition = true;
     render();
@@ -2588,6 +2959,7 @@ document.addEventListener('click', async (event) => {
   }
   if (action === 'toggle-major-review') {
     filters.majorTopic = filters.majorTopic === 'public-management-review' ? 'all' : 'public-management-review';
+    await persistPositionPreferences();
     jobPage = 1;
     resultTransition = true;
     render();
@@ -3209,54 +3581,30 @@ document.addEventListener('submit', async (event) => {
   if (!(form instanceof HTMLFormElement)) return;
   event.preventDefault();
   const values = Object.fromEntries(new FormData(form).entries());
-  if (form.dataset?.accountId) {
+  if (form.id === 'site-access-form') {
+    if (values.password !== FIXED_ACCESS_PASSWORD) {
+      showAccountGate('密码不正确，请重新输入。');
+      return;
+    }
     try {
-      const opened = await openStoredAccount({ id: form.dataset.accountId, password: values.password, storage: localStorage });
+      const opened = await openFixedLocalProfile();
       activateAccount(opened.session, opened.state);
     } catch (error) {
       showAccountGate(error.message);
     }
     return;
   }
-  if (form.id === 'account-create-form' || form.id === 'account-migration-form') {
-    if ((values.password || '').length < 12) {
-      showAccountGate('请使用至少 12 个字符的档案密码。');
-      return;
-    }
-    if (values.password !== values.confirmPassword) {
-      showAccountGate('两次输入的密码不一致。');
-      return;
-    }
+  if (form.id === 'github-token-form') {
     try {
-      if (form.id === 'account-create-form') {
-        const created = await createStoredAccount({
-          name: values.name,
-          password: values.password,
-          state: emptyStorage(),
-          storage: localStorage,
-        });
-        activateAccount(created.session, emptyStorage(), '本地加密档案已创建。');
-      } else {
-        let legacyState;
-        try {
-          legacyState = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null');
-        } catch {
-          throw new Error('旧版本地记录无法读取，原记录已保留。');
-        }
-        if (!legacyState) throw new Error('没有检测到可迁移的旧版本地记录。');
-        const migratedState = readStorage(legacyState, readDisplayDensity());
-        const migrated = await migrateLegacyAccount({
-          name: values.name,
-          password: values.password,
-          state: migratedState,
-          storage: localStorage,
-        });
-        try { localStorage.removeItem(ACCOUNT_DENSITY_KEY); } catch { /* density is non-sensitive; account data is already encrypted */ }
-        activateAccount(migrated.session, migratedState, '旧记录已加密迁移；原明文键已移除。');
-      }
+      const result = await saveGitHubToken(values.token);
+      githubTokenMemory = result.token || values.token.trim();
+      cloudSyncUi.tokenPersistence = result.persistence;
+      cloudSyncUi.error = '';
+      cloudSyncUi.screen = cloudSyncUi.returnScreen || 'panel';
     } catch (error) {
-      showAccountGate(error.message);
+      cloudSyncUi.error = error.message || 'Token 保存失败。';
     }
+    renderCloudSyncModal();
     return;
   }
   if (form.id === 'backup-unlock-form' && pendingEncryptedBackup) {
@@ -3502,7 +3850,7 @@ document.addEventListener('submit', async (event) => {
     const mastery = Number.isFinite(accuracy) && base.plannedQuestions > 0
       ? Math.min(1, 0.7 * Math.min(accuracy / target, 1) + 0.3 * Math.min(attempted / base.plannedQuestions, 1))
       : null;
-    storage.aptitudeLogs[index] = {
+    storage.aptitudeLogs[studyLogKey('aptitude', base)] = {
       attempted,
       accuracy,
       retakeAccuracy: values.retakeAccuracy === '' ? null : Number(values.retakeAccuracy) / 100,
@@ -3520,7 +3868,7 @@ document.addEventListener('submit', async (event) => {
     const mastery = completed > 0 && Number.isFinite(selfScore) && Number.isFinite(keywordCoverage)
       ? Math.min(1, 0.45 * Math.min(completed / base.planned, 1) + 0.35 * selfScore / 100 + 0.2 * keywordCoverage)
       : null;
-    storage.essayLogs[index] = {
+    storage.essayLogs[studyLogKey('essay', base)] = {
       completed,
       selfScore,
       keywordCoverage,
@@ -3533,7 +3881,10 @@ document.addEventListener('submit', async (event) => {
   if (form.id === 'mock-form') {
     const aptitude = Number(values.aptitude);
     const essay = Number(values.essay);
+    const mockId = createPersonalId('mock');
     storage.mocks.push({
+      id: mockId,
+      mock_id: mockId,
       number: storage.mocks.length + 1,
       date: values.date || todayString(),
       aptitude,
@@ -3632,6 +3983,7 @@ document.addEventListener('change', async (event) => {
       if (positionFilter === 'year' && event.target.value !== 'all') scenarioYear = event.target.value;
     }
     else jobSort = event.target.value;
+    await persistPositionPreferences();
     jobPage = 1;
     resultTransition = true;
     render();
@@ -3641,13 +3993,18 @@ document.addEventListener('change', async (event) => {
     }
     document.getElementById(event.target.id)?.focus({ preventScroll: true });
   }
-  if (event.target.id === 'source-level') { filters.sourceLevel = event.target.value; render(); }
+  if (event.target.id === 'source-level') {
+    filters.sourceLevel = event.target.value;
+    await persistPositionPreferences();
+    render();
+  }
   if (event.target.id === 'scenario-year' || event.target.id === 'scenario-scope') {
     if (event.target.id === 'scenario-year') {
       scenarioYear = event.target.value;
       filters.year = event.target.value;
     }
     else scenarioScope = event.target.value;
+    await persistPositionPreferences();
     resultTransition = true;
     render();
     document.getElementById(event.target.id)?.focus({ preventScroll: true });
@@ -3701,7 +4058,17 @@ async function start() {
     const response = await fetch(DATA_URL);
     if (!response.ok) throw new Error(`数据载入失败（HTTP ${response.status}）`);
     dataset = normalizeDataset(await response.json());
-    showAccountGate();
+    if (!hasRememberedAccessSession()) {
+      showAccountGate();
+      return;
+    }
+    try {
+      const opened = await openFixedLocalProfile();
+      activateAccount(opened.session, opened.state);
+    } catch (error) {
+      rememberAccessSession(false);
+      showAccountGate(error.message);
+    }
   } catch (error) {
     root.innerHTML = `<div class="load-error"><span>!</span><h1>暂时无法载入工作台数据</h1><p>${escapeHtml(error.message)}</p><p>请在项目目录运行 <code>./start.sh</code>，再访问本机地址。</p><a class="button button-primary" href="/">重新打开</a></div>`;
   }

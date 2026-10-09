@@ -6,9 +6,10 @@ import { fileURLToPath } from 'node:url';
 import { webcrypto } from 'node:crypto';
 import { runInNewContext } from 'node:vm';
 import { createStoredAccount } from '../src/data/encryptedStore.js';
+import { studyLogKey } from '../src/data/sync.js';
 import { createPlanTask } from '../src/science/planTasks.js';
 
-const TEST_PASSWORD = 'correct horse battery staple for build tests';
+const TEST_PASSWORD = '1234567890123';
 
 async function listFiles(directory, prefix = '') {
   const entries = await readdir(directory, { withFileTypes: true });
@@ -69,6 +70,7 @@ async function renderStandaloneRoute(script, route, storedState = null) {
     storage: localStorage,
     cryptoApi: webcrypto,
   });
+  localStorage.setItem('changping-jingkao-dashboard:fixed-profile-id:v1', account.id);
   const dataText = await readFile(new URL('../public/data.json', import.meta.url), 'utf8');
   class HTMLFormElement {
     constructor(id, dataset, valuesForForm) { this.id = id; this.dataset = dataset; this.values = valuesForForm; }
@@ -97,7 +99,7 @@ async function renderStandaloneRoute(script, route, storedState = null) {
   });
 
   await new Promise(setImmediate);
-  const unlockForm = new HTMLFormElement('', { accountId: account.id }, { password: TEST_PASSWORD });
+  const unlockForm = new HTMLFormElement('site-access-form', {}, { password: TEST_PASSWORD });
   await listeners.get('submit')({ target: unlockForm, preventDefault() {} });
 
   return { document: documentLike, root: elements.get('#root'), modalRoot: elements.get('#modal-root'), elements, listeners, windowListeners, location, localStorage, accountId: account.id };
@@ -342,7 +344,7 @@ test('module cards and pages combine module-only site answers with manual traini
   const script = html.match(/<script>\s*([\s\S]*?)<\/script>/)?.[1];
   const state = {
     onboarding: { hidden: true, completed: true },
-    aptitudeLogs: { 7: { attempted: 10, accuracy: 0.5 } },
+    aptitudeLogs: { [studyLogKey('aptitude', { area: '言语', item: '中心理解/意图判断' })]: { attempted: 10, accuracy: 0.5 } },
     aptitudeModuleStudies: {
       verbal: {
         moduleId: 'verbal', knowledgeProgress: {},

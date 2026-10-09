@@ -1,8 +1,6 @@
 import { webcrypto } from 'node:crypto';
 import { createStoredAccount } from '../../src/data/encryptedStore.js';
 
-export const TEST_ACCOUNT_PASSWORD = 'correct horse battery staple for app harness';
-
 export function installAccountBrowserAPIs() {
   Object.defineProperty(globalThis, 'crypto', { value: webcrypto, configurable: true, writable: true });
   globalThis.TextEncoder = TextEncoder;
@@ -35,7 +33,7 @@ export function memoryLocalStorage() {
 export async function seedUnlockedTestAccount(storage) {
   const created = await createStoredAccount({
     name: 'APP TEST PROFILE',
-    password: TEST_ACCOUNT_PASSWORD,
+    password: '1234567890123',
     state: { onboarding: { step: 0, hidden: true, completed: true } },
     storage,
     cryptoApi: webcrypto,
@@ -44,6 +42,7 @@ export async function seedUnlockedTestAccount(storage) {
 }
 
 export async function unlockTestAccount(listeners, accountId) {
-  const form = new globalThis.HTMLFormElement('', { accountId }, { password: TEST_ACCOUNT_PASSWORD });
+  globalThis.localStorage.setItem('changping-jingkao-dashboard:fixed-profile-id:v1', accountId);
+  const form = new globalThis.HTMLFormElement('site-access-form', {}, { password: '1234567890123' });
   await listeners.submit({ target: form, preventDefault() {} });
 }
