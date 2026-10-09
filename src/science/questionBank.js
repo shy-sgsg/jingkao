@@ -1026,4 +1026,158 @@ addPublishedReferenceQuestion({
   correctAnswer: 'A', explanation: '冰岛位于大西洋中脊附近，是北美板块与亚欧板块交界区的一部分。其他三组分别不在蒙古、英国北部或美国东海岸交界。',
 });
 
+addPublishedReferenceQuestion({
+  id: 'gd-2023-township-grain-storage', subjectId: 'biology', topicId: 'biology:cells-metabolism',
+  knowledgePointIds: ['biology:respiration', 'biology:microorganisms'], difficulty: 'medium', reasoningType: 'causal_inference',
+  sourceType: 'recalled', sourceId: 'gd-2023-township-recall',
+  sourceTitle: '2023 广东省考乡镇卷回忆题第 71 题 · 粮食储藏', region: '广东', examYear: 2023, presentationMode: 'adapted',
+  sourceNote: '按公开回忆题及答案解析改述；答案 C。原卷为考生回忆整理，非官方原卷。',
+  stem: '为延长粮食存放时间，下列哪种做法最不合理？',
+  options: ['让储粮环境保持较低温度', '尽量隔绝氧气', '提高库房空气湿度', '在储粮环境中适当提高二氧化碳浓度'],
+  correctAnswer: 'C', explanation: '低温可减慢种子呼吸并抑制微生物和害虫；隔绝氧气或适当提高二氧化碳浓度有助于降低呼吸作用。湿度过高会促进种子萌发、呼吸和霉变，不利于储藏。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'gd-2023-township-graphite-diamond', subjectId: 'chemistry', topicId: 'chemistry:changes-reactions',
+  knowledgePointIds: ['chemistry:physical-chemical-change'], difficulty: 'easy', reasoningType: 'classification',
+  sourceType: 'recalled', sourceId: 'gd-2023-township-recall',
+  sourceTitle: '2023 广东省考乡镇卷回忆题第 72 题 · 物理变化与化学变化', region: '广东', examYear: 2023, presentationMode: 'adapted',
+  sourceNote: '按公开回忆题及答案解析改述；答案 B。原卷为考生回忆整理，非官方原卷。',
+  stem: '下列变化中，属于化学变化的是哪一项？',
+  options: ['把木纤维打散、摊薄并晒干制成纸', '在高温高压下使石墨转变为金刚石', '打开汽水罐后溶解的气体逸出', '干冰放在室外后逐渐消失'],
+  correctAnswer: 'B', explanation: '石墨和金刚石都是碳单质，但碳原子的排列结构不同；石墨转化为金刚石时生成了不同物质，属于化学变化。其余变化只涉及形态或溶解状态改变，没有生成新物质。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'gd-2023-township-green-glass', subjectId: 'physics', topicId: 'physics:optics',
+  knowledgePointIds: ['physics:optical-phenomena'], difficulty: 'medium', reasoningType: 'causal_inference',
+  sourceType: 'recalled', sourceId: 'gd-2023-township-recall',
+  sourceTitle: '2023 广东省考乡镇卷回忆题第 73 题 · 绿色玻璃看红字', region: '广东', examYear: 2023, presentationMode: 'adapted',
+  sourceNote: '按公开回忆题及答案解析改述；答案 B。原卷为考生回忆整理，非官方原卷。',
+  stem: '在白光照明下，透过纯绿色玻璃观察白墙上的纯红色文字，最可能看到什么？',
+  options: ['绿墙上看不到文字', '绿墙上有黑色文字', '绿墙上有橙色文字', '黑墙上看不到文字'],
+  correctAnswer: 'B', explanation: '白墙反射多种颜色的光，绿色玻璃主要透过绿光，因此墙面看起来偏绿。红字主要反射红光，红光被绿色玻璃滤去，字的位置缺少到达眼睛的光，因而显得黑。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'gd-2023-township-reflex', subjectId: 'biology', topicId: 'biology:human-body',
+  knowledgePointIds: ['biology:nervous-regulation', 'biology:microorganisms'], difficulty: 'medium', reasoningType: 'classification',
+  sourceType: 'recalled', sourceId: 'gd-2023-township-recall',
+  sourceTitle: '2023 广东省考乡镇卷回忆题第 74 题 · 反射与趋性', region: '广东', examYear: 2023, presentationMode: 'adapted',
+  sourceNote: '按公开回忆题及答案解析改述；答案 D。原卷为考生回忆整理，非官方原卷。',
+  stem: '反射是动物通过神经系统对刺激产生的有规律的反应。下列现象不属于反射的是哪一项？',
+  options: ['人坐上过山车后心跳加快', '狗闻到食物气味后流口水', '猎豹发现猎物后停下观察', '乳酸菌向果糖浓度较高的区域聚集'],
+  correctAnswer: 'D', explanation: '人和哺乳动物有神经系统，可以对刺激产生反射。乳酸菌是单细胞生物，没有神经系统；它向营养较多区域移动属于趋性或应激反应，不是反射。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'gd-2023-township-5g-wavelength', subjectId: 'physics', topicId: 'physics:sound-electromagnetism',
+  knowledgePointIds: ['physics:electromagnetic-waves'], difficulty: 'medium', reasoningType: 'causal_inference',
+  sourceType: 'recalled', sourceId: 'gd-2023-township-recall',
+  sourceTitle: '2023 广东省考乡镇卷回忆题第 75 题 · 5G 信号频率与波长', region: '广东', examYear: 2023, presentationMode: 'adapted',
+  sourceNote: '据回忆卷第 75 题考查的频率—波长关系改述；为避免把覆盖范围直接等同于频率，题干明确限定所比较频段和传播速度。原卷为考生回忆整理，非官方原卷。',
+  stem: '比较题目所指的较高频段 5G 信号与较低频段 4G 信号，假设二者在同一介质中传播速度相同。5G 信号通常具有哪种特点？',
+  options: ['频率较低、波长较短', '频率较低、波长较长', '频率较高、波长较短', '频率较高、波长较长'],
+  correctAnswer: 'C', explanation: '电磁波满足 v=fλ。在传播速度相同的条件下，频率较高意味着波长较短。现实中的 5G 使用多个频段，基站覆盖范围还会受到障碍物、功率和环境影响，不能只凭网络代际判断频率或覆盖。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'gd-2023-township-fertilizer-use', subjectId: 'biology', topicId: 'biology:cells-metabolism',
+  knowledgePointIds: ['biology:plant-growth', 'biology:photosynthesis'], difficulty: 'medium', reasoningType: 'classification',
+  sourceType: 'recalled', sourceId: 'gd-2023-township-recall',
+  sourceTitle: '2023 广东省考乡镇卷回忆题第 78 题 · 肥料使用', region: '广东', examYear: 2023, presentationMode: 'adapted',
+  sourceNote: '按公开回忆题及答案解析改述；答案 A。原卷为考生回忆整理，非官方原卷。',
+  stem: '关于农业种植中的肥料使用，下列说法错误的是哪一项？',
+  options: ['肥料的主要作用是直接给农作物提供有机物', '叶面喷施的部分养分也可被植物吸收', '施肥过浓可能使根细胞失水并造成“烧根”', '应按作物种类和生长阶段合理施肥'],
+  correctAnswer: 'A', explanation: '肥料主要补充氮、磷、钾等矿质营养。植物生长所需的有机物主要通过光合作用合成；施肥过浓会使土壤溶液浓度过高，根细胞可能失水。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'gd-2023-township-formic-acid-hydrogen', subjectId: 'chemistry', topicId: 'chemistry:changes-reactions',
+  knowledgePointIds: ['chemistry:common-reactions'], difficulty: 'medium', reasoningType: 'classification',
+  sourceType: 'recalled', sourceId: 'gd-2023-township-recall',
+  sourceTitle: '2023 广东省考乡镇卷回忆题第 80 题 · 甲酸制氢', region: '广东', examYear: 2023, presentationMode: 'adapted',
+  sourceNote: '用公开回忆题图示对应的反应式 HCOOH → H₂ + CO₂ 代替原微观示意图；答案 A 与公开解析核对。原卷为考生回忆整理，非官方原卷。',
+  stem: '甲酸制氢的反应可表示为 HCOOH → H₂ + CO₂。下列说法正确的是哪一项？',
+  options: ['反应后分子总数增加', '该反应属于化合反应', '反应物和生成物都是有机物', '该反应不遵守能量守恒定律'],
+  correctAnswer: 'A', explanation: '一个甲酸分子分解生成一个氢气分子和一个二氧化碳分子，反应后分子总数由一个变为两个。该反应属于分解反应，二氧化碳和氢气都不是有机物；化学反应遵守能量守恒。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'gd-2023-township-household-electricity', subjectId: 'physics', topicId: 'physics:electricity',
+  knowledgePointIds: ['physics:circuit-faults', 'physics:parallel-circuits'], difficulty: 'medium', reasoningType: 'classification',
+  sourceType: 'recalled', sourceId: 'gd-2023-township-recall',
+  sourceTitle: '2023 广东省考乡镇卷回忆题第 81 题 · 家庭用电', region: '广东', examYear: 2023, presentationMode: 'adapted',
+  sourceNote: '按公开回忆题及答案解析改述；答案 D。原卷为考生回忆整理，非官方原卷。',
+  stem: '下列关于家庭用电的说法，正确的是哪一项？',
+  options: ['家庭电路使用 220 V 直流电', '带金属外壳的电器一般接两孔插座', '为使各电器互不影响，应把它们串联', '保险丝可采用电阻率较大且熔点较低的合金'],
+  correctAnswer: 'D', explanation: '我国家庭电路使用 220 V 交流电；带金属外壳的电器通常通过三孔插座接地；家用电器并联后可以独立工作。电流过大时，高电阻率、低熔点的保险丝更容易发热熔断并切断电路。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'gd-2023-township-asexual-reproduction', subjectId: 'biology', topicId: 'biology:inheritance-microbes',
+  knowledgePointIds: ['biology:reproduction-inheritance'], difficulty: 'easy', reasoningType: 'classification',
+  sourceType: 'recalled', sourceId: 'gd-2023-township-recall',
+  sourceTitle: '2023 广东省考乡镇卷回忆题第 82 题 · 有性与无性繁殖', region: '广东', examYear: 2023, presentationMode: 'adapted',
+  sourceNote: '按公开回忆题及答案解析改述；答案 A。原卷为考生回忆整理，非官方原卷。',
+  stem: '下列繁殖过程不属于无性繁殖的是哪一项？',
+  options: ['西瓜花授粉后结出果实', '草履虫通过细胞分裂形成两个个体', '水螅母体长出芽体并发育成新个体', '马铃薯块茎发芽后形成新植株'],
+  correctAnswer: 'A', explanation: '西瓜授粉涉及生殖细胞结合和受精，属于有性繁殖。草履虫分裂、水螅出芽和马铃薯块茎繁殖均由母体的一部分直接形成新个体，属于无性繁殖。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'gd-2023-township-sucrose-crystallization', subjectId: 'chemistry', topicId: 'chemistry:solutions-acids-bases',
+  knowledgePointIds: ['chemistry:solutions', 'chemistry:solubility'], difficulty: 'medium', reasoningType: 'causal_inference',
+  sourceType: 'recalled', sourceId: 'gd-2023-township-recall',
+  sourceTitle: '2023 广东省考乡镇卷回忆题第 83 题 · 蔗糖结晶', region: '广东', examYear: 2023, presentationMode: 'adapted',
+  sourceNote: '按公开回忆题及答案解析改述；答案 D。原卷为考生回忆整理，非官方原卷。',
+  stem: '蔗糖水加糖后搅拌至蔗糖完全溶解，再放入冰箱。取出时杯底有少量晶体。判断下列说法：①冷藏前的溶液一定不饱和；②取出后析出晶体的溶液一定饱和；③冷藏前后溶液中溶解的蔗糖质量相等；④蒸发部分水分也能析出蔗糖晶体。正确的是：',
+  options: ['①②', '①④', '②③', '②④'],
+  correctAnswer: 'D', explanation: '冷藏前虽未观察到晶体，但无法据此判断溶液是否饱和；冷却后有晶体析出，说明剩余溶液已饱和。析晶使溶液中溶解的蔗糖质量减少；蒸发水分提高溶液浓度，也可使蔗糖析出。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'gd-2023-township-greenhouse-yield', subjectId: 'biology', topicId: 'biology:cells-metabolism',
+  knowledgePointIds: ['biology:photosynthesis', 'biology:respiration'], difficulty: 'medium', reasoningType: 'causal_inference',
+  sourceType: 'recalled', sourceId: 'gd-2023-township-recall',
+  sourceTitle: '2023 广东省考乡镇卷回忆题第 84 题 · 大棚增产措施', region: '广东', examYear: 2023, presentationMode: 'adapted',
+  sourceNote: '按公开回忆题及答案解析改述；答案 B。原卷为考生回忆整理，非官方原卷。',
+  stem: '下列大棚种植的增产做法中，效果判断有误的是哪一项？',
+  options: ['补充适量二氧化碳，为光合作用提供原料', '让大棚昼夜温度保持相同，以减少夜间有机物消耗', '适当延长光照时间，增加光合作用时长', '合理密植，提高单位土地面积对光照的利用率'],
+  correctAnswer: 'B', explanation: '白天适宜温度有利于光合作用；夜间适当降温可降低呼吸作用，减少有机物消耗。因此保持昼夜温度相同并非更有效的增产措施。其余措施在合理控制条件时可提高光合产物积累。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'gd-2023-township-polar-star', subjectId: 'geography', topicId: 'geography:earth-sun-moon',
+  knowledgePointIds: ['geography:rotation'], difficulty: 'medium', reasoningType: 'causal_inference',
+  sourceType: 'recalled', sourceId: 'gd-2023-township-recall',
+  sourceTitle: '2023 广东省考乡镇卷回忆题第 85 题 · 北天极星空视运动', region: '广东', examYear: 2023, presentationMode: 'adapted',
+  sourceNote: '按公开回忆题及答案解析改述；答案 A。原卷为考生回忆整理，非官方原卷。',
+  stem: '假设一颗可见恒星恰位于地球北天极方向，赤道上的观察者整晚观测。下列说法正确的是：①该星会东升西落；②该星看起来基本不动；③周围星星绕它呈逆时针方向转动；④周围星星绕它呈顺时针方向转动。',
+  options: ['②③', '①④', '①③', '②④'],
+  correctAnswer: 'A', explanation: '位于地轴延长线方向的恒星在地球自转时仍近似保持在北方天空中的同一位置，不会东升西落。面向北方观察，周围星体的周日视运动围绕北天极呈逆时针方向。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'zj-2024-c-high-power-appliances', subjectId: 'physics', topicId: 'physics:electricity',
+  knowledgePointIds: ['physics:electric-power', 'physics:electromagnetic-induction'], difficulty: 'medium', reasoningType: 'classification',
+  sourceType: 'recalled', sourceId: 'zj-2024-c-recall',
+  sourceTitle: '2024 浙江省考 C 类回忆题第 19 题 · 家用电器常识', region: '浙江', examYear: 2024, presentationMode: 'adapted',
+  sourceNote: '据浙江省 2024 年 C 类行测回忆卷常识判断第 19 题改述；参考答案 C 与公开答案和解析核对。该题考查生活中的科学知识，未标为专项科学推理题；回忆卷不是官方原卷。',
+  stem: '下列关于家用电器的说法，哪一项符合本题采用的常见口径？',
+  options: ['电磁炉不产生明火，所以使用时不会有火灾风险', '燃气灶具的安全使用年限通常为 10 年', '直接使用 220 V 交流电且功率大于 1200 W 的电器通常归为大功率电器', '电磁炉有电磁辐射，而微波炉没有电磁辐射'],
+  correctAnswer: 'C', explanation: '该题采用的常见分类口径把直接使用 220 V 交流电、功率大于 1200 W 的电器归为大功率电器。电磁炉仍可能因器具或电路故障引发火灾；燃气灶安全使用年限通常为 8 年；微波炉也会产生电磁辐射。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'mock-zhonggong-2027-equal-speed-stones', subjectId: 'physics', topicId: 'physics:kinematics',
+  knowledgePointIds: ['physics:relative-motion'], difficulty: 'medium', reasoningType: 'causal_inference',
+  sourceType: 'third_party_mock', sourceId: 'gd-2027-zhonggong-mock',
+  sourceTitle: '中公 2027 广东科学推理模拟题 08.28 · 同速列车相向掷石', region: '广东', examYear: null, presentationMode: 'adapted',
+  sourceNote: '据中公模拟题第 2 题改述；公开解析给出的答案为 C。题面保留两车同速、乘客同时以相同相对速度掷石的条件，属于机构模拟题，不是省考真题。',
+  stem: '甲、乙两辆列车沿同一方向以相同速度 v₀ 行驶，甲车在前。两车乘客同时以大小等于 v₀ 的水平速度相对于各自列车向对方掷出小石子。忽略石子的竖直下落后，最可能出现哪种结果？',
+  options: ['甲车乘客先被击中', '乙车乘客先被击中', '两名乘客同时被击中', '石子只能击中乙车乘客'],
+  correctAnswer: 'C', explanation: '两车相对静止。若两列车速度同为 v₀，两名乘客分别以大小 v₀ 相对列车向对方掷石，甲乘客的石子相对地面近似静止，乙乘客的石子相对地面速度约为 2v₀。结合乘客运动计算，两枚石子到达对方的时间相同，因此两人同时被击中。',
+});
+
 export { SCIENCE_QUESTION_BANK };

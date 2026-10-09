@@ -121,6 +121,7 @@ export const SCIENCE_TREE = [
         sciencePoint('physics:pitch-loudness', '音调和响度'),
         sciencePoint('physics:magnetic-field', '磁场'),
         sciencePoint('physics:electromagnetic-induction', '电磁感应'),
+        sciencePoint('physics:electromagnetic-waves', '电磁波的频率与波长'),
         sciencePoint('physics:motors-generators', '发电机和电动机'),
       ]),
     ],

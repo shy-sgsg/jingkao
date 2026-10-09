@@ -9,9 +9,10 @@ test('science tree uses one stable four-discipline catalog for point lookup', as
   assert.deepEqual(tree.map((subject) => subject.id), ['physics', 'chemistry', 'biology', 'geography']);
   const pointIds = tree.flatMap((subject) => subject.topics.flatMap((topic) => topic.knowledgePoints.map((point) => point.id)));
   assert.equal(new Set(pointIds).size, pointIds.length);
-  assert.equal(pointIds.length, 125);
+  assert.equal(pointIds.length, 126);
   assert.ok(pointIds.includes('physics:buoyancy'));
   assert.ok(pointIds.includes('physics:centripetal-force'));
+  assert.ok(pointIds.includes('physics:electromagnetic-waves'));
   assert.ok(pointIds.includes('geography:plate-tectonics'));
   assert.equal(knowledge.getKnowledgePoint('physics:buoyancy').title, '浮力与阿基米德原理');
   assert.equal(knowledge.getKnowledgePoint('unknown:point'), null);
@@ -74,7 +75,7 @@ test('published questions distinguish the existing original bank from sourced ex
   const { SCIENCE_SOURCES } = await import('../src/science/sources.js');
   const originalBank = bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType === 'original');
   assert.equal(originalBank.length, 153);
-  assert.equal(bankModule.SCIENCE_QUESTION_BANK.length, 230);
+  assert.equal(bankModule.SCIENCE_QUESTION_BANK.length, 244);
   const subjectCounts = Object.fromEntries(['physics', 'chemistry', 'biology', 'geography']
     .map((subjectId) => [subjectId, originalBank.filter((question) => question.subjectId === subjectId).length]));
   assert.deepEqual(subjectCounts, { physics: 42, chemistry: 37, biology: 36, geography: 38 });
@@ -111,6 +112,12 @@ test('published questions distinguish the existing original bank from sourced ex
     'gd-2021-county-plate-boundary', 'mock-sh-2022-v5-camera-distance',
     'mock-sh-2022-v5-galileo-thermometer', 'mock-sh-2022-v5-static-friction',
     'zj-2025-mock-mars-microbes', 'mock-huatu-buoyancy-load',
+    'gd-2023-township-grain-storage', 'gd-2023-township-graphite-diamond', 'gd-2023-township-green-glass',
+    'gd-2023-township-reflex', 'gd-2023-township-5g-wavelength', 'gd-2023-township-fertilizer-use',
+    'gd-2023-township-formic-acid-hydrogen', 'gd-2023-township-household-electricity',
+    'gd-2023-township-asexual-reproduction', 'gd-2023-township-sucrose-crystallization',
+    'gd-2023-township-greenhouse-yield', 'gd-2023-township-polar-star',
+    'zj-2024-c-high-power-appliances', 'mock-zhonggong-2027-equal-speed-stones',
   ]) {
     assert.ok(bankModule.SCIENCE_QUESTION_BANK.some((question) => question.id === id), `${id} is published`);
   }
@@ -119,8 +126,8 @@ test('published questions distinguish the existing original bank from sourced ex
   assert.ok(bankModule.SCIENCE_QUESTION_BANK.some((question) => question.sourceType === 'third_party_mock'));
   assert.ok(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType !== 'original')
     .every((question) => question.sourceId && question.sourceNote));
-  assert.equal(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType === 'recalled').length, 58);
-  assert.equal(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType === 'third_party_mock').length, 13);
+  assert.equal(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType === 'recalled').length, 71);
+  assert.equal(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType === 'third_party_mock').length, 14);
   assert.equal(SCIENCE_SOURCES.length, 33);
 });
 
@@ -145,7 +152,7 @@ test('published knowledge lessons cover all four disciplines with practical expl
       && point.content.everydayExample && point.content.quickMethod), `${subject.id} lessons contain actionable explanations`);
     return [subject.id, lessons.length];
   }));
-  assert.equal(Object.values(counts).reduce((sum, count) => sum + count, 0), 74);
+  assert.equal(Object.values(counts).reduce((sum, count) => sum + count, 0), 75);
   assert.equal(counts.geography, 13);
   for (const pointId of [
     'physics:elastic-force', 'physics:optical-phenomena', 'physics:gravity', 'physics:magnetic-field', 'physics:lens-imaging',

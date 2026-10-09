@@ -134,7 +134,12 @@ export const SCIENCE_SOURCES = [
     organization: '上岸鸭公考（回忆题整理）', sourceType: 'recalled', region: '广东', examYear: 2023,
     authority: 'third-party-recollection', verificationStatus: 'verified', copyrightStatus: 'reference_only',
     url: 'https://m.gwy.com/gdgwy/309527.html',
-    note: '第三方回忆整理页；题目按页面公开文本整理，非官方原卷。',
+    relatedUrls: [
+      'https://www.chinagwy.org/files/20240111152901_89607.pdf',
+      'https://www.swdtbook.com/xc/%E7%AC%AC%20%E5%9B%9E/page/1339',
+      'https://ah.huatu.com/tiku/dfgwy/2023gdskxzgf/',
+    ],
+    note: '第三方回忆整理资料；本库补录其中第 71–75、78、80–85 题共 12 道文字题，题面与参考答案按公开试题解析交叉核对，非官方原卷。依赖缺失图表的题目未收入。',
   },
   {
     id: 'gd-2024-recall', title: '2024 年广东省公务员考试行测真题（考生回忆版）',
@@ -193,10 +198,12 @@ export const SCIENCE_SOURCES = [
     url: 'https://upload.xingguanggongkao.com/pdf/2024%E5%B9%B4%E6%B5%99%E6%B1%9F%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88C%E5%8D%B7-%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.pdf?time=1729840483',
     relatedUrls: [
       'https://static.32xueyuan.com/zq/u/cms/www/202409/140935257r61.pdf',
+      'https://www.chinagwy.org/files/20241009142500_31899.pdf',
+      'https://bd6.net/gongwuyuan/172370476728590.html',
       'https://gwy.gkzhenti.cn/answer/1723610466814',
       'https://www.chinacdc.cn/jkkp/crb/jcr/202608/t20260805_1838681.html',
     ],
-    note: '第三方考生回忆卷，非官方原卷；第 94–96、100 题题面与参考答案可交叉核对，练习题意已改述。霍乱传播知识另以中国疾控中心资料核对。',
+    note: '第三方考生回忆卷，非官方原卷；第 19、94–96、100 题题面与参考答案可交叉核对，练习题意已改述。第 19 题来自常识判断中的科学知识题，未标为专项科学推理题；霍乱传播知识另以中国疾控中心资料核对。',
   },
   {
     id: 'zj-2025-32xueyuan-mock', title: '浙江省公务员录用考试 2025 年模拟卷《行测》',
@@ -232,7 +239,7 @@ export const SCIENCE_SOURCES = [
     authority: 'third-party-publisher', verificationStatus: 'verified', copyrightStatus: 'reference_only',
     url: 'https://www.eoffcn.com/kszx/detail/2210484.html',
     relatedUrls: ['https://www.eoffcn.com/kszx/detail/2196566.html'],
-    note: '机构模拟题，不是考试真题；页面答案解析署名中公。两篇模拟题页合计收录 3 道练习，缺图且无法按文字独立作答的题未收录。',
+    note: '机构模拟题，不是考试真题；页面答案解析署名中公。两篇模拟题页合计收录 4 道练习，缺图且无法按文字独立作答的题未收录。',
   },
   {
     id: 'mock-zhonggong-2027-light', title: '中公 2027 广东行测科学推理模拟题（光学）',
