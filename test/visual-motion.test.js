@@ -139,7 +139,7 @@ test('page transitions are reserved for navigation and do not cascade through da
   const app = await readFile(new URL('../src/app.js', import.meta.url), 'utf8');
 
   assert.ok(/class="page-shell \$\{pageTransition \? 'page-enter' : ''\}\$\{resultTransition \? ' results-enter' : ''\}"/.test(app), 'page shell should opt into route or result motion only when requested');
-  assert.ok(/function navigate\(id\) \{[\s\S]*?pageTransition = true;[\s\S]*?runViewTransition\(document,\s*\(\)\s*=>\s*\{[\s\S]*?render\(\);[\s\S]*?scrollToTop\(\);[\s\S]*?\}, storage\.settings\.motion\);/.test(app), 'navigation should render and reset scroll within the progressive page transition update');
+  assert.ok(/function navigate\(id, query = ''\) \{[\s\S]*?pageTransition = true;[\s\S]*?runViewTransition\(document,\s*\(\)\s*=>\s*\{[\s\S]*?render\(\);[\s\S]*?scrollToTop\(\);[\s\S]*?\}, storage\.settings\.motion\);/.test(app), 'navigation should render and reset scroll within the progressive page transition update');
   assert.ok(/function render\(\) \{[\s\S]*?pageTransition = false;/.test(app), 'ordinary renders should not replay page entry motion');
   assert.ok(/window\.addEventListener\('hashchange',[\s\S]*?pageTransition = true;[\s\S]*?runViewTransition\(document,\s*\(\)\s*=>\s*\{[\s\S]*?render\(\);[\s\S]*?scrollToTop\(\);[\s\S]*?\}, storage\.settings\.motion\);/.test(app), 'browser history navigation should reset scroll within the page transition update');
   assert.match(app, /window\.scrollTo\(\{ top: 0, behavior: 'instant' \}\);/, 'route scroll should finish before page-entry motion begins');
@@ -290,9 +290,9 @@ test('the active navigation marker glides between pages and stops for reduced-mo
 
 test('hash navigation leaves its single scroll reset to the transition update', async () => {
   const app = await readFile(new URL('../src/app.js', import.meta.url), 'utf8');
-  const hashChangeBranch = app.match(/if \(location\.hash !== `#\/\$\{page\}`\) \{([\s\S]*?)\n  \}/)?.[1] || '';
+  const hashChangeBranch = app.match(/if \(location\.hash !== route\) \{([\s\S]*?)\n  \}/)?.[1] || '';
 
-  assert.match(hashChangeBranch, /location\.hash = `\/\$\{page\}`;/);
+  assert.match(hashChangeBranch, /location\.hash = route\.slice\(1\);/);
   assert.doesNotMatch(hashChangeBranch, /scrollToTop\(\)/, 'hashchange owns the route scroll so navigation cannot start two overlapping scrolls');
 });
 

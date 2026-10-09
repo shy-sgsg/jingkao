@@ -111,7 +111,7 @@ test('standalone site executes and renders the homepage from its embedded app mo
   assert.match(markup, /136 \/ 138 人已收录 · 第三方汇总对照/);
 
   const routes = [
-    ['guide', '使用指南'], ['plan', '50 天复习计划'], ['aptitude', '行测能力'],
+    ['guide', '使用指南'], ['plan', '学习计划'], ['science', '科学推理'], ['aptitude', '行测能力'],
     ['essay', '申论训练'], ['mocks', '模考复盘'], ['positions', '昌平职位库'],
     ['compare', '岗位比较'], ['assistant', '选岗助手'], ['scenarios', '分数情景'],
     ['matrix', '昌平竞争矩阵'], ['profile', '个人报考资料'],
