@@ -115,7 +115,7 @@ test('account creation fails when Web Crypto is unavailable', async () => {
   await assert.rejects(makeAccount({ cryptoApi: null }));
 });
 
-test('stored accounts keep anonymous index entries and isolate independent profiles', async () => {
+test('stored accounts keep display names in the local index and isolate independent profiles', async () => {
   const storage = makeStorage();
   const firstState = { ...state, profile: { major: 'FIRST PRIVATE MAJOR' } };
   const secondState = { ...state, profile: { major: 'SECOND PRIVATE MAJOR' } };
@@ -124,13 +124,27 @@ test('stored accounts keep anonymous index entries and isolate independent profi
 
   const accounts = listEncryptedAccounts(storage);
   assert.deepEqual(accounts.map(({ slot }) => slot), [1, 2]);
-  assert.deepEqual(Object.keys(accounts[0]).sort(), ['id', 'slot']);
+  assert.deepEqual(accounts.map(({ name }) => name), ['PROFILE ALPHA', 'PROFILE BETA']);
   const indexText = storage.getItem('changping-jingkao-dashboard:accounts:v1');
-  assert.doesNotMatch(indexText, /PROFILE ALPHA|PROFILE BETA|FIRST PRIVATE MAJOR|SECOND PRIVATE MAJOR/);
+  assert.match(indexText, /PROFILE ALPHA|PROFILE BETA/);
+  assert.doesNotMatch(indexText, /FIRST PRIVATE MAJOR|SECOND PRIVATE MAJOR/);
   assert.deepEqual((await openStoredAccount({ id: first.id, password: 'first passphrase', storage, cryptoApi: webcrypto })).state, firstState);
   await assert.rejects(openStoredAccount({ id: first.id, password: 'second passphrase', storage, cryptoApi: webcrypto }));
   assert.deepEqual((await openStoredAccount({ id: second.id, password: 'second passphrase', storage, cryptoApi: webcrypto })).state, secondState);
   assert.deepEqual(listEncryptedAccounts(storage), accounts);
+});
+
+test('an old anonymous local account index learns its name after a successful unlock', async () => {
+  const storage = makeStorage();
+  const account = await createStoredAccount({ name: 'RECOVERED LOCAL NAME', password: 'profile passphrase', state, storage, cryptoApi: webcrypto });
+  const indexKey = 'changping-jingkao-dashboard:accounts:v1';
+  const oldIndex = JSON.parse(storage.getItem(indexKey));
+  oldIndex.accounts = oldIndex.accounts.map(({ id, slot }) => ({ id, slot }));
+  storage.setItem(indexKey, JSON.stringify(oldIndex));
+
+  assert.equal(listEncryptedAccounts(storage)[0].name, undefined);
+  assert.equal((await openStoredAccount({ id: account.id, password: 'profile passphrase', storage, cryptoApi: webcrypto })).name, 'RECOVERED LOCAL NAME');
+  assert.equal(listEncryptedAccounts(storage)[0].name, 'RECOVERED LOCAL NAME');
 });
 
 test('rapid stored-account saves snapshot input and preserve invocation order', async () => {

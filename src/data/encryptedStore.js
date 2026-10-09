@@ -81,17 +81,29 @@ function readAccountIndex(storage) {
   const ids = new Set();
   const slots = new Set();
   for (const account of index.accounts) {
+    const keys = account && typeof account === 'object' && !Array.isArray(account)
+      ? Object.keys(account).sort().join(',')
+      : '';
+    const hasName = keys === 'id,name,slot';
     if (!account || typeof account !== 'object' || Array.isArray(account)
-      || Object.keys(account).sort().join(',') !== 'id,slot'
+      || (keys !== 'id,slot' && !hasName)
       || typeof account.id !== 'string' || !/^[A-Za-z0-9_-]{20,}$/u.test(account.id)
       || !Number.isSafeInteger(account.slot) || account.slot < 1
+      || (hasName && (typeof account.name !== 'string' || !account.name.trim() || account.name.length > 60))
       || ids.has(account.id) || slots.has(account.slot)) {
       throw new Error('本地档案索引格式不受支持；为保护数据，未继续操作。');
     }
     ids.add(account.id);
     slots.add(account.slot);
   }
-  return { version: ACCOUNT_INDEX_VERSION, accounts: index.accounts.map(({ id, slot }) => ({ id, slot })) };
+  return {
+    version: ACCOUNT_INDEX_VERSION,
+    accounts: index.accounts.map(({ id, slot, name }) => ({
+      id,
+      slot,
+      ...(typeof name === 'string' ? { name: name.trim() } : {}),
+    })),
+  };
 }
 
 function writeAndVerify(storage, key, value) {
@@ -244,7 +256,7 @@ export async function createStoredAccount({ name, password, state, storage, cryp
   const index = readAccountIndex(storage);
   if (index.accounts.some((account) => account.id === id)) throw new Error('档案编号冲突，请重试。');
   const slot = index.accounts.reduce((largest, account) => Math.max(largest, account.slot), 0) + 1;
-  const nextIndex = { version: ACCOUNT_INDEX_VERSION, accounts: [...index.accounts, { id, slot }] };
+  const nextIndex = { version: ACCOUNT_INDEX_VERSION, accounts: [...index.accounts, { id, slot, name: session.name }] };
   const recordKey = accountStorageKey(id);
   try {
     writeAndVerify(storage, recordKey, envelope);
@@ -258,7 +270,8 @@ export async function createStoredAccount({ name, password, state, storage, cryp
 
 export async function openStoredAccount({ id, password, storage, cryptoApi = globalThis.crypto }) {
   if (!storage || typeof storage.getItem !== 'function') throw new Error('本地档案存储不可用。');
-  if (!readAccountIndex(storage).accounts.some((account) => account.id === id)) {
+  const index = readAccountIndex(storage);
+  if (!index.accounts.some((account) => account.id === id)) {
     throw new Error('未找到此本地档案。');
   }
   let envelope;
@@ -268,7 +281,20 @@ export async function openStoredAccount({ id, password, storage, cryptoApi = glo
     throw new Error('档案加密数据无法读取。');
   }
   if (!envelope) throw new Error('档案加密数据不存在。');
-  return unlockEncryptedAccount({ id, envelope, password, cryptoApi });
+  const opened = await unlockEncryptedAccount({ id, envelope, password, cryptoApi });
+  const indexedAccount = index.accounts.find((account) => account.id === id);
+  if (indexedAccount?.name !== opened.name) {
+    const nextIndex = {
+      version: ACCOUNT_INDEX_VERSION,
+      accounts: index.accounts.map((account) => account.id === id ? { ...account, name: opened.name } : account),
+    };
+    try {
+      writeAndVerify(storage, ACCOUNT_INDEX_KEY, nextIndex);
+    } catch {
+      // Unlocking the encrypted account must not depend on a display-name metadata update.
+    }
+  }
+  return opened;
 }
 
 export function saveStoredAccount({ session, state, storage, cryptoApi = globalThis.crypto }) {

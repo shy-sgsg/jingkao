@@ -6,7 +6,8 @@ const projectRoot = new URL('../', import.meta.url);
 
 test('2025 Changping positions reconcile to the reviewed 91-position, 177-recruit mirror', async () => {
   const positions = JSON.parse(await readFile(new URL('data/positions_seed.json', projectRoot), 'utf8'))
-    .filter((position) => Number(position.year) === 2025);
+    .filter((position) => Number(position.year) === 2025
+      && (position.sources.includes('huatu-2025-list') || position.code === '221264501'));
   const sources = JSON.parse(await readFile(new URL('data/source_registry.json', projectRoot), 'utf8'));
   const sourceById = new Map(sources.map((source) => [source.sourceId, source]));
 

@@ -4,10 +4,10 @@ import { advanceOnboarding, shouldShowOnboarding } from './data/onboarding.js';
 import { buildGuideGroups, getPageHelp } from './data/pageHelp.js';
 import { createEncryptedUserBackup, parseEncryptedUserBackup, parseUserBackup } from './data/backup.js';
 import { createStoredAccount, listEncryptedAccounts, migrateLegacyAccount, openStoredAccount, saveStoredAccount, unlockEncryptedAccount } from './data/encryptedStore.js';
-import { getCoverageSpotlight, getPositionDataCompleteness, summarizePositionCoverage } from './data/coverage.js';
+import { getPositionDataCompleteness, summarizePositionCoverage } from './data/coverage.js';
 import { buildResearchFindings, summarizeAnnualConflicts } from './data/findings.js';
 import { readDisplayDensity } from './data/displayDensity.js';
-import { classifyPublicManagementMatch, filterAndSortPositions, filterScoreRowsBySegment, getPositionEvidenceGrade, getPositionFilterValue, paginateItems, summarizePublicManagementPositions } from './data/positions.js';
+import { buildDecisionCoverageMatrix, classifyPublicManagementMatch, filterAndSortPositions, filterScoreRowsByScope, filterScoreRowsBySegment, findPositionByReference, getPositionEvidenceGrade, getPositionFilterValue, hasPositionReference, paginateItems, positionIdentity, summarizePublicManagementPositions } from './data/positions.js';
 import { runViewTransition } from './ui/viewTransition.js';
 import { observePageSections } from './ui/scrollReveal.js';
 import { normalizeStudyState, setKnowledgePointStatus, toggleKnowledgePointFlag } from './science/persistence.js';
@@ -32,19 +32,20 @@ const icons = {
   overview: '◫', guide: '✦', plan: '▦', science: '⚗', aptitude: '⌁', essay: '✎', mocks: '⌂', positions: '▤', compare: '⇄', assistant: '✧', scenarios: '◉', matrix: '▦', profile: '♙', research: '✧', evidence: '⌁', sources: 'ⓘ', settings: '⚙',
 };
 const pageMeta = {
-  overview: ['备考总览', '查看今天的复习任务、目标分差和昌平选岗证据。'],
+  overview: ['备考总览', '查看今天的复习任务、目标分差和北京京考职位决策证据。'],
   guide: ['使用指南', '从你要解决的问题出发，找到对应页面和下一步操作。'],
   plan: ['学习计划', '自由安排日期、任务类型和学习内容；保留原有每日计划记录。'],
   science: ['科学推理', '行测能力子模块 · 知识学习、专项练习与计划联动。'],
-  aptitude: ['行测能力', '查看各项能力训练，并进入科学推理和常识判断子模块。'],
-  generalKnowledge: ['常识判断', '行测能力子模块 · 内容筹备中。'],
+  aptitude: ['行测能力', '查看整体正确率、训练记录，并进入各个行测模块。'],
+  aptitudeModule: ['行测模块', '学习知识点、练习题目或手动记录训练。'],
+  generalKnowledge: ['常识判断', '学习知识点、练习题目或手动记录训练。'],
   essay: ['申论训练', '按训练任务记录练习次数、关键词覆盖和自评；自评不是客观测量。'],
   mocks: ['模考复盘', '只画实际填写的成绩。空白模考不会被显示成 0 分。'],
-  positions: ['昌平职位库', '当前仅展示有来源的候选样例，不是昌平区全量职位表。'],
+  positions: ['职位库', '按北京市 16 区和招考年度筛选可追溯职位；未收录区县明确显示待补。'],
   compare: ['岗位比较', '并排核对已收录条件和证据缺口；最多收藏比较 5 个岗位。'],
   assistant: ['选岗助手', '先做条件完整度检查；资料或岗位条件不全时明确停在“待核验”。'],
   scenarios: ['分数情景', '将目标分与已收录的历史样本范围对照，不输出进面或录取概率。'],
-  matrix: ['昌平竞争矩阵', '分区直、街道、镇查看有来源的记录；样例数量不等于年度总量。'],
+  matrix: ['北京京考竞争矩阵', '按北京市 16 区和年度查看职位样例覆盖；不把样例数解释为竞争率或年度总量。'],
   profile: ['个人报考资料', '在本机填写。专业预置为公共管理；其他信息不会由系统推断。'],
   research: ['研究结论', '把当前可支持的结论、证据与限制集中查看。'],
   evidence: ['数据覆盖与核验', '查看年度职位样例覆盖、来源差异与数据边界。'],
@@ -54,12 +55,21 @@ const pageMeta = {
 const navGroups = [
   { label: '工作台', items: [['overview', '备考总览'], ['guide', '使用指南'], ['plan', '学习计划']] },
   { label: '备考复盘', items: [['aptitude', '行测能力'], ['essay', '申论训练'], ['mocks', '模考记录']] },
-  { label: '职位决策', items: [['positions', '昌平职位库'], ['compare', '岗位比较'], ['assistant', '选岗助手'], ['scenarios', '分数情景'], ['matrix', '竞争矩阵']] },
+  { label: '北京京考职位决策', items: [['positions', '职位库'], ['compare', '岗位比较'], ['assistant', '选岗助手'], ['scenarios', '分数情景'], ['matrix', '竞争矩阵']] },
   { label: '个人与数据', items: [['profile', '个人资料'], ['research', '研究结论'], ['evidence', '数据覆盖'], ['sources', '数据与来源'], ['settings', '设置与显示']] },
 ];
 const mockModules = [
   ['dataAnalysis', '资料分析'], ['reasoning', '判断推理'], ['science', '科学推理'],
   ['quantitative', '数量关系'], ['verbal', '言语理解'], ['politicalAndGeneral', '政治理论 + 常识'],
+];
+const APTITUDE_MODULES = [
+  { id: 'political-theory', area: '政治理论', symbol: '政', hint: '理论政策与时政辨析' },
+  { id: 'general-knowledge', area: '常识判断', symbol: '常', hint: '法律、经济、科技、人文与北京市情' },
+  { id: 'verbal', area: '言语', symbol: '言', hint: '中心理解、逻辑填空与语句表达' },
+  { id: 'quantitative', area: '数量关系', symbol: '数', hint: '数字推理、应用题与数量模型' },
+  { id: 'reasoning', area: '判断推理', symbol: '判', hint: '图形、演绎、定义、类比与排序' },
+  { id: 'science', area: '科学推理', symbol: '理', hint: '知识点学习、专项练习与错题复习' },
+  { id: 'data-analysis', area: '资料分析', symbol: '资', hint: '增长率、比重与综合判断' },
 ];
 
 let dataset;
@@ -68,13 +78,18 @@ function readRoute(hash = location.hash) {
   const queryStart = route.indexOf('?');
   const routePage = (queryStart < 0 ? route : route.slice(0, queryStart)) || 'overview';
   const query = queryStart < 0 ? '' : route.slice(queryStart + 1);
+  const aptitudeModuleRoute = routePage.match(/^aptitude\/module\/([a-z0-9-]+)$/u);
   const value = (key) => {
     const encoded = query.match(new RegExp(`(?:^|&)${key}=([^&]*)`, 'u'))?.[1];
     if (!encoded) return null;
     try { return decodeURIComponent(encoded.replace(/\+/gu, ' ')); } catch { return null; }
   };
   const pageAliases = { science: 'science', 'aptitude/science': 'science', 'aptitude/general-knowledge': 'generalKnowledge' };
-  return { page: pageAliases[routePage] || routePage, taskId: value('task'), knowledgePointId: value('knowledge'), sessionId: value('session') };
+  return {
+    page: aptitudeModuleRoute ? 'aptitudeModule' : pageAliases[routePage] || routePage,
+    aptitudeModuleId: aptitudeModuleRoute?.[1] || null,
+    taskId: value('task'), knowledgePointId: value('knowledge'), sessionId: value('session'),
+  };
 }
 
 function routeTaskIdForScience() {
@@ -83,13 +98,14 @@ function routeTaskIdForScience() {
 
 const initialRoute = readRoute();
 let page = initialRoute.page;
+let activeAptitudeModuleId = initialRoute.aptitudeModuleId;
 let activeSciencePlanTaskId = initialRoute.taskId;
 let selectedScienceKnowledgePointId = initialRoute.knowledgePointId;
 let activeScienceSessionId = initialRoute.sessionId;
 let pageTransition = true;
 let resultTransition = false;
 let filters = {
-  year: 'all', orgType: 'all', jobType: 'all', majorTopic: 'all', query: '', sourceLevel: 'all',
+  districtId: 'all', year: 'all', orgType: 'all', jobType: 'all', majorTopic: 'all', query: '', sourceLevel: 'all',
   unit: 'all', education: 'all', politicalStatus: 'all', freshGraduate: 'all',
   physicalTest: 'all', professionalTest: 'all', recruitmentGroup: 'all',
 };
@@ -174,17 +190,17 @@ async function persist() {
 }
 
 function renderAccountGate({ accounts = [], hasLegacy = false, error = '' } = {}) {
-  const unlockCards = accounts.map((account) => `<form class="account-unlock-card" data-account-id="${escapeHtml(account.id)}"><div><span class="account-slot-mark">${String(account.slot).padStart(2, '0')}</span><strong>本地档案 ${account.slot}</strong></div><label class="form-field"><span>档案密码</span><input name="password" type="password" autocomplete="current-password" required/></label><button type="submit" class="button button-primary">解锁</button></form>`).join('');
+  const unlockCards = accounts.map((account) => `<form class="account-unlock-card" data-account-id="${escapeHtml(account.id)}"><div><span class="account-slot-mark">${String(account.slot).padStart(2, '0')}</span><strong>${escapeHtml(account.name || `本地档案 ${account.slot}`)}</strong></div><label class="form-field"><span>档案密码</span><input name="password" type="password" autocomplete="current-password" required/></label><button type="submit" class="button button-primary">解锁</button></form>`).join('');
   const accountForm = (id, action, heading, submitLabel, autocomplete = 'new-password') => `<form id="${id}" class="account-create-form"><h2>${heading}</h2><label class="form-field"><span>档案名称</span><input name="name" maxlength="60" value="我的备考档案" required autocomplete="off"/></label><label class="form-field"><span>设置密码</span><input name="password" type="password" minlength="12" autocomplete="${autocomplete}" required/><small>建议使用便于记忆的长口令；遗失后无法找回。</small></label><label class="form-field"><span>再次输入密码</span><input name="confirmPassword" type="password" minlength="12" autocomplete="${autocomplete}" required/></label><button type="submit" class="button button-primary">${submitLabel}</button></form>`;
   let accessPanel;
   if (hasLegacy) {
     accessPanel = `<section class="account-panel account-migration-panel"><div class="account-panel-heading"><span>发现旧版本地记录</span><h2>为已有备考数据设置密码</h2><p>记录目前仍是旧版明文格式。输入档案名称和新密码后，网站会先加密并回读校验；校验通过后才移除旧记录。</p></div>${accountForm('account-migration-form', 'migrate', '迁移并加密旧记录', '加密并进入工作台')}</section>${unlockCards ? `<section class="account-panel"><h2>或解锁已有档案</h2><div class="account-unlock-list">${unlockCards}</div></section>` : ''}`;
   } else if (accounts.length) {
-    accessPanel = `<section class="account-panel"><div class="account-panel-heading"><span>此浏览器中的加密档案</span><h2>解锁后继续</h2><p>档案只在此浏览器保存。网站没有账户服务器，也不会上传个人数据。</p></div><div class="account-unlock-list">${unlockCards}</div></section><details class="account-panel account-create-details"><summary>＋ 创建另一份独立档案</summary>${accountForm('account-create-form', 'create', '新建加密档案', '创建并进入工作台')}</details>`;
+    accessPanel = `<section class="account-panel"><div class="account-panel-heading"><span>此浏览器中的加密档案</span><h2>解锁后继续</h2><p>档案只在此浏览器保存。网站没有账户服务器，也不会上传个人数据。</p><small class="account-name-storage-note">为方便辨认，档案名称会以明文保存在本机浏览器索引；个人计划、资料和成绩仍加密保存。</small></div><div class="account-unlock-list">${unlockCards}</div></section><details class="account-panel account-create-details"><summary>＋ 创建另一份独立档案</summary>${accountForm('account-create-form', 'create', '新建加密档案', '创建并进入工作台')}</details>`;
   } else {
     accessPanel = `<section class="account-panel account-first-create">${accountForm('account-create-form', 'create', '创建本地档案', '创建并进入工作台')}</section>`;
   }
-  root.innerHTML = `<main class="account-gate"><section class="account-gate-card"><div class="account-gate-brand"><span>京</span><div><strong>京考备考台</strong><small>CHANGPING · LOCAL ONLY</small></div></div><div class="account-gate-copy"><div class="eyebrow muted">PRIVATE STUDY SPACE</div><h1>${hasLegacy ? '先加密已有记录，再继续备考' : accounts.length ? '欢迎回来' : '把备考记录安全留在本机'}</h1><p>每个本地档案使用独立密码加密。解锁前不会载入个人计划、资料或成绩。</p></div>${error ? `<div class="account-gate-error" role="alert">${escapeHtml(error)}</div>` : ''}${accessPanel}<div class="account-gate-footnote"><span>▣</span><p><strong>只保存在当前浏览器</strong><br/>不注册、不上传、不跨设备同步。清理浏览器数据会删除档案；忘记密码后无法恢复。</p></div></section></main>`;
+  root.innerHTML = `<main class="account-gate"><section class="account-gate-card"><div class="account-gate-brand"><span>京</span><div><strong>京考备考台</strong><small>BEIJING · LOCAL ONLY</small></div></div><div class="account-gate-copy"><div class="eyebrow muted">PRIVATE STUDY SPACE</div><h1>${hasLegacy ? '先加密已有记录，再继续备考' : accounts.length ? '欢迎回来' : '把备考记录安全留在本机'}</h1><p>每个本地档案使用独立密码加密。解锁前不会载入个人计划、资料或成绩。</p></div>${error ? `<div class="account-gate-error" role="alert">${escapeHtml(error)}</div>` : ''}${accessPanel}<div class="account-gate-footnote"><span>▣</span><p><strong>只保存在当前浏览器</strong><br/>不注册、不上传、不跨设备同步。清理浏览器数据会删除档案；忘记密码后无法恢复。</p></div></section></main>`;
   document.title = '本地档案 · 京考备考台';
 }
 
@@ -443,10 +459,10 @@ function scoreEcdfSvg(scoreRows, year, targetScore) {
 
 function renderSidebar() {
   const nav = navGroups.map((group) => `<div class="nav-group"><div class="nav-heading">${escapeHtml(group.label)}</div>${group.items.map(([id, label]) => {
-    const active = page === id || (id === 'aptitude' && ['science', 'generalKnowledge'].includes(page));
+    const active = page === id || (id === 'aptitude' && ['science', 'generalKnowledge', 'aptitudeModule'].includes(page));
     return `<a href="#/${id}" class="nav-item ${active ? 'active' : ''}" ${active ? 'aria-current="page"' : ''}><span class="nav-icon">${icons[id]}</span><span>${escapeHtml(label)}</span>${id === 'positions' ? `<span class="nav-count">${dataset.positions.length}</span>` : ''}</a>`;
   }).join('')}</div>`).join('');
-  return `<aside class="sidebar" id="sidebar"><a class="brand" href="#/overview"><span class="brand-mark">京</span><span><strong>京考备考台</strong><small>CHANGPING · 2027</small></span></a><div class="data-status"><span class="status-dot"></span><span>本地运行 · 数据基准 ${escapeHtml(dataset.dataAsOf)}</span></div><nav aria-label="主导航">${nav}</nav><div class="sidebar-bottom"><div class="sidebar-note"><span class="lock-icon">▣</span><div><strong>仅保存在本机</strong><small>个人记录不会上传</small></div></div><div class="sidebar-version">昌平区 · 个人工作台 <span>v1.0</span></div></div></aside>`;
+  return `<aside class="sidebar" id="sidebar"><a class="brand" href="#/overview"><span class="brand-mark">京</span><span><strong>京考备考台</strong><small>BEIJING · 2027</small></span></a><div class="data-status"><span class="status-dot"></span><span>本地运行 · 数据基准 ${escapeHtml(dataset.dataAsOf)}</span></div><nav aria-label="主导航">${nav}</nav><div class="sidebar-bottom"><div class="sidebar-note"><span class="lock-icon">▣</span><div><strong>仅保存在本机</strong><small>个人记录不会上传</small></div></div><div class="sidebar-version">个人备考工作台 <span>v1.0</span></div></div></aside>`;
 }
 
 function renderDensityControl() {
@@ -463,8 +479,11 @@ function renderSettings() {
 }
 
 function renderLayout() {
-  const [title, subtitle] = pageMeta[page] || pageMeta.overview;
-  const pageScope = ['positions', 'compare', 'assistant'].includes(page) ? '北京市职位样例' : ['aptitude', 'science', 'generalKnowledge'].includes(page) ? '行测能力' : '昌平区';
+  const aptitudeModule = page === 'aptitudeModule' ? APTITUDE_MODULES.find((module) => module.id === activeAptitudeModuleId) : null;
+  const [title, subtitle] = aptitudeModule
+    ? [aptitudeModule.area, `${aptitudeModule.hint} · 学习、练习与手动记录`]
+    : pageMeta[page] || pageMeta.overview;
+  const pageScope = ['positions', 'compare', 'assistant', 'scenarios', 'matrix'].includes(page) ? '北京京考职位决策' : ['aptitude', 'aptitudeModule', 'science', 'generalKnowledge'].includes(page) ? '行测能力' : page === 'overview' ? '备考工作台' : '昌平区';
   return `${renderSidebar()}<div class="main-shell"><header class="topbar"><div class="topbar-left"><button class="mobile-menu" type="button" aria-label="打开导航" data-action="mobile-menu">☰</button><div><div class="breadcrumb">${pageScope} <span>/</span> <strong>${escapeHtml(title)}</strong></div><p class="page-subtitle">${escapeHtml(subtitle)}</p></div></div><div class="topbar-right"><a class="button button-secondary guide-trigger" href="#/guide">使用指南</a>${renderDensityControl()}<span class="today-pill"><span class="today-dot"></span>${escapeHtml(fmtDate(todayString()))}</span><button class="button button-quiet account-lock-button" type="button" data-action="account-lock" aria-label="锁定当前档案并切换账户">锁定 · ${escapeHtml(accountSession.name)}</button></div></header><main id="page-content" tabindex="-1">${renderPage()}</main><footer class="page-footer"><span>资料更新至 ${escapeHtml(dataset.dataAsOf)} · 使用前请回看官方当年职位表</span><a href="#/sources">数据口径说明 →</a></footer></div><div class="sidebar-scrim" data-action="close-menu"></div>`;
 }
 
@@ -502,39 +521,26 @@ function renderOverview() {
   const aptitude = dataset.aptitude.map((item, index) => ({ ...item, ...(storage.aptitudeLogs[index] || {}) }));
   const weekly = buildSevenDayRecommendations({ days: getDays(), aptitude, mocks, today: todayString() });
   const dateNote = todayPlan?.date === todayString() ? '今天的任务' : `下一计划 · ${fmtDate(todayPlan?.date)}`;
-  const qualified = dataset.observations.filter((item) => item.observationType === 'qualified_snapshot');
-  const latestQualifiedByScope = new Map();
-  for (const observation of qualified) {
-    const key = observation.positionCode
-      ? `position:${observation.year}:${observation.positionCode}`
-      : `aggregate:${observation.sourceId}`;
-    const current = latestQualifiedByScope.get(key);
-    if (!current || String(observation.observedAt).localeCompare(String(current.observedAt)) > 0) {
-      latestQualifiedByScope.set(key, observation);
-    }
-  }
-  const snapshotCards = [...latestQualifiedByScope.values()].map((item, index) => {
-    const position = item.positionCode
-      ? dataset.positions.find((row) => Number(row.year) === Number(item.year) && row.code === item.positionCode)
-      : null;
-    const label = position
-      ? `${position.code} · ${position.title}`
-      : item.unit ? `${item.unit.replace(/^北京市昌平区/, '昌平区')} · 单位级汇总` : `${item.year} 年昌平区汇总`;
-    const context = position ? position.unit : item.scope;
-    return `<div class="snapshot-row" style="--snapshot-index:${index}"><span class="snapshot-year">${item.year}</span><div><strong>${escapeHtml(label)} · ${Number(item.applicantsQualified).toLocaleString('zh-CN')} 人资格审查通过</strong><small>${escapeHtml(context)} · ${escapeHtml(item.observedAt)} 快照 · 计划招录 ${fmt(item.recruitCount)} 人</small></div><span class="snapshot-ratio">${fmt(item.qualifiedCompetitionRatio, 2)}:1<small>按来源招录数计算</small></span></div>`;
+  const decisionYears = [2024, 2025, 2026];
+  const decisionCoverage = buildDecisionCoverageMatrix(dataset.positions, dataset.districts, decisionYears);
+  const coveredDistricts = decisionCoverage.filter((district) => Object.values(district.years).some((year) => year.hasSample)).length;
+  const coveredCells = decisionCoverage.reduce((total, district) => total + Object.values(district.years).filter((year) => year.hasSample).length, 0);
+  const linkedSourceIds = new Set(dataset.positions.flatMap((position) => position.sources || []));
+  const annualPositionCoverage = decisionYears.map((year) => {
+    const rows = dataset.positions.filter((position) => Number(position.year) === year);
+    const districts = new Set(rows.map((position) => position.districtId).filter(Boolean)).size;
+    const sources = new Set(rows.flatMap((position) => position.sources || [])).size;
+    return `<div class="overview-coverage-year"><span>${year}</span><strong>${rows.length} 岗样例</strong><small>${districts} / 16 区 · ${sources} 个来源</small></div>`;
   }).join('');
-  const coverage = getCoverageSpotlight(dataset, 2026);
-  const coverageNote = coverage.referencePositions !== null
-    ? `${fmt(coverage.importedRecruits)} / ${fmt(coverage.referenceRecruits)} 人已收录 · 第三方汇总对照`
-    : '年度职位总量暂无可靠参照';
-  const coverageTile = `<a class="metric-card metric-purple coverage-spotlight" href="#/evidence" aria-label="查看 2026 年职位覆盖：已收录 ${coverage.importedPositions} 个职位，第三方汇总参照 ${fmt(coverage.referencePositions)} 个；已收录 ${fmt(coverage.importedRecruits)} 人，参照 ${fmt(coverage.referenceRecruits)} 人。覆盖尚未官方逐码核实。"><div class="metric-top"><span>2026 职位覆盖</span><span class="metric-icon">▤</span></div><div class="metric-value">${fmt(coverage.importedPositions)}<small> / ${fmt(coverage.referencePositions)} 个职位</small></div><div class="metric-note">${coverageNote}</div><div class="progress-track coverage-progress" aria-hidden="true"><span style="width:${Math.round((coverage.positionRatio ?? 0) * 100)}%"></span></div><div class="coverage-caveat">第三方参照 · 待官方逐码核实 <span>详情 ↗</span></div></a>`;
+  const coverageTile = `<a class="metric-card metric-purple coverage-spotlight citywide-coverage-tile" href="#/matrix"><div class="metric-top"><span>北京职位样例</span><span class="metric-icon">▤</span></div><div class="metric-value">${dataset.positions.length}<small>条岗位样例</small></div><div class="metric-note">${coveredDistricts} / 16 区有样例 · ${coveredCells} / 48 个区县年度格</div><div class="coverage-caveat">${linkedSourceIds.size} 个已关联来源 <span>查看矩阵 ↗</span></div></a>`;
+  const cityCoveragePanel = `<article class="panel evidence-panel citywide-coverage-panel"><div class="panel-heading"><div><div class="eyebrow muted">BEIJING · POSITION DATA</div><h2>北京全市职位数据概览</h2></div><a class="panel-link" href="#/matrix">竞争矩阵 →</a></div><div class="overview-coverage-years">${annualPositionCoverage}</div><div class="citywide-source-summary"><span>已关联 ${linkedSourceIds.size} 个来源</span><span>${coveredDistricts} / 16 区有职位样例</span></div><div class="overview-coverage-links"><a href="#/positions">职位库 <span>↗</span></a><a href="#/matrix">竞争矩阵 <span>↗</span></a><a href="#/sources">来源与口径 <span>↗</span></a></div><div class="notice notice-soft"><span>ⓘ</span><p>覆盖只反映当前有来源的岗位样例；空白区县或年度格表示待补数据，不代表没有招录。</p></div></article>`;
   return `<div class="page-body">
     <section class="welcome-banner"><div class="welcome-copy"><div class="eyebrow"><span class="eyebrow-dot"></span> PERSONALISED STUDY DESK <span class="eyebrow-date">数据基准 ${escapeHtml(dataset.dataAsOf)}</span></div><h1>把每一步，变成<br/><em>有依据的进步。</em></h1><p>今天先做好计划里的下一件事。分数趋势和岗位判断，等你的真实数据到位再说。</p><div class="welcome-actions"><a class="button button-light" href="#/plan">打开今日计划 <span>↗</span></a><a class="welcome-link" href="#/profile">完善个人条件 <span>→</span></a></div></div><div class="welcome-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="art-sun"></div><div class="art-line art-line-one"></div><div class="art-line art-line-two"></div><div class="art-label">PLAN · PRACTICE<br/>· REFLECT</div><span class="art-star star-one">✦</span><span class="art-star star-two">✧</span></div></section>
     <section class="metric-grid">${metric('复习计划完成度', fmtPct(progress), `${done} / ${days.length} 天标记完成`, '↗', 'blue')}${metric('计划训练量', `${plannedTotals.questions.toLocaleString('zh-CN')}<small>题</small>`, `${fmt(plannedTotals.hours)} 小时计划投入`, '⌁', 'mint')}${metric('有效模考', `${mocks.length}<small> / 12</small>`, mocks.length ? `最近总分 ${fmt(latest.total, 1)} · 目标 ${fmt(target)}` : '尚无真实成绩记录', '◉', 'amber')}${coverageTile}</section>
     <section class="score-target-section" aria-label="真实模考与目标分差距"><div class="score-target-heading"><div><div class="eyebrow muted">REAL MOCK · TARGET DISTANCE</div><h2>离目标分还有多远？</h2><p>${latest ? `最近一次真实模考：${escapeHtml(latest.date || '日期待定')} · ${fmt(latest.total, 1)} 分` : '录入模考后，按真实总分计算目标差距；空白不会当作 0 分。'}</p></div><a class="panel-link" href="#/mocks">记录或复盘成绩 →</a></div><div class="score-target-grid">${scoreTargets}</div></section>
-    <section class="quick-start-section"><div class="quick-start-heading"><div><div class="eyebrow muted">QUICK START</div><h2>我应该先做什么？</h2></div><button type="button" class="text-button" data-action="open-onboarding">第一次使用？3 分钟完成初始化 →</button></div><div class="quick-start-grid"><a class="quick-start-card" href="#/profile"><span class="quick-start-icon icon-profile">01</span><span class="quick-start-copy"><strong>完善个人报考条件</strong><small>${completedProfileFields} / ${profileFields.length} 项有内容</small></span><span class="quick-start-arrow">↗</span></a><a class="quick-start-card" href="#/plan"><span class="quick-start-icon icon-plan">02</span><span class="quick-start-copy"><strong>安排今天的学习</strong><small>${todayPlan ? `从 Day ${todayPlan.day} 开始 · ${escapeHtml(todayPlan.focus)}` : '打开 50 天学习计划'}</small></span><span class="quick-start-arrow">↗</span></a><button type="button" class="quick-start-card" data-action="add-mock"><span class="quick-start-icon icon-mock">03</span><span class="quick-start-copy"><strong>记录一次模考</strong><small>${mocks.length ? `已有 ${mocks.length} 次真实记录，继续复盘` : '录入首场成绩，建立自己的起点'}</small></span><span class="quick-start-arrow">↗</span></button><a class="quick-start-card" href="#/positions"><span class="quick-start-icon icon-jobs">04</span><span class="quick-start-copy"><strong>浏览昌平历史岗位</strong><small>${dataset.positions.length} 条有来源样例 · 当前非全量</small></span><span class="quick-start-arrow">↗</span></a></div></section>
+    <section class="quick-start-section"><div class="quick-start-heading"><div><div class="eyebrow muted">QUICK START</div><h2>我应该先做什么？</h2></div><button type="button" class="text-button" data-action="open-onboarding">第一次使用？3 分钟完成初始化 →</button></div><div class="quick-start-grid"><a class="quick-start-card" href="#/profile"><span class="quick-start-icon icon-profile">01</span><span class="quick-start-copy"><strong>完善个人报考条件</strong><small>${completedProfileFields} / ${profileFields.length} 项有内容</small></span><span class="quick-start-arrow">↗</span></a><a class="quick-start-card" href="#/plan"><span class="quick-start-icon icon-plan">02</span><span class="quick-start-copy"><strong>安排今天的学习</strong><small>${todayPlan ? `从 Day ${todayPlan.day} 开始 · ${escapeHtml(todayPlan.focus)}` : '打开 50 天学习计划'}</small></span><span class="quick-start-arrow">↗</span></a><button type="button" class="quick-start-card" data-action="add-mock"><span class="quick-start-icon icon-mock">03</span><span class="quick-start-copy"><strong>记录一次模考</strong><small>${mocks.length ? `已有 ${mocks.length} 次真实记录，继续复盘` : '录入首场成绩，建立自己的起点'}</small></span><span class="quick-start-arrow">↗</span></button><a class="quick-start-card" href="#/positions"><span class="quick-start-icon icon-jobs">04</span><span class="quick-start-copy"><strong>浏览北京京考职位库</strong><small>${dataset.positions.length} 条有来源样例 · 当前覆盖 ${new Set(dataset.positions.map((position) => position.districtId).filter(Boolean)).size} 个区县</small></span><span class="quick-start-arrow">↗</span></a></div></section>
     ${scienceReminder}<section class="content-grid overview-grid"><article class="panel next-task-panel"><div class="panel-heading"><div><div class="eyebrow muted">STUDY PLAN</div><h2>${escapeHtml(dateNote)}</h2></div><a class="panel-link" href="#/plan">查看全部 50 天 →</a></div>${todayPlan ? `<div class="next-day"><div class="day-date"><strong>${String(todayPlan.day).padStart(2, '0')}</strong><small>${escapeHtml(fmtDate(todayPlan.date))}</small></div><div class="next-day-content"><div class="next-day-title"><strong>${escapeHtml(todayPlan.focus)}</strong>${chip(todayPlan.status, statusTone(todayPlan.status))}</div><p>${escapeHtml(todayPlan.coreTask)}</p><div class="task-tags"><span>▣ ${fmt(todayPlan.plannedQuestions)} 题</span><span>◷ ${fmt(todayPlan.plannedHours, 1)} 小时</span>${todayPlan.stage ? `<span>${escapeHtml(todayPlan.stage.replace(/^阶段\d+：/, ''))}</span>` : ''}</div></div></div><div class="task-footer"><span class="mini-progress-label">本日记录完成度</span><strong>${fmtPct(calculateDayCompletion(todayPlan))}</strong></div><div class="progress-track"><span style="width:${Math.round(calculateDayCompletion(todayPlan) * 100)}%"></span></div><a class="task-open" href="#/plan">记录今天的进度 <span>↗</span></a>` : `<div class="empty-state">工作簿中没有可显示的计划数据。</div>`}</article>
-      <article class="panel evidence-panel"><div class="panel-heading"><div><div class="eyebrow muted">EVIDENCE CHECK</div><h2>昌平竞争观察</h2></div><a class="panel-link" href="#/evidence">岗位时序与口径 →</a></div><div class="snapshot-list">${snapshotCards}<div class="snapshot-row snapshot-2026"><span class="snapshot-year">2026</span><div><strong>报道区平均竞争比 18.24:1</strong><small>报名时点快照 · 算法与分子未完整披露</small></div><span class="snapshot-ratio snapshot-unknown">不可直接比较</span></div></div><div class="notice notice-soft"><span>ⓘ</span><p>区级记录不能下放到岗位；岗位行是第三方“资格审查通过”快照，不等同最终报名、缴费或实考人数。</p></div></article>
+      ${cityCoveragePanel}
     </section>
     <section class="content-grid overview-grid"><article class="panel chart-panel"><div class="panel-heading"><div><div class="eyebrow muted">MOCK REVIEW</div><h2>模考分数走势</h2></div><a class="panel-link" href="#/mocks">进入模考复盘 →</a></div><div class="chart-summary">${latest ? `<strong>${fmt(latest.total, 1)}<small> 分</small></strong><span>${escapeHtml(latestTargetSummary)}</span>` : `<strong class="placeholder-value">尚未开始</strong><span>${escapeHtml(latestTargetSummary)}</span>`}</div>${chartSvg(mocks)}</article>${renderSevenDayPanel(weekly)}</section>
     <section class="notice notice-2027"><span class="notice-icon">◎</span><div><strong>2027年度定向选调和“优培计划”已发布，网上报名已于2026年9月23日18:00截止</strong><p>定向选调和优培计划Ⅰ类统一笔试计划于2026年10月17日9:00至11:30，成绩于2026年10月28日后查询；优培计划Ⅱ类招聘流程由各单位自行组织。普通京考职位表截至 ${escapeHtml(examStatusAsOf)} 尚未在官方目录检出——这只是本次检索结果，并非官方确认未发布。定向选调/优培与普通京考不是同一项目；2024–2026 岗位仅作历史参考。${sourceLink('beijing-2027-selection', '查看2027定向选调/优培公告 ↗')} ${sourceLink('beijing-index', '查看官方招考目录 ↗')}</p></div><a class="notice-close" data-action="dismiss-notice" href="#" aria-label="关闭">×</a></section>
@@ -760,6 +766,7 @@ function renderScience() {
   }).join('');
   return `<div class="page-body science-page"><div class="page-heading-row"><div><div class="eyebrow muted">FOUR SCIENCE SUBJECTS · SOURCED QUESTION BANK</div><h1>科学推理</h1><p>知识点学习、专项练习、限时模拟和错题复习会单独记录。现有原创练习保留发布；新收录题目均标注官方例题、回忆题或机构模拟来源。</p></div><div class="heading-actions"><button type="button" class="button button-primary" data-action="open-science-practice">开始自由练习</button><a class="button button-secondary" href="#/plan">安排学习任务</a></div></div>
     <div class="metric-grid science-metrics">${metric('练习题库', `${SCIENCE_QUESTION_BANK.length}<small> 道</small>`, `${questionCounts.official_outline_example} 道官方大纲例题 · ${questionCounts.recalled} 道回忆题 · ${questionCounts.third_party_mock} 道机构模拟 · ${questionCounts.original} 道现有原创`, '⚗', 'blue')}${metric('已作答', `${stats.attemptedCount}<small> 题</small>`, `${stats.completedSessionCount} 次练习完成`, '✓', 'mint')}${metric('实际正确率', fmtPct(stats.accuracy), stats.accuracy === null ? '暂无答案记录' : '按已提交答案计算', '◎', 'amber')}${metric('错题 / 收藏', `${mistakeIds.length}<small> / ${favoriteCount}</small>`, '错题和收藏独立保存', '☆', 'purple')}</div>
+    ${renderAptitudeRecords(APTITUDE_MODULES.find((module) => module.id === 'science'), aptitudeItemsForArea('科学推理'))}
     <section class="science-shortcuts">${activeSession ? `<a class="panel science-shortcut-card science-resume-card" href="#/aptitude/science?session=${encodeURIComponent(activeSession.id)}"><span>继续未完成训练 · ${activeSession.mode === 'exam' ? '限时模拟' : '专项练习'}</span><strong>第 ${activeSession.currentIndex + 1} / ${activeSession.questionIds.length} 题</strong><small>剩余答题和已选答案均已保存</small></a>` : ''}<button type="button" class="panel science-shortcut-card" data-action="open-science-practice" data-mode="mistakes"><span>错题复习</span><strong>${mistakeIds.length} 道</strong><small>仅从已记录错题中抽题</small></button><button type="button" class="panel science-shortcut-card" data-action="open-science-practice" data-mode="exam"><span>限时模拟</span><strong>自选题量与时长</strong><small>到时后停止答题，并保留已作答内容</small></button><a class="panel science-shortcut-card" href="#/plan"><span>学习计划</span><strong>把训练排进日程</strong><small>通过计划任务核验实际完成量</small></a></section>
     <section class="panel science-source-panel"><div class="science-panel-heading"><div><span class="eyebrow muted">SOURCE CATALOG</span><h2>官方与公开题源</h2><p>“官方大纲例题”来自考试大纲；“考生回忆版”和“机构模拟题”均明确标为非官方。</p></div><span>${SCIENCE_SOURCES.length} 个来源</span></div><div class="science-source-list">${sourceRows}</div></section>
     <div class="science-subject-grid">${subjects}</div>
@@ -768,31 +775,96 @@ function renderScience() {
 
 function renderAptitude() {
   const aptitude = dataset.aptitude.map((item, index) => ({ ...item, ...(storage.aptitudeLogs[index] || {}), index }));
-  const groups = new Map();
-  for (const item of aptitude) {
-    const area = item.area || '未分类';
-    if (!groups.has(area)) groups.set(area, []);
-    groups.get(area).push(item);
-  }
-  const cards = [...groups.entries()].map(([area, items], index) => {
-    const planned = items.reduce((sum, item) => sum + (item.plannedQuestions || 0), 0);
-    const hasAttempted = items.some((item) => Number.isFinite(item.attempted));
-    const done = hasAttempted ? items.reduce((sum, item) => sum + (Number.isFinite(item.attempted) ? item.attempted : 0), 0) : null;
-    const recorded = items.filter((item) => Number.isFinite(item.accuracy));
-    const accuracy = recorded.length ? recorded.reduce((sum, item) => sum + item.accuracy, 0) / recorded.length : null;
-    const accent = ['blue', 'mint', 'purple', 'amber'][index % 4];
-    return `<article class="panel skill-panel"><div class="skill-heading"><span class="skill-symbol skill-${accent}">${['文', '数', '推', '策'][index % 4]}</span><div><h2>${escapeHtml(area)}</h2><small>${items.length} 个训练子项</small></div><span class="skill-progress-value">${fmtPct(accuracy)}</span></div><div class="skill-progress-line"><span style="width:${Math.round(planned && Number.isFinite(done) ? done / planned * 100 : 0)}%"></span></div><div class="skill-stats"><span><strong>${fmt(done)}</strong> / ${fmt(planned)} 题</span><span>目标正确率 ${fmtPct(items[0]?.targetAccuracy)}</span></div><div class="skill-items">${items.slice(0, 5).map((item) => `<div class="skill-item"><span>${escapeHtml(item.item)}</span><span>${fmt(item.attempted)} / ${fmt(item.plannedQuestions)} 题</span><span>${fmtPct(item.accuracy)}</span>${button('记录', 'edit-aptitude', 'button button-quiet button-small', `data-index="${item.index}"`)}</div>`).join('')}${items.length > 5 ? `<small class="more-items">还有 ${items.length - 5} 个训练项 · 完整清单仍在 Excel 源表</small>` : ''}</div></article>`;
+  const modules = APTITUDE_MODULES.map((module) => ({
+    ...module,
+    items: aptitude.filter((item) => item.area === module.area),
+  })).filter((module) => module.items.length);
+  const scienceStats = getScienceStats(storage.scienceStudy);
+  const overall = combineAptitudeSummary(summarizeAptitudeItems(aptitude), scienceStats);
+  const modulesWithRecords = modules.filter((module) => summarizeAptitudeItems(module.items).hasManualRecords
+    || (module.id === 'science' && scienceStats.attemptedCount > 0)).length;
+  const cards = modules.map((module) => {
+    const manualSummary = summarizeAptitudeItems(module.items);
+    const summary = module.id === 'science' ? combineAptitudeSummary(manualSummary, scienceStats) : manualSummary;
+    const href = module.id === 'science'
+      ? '#/aptitude/science'
+      : module.id === 'general-knowledge'
+        ? '#/aptitude/general-knowledge'
+        : `#/aptitude/module/${module.id}`;
+    return `<a class="panel aptitude-entry-card" href="${href}"><span class="aptitude-entry-icon module-${module.id}">${escapeHtml(module.symbol)}</span><span class="aptitude-entry-copy"><strong>${escapeHtml(module.area)}</strong><small>${escapeHtml(module.hint)}</small></span><span class="aptitude-entry-stat aptitude-entry-accuracy"><strong>${fmtPct(summary.accuracy)}</strong><small>${module.id === 'science' ? '合并正确率' : '手动正确率'}</small></span><span class="aptitude-entry-stat aptitude-entry-attempts"><strong>${summary.hasAttempted ? fmt(summary.attemptedCount) : '待记录'}</strong><small>已录题量</small></span><b aria-hidden="true">↗</b></a>`;
   }).join('');
-  const hasAnyAttempted = aptitude.some((item) => Number.isFinite(item.attempted));
-  const totalDone = hasAnyAttempted ? aptitude.reduce((sum, item) => sum + (Number.isFinite(item.attempted) ? item.attempted : 0), 0) : null;
-  const totalTarget = aptitude.reduce((sum, item) => sum + (item.plannedQuestions || 0), 0);
-  const accuracyValues = aptitude.filter((item) => Number.isFinite(item.accuracy)).map((item) => item.accuracy);
-  const overallAccuracy = accuracyValues.length ? accuracyValues.reduce((sum, value) => sum + value, 0) / accuracyValues.length : null;
-  return `<div class="page-body"><div class="page-heading-row"><div><div class="eyebrow muted">SIX OFFICIAL SECTIONS + TRACKED SUBSKILLS</div><h1>行测能力训练</h1><p>从行测子模块进入专项学习；其他训练项继续按工作簿计划记录。</p></div><a class="button button-secondary" href="#/plan">查看 50 天计划 →</a></div><section class="aptitude-modules" aria-label="行测子模块"><a class="panel aptitude-module-card" href="#/aptitude/science"><span class="aptitude-module-icon science">⚗</span><span class="aptitude-module-copy"><strong>科学推理</strong><small>知识学习、专项练习、限时模拟和错题复习</small></span><b aria-hidden="true">↗</b></a><a class="panel aptitude-module-card" href="#/aptitude/general-knowledge"><span class="aptitude-module-icon general-knowledge">常</span><span class="aptitude-module-copy"><strong>常识判断</strong><small>知识点与题目内容后续补充</small></span><span class="aptitude-module-status">内容筹备中</span></a></section><div class="metric-grid three-metrics">${metric('训练子项', `${dataset.aptitude.length}<small> 项</small>`, `${groups.size} 个工作簿训练分类`, '⌁', 'blue')}${metric('已记录题量', `${fmt(totalDone)}<small> 题</small>`, `训练目标 ${Number(totalTarget).toLocaleString('zh-CN')} 题`, '▤', 'mint')}${metric('实际正确率', fmtPct(overallAccuracy), overallAccuracy === null ? '尚无练习记录；不是 0%' : '已记录训练项均值', '◎', 'amber')}</div><div class="skill-grid">${cards}</div><div class="notice notice-soft"><span>ⓘ</span><p>工作簿内计划题量可见；模板的零值按占位值处理，实际练习数据需另行记录。点击“记录”可更新单项训练。</p></div></div>`;
+  const onlineAccuracyNote = scienceStats.accuracy === null
+    ? '科学推理尚无站内答题记录'
+    : `站内已答 ${scienceStats.attemptedCount} 题 · ${fmt(scienceStats.correctCount)} 题答对`;
+  return `<div class="page-body aptitude-page"><div class="page-heading-row"><div><div class="eyebrow muted">APTITUDE · MODULE OVERVIEW</div><h1>行测能力</h1><p>先看训练总览，再进入对应模块学习、练习或手动更新记录。</p></div><a class="button button-secondary" href="#/plan">查看学习计划 →</a></div><section class="metric-grid four-metrics aptitude-overview" aria-label="行测训练总览">${metric('整体正确率', fmtPct(overall.accuracy), overall.accuracy === null ? '录入练习记录后统计' : `按 ${fmt(overall.accuracyQuestionCount)} 道有正确数依据的题量合并`, '◎', 'blue')}${metric('累计记录题量', overall.hasAttempted ? `${fmt(overall.attemptedCount)}<small> 题</small>` : '待记录', `${overall.hasManualRecordsCount} 个手动训练子项已填写`, '▤', 'mint')}${metric('站内答题正确率', fmtPct(scienceStats.accuracy), onlineAccuracyNote, '✓', 'amber')}${metric('已记录模块', `${modulesWithRecords}<small> / ${modules.length}</small>`, '包含手动记录和站内答题', '⌁', 'purple')}</section><section class="aptitude-module-section"><div class="aptitude-section-heading"><div><span class="eyebrow muted">MODULES</span><h2>行测模块</h2></div><span>${modules.length} 个入口</span></div><div class="aptitude-entry-grid">${cards}</div></section><div class="notice notice-soft"><span>ⓘ</span><p>手动正确率按训练子项的已录题量加权，并与科学推理站内作答合并；不要把站内已答题再次计入手动累计。</p></div></div>`;
+}
+
+function summarizeAptitudeItems(items) {
+  const attemptedItems = items.filter((item) => Number.isFinite(item.attempted));
+  const accuracyItems = items.filter((item) => Number.isFinite(item.attempted) && item.attempted > 0 && Number.isFinite(item.accuracy));
+  const attemptedCount = attemptedItems.reduce((sum, item) => sum + item.attempted, 0);
+  const accuracyQuestionCount = accuracyItems.reduce((sum, item) => sum + item.attempted, 0);
+  const correctEstimate = accuracyItems.reduce((sum, item) => sum + item.attempted * item.accuracy, 0);
+  return {
+    hasAttempted: attemptedItems.length > 0,
+    attemptedCount,
+    accuracyQuestionCount,
+    correctEstimate,
+    accuracy: accuracyQuestionCount ? correctEstimate / accuracyQuestionCount : null,
+    hasManualRecords: items.some((item) => Number.isFinite(item.attempted) || Number.isFinite(item.accuracy)),
+    hasManualRecordsCount: items.filter((item) => Number.isFinite(item.attempted) || Number.isFinite(item.accuracy)).length,
+    plannedCount: items.reduce((sum, item) => sum + (Number(item.plannedQuestions) || 0), 0),
+  };
+}
+
+function combineAptitudeSummary(manualSummary, scienceStats) {
+  const accuracyQuestionCount = manualSummary.accuracyQuestionCount + scienceStats.attemptedCount;
+  const correctEstimate = manualSummary.correctEstimate + scienceStats.correctCount;
+  const attemptedCount = manualSummary.attemptedCount + scienceStats.attemptedCount;
+  return {
+    ...manualSummary,
+    attemptedCount,
+    hasAttempted: manualSummary.hasAttempted || scienceStats.attemptedCount > 0,
+    accuracyQuestionCount,
+    correctEstimate,
+    accuracy: accuracyQuestionCount ? correctEstimate / accuracyQuestionCount : null,
+  };
+}
+
+function aptitudeItemsForArea(area) {
+  return dataset.aptitude
+    .map((item, index) => ({ ...item, ...(storage.aptitudeLogs[index] || {}), index }))
+    .filter((item) => item.area === area);
+}
+
+function renderAptitudeRecords(module, items) {
+  const summary = summarizeAptitudeItems(items);
+  const rows = items.map((item) => `<article class="aptitude-record-row"><div class="aptitude-record-copy"><strong>${escapeHtml(item.item)}</strong><small>目标 ${fmtPct(item.targetAccuracy)} · 已录 ${fmt(item.attempted)} / ${fmt(item.plannedQuestions)} 题${Number.isFinite(item.retakeAccuracy) ? ` · 二刷 ${fmtPct(item.retakeAccuracy)}` : ''}</small></div><span class="aptitude-record-accuracy">${fmtPct(item.accuracy)}</span>${button('记录', 'edit-aptitude', 'button button-quiet button-small', `data-index="${item.index}"`)}</article>`).join('');
+  return `<section class="panel aptitude-record-panel"><div class="panel-heading"><div><div class="eyebrow muted">MANUAL PRACTICE LOG</div><h2>${escapeHtml(module.area)}训练记录</h2><p>手动填写累计题量和当前正确率；相同站内作答请勿重复录入。</p></div><span class="panel-hint">${summary.hasManualRecordsCount} / ${items.length} 项已录</span></div>${rows ? `<div class="aptitude-record-list">${rows}</div>` : '<div class="empty-state">暂无可记录的训练项。</div>'}</section>`;
+}
+
+function renderAptitudeModuleContent(module) {
+  return `<section class="aptitude-content-grid" aria-label="${escapeHtml(module.area)}学习内容"><article class="panel aptitude-content-card"><span class="aptitude-content-icon">知</span><div><span class="eyebrow muted">KNOWLEDGE</span><h2>知识点学习</h2><p>本模块的知识点目录和讲解内容正在整理。</p></div><span class="aptitude-module-status">内容待补</span></article><article class="panel aptitude-content-card"><span class="aptitude-content-icon practice">题</span><div><span class="eyebrow muted">PRACTICE</span><h2>题目练习</h2><p>题库准备完成后，可在这里按知识点刷题并查看解析。</p></div><span class="aptitude-module-status">题库待补</span></article></section>`;
+}
+
+function renderAptitudeModule(moduleId) {
+  const module = APTITUDE_MODULES.find((item) => item.id === moduleId);
+  if (!module || module.id === 'science') {
+    return `<div class="page-body"><div class="empty-state">没有找到这个行测模块。</div><a class="button button-secondary" href="#/aptitude">返回行测能力</a></div>`;
+  }
+  const items = aptitudeItemsForArea(module.area);
+  const summary = summarizeAptitudeItems(items);
+  const accuracyProgress = summary.plannedCount && summary.hasAttempted
+    ? Math.min(summary.attemptedCount / summary.plannedCount, 1)
+    : null;
+  const progressNote = summary.hasAttempted
+    ? `${fmt(summary.attemptedCount)} / ${fmt(summary.plannedCount)} 题`
+    : `尚未记录 · 计划 ${fmt(summary.plannedCount)} 题`;
+  return `<div class="page-body aptitude-module-page"><div class="page-heading-row"><div><div class="eyebrow muted">APTITUDE MODULE</div><h1>${escapeHtml(module.area)}</h1><p>${escapeHtml(module.hint)}。可以先浏览站内学习入口，也可以手动记录已有训练。</p></div><a class="button button-secondary" href="#/aptitude">返回行测总览 →</a></div><div class="metric-grid three-metrics aptitude-module-overview">${metric('手动记录正确率', fmtPct(summary.accuracy), summary.accuracy === null ? '录入题量和正确率后统计' : `按 ${fmt(summary.accuracyQuestionCount)} 道有正确率记录的题量加权`, '◎', 'blue')}${metric('手动记录题量', summary.hasAttempted ? `${fmt(summary.attemptedCount)}<small> 题</small>` : '待记录', `共 ${items.length} 个训练子项`, '▤', 'mint')}${metric('计划题量进度', accuracyProgress === null ? '待记录' : fmtPct(accuracyProgress), progressNote, '↗', 'amber')}</div>${renderAptitudeModuleContent(module)}${renderAptitudeRecords(module, items)}</div>`;
 }
 
 function renderGeneralKnowledge() {
-  return `<div class="page-body"><div class="page-heading-row"><div><div class="eyebrow muted">APTITUDE · GENERAL KNOWLEDGE</div><h1>常识判断</h1><p>本模块已加入行测能力，知识点和练习内容将在后续补充。</p></div><a class="button button-secondary" href="#/aptitude">返回行测能力 →</a></div><section class="panel aptitude-empty-state"><span aria-hidden="true">⌁</span><h2>内容筹备中</h2><p>后续将补充常识判断知识点、官方例题和真题训练。</p></section></div>`;
+  return renderAptitudeModule('general-knowledge');
 }
 
 function renderEssay() {
@@ -833,11 +905,49 @@ function filteredPositions() {
   return filterAndSortPositions(dataset.positions, { ...filters, sortBy: jobSort });
 }
 
+function decisionScopePositions({ districtId = filters.districtId, year = filters.year } = {}) {
+  return dataset.positions.filter((position) => (districtId === 'all' || position.districtId === districtId)
+    && (year === 'all' || String(position.year) === String(year)));
+}
+
+function renderDecisionScope({ districtControlId = 'decision-district', yearControlId = 'decision-year', yearValue = filters.year, allowAllYears = true } = {}) {
+  const districts = Array.isArray(dataset.districts) ? dataset.districts : [];
+  const districtNames = new Map(districts.map((district) => [district.id, district.name]));
+  const currentDistrict = filters.districtId;
+  const currentYear = String(yearValue);
+  const scopedRows = decisionScopePositions({ districtId: currentDistrict, year: currentYear });
+  const selectedDistrictName = currentDistrict === 'all' ? '全部区县' : districtNames.get(currentDistrict) || '区县待核';
+  const selectedYearName = currentYear === 'all' ? '全部年度' : `${currentYear} 年`;
+  const districtOptions = districts.map((district) => {
+    const count = dataset.positions.filter((position) => position.districtId === district.id
+      && (currentYear === 'all' || String(position.year) === currentYear)).length;
+    const status = count ? `${count} 条样例` : '待补逐岗数据';
+    return `<option value="${escapeHtml(district.id)}" ${currentDistrict === district.id ? 'selected' : ''}>${escapeHtml(district.name)} · ${status}</option>`;
+  }).join('');
+  const yearOptions = [2024, 2025, 2026].map((year) => {
+    const count = dataset.positions.filter((position) => (currentDistrict === 'all' || position.districtId === currentDistrict)
+      && Number(position.year) === year).length;
+    return `<option value="${year}" ${currentYear === String(year) ? 'selected' : ''}>${year} 年${count ? ` · ${count} 条样例` : ' · 待补逐岗数据'}</option>`;
+  }).join('');
+  return `<section class="decision-scope-panel" aria-label="北京京考职位决策范围"><div class="decision-scope-copy"><span class="eyebrow muted">BEIJING EXAM · DECISION SCOPE</span><strong>北京京考职位决策范围</strong><small>职位库、选岗助手与分数情景按此范围筛选；比较页按你手动选中的岗位，可跨区、跨年对照。</small></div><div class="decision-scope-controls"><label><span>行政区</span><select id="${districtControlId}" aria-label="职位决策区县"><option value="all" ${currentDistrict === 'all' ? 'selected' : ''}>全部 16 区</option>${districtOptions}</select></label><label><span>招考年度</span><select id="${yearControlId}" aria-label="职位决策年度">${allowAllYears ? `<option value="all" ${currentYear === 'all' ? 'selected' : ''}>全部年度</option>` : ''}${yearOptions}</select></label></div><div class="decision-scope-summary"><strong>${scopedRows.length}</strong><span>当前范围职位样例</span><small>${escapeHtml(selectedDistrictName)} · ${escapeHtml(selectedYearName)}；空白表示尚未收录，不代表没有招录</small></div></section>`;
+}
+
 function renderPositions() {
   const allPositions = filteredPositions();
+  const positionsInScope = decisionScopePositions();
+  const emptyPositionText = positionsInScope.length
+    ? '当前筛选条件下没有匹配的职位样例。'
+    : '当前区县 / 年度尚无可追溯的逐岗样例；这表示数据待补，不代表没有招录。';
   const pageState = paginateItems(allPositions, jobPage, 25);
   jobPage = pageState.page;
   const positions = pageState.items;
+  const districts = Array.isArray(dataset.districts) ? dataset.districts : [];
+  const positionCountsByDistrict = new Map(districts.map((district) => [
+    district.id,
+    dataset.positions.filter((position) => position.districtId === district.id
+      && (filters.year === 'all' || String(position.year) === filters.year)).length,
+  ]));
+  const districtNameById = new Map(districts.map((district) => [district.id, district.name]));
   const matchLabels = {
     explicit: '明确列入 1204 / 1252',
     'manual-review': '可能相关 · 人工核对',
@@ -847,9 +957,13 @@ function renderPositions() {
   };
   const rows = positions.map((position, index) => {
     const majorMatch = classifyPublicManagementMatch(position);
-    return `<tr style="--row-index:${Math.min(index, 6)}"><td><span class="year-pill">${position.year}</span></td><td><strong>${escapeHtml(position.unit)}</strong><small class="cell-secondary">${escapeHtml(position.orgType)} · ${escapeHtml(position.jobType || '类别待核')}</small></td><td><button type="button" class="position-title-link" data-action="open-job" data-code="${escapeHtml(position.code)}">${escapeHtml(position.title)}</button><small class="cell-secondary mono">${escapeHtml(position.code)}</small></td><td>${fmt(position.recruitCount)} 人</td><td><span class="major-match-badge major-match-${majorMatch.status}">${matchLabels[majorMatch.status]}</span><span class="truncate-cell">${escapeHtml(position.majorText || '待核验')}</span></td><td><div class="position-evidence-cell">${positionEvidenceMarkup(position)}${positionCompletenessMarkup(position)}<small class="cell-secondary">${escapeHtml(position.verification || '核验状态未知')}</small></div></td><td><div class="row-actions"><button type="button" class="icon-button ${storage.favorites.includes(position.code) ? 'favorited' : ''}" data-action="favorite" data-code="${escapeHtml(position.code)}" aria-label="收藏职位">${storage.favorites.includes(position.code) ? '★' : '☆'}</button><button type="button" class="icon-button" data-action="compare" data-code="${escapeHtml(position.code)}" aria-label="加入比较">⇄</button></div></td></tr>`;
+    const positionKey = positionIdentity(position);
+    const isFavorite = hasPositionReference(storage.favorites, position, dataset.positions);
+    const districtName = districtNameById.get(position.districtId) || '区县待核';
+    return `<tr style="--row-index:${Math.min(index, 6)}"><td><span class="year-pill">${position.year}</span></td><td><strong>${escapeHtml(position.unit)}</strong><small class="cell-secondary">${escapeHtml(districtName)} · ${escapeHtml(position.orgType)} · ${escapeHtml(position.jobType || '类别待核')}</small></td><td><button type="button" class="position-title-link" data-action="open-job" data-position-key="${escapeHtml(positionKey)}">${escapeHtml(position.title)}</button><small class="cell-secondary mono">${escapeHtml(position.code)}</small></td><td>${fmt(position.recruitCount)} 人</td><td><span class="major-match-badge major-match-${majorMatch.status}">${matchLabels[majorMatch.status]}</span><span class="truncate-cell">${escapeHtml(position.majorText || '待核验')}</span></td><td><div class="position-evidence-cell">${positionEvidenceMarkup(position)}${positionCompletenessMarkup(position)}<small class="cell-secondary">${escapeHtml(position.verification || '核验状态未知')}</small></div></td><td><div class="row-actions"><button type="button" class="icon-button ${isFavorite ? 'favorited' : ''}" data-action="favorite" data-position-key="${escapeHtml(positionKey)}" aria-label="收藏职位">${isFavorite ? '★' : '☆'}</button><button type="button" class="icon-button" data-action="compare" data-position-key="${escapeHtml(positionKey)}" aria-label="加入比较">⇄</button></div></td></tr>`;
   }).join('');
-  const publicManagement = summarizePublicManagementPositions(dataset.positions);
+  const districtScopedPositions = decisionScopePositions();
+  const publicManagement = summarizePublicManagementPositions(districtScopedPositions);
   const publicManagementTotals = publicManagement.reduce((total, item) => ({
     positions: total.positions + item.positionCount,
     recruits: total.recruits + item.recruitCount,
@@ -862,18 +976,24 @@ function renderPositions() {
   const publicManagementRows = publicManagement.map((item) => `<tr><th scope="row">${item.year}</th><td><strong>${item.positionCount}</strong> 岗 / ${item.recruitCount} 人</td><td><strong>${item.manualReviewCount}</strong> 岗 / ${item.manualReviewRecruitCount} 人</td><td>${item.notListedCount} / ${item.unknownCount} / ${item.unrestrictedCount}</td><td>区直 ${item.byOrgType['区直']} · 街道 ${item.byOrgType['街道']} · 镇 ${item.byOrgType['镇']}</td><td>本科 1204：${item.byMajorType.undergraduate1204}<br/>硕士 1204：${item.byMajorType.graduate1204}<br/>专硕 1252：${item.byMajorType.professional1252}</td></tr>`).join('');
   const manualReviewActive = filters.majorTopic === 'public-management-review';
   const publicManagementPanel = `<section class="major-topic-panel" aria-labelledby="major-topic-title"><div class="major-topic-heading"><div><div class="eyebrow muted">PUBLIC ADMINISTRATION · CODED EXAMPLES</div><h2 id="major-topic-title">公共管理专业专题</h2><p>仅本科 1204、研究生 1204 / 1252 计为明确列入；门类 12 和 1204 下级专业列为可能相关，需人工核对。</p></div><div class="major-topic-actions"><button type="button" class="button ${filters.majorTopic === 'public-management' ? 'button-primary' : 'button-secondary'}" data-action="toggle-major-focus" aria-pressed="${filters.majorTopic === 'public-management'}">${filters.majorTopic === 'public-management' ? '正在看明确列入 · 显示全部' : '仅看明确列入 1204 / 1252'}</button><button type="button" class="button ${manualReviewActive ? 'button-primary' : 'button-secondary'}" data-action="toggle-major-review" aria-pressed="${manualReviewActive}">${manualReviewActive ? '正在看可能相关 · 显示全部' : '仅看可能相关 · 人工核对'}</button></div></div><div class="major-topic-metrics"><div><span>明确列入 1204 / 1252</span><strong>${publicManagementTotals.positions}<small> 岗 · ${publicManagementTotals.recruits} 人</small></strong></div><div><span>可能相关 · 需人工核对</span><strong>${publicManagementTotals.manualReview}<small> 岗 · ${publicManagementTotals.manualReviewRecruits} 人</small></strong></div><div><span>未列入目标代码</span><strong>${publicManagementTotals.notListed}<small> 岗</small></strong></div><div><span>专业不限</span><strong>${publicManagementTotals.unrestricted}<small> 岗</small></strong></div><div><span>专业文本缺失</span><strong>${publicManagementTotals.unknown}<small> 岗</small></strong></div></div><div class="table-scroll"><table class="data-table major-topic-table"><thead><tr><th>年度</th><th>明确列入（岗 / 人）</th><th>可能相关待核（岗 / 人）</th><th>未列入 / 缺失 / 不限</th><th>明确列入的单位类型</th><th>明确代码拆分</th></tr></thead><tbody>${publicManagementRows || '<tr><td colspan="6">暂无符合条件的样例记录</td></tr>'}</tbody></table></div><div class="major-topic-note">“未列入 / 缺失 / 不限”按此顺序显示；管理学门类和下级专业不会自动视为符合，所有统计都不能替代官方资格条件核对。</div></section>`;
-  const count2024 = dataset.positions.filter((position) => Number(position.year) === 2024).length;
-  const count2025 = dataset.positions.filter((position) => Number(position.year) === 2025).length;
-  const positions2026 = dataset.positions.filter((position) => Number(position.year) === 2026);
-  const count2026 = positions2026.length;
-  const hires2026 = positions2026.reduce((sum, position) => sum + (Number(position.recruitCount) || 0), 0);
-  const summary2026 = dataset.sources.find((source) => source.sourceId === 'huatu-2026-list');
-  const summaryPositionCount2026 = Number(summary2026?.reportedPositionCount) || count2026;
-  const summaryRecruitCount2026 = Number(summary2026?.reportedRecruitCount) || hires2026;
-  const missingPositionCount2026 = Math.max(0, summaryPositionCount2026 - count2026);
-  const missingRecruitCount2026 = Math.max(0, summaryRecruitCount2026 - hires2026);
-  const crossCount2025 = dataset.positions.filter((position) => Number(position.year) === 2025 && position.crossVerified === true).length;
-  const singleCount2025 = dataset.positions.filter((position) => Number(position.year) === 2025 && position.crossVerified === false).length;
+  const countForDistrictYear = (districtId, year) => dataset.positions.filter((position) => position.districtId === districtId && Number(position.year) === year).length;
+  const hiresForDistrictYear = (districtId, year) => dataset.positions
+    .filter((position) => position.districtId === districtId && Number(position.year) === year)
+    .reduce((sum, position) => sum + (Number(position.recruitCount) || 0), 0);
+  const populatedDistricts = districts.filter((district) => (positionCountsByDistrict.get(district.id) || 0) > 0);
+  const districtCoverage = populatedDistricts.map((district) => `${district.name} ${positionCountsByDistrict.get(district.id)} 条`).join('、');
+  const unassignedCount = dataset.positions.filter((position) => !position.districtId).length;
+  const yearDistrictCoverage = [2024, 2025, 2026].map((year) => {
+    const regions = districts
+      .map((district) => ({
+        name: district.name,
+        count: countForDistrictYear(district.id, year),
+        recruits: hiresForDistrictYear(district.id, year),
+      }))
+      .filter((district) => district.count > 0)
+      .map((district) => `${district.name.replace(/区$/u, '')} ${district.count} 条/${district.recruits} 人`);
+    return `${year} 年 ${regions.join('、') || '暂无逐岗样例'}`;
+  }).join('；');
   const orgTypes = ['区直', '街道', '镇', '垂直/驻区'].filter((type) => dataset.positions.some((position) => position.orgType === type));
   const jobTypes = [...new Set(dataset.positions.map((position) => position.jobType).filter(Boolean))].sort((left, right) => left.localeCompare(right, 'zh-CN'));
   const sortOptions = [['year-desc', '年度（新→旧）'], ['recruit-desc', '招录人数（多→少）'], ['unit-asc', '单位名称（A→Z）'], ['title-asc', '职位名称（A→Z）']];
@@ -902,19 +1022,22 @@ function renderPositions() {
     ? `<nav class="position-pagination" aria-label="职位列表分页"><span class="pagination-summary" aria-live="polite">显示 ${pageState.start}–${pageState.end} 条，共 ${pageState.total} 条</span><div class="pagination-controls"><button type="button" class="button button-secondary" data-action="positions-page" data-direction="previous" data-page="${pageState.page - 1}" aria-label="上一页" ${pageState.page <= 1 ? 'disabled' : ''}>← 上一页</button><span>第 ${pageState.page} / ${pageState.totalPages} 页</span><button type="button" class="button button-secondary" data-action="positions-page" data-direction="next" data-page="${pageState.page + 1}" aria-label="下一页" ${pageState.page >= pageState.totalPages ? 'disabled' : ''}>下一页 →</button></div></nav>`
     : `<div class="position-pagination"><span class="pagination-summary">显示 ${pageState.start}–${pageState.end} 条，共 ${pageState.total} 条</span></div>`;
   return `<div class="page-body">
-    <div class="page-heading-row"><div><div class="eyebrow muted">2024 — 2026 · CANDIDATE SAMPLE</div><h1>昌平职位库</h1><p>目前有 ${dataset.positions.length} 条可追溯候选；2024 年收录 ${count2024} 条镜像行，2025 年收录 ${count2025} 条镜像明细，2026 年收录 ${count2026} 条逐岗明细。年度官方分母未验证，不代表昌平区全量。</p></div><a class="button button-secondary" href="#/sources">了解数据覆盖 →</a></div>
-    <div class="notice notice-warning"><span>!</span><p>2024 年二手来源汇总存在 93/142、95/197、97/199 三种口径；2025 年 ${crossCount2025} 条明细在两处二手镜像逐字段一致，另 ${singleCount2025} 条只在单一镜像可见。2026 年已收录 ${count2026} 条逐岗镜像明细 / ${hires2026} 人；华图分类页汇总 ${summaryPositionCount2026} 岗 / ${summaryRecruitCount2026} 人，仍有 ${missingPositionCount2026} 岗 / ${missingRecruitCount2026} 人尚未取得逐岗明细。均不是官方核验。报考前仍须查看官方原表，“公共管理”摘要也不代表你满足岗位资格。${sourceLink('huatu-2026-list', '查看华图汇总 ↗')}</p></div>
+    <div class="page-heading-row"><div><div class="eyebrow muted">BEIJING CIVIL SERVICE EXAM · 2024 — 2026</div><h1>职位库</h1><p>北京全市职位决策入口：当前收录 ${dataset.positions.length} 条逐岗候选，${populatedDistricts.length} / ${districts.length} 个区已有样例（${districtCoverage || '暂无已归类样例'}）；另有 ${unassignedCount} 条区县待核。空白区县是待补数据，不代表没有招录。</p></div><a class="button button-secondary" href="#/sources">了解数据覆盖 →</a></div>
+    ${renderDecisionScope({ districtControlId: 'job-district', yearControlId: 'job-year' })}
+    <div class="notice notice-soft"><span>ⓘ</span><p>各年度当前可追溯样例：${yearDistrictCoverage}。职位行尚未完成全市官方原表逐码核验；汇总口径差异、来源等级和缺失条件在覆盖中心与每条职位记录中保留，不把样例数当作年度全量或竞争率。</p></div>
     ${publicManagementPanel}
-    <div class="panel table-panel job-panel"><div class="job-filterbar"><label class="searchbox"><span>⌕</span><input id="job-search" type="search" placeholder="搜单位、职位、专业或代码" value="${escapeHtml(filters.query)}" autocomplete="off"/><kbd>⌘ K</kbd></label><select id="job-year" aria-label="招考年度"><option value="all" ${filters.year === 'all' ? 'selected' : ''}>全部年度</option>${[2024, 2025, 2026].map((year) => `<option value="${year}" ${filters.year === String(year) ? 'selected' : ''}>${year} 年</option>`).join('')}</select><select id="job-type" aria-label="单位类型"><option value="all" ${filters.orgType === 'all' ? 'selected' : ''}>全部单位类型</option>${orgTypes.map((type) => `<option value="${escapeHtml(type)}" ${filters.orgType === type ? 'selected' : ''}>${escapeHtml(type)}</option>`).join('')}</select><select id="job-jobtype" aria-label="职位类别"><option value="all" ${filters.jobType === 'all' ? 'selected' : ''}>全部职位类别</option>${jobTypes.map((type) => `<option value="${escapeHtml(type)}" ${filters.jobType === type ? 'selected' : ''}>${escapeHtml(type)}</option>`).join('')}</select><select id="job-sort" aria-label="职位排序">${sortOptions.map(([value, label]) => `<option value="${value}" ${jobSort === value ? 'selected' : ''}>${escapeHtml(label)}</option>`).join('')}</select><span class="filter-count">${allPositions.length} 条结果</span></div>${advancedFilters}
-    <div class="table-scroll"><table class="data-table job-table"><thead><tr><th>年度</th><th>招录单位</th><th>职位名称 / 代码</th><th>人数</th><th>专业条件片段</th><th>来源等级 / 数据完整度</th><th></th></tr></thead><tbody>${rows || `<tr><td colspan="7"><div class="table-empty compact-empty">没有匹配的样例职位。</div></td></tr>`}</tbody></table></div>${pagination}<div class="table-footnote">来源等级反映证据性质；数据完整度按 8 类信息是否可回查计算，两者互不替代。悬停完整度标签可看缺失项；职位数和招录数只表示可见候选，缺失值以“—”呈现，不按 0 人处理。</div></div></div>`;
+    <div class="panel table-panel job-panel"><div class="job-filterbar"><label class="searchbox"><span>⌕</span><input id="job-search" type="search" placeholder="搜单位、职位、专业或代码" value="${escapeHtml(filters.query)}" autocomplete="off"/><kbd>⌘ K</kbd></label><select id="job-type" aria-label="单位类型"><option value="all" ${filters.orgType === 'all' ? 'selected' : ''}>全部单位类型</option>${orgTypes.map((type) => `<option value="${escapeHtml(type)}" ${filters.orgType === type ? 'selected' : ''}>${escapeHtml(type)}</option>`).join('')}</select><select id="job-jobtype" aria-label="职位类别"><option value="all" ${filters.jobType === 'all' ? 'selected' : ''}>全部职位类别</option>${jobTypes.map((type) => `<option value="${escapeHtml(type)}" ${filters.jobType === type ? 'selected' : ''}>${escapeHtml(type)}</option>`).join('')}</select><select id="job-sort" aria-label="职位排序">${sortOptions.map(([value, label]) => `<option value="${value}" ${jobSort === value ? 'selected' : ''}>${escapeHtml(label)}</option>`).join('')}</select><span class="filter-count">${allPositions.length} 条结果</span></div>${advancedFilters}
+    <div class="table-scroll"><table class="data-table job-table"><thead><tr><th>年度</th><th>招录单位</th><th>职位名称 / 代码</th><th>人数</th><th>专业条件片段</th><th>来源等级 / 数据完整度</th><th></th></tr></thead><tbody>${rows || `<tr><td colspan="7"><div class="table-empty compact-empty">${escapeHtml(emptyPositionText)}</div></td></tr>`}</tbody></table></div>${pagination}<div class="table-footnote">来源等级反映证据性质；数据完整度按 8 类信息是否可回查计算，两者互不替代。悬停完整度标签可看缺失项；职位数和招录数只表示可见候选，缺失值以“—”呈现，不按 0 人处理。</div></div></div>`;
 }
 
 function renderCompare() {
-  const selected = storage.compared.map((code) => dataset.positions.find((position) => position.code === code)).filter(Boolean);
-  if (!selected.length) return `<div class="page-body"><div class="page-heading-row"><div><div class="eyebrow muted">SIDE-BY-SIDE REVIEW</div><h1>岗位比较</h1><p>从职位库逐项加入岗位，最多同时比较 5 个。</p></div><a href="#/positions" class="button button-primary">前往职位库选岗位 →</a></div><div class="panel empty-compare"><span class="empty-compare-icon">⇄</span><h2>先挑几个岗位放在一起看</h2><p>比较表会展示单位、职位条件、来源与已知数据空缺，不为缺失字段打分。</p><a href="#/positions" class="button button-secondary">浏览候选职位</a></div></div>`;
+  const selected = storage.compared.map((reference) => findPositionByReference(dataset.positions, reference)).filter(Boolean);
+  if (!selected.length) return `<div class="page-body"><div class="page-heading-row"><div><div class="eyebrow muted">BEIJING · SIDE-BY-SIDE REVIEW</div><h1>岗位比较</h1><p>从北京全市职位库加入最多 5 个岗位；可跨区、跨年比较，但会明确展示范围和证据。</p></div><a href="#/positions" class="button button-primary">前往职位库选岗位 →</a></div><div class="panel empty-compare"><span class="empty-compare-icon">⇄</span><h2>先挑几个岗位放在一起看</h2><p>比较表会展示区县、年度、单位、职位条件、来源与已知数据空缺，不为缺失字段打分。</p><a href="#/positions" class="button button-secondary">浏览北京候选职位</a></div></div>`;
+  const districtNameById = new Map((dataset.districts || []).map((district) => [district.id, district.name]));
   const qualifiedSnapshotsFor = (position) => dataset.observations.filter((item) => item.observationType === 'qualified_snapshot'
     && Number(item.year) === Number(position.year) && item.positionCode === position.code);
   const fields = [
+    ['区县', (position) => districtNameById.get(position.districtId) || '区县待核'],
     ['年度 / 代码', (position) => `${position.year} · ${position.code}`],
     ['单位 / 类型', (position) => `${position.unit} · ${position.orgType}`],
     ['职位', (position) => position.title],
@@ -932,7 +1055,7 @@ function renderCompare() {
     ['历史进面线 / 安全垫', () => '暂无逐岗位可比样本'],
     ['来源状态', (position) => position.verification],
   ];
-  return `<div class="page-body"><div class="page-heading-row"><div><div class="eyebrow muted">SIDE-BY-SIDE REVIEW</div><h1>岗位比较</h1><p>已选 ${selected.length} / 5 个 · 缺失条件保持待核验</p></div><a href="#/positions" class="button button-secondary">＋ 添加岗位</a></div><div class="panel compare-panel" style="--compare-count:${selected.length}"><div class="compare-grid compare-header"><div class="compare-label-cell">对比字段</div>${selected.map((position) => `<div class="compare-job-head"><button class="remove-compare" data-action="remove-compare" data-code="${position.code}" aria-label="移除">×</button><span class="year-pill">${position.year}</span><strong>${escapeHtml(position.unit)}</strong><span>${escapeHtml(position.title)}</span></div>`).join('')}</div>${fields.map(([label, getValue]) => `<div class="compare-grid compare-row"><div class="compare-label-cell">${escapeHtml(label)}</div>${selected.map((position) => `<div class="compare-value-cell">${escapeHtml(getValue(position))}</div>`).join('')}</div>`).join('')}<div class="compare-grid compare-row"><div class="compare-label-cell">来源</div>${selected.map((position) => `<div class="compare-value-cell">${(position.sources || []).map((id) => sourceLink(id, '打开来源 ↗')).join('<br/>')}</div>`).join('')}</div></div><div class="notice notice-soft"><span>ⓘ</span><p>以上均是历史职位样例，不代表 2027 职位。岗位级最终竞争比和逐岗进面线未核实；过程快照不作为最终报名或实考数据，也不用于计算个人安全垫。</p></div></div>`;
+  return `<div class="page-body"><div class="page-heading-row"><div><div class="eyebrow muted">BEIJING · SIDE-BY-SIDE REVIEW</div><h1>岗位比较</h1><p>已选 ${selected.length} / 5 个 · ${new Set(selected.map((position) => position.districtId).filter(Boolean)).size} 个区县 · 缺失条件保持待核验</p></div><a href="#/positions" class="button button-secondary">＋ 添加岗位</a></div><div class="panel compare-panel" style="--compare-count:${selected.length}"><div class="compare-grid compare-header"><div class="compare-label-cell">对比字段</div>${selected.map((position) => `<div class="compare-job-head"><button class="remove-compare" data-action="remove-compare" data-position-key="${escapeHtml(positionIdentity(position))}" aria-label="移除">×</button><span class="year-pill">${escapeHtml(districtNameById.get(position.districtId) || '区县待核')} · ${position.year}</span><strong>${escapeHtml(position.unit)}</strong><span>${escapeHtml(position.title)}</span></div>`).join('')}</div>${fields.map(([label, getValue]) => `<div class="compare-grid compare-row"><div class="compare-label-cell">${escapeHtml(label)}</div>${selected.map((position) => `<div class="compare-value-cell">${escapeHtml(getValue(position))}</div>`).join('')}</div>`).join('')}<div class="compare-grid compare-row"><div class="compare-label-cell">来源</div>${selected.map((position) => `<div class="compare-value-cell">${(position.sources || []).map((id) => sourceLink(id, '打开来源 ↗')).join('<br/>')}</div>`).join('')}</div></div><div class="notice notice-soft"><span>ⓘ</span><p>以上均是 2024–2026 年历史职位样例，不代表 2027 职位。岗位级最终竞争比和逐岗进面线未核实；过程快照不作为最终报名或实考数据，也不用于计算个人安全垫。</p></div></div>`;
 }
 
 function renderWorkPreferenceChecks(position) {
@@ -957,7 +1080,8 @@ function renderWorkPreferenceChecks(position) {
 
 function renderAssistant() {
   const mocks = getMocks();
-  const results = dataset.positions.map((position) => {
+  const positionsInScope = decisionScopePositions();
+  const results = positionsInScope.map((position) => {
     const fit = scoreFit(position, storage.profile, storage.profile, mocks, dataset);
     return { position, eligibility: fit.eligibility, difficulty: scoreDifficulty(position, dataset), fit };
   });
@@ -986,6 +1110,7 @@ function renderAssistant() {
   }).length;
   const evidenceSummary = `<section class="assistant-score-overview" aria-label="评分证据覆盖"><article><span>难度综合分</span><strong>${completeDifficulty}<small> / ${results.length} 岗</small></strong><p>六个固定权重分项全部有证据</p></article><article><span>适配综合分</span><strong>${completeFit}<small> / ${results.length} 岗</small></strong><p>硬筛通过且七个固定权重分项齐全</p></article><article><span>代码匹配的进面线</span><strong>${mappedCutoffs}<small> 岗</small></strong><p>仅计入高置信、同年度代码匹配</p></article><article><span>岗位级竞争比</span><strong>${positionCompetition}<small> 岗</small></strong><p>另有 ${excludedSnapshotPositions} 个岗位有多时点资格审查快照，未纳入本项评分</p></article></section>`;
   const cards = visibleResults.map(({ position, eligibility, difficulty, fit }, index) => {
+    const districtName = (dataset.districts || []).find((district) => district.id === position.districtId)?.name || '区县待核';
     const cutoff = difficulty.components.find((item) => item.key === 'interviewCutoff');
     const competition = difficulty.components.find((item) => item.key === 'qualifiedCompetition');
     const snapshots = dataset.observations.filter((item) => item.observationType === 'qualified_snapshot'
@@ -1001,17 +1126,24 @@ function renderAssistant() {
         ? `有 ${snapshots.length} 条第三方资格审查时点快照，最新为 ${latestSnapshot.observedAt}、${fmt(latestSnapshot.applicantsQualified)} 人；非最终报名或实考数据，未纳入岗位竞争比分项`
         : '暂无来源记录的岗位级资格审查竞争比';
     const positionEvidence = `${cutoffText}；${competitionText}。区级汇总不下放到职位。`;
-    return `<article class="panel assistant-job ${assistantFilterChanged ? 'filter-enter' : ''}" style="--assistant-index:${Math.min(index, 7)}"><div class="assistant-job-top"><span class="year-pill">${position.year}</span>${chip(eligibility.status, statusTone(eligibility.status))}</div><h2>${escapeHtml(position.title)}</h2><p class="assistant-unit">${escapeHtml(position.unit)} · ${escapeHtml(position.orgType)} · 招录 ${fmt(position.recruitCount)} 人</p>${renderEligibilityChecks(eligibility, position)}${renderWorkPreferenceChecks(position)}<div class="reason-list"><div><span>${eligibility.majorCheck?.status === 'mismatch' ? '!' : eligibility.majorCheck?.status === 'match' ? '✓' : '·'}</span><p><strong>专业代码核验</strong><small>${escapeHtml(majorEligibilityText(position, storage.profile, eligibility))}</small></p></div><div><span>${eligibility.educationCheck?.status === 'mismatch' ? '!' : eligibility.educationCheck?.status === 'match' ? '✓' : '·'}</span><p><strong>学历条件核验</strong><small>${escapeHtml(educationEligibilityText(position, storage.profile, eligibility))}</small></p></div><div><span>—</span><p><strong>岗位竞争与进面分</strong><small>${escapeHtml(positionEvidence)}</small></p></div></div><div class="assistant-scores">${renderScoreBreakdown('难度', difficulty)}${renderScoreBreakdown('适配', fit)}</div><div class="assistant-actions"><button class="button button-quiet button-small" data-action="open-job" data-code="${position.code}">查看证据</button><button class="button button-quiet button-small" data-action="compare" data-code="${position.code}">加入比较 ⇄</button></div></article>`;
+    return `<article class="panel assistant-job ${assistantFilterChanged ? 'filter-enter' : ''}" style="--assistant-index:${Math.min(index, 7)}"><div class="assistant-job-top"><span class="year-pill">${escapeHtml(districtName)} · ${position.year}</span>${chip(eligibility.status, statusTone(eligibility.status))}</div><h2>${escapeHtml(position.title)}</h2><p class="assistant-unit">${escapeHtml(position.unit)} · ${escapeHtml(position.orgType)} · 招录 ${fmt(position.recruitCount)} 人</p>${renderEligibilityChecks(eligibility, position)}${renderWorkPreferenceChecks(position)}<div class="reason-list"><div><span>${eligibility.majorCheck?.status === 'mismatch' ? '!' : eligibility.majorCheck?.status === 'match' ? '✓' : '·'}</span><p><strong>专业代码核验</strong><small>${escapeHtml(majorEligibilityText(position, storage.profile, eligibility))}</small></p></div><div><span>${eligibility.educationCheck?.status === 'mismatch' ? '!' : eligibility.educationCheck?.status === 'match' ? '✓' : '·'}</span><p><strong>学历条件核验</strong><small>${escapeHtml(educationEligibilityText(position, storage.profile, eligibility))}</small></p></div><div><span>—</span><p><strong>岗位竞争与进面分</strong><small>${escapeHtml(positionEvidence)}</small></p></div></div><div class="assistant-scores">${renderScoreBreakdown('难度', difficulty)}${renderScoreBreakdown('适配', fit)}</div><div class="assistant-actions"><button class="button button-quiet button-small" data-action="open-job" data-position-key="${escapeHtml(positionIdentity(position))}">查看证据</button><button class="button button-quiet button-small" data-action="compare" data-position-key="${escapeHtml(positionIdentity(position))}">加入比较 ⇄</button></div></article>`;
   }).join('');
-  return `<div class="page-body"><div class="page-heading-row"><div><div class="eyebrow muted">ELIGIBILITY FIRST · EVIDENCE-WEIGHTED SCORES</div><h1>选岗助手</h1><p>先核对硬性条件，再看透明的难度与适配分项；缺失证据不会被重分配或估成零分。</p></div><a class="button button-secondary" href="#/profile">完善个人条件 →</a></div><div class="assistant-intro"><div class="assistant-icon">✦</div><div><strong>资格优先 · 分项透明</strong><p>个人信息字段已填写 ${complete} 项；“明确可报”仅在官方来源、完整条件和个人资料均可核对时出现。</p></div><span class="assistant-badge">不预测录取概率</span></div>${evidenceSummary}<div class="assistant-filterbar" role="group" aria-label="按资格核验结论筛选">${filterMarkup}</div><div class="assistant-grid">${cards || '<div class="empty-state assistant-empty">这一类暂时没有匹配职位。你可以补充个人资料，或查看其他核验结论。</div>'}</div><div class="notice notice-warning"><span>!</span><p>综合分按规格固定权重计算；任一分项缺证据就暂不汇总、不对剩余分项重新加权。当前缺少可用于岗位竞争比评分的样本、完整职位条件和个人限制匹配分布，因此合成分可能隐藏；另有多时点资格审查快照未纳入评分，这表示证据口径受限，不是零分，也不等于录取概率。</p></div></div>`;
+  return `<div class="page-body"><div class="page-heading-row"><div><div class="eyebrow muted">BEIJING · ELIGIBILITY FIRST · EVIDENCE-WEIGHTED SCORES</div><h1>选岗助手</h1><p>先核对硬性条件，再看透明的难度与适配分项；候选与摘要同步受区县、年度筛选。</p></div><a class="button button-secondary" href="#/profile">完善个人条件 →</a></div>${renderDecisionScope()}<div class="assistant-intro"><div class="assistant-icon">✦</div><div><strong>资格优先 · 分项透明</strong><p>个人信息字段已填写 ${complete} 项；“明确可报”仅在官方来源、完整条件和个人资料均可核对时出现。</p></div><span class="assistant-badge">不预测录取概率</span></div>${evidenceSummary}<div class="assistant-filterbar" role="group" aria-label="按资格核验结论筛选">${filterMarkup}</div><div class="assistant-grid">${cards || '<div class="empty-state assistant-empty">当前北京区县 / 年度范围内没有已收录职位样例。可切换筛选范围；暂未收录不代表没有岗位。</div>'}</div><div class="notice notice-warning"><span>!</span><p>综合分按规格固定权重计算；任一分项缺证据就暂不汇总、不对剩余分项重新加权。当前缺少可用于岗位竞争比评分的样本、完整职位条件和个人限制匹配分布，因此合成分可能隐藏；另有多时点资格审查快照未纳入评分，这表示证据口径受限，不是零分，也不等于录取概率。</p></div></div>`;
 }
 
 function renderScenarios() {
   const year = Number(scenarioYear);
   const sample = getScoreSampleForYear(dataset.scoreSamples, year);
-  const yearScoreRows = dataset.scoreRows.filter((row) => Number(row.year) === year && Number.isFinite(row.score));
+  const yearScoreRows = filterScoreRowsByScope(
+    dataset.scoreRows.filter((row) => Number(row.year) === year && Number.isFinite(row.score)),
+    dataset.positions,
+    { districtId: filters.districtId, year: scenarioYear },
+  );
+  const selectedDistrictName = filters.districtId === 'all'
+    ? '全部区县'
+    : (dataset.districts || []).find((district) => district.id === filters.districtId)?.name || '区县待核';
   const scopeDefinitions = [
-    ['all', '全部昌平'], ['district', '区直'], ['street', '街道'], ['town', '镇'],
+    ['all', filters.districtId === 'all' ? '全部区县' : '全部单位类型'], ['district', '区直'], ['street', '街道'], ['town', '镇'],
     ['ordinary', '普通职位'], ['enforcement', '行政执法'], ['public-management', '公共管理相关'],
   ];
   const rowsByScope = Object.fromEntries(scopeDefinitions.map(([scope]) => [
@@ -1019,7 +1151,7 @@ function renderScenarios() {
     filterScoreRowsBySegment(yearScoreRows, dataset.positions, scope),
   ]));
   const scoreRows = rowsByScope[scenarioScope] || rowsByScope.all;
-  const scopeLabel = Object.fromEntries(scopeDefinitions.map(([scope, label]) => [scope, label]))[scenarioScope] || '全部昌平';
+  const scopeLabel = `${selectedDistrictName} · ${Object.fromEntries(scopeDefinitions.map(([scope, label]) => [scope, label]))[scenarioScope] || '全部单位类型'}`;
   const classifiedSampleCount = new Set(['ordinary', 'enforcement', 'public-management']
     .flatMap((scope) => rowsByScope[scope].map((row) => row.id))).size;
   const result = scoreAgainstSample(scenarioScore, sample, scoreRows);
@@ -1029,10 +1161,18 @@ function renderScenarios() {
     return `<div class="scenario-row ${score === scenarioScore ? 'selected' : ''}" style="--scenario-index:${index}"><strong>${score}</strong><div class="scenario-bar"><span style="width:${band.coverageRate === null ? 0 : Math.round(band.coverageRate * 100)}%"></span></div><span>${escapeHtml(label)}</span></div>`;
   }).join('');
   const rows = scoreRows.map((row, index) => {
+    const mappedPositions = row.positionCode
+      ? dataset.positions.filter((position) => Number(position.year) === Number(row.year) && position.code === row.positionCode)
+      : [];
+    const matchedPosition = row.mappingConfidence === 'high' && mappedPositions.length === 1
+      && mappedPositions[0].unit === row.unit && mappedPositions[0].title === row.title
+      ? mappedPositions[0]
+      : null;
+    const districtName = (dataset.districts || []).find((district) => district.id === matchedPosition?.districtId)?.name || '区县未核';
     const mapping = row.positionCode
       ? `职位代码 ${row.positionCode}`
       : row.mappingConfidence === 'ambiguous' ? '同名岗位有歧义' : '尚未匹配职位代码';
-    return `<tr style="--scenario-index:${index}"><td><strong>${escapeHtml(row.unit || row.name)}</strong><small class="cell-secondary">${escapeHtml(row.title || '')}</small></td><td><span class="year-pill">${escapeHtml(row.orgType)}</span></td><td><strong>${fmt(row.score, 2)} 分</strong></td><td>${escapeHtml(mapping)}</td><td>${sourceLink(row.sourceId, '查看原始样例来源 ↗')}</td></tr>`;
+    return `<tr style="--scenario-index:${index}"><td><strong>${escapeHtml(row.unit || row.name)}</strong><small class="cell-secondary">${escapeHtml(row.title || '')}</small></td><td>${escapeHtml(districtName)}</td><td><span class="year-pill">${escapeHtml(row.orgType)}</span></td><td><strong>${fmt(row.score, 2)} 分</strong></td><td>${escapeHtml(mapping)}</td><td>${sourceLink(row.sourceId, '查看原始样例来源 ↗')}</td></tr>`;
   }).join('');
   const scores = scoreRows.map((row) => row.score);
   const minimum = scores.length ? Math.min(...scores) : null;
@@ -1040,23 +1180,36 @@ function renderScenarios() {
   const sampleRange = sample && scoreRows.length
     ? `<div class="sample-range"><div class="sample-range-title"><span>岗位最低进面线范围</span><span>${fmt(minimum, 2)} — ${fmt(maximum, 2)}</span></div><div class="range-track"><span class="sample-track"></span><span class="score-marker" style="left:${Math.max(0, Math.min(100, (scenarioScore - 100) * 2))}%"></span></div><div class="sample-caption">${year} 年「${escapeHtml(scopeLabel)}」纳入 ${scoreRows.length} 条具名岗位分数线；当前目标分覆盖 ${result.coveredPositions} 条（${fmtPct(result.coverageRate)}），不是进面概率。</div></div><div class="score-ecdf-heading"><strong>历史岗位进面线分布</strong><span>${year} · ECDF · n=${scoreRows.length}</span></div>${scoreEcdfSvg(scoreRows, year, scenarioScore)}`
     : `<div class="notice notice-warning scenario-no-sample"><span>!</span><p>${year} 年「${escapeHtml(scopeLabel)}」暂无可追溯的具名岗位进面分记录；不借用其他组别或年度样本。</p></div>`;
-  const yearOptions = [2024, 2025, 2026].map((item) => `<option value="${item}" ${scenarioYear === String(item) ? 'selected' : ''}>${item} 年</option>`).join('');
   const scopeOptions = scopeDefinitions.map(([scope, label]) => `<option value="${scope}" ${scenarioScope === scope ? 'selected' : ''}>${label} · n=${rowsByScope[scope].length}</option>`).join('');
   const coverage = result.coverageRate === null ? '暂无可比样本' : `${fmtPct(result.coverageRate)} · ${result.coveredPositions}/${result.totalPositions} 条岗位线`;
   const sliderProgress = Math.round(Math.max(0, Math.min(100, ((scenarioScore - 120) / 30) * 100)));
-  return `<div class="page-body"><div class="page-heading-row"><div><div class="eyebrow muted">HISTORICAL SCORE CONTEXT</div><h1>分数情景</h1><p>逐年对照当前可追溯样本；历史线覆盖比例不是个人进面概率。</p></div><div class="heading-actions scenario-actions"><label class="scenario-year-field"><span>查看年度</span><select id="scenario-year" aria-label="分数样本年度">${yearOptions}</select></label><label class="scenario-scope-field"><span>样本分组</span><select id="scenario-scope" aria-label="分数样本分组">${scopeOptions}</select></label>${chip('不预测录取概率', 'blue-soft')}</div></div><div class="scenario-layout"><section class="panel scenario-main"><div class="panel-heading"><div><div class="eyebrow muted">YOUR TARGET · ${year} · ${escapeHtml(scopeLabel)}</div><h2>试算目标分</h2></div><span class="scenario-score-display">${scenarioScore}<small> 分</small></span></div><input id="scenario-slider" class="score-slider" type="range" min="120" max="150" step="1" value="${scenarioScore}" style="--score-progress:${sliderProgress}%" aria-label="目标分"/><div class="range-labels"><span>120</span><span>135</span><span>150</span></div><div class="scenario-result"><div class="scenario-result-number">${scenarioScore}</div><div><strong>${escapeHtml(result.label)}</strong><p id="scenario-coverage">${year} 年历史最低进面线覆盖 · ${coverage}</p></div></div>${sampleRange}</section><section class="panel scenario-presets"><div class="panel-heading"><div><div class="eyebrow muted">REFERENCE POINTS</div><h2>目标分参考点</h2></div></div><div class="scenario-list">${scenarios}</div><div class="notice notice-soft compact-notice"><span>ⓘ</span><p>覆盖率 = 历史最低进面线 ≤ 目标分的岗位数 ÷ 当前所选分组的具名岗位分数行。</p></div></section></div><div class="panel table-panel"><div class="panel-heading"><div><div class="eyebrow muted">POSITION-NAMED EXAMPLES · ${year} · ${escapeHtml(scopeLabel)}</div><h2>${year} 年${escapeHtml(scopeLabel)}具体岗位最低进面线</h2></div><span class="panel-hint">${scoreRows.length} 条 · ${scoreRows.filter((row) => row.mappingConfidence === 'high' && row.positionCode).length} 条代码已核对</span></div><div class="table-scroll"><table class="data-table scenario-table"><thead><tr><th>单位 / 岗位</th><th>单位类型</th><th>最低进面线</th><th>代码匹配</th><th>来源</th></tr></thead><tbody>${rows || `<tr><td colspan="5"><div class="table-empty compact-empty">${year} 年「${escapeHtml(scopeLabel)}」暂无可追溯的具体岗位分数记录。</div></td></tr>`}</tbody></table></div><small class="table-footnote">分数来自第三方页面可见样例；“全部昌平”与单位类型分组不代表年度全量。岗位类别仅纳入代码、单位与岗位名均唯一匹配的分数记录（当前年度 ${classifiedSampleCount} 条），未匹配样本不猜分组。</small></div><div class="notice notice-warning"><span>!</span><p>岗位最低进面线不等于笔试合格线。代码未唯一匹配的行仅参与“全部昌平”及单位类型统计，不进入岗位类别筛选。</p></div></div>`;
+  return `<div class="page-body"><div class="page-heading-row"><div><div class="eyebrow muted">BEIJING · HISTORICAL SCORE CONTEXT</div><h1>分数情景</h1><p>按所选区县与年度查看可追溯的具名岗位分数线；历史覆盖不是个人进面概率。</p></div><div class="heading-actions scenario-actions"><label class="scenario-scope-field"><span>样本分组</span><select id="scenario-scope" aria-label="样本分组">${scopeOptions}</select></label>${chip('不预测录取概率', 'blue-soft')}</div></div>${renderDecisionScope({ districtControlId: 'decision-district', yearControlId: 'scenario-year', yearValue: scenarioYear, allowAllYears: false })}<div class="scenario-layout"><section class="panel scenario-main"><div class="panel-heading"><div><div class="eyebrow muted">YOUR TARGET · ${year} · ${escapeHtml(scopeLabel)}</div><h2>试算目标分</h2></div><span class="scenario-score-display">${scenarioScore}<small> 分</small></span></div><input id="scenario-slider" class="score-slider" type="range" min="120" max="150" step="1" value="${scenarioScore}" style="--score-progress:${sliderProgress}%" aria-label="目标分"/><div class="range-labels"><span>120</span><span>135</span><span>150</span></div><div class="scenario-result"><div class="scenario-result-number">${scenarioScore}</div><div><strong>${escapeHtml(result.label)}</strong><p id="scenario-coverage">${year} 年历史最低进面线覆盖 · ${coverage}</p></div></div>${sampleRange}</section><section class="panel scenario-presets"><div class="panel-heading"><div><div class="eyebrow muted">REFERENCE POINTS</div><h2>目标分参考点</h2></div></div><div class="scenario-list">${scenarios}</div><div class="notice notice-soft compact-notice"><span>ⓘ</span><p>覆盖率 = 历史最低进面线 ≤ 目标分的岗位数 ÷ 当前所选区县 / 分组的具名岗位分数行。</p></div></section></div><div class="panel table-panel"><div class="panel-heading"><div><div class="eyebrow muted">POSITION-NAMED EXAMPLES · ${year} · ${escapeHtml(scopeLabel)}</div><h2>${year} 年${escapeHtml(scopeLabel)}具体岗位最低进面线</h2></div><span class="panel-hint">${scoreRows.length} 条 · ${scoreRows.filter((row) => row.mappingConfidence === 'high' && row.positionCode).length} 条代码已核对</span></div><div class="table-scroll"><table class="data-table scenario-table"><thead><tr><th>单位 / 岗位</th><th>区县</th><th>单位类型</th><th>最低进面线</th><th>代码匹配</th><th>来源</th></tr></thead><tbody>${rows || `<tr><td colspan="6"><div class="table-empty compact-empty">${year} 年「${escapeHtml(scopeLabel)}」暂无可追溯的具体岗位分数记录；不会借用其他区县的分数。</div></td></tr>`}</tbody></table></div><small class="table-footnote">分数来自第三方页面可见样例。岗位类别仅纳入代码、单位与岗位名均唯一匹配的分数记录（当前年度 ${classifiedSampleCount} 条）；未匹配样本不推测区县，也不用于区县筛选。</small></div><div class="notice notice-warning"><span>!</span><p>岗位最低进面线不等于笔试合格线。所选区县仅统计高置信、同年度、单位与岗位名一致的代码映射。</p></div></div>`;
 }
 
 function renderMatrix() {
+  const years = [2024, 2025, 2026];
+  const matrix = buildDecisionCoverageMatrix(dataset.positions, dataset.districts, years);
+  const populatedDistricts = matrix.filter((district) => Object.values(district.years).some((cell) => cell.hasSample)).length;
+  const populatedCells = matrix.reduce((sum, district) => sum + Object.values(district.years).filter((cell) => cell.hasSample).length, 0);
+  const cellMarkup = (district, year) => {
+    const cell = district.years[year];
+    if (!cell.hasSample) return `<td class="district-matrix-empty"><strong>未收录</strong><small>待补逐岗数据</small></td>`;
+    const recruitLabel = cell.knownRecruitCount
+      ? `${fmt(cell.recruitCount)} 人已知 · ${cell.knownRecruitCount}/${cell.positionCount} 岗有人数`
+      : '招录人数待核';
+    return `<td class="district-matrix-sample"><strong>${cell.positionCount} 岗样例</strong><small>${recruitLabel}</small><small>官方 ${cell.officialCount} · 二手 ${cell.secondaryCount}</small><button type="button" class="matrix-cell-link" data-action="open-matrix-scope" data-district="${escapeHtml(district.districtId)}" data-year="${year}">查看职位 →</button></td>`;
+  };
+  const matrixRows = matrix.map((district) => `<tr data-matrix-district="${escapeHtml(district.districtId)}"><th scope="row">${escapeHtml(district.districtName)}</th>${years.map((year) => cellMarkup(district, year)).join('')}</tr>`).join('');
+  const scopedPositions = decisionScopePositions();
   const groups = ['区直', '街道', '镇', '垂直/驻区'];
-  const cells = groups.map((group) => {
-    const jobs = dataset.positions.filter((position) => position.orgType === group);
-    const recruits = jobs.reduce((sum, position) => sum + (Number(position.recruitCount) || 0), 0);
-    const years = [...new Set(jobs.map((position) => position.year))].sort();
-    const symbol = group === '区直' ? '▤' : group === '街道' ? '⌂' : group === '镇' ? '⌖' : '↗';
-    return `<article class="panel matrix-card"><div class="matrix-top"><span class="matrix-symbol">${symbol}</span>${chip(`${jobs.length} 条样例`, 'blue-soft')}</div><h2>${group}</h2><div class="matrix-numbers"><div><strong>${jobs.length}</strong><small>职位候选</small></div><div><strong>${recruits || '—'}</strong><small>已知招录人数</small></div></div><div class="matrix-years"><span>涉及年度</span><strong>${years.length ? years.join(' · ') : '暂无收录'}</strong></div><div class="matrix-bottom">岗位级报名数：<strong>暂无可核验数据</strong></div></article>`;
+  const groupCards = groups.map((group, index) => {
+    const rows = scopedPositions.filter((position) => position.orgType === group);
+    const knownRows = rows.filter((position) => position.recruitCount !== null && position.recruitCount !== undefined
+      && position.recruitCount !== '' && Number.isFinite(Number(position.recruitCount)));
+    const recruits = knownRows.reduce((sum, position) => sum + Number(position.recruitCount), 0);
+    return `<article class="panel matrix-card"><span class="matrix-symbol" aria-hidden="true">${['▤', '⌂', '⌖', '↗'][index]}</span><div><h3>${group}</h3><strong>${rows.length ? `${rows.length} 条样例` : '待补样例'}</strong><small>${knownRows.length ? `${fmt(recruits)} 人已知 · ${knownRows.length}/${rows.length} 岗有人数` : '招录人数待核'}</small></div></article>`;
   }).join('');
-  return `<div class="page-body"><div class="page-heading-row"><div><div class="eyebrow muted">CHANGPING · SAMPLE COVERAGE</div><h1>昌平竞争矩阵</h1><p>这里展示的是数据库当前样例覆盖，不是完整行政区职位地图或年度总量。</p></div>${chip('样例覆盖', 'amber')}</div><div class="matrix-grid">${cells}</div><div class="panel conflict-panel"><div class="panel-heading"><div><div class="eyebrow muted">ANNUAL SUMMARY CONFLICTS</div><h2>年度职位汇总待逐码核验</h2></div><a href="#/evidence" class="panel-link">查看覆盖与冲突中心 →</a></div><p class="coverage-intro">各年第三方汇总范围与逐条来源已集中在研究发现页。这里不重复展示静态总数，也不据此推断单位冷热。</p></div><div class="notice notice-warning"><span>!</span><p>在官方原始职位表导入并逐代码账前，不把第三方统计合并成唯一年度总量，也不推断“高竞争街道”或“低竞争单位”。</p></div></div>`;
+  return `<div class="page-body"><div class="page-heading-row"><div><div class="eyebrow muted">BEIJING · DISTRICT × YEAR · 2024 — 2026</div><h1>北京京考竞争矩阵</h1><p>用逐岗样例展示区县和年度覆盖，再按单位类型拆分当前范围；职位样例数不是年度总量，也不是报名竞争率。</p></div>${chip('样例覆盖', 'amber')}</div>${renderDecisionScope()}<section class="panel district-matrix-panel"><div class="panel-heading"><div><div class="eyebrow muted">DISTRICT / YEAR COVERAGE</div><h2>全市 16 区 × 3 年职位样例覆盖</h2></div><span class="panel-hint">${populatedDistricts}/16 区有样例 · ${populatedCells}/48 个区县年度格有数据</span></div><div class="table-scroll"><table class="data-table district-matrix-table"><thead><tr><th>区县</th>${years.map((year) => `<th>${year} 招考</th>`).join('')}</tr></thead><tbody>${matrixRows}</tbody></table></div><div class="table-footnote">“未收录”表示当前公开数据库没有可追溯的逐岗记录，不等于该区当年没有招录。来源等级、资格条件和年度汇总差异仍以逐条来源登记为准。</div></section><section class="matrix-type-section"><div class="panel-heading"><div><div class="eyebrow muted">UNIT TYPE · SELECTED SCOPE</div><h2>当前范围单位类型样例</h2></div><a href="#/evidence" class="panel-link">查看年度汇总与来源差异 →</a></div><div class="matrix-grid">${groupCards}</div></section><div class="notice notice-warning"><span>!</span><p>此矩阵不提供“哪个区竞争更激烈”的结论：目前没有可比的全市最终报名 / 实考分母；岗位级资格审查快照也不会被冒充成报名竞争比。</p></div></div>`;
 }
 
 function renderProfile() {
@@ -1143,7 +1296,7 @@ function renderResearch() {
       const count = topic === 'all' ? findings.length : findings.filter((item) => item.topic === topic).length;
       return `<button type="button" class="research-topic-button ${researchTopic === topic ? 'active' : ''}" data-action="filter-research-topic" data-topic="${escapeHtml(topic)}" aria-pressed="${researchTopic === topic}"><span>${escapeHtml(label)}</span><small>${count}</small></button>`;
     }).join('')}</div><div class="research-findings-grid" aria-live="polite">${cards}${emptyState}</div></section>
-    <section class="research-next-step"><span class="research-next-icon">↗</span><div><strong>把样例当线索，把官方职位表当准绳</strong><p>下一步可从覆盖缺口进入职位库逐条核验，或完善个人条件后再用选岗助手。</p></div><a class="button button-secondary" href="#/positions">打开昌平职位库</a></section>
+    <section class="research-next-step"><span class="research-next-icon">↗</span><div><strong>把样例当线索，把官方职位表当准绳</strong><p>下一步可从覆盖缺口进入职位库逐条核验，或完善个人条件后再用选岗助手。</p></div><a class="button button-secondary" href="#/positions">打开职位库</a></section>
   </div>`;
 }
 
@@ -1257,8 +1410,8 @@ function renderSources() {
 
 function renderPage() {
   const pages = { overview: renderOverview, guide: renderGuide, plan: renderPlan, science: renderScience, aptitude: renderAptitude, generalKnowledge: renderGeneralKnowledge, essay: renderEssay, mocks: renderMocks, positions: renderPositions, compare: renderCompare, assistant: renderAssistant, scenarios: renderScenarios, matrix: renderMatrix, profile: renderProfile, research: renderResearch, evidence: renderEvidence, sources: renderSources, settings: renderSettings };
-  const help = getPageHelp(page);
-  let content = (pages[page] || renderOverview)();
+  const help = getPageHelp(page === 'aptitudeModule' ? 'aptitudeModule' : page);
+  let content = page === 'aptitudeModule' ? renderAptitudeModule(activeAptitudeModuleId) : (pages[page] || renderOverview)();
   return `<div class="page-shell ${pageTransition ? 'page-enter' : ''}${resultTransition ? ' results-enter' : ''}"><details class="page-howto"><summary><span class="page-howto-icon">ⓘ</span><span>本页怎么用</span><span class="page-howto-hint">点此展开</span></summary><div class="page-howto-content"><p>${escapeHtml(help.text)}</p><a href="#/${escapeHtml(help.actionPage)}">${escapeHtml(help.actionLabel)} →</a></div></details>${content}</div>`;
 }
 
@@ -1279,16 +1432,16 @@ function renderBackupPreview(state, { exportedAt = null, kind = 'encrypted', sou
 function renderOnboarding(direction = 'initial') {
   const step = Math.max(0, Math.min(3, storage.onboarding?.step || 0));
   const dayOne = getDays().find((day) => day.day === 1);
-  const stepTitles = ['个人报考条件', '从 Day 1 开始', '记录第一次模考', '查看昌平历史岗位'];
+  const stepTitles = ['个人报考条件', '从 Day 1 开始', '记录第一次模考', '查看北京京考职位'];
   let body;
   if (step === 0) {
-    body = `<p class="onboarding-lead">这张工作台帮你完成四件事。专业方向预填为公共管理，请先改成自己的真实专业；其他信息可以稍后补。内容只保存在此浏览器。</p><ul class="onboarding-capabilities" aria-label="工作台功能"><li style="--capability-index:0"><span>01</span><strong>管理 50 天复习计划</strong></li><li style="--capability-index:1"><span>02</span><strong>记录并诊断模考成绩</strong></li><li style="--capability-index:2"><span>03</span><strong>查询昌平历年真实职位</strong></li><li style="--capability-index:3"><span>04</span><strong>根据个人条件辅助选岗</strong></li></ul><form id="onboarding-profile-form"><div class="onboarding-fields"><label class="form-field"><span>专业方向</span><input name="major" value="${escapeHtml(storage.profile.major || '公共管理')}" autocomplete="off"/></label><label class="form-field"><span>最高学历</span><input name="degree" value="${escapeHtml(storage.profile.degree || '')}" placeholder="例如：本科 / 硕士" autocomplete="off"/></label></div><div class="modal-footer"><button type="button" class="button button-quiet" data-action="onboarding-later">稍后再看</button><button type="submit" class="button button-primary">保存并继续</button></div></form>`;
+    body = `<p class="onboarding-lead">这张工作台帮你完成四件事。专业方向预填为公共管理，请先改成自己的真实专业；其他信息可以稍后补。内容只保存在此浏览器。</p><ul class="onboarding-capabilities" aria-label="工作台功能"><li style="--capability-index:0"><span>01</span><strong>管理 50 天复习计划</strong></li><li style="--capability-index:1"><span>02</span><strong>记录并诊断模考成绩</strong></li><li style="--capability-index:2"><span>03</span><strong>查询北京京考历年职位</strong></li><li style="--capability-index:3"><span>04</span><strong>根据个人条件辅助选岗</strong></li></ul><form id="onboarding-profile-form"><div class="onboarding-fields"><label class="form-field"><span>专业方向</span><input name="major" value="${escapeHtml(storage.profile.major || '公共管理')}" autocomplete="off"/></label><label class="form-field"><span>最高学历</span><input name="degree" value="${escapeHtml(storage.profile.degree || '')}" placeholder="例如：本科 / 硕士" autocomplete="off"/></label></div><div class="modal-footer"><button type="button" class="button button-quiet" data-action="onboarding-later">稍后再看</button><button type="submit" class="button button-primary">保存并继续</button></div></form>`;
   } else if (step === 1) {
     body = `<p class="onboarding-lead">计划来自你的 50 天复习表。先从第一天开始记录实际题量和用时，后续完成度就会按真实记录更新。</p><div class="onboarding-preview"><span>DAY 01</span><div><strong>${escapeHtml(dayOne?.focus || '打开 50 天计划')}</strong><small>${escapeHtml(dayOne?.coreTask || '查看第一天的学习安排')} · ${fmt(dayOne?.plannedQuestions)} 题 · ${fmt(dayOne?.plannedHours, 1)} 小时</small></div></div><div class="modal-footer"><button type="button" class="button button-quiet" data-action="onboarding-back">上一步</button><button type="button" class="button button-secondary" data-action="onboarding-open" data-page="plan" data-next-step="2">打开 Day 1 计划</button><button type="button" class="button button-primary" data-action="onboarding-next">下一步</button></div>`;
   } else if (step === 2) {
     body = `<p class="onboarding-lead">录入真实模考后，首页才会显示你的分数趋势、目标差距和薄弱模块。没有填写的分数不会按 0 分处理。</p><div class="onboarding-preview"><span>${getMocks().length ? `${getMocks().length} 次` : '首次'}</span><div><strong>建立自己的成绩基线</strong><small>行测、申论总分，以及选填的模块正确率</small></div></div><div class="modal-footer"><button type="button" class="button button-quiet" data-action="onboarding-back">上一步</button><button type="button" class="button button-secondary" data-action="onboarding-open-mock">现在录入模考</button><button type="button" class="button button-primary" data-action="onboarding-next">下一步</button></div>`;
   } else {
-    body = `<p class="onboarding-lead">职位页展示可追溯的历史记录。当前每条记录都会标出来源和核验状态；历史岗位不能代替当年官方职位表。</p><div class="onboarding-preview"><span>${dataset.positions.length}</span><div><strong>昌平历史岗位样例</strong><small>可搜索、筛选、收藏并查看来源；完整资格仍以官方原表为准</small></div></div><div class="modal-footer"><button type="button" class="button button-quiet" data-action="onboarding-back">上一步</button><button type="button" class="button button-secondary" data-action="onboarding-later">稍后再看</button><button type="button" class="button button-primary" data-action="onboarding-finish">完成并查看岗位</button></div>`;
+    body = `<p class="onboarding-lead">职位库展示可追溯的北京京考历史记录。当前每条记录都会标出区县、来源和核验状态；历史岗位不能代替当年官方职位表。</p><div class="onboarding-preview"><span>${dataset.positions.length}</span><div><strong>北京京考职位样例</strong><small>可按 16 区和年度搜索、筛选、收藏并查看来源；空白区县待补数据</small></div></div><div class="modal-footer"><button type="button" class="button button-quiet" data-action="onboarding-back">上一步</button><button type="button" class="button button-secondary" data-action="onboarding-later">稍后再看</button><button type="button" class="button button-primary" data-action="onboarding-finish">完成并查看岗位</button></div>`;
   }
   const progress = Math.round(((step + 1) / stepTitles.length) * 100);
   renderModal(`<div class="onboarding-content onboarding-content--${direction}"><div class="onboarding-top"><div><span class="eyebrow muted">第一次使用 · 约 3 分钟</span><h2 id="onboarding-title">第一次使用？3 分钟完成初始化</h2></div><button type="button" class="modal-close" aria-label="关闭引导" data-action="onboarding-later">×</button></div><div class="onboarding-progress" role="progressbar" aria-label="初始化进度" aria-valuemin="1" aria-valuemax="4" aria-valuenow="${step + 1}"><span style="width:${progress}%"></span></div><div class="onboarding-step-pane"><div class="onboarding-step-label">第 ${step + 1} 步，共 4 步 <strong>${stepTitles[step]}</strong></div>${body}</div></div>`);
@@ -1302,9 +1455,11 @@ async function closeOnboarding() {
   modalRoot.innerHTML = '';
 }
 
-function openJob(code) {
-  const position = dataset.positions.find((item) => item.code === code);
+function openJob(reference) {
+  const position = findPositionByReference(dataset.positions, reference);
   if (!position) return;
+  const code = position.code;
+  const positionKey = positionIdentity(position);
   const eligibility = evaluateEligibility(position, storage.profile);
   const sources = (position.sources || []).map((sourceId) => {
     const source = sourceFor(sourceId);
@@ -1313,7 +1468,7 @@ function openJob(code) {
   const officialLookup = position.year === 2026 && sourceFor('beijing-2026-position-lookup')
     ? `<aside class="official-position-lookup"><div><strong>官方复核工具 · 2026</strong><p>可按详情页上方职位代码手动查询；该入口是复核工具，不会自动将本条职位标记为官方核验。</p></div>${sourceLink('beijing-2026-position-lookup', '打开人社局代码查询 ↗')}</aside>`
     : '';
-  const observations = dataset.observations.filter((item) => item.positionCode === code);
+  const observations = dataset.observations.filter((item) => Number(item.year) === Number(position.year) && item.positionCode === code);
   const majorAssessment = [majorCriteriaSummary(position), majorEligibilityText(position, storage.profile, eligibility)].filter(Boolean).join('；');
   const professionalTest = position.professionalTest === true
     ? `是${position.physicalTest === true ? '（含体能测试）' : ''}`
@@ -1352,7 +1507,8 @@ function openJob(code) {
       : escapeHtml(row.value);
     return `<div class="${classes}" style="--detail-index:${Math.min(index, 7)}"><span>${escapeHtml(row.label)}</span><strong>${value}</strong></div>`;
   }).join('');
-  renderModal(`<div class="modal-head"><div><div class="eyebrow muted">${position.year} · ${escapeHtml(position.code)}</div><h2>${escapeHtml(position.title)}</h2><p>${escapeHtml(position.unit)} · ${escapeHtml(position.orgType)}</p></div><button class="modal-close" data-action="close-modal" aria-label="关闭">×</button></div><div class="modal-body"><div class="modal-status-row">${chip(eligibility.status, statusTone(eligibility.status))}${positionEvidenceMarkup(position)}${positionCompletenessMarkup(position)}${chip(position.verification, 'amber')}</div>${renderEligibilityChecks(eligibility, position)}<div class="detail-grid job-detail-grid">${detailMarkup}</div>${officialLookup}<div class="evidence-list"><div class="eyebrow muted">EVIDENCE & PROVENANCE</div>${sources}</div></div><div class="modal-footer">${button('加入比较 ⇄', 'compare', 'button button-secondary', `data-code="${escapeHtml(code)}"`)}${button(storage.favorites.includes(code) ? '★ 已收藏' : '☆ 收藏岗位', 'favorite', 'button button-quiet', `data-code="${escapeHtml(code)}"`)}<button class="button button-primary" data-action="close-modal">完成</button></div>`);
+  const isFavorite = hasPositionReference(storage.favorites, position, dataset.positions);
+  renderModal(`<div class="modal-head"><div><div class="eyebrow muted">${position.year} · ${escapeHtml(position.code)}</div><h2>${escapeHtml(position.title)}</h2><p>${escapeHtml(position.unit)} · ${escapeHtml(position.orgType)}</p></div><button class="modal-close" data-action="close-modal" aria-label="关闭">×</button></div><div class="modal-body"><div class="modal-status-row">${chip(eligibility.status, statusTone(eligibility.status))}${positionEvidenceMarkup(position)}${positionCompletenessMarkup(position)}${chip(position.verification, 'amber')}</div>${renderEligibilityChecks(eligibility, position)}<div class="detail-grid job-detail-grid">${detailMarkup}</div>${officialLookup}<div class="evidence-list"><div class="eyebrow muted">EVIDENCE & PROVENANCE</div>${sources}</div></div><div class="modal-footer">${button('加入比较 ⇄', 'compare', 'button button-secondary', `data-position-key="${escapeHtml(positionKey)}"`)}${button(isFavorite ? '★ 已收藏' : '☆ 收藏岗位', 'favorite', 'button button-quiet', `data-position-key="${escapeHtml(positionKey)}"`)}<button class="button button-primary" data-action="close-modal">完成</button></div>`);
 }
 
 function openDayEditor(dayNumber) {
@@ -1610,8 +1766,17 @@ document.addEventListener('click', async (event) => {
   const actionEl = event.target.closest('[data-action]');
   if (!actionEl) return;
   const { action, code } = actionEl.dataset;
+  const positionReference = actionEl.dataset.positionKey || code;
   if (action === 'account-lock') { lockAccount(); return; }
   if (!accountSession) return;
+  if (action === 'open-matrix-scope') {
+    filters.districtId = actionEl.dataset.district || 'all';
+    filters.year = actionEl.dataset.year || 'all';
+    scenarioYear = filters.year === 'all' ? scenarioYear : filters.year;
+    jobPage = 1;
+    navigate('positions');
+    return;
+  }
   if (action === 'positions-page') {
     jobPage = Number(actionEl.dataset.page) || 1;
     resultTransition = true;
@@ -1713,7 +1878,7 @@ document.addEventListener('click', async (event) => {
     render();
     notify('备份内容已加密恢复到当前档案');
   }
-  if (action === 'open-job') openJob(code);
+  if (action === 'open-job') openJob(positionReference);
   if (action === 'edit-day') openDayEditor(actionEl.dataset.day);
   if (action === 'edit-plan-day') openPlanEditor(actionEl.dataset.day);
   if (action === 'add-plan-task') openPlanTaskEditor(null, actionEl.dataset.date || todayString());
@@ -1878,16 +2043,29 @@ document.addEventListener('click', async (event) => {
     document.querySelector('.sidebar-scrim')?.classList.remove('visible');
   }
   if (action === 'favorite') {
-    storage.favorites = storage.favorites.includes(code) ? storage.favorites.filter((item) => item !== code) : [...storage.favorites, code];
-    await persistAndRender(storage.favorites.includes(code) ? '已加入收藏' : '已取消收藏');
+    const position = findPositionByReference(dataset.positions, positionReference);
+    if (!position) return;
+    const positionKey = positionIdentity(position);
+    const isFavorite = hasPositionReference(storage.favorites, position, dataset.positions);
+    const isLegacyReference = (item) => item === position.code && findPositionByReference(dataset.positions, item) === position;
+    storage.favorites = isFavorite
+      ? storage.favorites.filter((item) => item !== positionKey && !isLegacyReference(item))
+      : [...storage.favorites, positionKey];
+    await persistAndRender(isFavorite ? '已取消收藏' : '已加入收藏');
   }
   if (action === 'compare') {
-    if (storage.compared.includes(code)) notify('该岗位已在比较清单中');
+    const position = findPositionByReference(dataset.positions, positionReference);
+    if (!position) return;
+    const positionKey = positionIdentity(position);
+    if (hasPositionReference(storage.compared, position, dataset.positions)) notify('该岗位已在比较清单中');
     else if (storage.compared.length >= 5) notify('最多同时比较 5 个岗位');
-    else { storage.compared.push(code); await persistAndRender('已加入岗位比较'); }
+    else { storage.compared.push(positionKey); await persistAndRender('已加入岗位比较'); }
   }
   if (action === 'remove-compare') {
-    storage.compared = storage.compared.filter((item) => item !== code);
+    const position = findPositionByReference(dataset.positions, positionReference);
+    const positionKey = position ? positionIdentity(position) : positionReference;
+    const isLegacyReference = (item) => position && item === position.code && findPositionByReference(dataset.positions, item) === position;
+    storage.compared = storage.compared.filter((item) => item !== positionKey && !isLegacyReference(item));
     await persistAndRender('已从比较中移除');
   }
   if (action === 'filter-evidence-year') {
@@ -2221,14 +2399,18 @@ document.addEventListener('change', async (event) => {
     syncPlanTaskScienceControls(event.target.closest('#plan-task-form'));
   }
   const positionFilter = {
-    'job-year': 'year', 'job-type': 'orgType', 'job-jobtype': 'jobType',
+    'job-district': 'districtId', 'decision-district': 'districtId',
+    'job-year': 'year', 'decision-year': 'year', 'job-type': 'orgType', 'job-jobtype': 'jobType',
     'job-unit': 'unit', 'job-education': 'education', 'job-politics': 'politicalStatus',
     'job-graduation': 'freshGraduate', 'job-physical-test': 'physicalTest',
     'job-professional-test': 'professionalTest', 'job-recruitment': 'recruitmentGroup',
   }[event.target.id];
   if (positionFilter || event.target.id === 'job-sort') {
     const advancedWasOpen = Boolean(document.querySelector('#job-advanced-filters')?.open);
-    if (positionFilter) filters[positionFilter] = event.target.value;
+    if (positionFilter) {
+      filters[positionFilter] = event.target.value;
+      if (positionFilter === 'year' && event.target.value !== 'all') scenarioYear = event.target.value;
+    }
     else jobSort = event.target.value;
     jobPage = 1;
     resultTransition = true;
@@ -2241,7 +2423,10 @@ document.addEventListener('change', async (event) => {
   }
   if (event.target.id === 'source-level') { filters.sourceLevel = event.target.value; render(); }
   if (event.target.id === 'scenario-year' || event.target.id === 'scenario-scope') {
-    if (event.target.id === 'scenario-year') scenarioYear = event.target.value;
+    if (event.target.id === 'scenario-year') {
+      scenarioYear = event.target.value;
+      filters.year = event.target.value;
+    }
     else scenarioScope = event.target.value;
     resultTransition = true;
     render();
@@ -2273,6 +2458,7 @@ window.addEventListener('hashchange', () => {
   if (!accountSession) return;
   const route = readRoute();
   page = pageMeta[route.page] ? route.page : 'overview';
+  activeAptitudeModuleId = route.aptitudeModuleId;
   activeSciencePlanTaskId = route.taskId;
   selectedScienceKnowledgePointId = route.knowledgePointId;
   activeScienceSessionId = route.sessionId;

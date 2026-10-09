@@ -40,6 +40,18 @@ function hasReportedNumber(value) {
   return value !== null && value !== undefined && value !== '' && Number.isFinite(Number(value));
 }
 
+function matchesSourceDistrictScope(position, district, sourceById) {
+  if (position.districtId === district.id) return true;
+  const districtLabel = district.name.replace(/区$/, '');
+  return (Array.isArray(position.sources) ? position.sources : []).some((sourceId) => {
+    const source = sourceById.get(sourceId);
+    return source?.districtId === district.id
+      || source?.geographicScope === district.name
+      || source?.geographicScope === districtLabel
+      || String(source?.title || '').includes(districtLabel);
+  });
+}
+
 export function getPositionDataCompleteness(position, dataset = {}) {
   const present = COMPLETENESS_SECTIONS.map(([, isPresent]) => isPresent(position, dataset));
   const availableSections = present.filter(Boolean).length;
@@ -65,10 +77,8 @@ export function summarizePositionCoverage(dataset, years = [2024, 2025, 2026]) {
   const scoreRows = Array.isArray(dataset?.scoreRows) ? dataset.scoreRows : [];
   const scoreSamples = Array.isArray(dataset?.scoreSamples) ? dataset.scoreSamples : [];
   const sources = Array.isArray(dataset?.sources) ? dataset.sources : [];
+  const sourceById = new Map(sources.map((source) => [source.sourceId, source]));
   return years.map((year) => {
-    const visible = positions.filter((position) => Number(position.year) === Number(year));
-    const knownRecruitments = visible.filter((position) => Number.isFinite(position.recruitCount) && position.recruitCount >= 0);
-    const knownRecruitCount = knownRecruitments.reduce((sum, position) => sum + position.recruitCount, 0);
     const secondarySummary = sources.find((source) => (
       Number(source.year) === Number(year)
       && source.level === 'secondary'
@@ -76,6 +86,11 @@ export function summarizePositionCoverage(dataset, years = [2024, 2025, 2026]) {
       && Number.isFinite(source.reportedPositionCount)
       && source.reportedPositionCount > 0
     ));
+    const scopeDistrict = dataset?.districts?.find((district) => district.name === secondarySummary?.geographicScope);
+    const visible = positions.filter((position) => Number(position.year) === Number(year)
+      && (!scopeDistrict || matchesSourceDistrictScope(position, scopeDistrict, sourceById)));
+    const knownRecruitments = visible.filter((position) => Number.isFinite(position.recruitCount) && position.recruitCount >= 0);
+    const knownRecruitCount = knownRecruitments.reduce((sum, position) => sum + position.recruitCount, 0);
     const secondaryReference = secondarySummary ? {
       sourceId: secondarySummary.sourceId || null,
       reportedPositionCount: secondarySummary.reportedPositionCount,

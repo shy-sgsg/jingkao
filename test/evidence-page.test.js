@@ -59,24 +59,26 @@ test('the competition matrix directs annual reconciliation to the evidence cente
   const { root } = await renderSourceApp('#/matrix');
   const styles = await readFile(new URL('../src/styles.css', import.meta.url), 'utf8');
 
-  assert.match(root.innerHTML, /<h2>垂直\/驻区<\/h2>/);
+  assert.match(root.innerHTML, /<h3>垂直\/驻区<\/h3>/);
   assert.match(styles, /\.matrix-grid\s*\{[^}]*grid-template-columns:\s*repeat\(4,\s*minmax\(0,\s*1fr\)\)/);
-  assert.match(root.innerHTML, /class="panel conflict-panel"[\s\S]*?href="#\/evidence"[^>]*>查看覆盖与冲突中心/);
+  assert.match(root.innerHTML, /class="matrix-type-section"[\s\S]*?href="#\/evidence"[^>]*>查看年度汇总与来源差异/);
+  assert.match(root.innerHTML, /全市 16 区 × 3 年职位样例覆盖/);
   assert.doesNotMatch(root.innerHTML, /93–97 岗/);
 });
 
-test('the rendered position library exposes 2025 mirror coverage and the vertical-unit filter', async () => {
+test('the rendered position library exposes citywide counts and the vertical-unit filter', async () => {
   const { root } = await renderSourceApp('#/positions');
   const dataset = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
   const years = [...root.innerHTML.matchAll(/<span class="year-pill">(\d{4})<\/span>/g)].map((match) => Number(match[1]));
 
-  assert.match(root.innerHTML, /2024 年收录 95 条镜像行，2025 年收录 91 条镜像明细/);
-  assert.match(root.innerHTML, /2026 年已收录 86 条逐岗镜像明细 \/ 136 人；华图分类页汇总 88 岗 \/ 138 人，仍有 2 岗 \/ 2 人尚未取得逐岗明细/);
+  assert.match(root.innerHTML, new RegExp(`当前收录 ${dataset.positions.length} 条逐岗候选`));
+  assert.match(root.innerHTML, /北京市 16 区/);
+  assert.match(root.innerHTML, /海淀区/);
+  assert.match(root.innerHTML, /延庆区/);
   assert.match(root.innerHTML, /option value="垂直\/驻区"/);
   assert.match(root.innerHTML, /id="job-search"/);
-  assert.match(root.innerHTML, /显示 1–25 条，共 272 条/);
+  assert.match(root.innerHTML, new RegExp(`显示 1–25 条，共 ${dataset.positions.length} 条`));
   assert.ok(dataset.positions.some((position) => position.code === '221264501'), 'the searched role remains in the year-filterable dataset');
-  assert.match(root.innerHTML, /90 条明细在两处二手镜像逐字段一致/);
   assert.ok(years.every((year, index) => index === 0 || years[index - 1] >= year), 'position rows should be grouped newest year first');
 });
 
@@ -111,15 +113,27 @@ test('the evidence center lists dated position-level qualification snapshots wit
   assert.match(root.innerHTML, /岗位级资格审查快照[\s\S]*?覆盖 2 个岗位/);
 });
 
-test('the overview highlights the latest position snapshots without flooding the first screen with history rows', async () => {
+test('the overview keeps personal study summaries and shows citywide position coverage and sources', async () => {
   const { root } = await renderSourceApp('#/overview');
+  const dataset = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const populatedDistricts = new Set(dataset.positions.map((position) => position.districtId).filter(Boolean)).size;
+  const populatedCells = dataset.districts.reduce((sum, district) => sum + [2024, 2025, 2026].filter((year) => (
+    dataset.positions.some((position) => position.districtId === district.id && Number(position.year) === year)
+  )).length, 0);
+  const linkedSources = new Set(dataset.positions.flatMap((position) => position.sources || [])).size;
 
-  assert.equal((root.innerHTML.match(/class="snapshot-row/g) || []).length, 6);
-  assert.match(root.innerHTML, /821261102 · 综合管理岗/);
-  assert.match(root.innerHTML, /821263001 · 文秘岗/);
-  assert.match(root.innerHTML, /424 人资格审查通过/);
-  assert.match(root.innerHTML, /150 人资格审查通过/);
-  assert.doesNotMatch(root.innerHTML, /44 人资格审查通过/);
+  assert.match(root.innerHTML, /离目标分还有多远/);
+  assert.match(root.innerHTML, /安排今天的学习/);
+  assert.equal((root.innerHTML.match(/class="snapshot-row/g) || []).length, 0);
+  assert.match(root.innerHTML, /北京全市职位数据概览/);
+  assert.match(root.innerHTML, new RegExp(`${dataset.positions.length}<small>条岗位样例</small>`));
+  assert.match(root.innerHTML, new RegExp(`${populatedDistricts} / 16 区有样例`));
+  assert.match(root.innerHTML, new RegExp(`${populatedCells} / 48 个区县年度格`));
+  assert.match(root.innerHTML, new RegExp(`${linkedSources} 个已关联来源`));
+  assert.match(root.innerHTML, /href="#\/positions"[^>]*>职位库/);
+  assert.match(root.innerHTML, /href="#\/matrix"[^>]*>竞争矩阵/);
+  assert.match(root.innerHTML, /href="#\/sources"[^>]*>来源与口径/);
+  assert.doesNotMatch(root.innerHTML, /昌平竞争观察|报道区平均竞争比|18\.24:1/);
 });
 
 test('the source page keeps the unmatched Fenbi joint-exam list out of Jingkao totals', async () => {

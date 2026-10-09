@@ -11,6 +11,29 @@ function nonEmptyValue(value) {
   return text || null;
 }
 
+export function positionIdentity(position) {
+  const code = String(position?.code || '').trim();
+  if (position?.year === null || position?.year === undefined || !code) return null;
+  return `${position.year}:${code}`;
+}
+
+export function findPositionByReference(positions, reference) {
+  const rows = Array.isArray(positions) ? positions : [];
+  const key = String(reference || '').trim();
+  if (!key) return null;
+  const exact = rows.find((position) => positionIdentity(position) === key);
+  return exact || rows.find((position) => String(position?.code || '') === key) || null;
+}
+
+export function hasPositionReference(references, position, positions) {
+  const saved = Array.isArray(references) ? references : [];
+  const identity = positionIdentity(position);
+  if (identity && saved.includes(identity)) return true;
+  const code = String(position?.code || '');
+  if (!code || !saved.includes(code)) return false;
+  return findPositionByReference(positions, code) === position;
+}
+
 export function getPositionFilterValue(position, field) {
   const graduationStatus = position?.requirements?.graduationStatus ?? position?.freshGraduateRequirement;
   const graduationYear = position?.requirements?.graduationYear ?? position?.newGraduateYear;
@@ -50,6 +73,7 @@ export function getPositionEvidenceGrade(position, sourceRegistry) {
 
 export function filterAndSortPositions(positions, options = {}) {
   const rows = Array.isArray(positions) ? positions : [];
+  const districtId = String(options.districtId || 'all');
   const year = String(options.year || 'all');
   const orgType = String(options.orgType || 'all');
   const jobType = String(options.jobType || 'all');
@@ -60,6 +84,7 @@ export function filterAndSortPositions(positions, options = {}) {
   const sortBy = String(options.sortBy || 'year-desc');
 
   const filtered = rows.filter((position) => {
+    if (districtId !== 'all' && position.districtId !== districtId) return false;
     if (year !== 'all' && String(position.year) !== year) return false;
     if (orgType !== 'all' && position.orgType !== orgType) return false;
     if (jobType !== 'all' && position.jobType !== jobType) return false;
@@ -114,6 +139,51 @@ export function filterAndSortPositions(positions, options = {}) {
       if (byYear) return byYear;
     }
     return String(left.code || '').localeCompare(String(right.code || ''), 'zh-CN');
+  });
+}
+
+export function filterScoreRowsByScope(scoreRows, positions, { districtId = 'all', year = 'all' } = {}) {
+  const rows = Array.isArray(scoreRows) ? scoreRows : [];
+  const positionRows = Array.isArray(positions) ? positions : [];
+  const selectedDistrict = String(districtId || 'all');
+  const selectedYear = String(year || 'all');
+  return rows.filter((row) => {
+    if (selectedYear !== 'all' && String(row.year) !== selectedYear) return false;
+    if (selectedDistrict === 'all') return true;
+    if (!row.positionCode || row.mappingConfidence !== 'high') return false;
+    const matches = positionRows.filter((position) => String(position.year) === String(row.year)
+      && String(position.code) === String(row.positionCode));
+    if (matches.length !== 1) return false;
+    const [position] = matches;
+    return position.districtId === selectedDistrict
+      && String(position.unit || '') === String(row.unit || '')
+      && String(position.title || '') === String(row.title || '');
+  });
+}
+
+export function buildDecisionCoverageMatrix(positions, districts, years = [2024, 2025, 2026]) {
+  const rows = Array.isArray(positions) ? positions : [];
+  const regions = Array.isArray(districts) ? districts : [];
+  const yearValues = [...new Set((Array.isArray(years) ? years : []).map(Number).filter(Number.isFinite))];
+  return regions.map((district) => {
+    const districtRows = rows.filter((position) => position.districtId === district.id);
+    const annual = Object.fromEntries(yearValues.map((year) => {
+      const positionsForYear = districtRows.filter((position) => Number(position.year) === year);
+      const knownRecruitRows = positionsForYear.filter((position) => position.recruitCount !== null
+        && position.recruitCount !== undefined && position.recruitCount !== ''
+        && Number.isFinite(Number(position.recruitCount)));
+      return [year, {
+        positionCount: positionsForYear.length,
+        recruitCount: positionsForYear.length
+          ? knownRecruitRows.reduce((sum, position) => sum + Number(position.recruitCount), 0)
+          : null,
+        knownRecruitCount: knownRecruitRows.length,
+        officialCount: positionsForYear.filter((position) => position.sourceLevel === 'official').length,
+        secondaryCount: positionsForYear.filter((position) => position.sourceLevel === 'secondary').length,
+        hasSample: positionsForYear.length > 0,
+      }];
+    }));
+    return { districtId: district.id, districtName: district.name, years: annual };
   });
 }
 

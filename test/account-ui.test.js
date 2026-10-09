@@ -118,10 +118,10 @@ test('a new visitor sees account creation instead of an unlocked personal dashbo
   assert.doesNotMatch(site.root.innerHTML, /LOCAL PROFILE|个人报考资料/);
 });
 
-test('existing accounts show anonymous slots and require the password before revealing personal state', async () => {
+test('existing accounts show their local display names and still require the password before revealing personal state', async () => {
   const site = await loadBuiltSite({ initialState: { profile: { major: 'PRIVATE MAJOR FROM LOCKED PROFILE' } }, route: 'profile' });
-  assert.match(site.root.innerHTML, /本地档案 1/);
-  assert.doesNotMatch(site.root.innerHTML, /PRIVATE ACCOUNT LABEL|PRIVATE MAJOR FROM LOCKED PROFILE/);
+  assert.match(site.root.innerHTML, /PRIVATE ACCOUNT LABEL/);
+  assert.doesNotMatch(site.root.innerHTML, /本地档案 1|PRIVATE MAJOR FROM LOCKED PROFILE/);
 
   await submit(site, '', { password: 'incorrect passphrase for test' }, { accountId: site.accountId });
   assert.match(site.root.innerHTML, /密码错误或数据已损坏/);
@@ -131,11 +131,11 @@ test('existing accounts show anonymous slots and require the password before rev
   assert.match(site.root.innerHTML, /PRIVATE MAJOR FROM LOCKED PROFILE/);
   assert.match(site.root.innerHTML, /锁定 · PRIVATE ACCOUNT LABEL/);
   await click(site, 'account-lock');
-  assert.match(site.root.innerHTML, /本地档案 1/);
-  assert.doesNotMatch(site.root.innerHTML, /PRIVATE ACCOUNT LABEL|PRIVATE MAJOR FROM LOCKED PROFILE/);
+  assert.match(site.root.innerHTML, /PRIVATE ACCOUNT LABEL/);
+  assert.doesNotMatch(site.root.innerHTML, /PRIVATE MAJOR FROM LOCKED PROFILE/);
 });
 
-test('first account creation writes only an anonymous index and encrypted account envelope', async () => {
+test('first account creation writes its display name only to the local account index and encrypts personal state', async () => {
   const site = await loadBuiltSite();
   await submit(site, 'account-create-form', {
     name: 'PRIVATE NEW ACCOUNT',
@@ -145,8 +145,10 @@ test('first account creation writes only an anonymous index and encrypted accoun
 
   assert.match(site.root.innerHTML, /锁定 · PRIVATE NEW ACCOUNT/);
   assert.equal(site.localStorage.getItem(LEGACY_KEY), null);
+  const accountIndex = site.localStorage.getItem('changping-jingkao-dashboard:accounts:v1');
+  assert.match(accountIndex, /PRIVATE NEW ACCOUNT/);
   for (const value of site.values.values()) {
-    assert.doesNotMatch(value, /PRIVATE NEW ACCOUNT|公共管理|correct horse battery staple/);
+    assert.doesNotMatch(value, /公共管理|correct horse battery staple/);
   }
 });
 
@@ -180,8 +182,13 @@ test('legacy single-profile migration retains data only after encrypted readback
 
   assert.equal(site.localStorage.getItem(LEGACY_KEY), null);
   assert.match(site.root.innerHTML, /MIGRATED PRIVATE MAJOR/);
-  for (const value of site.values.values()) {
-    assert.doesNotMatch(value, /MIGRATED PRIVATE MAJOR|MIGRATED PRIVATE NOTE|MIGRATED ACCOUNT/);
+  const accountIndex = site.localStorage.getItem('changping-jingkao-dashboard:accounts:v1');
+  assert.match(accountIndex, /MIGRATED ACCOUNT/);
+  assert.doesNotMatch(accountIndex, /MIGRATED PRIVATE MAJOR|MIGRATED PRIVATE NOTE/);
+  for (const [key, value] of site.values) {
+    if (key.startsWith('changping-jingkao-dashboard:account:')) {
+      assert.doesNotMatch(value, /MIGRATED PRIVATE MAJOR|MIGRATED PRIVATE NOTE|MIGRATED ACCOUNT/);
+    }
   }
 });
 

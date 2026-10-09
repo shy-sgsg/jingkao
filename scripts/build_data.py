@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import re
 from datetime import date, datetime
 from pathlib import Path
 from typing import Any
@@ -66,14 +67,42 @@ def assign_district(unit: str | None, districts: list[dict[str, Any]]) -> tuple[
     return district_id, match_term
 
 
+def parse_mirror_major_criteria(major_text: str | None) -> dict[str, list[str]]:
+    text = str(major_text or "")
+    criteria: dict[str, list[str]] = {}
+    for level, label in (("undergraduate", "本科"), ("graduate", "研究生")):
+        section = re.search(
+            rf"{label}\s*[:：](.*?)(?=(?:本科|研究生)\s*[:：]|$)",
+            text,
+        )
+        if not section:
+            continue
+        codes = re.findall(r"[（(]\s*([A-Za-z0-9]{2,})\s*[）)]", section.group(1))
+        if codes:
+            criteria[level] = list(dict.fromkeys(codes))
+    return criteria
+
+
 def build_positions(
     positions: list[dict[str, Any]], districts: list[dict[str, Any]]
 ) -> list[dict[str, Any]]:
     result = []
     for position in positions:
         district_id, district_match = assign_district(position.get("unit"), districts)
+        mirror_sources = position.get("sources", [])
+        is_shijingshan_mirror = any(
+            source_id.startswith("gwyzwb-2025-shijingshan-org-")
+            or source_id == "huatu-2024-shijingshan-list"
+            for source_id in mirror_sources
+        )
+        derived_criteria = (
+            parse_mirror_major_criteria(position.get("majorText"))
+            if is_shijingshan_mirror and not position.get("majorCriteria")
+            else {}
+        )
         result.append({
             **position,
+            **({"majorCriteria": derived_criteria} if derived_criteria else {}),
             "districtId": district_id,
             "districtMatch": district_match,
         })
@@ -432,6 +461,7 @@ def render_coverage_report(dataset: dict[str, Any]) -> str:
             if source.get("year") == year
             and source.get("level") == "secondary"
             and source.get("geographicScope") != "citywide"
+            and not source.get("districtId")
             and (has_value(source.get("reportedPositionCount")) or has_value(source.get("reportedRecruitCount")))
         ]
         reference_text = "; ".join(
@@ -464,6 +494,7 @@ def render_coverage_report(dataset: dict[str, Any]) -> str:
         source for source in sources
         if source.get("level") == "secondary"
         and source.get("geographicScope") == "citywide"
+        and not source.get("districtId")
         and (has_value(source.get("reportedPositionCount")) or has_value(source.get("reportedRecruitCount")))
     ]
     if citywide_references:
@@ -567,7 +598,7 @@ def main() -> None:
         "schemaVersion": 1,
         "generatedAt": date.today().isoformat(),
         "dataAsOf": date.today().isoformat(),
-        "scopeNote": "职位库仍为可追溯候选，不是北京全市全量官方职位表。现有2024—2026年职位行主要是昌平二手镜像样例；年度官方全市分母及逐代码核验尚未完成。区目录按北京市民政局2026年行政区划代码标准化；职位区县仅在招录单位名匹配标准区名或经审阅别名时赋值，其余保留未知。职位事实与报名快照、部分面试分数样本分开保存。",
+        "scopeNote": "职位库仍为可追溯候选，不是北京全市全量官方职位表。现有行级候选覆盖昌平、延庆、石景山2024—2026年，以及海淀2025—2026年；石景山2024、海淀2025和海淀2026各保留一条仅见于来源目录的市级候选，因单位名不能确认区属而未分配区县。海淀2024目前只有第三方区级汇总，没有可追溯逐岗行，不把汇总数合成为职位。年度官方全市分母及逐代码核验尚未完成。区目录按北京市民政局2026年行政区划代码标准化；职位区县仅在招录单位名匹配标准区名或经审阅别名时赋值，其余保留未知。职位事实与报名快照、部分面试分数样本分开保存。",
         "studyMeta": study_meta,
         "districts": districts,
         "positions": positions,

@@ -106,22 +106,38 @@ test('standalone site executes and renders the homepage from its embedded app mo
 
   const { root: homepage } = await renderStandaloneRoute(script, '');
   const markup = homepage.innerHTML;
-  assert.match(markup, /2026 职位覆盖/);
-  assert.match(markup, /86<small> \/ 88 个职位<\/small>/);
-  assert.match(markup, /136 \/ 138 人已收录 · 第三方汇总对照/);
+  assert.match(markup, /北京职位样例/);
+  assert.match(markup, /北京全市职位数据概览/);
+  assert.match(markup, /href="#\/positions"[^>]*>职位库/);
+  assert.match(markup, /href="#\/matrix"[^>]*>竞争矩阵/);
+  assert.match(markup, /href="#\/sources"[^>]*>来源与口径/);
+  assert.doesNotMatch(markup, /昌平竞争观察|报道区平均竞争比/);
 
   const routes = [
     ['guide', '使用指南'], ['plan', '学习计划'], ['science', '科学推理'], ['aptitude', '行测能力'],
-    ['essay', '申论训练'], ['mocks', '模考复盘'], ['positions', '昌平职位库'],
+    ['essay', '申论训练'], ['mocks', '模考复盘'], ['positions', '职位库'],
     ['compare', '岗位比较'], ['assistant', '选岗助手'], ['scenarios', '分数情景'],
-    ['matrix', '昌平竞争矩阵'], ['profile', '个人报考资料'],
+    ['matrix', '北京京考竞争矩阵'], ['profile', '个人报考资料'],
     ['research', '研究结论'], ['evidence', '数据覆盖与核验'], ['sources', '数据与来源'], ['settings', '设置与显示'],
   ];
   for (const [route, title] of routes) {
     const rendered = await renderStandaloneRoute(script, route);
     assert.match(rendered.root.innerHTML, new RegExp(title), `the standalone ${route} route should render`);
+    if (route === 'positions') {
+      assert.match(rendered.root.innerHTML, /北京京考职位决策范围/);
+      assert.match(rendered.root.innerHTML, /<h1>职位库<\/h1>/);
+      assert.match(rendered.root.innerHTML, /东城区/);
+      assert.match(rendered.root.innerHTML, /待补逐岗数据/);
+      assert.doesNotMatch(rendered.root.innerHTML, /昌平职位库/);
+    }
+    if (route === 'matrix') {
+      assert.match(rendered.root.innerHTML, /16 区 × 3 年/);
+      assert.match(rendered.root.innerHTML, /东城区/);
+      assert.match(rendered.root.innerHTML, /未收录/);
+    }
+    if (route === 'assistant') assert.match(rendered.root.innerHTML, /当前范围职位样例/);
     if (route === 'research') {
-      assert.match(rendered.root.innerHTML, /2026 年收录 86 条岗位样例/);
+      assert.match(rendered.root.innerHTML, /2026 年昌平区来源清单列出 86 条岗位样例/);
       assert.match(rendered.root.innerHTML, /31 条部分样本/);
       assert.match(rendered.root.innerHTML, /data-action="filter-research-topic"/);
     }
@@ -152,7 +168,7 @@ test('homepage quick start prioritizes real profile completion, plan, mock, and 
   assert.match(markup, /class="quick-start-card" href="#\/profile"[\s\S]*?完善个人报考条件[\s\S]*?1 \/ 15 项有内容/);
   assert.match(markup, /class="quick-start-card" href="#\/plan"[\s\S]*?安排今天的学习/);
   assert.match(markup, /data-action="add-mock"[\s\S]*?记录一次模考/);
-  assert.match(markup, /class="quick-start-card" href="#\/positions"[\s\S]*?浏览昌平历史岗位/);
+  assert.match(markup, /class="quick-start-card" href="#\/positions"[\s\S]*?浏览北京京考职位库/);
   assert.doesNotMatch(markup, /按个人条件筛岗位/);
 });
 
@@ -215,7 +231,7 @@ test('first-use onboarding names all four jobs the workspace supports', async ()
   assert.match(onboarding, /专业方向预填为公共管理，请先改成自己的真实专业/);
   assert.match(onboarding, /管理 50 天复习计划/);
   assert.match(onboarding, /记录并诊断模考成绩/);
-  assert.match(onboarding, /查询昌平历年真实职位/);
+  assert.match(onboarding, /查询北京京考历年职位/);
   assert.match(onboarding, /根据个人条件辅助选岗/);
   assert.match(onboarding, /data-action="onboarding-later"/);
 });
@@ -249,6 +265,33 @@ test('assistant renders evidence-gated difficulty and fit breakdowns for real po
   assert.match(assistant.innerHTML, /查看评分依据/);
 });
 
+test('assistant and score scenarios honor Beijing district scope without borrowing other districts', async () => {
+  await import('../scripts/build.mjs');
+  const html = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8');
+  const script = html.match(/<script>\s*([\s\S]*?)<\/script>/)?.[1];
+  const assistant = await renderStandaloneRoute(script, 'assistant');
+
+  await assistant.listeners.get('change')({ target: { id: 'decision-district', value: 'haidian' } });
+  assert.match(assistant.root.innerHTML, /302<\/strong><span>当前范围职位样例/);
+  assert.equal((assistant.root.innerHTML.match(/class="panel assistant-job /g) || []).length, 302);
+  assert.match(assistant.root.innerHTML, /海淀区 · 2025/);
+
+  await assistant.listeners.get('change')({ target: { id: 'decision-year', value: '2025' } });
+  assert.match(assistant.root.innerHTML, /153<\/strong><span>当前范围职位样例/);
+  assert.equal((assistant.root.innerHTML.match(/class="panel assistant-job /g) || []).length, 153);
+
+  await assistant.listeners.get('change')({ target: { id: 'decision-year', value: '2024' } });
+  assert.match(assistant.root.innerHTML, /0<\/strong><span>当前范围职位样例/);
+  assert.match(assistant.root.innerHTML, /暂未收录不代表没有岗位/);
+  assert.equal((assistant.root.innerHTML.match(/class="panel assistant-job /g) || []).length, 0);
+
+  const scenarios = await renderStandaloneRoute(script, 'scenarios');
+  await scenarios.listeners.get('change')({ target: { id: 'decision-district', value: 'haidian' } });
+  assert.match(scenarios.root.innerHTML, /海淀区 · 全部单位类型/);
+  assert.match(scenarios.root.innerHTML, /不会借用其他区县的分数/);
+  assert.match(scenarios.root.innerHTML, /0 条 · 0 条代码已核对/);
+});
+
 test('position comparison distinguishes process snapshots from final registration data', async () => {
   await import('../scripts/build.mjs');
   const html = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8');
@@ -259,6 +302,7 @@ test('position comparison distinguishes process snapshots from final registratio
   });
 
   assert.match(comparison.innerHTML, /岗位级报名 \/ 资格审查记录/);
+  assert.match(comparison.innerHTML, /区县/);
   assert.match(comparison.innerHTML, /2025-11-19 18:00 · 424 人资格审查通过（过程快照，非最终报名或实考）/);
   assert.match(comparison.innerHTML, /2025-11-19 18:00 · 150 人资格审查通过（过程快照，非最终报名或实考）/);
   assert.match(comparison.innerHTML, /过程快照不作为最终报名或实考数据/);
@@ -295,7 +339,7 @@ test('score scenario exposes every requested segment and labels the narrower mat
   const { root, listeners } = await renderStandaloneRoute(script, 'scenarios');
 
   assert.match(root.innerHTML, /<select id="scenario-scope"/);
-  for (const [segment, sampleCount] of [['全部昌平', 31], ['区直', 23], ['街道', 3], ['镇', 5], ['普通职位', 15], ['行政执法', 7], ['公共管理相关', 4]]) {
+  for (const [segment, sampleCount] of [['全部区县', 31], ['区直', 23], ['街道', 3], ['镇', 5], ['普通职位', 15], ['行政执法', 7], ['公共管理相关', 4]]) {
     assert.ok(root.innerHTML.includes(`${segment} · n=${sampleCount}`), `score scope selector should show ${segment}'s ${sampleCount} source-backed rows`);
   }
   assert.match(root.innerHTML, /岗位类别仅纳入代码、单位与岗位名均唯一匹配的分数记录/);
