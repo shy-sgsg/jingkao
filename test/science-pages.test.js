@@ -18,7 +18,7 @@ test('free science practice opens the session it just created', () => {
 });
 
 test('task-linked science results return to the study plan', () => {
-  assert.ok(app.includes("session.planTaskId ? '#/plan' : '#/science'"));
+  assert.ok(app.includes("session.planTaskId ? '#/plan' : '#/aptitude/science'"));
   assert.ok(app.includes('markPlanTaskInProgress'));
   assert.ok(app.includes('getPlanTaskProgress'));
   assert.ok(app.includes('progress.remainingCount'));

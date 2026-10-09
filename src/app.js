@@ -35,8 +35,9 @@ const pageMeta = {
   overview: ['备考总览', '查看今天的复习任务、目标分差和昌平选岗证据。'],
   guide: ['使用指南', '从你要解决的问题出发，找到对应页面和下一步操作。'],
   plan: ['学习计划', '自由安排日期、任务类型和学习内容；保留原有每日计划记录。'],
-  science: ['科学推理', '知识学习与刷题数据独立记录，并可从每日计划进入。'],
-  aptitude: ['行测能力', '官方大纲六个一级模块；科学推理作为判断推理中的专项单独追踪。'],
+  science: ['科学推理', '行测能力子模块 · 知识学习、专项练习与计划联动。'],
+  aptitude: ['行测能力', '查看各项能力训练，并进入科学推理和常识判断子模块。'],
+  generalKnowledge: ['常识判断', '行测能力子模块 · 内容筹备中。'],
   essay: ['申论训练', '按训练任务记录练习次数、关键词覆盖和自评；自评不是客观测量。'],
   mocks: ['模考复盘', '只画实际填写的成绩。空白模考不会被显示成 0 分。'],
   positions: ['昌平职位库', '当前仅展示有来源的候选样例，不是昌平区全量职位表。'],
@@ -51,7 +52,7 @@ const pageMeta = {
   settings: ['设置与显示', '调整字号、动效层级和页面密度；偏好保存在此浏览器。'],
 };
 const navGroups = [
-  { label: '工作台', items: [['overview', '备考总览'], ['guide', '使用指南'], ['plan', '学习计划'], ['science', '科学推理']] },
+  { label: '工作台', items: [['overview', '备考总览'], ['guide', '使用指南'], ['plan', '学习计划']] },
   { label: '备考复盘', items: [['aptitude', '行测能力'], ['essay', '申论训练'], ['mocks', '模考记录']] },
   { label: '职位决策', items: [['positions', '昌平职位库'], ['compare', '岗位比较'], ['assistant', '选岗助手'], ['scenarios', '分数情景'], ['matrix', '竞争矩阵']] },
   { label: '个人与数据', items: [['profile', '个人资料'], ['research', '研究结论'], ['evidence', '数据覆盖'], ['sources', '数据与来源'], ['settings', '设置与显示']] },
@@ -72,7 +73,8 @@ function readRoute(hash = location.hash) {
     if (!encoded) return null;
     try { return decodeURIComponent(encoded.replace(/\+/gu, ' ')); } catch { return null; }
   };
-  return { page: routePage, taskId: value('task'), knowledgePointId: value('knowledge'), sessionId: value('session') };
+  const pageAliases = { science: 'science', 'aptitude/science': 'science', 'aptitude/general-knowledge': 'generalKnowledge' };
+  return { page: pageAliases[routePage] || routePage, taskId: value('task'), knowledgePointId: value('knowledge'), sessionId: value('session') };
 }
 
 function routeTaskIdForScience() {
@@ -440,7 +442,10 @@ function scoreEcdfSvg(scoreRows, year, targetScore) {
 }
 
 function renderSidebar() {
-  const nav = navGroups.map((group) => `<div class="nav-group"><div class="nav-heading">${escapeHtml(group.label)}</div>${group.items.map(([id, label]) => `<a href="#/${id}" class="nav-item ${page === id ? 'active' : ''}" ${page === id ? 'aria-current="page"' : ''}><span class="nav-icon">${icons[id]}</span><span>${escapeHtml(label)}</span>${id === 'positions' ? `<span class="nav-count">${dataset.positions.length}</span>` : ''}</a>`).join('')}</div>`).join('');
+  const nav = navGroups.map((group) => `<div class="nav-group"><div class="nav-heading">${escapeHtml(group.label)}</div>${group.items.map(([id, label]) => {
+    const active = page === id || (id === 'aptitude' && ['science', 'generalKnowledge'].includes(page));
+    return `<a href="#/${id}" class="nav-item ${active ? 'active' : ''}" ${active ? 'aria-current="page"' : ''}><span class="nav-icon">${icons[id]}</span><span>${escapeHtml(label)}</span>${id === 'positions' ? `<span class="nav-count">${dataset.positions.length}</span>` : ''}</a>`;
+  }).join('')}</div>`).join('');
   return `<aside class="sidebar" id="sidebar"><a class="brand" href="#/overview"><span class="brand-mark">京</span><span><strong>京考备考台</strong><small>CHANGPING · 2027</small></span></a><div class="data-status"><span class="status-dot"></span><span>本地运行 · 数据基准 ${escapeHtml(dataset.dataAsOf)}</span></div><nav aria-label="主导航">${nav}</nav><div class="sidebar-bottom"><div class="sidebar-note"><span class="lock-icon">▣</span><div><strong>仅保存在本机</strong><small>个人记录不会上传</small></div></div><div class="sidebar-version">昌平区 · 个人工作台 <span>v1.0</span></div></div></aside>`;
 }
 
@@ -459,7 +464,8 @@ function renderSettings() {
 
 function renderLayout() {
   const [title, subtitle] = pageMeta[page] || pageMeta.overview;
-  return `${renderSidebar()}<div class="main-shell"><header class="topbar"><div class="topbar-left"><button class="mobile-menu" type="button" aria-label="打开导航" data-action="mobile-menu">☰</button><div><div class="breadcrumb">昌平区 <span>/</span> <strong>${escapeHtml(title)}</strong></div><p class="page-subtitle">${escapeHtml(subtitle)}</p></div></div><div class="topbar-right"><a class="button button-secondary guide-trigger" href="#/guide">使用指南</a>${renderDensityControl()}<span class="today-pill"><span class="today-dot"></span>${escapeHtml(fmtDate(todayString()))}</span><button class="button button-quiet account-lock-button" type="button" data-action="account-lock" aria-label="锁定当前档案并切换账户">锁定 · ${escapeHtml(accountSession.name)}</button></div></header><main id="page-content" tabindex="-1">${renderPage()}</main><footer class="page-footer"><span>资料更新至 ${escapeHtml(dataset.dataAsOf)} · 使用前请回看官方当年职位表</span><a href="#/sources">数据口径说明 →</a></footer></div><div class="sidebar-scrim" data-action="close-menu"></div>`;
+  const pageScope = ['positions', 'compare', 'assistant'].includes(page) ? '北京市职位样例' : ['aptitude', 'science', 'generalKnowledge'].includes(page) ? '行测能力' : '昌平区';
+  return `${renderSidebar()}<div class="main-shell"><header class="topbar"><div class="topbar-left"><button class="mobile-menu" type="button" aria-label="打开导航" data-action="mobile-menu">☰</button><div><div class="breadcrumb">${pageScope} <span>/</span> <strong>${escapeHtml(title)}</strong></div><p class="page-subtitle">${escapeHtml(subtitle)}</p></div></div><div class="topbar-right"><a class="button button-secondary guide-trigger" href="#/guide">使用指南</a>${renderDensityControl()}<span class="today-pill"><span class="today-dot"></span>${escapeHtml(fmtDate(todayString()))}</span><button class="button button-quiet account-lock-button" type="button" data-action="account-lock" aria-label="锁定当前档案并切换账户">锁定 · ${escapeHtml(accountSession.name)}</button></div></header><main id="page-content" tabindex="-1">${renderPage()}</main><footer class="page-footer"><span>资料更新至 ${escapeHtml(dataset.dataAsOf)} · 使用前请回看官方当年职位表</span><a href="#/sources">数据口径说明 →</a></footer></div><div class="sidebar-scrim" data-action="close-menu"></div>`;
 }
 
 function renderOverview() {
@@ -480,7 +486,7 @@ function renderOverview() {
   const todayPlan = getTodayOrNextDay();
   const todayScienceTasks = getTasksForDate(storage.studyPlanTasks, todayString())
     .filter((task) => task.taskType === 'science_reasoning' && task.status !== 'completed');
-  const scienceReminder = todayScienceTasks.length ? `<section class="panel science-reminder-panel"><div class="panel-heading"><div><div class="eyebrow muted">TODAY · SCIENCE REASONING</div><h2>今天的科学推理任务</h2><p>${todayScienceTasks.length} 项待完成；从这里可直接进入对应训练。</p></div><a class="panel-link" href="#/plan">管理计划 →</a></div><div class="science-reminder-list">${todayScienceTasks.map((task) => `<a class="science-reminder-item" href="#/science?task=${encodeURIComponent(task.id)}"><span class="science-reminder-icon">⚗</span><span><strong>${escapeHtml(task.title)}</strong><small>${escapeHtml(planTaskTypeLabel(task))} · ${escapeHtml(planTaskStatusLabel(task.status))}${task.estimatedMinutes ? ` · ${task.estimatedMinutes} 分钟` : ''}</small></span><b>开始 ↗</b></a>`).join('')}</div></section>` : '';
+  const scienceReminder = todayScienceTasks.length ? `<section class="panel science-reminder-panel"><div class="panel-heading"><div><div class="eyebrow muted">TODAY · SCIENCE REASONING</div><h2>今天的科学推理任务</h2><p>${todayScienceTasks.length} 项待完成；从这里可直接进入对应训练。</p></div><a class="panel-link" href="#/plan">管理计划 →</a></div><div class="science-reminder-list">${todayScienceTasks.map((task) => `<a class="science-reminder-item" href="#/aptitude/science?task=${encodeURIComponent(task.id)}"><span class="science-reminder-icon">⚗</span><span><strong>${escapeHtml(task.title)}</strong><small>${escapeHtml(planTaskTypeLabel(task))} · ${escapeHtml(planTaskStatusLabel(task.status))}${task.estimatedMinutes ? ` · ${task.estimatedMinutes} 分钟` : ''}</small></span><b>开始 ↗</b></a>`).join('')}</div></section>` : '';
   const profileFields = ['undergraduateMajor', 'undergraduateMajorCode', 'graduateMajor', 'graduateMajorCode', 'degree', 'degreeType', 'graduationStatus', 'graduationYear', 'politicalStatus', 'hukou', 'studentOrigin', 'grassrootsYears', 'credentials', 'retiredStatus', 'grassrootsProjectStatus'];
   const completedProfileFields = profileFields.filter((key) => storage.profile[key] !== null
     && storage.profile[key] !== undefined && String(storage.profile[key]).trim() !== '').length;
@@ -591,7 +597,7 @@ function renderPlanTaskList() {
       <div class="plan-task-date"><strong>${escapeHtml(fmtDate(task.date))}</strong><small>${escapeHtml(task.date)}</small></div>
       <div class="plan-task-main"><div class="plan-task-title-row"><span class="plan-task-type">${escapeHtml(planTaskTypeLabel(task))}</span><h3>${escapeHtml(task.title)}</h3>${chip(planTaskStatusLabel(task.status), task.status === 'completed' ? 'green' : task.status === 'in_progress' ? 'blue' : 'neutral')}</div>
         ${task.description ? `<p>${escapeHtml(task.description)}</p>` : ''}<div class="plan-task-meta">${scienceDetail}${task.estimatedMinutes !== null ? `<span>◷ ${fmt(task.estimatedMinutes)} 分钟</span>` : ''}<span>${task.priority === 'high' ? '高优先级' : task.priority === 'low' ? '低优先级' : '普通优先级'}</span>${task.status === 'completed' ? `<span>${completionLabel}</span>` : ''}</div>
-      </div><div class="plan-task-actions">${task.taskType === 'science_reasoning' ? `<a class="button button-secondary button-small" href="#/science?task=${encodeURIComponent(task.id)}">开始</a>` : ''}${button('编辑', 'edit-plan-task', 'button button-quiet button-small', `data-task-id="${escapeHtml(task.id)}"`)}${task.status === 'completed' ? button('标为未完成', 'reopen-plan-task', 'button button-quiet button-small', `data-task-id="${escapeHtml(task.id)}"`) : button('完成', 'complete-plan-task', 'button button-secondary button-small', `data-task-id="${escapeHtml(task.id)}"`)}${button('归档', 'archive-plan-task', 'button button-quiet button-small', `data-task-id="${escapeHtml(task.id)}"`)}</div>
+      </div><div class="plan-task-actions">${task.taskType === 'science_reasoning' ? `<a class="button button-secondary button-small" href="#/aptitude/science?task=${encodeURIComponent(task.id)}">开始</a>` : ''}${button('编辑', 'edit-plan-task', 'button button-quiet button-small', `data-task-id="${escapeHtml(task.id)}"`)}${task.status === 'completed' ? button('标为未完成', 'reopen-plan-task', 'button button-quiet button-small', `data-task-id="${escapeHtml(task.id)}"`) : button('完成', 'complete-plan-task', 'button button-secondary button-small', `data-task-id="${escapeHtml(task.id)}"`)}${button('归档', 'archive-plan-task', 'button button-quiet button-small', `data-task-id="${escapeHtml(task.id)}"`)}</div>
     </article>`;
   }).join('');
   return `<section class="panel plan-task-panel"><div class="panel-heading"><div><div class="eyebrow muted">FLEXIBLE STUDY TASKS</div><h2>学习任务 <span class="heading-count">${tasks.length}</span></h2><p>新增任务与 50 天原始日程分开保存；归档会保留关联学习记录。</p></div><button type="button" class="button button-primary" data-action="add-plan-task" data-date="${todayString()}">＋ 新增学习任务</button></div>${tasks.length ? `<div class="plan-task-list">${taskCards}</div>` : '<div class="empty-state plan-task-empty">还没有自定义学习任务。你可以按日期添加普通任务或科学推理训练。</div>'}</section>`;
@@ -613,20 +619,20 @@ function renderScienceDiagram(pointId) {
 }
 
 function renderScienceLesson(point, task = null) {
-  if (!point) return `<div class="page-body"><div class="empty-state">没有找到这个知识点。</div><a class="button button-secondary" href="#/science">返回科学推理</a></div>`;
+  if (!point) return `<div class="page-body"><div class="empty-state">没有找到这个知识点。</div><a class="button button-secondary" href="#/aptitude/science">返回科学推理</a></div>`;
   const pointQuestions = SCIENCE_QUESTION_BANK.filter((question) => question.knowledgePointIds.includes(point.id));
   const progress = storage.scienceStudy.knowledgeProgress[point.id];
   const learningStatus = progress?.status === 'completed' ? '已学完' : progress?.status === 'learning' ? '学习中' : '未开始';
   const isPointFavorite = storage.scienceStudy.favoriteKnowledgePointIds.includes(point.id);
   const isPointUnclear = storage.scienceStudy.unclearKnowledgePointIds.includes(point.id);
   if (!point.content) {
-    return `<div class="page-body science-page"><div class="page-heading-row"><div><div class="eyebrow muted">${escapeHtml(point.subjectTitle)} · ${escapeHtml(point.topicTitle)}</div><h1>${escapeHtml(point.title)}</h1><p>该知识点已进入目录，完整讲义仍在编校；页面不会把提纲当作已发布知识内容。</p></div><a class="button button-secondary" href="#/science">返回知识目录</a></div><section class="panel science-outline-panel"><span class="science-content-status">目录提纲</span><h2>本点题目</h2><p>${pointQuestions.length} 道已发布题目，题面会注明官方例题、考生回忆版、机构模拟题或现有原创练习来源。</p><button type="button" class="button button-primary" data-action="open-science-practice" data-point-id="${escapeHtml(point.id)}">按此知识点练习</button></section></div>`;
+    return `<div class="page-body science-page"><div class="page-heading-row"><div><div class="eyebrow muted">${escapeHtml(point.subjectTitle)} · ${escapeHtml(point.topicTitle)}</div><h1>${escapeHtml(point.title)}</h1><p>该知识点已进入目录，完整讲义仍在编校；页面不会把提纲当作已发布知识内容。</p></div><a class="button button-secondary" href="#/aptitude/science">返回知识目录</a></div><section class="panel science-outline-panel"><span class="science-content-status">目录提纲</span><h2>本点题目</h2><p>${pointQuestions.length} 道已发布题目，题面会注明官方例题、考生回忆版、机构模拟题或现有原创练习来源。</p><button type="button" class="button button-primary" data-action="open-science-practice" data-point-id="${escapeHtml(point.id)}">按此知识点练习</button></section></div>`;
   }
   const content = point.content;
   const formulas = (content.formulas || []).map((formula) => `<article class="science-formula"><strong>${escapeHtml(formula.expression)}</strong><p>${escapeHtml(formula.variables)}</p><small>${escapeHtml(formula.conditions)}</small></article>`).join('');
   const examples = (content.examples || []).map((example) => `<article class="science-example"><h3>${escapeHtml(example.title)}</h3><p>${escapeHtml(example.stem)}</p><div class="science-example-options">${example.options.map((option) => `<span class="${option.id === example.answer ? 'is-correct' : ''}"><b>${option.id}</b>${escapeHtml(option.text)}</span>`).join('')}</div><ol>${example.steps.map((step) => `<li>${escapeHtml(step)}</li>`).join('')}</ol><details><summary>查看各选项分析</summary><ul>${Object.entries(example.optionExplanations).map(([key, value]) => `<li><strong>${key}：</strong>${escapeHtml(value)}</li>`).join('')}</ul></details></article>`).join('');
   const completed = progress?.status === 'completed';
-  return `<div class="page-body science-page"><div class="page-heading-row"><div><div class="eyebrow muted">${escapeHtml(point.subjectTitle)} · ${escapeHtml(point.topicTitle)} · KNOWLEDGE</div><h1>${escapeHtml(point.title)}</h1><p>${escapeHtml(content.summary)}</p></div><div class="heading-actions"><a class="button button-secondary" href="#/science">知识目录</a>${chip(learningStatus, completed ? 'green' : progress?.status === 'learning' ? 'blue' : 'neutral')}</div></div>
+  return `<div class="page-body science-page"><div class="page-heading-row"><div><div class="eyebrow muted">${escapeHtml(point.subjectTitle)} · ${escapeHtml(point.topicTitle)} · KNOWLEDGE</div><h1>${escapeHtml(point.title)}</h1><p>${escapeHtml(content.summary)}</p></div><div class="heading-actions"><a class="button button-secondary" href="#/aptitude/science">知识目录</a>${chip(learningStatus, completed ? 'green' : progress?.status === 'learning' ? 'blue' : 'neutral')}</div></div>
     <div class="science-lesson-layout"><article class="panel science-lesson-main"><section><span class="science-section-kicker">原理解释</span><p>${escapeHtml(content.explanation)}</p></section>${renderScienceDiagram(point.id)}${content.principle ? `<section class="science-principle"><span class="science-section-kicker">核心规律</span><p>${escapeHtml(content.principle)}</p></section>` : ''}${formulas ? `<section><span class="science-section-kicker">公式与适用条件</span><div class="science-formula-grid">${formulas}</div></section>` : ''}<section><span class="science-section-kicker">生活例子</span><p>${escapeHtml(content.everydayExample)}</p></section>${examples ? `<section><span class="science-section-kicker">分步例题</span><div class="science-examples">${examples}</div></section>` : ''}${content.commonMistakes?.length ? `<section class="science-mistakes-note"><span class="science-section-kicker">常见误区</span><ul>${content.commonMistakes.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul></section>` : ''}${content.quickMethod ? `<section class="science-quick-method"><span class="science-section-kicker">快速检查</span><p>${escapeHtml(content.quickMethod)}</p></section>` : ''}
     <div class="science-lesson-footer"><button type="button" class="button button-secondary" data-action="start-science-knowledge" data-point-id="${escapeHtml(point.id)}" ${progress?.status === 'learning' || completed ? 'disabled' : ''}>${progress?.status === 'learning' ? '正在学习' : completed ? '已学完' : '标记正在学习'}</button><button type="button" class="button button-primary" data-action="complete-science-knowledge" data-point-id="${escapeHtml(point.id)}" ${completed ? 'disabled' : ''}>${completed ? '已完成知识点学习' : '完成知识点学习'}</button><button type="button" class="button button-secondary" data-action="toggle-science-knowledge-favorite" data-point-id="${escapeHtml(point.id)}">${isPointFavorite ? '★ 已收藏知识点' : '☆ 收藏知识点'}</button><button type="button" class="button button-quiet" data-action="toggle-science-knowledge-unclear" data-point-id="${escapeHtml(point.id)}">${isPointUnclear ? '已标记不理解 · 取消' : '标记不理解'}</button><button type="button" class="button button-secondary" data-action="open-science-practice" data-point-id="${escapeHtml(point.id)}">练习此知识点</button>${task ? `<span>任务：${escapeHtml(task.title)}</span>` : ''}</div></article><aside class="science-lesson-aside"><section class="panel"><span class="eyebrow muted">本点练习</span><strong class="science-aside-number">${pointQuestions.length}</strong><p>道已发布题目</p><small>官方大纲例题、公开回忆题、机构模拟和既有原创练习均逐题标注来源。</small></section><section class="panel"><span class="eyebrow muted">学习记录</span><strong>${completed ? escapeHtml(fmtDate(progress.completedAt?.slice(0, 10))) : learningStatus}</strong><p>${progress?.lastViewedAt ? `最近更新 ${escapeHtml(fmtDate(progress.lastViewedAt.slice(0, 10)))}` : '开始学习和标记学完都由你主动确认。'}</p></section></aside></div>
   </div>`;
@@ -649,7 +655,7 @@ function renderScienceSession(session) {
     const scoreText = isExam
       ? `${correct} / ${session.questionIds.length} 题 · 得分率 ${Math.round((session.scoreRate || 0) * 100)}% · 已答题准确率 ${session.answeredAccuracy === null ? '—' : `${Math.round(session.answeredAccuracy * 100)}%`}`
       : `${correct} / ${sessionAnswers.length} 题答对 · ${sessionAnswers.length ? Math.round(correct / sessionAnswers.length * 100) : 0}% 正确`;
-    const resultHref = session.planTaskId ? '#/plan' : '#/science';
+    const resultHref = session.planTaskId ? '#/plan' : '#/aptitude/science';
     const resultLinkLabel = session.planTaskId ? '返回学习计划' : '返回科学推理';
     return `<div class="page-body science-page"><div class="page-heading-row"><div><div class="eyebrow muted">${isExam ? 'TIMED MOCK REVIEW' : 'PRACTICE REVIEW'}</div><h1>${session.status === 'timed_out' ? '模拟已到时' : isExam ? '模拟已交卷' : '训练完成'}</h1><p>${scoreText}</p></div><a class="button button-secondary" href="${resultHref}">${resultLinkLabel}</a></div><section class="panel science-results-panel"><div class="science-result-summary"><strong>${correct}<small> / ${session.questionIds.length}</small></strong><span>${isExam ? '答对 / 本场总题数' : '正确题数'}</span><p>${session.status === 'timed_out' ? '时间到后保留已选答案，空题计入总题数但不计入已答题准确率。' : '答案和逐题解析已保存；答错的题目会加入错题本。'}</p></div><div class="science-result-list">${reviewRows || '<div class="empty-state">本次没有可复盘题目。</div>'}</div><button type="button" class="button button-primary" data-action="open-science-practice">再练一组</button></section></div>`;
   }
@@ -736,7 +742,7 @@ function renderScience() {
     const topics = subject.topics.map((topic) => {
       const points = topic.knowledgePoints.map((point) => {
         const count = SCIENCE_QUESTION_BANK.filter((question) => question.knowledgePointIds.includes(point.id)).length;
-        return `<a class="science-point-link ${point.contentStatus}" href="#/science?knowledge=${encodeURIComponent(point.id)}"><span>${escapeHtml(point.title)}</span><small>${point.contentStatus === 'published' ? '讲义已发布' : '目录提纲'} · ${count} 题</small></a>`;
+        return `<a class="science-point-link ${point.contentStatus}" href="#/aptitude/science?knowledge=${encodeURIComponent(point.id)}"><span>${escapeHtml(point.title)}</span><small>${point.contentStatus === 'published' ? '讲义已发布' : '目录提纲'} · ${count} 题</small></a>`;
       }).join('');
       return `<details class="science-topic-card"><summary><strong>${escapeHtml(topic.title)}</strong><span>${topic.knowledgePoints.length} 个知识点</span></summary><div class="science-point-links">${points}</div></details>`;
     }).join('');
@@ -754,7 +760,7 @@ function renderScience() {
   }).join('');
   return `<div class="page-body science-page"><div class="page-heading-row"><div><div class="eyebrow muted">FOUR SCIENCE SUBJECTS · SOURCED QUESTION BANK</div><h1>科学推理</h1><p>知识点学习、专项练习、限时模拟和错题复习会单独记录。现有原创练习保留发布；新收录题目均标注官方例题、回忆题或机构模拟来源。</p></div><div class="heading-actions"><button type="button" class="button button-primary" data-action="open-science-practice">开始自由练习</button><a class="button button-secondary" href="#/plan">安排学习任务</a></div></div>
     <div class="metric-grid science-metrics">${metric('练习题库', `${SCIENCE_QUESTION_BANK.length}<small> 道</small>`, `${questionCounts.official_outline_example} 道官方大纲例题 · ${questionCounts.recalled} 道回忆题 · ${questionCounts.third_party_mock} 道机构模拟 · ${questionCounts.original} 道现有原创`, '⚗', 'blue')}${metric('已作答', `${stats.attemptedCount}<small> 题</small>`, `${stats.completedSessionCount} 次练习完成`, '✓', 'mint')}${metric('实际正确率', fmtPct(stats.accuracy), stats.accuracy === null ? '暂无答案记录' : '按已提交答案计算', '◎', 'amber')}${metric('错题 / 收藏', `${mistakeIds.length}<small> / ${favoriteCount}</small>`, '错题和收藏独立保存', '☆', 'purple')}</div>
-    <section class="science-shortcuts">${activeSession ? `<a class="panel science-shortcut-card science-resume-card" href="#/science?session=${encodeURIComponent(activeSession.id)}"><span>继续未完成训练 · ${activeSession.mode === 'exam' ? '限时模拟' : '专项练习'}</span><strong>第 ${activeSession.currentIndex + 1} / ${activeSession.questionIds.length} 题</strong><small>剩余答题和已选答案均已保存</small></a>` : ''}<button type="button" class="panel science-shortcut-card" data-action="open-science-practice" data-mode="mistakes"><span>错题复习</span><strong>${mistakeIds.length} 道</strong><small>仅从已记录错题中抽题</small></button><button type="button" class="panel science-shortcut-card" data-action="open-science-practice" data-mode="exam"><span>限时模拟</span><strong>自选题量与时长</strong><small>到时后停止答题，并保留已作答内容</small></button><a class="panel science-shortcut-card" href="#/plan"><span>学习计划</span><strong>把训练排进日程</strong><small>通过计划任务核验实际完成量</small></a></section>
+    <section class="science-shortcuts">${activeSession ? `<a class="panel science-shortcut-card science-resume-card" href="#/aptitude/science?session=${encodeURIComponent(activeSession.id)}"><span>继续未完成训练 · ${activeSession.mode === 'exam' ? '限时模拟' : '专项练习'}</span><strong>第 ${activeSession.currentIndex + 1} / ${activeSession.questionIds.length} 题</strong><small>剩余答题和已选答案均已保存</small></a>` : ''}<button type="button" class="panel science-shortcut-card" data-action="open-science-practice" data-mode="mistakes"><span>错题复习</span><strong>${mistakeIds.length} 道</strong><small>仅从已记录错题中抽题</small></button><button type="button" class="panel science-shortcut-card" data-action="open-science-practice" data-mode="exam"><span>限时模拟</span><strong>自选题量与时长</strong><small>到时后停止答题，并保留已作答内容</small></button><a class="panel science-shortcut-card" href="#/plan"><span>学习计划</span><strong>把训练排进日程</strong><small>通过计划任务核验实际完成量</small></a></section>
     <section class="panel science-source-panel"><div class="science-panel-heading"><div><span class="eyebrow muted">SOURCE CATALOG</span><h2>官方与公开题源</h2><p>“官方大纲例题”来自考试大纲；“考生回忆版”和“机构模拟题”均明确标为非官方。</p></div><span>${SCIENCE_SOURCES.length} 个来源</span></div><div class="science-source-list">${sourceRows}</div></section>
     <div class="science-subject-grid">${subjects}</div>
   </div>`;
@@ -782,7 +788,11 @@ function renderAptitude() {
   const totalTarget = aptitude.reduce((sum, item) => sum + (item.plannedQuestions || 0), 0);
   const accuracyValues = aptitude.filter((item) => Number.isFinite(item.accuracy)).map((item) => item.accuracy);
   const overallAccuracy = accuracyValues.length ? accuracyValues.reduce((sum, value) => sum + value, 0) / accuracyValues.length : null;
-  return `<div class="page-body"><div class="page-heading-row"><div><div class="eyebrow muted">SIX OFFICIAL SECTIONS + TRACKED SUBSKILLS</div><h1>行测能力训练</h1><p>科学推理在官方大纲中属于判断推理细分，本页为训练需要单列显示。</p></div><a class="button button-secondary" href="#/plan">查看 50 天计划 →</a></div><div class="metric-grid three-metrics">${metric('训练子项', `${dataset.aptitude.length}<small> 项</small>`, `${groups.size} 个工作簿训练分类`, '⌁', 'blue')}${metric('已记录题量', `${fmt(totalDone)}<small> 题</small>`, `训练目标 ${Number(totalTarget).toLocaleString('zh-CN')} 题`, '▤', 'mint')}${metric('实际正确率', fmtPct(overallAccuracy), overallAccuracy === null ? '尚无练习记录；不是 0%' : '已记录训练项均值', '◎', 'amber')}</div><div class="skill-grid">${cards}</div><div class="notice notice-soft"><span>ⓘ</span><p>工作簿内计划题量可见；模板的零值按占位值处理，实际练习数据需另行记录。点击“记录”可更新单项训练。</p></div></div>`;
+  return `<div class="page-body"><div class="page-heading-row"><div><div class="eyebrow muted">SIX OFFICIAL SECTIONS + TRACKED SUBSKILLS</div><h1>行测能力训练</h1><p>从行测子模块进入专项学习；其他训练项继续按工作簿计划记录。</p></div><a class="button button-secondary" href="#/plan">查看 50 天计划 →</a></div><section class="aptitude-modules" aria-label="行测子模块"><a class="panel aptitude-module-card" href="#/aptitude/science"><span class="aptitude-module-icon science">⚗</span><span class="aptitude-module-copy"><strong>科学推理</strong><small>知识学习、专项练习、限时模拟和错题复习</small></span><b aria-hidden="true">↗</b></a><a class="panel aptitude-module-card" href="#/aptitude/general-knowledge"><span class="aptitude-module-icon general-knowledge">常</span><span class="aptitude-module-copy"><strong>常识判断</strong><small>知识点与题目内容后续补充</small></span><span class="aptitude-module-status">内容筹备中</span></a></section><div class="metric-grid three-metrics">${metric('训练子项', `${dataset.aptitude.length}<small> 项</small>`, `${groups.size} 个工作簿训练分类`, '⌁', 'blue')}${metric('已记录题量', `${fmt(totalDone)}<small> 题</small>`, `训练目标 ${Number(totalTarget).toLocaleString('zh-CN')} 题`, '▤', 'mint')}${metric('实际正确率', fmtPct(overallAccuracy), overallAccuracy === null ? '尚无练习记录；不是 0%' : '已记录训练项均值', '◎', 'amber')}</div><div class="skill-grid">${cards}</div><div class="notice notice-soft"><span>ⓘ</span><p>工作簿内计划题量可见；模板的零值按占位值处理，实际练习数据需另行记录。点击“记录”可更新单项训练。</p></div></div>`;
+}
+
+function renderGeneralKnowledge() {
+  return `<div class="page-body"><div class="page-heading-row"><div><div class="eyebrow muted">APTITUDE · GENERAL KNOWLEDGE</div><h1>常识判断</h1><p>本模块已加入行测能力，知识点和练习内容将在后续补充。</p></div><a class="button button-secondary" href="#/aptitude">返回行测能力 →</a></div><section class="panel aptitude-empty-state"><span aria-hidden="true">⌁</span><h2>内容筹备中</h2><p>后续将补充常识判断知识点、官方例题和真题训练。</p></section></div>`;
 }
 
 function renderEssay() {
@@ -1246,7 +1256,7 @@ function renderSources() {
 }
 
 function renderPage() {
-  const pages = { overview: renderOverview, guide: renderGuide, plan: renderPlan, science: renderScience, aptitude: renderAptitude, essay: renderEssay, mocks: renderMocks, positions: renderPositions, compare: renderCompare, assistant: renderAssistant, scenarios: renderScenarios, matrix: renderMatrix, profile: renderProfile, research: renderResearch, evidence: renderEvidence, sources: renderSources, settings: renderSettings };
+  const pages = { overview: renderOverview, guide: renderGuide, plan: renderPlan, science: renderScience, aptitude: renderAptitude, generalKnowledge: renderGeneralKnowledge, essay: renderEssay, mocks: renderMocks, positions: renderPositions, compare: renderCompare, assistant: renderAssistant, scenarios: renderScenarios, matrix: renderMatrix, profile: renderProfile, research: renderResearch, evidence: renderEvidence, sources: renderSources, settings: renderSettings };
   const help = getPageHelp(page);
   let content = (pages[page] || renderOverview)();
   return `<div class="page-shell ${pageTransition ? 'page-enter' : ''}${resultTransition ? ' results-enter' : ''}"><details class="page-howto"><summary><span class="page-howto-icon">ⓘ</span><span>本页怎么用</span><span class="page-howto-hint">点此展开</span></summary><div class="page-howto-content"><p>${escapeHtml(help.text)}</p><a href="#/${escapeHtml(help.actionPage)}">${escapeHtml(help.actionLabel)} →</a></div></details>${content}</div>`;
@@ -1560,7 +1570,8 @@ function scrollToTop() {
 function navigate(id, query = '') {
   page = pageMeta[id] ? id : 'overview';
   const querySuffix = page === 'science' && query ? `?${query}` : '';
-  const route = `#/${page}${querySuffix}`;
+  const routePath = page === 'science' ? 'aptitude/science' : page === 'generalKnowledge' ? 'aptitude/general-knowledge' : page;
+  const route = `#/${routePath}${querySuffix}`;
   const parsedRoute = readRoute(route);
   activeSciencePlanTaskId = parsedRoute.taskId;
   selectedScienceKnowledgePointId = parsedRoute.knowledgePointId;
@@ -1588,11 +1599,11 @@ document.addEventListener('click', async (event) => {
   if (nav) {
     const route = nav.getAttribute('href').slice(2);
     const queryStart = route.indexOf('?');
-    const id = queryStart < 0 ? route : route.slice(0, queryStart);
     const query = queryStart < 0 ? '' : route.slice(queryStart + 1);
-    if (pageMeta[id]) {
+    const parsedRoute = readRoute(`#/${route}`);
+    if (pageMeta[parsedRoute.page]) {
       event.preventDefault();
-      navigate(id, query);
+      navigate(parsedRoute.page, query);
       return;
     }
   }

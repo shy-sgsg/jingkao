@@ -284,6 +284,20 @@ button { color: inherit; }
 .table-footnote { padding: 9px 15px 11px; border-top: 1px solid #f0f2f5; color: #9ba5b1; font-size: var(--font-xs); }
 
 .skill-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; }
+.aptitude-modules { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 0 0 18px; }
+.aptitude-module-card { display: flex; min-width: 0; min-height: 88px; align-items: center; gap: 12px; padding: 15px; transition: border-color .18s ease, transform .18s ease; }
+.aptitude-module-card:hover { border-color: #cbd8e8; transform: translateY(-1px); }
+.aptitude-module-icon { display: grid; width: 40px; height: 40px; flex: 0 0 auto; place-items: center; border-radius: 12px; background: #eef3fb; color: #5774a8; font-size: var(--font-md); font-weight: 700; }
+.aptitude-module-icon.general-knowledge { background: #f3eff9; color: #8065a4; font-size: var(--font-xs); }
+.aptitude-module-copy { display: grid; min-width: 0; gap: 4px; }
+.aptitude-module-copy strong { color: #405672; font-size: var(--font-sm); }
+.aptitude-module-copy small { color: #8b98a8; font-size: var(--font-xs); line-height: 1.5; }
+.aptitude-module-card > b { margin-left: auto; color: #8b9bb0; font-size: var(--font-base); }
+.aptitude-module-status { flex: 0 0 auto; margin-left: auto; padding: 4px 8px; border-radius: 20px; background: #f5f3ef; color: #9a886b; font-size: 13px; }
+.aptitude-empty-state { display: grid; min-height: 240px; align-content: center; justify-items: center; gap: 8px; padding: 26px; text-align: center; }
+.aptitude-empty-state > span { color: #91a5c4; font-size: 32px; }
+.aptitude-empty-state h2 { margin: 0; color: #536880; font-size: var(--font-base); }
+.aptitude-empty-state p { margin: 0; color: #8b98a8; font-size: var(--font-sm); }
 .skill-panel { padding: 15px; }
 .skill-heading { display: flex; align-items: center; gap: 10px; }
 .skill-symbol { display: grid; width: 32px; height: 32px; flex: 0 0 auto; place-items: center; border-radius: 10px; font-size: var(--font-xs); font-weight: 700; }
@@ -1750,6 +1764,9 @@ button.science-answer-option:hover { border-color: #c9d9ee; background: #f7faff;
   .plan-task-actions .button { min-height: 38px; }
   .science-reminder-item { grid-template-columns: 34px minmax(0, 1fr); }
   .science-reminder-item b { display: none; }
+  .aptitude-modules { grid-template-columns: 1fr; }
+  .aptitude-module-card { align-items: flex-start; }
+  .aptitude-module-status { white-space: nowrap; }
   .science-shortcuts, .science-subject-grid { grid-template-columns: 1fr; }
   .science-shortcut-card { min-height: 95px; }
   .science-lesson-layout { grid-template-columns: 1fr; }
