@@ -40,6 +40,14 @@ test('all-source sessions select official, recalled, agency mock, then existing 
   assert.deepEqual(originalsOnly.session.questionIds, ['original-first']);
 });
 
+test('continuing a linked plan task can exclude questions it already counted', () => {
+  const { session } = createScienceSession(bank, emptyStudy(), {
+    mode: 'practice', targetQuestionCount: 1, subjectId: 'physics', excludeQuestionIds: ['q-1'],
+  }, { id: 'session-next-set', now: '2026-10-09T00:00:00.000Z' });
+
+  assert.deepEqual(session.questionIds, ['q-2']);
+});
+
 test('answers are recorded once, mistakes accumulate, and a session completes after review', () => {
   const study = emptyStudy();
   const { scienceStudy: started, session } = createScienceSession(bank, study, {

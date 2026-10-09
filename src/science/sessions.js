@@ -47,6 +47,7 @@ export function createScienceSession(bank, sourceStudy, options = {}, { id, now 
     examYear: options.examYear || undefined,
     onlyUnanswered: options.onlyUnanswered === true,
     onlyMistakes: options.onlyMistakes === true,
+    excludeQuestionIds: Array.isArray(options.excludeQuestionIds) ? options.excludeQuestionIds : [],
     answeredQuestionIds: scienceStudy.answers.map((answer) => answer.questionId),
     mistakeQuestionIds: Object.keys(scienceStudy.mistakes),
     favoriteQuestionIds: scienceStudy.favorites,

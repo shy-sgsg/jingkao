@@ -4,6 +4,7 @@ const VALID_COPYRIGHT_STATES = new Set(['original', 'licensed', 'reference_only'
 
 export function filterQuestions(bank, filters = {}) {
   const answered = new Set(filters.answeredQuestionIds || []);
+  const excluded = new Set(filters.excludeQuestionIds || []);
   const mistakes = new Set(filters.mistakeQuestionIds || []);
   const favorites = new Set(filters.favoriteQuestionIds || []);
   const sourceTypes = Array.isArray(filters.sourceType)
@@ -12,6 +13,7 @@ export function filterQuestions(bank, filters = {}) {
       ? new Set(['verified_exam', 'official_outline_example'])
       : filters.sourceType ? new Set([filters.sourceType]) : null;
   return bank.filter((question) => {
+    if (excluded.has(question.id)) return false;
     if (filters.subjectId && question.subjectId !== filters.subjectId) return false;
     if (filters.topicId && question.topicId !== filters.topicId) return false;
     if (filters.knowledgePointId && !question.knowledgePointIds?.includes(filters.knowledgePointId)) return false;

@@ -176,3 +176,117 @@ export function archivePlanTask(tasks, id, { now = new Date().toISOString() } = 
 export function getTasksForDate(tasks, date) {
   return tasks.filter((task) => task.date === date && !task.archivedAt);
 }
+
+function sessionMatchesTaskConfig(session, config) {
+  const activityType = config?.activityType || 'free';
+  const expectedMode = activityType === 'knowledge' ? 'knowledge' : activityType === 'exam' ? 'exam' : 'practice';
+  if (session.mode !== expectedMode) return false;
+  const filters = session.filters || {};
+  if (config.subjectId && filters.subjectId && filters.subjectId !== config.subjectId) return false;
+  if (config.topicId && filters.topicId && filters.topicId !== config.topicId) return false;
+  const knowledgePointIds = Array.isArray(config.knowledgePointIds) ? config.knowledgePointIds : [];
+  if (activityType === 'knowledge' && knowledgePointIds.length && !knowledgePointIds.includes(session.knowledgePointId)) return false;
+  if (activityType !== 'knowledge' && knowledgePointIds.length && filters.knowledgePointId
+    && !knowledgePointIds.includes(filters.knowledgePointId)) return false;
+  if (config.sourceFilter && config.sourceFilter !== 'all' && filters.sourceType && filters.sourceType !== config.sourceFilter) return false;
+  if (config.difficultyFilter && config.difficultyFilter !== 'all' && filters.difficulty && filters.difficulty !== config.difficultyFilter) return false;
+  if (activityType === 'mistakes' && filters.onlyMistakes === false) return false;
+  if (activityType === 'practice' && filters.onlyMistakes === true) return false;
+  return true;
+}
+
+export function getPlanTaskProgress(task, sessions = [], answers = []) {
+  const config = task?.scienceConfig || {};
+  const activityType = config.activityType || 'free';
+  const eligibleSessions = task?.taskType === 'science_reasoning'
+    ? sessions.filter((session) => session.planTaskId === task.id && sessionMatchesTaskConfig(session, config))
+    : [];
+  const hasStarted = eligibleSessions.length > 0;
+
+  if (activityType === 'free') {
+    return { activityType, progressCount: 0, completedCount: 0, displayCount: 0, targetCount: null, remainingCount: null, isComplete: false, hasStarted, questionIds: [] };
+  }
+
+  if (activityType === 'knowledge') {
+    const targetCount = new Set(config.knowledgePointIds || []).size;
+    const completedPointIds = new Set(eligibleSessions
+      .filter((session) => session.status === 'completed' && session.knowledgePointId)
+      .map((session) => session.knowledgePointId));
+    const completedCount = completedPointIds.size;
+    return {
+      activityType,
+      progressCount: completedCount,
+      completedCount,
+      displayCount: completedCount,
+      targetCount,
+      remainingCount: Math.max(0, targetCount - completedCount),
+      isComplete: targetCount > 0 && completedCount >= targetCount,
+      hasStarted,
+      questionIds: [],
+    };
+  }
+
+  const targetCount = config.targetQuestionCount !== null && config.targetQuestionCount !== undefined
+    && Number.isInteger(Number(config.targetQuestionCount))
+    ? Number(config.targetQuestionCount)
+    : null;
+  const eligibleSessionIds = new Set(eligibleSessions.map((session) => session.id));
+  const answeredQuestionIds = new Set(answers
+    .filter((answer) => eligibleSessionIds.has(answer.sessionId) && typeof answer.questionId === 'string')
+    .map((answer) => answer.questionId));
+  const completedSessionIds = new Set(eligibleSessions
+    .filter((session) => activityType === 'exam'
+      ? ['completed', 'timed_out'].includes(session.status)
+      : session.status === 'completed')
+    .map((session) => session.id));
+  const completedQuestionIds = new Set(answers
+    .filter((answer) => completedSessionIds.has(answer.sessionId) && typeof answer.questionId === 'string')
+    .map((answer) => answer.questionId));
+  const draftQuestionIds = new Set(eligibleSessions
+    .filter((session) => activityType === 'exam' && session.status === 'active')
+    .flatMap((session) => Object.keys(session.draftAnswers || {})));
+  const displayQuestionIds = new Set([...answeredQuestionIds, ...draftQuestionIds]);
+  const completedCount = completedQuestionIds.size;
+  const progressCount = answeredQuestionIds.size;
+  return {
+    activityType,
+    progressCount,
+    completedCount,
+    displayCount: targetCount === null ? displayQuestionIds.size : Math.min(targetCount, displayQuestionIds.size),
+    targetCount,
+    remainingCount: targetCount === null ? null : Math.max(0, targetCount - progressCount),
+    isComplete: targetCount !== null && targetCount > 0 && completedCount >= targetCount,
+    hasStarted,
+    questionIds: [...new Set([...answeredQuestionIds, ...draftQuestionIds])],
+  };
+}
+
+export function markPlanTaskInProgress(tasks, id, { now = new Date().toISOString() } = {}) {
+  const task = tasks.find((item) => item.id === id);
+  if (!task) throw new Error('找不到要开始的学习任务。');
+  if (task.status === 'completed') return tasks;
+  return updatePlanTask(tasks, id, { status: 'in_progress', completionSource: 'not_completed' }, { now });
+}
+
+export function reconcileSciencePlanTaskProgress(tasks, id, sessions, answers, { now = new Date().toISOString() } = {}) {
+  const task = tasks.find((item) => item.id === id);
+  if (!task || task.taskType !== 'science_reasoning') return tasks;
+  if (task.status === 'completed' && task.completionSource === 'manual') return tasks;
+
+  const progress = getPlanTaskProgress(task, sessions, answers);
+  if (progress.isComplete) {
+    if (task.status === 'completed' && task.completionSource === 'system_verified') return tasks;
+    return updatePlanTask(tasks, id, { status: 'completed', completionSource: 'system_verified' }, { now });
+  }
+
+  if (task.status === 'completed' && task.completionSource === 'system_verified') {
+    return updatePlanTask(tasks, id, {
+      status: progress.hasStarted ? 'in_progress' : 'not_started',
+      completionSource: 'not_completed',
+    }, { now });
+  }
+  if (progress.hasStarted && task.status === 'not_started') {
+    return updatePlanTask(tasks, id, { status: 'in_progress' }, { now });
+  }
+  return tasks;
+}

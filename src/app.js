@@ -11,7 +11,7 @@ import { classifyPublicManagementMatch, filterAndSortPositions, filterScoreRowsB
 import { runViewTransition } from './ui/viewTransition.js';
 import { observePageSections } from './ui/scrollReveal.js';
 import { normalizeStudyState, setKnowledgePointStatus, toggleKnowledgePointFlag } from './science/persistence.js';
-import { archivePlanTask, createPlanTask, getTasksForDate, updatePlanTask } from './science/planTasks.js';
+import { archivePlanTask, createPlanTask, getPlanTaskProgress, getTasksForDate, markPlanTaskInProgress, reconcileSciencePlanTaskProgress, updatePlanTask } from './science/planTasks.js';
 import { getKnowledgePoint, getScienceTree } from './science/knowledge.js';
 import { SCIENCE_QUESTION_BANK } from './science/questionBank.js';
 import { SCIENCE_SOURCES } from './science/sources.js';
@@ -578,10 +578,13 @@ function renderPlanTaskList() {
     .slice().sort((a, b) => a.date.localeCompare(b.date) || a.createdAt.localeCompare(b.createdAt));
   const taskCards = tasks.map((task) => {
     const config = task.scienceConfig;
+    const progress = task.taskType === 'science_reasoning'
+      ? getPlanTaskProgress(task, storage.scienceStudy.sessions, storage.scienceStudy.answers)
+      : null;
     const sciencePoint = config?.knowledgePointIds?.map(getKnowledgePoint).filter(Boolean)[0];
     const activity = SCIENCE_ACTIVITY_TYPES.find(([value]) => value === config?.activityType)?.[1];
     const scienceDetail = task.taskType === 'science_reasoning'
-      ? `<span>${escapeHtml(activity || '自由学习')}${sciencePoint ? ` · ${escapeHtml(sciencePoint.title)}` : ''}${config?.targetQuestionCount ? ` · ${config.targetQuestionCount} 题` : ''}</span>`
+      ? `<span>${escapeHtml(activity || '自由学习')}${sciencePoint ? ` · ${escapeHtml(sciencePoint.title)}` : ''}${config?.targetQuestionCount ? ` · ${config.targetQuestionCount} 题` : ''}</span>${progress?.targetCount ? `<span>进度 ${progress.displayCount}/${progress.targetCount} ${progress.activityType === 'knowledge' ? '个知识点' : '题'}</span>` : ''}`
       : '';
     const completionLabel = task.completionSource === 'system_verified' ? '系统核验完成' : '手动完成';
     return `<article class="plan-task-card ${task.status === 'completed' ? 'is-complete' : ''}">
@@ -708,17 +711,24 @@ function renderScience() {
     : null;
   if (routedSession) return renderScienceSession(routedSession);
 
+  const taskSessions = routeTask
+    ? storage.scienceStudy.sessions.filter((session) => session.planTaskId === routeTask.id)
+    : [];
   const linkedSession = routeTask
-    ? storage.scienceStudy.sessions.find((session) => session.planTaskId === routeTask.id && session.status === 'active')
-      || storage.scienceStudy.sessions.find((session) => session.planTaskId === routeTask.id && ['completed', 'timed_out'].includes(session.status))
+    ? taskSessions.find((session) => session.status === 'active')
+      || (routeTask.status === 'completed' ? taskSessions.filter((session) => ['completed', 'timed_out'].includes(session.status)).at(-1) : null)
     : null;
   if (linkedSession) return renderScienceSession(linkedSession);
 
   if (routeTask && routeTask.scienceConfig.activityType !== 'free' && routeTask.scienceConfig.activityType !== 'knowledge') {
     const config = routeTask.scienceConfig;
+    const progress = getPlanTaskProgress(routeTask, storage.scienceStudy.sessions, storage.scienceStudy.answers);
     const modeLabel = config.activityType === 'exam' ? '限时模拟' : config.activityType === 'mistakes' ? '错题复习' : '专项练习';
     const point = config.knowledgePointIds?.map(getKnowledgePoint).find(Boolean);
-    return `<div class="page-body science-page"><div class="page-heading-row"><div><div class="eyebrow muted">PLAN TASK · ${escapeHtml(routeTask.date)}</div><h1>${escapeHtml(routeTask.title)}</h1><p>${escapeHtml(modeLabel)} · 目标 ${config.targetQuestionCount} 题${config.durationSeconds ? ` · ${Math.round(config.durationSeconds / 60)} 分钟` : ''}</p></div><a class="button button-secondary" href="#/plan">返回计划</a></div><section class="panel science-task-start"><span class="eyebrow muted">${escapeHtml(point?.subjectTitle || '全部学科')}${point ? ` · ${escapeHtml(point.topicTitle)} · ${escapeHtml(point.title)}` : ''}</span><h2>准备好开始这项任务了吗？</h2><p>计划任务会按设定的筛选条件选题；只有实际提交目标题量，任务才会自动标记为系统核验完成。</p><button type="button" class="button button-primary" data-action="start-science-task" data-task-id="${escapeHtml(routeTask.id)}">开始${escapeHtml(modeLabel)}</button></section></div>`;
+    const progressCopy = progress.targetCount
+      ? `已记录 ${progress.progressCount}/${progress.targetCount} 题，还需 ${progress.remainingCount} 题。`
+      : '';
+    return `<div class="page-body science-page"><div class="page-heading-row"><div><div class="eyebrow muted">PLAN TASK · ${escapeHtml(routeTask.date)}</div><h1>${escapeHtml(routeTask.title)}</h1><p>${escapeHtml(modeLabel)} · 目标 ${config.targetQuestionCount} 题${config.durationSeconds ? ` · ${Math.round(config.durationSeconds / 60)} 分钟` : ''}</p></div><a class="button button-secondary" href="#/plan">返回计划</a></div><section class="panel science-task-start"><span class="eyebrow muted">${escapeHtml(point?.subjectTitle || '全部学科')}${point ? ` · ${escapeHtml(point.topicTitle)} · ${escapeHtml(point.title)}` : ''}</span><h2>准备好开始这项任务了吗？</h2><p>${progressCopy}计划任务会按剩余题量和设定的筛选条件选题；重复做过的题不重复计入进度。</p><button type="button" class="button button-primary" data-action="start-science-task" data-task-id="${escapeHtml(routeTask.id)}">开始${escapeHtml(modeLabel)}</button></section></div>`;
   }
 
   const activeSession = storage.scienceStudy.sessions.find((session) => session.status === 'active');
@@ -1531,16 +1541,16 @@ function startScienceExamClock() {
 function syncSciencePlanTaskCompletion(session) {
   if (!session?.planTaskId) return false;
   const practiceComplete = session.mode === 'practice' && session.status === 'completed';
-  const examComplete = session.mode === 'exam'
-    && ['completed', 'timed_out'].includes(session.status)
-    && session.answeredCount === session.questionIds.length;
+  const examComplete = session.mode === 'exam' && ['completed', 'timed_out'].includes(session.status);
   if (!practiceComplete && !examComplete) return false;
   const task = storage.studyPlanTasks.find((item) => item.id === session.planTaskId && item.taskType === 'science_reasoning');
-  if (!task || task.status === 'completed') return false;
-  storage.studyPlanTasks = updatePlanTask(storage.studyPlanTasks, task.id, {
-    status: 'completed', completionSource: 'system_verified',
-  });
-  return true;
+  if (!task) return false;
+  const wasComplete = task.status === 'completed' && task.completionSource === 'system_verified';
+  storage.studyPlanTasks = reconcileSciencePlanTaskProgress(
+    storage.studyPlanTasks, task.id, storage.scienceStudy.sessions, storage.scienceStudy.answers,
+  );
+  const updated = storage.studyPlanTasks.find((item) => item.id === task.id);
+  return !wasComplete && updated?.status === 'completed' && updated.completionSource === 'system_verified';
 }
 
 function scrollToTop() {
@@ -1717,6 +1727,9 @@ document.addEventListener('click', async (event) => {
     const task = storage.studyPlanTasks.find((item) => item.id === actionEl.dataset.taskId && item.taskType === 'science_reasoning');
     if (!task) { notify('找不到这条科学推理任务。'); return; }
     const config = task.scienceConfig;
+    const progress = getPlanTaskProgress(task, storage.scienceStudy.sessions, storage.scienceStudy.answers);
+    const targetQuestionCount = progress.targetCount === null ? config.targetQuestionCount : progress.remainingCount;
+    if (!Number.isInteger(targetQuestionCount) || targetQuestionCount < 1) { notify('这项计划任务的题量目标已完成。'); return; }
     try {
       const started = createScienceSession(SCIENCE_QUESTION_BANK, storage.scienceStudy, {
         mode: config.activityType === 'exam' ? 'exam' : 'practice',
@@ -1724,13 +1737,15 @@ document.addEventListener('click', async (event) => {
         subjectId: config.subjectId,
         topicId: config.topicId,
         knowledgePointIds: config.knowledgePointIds,
-        targetQuestionCount: config.targetQuestionCount,
+        targetQuestionCount,
         durationSeconds: config.durationSeconds || 600,
         sourceFilter: config.sourceFilter,
         difficultyFilter: config.difficultyFilter,
         onlyMistakes: config.activityType === 'mistakes',
+        excludeQuestionIds: progress.questionIds,
       });
       storage.scienceStudy = started.scienceStudy;
+      storage.studyPlanTasks = markPlanTaskInProgress(storage.studyPlanTasks, task.id);
       await persist();
       navigate('science', `task=${encodeURIComponent(task.id)}`);
     } catch (error) { notify(error.message); }
@@ -2038,8 +2053,16 @@ document.addEventListener('submit', async (event) => {
       scienceConfig,
     };
     try {
-      if (existing) storage.studyPlanTasks = updatePlanTask(storage.studyPlanTasks, existing.id, input);
-      else storage.studyPlanTasks = [...storage.studyPlanTasks, createPlanTask(input)];
+      if (existing) {
+        const scienceConfigChanged = values.taskType === 'science_reasoning'
+          && (existing.taskType !== 'science_reasoning' || JSON.stringify(existing.scienceConfig) !== JSON.stringify(input.scienceConfig));
+        storage.studyPlanTasks = updatePlanTask(storage.studyPlanTasks, existing.id, input);
+        if (scienceConfigChanged) {
+          storage.studyPlanTasks = reconcileSciencePlanTaskProgress(
+            storage.studyPlanTasks, existing.id, storage.scienceStudy.sessions, storage.scienceStudy.answers,
+          );
+        }
+      } else storage.studyPlanTasks = [...storage.studyPlanTasks, createPlanTask(input)];
       await persistAndRender(existing ? '学习任务已更新并加密保存' : '学习任务已创建并加密保存');
       modalRoot.innerHTML = '';
     } catch (error) {
