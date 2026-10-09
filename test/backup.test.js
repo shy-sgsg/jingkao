@@ -21,6 +21,10 @@ const state = {
     mistakes: { 'q-a': { count: 1 } },
     favorites: ['q-b'],
   },
+  generalKnowledgeStudy: {
+    knowledgeProgress: {}, sessions: [], answers: [], mistakes: {}, favorites: [],
+    favoriteKnowledgePointIds: [], unclearKnowledgePointIds: [], flashcards: [], flashcardReviews: [],
+  },
   aptitudeLogs: {}, essayLogs: {},
   mocks: [{ aptitude: 72, essay: 68, total: 140, date: '2026-10-08' }],
   favorites: ['231260001'], compared: ['231260001'],
@@ -48,7 +52,7 @@ test('restore rejects mock scores that are not actual numeric records', () => {
 });
 
 test('older personal backups remain importable and receive empty plan edits and default display settings', () => {
-  const { planOverrides, settings, studyPlanTasks, scienceStudy, ...olderState } = state;
+  const { planOverrides, settings, studyPlanTasks, scienceStudy, generalKnowledgeStudy, ...olderState } = state;
   const parsed = parseUserBackup(createUserBackup(olderState));
 
   assert.equal(parsed.ok, true);
@@ -68,6 +72,31 @@ test('personal backups preserve science plan and learning records and reject mal
 
   const malformed = { ...state, scienceStudy: { ...state.scienceStudy, answers: 'not-an-array' } };
   assert.equal(parseUserBackup(createUserBackup(malformed)).ok, false);
+});
+
+test('JSON backups preserve module-isolated aptitude state and reject cross-module events', () => {
+  const aptitudeModuleStudies = {
+    verbal: {
+      moduleId: 'verbal',
+      knowledgeProgress: { 'verbal:reading': { status: 'completed' } },
+      sessions: [{ id: 'verbal-session', moduleId: 'verbal', status: 'completed' }],
+      answers: [{ id: 'verbal-answer', moduleId: 'verbal', sessionId: 'verbal-session', questionId: 'shared-q' }],
+      mistakes: { 'shared-q': { moduleId: 'verbal', count: 1 } },
+      favorites: ['shared-q'], favoriteKnowledgePointIds: ['verbal:reading'], unclearKnowledgePointIds: [],
+    },
+  };
+  const parsed = parseUserBackup(createUserBackup({ ...state, aptitudeModuleStudies }));
+  assert.equal(parsed.ok, true);
+  assert.deepEqual(parsed.state.aptitudeModuleStudies, aptitudeModuleStudies);
+  assert.deepEqual(parsed.state.scienceStudy, state.scienceStudy);
+
+  const invalid = {
+    ...state,
+    aptitudeModuleStudies: {
+      verbal: { ...aptitudeModuleStudies.verbal, answers: [{ id: 'foreign-answer', moduleId: 'reasoning' }] },
+    },
+  };
+  assert.equal(parseUserBackup(createUserBackup(invalid)).ok, false);
 });
 
 test('encrypted backup contains only an anonymous account ID and opaque ciphertext', () => {

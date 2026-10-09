@@ -141,7 +141,8 @@ function emptyStorage() {
   const studyState = normalizeStudyState();
   return {
     profile: { major: '公共管理' }, dayLogs: {}, planOverrides: {}, studyPlanTasks: studyState.studyPlanTasks,
-    scienceStudy: studyState.scienceStudy, generalKnowledgeStudy: studyState.generalKnowledgeStudy, aptitudeLogs: {}, essayLogs: {},
+    scienceStudy: studyState.scienceStudy, generalKnowledgeStudy: studyState.generalKnowledgeStudy,
+    aptitudeModuleStudies: studyState.aptitudeModuleStudies, aptitudeLogs: {}, essayLogs: {},
     mocks: [], favorites: [], compared: [],
     settings: { density: 'comfortable', fontSize: 'standard', motion: 'enhanced' },
     onboarding: { step: 0, hidden: false, completed: false },
@@ -160,6 +161,7 @@ function readStorage(source = {}, densityFallback = 'comfortable') {
       studyPlanTasks: studyState.studyPlanTasks,
       scienceStudy: studyState.scienceStudy,
       generalKnowledgeStudy: studyState.generalKnowledgeStudy,
+      aptitudeModuleStudies: studyState.aptitudeModuleStudies,
       aptitudeLogs: parsed.aptitudeLogs || {},
       essayLogs: parsed.essayLogs || {},
       mocks: Array.isArray(parsed.mocks) ? parsed.mocks : [],

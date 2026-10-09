@@ -7,6 +7,7 @@ const sourceHtml = readFileSync(new URL('../index.html', import.meta.url), 'utf8
 const css = readFileSync(new URL('../src/styles.css', import.meta.url), 'utf8');
 const appModules = [
   '../src/aptitude/modules.js',
+  '../src/aptitude/persistence.js',
   '../src/data/normalize.js',
   '../src/data/decision.js',
   '../src/data/onboarding.js',
@@ -30,6 +31,7 @@ const appModules = [
   '../src/science/sources.js',
   '../src/science/questionBank.js',
   '../src/science/sessions.js',
+  '../src/aptitude/sessions.js',
   '../src/general-knowledge/lessonContent.js',
   '../src/general-knowledge/knowledge.js',
   '../src/general-knowledge/planConfig.js',

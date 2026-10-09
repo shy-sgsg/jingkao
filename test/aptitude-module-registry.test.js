@@ -16,6 +16,9 @@ test('all seven aptitude areas have unique module, task, route, and record ident
   }
   assert.equal(registry.getAptitudeModule('political-theory').area, '政治理论');
   assert.equal(registry.getAptitudeModule('political-theory').taskType, 'political_theory');
+  assert.equal(registry.getAptitudeModule('science').studyStore, 'scienceStudy');
+  assert.equal(registry.getAptitudeModule('general-knowledge').studyStore, 'generalKnowledgeStudy');
+  assert.equal(registry.getAptitudeModule('verbal').studyStore, 'aptitudeModuleStudies');
   assert.equal(registry.getAptitudeModule('missing'), null);
 });
 

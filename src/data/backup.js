@@ -4,6 +4,7 @@ export const ENCRYPTED_BACKUP_FORMAT = 'changping-jingkao-dashboard-encrypted-us
 export const ENCRYPTED_BACKUP_VERSION = 1;
 
 const ENVELOPE_FIELDS = ['cipher', 'ciphertext', 'iterations', 'iv', 'kdf', 'salt', 'version'];
+import { APTITUDE_MODULES } from '../aptitude/modules.js';
 
 function base64ByteLength(value) {
   if (typeof value !== 'string' || value.length === 0 || value.length % 4 !== 0
@@ -73,6 +74,27 @@ function emptyGeneralKnowledgeStudyRecord() {
   return { knowledgeProgress: {}, sessions: [], answers: [], mistakes: {}, favorites: [], favoriteKnowledgePointIds: [], unclearKnowledgePointIds: [], flashcards: [], flashcardReviews: [] };
 }
 
+function isAptitudeModuleStudyRecord(value, moduleId) {
+  return isRecord(value)
+    && (value.moduleId === undefined || value.moduleId === moduleId)
+    && isRecord(value.knowledgeProgress)
+    && Array.isArray(value.sessions) && value.sessions.every((item) => isRecord(item)
+      && (item.moduleId === undefined || item.moduleId === moduleId))
+    && Array.isArray(value.answers) && value.answers.every((item) => isRecord(item)
+      && (item.moduleId === undefined || item.moduleId === moduleId))
+    && isRecord(value.mistakes) && Object.values(value.mistakes).every((item) => isRecord(item)
+      && (item.moduleId === undefined || item.moduleId === moduleId))
+    && Array.isArray(value.favorites) && value.favorites.every((id) => typeof id === 'string')
+    && Array.isArray(value.favoriteKnowledgePointIds) && value.favoriteKnowledgePointIds.every((id) => typeof id === 'string')
+    && Array.isArray(value.unclearKnowledgePointIds) && value.unclearKnowledgePointIds.every((id) => typeof id === 'string');
+}
+
+function isAptitudeModuleStudiesRecord(value) {
+  if (!isRecord(value)) return false;
+  const allowedIds = new Set(APTITUDE_MODULES.filter((module) => module.studyStore === 'aptitudeModuleStudies').map((module) => module.id));
+  return Object.entries(value).every(([moduleId, study]) => allowedIds.has(moduleId) && isAptitudeModuleStudyRecord(study, moduleId));
+}
+
 export function createEncryptedUserBackup({ id, envelope }, exportedAt = new Date().toISOString()) {
   const data = { id, envelope };
   if (!validateEncryptedBackupData(data)) throw new Error('档案加密格式不受支持或已损坏，无法导出。');
@@ -124,6 +146,7 @@ export function parseUserBackup(input) {
         || typeof task.date !== 'string' || typeof task.taskType !== 'string')))
     || (state.scienceStudy !== undefined && !isScienceStudyRecord(state.scienceStudy))
     || (state.generalKnowledgeStudy !== undefined && !isGeneralKnowledgeStudyRecord(state.generalKnowledgeStudy))
+    || (state.aptitudeModuleStudies !== undefined && !isAptitudeModuleStudiesRecord(state.aptitudeModuleStudies))
     || (state.settings !== undefined && !isRecord(state.settings))) {
     return { ok: false, error: '备份缺少必要的个人记录字段，未修改本机数据。' };
   }
@@ -153,6 +176,7 @@ export function parseUserBackup(input) {
       studyPlanTasks: state.studyPlanTasks || [],
       scienceStudy: state.scienceStudy || emptyScienceStudyRecord(),
       generalKnowledgeStudy: state.generalKnowledgeStudy || emptyGeneralKnowledgeStudyRecord(),
+      ...(state.aptitudeModuleStudies !== undefined ? { aptitudeModuleStudies: state.aptitudeModuleStudies } : {}),
       aptitudeLogs: state.aptitudeLogs,
       essayLogs: state.essayLogs,
       mocks: state.mocks,
