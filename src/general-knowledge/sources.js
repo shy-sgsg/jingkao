@@ -22,6 +22,18 @@ export const GENERAL_KNOWLEDGE_SOURCES = [
     copyrightStatus: '法规事实摘述并链接原文', note: '法律时效核验主入口。题库不替代对最新法律文本的查询。',
   },
   {
+    id: 'admin-penalty-law-2021', sourceType: 'official_law', title: '中华人民共和国行政处罚法（2021年修订）', organization: '工业和信息化部政府门户网站',
+    url: 'https://www.miit.gov.cn/zwgk/zcwj/flfg/art/2022/art_76d37c09bd594d67b80ec2aa6fababcc.html',
+    verificationStatus: 'verified', publishStatus: 'published', copyrightStatus: '法规事实摘述并链接法规全文',
+    note: '官方全文载明2021年修订文本及第三十三、第四十四、第四十五、第六十二条；2021年7月15日起施行。',
+  },
+  {
+    id: 'admin-reconsideration-law-2023', sourceType: 'official_law', title: '中华人民共和国行政复议法（2023年修订）', organization: '中国人大网原文（生态环境部转载）',
+    url: 'https://www.mee.gov.cn/home/ztbd/2022/sthjpf/fgbzjd/202309/t20230914_1040873.shtml',
+    verificationStatus: 'verified', publishStatus: 'published', copyrightStatus: '法规事实摘述并链接法规全文',
+    note: '全国人大原文转载；2023年9月1日修订、2024年1月1日起施行，第二十条规定通常的六十日申请期限及例外。',
+  },
+  {
     id: 'beijing-12345-regulation', sourceType: 'official_policy', title: '北京市接诉即办工作条例', organization: '北京市人民代表大会常务委员会 / 首都之窗',
     url: 'https://www.beijing.gov.cn/zhengce/dfxfg/202109/t20210925_2501573.html', verificationStatus: 'verified',
     publishStatus: 'published', copyrightStatus: '法规事实摘述并链接原文', note: '政府门户页面标示本条例自2021-09-24施行、现行有效；使用前仍需复核状态。',

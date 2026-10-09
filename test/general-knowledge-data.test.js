@@ -68,3 +68,31 @@ test('sourced questions rank ahead of original supplements and retain source tra
   assert.ok(questions.filter((question) => question.publishStatus === 'published')
     .every((question) => question.moduleId === 'general_knowledge' && question.sourceId && question.sourceNote));
 });
+
+test('administrative penalty and reconsideration practice is traceable to current official law texts', async () => {
+  const [bank, sources, knowledge, lessonContent, questionRules] = await Promise.all([
+    import('../src/general-knowledge/questionBank.js'),
+    import('../src/general-knowledge/sources.js'),
+    import('../src/general-knowledge/knowledge.js'),
+    import('../src/general-knowledge/lessonContent.js'),
+    import('../src/general-knowledge/questions.js'),
+  ]);
+  const expectedIds = [
+    'gk-original-admin-minor-correction',
+    'gk-original-admin-first-violation',
+    'gk-original-admin-hearing-rights',
+    'gk-original-review-deadline',
+  ];
+  const questions = bank.GENERAL_KNOWLEDGE_QUESTION_BANK.filter(({ id }) => expectedIds.includes(id));
+  const sourceIds = sources.GENERAL_KNOWLEDGE_SOURCES.map(({ id }) => id);
+  const sourceById = new Map(sources.GENERAL_KNOWLEDGE_SOURCES.map((source) => [source.id, source]));
+
+  assert.deepEqual(questions.map(({ id }) => id).sort(), [...expectedIds].sort());
+  assert.equal(lessonContent.GENERAL_KNOWLEDGE_LESSONS['law:administrative-remedies']?.contentAsOf, '2026-10-09');
+  assert.ok(lessonContent.GENERAL_KNOWLEDGE_LESSONS['law:administrative-penalty']?.sourceIds.includes('admin-penalty-law-2021'));
+  assert.equal(sourceById.get('admin-penalty-law-2021')?.verificationStatus, 'verified');
+  assert.equal(sourceById.get('admin-reconsideration-law-2023')?.verificationStatus, 'verified');
+  assert.deepEqual(questionRules.validateGeneralKnowledgeQuestionBank(questions, {
+    knowledgePointIds: knowledge.getGeneralKnowledgePointIds(), sourceIds,
+  }).issues, []);
+});
