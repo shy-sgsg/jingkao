@@ -6,6 +6,7 @@
 |---|---|---:|---|
 | `beijing-2026-outline` | 官方大纲例题 / 北京 / 2026 | 1 | [北京市政府 PDF](https://www.beijing.gov.cn/gongkai/rsxx/gwyzk/202511/P020251110416492086501.pdf) |
 | `sh-2020-admin-outline` | 官方大纲例题 / 上海 / 2020 | 1 | [上海市考试院 PDF](https://files.shacs.gov.cn/attachment/2020-09/20200902191322057.pdf) |
+| `sh-2014-a-recall` | 考生回忆 / 上海 / 2014 A 卷 | 1 | [星光公考回忆卷 PDF](https://upload.xingguanggongkao.com/pdf/2014%E5%B9%B4%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88A%E5%8D%B7-%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.pdf?time=1733728303)；[中公同题解析](https://www.eoffcn.com/kszx/stixz/156509.html) |
 | `sh-2025-official-outline` | 官方大纲 / 上海 / 2025 | 0 | [上海市公务员局](https://shacs.gov.cn/recruits/369/article/1083)；例题与 2020 年重复 |
 | `sh-2026-official-outline` | 官方大纲例题 / 上海 / 2026 | 1 | [上海市公务员局](https://shacs.gov.cn/recruits/407/article/1238) |
 | `gd-2019-township-recall` | 考生回忆 / 广东 / 2019 | 3 | [公考网回忆题](https://www.gwysk.cn/shengkao/guangdong/zhenti/3551.html) |
@@ -33,4 +34,4 @@
 | mock-zhonggong-2027-light | 机构模拟 / 广东 | 1 | [中公网校光学模拟题](https://www.eoffcn.com/kszx/detail/2214061.html) |
 | `zhanhong-zhejiang-mock` | 机构模拟 / 浙江 | 4 | [展鸿行测模拟卷 PDF](https://static.32xueyuan.com/zq/u/cms/zj/202406/19110417oqg8.pdf) |
 
-合计 27 条来源记录：6 条官方大纲、16 条回忆资料、5 条机构材料。来源记录数不等于已发布题数；没有可用题目的来源仍保留在目录中并说明原因。
+合计 28 条来源记录：6 条官方大纲、17 条回忆资料、5 条机构材料。来源记录数不等于已发布题数；没有可用题目的来源仍保留在目录中并说明原因。

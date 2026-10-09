@@ -111,6 +111,9 @@ export const SCIENCE_TREE = [
         sciencePoint('physics:thermal-radiation', '热辐射与红外成像'),
         sciencePoint('physics:thermal-expansion', '热胀冷缩'),
       ]),
+      scienceTopic('physics:surface-phenomena', '液体表面现象', [
+        sciencePoint('physics:wetting-adhesion', '内聚力、附着力与润湿'),
+      ]),
       scienceTopic('physics:sound-electromagnetism', '声学与电磁学', [
         sciencePoint('physics:sound-production', '声音的产生'),
         sciencePoint('physics:sound-propagation', '声音的传播'),

@@ -53,6 +53,14 @@ export const SCIENCE_SOURCES = [
     note: '题面和答案来自第三方回忆整理；练习中以简化重述呈现，非官方原卷。',
   },
   {
+    id: 'sh-2014-a-recall', title: '2014 年上海市公务员录用考试《行测》A 卷（考生回忆版）',
+    organization: '星光公考（回忆卷）；中公网校（同题解析）', sourceType: 'recalled', region: '上海', examYear: 2014,
+    authority: 'third-party-recollection', verificationStatus: 'verified', copyrightStatus: 'reference_only',
+    url: 'https://upload.xingguanggongkao.com/pdf/2014%E5%B9%B4%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88A%E5%8D%B7-%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.pdf?time=1733728303',
+    relatedUrls: ['https://www.eoffcn.com/kszx/stixz/156509.html'],
+    note: '星光公考标注为 2014 年上海 A 卷回忆版第 26 题，属于判断推理部分的科学论证材料，不是官方原卷；答案 C 与中公网校同题解析核对。',
+  },
+  {
     id: 'sh-2021-b-recall', title: '2021 年上海市公务员考试行测 B 卷（考生回忆版）',
     organization: '星光公考（回忆版试题）', sourceType: 'recalled', region: '上海', examYear: 2021,
     authority: 'third-party-recollection', verificationStatus: 'verified', copyrightStatus: 'reference_only',

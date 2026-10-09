@@ -783,4 +783,15 @@ addPublishedReferenceQuestion({
   correctAnswer: 'C', explanation: '三种气体均无色、无明显气味。少量取样时，氧气能使木条燃烧更旺，氢气能燃烧，空气通常只支持木条正常燃烧，故燃着的木条可区分三者。真实操作须遵守氢气验纯和防火规范。',
 });
 
+addPublishedReferenceQuestion({
+  id: 'sh-2014-a-wetting-adhesion', subjectId: 'physics', topicId: 'physics:surface-phenomena',
+  knowledgePointIds: ['physics:wetting-adhesion'], difficulty: 'medium', reasoningType: 'causal_inference',
+  sourceType: 'recalled', sourceId: 'sh-2014-a-recall',
+  sourceTitle: '2014 上海市考 A 卷回忆题 · 内聚力与附着力', region: '上海', examYear: 2014, presentationMode: 'adapted',
+  sourceNote: '据回忆卷第 26 题改述，题目位于判断推理部分；答案 C 与中公网校同题解析核对。来源为考生回忆版，不是官方原卷或官方答案。',
+  stem: '题目给出：同种物质内部的吸引作用称为内聚力，不同物质接触面间的吸引作用称为附着力；附着力较强时容易发生润湿。下列说法正确的是：',
+  options: ['雨衣不透水，说明水对雨衣的附着力强于水的内聚力', '防水剂处理棉布会增强水对棉布的附着作用，使水更易渗入', '憎水涂层可削弱水对玻璃的附着作用，使水不易铺展', '雨水在普通挡风玻璃上铺展，说明水对玻璃的附着力弱于水的内聚力'],
+  correctAnswer: 'C', explanation: '题干将附着作用较强与润湿联系起来。雨衣和防水布料不易被水润湿，附着作用应减弱；普通玻璃上的雨水会铺展，说明附着作用相对较强。憎水涂层通过降低水对玻璃的附着作用减少铺展，因此 C 正确。',
+});
+
 export { SCIENCE_QUESTION_BANK };
