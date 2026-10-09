@@ -31,6 +31,7 @@ export const SCIENCE_TREE = [
         sciencePoint('physics:force-analysis', '受力分析'),
         sciencePoint('physics:force-equilibrium', '力的平衡'),
         sciencePoint('physics:motion-state', '运动状态变化'),
+        sciencePoint('physics:centripetal-force', '向心力与圆周运动'),
       ]),
       scienceTopic('physics:pressure', '压强与浮力', [
         sciencePoint('physics:solid-pressure', '固体压强'),
@@ -213,6 +214,7 @@ export const SCIENCE_TREE = [
         sciencePoint('geography:ocean-currents', '洋流'),
       ]),
       scienceTopic('geography:geological-processes', '地质过程', [
+        sciencePoint('geography:plate-tectonics', '板块构造'),
         sciencePoint('geography:earthquakes', '地震'),
         sciencePoint('geography:volcanoes', '火山'),
       ]),

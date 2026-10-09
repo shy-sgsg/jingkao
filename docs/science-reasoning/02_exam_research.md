@@ -44,6 +44,9 @@
 - 广东 2019—2026 年、上海 2018—2026 年及浙江 2024—2026 年有考生回忆资料；只收录题面、科学知识点和答案可复核的内容。广东 2026 年回忆卷收录一题锋面雨文字改述，其余图示题继续待核图。
 - 广东 2026 年官方笔试大纲的斜面受力例题与 2025 年储粮例题均已核对；只新增未重复的题目。
 - 广东 2021 年官方笔试大纲新增梯子受力例题；答案 B 与两家公开大纲文本核对。
+- 广东 2021 年县级卷回忆版新增 3 道文字题，涵盖转弯向心力、泡沫灭火器和冰岛板块边界；县级卷与同年乡镇卷分开建档。
+- 上海 2022 年 B 类回忆卷新增 4 道可独立作答的文字题，题面与答案汇总交叉核对；图示题未纳入。
+- 搜狐号“上海公务员考试备考”的 2022 模拟卷五新增 3 道题，按机构模拟题展示；题目改述，缺图或缺题干的候选未收录。
 - 中公网校 2027 年科学推理模拟题中收录一道人眼颜色与光反射题，保持第三方模拟题标签。
 - 展鸿浙江行测模拟卷新增 4 道可核验科学推理练习，并为“比热容”补充完整讲解；均标为机构模拟题。
 - 上海 2014 A 卷回忆版新增 1 道润湿现象科学论证题，并补充“内聚力、附着力与润湿”知识讲解。
@@ -59,9 +62,12 @@
 - [上海市 2020 年行政执法类公务员招考大纲（上海市职业能力考试院）](https://files.shacs.gov.cn/attachment/2020-09/20200902191322057.pdf)
 - [上海市 2025 年度公务员考试大纲（上海市公务员局）](https://shacs.gov.cn/recruits/369/article/1083)
 - [上海市 2026 年度公务员考试大纲（上海市公务员局）](https://shacs.gov.cn/recruits/407/article/1238)
+- [2022 年上海市考 B 类回忆题面（Aipta）](https://www.aipta.com/article/1232.html)；[答案汇总（人人文库）](https://www.renrendoc.com/paper/334955264.html)
+- [2022 上海科学推理模拟卷五（搜狐号“上海公务员考试备考”）](https://www.sohu.com/a/506739088_120707913)
 - [2026 年上海市考行测网友回忆卷（公开真题库）](https://gwy.gkzhenti.cn/paper/1775360735040)；[参考答案](https://gwy.gkzhenti.cn/answer/1775360735040)
 - [广东省 2026 年考试录用公务员公告（广东省委组织部）](https://www.gdzz.gov.cn/tzgg/content/mpost_24016.html)；[官方笔试大纲附件（江门市政府）](https://www.jiangmen.gov.cn/jmkjj/attachment/0/373/373115/3383802.doc)；[大纲全文核对页（华图）](https://yn.huatu.com/2025/1019/1978599_5.html)
 - [广东省 2021 年考试录用公务员公告（广东省人事考试局）](https://rsks.gd.gov.cn/kswj/bkwj/content/post_3191353.html)；[2021 年大纲全文与梯子例题（华图）](https://gd.huatu.com/2021/0125/1969639.html)；[大纲全文复核（中公）](https://xzgwy.offcn.com/2021/bkzd_0129/10483_4.html)
+- [2021 年广东省考县级卷回忆及解析（闻思教育 PDF）](https://www.wensiedu.cn/wp-content/uploads/2022/06/4a964ad0fe9053d.pdf)；[华图县级卷考情和答案分析](https://www.huatu.com/2021/1029/2316497.html)
 - [2022 年广东省考乡镇卷回忆题（星光公考 PDF）](https://upload.xingguanggongkao.com/pdf/2022%E5%B9%B4%E5%B9%BF%E4%B8%9C%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88%E4%B9%A1%E9%95%87%E5%8D%B7-%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.pdf)；[乡镇卷题目与解析（Aipta）](https://www.aipta.com/article/3494.html)；[县级卷回忆资料（闻思教育 PDF）](https://www.wensiedu.cn/wp-content/uploads/2022/06/4ea273a28d7543f.pdf)
 - [热胀冷缩与水净化答案解析（星光公考）](https://www.xingguanggongkao.com/Pc/XingQuestion/search/subject_id/2/keywords/%E8%80%B6%E7%A8%A3%E5%92%8C%E5%A1%91%E6%96%99/p/100.html)；[挖掘机履带题解析（华图）](https://ah.huatu.com/2022/0110/2218067.html)
 - [2026 年广东省考网友回忆卷与答案](https://gwy.gkzhenti.cn/paper/1767342832062)；[爱题库题面与答案](https://iget100.com/exam/civil-service/0bf9be8c-93db-4573-8eb1-8ebed591627b)；[中公题干与回忆分析](https://www.eoffcn.com/kszx/detail/1918990.html)

@@ -269,4 +269,34 @@ export const SCIENCE_SOURCES = [
     url: 'https://www.eoffcn.com/kszx/detail/1239326.html',
     note: '来源页标注为 2018 年上海市考；依赖四幅原图，尚未取得可核验图像，暂不进入可练题库。',
   },
+
+  {
+    id: 'gd-2021-county-recall', title: '2021 年广东省公务员考试行测真题（县级卷，考生回忆版）',
+    organization: '闻思教育（回忆卷与解析）；华图（考情分析）', sourceType: 'recalled', region: '广东', examYear: 2021,
+    authority: 'third-party-recollection', verificationStatus: 'verified', copyrightStatus: 'reference_only',
+    url: 'https://www.wensiedu.cn/wp-content/uploads/2022/06/4a964ad0fe9053d.pdf',
+    relatedUrls: [
+      'https://www.huatu.com/2021/1029/2316497.html',
+      'https://www.wensiedu.cn/wp-content/uploads/2022/06/094c57d820d9c8d.pdf',
+    ],
+    note: '第三方考生回忆版。县级卷与同年乡镇卷为不同试卷；本库收录第 82—84 题中题面和答案可独立核对的文字题，不将其标为官方原卷。',
+  },
+  {
+    id: 'sh-2022-b-recall', title: '2022 年上海市公务员考试行测 B 类（考生回忆版）',
+    organization: 'Aipta（回忆题面）；人人文库（答案汇总）；华图在线（考情复盘）', sourceType: 'recalled', region: '上海', examYear: 2022,
+    authority: 'third-party-recollection', verificationStatus: 'verified', copyrightStatus: 'reference_only',
+    url: 'https://www.aipta.com/article/1232.html',
+    relatedUrls: [
+      'https://www.renrendoc.com/paper/334955264.html',
+      'https://v.huatu.com/htnews/html/kaoqing/panduantuili/2021/1212/3406109.html',
+    ],
+    note: '第三方考生回忆版，非官方原卷。本库收录 4 道无需依赖原图即可作答的文字题；答案与公开答案汇总及科学原理交叉核对。',
+  },
+  {
+    id: 'sh-2022-sohu-mock-v5', title: '2022 上海公务员行测科学推理模拟卷五（第 26—30 题）',
+    organization: '搜狐号“上海公务员考试备考”', sourceType: 'third_party_mock', region: '上海', examYear: null,
+    authority: 'third-party-publisher', verificationStatus: 'verified', copyrightStatus: 'reference_only',
+    url: 'https://www.sohu.com/a/506739088_120707913',
+    note: '第三方备考模拟卷，非历年真题。第 26、28、30 题经改述后收录；第 27 题依赖原图，第 29 题未见完整题面，未收录。',
+  },
 ];
