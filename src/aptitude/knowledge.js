@@ -2,6 +2,7 @@ const OUTLINE_SPECS = {
   'political-theory': {
     title: '政治理论',
     topics: [
+      ['theory-foundations', '基础理论与哲学方法', 'practice-and-knowledge|实践与认识;contradiction-analysis|矛盾分析法;quantity-and-quality|量变与质变;principal-contradiction|主要矛盾;productive-relations|生产力与生产关系;people-and-history|人民群众观点;truth-and-conditions|真理与条件;economic-base|经济基础与上层建筑;ecological-development|人与自然关系;common-prosperity|发展与公平;dialectical-negation|辩证否定;system-thinking|系统观念'],
       ['innovation-theory', '党的创新理论', 'innovation-theory|党的创新理论基本框架;important-concepts|重要概念和理论表述理解;development-concepts|新发展理念与高质量发展;theory-practice|理论观点与工作实践对应'],
       ['party-policy', '党和国家方针政策', 'policy-goals|政策目标和主要任务;policy-measures|政策举措与实施主体;policy-scope|政策适用对象和范围;policy-links|政策要求间的衔接关系'],
       ['policy-reading', '政策材料阅读与应用', 'meeting-documents|重要会议和文件要点识别;policy-language|政策表述辨析;policy-implementation|政策落实和基层工作要求;policy-sources|政策来源和时效核对'],
@@ -20,7 +21,7 @@ const OUTLINE_SPECS = {
     topics: [
       ['number-reasoning', '数字推理', 'number-patterns|数列规律识别;difference-ratio|差数与倍数关系;recurrence|递推关系;grouped-sequences|分组与交叉数列'],
       ['arithmetic-basics', '数学运算基础', 'equations|方程与不定方程;ratio-percentage|比例、百分数与浓度;average|平均数与加权平均;profit|利润、折扣与费用'],
-      ['common-models', '常见数量模型', 'work-rate|工程与工作效率;travel|行程与相遇追及;arrangements|排列组合;probability|概率;geometry|几何与空间测量'],
+      ['common-models', '常见数量模型', 'work-rate|工程与工作效率;travel|行程与相遇追及;arrangements|排列组合;probability|概率;periodic-schedule|周期与重复规律;geometry|几何与空间测量'],
       ['calculation-strategy', '计算与解题策略', 'estimation|估算与数量级判断;option-substitution|代入选项;equivalent-relations|等量关系转换;calculation-simplification|分数与比例简算'],
     ],
   },

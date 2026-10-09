@@ -43,16 +43,33 @@ test('practice answers, feedback, mistakes, and completion stay in the selected 
   assert.deepEqual(completed.reasoning.answers, []);
 });
 
-test('empty published aptitude providers cannot create sessions or progress', () => {
+test('an empty supplied question bank cannot create a session or progress', () => {
   const before = normalizeAptitudeModuleStudies();
   for (const moduleId of ['political-theory', 'verbal', 'quantitative', 'reasoning', 'data-analysis']) {
-    const bank = getAptitudeQuestions(moduleId);
-    assert.deepEqual(bank, []);
-    assert.throws(() => createAptitudeModuleSession(bank, before, moduleId, {
+    assert.throws(() => createAptitudeModuleSession([], before, moduleId, {
       mode: 'practice', targetQuestionCount: 1,
     }, { id: `${moduleId}-empty-session`, now: '2026-10-09T00:00:00.000Z' }), /0 道/);
     assert.deepEqual(before[moduleId].sessions, []);
     assert.deepEqual(before[moduleId].answers, []);
+  }
+});
+
+test('each published module question bank starts both practice and timed mock sessions', () => {
+  for (const moduleId of ['political-theory', 'verbal', 'quantitative', 'reasoning', 'data-analysis']) {
+    const bank = getAptitudeQuestions(moduleId);
+    assert.ok(bank.length > 0, `${moduleId} should have published questions`);
+    const practice = createAptitudeModuleSession(bank, normalizeAptitudeModuleStudies(), moduleId, {
+      mode: 'practice', targetQuestionCount: 1,
+    }, { id: `${moduleId}-real-practice`, now: '2026-10-09T00:00:00.000Z' });
+    const exam = createAptitudeModuleSession(bank, normalizeAptitudeModuleStudies(), moduleId, {
+      mode: 'exam', targetQuestionCount: 1, durationSeconds: 60,
+    }, { id: `${moduleId}-real-exam`, now: '2026-10-09T00:00:00.000Z' });
+    assert.equal(practice.session.moduleId, moduleId);
+    assert.equal(practice.session.mode, 'practice');
+    assert.equal(practice.session.questionIds.length, 1);
+    assert.equal(exam.session.moduleId, moduleId);
+    assert.equal(exam.session.mode, 'exam');
+    assert.equal(exam.session.questionIds.length, 1);
   }
 });
 

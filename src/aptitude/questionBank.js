@@ -1,3 +1,5 @@
+import { getAptitudeModuleKnowledgeTree } from './knowledge.js';
+
 const QUESTION_SEEDS = [
   ['political-theory', 'theory', 'practice-and-knowledge', '基础理论', '实践是检验认识是否正确的主要标准，最直接的理由是？', ['实践只会重复已有认识', '理论一经提出便自动成为真理', '实践能把认识与客观效果联系起来检验', '多数人赞同就必然正确'], 'C', '实践把主观认识置于客观活动及其结果中检验；共识和书本结论都不能替代实践检验。', 'easy'],
   ['political-theory', 'theory', 'contradiction-analysis', '矛盾分析', '同一类矛盾在不同发展阶段表现出不同特点，分析时首先应当？', ['照搬其他阶段的处理办法', '从具体条件出发分析矛盾的特殊性', '否认矛盾具有普遍性', '把所有矛盾都视为相同'], 'B', '矛盾具有普遍性，也有特殊性。具体问题具体分析，要求结合事物所处阶段和条件识别矛盾特点。', 'easy'],
@@ -66,20 +68,100 @@ const QUESTION_SEEDS = [
   ['data-analysis', 'statistics', 'data-comparison', '数据比较', '甲、乙两地同年公共服务办件量分别为120万件和90万件。甲地比乙地多多少万件？', ['20万件', '25万件', '30万件', '33.3万件'], 'C', '数量差为120−90=30万件。比较“多多少”先计算绝对差；若问“多百分之几”才再除以比较基数。', 'easy'],
 ];
 
+const MODULE_IDS = ['political-theory', 'verbal', 'quantitative', 'reasoning', 'data-analysis'];
+
+const QUESTION_POINT_SLUGS = {
+  'political-theory': {
+    基础理论: 'practice-and-knowledge',
+    矛盾分析: 'contradiction-analysis',
+    量变与质变: 'quantity-and-quality',
+    主要矛盾: 'principal-contradiction',
+    生产力与生产关系: 'productive-relations',
+    人民群众观点: 'people-and-history',
+    真理与条件: 'truth-and-conditions',
+    经济基础与上层建筑: 'economic-base',
+    人与自然关系: 'ecological-development',
+    发展与公平: 'common-prosperity',
+    辩证否定: 'dialectical-negation',
+    系统观念: 'system-thinking',
+  },
+  verbal: {
+    中心理解: 'main-idea',
+    语境填词: 'context',
+    细节判断: 'detail',
+    语句排序: 'sentence-order',
+    词语辨析: 'word-choice',
+    逻辑填空: 'collocation',
+    语句衔接: 'sentence-connection',
+    逻辑判断: 'inference',
+  },
+  quantitative: {
+    方程应用: 'equations',
+    行程问题: 'travel',
+    数列规律: 'number-patterns',
+    工程问题: 'work-rate',
+    折扣问题: 'profit',
+    平均数: 'average',
+    概率: 'probability',
+    周期问题: 'periodic-schedule',
+    排列组合: 'arrangements',
+    平均速度: 'travel',
+    比例与变化: 'ratio-percentage',
+    合作效率: 'work-rate',
+    数字推理: 'number-patterns',
+  },
+  reasoning: {
+    必然推理: 'conclusion',
+    条件推理: 'conditional-translation',
+    因果论证: 'cause-effect',
+    定义判断: 'case-matching',
+    类比推理: 'logical-relations',
+    必要条件: 'necessary-sufficient',
+    削弱论证: 'strengthen-weaken',
+    集合关系: 'conclusion',
+    论据评价: 'assumption',
+    命题推理: 'conditional-translation',
+    关系类比: 'logical-relations',
+  },
+  'data-analysis': {
+    增长率: 'growth-rate',
+    比重: 'current-share',
+    基期量: 'base-period',
+    平均数: 'average-value',
+    增量比较: 'growth-amount',
+    百分点: 'share-change',
+    比重计算: 'current-share',
+    平均增长率: 'average-growth',
+    变化幅度: 'growth-rate',
+    数据比较: 'ranking',
+  },
+};
+
+const OUTLINE_ENTRIES = new Map();
+for (const moduleId of MODULE_IDS) {
+  for (const subject of getAptitudeModuleKnowledgeTree(moduleId)) {
+    for (const topic of subject.topics) {
+      for (const point of topic.knowledgePoints) {
+        OUTLINE_ENTRIES.set(point.id, { subject, topic, point });
+      }
+    }
+  }
+}
+
 export const APTITUDE_MODULE_QUESTION_BANKS = Object.fromEntries(
-  ['political-theory', 'verbal', 'quantitative', 'reasoning', 'data-analysis'].map((moduleId) => [moduleId, []]),
+  MODULE_IDS.map((moduleId) => [moduleId, []]),
 );
 
-// Keep the previously published seed set available only to sessions already saved in local profiles.
-// New sessions read APTITUDE_MODULE_QUESTION_BANKS, which intentionally stays empty until content is approved.
+// Keep the original question IDs resolvable for sessions saved before the module mapping was added.
 export const APTITUDE_MODULE_SESSION_ARCHIVE = Object.fromEntries(
-  Object.keys(APTITUDE_MODULE_QUESTION_BANKS).map((moduleId) => [moduleId, []]),
+  MODULE_IDS.map((moduleId) => [moduleId, []]),
 );
 
-for (const [moduleId, subjectId, topicSlug, pointTitle, stem, optionTexts, correctAnswer, explanation, difficulty] of QUESTION_SEEDS) {
-  const bank = APTITUDE_MODULE_SESSION_ARCHIVE[moduleId];
-  bank.push({
-    id: `apt-${moduleId}-${String(bank.length + 1).padStart(3, '0')}`,
+const archivedSequence = Object.fromEntries(MODULE_IDS.map((moduleId) => [moduleId, 0]));
+
+function questionFromSeed(id, moduleId, subjectId, topicSlug, pointTitle, stem, optionTexts, correctAnswer, explanation, difficulty) {
+  return {
+    id,
     moduleId,
     subjectId,
     topicId: `${moduleId}:${topicSlug}`,
@@ -99,5 +181,32 @@ for (const [moduleId, subjectId, topicSlug, pointTitle, stem, optionTexts, corre
     verificationStatus: 'verified',
     copyrightStatus: 'original',
     publishStatus: 'published',
+  };
+}
+
+for (const [moduleId, subjectId, topicSlug, pointTitle, stem, optionTexts, correctAnswer, explanation, difficulty] of QUESTION_SEEDS) {
+  const originalId = `apt-${moduleId}-${String(++archivedSequence[moduleId]).padStart(3, '0')}`;
+  const archivedQuestion = questionFromSeed(originalId, moduleId, subjectId, topicSlug, pointTitle, stem, optionTexts, correctAnswer, explanation, difficulty);
+  APTITUDE_MODULE_SESSION_ARCHIVE[moduleId].push(archivedQuestion);
+
+  const publishedModuleId = moduleId === 'reasoning' && pointTitle === '数字推理' ? 'quantitative' : moduleId;
+  const pointSlug = QUESTION_POINT_SLUGS[publishedModuleId]?.[pointTitle];
+  const entry = pointSlug ? OUTLINE_ENTRIES.get(`${publishedModuleId}:${pointSlug}`) : null;
+  if (!entry) throw new Error(`Missing aptitude outline mapping for ${moduleId}: ${pointTitle}`);
+
+  const publishedBank = APTITUDE_MODULE_QUESTION_BANKS[publishedModuleId];
+  const publishedId = publishedModuleId === moduleId
+    ? originalId
+    : `apt-${publishedModuleId}-${String(publishedBank.length + 1).padStart(3, '0')}`;
+  publishedBank.push({
+    ...archivedQuestion,
+    id: publishedId,
+    moduleId: publishedModuleId,
+    subjectId: entry.subject.id,
+    subjectTitle: entry.subject.title,
+    topicId: entry.topic.id,
+    topicTitle: entry.topic.title,
+    knowledgePointIds: [entry.point.id],
+    knowledgePointTitle: entry.point.title,
   });
 }

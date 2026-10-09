@@ -157,7 +157,7 @@ test('standalone site executes and renders the homepage from its embedded app mo
   }
 });
 
-test('standalone aptitude routes preserve dedicated pages and show empty-provider states', async () => {
+test('standalone aptitude routes preserve dedicated pages and expose available module practice', async () => {
   await import('../scripts/build.mjs');
   const html = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8');
   const script = html.match(/<script>\s*([\s\S]*?)<\/script>/)?.[1];
@@ -168,9 +168,9 @@ test('standalone aptitude routes preserve dedicated pages and show empty-provide
   const generalKnowledgePage = (await renderStandaloneRoute(script, 'aptitude/general-knowledge', storedState)).root.innerHTML;
 
   assert.match(modulePage, /<h1>言语<\/h1>/);
-  assert.match(modulePage, /题库待接入/);
-  assert.match(modulePage, /disabled aria-disabled="true" title="题库待接入">开始练习<\/button>/);
-  assert.match(modulePage, /disabled aria-disabled="true" title="题库待接入">限时模拟<\/button>/);
+  assert.match(modulePage, /13 道已发布题目/);
+  assert.match(modulePage, /data-action="open-aptitude-module-practice"[^>]*data-mode="practice"/);
+  assert.match(modulePage, /data-action="open-aptitude-module-practice"[^>]*data-mode="exam"/);
   assert.match(modulePage, /错题与收藏/);
   assert.match(modulePage, /MANUAL PRACTICE LOG/);
   assert.match(modulePage, /安排学习任务/);
@@ -180,16 +180,46 @@ test('standalone aptitude routes preserve dedicated pages and show empty-provide
   assert.match(generalKnowledgePage, /常识判断知识点目录|法律/);
 });
 
-test('all five reserved modules render their shared learning, records, and plan sections', async () => {
+test('general knowledge temporary exit returns to the directory and preserves the resumable session', async () => {
+  await import('../scripts/build.mjs');
+  const html = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8');
+  const script = html.match(/<script>\s*([\s\S]*?)<\/script>/)?.[1];
+  const sessionId = 'general-knowledge-exit-test';
+  const app = await renderStandaloneRoute(script, `aptitude/general-knowledge?session=${sessionId}`, {
+    onboarding: { hidden: true, completed: true },
+    generalKnowledgeStudy: {
+      knowledgeProgress: {},
+      sessions: [{
+        id: sessionId, moduleId: 'general_knowledge', mode: 'practice', status: 'active',
+        questionIds: ['gk-official-2026-fermentation'], currentIndex: 0, draftAnswers: {},
+      }],
+      answers: [], mistakes: {}, favorites: [], favoriteKnowledgePointIds: [], unclearKnowledgePointIds: [],
+      flashcards: [], flashcardReviews: [],
+    },
+  });
+
+  assert.match(app.root.innerHTML, /常识判断练习/);
+  const exitButton = { dataset: { action: 'leave-general-knowledge-session' } };
+  const target = { closest: (selector) => selector === '[data-action]' ? exitButton : null };
+  await app.listeners.get('click')({ target, preventDefault() {} });
+  assert.equal(app.location.hash, '#/aptitude/general-knowledge');
+  await app.windowListeners.get('hashchange')();
+
+  assert.doesNotMatch(app.root.innerHTML, /常识判断练习/);
+  assert.match(app.root.innerHTML, /继续未完成训练/);
+  assert.match(app.root.innerHTML, new RegExp(`href="#/aptitude/general-knowledge\\?session=${sessionId}"`));
+});
+
+test('all five modules render outline-backed learning, practice, records, and plan sections', async () => {
   await import('../scripts/build.mjs');
   const html = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8');
   const script = html.match(/<script>\s*([\s\S]*?)<\/script>/)?.[1];
   const firstKnowledgePointByModule = {
-    'political-theory': ['political-theory:innovation-theory', '党的创新理论基本框架', '党的创新理论'],
+    'political-theory': ['political-theory:practice-and-knowledge', '实践与认识', '基础理论与哲学方法'],
     verbal: ['verbal:main-idea', '主旨概括', '阅读理解'],
     quantitative: ['quantitative:number-patterns', '数列规律识别', '数字推理'],
-    reasoning: ['reasoning:graphic-patterns', '图形规律识别', '图形推理'],
-    'data-analysis': ['data-analysis:material-types', '统计资料类型识别', '资料解读'],
+    reasoning: ['reasoning:conclusion', '结论推出与解释评价', '逻辑判断'],
+    'data-analysis': ['data-analysis:growth-rate', '增长率计算', '增长量与增长率'],
   };
 
   for (const moduleId of ['political-theory', 'verbal', 'quantitative', 'reasoning', 'data-analysis']) {
@@ -201,6 +231,12 @@ test('all five reserved modules render their shared learning, records, and plan 
     assert.match(page.root.innerHTML, new RegExp(topicTitle), `${moduleId} should show a module-specific topic`);
     assert.match(page.root.innerHTML, new RegExp(pointTitle), `${moduleId} should show a clickable knowledge point`);
     assert.match(page.root.innerHTML, /<h2>专项练习与限时模拟<\/h2>/, `${moduleId} should expose the practice provider section`);
+    assert.match(page.root.innerHTML, /当前有 \d+ 道已发布题目/, `${moduleId} should show its prepared bank count`);
+    for (const mode of ['practice', 'exam']) {
+      const launch = page.root.innerHTML.match(new RegExp(`<button[^>]*data-action="open-aptitude-module-practice"[^>]*data-mode="${mode}"[^>]*>`))?.[0];
+      assert.ok(launch, `${moduleId} should expose a ${mode} entry`);
+      assert.doesNotMatch(launch, /disabled/);
+    }
     assert.match(page.root.innerHTML, /错题与收藏/);
     assert.match(page.root.innerHTML, /data-section="aptitude-module-statistics"/);
     assert.match(page.root.innerHTML, /data-section="aptitude-module-plan"/);
@@ -210,21 +246,30 @@ test('all five reserved modules render their shared learning, records, and plan 
     assert.match(lessonPage.root.innerHTML, new RegExp(`<h1>${pointTitle}<\\/h1>`), `${moduleId} should open the selected outline point`);
     assert.match(lessonPage.root.innerHTML, /目录提纲/);
     assert.match(lessonPage.root.innerHTML, /讲解待接入/);
+    assert.match(lessonPage.root.innerHTML, /道已发布练习/);
+    assert.match(lessonPage.root.innerHTML, /data-action="open-aptitude-module-practice"[^>]*data-point-id=/);
+    assert.doesNotMatch(lessonPage.root.innerHTML, /title="本知识点题库待接入"/);
   }
 
   const missingPoint = await renderStandaloneRoute(script, 'aptitude/verbal?knowledge=not-in-provider');
   assert.match(missingPoint.root.innerHTML, /没有找到这个行测知识点/);
 });
 
-test('homepage keeps module launch controls but disables modules without published questions', async () => {
+test('homepage enables practice and timed mock launch controls for every published module bank', async () => {
   await import('../scripts/build.mjs');
   const html = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8');
   const script = html.match(/<script>\s*([\s\S]*?)<\/script>/)?.[1];
   const app = await renderStandaloneRoute(script, 'aptitude', { onboarding: { hidden: true, completed: true } });
 
   for (const moduleId of ['political-theory', 'verbal', 'quantitative', 'reasoning', 'data-analysis']) {
-    assert.match(app.root.innerHTML, new RegExp(`data-module-id="${moduleId}" data-mode="practice"[^>]*disabled`));
-    assert.match(app.root.innerHTML, new RegExp(`data-module-id="${moduleId}" data-mode="exam"[^>]*disabled`));
+    const practice = app.root.innerHTML.match(new RegExp(`<button[^>]*data-module-id="${moduleId}" data-mode="practice"[^>]*>`))?.[0];
+    const exam = app.root.innerHTML.match(new RegExp(`<button[^>]*data-module-id="${moduleId}" data-mode="exam"[^>]*>`))?.[0];
+    assert.ok(practice, `${moduleId} should expose a direct practice entry`);
+    assert.ok(exam, `${moduleId} should expose a direct mock entry`);
+    assert.match(practice, /data-action="open-aptitude-module-practice"/);
+    assert.match(exam, /data-action="open-aptitude-module-practice"/);
+    assert.doesNotMatch(practice, /disabled/);
+    assert.doesNotMatch(exam, /disabled/);
   }
   for (const [moduleId, actionName] of [['science', 'open-science-practice'], ['general-knowledge', 'open-general-knowledge-practice']]) {
     const launchButton = app.root.innerHTML.match(new RegExp(`<button[^>]*data-action="${actionName}"[^>]*data-module-id="${moduleId}"[^>]*data-mode="practice"[^>]*>`))?.[0];

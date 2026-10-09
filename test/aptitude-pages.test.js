@@ -21,7 +21,7 @@ test('new and legacy module routes resolve to the shared or existing dedicated p
   assert.equal(resolveAptitudeModuleRoute('aptitude'), null);
 });
 
-test('five reserved modules expose useful outlines while lessons and question banks remain empty', () => {
+test('five modules expose useful outlines, retain optional empty lessons, and publish their prepared banks', () => {
   const outlineModules = APTITUDE_MODULES.filter((module) => module.studyStore === 'aptitudeModuleStudies');
   const firstTopicByModule = {
     'political-theory': '党的创新理论',
@@ -41,7 +41,7 @@ test('five reserved modules expose useful outlines while lessons and question ba
     assert.ok(points.every((point) => point.contentStatus === 'outline'), `${module.id} outline points must not claim published lessons`);
     assert.equal(new Set(points.map((point) => point.id)).size, points.length, `${module.id} point IDs should be unique`);
     assert.deepEqual(content.lessons, {}, `${module.id} should keep lesson text empty`);
-    assert.deepEqual(getAptitudeQuestions(module.id), [], `${module.id} should keep its question provider empty`);
+    assert.ok(getAptitudeQuestions(module.id).length >= 10, `${module.id} should publish the prepared practice bank`);
   }
   assert.ok(getAptitudeModuleContent('science').directory.length > 0);
   assert.ok(getAptitudeModuleContent('general-knowledge').directory.length > 0);
@@ -96,7 +96,7 @@ test('overview and shared module page use registry routes and expose all learnin
   assert.match(app, /form\.id === 'aptitude-module-session-setup'/);
 });
 
-test('the overview reserves launch actions and disables modules with empty question banks', () => {
+test('the overview enables practice and timed mock launches for every module with a published bank', () => {
   assert.equal(typeof launch.getAptitudeModuleLaunchAction, 'function');
   assert.equal(typeof launch.renderAptitudeModuleLaunchButtons, 'function');
   for (const module of APTITUDE_MODULES) {
@@ -109,8 +109,8 @@ test('the overview reserves launch actions and disables modules with empty quest
     assert.match(buttons, /模考刷题/);
     assert.match(buttons, /data-mode="practice"/);
     assert.match(buttons, /data-mode="exam"/);
-    const expectedUnavailable = ['political-theory', 'verbal', 'quantitative', 'reasoning', 'data-analysis'].includes(module.id);
-    assert.equal(/disabled aria-disabled="true"/.test(buttons), expectedUnavailable, `${module.id} launch availability should follow its question provider`);
+    assert.doesNotMatch(buttons, /disabled aria-disabled="true"/, `${module.id} should allow launches when its question provider is populated`);
+    assert.match(buttons, /data-action="(?:open-science-practice|open-general-knowledge-practice|open-aptitude-module-practice)"/);
   }
   assert.deepEqual(launch.getAptitudeModuleLaunchAction('science', 'exam'), {
     action: 'open-science-practice', moduleId: 'science', mode: 'exam',
