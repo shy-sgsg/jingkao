@@ -139,6 +139,28 @@ export const SCIENCE_SOURCES = [
     note: '第三方整理的考生回忆版，非官方原卷；第 70 题题面可在 PDF 和文本页核对，练习题意已改述。',
   },
   {
+    id: 'gd-2026-official-outline', title: '广东省 2026 年考试录用公务员笔试大纲',
+    organization: '中共广东省委组织部 / 广东省人力资源和社会保障厅', sourceType: 'official_outline_example', region: '广东', examYear: 2026,
+    authority: 'official', verificationStatus: 'verified', copyrightStatus: 'reference_only',
+    url: 'https://www.jiangmen.gov.cn/jmkjj/attachment/0/373/373115/3383802.doc',
+    relatedUrls: [
+      'https://www.gdzz.gov.cn/tzgg/content/mpost_24016.html',
+      'https://yn.huatu.com/2025/1019/1978599_5.html',
+    ],
+    note: '广东省官方笔试大纲列有两道科学推理例题。本库收录斜面受力例题；储粮例题与已收录的 2025 年官方大纲例题重复，不重复入库。',
+  },
+  {
+    id: 'gd-2026-science-reasoning-recall', title: '2026 年广东省公务员录用考试《行测》题（网友回忆版）',
+    organization: '粉笔题库（网友回忆版）；公开真题库（答案页）；中公网校（回忆分析）', sourceType: 'recalled', region: '广东', examYear: 2026,
+    authority: 'third-party-recollection', verificationStatus: 'pending', copyrightStatus: 'reference_only',
+    url: 'https://gwy.gkzhenti.cn/paper/1767342832062',
+    relatedUrls: [
+      'https://gwy.gkzhenti.cn/answer/1767342832062',
+      'https://www.eoffcn.com/kszx/detail/1918990.html',
+    ],
+    note: '第三方考生回忆卷，非官方原卷；第 66–70 题共 5 道科学推理题，但均依赖原图、图表或电路示意。当前可核对文本未显示这些图像，中公网校也提示回忆题答案次序可能有出入，暂保留来源待核验，不发布题目。',
+  },
+  {
     id: 'zj-2024-c-recall', title: '2024 年浙江省公务员录用考试《行测》C 类（考生回忆版）',
     organization: '星光公考（考生回忆卷）；32 学苑 / 公考真题库（答案与解析）', sourceType: 'recalled', region: '浙江', examYear: 2024,
     authority: 'third-party-recollection', verificationStatus: 'verified', copyrightStatus: 'reference_only',
@@ -184,6 +206,13 @@ export const SCIENCE_SOURCES = [
     authority: 'third-party-publisher', verificationStatus: 'verified', copyrightStatus: 'reference_only',
     url: 'https://www.eoffcn.com/kszx/detail/2210484.html',
     note: '机构模拟题，不是考试真题；页面答案解析署名中公。',
+  },
+  {
+    id: 'mock-zhonggong-2027-light', title: '中公 2027 广东行测科学推理模拟题（光学）',
+    organization: '中公教育（中公网校）', sourceType: 'third_party_mock', region: '广东', examYear: null,
+    authority: 'third-party-publisher', verificationStatus: 'verified', copyrightStatus: 'reference_only',
+    url: 'https://www.eoffcn.com/kszx/detail/2214061.html',
+    note: '中公网校科学推理模拟题第 2 题，文字题面和答案解析可核对；按原意改述，属于机构模拟题，不是省考真题。',
   },
   {
     id: 'huatu-2022-science-examples', title: '华图科学推理浮力例题',

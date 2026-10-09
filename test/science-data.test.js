@@ -71,7 +71,7 @@ test('published questions distinguish the existing original bank from sourced ex
   const { SCIENCE_SOURCES } = await import('../src/science/sources.js');
   const originalBank = bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType === 'original');
   assert.equal(originalBank.length, 153);
-  assert.equal(bankModule.SCIENCE_QUESTION_BANK.length, 202);
+  assert.equal(bankModule.SCIENCE_QUESTION_BANK.length, 204);
   const subjectCounts = Object.fromEntries(['physics', 'chemistry', 'biology', 'geography']
     .map((subjectId) => [subjectId, originalBank.filter((question) => question.subjectId === subjectId).length]));
   assert.deepEqual(subjectCounts, { physics: 42, chemistry: 37, biology: 36, geography: 38 });
@@ -85,8 +85,9 @@ test('published questions distinguish the existing original bank from sourced ex
     && question.copyrightStatus === 'original' && question.verificationStatus === 'verified'
     && question.publishStatus === 'published' && question.region === 'general' && question.examYear === null));
   const official = filterQuestions(bankModule.SCIENCE_QUESTION_BANK, { sourceType: 'official' });
-  assert.equal(official.length, 4);
+  assert.equal(official.length, 5);
   assert.ok(official.some((question) => question.sourceId === 'sh-2026-official-outline'));
+  assert.ok(official.some((question) => question.sourceId === 'gd-2026-official-outline'));
   for (const id of [
     'gd-2024-soot-ink', 'gd-2024-insulin-glucose', 'gd-2025-outline-grain-storage', 'gd-2025-recall-bacteria',
     'zj-2024-c-knuckle-evidence', 'zj-2024-c-animal-aging', 'zj-2024-c-cholera-transmission', 'zj-2024-c-breath-biometrics',
@@ -95,6 +96,7 @@ test('published questions distinguish the existing original bank from sourced ex
     'sh-2026-bci-decoding', 'sh-2026-bladeless-fan-airflow', 'sh-2026-capacitive-touchscreen',
     'sh-2026-fast-charging-battery', 'sh-2026-mask-layers', 'sh-2026-click-chemistry',
     'sh-2026-infrared-thermal-imaging', 'sh-2026-bowl-water-resonance', 'sh-2026-vr-force-feedback',
+    'gd-2026-outline-slope-forces', 'mock-zhonggong-2027-red-object-color',
     'zj-2025-mock-mars-microbes', 'mock-huatu-buoyancy-load',
   ]) {
     assert.ok(bankModule.SCIENCE_QUESTION_BANK.some((question) => question.id === id), `${id} is published`);
@@ -105,8 +107,8 @@ test('published questions distinguish the existing original bank from sourced ex
   assert.ok(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType !== 'original')
     .every((question) => question.sourceId && question.sourceNote));
   assert.equal(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType === 'recalled').length, 41);
-  assert.equal(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType === 'third_party_mock').length, 4);
-  assert.equal(SCIENCE_SOURCES.length, 23);
+  assert.equal(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType === 'third_party_mock').length, 5);
+  assert.equal(SCIENCE_SOURCES.length, 26);
 });
 
 test('published knowledge lessons cover all four disciplines with practical explanations', async () => {

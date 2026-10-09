@@ -717,4 +717,26 @@ addPublishedReferenceQuestion({
   correctAnswer: 'B', explanation: '电磁执行器把控制电流转成可调机械力，在手部运动时提供反向阻力，以模拟虚拟负载；用户感受到的是设备施加的力，不是虚拟物体真实的重力。',
 });
 
+addPublishedReferenceQuestion({
+  id: 'gd-2026-outline-slope-forces', subjectId: 'physics', topicId: 'physics:mechanics',
+  knowledgePointIds: ['physics:friction', 'physics:work', 'physics:mechanical-energy'],
+  difficulty: 'medium', reasoningType: 'causal_inference', sourceType: 'official_outline_example', sourceId: 'gd-2026-official-outline',
+  sourceTitle: '广东省 2026 年公务员笔试大纲例题 · 粗糙斜面上的物体', region: '广东', examYear: 2026, presentationMode: 'adapted',
+  sourceNote: '据广东省 2026 年官方笔试大纲科学推理例题 1 改述；答案 D 与公开大纲全文核对。属于官方大纲例题，不是已举行考试的历年真题。',
+  stem: '物体 M 在恒力 F 作用下沿粗糙斜面匀速向上移动。下列说法不准确的是：',
+  options: ['恒力 F 对物体做正功', '物体的重力势能逐渐增大', '物体受到的摩擦力与运动方向相反', '斜面对物体的支持力与物体所受重力是一对平衡力'],
+  correctAnswer: 'D', explanation: '物体匀速运动，合力为零；但物体还受沿斜面向上的恒力和向下的摩擦力，支持力与重力不能单独构成平衡力。A、B、C 均符合题设。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'mock-zhonggong-2027-red-object-color', subjectId: 'physics', topicId: 'physics:optics',
+  knowledgePointIds: ['physics:optical-phenomena'], difficulty: 'medium', reasoningType: 'classification',
+  sourceType: 'third_party_mock', sourceId: 'mock-zhonggong-2027-light',
+  sourceTitle: '中公 2027 广东行测科学推理模拟题 · 光的反射与颜色', region: '广东', examYear: null, presentationMode: 'adapted',
+  sourceNote: '据中公网校科学推理模拟题第 2 题改述；答案 D 及解析可在原页面核对。为避免绝对化，白色物体的反射表述作了限定。属于机构模拟题，不是省考真题。',
+  stem: '关于物体对光和辐射热的反射、吸收，下列说法不正确的是：',
+  options: ['金属箔可反射较多辐射能，从而减少部分热辐射传递', '白色物体对可见光中的多种波长都有较强反射，因此看起来呈白色', '在积雪上撒炭黑，可增加对太阳辐射的吸收并促进积雪融化', '红色衣物呈红色，是因为它吸收红光并反射其他颜色的光'],
+  correctAnswer: 'D', explanation: '物体呈现的颜色主要取决于它反射到眼中的可见光。红色物体主要反射红光、较多吸收其他波长的光，因此 D 把吸收和反射关系说反了。',
+});
+
 export { SCIENCE_QUESTION_BANK };

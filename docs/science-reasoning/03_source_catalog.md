@@ -28,4 +28,8 @@
 | `huatu-2022-science-examples` | 机构例题 / 广东 | 1 | [华图科学推理讲解页](https://www.huatu.com/2022/0208/2471720.html) |
 | `sh-2018-recalled-example` | 回忆题 / 上海 / 2018 | 0（待核验） | [中公回顾页](https://www.eoffcn.com/kszx/detail/1239326.html)；所需原图未取得 |
 
-合计 23 条来源记录：5 条官方大纲、15 条回忆资料、3 条机构材料。来源记录数不等于已发布题数；没有可用题目的来源仍保留在目录中并说明原因。
+| gd-2026-official-outline | 官方大纲例题 / 广东 / 2026 | 1 | [广东省委组织部公告](https://www.gdzz.gov.cn/tzgg/content/mpost_24016.html)；[官方大纲附件](https://www.jiangmen.gov.cn/jmkjj/attachment/0/373/373115/3383802.doc)；[全文核对页](https://yn.huatu.com/2025/1019/1978599_5.html) |
+| gd-2026-science-reasoning-recall | 考生回忆 / 广东 / 2026 | 0（图示待核验） | [网友回忆卷](https://gwy.gkzhenti.cn/paper/1767342832062)；[答案页](https://gwy.gkzhenti.cn/answer/1767342832062)；[中公分析](https://www.eoffcn.com/kszx/detail/1918990.html) |
+| mock-zhonggong-2027-light | 机构模拟 / 广东 | 1 | [中公网校光学模拟题](https://www.eoffcn.com/kszx/detail/2214061.html) |
+
+合计 26 条来源记录：6 条官方大纲、16 条回忆资料、4 条机构材料。来源记录数不等于已发布题数；没有可用题目的来源仍保留在目录中并说明原因。
