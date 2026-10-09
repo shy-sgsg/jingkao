@@ -95,6 +95,13 @@ function isAptitudeModuleStudiesRecord(value) {
   return Object.entries(value).every(([moduleId, study]) => allowedIds.has(moduleId) && isAptitudeModuleStudyRecord(study, moduleId));
 }
 
+function isAptitudeOverallStudyRecord(value) {
+  return isRecord(value)
+    && Array.isArray(value.sessions) && value.sessions.every(isRecord)
+    && Array.isArray(value.answers) && value.answers.every(isRecord)
+    && isRecord(value.mistakes) && Object.values(value.mistakes).every(isRecord);
+}
+
 export function createEncryptedUserBackup({ id, envelope }, exportedAt = new Date().toISOString()) {
   const data = { id, envelope };
   if (!validateEncryptedBackupData(data)) throw new Error('档案加密格式不受支持或已损坏，无法导出。');
@@ -147,6 +154,7 @@ export function parseUserBackup(input) {
     || (state.scienceStudy !== undefined && !isScienceStudyRecord(state.scienceStudy))
     || (state.generalKnowledgeStudy !== undefined && !isGeneralKnowledgeStudyRecord(state.generalKnowledgeStudy))
     || (state.aptitudeModuleStudies !== undefined && !isAptitudeModuleStudiesRecord(state.aptitudeModuleStudies))
+    || (state.aptitudeOverallStudy !== undefined && !isAptitudeOverallStudyRecord(state.aptitudeOverallStudy))
     || (state.settings !== undefined && !isRecord(state.settings))) {
     return { ok: false, error: '备份缺少必要的个人记录字段，未修改本机数据。' };
   }
@@ -177,6 +185,7 @@ export function parseUserBackup(input) {
       scienceStudy: state.scienceStudy || emptyScienceStudyRecord(),
       generalKnowledgeStudy: state.generalKnowledgeStudy || emptyGeneralKnowledgeStudyRecord(),
       ...(state.aptitudeModuleStudies !== undefined ? { aptitudeModuleStudies: state.aptitudeModuleStudies } : {}),
+      ...(state.aptitudeOverallStudy !== undefined ? { aptitudeOverallStudy: state.aptitudeOverallStudy } : {}),
       aptitudeLogs: state.aptitudeLogs,
       essayLogs: state.essayLogs,
       mocks: state.mocks,

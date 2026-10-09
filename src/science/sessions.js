@@ -1,4 +1,4 @@
-import { filterQuestions } from './questions.js';
+import { filterQuestions, randomizeQuestionGroups } from './questions.js';
 
 function normalizeStudy(scienceStudy = {}) {
   return {
@@ -33,8 +33,8 @@ function questionSourcePriority(question) {
 export function createScienceSession(bank, sourceStudy, options = {}, { id, now = new Date().toISOString() } = {}) {
   const scienceStudy = normalizeStudy(sourceStudy);
   const mode = options.mode === 'exam' ? 'exam' : 'practice';
-  const targetQuestionCount = Number(options.targetQuestionCount);
-  if (!Number.isInteger(targetQuestionCount) || targetQuestionCount < 1) {
+  const requestedQuestionCount = Number(options.targetQuestionCount);
+  if (!Number.isInteger(requestedQuestionCount) || requestedQuestionCount < 1) {
     throw new Error('练习题量必须是大于 0 的整数。');
   }
   const filters = {
@@ -56,14 +56,36 @@ export function createScienceSession(bank, sourceStudy, options = {}, { id, now 
   const sourcePriority = Array.isArray(options.sourcePriorityOrder)
     ? new Map(options.sourcePriorityOrder.map((sourceType, index) => [sourceType, index]))
     : null;
-  const candidates = filterQuestions((Array.isArray(bank) ? bank : []).filter((question) => question.publishStatus === 'published'), filters)
-    .sort((left, right) => sourcePriority
+  const publishedBank = (Array.isArray(bank) ? bank : []).filter((question) => question.publishStatus === 'published');
+  let candidates = filterQuestions(publishedBank, filters);
+  if (options.randomize) {
+    const candidateIds = new Set(candidates.map((question) => question.id));
+    const incompleteSharedGroups = new Set();
+    const sharedGroups = new Map();
+    for (const question of publishedBank) {
+      if (!question.sharedStimulusId) continue;
+      if (!sharedGroups.has(question.sharedStimulusId)) sharedGroups.set(question.sharedStimulusId, []);
+      sharedGroups.get(question.sharedStimulusId).push(question);
+    }
+    for (const [stimulusId, group] of sharedGroups) {
+      if (!group.every((question) => candidateIds.has(question.id))) incompleteSharedGroups.add(stimulusId);
+    }
+    candidates = candidates.filter((question) => !question.sharedStimulusId || !incompleteSharedGroups.has(question.sharedStimulusId));
+  }
+  if (!options.preserveOrder) {
+    candidates.sort((left, right) => sourcePriority
       ? (sourcePriority.get(left.sourceType) ?? 999) - (sourcePriority.get(right.sourceType) ?? 999)
       : questionSourcePriority(left) - questionSourcePriority(right));
-  if (candidates.length < targetQuestionCount) {
-    throw new Error(`当前筛选仅有 ${candidates.length} 道可用题目，少于目标题量 ${targetQuestionCount}。`);
   }
-  const questionIds = candidates.slice(0, targetQuestionCount).map((question) => question.id);
+  if (candidates.length < requestedQuestionCount) {
+    throw new Error(`当前筛选仅有 ${candidates.length} 道可用题目，少于目标题量 ${requestedQuestionCount}。`);
+  }
+  const sampled = options.randomize
+    ? randomizeQuestionGroups(candidates, requestedQuestionCount)
+    : { questions: candidates.slice(0, requestedQuestionCount), selectedQuestionCount: requestedQuestionCount };
+  const targetQuestionCount = sampled.questions.length;
+  if (targetQuestionCount < 1) throw new Error('当前没有可组成的完整题组。');
+  const questionIds = sampled.questions.map((question) => question.id);
   const startedAt = new Date(now);
   if (!Number.isFinite(startedAt.valueOf())) throw new Error('练习开始时间无效。');
   const durationSeconds = mode === 'exam' ? Number(options.durationSeconds) : null;
@@ -76,6 +98,10 @@ export function createScienceSession(bank, sourceStudy, options = {}, { id, now 
     status: 'active',
     planTaskId: options.planTaskId || null,
     questionIds,
+    ...(sampled.selectedQuestionCount !== requestedQuestionCount ? {
+      requestedQuestionCount,
+      questionSelectionNote: `共用材料题按组抽取，目标题量 ${requestedQuestionCount} 道，本次完整抽取 ${sampled.selectedQuestionCount} 道。`,
+    } : {}),
     currentIndex: 0,
     correctCount: 0,
     reviewingAnswerId: null,

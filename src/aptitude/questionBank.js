@@ -210,3 +210,254 @@ for (const [moduleId, subjectId, topicSlug, pointTitle, stem, optionTexts, corre
     knowledgePointTitle: entry.point.title,
   });
 }
+
+const SOURCE_POINT_IDS = {
+  'political-theory:chinese-modernization': 'political-theory:important-concepts',
+  'political-theory:rural-development': 'political-theory:policy-implementation',
+  'political-theory:party-theory': 'political-theory:innovation-theory',
+  'political-theory:reform': 'political-theory:policy-language',
+  'political-theory:high-quality-development': 'political-theory:development-concepts',
+  'political-theory:public-welfare': 'political-theory:policy-goals',
+  'political-theory:education': 'political-theory:policy-measures',
+  'political-theory:international-relations': 'political-theory:important-concepts',
+  'political-theory:social-work': 'political-theory:policy-implementation',
+  'political-theory:national-defense': 'political-theory:policy-goals',
+  'political-theory:ecological-civilization': 'political-theory:development-concepts',
+  'verbal:contextual-word-choice': 'verbal:context',
+  'quantitative:volume-displacement': 'quantitative:geometry',
+  'reasoning:definition-judgment': 'reasoning:case-matching',
+  'reasoning:paired-tools': 'reasoning:logical-relations',
+  'reasoning:argument-criticism': 'reasoning:strengthen-weaken',
+};
+
+const sourceQuestion = (question, source) => {
+  const sourcePointId = question.knowledgePointIds?.[0] || question.topicId;
+  const pointId = SOURCE_POINT_IDS[sourcePointId] || sourcePointId;
+  const entry = OUTLINE_ENTRIES.get(pointId);
+  if (!entry) throw new Error(`Missing aptitude outline mapping for public question ${question.id}: ${sourcePointId}`);
+
+  return {
+    ...question,
+    subjectId: entry.subject.id,
+    subjectTitle: entry.subject.title,
+    topicId: entry.topic.id,
+    topicTitle: entry.topic.title,
+    knowledgePointIds: [entry.point.id],
+    knowledgePointTitle: entry.point.title,
+    options: question.options.map((text, index) => ({ id: ['A', 'B', 'C', 'D'][index], text })),
+    difficulty: question.difficulty || 'medium',
+    sourceType: source.sourceType,
+    sourceId: source.sourceId,
+    sourceTitle: source.sourceTitle,
+    sourceNote: source.sourceNote,
+    sourceUrl: source.url || null,
+    region: source.region,
+    examYear: source.examYear,
+    paperId: source.paperId,
+    paperTitle: source.paperTitle,
+    answerSourceUrl: source.answerUrl || null,
+    originalQuestionNo: question.originalQuestionNo,
+    sectionOrder: source.sectionOrder,
+    sharedStimulusId: null,
+    verificationStatus: 'verified',
+    copyrightStatus: 'adapted_public_source',
+    publishStatus: 'published',
+    presentationMode: 'adapted',
+  };
+};
+
+const anhuiOutlineSource = {
+  sourceType: 'official_outline_example',
+  sourceId: 'anhui-2026-outline',
+  sourceTitle: '安徽省2026年度公务员考试大纲公开例题（摘要改写）',
+  sourceNote: '来自安徽省2026年度考试大纲中的公开例题。本站对题干与选项作摘要改写，保留考点及答案，不是历年考试真题。',
+  region: 'anhui',
+  examYear: 2026,
+  paperId: 'anhui-2026-outline',
+  paperTitle: '安徽省2026年行测大纲例题',
+  url: 'https://rsj.huainan.gov.cn/group4/M00/11/14/rB40qWlooVmAFWHRAA3nByKSHRA495.pdf?attachDownload=1',
+};
+const zhejiangRecallSource = {
+  sourceType: 'recalled',
+  sourceId: 'zhejiang-2025a-recall',
+  sourceTitle: '2025年浙江省考行测A类（考生回忆版，摘要改写）',
+  sourceNote: '来源为第三方公开考生回忆版；题干与选项作摘要改写，答案与公开答案页核对。非官方发布原卷。',
+  region: 'zhejiang',
+  examYear: 2025,
+  paperId: 'zhejiang-2025-A-类',
+  paperTitle: '2025年浙江A类行测回忆卷',
+  url: 'https://gwy.gkzhenti.cn/paper/1739531137130',
+  answerUrl: 'https://gwy.gkzhenti.cn/answer/1739531137130',
+};
+
+const sourcedQuestions = [
+  sourceQuestion({
+    id: 'ah2026-outline-political-1', moduleId: 'political-theory', subjectId: 'political-theory',
+    topicId: 'political-theory:chinese-modernization', knowledgePointIds: ['political-theory:chinese-modernization'],
+    originalQuestionNo: '政治理论例题1', sectionOrder: 1,
+    stem: '关于中国式现代化的目标、道路和特征，下面五项判断中正确的有几项？①以群众对美好生活的期待引领现代化建设；②共同富裕是这一道路的重要要求；③把超过西方发达国家作为主要目标；④把照搬其他国家的现代化模式作为基本经验；⑤形成新的文明发展形态。',
+    options: ['2项', '3项', '4项', '5项'], correctAnswer: 'B', difficulty: 'medium',
+    explanation: '①、②、⑤符合官方大纲例题所依据的政策表述；③、④把中国式现代化误写成以超越他国、复制既有模式为目标。共三项正确。',
+  }, { ...anhuiOutlineSource, sectionOrder: 1 }),
+  sourceQuestion({
+    id: 'ah2026-outline-political-2', moduleId: 'political-theory', subjectId: 'political-theory',
+    topicId: 'political-theory:rural-development', knowledgePointIds: ['political-theory:rural-development'],
+    originalQuestionNo: '政治理论例题2', sectionOrder: 1,
+    stem: '围绕缩小城乡差距、巩固脱贫成果和发展乡村产业，以下做法中符合现行政策要求的有几项？①以建制镇为县域经济体系的唯一枢纽；②持续监测返贫风险并增强脱贫地区发展能力；③结合地方条件发展特色产业并推动农村产业融合；④改善农村人居环境并保护传统村落。',
+    options: ['①②③', '①②④', '①③④', '②③④'], correctAnswer: 'D', difficulty: 'medium',
+    explanation: '持续监测、因地制宜发展产业、改善农村环境和保护特色村落均符合例题所列政策方向；①对城镇化载体和县域经济的表述被绝对化。',
+  }, { ...anhuiOutlineSource, sectionOrder: 1 }),
+
+  sourceQuestion({
+    id: 'ah2026-outline-verbal-1', moduleId: 'verbal', subjectId: 'reading',
+    topicId: 'verbal:contextual-word-choice', knowledgePointIds: ['verbal:contextual-word-choice'],
+    originalQuestionNo: '言语例题1', sectionOrder: 3,
+    stem: '一段文字对比了战乱年代的离乡处境与当代城市生活者对家乡的情感。依次填入表示“离开故土”和“情感归属”的词语，最恰当的是？',
+    options: ['民不聊生；认可', '流离失所；认识', '背井离乡；认同', '饥寒交迫；认知'], correctAnswer: 'C', difficulty: 'medium',
+    explanation: '第一空需要表达离开家乡，第二空需要表达情感上的归属；“背井离乡”和“认同”与两处语义分别匹配。',
+  }, { ...anhuiOutlineSource, sectionOrder: 3 }),
+  sourceQuestion({
+    id: 'ah2026-outline-verbal-2', moduleId: 'verbal', subjectId: 'reading',
+    topicId: 'verbal:main-idea', knowledgePointIds: ['verbal:main-idea'],
+    originalQuestionNo: '言语例题2', sectionOrder: 3,
+    stem: '文段指出，传统手艺曾代表当时的重要生产力；现代科技取代了许多手工技能，但也能帮助传统工艺提升并继续服务社会。文段主要说明？',
+    options: ['传统工艺可借助现代科技获得发展', '社会发展只取决于生产力', '现代科技对传统手工艺只有冲击', '科技能够解决传统工艺的所有困难'], correctAnswer: 'A', difficulty: 'easy',
+    explanation: '文段的落脚点是现代科技能够帮助传统工艺提升和延续，A概括了这一观点；其余选项扩大或改变了文意。',
+  }, { ...anhuiOutlineSource, sectionOrder: 3 }),
+  sourceQuestion({
+    id: 'ah2026-outline-verbal-3', moduleId: 'verbal', subjectId: 'reading',
+    topicId: 'verbal:contextual-word-choice', knowledgePointIds: ['verbal:contextual-word-choice'],
+    originalQuestionNo: '言语例题3', sectionOrder: 3,
+    stem: '数字网络要真正服务公众，离不开网络参与者之间建立信任，也离不开共同治理。填入横线处的观点最恰当的是？',
+    options: ['信任与共治共同构成网络发展的基础原则', '信任只是治理完成后的结果', '共治是信任的未来替代品', '只有信任重要，共治并非必要'], correctAnswer: 'A', difficulty: 'easy',
+    explanation: '下文分别说明信任与共治的作用，横线处应概括二者共同发挥基础作用，A与后文并列关系一致。',
+  }, { ...anhuiOutlineSource, sectionOrder: 3 }),
+  sourceQuestion({
+    id: 'ah2026-outline-verbal-4', moduleId: 'verbal', subjectId: 'reading',
+    topicId: 'verbal:sentence-order', knowledgePointIds: ['verbal:sentence-order'],
+    originalQuestionNo: '言语例题4', sectionOrder: 3,
+    stem: '将下列句子排序，使关于工匠文化与教育传承的论述连贯：①这种精神融入技艺训练，也体现修身与服务社会的追求。②古代工匠文化强调品德与技艺并重。③古代教育思想也把教师职责与技艺传授联系起来。④韩愈的相关论述也表达了相近思想。⑤中外都形成了悠久的工艺传统。⑥《礼记》以工艺传承说明教学传授的道理。',
+    options: ['⑤⑥④②③①', '③⑤②⑥④①', '⑤②①③⑥④', '⑥④②①③⑤'], correctAnswer: 'C', difficulty: 'hard',
+    explanation: '⑤先作总述，②概括中国古代工匠精神，①接着解释其内容；③引出教育与技艺的联系，再由⑥、④举例补充，顺序为⑤②①③⑥④。',
+  }, { ...anhuiOutlineSource, sectionOrder: 3 }),
+
+  sourceQuestion({
+    id: 'ah2026-outline-quantitative-1', moduleId: 'quantitative', subjectId: 'geometry',
+    topicId: 'quantitative:volume-displacement', knowledgePointIds: ['quantitative:volume-displacement'],
+    originalQuestionNo: '数量关系例题', sectionOrder: 4,
+    stem: '圆柱容器与三个实心球的半径均为4厘米。放入三个球后，水面刚好没过最上方的球，且水没有溢出。放球前的水面高度是多少？',
+    options: ['2厘米', '4厘米', '6厘米', '8厘米'], correctAnswer: 'D', difficulty: 'medium',
+    explanation: '三个球的排水体积合计为3×(4/3)π×4³=256π立方厘米。圆柱底面积为16π平方厘米，因此水面上升16厘米；最终水深为24厘米，原水深为8厘米。',
+  }, { ...anhuiOutlineSource, sectionOrder: 4 }),
+
+  sourceQuestion({
+    id: 'ah2026-outline-reasoning-1', moduleId: 'reasoning', subjectId: 'definition',
+    topicId: 'reasoning:definition-judgment', knowledgePointIds: ['reasoning:definition-judgment'],
+    originalQuestionNo: '判断推理定义例题', sectionOrder: 5,
+    stem: '共享经济依托网络平台，暂时转移闲置资源的使用权，以提升存量资产利用效率。下列哪项活动不符合这一概念？',
+    options: ['通过平台预约网约车出行', '通过平台借款后用于股票投资', '在线订购餐食并送到家中', '出行前在线预订民宿'], correctAnswer: 'B', difficulty: 'medium',
+    explanation: 'B是借贷和金融投资活动，并未体现闲置资源使用权的临时转移；网约车和民宿预订都可能利用闲置运力或房屋。',
+  }, { ...anhuiOutlineSource, sectionOrder: 5 }),
+  sourceQuestion({
+    id: 'ah2026-outline-reasoning-2', moduleId: 'reasoning', subjectId: 'analogy',
+    topicId: 'reasoning:paired-tools', knowledgePointIds: ['reasoning:paired-tools'],
+    originalQuestionNo: '判断推理类比例题', sectionOrder: 5,
+    stem: '一组零件需要配套使用。以下哪一组物品之间也具有相近的配套关系？',
+    options: ['水杯与暖瓶', '线与纽扣', '插头与插座', '筷子与碗'], correctAnswer: 'C', difficulty: 'easy',
+    explanation: '螺丝与螺帽、插头与插座都是必须配合连接或使用的一对部件；其余选项是容器关系或缝制关系。',
+  }, { ...anhuiOutlineSource, sectionOrder: 5 }),
+  sourceQuestion({
+    id: 'ah2026-outline-reasoning-3', moduleId: 'reasoning', subjectId: 'argument',
+    topicId: 'reasoning:argument-criticism', knowledgePointIds: ['reasoning:argument-criticism'],
+    originalQuestionNo: '判断推理逻辑例题', sectionOrder: 5,
+    stem: '唐代墓葬中出现先秦纹样陶片，有专家推测陶片被雨水带入墓中。以下哪项事实最能削弱这一解释？',
+    options: ['墓中还发现西汉时期的器物', '墓室保存完好，没有进水或坍塌迹象', '唐代文人也曾使用类似纹样', '唐人会把生前喜爱的物品随葬'], correctAnswer: 'B', difficulty: 'medium',
+    explanation: '专家以雨水冲刷解释陶片进入墓穴；若墓室保存完好、没有进水迹象，便直接削弱了该解释的关键前提。',
+  }, { ...anhuiOutlineSource, sectionOrder: 5 }),
+
+  sourceQuestion({
+    id: 'ah2026-outline-data-1', moduleId: 'data-analysis', subjectId: 'statistics',
+    topicId: 'data-analysis:share-change', knowledgePointIds: ['data-analysis:share-change'],
+    originalQuestionNo: '资料分析例题', sectionOrder: 6,
+    stem: '某年5月，股份制银行资产为431150亿元，同比增长11.5%；银行业金融机构资产为2328934亿元，同比增长12.5%。股份制银行资产占比与上年同期相比约有何变化？',
+    options: ['增加2个百分点', '减少2个百分点', '增加0.2个百分点', '减少0.2个百分点'], correctAnswer: 'D', difficulty: 'hard',
+    explanation: '本年占比为431150÷2328934。上年同期占比为本年占比×(1+12.5%)÷(1+11.5%)，因此本年占比较上年约下降0.2个百分点。',
+  }, { ...anhuiOutlineSource, sectionOrder: 6 }),
+
+  sourceQuestion({
+    id: 'zja2025-q1', moduleId: 'political-theory', subjectId: 'party-theory',
+    topicId: 'political-theory:party-theory', knowledgePointIds: ['political-theory:party-theory'],
+    originalQuestionNo: 1, sectionOrder: 1,
+    stem: '关于习近平新时代中国特色社会主义思想与中国特色社会主义事业，判断以下表述正确的有几项：①深化了对执政、建设和社会发展规律的认识；②“六个必须坚持”概括了相关世界观和方法论；③“两个确立”包括确立党中央核心地位和指导思想地位；④新时代坚持和发展中国特色社会主义的总任务包含现代化建设和民族复兴。',
+    options: ['1项', '2项', '3项', '4项'], correctAnswer: 'D', difficulty: 'medium',
+    explanation: '公开答案页给出的答案为D。四项均符合该题回忆文本所对应的理论表述；题库保留原卷题号并以摘要方式呈现。',
+  }, { ...zhejiangRecallSource, sectionOrder: 1 }),
+  sourceQuestion({
+    id: 'zja2025-political-2', moduleId: 'political-theory', subjectId: 'party-theory',
+    topicId: 'political-theory:reform', knowledgePointIds: ['political-theory:reform'],
+    originalQuestionNo: 2, sectionOrder: 1,
+    stem: '关于2024年党的二十届三中全会精神，下列表述中哪项不准确？',
+    options: ['全面深化改革要围绕中国式现代化展开', '以人民为中心被题目表述为改革开放成功推进的根本保证和最大政治优势', '改革举措要加强协调，防止局部利益妨碍改革全局', '尊重基层和群众首创经验，鼓励试点并形成可推广做法'], correctAnswer: 'B', difficulty: 'medium',
+    explanation: '公开答案页给出的答案为B。题目考查政策表述与概念归属的准确性；复习应核对全会正式文件，不把方向正确的观点误当成原文中的概念定义。',
+  }, { ...zhejiangRecallSource, sectionOrder: 1 }),
+  sourceQuestion({
+    id: 'zja2025-political-3', moduleId: 'political-theory', subjectId: 'party-theory',
+    topicId: 'political-theory:high-quality-development', knowledgePointIds: ['political-theory:high-quality-development'],
+    originalQuestionNo: 3, sectionOrder: 1,
+    stem: '关于高质量发展及相关宏观政策，以下哪项表述不准确？',
+    options: ['新质生产力的发展既涉及技术和业态，也涉及管理制度创新', '财政与货币政策可以配合弥补需求不足，货币政策保持流动性合理充裕', '房地产政策同时强调严控增量、优化存量、提高质量和盘活闲置土地', '参与国际绿色金融、数字金融规则制定有助于提升我国影响力'], correctAnswer: 'C', difficulty: 'medium',
+    explanation: '公开答案页给出的答案为C。该题属于政策措辞辨析，题库使用回忆版答案；具体年度政策内容以正式文件为准。',
+  }, { ...zhejiangRecallSource, sectionOrder: 1 }),
+  sourceQuestion({
+    id: 'zja2025-political-4', moduleId: 'political-theory', subjectId: 'party-theory',
+    topicId: 'political-theory:public-welfare', knowledgePointIds: ['political-theory:public-welfare'],
+    originalQuestionNo: 4, sectionOrder: 1,
+    stem: '关于民生与社会保障，以下表述中哪项不准确？',
+    options: ['改善民生要兼顾积极作为与财力条件', '就业是基础性民生，应扩大高质量就业', '截至2023年底，医保仅覆盖约10亿人而基本养老保险覆盖约14亿人', '提高人民生活品质是全面深化改革的重要着力点之一'], correctAnswer: 'C', difficulty: 'medium',
+    explanation: '公开答案页给出的答案为C。题干中的参保人数口径与真实统计不符；使用统计数字时要核对统计年度和统计范围。',
+  }, { ...zhejiangRecallSource, sectionOrder: 1 }),
+  sourceQuestion({
+    id: 'zja2025-political-5', moduleId: 'political-theory', subjectId: 'party-theory',
+    topicId: 'political-theory:education', knowledgePointIds: ['political-theory:education'],
+    originalQuestionNo: 5, sectionOrder: 1,
+    stem: '关于建设教育强国，判断以下表述正确的有几项：①到2035年总体实现教育现代化；②统筹教育、科技和人才发展；③推动义务教育优质均衡并缩小差距；④促进职业教育、高等教育和继续教育协同；⑤提升教师社会地位和职业荣誉。',
+    options: ['2项', '3项', '4项', '5项'], correctAnswer: 'D', difficulty: 'medium',
+    explanation: '公开答案页给出的答案为D；五项表述均符合题目所引用的教育强国政策方向。',
+  }, { ...zhejiangRecallSource, sectionOrder: 1 }),
+  sourceQuestion({
+    id: 'zja2025-political-6', moduleId: 'political-theory', subjectId: 'party-theory',
+    topicId: 'political-theory:international-relations', knowledgePointIds: ['political-theory:international-relations'],
+    originalQuestionNo: 6, sectionOrder: 1,
+    stem: '关于和平共处五项原则与国际合作，下列哪项说法不符合相关讲话精神？',
+    options: ['国际规则应由各国共同参与制定和维护', '以合作推进发展与安全', '倡导平等有序的多极化格局', '帮助其他国家选择适合其国情的道路和制度'], correctAnswer: 'D', difficulty: 'medium',
+    explanation: '公开答案页给出的答案为D。国际合作应尊重各国自主选择发展道路的权利，不能替他国作出制度选择。',
+  }, { ...zhejiangRecallSource, sectionOrder: 1 }),
+  sourceQuestion({
+    id: 'zja2025-political-8', moduleId: 'political-theory', subjectId: 'party-theory',
+    topicId: 'political-theory:social-work', knowledgePointIds: ['political-theory:social-work'],
+    originalQuestionNo: 8, sectionOrder: 1,
+    stem: '关于我国社会工作体制与队伍建设，以下哪项表述不准确？',
+    options: ['社会治理和服务工作在党的重要会议部署中不断拓展', '各级党委均已在乡镇层面设立与省市县相同的社会工作部门', '专业人才、社区工作者和志愿者队伍都可发挥作用', '新经济组织、新社会组织和新就业群体党建是重要工作内容'], correctAnswer: 'B', difficulty: 'medium',
+    explanation: '公开答案页给出的答案为B。社会工作部门的设置层级不能扩大为所有乡镇均设有与省市县同样的部门。',
+  }, { ...zhejiangRecallSource, sectionOrder: 1 }),
+  sourceQuestion({
+    id: 'zja2025-political-9', moduleId: 'political-theory', subjectId: 'party-theory',
+    topicId: 'political-theory:national-defense', knowledgePointIds: ['political-theory:national-defense'],
+    originalQuestionNo: 9, sectionOrder: 1,
+    stem: '关于新时代政治建军与国防改革，以下哪项表述不准确？',
+    options: ['政治建设关系到人民军队根本方向', '新时代通过政治整训和从严治军加强队伍建设', '科技创新是提升战斗力的重要支撑', '深化改革后现役军队员额已增加至300万人'], correctAnswer: 'D', difficulty: 'medium',
+    explanation: '公开答案页给出的答案为D。军队员额并未因改革增加到题干所说的规模；涉及国防数据时应注意统计口径与官方公开资料。',
+  }, { ...zhejiangRecallSource, sectionOrder: 1 }),
+  sourceQuestion({
+    id: 'zja2025-political-10', moduleId: 'political-theory', subjectId: 'party-theory',
+    topicId: 'political-theory:ecological-civilization', knowledgePointIds: ['political-theory:ecological-civilization'],
+    originalQuestionNo: 10, sectionOrder: 1,
+    stem: '关于生态文明建设，以下四项判断中正确的有几项？①绿色发展是高质量发展的底色；②我国提出2035年前实现碳达峰、2050年前实现碳中和；③推进双碳政策须结合能源资源禀赋；④生态修复应以工程修复为主、自然恢复为辅。',
+    options: ['1项', '2项', '3项', '4项'], correctAnswer: 'B', difficulty: 'medium',
+    explanation: '公开答案页给出的答案为B。①、③正确；②的时间目标与国家提出的目标不符，④把自然恢复与人工修复的主次关系说反。',
+  }, { ...zhejiangRecallSource, sectionOrder: 1 }),
+];
+
+for (const question of sourcedQuestions) {
+  APTITUDE_MODULE_QUESTION_BANKS[question.moduleId].push(question);
+}

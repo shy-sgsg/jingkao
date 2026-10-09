@@ -28,6 +28,40 @@ export function filterQuestions(bank, filters = {}) {
   });
 }
 
+export function randomizeQuestionGroups(bank, targetQuestionCount) {
+  const groups = new Map();
+  for (const question of Array.isArray(bank) ? bank : []) {
+    const groupId = question.sharedStimulusId || question.id;
+    if (!groups.has(groupId)) groups.set(groupId, []);
+    groups.get(groupId).push(question);
+  }
+  const randomizedGroups = [...groups.values()].map((group) => group.slice().sort((left, right) => {
+    const leftNumber = Number(left.originalQuestionNo);
+    const rightNumber = Number(right.originalQuestionNo);
+    return Number.isFinite(leftNumber) && Number.isFinite(rightNumber) ? leftNumber - rightNumber : 0;
+  }));
+  for (let index = randomizedGroups.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(Math.random() * (index + 1));
+    [randomizedGroups[index], randomizedGroups[swapIndex]] = [randomizedGroups[swapIndex], randomizedGroups[index]];
+  }
+
+  const target = Math.min(Math.max(0, Number(targetQuestionCount) || 0), randomizedGroups.reduce((sum, group) => sum + group.length, 0));
+  const reachable = new Map([[0, []]]);
+  for (const [groupIndex, group] of randomizedGroups.entries()) {
+    for (const [count, selected] of [...reachable].reverse()) {
+      const nextCount = count + group.length;
+      if (nextCount <= target && !reachable.has(nextCount)) reachable.set(nextCount, [...selected, groupIndex]);
+    }
+  }
+  const selectedCount = Math.max(...reachable.keys());
+  const selectedIndices = new Set(reachable.get(selectedCount) || []);
+  return {
+    questions: randomizedGroups.flatMap((group, index) => selectedIndices.has(index) ? group : []),
+    requestedQuestionCount: Number(targetQuestionCount) || 0,
+    selectedQuestionCount: selectedCount,
+  };
+}
+
 export function validateQuestionBank(bank, { knowledgePointIds = [], sourceIds = [] } = {}) {
   const issues = [];
   const seenIds = new Set();

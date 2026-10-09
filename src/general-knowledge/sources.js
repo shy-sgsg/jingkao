@@ -115,4 +115,126 @@ export const GENERAL_KNOWLEDGE_SOURCES = [
     publishStatus: 'reference_only', copyrightStatus: '题面展示授权未核实',
     note: '作为后续真题类型和题源调查索引，不将网页可访问误作题目开放许可。',
   },
+  {
+    id: 'anhui-2026-outline', sourceType: 'official_outline_example', title: '安徽省2026年度公务员笔试考试大纲（公开例题）', organization: '安徽省人力资源和社会保障厅 / 淮南市人力资源和社会保障局',
+    url: 'https://rsj.huainan.gov.cn/group4/M00/11/14/rB40qWlooVmAFWHRAA3nByKSHRA495.pdf?attachDownload=1', verificationStatus: 'verified',
+    publishStatus: 'published', copyrightStatus: '例题摘要改写并链接官方大纲', note: '覆盖政治理论、常识判断、言语、数量、判断推理和资料分析公开例题；图片题因图像未随文字抽取而未纳入。',
+  },
+  {
+    id: 'zhejiang-2025a-recall', sourceType: 'recalled', title: '2025年浙江省公务员考试《行测》A类回忆版及答案', organization: '公开真题库 / 考生回忆资料',
+    url: 'https://gwy.gkzhenti.cn/paper/1739531137130', answerUrl: 'https://gwy.gkzhenti.cn/answer/1739531137130', verificationStatus: 'verified',
+    publishStatus: 'published', copyrightStatus: '题意与选项摘要改写并注明回忆来源', note: '仅发布题面资源完整、答案可核的分项；Q12依赖未取得的路线图，继续暂缓。公开答案页用于核对答案，不代表官方命题文件。',
+  },
+  {
+    id: 'mofcom-emergency-supplies', sourceType: 'official_policy', title: '生活必需品市场供应应急管理相关规定', organization: '中华人民共和国商务部',
+    url: 'https://www.mofcom.gov.cn/zcfb/blgg/art/2011/art_9c44dbc882cd47a2a2db6ddd07e242fd.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '政策事实概述并链接原文', note: '用于应急组织货源、储备投放和生活必需品市场供应管理的基础概念。',
+  },
+  {
+    id: 'ndrc-three-distributions', sourceType: 'official_policy', title: '促进共同富裕与三次分配的政策解读', organization: '国家发展和改革委员会',
+    url: 'https://www.ndrc.gov.cn/fggz/jyysr/jysrsbxf/202109/t20210924_1297384_ext.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '政策事实概述并链接原文', note: '用于区分初次分配、再分配和第三次分配的主体与机制。',
+  },
+  {
+    id: 'npc-oath-decision', sourceType: 'official_law', title: '关于实行宪法宣誓制度的决定', organization: '全国人民代表大会常务委员会',
+    url: 'https://www.npc.gov.cn/npc/c2/c30834/202306/t20230606_429893.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '法条事实摘述并链接原文', note: '宣誓适用对象和组织程序以现行法律决定为准。',
+  },
+  {
+    id: 'court-judge-oath-rules', sourceType: 'official_law', title: '中华人民共和国法官宣誓组织办法', organization: '最高人民法院',
+    url: 'https://www.court.gov.cn/fabu/xiangqing/20262.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '规则事实摘述并链接原文', note: '用于核对法院系统法官职务宣誓的组织安排。',
+  },
+  {
+    id: 'cpc-20th-report', sourceType: 'official_policy', title: '中国共产党第二十次全国代表大会报告', organization: '中国政府网',
+    url: 'https://app.www.gov.cn/govdata/gov/202210/25/493662/article.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '政策观点概述并链接原文', note: '用于核对城乡融合、发展与公平及生态文明等稳定政策表述。',
+  },
+  {
+    id: 'beijing-willow-fluff', sourceType: 'official_reference', title: '杨柳飞絮与植物种子传播科普', organization: '北京市园林绿化局',
+    url: 'https://yllhj.beijing.gov.cn/ztxx/zlylfxgcyjhj/ylfxqy/201510/t20151013_119733.shtml', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '科学事实概述并链接原文', note: '说明杨柳飞絮与种子绒毛及风力传播之间的关系。',
+  },
+  {
+    id: 'pku-capsaicin-chemistry', sourceType: 'official_reference', title: '辣椒素溶解性与生活化学实验研究', organization: '北京大学《大学化学》',
+    url: 'https://www.dxhx.pku.edu.cn/fileup/1000-8438/PDF/dxhx-201803041.pdf', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '科学事实概述并链接论文', note: '用于核对辣椒素在水、乙醇等介质中的溶解性。',
+  },
+  {
+    id: 'nra-railway-track', sourceType: 'official_reference', title: '高速铁路设计规范专家解读', organization: '国家铁路局',
+    url: 'https://source.nra.gov.cn/xxgk/gkml/ztjg/gfzd/zcjd/202204/t20220405_280609.shtml', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '技术事实概述并链接原文', note: '用于高速铁路轨道结构与线路基础知识；无缝线路仍须考虑温度变化。',
+  },
+  {
+    id: 'moe-employment-priority', sourceType: 'official_policy', title: '高校毕业生等青年就业服务与支持政策', organization: '教育部',
+    url: 'https://www.moe.gov.cn/jyb_xxgk/moe_1777/moe_1778/202409/t20240926_1153200.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '政策事实概述并链接原文', note: '用于就业服务、重点群体支持和技能提升等知识点。',
+  },
+  {
+    id: 'mct-transaction-costs', sourceType: 'official_policy', title: '降低制度性交易成本相关政策解读', organization: '文化和旅游部转载国务院办公厅材料',
+    url: 'https://www.mct.gov.cn/preview/whhlyqyzcxxfw/yshjxf/202306/t20230612_944383.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '政策事实概述并链接原文', note: '用于区分制度规则及流程带来的成本与企业正常生产投入。',
+  },
+  {
+    id: 'politburo-20240926', sourceType: 'official_policy', title: '中共中央政治局会议研究当前经济形势和经济工作', organization: '新华社',
+    url: 'https://www.xinhuanet.com/fortune/20240926/0f9a6b9e501c48ea85aea3b6d8cc7ccc/c.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '政策事实概述并链接原文', note: '用于核对2024年9月26日会议关于扩大内需、逆周期调节和民生工作的表述。',
+  },
+  {
+    id: 'pbc-lpr', sourceType: 'official_reference', title: '贷款市场报价利率形成机制与公布资料', organization: '中国人民银行',
+    url: 'https://www.pbc.gov.cn/zhengcehuobisi/125207/125213/125440/125832/2804873/index.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '机制事实概述并链接原文', note: '用于LPR的报价、公布和贷款定价传导知识。',
+  },
+  {
+    id: 'ethnic-autonomy-law', sourceType: 'official_law', title: '中华人民共和国民族区域自治法', organization: '司法部行政复议行政应诉局法规公开平台',
+    url: 'https://xzfy.moj.gov.cn/c/2021-01-06/487588.shtml', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '法条事实摘述并链接原文', note: '用于核对自治地方、自治机关及主要负责人的法定规定。',
+  },
+  {
+    id: 'palace-history', sourceType: 'official_reference', title: '故宫博物院院史与紫禁城沿革', organization: '故宫博物院',
+    url: 'https://www.dpm.org.cn/subject_600/index.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '历史事实概述并链接原文', note: '用于核对紫禁城营建、明清皇宫及故宫博物院沿革。',
+  },
+  {
+    id: 'most-salt-tolerant-rice', sourceType: 'official_reference', title: '耐盐碱水稻研究与示范应用', organization: '科学技术部',
+    url: 'https://www.most.gov.cn/dfkj/hain/zxdt/202203/t20220323_179960.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '科技事实概述并链接原文', note: '用于说明耐盐碱品种及其土壤、水分和栽培条件。',
+  },
+  {
+    id: 'spacecraft-battery-upgrade', sourceType: 'official_reference', title: '神舟飞船储能电池技术升级', organization: '中国航天科技集团有限公司',
+    url: 'https://www.spacechina.com/n25/n2014789/n2014809/c4217099/content.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '科技事实概述并链接原文', note: '官方资料说明神舟十八号起主电源储能电池由镉镍体系改为锂离子体系。',
+  },
+  {
+    id: 'hangzhou-2022-flame', sourceType: 'official_reference', title: '杭州亚运会火种采集于良渚古城遗址', organization: '杭州第19届亚运会组委会',
+    url: 'https://www.hangzhou2022.cn/xwzx/jdxw/ttxw/202306/t20230615_62401.shtml', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '事实概述并链接原文', note: '用于区分良渚遗址与河姆渡遗址及亚运会火种采集地点。',
+  },
+  {
+    id: 'lantern-festival-poem', sourceType: 'official_reference', title: '元宵节诗词文本参考', organization: '中国哲学书电子化计划',
+    url: 'https://ctext.org/text.pl?if=gb&node=208579', verificationStatus: 'reviewed', publishStatus: 'published',
+    copyrightStatus: '古典作品出处并链接原文', note: '用于核对“正月中旬”“灯市”等诗词线索与元宵节的关系。',
+  },
+  {
+    id: 'unesco-liangzhu', sourceType: 'official_reference', title: '良渚古城遗址世界遗产资料', organization: '联合国教科文组织世界遗产中心',
+    url: 'https://whc.unesco.org/en/list/1592/', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '遗产事实概述并链接原文', note: '用于核对良渚古城的考古、社会组织与世界遗产信息。',
+  },
+  {
+    id: 'china-fire-gas-safety', sourceType: 'official_reference', title: '燃气泄漏时的家庭安全处置', organization: '国家消防救援局',
+    url: 'https://www.119.gov.cn/kp/hzyf/jt/2022/1201.shtml', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '安全事实概述并链接原文', note: '燃气泄漏时不要操作电器开关或产生火花，应按消防部门指引通风、撤离并求助。',
+  },
+  {
+    id: 'beijing-political-consultation-regulation', sourceType: 'official_policy', title: '中国共产党政治协商工作条例', organization: '中共中央 / 首都之窗',
+    url: 'https://www.beijing.gov.cn/zhengce/zhengcefagui/202206/t20220621_2747230.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '政策规则概述并链接原文', note: '条例区分政党协商与人民政协政治协商，并列明两类协商的对象。',
+  },
+  {
+    id: 'beijing-2023-recall', sourceType: 'recalled', title: '2023年北京市公务员录用考试《行测》真题（考生回忆版）',
+    organization: '星光公考（题面回忆整理）；拉西学习资源站（答案解析，标注来源为1mi.xyz）', examYear: 2023, region: '北京',
+    url: 'https://upload.xingguanggongkao.com/pdf/2023%E5%B9%B4%E5%8C%97%E4%BA%AC%E5%B8%82%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.pdf?time=1733730281',
+    answerUrl: 'https://lasee.net/gongwuyuan/167886579811619.html', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: 'adapted_public_source', note: '题面与答案分别由公开回忆 PDF 和答案解析页核验；本站仅发布题意改述的常识第1–14、16题。第15题缺失，整卷有缺题且非官方原卷。',
+  },
 ];
