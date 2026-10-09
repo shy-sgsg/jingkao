@@ -6,6 +6,7 @@ import { fileURLToPath } from 'node:url';
 import { webcrypto } from 'node:crypto';
 import { runInNewContext } from 'node:vm';
 import { createStoredAccount } from '../src/data/encryptedStore.js';
+import { createPlanTask } from '../src/science/planTasks.js';
 
 const TEST_PASSWORD = 'correct horse battery staple for build tests';
 
@@ -87,7 +88,7 @@ async function renderStandaloneRoute(script, route, storedState = null) {
   const unlockForm = new HTMLFormElement('', { accountId: account.id }, { password: TEST_PASSWORD });
   await listeners.get('submit')({ target: unlockForm, preventDefault() {} });
 
-  return { document: documentLike, root: elements.get('#root'), elements, listeners, localStorage, accountId: account.id };
+  return { document: documentLike, root: elements.get('#root'), modalRoot: elements.get('#modal-root'), elements, listeners, localStorage, accountId: account.id };
 }
 
 test('standalone site build embeds the route transition helper used by the app', async () => {
@@ -142,6 +143,90 @@ test('standalone site executes and renders the homepage from its embedded app mo
       assert.match(rendered.root.innerHTML, /data-action="filter-research-topic"/);
     }
   }
+});
+
+test('standalone aptitude routes render the shared empty-bank page and preserve dedicated routes', async () => {
+  await import('../scripts/build.mjs');
+  const html = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8');
+  const script = html.match(/<script>\s*([\s\S]*?)<\/script>/)?.[1];
+  const storedState = { onboarding: { hidden: true, completed: true } };
+  const modulePage = (await renderStandaloneRoute(script, 'aptitude/verbal', storedState)).root.innerHTML;
+  const legacyModulePage = (await renderStandaloneRoute(script, 'aptitude/module/verbal', storedState)).root.innerHTML;
+  const sciencePage = (await renderStandaloneRoute(script, 'aptitude/science', storedState)).root.innerHTML;
+  const generalKnowledgePage = (await renderStandaloneRoute(script, 'aptitude/general-knowledge', storedState)).root.innerHTML;
+
+  assert.match(modulePage, /<h1>言语<\/h1>/);
+  assert.match(modulePage, /知识目录待接入/);
+  assert.match(modulePage, /题库待接入/);
+  assert.match(modulePage, /错题与收藏/);
+  assert.match(modulePage, /MANUAL PRACTICE LOG/);
+  assert.match(modulePage, /安排学习任务/);
+  assert.match(modulePage, /<button[^>]*disabled[^>]*>开始练习<\/button>/);
+  assert.match(legacyModulePage, /<h1>言语<\/h1>/);
+  assert.match(sciencePage, /<h1>科学推理<\/h1>/);
+  assert.match(generalKnowledgePage, /<h1>常识判断<\/h1>/);
+  assert.match(generalKnowledgePage, /常识判断知识点目录|法律/);
+});
+
+test('module cards and pages combine module-only site answers with manual training logs', async () => {
+  await import('../scripts/build.mjs');
+  const html = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8');
+  const script = html.match(/<script>\s*([\s\S]*?)<\/script>/)?.[1];
+  const state = {
+    onboarding: { hidden: true, completed: true },
+    aptitudeLogs: { 7: { attempted: 10, accuracy: 0.5 } },
+    aptitudeModuleStudies: {
+      verbal: {
+        moduleId: 'verbal', knowledgeProgress: {},
+        sessions: [{ id: 'verbal-practice', moduleId: 'verbal', mode: 'practice', status: 'completed' }],
+        answers: [{ id: 'verbal-answer', moduleId: 'verbal', sessionId: 'verbal-practice', questionId: 'shared-id', isCorrect: true }],
+        mistakes: {}, favorites: [], favoriteKnowledgePointIds: [], unclearKnowledgePointIds: [],
+      },
+      reasoning: {
+        moduleId: 'reasoning', knowledgeProgress: {},
+        sessions: [{ id: 'reasoning-practice', moduleId: 'reasoning', mode: 'practice', status: 'completed' }],
+        answers: [{ id: 'reasoning-answer', moduleId: 'reasoning', sessionId: 'reasoning-practice', questionId: 'shared-id', isCorrect: false }],
+        mistakes: {}, favorites: [], favoriteKnowledgePointIds: [], unclearKnowledgePointIds: [],
+      },
+    },
+  };
+  const { root: overview } = await renderStandaloneRoute(script, 'aptitude', state);
+  const { root: modulePage } = await renderStandaloneRoute(script, 'aptitude/verbal', state);
+
+  assert.match(overview.innerHTML, /href="#\/aptitude\/verbal"/);
+  assert.match(overview.innerHTML, /href="#\/aptitude\/reasoning"/);
+  assert.match(overview.innerHTML, /合并正确率/);
+  assert.match(modulePage.innerHTML, /1 道站内 · 10 道手动/);
+  assert.match(modulePage.innerHTML, /合并题量/);
+  assert.match(modulePage.innerHTML, /11<small> 题<\/small>/);
+});
+
+test('plan UI exposes all registry module types, saves module progress, and links to the module route', async () => {
+  await import('../scripts/build.mjs');
+  const html = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8');
+  const script = html.match(/<script>\s*([\s\S]*?)<\/script>/)?.[1];
+  const verbalTask = createPlanTask({
+    taskType: 'verbal', title: '言语专项练习', date: '2026-10-09',
+    aptitudeConfig: { moduleId: 'verbal', activityType: 'practice', targetQuestionCount: 10 },
+  }, { id: 'verbal-plan-ui', now: '2026-10-09T00:00:00.000Z' });
+  const plan = await renderStandaloneRoute(script, 'plan', {
+    onboarding: { hidden: true, completed: true },
+    studyPlanTasks: [verbalTask],
+  });
+
+  assert.match(plan.root.innerHTML, /言语专项练习/);
+  assert.match(plan.root.innerHTML, /href="#\/aptitude\/verbal\?task=verbal-plan-ui"/);
+  assert.match(plan.root.innerHTML, /言语 · 专项练习 · 10 题/);
+
+  const addAction = { dataset: { action: 'add-plan-task', date: '2026-10-09' } };
+  await plan.listeners.get('click')({
+    target: { closest(selector) { return selector === '[data-action]' ? addAction : null; } },
+    preventDefault() {},
+  });
+  assert.match(plan.modalRoot.innerHTML, /<option value="political_theory"/);
+  assert.match(plan.modalRoot.innerHTML, /<option value="data_analysis"/);
+  assert.match(plan.modalRoot.innerHTML, /data-aptitude-config/);
+  assert.match(plan.modalRoot.innerHTML, /name="aptitudeKnowledgePointIds"/);
 });
 
 test('position table shows a source-backed data-completeness grade with missing sections', async () => {

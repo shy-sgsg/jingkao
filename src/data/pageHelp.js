@@ -4,7 +4,7 @@ export const PAGE_HELP = Object.freeze({
   plan: { text: '“调整计划”修改某天的日期、阶段、任务和目标题量；“记录”只填写实际完成情况，两类数据分别保存在本机。', actionPage: 'mocks', actionLabel: '记录一次模考' },
   science: { text: '通过知识目录学习并标记进度，也可按知识点练习、限时模拟或复习错题；科学推理计划任务会从这里直接进入。', actionPage: 'aptitude', actionLabel: '返回行测能力' },
   aptitude: { text: '查看手动记录与站内作答合并后的整体正确率，再进入对应模块学习、练习或手动更新训练记录。相同题目不要重复手动录入。', actionPage: 'plan', actionLabel: '查看学习计划' },
-  aptitudeModule: { text: '这里汇总本模块的手动训练情况；知识点讲解和题库尚未开放时，可先使用现有训练项手动记录。', actionPage: 'aptitude', actionLabel: '返回行测总览' },
+  aptitudeModule: { text: '查看本模块站内作答与手动记录合并结果，并使用知识、练习、错题、统计和计划区块。目录或题库待接入时会显示状态，空题库不会启动训练。', actionPage: 'aptitude', actionLabel: '返回行测总览' },
   generalKnowledge: { text: '在常识判断模块查看训练总览、手动记录入口和后续开放的知识点与题库。', actionPage: 'aptitude', actionLabel: '返回行测总览' },
   essay: { text: '记录训练次数、自评和关键词覆盖；自评用于纵向复盘，不等同于官方评分。', actionPage: 'mocks', actionLabel: '查看模考复盘' },
   mocks: { text: '录入真实完成的行测与申论成绩；空白不代表 0，样本不足时不会给出稳定性判断。', actionPage: 'profile', actionLabel: '完善个人条件' },

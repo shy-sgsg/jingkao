@@ -18,6 +18,11 @@ test('unknown routes fall back to overview guidance', () => {
   assert.equal(getPageHelp('unknown').text, PAGE_HELP.overview.text);
 });
 
+test('new aptitude module guidance explains merged stats and empty-bank behavior', () => {
+  assert.match(PAGE_HELP.aptitudeModule.text, /站内作答与手动记录合并/);
+  assert.match(PAGE_HELP.aptitudeModule.text, /空题库不会启动训练/);
+});
+
 test('overview guidance matches its score-gap panel and task-first actions', () => {
   assert.match(PAGE_HELP.overview.text, /真实模考/);
   assert.match(PAGE_HELP.overview.text, /历史职位/);

@@ -1,6 +1,6 @@
 import { APTITUDE_MODULES } from './modules.js';
 
-const APTITUDE_MODULES_WITH_OWN_STATE = APTITUDE_MODULES.filter((module) => module.studyStore === 'aptitudeModuleStudies');
+const APTITUDE_MODULES_WITH_OWN_STATE = APTITUDE_MODULES.filter((module) => module.planAdapter === 'aptitude');
 const APTITUDE_ACTIVITY_TYPES = new Set(['knowledge', 'practice', 'exam', 'mistakes', 'free']);
 const SOURCE_FILTERS = new Set([
   'all', 'official', 'official_outline_example', 'verified_exam', 'recalled', 'third_party_mock', 'licensed', 'original',

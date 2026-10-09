@@ -10,8 +10,9 @@ const QUESTION_BANK_PROVIDERS = {
 const FILTER_FIELDS = ['subjectId', 'topicId', 'sourceType', 'difficulty'];
 
 export function getAptitudeQuestions(moduleId, filters = {}) {
-  if (!getAptitudeModule(moduleId)) throw new Error(`Unknown aptitude module: ${moduleId}`);
-  const provider = QUESTION_BANK_PROVIDERS[moduleId];
+  const module = getAptitudeModule(moduleId);
+  if (!module) throw new Error(`Unknown aptitude module: ${moduleId}`);
+  const provider = module.questionProvider ? QUESTION_BANK_PROVIDERS[module.questionProvider] : null;
   const bank = provider ? provider() : [];
   return bank.filter((question) => {
     if (question.publishStatus !== 'published') return false;
