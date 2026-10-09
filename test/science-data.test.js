@@ -9,7 +9,7 @@ test('science tree uses one stable four-discipline catalog for point lookup', as
   assert.deepEqual(tree.map((subject) => subject.id), ['physics', 'chemistry', 'biology', 'geography']);
   const pointIds = tree.flatMap((subject) => subject.topics.flatMap((topic) => topic.knowledgePoints.map((point) => point.id)));
   assert.equal(new Set(pointIds).size, pointIds.length);
-  assert.equal(pointIds.length, 126);
+  assert.equal(pointIds.length, 128);
   assert.ok(pointIds.includes('physics:buoyancy'));
   assert.ok(pointIds.includes('physics:centripetal-force'));
   assert.ok(pointIds.includes('physics:electromagnetic-waves'));
@@ -75,7 +75,7 @@ test('published questions distinguish the existing original bank from sourced ex
   const { SCIENCE_SOURCES } = await import('../src/science/sources.js');
   const originalBank = bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType === 'original');
   assert.equal(originalBank.length, 153);
-  assert.equal(bankModule.SCIENCE_QUESTION_BANK.length, 244);
+  assert.equal(bankModule.SCIENCE_QUESTION_BANK.length, 249);
   const subjectCounts = Object.fromEntries(['physics', 'chemistry', 'biology', 'geography']
     .map((subjectId) => [subjectId, originalBank.filter((question) => question.subjectId === subjectId).length]));
   assert.deepEqual(subjectCounts, { physics: 42, chemistry: 37, biology: 36, geography: 38 });
@@ -118,15 +118,17 @@ test('published questions distinguish the existing original bank from sourced ex
     'gd-2023-township-asexual-reproduction', 'gd-2023-township-sucrose-crystallization',
     'gd-2023-township-greenhouse-yield', 'gd-2023-township-polar-star',
     'zj-2024-c-high-power-appliances', 'mock-zhonggong-2027-equal-speed-stones',
+    'sh-2025-b-charging-work', 'sh-2025-b-quantum-tunneling', 'sh-2025-b-mountain-height',
+    'sh-2025-b-boiling-points', 'sh-2025-b-membrane-filtration',
   ]) {
     assert.ok(bankModule.SCIENCE_QUESTION_BANK.some((question) => question.id === id), `${id} is published`);
   }
   assert.ok(bankModule.SCIENCE_QUESTION_BANK.some((question) => question.sourceType === 'recalled' && question.examYear === 2019));
-  assert.ok(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceId === 'sh-2025-b-recall').length >= 3);
+  assert.equal(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceId === 'sh-2025-b-recall').length, 8);
   assert.ok(bankModule.SCIENCE_QUESTION_BANK.some((question) => question.sourceType === 'third_party_mock'));
   assert.ok(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType !== 'original')
     .every((question) => question.sourceId && question.sourceNote));
-  assert.equal(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType === 'recalled').length, 71);
+  assert.equal(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType === 'recalled').length, 76);
   assert.equal(bankModule.SCIENCE_QUESTION_BANK.filter((question) => question.sourceType === 'third_party_mock').length, 14);
   assert.equal(SCIENCE_SOURCES.length, 33);
 });
@@ -152,7 +154,7 @@ test('published knowledge lessons cover all four disciplines with practical expl
       && point.content.everydayExample && point.content.quickMethod), `${subject.id} lessons contain actionable explanations`);
     return [subject.id, lessons.length];
   }));
-  assert.equal(Object.values(counts).reduce((sum, count) => sum + count, 0), 75);
+  assert.equal(Object.values(counts).reduce((sum, count) => sum + count, 0), 77);
   assert.equal(counts.geography, 13);
   for (const pointId of [
     'physics:elastic-force', 'physics:optical-phenomena', 'physics:gravity', 'physics:magnetic-field', 'physics:lens-imaging',
@@ -167,6 +169,7 @@ test('published knowledge lessons cover all four disciplines with practical expl
     'physics:wetting-adhesion',
     'chemistry:experiments', 'biology:digestion', 'geography:terrain-reading',
     'geography:fronts-precipitation', 'geography:volcanoes',
+    'physics:quantum-tunneling', 'chemistry:boiling-point',
   ]) {
     const point = tree.flatMap((subject) => subject.topics).flatMap((topic) => topic.knowledgePoints).find((item) => item.id === pointId);
     assert.equal(point.contentStatus, 'published', `${pointId} has a lesson for the newly collected Shanghai questions`);

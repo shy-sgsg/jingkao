@@ -458,6 +458,16 @@ addPublishedReferenceQuestion({
 });
 
 addPublishedReferenceQuestion({
+  id: 'sh-2025-b-charging-work', subjectId: 'physics', topicId: 'physics:electricity', knowledgePointIds: ['physics:electric-work'],
+  difficulty: 'medium', reasoningType: 'data_interpretation', sourceType: 'recalled', sourceId: 'sh-2025-b-recall',
+  sourceTitle: '2025 上海市考 B 类回忆题第 71 题 · 有线与无线充电', region: '上海', examYear: 2025, presentationMode: 'adapted',
+  sourceNote: '根据第三方回忆卷中的充电曲线整理为文字数据；相同电压下从同一电量充至同一电量，答案 D 与公开答案页核对，非官方答案。',
+  stem: '同一充电宝分别用有线和无线方式给同款手机充电，充电电压视为恒定。手机电量记录如下（时间/分钟，电量/%）：有线（0,1）、（30,38）、（60,72）、（90,93）；无线（0,1）、（30,27）、（60,46）、（90,63）、（120,80）、（150,93）。下列判断正确的是：',
+  options: ['曲线与时间轴围成的面积代表充电电流', '曲线与时间轴围成的面积代表电流所做的功', '从 1% 充至 93%，两种方式充入的电荷量不同', '从 1% 充至 93%，两种方式充入的电能相同'],
+  correctAnswer: 'D', explanation: '同款手机从相同电量充至相同电量，增加的电荷量相同。电压视为恒定时，电能 W=UQ，因此两种方式充入的电能相同。电量—时间曲线的斜率反映单位时间电量变化，曲线下面积不代表电流或电能。',
+});
+
+addPublishedReferenceQuestion({
   id: 'sh-2025-b-railway-resonance', subjectId: 'physics', topicId: 'physics:mechanics', knowledgePointIds: ['physics:elastic-force'],
   difficulty: 'medium', reasoningType: 'causal_inference', sourceType: 'recalled', sourceId: 'sh-2025-b-recall',
   sourceTitle: '2025 上海市考 B 类回忆题 · 动车减振与共振', region: '上海', examYear: 2025, presentationMode: 'adapted',
@@ -465,6 +475,26 @@ addPublishedReferenceQuestion({
   stem: '动车车厢由弹簧支撑，并受到周期性轨道振动。若外部激励频率接近车厢的固有频率，最可能出现什么现象？',
   options: ['发生共振，车厢振幅可能增大', '阻尼越大，车厢振幅一定越大', '车厢固有频率只由弹簧决定，与质量无关', '只要增加弹簧刚度，任何频率下的振幅都会减小'],
   correctAnswer: 'A', explanation: '受迫振动的激励频率接近系统固有频率时可能发生共振，使振幅明显增大。阻尼通常会耗散振动能量；固有频率还与系统质量有关，单纯提高弹簧刚度也不能保证所有激励条件下振幅都减小。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'sh-2025-b-quantum-tunneling', subjectId: 'physics', topicId: 'physics:modern-physics', knowledgePointIds: ['physics:quantum-tunneling'],
+  difficulty: 'medium', reasoningType: 'causal_inference', sourceType: 'recalled', sourceId: 'sh-2025-b-recall',
+  sourceTitle: '2025 上海市考 B 类回忆题第 73 题 · 量子隧穿', region: '上海', examYear: 2025, presentationMode: 'adapted',
+  sourceNote: '依据第三方回忆题改述；势垒高度相同、粒子能量相同时，穿透概率随势垒宽度增加而降低，答案 A 与公开答案页核对，非官方答案。',
+  stem: '电子能量低于势垒高度时，仍有一定概率穿透势垒。若三个势垒高度相同、宽度分别为 d、2d、4d，电子的隧穿概率最大的是哪一个？',
+  options: ['宽度为 d 的势垒', '宽度为 2d 的势垒', '宽度为 4d 的势垒', '三个势垒的概率相同'],
+  correctAnswer: 'A', explanation: '在势垒高度、粒子能量和粒子质量相同的条件下，隧穿概率近似随宽度按指数下降。势垒越窄，穿透概率越大，因此宽度为 d 的甲势垒概率最大。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'sh-2025-b-mountain-height', subjectId: 'physics', topicId: 'physics:pressure', knowledgePointIds: ['physics:solid-pressure', 'physics:density'],
+  difficulty: 'medium', reasoningType: 'quantitative_reasoning', sourceType: 'recalled', sourceId: 'sh-2025-b-recall',
+  sourceTitle: '2025 上海市考 B 类回忆题第 74 题 · 山峰高度极限', region: '上海', examYear: 2025, presentationMode: 'adapted',
+  sourceNote: '根据第三方回忆题改述，并将抗压强度单位按 kgf/cm² 明确书写；答案 B 与公开答案页核对，非官方答案。',
+  stem: '把山体近似为密度 3 g/cm³ 的圆锥，底部花岗岩的抗压强度约为 2000 kgf/cm²。取 g=10 m/s²，忽略其他因素，理想情况下山峰的极限高度约为多少？',
+  options: ['8848 m', '20000 m', '50000 m', '200000 m'],
+  correctAnswer: 'B', explanation: '圆锥体积为底面积乘高再除以 3，所以底部平均压强 p=ρgh/3。将 2000 kgf/cm² 约化为 2×10⁸ Pa、密度换为 3×10³ kg/m³，得 h=3p/(ρg)=20000 m。',
 });
 
 addPublishedReferenceQuestion({
@@ -485,6 +515,26 @@ addPublishedReferenceQuestion({
   stem: '设想太空电梯缆绳连接赤道附近地面与地球同步轨道。下列说法中错误的是哪一项？',
   options: ['基座适合设置在赤道附近', '电梯与地球同步自转，离地轴越远线速度越大', '高强度轻质缆绳材料是建造难点之一', '同步轨道外的配重只用于抵消缆绳自身重力'],
   correctAnswer: 'D', explanation: '同步轨道外的配重用于维持缆绳张力和整体旋转平衡，不只是抵消缆绳重力。赤道位置和同步旋转来自轨道几何条件；同角速度下，离转轴越远线速度越大。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'sh-2025-b-boiling-points', subjectId: 'chemistry', topicId: 'chemistry:materials-experiments', knowledgePointIds: ['chemistry:boiling-point'],
+  difficulty: 'medium', reasoningType: 'data_interpretation', sourceType: 'recalled', sourceId: 'sh-2025-b-recall',
+  sourceTitle: '2025 上海市考 B 类回忆题第 78 题 · 有机物沸点比较', region: '上海', examYear: 2025, presentationMode: 'adapted',
+  sourceNote: '依据第三方回忆题中的结构、相对分子质量和沸点数据改述；答案 D 与公开答案页核对，非官方答案。',
+  stem: '某题给出的数据为：①乙醚，相对分子质量 74，沸点 35℃；②正丁醇，74，118℃；③乙二醇，62，197℃；④乙醇，46，78℃；⑤乙硫醇，62，37℃。根据这些比较，错误的推断是哪一项？',
+  options: ['①和②说明：相对分子质量相同，含羟基的物质沸点更高', '②和④说明：羟基数相同时，相对分子质量越大，沸点越高', '②和③说明：羟基数增加，沸点升高', '④和⑤说明：羟基对沸点的影响小于相对分子质量的影响'],
+  correctAnswer: 'D', explanation: '乙醇的相对分子质量小于乙硫醇，但沸点明显更高，不能据此得出羟基影响小于相对分子质量影响；数据反而体现了羟基形成氢键对沸点的显著影响。其余比较在题给样本范围内与数据相符。',
+});
+
+addPublishedReferenceQuestion({
+  id: 'sh-2025-b-membrane-filtration', subjectId: 'chemistry', topicId: 'chemistry:environment-life', knowledgePointIds: ['chemistry:water-purification'],
+  difficulty: 'medium', reasoningType: 'classification', sourceType: 'recalled', sourceId: 'sh-2025-b-recall',
+  sourceTitle: '2025 上海市考 B 类回忆题第 80 题 · 膜分离技术', region: '上海', examYear: 2025, presentationMode: 'adapted',
+  sourceNote: '依据第三方回忆题及其膜孔径示意改写为文字题；超滤不能按该图示范围拦截金属离子，答案 B 与公开答案页和公开解析核对，非官方答案。',
+  stem: '膜分离按孔径筛分颗粒，常见膜孔径由大到小依次为微滤、超滤、纳滤、反渗透。原题图列出的对象包括细菌、病毒、糖分子和金属离子，按粒径由大到小排列。下列对应说法错误的是：',
+  options: ['微滤可拦截水中的细菌', '超滤可拦截水中的金属离子', '纳滤可拦截水中的病毒', '反渗透可拦截水中的糖'],
+  correctAnswer: 'B', explanation: '金属离子远小于超滤膜的典型截留尺度，按题图所示的尺寸筛分关系需由更细的反渗透膜截留。细菌可由微滤拦截，病毒可落在纳滤范围，糖分子可由反渗透截留。',
 });
 
 addPublishedReferenceQuestion({

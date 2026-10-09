@@ -124,6 +124,9 @@ export const SCIENCE_TREE = [
         sciencePoint('physics:electromagnetic-waves', '电磁波的频率与波长'),
         sciencePoint('physics:motors-generators', '发电机和电动机'),
       ]),
+      scienceTopic('physics:modern-physics', '近代物理与量子现象', [
+        sciencePoint('physics:quantum-tunneling', '量子隧穿'),
+      ]),
     ],
   },
   {
@@ -143,6 +146,7 @@ export const SCIENCE_TREE = [
       ]),
       scienceTopic('chemistry:materials-experiments', '物质性质与实验', [
         sciencePoint('chemistry:common-gases', '常见气体'),
+        sciencePoint('chemistry:boiling-point', '沸点与分子间作用力'),
         sciencePoint('chemistry:metal-activity', '金属活动性'),
         sciencePoint('chemistry:metal-corrosion', '金属腐蚀'),
         sciencePoint('chemistry:experiments', '化学实验'),
