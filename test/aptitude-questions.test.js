@@ -29,12 +29,11 @@ test('five general aptitude modules publish usable questions linked to their kno
     const points = content.directory.flatMap((subject) => (subject.topics || []).flatMap((topic) => topic.knowledgePoints || []));
     const topics = content.directory.flatMap((subject) => subject.topics || []);
     const bank = questions.getAptitudeQuestions(moduleId);
-    assert.equal(bank.length, expectedCounts[moduleId], `${moduleId} should expose its complete prepared original set`);
+    const originals = bank.filter((question) => question.sourceType === 'original');
+    assert.equal(originals.length, expectedCounts[moduleId], `${moduleId} should retain its complete prepared original set`);
     assert.ok(bank.every((question) => question.moduleId === moduleId
       && question.publishStatus === 'published'
       && question.verificationStatus === 'verified'
-      && question.copyrightStatus === 'original'
-      && question.sourceType === 'original'
       && question.sourceTitle
       && question.sourceNote
       && question.options.length === 4

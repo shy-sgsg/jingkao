@@ -155,9 +155,9 @@ test('published knowledge lessons cover all four disciplines with practical expl
       && point.content.everydayExample && point.content.quickMethod), `${subject.id} lessons contain actionable explanations`);
     return [subject.id, lessons.length];
   }));
-  assert.equal(Object.values(counts).reduce((sum, count) => sum + count, 0), 79);
-  assert.equal(counts.chemistry, 14);
-  assert.equal(counts.geography, 14);
+  assert.equal(Object.values(counts).reduce((sum, count) => sum + count, 0), 128);
+  assert.equal(counts.chemistry, 20);
+  assert.equal(counts.geography, 22);
   for (const pointId of [
     'physics:elastic-force', 'physics:optical-phenomena', 'physics:gravity', 'physics:magnetic-field', 'physics:lens-imaging',
     'biology:hormonal-regulation', 'biology:microorganisms', 'biology:musculoskeletal-system',

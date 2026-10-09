@@ -47,6 +47,7 @@ test('normalized account state preserves task links, exam attempts, mistakes, an
     aptitudeModuleStudies: Object.fromEntries(['political-theory', 'verbal', 'quantitative', 'reasoning', 'data-analysis'].map((moduleId) => [moduleId, {
       moduleId, knowledgeProgress: {}, sessions: [], answers: [], mistakes: {}, favorites: [], favoriteKnowledgePointIds: [], unclearKnowledgePointIds: [],
     }])),
+    aptitudeOverallStudy: { sessions: [], answers: [], mistakes: {} },
   });
 });
 

@@ -168,7 +168,7 @@ test('standalone aptitude routes preserve dedicated pages and expose available m
   const generalKnowledgePage = (await renderStandaloneRoute(script, 'aptitude/general-knowledge', storedState)).root.innerHTML;
 
   assert.match(modulePage, /<h1>言语<\/h1>/);
-  assert.match(modulePage, /13 道已发布题目/);
+  assert.match(modulePage, /17 道已发布题目/);
   assert.match(modulePage, /data-action="open-aptitude-module-practice"[^>]*data-mode="practice"/);
   assert.match(modulePage, /data-action="open-aptitude-module-practice"[^>]*data-mode="exam"/);
   assert.match(modulePage, /错题与收藏/);

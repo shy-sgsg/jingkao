@@ -7,6 +7,7 @@ const sourceHtml = readFileSync(new URL('../index.html', import.meta.url), 'utf8
 const css = readFileSync(new URL('../src/styles.css', import.meta.url), 'utf8');
 const appModules = [
   '../src/aptitude/modules.js',
+  '../src/aptitude/mock.js',
   '../src/aptitude/launch.js',
   '../src/aptitude/persistence.js',
   '../src/aptitude/analytics.js',

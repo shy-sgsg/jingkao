@@ -106,7 +106,7 @@ test('the overview enables practice and timed mock launches for every module wit
     assert.equal(practice.mode, 'practice');
     assert.equal(exam.mode, 'exam');
     assert.match(buttons, /自由刷题/);
-    assert.match(buttons, /模考刷题/);
+    assert.match(buttons, /随机模考/);
     assert.match(buttons, /data-mode="practice"/);
     assert.match(buttons, /data-mode="exam"/);
     assert.doesNotMatch(buttons, /disabled aria-disabled="true"/, `${module.id} should allow launches when its question provider is populated`);
