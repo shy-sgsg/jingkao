@@ -2450,8 +2450,9 @@ function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'instant' });
 }
 
-function navigate(id, query = '') {
+function navigate(id, query = '', aptitudeModuleId = null) {
   page = pageMeta[id] ? id : 'overview';
+  if (page === 'aptitudeModule' && aptitudeModuleId) activeAptitudeModuleId = aptitudeModuleId;
   const querySuffix = ['aptitude', 'science', 'generalKnowledge', 'aptitudeModule'].includes(page) && query ? `?${query}` : '';
   const routePath = page === 'science' ? 'aptitude/science'
     : page === 'generalKnowledge' ? 'aptitude/general-knowledge'
@@ -2495,8 +2496,7 @@ document.addEventListener('click', async (event) => {
     const parsedRoute = readRoute(`#/${route}`);
     if (pageMeta[parsedRoute.page]) {
       event.preventDefault();
-      if (parsedRoute.page === 'aptitudeModule') activeAptitudeModuleId = parsedRoute.aptitudeModuleId;
-      navigate(parsedRoute.page, query);
+      navigate(parsedRoute.page, query, parsedRoute.aptitudeModuleId);
       return;
     }
   }

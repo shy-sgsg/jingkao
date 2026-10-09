@@ -83,6 +83,8 @@ test('module statistics count only the selected module’s own answers', () => {
 
 test('overview and shared module page use registry routes and expose all learning sections', () => {
   assert.match(app, /resolveAptitudeModuleRoute\(routePage\)/);
+  assert.match(app, /navigate\(parsedRoute\.page, query, parsedRoute\.aptitudeModuleId\)/,
+    'intercepted module links must carry the route’s module ID into navigation');
   assert.match(app, /href="\$\{escapeHtml\(module\.route\)\}"/);
   assert.match(app, /APTITUDE_MODULES\.map\(\(module\) => \(\{/);
   assert.match(app, /function getAptitudeModuleOnlineStats\(/);
