@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "backupId": "6968ebc3-fd8c-4a7a-8d1c-49919ca0967d",
-  "updatedAt": "2026-10-09T15:31:57.177Z",
+  "updatedAt": "2026-10-09T15:33:05.878Z",
   "data": {
     "profile": {
       "major": "公共管理",
@@ -54,9 +54,25 @@
           "status": "active"
         },
         {
+          "completedAt": "2026-10-09T15:31:30.459Z",
+          "correctCount": 15,
+          "currentIndex": 15,
+          "deadline": null,
+          "draftAnswers": {},
+          "durationSeconds": null,
+          "filters": {
+            "answeredQuestionIds": [
+              "beijing-2026-outline-dragonfly"
+            ],
+            "excludeQuestionIds": [],
+            "favoriteQuestionIds": [],
+            "mistakeQuestionIds": [],
+            "onlyFavorites": false,
+            "onlyMistakes": false,
+            "onlyUnanswered": false
+          },
           "id": "science_mv14f3ga_fzl77c",
           "mode": "practice",
-          "status": "completed",
           "planTaskId": null,
           "questionIds": [
             "beijing-2026-outline-dragonfly",
@@ -75,25 +91,9 @@
             "gd-2020-township-seed-storage",
             "gd-2020-township-snowline"
           ],
-          "currentIndex": 15,
-          "correctCount": 15,
           "reviewingAnswerId": null,
-          "draftAnswers": {},
           "startedAt": "2026-10-09T15:29:11.482Z",
-          "deadline": null,
-          "durationSeconds": null,
-          "filters": {
-            "onlyUnanswered": false,
-            "onlyMistakes": false,
-            "onlyFavorites": false,
-            "excludeQuestionIds": [],
-            "answeredQuestionIds": [
-              "beijing-2026-outline-dragonfly"
-            ],
-            "mistakeQuestionIds": [],
-            "favoriteQuestionIds": []
-          },
-          "completedAt": "2026-10-09T15:31:30.459Z"
+          "status": "completed"
         }
       ],
       "answers": [
