@@ -36,8 +36,9 @@ const pageMeta = {
   guide: ['使用指南', '从你要解决的问题出发，找到对应页面和下一步操作。'],
   plan: ['学习计划', '自由安排日期、任务类型和学习内容；保留原有每日计划记录。'],
   science: ['科学推理', '行测能力子模块 · 知识学习、专项练习与计划联动。'],
-  aptitude: ['行测能力', '查看各项能力训练，并进入科学推理和常识判断子模块。'],
-  generalKnowledge: ['常识判断', '行测能力子模块 · 内容筹备中。'],
+  aptitude: ['行测能力', '查看整体正确率、训练记录，并进入各个行测模块。'],
+  aptitudeModule: ['行测模块', '学习知识点、练习题目或手动记录训练。'],
+  generalKnowledge: ['常识判断', '学习知识点、练习题目或手动记录训练。'],
   essay: ['申论训练', '按训练任务记录练习次数、关键词覆盖和自评；自评不是客观测量。'],
   mocks: ['模考复盘', '只画实际填写的成绩。空白模考不会被显示成 0 分。'],
   positions: ['职位库', '按北京市 16 区和招考年度筛选可追溯职位；未收录区县明确显示待补。'],
@@ -61,6 +62,15 @@ const mockModules = [
   ['dataAnalysis', '资料分析'], ['reasoning', '判断推理'], ['science', '科学推理'],
   ['quantitative', '数量关系'], ['verbal', '言语理解'], ['politicalAndGeneral', '政治理论 + 常识'],
 ];
+const APTITUDE_MODULES = [
+  { id: 'political-theory', area: '政治理论', symbol: '政', hint: '理论政策与时政辨析' },
+  { id: 'general-knowledge', area: '常识判断', symbol: '常', hint: '法律、经济、科技、人文与北京市情' },
+  { id: 'verbal', area: '言语', symbol: '言', hint: '中心理解、逻辑填空与语句表达' },
+  { id: 'quantitative', area: '数量关系', symbol: '数', hint: '数字推理、应用题与数量模型' },
+  { id: 'reasoning', area: '判断推理', symbol: '判', hint: '图形、演绎、定义、类比与排序' },
+  { id: 'science', area: '科学推理', symbol: '理', hint: '知识点学习、专项练习与错题复习' },
+  { id: 'data-analysis', area: '资料分析', symbol: '资', hint: '增长率、比重与综合判断' },
+];
 
 let dataset;
 function readRoute(hash = location.hash) {
@@ -68,13 +78,18 @@ function readRoute(hash = location.hash) {
   const queryStart = route.indexOf('?');
   const routePage = (queryStart < 0 ? route : route.slice(0, queryStart)) || 'overview';
   const query = queryStart < 0 ? '' : route.slice(queryStart + 1);
+  const aptitudeModuleRoute = routePage.match(/^aptitude\/module\/([a-z0-9-]+)$/u);
   const value = (key) => {
     const encoded = query.match(new RegExp(`(?:^|&)${key}=([^&]*)`, 'u'))?.[1];
     if (!encoded) return null;
     try { return decodeURIComponent(encoded.replace(/\+/gu, ' ')); } catch { return null; }
   };
   const pageAliases = { science: 'science', 'aptitude/science': 'science', 'aptitude/general-knowledge': 'generalKnowledge' };
-  return { page: pageAliases[routePage] || routePage, taskId: value('task'), knowledgePointId: value('knowledge'), sessionId: value('session') };
+  return {
+    page: aptitudeModuleRoute ? 'aptitudeModule' : pageAliases[routePage] || routePage,
+    aptitudeModuleId: aptitudeModuleRoute?.[1] || null,
+    taskId: value('task'), knowledgePointId: value('knowledge'), sessionId: value('session'),
+  };
 }
 
 function routeTaskIdForScience() {
@@ -83,6 +98,7 @@ function routeTaskIdForScience() {
 
 const initialRoute = readRoute();
 let page = initialRoute.page;
+let activeAptitudeModuleId = initialRoute.aptitudeModuleId;
 let activeSciencePlanTaskId = initialRoute.taskId;
 let selectedScienceKnowledgePointId = initialRoute.knowledgePointId;
 let activeScienceSessionId = initialRoute.sessionId;
@@ -443,7 +459,7 @@ function scoreEcdfSvg(scoreRows, year, targetScore) {
 
 function renderSidebar() {
   const nav = navGroups.map((group) => `<div class="nav-group"><div class="nav-heading">${escapeHtml(group.label)}</div>${group.items.map(([id, label]) => {
-    const active = page === id || (id === 'aptitude' && ['science', 'generalKnowledge'].includes(page));
+    const active = page === id || (id === 'aptitude' && ['science', 'generalKnowledge', 'aptitudeModule'].includes(page));
     return `<a href="#/${id}" class="nav-item ${active ? 'active' : ''}" ${active ? 'aria-current="page"' : ''}><span class="nav-icon">${icons[id]}</span><span>${escapeHtml(label)}</span>${id === 'positions' ? `<span class="nav-count">${dataset.positions.length}</span>` : ''}</a>`;
   }).join('')}</div>`).join('');
   return `<aside class="sidebar" id="sidebar"><a class="brand" href="#/overview"><span class="brand-mark">京</span><span><strong>京考备考台</strong><small>BEIJING · 2027</small></span></a><div class="data-status"><span class="status-dot"></span><span>本地运行 · 数据基准 ${escapeHtml(dataset.dataAsOf)}</span></div><nav aria-label="主导航">${nav}</nav><div class="sidebar-bottom"><div class="sidebar-note"><span class="lock-icon">▣</span><div><strong>仅保存在本机</strong><small>个人记录不会上传</small></div></div><div class="sidebar-version">个人备考工作台 <span>v1.0</span></div></div></aside>`;
@@ -463,8 +479,11 @@ function renderSettings() {
 }
 
 function renderLayout() {
-  const [title, subtitle] = pageMeta[page] || pageMeta.overview;
-  const pageScope = ['positions', 'compare', 'assistant', 'scenarios', 'matrix'].includes(page) ? '北京京考职位决策' : ['aptitude', 'science', 'generalKnowledge'].includes(page) ? '行测能力' : page === 'overview' ? '备考工作台' : '昌平区';
+  const aptitudeModule = page === 'aptitudeModule' ? APTITUDE_MODULES.find((module) => module.id === activeAptitudeModuleId) : null;
+  const [title, subtitle] = aptitudeModule
+    ? [aptitudeModule.area, `${aptitudeModule.hint} · 学习、练习与手动记录`]
+    : pageMeta[page] || pageMeta.overview;
+  const pageScope = ['positions', 'compare', 'assistant', 'scenarios', 'matrix'].includes(page) ? '北京京考职位决策' : ['aptitude', 'aptitudeModule', 'science', 'generalKnowledge'].includes(page) ? '行测能力' : page === 'overview' ? '备考工作台' : '昌平区';
   return `${renderSidebar()}<div class="main-shell"><header class="topbar"><div class="topbar-left"><button class="mobile-menu" type="button" aria-label="打开导航" data-action="mobile-menu">☰</button><div><div class="breadcrumb">${pageScope} <span>/</span> <strong>${escapeHtml(title)}</strong></div><p class="page-subtitle">${escapeHtml(subtitle)}</p></div></div><div class="topbar-right"><a class="button button-secondary guide-trigger" href="#/guide">使用指南</a>${renderDensityControl()}<span class="today-pill"><span class="today-dot"></span>${escapeHtml(fmtDate(todayString()))}</span><button class="button button-quiet account-lock-button" type="button" data-action="account-lock" aria-label="锁定当前档案并切换账户">锁定 · ${escapeHtml(accountSession.name)}</button></div></header><main id="page-content" tabindex="-1">${renderPage()}</main><footer class="page-footer"><span>资料更新至 ${escapeHtml(dataset.dataAsOf)} · 使用前请回看官方当年职位表</span><a href="#/sources">数据口径说明 →</a></footer></div><div class="sidebar-scrim" data-action="close-menu"></div>`;
 }
 
@@ -747,6 +766,7 @@ function renderScience() {
   }).join('');
   return `<div class="page-body science-page"><div class="page-heading-row"><div><div class="eyebrow muted">FOUR SCIENCE SUBJECTS · SOURCED QUESTION BANK</div><h1>科学推理</h1><p>知识点学习、专项练习、限时模拟和错题复习会单独记录。现有原创练习保留发布；新收录题目均标注官方例题、回忆题或机构模拟来源。</p></div><div class="heading-actions"><button type="button" class="button button-primary" data-action="open-science-practice">开始自由练习</button><a class="button button-secondary" href="#/plan">安排学习任务</a></div></div>
     <div class="metric-grid science-metrics">${metric('练习题库', `${SCIENCE_QUESTION_BANK.length}<small> 道</small>`, `${questionCounts.official_outline_example} 道官方大纲例题 · ${questionCounts.recalled} 道回忆题 · ${questionCounts.third_party_mock} 道机构模拟 · ${questionCounts.original} 道现有原创`, '⚗', 'blue')}${metric('已作答', `${stats.attemptedCount}<small> 题</small>`, `${stats.completedSessionCount} 次练习完成`, '✓', 'mint')}${metric('实际正确率', fmtPct(stats.accuracy), stats.accuracy === null ? '暂无答案记录' : '按已提交答案计算', '◎', 'amber')}${metric('错题 / 收藏', `${mistakeIds.length}<small> / ${favoriteCount}</small>`, '错题和收藏独立保存', '☆', 'purple')}</div>
+    ${renderAptitudeRecords(APTITUDE_MODULES.find((module) => module.id === 'science'), aptitudeItemsForArea('科学推理'))}
     <section class="science-shortcuts">${activeSession ? `<a class="panel science-shortcut-card science-resume-card" href="#/aptitude/science?session=${encodeURIComponent(activeSession.id)}"><span>继续未完成训练 · ${activeSession.mode === 'exam' ? '限时模拟' : '专项练习'}</span><strong>第 ${activeSession.currentIndex + 1} / ${activeSession.questionIds.length} 题</strong><small>剩余答题和已选答案均已保存</small></a>` : ''}<button type="button" class="panel science-shortcut-card" data-action="open-science-practice" data-mode="mistakes"><span>错题复习</span><strong>${mistakeIds.length} 道</strong><small>仅从已记录错题中抽题</small></button><button type="button" class="panel science-shortcut-card" data-action="open-science-practice" data-mode="exam"><span>限时模拟</span><strong>自选题量与时长</strong><small>到时后停止答题，并保留已作答内容</small></button><a class="panel science-shortcut-card" href="#/plan"><span>学习计划</span><strong>把训练排进日程</strong><small>通过计划任务核验实际完成量</small></a></section>
     <section class="panel science-source-panel"><div class="science-panel-heading"><div><span class="eyebrow muted">SOURCE CATALOG</span><h2>官方与公开题源</h2><p>“官方大纲例题”来自考试大纲；“考生回忆版”和“机构模拟题”均明确标为非官方。</p></div><span>${SCIENCE_SOURCES.length} 个来源</span></div><div class="science-source-list">${sourceRows}</div></section>
     <div class="science-subject-grid">${subjects}</div>
@@ -755,31 +775,96 @@ function renderScience() {
 
 function renderAptitude() {
   const aptitude = dataset.aptitude.map((item, index) => ({ ...item, ...(storage.aptitudeLogs[index] || {}), index }));
-  const groups = new Map();
-  for (const item of aptitude) {
-    const area = item.area || '未分类';
-    if (!groups.has(area)) groups.set(area, []);
-    groups.get(area).push(item);
-  }
-  const cards = [...groups.entries()].map(([area, items], index) => {
-    const planned = items.reduce((sum, item) => sum + (item.plannedQuestions || 0), 0);
-    const hasAttempted = items.some((item) => Number.isFinite(item.attempted));
-    const done = hasAttempted ? items.reduce((sum, item) => sum + (Number.isFinite(item.attempted) ? item.attempted : 0), 0) : null;
-    const recorded = items.filter((item) => Number.isFinite(item.accuracy));
-    const accuracy = recorded.length ? recorded.reduce((sum, item) => sum + item.accuracy, 0) / recorded.length : null;
-    const accent = ['blue', 'mint', 'purple', 'amber'][index % 4];
-    return `<article class="panel skill-panel"><div class="skill-heading"><span class="skill-symbol skill-${accent}">${['文', '数', '推', '策'][index % 4]}</span><div><h2>${escapeHtml(area)}</h2><small>${items.length} 个训练子项</small></div><span class="skill-progress-value">${fmtPct(accuracy)}</span></div><div class="skill-progress-line"><span style="width:${Math.round(planned && Number.isFinite(done) ? done / planned * 100 : 0)}%"></span></div><div class="skill-stats"><span><strong>${fmt(done)}</strong> / ${fmt(planned)} 题</span><span>目标正确率 ${fmtPct(items[0]?.targetAccuracy)}</span></div><div class="skill-items">${items.slice(0, 5).map((item) => `<div class="skill-item"><span>${escapeHtml(item.item)}</span><span>${fmt(item.attempted)} / ${fmt(item.plannedQuestions)} 题</span><span>${fmtPct(item.accuracy)}</span>${button('记录', 'edit-aptitude', 'button button-quiet button-small', `data-index="${item.index}"`)}</div>`).join('')}${items.length > 5 ? `<small class="more-items">还有 ${items.length - 5} 个训练项 · 完整清单仍在 Excel 源表</small>` : ''}</div></article>`;
+  const modules = APTITUDE_MODULES.map((module) => ({
+    ...module,
+    items: aptitude.filter((item) => item.area === module.area),
+  })).filter((module) => module.items.length);
+  const scienceStats = getScienceStats(storage.scienceStudy);
+  const overall = combineAptitudeSummary(summarizeAptitudeItems(aptitude), scienceStats);
+  const modulesWithRecords = modules.filter((module) => summarizeAptitudeItems(module.items).hasManualRecords
+    || (module.id === 'science' && scienceStats.attemptedCount > 0)).length;
+  const cards = modules.map((module) => {
+    const manualSummary = summarizeAptitudeItems(module.items);
+    const summary = module.id === 'science' ? combineAptitudeSummary(manualSummary, scienceStats) : manualSummary;
+    const href = module.id === 'science'
+      ? '#/aptitude/science'
+      : module.id === 'general-knowledge'
+        ? '#/aptitude/general-knowledge'
+        : `#/aptitude/module/${module.id}`;
+    return `<a class="panel aptitude-entry-card" href="${href}"><span class="aptitude-entry-icon module-${module.id}">${escapeHtml(module.symbol)}</span><span class="aptitude-entry-copy"><strong>${escapeHtml(module.area)}</strong><small>${escapeHtml(module.hint)}</small></span><span class="aptitude-entry-stat aptitude-entry-accuracy"><strong>${fmtPct(summary.accuracy)}</strong><small>${module.id === 'science' ? '合并正确率' : '手动正确率'}</small></span><span class="aptitude-entry-stat aptitude-entry-attempts"><strong>${summary.hasAttempted ? fmt(summary.attemptedCount) : '待记录'}</strong><small>已录题量</small></span><b aria-hidden="true">↗</b></a>`;
   }).join('');
-  const hasAnyAttempted = aptitude.some((item) => Number.isFinite(item.attempted));
-  const totalDone = hasAnyAttempted ? aptitude.reduce((sum, item) => sum + (Number.isFinite(item.attempted) ? item.attempted : 0), 0) : null;
-  const totalTarget = aptitude.reduce((sum, item) => sum + (item.plannedQuestions || 0), 0);
-  const accuracyValues = aptitude.filter((item) => Number.isFinite(item.accuracy)).map((item) => item.accuracy);
-  const overallAccuracy = accuracyValues.length ? accuracyValues.reduce((sum, value) => sum + value, 0) / accuracyValues.length : null;
-  return `<div class="page-body"><div class="page-heading-row"><div><div class="eyebrow muted">SIX OFFICIAL SECTIONS + TRACKED SUBSKILLS</div><h1>行测能力训练</h1><p>从行测子模块进入专项学习；其他训练项继续按工作簿计划记录。</p></div><a class="button button-secondary" href="#/plan">查看 50 天计划 →</a></div><section class="aptitude-modules" aria-label="行测子模块"><a class="panel aptitude-module-card" href="#/aptitude/science"><span class="aptitude-module-icon science">⚗</span><span class="aptitude-module-copy"><strong>科学推理</strong><small>知识学习、专项练习、限时模拟和错题复习</small></span><b aria-hidden="true">↗</b></a><a class="panel aptitude-module-card" href="#/aptitude/general-knowledge"><span class="aptitude-module-icon general-knowledge">常</span><span class="aptitude-module-copy"><strong>常识判断</strong><small>知识点与题目内容后续补充</small></span><span class="aptitude-module-status">内容筹备中</span></a></section><div class="metric-grid three-metrics">${metric('训练子项', `${dataset.aptitude.length}<small> 项</small>`, `${groups.size} 个工作簿训练分类`, '⌁', 'blue')}${metric('已记录题量', `${fmt(totalDone)}<small> 题</small>`, `训练目标 ${Number(totalTarget).toLocaleString('zh-CN')} 题`, '▤', 'mint')}${metric('实际正确率', fmtPct(overallAccuracy), overallAccuracy === null ? '尚无练习记录；不是 0%' : '已记录训练项均值', '◎', 'amber')}</div><div class="skill-grid">${cards}</div><div class="notice notice-soft"><span>ⓘ</span><p>工作簿内计划题量可见；模板的零值按占位值处理，实际练习数据需另行记录。点击“记录”可更新单项训练。</p></div></div>`;
+  const onlineAccuracyNote = scienceStats.accuracy === null
+    ? '科学推理尚无站内答题记录'
+    : `站内已答 ${scienceStats.attemptedCount} 题 · ${fmt(scienceStats.correctCount)} 题答对`;
+  return `<div class="page-body aptitude-page"><div class="page-heading-row"><div><div class="eyebrow muted">APTITUDE · MODULE OVERVIEW</div><h1>行测能力</h1><p>先看训练总览，再进入对应模块学习、练习或手动更新记录。</p></div><a class="button button-secondary" href="#/plan">查看学习计划 →</a></div><section class="metric-grid four-metrics aptitude-overview" aria-label="行测训练总览">${metric('整体正确率', fmtPct(overall.accuracy), overall.accuracy === null ? '录入练习记录后统计' : `按 ${fmt(overall.accuracyQuestionCount)} 道有正确数依据的题量合并`, '◎', 'blue')}${metric('累计记录题量', overall.hasAttempted ? `${fmt(overall.attemptedCount)}<small> 题</small>` : '待记录', `${overall.hasManualRecordsCount} 个手动训练子项已填写`, '▤', 'mint')}${metric('站内答题正确率', fmtPct(scienceStats.accuracy), onlineAccuracyNote, '✓', 'amber')}${metric('已记录模块', `${modulesWithRecords}<small> / ${modules.length}</small>`, '包含手动记录和站内答题', '⌁', 'purple')}</section><section class="aptitude-module-section"><div class="aptitude-section-heading"><div><span class="eyebrow muted">MODULES</span><h2>行测模块</h2></div><span>${modules.length} 个入口</span></div><div class="aptitude-entry-grid">${cards}</div></section><div class="notice notice-soft"><span>ⓘ</span><p>手动正确率按训练子项的已录题量加权，并与科学推理站内作答合并；不要把站内已答题再次计入手动累计。</p></div></div>`;
+}
+
+function summarizeAptitudeItems(items) {
+  const attemptedItems = items.filter((item) => Number.isFinite(item.attempted));
+  const accuracyItems = items.filter((item) => Number.isFinite(item.attempted) && item.attempted > 0 && Number.isFinite(item.accuracy));
+  const attemptedCount = attemptedItems.reduce((sum, item) => sum + item.attempted, 0);
+  const accuracyQuestionCount = accuracyItems.reduce((sum, item) => sum + item.attempted, 0);
+  const correctEstimate = accuracyItems.reduce((sum, item) => sum + item.attempted * item.accuracy, 0);
+  return {
+    hasAttempted: attemptedItems.length > 0,
+    attemptedCount,
+    accuracyQuestionCount,
+    correctEstimate,
+    accuracy: accuracyQuestionCount ? correctEstimate / accuracyQuestionCount : null,
+    hasManualRecords: items.some((item) => Number.isFinite(item.attempted) || Number.isFinite(item.accuracy)),
+    hasManualRecordsCount: items.filter((item) => Number.isFinite(item.attempted) || Number.isFinite(item.accuracy)).length,
+    plannedCount: items.reduce((sum, item) => sum + (Number(item.plannedQuestions) || 0), 0),
+  };
+}
+
+function combineAptitudeSummary(manualSummary, scienceStats) {
+  const accuracyQuestionCount = manualSummary.accuracyQuestionCount + scienceStats.attemptedCount;
+  const correctEstimate = manualSummary.correctEstimate + scienceStats.correctCount;
+  const attemptedCount = manualSummary.attemptedCount + scienceStats.attemptedCount;
+  return {
+    ...manualSummary,
+    attemptedCount,
+    hasAttempted: manualSummary.hasAttempted || scienceStats.attemptedCount > 0,
+    accuracyQuestionCount,
+    correctEstimate,
+    accuracy: accuracyQuestionCount ? correctEstimate / accuracyQuestionCount : null,
+  };
+}
+
+function aptitudeItemsForArea(area) {
+  return dataset.aptitude
+    .map((item, index) => ({ ...item, ...(storage.aptitudeLogs[index] || {}), index }))
+    .filter((item) => item.area === area);
+}
+
+function renderAptitudeRecords(module, items) {
+  const summary = summarizeAptitudeItems(items);
+  const rows = items.map((item) => `<article class="aptitude-record-row"><div class="aptitude-record-copy"><strong>${escapeHtml(item.item)}</strong><small>目标 ${fmtPct(item.targetAccuracy)} · 已录 ${fmt(item.attempted)} / ${fmt(item.plannedQuestions)} 题${Number.isFinite(item.retakeAccuracy) ? ` · 二刷 ${fmtPct(item.retakeAccuracy)}` : ''}</small></div><span class="aptitude-record-accuracy">${fmtPct(item.accuracy)}</span>${button('记录', 'edit-aptitude', 'button button-quiet button-small', `data-index="${item.index}"`)}</article>`).join('');
+  return `<section class="panel aptitude-record-panel"><div class="panel-heading"><div><div class="eyebrow muted">MANUAL PRACTICE LOG</div><h2>${escapeHtml(module.area)}训练记录</h2><p>手动填写累计题量和当前正确率；相同站内作答请勿重复录入。</p></div><span class="panel-hint">${summary.hasManualRecordsCount} / ${items.length} 项已录</span></div>${rows ? `<div class="aptitude-record-list">${rows}</div>` : '<div class="empty-state">暂无可记录的训练项。</div>'}</section>`;
+}
+
+function renderAptitudeModuleContent(module) {
+  return `<section class="aptitude-content-grid" aria-label="${escapeHtml(module.area)}学习内容"><article class="panel aptitude-content-card"><span class="aptitude-content-icon">知</span><div><span class="eyebrow muted">KNOWLEDGE</span><h2>知识点学习</h2><p>本模块的知识点目录和讲解内容正在整理。</p></div><span class="aptitude-module-status">内容待补</span></article><article class="panel aptitude-content-card"><span class="aptitude-content-icon practice">题</span><div><span class="eyebrow muted">PRACTICE</span><h2>题目练习</h2><p>题库准备完成后，可在这里按知识点刷题并查看解析。</p></div><span class="aptitude-module-status">题库待补</span></article></section>`;
+}
+
+function renderAptitudeModule(moduleId) {
+  const module = APTITUDE_MODULES.find((item) => item.id === moduleId);
+  if (!module || module.id === 'science') {
+    return `<div class="page-body"><div class="empty-state">没有找到这个行测模块。</div><a class="button button-secondary" href="#/aptitude">返回行测能力</a></div>`;
+  }
+  const items = aptitudeItemsForArea(module.area);
+  const summary = summarizeAptitudeItems(items);
+  const accuracyProgress = summary.plannedCount && summary.hasAttempted
+    ? Math.min(summary.attemptedCount / summary.plannedCount, 1)
+    : null;
+  const progressNote = summary.hasAttempted
+    ? `${fmt(summary.attemptedCount)} / ${fmt(summary.plannedCount)} 题`
+    : `尚未记录 · 计划 ${fmt(summary.plannedCount)} 题`;
+  return `<div class="page-body aptitude-module-page"><div class="page-heading-row"><div><div class="eyebrow muted">APTITUDE MODULE</div><h1>${escapeHtml(module.area)}</h1><p>${escapeHtml(module.hint)}。可以先浏览站内学习入口，也可以手动记录已有训练。</p></div><a class="button button-secondary" href="#/aptitude">返回行测总览 →</a></div><div class="metric-grid three-metrics aptitude-module-overview">${metric('手动记录正确率', fmtPct(summary.accuracy), summary.accuracy === null ? '录入题量和正确率后统计' : `按 ${fmt(summary.accuracyQuestionCount)} 道有正确率记录的题量加权`, '◎', 'blue')}${metric('手动记录题量', summary.hasAttempted ? `${fmt(summary.attemptedCount)}<small> 题</small>` : '待记录', `共 ${items.length} 个训练子项`, '▤', 'mint')}${metric('计划题量进度', accuracyProgress === null ? '待记录' : fmtPct(accuracyProgress), progressNote, '↗', 'amber')}</div>${renderAptitudeModuleContent(module)}${renderAptitudeRecords(module, items)}</div>`;
 }
 
 function renderGeneralKnowledge() {
-  return `<div class="page-body"><div class="page-heading-row"><div><div class="eyebrow muted">APTITUDE · GENERAL KNOWLEDGE</div><h1>常识判断</h1><p>本模块已加入行测能力，知识点和练习内容将在后续补充。</p></div><a class="button button-secondary" href="#/aptitude">返回行测能力 →</a></div><section class="panel aptitude-empty-state"><span aria-hidden="true">⌁</span><h2>内容筹备中</h2><p>后续将补充常识判断知识点、官方例题和真题训练。</p></section></div>`;
+  return renderAptitudeModule('general-knowledge');
 }
 
 function renderEssay() {
@@ -1325,8 +1410,8 @@ function renderSources() {
 
 function renderPage() {
   const pages = { overview: renderOverview, guide: renderGuide, plan: renderPlan, science: renderScience, aptitude: renderAptitude, generalKnowledge: renderGeneralKnowledge, essay: renderEssay, mocks: renderMocks, positions: renderPositions, compare: renderCompare, assistant: renderAssistant, scenarios: renderScenarios, matrix: renderMatrix, profile: renderProfile, research: renderResearch, evidence: renderEvidence, sources: renderSources, settings: renderSettings };
-  const help = getPageHelp(page);
-  let content = (pages[page] || renderOverview)();
+  const help = getPageHelp(page === 'aptitudeModule' ? 'aptitudeModule' : page);
+  let content = page === 'aptitudeModule' ? renderAptitudeModule(activeAptitudeModuleId) : (pages[page] || renderOverview)();
   return `<div class="page-shell ${pageTransition ? 'page-enter' : ''}${resultTransition ? ' results-enter' : ''}"><details class="page-howto"><summary><span class="page-howto-icon">ⓘ</span><span>本页怎么用</span><span class="page-howto-hint">点此展开</span></summary><div class="page-howto-content"><p>${escapeHtml(help.text)}</p><a href="#/${escapeHtml(help.actionPage)}">${escapeHtml(help.actionLabel)} →</a></div></details>${content}</div>`;
 }
 
@@ -2373,6 +2458,7 @@ window.addEventListener('hashchange', () => {
   if (!accountSession) return;
   const route = readRoute();
   page = pageMeta[route.page] ? route.page : 'overview';
+  activeAptitudeModuleId = route.aptitudeModuleId;
   activeSciencePlanTaskId = route.taskId;
   selectedScienceKnowledgePointId = route.knowledgePointId;
   activeScienceSessionId = route.sessionId;

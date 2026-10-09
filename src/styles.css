@@ -190,7 +190,7 @@ button { color: inherit; }
 .task-footer { display: flex; justify-content: space-between; margin-top: 13px; color: #8794a3; font-size: var(--font-xs); }
 .task-footer strong { color: #5475b2; font-size: var(--font-xs); }
 .progress-track { height: 5px; overflow: hidden; margin-top: 7px; border-radius: 5px; background: #edf0f5; }
-.progress-track > span, .table-progress > span, .skill-progress-line > span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #7193d8, #83a8dc); transition: width .3s ease; }
+.progress-track > span, .table-progress > span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #7193d8, #83a8dc); transition: width .3s ease; }
 .task-open { display: inline-flex; align-items: center; gap: 7px; margin-top: 13px; color: #5574ac; font-size: var(--font-xs); }
 .task-open:hover { color: #294b87; }
 .snapshot-list { display: flex; flex-direction: column; gap: 3px; }
@@ -294,36 +294,42 @@ button { color: inherit; }
 .table-empty .button { margin-top: 7px; }
 .table-footnote { padding: 9px 15px 11px; border-top: 1px solid #f0f2f5; color: #9ba5b1; font-size: var(--font-xs); }
 
-.skill-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; }
-.aptitude-modules { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 0 0 18px; }
-.aptitude-module-card { display: flex; min-width: 0; min-height: 88px; align-items: center; gap: 12px; padding: 15px; transition: border-color .18s ease, transform .18s ease; }
-.aptitude-module-card:hover { border-color: #cbd8e8; transform: translateY(-1px); }
-.aptitude-module-icon { display: grid; width: 40px; height: 40px; flex: 0 0 auto; place-items: center; border-radius: 12px; background: #eef3fb; color: #5774a8; font-size: var(--font-md); font-weight: 700; }
-.aptitude-module-icon.general-knowledge { background: #f3eff9; color: #8065a4; font-size: var(--font-xs); }
-.aptitude-module-copy { display: grid; min-width: 0; gap: 4px; }
-.aptitude-module-copy strong { color: #405672; font-size: var(--font-sm); }
-.aptitude-module-copy small { color: #8b98a8; font-size: var(--font-xs); line-height: 1.5; }
-.aptitude-module-card > b { margin-left: auto; color: #8b9bb0; font-size: var(--font-base); }
+.aptitude-overview { margin-bottom: 21px; }
+.aptitude-module-section { display: grid; gap: 11px; }
+.aptitude-section-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; }
+.aptitude-section-heading h2 { margin: 3px 0 0; color: #3d526d; font-size: var(--font-base); }
+.aptitude-section-heading > span { color: #98a3b0; font-size: var(--font-xs); }
+.aptitude-entry-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.aptitude-entry-card { display: grid; grid-template-areas: "icon copy accuracy attempts arrow"; grid-template-columns: 40px minmax(0, 1fr) auto auto 15px; align-items: center; gap: 12px; min-width: 0; min-height: 88px; padding: 14px; color: inherit; text-decoration: none; transition: border-color .18s ease, transform .18s ease, box-shadow .18s ease; }
+.aptitude-entry-card:hover { transform: translateY(-2px); border-color: #cad7e7; box-shadow: 0 12px 24px #233b5910; }
+.aptitude-entry-icon { display: grid; grid-area: icon; width: 40px; height: 40px; place-items: center; border-radius: 12px; background: #eef3fb; color: #5774a8; font-size: var(--font-sm); font-weight: 700; }
+.aptitude-entry-icon.module-general-knowledge, .aptitude-entry-icon.module-quantitative { background: #f3eff9; color: #8065a4; }
+.aptitude-entry-icon.module-verbal, .aptitude-entry-icon.module-data-analysis { background: #edf8f3; color: #548e78; }
+.aptitude-entry-icon.module-reasoning, .aptitude-entry-icon.module-science { background: #fff5e7; color: #aa7d3d; }
+.aptitude-entry-copy { display: grid; grid-area: copy; min-width: 0; gap: 4px; }
+.aptitude-entry-copy strong { color: #405672; font-size: var(--font-sm); }
+.aptitude-entry-copy small { overflow: hidden; color: #8b98a8; font-size: var(--font-xs); line-height: 1.5; text-overflow: ellipsis; white-space: nowrap; }
+.aptitude-entry-stat { display: grid; gap: 3px; text-align: right; white-space: nowrap; }
+.aptitude-entry-accuracy { grid-area: accuracy; }
+.aptitude-entry-attempts { grid-area: attempts; }
+.aptitude-entry-stat strong { color: #526c93; font-size: var(--font-sm); font-weight: 650; }
+.aptitude-entry-stat small { color: #9aa5b1; font-size: var(--font-xs); }
+.aptitude-entry-card > b { grid-area: arrow; color: #8b9bb0; font-size: var(--font-base); }
 .aptitude-module-status { flex: 0 0 auto; margin-left: auto; padding: 4px 8px; border-radius: 20px; background: #f5f3ef; color: #9a886b; font-size: 13px; }
-.aptitude-empty-state { display: grid; min-height: 240px; align-content: center; justify-items: center; gap: 8px; padding: 26px; text-align: center; }
-.aptitude-empty-state > span { color: #91a5c4; font-size: 32px; }
-.aptitude-empty-state h2 { margin: 0; color: #536880; font-size: var(--font-base); }
-.aptitude-empty-state p { margin: 0; color: #8b98a8; font-size: var(--font-sm); }
-.skill-panel { padding: 15px; }
-.skill-heading { display: flex; align-items: center; gap: 10px; }
-.skill-symbol { display: grid; width: 32px; height: 32px; flex: 0 0 auto; place-items: center; border-radius: 10px; font-size: var(--font-xs); font-weight: 700; }
-.skill-blue { background: #eef3fc; color: #6785c1; }.skill-mint { background: #edf8f3; color: #5da285; }.skill-purple { background: #f3eff9; color: #8c72b3; }.skill-amber { background: #fff6e8; color: #bc904d; }
-.skill-heading h2 { margin: 0; color: #41536b; font-size: var(--font-xs); }
-.skill-heading small { display: block; margin-top: 3px; color: #a0aab6; font-size: var(--font-xs); }
-.skill-progress-value { margin-left: auto; color: #9ca8b7; font-size: var(--font-xs); }
-.skill-progress-line { height: 4px; overflow: hidden; margin: 13px 0 8px; border-radius: 4px; background: #eef1f5; }
-.skill-progress-line > span { background: #79b59d; }
-.skill-stats { display: flex; justify-content: space-between; color: #9aa5b1; font-size: var(--font-xs); }
-.skill-stats strong { color: #536880; font-size: var(--font-xs); }
-.skill-items { margin-top: 10px; border-top: 1px solid #f0f2f5; }
-.skill-item { display: grid; grid-template-columns: minmax(0, 1fr) auto 48px auto; align-items: center; gap: 8px; padding: 8px 1px; border-bottom: 1px solid #f2f4f6; color: #718096; font-size: var(--font-xs); }
-.skill-item span:last-child { color: #a2adba; text-align: right; }
-.more-items { display: block; padding-top: 8px; color: #a0a9b5; font-size: var(--font-xs); }
+.aptitude-content-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.aptitude-content-card { display: flex; min-width: 0; align-items: center; gap: 12px; padding: 17px; }
+.aptitude-content-card > div { min-width: 0; flex: 1; }
+.aptitude-content-icon { display: grid; width: 38px; height: 38px; flex: 0 0 auto; place-items: center; border-radius: 11px; background: #eef3fb; color: #5774a8; font-weight: 700; }
+.aptitude-content-icon.practice { background: #edf8f3; color: #548e78; }
+.aptitude-content-card h2 { margin: 3px 0 4px; color: #405672; font-size: var(--font-sm); }
+.aptitude-content-card p { margin: 0; color: #8b98a8; font-size: var(--font-xs); line-height: 1.55; }
+.aptitude-record-panel { margin-top: 1px; }
+.aptitude-record-list { display: grid; }
+.aptitude-record-row { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 14px; padding: 11px 2px; border-top: 1px solid #f0f2f5; }
+.aptitude-record-copy { display: grid; min-width: 0; gap: 4px; }
+.aptitude-record-copy strong { overflow: hidden; color: #50647f; font-size: var(--font-xs); font-weight: 620; text-overflow: ellipsis; white-space: nowrap; }
+.aptitude-record-copy small { color: #98a3b0; font-size: var(--font-xs); line-height: 1.5; }
+.aptitude-record-accuracy { color: #6584ae; font-size: var(--font-xs); font-weight: 650; white-space: nowrap; }
 .module-summary { padding-bottom: 16px; }
 .module-score-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px; }
 .module-score-card { display: flex; flex-direction: column; gap: 6px; padding: 10px; border: 1px solid #edf0f4; border-radius: 8px; background: #fcfdfe; }
@@ -825,7 +831,6 @@ button { color: inherit; }
   .official-position-lookup { align-items: flex-start; flex-direction: column; gap: 7px; }
   .pagination-controls { width: 100%; justify-content: space-between; gap: 6px; }
   .filter-count { margin-left: auto; }
-  .skill-grid { grid-template-columns: 1fr; }
   .module-score-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .conflict-grid { grid-template-columns: 1fr; }
   .conflict-year { padding: 10px; }
@@ -835,9 +840,16 @@ button { color: inherit; }
   .assistant-intro { align-items: flex-start; }
   .assistant-badge { display: none; }
   .scenario-row { grid-template-columns: 28px 1fr 105px; }
-  .skill-item { grid-template-columns: minmax(0, 1fr) auto; }
-  .skill-item span:nth-child(3) { text-align: right; }
-  .skill-item .button { grid-column: 2; justify-self: end; }
+  .aptitude-entry-grid { grid-template-columns: 1fr; }
+  .aptitude-entry-card { grid-template-areas: "icon copy copy copy arrow" "icon accuracy attempts attempts arrow"; grid-template-columns: 40px minmax(0, 1fr) auto auto 15px; row-gap: 6px; }
+  .aptitude-entry-stat { text-align: left; }
+  .aptitude-content-grid { grid-template-columns: 1fr; }
+  .aptitude-content-card { align-items: flex-start; flex-wrap: wrap; }
+  .aptitude-content-card .aptitude-module-status { margin-left: 50px; }
+  .aptitude-record-row { grid-template-areas: "copy accuracy" "copy action"; grid-template-columns: minmax(0, 1fr) auto; gap: 7px 12px; }
+  .aptitude-record-copy { grid-area: copy; }
+  .aptitude-record-accuracy { grid-area: accuracy; text-align: right; }
+  .aptitude-record-row .button { grid-area: action; justify-self: end; }
   .module-score-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .scenario-result p { line-height: 1.5; }
   .scenario-actions { align-items: stretch; flex-direction: column; }
@@ -1820,8 +1832,6 @@ button.science-answer-option:hover { border-color: #c9d9ee; background: #f7faff;
   .plan-task-actions .button { min-height: 38px; }
   .science-reminder-item { grid-template-columns: 34px minmax(0, 1fr); }
   .science-reminder-item b { display: none; }
-  .aptitude-modules { grid-template-columns: 1fr; }
-  .aptitude-module-card { align-items: flex-start; }
   .aptitude-module-status { white-space: nowrap; }
   .science-shortcuts, .science-subject-grid { grid-template-columns: 1fr; }
   .science-shortcut-card { min-height: 95px; }
