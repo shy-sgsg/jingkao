@@ -6,6 +6,7 @@ import { getAptitudeModuleContent } from '../src/aptitude/content.js';
 import { getAptitudeQuestions } from '../src/aptitude/questions.js';
 import { getAptitudeModuleStats } from '../src/aptitude/analytics.js';
 const launch = await import('../src/aptitude/launch.js').catch(() => ({}));
+const { findAptitudeModuleKnowledgePoint } = await import('../src/aptitude/content.js').catch(() => ({}));
 
 const app = await readFile(new URL('../src/app.js', import.meta.url), 'utf8');
 
@@ -30,11 +31,23 @@ test('all five general modules retain empty optional lessons and empty reserved 
   assert.ok(getAptitudeModuleContent('science').directory.length > 0);
   assert.ok(getAptitudeModuleContent('general-knowledge').directory.length > 0);
   const synthetic = getAptitudeModuleContent('verbal', {
-    directory: [{ id: 'reading', topics: [{ id: 'reading:center' }] }],
-    lessons: { 'reading:main': { summary: 'test-only lesson' } },
+    directory: [{ id: 'reading', title: '言语', topics: [{
+      id: 'reading:center', title: '中心理解', knowledgePoints: [
+        { id: 'reading:main-idea', title: '主旨概括', contentStatus: 'published' },
+      ],
+    }] }],
+    lessons: { 'reading:main-idea': { explanation: 'test-only lesson' } },
   });
   assert.equal(synthetic.directory[0].topics[0].id, 'reading:center');
-  assert.equal(synthetic.lessons['reading:main'].summary, 'test-only lesson');
+  assert.equal(synthetic.lessons['reading:main-idea'].explanation, 'test-only lesson');
+  assert.equal(typeof findAptitudeModuleKnowledgePoint, 'function');
+  assert.deepEqual(findAptitudeModuleKnowledgePoint(synthetic, 'reading:main-idea'), {
+    subject: synthetic.directory[0],
+    topic: synthetic.directory[0].topics[0],
+    point: synthetic.directory[0].topics[0].knowledgePoints[0],
+    lesson: synthetic.lessons['reading:main-idea'],
+  });
+  assert.equal(findAptitudeModuleKnowledgePoint(synthetic, 'missing-point'), null);
 });
 
 test('module statistics count only the selected module’s own answers', () => {
@@ -63,6 +76,9 @@ test('overview and shared module page use registry routes and expose all learnin
   assert.match(app, /错题与收藏/);
   assert.match(app, /站内作答与手动记录/);
   assert.match(app, /data-section="aptitude-module-plan"/);
+  assert.match(app, /function renderAptitudeModuleLesson\(/);
+  assert.match(app, /function openAptitudeModulePracticeSetup\(/);
+  assert.match(app, /form\.id === 'aptitude-module-session-setup'/);
 });
 
 test('the overview reserves launch actions and disables modules with empty question banks', () => {
@@ -88,7 +104,7 @@ test('the overview reserves launch actions and disables modules with empty quest
     action: 'open-general-knowledge-practice', moduleId: 'general-knowledge', mode: 'practice',
   });
   assert.deepEqual(launch.getAptitudeModuleLaunchAction('verbal', 'practice'), {
-    action: 'start-aptitude-module-session', moduleId: 'verbal', mode: 'practice',
+    action: 'open-aptitude-module-practice', moduleId: 'verbal', mode: 'practice',
   });
   assert.throws(() => launch.getAptitudeModuleLaunchAction('unknown', 'practice'), /module/i);
   assert.throws(() => launch.getAptitudeModuleLaunchAction('verbal', 'knowledge'), /启动方式/);

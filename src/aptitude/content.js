@@ -14,6 +14,11 @@ const LESSON_PROVIDERS = {
   'general-knowledge': () => GENERAL_KNOWLEDGE_LESSONS,
 };
 
+for (const moduleId of ['political-theory', 'verbal', 'quantitative', 'reasoning', 'data-analysis']) {
+  DIRECTORY_PROVIDERS[moduleId] = () => [];
+  LESSON_PROVIDERS[moduleId] = () => ({});
+}
+
 function isRecord(value) {
   return Boolean(value) && typeof value === 'object' && !Array.isArray(value);
 }
@@ -33,4 +38,35 @@ export function getAptitudeModuleContent(moduleId, testContent = null) {
     directory: directoryProvider ? directoryProvider() : [],
     lessons: lessonProvider ? lessonProvider() : {},
   };
+}
+
+export function findAptitudeModuleKnowledgePoint(content, pointId) {
+  if (!isRecord(content) || typeof pointId !== 'string' || !pointId) return null;
+  for (const subject of Array.isArray(content.directory) ? content.directory : []) {
+    for (const topic of Array.isArray(subject?.topics) ? subject.topics : []) {
+      const point = (Array.isArray(topic?.knowledgePoints) ? topic.knowledgePoints : [])
+        .find((item) => item?.id === pointId);
+      if (point) {
+        return {
+          subject,
+          topic,
+          point,
+          lesson: content.lessons?.[pointId] || point.content || null,
+        };
+      }
+    }
+  }
+  return null;
+}
+
+export function getAptitudeModuleKnowledgePoints(content) {
+  return (Array.isArray(content?.directory) ? content.directory : []).flatMap((subject) =>
+    (Array.isArray(subject?.topics) ? subject.topics : []).flatMap((topic) =>
+      (Array.isArray(topic?.knowledgePoints) ? topic.knowledgePoints : []).map((point) => ({
+        ...point,
+        subjectId: point.subjectId || subject.id,
+        subjectTitle: point.subjectTitle || subject.title,
+        topicId: point.topicId || topic.id,
+        topicTitle: point.topicTitle || topic.title,
+      }))));
 }

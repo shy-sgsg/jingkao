@@ -14,6 +14,7 @@ import { normalizeStudyState, setKnowledgePointStatus, toggleKnowledgePointFlag 
 import { archivePlanTask, createPlanTask, getPlanTaskProgress, getTasksForDate, markPlanTaskInProgress, reconcileSciencePlanTaskProgress, updatePlanTask } from './science/planTasks.js';
 import { getKnowledgePoint, getScienceTree } from './science/knowledge.js';
 import { SCIENCE_QUESTION_BANK } from './science/questionBank.js';
+import { filterQuestions } from './science/questions.js';
 import { SCIENCE_SOURCES } from './science/sources.js';
 import { advanceExamQuestion, answerScienceQuestion, continueScienceSession, createScienceSession, expireScienceSession, finishExamSession, getScienceStats, goToExamQuestion, selectExamAnswer, toggleScienceFavorite } from './science/sessions.js';
 import { GENERAL_KNOWLEDGE_QUESTION_BANK } from './general-knowledge/questionBank.js';
@@ -25,12 +26,12 @@ import { getGeneralKnowledgeStats, combinePracticeSummary } from './general-know
 import { createGeneralKnowledgeSession, answerGeneralKnowledgeQuestion, continueGeneralKnowledgeSession, selectGeneralKnowledgeAnswer, advanceGeneralKnowledgeQuestion, goToGeneralKnowledgeQuestion, finishGeneralKnowledgeSession, expireGeneralKnowledgeSession } from './general-knowledge/sessions.js';
 import { getGeneralKnowledgeTaskProgress, reconcileGeneralKnowledgePlanTaskProgress } from './general-knowledge/planTasks.js';
 import { APTITUDE_MODULES, getAptitudeMockModules, resolveAptitudeModuleRoute } from './aptitude/modules.js';
-import { getAptitudeModuleContent } from './aptitude/content.js';
+import { findAptitudeModuleKnowledgePoint, getAptitudeModuleContent, getAptitudeModuleKnowledgePoints } from './aptitude/content.js';
 import { getAptitudeMockSessionRecords, getAptitudeModuleStats } from './aptitude/analytics.js';
 import { getAptitudeQuestions, getAptitudeSessionQuestions } from './aptitude/questions.js';
 import { getAptitudeModuleForTaskType, getAptitudeModuleTaskProgress, reconcileAptitudeModuleTaskProgress } from './aptitude/planTasks.js';
 import { answerAptitudeModuleQuestion, continueAptitudeModuleSession, createAptitudeModuleSession, finishAptitudeModuleSession, goToAptitudeModuleQuestion, selectAptitudeModuleAnswer } from './aptitude/sessions.js';
-import { toggleAptitudeModuleFavorite } from './aptitude/persistence.js';
+import { setAptitudeModulePointStatus, toggleAptitudeModuleFavorite, toggleAptitudeModulePointFlag } from './aptitude/persistence.js';
 import { renderAptitudeModuleLaunchButtons } from './aptitude/launch.js';
 import { renderEligibilityChecks } from './ui/eligibility.js';
 import { renderScoreBreakdown } from './ui/scoreBreakdown.js';
@@ -105,6 +106,7 @@ let page = initialRoute.page;
 let activeAptitudeModuleId = initialRoute.aptitudeModuleId;
 let activeAptitudeModulePlanTaskId = initialRoute.page === 'aptitudeModule' ? initialRoute.taskId : null;
 let activeAptitudeModuleSessionId = initialRoute.page === 'aptitudeModule' ? initialRoute.sessionId : null;
+let selectedAptitudeModuleKnowledgePointId = initialRoute.page === 'aptitudeModule' ? initialRoute.knowledgePointId : null;
 let activeSciencePlanTaskId = initialRoute.taskId;
 let selectedScienceKnowledgePointId = initialRoute.knowledgePointId;
 let activeScienceSessionId = initialRoute.sessionId;
@@ -883,9 +885,29 @@ function renderAptitudeRecords(module, items) {
   return `<section class="panel aptitude-record-panel"><div class="panel-heading"><div><div class="eyebrow muted">MANUAL PRACTICE LOG</div><h2>${escapeHtml(module.area)}训练记录</h2><p>手动填写累计题量和当前正确率；相同站内作答请勿重复录入。</p></div><span class="panel-hint">${summary.hasManualRecordsCount} / ${items.length} 项已录</span></div>${rows ? `<div class="aptitude-record-list">${rows}</div>` : '<div class="empty-state">暂无可记录的训练项。</div>'}</section>`;
 }
 
+function aptitudeModuleLessonIsPublished(entry) {
+  return Boolean(entry?.lesson && typeof entry.lesson === 'object'
+    && Object.keys(entry.lesson).length && entry.point?.contentStatus !== 'outline');
+}
+
+function aptitudeModuleKnowledgeStatus(study, pointId) {
+  const status = study.knowledgeProgress[pointId]?.status;
+  return status === 'completed' ? '已学完' : status === 'learning' ? '学习中' : '未开始';
+}
+
 function renderAptitudeModuleContent(module, content, questionCount, study, tasks) {
   const topics = content.directory.flatMap((subject) => (subject.topics || []).map((topic) => ({ subject, topic })));
-  const lessonRows = Object.entries(content.lessons).map(([id, lesson]) => `<article class="aptitude-module-lesson"><strong>${escapeHtml(lesson.title || id)}</strong><p>${escapeHtml(lesson.summary || lesson.explanation || lesson.examAngle || '讲解内容已发布。')}</p></article>`).join('');
+  const lessonRows = Object.entries(content.lessons).map(([id, lesson]) => `<a class="aptitude-module-lesson" href="${escapeHtml(module.route)}?knowledge=${encodeURIComponent(id)}"><strong>${escapeHtml(lesson.title || id)}</strong><p>${escapeHtml(lesson.summary || lesson.explanation || lesson.examAngle || '打开讲解')}</p></a>`).join('');
+  const topicRows = topics.map(({ subject, topic }) => {
+    const pointRows = (topic.knowledgePoints || []).map((point) => {
+      const entry = findAptitudeModuleKnowledgePoint(content, point.id);
+      const published = aptitudeModuleLessonIsPublished(entry);
+      const pointQuestionCount = getAptitudeQuestions(module.id, { knowledgePointId: point.id }).length;
+      const status = aptitudeModuleKnowledgeStatus(study, point.id);
+      return `<a class="science-point-link aptitude-module-point-link ${published ? 'published' : 'outline'}" href="${escapeHtml(module.route)}?knowledge=${encodeURIComponent(point.id)}"><span>${escapeHtml(point.title)}</span><small>${published ? '讲解已发布' : '讲解待接入'} · ${escapeHtml(status)} · ${pointQuestionCount} 题</small></a>`;
+    }).join('');
+    return `<article class="aptitude-module-topic"><strong>${escapeHtml(subject.title)} · ${escapeHtml(topic.title)}</strong><small>${(topic.knowledgePoints || []).length} 个知识点</small>${pointRows ? `<div class="science-point-links aptitude-module-point-list">${pointRows}</div>` : ''}</article>`;
+  }).join('');
   const taskRows = tasks.map((task) => {
     const progress = getAptitudeModuleTaskProgress(task, study.sessions, study.answers);
     const config = task.aptitudeConfig || {};
@@ -897,16 +919,52 @@ function renderAptitudeModuleContent(module, content, questionCount, study, task
   const unavailable = questionCount === 0;
   const activeSession = study.sessions.find((session) => session.status === 'active');
   const practiceControls = unavailable
-    ? '<button type="button" class="button button-secondary" disabled aria-disabled="true" title="题库待接入">开始练习</button><button type="button" class="button button-secondary" disabled aria-disabled="true" title="题库待接入">限时模拟</button><button type="button" class="button button-quiet" disabled aria-disabled="true" title="题库待接入">复习错题</button>'
-    : '<button type="button" class="button button-secondary" data-action="start-aptitude-module-session" data-mode="practice">开始练习</button><button type="button" class="button button-secondary" data-action="start-aptitude-module-session" data-mode="exam">限时模拟</button><button type="button" class="button button-quiet" data-action="start-aptitude-module-session" data-mode="mistakes">复习错题</button>';
+    ? '<button type="button" class="button button-secondary" disabled aria-disabled="true" title="题库待接入">开始练习</button><button type="button" class="button button-secondary" disabled aria-disabled="true" title="题库待接入">限时模拟</button><button type="button" class="button button-quiet" disabled aria-disabled="true" title="题库待接入">复习错题</button><button type="button" class="button button-quiet" disabled aria-disabled="true" title="题库待接入">复习收藏</button>'
+    : `<button type="button" class="button button-secondary" data-action="open-aptitude-module-practice" data-module-id="${escapeHtml(module.id)}" data-mode="practice">开始练习</button><button type="button" class="button button-secondary" data-action="open-aptitude-module-practice" data-module-id="${escapeHtml(module.id)}" data-mode="exam">限时模拟</button><button type="button" class="button button-quiet" data-action="open-aptitude-module-practice" data-module-id="${escapeHtml(module.id)}" data-mode="mistakes">复习错题</button><button type="button" class="button button-quiet" data-action="open-aptitude-module-practice" data-module-id="${escapeHtml(module.id)}" data-mode="favorites">复习收藏</button>`;
   const resume = activeSession
     ? `<a class="button button-primary" href="${escapeHtml(module.route)}?session=${encodeURIComponent(activeSession.id)}">继续未完成训练</a>` : '';
   return `<section class="aptitude-module-learning-grid" aria-label="${escapeHtml(module.area)}学习与练习">
-    <article class="panel aptitude-module-content-panel" data-section="aptitude-module-knowledge"><div class="panel-heading"><div><div class="eyebrow muted">KNOWLEDGE</div><h2>知识目录与讲解</h2><p>${content.directory.length ? `${content.directory.length} 个学科 · ${topics.length} 个专题` : '知识目录待接入；占位内容不会计为已学。'}</p></div><span class="aptitude-module-status">${content.directory.length ? '目录已接入' : '知识目录待接入'}</span></div>${topics.length ? `<div class="aptitude-module-topic-list">${topics.map(({ subject, topic }) => `<article><strong>${escapeHtml(subject.title)} · ${escapeHtml(topic.title)}</strong><small>${(topic.knowledgePoints || []).length} 个知识点</small></article>`).join('')}</div>` : '<div class="empty-state compact">当前没有可浏览的知识目录。</div>'}${lessonRows ? `<div class="aptitude-module-lesson-list">${lessonRows}</div>` : '<div class="aptitude-module-lesson-empty">讲解待接入</div>'}</article>
+    <article class="panel aptitude-module-content-panel" data-section="aptitude-module-knowledge"><div class="panel-heading"><div><div class="eyebrow muted">KNOWLEDGE</div><h2>知识目录与讲解</h2><p>${content.directory.length ? `${content.directory.length} 个学科 · ${topics.length} 个专题` : '知识目录待接入；占位内容不会计为已学。'}</p></div><span class="aptitude-module-status">${content.directory.length ? '目录已接入' : '知识目录待接入'}</span></div>${topicRows ? `<div class="aptitude-module-topic-list">${topicRows}</div>` : '<div class="empty-state compact">当前没有可浏览的知识目录。</div>'}${lessonRows ? `<div class="aptitude-module-lesson-list">${lessonRows}</div>` : '<div class="aptitude-module-lesson-empty">讲解待接入</div>'}</article>
     <article class="panel aptitude-module-content-panel" data-section="aptitude-module-practice"><div class="panel-heading"><div><div class="eyebrow muted">PRACTICE · MOCK</div><h2>专项练习与限时模拟</h2><p>${unavailable ? '当前模块没有已发布题目，训练入口暂不可用。' : `当前有 ${questionCount} 道已发布题目。`}</p></div><span class="aptitude-module-status">${unavailable ? '题库待接入' : `${questionCount} 道题`}</span></div><div class="aptitude-module-practice-actions">${practiceControls}${resume}</div><p class="aptitude-module-unavailable-note">${unavailable ? '题库待接入；现在无法创建会话或增加站内答题记录。' : '训练交互和记录由本模块会话适配器负责。'}</p></article>
     <article class="panel aptitude-module-content-panel" data-section="aptitude-module-mistakes"><div class="panel-heading"><div><div class="eyebrow muted">REVIEW</div><h2>错题与收藏</h2><p>状态仅读取 ${escapeHtml(module.area)} 自己的学习档案。</p></div></div><div class="aptitude-module-counts"><span><strong>${Object.keys(study.mistakes).length}</strong><small>错题</small></span><span><strong>${study.favorites.length}</strong><small>收藏题</small></span><span><strong>${study.favoriteKnowledgePointIds.length}</strong><small>知识点收藏</small></span><span><strong>${study.unclearKnowledgePointIds.length}</strong><small>待复习知识点</small></span></div><div class="empty-state compact">${questionCount ? '错题和收藏将在题库接入后按题目显示。' : '题库待接入，暂时没有可打开的错题或收藏题。'}</div></article>
     <article class="panel aptitude-module-content-panel" data-section="aptitude-module-plan"><div class="panel-heading"><div><div class="eyebrow muted">STUDY PLAN</div><h2>学习计划</h2><p>只汇总关联到本模块的任务与站内进度。</p></div><a class="panel-link" href="#/plan">管理计划 →</a></div>${taskRows || '<div class="empty-state compact">还没有本模块计划任务。</div>'}</article>
   </section>`;
+}
+
+function renderAptitudeModuleLesson(module, content, pointId, study, task = null) {
+  const entry = findAptitudeModuleKnowledgePoint(content, pointId);
+  if (!entry) return `<div class="page-body aptitude-module-page"><div class="empty-state">没有找到这个行测知识点。</div><a class="button button-secondary" href="${escapeHtml(module.route)}">返回${escapeHtml(module.area)}</a></div>`;
+  const { subject, topic, point } = entry;
+  const lesson = aptitudeModuleLessonIsPublished(entry) ? entry.lesson : null;
+  const progress = study.knowledgeProgress[point.id];
+  const completed = progress?.status === 'completed';
+  const isFavorite = study.favoriteKnowledgePointIds.includes(point.id);
+  const isUnclear = study.unclearKnowledgePointIds.includes(point.id);
+  const pointQuestionCount = getAptitudeQuestions(module.id, { knowledgePointId: point.id }).length;
+  const taskPointIds = task?.aptitudeConfig?.activityType === 'knowledge'
+    ? task.aptitudeConfig.knowledgePointIds : [];
+  const nextTaskPointId = taskPointIds.find((id) => id !== point.id
+    && findAptitudeModuleKnowledgePoint(content, id)
+    && study.knowledgeProgress[id]?.status !== 'completed');
+  const paragraphs = [
+    ['核心讲解', lesson?.explanation || lesson?.summary],
+    ['一句话记忆', lesson?.principle],
+    ['题目怎么考', lesson?.examAngle],
+    ['生活示例', lesson?.everydayExample],
+    ['解题方法', lesson?.quickMethod],
+  ].filter(([, value]) => typeof value === 'string' && value.trim());
+  const memory = Array.isArray(lesson?.memory) && lesson.memory.length
+    ? `<section><span class="science-section-kicker">记忆要点</span><ul>${lesson.memory.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul></section>` : '';
+  const mistakes = Array.isArray(lesson?.commonMistakes) && lesson.commonMistakes.length
+    ? `<section class="science-mistakes-note"><span class="science-section-kicker">常见混淆</span><ul>${lesson.commonMistakes.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul></section>` : '';
+  const lessonBody = lesson
+    ? `${paragraphs.map(([title, value]) => `<section><span class="science-section-kicker">${title}</span><p>${escapeHtml(value)}</p></section>`).join('')}${memory}${mistakes}`
+    : '<section class="science-outline-panel"><span class="science-content-status">目录提纲</span><h2>讲解待接入</h2><p>已预留讲解 provider。讲解发布前不会记录为正在学习或已学完。</p></section>';
+  const status = completed ? '已学完' : progress?.status === 'learning' ? '学习中' : '未开始';
+  const taskLabel = task ? `<span>计划任务：${escapeHtml(task.title)}</span>` : '';
+  const nextTask = nextTaskPointId
+    ? `<button type="button" class="button button-quiet" data-action="next-aptitude-module-task-point" data-task-id="${escapeHtml(task.id)}" data-point-id="${escapeHtml(nextTaskPointId)}">下一个计划知识点 →</button>` : '';
+  return `<div class="page-body aptitude-module-page science-page"><div class="page-heading-row"><div><div class="eyebrow muted">${escapeHtml(subject.title)} · ${escapeHtml(topic.title)} · KNOWLEDGE</div><h1>${escapeHtml(point.title)}</h1><p>${lesson ? '知识点讲解与本模块学习状态。' : '本知识点已进入目录，讲解尚未发布。'}</p></div><div class="heading-actions"><a class="button button-secondary" href="${escapeHtml(module.route)}">返回${escapeHtml(module.area)}</a><span class="aptitude-module-status">${escapeHtml(status)}</span></div></div><div class="science-lesson-layout"><article class="panel science-lesson-main">${lessonBody}<section class="science-lesson-footer"><button type="button" class="button button-secondary" data-action="start-aptitude-module-knowledge" data-module-id="${escapeHtml(module.id)}" data-point-id="${escapeHtml(point.id)}" ${!lesson || progress?.status === 'learning' || completed ? 'disabled' : ''}>${progress?.status === 'learning' ? '正在学习' : completed ? '已学完' : '标记正在学习'}</button><button type="button" class="button button-primary" data-action="complete-aptitude-module-knowledge" data-module-id="${escapeHtml(module.id)}" data-point-id="${escapeHtml(point.id)}" ${!lesson || completed ? 'disabled' : ''}>${completed ? '已完成知识点学习' : '完成知识点学习'}</button><button type="button" class="button button-quiet" data-action="toggle-aptitude-module-point-favorite" data-module-id="${escapeHtml(module.id)}" data-point-id="${escapeHtml(point.id)}">${isFavorite ? '★ 已收藏知识点' : '☆ 收藏知识点'}</button><button type="button" class="button button-quiet" data-action="toggle-aptitude-module-point-unclear" data-module-id="${escapeHtml(module.id)}" data-point-id="${escapeHtml(point.id)}">${isUnclear ? '已标记不理解 · 取消' : '标记不理解'}</button><button type="button" class="button button-secondary" data-action="open-aptitude-module-practice" data-module-id="${escapeHtml(module.id)}" data-mode="practice" data-point-id="${escapeHtml(point.id)}" ${pointQuestionCount ? '' : 'disabled aria-disabled="true" title="本知识点题库待接入"'}>练习此知识点</button>${taskLabel}${nextTask}</section></article><aside class="science-lesson-aside"><section class="panel"><span class="eyebrow muted">关联题目</span><strong class="science-aside-number">${pointQuestionCount}</strong><p>道已发布练习</p></section><section class="panel"><span class="eyebrow muted">学习状态</span><strong>${escapeHtml(status)}</strong><p>${progress?.lastViewedAt ? `最近学习 ${escapeHtml(fmtDate(progress.lastViewedAt.slice(0, 10)))}` : '开始与完成状态由你记录。'}</p></section></aside></div></div>`;
 }
 
 function renderAptitudeModuleSession(module, session, study) {
@@ -980,9 +1038,14 @@ function renderAptitudeModule(moduleId) {
   const taskProgress = planTask ? getAptitudeModuleTaskProgress(planTask, study.sessions, study.answers) : null;
   const taskActivity = planTask?.aptitudeConfig?.activityType || 'free';
   const taskModeLabel = taskActivity === 'exam' ? '限时模拟' : taskActivity === 'mistakes' ? '错题复习' : taskActivity === 'practice' ? '专项练习' : taskActivity === 'knowledge' ? '知识点学习' : '自由学习';
-  const taskUnavailable = questionCount === 0 || taskActivity === 'knowledge';
+  if (selectedAptitudeModuleKnowledgePointId) {
+    return renderAptitudeModuleLesson(module, content, selectedAptitudeModuleKnowledgePointId, study, planTask);
+  }
+  const knowledgeTaskPoints = taskActivity === 'knowledge'
+    ? (planTask.aptitudeConfig.knowledgePointIds || []).filter((id) => findAptitudeModuleKnowledgePoint(content, id)) : [];
+  const taskUnavailable = taskActivity === 'knowledge' ? knowledgeTaskPoints.length === 0 : questionCount === 0;
   const taskStartPanel = planTask && taskActivity !== 'free'
-    ? `<section class="panel science-task-start"><span class="eyebrow muted">PLAN TASK · ${escapeHtml(planTask.date)}</span><h2>${escapeHtml(planTask.title)}</h2><p>${taskModeLabel} · ${taskActivity === 'knowledge' ? '知识目录待接入' : `目标 ${planTask.aptitudeConfig.targetQuestionCount || 0} 题 · 已完成 ${taskProgress?.progressCount || 0}/${taskProgress?.targetCount || 0}`}</p><button type="button" class="button button-primary" data-action="start-aptitude-module-session" data-mode="${taskActivity === 'exam' ? 'exam' : 'practice'}" data-task-id="${escapeHtml(planTask.id)}" ${taskUnavailable ? 'disabled aria-disabled="true"' : ''}>${taskUnavailable ? taskActivity === 'knowledge' ? '知识目录待接入' : '题库待接入' : `开始${taskModeLabel}`}</button></section>`
+    ? `<section class="panel science-task-start"><span class="eyebrow muted">PLAN TASK · ${escapeHtml(planTask.date)}</span><h2>${escapeHtml(planTask.title)}</h2><p>${taskModeLabel} · ${taskActivity === 'knowledge' ? `目标 ${taskProgress?.targetCount || 0} 个知识点 · 已完成 ${taskProgress?.progressCount || 0}/${taskProgress?.targetCount || 0}` : `目标 ${planTask.aptitudeConfig.targetQuestionCount || 0} 题 · 已完成 ${taskProgress?.progressCount || 0}/${taskProgress?.targetCount || 0}`}</p><button type="button" class="button button-primary" data-action="start-aptitude-module-session" data-mode="${taskActivity === 'knowledge' ? 'knowledge' : taskActivity === 'exam' ? 'exam' : 'practice'}" data-task-id="${escapeHtml(planTask.id)}" ${taskUnavailable ? 'disabled aria-disabled="true"' : ''}>${taskUnavailable ? taskActivity === 'knowledge' ? '知识目录待接入' : '题库待接入' : `开始${taskModeLabel}`}</button></section>`
     : '';
   const accuracyProgress = summary.plannedCount && summary.hasAttempted
     ? Math.min(summary.attemptedCount / summary.plannedCount, 1)
@@ -1808,6 +1871,80 @@ function openSciencePracticeSetup({ pointId = '', mode = 'practice' } = {}) {
   </div><div class="notice notice-soft compact-notice"><span>ⓘ</span><p>筛选后题量不足时，系统会显示实际可用题数，不会重复拼题或伪造题目。</p></div></div><div class="modal-footer"><button type="button" class="button button-quiet" data-action="close-modal">取消</button><button type="submit" class="button button-primary">开始训练</button></div></form>`);
 }
 
+function getAptitudeModulePracticeCandidates(moduleId, values = {}) {
+  const study = storage.aptitudeModuleStudies[moduleId];
+  if (!study) return [];
+  return filterQuestions(getAptitudeQuestions(moduleId), {
+    subjectId: values.subjectId || undefined,
+    topicId: values.topicId || undefined,
+    knowledgePointId: values.knowledgePointId || undefined,
+    difficulty: values.difficultyFilter && values.difficultyFilter !== 'all' ? values.difficultyFilter : undefined,
+    sourceType: values.sourceFilter && values.sourceFilter !== 'all' ? values.sourceFilter : undefined,
+    onlyMistakes: values.mode === 'mistakes',
+    onlyFavorites: values.mode === 'favorites',
+    onlyUnanswered: values.onlyUnanswered === 'true' || values.onlyUnanswered === true,
+    answeredQuestionIds: study.answers.map((answer) => answer.questionId),
+    mistakeQuestionIds: Object.keys(study.mistakes),
+    favoriteQuestionIds: study.favorites,
+  });
+}
+
+function syncAptitudeModulePracticeSetup(form) {
+  if (!form) return;
+  const values = Object.fromEntries(new FormData(form).entries());
+  const candidates = getAptitudeModulePracticeCandidates(form.dataset.moduleId, values);
+  const countNote = form.querySelector('[data-aptitude-module-question-count]');
+  const targetCount = form.querySelector('[name="targetQuestionCount"]');
+  const duration = form.querySelector('[data-aptitude-module-duration]');
+  const submit = form.querySelector('[type="submit"]');
+  if (countNote) countNote.textContent = `当前筛选可用 ${candidates.length} 道题`;
+  if (targetCount) {
+    targetCount.max = String(Math.max(1, candidates.length));
+    if (candidates.length && Number(targetCount.value) > candidates.length) targetCount.value = String(candidates.length);
+  }
+  if (duration) duration.hidden = values.mode !== 'exam';
+  if (submit) submit.disabled = candidates.length === 0;
+}
+
+function openAptitudeModulePracticeSetup({ moduleId, pointId = '', mode = 'practice' } = {}) {
+  const module = APTITUDE_MODULES.find((item) => item.id === moduleId && item.studyStore === 'aptitudeModuleStudies');
+  if (!module) { notify('找不到这条行测模块。'); return; }
+  const bank = getAptitudeQuestions(module.id);
+  if (!bank.length) { notify('题库待接入，无法开始训练。'); return; }
+  const content = getAptitudeModuleContent(module.id);
+  const points = getAptitudeModuleKnowledgePoints(content);
+  const point = points.find((item) => item.id === pointId);
+  const subjects = new Map((content.directory || []).map((item) => [item.id, item.title]));
+  const topics = new Map((content.directory || []).flatMap((subject) => (subject.topics || []).map((item) => [item.id, `${subject.title} · ${item.title}`])));
+  const pointLabels = new Map(points.map((item) => [item.id, `${item.subjectTitle} · ${item.topicTitle} · ${item.title}`]));
+  for (const question of bank) {
+    if (question.subjectId) subjects.set(question.subjectId, question.subjectTitle || question.subjectId);
+    if (question.topicId) topics.set(question.topicId, question.topicTitle || question.topicId);
+    for (const id of question.knowledgePointIds || []) if (!pointLabels.has(id)) pointLabels.set(id, id);
+  }
+  const subjectOptions = `<option value="">全部学科</option>${[...subjects].map(([id, title]) => `<option value="${escapeHtml(id)}" ${id === point?.subjectId ? 'selected' : ''}>${escapeHtml(title)}</option>`).join('')}`;
+  const topicOptions = `<option value="">全部专题</option>${[...topics].map(([id, title]) => `<option value="${escapeHtml(id)}" ${id === point?.topicId ? 'selected' : ''}>${escapeHtml(title)}</option>`).join('')}`;
+  const pointOptions = `<option value="">不限定知识点</option>${[...pointLabels].map(([id, title]) => `<option value="${escapeHtml(id)}" ${id === pointId ? 'selected' : ''}>${escapeHtml(title)}</option>`).join('')}`;
+  const selectedMode = ['exam', 'mistakes', 'favorites'].includes(mode) ? mode : 'practice';
+  const initialCount = getAptitudeModulePracticeCandidates(module.id, {
+    mode: selectedMode, knowledgePointId: pointId,
+  }).length;
+  if (!initialCount) { notify(selectedMode === 'mistakes' ? '当前模块还没有可复习错题。' : selectedMode === 'favorites' ? '当前模块还没有收藏题目。' : '当前筛选没有可用题目。'); return; }
+  const defaultCount = Math.min(selectedMode === 'mistakes' || selectedMode === 'favorites' ? 10 : 15, initialCount);
+  renderModal(`<form id="aptitude-module-session-setup" data-module-id="${escapeHtml(module.id)}"><div class="modal-head"><div><div class="eyebrow muted">${escapeHtml(module.area.toUpperCase())} · APTITUDE</div><h2>设置${escapeHtml(module.area)}训练</h2><p>按本模块已发布题库筛选；题量不足时只使用实际可用题目。</p></div><button type="button" class="modal-close" data-action="close-modal" aria-label="关闭">×</button></div><div class="modal-body"><div class="form-grid">
+    <label class="form-field"><span>训练方式</span><select name="mode"><option value="practice" ${selectedMode === 'practice' ? 'selected' : ''}>专项练习</option><option value="exam" ${selectedMode === 'exam' ? 'selected' : ''}>限时模拟</option><option value="mistakes" ${selectedMode === 'mistakes' ? 'selected' : ''}>错题复习</option><option value="favorites" ${selectedMode === 'favorites' ? 'selected' : ''}>收藏题复习</option></select></label>
+    <label class="form-field"><span>学科筛选</span><select name="subjectId">${subjectOptions}</select></label>
+    <label class="form-field"><span>专题筛选</span><select name="topicId">${topicOptions}</select></label>
+    <label class="form-field form-field-wide"><span>知识点筛选</span><select name="knowledgePointId">${pointOptions}</select></label>
+    <label class="form-field"><span>目标题量</span><input name="targetQuestionCount" type="number" min="1" max="${initialCount}" value="${defaultCount}" required/></label>
+    <label class="form-field" data-aptitude-module-duration ${selectedMode === 'exam' ? '' : 'hidden'}><span>模拟时长（分钟）</span><input name="durationMinutes" type="number" min="1" value="20"/></label>
+    <label class="form-field"><span>难度</span><select name="difficultyFilter"><option value="all">全部难度</option><option value="easy">基础</option><option value="medium">中等</option><option value="hard">进阶</option></select></label>
+    <label class="form-field"><span>题源</span><select name="sourceFilter"><option value="all">全部题源</option><option value="official">官方大纲例题 / 真题</option><option value="official_outline_example">官方大纲例题</option><option value="verified_exam">核验真题</option><option value="third_party_mock">机构模拟题</option><option value="recalled">考生回忆版</option><option value="licensed">授权题目</option><option value="original">本站原创</option></select></label>
+    <label class="form-field"><span><input name="onlyUnanswered" type="checkbox" value="true"/> 只做未答题</span></label>
+  </div><p class="panel-hint" data-aptitude-module-question-count></p></div><div class="modal-footer"><button type="button" class="button button-quiet" data-action="close-modal">取消</button><button type="submit" class="button button-primary">开始训练</button></div></form>`);
+  syncAptitudeModulePracticeSetup(modalRoot.querySelector('#aptitude-module-session-setup'));
+}
+
 function openGeneralKnowledgePracticeSetup({ pointId = '', mode = 'practice' } = {}) {
   const points = getGeneralKnowledgeTree().flatMap((subject) => subject.topics.flatMap((topic) => topic.knowledgePoints));
   const point = points.find((item) => item.id === pointId);
@@ -2185,6 +2322,7 @@ function navigate(id, query = '') {
   activeGeneralKnowledgeSessionId = page === 'generalKnowledge' ? parsedRoute.sessionId : null;
   activeAptitudeModulePlanTaskId = page === 'aptitudeModule' ? parsedRoute.taskId : null;
   activeAptitudeModuleSessionId = page === 'aptitudeModule' ? parsedRoute.sessionId : null;
+  selectedAptitudeModuleKnowledgePointId = page === 'aptitudeModule' ? parsedRoute.knowledgePointId : null;
   document.querySelector('.sidebar')?.classList.remove('mobile-open');
   document.querySelector('.sidebar-scrim')?.classList.remove('visible');
   pageTransition = true;
@@ -2351,6 +2489,13 @@ document.addEventListener('click', async (event) => {
       await persistAndRender('学习任务已归档，关联记录已保留');
     } catch (error) { notify(error.message); }
   }
+  if (action === 'open-aptitude-module-practice') {
+    openAptitudeModulePracticeSetup({
+      moduleId: actionEl.dataset.moduleId || activeAptitudeModuleId,
+      pointId: actionEl.dataset.pointId || '',
+      mode: actionEl.dataset.mode || 'practice',
+    });
+  }
   if (action === 'start-aptitude-module-session') {
     const module = APTITUDE_MODULES.find((item) => item.id === actionEl.dataset.moduleId || page === 'aptitudeModule' && item.id === activeAptitudeModuleId);
     if (!module || module.studyStore !== 'aptitudeModuleStudies') { notify('找不到这条行测模块。'); return; }
@@ -2360,7 +2505,18 @@ document.addEventListener('click', async (event) => {
       : activeAptitudeModulePlanTaskId
         ? storage.studyPlanTasks.find((item) => item.id === activeAptitudeModulePlanTaskId && item.aptitudeConfig?.moduleId === module.id) : null;
     const config = task?.aptitudeConfig || {};
-    if (config.activityType === 'knowledge') { notify('该模块的知识目录尚未接入，暂时无法开始知识点学习。'); return; }
+    if (config.activityType === 'knowledge') {
+      const content = getAptitudeModuleContent(module.id);
+      const pointId = (config.knowledgePointIds || []).find((id) => findAptitudeModuleKnowledgePoint(content, id)
+        && storage.aptitudeModuleStudies[module.id].knowledgeProgress[id]?.status !== 'completed')
+        || (config.knowledgePointIds || []).find((id) => findAptitudeModuleKnowledgePoint(content, id));
+      if (!pointId) { notify('这项计划任务的知识点目录尚未接入。'); return; }
+      storage.studyPlanTasks = markPlanTaskInProgress(storage.studyPlanTasks, task.id);
+      await persist();
+      activeAptitudeModuleId = module.id;
+      navigate('aptitudeModule', `task=${encodeURIComponent(task.id)}&knowledge=${encodeURIComponent(pointId)}`);
+      return;
+    }
     const mode = task ? config.activityType === 'exam' ? 'exam' : 'practice' : actionEl.dataset.mode === 'exam' ? 'exam' : 'practice';
     const study = storage.aptitudeModuleStudies[module.id];
     const progress = task ? getAptitudeModuleTaskProgress(task, study.sessions, study.answers) : null;
@@ -2443,6 +2599,54 @@ document.addEventListener('click', async (event) => {
     storage.aptitudeModuleStudies = toggleAptitudeModuleFavorite(storage.aptitudeModuleStudies, moduleId, actionEl.dataset.questionId);
     const enabled = storage.aptitudeModuleStudies[moduleId].favorites.includes(actionEl.dataset.questionId);
     await persistAndRender(enabled ? '题目已收藏' : '已取消收藏');
+  }
+  if (action === 'start-aptitude-module-knowledge') {
+    const moduleId = actionEl.dataset.moduleId;
+    const content = getAptitudeModuleContent(moduleId);
+    const entry = findAptitudeModuleKnowledgePoint(content, actionEl.dataset.pointId);
+    if (!entry || !aptitudeModuleLessonIsPublished(entry)) { notify('该知识点讲解尚未发布，不能记录学习。'); return; }
+    storage.aptitudeModuleStudies = setAptitudeModulePointStatus(storage.aptitudeModuleStudies, moduleId, entry.point.id, 'learning');
+    await persistAndRender('已记录正在学习');
+  }
+  if (action === 'complete-aptitude-module-knowledge') {
+    const moduleId = actionEl.dataset.moduleId;
+    const content = getAptitudeModuleContent(moduleId);
+    const entry = findAptitudeModuleKnowledgePoint(content, actionEl.dataset.pointId);
+    if (!entry || !aptitudeModuleLessonIsPublished(entry)) { notify('该知识点讲解尚未发布，不能标记为学完。'); return; }
+    const task = activeAptitudeModulePlanTaskId
+      ? storage.studyPlanTasks.find((item) => item.id === activeAptitudeModulePlanTaskId && item.aptitudeConfig?.moduleId === moduleId) : null;
+    if (task?.aptitudeConfig?.activityType === 'knowledge'
+      && !task.aptitudeConfig.knowledgePointIds.includes(entry.point.id)) {
+      notify('这个知识点不属于当前计划任务。'); return;
+    }
+    if (storage.aptitudeModuleStudies[moduleId].knowledgeProgress[entry.point.id]?.status === 'completed') return;
+    const now = new Date().toISOString();
+    try {
+      const result = createAptitudeModuleSession([], storage.aptitudeModuleStudies, moduleId, {
+        mode: 'knowledge', knowledgePointId: entry.point.id, subjectId: entry.subject.id, topicId: entry.topic.id,
+        planTaskId: task?.id || null,
+      }, { now });
+      storage.aptitudeModuleStudies = result.aptitudeModuleStudies;
+      const completed = syncAptitudeModulePlanTaskCompletion(result.session);
+      await persistAndRender(completed ? '知识点已学完；学习计划已核验完成' : '知识点学习记录已保存');
+    } catch (error) { notify(error.message); }
+  }
+  if (action === 'toggle-aptitude-module-point-favorite' || action === 'toggle-aptitude-module-point-unclear') {
+    const moduleId = actionEl.dataset.moduleId;
+    const flag = action === 'toggle-aptitude-module-point-favorite' ? 'favorite' : 'unclear';
+    storage.aptitudeModuleStudies = toggleAptitudeModulePointFlag(storage.aptitudeModuleStudies, moduleId, actionEl.dataset.pointId, flag);
+    const stateKey = flag === 'favorite' ? 'favoriteKnowledgePointIds' : 'unclearKnowledgePointIds';
+    const enabled = storage.aptitudeModuleStudies[moduleId][stateKey].includes(actionEl.dataset.pointId);
+    await persistAndRender(flag === 'favorite' ? enabled ? '知识点已收藏' : '已取消收藏' : enabled ? '已标记为不理解' : '已取消不理解标记');
+  }
+  if (action === 'next-aptitude-module-task-point') {
+    const moduleId = activeAptitudeModuleId;
+    const task = storage.studyPlanTasks.find((item) => item.id === actionEl.dataset.taskId
+      && item.aptitudeConfig?.moduleId === moduleId && item.aptitudeConfig.activityType === 'knowledge');
+    const content = getAptitudeModuleContent(moduleId);
+    const entry = findAptitudeModuleKnowledgePoint(content, actionEl.dataset.pointId);
+    if (!task || !entry || !task.aptitudeConfig.knowledgePointIds.includes(entry.point.id)) { notify('找不到这条计划知识点。'); return; }
+    navigate('aptitudeModule', `task=${encodeURIComponent(task.id)}&knowledge=${encodeURIComponent(entry.point.id)}`);
   }
   if (action === 'leave-aptitude-module-session') navigate('aptitudeModule');
   if (action === 'open-general-knowledge-practice') openGeneralKnowledgePracticeSetup({ pointId: actionEl.dataset.pointId || '', mode: actionEl.dataset.mode || 'practice' });
@@ -3020,6 +3224,32 @@ document.addEventListener('submit', async (event) => {
       navigate('science', `session=${encodeURIComponent(started.session.id)}`);
     } catch (error) { notify(error.message); }
   }
+  if (form.id === 'aptitude-module-session-setup') {
+    const moduleId = form.dataset.moduleId;
+    const module = APTITUDE_MODULES.find((item) => item.id === moduleId && item.studyStore === 'aptitudeModuleStudies');
+    if (!module) { notify('找不到这条行测模块。'); return; }
+    const mode = values.mode === 'exam' ? 'exam' : 'practice';
+    try {
+      const started = createAptitudeModuleSession(getAptitudeQuestions(module.id), storage.aptitudeModuleStudies, module.id, {
+        mode,
+        subjectId: values.subjectId || undefined,
+        topicId: values.topicId || undefined,
+        knowledgePointId: values.knowledgePointId || undefined,
+        targetQuestionCount: Number(values.targetQuestionCount),
+        durationSeconds: mode === 'exam' ? Number(values.durationMinutes) * 60 : null,
+        sourceFilter: values.sourceFilter || 'all',
+        difficultyFilter: values.difficultyFilter || 'all',
+        onlyMistakes: values.mode === 'mistakes',
+        onlyFavorites: values.mode === 'favorites',
+        onlyUnanswered: values.onlyUnanswered === 'true',
+      });
+      storage.aptitudeModuleStudies = started.aptitudeModuleStudies;
+      modalRoot.innerHTML = '';
+      await persist();
+      activeAptitudeModuleId = module.id;
+      navigate('aptitudeModule', `session=${encodeURIComponent(started.session.id)}`);
+    } catch (error) { notify(error.message); }
+  }
   if (form.id === 'aptitude-form') {
     const index = Number(form.dataset.index);
     const base = dataset.aptitude[index];
@@ -3135,6 +3365,7 @@ document.addEventListener('input', (event) => {
 
 document.addEventListener('change', async (event) => {
   if (!accountSession) return;
+  syncAptitudeModulePracticeSetup(event.target.closest?.('#aptitude-module-session-setup'));
   if (['plan-task-type', 'science-subject', 'science-topic', 'science-activity-type'].includes(event.target.id)) {
     syncPlanTaskScienceControls(event.target.closest('#plan-task-form'));
   }
@@ -3213,6 +3444,7 @@ window.addEventListener('hashchange', () => {
   activeGeneralKnowledgeSessionId = route.page === 'generalKnowledge' ? route.sessionId : null;
   activeAptitudeModulePlanTaskId = route.page === 'aptitudeModule' ? route.taskId : null;
   activeAptitudeModuleSessionId = route.page === 'aptitudeModule' ? route.sessionId : null;
+  selectedAptitudeModuleKnowledgePointId = route.page === 'aptitudeModule' ? route.knowledgePointId : null;
   pageTransition = true;
   runViewTransition(document, () => {
     render();

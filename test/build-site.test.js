@@ -180,6 +180,25 @@ test('standalone aptitude routes preserve dedicated pages and show empty-provide
   assert.match(generalKnowledgePage, /常识判断知识点目录|法律/);
 });
 
+test('all five reserved modules render their shared learning, records, and plan sections', async () => {
+  await import('../scripts/build.mjs');
+  const html = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8');
+  const script = html.match(/<script>\s*([\s\S]*?)<\/script>/)?.[1];
+
+  for (const moduleId of ['political-theory', 'verbal', 'quantitative', 'reasoning', 'data-analysis']) {
+    const page = await renderStandaloneRoute(script, `aptitude/${moduleId}`);
+    assert.match(page.root.innerHTML, /<h2>知识目录与讲解<\/h2>/, `${moduleId} should expose the knowledge provider section`);
+    assert.match(page.root.innerHTML, /<h2>专项练习与限时模拟<\/h2>/, `${moduleId} should expose the practice provider section`);
+    assert.match(page.root.innerHTML, /错题与收藏/);
+    assert.match(page.root.innerHTML, /data-section="aptitude-module-statistics"/);
+    assert.match(page.root.innerHTML, /data-section="aptitude-module-plan"/);
+    assert.match(page.root.innerHTML, /MANUAL PRACTICE LOG/);
+  }
+
+  const missingPoint = await renderStandaloneRoute(script, 'aptitude/verbal?knowledge=not-in-provider');
+  assert.match(missingPoint.root.innerHTML, /没有找到这个行测知识点/);
+});
+
 test('homepage keeps module launch controls but disables modules without published questions', async () => {
   await import('../scripts/build.mjs');
   const html = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8');

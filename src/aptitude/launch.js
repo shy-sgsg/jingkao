@@ -7,7 +7,7 @@ export function getAptitudeModuleLaunchAction(moduleId, mode) {
   if (mode !== 'practice' && mode !== 'exam') throw new Error('行测启动方式无效。');
   const action = module.id === 'science' ? 'open-science-practice'
     : module.id === 'general-knowledge' ? 'open-general-knowledge-practice'
-      : 'start-aptitude-module-session';
+      : 'open-aptitude-module-practice';
   return { action, moduleId: module.id, mode };
 }
 
