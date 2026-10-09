@@ -4,7 +4,7 @@ import { readFile } from 'node:fs/promises';
 import { getPageHelp, PAGE_HELP } from '../src/data/pageHelp.js';
 
 test('every existing route has short, task-specific in-page guidance', () => {
-  const routeIds = ['overview', 'guide', 'plan', 'aptitude', 'science', 'generalKnowledge', 'essay', 'mocks', 'positions', 'compare', 'assistant', 'scenarios', 'matrix', 'profile', 'research', 'evidence', 'sources', 'settings'];
+  const routeIds = ['overview', 'guide', 'plan', 'aptitude', 'aptitudeModule', 'science', 'generalKnowledge', 'essay', 'mocks', 'positions', 'compare', 'assistant', 'scenarios', 'matrix', 'profile', 'research', 'evidence', 'sources', 'settings'];
   assert.deepEqual(Object.keys(PAGE_HELP).sort(), [...routeIds].sort());
   for (const route of routeIds) {
     const help = getPageHelp(route);
