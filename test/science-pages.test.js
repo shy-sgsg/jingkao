@@ -4,6 +4,10 @@ import { readFile } from 'node:fs/promises';
 
 const app = await readFile(new URL('../src/app.js', import.meta.url), 'utf8');
 
+test('science navigation resolves to the dedicated science page', () => {
+  assert.ok(app.includes('science: renderScience'), 'the science route must map to its dedicated page');
+});
+
 test('science exam clock follows the exact session in the route', () => {
   const clock = app.slice(app.indexOf('function startScienceExamClock()'), app.indexOf('function syncSciencePlanTaskCompletion'));
   assert.match(clock, /activeScienceSessionId/);

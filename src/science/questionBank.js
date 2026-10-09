@@ -860,4 +860,15 @@ addPublishedReferenceQuestion({
   correctAnswer: 'B', explanation: '相同小球都处于漂浮静止状态，浮力分别等于各自小球的重力，因此两处浮力相等。由 F浮=ρ液gV排，在浮力相等时排开体积较大的甲液体密度较小。',
 });
 
+addPublishedReferenceQuestion({
+  id: 'mock-zhonggong-2027-rocks-relative-motion', subjectId: 'physics', topicId: 'physics:kinematics',
+  knowledgePointIds: ['physics:relative-motion'], difficulty: 'medium', reasoningType: 'causal_inference',
+  sourceType: 'third_party_mock', sourceId: 'gd-2027-zhonggong-mock',
+  sourceTitle: '中公 2027 广东行测科学推理模拟题 08.28 · 同速列车掷石子', region: '广东', examYear: null, presentationMode: 'adapted',
+  sourceNote: '据中公科学推理模拟题第 2 题改述；答案 C 与原页面解析核对。属于机构模拟题，不是省考真题。',
+  stem: '甲、乙两车以相同速度沿直轨道同向行驶，甲车在前、乙车在后。两车上分别有人 a、b，同时以相对于本车速度大小相同的石子沿水平方向瞄准对方投出。忽略石子的竖直下落，两人谁会先被击中？',
+  options: ['a 先被击中', 'b 先被击中', 'a、b 同时被击中', '石子只能击中 b，不能击中 a'],
+  correctAnswer: 'C', explanation: '以列车为参考系，两车和两人相对静止，两颗石子分别以相同速度沿相反方向飞向对方，初始距离相同，因此到达时间相同。',
+});
+
 export { SCIENCE_QUESTION_BANK };

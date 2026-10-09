@@ -1246,7 +1246,7 @@ function renderSources() {
 }
 
 function renderPage() {
-  const pages = { overview: renderOverview, guide: renderGuide, plan: renderPlan, aptitude: renderAptitude, essay: renderEssay, mocks: renderMocks, positions: renderPositions, compare: renderCompare, assistant: renderAssistant, scenarios: renderScenarios, matrix: renderMatrix, profile: renderProfile, research: renderResearch, evidence: renderEvidence, sources: renderSources, settings: renderSettings };
+  const pages = { overview: renderOverview, guide: renderGuide, plan: renderPlan, science: renderScience, aptitude: renderAptitude, essay: renderEssay, mocks: renderMocks, positions: renderPositions, compare: renderCompare, assistant: renderAssistant, scenarios: renderScenarios, matrix: renderMatrix, profile: renderProfile, research: renderResearch, evidence: renderEvidence, sources: renderSources, settings: renderSettings };
   const help = getPageHelp(page);
   let content = (pages[page] || renderOverview)();
   return `<div class="page-shell ${pageTransition ? 'page-enter' : ''}${resultTransition ? ' results-enter' : ''}"><details class="page-howto"><summary><span class="page-howto-icon">ⓘ</span><span>本页怎么用</span><span class="page-howto-hint">点此展开</span></summary><div class="page-howto-content"><p>${escapeHtml(help.text)}</p><a href="#/${escapeHtml(help.actionPage)}">${escapeHtml(help.actionLabel)} →</a></div></details>${content}</div>`;

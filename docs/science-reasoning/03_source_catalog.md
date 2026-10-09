@@ -26,7 +26,7 @@
 | `zj-2025-c-recall` | 考生回忆 / 浙江 / 2025 C 类 | 1 | [回忆卷](https://gwy.gkzhenti.cn/paper/1739531136929)；[参考答案](https://gwy.gkzhenti.cn/answer/1739531136929) |
 | `zj-2026-c-recall` | 考生回忆 / 浙江 / 2026 C 类 | 2 | [回忆卷](https://gwy.gkzhenti.cn/paper/1767342832464)；[参考答案](https://gwy.gkzhenti.cn/answer/1767342832464)；[miR-205 研究](https://pubmed.ncbi.nlm.nih.gov/37216502/) |
 | `zj-2025-32xueyuan-mock` | 机构模拟 / 浙江 / 2025 模拟卷 | 1 | [32 学苑模拟卷 PDF](https://static.32xueyuan.com/zq/u/cms/zj/202411/202048155177.pdf)；[微生物实验原始论文](https://www.nature.com/articles/s41598-017-04910-3) |
-| `gd-2027-zhonggong-mock` | 机构模拟 / 广东 | 2 | [中公解析转载页](https://www.eoffcn.com/kszx/detail/2210484.html) |
+| `gd-2027-zhonggong-mock` | 机构模拟 / 广东 | 3 | [中公解析转载页 09.21](https://www.eoffcn.com/kszx/detail/2210484.html)；[中公模拟题 08.28](https://www.eoffcn.com/kszx/detail/2196566.html) |
 | `huatu-2022-science-examples` | 机构例题 / 广东 | 1 | [华图科学推理讲解页](https://www.huatu.com/2022/0208/2471720.html) |
 | `sh-2018-recalled-example` | 回忆题 / 上海 / 2018 | 0（待核验） | [中公回顾页](https://www.eoffcn.com/kszx/detail/1239326.html)；所需原图未取得 |
 

@@ -230,7 +230,8 @@ export const SCIENCE_SOURCES = [
     organization: '中公教育（E 考试网转载）', sourceType: 'third_party_mock', region: '广东', examYear: null,
     authority: 'third-party-publisher', verificationStatus: 'verified', copyrightStatus: 'reference_only',
     url: 'https://www.eoffcn.com/kszx/detail/2210484.html',
-    note: '机构模拟题，不是考试真题；页面答案解析署名中公。',
+    relatedUrls: ['https://www.eoffcn.com/kszx/detail/2196566.html'],
+    note: '机构模拟题，不是考试真题；页面答案解析署名中公。两篇模拟题页合计收录 3 道练习，缺图且无法按文字独立作答的题未收录。',
   },
   {
     id: 'mock-zhonggong-2027-light', title: '中公 2027 广东行测科学推理模拟题（光学）',
