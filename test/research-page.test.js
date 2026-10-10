@@ -32,7 +32,7 @@ test('research findings derive sample coverage, score distribution, and evidence
     ambiguousRows: 6,
   });
   assert.deepEqual(byId['qualification-coverage'].facts, {
-    positions: 330,
+    positions: 695,
     structuredRequirements: 11,
     completeEligibility: 0,
     officialPositionRows: 0,

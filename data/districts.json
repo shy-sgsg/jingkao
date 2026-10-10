@@ -1,14 +1,14 @@
 [
   {"id":"dongcheng","code":"110101","name":"东城区","unitMatchAliases":[],"sourceId":"beijing-district-codes-2026"},
-  {"id":"xicheng","code":"110102","name":"西城区","unitMatchAliases":[],"sourceId":"beijing-district-codes-2026"},
-  {"id":"chaoyang","code":"110105","name":"朝阳区","unitMatchAliases":[],"sourceId":"beijing-district-codes-2026"},
-  {"id":"fengtai","code":"110106","name":"丰台区","unitMatchAliases":[],"sourceId":"beijing-district-codes-2026"},
+  {"id":"xicheng","code":"110102","name":"西城区","unitMatchAliases":["西城分局","西城运输管理分局"],"sourceId":"beijing-district-codes-2026"},
+  {"id":"chaoyang","code":"110105","name":"朝阳区","unitMatchAliases":["朝阳分局","朝阳运输管理分局"],"sourceId":"beijing-district-codes-2026"},
+  {"id":"fengtai","code":"110106","name":"丰台区","unitMatchAliases":["丰台分局","丰台运输管理分局"],"sourceId":"beijing-district-codes-2026"},
   {"id":"shijingshan","code":"110107","name":"石景山区","unitMatchAliases":["石景山分局","石景山运输管理分局"],"sourceId":"beijing-district-codes-2026"},
   {"id":"haidian","code":"110108","name":"海淀区","unitMatchAliases":["海淀分局","海淀运输管理分局"],"sourceId":"beijing-district-codes-2026"},
-  {"id":"mentougou","code":"110109","name":"门头沟区","unitMatchAliases":[],"sourceId":"beijing-district-codes-2026"},
-  {"id":"fangshan","code":"110111","name":"房山区","unitMatchAliases":[],"sourceId":"beijing-district-codes-2026"},
-  {"id":"tongzhou","code":"110112","name":"通州区","unitMatchAliases":[],"sourceId":"beijing-district-codes-2026"},
-  {"id":"shunyi","code":"110113","name":"顺义区","unitMatchAliases":[],"sourceId":"beijing-district-codes-2026"},
+  {"id":"mentougou","code":"110109","name":"门头沟区","unitMatchAliases":["门头沟分局","门头沟公路分局"],"sourceId":"beijing-district-codes-2026"},
+  {"id":"fangshan","code":"110111","name":"房山区","unitMatchAliases":["房山分局","房山公路分局"],"sourceId":"beijing-district-codes-2026"},
+  {"id":"tongzhou","code":"110112","name":"通州区","unitMatchAliases":["通州分局","通州公路分局"],"sourceId":"beijing-district-codes-2026"},
+  {"id":"shunyi","code":"110113","name":"顺义区","unitMatchAliases":["顺义分局","顺义公路分局"],"sourceId":"beijing-district-codes-2026"},
   {
     "id":"changping",
     "code":"110114",
@@ -16,9 +16,9 @@
     "unitMatchAliases":["昌平分局","昌平公路分局","昌平园管理委员会"],
     "sourceId":"beijing-district-codes-2026"
   },
-  {"id":"daxing","code":"110115","name":"大兴区","unitMatchAliases":[],"sourceId":"beijing-district-codes-2026"},
-  {"id":"huairou","code":"110116","name":"怀柔区","unitMatchAliases":[],"sourceId":"beijing-district-codes-2026"},
-  {"id":"pinggu","code":"110117","name":"平谷区","unitMatchAliases":[],"sourceId":"beijing-district-codes-2026"},
-  {"id":"miyun","code":"110118","name":"密云区","unitMatchAliases":[],"sourceId":"beijing-district-codes-2026"},
+  {"id":"daxing","code":"110115","name":"大兴区","unitMatchAliases":["大兴分局","大兴公路分局","大兴生物医药产业基地管理委员会"],"sourceId":"beijing-district-codes-2026"},
+  {"id":"huairou","code":"110116","name":"怀柔区","unitMatchAliases":["怀柔分局","怀柔公路分局"],"sourceId":"beijing-district-codes-2026"},
+  {"id":"pinggu","code":"110117","name":"平谷区","unitMatchAliases":["平谷分局","平谷公路分局"],"sourceId":"beijing-district-codes-2026"},
+  {"id":"miyun","code":"110118","name":"密云区","unitMatchAliases":["密云分局","密云公路分局","密云园管理委员会"],"sourceId":"beijing-district-codes-2026"},
   {"id":"yanqing","code":"110119","name":"延庆区","unitMatchAliases":["延庆分局","延庆公路分局","延庆监狱"],"sourceId":"beijing-district-codes-2026"}
 ]

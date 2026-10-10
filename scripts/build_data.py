@@ -90,14 +90,27 @@ def build_positions(
     for position in positions:
         district_id, district_match = assign_district(position.get("unit"), districts)
         mirror_sources = position.get("sources", [])
-        is_shijingshan_mirror = any(
+        has_mirror_major_codes = any(
             source_id.startswith("gwyzwb-2025-shijingshan-org-")
             or source_id == "huatu-2024-shijingshan-list"
+            or source_id == "daxing-2024-huatu-list"
+            or source_id.startswith("daxing-2025-gwy-page-")
+            or source_id.startswith("daxing-2026-job-")
+            or source_id.startswith("daxing-2026-unit-")
+            or source_id.startswith("huairou-2025-gwy-page-")
+            or source_id.startswith("huairou-2026-page-")
+            or source_id.startswith("mentougou-2024-")
+            or source_id.startswith("mentougou-2025-gwy-page-")
+            or source_id.startswith("northeast-2025-")
+            or source_id.startswith("fengtai-")
+            or source_id.startswith("fangshan-")
+            or source_id.startswith("xicheng-")
+            or source_id.startswith("tongzhou-")
             for source_id in mirror_sources
         )
         derived_criteria = (
             parse_mirror_major_criteria(position.get("majorText"))
-            if is_shijingshan_mirror and not position.get("majorCriteria")
+            if has_mirror_major_codes and not position.get("majorCriteria")
             else {}
         )
         result.append({
@@ -390,7 +403,7 @@ def render_coverage_report(dataset: dict[str, Any]) -> str:
         return f"[{source_id}]({url})" if url else str(source_id)
 
     lines = [
-        "# 昌平京考看板数据覆盖报告",
+        "# 北京京考职位库数据覆盖报告",
         "",
         f"数据基准日：{dataset.get('dataAsOf', '未知')}。本报告由 `scripts/build_data.py` 根据生成数据自动更新。年度官方职位分母未取得时只展示可见样例和二手参考，不把参考数写成官方覆盖率。",
         "",
@@ -502,7 +515,7 @@ def render_coverage_report(dataset: dict[str, Any]) -> str:
             "",
             "## 全市级职位表参照汇总",
             "",
-            "以下为全市范围的二手汇总，仅作外部参照；不是官方原表复算结果，不与昌平逐岗样本计算差额，也不作为官方覆盖率分母。",
+            "以下为全市范围的二手汇总，仅作外部参照；不是官方原表复算结果，不与当前候选明细计算差额，也不作为官方覆盖率分母。",
             "",
             "| 年度 | 来源 | 全市职位 / 招录 | 说明 |",
             "| ---: | --- | ---: | --- |",
@@ -512,7 +525,7 @@ def render_coverage_report(dataset: dict[str, Any]) -> str:
                 f"| {source.get('year', '未知')} | {link_source(source)} | "
                 f"{source.get('reportedPositionCount', '未知')} 岗 / "
                 f"{source.get('reportedRecruitCount', '未知')} 人 | "
-                "不与昌平逐岗样本计算差额 |"
+                "候选明细非全市完整样本，不据此计算覆盖率或差额 |"
             )
 
     unit_reference_source = next((
@@ -598,7 +611,7 @@ def main() -> None:
         "schemaVersion": 1,
         "generatedAt": date.today().isoformat(),
         "dataAsOf": date.today().isoformat(),
-        "scopeNote": "职位库仍为可追溯候选，不是北京全市全量官方职位表。现有行级候选覆盖昌平、延庆、石景山2024—2026年，以及海淀2024—2026年；石景山2024、海淀2025、海淀2026和海淀2024各保留一条仅见于区级检索页的市级候选，因单位名不能确认区属而未分配区县。海淀2024新增华图检索页100条候选镜像明细（341人），但其与另外两家第三方区级汇总存在冲突，未与官方表逐代码核验，不作为官方全量或覆盖分母。年度官方全市分母及逐代码核验尚未完成。区目录按北京市民政局2026年行政区划代码标准化；职位区县仅在招录单位名匹配标准区名或经审阅别名时赋值，其余保留未知。职位事实与报名快照、部分面试分数样本分开保存。",
+        "scopeNote": "职位库仍为可追溯候选，不是北京全市全量官方职位表。当前行级候选已覆盖北京16区的部分年度，区县归属仅按招录单位名及审阅别名匹配。西城2024—2026当前恢复57岗/135人、89岗/310人、119岗/361人；三届均是第三方去重候选。其2024镜像目录分别报告188岗/361人和195岗/496人，2025目录报告170岗/447人，2026目录报告118岗/357人；不同镜像与逐行候选的差异仍待官方逐码核验。通州2024—2026当前恢复86岗/166人、82岗/212人、70岗/134人；2024三家镜像汇总分别为79岗/117人、86岗/166人、87岗/168人，2026目录报告90岗/169人、逐岗明细仍缺20岗/35人；未据汇总差额补造。丰台当前逐岗候选为2024年2岗/3人、2025年10岗/66人、2026年26岗/92人，低于第三方目录汇总的年度数字，不据汇总差额补造。房山2025目录报告134岗/244人，目前恢复131岗/241人，单位页32的3岗/3人无法读取；2024和2026仅代表已恢复第三方明细。东城目前仅含3条来自朝阳区目录、但招录单位名称明确为东城区朝阳门街道的2025候选。怀柔2026目录报告44岗/112人，目前恢复41岗/108人，差额未据汇总补造。石景山2024、海淀2024—2026仍有来源口径冲突或市级单位行未能归区；大兴2026、延庆2026也只收录可追溯明细。所有职位候选仍未与官方招考简章逐代码核验，年度官方全市分母尚未复算。职位事实与报名快照、部分面试分数样本分开保存。",
         "studyMeta": study_meta,
         "districts": districts,
         "positions": positions,
