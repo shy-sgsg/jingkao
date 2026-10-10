@@ -1,4 +1,4 @@
-candidate_id,region,exam_year,candidate_title,url,status,reason_and_next_action
+﻿candidate_id,region,exam_year,candidate_title,url,status,reason_and_next_action
 bj-2026-full-recall,北京,2026,2026 京考行测回忆卷候选,https://www.jike.vip/shuati/category/100984/100990.html,pending_source_access,官方公告确认考试于 2025-12-07 举行；即刻题库列有回忆卷条目，但需取得可逐题核对的公开卷面后再建完整套卷记录。
 bj-2025-full-recall,北京,2025,2025 京考（2024-12-08）回忆卷候选,https://m.bj.huatu.com/2024/1208/1244828.html,pending_full_paper,华图页提供模块题量分析，不是完整题本；另有第三方题本版本之间的题量/内容冲突，先不作为整卷模考。
 bj-2024-full-recall,北京,2024,2024 京考回忆卷候选,https://www.jike.vip/shuati/category/100984/100990.html,catalog_only,目录列出 2024-12-08 卷名；需核具体年份标注、题量与公开题本后再加入可用整卷。
@@ -40,7 +40,7 @@ guangxi-2026-recall-candidate,广西,2026,2026年广西区考行测回忆版（1
 fujian-2026-recall-candidate,福建,2026,2026年福建省考行测回忆版（120题）,https://gwy.gkzhenti.cn/paper/1775360735242,question_and_same_site_key_available_item_audit_pending,同站题面与答案键覆盖1–120；逐题核验答案解析、图表/共享材料并与联考卷去重后再接入。
 hebei-2026-recall-candidate,河北,2026,2026年河北省考行测回忆版（130题）,https://gwy.gkzhenti.cn/paper/1775360735747,question_and_same_site_key_available_item_audit_pending,同站题面与答案键覆盖1–130；逐题核验答案解析、图表/共享材料并与联考卷去重后再接入。
 chongqing-2026-recall-candidate,重庆,2026,2026年重庆市考行测回忆版（120题）,https://gwy.gkzhenti.cn/paper/1775360736757,question_page_retrieval_and_item_audit_pending,站内可定位题面页且同站答案键覆盖1–120；确认题面正文可稳定读取后，逐题核图表/共享材料、解析和跨卷重复。
-zhanhong-2025-guangdong-mock-2-candidate,广东,2025,展鸿2025广东省考行测模拟卷（二）,https://zhanhong-32-read-able.oss-cn-hangzhou.aliyuncs.com/upload/videos/2025/03/10/xc2163949910.pdf,combined_question_and_solution_pdf_item_audit_pending,41页PDF同时包含题本和答案解析；逐题核原文、选项、素材和答案，拆分后才能进入题库，答题前不得暴露解析。
+zhanhong-2025-guangdong-mock-2-candidate,广东,2025,展鸿 2025 年广东省公务员录用考试《行测》模拟卷（二）（分批已接入）,https://zhanhong-32-read-able.oss-cn-hangzhou.aliyuncs.com/upload/videos/2025/03/10/xc2163949910.pdf,partial_release_95_verified_5_held_multi_select,100题题本和同卷答案解析已逐题匹配，95道判断/单选/资料题接入模块，5道多选题保留归档并标记暂缓；已补齐图形与四组共享材料。政治理论分区因多选题暂不开放完整分区，行测整卷模考关闭；其余六个完整模块分区可模考。
 wenchao-2025-gd-multiregion-mock-series,广东及多省份,2025,文超教育广东及多省联考行测模拟卷6套,https://www.xiangyikou.com/11328.html,directory_only_files_not_retrieved,公开目录列出3套广东卷、3套多省卷及对应答案/简版解析；取得题本与解析文件后批量核验题面、答案、图表和系列卷间重复。
 yueyue-2025-guangdong-mock-series,广东,2025,跃跃公考广东省考行测模拟卷3套,https://www.xiangyikou.com/11812.html,directory_only_files_not_retrieved,资源目录列出3套题本及对应答案解析PDF；取得文件后逐题核验原文、答案和材料，并按模拟题标注。
 zhanhong-2025-guokao-city-mock-2-answer-candidate,全国,2025,展鸿国考行测模拟卷（二）（地市级）答案解析线索,https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf,answer_explanation_found_question_paper_missing,已找到答案解析PDF，未找到对应原题本；继续搜集原题本和材料资源，题本/答案配对前不接入。

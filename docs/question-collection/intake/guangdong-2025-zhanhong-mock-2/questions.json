@@ -1,0 +1,2309 @@
+[
+  {
+    "id": "zh-gd2025m2-q001",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "political-theory:basic-theory",
+    "knowledgePointIds": [
+      "political-theory:meeting-documents"
+    ],
+    "originalQuestionNo": 1,
+    "sectionOrder": 1,
+    "stem": "党的二十届三中全会的中心议题是全面振兴社会主义新农村问题。",
+    "options": [
+      "正确",
+      "错误"
+    ],
+    "optionType": "true_false",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q002",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "political-theory:basic-theory",
+    "knowledgePointIds": [
+      "political-theory:meeting-documents"
+    ],
+    "originalQuestionNo": 2,
+    "sectionOrder": 1,
+    "stem": "全面依法治国的总目标是推进国家治理能力和治理体系现代化。",
+    "options": [
+      "正确",
+      "错误"
+    ],
+    "optionType": "true_false",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q003",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "political-theory:basic-theory",
+    "knowledgePointIds": [
+      "political-theory:people-and-history"
+    ],
+    "originalQuestionNo": 3,
+    "sectionOrder": 1,
+    "stem": "衡量党和国家的一切工作和方针政策的最高标准，是是否符合最广大人民群众的根本利益。",
+    "options": [
+      "正确",
+      "错误"
+    ],
+    "optionType": "true_false",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q004",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "political-theory:basic-theory",
+    "knowledgePointIds": [
+      "political-theory:important-concepts"
+    ],
+    "originalQuestionNo": 4,
+    "sectionOrder": 1,
+    "stem": "实践告诉我们，中国共产党为什么能，中国特色社会主义为什么好，归根到底是马克思主义行， 是中国化时代化的马克思主义行。",
+    "options": [
+      "正确",
+      "错误"
+    ],
+    "optionType": "true_false",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q005",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "political-theory:basic-theory",
+    "knowledgePointIds": [
+      "political-theory:important-concepts"
+    ],
+    "originalQuestionNo": 5,
+    "sectionOrder": 1,
+    "stem": "党的阶级性是指中国共产党以无产阶级为基础。",
+    "options": [
+      "正确",
+      "错误"
+    ],
+    "optionType": "true_false",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q006",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "political-theory:basic-theory",
+    "knowledgePointIds": [
+      "political-theory:policy-language"
+    ],
+    "originalQuestionNo": 6,
+    "sectionOrder": 1,
+    "stem": "2024 年 7 月 18 日，中国共产党第二十届中央委员会第三次全体会议通过《中共中央关于进一步全面深化改革推进中国式现代化的决定》，指出进一步全面深化改革要贯彻六大原则，其中不包括 （）。",
+    "options": [
+      "坚持系统观念",
+      "坚持高质量发展",
+      "坚持以人民为中心",
+      "坚持全面依法治国"
+    ],
+    "optionType": "multi_select",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q007",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "political-theory:basic-theory",
+    "knowledgePointIds": [
+      "political-theory:policy-implementation"
+    ],
+    "originalQuestionNo": 7,
+    "sectionOrder": 1,
+    "stem": "习近平总书记关于党的自我革命的重要思想凝聚了全党高度共识，为新时代新征程深入推进全面从严治党、党风廉政建设和反腐败斗争提供了根本遵循。关于党的自我革命的实践要求，下列说法正确的是（）。",
+    "options": [
+      "以跳出历史周期率为根本目的",
+      "以引领伟大社会革命为有效途径",
+      "以解决大党独有难题为主攻方向",
+      "以自我监督和人民监督相结合为重要抓手"
+    ],
+    "optionType": "multi_select",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q008",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "political-theory:basic-theory",
+    "knowledgePointIds": [
+      "political-theory:development-concepts"
+    ],
+    "originalQuestionNo": 8,
+    "sectionOrder": 1,
+    "stem": "下列关于全面建设社会主义现代化国家的说法，错误的是（）。",
+    "options": [
+      "高质量发展是全面建设社会主义现代化国家的首要任务",
+      "中国共产党人是全面建设社会主义现代化国家的基础性、战略性支撑",
+      "人民民主是社会主义的生命，是全面建设社会主义现代化国家的应有之义",
+      "尊重自然、顺应自然、保护自然，是全面建设社会主义现代化国家的内在要求"
+    ],
+    "optionType": "multi_select",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q009",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "political-theory:basic-theory",
+    "knowledgePointIds": [
+      "political-theory:policy-implementation"
+    ],
+    "originalQuestionNo": 9,
+    "sectionOrder": 1,
+    "stem": "制定实施中央八项规定，是党在新时代的徙木立信之举，必须常抓不懈、久久为功，直至真正化风成俗。下列选项中，不属于中央八项规定内容的是（）。",
+    "options": [
+      "一般情况下不得封路、不清场闭馆",
+      "提高会议实效，开短会、讲短话",
+      "精简文件简报，以电子文件取代纸质文件",
+      "到基层调研，要轻车简从、减少陪同"
+    ],
+    "optionType": "multi_select",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q010",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "political-theory:basic-theory",
+    "knowledgePointIds": [
+      "political-theory:meeting-documents"
+    ],
+    "originalQuestionNo": 10,
+    "sectionOrder": 1,
+    "stem": "党的二十届三中全会强调，党的领导是进一步全面深化改革、推进中国式现代化的根本保证。 必须深刻领悟“两个确立”的决定性意义，增强“四个意识”、坚定“四个自信”、做到“两个维护”。 下列相关概念说法有误的是（）。",
+    "options": [
+      "党的二十大通过的《中共中央关于党的百年奋斗重大成就和历史经验的决议》提出，确立习近平同志党中央的核心、全党的核心地位，确立习近平新时代中国特色社会主义思想的指导地位",
+      "“四个意识”包括政治意识、大局意识、核心意识、看齐意识，其中位于首位的是政治意识",
+      "“四个自信”中的道路自信是对中国特色社会主义道路发展方向和未来命运的自信",
+      "带头做到“两个维护”，是加强中央和国家机关党的建设的首要任务"
+    ],
+    "optionType": "multi_select",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q011",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "political-theory:basic-theory",
+    "knowledgePointIds": [
+      "political-theory:policy-measures"
+    ],
+    "originalQuestionNo": 11,
+    "sectionOrder": 1,
+    "stem": "《中共中央关于进一步全面深化改革推进中国式现代化的决定》提出，构建高水平社会主义市场经济，下列举措正确的有（）。",
+    "options": [
+      "坚持和落实“两个毫不动摇”",
+      "构建全国统一大市场",
+      "完善市场经济基础制度",
+      "深化财税体制改革"
+    ],
+    "optionType": "multi_select",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "held",
+    "holdReason": "multi_select_not_supported"
+  },
+  {
+    "id": "zh-gd2025m2-q012",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "political-theory:basic-theory",
+    "knowledgePointIds": [
+      "political-theory:people-and-history"
+    ],
+    "originalQuestionNo": 12,
+    "sectionOrder": 1,
+    "stem": "党的二十大报告指出，江山就是人民，人民就是江山。其原因在于（）。",
+    "options": [
+      "人民群众是实践的主体，是历史的创造者",
+      "人民群众是社会精神财富的创造者",
+      "人民群众是社会物质财富的创造者",
+      "人民群众是社会变革的决定力量"
+    ],
+    "optionType": "multi_select",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "held",
+    "holdReason": "multi_select_not_supported"
+  },
+  {
+    "id": "zh-gd2025m2-q013",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "political-theory:basic-theory",
+    "knowledgePointIds": [
+      "political-theory:meeting-documents"
+    ],
+    "originalQuestionNo": 13,
+    "sectionOrder": 1,
+    "stem": "学习贯彻习近平新时代中国特色社会主义思想主题教育工作会议指出，开展主题教育，根本任务是坚持学思用贯通、知信行统一，努力在以学铸魂、以学增智、以学正风、以学促干方面取得实实在在的成效。下列相关说法正确的有（）。",
+    "options": [
+      "以学铸魂，要从思想上正本清源、固本培元，筑牢信仰之基、补足精神之钙、把稳思想之舵",
+      "以学增智，要从党的科学理论中悟规律、明方向、学方法、增智慧，把看家本领、兴党本领、强国本领学到手",
+      "以学正风，要大兴务实之风，抓好调查研究，在力戒形式主义、官僚主义上取得明显实质性进展",
+      "以学促干，一要提升政治能力，二要提升思维能力，三要提升实践能力"
+    ],
+    "optionType": "multi_select",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "held",
+    "holdReason": "multi_select_not_supported"
+  },
+  {
+    "id": "zh-gd2025m2-q014",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "political-theory:basic-theory",
+    "knowledgePointIds": [
+      "political-theory:policy-goals"
+    ],
+    "originalQuestionNo": 14,
+    "sectionOrder": 1,
+    "stem": "习近平在《关于全面建成小康社会补短板问题》文章中指出，目前全面建成小康社会工作中要把握好以下哪些关系？（）",
+    "options": [
+      "整体目标和个体目标的关系",
+      "整体推进和重点突破的关系",
+      "绝对标准和相对标准的关系",
+      "定量分析和定性判断的关系"
+    ],
+    "optionType": "multi_select",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "held",
+    "holdReason": "multi_select_not_supported"
+  },
+  {
+    "id": "zh-gd2025m2-q015",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "political-theory:basic-theory",
+    "knowledgePointIds": [
+      "political-theory:common-prosperity"
+    ],
+    "originalQuestionNo": 15,
+    "sectionOrder": 1,
+    "stem": "新发展理念是中国共产党关于发展理论的重大升华，贯彻新发展理念就是要坚持创新、协调、 绿色、开放、共享发展。下列关于共享发展理解正确的是（）。",
+    "options": [
+      "共享发展是人人享有，是全民共享",
+      "共享发展就要共享国家经济、政治、文化、社会、生态文明各方面建设成果，全面共享",
+      "共享发展是共建共享，只有共建才能共享，共建的过程也是共享的过程",
+      "共享发展是一个从低级到高级、从不均衡到均衡的过程，即渐进共享"
+    ],
+    "optionType": "multi_select",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "held",
+    "holdReason": "multi_select_not_supported"
+  },
+  {
+    "id": "zh-gd2025m2-q016",
+    "moduleId": "general-knowledge",
+    "subjectId": "economy",
+    "topicId": "economy:money",
+    "knowledgePointIds": [
+      "economy:lpr-mechanism"
+    ],
+    "originalQuestionNo": 16,
+    "sectionOrder": 2,
+    "stem": "2024 年 10 月 21 日，中国人民银行授权全国银行间同业拆借中心公布，1 年期贷款市场报价利率（LPR）为 3.10%，5 年期以上 LPR 为 3.60%，二者均比上月下调 25 个基点。下列有关说法不正确的是 （）。",
+    "options": [
+      "LPR 下调有助于增加居民的储蓄收益，提高居民收入水平",
+      "LPR 下调有助于减轻居民的房贷压力，增强居民购房意愿",
+      "LPR 下调有助于降低企业的融资成本，鼓励创新创业活动",
+      "LPR 下调有助于扩大企业的投资规模，创造更多就业机会"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q017",
+    "moduleId": "general-knowledge",
+    "subjectId": "humanities",
+    "topicId": "humanities:tradition",
+    "knowledgePointIds": [
+      "humanities:lantern-festival-poetry"
+    ],
+    "originalQuestionNo": 17,
+    "sectionOrder": 2,
+    "stem": "下列诗句与“千门开锁万灯明，正月中旬动帝京”涉及的传统节日相同的是（）。",
+    "options": [
+      "插萸登鹫岭，把菊坐蜂台",
+      "一轮秋影转金波，飞镜又重磨",
+      "鼓声三下红旗开，两龙跃出浮水来",
+      "灯火钱塘三五夜，明月如霜，照见人如画"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q018",
+    "moduleId": "general-knowledge",
+    "subjectId": "economy",
+    "topicId": "economy:macro",
+    "knowledgePointIds": [
+      "economy:gdp-growth"
+    ],
+    "originalQuestionNo": 18,
+    "sectionOrder": 2,
+    "stem": "GDP 是国民经济核算的核心指标，也是衡量一个国家或地区经济状况和发展水平的重要指标，关于 GDP，下列说法错误的是（）。",
+    "options": [
+      "GDP 是用最终产品和服务来计量的",
+      "GDP 是存量而非流量",
+      "GDP 不是实实在在流通的财富",
+      "GDP 是一个市场价值的概念"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q019",
+    "moduleId": "general-knowledge",
+    "subjectId": "law",
+    "topicId": "law:criminal-law",
+    "knowledgePointIds": [
+      "law:property-crimes"
+    ],
+    "originalQuestionNo": 19,
+    "sectionOrder": 2,
+    "stem": "李某是 A 工厂的电工，心高气傲，在一次检修电路时为了图方便未按规定操作造成电路着火， 部分设备被烧毁，损失十多万元，使该工厂生产、工作受到重大影响。李某的行为构成（）。",
+    "options": [
+      "过失损坏易燃易爆设备罪",
+      "玩忽职守罪",
+      "破坏集体生产罪",
+      "重大责任事故罪"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q020",
+    "moduleId": "general-knowledge",
+    "subjectId": "law",
+    "topicId": "law:civil-law",
+    "knowledgePointIds": [
+      "law:civil-subjects"
+    ],
+    "originalQuestionNo": 20,
+    "sectionOrder": 2,
+    "stem": "甲有限责任公司先设立天长、地久两家分公司，两年后又设立春晓、夏花、秋雨、冬雪共 4 家子公司。下列表述正确的是（）。",
+    "options": [
+      "以上具有法人资格的公司共有 5 家",
+      "春晓公司的民事责任由甲公司承担",
+      "小李作为甲公司的大股东，可以用自己的信用作价出资",
+      "小张作为甲公司的小股东，可以用口头或书面形式对甲公司提出查账要求"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q021",
+    "moduleId": "general-knowledge",
+    "subjectId": "humanities",
+    "topicId": "humanities:tradition",
+    "knowledgePointIds": [
+      "humanities:philosophy-schools"
+    ],
+    "originalQuestionNo": 21,
+    "sectionOrder": 2,
+    "stem": "中华优秀传统文化源远流长、博大精深，是中华文明的智慧结晶，其中蕴含着天下为公，民为邦本，天人合一等理念。下列古语最能体现“天人合一”的理念是（）。",
+    "options": [
+      "诚者，天之道也",
+      "得时，则天下随之矣",
+      "天生烝民，有物有则",
+      "物之不齐，物之情也"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q022",
+    "moduleId": "general-knowledge",
+    "subjectId": "history",
+    "topicId": "history:ancient",
+    "knowledgePointIds": [
+      "history:historical-chronology"
+    ],
+    "originalQuestionNo": 22,
+    "sectionOrder": 2,
+    "stem": "假如生活在唐朝，不可能看到的情景是（）。",
+    "options": [
+      "景德镇的青白瓷在洛阳十分畅销",
+      "江南地区的丘陵地带种植了茶叶",
+      "长安城中的坊市按时开启和关闭",
+      "贵族宴会上用琉璃杯盛装葡萄酒"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q023",
+    "moduleId": "general-knowledge",
+    "subjectId": "geography",
+    "topicId": "geography:natural",
+    "knowledgePointIds": [
+      "geography:weather"
+    ],
+    "originalQuestionNo": 23,
+    "sectionOrder": 2,
+    "stem": "“天公恶作剧，翻手变炎凉。海运三山动，江高数尺缰。”当这首诗中描写的现象出现时，下列做法不正确的是（）。",
+    "options": [
+      "关闭煤气，切断电源",
+      "住在高层建筑的人到阳台躲避",
+      "撤离时用枕头等软物将头部护住",
+      "来不及转移时，迅速躲到较坚实的家具下面"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q024",
+    "moduleId": "general-knowledge",
+    "subjectId": "technology",
+    "topicId": "technology:space",
+    "knowledgePointIds": [
+      "technology:space-station"
+    ],
+    "originalQuestionNo": 24,
+    "sectionOrder": 2,
+    "stem": "2024 年 10 月 30 日，神舟十九号载人飞船发射任务取得圆满成功，3 名航天员顺利进驻中国空间站，与神舟十八号 3 名航天员会师。下列与神十八、神十九有关的表述，不正确的是（）。",
+    "options": [
+      "神十九飞行任务是中国空间站应用与发展阶段第 4 次载人飞行任务，飞船装载体积较神十八提升了 20%",
+      "神十九飞行乘组中有两位“90 后”航天员，至此，“70 后”“80 后”“90 后”齐聚“天宫”， 载人航天精神薪火相传",
+      "自神十八起，飞船的主电源储能电池由锂离子电池更改为镉镍电池，其能量密度更高、稳定性更强，自身质量也更小",
+      "神舟载人飞船是我国自行研制的用于天地往返运输人员和物资的载人航天器，达到或优于国际第三代载人飞船技术，具有完全自主知识产权及鲜明的中国特色"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q025",
+    "moduleId": "general-knowledge",
+    "subjectId": "geography",
+    "topicId": "geography:natural",
+    "knowledgePointIds": [
+      "geography:climate"
+    ],
+    "originalQuestionNo": 25,
+    "sectionOrder": 2,
+    "stem": "下列各种地理效应的相关说法不正确的是（）。",
+    "options": [
+      "“冷岛效应”在干旱地区的湖泊（包括水库）、绿洲地带普遍存在",
+      "“雨岛效应”的形成受“热岛效应”的影响",
+      "“大湖效应”产生的降雪过程与冷锋降水过程相似",
+      "伦敦和重庆雾日较多，除了自然条件的原因外，主要受“雾岛效应”影响"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q026",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal:reading",
+    "knowledgePointIds": [
+      "verbal:word-choice"
+    ],
+    "originalQuestionNo": 26,
+    "sectionOrder": 3,
+    "stem": "当今世界正经历百年未有之大变局，中国和阿拉伯国家都面临实现民族振兴、加快国家发展的历史任务。新形势下，中国将同阿拉伯国家________友好精神，携手构建面向新时代的中阿命运共同体。 填入划横线部分最恰当的一项是（）。",
+    "options": [
+      "传播",
+      "传承",
+      "继承",
+      "传递"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q027",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal:reading",
+    "knowledgePointIds": [
+      "verbal:collocation"
+    ],
+    "originalQuestionNo": 27,
+    "sectionOrder": 3,
+    "stem": "青年电影人对市场具有特殊的敏感性，善于在新媒体时代________，不断翻新营销手法而且娴熟自如。例如，他们善于借力网络小说展翅高飞，将走红的网络小说及时进行视听化呈现，借助网络小说的高人气乘势而上，从而引爆了新的票房高潮。 填入划横线部分最恰当的一项是（）。",
+    "options": [
+      "看风使舵",
+      "借船出海",
+      "吐故纳新",
+      "集思广益"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q028",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal:reading",
+    "knowledgePointIds": [
+      "verbal:collocation"
+    ],
+    "originalQuestionNo": 28,
+    "sectionOrder": 3,
+    "stem": "峨眉的仙山秀水，孕育出流芳百世的“儒释道食茶武药”文化，与“世界文化与自然双遗产” 金字招牌________，熠熠生辉，成为峨眉人最为宝贵的财富。 填入划横线部分最恰当的一项是（）。",
+    "options": [
+      "相辅相成",
+      "相得益彰",
+      "珠联璧合",
+      "交相辉映"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q029",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal:reading",
+    "knowledgePointIds": [
+      "verbal:collocation"
+    ],
+    "originalQuestionNo": 29,
+    "sectionOrder": 3,
+    "stem": "在社会主义市场经济条件下，竞争机制是必要的。但如果只讲竞争，丢了大协作，就会导致条块________，有限的科技资源不能共享，会阻碍重大创新的出现，更会导致强化________的单位、小集体乃至个人意识，淡化了国家意识，阻碍高素质科技领军人才的成长。 依次填入划横线部分最恰当的一项是（）。",
+    "options": [
+      "分割狭隘",
+      "独立局促",
+      "凌乱短浅",
+      "交错浅薄"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q030",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal:reading",
+    "knowledgePointIds": [
+      "verbal:collocation"
+    ],
+    "originalQuestionNo": 30,
+    "sectionOrder": 3,
+    "stem": "人和人的相遇是一种缘分，其实人和石头的相遇亦是如此。雕塑的真谛之一，在中西方的艺术家身上，会________地体现在一个“相”字上，就是在一块原石的面前久久________，首先在头脑中勾勒出作品的样貌，再依照这种想象去一点点呈现出来。 依次填入划横线部分最恰当的一项是（）。",
+    "options": [
+      "不谋而合审视",
+      "不约而同凝视",
+      "不言而喻注视",
+      "不期而同凝望"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q031",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal:reading",
+    "knowledgePointIds": [
+      "verbal:main-idea"
+    ],
+    "originalQuestionNo": 31,
+    "sectionOrder": 3,
+    "stem": "中华民族自古崇尚读书，讲究格物致知、诚意正心。我们走过书信时代，经过电邮时代，来到读“屏”时代，网页挤占书页，“输写”代替书写。我们无法回到“从前慢”的过去，但也不能丢失知识的传承、文化的涵养、精神的赓续。加强数字资源平台建设，开展青少年学生读书活动，是把数字技术这一“最大变量”转化为阅读提质“最大增量”的关键一招。 这段文字意在强调（）。",
+    "options": [
+      "提供优质数字化阅读资源势在必行",
+      "数字阅读是青少年阅读的重要方式",
+      "数字化阅读时代更要重视文化传承",
+      "数字化技术是影响阅读的最大变量"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q032",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal:reading",
+    "knowledgePointIds": [
+      "verbal:main-idea"
+    ],
+    "originalQuestionNo": 32,
+    "sectionOrder": 3,
+    "stem": "随着人们的寿命延长，更快地退休，他们可用的时间愈来愈多。在亚洲国家，享受悠闲生活的重要性正获得人们新的关注。在亚洲国家快速迈向老龄化社会之际，它们正尽力解决如何更好地让其他人口做好准备拥抱退休后的生活的问题。随着婴儿潮一代开始退休，这一问题更加紧迫。 这段文字旨在讨论（）。",
+    "options": [
+      "如何享受悠闲的退休生活",
+      "如何解决老龄化社会问题",
+      "如何解决婴儿潮退休问题",
+      "延长寿命与推迟退休问题"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q033",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal:reading",
+    "knowledgePointIds": [
+      "verbal:main-idea"
+    ],
+    "originalQuestionNo": 33,
+    "sectionOrder": 3,
+    "stem": "从文化史上我们不难发现，古希腊人曾遭遇强大而优越的东方文化，他们一度似乎要被这些外来文化压垮了，他们的宗教几乎就是各种东方宗教的一场混战。但是，希腊文化最终并没有成为“机械混合的文化”或“装饰性的文化”，那是因为希腊人牢记着德尔斐神庙的箴言——“认识你自己”，他们开始弄清楚自己的真实需要，没有长久地做东方的追随者。 这段文字给我们的启示是（）。",
+    "options": [
+      "文化冲突中应坚持自身的文化主体性",
+      "坚持文化自信是实现文化繁荣的根本原因",
+      "东西方文化的差异在文化结合过程中尤为凸显",
+      "本国文化应顺势而为避免成为外来文化的附庸"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q034",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal:reading",
+    "knowledgePointIds": [
+      "verbal:sentence-completion"
+    ],
+    "originalQuestionNo": 34,
+    "sectionOrder": 3,
+    "stem": "“________________。”过去几十年，人类取得了经济发展和社会进步的显著成果，就是因为吸取了两次世界大战和冷战的教训，顺应了经济全球化的历史潮流，开辟了开放发展、合作共赢的人间正道。当今世界是一荣俱荣、一损俱损的命运共同体。各国人民企盼的，不是“新冷战”，不是“小圈子”，而是一个持久和平、普遍安全的世界，一个共同繁荣、开放包容、清洁美丽的世界。这是历史前进的逻辑、时代发展的潮流。 以下句子填入划横线处，最恰当的是（）。",
+    "options": [
+      "顺理而举易为力，背时而动难为功",
+      "事者，生于虑，成于务，失于傲",
+      "行之力则知愈进，知之深则行愈达",
+      "孤举者难起，众行者易趋"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q035",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal:reading",
+    "knowledgePointIds": [
+      "verbal:sentence-order"
+    ],
+    "originalQuestionNo": 35,
+    "sectionOrder": 3,
+    "stem": "将以下句子重新排列，顺序最恰当的是（）。 ①在大比例尺的地图上有详细的地理背景资料时 ②在小比例尺的地图上很难做到真正意义上的定位布点 ③可以准确地布点以反映其实际分布 ④定位布点的精确程度取决于地图比例尺和资料的详细程度",
+    "options": [
+      "④①③②",
+      "③①②④",
+      "①②③④",
+      "②①③④"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q036",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal:reading",
+    "knowledgePointIds": [
+      "verbal:main-idea"
+    ],
+    "originalQuestionNo": 36,
+    "sectionOrder": 3,
+    "stem": "粮食安全是事关人类生存的根本性问题，减少粮食损耗是保障粮食安全的重要途径。保障粮食安全，促进节粮减损，刻不容缓，势在必行。促进节粮减损，应强化科技“硬支撑”。粮食仓储难题一直是节粮减损的一大制约。在广大粮食科技工作者多年努力下，以机械通风、谷物冷却、环流熏蒸、粮情测控为主的新技术，较好解决了这一难题，目前已广泛应用于粮食储备仓房。实践证明，通过科技创新节粮减损，有力有效。因此，就推进储运减损关键技术提质升级、提升粮食加工技术与装备研发水平等方面，进行了更加具体、更加细化的部署，以科技创新为节粮减损以及粮食产业高质量发展提供助力。 最适合做这段文字标题的是（）。",
+    "options": [
+      "科技支撑节粮减损安全底气",
+      "科技为粮食安全保驾护航",
+      "掌握粮食安全的“科技命脉”",
+      "科技创新赋能节粮减损"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q037",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal:reading",
+    "knowledgePointIds": [
+      "verbal:detail"
+    ],
+    "originalQuestionNo": 37,
+    "sectionOrder": 3,
+    "stem": "工业互联网的征信问题，可以借助区块链来解决。区块链通过块链式的数据结构、分布式账本、 数字签名和智能合约等四大加密安全方式，通过算法而不需要第三方机构的介入可获得交易过程诚信保证。区块链在产品溯源中已有很多成功的应用案例，但区块链也不是没有问题，区块链用信任算法代码来代替信任，而代码也会被黑客破解，难道软件比人更值得信任吗？将区块链与物联网、第三方机构结合可以改进安全性。 下列说法与文意相符的是（）。",
+    "options": [
+      "区块链获得交易诚信保证不需要第三方机构介入",
+      "区块链与物联网和第三方机构结合可赋能工业互联网",
+      "区块链完美地解决了工业互联网的征信问题",
+      "区块链与物联网、第三方机构结合可以解决安全问题"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q038",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal:reading",
+    "knowledgePointIds": [
+      "verbal:sentence-completion"
+    ],
+    "originalQuestionNo": 38,
+    "sectionOrder": 3,
+    "stem": "弹窗广告乱象由来已久，网民不堪其扰。作为“强塞”给用户的信息，弹窗广告具有强制性， 极易影响用户体验。不仅如此，有些弹窗传播低俗内容、诱导消费或设置金融陷阱，严重污染网络环境。 最近甚至发生了汽车导航屏幕突现弹窗的事件，给安全驾驶带来很大隐患。不分情况、不分地点的弹窗广告必须治治了。所以，________________。弹窗广告背后存在利益链，有专门的弹窗推广公司对接广告主和网络平台，投放成本低、收益高。目前针对违规弹窗广告的罚款基本在 3 万元以下，违法成本不足以震慑违规者放弃大额收益。 以下句子填入划横线处，最恰当的是（）。",
+    "options": [
+      "管理规范有待细化",
+      "处罚标准有待提升",
+      "广告利益有待限制",
+      "法律制度有待完善"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q039",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal:reading",
+    "knowledgePointIds": [
+      "verbal:detail"
+    ],
+    "originalQuestionNo": 39,
+    "sectionOrder": 3,
+    "stem": "建立纯粹的量子网络具有更充足的理由，因为这是一种保密性更强的互联网。量子通信的特点是，不可分割、复制、测量，因而不易被破译窃听。不可分割使得窃听者无法将量子分割进行测量。即便可以强行测量也会留下痕迹，改变量子的状态，使窃听行为暴露。而且量子本身有不确定性，即便窃听者截取了量子，也不能精准复原正确的量子状态，得到的是错误信息。因此，量子网络可以让用户在安全保密的状态下通信。 下列说法与文意相符的是（）。",
+    "options": [
+      "量子的特点是不可分割、复制和测量",
+      "窃听行为往往通过量子状态改变被暴露",
+      "量子的不确定性能阻止窃听者还原正确信息",
+      "量子网络的产生是为了保障用户的通信安全"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q040",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal:reading",
+    "knowledgePointIds": [
+      "verbal:sentence-order"
+    ],
+    "originalQuestionNo": 40,
+    "sectionOrder": 3,
+    "stem": "将以下句子重新排列，顺序最恰当的是（）。 ①围绕何时种、如何种、何时收、如何收，中国古人早都在长期的农业生活中积累了太多经验和知识 ②进入芒种，冬小麦进入了收割季节，收割完毕马上就是谷黍等农作物的播种期 ③这些来自农业生产的时间经验与知识，被古代人逐步升华成为他们时间生活的宝库，在今天依旧对我们有指导意义 ④芒种一称“忙种”，这节气得名于农时，芒，指的是麦子一类有芒刺的庄稼，成熟后挺着尖尖的芒刺等待收割 ⑤农谚说：“过了芒种，不可抢种。过了芒种，不能强种。”许多地方播种都必须赶在芒种时节完成，这一收一种，让芒种成了农人最忙的节气 ⑥中国是一个农业古国，考古学证明南方水稻人工栽培已有 1.1 万年以上的历史，北方的黍也有万年的种植史",
+    "options": [
+      "④②⑤⑥①③",
+      "⑥①②⑤④③",
+      "④⑤①③⑥②",
+      "⑥①⑤④②③"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q041",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative:arithmetic",
+    "knowledgePointIds": [
+      "quantitative:number-patterns"
+    ],
+    "originalQuestionNo": 41,
+    "sectionOrder": 4,
+    "stem": "下表中问号处的数字为（）。",
+    "options": [
+      "378",
+      "342",
+      "300",
+      "228"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [
+      "./public/assets/question-bank/guangdong-2025-zhanhong-mock-2/gd-2025-m2-q041.png"
+    ],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q042",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative:arithmetic",
+    "knowledgePointIds": [
+      "quantitative:number-patterns"
+    ],
+    "originalQuestionNo": 42,
+    "sectionOrder": 4,
+    "stem": "3， 6， 15， 39， 102， 267， （）",
+    "options": [
+      "666",
+      "669",
+      "696",
+      "699"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q043",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative:arithmetic",
+    "knowledgePointIds": [
+      "quantitative:number-patterns"
+    ],
+    "originalQuestionNo": 43,
+    "sectionOrder": 4,
+    "stem": "3， -5， 6， -9， 11， -15， 18， -23， （）",
+    "options": [
+      "-33",
+      "27",
+      "35",
+      "45"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q044",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative:arithmetic",
+    "knowledgePointIds": [
+      "quantitative:number-patterns"
+    ],
+    "originalQuestionNo": 44,
+    "sectionOrder": 4,
+    "stem": "65.11， 72.9， 83.11， 98.17， 117.9， （）",
+    "options": [
+      "140.17",
+      "140.5",
+      "148.13",
+      "148.17"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q045",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative:arithmetic",
+    "knowledgePointIds": [
+      "quantitative:number-patterns"
+    ],
+    "originalQuestionNo": 45,
+    "sectionOrder": 4,
+    "stem": "1/3，1/3，1/2，5/8，35/64，（ ）",
+    "options": [
+      "75/128",
+      "85/256",
+      "175/576",
+      "315/1024"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q046",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative:arithmetic",
+    "knowledgePointIds": [
+      "quantitative:ratio-percentage"
+    ],
+    "originalQuestionNo": 46,
+    "sectionOrder": 4,
+    "stem": "甲、乙、丙和丁四个汽车租赁公司可用汽车数量比为 5:4:3:2，现甲公司调度 4 辆汽车到丙公司， 丁公司调度 1 辆汽车到乙公司后，丁公司可用汽车数量正好是丙公司的 60%。问此时甲公司的可用汽车数量比乙公司（）。",
+    "options": [
+      "少 22 辆",
+      "多 22 辆",
+      "少 12 辆",
+      "多 12 辆"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q047",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative:arithmetic",
+    "knowledgePointIds": [
+      "quantitative:work-rate"
+    ],
+    "originalQuestionNo": 47,
+    "sectionOrder": 4,
+    "stem": "甲、乙、丙三人加工一种零件，三人每小时一共可以加工 70 个零件。如果甲乙两人每小时加工的零件数之比为 2:3，乙丙两人每小时加工的零件数之比为 4:5，则丙每小时比甲多加工 （）个零件。",
+    "options": [
+      "8",
+      "10",
+      "14",
+      "16"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q048",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative:arithmetic",
+    "knowledgePointIds": [
+      "quantitative:geometry"
+    ],
+    "originalQuestionNo": 48,
+    "sectionOrder": 4,
+    "stem": "某地粮仓如图所示共两层，下层为圆柱体，上层为圆锥体。已知粮仓整体高为 5.5 米，底面直径为 6 米，上层容积为 14.13 立方米，粮食只存放在下层，且每立方米可存放 750 千克粮食，则此粮仓最多可存放多少吨粮食？( )(π取 3.14）",
+    "options": [
+      "113.04",
+      "103.26",
+      "84.78",
+      "65.32"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [
+      "./public/assets/question-bank/guangdong-2025-zhanhong-mock-2/gd-2025-m2-q048.png"
+    ],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q049",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative:arithmetic",
+    "knowledgePointIds": [
+      "quantitative:average"
+    ],
+    "originalQuestionNo": 49,
+    "sectionOrder": 4,
+    "stem": "某单位男女干部人数相等，男干部中 60%有基层工作经历，女干部中 50%有基层工作经历。则在该单位全体干部中，有基层工作经历的占（）。",
+    "options": [
+      "55%",
+      "60%",
+      "65%",
+      "70%"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q050",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative:arithmetic",
+    "knowledgePointIds": [
+      "quantitative:work-rate"
+    ],
+    "originalQuestionNo": 50,
+    "sectionOrder": 4,
+    "stem": "在一个物流中转站，每天不断有货物卸载，假设每小时卸货速度恒定不变，每辆车每小时载货速度均相同且不变。每天上午某整点准时开始卸货，从上午十点开始用货车载货。如果用 8 辆车载货， 那么需要 6 小时可以清场；如果用 9 辆车载货，那么需要 4 小时可以清场。问每天中转站卸货开放时间是上午几点？（）",
+    "options": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q051",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative:arithmetic",
+    "knowledgePointIds": [
+      "quantitative:probability"
+    ],
+    "originalQuestionNo": 51,
+    "sectionOrder": 4,
+    "stem": "某单位工会组织桥牌比赛，共有 8 人报名，随机组成 4 队，每队 2 人。那么，小王和小李恰好被分在同一队的概率是（）。",
+    "options": [
+      "1/7",
+      "1/14",
+      "1/21",
+      "1/28"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q052",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative:arithmetic",
+    "knowledgePointIds": [
+      "quantitative:ratio-percentage"
+    ],
+    "originalQuestionNo": 52,
+    "sectionOrder": 4,
+    "stem": "甲有排球若干个，乙有足球若干个。如果乙用全部足球换回数量同样多的排球，则需补给甲 160 元；如果乙不补钱，就要少换回 5 个排球。已知 3 个排球比 5 个足球的价钱少 24 元，那么乙原有足球多少个？（）",
+    "options": [
+      "10",
+      "15",
+      "20",
+      "25"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q053",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative:arithmetic",
+    "knowledgePointIds": [
+      "quantitative:ratio-percentage"
+    ],
+    "originalQuestionNo": 53,
+    "sectionOrder": 4,
+    "stem": "如图所示，某市要在街道 ABCD 上栽种一批桂花树，要求均种在街道的同一侧且每一棵桂花树之间距离相等，并且 A、B、C、D 处各栽种一棵，则街道 ABCD 上至少需种多少棵桂花树？（）",
+    "options": [
+      "34",
+      "35",
+      "36",
+      "37"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [
+      "./public/assets/question-bank/guangdong-2025-zhanhong-mock-2/gd-2025-m2-q053.png"
+    ],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q054",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative:arithmetic",
+    "knowledgePointIds": [
+      "quantitative:travel"
+    ],
+    "originalQuestionNo": 54,
+    "sectionOrder": 4,
+    "stem": "从 A 地到 B 地是下坡路，一辆车从 A 地开往 B 地需要三小时，从 B 地开往 A 地需要四小时。已知这辆车下坡速度比上坡速度快 15 千米/小时，则 A、B 两地之间的距离是多少千米？（）",
+    "options": [
+      "120",
+      "180",
+      "240",
+      "300"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q055",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative:arithmetic",
+    "knowledgePointIds": [
+      "quantitative:arrangements"
+    ],
+    "originalQuestionNo": 55,
+    "sectionOrder": 4,
+    "stem": "有两个三口之家一起出行去旅游，他们被安排坐在两排相对的座位上，其中一排有 3 个座位， 另一排有 4 个座位。如果同一个家庭成员只能被安排在同一排座位相邻而坐，那么共有多少种不同的安排方法？（）",
+    "options": [
+      "36",
+      "72",
+      "144",
+      "288"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q056",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:logic",
+    "knowledgePointIds": [
+      "reasoning:graphic-patterns"
+    ],
+    "originalQuestionNo": 56,
+    "sectionOrder": 5,
+    "stem": "从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。",
+    "options": [
+      {
+        "id": "A",
+        "text": "",
+        "imageUrl": "./public/assets/question-bank/guangdong-2025-zhanhong-mock-2/gd-2025-m2-q056-option-a.png"
+      },
+      {
+        "id": "B",
+        "text": "",
+        "imageUrl": "./public/assets/question-bank/guangdong-2025-zhanhong-mock-2/gd-2025-m2-q056-option-b.png"
+      },
+      {
+        "id": "C",
+        "text": "",
+        "imageUrl": "./public/assets/question-bank/guangdong-2025-zhanhong-mock-2/gd-2025-m2-q056-option-c.png"
+      },
+      {
+        "id": "D",
+        "text": "",
+        "imageUrl": "./public/assets/question-bank/guangdong-2025-zhanhong-mock-2/gd-2025-m2-q056-option-d.png"
+      }
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [
+      "./public/assets/question-bank/guangdong-2025-zhanhong-mock-2/gd-2025-m2-q056-stem.png"
+    ],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q057",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:logic",
+    "knowledgePointIds": [
+      "reasoning:graphic-patterns"
+    ],
+    "originalQuestionNo": 57,
+    "sectionOrder": 5,
+    "stem": "从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。",
+    "options": [
+      {
+        "id": "A",
+        "text": "",
+        "imageUrl": "./public/assets/question-bank/guangdong-2025-zhanhong-mock-2/gd-2025-m2-q057-option-a.png"
+      },
+      {
+        "id": "B",
+        "text": "",
+        "imageUrl": "./public/assets/question-bank/guangdong-2025-zhanhong-mock-2/gd-2025-m2-q057-option-b.png"
+      },
+      {
+        "id": "C",
+        "text": "",
+        "imageUrl": "./public/assets/question-bank/guangdong-2025-zhanhong-mock-2/gd-2025-m2-q057-option-c.png"
+      },
+      {
+        "id": "D",
+        "text": "",
+        "imageUrl": "./public/assets/question-bank/guangdong-2025-zhanhong-mock-2/gd-2025-m2-q057-option-d.png"
+      }
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [
+      "./public/assets/question-bank/guangdong-2025-zhanhong-mock-2/gd-2025-m2-q057-stem.png"
+    ],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q058",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:logic",
+    "knowledgePointIds": [
+      "reasoning:spatial"
+    ],
+    "originalQuestionNo": 58,
+    "sectionOrder": 5,
+    "stem": "如下图所示，由图1折叠成图2，再折叠成图3，然后剪去图4的阴影三角部分，现将其完全展开后得到的图形是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "",
+        "imageUrl": "./public/assets/question-bank/guangdong-2025-zhanhong-mock-2/gd-2025-m2-q058-option-a.png"
+      },
+      {
+        "id": "B",
+        "text": "",
+        "imageUrl": "./public/assets/question-bank/guangdong-2025-zhanhong-mock-2/gd-2025-m2-q058-option-b.png"
+      },
+      {
+        "id": "C",
+        "text": "",
+        "imageUrl": "./public/assets/question-bank/guangdong-2025-zhanhong-mock-2/gd-2025-m2-q058-option-c.png"
+      },
+      {
+        "id": "D",
+        "text": "",
+        "imageUrl": "./public/assets/question-bank/guangdong-2025-zhanhong-mock-2/gd-2025-m2-q058-option-d.png"
+      }
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [
+      "./public/assets/question-bank/guangdong-2025-zhanhong-mock-2/gd-2025-m2-q058-stem.png"
+    ],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q059",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:logic",
+    "knowledgePointIds": [
+      "reasoning:spatial"
+    ],
+    "originalQuestionNo": 59,
+    "sectionOrder": 5,
+    "stem": "左边图形是由四块完全相同的图形组成，则该图形是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "",
+        "imageUrl": "./public/assets/question-bank/guangdong-2025-zhanhong-mock-2/gd-2025-m2-q059-option-a.png"
+      },
+      {
+        "id": "B",
+        "text": "",
+        "imageUrl": "./public/assets/question-bank/guangdong-2025-zhanhong-mock-2/gd-2025-m2-q059-option-b.png"
+      },
+      {
+        "id": "C",
+        "text": "",
+        "imageUrl": "./public/assets/question-bank/guangdong-2025-zhanhong-mock-2/gd-2025-m2-q059-option-c.png"
+      },
+      {
+        "id": "D",
+        "text": "",
+        "imageUrl": "./public/assets/question-bank/guangdong-2025-zhanhong-mock-2/gd-2025-m2-q059-option-d.png"
+      }
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [
+      "./public/assets/question-bank/guangdong-2025-zhanhong-mock-2/gd-2025-m2-q059-stem.png"
+    ],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q060",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:logic",
+    "knowledgePointIds": [
+      "reasoning:spatial"
+    ],
+    "originalQuestionNo": 60,
+    "sectionOrder": 5,
+    "stem": "给定一个纸盒，下列哪一项不能折成给定的纸盒？（ ）",
+    "options": [
+      {
+        "id": "A",
+        "text": "",
+        "imageUrl": "./public/assets/question-bank/guangdong-2025-zhanhong-mock-2/gd-2025-m2-q060-option-a.png"
+      },
+      {
+        "id": "B",
+        "text": "",
+        "imageUrl": "./public/assets/question-bank/guangdong-2025-zhanhong-mock-2/gd-2025-m2-q060-option-b.png"
+      },
+      {
+        "id": "C",
+        "text": "",
+        "imageUrl": "./public/assets/question-bank/guangdong-2025-zhanhong-mock-2/gd-2025-m2-q060-option-c.png"
+      },
+      {
+        "id": "D",
+        "text": "",
+        "imageUrl": "./public/assets/question-bank/guangdong-2025-zhanhong-mock-2/gd-2025-m2-q060-option-d.png"
+      }
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [
+      "./public/assets/question-bank/guangdong-2025-zhanhong-mock-2/gd-2025-m2-q060-stem.png"
+    ],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q061",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:logic",
+    "knowledgePointIds": [
+      "reasoning:conclusion"
+    ],
+    "originalQuestionNo": 61,
+    "sectionOrder": 5,
+    "stem": "师范类院校学生来自全国各地，甲大学是师范类院校，所以甲大学的学生来自全国各地。 下列选项所犯逻辑错误与上述推理最相似的是（）。",
+    "options": [
+      "牛不是食肉动物，而狮子不是牛，所以狮子不是食肉动物",
+      "父母爱读书的孩子爱运动，小黄爱运动，所以小黄的父母爱读书",
+      "私人捐赠的教学楼遍布全国各高校，何况是邵逸夫先生捐赠的逸夫楼",
+      "文明司机都是礼让行人的，有些公务司机礼让行人，所以有些公务司机是文明司机"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q062",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:logic",
+    "knowledgePointIds": [
+      "reasoning:conditional-translation"
+    ],
+    "originalQuestionNo": 62,
+    "sectionOrder": 5,
+    "stem": "小刘是某大学计算机科学专业的大四学生。 小张说：如果小刘喜欢离散数学，那么他会报考计算机科学专业的研究生。 小王说：如果小刘不喜欢离散数学，那么他会成为算法程序员。 小赵说：如果小刘不报考计算机科学专业的研究生，那么他不能成为算法程序员。 如果小张、小王、小赵的论断均为真，那么以下哪项一定为真？（）",
+    "options": [
+      "小刘报考了计算机科学专业的研究生",
+      "小刘没有报考计算机科学专业的研究生",
+      "小刘喜欢离散数学",
+      "小刘不喜欢离散数学"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q063",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:logic",
+    "knowledgePointIds": [
+      "reasoning:assumption"
+    ],
+    "originalQuestionNo": 63,
+    "sectionOrder": 5,
+    "stem": "有句俗话叫“要想身体好，天天吃核桃”，多年经验浓缩成的俗话一定有它的道理，最近，有研究证实，多吃核桃的确有益肠道健康，可增加大量的有益肠道细菌，因此对人类心脏有好处。 以下哪项可以作为上述论证的前提？（）",
+    "options": [
+      "每天食用核桃可以帮助中老年人降低血压和胆固醇",
+      "充满益生菌的肠道，可以长时间地保护人类心脏健康",
+      "核桃可以增加肠道益生菌，从而降低患高血压的风险",
+      "核桃还对糖尿病人的血糖控制有一定的帮助"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q064",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:logic",
+    "knowledgePointIds": [
+      "reasoning:cause-effect"
+    ],
+    "originalQuestionNo": 64,
+    "sectionOrder": 5,
+    "stem": "近期一项电脑市场调查显示：按照一品牌学生购买者占全部购买者的百分比计算，A、B 两品牌电脑名列前两位，比例分别为 68%和 52%。但是，在过去 6 个月的学生购买电脑量排行榜中，国产 C 品牌一直排在首位。 下列哪项为真，最有助于解释上述矛盾？（）",
+    "options": [
+      "有关机构设立排行榜在一定程度上影响学生消费者对品牌的选择",
+      "C 品牌的学生购买者占其购买者的比例也曾在相当长的时间内高于其他品牌",
+      "与 A、B 两种品牌相比，C 品牌电脑性价比更高，更符合学生要求",
+      "某种品牌学生购买者占各品牌学生购买者总数的百分比，与某种品牌学生购买者占该品牌全部购买者的百分比是不同的"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q065",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:logic",
+    "knowledgePointIds": [
+      "reasoning:strengthen-weaken"
+    ],
+    "originalQuestionNo": 65,
+    "sectionOrder": 5,
+    "stem": "目前市场上有很多类型的饮用水，除了我们日常喝的矿泉水、纯净水之外，还有厂家推出了“婴儿水”，厂家宣传说，这种水针对婴幼儿免疫系统和代谢系统不成熟的特征，由无菌生产线生产，能够保证婴幼儿的饮水安全，值得每个有婴幼儿的家庭购买。 以下哪项如果为真，最能质疑上述厂家的说法？（）",
+    "options": [
+      "在行业发布的关于包装饮用水的分类规定中不包含“婴儿水”",
+      "“婴儿水”价格高昂，是普通饮用水的数倍，许多普通家庭望而却步",
+      "普通的饮用水经过严格净化处理，烧开就可以达到杀菌的效果",
+      "婴幼儿成长所需的营养需要全面健康的饮食，仅“婴儿水”远远不够"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q066",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:logic",
+    "knowledgePointIds": [
+      "reasoning:logical-relations"
+    ],
+    "originalQuestionNo": 66,
+    "sectionOrder": 5,
+    "stem": "春节前夕，小黄拟在水仙、风信子、瑞香、兰花、百合和茶花中选择 4 种美化环境。已知： （1）茶花、兰花和百合至多选择 2 种； （2）如果瑞香、兰花两种至少选择 1 种，则选择茶花而不选择水仙。 根据以上信息，一定可以推出（）。",
+    "options": [
+      "选择兰花",
+      "选择风信子",
+      "不选择水仙",
+      "不选择百合"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q067",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:logic",
+    "knowledgePointIds": [
+      "reasoning:logical-relations"
+    ],
+    "originalQuestionNo": 67,
+    "sectionOrder": 5,
+    "stem": "只有激情奋斗的青春，只有顽强拼搏的青春，只有为人民作出了奉献的青春，才会留下充实、 温暖、持久、无悔的青春回忆。因此，没有留下充实的青春回忆，一定没有激情奋斗的青春。 以下哪项与上述论证形式最为类似？（）",
+    "options": [
+      "一部作品只有用内容说话，以质量立足，方能真正打动观众，赢得口碑。因此，不以质量立足的产品，一定不能赢得口碑",
+      "加快建设农业强国，才能有效防范涉农领域安全风险。因此，有效防范了涉农领域安全风险，一定能加快建设农业强国",
+      "唯有深入生活，遵循艺术规律、锤炼内容质量、追求社会效益与经济效益相统一，作品才能常演常新，叫好又叫座。因此，不能叫好又叫座的作品，一定没有深入生活",
+      "文艺创作要经得起时代检验和历史沉淀，文艺工作者就必须厚植人民情怀，投入时代洪流，激发青春理想。因此，没有激发青春理想给的文艺创作，一定经不起时代检验或历史沉淀"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q068",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:logic",
+    "knowledgePointIds": [
+      "reasoning:strengthen-weaken"
+    ],
+    "originalQuestionNo": 68,
+    "sectionOrder": 5,
+    "stem": "如今很多人手机不离身，每天都要频繁给手机充电，网传“手机电池只能充电 500 次，之后就 ‘寿终正寝’了”。因此许多人觉得，要尽量减少给手机充电的次数。 下列哪项如果为真，能够为上述结论提供支持？（）",
+    "options": [
+      "在实验室恒温测试中，电池能够实现两三千次以上、稳定的充放电循环",
+      "满充甚至过充、快充等，这些行为理论上都会对关键电池材料的微观结构造成不可逆的损坏，进而导致电池容量的不断减少",
+      "在现实使用中，通常手机电池在完整充放电 400 次至 500 次后，电池性能可能就开始出现衰减， 如电池容量低于原来的 80%",
+      "从理论上来讲，只要锂离子电池正、负极材料的结构以及所使用的电解液在其工作电压范围内足够稳定，那么手机电池就可以实现无限次的充放电循环"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q069",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:logic",
+    "knowledgePointIds": [
+      "reasoning:necessary-sufficient"
+    ],
+    "originalQuestionNo": 69,
+    "sectionOrder": 5,
+    "stem": "一项研究发现，经常进行户外运动的居民的平均寿命普遍高于全国平均水平，由此，研究者得出结论：户外运动有助于提高居民的平均寿命。 为了得到上述结论，研究者应当增加下列哪项作为前提？（）",
+    "options": [
+      "户外运动的受众有限",
+      "经常进行户外运动的居民通常拥有更好的医疗保障",
+      "经常进行户外运动的居民在饮食和其他生活习惯上与其他居民没有显著差异",
+      "专家建议居民应在空气质量高的地区进行户外运动"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q070",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:logic",
+    "knowledgePointIds": [
+      "reasoning:workflow-order"
+    ],
+    "originalQuestionNo": 70,
+    "sectionOrder": 5,
+    "stem": "赵一、钱二、孙三、李四去吃火锅，服务员端上来的锅底有酸汤肥牛、香辣排骨、秘制番茄、 胡椒猪肚。已知： （1）赵一比选择香辣排骨锅底的人年龄大； （2）孙三比钱二年龄小； （3）吃酸汤肥牛锅底的人比吃胡椒猪肚锅底的人年龄小； （4）吃香辣排骨锅底的人比吃秘制番茄锅底的人年龄大； （5）吃胡椒猪肚锅底的人不是孙三就是李四。 根据以上条件，下列可以推出的是（）。",
+    "options": [
+      "吃秘制番茄锅底的是赵一",
+      "吃香辣排骨锅底的是孙三",
+      "只能确定一人吃什么火锅锅底",
+      "四人各自吃什么火锅锅底都能确定"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q071",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:logic",
+    "knowledgePointIds": [
+      "reasoning:cause-effect"
+    ],
+    "originalQuestionNo": 71,
+    "sectionOrder": 5,
+    "stem": "据报道，某贫困地区的 248 所中学通过直播与某一线城市的重点中学同步上课已经有 16 年之久。 16 年来，这 248 所中学里，有的学校出了省状元，有的本科升学率涨了十几倍。从数据上看，这种直播教学模式是非常成功的。然而，令人遗憾的是，这一成功模式并未在全国得到广泛推广。 以下哪项如果为真，不能解释这一令人遗憾的现象？（）",
+    "options": [
+      "不同中学学生知识基础不同，这种直播教学缺乏针对性",
+      "这一模式需要诸多部门的通力协作，面临的困难还很多",
+      "大部分贫困地区的中学，难以组建起高水平的师资队伍",
+      "一些贫困地区观念落后保守，不愿意尝试和接纳新事物"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q072",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:logic",
+    "knowledgePointIds": [
+      "reasoning:logical-relations"
+    ],
+    "originalQuestionNo": 72,
+    "sectionOrder": 5,
+    "stem": "某汽车公司有规定：只要是公司的员工都可以享受购车优惠。小明是该公司的员工，所以小明可以享受购车优惠。 下列与上述推理的形式结构最为类似的是（）。",
+    "options": [
+      "所有细菌都有细胞，病毒没有细胞，所以病毒不是细菌",
+      "只有晚上 12 点到早晨 6 点选择公路才不会堵车，现在是晚上 10 点，所以很堵车",
+      "所有的光都是电磁波，紫外线也是光，所以紫外线也是电磁波",
+      "所有的可见光都是电磁波，紫外线是不可见光，所以紫外线不是电磁波"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q073",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:logic",
+    "knowledgePointIds": [
+      "reasoning:necessary-sufficient"
+    ],
+    "originalQuestionNo": 73,
+    "sectionOrder": 5,
+    "stem": "检测文物中的碳同位素比值可以确定文物的年代，因此只要得到文物的本体，就能通过文物年代数据判断其真伪。 以上结论基于的假设是（）。",
+    "options": [
+      "文物中的碳同位素不受污染",
+      "文物必须完整无任何破损",
+      "文物放置的环境必须密闭",
+      "文物为单一材料物质组成"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q074",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:logic",
+    "knowledgePointIds": [
+      "reasoning:strengthen-weaken"
+    ],
+    "originalQuestionNo": 74,
+    "sectionOrder": 5,
+    "stem": "据调查发现，大部分电视观众对同一则广告在电视节目中反复播放的行为相当反感，因此有人认为厂家做广告的目的不仅没达到，甚至会产生负作用，最终影响产品销售。 下列哪项如果为真，最能削弱上述结论？（）",
+    "options": [
+      "只要广告制作得精彩、有创意，还是有很多观众乐意看的",
+      "厂家的目的是让观众记住其所推销的产品，而不会顾及观众当时的感受",
+      "有些电视观众在广告时间干些家务或休息一下",
+      "许多有实力的大企业的电视广告往往采用同一则广告反复播放的形式"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q075",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:logic",
+    "knowledgePointIds": [
+      "reasoning:cause-effect"
+    ],
+    "originalQuestionNo": 75,
+    "sectionOrder": 5,
+    "stem": "俗话说“每逢佳节胖三斤，仔细一看三公斤”。春节过后，人们摸着肚子上突然显露的一圈肥肉细思极恐，迫不及待地开始了新一轮的疯狂节食和运动。不过，很多人通过运动、节食减肥好一段时间了，但是仍然看不到效果。 以下哪项如果为真，最能解释上述现象？（）",
+    "options": [
+      "减肥欲速则不达，事实上，减肥速度最好是要控制在一个月减一到两公斤",
+      "在减肥的过程中不宜天天称体重，一周一次就好，最好在起床空腹时称重",
+      "太瘦的人身体内的蛋白量比较低，处于一种低水平健康状态，易受伤害",
+      "人体对体重的下降很敏感，会通过刺激饥饿感来提醒自己多吃以维持体重"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q076",
+    "moduleId": "science",
+    "subjectId": "chemistry",
+    "topicId": "chemistry:changes-reactions",
+    "knowledgePointIds": [
+      "chemistry:common-reactions"
+    ],
+    "originalQuestionNo": 76,
+    "sectionOrder": 6,
+    "stem": "纯碱（Na₂CO₃）是化工之母，实验室中通过以下实验模拟工业制纯碱。向饱和 NaCl 溶液中先通入氨气再通入二氧化碳：发生反应的化学方程式为①NaCl+NH₃+CO₂+H₂O→NaHCO₃↓+NH₄Cl，NaHCO₃ 加热得到纯碱的反应方程式为②2NaHCO₃ Δ→Na₂CO₃+CO₂↑+H₂O。下列判断错误的是（）。",
+    "options": [
+      "纯碱工业的副产品氯化铵（NH4Cl）可以用作化肥",
+      "反应②生成的 CO2 可以为①循环使用",
+      "从溶液中分离 NaHCO3 的方法是过滤",
+      "得到的 NaHCO3 固体是纯净物"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q077",
+    "moduleId": "science",
+    "subjectId": "physics",
+    "topicId": "physics:mechanics",
+    "knowledgePointIds": [],
+    "originalQuestionNo": 77,
+    "sectionOrder": 6,
+    "stem": "日常生活中，需要对身边的一些常见的科学量进行估测，以下估测数据符合实际的是（）。",
+    "options": [
+      "科学书中一页纸张的厚度约为 0.01m",
+      "一粒西瓜子平放在桌面上时，对桌面的压强约为 20Pa",
+      "一个成年人从一楼走上二楼克服重力做的功约为 150J",
+      "教室里的日光灯正常发光时的电流约为 10mA"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q078",
+    "moduleId": "science",
+    "subjectId": "physics",
+    "topicId": "physics:mechanics",
+    "knowledgePointIds": [
+      "physics:elastic-force"
+    ],
+    "originalQuestionNo": 78,
+    "sectionOrder": 6,
+    "stem": "某同学将轻质不可伸长的晾衣绳两端分别固定在竖直杆 M、N 上的 a、b 两点，将衣架挂在绳上晾晒衣物，衣架挂钩可视为光滑。晾晒一件短袖 T 恤时，衣架静止于如图位置。当晾晒一件厚滑雪衫时， 该同学担心晾衣绳可能会断，为防止绳断，他应该（）。",
+    "options": [
+      "将绳的右端固定点 b 略向上移",
+      "将绳的右端固定点 b 略向下移",
+      "换一根略短的晾衣绳",
+      "换一根略长的晾衣绳"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "diagramImageUrl": "./public/assets/question-bank/guangdong-2025-zhanhong-mock-2/gd-2025-m2-q078.png",
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q079",
+    "moduleId": "science",
+    "subjectId": "physics",
+    "topicId": "physics:kinematics",
+    "knowledgePointIds": [
+      "physics:acceleration"
+    ],
+    "originalQuestionNo": 79,
+    "sectionOrder": 6,
+    "stem": "如图所示为某人设计的一种测量装置的电路，其中 AB 部分为四分之一圆弧的电阻丝，一段柔软的细金属丝拴一小球悬挂于 O 点并与电阻丝良好接触，将其放在水平行驶的汽车中，则该装置可以测量汽车的（）。",
+    "options": [
+      "速度大小，电压表数值越大，汽车速度越大",
+      "速度大小，电压表数值越大，汽车速度越小",
+      "加速度大小，电压表数值越大，汽车加速度越大",
+      "加速度大小，电压表数值越大，汽车加速度越小"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "diagramImageUrl": "./public/assets/question-bank/guangdong-2025-zhanhong-mock-2/gd-2025-m2-q079.png",
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q080",
+    "moduleId": "science",
+    "subjectId": "biology",
+    "topicId": "biology:ecology",
+    "knowledgePointIds": [
+      "biology:ecosystems"
+    ],
+    "originalQuestionNo": 80,
+    "sectionOrder": 6,
+    "stem": "下列有关生物分类和生物多样性的叙述，不正确的是（）。",
+    "options": [
+      "在生物分类中，种是最基本的分类单位，同种生物的亲缘关系最密切",
+      "被子植物的花、果实、种子往往作为分类的重要依据",
+      "保护生物的栖息环境，保护生态系统的多样性，是保护生物多样性最为有效的措施",
+      "生物种类的多样性实质上是基因的多样性"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": null,
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q081",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:statistics",
+    "knowledgePointIds": [
+      "data-analysis:growth-amount"
+    ],
+    "originalQuestionNo": 81,
+    "sectionOrder": 7,
+    "stem": "2013～2022 年，中国对外直接投资流量年均增加约（）亿美元。",
+    "options": [
+      "55.3",
+      "61.4",
+      "67.5",
+      "73.6"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": "zhanhong-2025-guangdong-mock-2-stimulus-81-85",
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q082",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:statistics",
+    "knowledgePointIds": [
+      "data-analysis:share-change"
+    ],
+    "originalQuestionNo": 82,
+    "sectionOrder": 7,
+    "stem": "与 2021 年相比，2022 年中国对外直接投资流量在全球中的占比（）。",
+    "options": [
+      "增加了不到 3 个百分点",
+      "增加了超过 3 个百分点",
+      "减少了不到 3 个百分点",
+      "减少了超过 3 个百分点"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": "zhanhong-2025-guangdong-mock-2-stimulus-81-85",
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q083",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:statistics",
+    "knowledgePointIds": [
+      "data-analysis:growth-rate"
+    ],
+    "originalQuestionNo": 83,
+    "sectionOrder": 7,
+    "stem": "2022 年，中国国民经济的 18 个行业大类中有（）个行业的对外直接投资流量同比有所增加。",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": "zhanhong-2025-guangdong-mock-2-stimulus-81-85",
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q084",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:statistics",
+    "knowledgePointIds": [
+      "data-analysis:ranking"
+    ],
+    "originalQuestionNo": 84,
+    "sectionOrder": 7,
+    "stem": "2021 年，中国下列行业的对外直接投资流量，从大到小排序正确的是（）。",
+    "options": [
+      "金融业＞租赁和商业服务业＞批发和零售业＞制造业",
+      "金融业＞租赁和商业服务业＞制造业＞批发和零售业",
+      "租赁和商业服务业＞制造业＞批发和零售业＞金融业",
+      "租赁和商业服务业＞批发和零售业＞制造业＞金融业"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": "zhanhong-2025-guangdong-mock-2-stimulus-81-85",
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q085",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:statistics",
+    "knowledgePointIds": [
+      "data-analysis:mixed-indicators"
+    ],
+    "originalQuestionNo": 85,
+    "sectionOrder": 7,
+    "stem": "根据资料，下列说法正确的是（）。",
+    "options": [
+      "截至 2022 年，中国对外直接投资流量最高的年份是 2016 年",
+      "2022 年，发展中经济体对外直接投资流量在全球的占比同比有所下降",
+      "2018～2022 年，中国对外直接投资流量累计超过了 8000 亿美元",
+      "2021 年，科学研究和技术服务业在中国对外直接投资流量中的占比超过 4%"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": "zhanhong-2025-guangdong-mock-2-stimulus-81-85",
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q086",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:statistics",
+    "knowledgePointIds": [
+      "data-analysis:growth-rate"
+    ],
+    "originalQuestionNo": 86,
+    "sectionOrder": 7,
+    "stem": "2022 年，中国国内旅游总人次同比约下降（）。",
+    "options": [
+      "17%",
+      "19%",
+      "20%",
+      "22%"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": "zhanhong-2025-guangdong-mock-2-stimulus-86-90",
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q087",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:statistics",
+    "knowledgePointIds": [
+      "data-analysis:growth-rate"
+    ],
+    "originalQuestionNo": 87,
+    "sectionOrder": 7,
+    "stem": "2018～2022 年，中国国内旅游收入同比增速最大的年份是（）。",
+    "options": [
+      "2021 年",
+      "2019 年",
+      "2022 年",
+      "2018 年"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": "zhanhong-2025-guangdong-mock-2-stimulus-86-90",
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q088",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:statistics",
+    "knowledgePointIds": [
+      "data-analysis:current-share"
+    ],
+    "originalQuestionNo": 88,
+    "sectionOrder": 7,
+    "stem": "2019 年春节假期，中国国内旅游收入占全年全国国内旅游收入的比重约为（）。",
+    "options": [
+      "9%",
+      "8%",
+      "7%",
+      "6%"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": "zhanhong-2025-guangdong-mock-2-stimulus-86-90",
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q089",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:statistics",
+    "knowledgePointIds": [
+      "data-analysis:average-value"
+    ],
+    "originalQuestionNo": 89,
+    "sectionOrder": 7,
+    "stem": "2022 年，中国国内平均每人次旅游消费较 2021 年约减少（）。",
+    "options": [
+      "76 元",
+      "86 元",
+      "96 元",
+      "106 元"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": "zhanhong-2025-guangdong-mock-2-stimulus-86-90",
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q090",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:statistics",
+    "knowledgePointIds": [
+      "data-analysis:mixed-indicators"
+    ],
+    "originalQuestionNo": 90,
+    "sectionOrder": 7,
+    "stem": "能够从上述资料中推出的是（）。",
+    "options": [
+      "2022 年，城镇居民的国内旅游人次同比净减少数少于农村居民",
+      "2023 年春节假期，全国国内旅游消费恢复程度强于旅游人次",
+      "2017～2022 年，城镇和农村旅游收入之差最大年份约为最小年份的 2.8 倍",
+      "2019 年春节假期，全国国内平均每人次旅游消费不到 1300 元"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": "zhanhong-2025-guangdong-mock-2-stimulus-86-90",
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q091",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:statistics",
+    "knowledgePointIds": [
+      "data-analysis:growth-amount"
+    ],
+    "originalQuestionNo": 91,
+    "sectionOrder": 7,
+    "stem": "2020 年 B 市全年轨道交通客运量比公共汽电车多（）。",
+    "options": [
+      "不到 3 亿人次",
+      "3～6 亿人次之间",
+      "6～9 亿人次之间",
+      "超过 9 亿人次"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": "zhanhong-2025-guangdong-mock-2-stimulus-91-95",
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q092",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:statistics",
+    "knowledgePointIds": [
+      "data-analysis:growth-rate"
+    ],
+    "originalQuestionNo": 92,
+    "sectionOrder": 7,
+    "stem": "2021 年下半年 B 市公共汽电车客运量环比增量为负的月份有几个？（）",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": "zhanhong-2025-guangdong-mock-2-stimulus-91-95",
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q093",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:statistics",
+    "knowledgePointIds": [
+      "data-analysis:multiple"
+    ],
+    "originalQuestionNo": 93,
+    "sectionOrder": 7,
+    "stem": "2021 年第四季度 B 市轨道交通客运量大约是巡游出租汽车客运量的几倍？（）",
+    "options": [
+      "不到 10 倍",
+      "10～14 倍之间",
+      "14～18 倍之间",
+      "超过 18 倍"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": "zhanhong-2025-guangdong-mock-2-stimulus-91-95",
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q094",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:statistics",
+    "knowledgePointIds": [
+      "data-analysis:current-share"
+    ],
+    "originalQuestionNo": 94,
+    "sectionOrder": 7,
+    "stem": "2021 年全年 B 市巡游出租汽车客运量占客运总量超过 5%的月份有几个？（）",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": "zhanhong-2025-guangdong-mock-2-stimulus-91-95",
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q095",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:statistics",
+    "knowledgePointIds": [
+      "data-analysis:growth-rate"
+    ],
+    "originalQuestionNo": 95,
+    "sectionOrder": 7,
+    "stem": "以下折线图中，最能准确反映2021年B市第二、三、四季度巡游出租汽车客运量环比增速变化趋势的是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "",
+        "imageUrl": "./public/assets/question-bank/guangdong-2025-zhanhong-mock-2/gd-2025-m2-q095-option-a.png"
+      },
+      {
+        "id": "B",
+        "text": "",
+        "imageUrl": "./public/assets/question-bank/guangdong-2025-zhanhong-mock-2/gd-2025-m2-q095-option-b.png"
+      },
+      {
+        "id": "C",
+        "text": "",
+        "imageUrl": "./public/assets/question-bank/guangdong-2025-zhanhong-mock-2/gd-2025-m2-q095-option-c.png"
+      },
+      {
+        "id": "D",
+        "text": "",
+        "imageUrl": "./public/assets/question-bank/guangdong-2025-zhanhong-mock-2/gd-2025-m2-q095-option-d.png"
+      }
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": "zhanhong-2025-guangdong-mock-2-stimulus-91-95",
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q096",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:statistics",
+    "knowledgePointIds": [
+      "data-analysis:calculation-choice"
+    ],
+    "originalQuestionNo": 96,
+    "sectionOrder": 7,
+    "stem": "2023 年，我国货物贸易顺差在（）。",
+    "options": [
+      "3 万亿元以内",
+      "3 万亿元～5 万亿元",
+      "5 万亿元～7 万亿元",
+      "7 万亿元以上"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": "zhanhong-2025-guangdong-mock-2-stimulus-96-100",
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q097",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:statistics",
+    "knowledgePointIds": [
+      "data-analysis:current-share"
+    ],
+    "originalQuestionNo": 97,
+    "sectionOrder": 7,
+    "stem": "2023 年，跨境电商进出口贸易中，我国与美国的进出口总额占比在以下哪个范围？（）",
+    "options": [
+      "20%～25%",
+      "25%～30%",
+      "30%～35%",
+      "35%～40%"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": "zhanhong-2025-guangdong-mock-2-stimulus-96-100",
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q098",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:statistics",
+    "knowledgePointIds": [
+      "data-analysis:growth-rate"
+    ],
+    "originalQuestionNo": 98,
+    "sectionOrder": 7,
+    "stem": "在以下年份中，我国跨境电商进出口额增速最快的是（）。",
+    "options": [
+      "2019 年",
+      "2020 年",
+      "2021 年",
+      "2023 年"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": "zhanhong-2025-guangdong-mock-2-stimulus-96-100",
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q099",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:statistics",
+    "knowledgePointIds": [
+      "data-analysis:relative-comparison"
+    ],
+    "originalQuestionNo": 99,
+    "sectionOrder": 7,
+    "stem": "2023 年，在跨境电商进出口贸易中，我国与下列哪个国家出现贸易逆差？（）",
+    "options": [
+      "德国",
+      "法国",
+      "英国",
+      "澳大利亚"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": "zhanhong-2025-guangdong-mock-2-stimulus-96-100",
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  },
+  {
+    "id": "zh-gd2025m2-q100",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:statistics",
+    "knowledgePointIds": [
+      "data-analysis:mixed-indicators"
+    ],
+    "originalQuestionNo": 100,
+    "sectionOrder": 7,
+    "stem": "根据以上资料，不能推出的是（）。",
+    "options": [
+      "2019～2023 年，我国跨境电商进口额同比增速逐年下降",
+      "2018～2023 年，我国跨境电商出口与进口额的差距逐年扩大",
+      "2018～2023 年间，我国跨境电商出口额年均增长超过 2400 亿元",
+      "2022 年，我国跨境电商进出口贸易在货物贸易进出口总值中占比低于 5%"
+    ],
+    "optionType": "single_choice",
+    "sharedStimulusId": "zhanhong-2025-guangdong-mock-2-stimulus-96-100",
+    "stemImageUrls": [],
+    "publishStatus": "published"
+  }
+]

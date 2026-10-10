@@ -3,6 +3,42 @@ import { getAptitudeQuestions } from './questions.js';
 
 const PAPER_CATALOG = [
   {
+    "id": "zhanhong-2025-guangdong-mock-2",
+    "title": "展鸿 2025 年广东省公务员录用考试《行测》模拟卷（二）",
+    "region": "广东",
+    "examYear": 2025,
+    "questionCount": 100,
+    "sourceUrl": null,
+    "answerUrl": null,
+    "sourceType": "third_party_mock",
+    "ranges": {
+      "general-knowledge": [
+        16,
+        25
+      ],
+      "verbal": [
+        26,
+        40
+      ],
+      "quantitative": [
+        41,
+        55
+      ],
+      "reasoning": [
+        56,
+        75
+      ],
+      "science": [
+        76,
+        80
+      ],
+      "data-analysis": [
+        81,
+        100
+      ]
+    }
+  },
+  {
     id: 'zhejiang-2025-A-类',
     title: '2025 年浙江省考行测 A 类（考生回忆版）',
     region: '浙江',

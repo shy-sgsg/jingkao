@@ -219,7 +219,7 @@ function addPublishedReferenceQuestion(question) {
     subjectTitle: SUBJECT_TITLES[question.subjectId],
     options: question.options.map((text, index) => ({ id: LETTERS[index], text })),
     verificationStatus: 'verified',
-    copyrightStatus: 'reference_only',
+    copyrightStatus: question.copyrightStatus || 'reference_only',
     publishStatus: 'published',
   });
 }
@@ -1347,3 +1347,192 @@ addPublishedReferenceQuestion({
 });
 
 export { SCIENCE_QUESTION_BANK };
+
+
+// 展鸿 2025 广东模拟卷（二）：已核验的科学推理题。
+addPublishedReferenceQuestion({
+  "id": "zh-gd2025m2-q076",
+  "moduleId": "science",
+  "subjectId": "chemistry",
+  "topicId": "chemistry:changes-reactions",
+  "knowledgePointIds": [
+    "chemistry:common-reactions"
+  ],
+  "difficulty": "medium",
+  "reasoningType": "causal_inference",
+  "sourceType": "third_party_mock",
+  "sourceId": "zhanhong-2025-guangdong-mock-2",
+  "sourceTitle": "展鸿 2025 年广东省公务员录用考试《行测》模拟卷（二）",
+  "region": "广东",
+  "examYear": 2025,
+  "paperId": "zhanhong-2025-guangdong-mock-2",
+  "paperTitle": "展鸿 2025 年广东省公务员录用考试《行测》模拟卷（二）",
+  "originalQuestionNo": 76,
+  "sectionOrder": 6,
+  "sourceNote": "展鸿教育公开模拟题；题干、选项按原题本保留。答题前不展示答案或解析。",
+  "sourceUrl": null,
+  "answerSourceUrl": "https://zhanhong-32-read-able.oss-cn-hangzhou.aliyuncs.com/upload/videos/2025/03/10/xc2163949910.pdf",
+  "stem": "纯碱（Na₂CO₃）是化工之母，实验室中通过以下实验模拟工业制纯碱。向饱和 NaCl 溶液中先通入氨气再通入二氧化碳：发生反应的化学方程式为①NaCl+NH₃+CO₂+H₂O→NaHCO₃↓+NH₄Cl，NaHCO₃ 加热得到纯碱的反应方程式为②2NaHCO₃ Δ→Na₂CO₃+CO₂↑+H₂O。下列判断错误的是（）。",
+  "options": [
+    "纯碱工业的副产品氯化铵（NH4Cl）可以用作化肥",
+    "反应②生成的 CO2 可以为①循环使用",
+    "从溶液中分离 NaHCO3 的方法是过滤",
+    "得到的 NaHCO3 固体是纯净物"
+  ],
+  "correctAnswer": "D",
+  "explanation": "本题考查化学。 A 项正确：氯化铵的含氮量为 24%～25%，可作氮肥使用，适用于小麦、水稻、玉米、油菜等作物。 B 项正确：反应①需要消耗 CO2，反应②生成 CO2，因此 CO2 可以循环使用。 C 项正确：根据反应①的化学方程式可知，生成的 NaHCO3 为难溶于水的固体沉淀物，可以通过过滤分离。 D 项错误：纯净物是指由一种单质或一种化合物组成的物质，反应①析出的 NaHCO3 固体上会附着少量的 NaCl 和 NH4Cl，因此不是纯净物。 故本题选 D。",
+  "copyrightStatus": "licensed",
+  "verificationStatus": "verified",
+  "publishStatus": "published",
+  "presentationMode": "original"
+});
+
+addPublishedReferenceQuestion({
+  "id": "zh-gd2025m2-q077",
+  "moduleId": "science",
+  "subjectId": "physics",
+  "topicId": "physics:mechanics",
+  "knowledgePointIds": [],
+  "difficulty": "medium",
+  "reasoningType": "data_interpretation",
+  "sourceType": "third_party_mock",
+  "sourceId": "zhanhong-2025-guangdong-mock-2",
+  "sourceTitle": "展鸿 2025 年广东省公务员录用考试《行测》模拟卷（二）",
+  "region": "广东",
+  "examYear": 2025,
+  "paperId": "zhanhong-2025-guangdong-mock-2",
+  "paperTitle": "展鸿 2025 年广东省公务员录用考试《行测》模拟卷（二）",
+  "originalQuestionNo": 77,
+  "sectionOrder": 6,
+  "sourceNote": "展鸿教育公开模拟题；题干、选项按原题本保留。答题前不展示答案或解析。",
+  "sourceUrl": null,
+  "answerSourceUrl": "https://zhanhong-32-read-able.oss-cn-hangzhou.aliyuncs.com/upload/videos/2025/03/10/xc2163949910.pdf",
+  "stem": "日常生活中，需要对身边的一些常见的科学量进行估测，以下估测数据符合实际的是（）。",
+  "options": [
+    "科学书中一页纸张的厚度约为 0.01m",
+    "一粒西瓜子平放在桌面上时，对桌面的压强约为 20Pa",
+    "一个成年人从一楼走上二楼克服重力做的功约为 150J",
+    "教室里的日光灯正常发光时的电流约为 10mA"
+  ],
+  "correctAnswer": "B",
+  "explanation": "A 项错误，0.01m=1cm，一张纸的厚度大约为 0.01cm。 B 项正确，一粒西瓜子的质量约为 0.2g，面积约为 1cm2，根据压强计算公式可知，其对桌面的压强 p= = = =20pa。 C 项错误，一个成年人约 50kg，一层楼约高 3m，根据功的计算公式可知，一个成年人从一楼走上二楼克服重力做的功 W=FS=mgS=50kg×10N/kg×3m=1500J。 D 项错误，10mA=0.01A，我国家庭电路的电压为 220V，则日光灯的功率为 P=UI=220V×0.01A=2.2W， 而教室用的日光灯功率一般在 20W～30W，不符合实际。 故本题选 B。",
+  "copyrightStatus": "licensed",
+  "verificationStatus": "verified",
+  "publishStatus": "published",
+  "presentationMode": "original"
+});
+
+addPublishedReferenceQuestion({
+  "id": "zh-gd2025m2-q078",
+  "moduleId": "science",
+  "subjectId": "physics",
+  "topicId": "physics:mechanics",
+  "knowledgePointIds": [
+    "physics:elastic-force"
+  ],
+  "difficulty": "medium",
+  "reasoningType": "causal_inference",
+  "sourceType": "third_party_mock",
+  "sourceId": "zhanhong-2025-guangdong-mock-2",
+  "sourceTitle": "展鸿 2025 年广东省公务员录用考试《行测》模拟卷（二）",
+  "region": "广东",
+  "examYear": 2025,
+  "paperId": "zhanhong-2025-guangdong-mock-2",
+  "paperTitle": "展鸿 2025 年广东省公务员录用考试《行测》模拟卷（二）",
+  "originalQuestionNo": 78,
+  "sectionOrder": 6,
+  "sourceNote": "展鸿教育公开模拟题；题干、选项按原题本保留。答题前不展示答案或解析。",
+  "sourceUrl": null,
+  "answerSourceUrl": "https://zhanhong-32-read-able.oss-cn-hangzhou.aliyuncs.com/upload/videos/2025/03/10/xc2163949910.pdf",
+  "stem": "某同学将轻质不可伸长的晾衣绳两端分别固定在竖直杆 M、N 上的 a、b 两点，将衣架挂在绳上晾晒衣物，衣架挂钩可视为光滑。晾晒一件短袖 T 恤时，衣架静止于如图位置。当晾晒一件厚滑雪衫时， 该同学担心晾衣绳可能会断，为防止绳断，他应该（）。",
+  "options": [
+    "将绳的右端固定点 b 略向上移",
+    "将绳的右端固定点 b 略向下移",
+    "换一根略短的晾衣绳",
+    "换一根略长的晾衣绳"
+  ],
+  "correctAnswer": "D",
+  "explanation": "本题考查力学。 为防止绳断，则两段绳子所成的角越小，绳所受到的力越小。移动固定点 b 的高度，绳子的长度不变，两杆之间的距离不变，则两段绳子所成的角也不变，A、B 项错误。 若换一根略短的晾衣绳，则两段绳子所成的角变大，绳子更可能断，增加绳子的长度可以使两段绳子所成的角变小，C 项错误，D 项正确。 故本题选 D。",
+  "copyrightStatus": "licensed",
+  "verificationStatus": "verified",
+  "publishStatus": "published",
+  "presentationMode": "original",
+  "diagramImageUrl": "./public/assets/question-bank/guangdong-2025-zhanhong-mock-2/gd-2025-m2-q078.png",
+  "diagramImageAlt": "展鸿 2025 年广东省考模拟卷（二）第 78 题原题图示"
+});
+
+addPublishedReferenceQuestion({
+  "id": "zh-gd2025m2-q079",
+  "moduleId": "science",
+  "subjectId": "physics",
+  "topicId": "physics:kinematics",
+  "knowledgePointIds": [
+    "physics:acceleration"
+  ],
+  "difficulty": "medium",
+  "reasoningType": "causal_inference",
+  "sourceType": "third_party_mock",
+  "sourceId": "zhanhong-2025-guangdong-mock-2",
+  "sourceTitle": "展鸿 2025 年广东省公务员录用考试《行测》模拟卷（二）",
+  "region": "广东",
+  "examYear": 2025,
+  "paperId": "zhanhong-2025-guangdong-mock-2",
+  "paperTitle": "展鸿 2025 年广东省公务员录用考试《行测》模拟卷（二）",
+  "originalQuestionNo": 79,
+  "sectionOrder": 6,
+  "sourceNote": "展鸿教育公开模拟题；题干、选项按原题本保留。答题前不展示答案或解析。",
+  "sourceUrl": null,
+  "answerSourceUrl": "https://zhanhong-32-read-able.oss-cn-hangzhou.aliyuncs.com/upload/videos/2025/03/10/xc2163949910.pdf",
+  "stem": "如图所示为某人设计的一种测量装置的电路，其中 AB 部分为四分之一圆弧的电阻丝，一段柔软的细金属丝拴一小球悬挂于 O 点并与电阻丝良好接触，将其放在水平行驶的汽车中，则该装置可以测量汽车的（）。",
+  "options": [
+    "速度大小，电压表数值越大，汽车速度越大",
+    "速度大小，电压表数值越大，汽车速度越小",
+    "加速度大小，电压表数值越大，汽车加速度越大",
+    "加速度大小，电压表数值越大，汽车加速度越小"
+  ],
+  "correctAnswer": "C",
+  "explanation": "A、B 项：将装置放在水平行驶的汽车上，汽车速度变化引起小球运动，通过小球的合力方向确定汽车加速度方向，因此这个装置是可以测量汽车加速度的，排除。 C、D 项：观察电路，电压表并联在细金属丝两端，当小球在 AB 间摆动时，测量的是金属丝两端的电压，当汽车的加速度越大时，小球倾斜连入电路的电阻增大，电阻两端的电压增大，C 项正确，D 项错误。 故本题选 C。",
+  "copyrightStatus": "licensed",
+  "verificationStatus": "verified",
+  "publishStatus": "published",
+  "presentationMode": "original",
+  "diagramImageUrl": "./public/assets/question-bank/guangdong-2025-zhanhong-mock-2/gd-2025-m2-q079.png",
+  "diagramImageAlt": "展鸿 2025 年广东省考模拟卷（二）第 79 题原题图示"
+});
+
+addPublishedReferenceQuestion({
+  "id": "zh-gd2025m2-q080",
+  "moduleId": "science",
+  "subjectId": "biology",
+  "topicId": "biology:ecology",
+  "knowledgePointIds": [
+    "biology:ecosystems"
+  ],
+  "difficulty": "medium",
+  "reasoningType": "causal_inference",
+  "sourceType": "third_party_mock",
+  "sourceId": "zhanhong-2025-guangdong-mock-2",
+  "sourceTitle": "展鸿 2025 年广东省公务员录用考试《行测》模拟卷（二）",
+  "region": "广东",
+  "examYear": 2025,
+  "paperId": "zhanhong-2025-guangdong-mock-2",
+  "paperTitle": "展鸿 2025 年广东省公务员录用考试《行测》模拟卷（二）",
+  "originalQuestionNo": 80,
+  "sectionOrder": 6,
+  "sourceNote": "展鸿教育公开模拟题；题干、选项按原题本保留。答题前不展示答案或解析。",
+  "sourceUrl": null,
+  "answerSourceUrl": "https://zhanhong-32-read-able.oss-cn-hangzhou.aliyuncs.com/upload/videos/2025/03/10/xc2163949910.pdf",
+  "stem": "下列有关生物分类和生物多样性的叙述，不正确的是（）。",
+  "options": [
+    "在生物分类中，种是最基本的分类单位，同种生物的亲缘关系最密切",
+    "被子植物的花、果实、种子往往作为分类的重要依据",
+    "保护生物的栖息环境，保护生态系统的多样性，是保护生物多样性最为有效的措施",
+    "生物种类的多样性实质上是基因的多样性"
+  ],
+  "correctAnswer": "C",
+  "explanation": "A 项正确，生物的分类等级从大到小依次是界、门、纲、目、科、属、种。 所属的等级越小，生物的亲缘关系越近，共同特征越多，等级越大，亲缘关系越远，共同特征越少，其中种是最基本的单位，同种的生物亲缘关系最近。 B 项正确，生物学家在对被子植物分类时，花、果实和种子往往作为分类的重要依据，因为花、果实和种子等生殖器官比根、茎、叶等营养器官在植物一生中出现得晚，生存的时间比较短，受环境的影响比较小，形态结构也比较稳定 C 项错误，保护生物的栖息环境，保护生态系统的多样性，是保护生物多样性的根本措施，建立自然保护区是保护生物多样性最为有效的措施。 D 项正确，基因的多样性是指物种的种内个体或种群间的基因变化，不同物种之间基因组成差别很大，同种生物之间的基因也有差别，每个物种都是一个独特的基因库，基因的多样性决定了生物种类的多样性。 故本题选 C。",
+  "copyrightStatus": "licensed",
+  "verificationStatus": "verified",
+  "publishStatus": "published",
+  "presentationMode": "original"
+});

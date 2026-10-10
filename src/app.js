@@ -965,7 +965,13 @@ function openAptitudeOverallRandomMockSetup() {
 function openAptitudePaperPicker(scope = 'all') {
   const moduleId = scope === 'all' ? null : scope;
   const papers = getCompleteAptitudePapers(moduleId);
-  const cards = papers.map((paper) => `<article class="aptitude-paper-choice"><div><strong>${escapeHtml(paper.title)}</strong><small>${escapeHtml(paper.region)} · ${paper.examYear} · ${paper.questionCount} 题${paper.moduleId ? ` · ${escapeHtml(getAptitudeModuleLabel(paper.moduleId))}完整分区` : ' · 完整行测卷'}</small><a href="${escapeHtml(safeUrl(paper.sourceUrl))}" target="_blank" rel="noopener noreferrer">查看题源 ↗</a> · <a href="${escapeHtml(safeUrl(paper.answerUrl))}" target="_blank" rel="noopener noreferrer">查看答案来源 ↗</a></div><button type="button" class="button button-primary button-small" data-action="start-aptitude-paper" data-paper-id="${escapeHtml(paper.id)}" data-scope-module-id="${escapeHtml(paper.moduleId || '')}">开始整卷</button></article>`).join('');
+  const cards = papers.map((paper) => {
+    const sourceLinks = [
+      paper.sourceUrl ? `<a href="${escapeHtml(safeUrl(paper.sourceUrl))}" target="_blank" rel="noopener noreferrer">查看题源 ↗</a>` : '',
+      paper.answerUrl ? `<a href="${escapeHtml(safeUrl(paper.answerUrl))}" target="_blank" rel="noopener noreferrer">查看答案来源 ↗</a>` : '',
+    ].filter(Boolean).join(' · ');
+    return `<article class="aptitude-paper-choice"><div><strong>${escapeHtml(paper.title)}</strong><small>${escapeHtml(paper.region)} · ${paper.examYear} · ${paper.questionCount} 题${paper.moduleId ? ` · ${escapeHtml(getAptitudeModuleLabel(paper.moduleId))}完整分区` : ' · 完整行测卷'}</small>${sourceLinks ? `<span>${sourceLinks}</span>` : ''}</div><button type="button" class="button button-primary button-small" data-action="start-aptitude-paper" data-paper-id="${escapeHtml(paper.id)}" data-scope-module-id="${escapeHtml(paper.moduleId || '')}">开始整卷</button></article>`;
+  }).join('');
   const scopeName = moduleId ? getAptitudeModuleLabel(moduleId) : '行测';
   renderModal(`<div class="modal-head"><div><div class="eyebrow muted">VERIFIED SOURCE PAPERS</div><h2>选择${scopeName}${moduleId ? '完整分区卷' : '整套卷'}</h2><p>只展示题号连续、题面与答案解析完整、必要材料齐全且来源可核验的试卷。</p></div><button type="button" class="modal-close" data-action="close-modal" aria-label="关闭">×</button></div><div class="modal-body">${cards || `<div class="empty-state"><strong>暂无可用${scopeName}${moduleId ? '完整分区卷' : '整套卷'}</strong><small>目前公开题源批次仍缺题或缺必要材料；对应题目已保留在已核验的随机题池中，不拼成不完整卷。</small></div>`}</div><div class="modal-footer"><button type="button" class="button button-secondary" data-action="close-modal">关闭</button></div>`);
 }
