@@ -22,7 +22,7 @@ test('score sample count and bounds are derived from its concrete score rows', a
   const rows = data.scoreRows.filter((row) => row.year === 2026);
   const samples = data.scoreSamples.filter((item) => item.year === 2026);
 
-  assert.equal(samples.length, 5);
+  assert.equal(samples.length, 6);
   assert.equal(samples.reduce((total, sample) => total + sample.samplePositions, 0), rows.length);
   for (const sample of samples) {
     const sourceRows = rows.filter((row) => row.sourceId === sample.sourceId);
@@ -49,6 +49,41 @@ test('Fangshan position detail receives the source-backed 2026 interview cutoff 
 
   assert.equal(evidence.cutoffScore, 136.25);
   assert.deepEqual(evidence.cutoffSourceIds, ['cgzj-2026-fangshan-cutoff-sample']);
+});
+
+test('Tongzhou fiscal positions receive their distinct 2026 interview cutoffs by exact position code', async () => {
+  const data = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const expected = [['821153902', 142], ['221153901', 132.5]];
+
+  for (const [code, score] of expected) {
+    const position = data.positions.find((row) => row.year === 2026 && row.code === code);
+    const evidence = getPositionCompetitionEvidence(position, {
+      observations: data.observations,
+      scoreRows: data.scoreRows,
+    });
+
+    assert.equal(evidence.cutoffScore, score);
+    assert.deepEqual(evidence.cutoffSourceIds, ['cgzj-2026-tongzhou-fiscal-cutoff-sample']);
+  }
+});
+
+test('Tongzhou district-only and year-conflicted score summaries do not become position cutoff rows', async () => {
+  const data = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const minimum = data.sources.find((source) => source.sourceId === 'cgzj-2026-tongzhou-minimum-summary');
+  const conflictIds = [
+    'cgzj-2026-tongzhou-cutoff-summary-conflict',
+    'cgzj-2026-fiscal-cutoff-summary-conflict',
+  ];
+
+  assert.equal(minimum?.minimum, 104.75);
+  assert.match(minimum?.notes ?? '', /未给出对应单位、岗位或职位代码/);
+  for (const sourceId of conflictIds) {
+    const source = data.sources.find((item) => item.sourceId === sourceId);
+    assert.ok(source, `${sourceId} should remain registered as a conflicting source`);
+    assert.equal(source.evidenceType, 'cutoff_year_conflict');
+    assert.equal(data.scoreRows.some((row) => row.sourceId === sourceId), false);
+  }
+  assert.equal(data.scoreRows.some((row) => row.positionCode === '221153901' && row.score === 142), false);
 });
 
 test('Haidian and Xicheng third-party samples expose their partial scope and unresolved rows', async () => {

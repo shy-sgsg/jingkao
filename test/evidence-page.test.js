@@ -110,7 +110,7 @@ test('the evidence center lists dated position-level qualification snapshots wit
   assert.match(root.innerHTML, /150 人/);
   assert.match(root.innerHTML, /eoffcn\.com\/kszx\/detail\/1903982\.html/);
   assert.match(root.innerHTML, /资格审查通过人数.*不等同最终报名人数、缴费人数或实考人数/s);
-  assert.match(root.innerHTML, /岗位级资格审查快照[\s\S]*?覆盖 26 个岗位 · 10 个时点/);
+  assert.match(root.innerHTML, /岗位级资格审查快照[\s\S]*?覆盖 26 个岗位 · 11 个时点/);
 });
 
 test('the evidence center separates citywide weighted competition snapshots from job-level ratios', async () => {
@@ -166,7 +166,7 @@ test('the source page exposes evidence-based coverage without presenting mirror 
   assert.match(root.innerHTML, /2024[\s\S]*?95 \/ 95 条/);
   assert.match(root.innerHTML, /2025[\s\S]*?91 \/ 91 条/);
   assert.match(root.innerHTML, /2026[\s\S]*?86 \/ 88 条/);
-  assert.match(root.innerHTML, /120 条具名分数记录[\s\S]*?部分样本/);
+  assert.match(root.innerHTML, /122 条具名分数记录[\s\S]*?部分样本/);
   assert.match(root.innerHTML, /年度官方职位分母未知/);
   assert.match(root.innerHTML, /条数相同不代表职位代码集合一致/);
   assert.doesNotMatch(root.innerHTML, /官方覆盖率[：:]\s*100%/);

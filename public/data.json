@@ -84207,6 +84207,23 @@
     {
       "year": 2025,
       "scope": "position-level",
+      "positionCode": "221155801",
+      "unit": null,
+      "observationType": "qualified_snapshot",
+      "observedAt": "2024-11-22 09:00",
+      "applicantsRegistered": null,
+      "applicantsQualified": 155,
+      "applicantsPaid": null,
+      "applicantsConfirmed": null,
+      "actualTestTakers": null,
+      "recruitCount": 1,
+      "sourceId": "eoffcn-2025-tongzhou-final-day-snapshot",
+      "sourceLevel": "secondary",
+      "notes": "来源逐岗表明确列出通州区商务局产业发展岗代码221155801，资格审查通过155人、计划1人，竞争比155:1。仅为该报道列出的热点岗位，不是全区完整清单；资格审查通过人数不是最终缴费或实考人数。"
+    },
+    {
+      "year": 2025,
+      "scope": "position-level",
       "positionCode": "220527701",
       "unit": null,
       "observationType": "qualified_snapshot",
@@ -86346,6 +86363,28 @@
       "notes": "昌平区资格审查通过人数1,738；来源以176人为计划人数，其他职位镜像为177人，快照不是最终缴费/实考人数。"
     },
     {
+      "sourceId": "eoffcn-2025-tongzhou-final-day-snapshot",
+      "title": "中公网校：2025京考通州商务局岗位快照（截至11月22日9时）",
+      "publisher": "中公教育",
+      "level": "secondary",
+      "evidenceType": "registration_snapshot",
+      "year": 2025,
+      "districtId": "tongzhou",
+      "geographicScope": "北京市通州区商务局产业发展岗",
+      "url": "https://www.eoffcn.com/kszx/detail/1521605.html",
+      "observedAt": "2024-11-22 09:00",
+      "accessedAt": "2026-10-10",
+      "positionSnapshots": [
+        {
+          "positionCode": "221155801",
+          "scope": "position-level",
+          "applicantsQualified": 155,
+          "recruitCount": 1
+        }
+      ],
+      "notes": "来源逐岗表明确列出通州区商务局产业发展岗代码221155801，资格审查通过155人、计划1人，竞争比155:1。仅为该报道列出的热点岗位，不是全区完整清单；资格审查通过人数不是最终缴费或实考人数。"
+    },
+    {
       "sourceId": "huatu-2025-citywide-top3-day2-evening-ratios",
       "title": "华图：2025京考职位过审竞争比（截至11月19日18时）",
       "publisher": "北京华图",
@@ -86941,6 +86980,58 @@
       "maximum": 136.25,
       "scope": "房山区岗位最低进面线部分样本",
       "notes": "页面称房山共91人进入面试，当前可读表格列出8条岗位分数并注明为部分样本；其中4条按同年度、单位、岗位名在候选职位库中唯一匹配，4条因同名岗位无法唯一匹配。样本不代表全区全量，也不是官方笔试合格线。职位候选仍未与官方职位表逐代码核验。"
+    },
+    {
+      "sourceId": "cgzj-2026-tongzhou-minimum-summary",
+      "title": "成公教育：2026通州区进面分最低样本汇总（未具名岗位）",
+      "publisher": "成公教育",
+      "level": "secondary",
+      "evidenceType": "partial_interview_score_sample",
+      "year": 2026,
+      "districtId": "tongzhou",
+      "geographicScope": "通州区区级分数摘要，未提供具体职位身份",
+      "url": "https://www.cgzj.com/sydw/12616.html",
+      "accessedAt": "2026-10-10",
+      "minimum": 104.75,
+      "notes": "摘要称通州区最低进面分样本为104.75，但未给出对应单位、岗位或职位代码；仅作区级参考，不导入岗位分数行。"
+    },
+    {
+      "sourceId": "cgzj-2026-tongzhou-cutoff-summary-conflict",
+      "title": "成公教育：通州区进面分摘要（页面标题与正文年份冲突）",
+      "publisher": "成公教育",
+      "level": "secondary",
+      "evidenceType": "cutoff_year_conflict",
+      "year": 2026,
+      "districtId": "tongzhou",
+      "geographicScope": "通州区摘要，未核实岗位分数",
+      "url": "https://www.cgzj.com/sk/4237.html",
+      "accessedAt": "2026-10-10",
+      "notes": "页面标题标2025、正文称2026；摘要称财政局财务管理岗142分及全区最低54.5分，与同站财政局逐岗表的绩效考评岗142、财务管理岗132.5不一致，故不导入具名岗位分数。"
+    },
+    {
+      "sourceId": "cgzj-2026-fiscal-cutoff-summary-conflict",
+      "title": "成公教育：财政局进面分摘要（页面标题与正文年份冲突）",
+      "publisher": "成公教育",
+      "level": "secondary",
+      "evidenceType": "cutoff_year_conflict",
+      "year": 2026,
+      "geographicScope": "北京市财政局岗位摘要",
+      "url": "https://www.cgzj.com/examinfo/4078.cshtml",
+      "accessedAt": "2026-10-10",
+      "notes": "标题为2025，正文叙述2026考试并将通州财政局财务管理岗142分称为财政局最高分，与同站逐岗表将142列为绩效考评岗、财务管理岗132.5冲突；不导入具名岗位分数。"
+    },
+    {
+      "sourceId": "cgzj-2026-tongzhou-fiscal-cutoff-sample",
+      "title": "2026北京公务员考试进面分数线｜财政局部分岗位样本（含通州条目）",
+      "publisher": "成公教育",
+      "level": "secondary",
+      "evidenceType": "partial_interview_score_sample",
+      "year": 2026,
+      "url": "https://www.cgzj.com/sk/12691.html",
+      "publishedAt": "2026-06-05",
+      "accessedAt": "2026-10-10",
+      "scope": "通州区财政局岗位最低进面线样本（2岗）",
+      "notes": "成公财政局专题页可检索的逐岗表列出通州财政局绩效考评岗142分、财务管理岗132.5分；本轮只导入这两条通州记录。代码按同年度、单位、岗位名称与本地第三方职位镜像唯一匹配，尚未逐代码官方核验。成公的通州区摘要和财政局摘要均将142分归于财务管理岗，且页面标题年份与正文统计年份不一致；与本页逐岗表冲突，争议值未重复计入。部分样本不是通州全量，也不是笔试合格线。"
     },
     {
       "sourceId": "gwyzwb-2025-example",
@@ -101310,6 +101401,18 @@
     },
     {
       "year": 2026,
+      "scope": "通州区财政局岗位最低进面线样本（2岗）",
+      "samplePositions": 2,
+      "sampleRecruits": null,
+      "minimum": 132.5,
+      "maximum": 142,
+      "sourceId": "cgzj-2026-tongzhou-fiscal-cutoff-sample",
+      "sourceLevel": "secondary",
+      "complete": false,
+      "notes": "成公财政局专题页可检索的逐岗表列出通州财政局绩效考评岗142分、财务管理岗132.5分；本轮只导入这两条通州记录。代码按同年度、单位、岗位名称与本地第三方职位镜像唯一匹配，尚未逐代码官方核验。成公的通州区摘要和财政局摘要均将142分归于财务管理岗，且页面标题年份与正文统计年份不一致；与本页逐岗表冲突，争议值未重复计入。部分样本不是通州全量，也不是笔试合格线。"
+    },
+    {
+      "year": 2026,
       "scope": "西城区岗位最低进面线部分样本",
       "samplePositions": 28,
       "sampleRecruits": 111,
@@ -103131,6 +103234,36 @@
       "notes": "页面可见部分样本；同年度、同单位和岗位名在职位候选库中唯一匹配，候选职位尚未与官方表逐代码核验。",
       "mappingConfidence": "high",
       "sourceId": "cgzj-2026-fangshan-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-tongzhou-01",
+      "year": 2026,
+      "unit": "北京市通州区财政局",
+      "title": "绩效考评岗",
+      "name": "北京市通州区财政局｜绩效考评岗",
+      "positionCode": "821153902",
+      "orgType": "区直",
+      "score": 142,
+      "notes": "成公财政局专题逐岗表列示142分；按同年度、单位和岗位名称唯一匹配至第三方职位镜像代码，尚未与官方职位表逐代码核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-tongzhou-fiscal-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-tongzhou-02",
+      "year": 2026,
+      "unit": "北京市通州区财政局",
+      "title": "财务管理岗",
+      "name": "北京市通州区财政局｜财务管理岗",
+      "positionCode": "221153901",
+      "orgType": "区直",
+      "score": 132.5,
+      "notes": "成公财政局专题逐岗表列示132.5分；按同年度、单位和岗位名称唯一匹配至第三方职位镜像代码，尚未与官方职位表逐代码核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-tongzhou-fiscal-cutoff-sample",
       "sourceLevel": "secondary",
       "verification": "年度、单位与岗位名唯一匹配"
     }

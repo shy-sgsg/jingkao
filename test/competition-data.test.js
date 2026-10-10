@@ -66,6 +66,26 @@ test('2025 evening competition ratios link to the exact positions and preserve t
   }
 });
 
+test('2025 Tongzhou final-day snapshot links the Business Bureau post by its exact code', async () => {
+  const raw = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const dataset = normalizeDataset(raw);
+  const sourceId = 'eoffcn-2025-tongzhou-final-day-snapshot';
+  const source = dataset.sources.find((item) => item.sourceId === sourceId);
+  const position = dataset.positions.find((item) => Number(item.year) === 2025 && item.code === '221155801');
+  const rows = dataset.observations.filter((item) => item.sourceId === sourceId
+    && Number(item.year) === 2025 && item.positionCode === '221155801');
+
+  assert.equal(source?.observedAt, '2024-11-22 09:00');
+  assert.equal(source?.url, 'https://www.eoffcn.com/kszx/detail/1521605.html');
+  assert.equal(position?.unit, '北京市通州区商务局');
+  assert.equal(position?.recruitCount, 1);
+  assert.equal(rows.length, 1);
+  assert.equal(rows[0].scope, 'position-level');
+  assert.equal(rows[0].applicantsQualified, 155);
+  assert.equal(rows[0].recruitCount, 1);
+  assert.equal(rows[0].qualifiedCompetitionRatio, 155);
+});
+
 test('2025 day-two evening ratios preserve the earlier observation for the same exact position codes', async () => {
   const raw = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
   const dataset = normalizeDataset(raw);

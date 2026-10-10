@@ -49,7 +49,7 @@ test('2026 cutoff rows link only to a unique exact year, unit, and title match',
     scoreRows.reduce((counts, row) => ({ ...counts, [row.mappingConfidence]: counts[row.mappingConfidence] + 1 }), {
       high: 0, ambiguous: 0, unmatched: 0,
     }),
-    { high: 98, ambiguous: 17, unmatched: 5 },
+    { high: 100, ambiguous: 17, unmatched: 5 },
   );
 });
 
@@ -142,7 +142,7 @@ test('2026 Yanqing partial interview-cutoff rows preserve unique matches and unr
     scoreRows.reduce((counts, row) => ({ ...counts, [row.mappingConfidence]: counts[row.mappingConfidence] + 1 }), {
       high: 0, ambiguous: 0, unmatched: 0,
     }),
-    { high: 98, ambiguous: 17, unmatched: 5 },
+    { high: 100, ambiguous: 17, unmatched: 5 },
   );
 });
 
@@ -208,5 +208,26 @@ test('2026 Fangshan cutoff sample links only unique exact position rows', () => 
     assert.ok(matches.length > 1, `${id} must retain its duplicate-name candidates`);
     assert.equal(row.positionCode, null);
     assert.equal(row.mappingConfidence, 'ambiguous');
+  }
+});
+
+test('2026 Tongzhou fiscal cutoff scores map to unique same-year unit and title matches', () => {
+  const expectedRows = {
+    '2026-cgzj-tongzhou-01': ['821153902', 142, '绩效考评岗'],
+    '2026-cgzj-tongzhou-02': ['221153901', 132.5, '财务管理岗'],
+  };
+
+  for (const [id, [code, score, title]] of Object.entries(expectedRows)) {
+    const row = scoreRows.find((item) => item.id === id);
+    const exactMatches = positions.filter((position) => position.year === 2026
+      && position.unit === '北京市通州区财政局'
+      && position.title === title);
+
+    assert.equal(exactMatches.length, 1, `${id} must match exactly one 2026 Tongzhou position`);
+    assert.equal(exactMatches[0].code, code);
+    assert.equal(row.positionCode, code);
+    assert.equal(row.score, score);
+    assert.equal(row.mappingConfidence, 'high');
+    assert.equal(row.sourceId, 'cgzj-2026-tongzhou-fiscal-cutoff-sample');
   }
 });
