@@ -1261,6 +1261,18 @@
         "recruitCount": 10
       },
       {
+        "positionCode": "230531801",
+        "scope": "position-level",
+        "applicantsQualified": 22,
+        "recruitCount": 1
+      },
+      {
+        "positionCode": "232502003",
+        "scope": "position-level",
+        "applicantsQualified": 32,
+        "recruitCount": 32
+      },
+      {
         "positionCode": "220633601",
         "scope": "position-level",
         "applicantsQualified": 22,
@@ -1274,7 +1286,7 @@
         "recruitCount": 1
       }
     ],
-    "notes": "页面逐职位表列出市级过审人数前十岗位；记录其中可与2026职位库按代码、招录人数匹配的岗位（含昌平区档案馆821261102为44人/计划2人）。另，昌平区总工会9人/计划1人仅见单位汇总，未展示职位代码，故仍记为单位级。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
+    "notes": "页面逐职位表列出市级过审人数前十岗位；记录其中可与2026职位库按代码、招录人数匹配的岗位（含昌平区档案馆821261102、朝阳区东坝地区230531801及朝阳公安分局232502003）。昌平区总工会9人/计划1人仅见单位汇总，未展示职位代码，故仍记为单位级。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
   },
   {
     "sourceId": "eoffcn-2026-snapshot-20251118-0900",
@@ -1346,6 +1358,18 @@
         "scope": "position-level",
         "applicantsQualified": 18,
         "recruitCount": 1
+      },
+      {
+        "positionCode": "230531801",
+        "scope": "position-level",
+        "applicantsQualified": 22,
+        "recruitCount": 1
+      },
+      {
+        "positionCode": "232502003",
+        "scope": "position-level",
+        "applicantsQualified": 65,
+        "recruitCount": 32
       }
     ],
     "notes": "页面列出市级过审人数前十及竞争最激烈岗位；记录其中能与2026职位库按代码、招录人数匹配的岗位。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
@@ -1409,6 +1433,18 @@
         "scope": "position-level",
         "applicantsQualified": 51,
         "recruitCount": 1
+      },
+      {
+        "positionCode": "230531801",
+        "scope": "position-level",
+        "applicantsQualified": 69,
+        "recruitCount": 1
+      },
+      {
+        "positionCode": "232502003",
+        "scope": "position-level",
+        "applicantsQualified": 109,
+        "recruitCount": 32
       }
     ],
     "notes": "报道注明竞争比按资格审查通过人数/招录人数计算；此处逐职位保存市级过审人数前十和高竞争岗位中可与2026职位库按职位代码、招录数匹配的记录。该页面不是全市完整清单；人数是第三方资格审查快照，不是最终缴费或实考人数。"
@@ -1435,9 +1471,21 @@
         "scope": "position-level",
         "applicantsQualified": 95,
         "recruitCount": 1
+      },
+      {
+        "positionCode": "230531801",
+        "scope": "position-level",
+        "applicantsQualified": 71,
+        "recruitCount": 1
+      },
+      {
+        "positionCode": "232502003",
+        "scope": "position-level",
+        "applicantsQualified": 183,
+        "recruitCount": 32
       }
     ],
-    "notes": "页面逐职位表列示昌平区档案馆综合管理岗821261102为275人/计划2人、昌平区总工会文秘岗821263001为95人/计划1人。均为第三方资格审查快照，不是最终报名、缴费或实考人数。"
+    "notes": "页面逐职位表列示昌平岗位821261102、821263001及朝阳岗位230531801、232502003的资格审查通过人数与招录数。均为第三方快照，不是最终报名、缴费或实考人数。"
   },
   {
     "sourceId": "eoffcn-2026-snapshot-20251119-1800",
@@ -1509,6 +1557,18 @@
         "scope": "position-level",
         "applicantsQualified": 87,
         "recruitCount": 1
+      },
+      {
+        "positionCode": "230531801",
+        "scope": "position-level",
+        "applicantsQualified": 124,
+        "recruitCount": 1
+      },
+      {
+        "positionCode": "232502003",
+        "scope": "position-level",
+        "applicantsQualified": 269,
+        "recruitCount": 32
       }
     ],
     "notes": "页面逐职位列出市级过审人数前十及最激烈岗位；记录其中能与2026职位库按代码、招录人数匹配的岗位。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
@@ -14450,5 +14510,57 @@
     "reportedPositionCount": 90,
     "reportedRecruitCount": 169,
     "notes": "第三方镜像目录汇总，只用于定位逐岗采集范围与记录来源差异，不是官方职位分母；不得按差额生成岗位行。"
+  },
+  {
+    "sourceId": "gwyzwb-2026-chaoyang-230531801",
+    "title": "京考职位网：2026朝阳区东坝地区平安建设岗职位详情",
+    "publisher": "京考职位网",
+    "level": "secondary",
+    "evidenceType": "position_mirror",
+    "year": 2026,
+    "districtId": "chaoyang",
+    "geographicScope": "朝阳区",
+    "url": "https://bj.gwyzwb.com/2026/696.html",
+    "accessedAt": "2026-10-10",
+    "positionCode": "230531801",
+    "unit": "北京市朝阳区东坝地区（乡）",
+    "positionTitle": "平安建设岗",
+    "reportedRecruitCount": 1,
+    "notes": "第三方职位详情列出职位代码、单位、职位名称及计划招录1人；本轮仅采集岗位身份字段用于关联竞争快照与分数，资格条件未完整导入，未与官方职位简章逐代码核验。"
+  },
+  {
+    "sourceId": "gwyzwb-2026-chaoyang-232502003",
+    "title": "京考职位网：2026朝阳公安分局一线执法岗1职位详情",
+    "publisher": "京考职位网",
+    "level": "secondary",
+    "evidenceType": "position_mirror",
+    "year": 2026,
+    "districtId": "chaoyang",
+    "geographicScope": "朝阳区",
+    "url": "https://bj.gwyzwb.com/2026/51.html",
+    "accessedAt": "2026-10-10",
+    "positionCode": "232502003",
+    "unit": "北京市公安局朝阳分局",
+    "positionTitle": "一线执法岗1",
+    "reportedRecruitCount": 32,
+    "notes": "第三方职位详情列出职位代码、单位、职位名称及计划招录32人；本轮仅采集岗位身份字段用于关联竞争快照与分数，资格条件未完整导入，未与官方职位简章逐代码核验。"
+  },
+  {
+    "sourceId": "cgzj-2026-chaoyang-cutoff-sample",
+    "title": "成公教育：2026北京公务员朝阳区岗位最低进面分数部分样本",
+    "publisher": "成公教育",
+    "level": "secondary",
+    "evidenceType": "partial_interview_score_sample",
+    "year": 2026,
+    "districtId": "chaoyang",
+    "geographicScope": "朝阳区岗位分数部分样本",
+    "url": "https://www.cgzj.com/gk/12623.html",
+    "accessedAt": "2026-10-10",
+    "samplePositions": 28,
+    "sampleRecruits": 163,
+    "minimum": 55.5,
+    "maximum": 141.5,
+    "scope": "朝阳区岗位最低进面分部分样本",
+    "notes": "页面称朝阳区163人进入面试，展示28条部分岗位最低进面分，表格没有职位代码。仅把单位+岗位名能与已收录2026候选岗位唯一对应的东坝平安建设岗和朝阳公安分局一线执法岗1关联到代码；分数和职位明细均为第三方材料，尚未逐代码与官方职位表核验，不能代表全区全量，也不是笔试合格线。"
   }
 ]

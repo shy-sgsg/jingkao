@@ -235,3 +235,52 @@ test('the last available 2026 registration snapshots preserve the named hot post
     assert.equal(citywideObservation?.qualifiedCompetitionRatio, snapshot.citywideQualified / 3694);
   }
 });
+
+test('2026 Chaoyang position snapshots and interview cutoffs attach to exact year-and-code posts', async () => {
+  const raw = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const dataset = normalizeDataset(raw);
+  const expectedPositions = [
+    ['230531801', '北京市朝阳区东坝地区（乡）', '平安建设岗', 1],
+    ['232502003', '北京市公安局朝阳分局', '一线执法岗1', 32],
+  ];
+
+  for (const [code, unit, title, recruits] of expectedPositions) {
+    const position = dataset.positions.find((item) => item.year === 2026 && item.code === code);
+    assert.equal(position?.unit, unit);
+    assert.equal(position?.title, title);
+    assert.equal(position?.recruitCount, recruits);
+  }
+
+  const snapshots = [
+    ['eoffcn-2026-snapshot-20251117-1800', '230531801', 22, 1, '2025-11-17 18:00'],
+    ['eoffcn-2026-snapshot-20251117-1800', '232502003', 32, 32, '2025-11-17 18:00'],
+    ['eoffcn-2026-snapshot-20251118-0900', '230531801', 22, 1, '2025-11-18 09:00'],
+    ['eoffcn-2026-snapshot-20251118-0900', '232502003', 65, 32, '2025-11-18 09:00'],
+    ['eoffcn-2026-snapshot-20251118-1800', '230531801', 69, 1, '2025-11-18 18:00'],
+    ['eoffcn-2026-snapshot-20251118-1800', '232502003', 109, 32, '2025-11-18 18:00'],
+    ['eoffcn-2026-snapshot-20251119-0900', '230531801', 71, 1, '2025-11-19 09:00'],
+    ['eoffcn-2026-snapshot-20251119-0900', '232502003', 183, 32, '2025-11-19 09:00'],
+    ['eoffcn-2026-snapshot-20251119-1800', '230531801', 124, 1, '2025-11-19 18:00'],
+    ['eoffcn-2026-snapshot-20251119-1800', '232502003', 269, 32, '2025-11-19 18:00'],
+  ];
+
+  for (const [sourceId, code, qualified, recruits, observedAt] of snapshots) {
+    const row = dataset.observations.find((item) => item.sourceId === sourceId
+      && item.year === 2026 && item.positionCode === code);
+    assert.equal(row?.applicantsQualified, qualified, `${sourceId} should retain ${code}'s exact qualified count`);
+    assert.equal(row?.recruitCount, recruits);
+    assert.equal(row?.observedAt, observedAt);
+    assert.equal(row?.qualifiedCompetitionRatio, qualified / recruits);
+  }
+
+  const cutoffs = [
+    ['230531801', 133.5],
+    ['232502003', 56.35],
+  ];
+  for (const [code, score] of cutoffs) {
+    const row = dataset.scoreRows.find((item) => item.year === 2026
+      && item.positionCode === code && item.sourceId === 'cgzj-2026-chaoyang-cutoff-sample');
+    assert.equal(row?.score, score);
+    assert.equal(row?.mappingConfidence, 'high');
+  }
+});

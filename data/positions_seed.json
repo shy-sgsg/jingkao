@@ -57986,5 +57986,35 @@
     "sources": [
       "tongzhou-2026-mirror-006"
     ]
+  },
+  {
+    "year": 2026,
+    "code": "230531801",
+    "unit": "北京市朝阳区东坝地区（乡）",
+    "title": "平安建设岗",
+    "recruitCount": 1,
+    "sourceLevel": "secondary",
+    "verification": "京考职位网第三方职位详情镜像；未与官方招考简章逐代码核验",
+    "crossVerified": false,
+    "eligibilityComplete": false,
+    "eligibilityText": "本轮仅补录岗位身份与招录数以关联竞争数据；其他资格条件以官方招考简章为准。",
+    "sources": [
+      "gwyzwb-2026-chaoyang-230531801"
+    ]
+  },
+  {
+    "year": 2026,
+    "code": "232502003",
+    "unit": "北京市公安局朝阳分局",
+    "title": "一线执法岗1",
+    "recruitCount": 32,
+    "sourceLevel": "secondary",
+    "verification": "京考职位网第三方职位详情镜像；未与官方招考简章逐代码核验",
+    "crossVerified": false,
+    "eligibilityComplete": false,
+    "eligibilityText": "本轮仅补录岗位身份与招录数以关联竞争数据；其他资格条件以官方招考简章为准。",
+    "sources": [
+      "gwyzwb-2026-chaoyang-232502003"
+    ]
   }
 ]

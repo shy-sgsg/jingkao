@@ -49,7 +49,7 @@ test('2026 cutoff rows link only to a unique exact year, unit, and title match',
     scoreRows.reduce((counts, row) => ({ ...counts, [row.mappingConfidence]: counts[row.mappingConfidence] + 1 }), {
       high: 0, ambiguous: 0, unmatched: 0,
     }),
-    { high: 100, ambiguous: 17, unmatched: 5 },
+    { high: 102, ambiguous: 17, unmatched: 5 },
   );
 });
 
@@ -142,7 +142,7 @@ test('2026 Yanqing partial interview-cutoff rows preserve unique matches and unr
     scoreRows.reduce((counts, row) => ({ ...counts, [row.mappingConfidence]: counts[row.mappingConfidence] + 1 }), {
       high: 0, ambiguous: 0, unmatched: 0,
     }),
-    { high: 100, ambiguous: 17, unmatched: 5 },
+    { high: 102, ambiguous: 17, unmatched: 5 },
   );
 });
 
@@ -229,5 +229,25 @@ test('2026 Tongzhou fiscal cutoff scores map to unique same-year unit and title 
     assert.equal(row.score, score);
     assert.equal(row.mappingConfidence, 'high');
     assert.equal(row.sourceId, 'cgzj-2026-tongzhou-fiscal-cutoff-sample');
+  }
+});
+
+test('2026 Chaoyang cutoff sample rows map only to their exact same-year job identities', () => {
+  const expectedRows = {
+    '2026-cgzj-chaoyang-01': ['230531801', '北京市朝阳区东坝地区（乡）', '平安建设岗', 133.5],
+    '2026-cgzj-chaoyang-02': ['232502003', '北京市公安局朝阳分局', '一线执法岗1', 56.35],
+  };
+
+  for (const [id, [code, unit, title, score]] of Object.entries(expectedRows)) {
+    const row = scoreRows.find((item) => item.id === id);
+    const matches = positions.filter((position) => position.year === 2026
+      && position.unit === unit && position.title === title);
+
+    assert.equal(matches.length, 1, `${id} must have one exact same-year job match`);
+    assert.equal(matches[0].code, code);
+    assert.equal(row.positionCode, code);
+    assert.equal(row.score, score);
+    assert.equal(row.mappingConfidence, 'high');
+    assert.equal(row.sourceId, 'cgzj-2026-chaoyang-cutoff-sample');
   }
 });
