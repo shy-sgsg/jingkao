@@ -73,6 +73,21 @@ test('each published module question bank starts both practice and timed mock se
   }
 });
 
+test('free practice samples a randomized question order instead of the bank prefix', () => {
+  const bank = [question('random-q1', 'verbal'), question('random-q2', 'verbal'), question('random-q3', 'verbal')];
+  const originalRandom = Math.random;
+  Math.random = () => 0;
+  try {
+    const started = createAptitudeModuleSession(bank, normalizeAptitudeModuleStudies(), 'verbal', {
+      mode: 'practice', targetQuestionCount: 2, randomize: false,
+    }, { id: 'verbal-random-practice', now: '2026-10-09T00:00:00.000Z' });
+
+    assert.deepEqual(started.session.questionIds, ['random-q2', 'random-q3']);
+  } finally {
+    Math.random = originalRandom;
+  }
+});
+
 test('timed mock supports answer changes, navigation, one-time submission, and module-tagged results', () => {
   assert.equal(typeof finishAptitudeModuleSession, 'function');
   const bank = [question('reasoning-q1', 'reasoning', 'A'), question('reasoning-q2', 'reasoning', 'B')];

@@ -1249,8 +1249,7 @@ function renderAptitudeModule(moduleId) {
     ? tasks.find((task) => task.id === activeAptitudeModulePlanTaskId) : null;
   const session = activeAptitudeModuleSessionId
     ? study.sessions.find((item) => item.id === activeAptitudeModuleSessionId && item.moduleId === module.id)
-    : planTask ? study.sessions.find((item) => item.planTaskId === planTask.id && item.status === 'active')
-      : study.sessions.find((item) => item.status === 'active' && item.moduleId === module.id);
+    : planTask ? study.sessions.find((item) => item.planTaskId === planTask.id && item.status === 'active') : null;
   if (session) return renderAptitudeModuleSession(module, session, study);
   const taskProgress = planTask ? getAptitudeModuleTaskProgress(planTask, study.sessions, study.answers) : null;
   const taskActivity = planTask?.aptitudeConfig?.activityType || 'free';
@@ -1955,7 +1954,12 @@ function renderPage() {
   const pages = { overview: renderOverview, guide: renderGuide, plan: renderPlan, science: renderScience, aptitude: renderAptitude, generalKnowledge: renderGeneralKnowledge, essay: renderEssay, mocks: renderMocks, positions: renderPositions, compare: renderCompare, assistant: renderAssistant, scenarios: renderScenarios, matrix: renderMatrix, profile: renderProfile, research: renderResearch, evidence: renderEvidence, sources: renderSources, settings: renderSettings };
   const help = getPageHelp(page === 'aptitudeModule' ? 'aptitudeModule' : page);
   let content = page === 'aptitudeModule' ? renderAptitudeModule(activeAptitudeModuleId) : (pages[page] || renderOverview)();
-  return `<div class="page-shell ${pageTransition ? 'page-enter' : ''}${resultTransition ? ' results-enter' : ''}"><details class="page-howto"><summary><span class="page-howto-icon">ⓘ</span><span>本页怎么用</span><span class="page-howto-hint">点此展开</span></summary><div class="page-howto-content"><p>${escapeHtml(help.text)}</p><a href="#/${escapeHtml(help.actionPage)}">${escapeHtml(help.actionLabel)} →</a></div></details>${content}</div>`;
+  const aptitudeModuleChild = page === 'science' || page === 'generalKnowledge'
+    || page === 'aptitudeModule' && Boolean(activeAptitudeModuleSessionId || activeAptitudeModulePlanTaskId || selectedAptitudeModuleKnowledgePointId);
+  const parentNavigation = aptitudeModuleChild
+    ? '<div class="module-parent-navigation"><a class="button button-secondary button-small" href="#/aptitude">返回行测总览</a></div>'
+    : '';
+  return `<div class="page-shell ${pageTransition ? 'page-enter' : ''}${resultTransition ? ' results-enter' : ''}"><details class="page-howto"><summary><span class="page-howto-icon">ⓘ</span><span>本页怎么用</span><span class="page-howto-hint">点此展开</span></summary><div class="page-howto-content"><p>${escapeHtml(help.text)}</p><a href="#/${escapeHtml(help.actionPage)}">${escapeHtml(help.actionLabel)} →</a></div></details>${parentNavigation}${content}</div>`;
 }
 
 function renderModal(content) {

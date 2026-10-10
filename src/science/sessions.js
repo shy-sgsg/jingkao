@@ -56,9 +56,10 @@ export function createScienceSession(bank, sourceStudy, options = {}, { id, now 
   const sourcePriority = Array.isArray(options.sourcePriorityOrder)
     ? new Map(options.sourcePriorityOrder.map((sourceType, index) => [sourceType, index]))
     : null;
+  const randomizeQuestions = !options.preserveOrder && (mode === 'practice' || options.randomize === true);
   const publishedBank = (Array.isArray(bank) ? bank : []).filter((question) => question.publishStatus === 'published');
   let candidates = filterQuestions(publishedBank, filters);
-  if (options.randomize) {
+  if (randomizeQuestions) {
     const candidateIds = new Set(candidates.map((question) => question.id));
     const incompleteSharedGroups = new Set();
     const sharedGroups = new Map();
@@ -80,7 +81,7 @@ export function createScienceSession(bank, sourceStudy, options = {}, { id, now 
   if (candidates.length < requestedQuestionCount) {
     throw new Error(`当前筛选仅有 ${candidates.length} 道可用题目，少于目标题量 ${requestedQuestionCount}。`);
   }
-  const sampled = options.randomize
+  const sampled = randomizeQuestions
     ? randomizeQuestionGroups(candidates, requestedQuestionCount)
     : { questions: candidates.slice(0, requestedQuestionCount), selectedQuestionCount: requestedQuestionCount };
   const targetQuestionCount = sampled.questions.length;

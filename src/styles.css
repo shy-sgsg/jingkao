@@ -1076,6 +1076,7 @@ input:not([type="checkbox"]), select, textarea { min-height: var(--control-heigh
 .chip { min-height: 27px; font-size: var(--font-xs); }
 .quick-start-section, .panel { margin-block: 2px; }
 .page-shell { display: flex; flex-direction: column; gap: 14px; view-transition-name: main-content; }
+.module-parent-navigation { display: flex; justify-content: flex-start; }
 .page-howto { overflow: hidden; border: 1px solid #e4eaf2; border-radius: 10px; background: #fff; }
 .page-howto summary { display: flex; min-height: 46px; align-items: center; gap: 9px; padding: 0 15px; color: #516987; font-size: var(--font-sm); font-weight: 650; cursor: pointer; list-style: none; }
 .page-howto summary::-webkit-details-marker { display: none; }

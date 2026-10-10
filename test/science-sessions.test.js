@@ -22,7 +22,7 @@ test('science sessions respect plan task filters and retain an exam deadline', (
   assert.equal(result.session.planTaskId, 'task-1');
 });
 
-test('all-source sessions select official, recalled, agency mock, then existing original questions', () => {
+test('free practice randomizes across all published source types', () => {
   const sourceBank = [
     { ...bank[0], id: 'original-first' },
     { ...bank[0], id: 'agency-mock', sourceType: 'third_party_mock' },
@@ -33,7 +33,7 @@ test('all-source sessions select official, recalled, agency mock, then existing 
     mode: 'practice', targetQuestionCount: 4,
   }, { id: 'source-priority', now: '2026-10-09T00:00:00.000Z' });
 
-  assert.deepEqual(session.questionIds, ['official', 'recalled', 'agency-mock', 'original-first']);
+  assert.deepEqual([...session.questionIds].sort(), ['agency-mock', 'official', 'original-first', 'recalled']);
   const originalsOnly = createScienceSession(sourceBank, emptyStudy(), {
     mode: 'practice', targetQuestionCount: 1, sourceFilter: 'original',
   }, { id: 'existing-original', now: '2026-10-09T00:00:00.000Z' });
@@ -53,16 +53,19 @@ test('answers are recorded once, mistakes accumulate, and a session completes af
   const { scienceStudy: started, session } = createScienceSession(bank, study, {
     mode: 'practice', targetQuestionCount: 2, subjectId: 'physics',
   }, { id: 'session-2', now: '2026-10-09T00:00:00.000Z' });
-  const first = answerScienceQuestion(bank, started, session.id, 'A', { now: '2026-10-09T00:00:20.000Z' });
+  const firstQuestion = bank.find((question) => question.id === session.questionIds[0]);
+  const firstWrongOption = firstQuestion.correctAnswer === 'A' ? 'B' : 'A';
+  const first = answerScienceQuestion(bank, started, session.id, firstWrongOption, { now: '2026-10-09T00:00:20.000Z' });
 
   assert.equal(first.answer.isCorrect, false);
-  assert.equal(first.scienceStudy.mistakes['q-1'].count, 1);
+  assert.equal(first.scienceStudy.mistakes[firstQuestion.id].count, 1);
   assert.equal(first.scienceStudy.sessions[0].currentIndex, 0);
   assert.throws(() => answerScienceQuestion(bank, first.scienceStudy, session.id, 'B'), /尚未完成上一题复盘/);
 
   const continued = continueScienceSession(bank, first.scienceStudy, session.id);
   assert.equal(continued.sessions[0].currentIndex, 1);
-  const second = answerScienceQuestion(bank, continued, session.id, 'A', { now: '2026-10-09T00:00:40.000Z' });
+  const secondQuestion = bank.find((question) => question.id === session.questionIds[1]);
+  const second = answerScienceQuestion(bank, continued, session.id, secondQuestion.correctAnswer, { now: '2026-10-09T00:00:40.000Z' });
   const finished = continueScienceSession(bank, second.scienceStudy, session.id, { now: '2026-10-09T00:00:41.000Z' });
 
   assert.equal(finished.sessions[0].status, 'completed');

@@ -8,6 +8,9 @@ import { runInNewContext } from 'node:vm';
 import { createStoredAccount } from '../src/data/encryptedStore.js';
 import { studyLogKey } from '../src/data/sync.js';
 import { createPlanTask } from '../src/science/planTasks.js';
+import { getAptitudeQuestions } from '../src/aptitude/questions.js';
+import { SCIENCE_QUESTION_BANK } from '../src/science/questionBank.js';
+import { GENERAL_KNOWLEDGE_QUESTION_BANK } from '../src/general-knowledge/questionBank.js';
 
 const TEST_PASSWORD = '1234567890123';
 
@@ -234,6 +237,78 @@ test('general knowledge temporary exit returns to the directory and preserves th
   assert.doesNotMatch(app.root.innerHTML, /常识判断练习/);
   assert.match(app.root.innerHTML, /继续未完成训练/);
   assert.match(app.root.innerHTML, new RegExp(`href="#/aptitude/general-knowledge\\?session=${sessionId}"`));
+});
+
+test('aptitude module directories, lessons, and sessions link back to the aptitude overview', async () => {
+  await import('../scripts/build.mjs');
+  const html = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8');
+  const script = html.match(/<script>\s*([\s\S]*?)<\/script>/)?.[1];
+  const returnLink = /href="#\/aptitude"[^>]*>返回行测总览/;
+  const directoryRoutes = [
+    'aptitude/verbal', 'aptitude/verbal?knowledge=verbal:main-idea',
+    'aptitude/science', 'aptitude/science?knowledge=physics:buoyancy',
+    'aptitude/general-knowledge', 'aptitude/general-knowledge?knowledge=law:legal-concepts',
+  ];
+
+  for (const route of directoryRoutes) {
+    const page = await renderStandaloneRoute(script, route);
+    assert.match(page.root.innerHTML, returnLink, `${route} should provide a direct link to the aptitude overview`);
+  }
+
+  const sessionCases = [
+    { route: 'aptitude/verbal', queryKey: 'aptitudeModuleStudies', storeKey: 'verbal', moduleId: 'verbal',
+      questionId: getAptitudeQuestions('verbal')[0].id, sessionId: 'verbal-parent-link' },
+    { route: 'aptitude/science', queryKey: 'scienceStudy', moduleId: 'science_reasoning',
+      questionId: SCIENCE_QUESTION_BANK.find((item) => item.publishStatus === 'published').id, sessionId: 'science-parent-link' },
+    { route: 'aptitude/general-knowledge', queryKey: 'generalKnowledgeStudy', moduleId: 'general_knowledge',
+      questionId: GENERAL_KNOWLEDGE_QUESTION_BANK.find((item) => item.publishStatus === 'published').id, sessionId: 'knowledge-parent-link' },
+  ];
+
+  for (const item of sessionCases) {
+    const study = {
+      knowledgeProgress: {}, sessions: [{ id: item.sessionId, moduleId: item.moduleId, mode: 'practice', status: 'active',
+        questionIds: [item.questionId], currentIndex: 0, draftAnswers: {} }],
+      answers: [], mistakes: {}, favorites: [], favoriteKnowledgePointIds: [], unclearKnowledgePointIds: [],
+    };
+    const storedState = { onboarding: { hidden: true, completed: true } };
+    if (item.storeKey) storedState[item.queryKey] = { [item.storeKey]: study };
+    else storedState[item.queryKey] = study;
+    const app = await renderStandaloneRoute(script, `${item.route}?session=${item.sessionId}`, storedState);
+    assert.match(app.root.innerHTML, returnLink, `${item.sessionId} should provide a direct parent link`);
+  }
+});
+
+test('temporarily exiting practice returns to each of the five general module pages and keeps a resume link', async () => {
+  await import('../scripts/build.mjs');
+  const html = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8');
+  const script = html.match(/<script>\s*([\s\S]*?)<\/script>/)?.[1];
+  for (const moduleId of ['political-theory', 'verbal', 'quantitative', 'reasoning', 'data-analysis']) {
+    const sessionId = `${moduleId}-exit-test`;
+    const questionId = getAptitudeQuestions(moduleId)[0].id;
+    const app = await renderStandaloneRoute(script, `aptitude/${moduleId}?session=${sessionId}`, {
+      onboarding: { hidden: true, completed: true },
+      aptitudeModuleStudies: {
+        [moduleId]: {
+          moduleId, knowledgeProgress: {},
+          sessions: [{ id: sessionId, moduleId, mode: 'practice', status: 'active',
+            questionIds: [questionId], currentIndex: 0, draftAnswers: {} }],
+          answers: [], mistakes: {}, favorites: [], favoriteKnowledgePointIds: [], unclearKnowledgePointIds: [],
+        },
+      },
+    });
+
+    assert.match(app.root.innerHTML, /data-action="leave-aptitude-module-session"/, `${moduleId} should expose temporary exit`);
+    const exitButton = { dataset: { action: 'leave-aptitude-module-session' } };
+    const target = { closest: (selector) => selector === '[data-action]' ? exitButton : null };
+    await app.listeners.get('click')({ target, preventDefault() {} });
+    assert.equal(app.location.hash, `#/aptitude/${moduleId}`);
+    await app.windowListeners.get('hashchange')();
+
+    assert.match(app.root.innerHTML, /知识目录与讲解/, `${moduleId} should return to its directory`);
+    assert.match(app.root.innerHTML, /继续未完成训练/, `${moduleId} should preserve a resume action`);
+    assert.match(app.root.innerHTML, new RegExp(`href="#/aptitude/${moduleId}\\?session=${sessionId}"`));
+    assert.doesNotMatch(app.root.innerHTML, /<h1>专项练习<\/h1>/, `${moduleId} should leave the question page`);
+  }
 });
 
 test('all five modules render outline-backed learning, practice, records, and plan sections', async () => {

@@ -14,12 +14,15 @@ test('practice answers save module identity, source, and wrong-book records with
   let state = { scienceStudy: { answers: [{ id: 'science-a', moduleId: 'science_reasoning' }] }, generalKnowledgeStudy: {} };
   const started = sessions.createGeneralKnowledgeSession(bank, state.generalKnowledgeStudy, { targetQuestionCount: 2 }, { id: 'practice-gk', now: '2026-10-09T10:00:00.000Z' });
   assert.equal(started.session.moduleId, 'general_knowledge');
-  assert.deepEqual(started.session.questionIds, ['gk-q1', 'gk-q3'], 'official examples and then third-party sources precede original supplements');
-  state.generalKnowledgeStudy = sessions.answerGeneralKnowledgeQuestion(bank, started.generalKnowledgeStudy, started.session.id, 'B', { now: '2026-10-09T10:01:00.000Z' });
+  assert.equal(started.session.questionIds.length, 2);
+  assert.ok(started.session.questionIds.every((id) => bank.some((question) => question.id === id)));
+  const firstQuestion = bank.find((question) => question.id === started.session.questionIds[0]);
+  const wrongOption = firstQuestion.correctAnswer === 'A' ? 'B' : 'A';
+  state.generalKnowledgeStudy = sessions.answerGeneralKnowledgeQuestion(bank, started.generalKnowledgeStudy, started.session.id, wrongOption, { now: '2026-10-09T10:01:00.000Z' });
   const answer = state.generalKnowledgeStudy.answers[0];
   assert.equal(answer.moduleId, 'general_knowledge');
   assert.equal(answer.isCorrect, false);
-  assert.equal(state.generalKnowledgeStudy.mistakes['gk-q1'].moduleId, 'general_knowledge');
+  assert.equal(state.generalKnowledgeStudy.mistakes[firstQuestion.id].moduleId, 'general_knowledge');
   assert.deepEqual(state.scienceStudy.answers.map((item) => item.id), ['science-a']);
 });
 

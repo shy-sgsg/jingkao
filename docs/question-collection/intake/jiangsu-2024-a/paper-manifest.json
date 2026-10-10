@@ -42,11 +42,11 @@
       "to": 135
     }
   ],
-  "questions_parsed_count": 124,
+  "questions_parsed_count": 129,
   "answer_count": 135,
   "explanation_count": 135,
-  "published_count": 124,
-  "held_count": 11,
+  "published_count": 129,
+  "held_count": 6,
   "authorization": {
     "status": "user_confirmed_republication_authorization",
     "confirmed_on": "2026-10-10"
@@ -54,12 +54,12 @@
   "source_file": "publisher-paper.pdf",
   "question_records_file": "questions.json",
   "answer_explanations_file": "answer-explanations.json",
-  "captured_question_text_count": 124,
+  "captured_question_text_count": 129,
   "answer_explanation_count": 135,
-  "published_question_count": 124,
-  "held_question_count": 11,
-  "verified_answer_explanation_count": 124,
+  "published_question_count": 129,
+  "held_question_count": 6,
+  "verified_answer_explanation_count": 129,
   "question_page_url": "https://www.aipta.com/article/9441.html",
   "shared_stimuli_file": "shared-stimuli.json",
-  "whole_paper_mock_eligibility": "hold_full_paper_until_11_missing_question_items_are_resolved; complete_general_knowledge_quantitative_and_data_analysis_sections_can_open"
+  "whole_paper_mock_eligibility": "hold_full_paper_until_6_missing_question_items_are_resolved; complete_general_knowledge_verbal_quantitative_and_data_analysis_sections_can_open; reasoning_section_incomplete"
 }
