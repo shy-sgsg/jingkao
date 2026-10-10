@@ -385,6 +385,62 @@ export const IMPORTED_SOURCE_QUESTIONS = [
     "presentationMode": "original"
   },
   {
+    "id": "js2024a-q012",
+    "moduleId": "general-knowledge",
+    "subjectId": "governance",
+    "topicId": "governance:public",
+    "knowledgePointIds": [
+      "governance:government-functions"
+    ],
+    "originalQuestionNo": 12,
+    "sectionOrder": 1,
+    "stem": "下图描绘的是被称为“二牛抬杠”的我国传统农业耕作场景，其中最能体现的管理职能是：",
+    "stemImageUrls": [
+      "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_7924131ffda595bb.png"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "激励",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "控制",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "计划",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "组织",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "“二牛抬杠”是南诏时期的一种特殊耕作方式，也称“二牛三夫”耕作法。耕作时，两牛相距约七八尺，中间横抬一“杠”，“杠”后接续辕犁。一人在前牵牛；一人坐于“杠”上，脚踏辕犁，控制犁铧入土深浅；一人在后扶持犁把。 A项错误，激励职能是企业管理者用科学的方法调动职工的积极性和创造性，挖掘职工的内在潜力的一系列管理活动。 B项错误，控制职能是管理者要对组织的运行状况加以监督，通过控制可发现当初的计划与实际的偏差，采取有利的行动纠正偏差，保证计划的实行，确保原来的目标得以实现。 C项错误，计划职能是指管理者预测未来、确定目标、制定实现这些目标的行动方针的过程。它涉及原因与目的、活动与内容、人员安排、时间安排、空间安排以及手段与方法的选择等问题。 D项正确，组织职能是指所确定的任务由谁来完成以及如何管理和协调这些任务的过程。“二牛抬杠”中，牛与人均有明确具体的分工，也体现了对人力、物力资源的组织协调。 故本题选D。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
     "id": "js2024a-q013",
     "moduleId": "general-knowledge",
     "subjectId": "economy",
@@ -823,43 +879,6 @@ export const IMPORTED_SOURCE_QUESTIONS = [
     "presentationMode": "original"
   },
   {
-    "id": "js2024a-q025",
-    "moduleId": "verbal",
-    "subjectId": "reading",
-    "topicId": "verbal:detail",
-    "knowledgePointIds": [
-      "verbal:detail"
-    ],
-    "originalQuestionNo": 25,
-    "sectionOrder": 2,
-    "stem": "本卷来源于考生回忆，本题暂缺失",
-    "options": [
-      "缺",
-      "缺",
-      "缺",
-      "缺"
-    ],
-    "correctAnswer": "A",
-    "explanation": "缺",
-    "difficulty": "medium",
-    "sourceType": "verified_exam",
-    "sourceId": "jiangsu-2024-a-32xueyuan",
-    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
-    "sourceNote": "江苏省考 A 类历年题；题干、选项取自原卷 PDF，答案与解析逐题按同份出版版核对。用户已确认获得转载授权。",
-    "sourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-    "region": "jiangsu",
-    "examYear": 2024,
-    "paperId": "jiangsu-2024-A-class",
-    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
-    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-    "sharedStimulusId": null,
-    "sharedStimulus": null,
-    "verificationStatus": "verified",
-    "copyrightStatus": "licensed",
-    "publishStatus": "published",
-    "presentationMode": "original"
-  },
-  {
     "id": "js2024a-q026",
     "moduleId": "verbal",
     "subjectId": "reading",
@@ -996,6 +1015,60 @@ export const IMPORTED_SOURCE_QUESTIONS = [
     "sourceNote": "江苏省考 A 类历年题；题干、选项取自原卷 PDF，答案与解析逐题按同份出版版核对。用户已确认获得转载授权。",
     "sourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
     "region": "jiangsu",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q030",
+    "moduleId": "verbal",
+    "subjectId": "sentence-expression",
+    "topicId": "verbal:sentence-order",
+    "knowledgePointIds": [
+      "verbal:sentence-order"
+    ],
+    "originalQuestionNo": 30,
+    "sectionOrder": 2,
+    "stem": "①这样经济潜能才能得到充分释放，经济增长的边界才会不断拓展 ②产权制度发挥着重要作用 ③能不能让各种资源都参与到经济活动中并充分发挥作用 ④通过有效的组合配置充分发挥要素价值，进而产生更大的经济效益 ⑤在经济发展中实现“人尽其才，物尽其用”，就是要求各种资源作为生产要素都参与到经济活动中 ⑥能不能保证生产要素的组合配置以最优的方式稳定地实现进而提高全要素生产率 将以上6个句子重新排列，语序正确的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "⑤⑥②①③④",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "⑤④①③⑥②",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "③⑥②①⑤④",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "③④⑤⑥①②",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "观察选项，可先判断首句。③提出能不能让各种资源都参与到经济活动中的问题，⑤论述要实现“人尽其才，物尽其用”，就是要求各种资源作为生产要素都参与到经济活动中，引出各种资源作为生产要素参与经济活动的话题，按照语句逻辑顺序，应先引出话题再具体论证“能不能”，相比之下，⑤更适合做首句，排除C、D项。 比较A、B项，①以“这样”开头，指出这样才能充分释放经济潜能、拓展经济增长的边界，为某种对策产生的作用，则前文应有相关的对策表述，②指出产权制度有重要作用，非对策性表述，④以“通过”提出对策，论述应以有效的组合配置充分发挥要素价值，产生更大的经济效益，“通过有效的组合配置”为对策表述且与①同样论述“经济”的话题，故②①衔接不当，④①衔接恰当，排除A项。 验证B项，符合语句逻辑关系。 故本题选B。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
     "examYear": 2024,
     "paperId": "jiangsu-2024-A-class",
     "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
@@ -1341,43 +1414,6 @@ export const IMPORTED_SOURCE_QUESTIONS = [
     "presentationMode": "original"
   },
   {
-    "id": "js2024a-q040",
-    "moduleId": "verbal",
-    "subjectId": "reading",
-    "topicId": "verbal:detail",
-    "knowledgePointIds": [
-      "verbal:detail"
-    ],
-    "originalQuestionNo": 40,
-    "sectionOrder": 2,
-    "stem": "本卷来源于考生回忆，本题暂缺失",
-    "options": [
-      "缺",
-      "缺",
-      "缺",
-      "缺提示词工程师，一个与人工智能（AI）相关的新职业悄然兴起。其职责是与生成式人工智能进行高质量对话，用设计、管理与优化相关行业的提示词来进行大模型训练，配合技术提升整体产品表现。可以这么理解：人工智能已经开始进入无数具体的行业领域，如同刚入职的“新人”，需要一位行业资深前辈贴身“传帮带”，助其快速适应业务、成为“熟手”。 这些“传帮带”的师父们，就是AI训练应用场景下的提示词工程师。在国内招聘平台上，这个岗位仍处于动态定义的过程中，未必严谨地以“提示词工程师”的字样出现，可能名为AI训练师，或是AI产品运营，也可能叫作AI“文生图”绘画师，但岗位描述都指向人工智能生成内容训练。毫无疑问，从需求端已经能感受到这一职业的水涨船高。 初看这个新职业，总有些________，因为它超出了专业对口的思维方式。说它是与AI技术相关吧，它要求从业者有其他垂直领域的专业性，尤其是法律、宗教、艺术这样的领域；说它是内容生产吧，它的从业者又必须高度理解AI逻辑，有产品经理思维打底。它非文非理、非农非工，既跨界又难以充分量化， 要求的是一种人文与技术的综合性，以及一种高度开放的思维、技术伴随式学习能力。 有论者分析，这个职业可能是暂时的，因为它适配的是大语言模型进入具体应用场景的阶段。但其实， 这个职业本身也正处于生成之中，谁又能定论没有新的发育可能呢？其所内含的职业精神本就指向人文精神与人工智能的动态调适。当AI快速进入人类生存的各个层面、各个细分领域，这种调适每个人都要经历，并指向了两个相辅相成的方面——既包含我们对AI的适应（使用、伴随学习、合作创造），也包括我们对AI的规训（日常训练、伦理制约）。未来，这就是一个人的社会化的基本内容，而“提示词工程师”则会成为每个现代人的一个侧面。 值得注意的是，对于我们怎么找工作、怎么看待工作，“提示词工程师”兴起还带来了另外一个重要的信号：未来，最容易被替代的工作是那些易于标准化的职业、易于模式化的流程，不容易被替代的则是那些具有“人”的综合性特征的职业。后者，可能是独特的艺术家、具有原创性的创作者、技术人文复合性人才，也可能是插花师、护士、电工这样具有人的“具身性”的职业。换句话说，在AI的吞噬中稍稍保持的竞争性，要么来自一个确实高度复杂的思维，要么来自一个可以面对面的肉身。 风吹云走，这样的职业分化已经近在眼前。此刻看似能“上岸”的职业、此刻被争抢的“饭碗”，是否有想象中那么稳定？可能还需选择者长思。"
-    ],
-    "correctAnswer": "A",
-    "explanation": "缺",
-    "difficulty": "medium",
-    "sourceType": "verified_exam",
-    "sourceId": "jiangsu-2024-a-32xueyuan",
-    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
-    "sourceNote": "江苏省考 A 类历年题；题干、选项取自原卷 PDF，答案与解析逐题按同份出版版核对。用户已确认获得转载授权。",
-    "sourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-    "region": "jiangsu",
-    "examYear": 2024,
-    "paperId": "jiangsu-2024-A-class",
-    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
-    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-    "sharedStimulusId": null,
-    "sharedStimulus": null,
-    "verificationStatus": "verified",
-    "copyrightStatus": "licensed",
-    "publishStatus": "published",
-    "presentationMode": "original"
-  },
-  {
     "id": "js2024a-q041",
     "moduleId": "verbal",
     "subjectId": "reading",
@@ -1407,8 +1443,12 @@ export const IMPORTED_SOURCE_QUESTIONS = [
     "paperId": "jiangsu-2024-A-class",
     "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
     "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-    "sharedStimulusId": null,
-    "sharedStimulus": null,
+    "sharedStimulusId": "jiangsu-2024-A-class-stimulus-41-45",
+    "sharedStimulus": {
+      "text": "提示词工程师，一个与人工智能（AI）相关的新职业悄然兴起。其职责是与生成式人工智能进行高质量对话，用设计、管理与优化相关行业的提示词来进行大模型训练，配合技术提升整体产品表现。可以这么理解：人工智能已经开始进入无数具体的行业领域，如同刚入职的“新人”，需要一位行业资深前辈贴身“传帮带”，助其快速适应业务、成为“熟手”。 这些“传帮带”的师父们，就是AI训练应用场景下的提示词工程师。在国内招聘平台上，这个岗位仍处于动态定义的过程中，未必严谨地以“提示词工程师”的字样出现，可能名为AI训练师，或是AI产品运营，也可能叫作AI“文生图”绘画师，但岗位描述都指向人工智能生成内容训练。毫无疑问，从需求端已经能感受到这一职业的水涨船高。 初看这个新职业，总有些________，因为它超出了专业对口的思维方式。说它是与AI技术相关吧，它要求从业者有其他垂直领域的专业性，尤其是法律、宗教、艺术这样的领域；说它是内容生产吧，它的从业者又必须高度理解AI逻辑，有产品经理思维打底。它非文非理、非农非工，既跨界又难以充分量化，要求的是一种人文与技术的综合性，以及一种高度开放的思维、技术伴随式学习能力。 有论者分析，这个职业可能是暂时的，因为它适配的是大语言模型进入具体应用场景的阶段。但其实，这个职业本身也正处于生成之中，谁又能定论没有新的发育可能呢？其所内含的职业精神本就指向人文精神与人工智能的动态调适。当AI快速进入人类生存的各个层面、各个细分领域，这种调适每个人都要经历，并指向了两个相辅相成的方面——既包含我们对AI的适应（使用、伴随学习、合作创造），也包括我们对AI的规训（日常训练、伦理制约）。未来，这就是一个人的社会化的基本内容，而“提示词工程师”则会成为每个现代人的一个侧面。 值得注意的是，对于我们怎么找工作、怎么看待工作，“提示词工程师”兴起还带来了另外一个重要的信号：未来，最容易被替代的工作是那些易于标准化的职业、易于模式化的流程，不容易被替代的则是那些具有“人”的综合性特征的职业。后者，可能是独特的艺术家、具有原创性的创作者、技术人文复合性人才，也可能是插花师、护士、电工这样具有人的“具身性”的职业。换句话说，在AI的吞噬中稍稍保持的竞争性，要么来自一个确实高度复杂的思维，要么来自一个可以面对面的肉身。 风吹云走，这样的职业分化已经近在眼前。此刻看似能“上岸”的职业、此刻被争抢的“饭碗”，是否有想象中那么稳定？可能还需选择者长思。",
+      "imageUrls": [],
+      "sourcePageUrl": "https://www.aipta.com/article/9441.html"
+    },
     "verificationStatus": "verified",
     "copyrightStatus": "licensed",
     "publishStatus": "published",
@@ -1444,8 +1484,12 @@ export const IMPORTED_SOURCE_QUESTIONS = [
     "paperId": "jiangsu-2024-A-class",
     "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
     "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-    "sharedStimulusId": null,
-    "sharedStimulus": null,
+    "sharedStimulusId": "jiangsu-2024-A-class-stimulus-41-45",
+    "sharedStimulus": {
+      "text": "提示词工程师，一个与人工智能（AI）相关的新职业悄然兴起。其职责是与生成式人工智能进行高质量对话，用设计、管理与优化相关行业的提示词来进行大模型训练，配合技术提升整体产品表现。可以这么理解：人工智能已经开始进入无数具体的行业领域，如同刚入职的“新人”，需要一位行业资深前辈贴身“传帮带”，助其快速适应业务、成为“熟手”。 这些“传帮带”的师父们，就是AI训练应用场景下的提示词工程师。在国内招聘平台上，这个岗位仍处于动态定义的过程中，未必严谨地以“提示词工程师”的字样出现，可能名为AI训练师，或是AI产品运营，也可能叫作AI“文生图”绘画师，但岗位描述都指向人工智能生成内容训练。毫无疑问，从需求端已经能感受到这一职业的水涨船高。 初看这个新职业，总有些________，因为它超出了专业对口的思维方式。说它是与AI技术相关吧，它要求从业者有其他垂直领域的专业性，尤其是法律、宗教、艺术这样的领域；说它是内容生产吧，它的从业者又必须高度理解AI逻辑，有产品经理思维打底。它非文非理、非农非工，既跨界又难以充分量化，要求的是一种人文与技术的综合性，以及一种高度开放的思维、技术伴随式学习能力。 有论者分析，这个职业可能是暂时的，因为它适配的是大语言模型进入具体应用场景的阶段。但其实，这个职业本身也正处于生成之中，谁又能定论没有新的发育可能呢？其所内含的职业精神本就指向人文精神与人工智能的动态调适。当AI快速进入人类生存的各个层面、各个细分领域，这种调适每个人都要经历，并指向了两个相辅相成的方面——既包含我们对AI的适应（使用、伴随学习、合作创造），也包括我们对AI的规训（日常训练、伦理制约）。未来，这就是一个人的社会化的基本内容，而“提示词工程师”则会成为每个现代人的一个侧面。 值得注意的是，对于我们怎么找工作、怎么看待工作，“提示词工程师”兴起还带来了另外一个重要的信号：未来，最容易被替代的工作是那些易于标准化的职业、易于模式化的流程，不容易被替代的则是那些具有“人”的综合性特征的职业。后者，可能是独特的艺术家、具有原创性的创作者、技术人文复合性人才，也可能是插花师、护士、电工这样具有人的“具身性”的职业。换句话说，在AI的吞噬中稍稍保持的竞争性，要么来自一个确实高度复杂的思维，要么来自一个可以面对面的肉身。 风吹云走，这样的职业分化已经近在眼前。此刻看似能“上岸”的职业、此刻被争抢的“饭碗”，是否有想象中那么稳定？可能还需选择者长思。",
+      "imageUrls": [],
+      "sourcePageUrl": "https://www.aipta.com/article/9441.html"
+    },
     "verificationStatus": "verified",
     "copyrightStatus": "licensed",
     "publishStatus": "published",
@@ -1481,8 +1525,12 @@ export const IMPORTED_SOURCE_QUESTIONS = [
     "paperId": "jiangsu-2024-A-class",
     "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
     "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-    "sharedStimulusId": null,
-    "sharedStimulus": null,
+    "sharedStimulusId": "jiangsu-2024-A-class-stimulus-41-45",
+    "sharedStimulus": {
+      "text": "提示词工程师，一个与人工智能（AI）相关的新职业悄然兴起。其职责是与生成式人工智能进行高质量对话，用设计、管理与优化相关行业的提示词来进行大模型训练，配合技术提升整体产品表现。可以这么理解：人工智能已经开始进入无数具体的行业领域，如同刚入职的“新人”，需要一位行业资深前辈贴身“传帮带”，助其快速适应业务、成为“熟手”。 这些“传帮带”的师父们，就是AI训练应用场景下的提示词工程师。在国内招聘平台上，这个岗位仍处于动态定义的过程中，未必严谨地以“提示词工程师”的字样出现，可能名为AI训练师，或是AI产品运营，也可能叫作AI“文生图”绘画师，但岗位描述都指向人工智能生成内容训练。毫无疑问，从需求端已经能感受到这一职业的水涨船高。 初看这个新职业，总有些________，因为它超出了专业对口的思维方式。说它是与AI技术相关吧，它要求从业者有其他垂直领域的专业性，尤其是法律、宗教、艺术这样的领域；说它是内容生产吧，它的从业者又必须高度理解AI逻辑，有产品经理思维打底。它非文非理、非农非工，既跨界又难以充分量化，要求的是一种人文与技术的综合性，以及一种高度开放的思维、技术伴随式学习能力。 有论者分析，这个职业可能是暂时的，因为它适配的是大语言模型进入具体应用场景的阶段。但其实，这个职业本身也正处于生成之中，谁又能定论没有新的发育可能呢？其所内含的职业精神本就指向人文精神与人工智能的动态调适。当AI快速进入人类生存的各个层面、各个细分领域，这种调适每个人都要经历，并指向了两个相辅相成的方面——既包含我们对AI的适应（使用、伴随学习、合作创造），也包括我们对AI的规训（日常训练、伦理制约）。未来，这就是一个人的社会化的基本内容，而“提示词工程师”则会成为每个现代人的一个侧面。 值得注意的是，对于我们怎么找工作、怎么看待工作，“提示词工程师”兴起还带来了另外一个重要的信号：未来，最容易被替代的工作是那些易于标准化的职业、易于模式化的流程，不容易被替代的则是那些具有“人”的综合性特征的职业。后者，可能是独特的艺术家、具有原创性的创作者、技术人文复合性人才，也可能是插花师、护士、电工这样具有人的“具身性”的职业。换句话说，在AI的吞噬中稍稍保持的竞争性，要么来自一个确实高度复杂的思维，要么来自一个可以面对面的肉身。 风吹云走，这样的职业分化已经近在眼前。此刻看似能“上岸”的职业、此刻被争抢的“饭碗”，是否有想象中那么稳定？可能还需选择者长思。",
+      "imageUrls": [],
+      "sourcePageUrl": "https://www.aipta.com/article/9441.html"
+    },
     "verificationStatus": "verified",
     "copyrightStatus": "licensed",
     "publishStatus": "published",
@@ -1518,8 +1566,12 @@ export const IMPORTED_SOURCE_QUESTIONS = [
     "paperId": "jiangsu-2024-A-class",
     "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
     "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-    "sharedStimulusId": null,
-    "sharedStimulus": null,
+    "sharedStimulusId": "jiangsu-2024-A-class-stimulus-41-45",
+    "sharedStimulus": {
+      "text": "提示词工程师，一个与人工智能（AI）相关的新职业悄然兴起。其职责是与生成式人工智能进行高质量对话，用设计、管理与优化相关行业的提示词来进行大模型训练，配合技术提升整体产品表现。可以这么理解：人工智能已经开始进入无数具体的行业领域，如同刚入职的“新人”，需要一位行业资深前辈贴身“传帮带”，助其快速适应业务、成为“熟手”。 这些“传帮带”的师父们，就是AI训练应用场景下的提示词工程师。在国内招聘平台上，这个岗位仍处于动态定义的过程中，未必严谨地以“提示词工程师”的字样出现，可能名为AI训练师，或是AI产品运营，也可能叫作AI“文生图”绘画师，但岗位描述都指向人工智能生成内容训练。毫无疑问，从需求端已经能感受到这一职业的水涨船高。 初看这个新职业，总有些________，因为它超出了专业对口的思维方式。说它是与AI技术相关吧，它要求从业者有其他垂直领域的专业性，尤其是法律、宗教、艺术这样的领域；说它是内容生产吧，它的从业者又必须高度理解AI逻辑，有产品经理思维打底。它非文非理、非农非工，既跨界又难以充分量化，要求的是一种人文与技术的综合性，以及一种高度开放的思维、技术伴随式学习能力。 有论者分析，这个职业可能是暂时的，因为它适配的是大语言模型进入具体应用场景的阶段。但其实，这个职业本身也正处于生成之中，谁又能定论没有新的发育可能呢？其所内含的职业精神本就指向人文精神与人工智能的动态调适。当AI快速进入人类生存的各个层面、各个细分领域，这种调适每个人都要经历，并指向了两个相辅相成的方面——既包含我们对AI的适应（使用、伴随学习、合作创造），也包括我们对AI的规训（日常训练、伦理制约）。未来，这就是一个人的社会化的基本内容，而“提示词工程师”则会成为每个现代人的一个侧面。 值得注意的是，对于我们怎么找工作、怎么看待工作，“提示词工程师”兴起还带来了另外一个重要的信号：未来，最容易被替代的工作是那些易于标准化的职业、易于模式化的流程，不容易被替代的则是那些具有“人”的综合性特征的职业。后者，可能是独特的艺术家、具有原创性的创作者、技术人文复合性人才，也可能是插花师、护士、电工这样具有人的“具身性”的职业。换句话说，在AI的吞噬中稍稍保持的竞争性，要么来自一个确实高度复杂的思维，要么来自一个可以面对面的肉身。 风吹云走，这样的职业分化已经近在眼前。此刻看似能“上岸”的职业、此刻被争抢的“饭碗”，是否有想象中那么稳定？可能还需选择者长思。",
+      "imageUrls": [],
+      "sourcePageUrl": "https://www.aipta.com/article/9441.html"
+    },
     "verificationStatus": "verified",
     "copyrightStatus": "licensed",
     "publishStatus": "published",
@@ -1555,8 +1607,12 @@ export const IMPORTED_SOURCE_QUESTIONS = [
     "paperId": "jiangsu-2024-A-class",
     "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
     "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-    "sharedStimulusId": null,
-    "sharedStimulus": null,
+    "sharedStimulusId": "jiangsu-2024-A-class-stimulus-41-45",
+    "sharedStimulus": {
+      "text": "提示词工程师，一个与人工智能（AI）相关的新职业悄然兴起。其职责是与生成式人工智能进行高质量对话，用设计、管理与优化相关行业的提示词来进行大模型训练，配合技术提升整体产品表现。可以这么理解：人工智能已经开始进入无数具体的行业领域，如同刚入职的“新人”，需要一位行业资深前辈贴身“传帮带”，助其快速适应业务、成为“熟手”。 这些“传帮带”的师父们，就是AI训练应用场景下的提示词工程师。在国内招聘平台上，这个岗位仍处于动态定义的过程中，未必严谨地以“提示词工程师”的字样出现，可能名为AI训练师，或是AI产品运营，也可能叫作AI“文生图”绘画师，但岗位描述都指向人工智能生成内容训练。毫无疑问，从需求端已经能感受到这一职业的水涨船高。 初看这个新职业，总有些________，因为它超出了专业对口的思维方式。说它是与AI技术相关吧，它要求从业者有其他垂直领域的专业性，尤其是法律、宗教、艺术这样的领域；说它是内容生产吧，它的从业者又必须高度理解AI逻辑，有产品经理思维打底。它非文非理、非农非工，既跨界又难以充分量化，要求的是一种人文与技术的综合性，以及一种高度开放的思维、技术伴随式学习能力。 有论者分析，这个职业可能是暂时的，因为它适配的是大语言模型进入具体应用场景的阶段。但其实，这个职业本身也正处于生成之中，谁又能定论没有新的发育可能呢？其所内含的职业精神本就指向人文精神与人工智能的动态调适。当AI快速进入人类生存的各个层面、各个细分领域，这种调适每个人都要经历，并指向了两个相辅相成的方面——既包含我们对AI的适应（使用、伴随学习、合作创造），也包括我们对AI的规训（日常训练、伦理制约）。未来，这就是一个人的社会化的基本内容，而“提示词工程师”则会成为每个现代人的一个侧面。 值得注意的是，对于我们怎么找工作、怎么看待工作，“提示词工程师”兴起还带来了另外一个重要的信号：未来，最容易被替代的工作是那些易于标准化的职业、易于模式化的流程，不容易被替代的则是那些具有“人”的综合性特征的职业。后者，可能是独特的艺术家、具有原创性的创作者、技术人文复合性人才，也可能是插花师、护士、电工这样具有人的“具身性”的职业。换句话说，在AI的吞噬中稍稍保持的竞争性，要么来自一个确实高度复杂的思维，要么来自一个可以面对面的肉身。 风吹云走，这样的职业分化已经近在眼前。此刻看似能“上岸”的职业、此刻被争抢的“饭碗”，是否有想象中那么稳定？可能还需选择者长思。",
+      "imageUrls": [],
+      "sourcePageUrl": "https://www.aipta.com/article/9441.html"
+    },
     "verificationStatus": "verified",
     "copyrightStatus": "licensed",
     "publishStatus": "published",
@@ -1662,6 +1718,122 @@ export const IMPORTED_SOURCE_QUESTIONS = [
     "sourceNote": "江苏省考 A 类历年题；题干、选项取自原卷 PDF，答案与解析逐题按同份出版版核对。用户已确认获得转载授权。",
     "sourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
     "region": "jiangsu",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q049",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative:number-patterns",
+    "knowledgePointIds": [
+      "quantitative:number-patterns"
+    ],
+    "originalQuestionNo": 49,
+    "sectionOrder": 3,
+    "stem": "， ，9，18， ，（ ）",
+    "stemImageUrls": [
+      "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_3078f9a491b0d177.png",
+      "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_27a38c439bea34cc.png",
+      "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_db0c1f3ae9f4b280.png"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "27",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "",
+        "imageUrls": [
+          "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_729273458fd299ea.png"
+        ]
+      },
+      {
+        "id": "C",
+        "text": "",
+        "imageUrls": [
+          "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_a316c964d7e442a8.png"
+        ]
+      },
+      {
+        "id": "D",
+        "text": "54",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "本题考查根号数列。 第一步：观察数列。根号数列优先考虑将各项写成根号形式，考虑根号内数列的规律。 第二步：方法一：将原数列写成根号形式： 、 、 、 、 ，根号内数字均为3的倍数，且存在一定的倍数关系，优先作商。原数列根号内数字后项除以前项得到：6、 、4、 ，分子、分母递增，反约分得到： 、 、 、 ，新数列分子是公差为3的等差数列，分母是公差为1的等差数列，则新数列下一项为 。因此原数列未知项为 = =27 。 方法二：将原数列写成根号形式： 、 、 、 、 ，根号内数字均为3的倍数，变化趋势较大，考虑写成因数分解形式： 、 、 、 、 ，根号内乘号左侧为等差数列，乘号右侧是公比为3的等比数列。因此原数列未知项为 =27 。 故本题选C。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q050",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative:number-patterns",
+    "knowledgePointIds": [
+      "quantitative:number-patterns"
+    ],
+    "originalQuestionNo": 50,
+    "sectionOrder": 3,
+    "stem": "1/2，1/5，5/7，7/17，23/25，（ ）。",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "27/31",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "39/43",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "47/49",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "35/64",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "本题考查分数数列。 第一步：观察数列。分数数列优先分子、分母分开考虑，但无明显规律，再整体观察。 第二步：原数列各项分子与分母相加得到：3、6、12、24、48，是公比为2的等比数列。因此原数列未知项分子与分母相加应为96，只有C项符合。 故本题选C。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
     "examYear": 2024,
     "paperId": "jiangsu-2024-A-class",
     "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
@@ -1970,6 +2142,60 @@ export const IMPORTED_SOURCE_QUESTIONS = [
     "presentationMode": "original"
   },
   {
+    "id": "js2024a-q059",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative:probability",
+    "knowledgePointIds": [
+      "quantitative:probability"
+    ],
+    "originalQuestionNo": 59,
+    "sectionOrder": 3,
+    "stem": "小张所在单位共有4个科室，现以科室为单位组织文艺演出，每个科室出2个节目。演出结束后，因8个节目都非常精彩，决定从中随机选3个节目参加上级组织的汇演。则小张所在科室出的节目至少有一个被选送参加汇演的概率是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "9/20",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "5/14",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "11/20",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "9/14",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "本题考查基础概率问题。 第一步：审阅题干。至少有一个被选送的对立事件是一个都没被选送。 第二步：小张所在科室出的节目至少有一个被选送参加汇演的概率为1- =1- = 。 故本题选D。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
     "id": "js2024a-q060",
     "moduleId": "quantitative",
     "subjectId": "quantitative",
@@ -2143,6 +2369,70 @@ export const IMPORTED_SOURCE_QUESTIONS = [
     "sourceNote": "江苏省考 A 类历年题；题干、选项取自原卷 PDF，答案与解析逐题按同份出版版核对。用户已确认获得转载授权。",
     "sourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
     "region": "jiangsu",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q065",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative:geometry",
+    "knowledgePointIds": [
+      "quantitative:geometry"
+    ],
+    "originalQuestionNo": 65,
+    "sectionOrder": 3,
+    "stem": "如图所示，ABCDEF是一个边长为2的正六边形，圆O是三角形ACE的内切圆，则圆O的面积是（ ）。",
+    "stemImageUrls": [
+      "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_f9f0c810cfb05be6.png"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "",
+        "imageUrls": [
+          "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_cca2ba2e561f487f.png"
+        ]
+      },
+      {
+        "id": "B",
+        "text": "",
+        "imageUrls": [
+          "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_c93285dc7b253402.png"
+        ]
+      },
+      {
+        "id": "C",
+        "text": "",
+        "imageUrls": [
+          "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_34c2882a885afda3.png"
+        ]
+      },
+      {
+        "id": "D",
+        "text": "",
+        "imageUrls": [
+          "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_6c62aef36818a33d.png"
+        ]
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "本题考查平面几何问题。 第一步：审阅题干。ABCDEF是一个正六边形，则△ACE为正三角形，且边长为2× =2 。 第二步：根据正六边形的特性可知，AO=AB=2，且△ACE为正三角形，边长为2 ，可得圆O的半径为1， 则圆O的面积为π×12=π。 故本题选A。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
     "examYear": 2024,
     "paperId": "jiangsu-2024-A-class",
     "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
@@ -2525,31 +2815,50 @@ export const IMPORTED_SOURCE_QUESTIONS = [
     "presentationMode": "original"
   },
   {
-    "id": "js2024a-q076",
+    "id": "js2024a-q079",
     "moduleId": "reasoning",
     "subjectId": "reasoning",
-    "topicId": "reasoning:conclusion",
+    "topicId": "reasoning:graphic-patterns",
     "knowledgePointIds": [
-      "reasoning:conclusion"
+      "reasoning:graphic-patterns"
     ],
-    "originalQuestionNo": 76,
+    "originalQuestionNo": 79,
     "sectionOrder": 4,
-    "stem": "本卷来源于考生回忆，本题暂缺失",
-    "options": [
-      "缺",
-      "缺",
-      "缺",
-      "缺"
+    "stem": "从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。",
+    "stemImageUrls": [
+      "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_9f78da97f071df2e.jpg"
     ],
-    "correctAnswer": "A",
-    "explanation": "缺",
+    "options": [
+      {
+        "id": "A",
+        "text": "A",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "B",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "C",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "D",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "本题考查位置类规律。 第一步：观察图形。题干每行图形组成相同，考虑位置类规律。题干九宫格前两行第一个图形逆时针旋转90°得到第二个图形，第二个图形上下翻转得到第三个图形。第三行图形遵循此规律，则问号处图形应由第三行第二个图形上下翻转得到。 第二步：分析选项，确定答案。 A项：不符合题干翻转规律，排除。 B项：符合题干翻转规律，当选。 C项：不符合题干翻转规律，排除。 D项：不符合题干翻转规律，排除。 故本题选B。",
     "difficulty": "medium",
     "sourceType": "verified_exam",
     "sourceId": "jiangsu-2024-a-32xueyuan",
     "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
-    "sourceNote": "江苏省考 A 类历年题；题干、选项取自原卷 PDF，答案与解析逐题按同份出版版核对。用户已确认获得转载授权。",
-    "sourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-    "region": "jiangsu",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
     "examYear": 2024,
     "paperId": "jiangsu-2024-A-class",
     "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
@@ -2562,31 +2871,50 @@ export const IMPORTED_SOURCE_QUESTIONS = [
     "presentationMode": "original"
   },
   {
-    "id": "js2024a-q077",
+    "id": "js2024a-q080",
     "moduleId": "reasoning",
     "subjectId": "reasoning",
-    "topicId": "reasoning:conclusion",
+    "topicId": "reasoning:graphic-patterns",
     "knowledgePointIds": [
-      "reasoning:conclusion"
+      "reasoning:graphic-patterns"
     ],
-    "originalQuestionNo": 77,
+    "originalQuestionNo": 80,
     "sectionOrder": 4,
-    "stem": "本卷来源于考生回忆，本题暂缺失",
+    "stem": "从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。",
+    "stemImageUrls": [
+      "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_9a25a155dbee8f8.png"
+    ],
     "options": [
-      "缺",
-      "缺",
-      "缺",
-      "缺"
+      {
+        "id": "A",
+        "text": "A",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "B",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "C",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "D",
+        "imageUrls": []
+      }
     ],
     "correctAnswer": "A",
-    "explanation": "缺",
+    "explanation": "本题考查数量类规律。 第一步：观察图形。题干各图形组成元素相同，但无明显位置类和形状类规律。进一步观察发现，题干各图形黑白圆分布较集中，考虑数量类规律。题干各图形中黑圆的个数均为7，黑圆和白圆的部分数均为3。则问号处图形中黑圆的个数应为7，黑圆和白圆的部分数应均为3。 第二步：分析选项，确定答案。 A项：黑圆的个数为7，黑圆和白圆的部分数均为3，当选。 B项：黑圆的个数为8，排除。 C项：黑圆的部分数为2，排除。 D项：白圆的部分数为4，排除。 故本题选A。",
     "difficulty": "medium",
     "sourceType": "verified_exam",
     "sourceId": "jiangsu-2024-a-32xueyuan",
     "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
-    "sourceNote": "江苏省考 A 类历年题；题干、选项取自原卷 PDF，答案与解析逐题按同份出版版核对。用户已确认获得转载授权。",
-    "sourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-    "region": "jiangsu",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
     "examYear": 2024,
     "paperId": "jiangsu-2024-A-class",
     "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
@@ -2599,31 +2927,554 @@ export const IMPORTED_SOURCE_QUESTIONS = [
     "presentationMode": "original"
   },
   {
-    "id": "js2024a-q078",
+    "id": "js2024a-q081",
     "moduleId": "reasoning",
     "subjectId": "reasoning",
-    "topicId": "reasoning:conclusion",
+    "topicId": "reasoning:graphic-patterns",
     "knowledgePointIds": [
-      "reasoning:conclusion"
+      "reasoning:graphic-patterns"
     ],
-    "originalQuestionNo": 78,
+    "originalQuestionNo": 81,
     "sectionOrder": 4,
-    "stem": "本卷来源于考生回忆，本题暂缺失",
-    "options": [
-      "缺",
-      "缺",
-      "缺",
-      "缺"
+    "stem": "从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。",
+    "stemImageUrls": [
+      "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_3180c15ffb2545db.png"
     ],
-    "correctAnswer": "A",
-    "explanation": "缺",
+    "options": [
+      {
+        "id": "A",
+        "text": "A",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "B",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "C",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "D",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "本题考查位置类规律。 第一步：观察图形。题干各图形组成相同，考虑位置类规律。题干各图形中外圈的依次沿外圈顺时针移动1、2、3、4格，内圈的依次顺时针旋转90°得到下一个图形，则问号处图形应由第五个图形外圈的沿外圈顺时针移动5格，内圈的顺时针旋转90°得到。 第二步：分析选项，确定答案。 A项：不符合题干移动规律，排除。 B项：符合题干移动规律，当选。 C项：不符合题干移动规律，排除。 D项：不符合题干移动规律，排除。 故本题选B。",
     "difficulty": "medium",
     "sourceType": "verified_exam",
     "sourceId": "jiangsu-2024-a-32xueyuan",
     "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
-    "sourceNote": "江苏省考 A 类历年题；题干、选项取自原卷 PDF，答案与解析逐题按同份出版版核对。用户已确认获得转载授权。",
-    "sourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-    "region": "jiangsu",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q082",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:graphic-patterns",
+    "knowledgePointIds": [
+      "reasoning:graphic-patterns"
+    ],
+    "originalQuestionNo": 82,
+    "sectionOrder": 4,
+    "stem": "选项四个图形中，只有一个是由题干的四个图形拼合（只能通过上、下、左、右平移）而成的，请把它找出来。",
+    "stemImageUrls": [
+      "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_f17a0bf0e6f54140.png"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "A",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "B",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "C",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "D",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "本题考查拼接类规律。 第一步：阅读题干。根据题干信息可知为拼接类规律。 第二步：分析图形。题干各图形拼合，形成的图形如下所示。 故本题选A。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q083",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:graphic-patterns",
+    "knowledgePointIds": [
+      "reasoning:graphic-patterns"
+    ],
+    "originalQuestionNo": 83,
+    "sectionOrder": 4,
+    "stem": "选项四个图形中，只有一个是由题干的四个图形拼合（只能通过上、下、左、右平移）而成的，请把它找出来。",
+    "stemImageUrls": [
+      "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_4aa731f5f06c4321.png"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "A",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "B",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "C",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "D",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "本题考查拼接类规律。 第一步：阅读题干。根据题干信息可知为拼接类规律。 第二步：分析图形。题干各图形拼合，形成的图形如下所示。 故本题选B。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q084",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:graphic-patterns",
+    "knowledgePointIds": [
+      "reasoning:graphic-patterns"
+    ],
+    "originalQuestionNo": 84,
+    "sectionOrder": 4,
+    "stem": "选项四个图形中，只有一个是由题干的四个图形拼合（只能通过上、下、左、右平移）而成的，请把它找出来。",
+    "stemImageUrls": [
+      "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_ce4a7781bcc8407.png"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "A",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "B",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "C",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "D",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "本题考查拼接类规律。 第一步：阅读题干。根据题干信息可知为拼接类规律。 第二步：分析图形。题干各图形拼合，形成的图形如下所示。 故本题选B。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q085",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:graphic-patterns",
+    "knowledgePointIds": [
+      "reasoning:graphic-patterns"
+    ],
+    "originalQuestionNo": 85,
+    "sectionOrder": 4,
+    "stem": "选项四个图形中，只有一个是由题干的四个图形拼合（只能通过上、下、左、右平移）而成的，请把它找出来。",
+    "stemImageUrls": [
+      "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_59b926321146bc45.png"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "A",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "B",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "C",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "D",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "本题考查拼接类规律。 第一步：阅读题干。根据题干信息可知为拼接类规律。 第二步：分析图形。题干各图形拼合，形成的图形如下所示。 故本题选D。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q086",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:spatial",
+    "knowledgePointIds": [
+      "reasoning:spatial"
+    ],
+    "originalQuestionNo": 86,
+    "sectionOrder": 4,
+    "stem": "左边图形恰好可以分割为右边的某三个图形（可以平移、旋转，但不可翻转），请找出不属于分割所得的图形。",
+    "stemImageUrls": [
+      "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_d07a14f2e77fdae6.png"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "A",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "B",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "C",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "D",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "本题考查拼接类规律。 第一步：阅读题干。根据题干信息可知为拼接类规律。 第二步：分析图形。如下图所示，题干图形可以分割成A、C、D三项。 故本题选B。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q087",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:spatial",
+    "knowledgePointIds": [
+      "reasoning:spatial"
+    ],
+    "originalQuestionNo": 87,
+    "sectionOrder": 4,
+    "stem": "左边给定的是六面体的外表面展开图，右边哪一项能由它折叠而成？",
+    "stemImageUrls": [
+      "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_ba1c0ba845732ca9.png"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "A",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "B",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "C",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "D",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "本题考查空间类规律。 第一步：观察图形。题干是展开图，选项为立体图形，观察各面的相对面与相邻面关系。 第二步：分析选项，确定答案。 A项：可以由题干外表面折叠而成，当选。 B项：假设正面与顶面正确，右面的“旦”字朝向错误，排除。 C项：假设正面正确，顶面应为“古”字所在面，右面应为“占”字所在面，排除。 D项：假设正面与顶面正确，右面的“由”字朝向错误，排除。 故本题选A。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q088",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:spatial",
+    "knowledgePointIds": [
+      "reasoning:spatial"
+    ],
+    "originalQuestionNo": 88,
+    "sectionOrder": 4,
+    "stem": "下列是四个正方体的外表面展开图，其中哪个展开图还原成正方体后，存在同一个公共顶点的三个面上的数字之和为8？",
+    "stemImageUrls": [
+      "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_ae3c4367c8d0d33a.png"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "A",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "B",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "C",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "D",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "阅读题干。要想使同一个公共顶点的三个面上的数字之和为8，需要“1”“2”“5”或者“1”“3”“4”三个面存在公共点。 第二步：分析选项，确定答案。 A项：“1”和“4”为相对面，不可能存在公共点；“2”和“5”为相对面，不可能存在公共点，排除。 B项：“1”和“4”为相对面，不可能存在公共点；“2”和“5”为相对面，不可能存在公共点，排除。 C项：“1”和“4”为相对面，不可能存在公共点；“1”“2”和“5”为相邻面，即存在同一个公共顶点的三个面上的数字之和为8，当选。 D项：“1”和“5”为相对面，不可能存在公共点；“3”和“4”为相对面，不可能存在公共点，排除。 故本题选C。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q089",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:spatial",
+    "knowledgePointIds": [
+      "reasoning:spatial"
+    ],
+    "originalQuestionNo": 89,
+    "sectionOrder": 4,
+    "stem": "将下列三棱锥的展开图还原成三棱锥后，有一个与其他三个不一样，请把它找出来。",
+    "stemImageUrls": [
+      "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_c2c53989e67e60e0.png"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "A",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "B",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "C",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "D",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "本题考查空间类规律。 第一步：观察图形。展开图各面中，小三角形所在面最特殊，以此为观察面。如下图所示，沿公共边旋转补齐小三角形所在面的两个相邻面。 第二步：分析选项，确定答案。如下图所示，A、B、C三项中小三角形所在面只有1个圆弧与另外2个面的圆弧相连，只有D项中小三角形所在面的2个圆弧均与2个面的圆弧相连。 故本题选D。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q090",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:spatial",
+    "knowledgePointIds": [
+      "reasoning:spatial"
+    ],
+    "originalQuestionNo": 90,
+    "sectionOrder": 4,
+    "stem": "下列立体图形的视图不可能是所给四个选项中的哪一个？",
+    "stemImageUrls": [
+      "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_33e900dd6895d69b.png"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "A",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "B",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "C",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "D",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "本题考查空间类规律。 第一步：观察图形。题干为立体图形，选项为该图形的视图，考查三视图。 第二步：分析选项，确定答案。 A项：从下图所示角度观看，圆柱对应的视图部分下方应有一条直线，当选。 B项：从下图所示角度观看，可以得到该视图，排除。 C项：从下图所示角度观看，可以得到该视图，排除。 D项：从下图所示角度观看，可以得到该视图，排除。 故本题选A。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
     "examYear": 2024,
     "paperId": "jiangsu-2024-A-class",
     "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
@@ -2710,31 +3561,164 @@ export const IMPORTED_SOURCE_QUESTIONS = [
     "presentationMode": "original"
   },
   {
-    "id": "js2024a-q093",
+    "id": "js2024a-q097",
     "moduleId": "reasoning",
     "subjectId": "reasoning",
-    "topicId": "reasoning:conclusion",
+    "topicId": "reasoning:conditional-translation",
     "knowledgePointIds": [
-      "reasoning:conclusion"
+      "reasoning:conditional-translation"
     ],
-    "originalQuestionNo": 93,
+    "originalQuestionNo": 97,
     "sectionOrder": 4,
-    "stem": "本卷来源于考生回忆，本题暂缺失",
+    "stem": "如果3个部门录用的人员学历各不相同，那么以下哪种情况符合小王的预测？",
+    "stemImageUrls": [],
     "options": [
-      "缺",
-      "缺",
-      "缺",
-      "缺"
+      {
+        "id": "A",
+        "text": "生产部录用硕士生，财务部录用本科生",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "研发部录用博士生，财务部录用硕士生",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "生产部录用博士生，研发部录用本科生",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "财务部录用本科生，研发部录用硕士生",
+        "imageUrls": []
+      }
     ],
-    "correctAnswer": "A",
-    "explanation": "缺",
+    "correctAnswer": "C",
+    "explanation": "本题考查智力推理。 第一步：整理题干信息。①生产部录用本科生→研发部录用硕士生；②研发部录用博士生→生产部录用博士生；③财务部录用本科生∨硕士生→研发部录用本科生；④3个部门分别需要招聘1名员工；⑤3个部门录用的人员学历各不相同。 第二步：根据题干信息解题。由②⑤可知，研发部没有录用博士生，排除B项；由③⑤可知，财务部没有录用本科生，排除A、D项。 故本题选C。",
     "difficulty": "medium",
     "sourceType": "verified_exam",
     "sourceId": "jiangsu-2024-a-32xueyuan",
     "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
-    "sourceNote": "江苏省考 A 类历年题；题干、选项取自原卷 PDF，答案与解析逐题按同份出版版核对。用户已确认获得转载授权。",
-    "sourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-    "region": "jiangsu",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": "jiangsu-2024-A-class-stimulus-97-98",
+    "sharedStimulus": {
+      "text": "某企业的生产部、研发部和财务部分别需要招聘1名员工，有3名博士生、3名硕士生和3名本科生前来应聘。该公司人事部小王对招聘结果做了如下预测： （1）如果生产部录用本科生，那么研发部录用硕士生； （2）如果研发部录用博士生，那么生产部录用博士生； （3）如果财务部录用本科生或者硕士生，那么研发部录用本科生。",
+      "imageUrls": [],
+      "sourcePageUrl": "https://www.aipta.com/article/9441.html"
+    },
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q098",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:conditional-translation",
+    "knowledgePointIds": [
+      "reasoning:conditional-translation"
+    ],
+    "originalQuestionNo": 98,
+    "sectionOrder": 4,
+    "stem": "如果研发部录用硕士生，那么以下哪种情况不符合小王的预测？",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "生产部录用博士生",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "财务部录用博士生",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "生产部录用本科生",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "财务部录用硕士生",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "本题考查智力推理。 第一步：整理题干信息。①生产部录用本科生→研发部录用硕士生；②研发部录用博士生→生产部录用博士生；③财务部录用本科生∨硕士生→研发部录用本科生；④3个部门分别需要招聘1名员工；⑤研发部录用硕士生。 第二步：根据题干信息解题。 由④⑤可知，研发部没有录用本科生，否定③的后件，可以推出否定前件，即财务部没有录用本科生和硕士生，则财务部只能录用博士生，D项不符合小王的预测。 故本题选D。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": "jiangsu-2024-A-class-stimulus-97-98",
+    "sharedStimulus": {
+      "text": "某企业的生产部、研发部和财务部分别需要招聘1名员工，有3名博士生、3名硕士生和3名本科生前来应聘。该公司人事部小王对招聘结果做了如下预测： （1）如果生产部录用本科生，那么研发部录用硕士生； （2）如果研发部录用博士生，那么生产部录用博士生； （3）如果财务部录用本科生或者硕士生，那么研发部录用本科生。",
+      "imageUrls": [],
+      "sourcePageUrl": "https://www.aipta.com/article/9441.html"
+    },
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q099",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:logical-relations",
+    "knowledgePointIds": [
+      "reasoning:logical-relations"
+    ],
+    "originalQuestionNo": 99,
+    "sectionOrder": 4,
+    "stem": "甲：小明十岁就能用英语与英国人流利对话，语言天赋真是出类拔萃。 乙：小明跟着父母在英国住了两年，能流利对话不足为奇。 以下哪项与题干对话方式最为相似？",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "甲：这款热水器的价格比市面上常见的热水器高出一倍，太不划算了乙：这款产品用的是航天级别的材料，在同材质热水器中性价比很高",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "甲：小李以前容易冲动，进入职场一年后稳重多了乙：小李承担了单位大量重要工作，变得稳重一点理所当然",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "甲：小张的数学一直很好，进入高中后，物理、化学等科目的学习很轻松乙：数学强调科学思维，掌握科学思维的人学习物理、化学当然没有难度",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "甲：小刘在过去的一年中连续犯下三起盗窃案，真是无可救药乙：人非圣贤，孰能无过，相信在经过改造之后他会洗心革面",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "本题考查相似结构。 第一步：分析题干对话方式。甲根据“小明十岁就能用英语与英国人流利对话”的情况，得出小明“语言天赋出类拔萃”的结论，而乙提出“小明跟着父母在英国住了两年”的理由来解释这种情况，用“能流利对话不足为奇”来反驳甲的结论。 第二步：分析选项，确定答案。 A项：甲根据“这款热水器的价格比市面上常见的热水器高出一倍”的情况，得出该热水器“太不划算了”的结论，乙提出“这款产品用的是航天级别的材料”的理由来解释这种情况，用“在同材质热水器中性价比很高”来反驳甲的结论，与题干对话方式一致，当选。 B项：甲提出“小李以前容易冲动，进入职场一年后稳重多了”的结论，乙提出“小李承担了单位大量重要工作，变得稳重一点理所当然”的理由来解释甲的结论，与题干对话方式不一致，排除。 C项：甲提出“小张的数学一直很好，进入高中后，物理、化学等科目的学习很轻松”的结论，乙提出“数学强调科学思维，掌握科学思维的人学习物理、化学当然没有难度”的理由来解释甲的结论，与题干对话方式不同，排除。 D项：甲根据“小刘在过去的一年中连续犯下三起盗窃案”的情况，得出他“无可救药”的结论，乙得出的观点“相信在经过改造之后他会洗心革面”是一种预测，而非事实，用预测来反驳甲的结论，与题干对话方式不同，排除。 故本题选A。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
     "examYear": 2024,
     "paperId": "jiangsu-2024-A-class",
     "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
@@ -2747,31 +3731,48 @@ export const IMPORTED_SOURCE_QUESTIONS = [
     "presentationMode": "original"
   },
   {
-    "id": "js2024a-q094",
+    "id": "js2024a-q100",
     "moduleId": "reasoning",
     "subjectId": "reasoning",
-    "topicId": "reasoning:conclusion",
+    "topicId": "reasoning:strengthen-weaken",
     "knowledgePointIds": [
-      "reasoning:conclusion"
+      "reasoning:strengthen-weaken"
     ],
-    "originalQuestionNo": 94,
+    "originalQuestionNo": 100,
     "sectionOrder": 4,
-    "stem": "本卷来源于考生回忆，本题暂缺失",
+    "stem": "卖早点、修家电、配钥匙·····老百姓家门口的社区商业，是以社区居民为服务对象、服务半径为步行15分钟左右范围内的商业形态。近年来，许多城市大力推进社区商业建设，以更好地满足居民的消费需求。不过，也有专家担忧，家门口商业服务的完善，在给居民生活带来便利的同时可能也会使快递业逐步萎缩。 以下哪项如果为真，最能缓解上述专家的担忧？",
+    "stemImageUrls": [],
     "options": [
-      "缺",
-      "缺",
-      "缺",
-      "缺"
+      {
+        "id": "A",
+        "text": "为了方便居民，很多城市推进社区商业建设时，都将快递驿站作为社区商业的重要组成部分",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "社区商业主要提供汽车保养、幼儿托管等服务类业态，社区购物在居民整体购物消费中占比很少",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "社会经济发展必然包含新旧行业的更迭，社区商业作为新的消费增长点，吸纳了大量传统行业的劳动者就业",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "许多大型商超组建了自己的配送车队，可为周边5公里范围内居民提供商品一小时送达服务",
+        "imageUrls": []
+      }
     ],
-    "correctAnswer": "A",
-    "explanation": "缺",
+    "correctAnswer": "B",
+    "explanation": "本题考查削弱类。 第一步：分析题干论点、论据。 论点：家门口商业服务的完善，在给居民生活带来便利的同时可能也会使快递业逐步萎缩。 论据：无。 第二步：分析选项，确定答案。 A项：指出很多城市推进社区商业建设时，都将快递驿站作为社区商业的重要组成部分，说明家门口商业服务完善后快递驿站依然很重要，可能不会使快递业逐步萎缩，削弱题干论点，保留。 B项：指出社区商业主要提供汽车保养、幼儿托管等服务类业态，社区购物在居民整体购物消费中占比很少，说明社区商业的建设对居民原有的购物方式影响不大，也就不会使快递业逐步萎缩，削弱题干论点，保留。 C项：指出社区商业作为新的消费增长点，吸纳了大量传统行业的劳动者就业，未提及社区商业对快递业的影响，与题干论点无关，排除。 D项：指出许多大型商超组建了自己的配送车队，可为周边5公里范围内居民提供商品一小时送达服务， 未提及社区商业对快递业的影响，与题干论点无关，排除。 第三步：进一步辨析。A项指出快递驿站的重要性，但快递驿站重要不能明确说明快递业的情况，而B项明确说明社区购物对居民原有的购物方式影响不大，即不会对快递业有影响，B项比A项更明确。 故本题选B。",
     "difficulty": "medium",
     "sourceType": "verified_exam",
     "sourceId": "jiangsu-2024-a-32xueyuan",
     "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
-    "sourceNote": "江苏省考 A 类历年题；题干、选项取自原卷 PDF，答案与解析逐题按同份出版版核对。用户已确认获得转载授权。",
-    "sourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-    "region": "jiangsu",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
     "examYear": 2024,
     "paperId": "jiangsu-2024-A-class",
     "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
@@ -2784,37 +3785,1937 @@ export const IMPORTED_SOURCE_QUESTIONS = [
     "presentationMode": "original"
   },
   {
-    "id": "js2024a-q095",
+    "id": "js2024a-q101",
     "moduleId": "reasoning",
     "subjectId": "reasoning",
     "topicId": "reasoning:conclusion",
     "knowledgePointIds": [
       "reasoning:conclusion"
     ],
-    "originalQuestionNo": 95,
+    "originalQuestionNo": 101,
     "sectionOrder": 4,
-    "stem": "本卷来源于考生回忆，本题暂缺失",
+    "stem": "某学校举办田径运动会，所有参加800米跑的运动员都参加了100米跑，所有参加100米跑的运动员都参加了跳高，有些参加跳远的运动员参加了投掷链球，所有参加跳远的运动员都没有参加跳高。 根据以上陈述，不能推出以下哪项？",
+    "stemImageUrls": [],
     "options": [
-      "缺",
-      "缺",
-      "缺",
-      "缺"
+      {
+        "id": "A",
+        "text": "所有参加800米跑的运动员都参加了跳高",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "所有参加投掷链球的运动员都没有参加跳高",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "所有参加跳远的运动员都没有参加100米跑",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "有些参加800米跑的运动员参加了跳远",
+        "imageUrls": []
+      }
     ],
-    "correctAnswer": "A",
-    "explanation": "缺",
+    "correctAnswer": "D",
+    "explanation": "本题考查集合推理。 第一步：翻译题干信息。①参加800米跑→参加100米跑；②参加100米跑→参加跳高；③有的参加跳远 →参加投掷链球；④参加跳远→¬参加跳高。由①②④可得⑤参加800米跑→参加100米跑→参加跳高→¬ 参加跳远。 第二步：分析选项，确定答案。 A项：翻译为参加800米跑→参加跳高，肯定⑤的前件，可以推出肯定后件，排除。 B项：翻译为参加投掷链球→¬参加跳高，由③可得有的参加投掷链球→参加跳远，与④联立可得有的参加投掷链球→参加跳远→¬参加跳高，“有的”无法推出“所有”，即“所有参加投掷链球的运动员都没有参加跳高”可能为真，可能为假，排除。 C项：翻译为参加跳远→¬参加100米跑，否定⑤的后件，可以推出否定前件，排除。 D项：翻译为有的参加800米跑→参加跳远，肯定⑤的前件却得到否定后件，不可能推出，当选。 故本题选D。",
     "difficulty": "medium",
     "sourceType": "verified_exam",
     "sourceId": "jiangsu-2024-a-32xueyuan",
     "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
-    "sourceNote": "江苏省考 A 类历年题；题干、选项取自原卷 PDF，答案与解析逐题按同份出版版核对。用户已确认获得转载授权。",
-    "sourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-    "region": "jiangsu",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
     "examYear": 2024,
     "paperId": "jiangsu-2024-A-class",
     "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
     "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
     "sharedStimulusId": null,
     "sharedStimulus": null,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q102",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:conclusion",
+    "knowledgePointIds": [
+      "reasoning:conclusion"
+    ],
+    "originalQuestionNo": 102,
+    "sectionOrder": 4,
+    "stem": "评价某份试卷中的试题质量通常有难度和区分度等指标，一道单选题的难度通常用正确选择试题答案的人数与参加测验的总人数的比值来表示。区分度指的是试题对考生实际水平的区分程度和区分的有效性，一道单选题的区分度指数D的计算公式为： ，其中 为高分组（试卷总得分排在前27%的考生）该题的难度， 为低分组（试卷总得分排在后27%的考生）该题的难度。 根据以上陈述，可以推出以下哪项？",
+    "stemImageUrls": [
+      "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_fbfa124413497938.png",
+      "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_28227d7c789a6e48.png",
+      "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_d000cebc00fd07fa.png"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "一道难度为1的单选题区分度指数为0.1.",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "任一单选题的区分度指数不可能为负值",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "一道难度为0.27的单选题的最大区分度指数为0.5.",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "一道单选题的难度也可以表示为该题的平均得分与该题分值的比值",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "本题考查结论类。 第一步：阅读题干，判断材料类型。本题为结论类题目，仔细阅读材料信息。 第二步：分析选项，确定答案。 A项：若一道单选题的难度为1，说明参加测验的人都答对了，则高分组该题的难度=低分组该题的难度 =1，则区分度指数D=0，而不是0.1，无法推出，排除。 B项：若有一道题高分组答对的人数少于低分组，此时高分组该题的难度PH＜低分组该题的难度PL，则这道题的区分度指数D为负数，无法推出，排除。 C项：若一道单选题的难度为0.27，说明正确选择该题答案的人数与参加测验的总人数的比值为0.27， 假设参加测验的总人数为100人，则正确选择该题答案的人数为27人，并且此时高分组与低分组均各有 27人，如果想要计算最大区分度指数，则需要使D=PH-PL的值尽可能大，即PH尽可能取最大值，同时 PL尽可能取最小值，则需要使正确选择该题答案的27人均属于高分组，即PH=1，同时，低分组全部答错，即PL=0，则此时该题的最大区分度指数D=1，而不是0.5，无法推出，排除。 D项： = = =难度，可以推出，当选。 故本题选D。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q103",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:strengthen-weaken",
+    "knowledgePointIds": [
+      "reasoning:strengthen-weaken"
+    ],
+    "originalQuestionNo": 103,
+    "sectionOrder": 4,
+    "stem": "一项研究发现，成年小白鼠去除一个关键生物钟基因后，昼夜节律完全消失，虽然生活质量有所下降，但寿命并未受到显著影响，心血管健康状况甚至有所改善。据此，研究人员推断昼夜节律缺失对健康的危害可能没有我们想象得那么大。 回答以下哪个问题最有助于评价上述研究人员所做出的推断？",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "成年小白鼠去除生物钟基因后出现的心血管情况改善是否会延长小白鼠的寿命",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "成年小白鼠去除生物钟基因之后的休息时间是否与未去除之前的休息时间相同",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "成年小白鼠去除生物钟基因后的寿命和心血管健康状况能否代表整体健康状况",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "成年小白鼠去除生物钟基因之后的生活质量是否会影响小白鼠的整体健康状况",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "本题考查评价类。 第一步：分析题干论点、论据。 论点：昼夜节律缺失对健康的危害可能没有我们想象得那么大。 论据：成年小白鼠去除一个关键生物钟基因后，昼夜节律完全消失，虽然生活质量有所下降，但寿命并未受到显著影响，心血管健康状况甚至有所改善。 第二步：分析选项，确定答案。 A项：指出成年小白鼠去除生物钟基因后心血管情况改善与延长小白鼠的寿命之间的关系，即使心血管状况改善能够延长寿命，仍无法得知整体健康状况如何，无助于评价研究人员的推断，排除。 B项：指出成年小白鼠去除生物钟基因前后的休息时间的关系，与昼夜节律缺失和整体健康状况的关系无关，无助于评价研究人员的推断，排除。 C项：指出成年小白鼠去除生物钟基因后的寿命和心血管健康状况与整体健康状况之间的关系，在论点和论据之间搭桥，如果寿命和心血管健康状况能代表整体健康状况，则说明研究人员的推断成立，最有助于评价研究人员的推断，当选。 D项：指出成年小白鼠去除生物钟基因之后的生活质量与整体健康状况之间的关系，但研究人员是通过寿命与心血管健康状况得出的结论，无助于评价研究人员的推断，排除。 故本题选C。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q104",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:conditional-translation",
+    "knowledgePointIds": [
+      "reasoning:conditional-translation"
+    ],
+    "originalQuestionNo": 104,
+    "sectionOrder": 4,
+    "stem": "参加或指导小微堵点改造项目的不可能同时有以下哪两个人？",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "王教授和马教授",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "马教授和小刘",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "小刘和小周",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "小周和王教授",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "本题考查智力推理。 第一步：整理题干信息。①每位工作人员参加的项目都必须有教授指导，每位教授至少指导一位工作人员；②每位工作人员只能参加一个项目，提倡多人合作；③每位教授只能指导一个项目，一个项目也可由多位教授共同指导；④小郑参加小微堵点改造或跨区断头路建设项目，钱教授指导历史街区微改造项目。提问方式为“不可能”，优先考虑代入排除法。 第二步：分析选项，确定答案。 A项：代入，王教授和马教授同时指导小微堵点改造项目。根据④可知，钱教授指导历史街区微改造项目。此时，只要小郑参加小微堵点改造项目，剩余两位工作人员一位选择小微堵点改造项目，一位选择历史街区微改造项目，符合题干条件，该项可能成立，排除。 B项：代入，马教授指导小微堵点改造项目，小刘参加小微堵点改造项目。根据④可知，钱教授指导历史街区微改造项目。此时，只要小郑参加小微堵点改造项目，王教授指导小微堵点改造项目，小周参加历史街区微改造项目（或者小郑参加跨区断头路建设项目，王教授指导跨区断头路建设项目，小周参加历史街区微改造项目），符合题干条件，该项可能成立，排除。 C项：代入，小刘和小周同时参加小微堵点改造项目。根据④可知，小郑不参加历史街区微改造项目， 钱教授指导历史街区微改造项目。此时，历史街区微改造项目没有工作人员参加，不符合①，该项不可能成立，当选。 D项：代入，王教授指导小微堵点改造项目，小周参加小微堵点改造项目。根据④可知，钱教授指导历史街区微改造项目。此时，只要小郑参加小微堵点改造项目，马教授指导小微堵点改造项目，小刘参加历史街区微改造项目（或者小郑参加跨区断头路建设项目，马教授指导跨区断头路建设项目，小刘参加历史街区微改造项目），符合题干条件，该项可能成立，排除。 故本题选C。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": "jiangsu-2024-A-class-stimulus-104-105",
+    "sharedStimulus": {
+      "text": "市住建局3名工作人员小郑、小周、小刘打算参加“青年党员下基层”调研活动。可选的有小微堵点改造、跨区断头路建设、小型城市客厅打造、历史街区微改造4个调研项目。指导调研的有王教授、钱教授、马教授，且他们只能指导上述三位工作人员，已知： （1）每位工作人员参加的项目都必须有教授指导，每位教授至少指导一位工作人员； （2）每位工作人员只能参加一个项目，提倡多人合作； （3）每位教授只能指导一个项目，一个项目也可由多位教授共同指导； （4）小郑参加小微堵点改造或跨区断头路建设项目，钱教授指导历史街区微改造项目。",
+      "imageUrls": [],
+      "sourcePageUrl": "https://www.aipta.com/article/9441.html"
+    },
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q105",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:conditional-translation",
+    "knowledgePointIds": [
+      "reasoning:conditional-translation"
+    ],
+    "originalQuestionNo": 105,
+    "sectionOrder": 4,
+    "stem": "如果小周参加小型城市客厅打造项目，则以下哪一项一定为真？",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "小刘参加历史街区微改造项目",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "王教授指导小型城市客厅打造项目",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "马教授指导小微堵点改造项目",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "小郑参加跨区断头路建设项目",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "本题考查智力推理。 第一步：整理题干信息。①每位工作人员参加的项目都必须有教授指导，每位教授至少指导一位工作人员；②每位工作人员只能参加一个项目，提倡多人合作；③每位教授只能指导一个项目，一个项目也可由多位教授共同指导；④小郑参加小微堵点改造或跨区断头路建设项目，钱教授指导历史街区微改造项目；⑤小周参加小型城市客厅打造项目。 第二步：分析题干信息，确定答案。根据①④可知，钱教授指导历史街区微改造项目，且历史街区微改造项目一定有工作人员参加。根据④可知，小郑不参加历史街区微改造项目。根据②⑤可知，小周不参加历史街区微改造项目。根据“他们只能指导上述三位工作人员”可知，小刘一定参加历史街区微改造项目。 故本题选A。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": "jiangsu-2024-A-class-stimulus-104-105",
+    "sharedStimulus": {
+      "text": "市住建局3名工作人员小郑、小周、小刘打算参加“青年党员下基层”调研活动。可选的有小微堵点改造、跨区断头路建设、小型城市客厅打造、历史街区微改造4个调研项目。指导调研的有王教授、钱教授、马教授，且他们只能指导上述三位工作人员，已知： （1）每位工作人员参加的项目都必须有教授指导，每位教授至少指导一位工作人员； （2）每位工作人员只能参加一个项目，提倡多人合作； （3）每位教授只能指导一个项目，一个项目也可由多位教授共同指导； （4）小郑参加小微堵点改造或跨区断头路建设项目，钱教授指导历史街区微改造项目。",
+      "imageUrls": [],
+      "sourcePageUrl": "https://www.aipta.com/article/9441.html"
+    },
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q106",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:case-matching",
+    "knowledgePointIds": [
+      "reasoning:case-matching"
+    ],
+    "originalQuestionNo": 106,
+    "sectionOrder": 4,
+    "stem": "迭代学习：指学习者通过不间断的目标训练，更好地理解学习内容，不断提升技能完善自身能力的学习方式。 下列不属于迭代学习的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "小周参加专业技能大赛，实操环节丢了不少分，他不断强化训练，再次参加就获得了二等奖。又经过一年训练，综合技能有了显著提高，自己也十分自信",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "学习者要熟练掌握数学运算需经历数年大致相同的过程，先是加减法，之后是乘除法，接下来是混合运算，逐渐进入更高阶的运算",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "李教授经常深入社区举办科普讲座，最初因为专业性过强，听众很少，后来引入了市民关注的鲜活案例，听众越来越多；最近又融入了不少优秀传统文化元素，感染力越来越强",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "多家公司推出了各自的AI自然语言处理模型，有的只能与人进行简单对话，有的能在收到指令后几秒钟内交出一份质量不错的作业，有些已经能够针对各种问题给出比较专业的建议",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "本题考查科学类定义判断。 第一步：分析定义要点。“迭代学习”的定义要点：①学习者；②不断提升技能完善自身能力。 第二步：分析选项，确定答案。 A项：小周通过不断强化训练，综合技能有了显著提高，符合①②，符合定义要点，排除。 B项：学习者通过学习加减法、乘除法、混合运算、更高阶的运算，逐渐熟练掌握数学运算，符合 ①②，符合定义要点，排除。 C项：李教授通过不断地更新讲座内容，听众越来越多，感染力越来越强，说明他科普讲座的能力不断提升和完善，符合①②，符合定义要点，排除。 D项：多家公司推出了各自的AI自然语言处理模型，既没有学习者，也没有体现不断提升技能完善自身能力，不符合①②，当选。 故本题选D。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q107",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:case-matching",
+    "knowledgePointIds": [
+      "reasoning:case-matching"
+    ],
+    "originalQuestionNo": 107,
+    "sectionOrder": 4,
+    "stem": "钝感力：指在工作、生活中能够尽快摆脱消极情绪或困扰，从容应对外部压力，或者冷静面对个人成绩，坚持既定目标的心理防御机制。 下列不属于钝感力的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "谷先生每次回顾自己的创业经历，都把成功归因于百折不挠的韧劲：无论碰到多少磨难，始终没有被困难打倒，一直沿着目标不断地向前",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "邱奶奶已经90岁，眼不花，耳不聋，腿脚麻利。她的体会是：人生在世，不如意事十之八九，迅速忘掉不愉快的事，保持乐观情绪就能长寿",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "杜先生从去年开始坚持在健身中心锻炼，提高身体素质，缓解工作压力。现在再也不像以前那样容易感冒，即使工作到深夜也不觉得累",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "钟先生性格稳重，听到表扬从不得意忘形，遇到批评也不垂头丧气，心无旁骛地钻研业务，近几年取得了很多令人羡慕的专业成就",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "本题考查心理类定义判断。 第一步：分析定义要点。“钝感力”的定义要点：①在工作、生活中能够尽快摆脱消极情绪或困扰，从容应对外部压力；②冷静面对个人成绩，坚持既定目标。二者满足其一即可。 第二步：分析选项，确定答案。 A项：谷先生无论碰到多少磨难，始终没有被困难打倒，一直沿着目标不断地向前，符合②，符合定义要点，排除。 B项：邱奶奶能够迅速忘掉不愉快的事，保持乐观情绪，符合①，符合定义要点，排除。 C项：杜先生从去年开始坚持在健身中心锻炼，提高身体素质，缓解工作压力，未提及心理和思想方面的感受，不符合①②，当选。 D项：钟先生性格稳重，听到表扬从不得意忘形，遇到批评也不垂头丧气，心无旁骛地钻研业务，符合 ①②，符合定义要点，排除。 故本题选C。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q108",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:case-matching",
+    "knowledgePointIds": [
+      "reasoning:case-matching"
+    ],
+    "originalQuestionNo": 108,
+    "sectionOrder": 4,
+    "stem": "潮汐式管理：指管理者根据时间的不同，差异化、精细化管理特定公共资源，最大限度开发和利用现有资源，有效提升公众幸福指数的管理方法。 下列不属于潮汐式管理的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "某市在主城区的一些特定道路上划定特殊停车位，实行“夜停晨走”制度，老城区停车位不足的问题得到了有效缓解",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "某街道对摆摊经营实行定时定点画线管理，商贩按指定时间、地点出摊，既不影响交通，又方便了周围居民生活",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "每年的旅游旺季，某景区附近的居民小区让外地游客免费使用地下停车场车位，大家在网上对此纷纷点赞",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "某市实行居民电动汽车充电桩分时电价政策，峰谷收费标准不同。高峰时段按照正常标准，低谷时段则按照不同的优惠幅度收费",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "本题考查管理类定义判断。 第一步：分析定义要点。“潮汐式管理”的定义要点：①管理者根据时间的不同，差异化、精细化管理特定公共资源；②最大限度开发和利用现有资源，有效提升公众幸福指数。 第二步：分析选项，确定答案。 A项：某市划定特殊停车位，实行“夜停晨走”制度，符合①；老城区停车位不足的问题得到了有效缓解，符合②，符合定义要点，排除。 B项：某街道对摆摊经营实行定时定点画线管理，符合①；既不影响交通，又方便了周围居民生活，符合②，符合定义要点，排除。 C项：某景区附近的居民小区让外地游客免费使用地下停车场车位，未体现是最大限度开发和利用现有资源，不符合②，当选。 D项：某市实行居民电动汽车充电桩分时电价政策，峰谷收费标准不同，符合①②，符合定义要点，排除。 故本题选C。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q109",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:case-matching",
+    "knowledgePointIds": [
+      "reasoning:case-matching"
+    ],
+    "originalQuestionNo": 109,
+    "sectionOrder": 4,
+    "stem": "城市漫游：指按照预定主题和路线，漫步城市街区，在向导带领下深度体验城市变迁或历史文化的旅游方式。 下列属于城市漫游的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "韩先生周末带外地同学游览本市的步行街——河西大道，聊得口干舌燥，买了两杯竹筒奶茶，在“我在河西大道很想你”路牌下拍了很多照片",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "小方周六日经常把年迈的父母接到城里游玩。由于父母腿脚不太利索，一天通常只游玩一两个景点。周围邻居都夸小方很孝顺",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "在外漂泊多年的任女士今年回到了故乡，昔日一览无余的小城现在到处高楼林立，为了寻找童年的记忆，她已经走遍了这里的大街小巷",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "某地旅行社推出了主打“像本地人一样行走在运河边”的新产品，三四个小时的穿城徒步让游客累得抬不起腿，大家仍觉得意犹未尽",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "本题考查社会类定义判断。 第一步：分析定义要点。“城市漫游”的定义要点是“在向导带领下深度体验城市变迁或历史文化”。 第二步：分析选项，确定答案。 A项：韩先生周末带外地同学游览本市的步行街，不是在向导带领下深度体验城市变迁或历史文化，不符合定义要点，排除。 B项：小方周六日经常把年迈的父母接到城里游玩，不是在向导带领下深度体验城市变迁或历史文化， 不符合定义要点，排除。 C项：任女士为了寻找童年的记忆，她已经走遍了故乡的大街小巷，不是在向导带领下深度体验城市变迁或历史文化，不符合定义要点，排除。 D项：某旅游社推出了主打“像本地人一样行走在运河边”的新产品，三四个小时的穿城徒步让游客意犹未尽，符合定义要点，当选。 故本题选D。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q112",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:case-matching",
+    "knowledgePointIds": [
+      "reasoning:case-matching"
+    ],
+    "originalQuestionNo": 112,
+    "sectionOrder": 4,
+    "stem": "数字游民：指工作时间不受限制，地域可以自主选择，利用网络数字手段完成本职工作的从业人员。 下列属于数字游民的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "小雷辞职后游走在不同的城市，白天在市区游玩特色街区，晚上到热闹的广场跟着市民一起跳舞，随时随地向天南地北的粉丝直播，月收入比以前多得多",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "康女士居住在很远的小区，每天通勤时间差不多需要三四个小时，工作十分辛苦。最近，她的居家办公申请得到了批准，不用天天去公司打卡了",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "黄先生年初被公司派驻到某山区工作，闲暇之余利用微信公众号帮助当地乡亲销售土特产，并通过网络众筹建起了雪乡旅舍，有时亲自担任导游。默默无闻的小山村很快变成了远近闻名的旅游村",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "潮玩设计师周先生到新公司后，再也不担心迟到早退。昨天也许还是短裤、T恤和凉鞋，明天就换成了密不透风的户外运动装。他要做的只是每天晚上将自己的灵感、新想法报告给部门主管",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "本题考查社会类定义判断。 第一步：分析定义要点。“数字游民”的定义要点：①工作时间不受限制，地域可以自主选择；②利用网络数字手段完成本职工作。 第二步：分析选项，确定答案。 A项：小雷辞职后游走在不同的城市，随时随地向天南地北的粉丝直播，月收入比以前多得多，符合 ①②，符合定义要点，当选。 B项：康女士居家办公申请得到了批准，工作时间仍然受公司的管理，不符合①，排除。 C项：黄先生年初被公司派驻到某山区工作，说明工作地域不是自主选择的，不符合①，排除。 D项：周先生要做的是每天晚上将自己的灵感、新想法报告给部门主管，说明工作时间受限制；且不明确是否利用网络数字手段完成本职工作，不符合②，排除。 故本题选A。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q113",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:case-matching",
+    "knowledgePointIds": [
+      "reasoning:case-matching"
+    ],
+    "originalQuestionNo": 113,
+    "sectionOrder": 4,
+    "stem": "代际责任：指在不超出自身能力的前提下，相邻两代人的一方向另一方主动提供经济帮扶、生活照顾、健康保障、精神抚慰等各种支持的行为。 下列不属于代际责任的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "苏女士把父母接到身边后，忙乎了一个多月，带着父母熟悉小区健身器材，到社区老年活动中心打牌下棋，在公园找人聊天，终于帮他们重新找到了“组织”",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "邵先生和妻子一直在城里忙于打拼，女儿正在读小学。每到寒暑假，邵先生的父母都会专程赶到城里，把孙女接回农村老家痛痛快快地玩上整个假期",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "罗奶奶像无数为孩子婚事发愁的长辈一样，每到周末就去附近公园的相亲角浏览展板上的照片、简历，觉得合适的就记下基本情况、电话号码。虽然快三十岁的孙女根本不着急，她却一直乐此不疲",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "毛先生喜欢第一时间把遇到的趣事分享到家族微信群，却很少得到期待的回应，一怒之下退了群。后来，儿子又把他请回，还邀约了几位有同样爱好的长辈，群里逐渐热闹起来，他也时不时点赞或评论几句",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "本题考查社会类定义判断。 第一步：分析定义要点。“代际责任”的定义要点是“相邻两代人的一方向另一方主动提供经济帮扶、 生活照顾、健康保障、精神抚慰等各种支持的行为”。 第二步：分析选项，确定答案。 A项：苏女士把父母接到身边，并且帮助父母重新找到了“组织”，符合定义要点，排除。 B项：邵先生的父母寒暑假会把孙女接回农村老家，减轻了在城里忙于打拼的邵先生夫妇的负担，即主动给邵先生提供了支持行为，符合定义要点，排除。 C项：罗奶奶为孙女的婚事发愁，每到周末就去附近公园的相亲角浏览展板上的照片、简历，罗奶奶和孙女不属于相邻的两代人，不符合定义要点，当选。 D项：毛先生的儿子把毛先生请回家族微信群，并邀约了几位有同样爱好的长辈，群里逐渐热闹起来， 即主动给毛先生提供了支持行为，符合定义要点，排除。 故本题选C。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q114",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:case-matching",
+    "knowledgePointIds": [
+      "reasoning:case-matching"
+    ],
+    "originalQuestionNo": 114,
+    "sectionOrder": 4,
+    "stem": "消费者教育：指通过有计划的宣传或培训，引导民众更新消费观念，掌握消费技能，培养消费习惯，使其形成产品购买的合理预期。 下列属于消费者教育的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "丁先生根据亲身经历写出了一份新疆自驾游的攻略，包括具体线路、沿途景点门票、酒店、美食等，还推荐了几个口碑很好的当地导游发布到了多家网站上，大批网友经过验证后给予了好评",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "某网站的帖子图文并茂地分析了各种榨汁机、豆浆机、养生壶、料理机的优缺点，推荐了一款黑科技“破壁机”，详细介绍了它的材质、功能、操作方法以及明星的使用体验，最后还附上了商家的二维码",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "某购物网站邀请网络写手连载长篇小说，让员工发动亲朋好友评论转发，大批粉丝追更到凌晨，网站贴心地附上了缓解眼睛疲劳的新产品供大家免费试用，两三个月后，访问量和营业额都有了显著提高",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "某知名品牌菜刀拍蒜后刀身断裂的视频在多个社交网站引发网友吐槽，厂家回应称视频中的菜刀属于高科技新品，硬度高，材质脆，受横向冲击时容易断裂，不适合拍蒜",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "本题考查经济类定义判断。 第一步：分析定义要点。“消费者教育”的定义要点：①通过有计划的宣传或培训；②引导民众更新消费观念，掌握消费技能，培养消费习惯；③使消费者形成产品购买的合理预期。 第二步：分析选项，确定答案。 A项：丁先生根据亲身经历写出了一份新疆自驾游的攻略，没有体现引导民众更新消费观念和使其形成产品购买的合理预期，不符合②③，排除。 B项：某网站的帖子图文并茂地分析了各种榨汁机、豆浆机、养生壶、料理机的优缺点，符合①；推荐了一款黑科技“破壁机”，详细介绍了它的材质、功能、操作方法以及明星的使用体验，符合②；最后还附上了商家的二维码，说明有使消费者形成产品购买的合理预期，符合③；符合定义要点，当选。 C项：某购物网站通过宣传使访问量和营业额都有了显著提高，未体现使消费者形成某一产品购买的合理预期，不符合③，排除。 D项：某知名品牌菜刀厂家回应拍蒜后刀身断裂的情况，不是有计划的宣传或培训，不符合①，排除。 故本题选B。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q115",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:case-matching",
+    "knowledgePointIds": [
+      "reasoning:case-matching"
+    ],
+    "originalQuestionNo": 115,
+    "sectionOrder": 4,
+    "stem": "灯谜是独具特色的中华优秀传统文化，可以根据谜面和谜底的关系分为多种类型。其中，摘顶格指去掉谜底的共同部首就扣合谜面；秋千格指从后往前读谜底就扣合谜面；白头格指谜底的第一个字作谐音读就扣合谜面。 根据上述定义，对下列三个灯谜的类型判断正确的是： （1）谜面：黄昏（打一地名）。谜底：洛阳 （2）谜面：郎貌（打一花名）。谜底：芙蓉 （3）谜面：思量（打一文具）。谜底：算盘",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "（1）秋千格，（2）白头格，（3）摘顶格",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "（1）白头格，（2）摘顶格，（3）秋千格",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "（1）白头格，（2）秋千格，（3）摘顶格",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "（1）秋千格，（2）摘顶格，（3）白头格",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "本题考查人文类定义判断。 第一步：分析定义要点。 “摘顶格”的定义要点是“去掉谜底的共同部首就扣合谜面”。 “秋千格”的定义要点是“从后往前读谜底就扣合谜面”。 “白头格”的定义要点是“谜底的第一个字作谐音读就扣合谜面”。 第二步：分析题干信息，确定答案。 （1）：谜底“洛阳”的第一个字作谐音读“落”，即落阳，扣合谜面“黄昏”，符合“白头格”的定义要点。 （2）：谜底“芙蓉”去掉共同部首为“夫容”，扣合谜面“郎貌”，符合“摘顶格”的定义要点。 （3）：谜底“算盘”从后往前读为“盘算”，扣合谜面“思量”，符合“秋千格”的定义要点。 综上，（1）为白头格，（2）为摘顶格，（3）为秋千格。 故本题选B。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q116",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:growth-amount",
+    "knowledgePointIds": [
+      "data-analysis:growth-amount"
+    ],
+    "originalQuestionNo": 116,
+    "sectionOrder": 5,
+    "stem": "2023年第二季度末，全国跨省联网定点零售药店环比增加：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "3.2万家",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "3.4万家",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "3.6万家",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "3.8万家",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "本题考查增长量计算。 第一步：查找相关材料。题干命题点的对应材料在第一段，即2023年第二季度末，跨省联网定点零售药店27.9万家，环比增长12.8%。 第二步：根据已知条件解题。2023年第二季度末，全国跨省联网定点零售药店环比增加 ×12.8%≈ × = =3.1万家，A项与之最接近。 故本题选A。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": "jiangsu-2024-A-class-stimulus-116-120",
+    "sharedStimulus": {
+      "text": "2023年第二季度末，全国跨省联网定点医疗机构54.3万家。其中，住院费用跨省联网定点医疗机构7.4万家，环比增长10.2%；普通门诊费用跨省联网定点医疗机构15.1万家，环比增长28.9%；门诊慢特病相关治疗费用跨省联网定点医疗机构3.9万家，环比增长75.9%；跨省联网定点零售药店27.9万家，环比增长12.8%。 2023年第二季度，全国跨省联网异地就医费用直接结算2854.1万人次，减少个人垫付394.1亿元，环比分别增长46.0%和32.6%。其中，住院费用跨省联网直接结算282.6万人次，减少个人垫付354.3亿元，环比分别增长32.9%和31.8%；门诊费用跨省联网直接结算2571.6万人次，减少个人垫付39.8亿元，环比分别增长47.6%和40.1%。 2023年第二季度，全国门诊费用跨省联网直接结算中，普通门诊费用跨省联网直接结算1886.7万人次，减少个人垫付26.5亿元，环比分别增长49.6%和36.8%。门诊慢特病相关治疗费用跨省联网直接结算59.7万人次，减少个人垫付5.5亿元，环比分别增长89.5%和97.9%。跨省联网定点零售药店直接结算625.2万人次，减少个人垫付7.8亿元，环比分别增长39.0%和24.6%。通过国家统一线上备案渠道成功办理备案177.0万人次，环比增长3.5%。",
+      "imageUrls": [],
+      "sourcePageUrl": "https://www.aipta.com/article/9441.html"
+    },
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q117",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:average-value",
+    "knowledgePointIds": [
+      "data-analysis:average-value"
+    ],
+    "originalQuestionNo": 117,
+    "sectionOrder": 5,
+    "stem": "2023年第二季度，全国住院费用跨省联网直接结算人均减少个人垫付：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "1.15万元",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "1.20万元",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "1.25万元",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "1.30万元",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "本题考查现期平均量。 第一步：查找相关材料。题干命题点的对应材料在第二段，即2023年第二季度，全国住院费用跨省联网直接结算282.6万人次，减少个人垫付354.3亿元。 第二步：根据已知条件解题。2023年第二季度，全国住院费用跨省联网直接结算人均减少个人垫付 ≈ = =1.25万元。 故本题选C。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": "jiangsu-2024-A-class-stimulus-116-120",
+    "sharedStimulus": {
+      "text": "2023年第二季度末，全国跨省联网定点医疗机构54.3万家。其中，住院费用跨省联网定点医疗机构7.4万家，环比增长10.2%；普通门诊费用跨省联网定点医疗机构15.1万家，环比增长28.9%；门诊慢特病相关治疗费用跨省联网定点医疗机构3.9万家，环比增长75.9%；跨省联网定点零售药店27.9万家，环比增长12.8%。 2023年第二季度，全国跨省联网异地就医费用直接结算2854.1万人次，减少个人垫付394.1亿元，环比分别增长46.0%和32.6%。其中，住院费用跨省联网直接结算282.6万人次，减少个人垫付354.3亿元，环比分别增长32.9%和31.8%；门诊费用跨省联网直接结算2571.6万人次，减少个人垫付39.8亿元，环比分别增长47.6%和40.1%。 2023年第二季度，全国门诊费用跨省联网直接结算中，普通门诊费用跨省联网直接结算1886.7万人次，减少个人垫付26.5亿元，环比分别增长49.6%和36.8%。门诊慢特病相关治疗费用跨省联网直接结算59.7万人次，减少个人垫付5.5亿元，环比分别增长89.5%和97.9%。跨省联网定点零售药店直接结算625.2万人次，减少个人垫付7.8亿元，环比分别增长39.0%和24.6%。通过国家统一线上备案渠道成功办理备案177.0万人次，环比增长3.5%。",
+      "imageUrls": [],
+      "sourcePageUrl": "https://www.aipta.com/article/9441.html"
+    },
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q118",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:current-share",
+    "knowledgePointIds": [
+      "data-analysis:current-share"
+    ],
+    "originalQuestionNo": 118,
+    "sectionOrder": 5,
+    "stem": "2023年第二季度，全国跨省联网异地就医费用直接结算人次占上半年的比重为：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "57.1%",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "59.3%",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "60.4%",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "61.2%",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "本题考查现期比重。 第一步：查找相关材料。题干命题点的对应材料在第二段，即2023年第二季度，全国跨省联网异地就医费用直接结算2854.1万人次，减少个人垫付394.1亿元，环比分别增长46.0%和32.6%。 第二步：根据已知条件解题。2023年第一季度全国跨省联网异地就医费用直接结算万人次。因此2023年第二季度，全国跨省联网异地就医费用直接结算人次占上半年的比重为=≈59.3%。 故本题选B。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": "jiangsu-2024-A-class-stimulus-116-120",
+    "sharedStimulus": {
+      "text": "2023年第二季度末，全国跨省联网定点医疗机构54.3万家。其中，住院费用跨省联网定点医疗机构7.4万家，环比增长10.2%；普通门诊费用跨省联网定点医疗机构15.1万家，环比增长28.9%；门诊慢特病相关治疗费用跨省联网定点医疗机构3.9万家，环比增长75.9%；跨省联网定点零售药店27.9万家，环比增长12.8%。 2023年第二季度，全国跨省联网异地就医费用直接结算2854.1万人次，减少个人垫付394.1亿元，环比分别增长46.0%和32.6%。其中，住院费用跨省联网直接结算282.6万人次，减少个人垫付354.3亿元，环比分别增长32.9%和31.8%；门诊费用跨省联网直接结算2571.6万人次，减少个人垫付39.8亿元，环比分别增长47.6%和40.1%。 2023年第二季度，全国门诊费用跨省联网直接结算中，普通门诊费用跨省联网直接结算1886.7万人次，减少个人垫付26.5亿元，环比分别增长49.6%和36.8%。门诊慢特病相关治疗费用跨省联网直接结算59.7万人次，减少个人垫付5.5亿元，环比分别增长89.5%和97.9%。跨省联网定点零售药店直接结算625.2万人次，减少个人垫付7.8亿元，环比分别增长39.0%和24.6%。通过国家统一线上备案渠道成功办理备案177.0万人次，环比增长3.5%。",
+      "imageUrls": [],
+      "sourcePageUrl": "https://www.aipta.com/article/9441.html"
+    },
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q119",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:average-change",
+    "knowledgePointIds": [
+      "data-analysis:average-change"
+    ],
+    "originalQuestionNo": 119,
+    "sectionOrder": 5,
+    "stem": "2023年第二季度，全国跨省联网异地就医费用直接结算减少个人垫付人均金额环比有所增加的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "门诊费用跨省联网直接结算",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "普通门诊费用跨省联网直接结算",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "跨省联网定点零售药店直接结算",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "门诊慢特病相关治疗费用跨省联网直接结算",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "本题考查平均量比较。 第一步：查找相关材料。题干命题点的对应材料在第二、三段，即2023年第二季度，四个选项直接结算人次以及减少个人垫付金额的环比增速。 第二步：根据已知条件解题。直接结算减少个人垫付人均金额= ，判断环比是否有所增加，只需比较减少个人垫付金额环比增长率及直接结算人次环比增长率大小即可。2023年第二季度，门诊费用跨省联网直接结算人次环比增长率（47.6%）＞减少个人垫付（40.1%），则人均金额环比下降。 普通门诊费用跨省联网直接结算人次环比增长率（49.6%）＞减少个人垫付（36.8%），即人均金额环比下降。同理，跨省联网定点零售药店直接结算减少个人垫付人均金额环比下降（39.0%＞24.6%），门诊慢特病相关治疗费用跨省联网直接结算减少个人垫付人均金额环比上升（89.5%＜97.9%）。 故本题选D。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": "jiangsu-2024-A-class-stimulus-116-120",
+    "sharedStimulus": {
+      "text": "2023年第二季度末，全国跨省联网定点医疗机构54.3万家。其中，住院费用跨省联网定点医疗机构7.4万家，环比增长10.2%；普通门诊费用跨省联网定点医疗机构15.1万家，环比增长28.9%；门诊慢特病相关治疗费用跨省联网定点医疗机构3.9万家，环比增长75.9%；跨省联网定点零售药店27.9万家，环比增长12.8%。 2023年第二季度，全国跨省联网异地就医费用直接结算2854.1万人次，减少个人垫付394.1亿元，环比分别增长46.0%和32.6%。其中，住院费用跨省联网直接结算282.6万人次，减少个人垫付354.3亿元，环比分别增长32.9%和31.8%；门诊费用跨省联网直接结算2571.6万人次，减少个人垫付39.8亿元，环比分别增长47.6%和40.1%。 2023年第二季度，全国门诊费用跨省联网直接结算中，普通门诊费用跨省联网直接结算1886.7万人次，减少个人垫付26.5亿元，环比分别增长49.6%和36.8%。门诊慢特病相关治疗费用跨省联网直接结算59.7万人次，减少个人垫付5.5亿元，环比分别增长89.5%和97.9%。跨省联网定点零售药店直接结算625.2万人次，减少个人垫付7.8亿元，环比分别增长39.0%和24.6%。通过国家统一线上备案渠道成功办理备案177.0万人次，环比增长3.5%。",
+      "imageUrls": [],
+      "sourcePageUrl": "https://www.aipta.com/article/9441.html"
+    },
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q120",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:mixed-indicators",
+    "knowledgePointIds": [
+      "data-analysis:mixed-indicators"
+    ],
+    "originalQuestionNo": 120,
+    "sectionOrder": 5,
+    "stem": "能够从上述资料中推出的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "2023年第二季度末，全国住院费用跨省联网定点医疗机构同比增加0.6万家",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "2023年第二季度，全国门诊费用跨省联网直接结算的人次比住院费用跨省联网直接结算的人次多8.1倍",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "2023年第二季度，通过国家统一线上备案渠道成功办理备案的患者都享受了全国跨省联网异地就医费用直接结算的服务",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "2023年第二季度末，全国门诊慢特病相关治疗费用跨省联网定点医疗机构数的环比增量不少于普通门诊费用跨省联网定点医疗机构数的环比增量",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "本题考查综合分析。 A项错误：材料仅给出2023年第二季度末全国住院费用跨省联网定点医疗机构环比相关数据，未给出同比相关数据，无法推出同比增加量，排除。 B项正确：根据材料第二段可知，2023年第二季度，全国门诊费用跨省联网直接结算的人次比住院费用跨省联网直接结算的人次多 -1≈9.1-1=8.1倍，当选。 C项错误：根据材料第三段可知，通过国家统一线上备案渠道成功办理备案177.0万人次，环比增长 3.5%。但线上办理备案人次与跨省联网异地就医费用直接结算服务关系未知，无法推出，排除。 D项错误：根据材料第一段可知，2023年第二季度末，全国门诊慢特病相关治疗费用跨省联网定点医疗机构数的环比增量为 ×75.9%≈ × = ≈1.7万家，普通门诊费用跨省联网定点医疗机构数的环比增量为 ×28.9%≈ ×0.3≈11.5×0.3≈3.5万家，前者小于后者，排除。 故本题选B。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": "jiangsu-2024-A-class-stimulus-116-120",
+    "sharedStimulus": {
+      "text": "2023年第二季度末，全国跨省联网定点医疗机构54.3万家。其中，住院费用跨省联网定点医疗机构7.4万家，环比增长10.2%；普通门诊费用跨省联网定点医疗机构15.1万家，环比增长28.9%；门诊慢特病相关治疗费用跨省联网定点医疗机构3.9万家，环比增长75.9%；跨省联网定点零售药店27.9万家，环比增长12.8%。 2023年第二季度，全国跨省联网异地就医费用直接结算2854.1万人次，减少个人垫付394.1亿元，环比分别增长46.0%和32.6%。其中，住院费用跨省联网直接结算282.6万人次，减少个人垫付354.3亿元，环比分别增长32.9%和31.8%；门诊费用跨省联网直接结算2571.6万人次，减少个人垫付39.8亿元，环比分别增长47.6%和40.1%。 2023年第二季度，全国门诊费用跨省联网直接结算中，普通门诊费用跨省联网直接结算1886.7万人次，减少个人垫付26.5亿元，环比分别增长49.6%和36.8%。门诊慢特病相关治疗费用跨省联网直接结算59.7万人次，减少个人垫付5.5亿元，环比分别增长89.5%和97.9%。跨省联网定点零售药店直接结算625.2万人次，减少个人垫付7.8亿元，环比分别增长39.0%和24.6%。通过国家统一线上备案渠道成功办理备案177.0万人次，环比增长3.5%。",
+      "imageUrls": [],
+      "sourcePageUrl": "https://www.aipta.com/article/9441.html"
+    },
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q121",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:growth-amount",
+    "knowledgePointIds": [
+      "data-analysis:growth-amount"
+    ],
+    "originalQuestionNo": 121,
+    "sectionOrder": 5,
+    "stem": "2023年第二季度，该市工业用电量同比增加：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "4.5亿千瓦时",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "3.8亿千瓦时",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "11.7亿千瓦时",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "3.0亿千瓦时",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "本题考查简单计算。 第一步：查找相关材料。题干命题点的对应材料在表格最后一行，即该市2022年1～3月工业用电量为 81.6亿千瓦时，1～6月为169.8亿千瓦时。2023年1～3月为81.3亿千瓦时，1～6月为173.3亿千瓦时。 第二步：根据已知条件解题。2022年第二季度该市工业用电量为169.8-81.6=88.2亿千瓦时，2023年第二季度为173.3-81.3=92亿千瓦时，后者比前者多92-88.2=3.8亿千瓦时。 故本题选B。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": "jiangsu-2024-A-class-stimulus-121-125",
+    "sharedStimulus": {
+      "text": "",
+      "imageUrls": [
+        "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_4cb4d597303ca29e.png"
+      ],
+      "sourcePageUrl": "https://www.aipta.com/article/9441.html"
+    },
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q122",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:ranking",
+    "knowledgePointIds": [
+      "data-analysis:ranking"
+    ],
+    "originalQuestionNo": 122,
+    "sectionOrder": 5,
+    "stem": "2022年第一季度—2023年第二季度，该市进出口总额最多的季度是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "2022年第二季度",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "2022年第三季度",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "2022年第四季度",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "2023年第二季度",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "本题考查判断范围。 第一步：查找相关材料。题干命题点的对应材料在表格倒数第四行，即2022年第一季度至2023年第二季度每个季度该市的累计进出口总额。 第二步：根据已知条件解题。2022年第二季度该市进出口总额为2988-1388=1600亿元，2022年第三季度为4566-2988=1578亿元，2022年第四季度为6292-4566=1726亿元，2023年第二季度为2915-1443=1472亿元。比较可知，2022年第四季度该市进出口总额最多。 故本题选C。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": "jiangsu-2024-A-class-stimulus-121-125",
+    "sharedStimulus": {
+      "text": "",
+      "imageUrls": [
+        "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_4cb4d597303ca29e.png"
+      ],
+      "sourcePageUrl": "https://www.aipta.com/article/9441.html"
+    },
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q123",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:calculation-choice",
+    "knowledgePointIds": [
+      "data-analysis:calculation-choice"
+    ],
+    "originalQuestionNo": 123,
+    "sectionOrder": 5,
+    "stem": "2023年第二季度，该市第三产业增加值是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "2623亿元",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "2766亿元",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "3262亿元",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "4087亿元",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "本题考查现期比重。 第一步：查找相关材料。题干命题点的对应材料在表格第三、四行，即该市2023年1～3月地区生产总值为4230亿元，第三产业增加值占比65.4%，1～6月为8317亿元，第三产业增加值占比64.8%。 第二步：根据已知条件解题。2023年第二季度，该市第三产业增加值为8317×64.8%- 4230×65.4%≈（8317-4230）×65%=4087×65%≈41×65=2665亿元，实际值要比计算值略小，只有A项符合。 故本题选A。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": "jiangsu-2024-A-class-stimulus-121-125",
+    "sharedStimulus": {
+      "text": "",
+      "imageUrls": [
+        "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_4cb4d597303ca29e.png"
+      ],
+      "sourcePageUrl": "https://www.aipta.com/article/9441.html"
+    },
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q124",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:growth-rate",
+    "knowledgePointIds": [
+      "data-analysis:growth-rate"
+    ],
+    "originalQuestionNo": 124,
+    "sectionOrder": 5,
+    "stem": "2023年上半年，该市地区生产总值、社会消费品零售总额、实际利用外资、工业用电量四个指标中同比增速最快的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "地区生产总值",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "社会消费品零售总额",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "实际利用外资",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "工业用电量",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "本题考查增长率比较。 第一步：查找相关材料。题干命题点的对应材料在表格，即2022年上半年和2023年上半年该市四个选项的数值。 第二步：根据已知条件解题。2023年上半年地区生产总值的同比增速为 ×100%= ×100%＜ 10%，社会消费品零售总额为 ×100%= ×100%＜10%，实际利用外资为 ×100%= ×100%＞10%，工业用电量为 ×100%= ×100%＜10%。因此2023年上半年该市同比增速最快的是实际利用外资。 故本题选C。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": "jiangsu-2024-A-class-stimulus-121-125",
+    "sharedStimulus": {
+      "text": "",
+      "imageUrls": [
+        "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_4cb4d597303ca29e.png"
+      ],
+      "sourcePageUrl": "https://www.aipta.com/article/9441.html"
+    },
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q125",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:mixed-indicators",
+    "knowledgePointIds": [
+      "data-analysis:mixed-indicators"
+    ],
+    "originalQuestionNo": 125,
+    "sectionOrder": 5,
+    "stem": "能够从上述资料中推出的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "2023年1—6月，该市进口额没有超过1100亿元",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "2023年第二季度，该市出口额环比增速高于进出口总额环比增速",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "2022年第二季度—2023年第二季度，该市季度固定资产投资最大值是1705亿元",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "2022年1月—2023年6月，该市月平均社会消费品零售总额超过700亿元",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "本题考查综合分析。 A项错误：根据表格倒数第三、四行可知，2023年1～6月，该市进口额为2915×（1- 58.1%）≈29×42=1218亿元＞1100亿元，排除。 B项正确：根据表格倒数第三、四行可知，2023年1～3月，该市出口额占进出口总额比重为57.8%，1～6 月占比为58.1%，根据混合增长率特性可知，第二季度出口额占进出口总额比重大于58.1%，占比环比上升。根据部分增长率大于整体增长率，部分占整体的比重上升可知，2023年第二季度，该市出口额环比增速高于进出口总额环比增速，当选。 C项错误：根据表格第五行可知，2022年第二季度，该市固定资产投资额为3040-1323=1717亿元＞1705 亿元，排除。 D项错误：根据表格倒数第五行可知，2022年1月～2023年6月，该市月平均社会消费品零售总额为 = ≈677亿元＜700亿元，排除。 故本题选B。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": "jiangsu-2024-A-class-stimulus-121-125",
+    "sharedStimulus": {
+      "text": "",
+      "imageUrls": [
+        "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_4cb4d597303ca29e.png"
+      ],
+      "sourcePageUrl": "https://www.aipta.com/article/9441.html"
+    },
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q126",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:growth-amount",
+    "knowledgePointIds": [
+      "data-analysis:growth-amount"
+    ],
+    "originalQuestionNo": 126,
+    "sectionOrder": 5,
+    "stem": "2023年上半年，江苏省国资委监管企业实现营业收入约同比增加：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "61亿元",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "80亿元",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "84亿元",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "100亿元",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "本题考查增长量计算。 第一步：查找相关材料。题干命题点的对应材料在文字材料第一段，即2023年上半年江苏省国资委监管企业实现营业收入、利润分别为2091亿元、306亿元，分别增长4%、30.4%。 第二步：根据已知条件解题。2023年上半年，江苏省国资委监管企业实现营业收入同比增加 ×4%= × = ≈80亿元。 故本题选B。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": "jiangsu-2024-A-class-stimulus-126-130",
+    "sharedStimulus": {
+      "text": "2023年上半年，江苏省、设区市国资委监管企业实现营业收入、利润分别为6121亿元、678亿元，同比分别增长8.3%、16.1%，其中，省国资委监管企业实现营业收入、利润分别为2091亿元、306亿元，分别增长4%、30.4%。 2023年6月末，江苏省、设区市国资委监管企业资产总额89864亿元，同比增长7.7%；资产负债率63.6%，较上年末上升0.8个百分点。其中省国资委监管企业资产总额24049亿元，增长6.7%，资产负债率64.8%，下降0.1个百分点。",
+      "imageUrls": [
+        "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_285135441332a505.png"
+      ],
+      "sourcePageUrl": "https://www.aipta.com/article/9441.html"
+    },
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q127",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:growth-rate",
+    "knowledgePointIds": [
+      "data-analysis:growth-rate"
+    ],
+    "originalQuestionNo": 127,
+    "sectionOrder": 5,
+    "stem": "2022年末，江苏省国资委监管企业的资产负债率比省、设区市国资委监管企业高：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "1.2个百分点",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "1.8个百分点",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "2.1个百分点",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "2.4个百分点",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "本题考查简单计算。 第一步：查找相关材料。题干命题点的对应材料在文字材料第二段，即2023年6月末，江苏省、设区市国资委监管企业资产负债率63.6%，较上年末上升0.8个百分点。其中省国资委监管企业资产负债率 64.8%，较上年末下降0.1个百分点。 第二步：根据已知条件解题。2022年末，江苏省国资委监管企业的资产负债率比省、设区市国资委监管企业高（64.8%+0.1%）-（63.6%-0.8%）=64.9%-62.8%=2.1%，即高2.1个百分点。 故本题选C。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": "jiangsu-2024-A-class-stimulus-126-130",
+    "sharedStimulus": {
+      "text": "2023年上半年，江苏省、设区市国资委监管企业实现营业收入、利润分别为6121亿元、678亿元，同比分别增长8.3%、16.1%，其中，省国资委监管企业实现营业收入、利润分别为2091亿元、306亿元，分别增长4%、30.4%。 2023年6月末，江苏省、设区市国资委监管企业资产总额89864亿元，同比增长7.7%；资产负债率63.6%，较上年末上升0.8个百分点。其中省国资委监管企业资产总额24049亿元，增长6.7%，资产负债率64.8%，下降0.1个百分点。",
+      "imageUrls": [
+        "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_285135441332a505.png"
+      ],
+      "sourcePageUrl": "https://www.aipta.com/article/9441.html"
+    },
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q128",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:growth-amount",
+    "knowledgePointIds": [
+      "data-analysis:growth-amount"
+    ],
+    "originalQuestionNo": 128,
+    "sectionOrder": 5,
+    "stem": "2020年下半年~2023年上半年，江苏省、设区市国资委监管企业利润环比增加最多的半年是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "2020年下半年",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "2021年上半年",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "2022年上半年",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "2023年上半年",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "本题考查增长量比较。 第一步：查找相关材料。题干命题点的对应材料在柱状图及文字材料，即2020年下半年～2023年上半年，江苏省、设区市国资委监管企业利润。 第二步：根据已知条件解题。2020年下半年，江苏省、设区市国资委监管企业利润环比增加573- 460=113亿元，2021年上半年为725-573=152亿元，2022年上半年为584-480=104亿元，2023年上半年为 678-504=174亿元。因此2023年上半年江苏省、设区市国资委监管企业利润环比增加最多。 故本题选D。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": "jiangsu-2024-A-class-stimulus-126-130",
+    "sharedStimulus": {
+      "text": "2023年上半年，江苏省、设区市国资委监管企业实现营业收入、利润分别为6121亿元、678亿元，同比分别增长8.3%、16.1%，其中，省国资委监管企业实现营业收入、利润分别为2091亿元、306亿元，分别增长4%、30.4%。 2023年6月末，江苏省、设区市国资委监管企业资产总额89864亿元，同比增长7.7%；资产负债率63.6%，较上年末上升0.8个百分点。其中省国资委监管企业资产总额24049亿元，增长6.7%，资产负债率64.8%，下降0.1个百分点。",
+      "imageUrls": [
+        "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_285135441332a505.png"
+      ],
+      "sourcePageUrl": "https://www.aipta.com/article/9441.html"
+    },
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q129",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:growth-rate",
+    "knowledgePointIds": [
+      "data-analysis:growth-rate"
+    ],
+    "originalQuestionNo": 129,
+    "sectionOrder": 5,
+    "stem": "2023年6月末，江苏设区市国资委监管企业资产总额同比增速的计算式可表示为（ ）。",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "",
+        "imageUrls": [
+          "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_d225080dd3b184d5.png"
+        ]
+      },
+      {
+        "id": "B",
+        "text": "",
+        "imageUrls": [
+          "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_c6ffd457d2c49504.png"
+        ]
+      },
+      {
+        "id": "C",
+        "text": "",
+        "imageUrls": [
+          "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_5b35b9b1ac01b9c3.png"
+        ]
+      },
+      {
+        "id": "D",
+        "text": "",
+        "imageUrls": [
+          "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_fef9084abadcc4e7.png"
+        ]
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "本题考查增长率计算。 第一步：查找相关材料。题干命题点的对应材料在文字材料第二段，即2023年6月末，江苏省、设区市国资委监管企业资产总额89864亿元，同比增长7.7%。其中省国资委监管企业资产总额24049亿元，增长 6.7%。 第二步：根据已知条件解题。2022年6月末，江苏设区市国资委监管企业资产总额为（ - ） 亿元，2023年6月末，其同比增速为 = = 。 故本题选A。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": "jiangsu-2024-A-class-stimulus-126-130",
+    "sharedStimulus": {
+      "text": "2023年上半年，江苏省、设区市国资委监管企业实现营业收入、利润分别为6121亿元、678亿元，同比分别增长8.3%、16.1%，其中，省国资委监管企业实现营业收入、利润分别为2091亿元、306亿元，分别增长4%、30.4%。 2023年6月末，江苏省、设区市国资委监管企业资产总额89864亿元，同比增长7.7%；资产负债率63.6%，较上年末上升0.8个百分点。其中省国资委监管企业资产总额24049亿元，增长6.7%，资产负债率64.8%，下降0.1个百分点。",
+      "imageUrls": [
+        "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_285135441332a505.png"
+      ],
+      "sourcePageUrl": "https://www.aipta.com/article/9441.html"
+    },
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q130",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:mixed-indicators",
+    "knowledgePointIds": [
+      "data-analysis:mixed-indicators"
+    ],
+    "originalQuestionNo": 130,
+    "sectionOrder": 5,
+    "stem": "从上述材料中不能推出的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "2023年上半年，江苏省国资委监管企业营业收入利润率同比有所提高",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "2023年上半年，江苏省、设区市国资委监管企业利润环比增速比上年同期快",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "2023年上半年，江苏省国资委监管企业利润占江苏省、设区市国资委监管企业利润的比重同比有所提高",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "2020年下半年~2023年上半年，江苏省、设区市国资委监管企业半年营业收入同比与环比增速具有相同的变动趋势",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "本题考查综合分析。 A项正确：根据文字材料第一段可知，2023年上半年，江苏省国资委监管企业营业收入同比增速为4%， 利润同比增速为30.4%，根据公式收入利润率= ×100%可知，当利润增速大于收入增速时，利润率同比有所提高，排除。 B项正确：根据文字材料第一段和柱状图可知，2023年上半年，江苏省、设区市国资委监管企业利润环比增速为 ×100%= ×100%＞30%，2022年上半年为 ×100%= ×100%＞20%，前者大于后者，排除。 C项正确：根据文字材料第一段可知，2023年上半年，江苏省、设区市国资委监管企业实现利润同比增长16.1%，其中，省国资委监管企业实现利润增长同比30.4%。根据部分增长率大于整体增长率，部分占整体的比重上升可知，2023年上半年，江苏省国资委监管企业利润占江苏省、设区市国资委监管企业利润的比重同比有所提高，排除。 D项错误：材料未给出2019年下半年江苏省、设区市国资委监管企业营业收入的相关数据，无法计算出 2020年下半年同比增速，也无法进行趋势比较，当选。 故本题选D。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": "jiangsu-2024-A-class-stimulus-126-130",
+    "sharedStimulus": {
+      "text": "2023年上半年，江苏省、设区市国资委监管企业实现营业收入、利润分别为6121亿元、678亿元，同比分别增长8.3%、16.1%，其中，省国资委监管企业实现营业收入、利润分别为2091亿元、306亿元，分别增长4%、30.4%。 2023年6月末，江苏省、设区市国资委监管企业资产总额89864亿元，同比增长7.7%；资产负债率63.6%，较上年末上升0.8个百分点。其中省国资委监管企业资产总额24049亿元，增长6.7%，资产负债率64.8%，下降0.1个百分点。",
+      "imageUrls": [
+        "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_285135441332a505.png"
+      ],
+      "sourcePageUrl": "https://www.aipta.com/article/9441.html"
+    },
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q131",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:estimation",
+    "knowledgePointIds": [
+      "data-analysis:estimation"
+    ],
+    "originalQuestionNo": 131,
+    "sectionOrder": 5,
+    "stem": "2022年我国网络零售交易额为：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "0.9万亿元",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "8.5万亿元",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "13.8万亿元",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "15.3万亿元",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "本题考查简单计算。 第一步：查找相关材料。题干命题点的对应材料在文字材料，即2022年直播电商行业交易额为3.5万亿元，直播电商行业渗透率（直播电商行业渗透率= ）为25.3%。 第二步：根据已知条件解题。2022年我国网络零售交易额为 ≈3.5×4=14万亿元，C项与之最接近。 故本题选C。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": "jiangsu-2024-A-class-stimulus-131-135",
+    "sharedStimulus": {
+      "text": "2022年，我国网络购物用户8.5亿人，使用率为79.2%；网络直播用户7.5亿人，比上年增长6.8%，占网民总数的70.3%；直播电商行业交易额为3.5万亿元，较2017年增长178倍，直播电商行业渗透率（直播电商行业渗透率 ）为25.3%；重点监测电商平台直播场次超1.2亿场，较2020年增长5倍；直播电商行业三大平台交易额分别为1.5万亿元、0.9万亿元和0.8万亿元。",
+      "imageUrls": [
+        "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_57e114dbf5f24a8b.png",
+        "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_bf9385f86fd16a3d.png"
+      ],
+      "sourcePageUrl": "https://www.aipta.com/article/9441.html"
+    },
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q132",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:multiple",
+    "knowledgePointIds": [
+      "data-analysis:multiple"
+    ],
+    "originalQuestionNo": 132,
+    "sectionOrder": 5,
+    "stem": "2022年与2021年我国直播电商行业交易额之比为：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "5：3",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "6：5",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "7：3",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "7：4",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "本题考查现期比值。 第一步：查找相关材料。题干命题点的对应材料在文字材料及表格，即2022年，我国直播电商行业交易额为3.5万亿元。2021年我国直播电商行业用户数4.3亿人，人均年消费额为4640元。 第二步：根据已知条件解题。2022年与2021年我国直播电商行业交易额之比为3.5: （4.3×0.464）≈3.5:2=7:4。 故本题选D。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": "jiangsu-2024-A-class-stimulus-131-135",
+    "sharedStimulus": {
+      "text": "2022年，我国网络购物用户8.5亿人，使用率为79.2%；网络直播用户7.5亿人，比上年增长6.8%，占网民总数的70.3%；直播电商行业交易额为3.5万亿元，较2017年增长178倍，直播电商行业渗透率（直播电商行业渗透率 ）为25.3%；重点监测电商平台直播场次超1.2亿场，较2020年增长5倍；直播电商行业三大平台交易额分别为1.5万亿元、0.9万亿元和0.8万亿元。",
+      "imageUrls": [
+        "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_57e114dbf5f24a8b.png",
+        "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_bf9385f86fd16a3d.png"
+      ],
+      "sourcePageUrl": "https://www.aipta.com/article/9441.html"
+    },
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q133",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:average-growth",
+    "knowledgePointIds": [
+      "data-analysis:average-growth"
+    ],
+    "originalQuestionNo": 133,
+    "sectionOrder": 5,
+    "stem": "若2019-2022年我国直播电商行业企业数、用户数、人均年消费额的年均增速分别用 、 、 表示。则下列关系式正确的是：",
+    "stemImageUrls": [
+      "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_e790eef72767a737.png",
+      "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_a672935b4cc27e2c.png",
+      "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_48beabc32283d866.png"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "",
+        "imageUrls": [
+          "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_7cb9de7fc29ae9a0.png"
+        ]
+      },
+      {
+        "id": "B",
+        "text": "",
+        "imageUrls": [
+          "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_342e8512dbf6b672.png"
+        ]
+      },
+      {
+        "id": "C",
+        "text": "",
+        "imageUrls": [
+          "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_d255f5c373ac07bd.png"
+        ]
+      },
+      {
+        "id": "D",
+        "text": "",
+        "imageUrls": [
+          "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_47b7c3b71f16809b.png"
+        ]
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "本题考查平均增长率。 第一步：查找相关材料。题干命题点的对应材料在表格，即2018～2022年我国直播电商行业企业数、用户数、人均年消费额数据。 第二步：根据已知条件解题。根据公式年均增长率= -1可知，由于年份差相同，比较年均增速，只需比较即可。2019～2022年我国直播电商行业企业数（V1）的为 ≈5，用户数 （V2）为 ≈2，人均年消费额（V3）为 ≈25。因此关系式为V2≤V1≤V3。 故本题选B。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": "jiangsu-2024-A-class-stimulus-131-135",
+    "sharedStimulus": {
+      "text": "2022年，我国网络购物用户8.5亿人，使用率为79.2%；网络直播用户7.5亿人，比上年增长6.8%，占网民总数的70.3%；直播电商行业交易额为3.5万亿元，较2017年增长178倍，直播电商行业渗透率（直播电商行业渗透率 ）为25.3%；重点监测电商平台直播场次超1.2亿场，较2020年增长5倍；直播电商行业三大平台交易额分别为1.5万亿元、0.9万亿元和0.8万亿元。",
+      "imageUrls": [
+        "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_57e114dbf5f24a8b.png",
+        "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_bf9385f86fd16a3d.png"
+      ],
+      "sourcePageUrl": "https://www.aipta.com/article/9441.html"
+    },
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q134",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:current-share",
+    "knowledgePointIds": [
+      "data-analysis:current-share"
+    ],
+    "originalQuestionNo": 134,
+    "sectionOrder": 5,
+    "stem": "下列能够表示2022年我国直播电商行业三大平台交易额比例关系的示意图是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "",
+        "imageUrls": [
+          "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_99f5dd646e083e93.png"
+        ]
+      },
+      {
+        "id": "B",
+        "text": "",
+        "imageUrls": [
+          "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_a62aaea2b6c00d13.png"
+        ]
+      },
+      {
+        "id": "C",
+        "text": "",
+        "imageUrls": [
+          "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_9bb43ad8456a9965.png"
+        ]
+      },
+      {
+        "id": "D",
+        "text": "",
+        "imageUrls": [
+          "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_cc360cbff791df3b.png"
+        ]
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "本题考查比重比较。 第一步：查找相关材料。题干命题点的对应材料在文字材料，即2022年，我国直播电商行业三大平台交易额分别为1.5万亿元、0.9万亿元和0.8万亿元。 第二步：根据已知条件解题。2022年，我国直播电商行业三大平台总交易额为1.5+0.9+0.8=3.2万亿元。交易额为1.5万亿元的平台占比略小于50%，观察选项，排除B、D项。交易额为0.8万亿元的平台占比为25%，排除C项。 故本题选A。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": "jiangsu-2024-A-class-stimulus-131-135",
+    "sharedStimulus": {
+      "text": "2022年，我国网络购物用户8.5亿人，使用率为79.2%；网络直播用户7.5亿人，比上年增长6.8%，占网民总数的70.3%；直播电商行业交易额为3.5万亿元，较2017年增长178倍，直播电商行业渗透率（直播电商行业渗透率 ）为25.3%；重点监测电商平台直播场次超1.2亿场，较2020年增长5倍；直播电商行业三大平台交易额分别为1.5万亿元、0.9万亿元和0.8万亿元。",
+      "imageUrls": [
+        "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_57e114dbf5f24a8b.png",
+        "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_bf9385f86fd16a3d.png"
+      ],
+      "sourcePageUrl": "https://www.aipta.com/article/9441.html"
+    },
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "js2024a-q135",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:mixed-indicators",
+    "knowledgePointIds": [
+      "data-analysis:mixed-indicators"
+    ],
+    "originalQuestionNo": 135,
+    "sectionOrder": 5,
+    "stem": "能够从上述资料中推出的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "2017年我国直播电商行业交易额超过250亿元",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "2020年我国直播电商行业直播场次超过2000万场",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "2019—2022年，我国直播电商行业企业数增速逐年加快",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "2019—2022年，我国直播电商行业用户数增加最多的是2022年",
+        "imageUrls": []
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "本题考查综合分析。 A项错误：根据文字材料可知，2017年我国直播电商行业交易额为 = ≈196亿元＜250亿元，排除。 B项正确：根据文字材料可知，2020年我国重点检测直播电商行业直播场次为 = =2000万场，则直播电商行业直播场次必定超过2000万场，当选。 C项错误：根据表格第二行估算可知，2021年企业数增加超过8000家，增长率超过100%，2022年增长约 3000家左右，增长率必定小于100%，并非逐年加快，排除。 D项错误：根据表格第三行可知，2022年我国直播电商行业用户数增加4.7-4.3=0.4亿人，2019年为2.5- 2.2=0.3亿人，2020年为3.7-2.5=1.2亿人，则增加最多的并非2022年，排除。 故本题选B。",
+    "difficulty": "medium",
+    "sourceType": "verified_exam",
+    "sourceId": "jiangsu-2024-a-32xueyuan",
+    "sourceTitle": "2024 年江苏省公务员录用考试《行测》A 类真题（第三方出版原卷）",
+    "sourceNote": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/9441.html",
+    "region": "江苏",
+    "examYear": 2024,
+    "paperId": "jiangsu-2024-A-class",
+    "paperTitle": "2024 年江苏省公务员录用考试《行测》A 类真题",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+    "sharedStimulusId": "jiangsu-2024-A-class-stimulus-131-135",
+    "sharedStimulus": {
+      "text": "2022年，我国网络购物用户8.5亿人，使用率为79.2%；网络直播用户7.5亿人，比上年增长6.8%，占网民总数的70.3%；直播电商行业交易额为3.5万亿元，较2017年增长178倍，直播电商行业渗透率（直播电商行业渗透率 ）为25.3%；重点监测电商平台直播场次超1.2亿场，较2020年增长5倍；直播电商行业三大平台交易额分别为1.5万亿元、0.9万亿元和0.8万亿元。",
+      "imageUrls": [
+        "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_57e114dbf5f24a8b.png",
+        "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_bf9385f86fd16a3d.png"
+      ],
+      "sourcePageUrl": "https://www.aipta.com/article/9441.html"
+    },
     "verificationStatus": "verified",
     "copyrightStatus": "licensed",
     "publishStatus": "published",

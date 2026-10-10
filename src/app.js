@@ -771,7 +771,7 @@ function renderScienceSession(session) {
       if (!question) return '';
       const statusLabel = answer ? answer.isCorrect ? '答对' : '答错' : '未作答';
       const selectedLabel = answer ? `你的选择 ${escapeHtml(answer.selectedOptionId)}` : '未提交答案';
-      return `<article class="science-result-row ${answer ? answer.isCorrect ? 'is-correct' : 'is-wrong' : 'is-unanswered'}"><div><strong>第 ${index + 1} 题 · ${statusLabel} · ${escapeHtml(question.subjectTitle)}</strong><span>${escapeHtml(question.stem)}</span></div><p>${escapeHtml(question.explanation)}</p><small>${selectedLabel} · 正确答案 ${escapeHtml(question.correctAnswer)}</small></article>`;
+      return `<article class="science-result-row ${answer ? answer.isCorrect ? 'is-correct' : 'is-wrong' : 'is-unanswered'}"><div><strong>第 ${index + 1} 题 · ${statusLabel} · ${escapeHtml(question.subjectTitle)}</strong>${renderAptitudeSharedStimulus(question.sharedStimulus)}${renderSourceQuestionStem(question, { heading: false })}</div><p>${escapeHtml(question.explanation)}</p><small>${selectedLabel} · 正确答案 ${escapeHtml(question.correctAnswer)}</small></article>`;
     }).join('');
     const scoreText = isExam
       ? `${correct} / ${session.questionIds.length} 题 · 得分率 ${Math.round((session.scoreRate || 0) * 100)}% · 已答题准确率 ${session.answeredAccuracy === null ? '—' : `${Math.round(session.answeredAccuracy * 100)}%`}`
@@ -795,15 +795,15 @@ function renderScienceSession(session) {
   const options = question.options.map((option) => {
     if (isExam) {
       const selected = examSelection === option.id;
-      return `<button type="button" class="science-answer-option ${selected ? 'is-selected' : ''}" data-action="select-exam-answer" data-session-id="${escapeHtml(session.id)}" data-option-id="${escapeHtml(option.id)}"><span>${escapeHtml(option.id)}</span><strong>${escapeHtml(option.text)}</strong><small>${selected ? '已选' : '选择'}</small></button>`;
+      return `<button type="button" class="science-answer-option ${selected ? 'is-selected' : ''}" data-action="select-exam-answer" data-session-id="${escapeHtml(session.id)}" data-option-id="${escapeHtml(option.id)}"><span>${escapeHtml(option.id)}</span><strong class="aptitude-source-option-content">${renderSourceQuestionOption(option)}</strong><small>${selected ? '已选' : '选择'}</small></button>`;
     }
     const selected = answer?.selectedOptionId === option.id;
     const correctOption = answer && question.correctAnswer === option.id;
     const marker = answer ? selected ? (answer.isCorrect ? '✓ 你的答案' : '你的答案') : correctOption ? '正确答案' : '' : '';
     const tone = answer ? correctOption ? 'is-correct' : selected ? 'is-wrong' : '' : '';
     return answer
-      ? `<div class="science-answer-option ${tone}"><span>${option.id}</span><strong>${escapeHtml(option.text)}</strong><small>${marker}</small></div>`
-      : `<button type="button" class="science-answer-option" data-action="answer-science-question" data-session-id="${escapeHtml(session.id)}" data-option-id="${escapeHtml(option.id)}"><span>${option.id}</span><strong>${escapeHtml(option.text)}</strong><small>选择</small></button>`;
+      ? `<div class="science-answer-option ${tone}"><span>${option.id}</span><strong class="aptitude-source-option-content">${renderSourceQuestionOption(option)}</strong><small>${marker}</small></div>`
+      : `<button type="button" class="science-answer-option" data-action="answer-science-question" data-session-id="${escapeHtml(session.id)}" data-option-id="${escapeHtml(option.id)}"><span>${option.id}</span><strong class="aptitude-source-option-content">${renderSourceQuestionOption(option)}</strong><small>选择</small></button>`;
   }).join('');
   const review = isExam
     ? examSelection ? '<div class="notice notice-soft"><span>✓</span><p>答案已保存。交卷前可修改，模拟结束前不显示答案和解析。</p></div>' : ''
@@ -821,7 +821,7 @@ function renderScienceSession(session) {
   const originalQuestionReference = renderOriginalQuestionReference(question);
   const sourceLabel = ({ original: '项目原创', official_outline_example: '官方大纲例题', verified_exam: '公开真题', recalled: '考生回忆版', third_party_mock: '机构模拟题', licensed: '授权题目' })[question.sourceType] || '题源待核';
   const presentationLabel = question.sourceType !== 'original' || question.presentationMode === 'adapted' ? ' · 题意重述' : '';
-  return `<div class="page-body science-page"><div class="page-heading-row"><div><div class="eyebrow muted">${isExam ? 'TIMED MOCK' : 'PRACTICE'}</div><h1>${isExam ? '科学推理限时模拟' : '科学推理练习'}</h1><p>${isExam ? `第 ${progressLabel} · 已答 ${Object.keys(session.draftAnswers || {}).length} 题` : `第 ${progressLabel} · ${correct} 题答对`}</p></div><div class="science-session-clock">${isExam ? `<span class="eyebrow muted">剩余时间</span><strong id="science-exam-countdown" data-deadline="${escapeHtml(session.deadline)}">计算中</strong>` : ''}<button type="button" class="button button-quiet" data-action="leave-science-session">暂时退出</button></div></div><section class="panel science-question-panel"><div class="science-question-meta"><span>${escapeHtml(question.subjectTitle)}</span><span>${escapeHtml(question.difficulty === 'easy' ? '基础' : question.difficulty === 'medium' ? '中等' : '进阶')}</span><span>${sourceLabel}${presentationLabel}</span>${originalQuestionReference}</div><h2>${escapeHtml(question.stem)}</h2>${question.diagramSvg ? `<div class="science-source-diagram">${question.diagramSvg}</div>` : ''}<div class="science-answer-options">${options}</div><div class="science-source-attribution">题目来源：${sourceLink}${question.sourceNote ? `<small>${escapeHtml(question.sourceNote)}</small>` : ''}</div>${review}<div class="science-question-footer">${actions}</div></section></div>`;
+  return `<div class="page-body science-page"><div class="page-heading-row"><div><div class="eyebrow muted">${isExam ? 'TIMED MOCK' : 'PRACTICE'}</div><h1>${isExam ? '科学推理限时模拟' : '科学推理练习'}</h1><p>${isExam ? `第 ${progressLabel} · 已答 ${Object.keys(session.draftAnswers || {}).length} 题` : `第 ${progressLabel} · ${correct} 题答对`}</p></div><div class="science-session-clock">${isExam ? `<span class="eyebrow muted">剩余时间</span><strong id="science-exam-countdown" data-deadline="${escapeHtml(session.deadline)}">计算中</strong>` : ''}<button type="button" class="button button-quiet" data-action="leave-science-session">暂时退出</button></div></div><section class="panel science-question-panel"><div class="science-question-meta"><span>${escapeHtml(question.subjectTitle)}</span><span>${escapeHtml(question.difficulty === 'easy' ? '基础' : question.difficulty === 'medium' ? '中等' : '进阶')}</span><span>${sourceLabel}${presentationLabel}</span>${originalQuestionReference}</div>${renderSourceQuestionStem(question)}${question.diagramSvg ? `<div class="science-source-diagram">${question.diagramSvg}</div>` : ''}<div class="science-answer-options">${options}</div><div class="science-source-attribution">题目来源：${sourceLink}${question.sourceNote ? `<small>${escapeHtml(question.sourceNote)}</small>` : ''}</div>${review}<div class="science-question-footer">${actions}</div></section></div>`;
 }
 
 function renderScience() {
@@ -976,7 +976,7 @@ function renderAptitudeOverallSession(session) {
       const source = aptitudeQuestionSource(question);
       const reference = question.originalQuestionNo === null || question.originalQuestionNo === undefined
         ? '' : ` · 原卷第 ${escapeHtml(question.originalQuestionNo)} 题`;
-      return `<article class="science-result-row ${!answer ? 'is-unanswered' : answer.isCorrect ? 'is-correct' : 'is-wrong'}"><div><strong>第 ${index + 1} 题 · ${escapeHtml(getAptitudeModuleLabel(question.moduleId))}${reference} · ${!answer ? '未作答' : answer.isCorrect ? '答对' : '答错'}</strong><span>${escapeHtml(question.stem)}</span></div><p>${escapeHtml(question.explanation)}</p><small>${answer ? `你的选择 ${escapeHtml(answer.selectedOptionId)}` : '未作答'} · 正确答案 ${escapeHtml(question.correctAnswer)} · ${source.url ? `<a href="${escapeHtml(safeUrl(source.url))}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.title)} ↗</a>` : escapeHtml(source.title)}</small></article>`;
+      return `<article class="science-result-row ${!answer ? 'is-unanswered' : answer.isCorrect ? 'is-correct' : 'is-wrong'}"><div><strong>第 ${index + 1} 题 · ${escapeHtml(getAptitudeModuleLabel(question.moduleId))}${reference} · ${!answer ? '未作答' : answer.isCorrect ? '答对' : '答错'}</strong>${renderAptitudeSharedStimulus(question.sharedStimulus)}${renderSourceQuestionStem(question, { heading: false })}</div><p>${escapeHtml(question.explanation)}</p><small>${answer ? `你的选择 ${escapeHtml(answer.selectedOptionId)}` : '未作答'} · 正确答案 ${escapeHtml(question.correctAnswer)} · ${source.url ? `<a href="${escapeHtml(safeUrl(source.url))}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.title)} ↗</a>` : escapeHtml(source.title)}</small></article>`;
     }).join('');
     return `<div class="page-body aptitude-page aptitude-overall-session"><div class="page-heading-row"><div><div class="eyebrow muted">APTITUDE MOCK REVIEW</div><h1>${session.status === 'timed_out' ? '模考已到时' : '模考已交卷'}</h1><p>${escapeHtml(sessionTitle)} · ${correct}/${count} 题答对 · 得分率 ${fmtPct(count ? correct / count : null)}</p></div><a class="button button-secondary" href="#/aptitude">返回行测总览</a></div><section class="panel science-results-panel"><div class="science-result-summary"><strong>${correct}<small> / ${count}</small></strong><span>答对 / 本场总题数</span><p>逐题答案、解析和题源已保存；未答题不计为答对。</p></div><div class="science-result-list">${rows || '<div class="empty-state">题目数据暂不可用。</div>'}</div></section></div>`;
   }
@@ -990,10 +990,10 @@ function renderAptitudeOverallSession(session) {
   if (!question) return `<div class="page-body aptitude-page"><div class="empty-state">题目数据暂不可用。请返回模考记录检查这场练习。</div><a class="button button-secondary" href="#/aptitude">返回行测总览</a></div>`;
   const source = aptitudeQuestionSource(question);
   const selected = session.draftAnswers?.[question.id]?.optionId;
-  const options = question.options.map((option) => `<button type="button" class="science-answer-option ${selected === option.id ? 'is-selected' : ''}" data-action="select-aptitude-overall-answer" data-session-id="${escapeHtml(session.id)}" data-option-id="${escapeHtml(option.id)}"><span>${escapeHtml(option.id)}</span><strong>${escapeHtml(option.text)}</strong><small>${selected === option.id ? '已选' : '选择'}</small></button>`).join('');
+  const options = question.options.map((option) => `<button type="button" class="science-answer-option ${selected === option.id ? 'is-selected' : ''}" data-action="select-aptitude-overall-answer" data-session-id="${escapeHtml(session.id)}" data-option-id="${escapeHtml(option.id)}"><span>${escapeHtml(option.id)}</span><strong class="aptitude-source-option-content">${renderSourceQuestionOption(option)}</strong><small>${selected === option.id ? '已选' : '选择'}</small></button>`).join('');
   const stimulusMarkup = renderAptitudeSharedStimulus(question.sharedStimulus);
   const numberLabel = question.originalQuestionNo === null || question.originalQuestionNo === undefined ? '' : ` · 原卷第 ${escapeHtml(question.originalQuestionNo)} 题`;
-  return `<div class="page-body aptitude-page aptitude-overall-session"><div class="page-heading-row"><div><div class="eyebrow muted">APTITUDE · ${session.mockType === 'full_paper' ? 'SOURCE PAPER' : 'RANDOM MOCK'}</div><h1>${escapeHtml(sessionTitle)}</h1><p>第 ${session.currentIndex + 1}/${count} 题 · ${escapeHtml(getAptitudeModuleLabel(question.moduleId))}${numberLabel}</p></div>${clock}<button type="button" class="button button-quiet" data-action="leave-aptitude-overall-session">暂时退出</button></div><section class="panel science-question-panel">${stimulusMarkup}<div class="science-question-meta"><span>${escapeHtml(question.topicTitle || question.topicId || '')}</span><span>${escapeHtml(question.difficulty || '难度待补')}</span><span>${escapeHtml(source.title)}</span>${numberLabel ? `<span>${numberLabel.slice(3)}</span>` : ''}</div><h2>${escapeHtml(question.stem)}</h2><div class="science-answer-options">${options}</div><div class="science-source-attribution">题目来源：${source.url ? `<a href="${escapeHtml(safeUrl(source.url))}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.title)} ↗</a>` : `<span>${escapeHtml(source.title)}</span>`}${question.sourceNote ? `<small>${escapeHtml(question.sourceNote)}</small>` : ''}</div><div class="science-exam-controls"><button type="button" class="button button-secondary" data-action="go-to-aptitude-overall-question" data-session-id="${escapeHtml(session.id)}" data-index="${Math.max(0, session.currentIndex - 1)}" ${session.currentIndex === 0 ? 'disabled' : ''}>上一题</button><span>已选 ${selectedIds.size} 题</span><button type="button" class="button button-primary" data-action="advance-aptitude-overall-question" data-session-id="${escapeHtml(session.id)}">${session.currentIndex + 1 === count ? '检查答题卡' : '下一题'}</button></div></section>${session.questionSelectionNote ? `<p class="panel-hint">${escapeHtml(session.questionSelectionNote)}</p>` : ''}</div>`;
+  return `<div class="page-body aptitude-page aptitude-overall-session"><div class="page-heading-row"><div><div class="eyebrow muted">APTITUDE · ${session.mockType === 'full_paper' ? 'SOURCE PAPER' : 'RANDOM MOCK'}</div><h1>${escapeHtml(sessionTitle)}</h1><p>第 ${session.currentIndex + 1}/${count} 题 · ${escapeHtml(getAptitudeModuleLabel(question.moduleId))}${numberLabel}</p></div>${clock}<button type="button" class="button button-quiet" data-action="leave-aptitude-overall-session">暂时退出</button></div><section class="panel science-question-panel">${stimulusMarkup}<div class="science-question-meta"><span>${escapeHtml(question.topicTitle || question.topicId || '')}</span><span>${escapeHtml(question.difficulty || '难度待补')}</span><span>${escapeHtml(source.title)}</span>${numberLabel ? `<span>${numberLabel.slice(3)}</span>` : ''}</div>${renderSourceQuestionStem(question)}<div class="science-answer-options">${options}</div><div class="science-source-attribution">题目来源：${source.url ? `<a href="${escapeHtml(safeUrl(source.url))}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.title)} ↗</a>` : `<span>${escapeHtml(source.title)}</span>`}${question.sourceNote ? `<small>${escapeHtml(question.sourceNote)}</small>` : ''}</div><div class="science-exam-controls"><button type="button" class="button button-secondary" data-action="go-to-aptitude-overall-question" data-session-id="${escapeHtml(session.id)}" data-index="${Math.max(0, session.currentIndex - 1)}" ${session.currentIndex === 0 ? 'disabled' : ''}>上一题</button><span>已选 ${selectedIds.size} 题</span><button type="button" class="button button-primary" data-action="advance-aptitude-overall-question" data-session-id="${escapeHtml(session.id)}">${session.currentIndex + 1 === count ? '检查答题卡' : '下一题'}</button></div></section>${session.questionSelectionNote ? `<p class="panel-hint">${escapeHtml(session.questionSelectionNote)}</p>` : ''}</div>`;
 }
 
 function getAptitudeModuleOnlineStats(module) {
@@ -1132,6 +1132,46 @@ function renderAptitudeSharedStimulus(stimulus) {
   return `<aside class="aptitude-shared-stimulus"><strong>共用材料</strong>${text ? `<p>${escapeHtml(text)}</p>` : ''}${imageUrls.map((url, index) => `<img src="${escapeHtml(safeUrl(url))}" alt="共用材料图表${imageUrls.length > 1 ? ` ${index + 1}` : ''}" loading="lazy"/>`).join('')}</aside>`;
 }
 
+function sourceQuestionImageUrls(value) {
+  if (!value || typeof value !== 'object') return [];
+  const candidates = [
+    ...(Array.isArray(value.stemImageUrls) ? value.stemImageUrls : []),
+    ...(Array.isArray(value.imageUrls) ? value.imageUrls : []),
+    value.stemImageUrl,
+    value.imageUrl,
+    value.assetUrl,
+  ];
+  return [...new Set(candidates
+    .filter((url) => typeof url === 'string' && url.trim())
+    .map((url) => safeUrl(url))
+    .filter((url) => url !== '#'))];
+}
+
+function renderSourceQuestionImages(urls, alt) {
+  if (!urls?.length) return '';
+  return '<div class="aptitude-source-question-images">' + urls.map((url, index) => {
+    const suffix = urls.length > 1 ? ' ' + (index + 1) : '';
+    return '<img src="' + escapeHtml(url) + '" alt="' + escapeHtml(alt + suffix) + '" loading="lazy"/>';
+  }).join('') + '</div>';
+}
+
+function renderSourceQuestionStem(question, { heading = true } = {}) {
+  const text = question?.stem ? escapeHtml(question.stem) : '';
+  const stem = text ? (heading ? '<h2>' + text + '</h2>' : '<p>' + text + '</p>') : '';
+  const images = renderSourceQuestionImages(sourceQuestionImageUrls(question), '题干配图');
+  return stem || images ? '<div class="aptitude-source-question-content">' + stem + images + '</div>' : '';
+}
+
+function renderSourceQuestionOption(option) {
+  const value = typeof option === 'string' ? { text: option } : option || {};
+  const text = value.text ? '<span>' + escapeHtml(value.text) + '</span>' : '';
+  const images = sourceQuestionImageUrls(value).map((url, index, urls) => {
+    const suffix = urls.length > 1 ? ' ' + (index + 1) : '';
+    return '<img src="' + escapeHtml(url) + '" alt="' + escapeHtml('选项配图' + suffix) + '" loading="lazy"/>';
+  }).join('');
+  return text + images;
+}
+
 function renderAptitudeModuleSession(module, session, study) {
   const bank = getAptitudeSessionQuestions(module.id, session.questionIds);
   const questionById = new Map(bank.map((question) => [question.id, question]));
@@ -1147,7 +1187,7 @@ function renderAptitudeModuleSession(module, session, study) {
       const question = questionById.get(id);
       const answer = answers.find((item) => item.questionId === id);
       if (!question) return '';
-      return `<article class="science-result-row ${!answer ? 'is-unanswered' : answer.isCorrect ? 'is-correct' : 'is-wrong'}"><div><strong>第 ${index + 1} 题 · ${!answer ? '未作答' : answer.isCorrect ? '答对' : '答错'}</strong><span>${escapeHtml(question.stem)}</span></div><p>${escapeHtml(question.explanation || '解析待补。')}</p><small>${answer ? `你的选择 ${escapeHtml(answer.selectedOptionId)}` : '未作答'} · 正确答案 ${escapeHtml(question.correctAnswer)}</small></article>`;
+      return `<article class="science-result-row ${!answer ? 'is-unanswered' : answer.isCorrect ? 'is-correct' : 'is-wrong'}"><div><strong>第 ${index + 1} 题 · ${!answer ? '未作答' : answer.isCorrect ? '答对' : '答错'}</strong>${renderAptitudeSharedStimulus(question.sharedStimulus)}${renderSourceQuestionStem(question, { heading: false })}</div><p>${escapeHtml(question.explanation || '解析待补。')}</p><small>${answer ? `你的选择 ${escapeHtml(answer.selectedOptionId)}` : '未作答'} · 正确答案 ${escapeHtml(question.correctAnswer)}</small></article>`;
     }).join('');
     return `<div class="page-body aptitude-module-page science-page"><div class="page-heading-row"><div><div class="eyebrow muted">${isExam ? 'TIMED MOCK REVIEW' : 'PRACTICE REVIEW'}</div><h1>${session.status === 'timed_out' ? '模拟已到时' : isExam ? '模拟已交卷' : '训练完成'}</h1><p>${correct}/${count} 题答对 · ${count ? Math.round(correct / count * 100) : 0}% 正确</p></div><a class="button button-secondary" href="${escapeHtml(module.route)}">返回${escapeHtml(module.area)}</a></div><section class="panel science-results-panel"><div class="science-result-list">${rows || '<div class="empty-state">题目数据暂不可用。</div>'}</div></section></div>`;
   }
@@ -1162,13 +1202,13 @@ function renderAptitudeModuleSession(module, session, study) {
   const answer = session.reviewingAnswerId ? answers.find((item) => item.id === session.reviewingAnswerId) : null;
   const selected = session.draftAnswers?.[question.id]?.optionId;
   const options = (question.options || []).map((option) => {
-    if (isExam) return `<button type="button" class="science-answer-option ${selected === option.id ? 'is-selected' : ''}" data-action="select-aptitude-module-answer" data-module-id="${escapeHtml(module.id)}" data-session-id="${escapeHtml(session.id)}" data-option-id="${escapeHtml(option.id)}"><span>${escapeHtml(option.id)}</span><strong>${escapeHtml(option.text)}</strong><small>${selected === option.id ? '已选' : '选择'}</small></button>`;
+    if (isExam) return `<button type="button" class="science-answer-option ${selected === option.id ? 'is-selected' : ''}" data-action="select-aptitude-module-answer" data-module-id="${escapeHtml(module.id)}" data-session-id="${escapeHtml(session.id)}" data-option-id="${escapeHtml(option.id)}"><span>${escapeHtml(option.id)}</span><strong class="aptitude-source-option-content">${renderSourceQuestionOption(option)}</strong><small>${selected === option.id ? '已选' : '选择'}</small></button>`;
     if (answer) {
       const correct = option.id === question.correctAnswer;
       const wrong = option.id === answer.selectedOptionId && !answer.isCorrect;
-      return `<div class="science-answer-option ${correct ? 'is-correct' : wrong ? 'is-wrong' : ''}"><span>${escapeHtml(option.id)}</span><strong>${escapeHtml(option.text)}</strong><small>${correct ? '正确答案' : wrong ? '你的答案' : ''}</small></div>`;
+      return `<div class="science-answer-option ${correct ? 'is-correct' : wrong ? 'is-wrong' : ''}"><span>${escapeHtml(option.id)}</span><strong class="aptitude-source-option-content">${renderSourceQuestionOption(option)}</strong><small>${correct ? '正确答案' : wrong ? '你的答案' : ''}</small></div>`;
     }
-    return `<button type="button" class="science-answer-option" data-action="answer-aptitude-module-question" data-module-id="${escapeHtml(module.id)}" data-session-id="${escapeHtml(session.id)}" data-option-id="${escapeHtml(option.id)}"><span>${escapeHtml(option.id)}</span><strong>${escapeHtml(option.text)}</strong><small>选择</small></button>`;
+    return `<button type="button" class="science-answer-option" data-action="answer-aptitude-module-question" data-module-id="${escapeHtml(module.id)}" data-session-id="${escapeHtml(session.id)}" data-option-id="${escapeHtml(option.id)}"><span>${escapeHtml(option.id)}</span><strong class="aptitude-source-option-content">${renderSourceQuestionOption(option)}</strong><small>选择</small></button>`;
   }).join('');
   const review = isExam ? selected ? '<div class="notice notice-soft"><span>✓</span><p>答案已保存，交卷前可修改；模拟结束前不会显示正确答案。</p></div>' : ''
     : answer ? `<div class="science-answer-explanation ${answer.isCorrect ? 'is-correct' : 'is-wrong'}"><strong>${answer.isCorrect ? '回答正确' : `回答不正确 · 正确答案 ${escapeHtml(question.correctAnswer)}`}</strong><p>${escapeHtml(question.explanation || '解析待补。')}</p></div>` : '';
@@ -1184,7 +1224,7 @@ function renderAptitudeModuleSession(module, session, study) {
   const answerLink = !isExam && answer && answerSourceUrl ? ` · <a href="${escapeHtml(answerSourceUrl)}" target="_blank" rel="noopener noreferrer">核对答案 ↗</a>` : '';
   const sharedStimulus = renderAptitudeSharedStimulus(question.sharedStimulus);
   const originalQuestionReference = renderOriginalQuestionReference(question);
-  return `<div class="page-body aptitude-module-page science-page"><div class="page-heading-row"><div><div class="eyebrow muted">${isExam ? 'TIMED MOCK' : 'PRACTICE'} · ${escapeHtml(module.area)}</div><h1>${isExam ? '限时模拟' : '专项练习'}</h1><p>第 ${session.currentIndex + 1}/${count} 题${isExam ? ` · 已答 ${selectedIds.size} 题` : ''}</p></div>${clock}<button type="button" class="button button-quiet" data-action="leave-aptitude-module-session" data-module-id="${escapeHtml(module.id)}">暂时退出</button></div><section class="panel science-question-panel"><div class="science-question-meta"><span>${escapeHtml(question.topicTitle || question.topicId || '')}</span><span>${escapeHtml(question.difficulty || '难度待补')}</span><span>${escapeHtml(question.sourceTitle || question.sourceType || '来源待补')}</span>${originalQuestionReference}</div><h2>${escapeHtml(question.stem)}</h2>${sharedStimulus}<div class="science-answer-options">${options}</div><div class="science-source-attribution">题目来源：${sourceLink}${answerLink}${question.sourceNote ? `<small>${escapeHtml(question.sourceNote)}</small>` : ''}</div>${review}<div class="science-question-footer">${actions}</div></section></div>`;
+  return `<div class="page-body aptitude-module-page science-page"><div class="page-heading-row"><div><div class="eyebrow muted">${isExam ? 'TIMED MOCK' : 'PRACTICE'} · ${escapeHtml(module.area)}</div><h1>${isExam ? '限时模拟' : '专项练习'}</h1><p>第 ${session.currentIndex + 1}/${count} 题${isExam ? ` · 已答 ${selectedIds.size} 题` : ''}</p></div>${clock}<button type="button" class="button button-quiet" data-action="leave-aptitude-module-session" data-module-id="${escapeHtml(module.id)}">暂时退出</button></div><section class="panel science-question-panel"><div class="science-question-meta"><span>${escapeHtml(question.topicTitle || question.topicId || '')}</span><span>${escapeHtml(question.difficulty || '难度待补')}</span><span>${escapeHtml(question.sourceTitle || question.sourceType || '来源待补')}</span>${originalQuestionReference}</div>${sharedStimulus}${renderSourceQuestionStem(question)}<div class="science-answer-options">${options}</div><div class="science-source-attribution">题目来源：${sourceLink}${answerLink}${question.sourceNote ? `<small>${escapeHtml(question.sourceNote)}</small>` : ''}</div>${review}<div class="science-question-footer">${actions}</div></section></div>`;
 }
 
 function renderAptitudeModule(moduleId) {
@@ -1260,7 +1300,7 @@ function renderGeneralKnowledgeSession(session) {
       const question = GENERAL_KNOWLEDGE_QUESTION_BANK.find((item) => item.id === id);
       const answer = answers.find((item) => item.questionId === id);
       if (!question) return '';
-      return `<article class="science-result-row ${!answer ? 'is-unanswered' : answer.isCorrect ? 'is-correct' : 'is-wrong'}"><div><strong>第 ${index + 1} 题 · ${!answer ? '未作答' : answer.isCorrect ? '答对' : '答错'} · ${escapeHtml(question.subjectTitle || question.subjectId)}</strong><span>${escapeHtml(question.stem)}</span></div><p>${escapeHtml(question.explanation)}</p><small>${answer ? `你的选择 ${escapeHtml(answer.selectedOptionId)}` : '未提交答案'} · 正确答案 ${escapeHtml(question.correctAnswer)}</small></article>`;
+      return `<article class="science-result-row ${!answer ? 'is-unanswered' : answer.isCorrect ? 'is-correct' : 'is-wrong'}"><div><strong>第 ${index + 1} 题 · ${!answer ? '未作答' : answer.isCorrect ? '答对' : '答错'} · ${escapeHtml(question.subjectTitle || question.subjectId)}</strong>${renderAptitudeSharedStimulus(question.sharedStimulus)}${renderSourceQuestionStem(question, { heading: false })}</div><p>${escapeHtml(question.explanation)}</p><small>${answer ? `你的选择 ${escapeHtml(answer.selectedOptionId)}` : '未提交答案'} · 正确答案 ${escapeHtml(question.correctAnswer)}</small></article>`;
     }).join('');
     const resultHref = session.planTaskId ? '#/plan' : '#/aptitude/general-knowledge';
     return `<div class="page-body science-page general-knowledge-page"><div class="page-heading-row"><div><div class="eyebrow muted">${isExam ? 'TIMED MOCK REVIEW' : 'PRACTICE REVIEW'}</div><h1>${session.status === 'timed_out' ? '模拟已到时' : isExam ? '模拟已交卷' : '训练完成'}</h1><p>${isExam ? `${correct}/${questionCount} 题 · 得分率 ${Math.round((session.scoreRate || 0) * 100)}% · 已答准确率 ${session.answeredAccuracy === null ? '—' : `${Math.round(session.answeredAccuracy * 100)}%`}` : `${correct}/${answers.length} 题答对 · ${answers.length ? Math.round(correct / answers.length * 100) : 0}% 正确`}</p></div><a class="button button-secondary" href="${resultHref}">${session.planTaskId ? '返回学习计划' : '返回常识判断'}</a></div><section class="panel science-results-panel"><div class="science-result-summary"><strong>${correct}<small> / ${questionCount}</small></strong><span>${isExam ? '答对 / 本场总题数' : '正确题数'}</span><p>逐题解析已保存；错题自动进入常识判断错题本。</p></div><div class="science-result-list">${rows || '<div class="empty-state">本次没有可复盘题目。</div>'}</div><button type="button" class="button button-primary" data-action="open-general-knowledge-practice">再练一组</button></section></div>`;
@@ -1275,13 +1315,13 @@ function renderGeneralKnowledgeSession(session) {
   const answer = session.reviewingAnswerId ? answers.find((item) => item.id === session.reviewingAnswerId) : null;
   const selected = session.draftAnswers?.[question.id]?.optionId;
   const options = question.options.map((option) => {
-    if (isExam) return `<button type="button" class="science-answer-option ${selected === option.id ? 'is-selected' : ''}" data-action="select-general-knowledge-answer" data-session-id="${escapeHtml(session.id)}" data-option-id="${escapeHtml(option.id)}"><span>${escapeHtml(option.id)}</span><strong>${escapeHtml(option.text)}</strong><small>${selected === option.id ? '已选' : '选择'}</small></button>`;
+    if (isExam) return `<button type="button" class="science-answer-option ${selected === option.id ? 'is-selected' : ''}" data-action="select-general-knowledge-answer" data-session-id="${escapeHtml(session.id)}" data-option-id="${escapeHtml(option.id)}"><span>${escapeHtml(option.id)}</span><strong class="aptitude-source-option-content">${renderSourceQuestionOption(option)}</strong><small>${selected === option.id ? '已选' : '选择'}</small></button>`;
     if (answer) {
       const correct = option.id === question.correctAnswer;
       const wrong = option.id === answer.selectedOptionId && !answer.isCorrect;
-      return `<div class="science-answer-option ${correct ? 'is-correct' : wrong ? 'is-wrong' : ''}"><span>${escapeHtml(option.id)}</span><strong>${escapeHtml(option.text)}</strong><small>${correct ? '正确答案' : wrong ? '你的答案' : ''}</small></div>`;
+      return `<div class="science-answer-option ${correct ? 'is-correct' : wrong ? 'is-wrong' : ''}"><span>${escapeHtml(option.id)}</span><strong class="aptitude-source-option-content">${renderSourceQuestionOption(option)}</strong><small>${correct ? '正确答案' : wrong ? '你的答案' : ''}</small></div>`;
     }
-    return `<button type="button" class="science-answer-option" data-action="answer-general-knowledge-question" data-session-id="${escapeHtml(session.id)}" data-option-id="${escapeHtml(option.id)}"><span>${escapeHtml(option.id)}</span><strong>${escapeHtml(option.text)}</strong><small>选择</small></button>`;
+    return `<button type="button" class="science-answer-option" data-action="answer-general-knowledge-question" data-session-id="${escapeHtml(session.id)}" data-option-id="${escapeHtml(option.id)}"><span>${escapeHtml(option.id)}</span><strong class="aptitude-source-option-content">${renderSourceQuestionOption(option)}</strong><small>选择</small></button>`;
   }).join('');
   const source = GENERAL_KNOWLEDGE_SOURCES.find((item) => item.id === question.sourceId);
   const sourceTitle = question.sourceTitle || source?.title || '题源信息待补';
@@ -1297,7 +1337,7 @@ function renderGeneralKnowledgeSession(session) {
     ? `<div class="science-exam-controls"><button type="button" class="button button-secondary" data-action="go-to-general-knowledge-question" data-session-id="${escapeHtml(session.id)}" data-index="${Math.max(0, session.currentIndex - 1)}" ${session.currentIndex === 0 ? 'disabled' : ''}>上一题</button><span>第 ${session.currentIndex + 1}/${questionCount} 题 · 已答 ${answeredIds.size} 题</span><button type="button" class="button button-primary" data-action="advance-general-knowledge-question" data-session-id="${escapeHtml(session.id)}">${session.currentIndex + 1 === questionCount ? '检查答题卡' : '下一题'}</button><button type="button" class="button button-quiet" data-action="finish-general-knowledge-exam" data-session-id="${escapeHtml(session.id)}">交卷</button></div>`
     : answer ? `<button type="button" class="button button-primary" data-action="continue-general-knowledge-session" data-session-id="${escapeHtml(session.id)}">${session.currentIndex + 1 >= questionCount ? '完成练习' : '下一题'}</button>`
       : `<div class="science-question-actions"><button type="button" class="button button-quiet" data-action="toggle-general-knowledge-favorite" data-question-id="${escapeHtml(question.id)}">${storage.generalKnowledgeStudy.favorites.includes(question.id) ? '★ 已收藏' : '☆ 收藏题目'}</button><span>答题后自动保存解析和来源信息。</span></div>`;
-  return `<div class="page-body science-page general-knowledge-page"><div class="page-heading-row"><div><div class="eyebrow muted">${isExam ? 'TIMED MOCK' : 'PRACTICE'} · ${escapeHtml(question.subjectTitle || question.subjectId)}</div><h1>${isExam ? '常识判断限时模拟' : '常识判断练习'}</h1><p>第 ${session.currentIndex + 1}/${questionCount} 题${isExam ? ` · 已答 ${answeredIds.size} 题` : ''}</p></div><div class="science-session-clock">${isExam ? `<span class="eyebrow muted">剩余时间</span><strong id="general-knowledge-exam-countdown" data-deadline="${escapeHtml(session.deadline)}">计算中</strong>` : ''}<button type="button" class="button button-quiet" data-action="leave-general-knowledge-session">暂时退出</button></div></div><section class="panel science-question-panel"><div class="science-question-meta"><span>${escapeHtml(question.topicTitle || question.topicId)}</span><span>${escapeHtml(question.difficulty === 'easy' ? '基础' : question.difficulty === 'hard' ? '进阶' : '中等')}</span><span>${sourceLabel}${question.presentationMode === 'adapted' ? ' · 题意重述' : ''}</span>${originalQuestionReference}</div><h2>${escapeHtml(question.stem)}</h2><div class="science-answer-options">${options}</div><div class="science-source-attribution">题目来源：${sourceUrl ? `<a href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(sourceTitle)} ↗</a>` : `<span>${escapeHtml(sourceTitle)}</span>`}${answerLink}${question.sourceNote ? `<small>${escapeHtml(question.sourceNote)}</small>` : ''}</div>${review}<div class="science-question-footer">${actions}</div></section></div>`;
+  return `<div class="page-body science-page general-knowledge-page"><div class="page-heading-row"><div><div class="eyebrow muted">${isExam ? 'TIMED MOCK' : 'PRACTICE'} · ${escapeHtml(question.subjectTitle || question.subjectId)}</div><h1>${isExam ? '常识判断限时模拟' : '常识判断练习'}</h1><p>第 ${session.currentIndex + 1}/${questionCount} 题${isExam ? ` · 已答 ${answeredIds.size} 题` : ''}</p></div><div class="science-session-clock">${isExam ? `<span class="eyebrow muted">剩余时间</span><strong id="general-knowledge-exam-countdown" data-deadline="${escapeHtml(session.deadline)}">计算中</strong>` : ''}<button type="button" class="button button-quiet" data-action="leave-general-knowledge-session">暂时退出</button></div></div><section class="panel science-question-panel"><div class="science-question-meta"><span>${escapeHtml(question.topicTitle || question.topicId)}</span><span>${escapeHtml(question.difficulty === 'easy' ? '基础' : question.difficulty === 'hard' ? '进阶' : '中等')}</span><span>${sourceLabel}${question.presentationMode === 'adapted' ? ' · 题意重述' : ''}</span>${originalQuestionReference}</div>${renderSourceQuestionStem(question)}<div class="science-answer-options">${options}</div><div class="science-source-attribution">题目来源：${sourceUrl ? `<a href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(sourceTitle)} ↗</a>` : `<span>${escapeHtml(sourceTitle)}</span>`}${answerLink}${question.sourceNote ? `<small>${escapeHtml(question.sourceNote)}</small>` : ''}</div>${review}<div class="science-question-footer">${actions}</div></section></div>`;
 }
 
 function renderGeneralKnowledge() {

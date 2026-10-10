@@ -245,7 +245,10 @@ const sourceQuestion = (question, source) => {
     topicTitle: entry.topic.title,
     knowledgePointIds: [entry.point.id],
     knowledgePointTitle: entry.point.title,
-    options: question.options.map((text, index) => ({ id: ['A', 'B', 'C', 'D'][index], text })),
+    options: question.options.map((option, index) => {
+      const value = typeof option === 'string' ? { text: option } : option || {};
+      return { ...value, id: value.id || ['A', 'B', 'C', 'D'][index], text: String(value.text || '') };
+    }),
     difficulty: question.difficulty || 'medium',
     sourceType: question.sourceType || source.sourceType,
     sourceId: question.sourceId || source.sourceId,

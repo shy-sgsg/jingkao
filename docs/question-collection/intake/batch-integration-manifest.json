@@ -138,11 +138,11 @@
       "paper_id": "jiangsu-2024-A-class",
       "title": "2024 年江苏省公务员录用考试《行测》A 类真题",
       "question_count": 135,
-      "captured_question_count": 133,
+      "captured_question_count": 124,
       "answer_count": 135,
       "explanation_count": 135,
-      "published_count": 77,
-      "held_count": 58,
+      "published_count": 124,
+      "held_count": 11,
       "sections": [
         {
           "module": "common_knowledge",
@@ -166,12 +166,12 @@
           "module": "reasoning",
           "section_order": 4,
           "from": 66,
-          "to": 95
+          "to": 115
         },
         {
           "module": "data_analysis",
           "section_order": 5,
-          "from": 96,
+          "from": 116,
           "to": 135
         }
       ],
@@ -223,13 +223,13 @@
       "answer_url": "https://static.32xueyuan.com/zq//u/cms/zj/202310/20144954ob39.pdf"
     }
   ],
-  "app_integrated_question_count": 456,
+  "app_integrated_question_count": 503,
   "app_integrated_by_module": {
-    "general-knowledge": 92,
-    "verbal": 142,
-    "quantitative": 77,
-    "reasoning": 130,
-    "data-analysis": 15
+    "general-knowledge": 93,
+    "verbal": 141,
+    "quantitative": 81,
+    "reasoning": 153,
+    "data-analysis": 35
   },
   "policy": "Only complete exact-stem and exact-option items with source answer and explanation are published. Visual and shared-material questions remain in intake until all assets are itemized. Published records feed the corresponding module practice and verified random mock bank; complete source-module ranges may be selected as section mocks."
 }

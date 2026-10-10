@@ -412,7 +412,8 @@ const importedKnowledgeQuestions = IMPORTED_SOURCE_QUESTIONS
   .map((question) => {
     const subject = importedKnowledgeTree.find((item) => item.id === question.subjectId);
     const topic = subject?.topics.find((item) => item.id === question.topicId);
-    const questionText = `${question.stem} ${(question.options || []).join(' ')} ${question.explanation || ''}`;
+    const optionText = (option) => typeof option === 'string' ? option : option?.text || '';
+    const questionText = `${question.stem} ${(question.options || []).map(optionText).join(' ')} ${question.explanation || ''}`;
     const topicPoints = topic?.knowledgePoints || [];
     const matchingPoint = topicPoints.find((point) => point.title
       .split(/[、，：:与/（）()]/)
@@ -427,7 +428,10 @@ const importedKnowledgeQuestions = IMPORTED_SOURCE_QUESTIONS
       topicTitle: topic?.title || question.topicId,
       knowledgePointIds: question.knowledgePointIds?.length ? question.knowledgePointIds : (point ? [point.id] : []),
       knowledgePointTitle: point?.title || null,
-      options: question.options.map((text, index) => ({ id: ['A', 'B', 'C', 'D'][index], text })),
+      options: question.options.map((option, index) => {
+        const value = typeof option === 'string' ? { text: option } : option || {};
+        return { ...value, id: value.id || ['A', 'B', 'C', 'D'][index], text: String(value.text || '') };
+      }),
     };
   });
 

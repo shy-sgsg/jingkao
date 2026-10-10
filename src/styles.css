@@ -1858,6 +1858,13 @@ html[data-font-size="small"] .welcome-banner h1 { font-size: 28px; }
 .aptitude-shared-stimulus { display: grid; gap: 12px; margin: 16px 0 22px; padding: 16px; border: 1px solid #e4eaf1; border-radius: 14px; background: #f8fafc; }
 .aptitude-shared-stimulus p { margin: 0; color: #44566e; line-height: 1.75; white-space: pre-wrap; }
 .aptitude-shared-stimulus img { display: block; width: 100%; max-height: 520px; object-fit: contain; background: #fff; }
+.aptitude-source-question-content { display: grid; gap: 12px; }
+.aptitude-source-question-content > p { margin: 4px 0; color: #44566e; font-size: var(--font-sm); line-height: 1.7; white-space: pre-wrap; }
+.aptitude-source-question-images { display: grid; justify-items: start; gap: 10px; margin: 8px 0 16px; }
+.aptitude-source-question-images img { display: block; max-width: 100%; max-height: 520px; object-fit: contain; background: #fff; }
+.science-answer-option > .aptitude-source-option-content { display: grid; align-self: center; gap: 8px; min-width: 0; }
+.aptitude-source-option-content img { display: block; max-width: min(100%, 520px); max-height: 360px; object-fit: contain; }
+.science-result-row .aptitude-source-question-images img { max-height: 360px; }
 .science-question-meta { display: flex; flex-wrap: wrap; gap: 7px; }
 .science-question-meta span { padding: 4px 8px; border-radius: 20px; background: #f0f4f8; color: #7d8b9e; font-size: var(--font-xs); }
 .science-question-panel h2 { margin: 16px 0 20px; color: #31445f; font-size: clamp(18px, 2vw, 22px); line-height: 1.65; }

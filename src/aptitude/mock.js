@@ -73,7 +73,7 @@ const PAPER_CATALOG = [
     sourceType: 'verified_exam',
     ranges: {
       'general-knowledge': [1, 15], verbal: [16, 45], quantitative: [46, 65],
-      reasoning: [66, 95], 'data-analysis': [96, 135],
+      reasoning: [66, 115], 'data-analysis': [116, 135],
     },
   },
   {
@@ -92,12 +92,21 @@ const PAPER_CATALOG = [
   },
 ];
 
+const PLACEHOLDER_STEMS = new Set([
+  '本卷来源于考生回忆，本题暂缺失',
+  '原卷题面已保留；文本抽取或必要材料待核。',
+]);
+
 function hasCompleteQuestion(question) {
+  const hasOptionContent = (option) => Boolean(option?.text?.trim()
+    || option?.imageUrl?.trim()
+    || option?.imageUrls?.some((url) => typeof url === 'string' && url.trim()));
   return Boolean(question && question.id && question.stem?.trim()
-    && Array.isArray(question.options) && question.options.length >= 2
-    && question.options.every((option) => option?.id && option.text?.trim())
+    && !PLACEHOLDER_STEMS.has(question.stem.trim())
+    && Array.isArray(question.options) && question.options.length === 4
+    && question.options.every((option) => option?.id && hasOptionContent(option))
     && question.options.some((option) => option.id === question.correctAnswer)
-    && question.explanation?.trim()
+    && question.explanation?.trim() && question.explanation.trim() !== '缺'
     && question.verificationStatus === 'verified'
     && question.publishStatus === 'published'
     && question.sourceType && question.sourceTitle?.trim() && question.sourceNote?.trim());
@@ -155,7 +164,11 @@ export function getUniqueAptitudeRandomQuestionBank(moduleId = null) {
     const normalize = (value) => String(value || '').normalize('NFKC').replace(/\s+/g, '').trim();
     const signature = [
       normalize(question.stem),
-      (question.options || []).map((option) => normalize(typeof option === 'string' ? option : option?.text)).join('|'),
+      (question.stemImageUrls || []).join('|'),
+      (question.options || []).map((option) => [
+        normalize(typeof option === 'string' ? option : option?.text),
+        (typeof option === 'string' ? [] : option?.imageUrls || []).join(','),
+      ].join(':')).join('|'),
       question.correctAnswer || '',
     ].join('\u001f');
     if (seen.has(signature)) return false;

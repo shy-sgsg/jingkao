@@ -20,7 +20,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q001",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -42,7 +42,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q002",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -64,7 +64,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q003",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -86,7 +86,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q004",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -108,7 +108,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q005",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -130,7 +130,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q006",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -152,7 +152,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q007",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -174,7 +174,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q008",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -196,7 +196,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q009",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -218,7 +218,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q010",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -240,7 +240,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q011",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -249,23 +249,33 @@
       "original_question_no": 12,
       "module": "common_knowledge",
       "section_order": 1,
-      "stem": "下图描绘的是被称为“二牛抬杠”的我国传统农业耕作场景，其中最能体现的管理职能是（ ）。",
+      "stem": "下图描绘的是被称为“二牛抬杠”的我国传统农业耕作场景，其中最能体现的管理职能是：",
       "options": [
         "激励",
         "控制",
         "计划",
         "组织"
       ],
-      "raw_source_text_block": "12.下图描绘的是被称为“二牛抬杠”的我国传统农业耕作场景，其中最能体现的管理职能是（ ）。 A.激励 B.控制 C.计划 D.组织",
+      "raw_source_text_block": "12.下图描绘的是被称为“二牛抬杠”的我国传统农业耕作场景，其中最能体现的管理职能是： A.激励 B.控制 C.计划 D.组织",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": null,
-      "asset_dependency": "visual_question_asset_not_split_for_item_display",
-      "record_status": "held_visual_asset_missing",
-      "hold_reason": "visual_question_asset_not_split_for_item_display",
+      "asset_dependency": "question_figure_linked",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q012",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [
+        "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_7924131ffda595bb.png"
+      ],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 13,
@@ -284,7 +294,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q013",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -306,7 +316,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q014",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -328,7 +338,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q015",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -350,7 +360,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q016",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -372,7 +382,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q017",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -394,7 +404,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q018",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -416,7 +426,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q019",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -438,7 +448,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q020",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -460,7 +470,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q021",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -482,7 +492,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q022",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -504,7 +514,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q023",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -526,7 +536,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q024",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -546,12 +556,19 @@
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": null,
-      "asset_dependency": "none",
-      "record_status": "published",
-      "hold_reason": "",
+      "asset_dependency": "question_text_missing_from_source_material",
+      "record_status": "held_question_text_missing",
+      "hold_reason": "question_text_not_present_in_archived_source_material",
       "app_question_id": "js2024a-q025",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ]
     },
     {
       "original_question_no": 26,
@@ -570,7 +587,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q026",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -592,7 +609,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q027",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -614,7 +631,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q028",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -636,7 +653,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q029",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -645,18 +662,31 @@
       "original_question_no": 30,
       "module": "verbal",
       "section_order": 2,
-      "stem": "",
-      "options": null,
-      "raw_source_text_block": "",
+      "stem": "①这样经济潜能才能得到充分释放，经济增长的边界才会不断拓展 ②产权制度发挥着重要作用 ③能不能让各种资源都参与到经济活动中并充分发挥作用 ④通过有效的组合配置充分发挥要素价值，进而产生更大的经济效益 ⑤在经济发展中实现“人尽其才，物尽其用”，就是要求各种资源作为生产要素都参与到经济活动中 ⑥能不能保证生产要素的组合配置以最优的方式稳定地实现进而提高全要素生产率 将以上6个句子重新排列，语序正确的是：",
+      "options": [
+        "⑤⑥②①③④",
+        "⑤④①③⑥②",
+        "③⑥②①⑤④",
+        "③④⑤⑥①②"
+      ],
+      "raw_source_text_block": "30.①这样经济潜能才能得到充分释放，经济增长的边界才会不断拓展 ②产权制度发挥着重要作用 ③能不能让各种资源都参与到经济活动中并充分发挥作用 ④通过有效的组合配置充分发挥要素价值，进而产生更大的经济效益 ⑤在经济发展中实现“人尽其才，物尽其用”，就是要求各种资源作为生产要素都参与到经济活动中 ⑥能不能保证生产要素的组合配置以最优的方式稳定地实现进而提高全要素生产率 将以上6个句子重新排列，语序正确的是： A.⑤⑥②①③④ B.⑤④①③⑥② C.③⑥②①⑤④ D.③④⑤⑥①②",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": null,
-      "asset_dependency": "question_or_option_asset_missing_from_text_extraction",
-      "record_status": "held_question_or_option_asset_missing",
-      "hold_reason": "question_or_option_asset_missing_from_text_extraction",
+      "asset_dependency": "none",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q030",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 31,
@@ -675,7 +705,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q031",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -697,7 +727,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q032",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -719,7 +749,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q033",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -741,7 +771,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q034",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -763,7 +793,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q035",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -785,7 +815,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q036",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -807,7 +837,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q037",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -829,7 +859,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q038",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -851,7 +881,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q039",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -865,18 +895,25 @@
         "缺",
         "缺",
         "缺",
-        "缺提示词工程师，一个与人工智能（AI）相关的新职业悄然兴起。其职责是与生成式人工智能进行高质量对话，用设计、管理与优化相关行业的提示词来进行大模型训练，配合技术提升整体产品表现。可以这么理解：人工智能已经开始进入无数具体的行业领域，如同刚入职的“新人”，需要一位行业资深前辈贴身“传帮带”，助其快速适应业务、成为“熟手”。 这些“传帮带”的师父们，就是AI训练应用场景下的提示词工程师。在国内招聘平台上，这个岗位仍处于动态定义的过程中，未必严谨地以“提示词工程师”的字样出现，可能名为AI训练师，或是AI产品运营，也可能叫作AI“文生图”绘画师，但岗位描述都指向人工智能生成内容训练。毫无疑问，从需求端已经能感受到这一职业的水涨船高。 初看这个新职业，总有些________，因为它超出了专业对口的思维方式。说它是与AI技术相关吧，它要求从业者有其他垂直领域的专业性，尤其是法律、宗教、艺术这样的领域；说它是内容生产吧，它的从业者又必须高度理解AI逻辑，有产品经理思维打底。它非文非理、非农非工，既跨界又难以充分量化， 要求的是一种人文与技术的综合性，以及一种高度开放的思维、技术伴随式学习能力。 有论者分析，这个职业可能是暂时的，因为它适配的是大语言模型进入具体应用场景的阶段。但其实， 这个职业本身也正处于生成之中，谁又能定论没有新的发育可能呢？其所内含的职业精神本就指向人文精神与人工智能的动态调适。当AI快速进入人类生存的各个层面、各个细分领域，这种调适每个人都要经历，并指向了两个相辅相成的方面——既包含我们对AI的适应（使用、伴随学习、合作创造），也包括我们对AI的规训（日常训练、伦理制约）。未来，这就是一个人的社会化的基本内容，而“提示词工程师”则会成为每个现代人的一个侧面。 值得注意的是，对于我们怎么找工作、怎么看待工作，“提示词工程师”兴起还带来了另外一个重要的信号：未来，最容易被替代的工作是那些易于标准化的职业、易于模式化的流程，不容易被替代的则是那些具有“人”的综合性特征的职业。后者，可能是独特的艺术家、具有原创性的创作者、技术人文复合性人才，也可能是插花师、护士、电工这样具有人的“具身性”的职业。换句话说，在AI的吞噬中稍稍保持的竞争性，要么来自一个确实高度复杂的思维，要么来自一个可以面对面的肉身。 风吹云走，这样的职业分化已经近在眼前。此刻看似能“上岸”的职业、此刻被争抢的“饭碗”，是否有想象中那么稳定？可能还需选择者长思。"
+        "缺"
       ],
-      "raw_source_text_block": "40.本卷来源于考生回忆，本题暂缺失 A.缺 B.缺 C.缺 D.缺提示词工程师，一个与人工智能（AI）相关的新职业悄然兴起。其职责是与生成式人工智能进行高质量对话，用设计、管理与优化相关行业的提示词来进行大模型训练，配合技术提升整体产品表现。可以这么理解：人工智能已经开始进入无数具体的行业领域，如同刚入职的“新人”，需要一位行业资深前辈贴身“传帮带”，助其快速适应业务、成为“熟手”。 这些“传帮带”的师父们，就是AI训练应用场景下的提示词工程师。在国内招聘平台上，这个岗位仍处于动态定义的过程中，未必严谨地以“提示词工程师”的字样出现，可能名为AI训练师，或是AI产品运营，也可能叫作AI“文生图”绘画师，但岗位描述都指向人工智能生成内容训练。毫无疑问，从需求端已经能感受到这一职业的水涨船高。 初看这个新职业，总有些________，因为它超出了专业对口的思维方式。说它是与AI技术相关吧，它要求从业者有其他垂直领域的专业性，尤其是法律、宗教、艺术这样的领域；说它是内容生产吧，它的从业者又必须高度理解AI逻辑，有产品经理思维打底。它非文非理、非农非工，既跨界又难以充分量化， 要求的是一种人文与技术的综合性，以及一种高度开放的思维、技术伴随式学习能力。 有论者分析，这个职业可能是暂时的，因为它适配的是大语言模型进入具体应用场景的阶段。但其实， 这个职业本身也正处于生成之中，谁又能定论没有新的发育可能呢？其所内含的职业精神本就指向人文精神与人工智能的动态调适。当AI快速进入人类生存的各个层面、各个细分领域，这种调适每个人都要经历，并指向了两个相辅相成的方面——既包含我们对AI的适应（使用、伴随学习、合作创造），也包括我们对AI的规训（日常训练、伦理制约）。未来，这就是一个人的社会化的基本内容，而“提示词工程师”则会成为每个现代人的一个侧面。 值得注意的是，对于我们怎么找工作、怎么看待工作，“提示词工程师”兴起还带来了另外一个重要的信号：未来，最容易被替代的工作是那些易于标准化的职业、易于模式化的流程，不容易被替代的则是那些具有“人”的综合性特征的职业。后者，可能是独特的艺术家、具有原创性的创作者、技术人文复合性人才，也可能是插花师、护士、电工这样具有人的“具身性”的职业。换句话说，在AI的吞噬中稍稍保持的竞争性，要么来自一个确实高度复杂的思维，要么来自一个可以面对面的肉身。 风吹云走，这样的职业分化已经近在眼前。此刻看似能“上岸”的职业、此刻被争抢的“饭碗”，是否有想象中那么稳定？可能还需选择者长思。",
+      "raw_source_text_block": "40.本卷来源于考生回忆，本题暂缺失 A.缺 B.缺 C.缺 D.缺",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": null,
-      "asset_dependency": "none",
-      "record_status": "published",
-      "hold_reason": "",
+      "asset_dependency": "question_text_missing_from_source_material",
+      "record_status": "held_question_text_missing",
+      "hold_reason": "question_text_not_present_in_archived_source_material",
       "app_question_id": "js2024a-q040",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ]
     },
     {
       "original_question_no": 41,
@@ -892,10 +929,10 @@
       "raw_source_text_block": "41.填入文章第三自然段划横线处最恰当的一项是（ ）。 A.光彩耀目 B.莫可名状 C.不堪言状 D.不知所以",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
-      "shared_stimulus_id": null,
-      "asset_dependency": "none",
+      "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-41-45",
+      "asset_dependency": "shared_stimulus_linked",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q041",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -914,10 +951,10 @@
       "raw_source_text_block": "42.文章第四自然段划横线句子中的“这”指的是（ ）。 A.人类对AI的适应和规训 B.每个人对社会的适应过程 C.人文精神与AI动态调适 D.提示词工程师适配的对象",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
-      "shared_stimulus_id": null,
-      "asset_dependency": "none",
+      "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-41-45",
+      "asset_dependency": "shared_stimulus_linked",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q042",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -936,10 +973,10 @@
       "raw_source_text_block": "43.关于提示词工程师，下列说法与文意不符的是（ ）。 A.与之相关的岗位尚处于动态定义的过程之中B.是近期兴起的一个与人工智能相关的新职业 C.是一个暂时存在但又较容易被替换掉的职业D.从业者需要具备创新思维和较高的学习能力",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
-      "shared_stimulus_id": null,
-      "asset_dependency": "none",
+      "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-41-45",
+      "asset_dependency": "shared_stimulus_linked",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q043",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -958,10 +995,10 @@
       "raw_source_text_block": "44.根据文意，下列职业在未来最有可能被AI替代的是（ ）。 A.非遗传承人 B.美发师 C.幼儿保育员 D.播音员",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
-      "shared_stimulus_id": null,
-      "asset_dependency": "none",
+      "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-41-45",
+      "asset_dependency": "shared_stimulus_linked",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q044",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -980,10 +1017,10 @@
       "raw_source_text_block": "45.这篇文章的主要意图是（ ）。 A.告知读者提示词工程师这一职业悄然兴起的原因 B.引导读者透过提示词工程师对职业选择进行思考 C.说明现在的热门职业未来不一定具有良好的前景 D.介绍提示词工程师所具有的职业特征与市场需求",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
-      "shared_stimulus_id": null,
-      "asset_dependency": "none",
+      "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-41-45",
+      "asset_dependency": "shared_stimulus_linked",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q045",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -1005,7 +1042,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q046",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -1027,7 +1064,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q047",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -1049,7 +1086,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q048",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -1058,45 +1095,69 @@
       "original_question_no": 49,
       "module": "quantitative",
       "section_order": 3,
-      "stem": "， ， 9， 18， ， （ ）",
+      "stem": "， ，9，18， ，（ ）",
       "options": [
         "27",
         "",
         "",
         "54"
       ],
-      "raw_source_text_block": "49. ， ， 9， 18， ， （ ） A.27 B. C. D.54",
+      "raw_source_text_block": "49.， ，9，18， ，（ ） A.27 B. C. D.54",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": null,
-      "asset_dependency": "question_or_option_asset_missing_from_text_extraction",
-      "record_status": "held_question_or_option_asset_missing",
-      "hold_reason": "question_or_option_asset_missing_from_text_extraction",
+      "asset_dependency": "question_and_option_images_linked",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q049",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [
+        "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_3078f9a491b0d177.png",
+        "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_27a38c439bea34cc.png",
+        "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_db0c1f3ae9f4b280.png"
+      ],
+      "option_image_urls": [
+        [],
+        [
+          "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_729273458fd299ea.png"
+        ],
+        [
+          "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_a316c964d7e442a8.png"
+        ],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 50,
       "module": "quantitative",
       "section_order": 3,
-      "stem": "， ， ， ， ， （ ）",
+      "stem": "1/2，1/5，5/7，7/17，23/25，（ ）。",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "27/31",
+        "39/43",
+        "47/49",
+        "35/64"
       ],
-      "raw_source_text_block": "50. ， ， ， ， ， （ ） A. B. C. D.",
+      "raw_source_text_block": "50.1/2，1/5，5/7，7/17，23/25，（ ）。 A.27/31 B.39/43 C.47/49 D.35/64",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": null,
-      "asset_dependency": "question_or_option_asset_missing_from_text_extraction",
-      "record_status": "held_question_or_option_asset_missing",
-      "hold_reason": "question_or_option_asset_missing_from_text_extraction",
+      "asset_dependency": "none",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q050",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 51,
@@ -1115,7 +1176,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q051",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -1137,7 +1198,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q052",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -1159,7 +1220,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q053",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -1181,7 +1242,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q054",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -1203,7 +1264,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q055",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -1225,7 +1286,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q056",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -1247,7 +1308,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q057",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -1269,7 +1330,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q058",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -1278,23 +1339,31 @@
       "original_question_no": 59,
       "module": "quantitative",
       "section_order": 3,
-      "stem": "小张所在单位共有4个科室，现以科室为单位组织文艺演出，每个科室出2个节目。演出结束后，因8个节目都非常精彩，决定从中随机选3个节目参加上级组织的汇演。则小张所在科室出的节目至少有一个被选送参加汇演的概率是（ ）。",
+      "stem": "小张所在单位共有4个科室，现以科室为单位组织文艺演出，每个科室出2个节目。演出结束后，因8个节目都非常精彩，决定从中随机选3个节目参加上级组织的汇演。则小张所在科室出的节目至少有一个被选送参加汇演的概率是：",
       "options": [
-        "",
-        "",
-        "",
-        ""
+        "9/20",
+        "5/14",
+        "11/20",
+        "9/14"
       ],
-      "raw_source_text_block": "59.小张所在单位共有4个科室，现以科室为单位组织文艺演出，每个科室出2个节目。演出结束后，因8个节目都非常精彩，决定从中随机选3个节目参加上级组织的汇演。则小张所在科室出的节目至少有一个被选送参加汇演的概率是（ ）。 A. B. C. D.",
+      "raw_source_text_block": "59.小张所在单位共有4个科室，现以科室为单位组织文艺演出，每个科室出2个节目。演出结束后，因8个节目都非常精彩，决定从中随机选3个节目参加上级组织的汇演。则小张所在科室出的节目至少有一个被选送参加汇演的概率是： A.9/20 B.5/14 C.11/20 D.9/14",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": null,
-      "asset_dependency": "question_or_option_asset_missing_from_text_extraction",
-      "record_status": "held_question_or_option_asset_missing",
-      "hold_reason": "question_or_option_asset_missing_from_text_extraction",
+      "asset_dependency": "none",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q059",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 60,
@@ -1313,7 +1382,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q060",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -1335,7 +1404,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q061",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -1357,7 +1426,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q062",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -1379,7 +1448,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q063",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -1401,7 +1470,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q064",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -1410,23 +1479,41 @@
       "original_question_no": 65,
       "module": "quantitative",
       "section_order": 3,
-      "stem": "如图所示，ABCDEF是一个边长为2的正六边形，圆O是△ACE的内切圆，则圆O的面积是 （ ）。",
+      "stem": "如图所示，ABCDEF是一个边长为2的正六边形，圆O是三角形ACE的内切圆，则圆O的面积是（ ）。",
       "options": [
-        "π",
-        "2π",
+        "",
+        "",
         "",
         ""
       ],
-      "raw_source_text_block": "65.如图所示，ABCDEF是一个边长为2的正六边形，圆O是△ACE的内切圆，则圆O的面积是 （ ）。 A.π B.2π C. D.",
+      "raw_source_text_block": "65.如图所示，ABCDEF是一个边长为2的正六边形，圆O是三角形ACE的内切圆，则圆O的面积是（ ）。 A. B. C. D.",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": null,
-      "asset_dependency": "question_or_option_asset_missing_from_text_extraction",
-      "record_status": "held_question_or_option_asset_missing",
-      "hold_reason": "question_or_option_asset_missing_from_text_extraction",
+      "asset_dependency": "question_and_option_images_linked",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q065",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [
+        "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_f9f0c810cfb05be6.png"
+      ],
+      "option_image_urls": [
+        [
+          "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_cca2ba2e561f487f.png"
+        ],
+        [
+          "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_c93285dc7b253402.png"
+        ],
+        [
+          "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_34c2882a885afda3.png"
+        ],
+        [
+          "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_6c62aef36818a33d.png"
+        ]
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 66,
@@ -1445,7 +1532,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q066",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -1467,7 +1554,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q067",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -1489,7 +1576,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q068",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -1511,7 +1598,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q069",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -1533,7 +1620,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q070",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -1555,7 +1642,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q071",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -1577,7 +1664,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q072",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -1599,7 +1686,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q073",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -1621,7 +1708,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q074",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -1643,7 +1730,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q075",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -1663,12 +1750,19 @@
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": null,
-      "asset_dependency": "none",
-      "record_status": "published",
-      "hold_reason": "",
+      "asset_dependency": "question_text_missing_from_source_material",
+      "record_status": "held_question_text_missing",
+      "hold_reason": "question_text_not_present_in_archived_source_material",
       "app_question_id": "js2024a-q076",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ]
     },
     {
       "original_question_no": 77,
@@ -1685,12 +1779,19 @@
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": null,
-      "asset_dependency": "none",
-      "record_status": "published",
-      "hold_reason": "",
+      "asset_dependency": "question_text_missing_from_source_material",
+      "record_status": "held_question_text_missing",
+      "hold_reason": "question_text_not_present_in_archived_source_material",
       "app_question_id": "js2024a-q077",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ]
     },
     {
       "original_question_no": 78,
@@ -1707,12 +1808,19 @@
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": null,
-      "asset_dependency": "none",
-      "record_status": "published",
-      "hold_reason": "",
+      "asset_dependency": "question_text_missing_from_source_material",
+      "record_status": "held_question_text_missing",
+      "hold_reason": "question_text_not_present_in_archived_source_material",
       "app_question_id": "js2024a-q078",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ]
     },
     {
       "original_question_no": 79,
@@ -1729,12 +1837,22 @@
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": null,
-      "asset_dependency": "visual_options_missing_from_text_extraction",
-      "record_status": "held_question_or_option_asset_missing",
-      "hold_reason": "visual_options_missing_from_text_extraction",
+      "asset_dependency": "question_figure_linked",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q079",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [
+        "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_9f78da97f071df2e.jpg"
+      ],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 80,
@@ -1751,12 +1869,22 @@
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": null,
-      "asset_dependency": "visual_options_missing_from_text_extraction",
-      "record_status": "held_question_or_option_asset_missing",
-      "hold_reason": "visual_options_missing_from_text_extraction",
+      "asset_dependency": "question_figure_linked",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q080",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [
+        "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_9a25a155dbee8f8.png"
+      ],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 81,
@@ -1773,12 +1901,22 @@
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": null,
-      "asset_dependency": "visual_options_missing_from_text_extraction",
-      "record_status": "held_question_or_option_asset_missing",
-      "hold_reason": "visual_options_missing_from_text_extraction",
+      "asset_dependency": "question_figure_linked",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q081",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [
+        "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_3180c15ffb2545db.png"
+      ],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 82,
@@ -1795,12 +1933,22 @@
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": null,
-      "asset_dependency": "visual_options_missing_from_text_extraction",
-      "record_status": "held_question_or_option_asset_missing",
-      "hold_reason": "visual_options_missing_from_text_extraction",
+      "asset_dependency": "question_figure_linked",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q082",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [
+        "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_f17a0bf0e6f54140.png"
+      ],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 83,
@@ -1817,12 +1965,22 @@
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": null,
-      "asset_dependency": "visual_options_missing_from_text_extraction",
-      "record_status": "held_question_or_option_asset_missing",
-      "hold_reason": "visual_options_missing_from_text_extraction",
+      "asset_dependency": "question_figure_linked",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q083",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [
+        "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_4aa731f5f06c4321.png"
+      ],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 84,
@@ -1839,12 +1997,22 @@
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": null,
-      "asset_dependency": "visual_options_missing_from_text_extraction",
-      "record_status": "held_question_or_option_asset_missing",
-      "hold_reason": "visual_options_missing_from_text_extraction",
+      "asset_dependency": "question_figure_linked",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q084",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [
+        "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_ce4a7781bcc8407.png"
+      ],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 85,
@@ -1861,12 +2029,22 @@
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": null,
-      "asset_dependency": "visual_options_missing_from_text_extraction",
-      "record_status": "held_question_or_option_asset_missing",
-      "hold_reason": "visual_options_missing_from_text_extraction",
+      "asset_dependency": "question_figure_linked",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q085",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [
+        "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_59b926321146bc45.png"
+      ],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 86,
@@ -1883,34 +2061,54 @@
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": null,
-      "asset_dependency": "visual_options_missing_from_text_extraction",
-      "record_status": "held_question_or_option_asset_missing",
-      "hold_reason": "visual_options_missing_from_text_extraction",
+      "asset_dependency": "question_figure_linked",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q086",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [
+        "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_d07a14f2e77fdae6.png"
+      ],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 87,
       "module": "reasoning",
       "section_order": 4,
-      "stem": "左边给定的是六面体的外表面展开图，右边哪一项能由它折叠而成？（ ）",
+      "stem": "左边给定的是六面体的外表面展开图，右边哪一项能由它折叠而成？",
       "options": [
         "A",
         "B",
         "C",
         "D"
       ],
-      "raw_source_text_block": "87.左边给定的是六面体的外表面展开图，右边哪一项能由它折叠而成？（ ） A.A B.B C.C D.D",
+      "raw_source_text_block": "87.左边给定的是六面体的外表面展开图，右边哪一项能由它折叠而成？ A.A B.B C.C D.D",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": null,
-      "asset_dependency": "visual_options_missing_from_text_extraction",
-      "record_status": "held_question_or_option_asset_missing",
-      "hold_reason": "visual_options_missing_from_text_extraction",
+      "asset_dependency": "question_figure_linked",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q087",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [
+        "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_ba1c0ba845732ca9.png"
+      ],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 88,
@@ -1927,12 +2125,22 @@
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": null,
-      "asset_dependency": "visual_options_missing_from_text_extraction",
-      "record_status": "held_question_or_option_asset_missing",
-      "hold_reason": "visual_options_missing_from_text_extraction",
+      "asset_dependency": "question_figure_linked",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q088",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [
+        "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_ae3c4367c8d0d33a.png"
+      ],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 89,
@@ -1949,34 +2157,54 @@
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": null,
-      "asset_dependency": "visual_options_missing_from_text_extraction",
-      "record_status": "held_question_or_option_asset_missing",
-      "hold_reason": "visual_options_missing_from_text_extraction",
+      "asset_dependency": "question_figure_linked",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q089",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [
+        "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_c2c53989e67e60e0.png"
+      ],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 90,
       "module": "reasoning",
       "section_order": 4,
-      "stem": "下列立体图形的视图不可能是所给四个选项中的哪一个？（ ）",
+      "stem": "下列立体图形的视图不可能是所给四个选项中的哪一个？",
       "options": [
         "A",
         "B",
         "C",
         "D"
       ],
-      "raw_source_text_block": "90.下列立体图形的视图不可能是所给四个选项中的哪一个？（ ） A.A B.B C.C D.D",
+      "raw_source_text_block": "90.下列立体图形的视图不可能是所给四个选项中的哪一个？ A.A B.B C.C D.D",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": null,
-      "asset_dependency": "visual_options_missing_from_text_extraction",
-      "record_status": "held_question_or_option_asset_missing",
-      "hold_reason": "visual_options_missing_from_text_extraction",
+      "asset_dependency": "question_figure_linked",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q090",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [
+        "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_33e900dd6895d69b.png"
+      ],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 91,
@@ -1995,7 +2223,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q091",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -2017,7 +2245,7 @@
       "shared_stimulus_id": null,
       "asset_dependency": "none",
       "record_status": "published",
-      "hold_reason": "",
+      "hold_reason": null,
       "app_question_id": "js2024a-q092",
       "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
       "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
@@ -2037,12 +2265,19 @@
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": null,
-      "asset_dependency": "none",
-      "record_status": "published",
-      "hold_reason": "",
+      "asset_dependency": "question_text_missing_from_source_material",
+      "record_status": "held_question_text_missing",
+      "hold_reason": "question_text_not_present_in_archived_source_material",
       "app_question_id": "js2024a-q093",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ]
     },
     {
       "original_question_no": 94,
@@ -2059,12 +2294,19 @@
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": null,
-      "asset_dependency": "none",
-      "record_status": "published",
-      "hold_reason": "",
+      "asset_dependency": "question_text_missing_from_source_material",
+      "record_status": "held_question_text_missing",
+      "hold_reason": "question_text_not_present_in_archived_source_material",
       "app_question_id": "js2024a-q094",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ]
     },
     {
       "original_question_no": 95,
@@ -2081,320 +2323,447 @@
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": null,
-      "asset_dependency": "none",
-      "record_status": "published",
-      "hold_reason": "",
+      "asset_dependency": "question_text_missing_from_source_material",
+      "record_status": "held_question_text_missing",
+      "hold_reason": "question_text_not_present_in_archived_source_material",
       "app_question_id": "js2024a-q095",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ]
     },
     {
       "original_question_no": 96,
-      "module": "data_analysis",
-      "section_order": 5,
+      "module": "reasoning",
+      "section_order": 4,
       "stem": "本卷来源于考生回忆，本题暂缺失",
       "options": [
         "缺",
         "缺",
         "缺",
-        "缺某企业的生产部、研发部和财务部分别需要招聘1名员工，有3名博士生、3名硕士生和3名本科生前来应聘。该公司人事部小王对招聘结果做了如下预测： （1）如果生产部录用本科生，那么研发部录用硕士生； （2）如果研发部录用博士生，那么生产部录用博士生； （3）如果财务部录用本科生或者硕士生，那么研发部录用本科生。"
+        "缺"
       ],
-      "raw_source_text_block": "96.本卷来源于考生回忆，本题暂缺失 A.缺 B.缺 C.缺 D.缺某企业的生产部、研发部和财务部分别需要招聘1名员工，有3名博士生、3名硕士生和3名本科生前来应聘。该公司人事部小王对招聘结果做了如下预测： （1）如果生产部录用本科生，那么研发部录用硕士生； （2）如果研发部录用博士生，那么生产部录用博士生； （3）如果财务部录用本科生或者硕士生，那么研发部录用本科生。",
+      "raw_source_text_block": "96.本卷来源于考生回忆，本题暂缺失 A.缺 B.缺 C.缺 D.缺",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
-      "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-96-100",
-      "asset_dependency": "shared_stimulus_and_chart_not_split_for_item_display",
-      "record_status": "held_shared_material_not_itemized",
-      "hold_reason": "shared_stimulus_and_chart_not_split_for_item_display",
+      "shared_stimulus_id": null,
+      "asset_dependency": "question_text_missing_from_source_material",
+      "record_status": "held_question_text_missing",
+      "hold_reason": "question_text_not_present_in_archived_source_material",
       "app_question_id": "js2024a-q096",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ]
     },
     {
       "original_question_no": 97,
-      "module": "data_analysis",
-      "section_order": 5,
-      "stem": "如果3个部门录用的人员学历各不相同，那么以下哪种情况符合小王的预测？（ ）",
+      "module": "reasoning",
+      "section_order": 4,
+      "stem": "如果3个部门录用的人员学历各不相同，那么以下哪种情况符合小王的预测？",
       "options": [
         "生产部录用硕士生，财务部录用本科生",
         "研发部录用博士生，财务部录用硕士生",
         "生产部录用博士生，研发部录用本科生",
         "财务部录用本科生，研发部录用硕士生"
       ],
-      "raw_source_text_block": "97.如果3个部门录用的人员学历各不相同，那么以下哪种情况符合小王的预测？（ ） A.生产部录用硕士生，财务部录用本科生 B.研发部录用博士生，财务部录用硕士生 C.生产部录用博士生，研发部录用本科生 D.财务部录用本科生，研发部录用硕士生",
+      "raw_source_text_block": "97.如果3个部门录用的人员学历各不相同，那么以下哪种情况符合小王的预测？ A.生产部录用硕士生，财务部录用本科生 B.研发部录用博士生，财务部录用硕士生 C.生产部录用博士生，研发部录用本科生 D.财务部录用本科生，研发部录用硕士生",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
-      "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-96-100",
-      "asset_dependency": "shared_stimulus_and_chart_not_split_for_item_display",
-      "record_status": "held_shared_material_not_itemized",
-      "hold_reason": "shared_stimulus_and_chart_not_split_for_item_display",
+      "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-97-98",
+      "asset_dependency": "shared_stimulus_linked",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q097",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 98,
-      "module": "data_analysis",
-      "section_order": 5,
-      "stem": "如果研发部录用硕士生，那么以下哪种情况不符合小王的预测？（ ）",
+      "module": "reasoning",
+      "section_order": 4,
+      "stem": "如果研发部录用硕士生，那么以下哪种情况不符合小王的预测？",
       "options": [
         "生产部录用博士生",
         "财务部录用博士生",
         "生产部录用本科生",
-        ".财务部录用硕士生"
+        "财务部录用硕士生"
       ],
-      "raw_source_text_block": "98.如果研发部录用硕士生，那么以下哪种情况不符合小王的预测？（ ） A.生产部录用博士生 B.财务部录用博士生 C.生产部录用本科生 D..财务部录用硕士生",
+      "raw_source_text_block": "98.如果研发部录用硕士生，那么以下哪种情况不符合小王的预测？ A.生产部录用博士生 B.财务部录用博士生 C.生产部录用本科生 D.财务部录用硕士生",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
-      "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-96-100",
-      "asset_dependency": "shared_stimulus_and_chart_not_split_for_item_display",
-      "record_status": "held_shared_material_not_itemized",
-      "hold_reason": "shared_stimulus_and_chart_not_split_for_item_display",
+      "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-97-98",
+      "asset_dependency": "shared_stimulus_linked",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q098",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 99,
-      "module": "data_analysis",
-      "section_order": 5,
-      "stem": "甲：小明十岁就能用英语与英国人流利对话，语言天赋真是出类拔萃。 乙：小明跟着父母在英国住了两年，能流利对话不足为奇。 以下哪项与题干对话方式最为相似？（ ）",
+      "module": "reasoning",
+      "section_order": 4,
+      "stem": "甲：小明十岁就能用英语与英国人流利对话，语言天赋真是出类拔萃。 乙：小明跟着父母在英国住了两年，能流利对话不足为奇。 以下哪项与题干对话方式最为相似？",
       "options": [
         "甲：这款热水器的价格比市面上常见的热水器高出一倍，太不划算了乙：这款产品用的是航天级别的材料，在同材质热水器中性价比很高",
         "甲：小李以前容易冲动，进入职场一年后稳重多了乙：小李承担了单位大量重要工作，变得稳重一点理所当然",
         "甲：小张的数学一直很好，进入高中后，物理、化学等科目的学习很轻松乙：数学强调科学思维，掌握科学思维的人学习物理、化学当然没有难度",
         "甲：小刘在过去的一年中连续犯下三起盗窃案，真是无可救药乙：人非圣贤，孰能无过，相信在经过改造之后他会洗心革面"
       ],
-      "raw_source_text_block": "99.甲：小明十岁就能用英语与英国人流利对话，语言天赋真是出类拔萃。 乙：小明跟着父母在英国住了两年，能流利对话不足为奇。 以下哪项与题干对话方式最为相似？（ ） A.甲：这款热水器的价格比市面上常见的热水器高出一倍，太不划算了乙：这款产品用的是航天级别的材料，在同材质热水器中性价比很高 B.甲：小李以前容易冲动，进入职场一年后稳重多了乙：小李承担了单位大量重要工作，变得稳重一点理所当然 C.甲：小张的数学一直很好，进入高中后，物理、化学等科目的学习很轻松乙：数学强调科学思维，掌握科学思维的人学习物理、化学当然没有难度 D.甲：小刘在过去的一年中连续犯下三起盗窃案，真是无可救药乙：人非圣贤，孰能无过，相信在经过改造之后他会洗心革面",
+      "raw_source_text_block": "99.甲：小明十岁就能用英语与英国人流利对话，语言天赋真是出类拔萃。 乙：小明跟着父母在英国住了两年，能流利对话不足为奇。 以下哪项与题干对话方式最为相似？ A.甲：这款热水器的价格比市面上常见的热水器高出一倍，太不划算了乙：这款产品用的是航天级别的材料，在同材质热水器中性价比很高 B.甲：小李以前容易冲动，进入职场一年后稳重多了乙：小李承担了单位大量重要工作，变得稳重一点理所当然 C.甲：小张的数学一直很好，进入高中后，物理、化学等科目的学习很轻松乙：数学强调科学思维，掌握科学思维的人学习物理、化学当然没有难度 D.甲：小刘在过去的一年中连续犯下三起盗窃案，真是无可救药乙：人非圣贤，孰能无过，相信在经过改造之后他会洗心革面",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
-      "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-96-100",
-      "asset_dependency": "shared_stimulus_and_chart_not_split_for_item_display",
-      "record_status": "held_shared_material_not_itemized",
-      "hold_reason": "shared_stimulus_and_chart_not_split_for_item_display",
+      "shared_stimulus_id": null,
+      "asset_dependency": "none",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q099",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 100,
-      "module": "data_analysis",
-      "section_order": 5,
-      "stem": "卖早点、修家电、配钥匙……老百姓家门口的社区商业，是以社区居民为服务对象，服务半径为步行15分钟左右范围内的商业形态。近年来，许多城市大力推进社区商业建设，以更好地满足居民的消费需求。不过，也有专家担忧，家门口商业服务的完善，在给居民生活带来便利的同时可能也会使快递业逐步萎缩。 以下哪项如果为真，最能缓解上述专家的担忧？（ ）",
+      "module": "reasoning",
+      "section_order": 4,
+      "stem": "卖早点、修家电、配钥匙·····老百姓家门口的社区商业，是以社区居民为服务对象、服务半径为步行15分钟左右范围内的商业形态。近年来，许多城市大力推进社区商业建设，以更好地满足居民的消费需求。不过，也有专家担忧，家门口商业服务的完善，在给居民生活带来便利的同时可能也会使快递业逐步萎缩。 以下哪项如果为真，最能缓解上述专家的担忧？",
       "options": [
         "为了方便居民，很多城市推进社区商业建设时，都将快递驿站作为社区商业的重要组成部分",
         "社区商业主要提供汽车保养、幼儿托管等服务类业态，社区购物在居民整体购物消费中占比很少",
         "社会经济发展必然包含新旧行业的更迭，社区商业作为新的消费增长点，吸纳了大量传统行业的劳动者就业",
         "许多大型商超组建了自己的配送车队，可为周边5公里范围内居民提供商品一小时送达服务"
       ],
-      "raw_source_text_block": "100.卖早点、修家电、配钥匙……老百姓家门口的社区商业，是以社区居民为服务对象，服务半径为步行15分钟左右范围内的商业形态。近年来，许多城市大力推进社区商业建设，以更好地满足居民的消费需求。不过，也有专家担忧，家门口商业服务的完善，在给居民生活带来便利的同时可能也会使快递业逐步萎缩。 以下哪项如果为真，最能缓解上述专家的担忧？（ ） A.为了方便居民，很多城市推进社区商业建设时，都将快递驿站作为社区商业的重要组成部分 B.社区商业主要提供汽车保养、幼儿托管等服务类业态，社区购物在居民整体购物消费中占比很少 C.社会经济发展必然包含新旧行业的更迭，社区商业作为新的消费增长点，吸纳了大量传统行业的劳动者就业 D.许多大型商超组建了自己的配送车队，可为周边5公里范围内居民提供商品一小时送达服务",
+      "raw_source_text_block": "100.卖早点、修家电、配钥匙·····老百姓家门口的社区商业，是以社区居民为服务对象、服务半径为步行15分钟左右范围内的商业形态。近年来，许多城市大力推进社区商业建设，以更好地满足居民的消费需求。不过，也有专家担忧，家门口商业服务的完善，在给居民生活带来便利的同时可能也会使快递业逐步萎缩。 以下哪项如果为真，最能缓解上述专家的担忧？ A.为了方便居民，很多城市推进社区商业建设时，都将快递驿站作为社区商业的重要组成部分 B.社区商业主要提供汽车保养、幼儿托管等服务类业态，社区购物在居民整体购物消费中占比很少 C.社会经济发展必然包含新旧行业的更迭，社区商业作为新的消费增长点，吸纳了大量传统行业的劳动者就业 D.许多大型商超组建了自己的配送车队，可为周边5公里范围内居民提供商品一小时送达服务",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
-      "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-96-100",
-      "asset_dependency": "shared_stimulus_and_chart_not_split_for_item_display",
-      "record_status": "held_shared_material_not_itemized",
-      "hold_reason": "shared_stimulus_and_chart_not_split_for_item_display",
+      "shared_stimulus_id": null,
+      "asset_dependency": "none",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q100",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 101,
-      "module": "data_analysis",
-      "section_order": 5,
-      "stem": "某学校举办田径运动会，所有参加800米跑的运动员都参加了100米跑，所有参加100米跑的运动员都参加了跳高，有些参加跳远的运动员参加了投掷链球，所有参加跳远的运动员都没有参加跳高。 根据以上陈述，不能推出以下哪项？（ ）",
+      "module": "reasoning",
+      "section_order": 4,
+      "stem": "某学校举办田径运动会，所有参加800米跑的运动员都参加了100米跑，所有参加100米跑的运动员都参加了跳高，有些参加跳远的运动员参加了投掷链球，所有参加跳远的运动员都没有参加跳高。 根据以上陈述，不能推出以下哪项？",
       "options": [
         "所有参加800米跑的运动员都参加了跳高",
         "所有参加投掷链球的运动员都没有参加跳高",
         "所有参加跳远的运动员都没有参加100米跑",
         "有些参加800米跑的运动员参加了跳远"
       ],
-      "raw_source_text_block": "101.某学校举办田径运动会，所有参加800米跑的运动员都参加了100米跑，所有参加100米跑的运动员都参加了跳高，有些参加跳远的运动员参加了投掷链球，所有参加跳远的运动员都没有参加跳高。 根据以上陈述，不能推出以下哪项？（ ） A.所有参加800米跑的运动员都参加了跳高 B.所有参加投掷链球的运动员都没有参加跳高 C.所有参加跳远的运动员都没有参加100米跑 D.有些参加800米跑的运动员参加了跳远",
+      "raw_source_text_block": "101.某学校举办田径运动会，所有参加800米跑的运动员都参加了100米跑，所有参加100米跑的运动员都参加了跳高，有些参加跳远的运动员参加了投掷链球，所有参加跳远的运动员都没有参加跳高。 根据以上陈述，不能推出以下哪项？ A.所有参加800米跑的运动员都参加了跳高 B.所有参加投掷链球的运动员都没有参加跳高 C.所有参加跳远的运动员都没有参加100米跑 D.有些参加800米跑的运动员参加了跳远",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
-      "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-101-105",
-      "asset_dependency": "shared_stimulus_and_chart_not_split_for_item_display",
-      "record_status": "held_shared_material_not_itemized",
-      "hold_reason": "shared_stimulus_and_chart_not_split_for_item_display",
+      "shared_stimulus_id": null,
+      "asset_dependency": "none",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q101",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 102,
-      "module": "data_analysis",
-      "section_order": 5,
-      "stem": "评价某份试卷中的试题质量通常有难度和区分度等指标，一道单选题的难度通常用正确选择试题答案的人数与参加测验的总人数的比值来表示。区分度指的是试题对考生实际水平的区分程度和区分的有效性，一道单选题的区分度指数D的计算公式为：D=PH-PL，其中PH为高分组（试卷总得分排在前 27%的考生）该题的难度，PL为低分组（试卷总得分排在后27%的考生）该题的难度。 根据以上陈述，可以推出以下哪项？（ ）",
+      "module": "reasoning",
+      "section_order": 4,
+      "stem": "评价某份试卷中的试题质量通常有难度和区分度等指标，一道单选题的难度通常用正确选择试题答案的人数与参加测验的总人数的比值来表示。区分度指的是试题对考生实际水平的区分程度和区分的有效性，一道单选题的区分度指数D的计算公式为： ，其中 为高分组（试卷总得分排在前27%的考生）该题的难度， 为低分组（试卷总得分排在后27%的考生）该题的难度。 根据以上陈述，可以推出以下哪项？",
       "options": [
-        "一道难度为1的单选题区分度指数为0.1",
+        "一道难度为1的单选题区分度指数为0.1.",
         "任一单选题的区分度指数不可能为负值",
-        "一道难度为0.27的单选题的最大区分度指数为0.5",
+        "一道难度为0.27的单选题的最大区分度指数为0.5.",
         "一道单选题的难度也可以表示为该题的平均得分与该题分值的比值"
       ],
-      "raw_source_text_block": "102.评价某份试卷中的试题质量通常有难度和区分度等指标，一道单选题的难度通常用正确选择试题答案的人数与参加测验的总人数的比值来表示。区分度指的是试题对考生实际水平的区分程度和区分的有效性，一道单选题的区分度指数D的计算公式为：D=PH-PL，其中PH为高分组（试卷总得分排在前 27%的考生）该题的难度，PL为低分组（试卷总得分排在后27%的考生）该题的难度。 根据以上陈述，可以推出以下哪项？（ ） A.一道难度为1的单选题区分度指数为0.1 B.任一单选题的区分度指数不可能为负值 C.一道难度为0.27的单选题的最大区分度指数为0.5 D.一道单选题的难度也可以表示为该题的平均得分与该题分值的比值",
+      "raw_source_text_block": "102.评价某份试卷中的试题质量通常有难度和区分度等指标，一道单选题的难度通常用正确选择试题答案的人数与参加测验的总人数的比值来表示。区分度指的是试题对考生实际水平的区分程度和区分的有效性，一道单选题的区分度指数D的计算公式为： ，其中 为高分组（试卷总得分排在前27%的考生）该题的难度， 为低分组（试卷总得分排在后27%的考生）该题的难度。 根据以上陈述，可以推出以下哪项？ A.一道难度为1的单选题区分度指数为0.1. B.任一单选题的区分度指数不可能为负值 C.一道难度为0.27的单选题的最大区分度指数为0.5. D.一道单选题的难度也可以表示为该题的平均得分与该题分值的比值",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
-      "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-101-105",
-      "asset_dependency": "shared_stimulus_and_chart_not_split_for_item_display",
-      "record_status": "held_shared_material_not_itemized",
-      "hold_reason": "shared_stimulus_and_chart_not_split_for_item_display",
+      "shared_stimulus_id": null,
+      "asset_dependency": "question_figure_linked",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q102",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [
+        "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_fbfa124413497938.png",
+        "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_28227d7c789a6e48.png",
+        "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_d000cebc00fd07fa.png"
+      ],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 103,
-      "module": "data_analysis",
-      "section_order": 5,
-      "stem": "一项研究发现，成年小白鼠去除一个关键生物钟基因后，昼夜节律完全消失，虽然生活质量有所下降，但寿命并未受到显著影响，心血管健康状况甚至有所改善。据此，研究人员推断昼夜节律缺失对健康的危害可能没有我们想象得那么大。 回答以下哪个问题最有助于评价上述研究人员所做出的推断？（ ） A.成年小白鼠去除生物钟基因后出现的心血管情况改善是否会延长小白鼠的寿命 B.成年小白鼠去除生物钟基因之后的休息时间是否与未去除之前的休息时间相同 C.成年小白鼠去除生物钟基因后的寿命和心血管健康状况能否代表整体健康状况 D.成年小白鼠去除生物钟基因之后的生活质量是否会影响小白鼠的整体健康状况市住建局3名工作人员小郑、小周、小刘打算参加“青年党员下基层”调研活动。可选的有小微堵点改造、跨区断头路建设、小型城市客厅打造、历史街区微改造4个调研项目。指导调研的有王教授、钱教授、马教授，且他们只能指导上述三位工作人员，已知： （1）每位工作人员参加的项目都必须有教授指导，每位教授至少指导一位工作人员； （2）每位工作人员只能参加一个项目，提倡多人合作； （3）每位教授只能指导一个项目，一个项目也可由多位教授共同指导； （4）小郑参加小微堵点改造或跨区断头路建设项目，钱教授指导历史街区微改造项目。 104.104.参加或指导小微堵点改造项目的不可能同时有以下哪两个人？（ ）",
+      "module": "reasoning",
+      "section_order": 4,
+      "stem": "一项研究发现，成年小白鼠去除一个关键生物钟基因后，昼夜节律完全消失，虽然生活质量有所下降，但寿命并未受到显著影响，心血管健康状况甚至有所改善。据此，研究人员推断昼夜节律缺失对健康的危害可能没有我们想象得那么大。 回答以下哪个问题最有助于评价上述研究人员所做出的推断？",
+      "options": [
+        "成年小白鼠去除生物钟基因后出现的心血管情况改善是否会延长小白鼠的寿命",
+        "成年小白鼠去除生物钟基因之后的休息时间是否与未去除之前的休息时间相同",
+        "成年小白鼠去除生物钟基因后的寿命和心血管健康状况能否代表整体健康状况",
+        "成年小白鼠去除生物钟基因之后的生活质量是否会影响小白鼠的整体健康状况"
+      ],
+      "raw_source_text_block": "103.一项研究发现，成年小白鼠去除一个关键生物钟基因后，昼夜节律完全消失，虽然生活质量有所下降，但寿命并未受到显著影响，心血管健康状况甚至有所改善。据此，研究人员推断昼夜节律缺失对健康的危害可能没有我们想象得那么大。 回答以下哪个问题最有助于评价上述研究人员所做出的推断？ A.成年小白鼠去除生物钟基因后出现的心血管情况改善是否会延长小白鼠的寿命 B.成年小白鼠去除生物钟基因之后的休息时间是否与未去除之前的休息时间相同 C.成年小白鼠去除生物钟基因后的寿命和心血管健康状况能否代表整体健康状况 D.成年小白鼠去除生物钟基因之后的生活质量是否会影响小白鼠的整体健康状况",
+      "paper_id": "jiangsu-2024-A-class",
+      "answer_key_status": "verified_source_answer_and_explanation",
+      "shared_stimulus_id": null,
+      "asset_dependency": "none",
+      "record_status": "published",
+      "hold_reason": null,
+      "app_question_id": "js2024a-q103",
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
+    },
+    {
+      "original_question_no": 104,
+      "module": "reasoning",
+      "section_order": 4,
+      "stem": "参加或指导小微堵点改造项目的不可能同时有以下哪两个人？",
       "options": [
         "王教授和马教授",
         "马教授和小刘",
         "小刘和小周",
         "小周和王教授"
       ],
-      "raw_source_text_block": "103.一项研究发现，成年小白鼠去除一个关键生物钟基因后，昼夜节律完全消失，虽然生活质量有所下降，但寿命并未受到显著影响，心血管健康状况甚至有所改善。据此，研究人员推断昼夜节律缺失对健康的危害可能没有我们想象得那么大。 回答以下哪个问题最有助于评价上述研究人员所做出的推断？（ ） A.成年小白鼠去除生物钟基因后出现的心血管情况改善是否会延长小白鼠的寿命 B.成年小白鼠去除生物钟基因之后的休息时间是否与未去除之前的休息时间相同 C.成年小白鼠去除生物钟基因后的寿命和心血管健康状况能否代表整体健康状况 D.成年小白鼠去除生物钟基因之后的生活质量是否会影响小白鼠的整体健康状况市住建局3名工作人员小郑、小周、小刘打算参加“青年党员下基层”调研活动。可选的有小微堵点改造、跨区断头路建设、小型城市客厅打造、历史街区微改造4个调研项目。指导调研的有王教授、钱教授、马教授，且他们只能指导上述三位工作人员，已知： （1）每位工作人员参加的项目都必须有教授指导，每位教授至少指导一位工作人员； （2）每位工作人员只能参加一个项目，提倡多人合作； （3）每位教授只能指导一个项目，一个项目也可由多位教授共同指导； （4）小郑参加小微堵点改造或跨区断头路建设项目，钱教授指导历史街区微改造项目。 104.104.参加或指导小微堵点改造项目的不可能同时有以下哪两个人？（ ） A.王教授和马教授 B.马教授和小刘 C.小刘和小周 D.小周和王教授",
+      "raw_source_text_block": "104.参加或指导小微堵点改造项目的不可能同时有以下哪两个人？ A.王教授和马教授 B.马教授和小刘 C.小刘和小周 D.小周和王教授",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
-      "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-101-105",
-      "asset_dependency": "shared_stimulus_and_chart_not_split_for_item_display",
-      "record_status": "held_shared_material_not_itemized",
-      "hold_reason": "shared_stimulus_and_chart_not_split_for_item_display",
-      "app_question_id": "js2024a-q103",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
-    },
-    {
-      "original_question_no": 104,
-      "module": "data_analysis",
-      "section_order": 5,
-      "stem": "",
-      "options": null,
-      "raw_source_text_block": "",
-      "paper_id": "jiangsu-2024-A-class",
-      "answer_key_status": "verified_source_answer_and_explanation",
-      "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-101-105",
-      "asset_dependency": "shared_stimulus_and_chart_not_split_for_item_display",
-      "record_status": "held_shared_material_not_itemized",
-      "hold_reason": "shared_stimulus_and_chart_not_split_for_item_display",
+      "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-104-105",
+      "asset_dependency": "shared_stimulus_linked",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q104",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 105,
-      "module": "data_analysis",
-      "section_order": 5,
-      "stem": "如果小周参加小型城市客厅打造项目，则以下哪一项一定为真？（ ）",
+      "module": "reasoning",
+      "section_order": 4,
+      "stem": "如果小周参加小型城市客厅打造项目，则以下哪一项一定为真？",
       "options": [
         "小刘参加历史街区微改造项目",
         "王教授指导小型城市客厅打造项目",
         "马教授指导小微堵点改造项目",
         "小郑参加跨区断头路建设项目"
       ],
-      "raw_source_text_block": "105.如果小周参加小型城市客厅打造项目，则以下哪一项一定为真？（ ） A.小刘参加历史街区微改造项目 B.王教授指导小型城市客厅打造项目 C.马教授指导小微堵点改造项目 D.小郑参加跨区断头路建设项目",
+      "raw_source_text_block": "105.如果小周参加小型城市客厅打造项目，则以下哪一项一定为真？ A.小刘参加历史街区微改造项目 B.王教授指导小型城市客厅打造项目 C.马教授指导小微堵点改造项目 D.小郑参加跨区断头路建设项目",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
-      "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-101-105",
-      "asset_dependency": "shared_stimulus_and_chart_not_split_for_item_display",
-      "record_status": "held_shared_material_not_itemized",
-      "hold_reason": "shared_stimulus_and_chart_not_split_for_item_display",
+      "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-104-105",
+      "asset_dependency": "shared_stimulus_linked",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q105",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 106,
-      "module": "data_analysis",
-      "section_order": 5,
-      "stem": "迭代学习：指学习者通过不间断的目标训练，更好地理解学习内容，不断提升技能完善自身能力的学习方式。 下列不属于迭代学习的是（ ）。",
+      "module": "reasoning",
+      "section_order": 4,
+      "stem": "迭代学习：指学习者通过不间断的目标训练，更好地理解学习内容，不断提升技能完善自身能力的学习方式。 下列不属于迭代学习的是：",
       "options": [
         "小周参加专业技能大赛，实操环节丢了不少分，他不断强化训练，再次参加就获得了二等奖。又经过一年训练，综合技能有了显著提高，自己也十分自信",
         "学习者要熟练掌握数学运算需经历数年大致相同的过程，先是加减法，之后是乘除法，接下来是混合运算，逐渐进入更高阶的运算",
         "李教授经常深入社区举办科普讲座，最初因为专业性过强，听众很少，后来引入了市民关注的鲜活案例，听众越来越多；最近又融入了不少优秀传统文化元素，感染力越来越强",
         "多家公司推出了各自的AI自然语言处理模型，有的只能与人进行简单对话，有的能在收到指令后几秒钟内交出一份质量不错的作业，有些已经能够针对各种问题给出比较专业的建议"
       ],
-      "raw_source_text_block": "106.迭代学习：指学习者通过不间断的目标训练，更好地理解学习内容，不断提升技能完善自身能力的学习方式。 下列不属于迭代学习的是（ ）。 A.小周参加专业技能大赛，实操环节丢了不少分，他不断强化训练，再次参加就获得了二等奖。又经过一年训练，综合技能有了显著提高，自己也十分自信 B.学习者要熟练掌握数学运算需经历数年大致相同的过程，先是加减法，之后是乘除法，接下来是混合运算，逐渐进入更高阶的运算 C.李教授经常深入社区举办科普讲座，最初因为专业性过强，听众很少，后来引入了市民关注的鲜活案例，听众越来越多；最近又融入了不少优秀传统文化元素，感染力越来越强 D.多家公司推出了各自的AI自然语言处理模型，有的只能与人进行简单对话，有的能在收到指令后几秒钟内交出一份质量不错的作业，有些已经能够针对各种问题给出比较专业的建议",
+      "raw_source_text_block": "106.迭代学习：指学习者通过不间断的目标训练，更好地理解学习内容，不断提升技能完善自身能力的学习方式。 下列不属于迭代学习的是： A.小周参加专业技能大赛，实操环节丢了不少分，他不断强化训练，再次参加就获得了二等奖。又经过一年训练，综合技能有了显著提高，自己也十分自信 B.学习者要熟练掌握数学运算需经历数年大致相同的过程，先是加减法，之后是乘除法，接下来是混合运算，逐渐进入更高阶的运算 C.李教授经常深入社区举办科普讲座，最初因为专业性过强，听众很少，后来引入了市民关注的鲜活案例，听众越来越多；最近又融入了不少优秀传统文化元素，感染力越来越强 D.多家公司推出了各自的AI自然语言处理模型，有的只能与人进行简单对话，有的能在收到指令后几秒钟内交出一份质量不错的作业，有些已经能够针对各种问题给出比较专业的建议",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
-      "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-106-110",
-      "asset_dependency": "shared_stimulus_and_chart_not_split_for_item_display",
-      "record_status": "held_shared_material_not_itemized",
-      "hold_reason": "shared_stimulus_and_chart_not_split_for_item_display",
+      "shared_stimulus_id": null,
+      "asset_dependency": "none",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q106",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 107,
-      "module": "data_analysis",
-      "section_order": 5,
-      "stem": "钝感力：指在工作、生活中能够尽快摆脱消极情绪或困扰，从容应对外部压力，或者冷静面对个人成绩，坚持既定目标的心理防御机制。 下列不属于钝感力的是（ ）。",
+      "module": "reasoning",
+      "section_order": 4,
+      "stem": "钝感力：指在工作、生活中能够尽快摆脱消极情绪或困扰，从容应对外部压力，或者冷静面对个人成绩，坚持既定目标的心理防御机制。 下列不属于钝感力的是：",
       "options": [
         "谷先生每次回顾自己的创业经历，都把成功归因于百折不挠的韧劲：无论碰到多少磨难，始终没有被困难打倒，一直沿着目标不断地向前",
         "邱奶奶已经90岁，眼不花，耳不聋，腿脚麻利。她的体会是：人生在世，不如意事十之八九，迅速忘掉不愉快的事，保持乐观情绪就能长寿",
         "杜先生从去年开始坚持在健身中心锻炼，提高身体素质，缓解工作压力。现在再也不像以前那样容易感冒，即使工作到深夜也不觉得累",
         "钟先生性格稳重，听到表扬从不得意忘形，遇到批评也不垂头丧气，心无旁骛地钻研业务，近几年取得了很多令人羡慕的专业成就"
       ],
-      "raw_source_text_block": "107.钝感力：指在工作、生活中能够尽快摆脱消极情绪或困扰，从容应对外部压力，或者冷静面对个人成绩，坚持既定目标的心理防御机制。 下列不属于钝感力的是（ ）。 A.谷先生每次回顾自己的创业经历，都把成功归因于百折不挠的韧劲：无论碰到多少磨难，始终没有被困难打倒，一直沿着目标不断地向前 B.邱奶奶已经90岁，眼不花，耳不聋，腿脚麻利。她的体会是：人生在世，不如意事十之八九，迅速忘掉不愉快的事，保持乐观情绪就能长寿 C.杜先生从去年开始坚持在健身中心锻炼，提高身体素质，缓解工作压力。现在再也不像以前那样容易感冒，即使工作到深夜也不觉得累 D.钟先生性格稳重，听到表扬从不得意忘形，遇到批评也不垂头丧气，心无旁骛地钻研业务，近几年取得了很多令人羡慕的专业成就",
+      "raw_source_text_block": "107.钝感力：指在工作、生活中能够尽快摆脱消极情绪或困扰，从容应对外部压力，或者冷静面对个人成绩，坚持既定目标的心理防御机制。 下列不属于钝感力的是： A.谷先生每次回顾自己的创业经历，都把成功归因于百折不挠的韧劲：无论碰到多少磨难，始终没有被困难打倒，一直沿着目标不断地向前 B.邱奶奶已经90岁，眼不花，耳不聋，腿脚麻利。她的体会是：人生在世，不如意事十之八九，迅速忘掉不愉快的事，保持乐观情绪就能长寿 C.杜先生从去年开始坚持在健身中心锻炼，提高身体素质，缓解工作压力。现在再也不像以前那样容易感冒，即使工作到深夜也不觉得累 D.钟先生性格稳重，听到表扬从不得意忘形，遇到批评也不垂头丧气，心无旁骛地钻研业务，近几年取得了很多令人羡慕的专业成就",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
-      "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-106-110",
-      "asset_dependency": "shared_stimulus_and_chart_not_split_for_item_display",
-      "record_status": "held_shared_material_not_itemized",
-      "hold_reason": "shared_stimulus_and_chart_not_split_for_item_display",
+      "shared_stimulus_id": null,
+      "asset_dependency": "none",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q107",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 108,
-      "module": "data_analysis",
-      "section_order": 5,
-      "stem": "潮汐式管理：指管理者根据时间的不同，差异化、精细化管理特定公共资源，最大限度开发和利用现有资源，有效提升公众幸福指数的管理方法。 下列不属于潮汐式管理的是（ ）。",
+      "module": "reasoning",
+      "section_order": 4,
+      "stem": "潮汐式管理：指管理者根据时间的不同，差异化、精细化管理特定公共资源，最大限度开发和利用现有资源，有效提升公众幸福指数的管理方法。 下列不属于潮汐式管理的是：",
       "options": [
         "某市在主城区的一些特定道路上划定特殊停车位，实行“夜停晨走”制度，老城区停车位不足的问题得到了有效缓解",
         "某街道对摆摊经营实行定时定点画线管理，商贩按指定时间、地点出摊，既不影响交通，又方便了周围居民生活",
         "每年的旅游旺季，某景区附近的居民小区让外地游客免费使用地下停车场车位，大家在网上对此纷纷点赞",
         "某市实行居民电动汽车充电桩分时电价政策，峰谷收费标准不同。高峰时段按照正常标准，低谷时段则按照不同的优惠幅度收费"
       ],
-      "raw_source_text_block": "108.潮汐式管理：指管理者根据时间的不同，差异化、精细化管理特定公共资源，最大限度开发和利用现有资源，有效提升公众幸福指数的管理方法。 下列不属于潮汐式管理的是（ ）。 A.某市在主城区的一些特定道路上划定特殊停车位，实行“夜停晨走”制度，老城区停车位不足的问题得到了有效缓解 B.某街道对摆摊经营实行定时定点画线管理，商贩按指定时间、地点出摊，既不影响交通，又方便了周围居民生活 C.每年的旅游旺季，某景区附近的居民小区让外地游客免费使用地下停车场车位，大家在网上对此纷纷点赞 D.某市实行居民电动汽车充电桩分时电价政策，峰谷收费标准不同。高峰时段按照正常标准，低谷时段则按照不同的优惠幅度收费",
+      "raw_source_text_block": "108.潮汐式管理：指管理者根据时间的不同，差异化、精细化管理特定公共资源，最大限度开发和利用现有资源，有效提升公众幸福指数的管理方法。 下列不属于潮汐式管理的是： A.某市在主城区的一些特定道路上划定特殊停车位，实行“夜停晨走”制度，老城区停车位不足的问题得到了有效缓解 B.某街道对摆摊经营实行定时定点画线管理，商贩按指定时间、地点出摊，既不影响交通，又方便了周围居民生活 C.每年的旅游旺季，某景区附近的居民小区让外地游客免费使用地下停车场车位，大家在网上对此纷纷点赞 D.某市实行居民电动汽车充电桩分时电价政策，峰谷收费标准不同。高峰时段按照正常标准，低谷时段则按照不同的优惠幅度收费",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
-      "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-106-110",
-      "asset_dependency": "shared_stimulus_and_chart_not_split_for_item_display",
-      "record_status": "held_shared_material_not_itemized",
-      "hold_reason": "shared_stimulus_and_chart_not_split_for_item_display",
+      "shared_stimulus_id": null,
+      "asset_dependency": "none",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q108",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 109,
-      "module": "data_analysis",
-      "section_order": 5,
-      "stem": "城市漫游：指按照预定主题和路线，漫步城市街区，在向导带领下深度体验城市变迁或历史文化的旅游方式。 下列属于城市漫游的是（ ）。",
+      "module": "reasoning",
+      "section_order": 4,
+      "stem": "城市漫游：指按照预定主题和路线，漫步城市街区，在向导带领下深度体验城市变迁或历史文化的旅游方式。 下列属于城市漫游的是：",
       "options": [
-        "韩先生周末带外地同学游览本市的步行街——河西大道，聊得口干舌燥，买了两杯竹筒奶茶， 在“我在河西大道很想你”路牌下拍了很多照片",
+        "韩先生周末带外地同学游览本市的步行街——河西大道，聊得口干舌燥，买了两杯竹筒奶茶，在“我在河西大道很想你”路牌下拍了很多照片",
         "小方周六日经常把年迈的父母接到城里游玩。由于父母腿脚不太利索，一天通常只游玩一两个景点。周围邻居都夸小方很孝顺",
         "在外漂泊多年的任女士今年回到了故乡，昔日一览无余的小城现在到处高楼林立，为了寻找童年的记忆，她已经走遍了这里的大街小巷",
         "某地旅行社推出了主打“像本地人一样行走在运河边”的新产品，三四个小时的穿城徒步让游客累得抬不起腿，大家仍觉得意犹未尽"
       ],
-      "raw_source_text_block": "109.城市漫游：指按照预定主题和路线，漫步城市街区，在向导带领下深度体验城市变迁或历史文化的旅游方式。 下列属于城市漫游的是（ ）。 A.韩先生周末带外地同学游览本市的步行街——河西大道，聊得口干舌燥，买了两杯竹筒奶茶， 在“我在河西大道很想你”路牌下拍了很多照片 B.小方周六日经常把年迈的父母接到城里游玩。由于父母腿脚不太利索，一天通常只游玩一两个景点。周围邻居都夸小方很孝顺 C.在外漂泊多年的任女士今年回到了故乡，昔日一览无余的小城现在到处高楼林立，为了寻找童年的记忆，她已经走遍了这里的大街小巷 D.某地旅行社推出了主打“像本地人一样行走在运河边”的新产品，三四个小时的穿城徒步让游客累得抬不起腿，大家仍觉得意犹未尽",
+      "raw_source_text_block": "109.城市漫游：指按照预定主题和路线，漫步城市街区，在向导带领下深度体验城市变迁或历史文化的旅游方式。 下列属于城市漫游的是： A.韩先生周末带外地同学游览本市的步行街——河西大道，聊得口干舌燥，买了两杯竹筒奶茶，在“我在河西大道很想你”路牌下拍了很多照片 B.小方周六日经常把年迈的父母接到城里游玩。由于父母腿脚不太利索，一天通常只游玩一两个景点。周围邻居都夸小方很孝顺 C.在外漂泊多年的任女士今年回到了故乡，昔日一览无余的小城现在到处高楼林立，为了寻找童年的记忆，她已经走遍了这里的大街小巷 D.某地旅行社推出了主打“像本地人一样行走在运河边”的新产品，三四个小时的穿城徒步让游客累得抬不起腿，大家仍觉得意犹未尽",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
-      "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-106-110",
-      "asset_dependency": "shared_stimulus_and_chart_not_split_for_item_display",
-      "record_status": "held_shared_material_not_itemized",
-      "hold_reason": "shared_stimulus_and_chart_not_split_for_item_display",
+      "shared_stimulus_id": null,
+      "asset_dependency": "none",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q109",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 110,
-      "module": "data_analysis",
-      "section_order": 5,
+      "module": "reasoning",
+      "section_order": 4,
       "stem": "本卷来源于考生回忆，本题暂缺失",
       "options": [
         "缺",
@@ -2405,18 +2774,25 @@
       "raw_source_text_block": "110.本卷来源于考生回忆，本题暂缺失 A.缺 B.缺 C.缺 D.缺",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
-      "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-106-110",
-      "asset_dependency": "shared_stimulus_and_chart_not_split_for_item_display",
-      "record_status": "held_shared_material_not_itemized",
-      "hold_reason": "shared_stimulus_and_chart_not_split_for_item_display",
+      "shared_stimulus_id": null,
+      "asset_dependency": "question_text_missing_from_source_material",
+      "record_status": "held_question_text_missing",
+      "hold_reason": "question_text_not_present_in_archived_source_material",
       "app_question_id": "js2024a-q110",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ]
     },
     {
       "original_question_no": 111,
-      "module": "data_analysis",
-      "section_order": 5,
+      "module": "reasoning",
+      "section_order": 4,
       "stem": "本卷来源于考生回忆，本题暂缺失",
       "options": [
         "缺",
@@ -2427,387 +2803,530 @@
       "raw_source_text_block": "111.本卷来源于考生回忆，本题暂缺失 A.缺 B.缺 C.缺 D.缺",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
-      "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-111-115",
-      "asset_dependency": "shared_stimulus_and_chart_not_split_for_item_display",
-      "record_status": "held_shared_material_not_itemized",
-      "hold_reason": "shared_stimulus_and_chart_not_split_for_item_display",
+      "shared_stimulus_id": null,
+      "asset_dependency": "question_text_missing_from_source_material",
+      "record_status": "held_question_text_missing",
+      "hold_reason": "question_text_not_present_in_archived_source_material",
       "app_question_id": "js2024a-q111",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ]
     },
     {
       "original_question_no": 112,
-      "module": "data_analysis",
-      "section_order": 5,
-      "stem": "数字游民：指工作时间不受限制，地域可以自主选择，利用网络数字手段完成本职工作的从业人员。 下列属于数字游民的是（ ）。",
+      "module": "reasoning",
+      "section_order": 4,
+      "stem": "数字游民：指工作时间不受限制，地域可以自主选择，利用网络数字手段完成本职工作的从业人员。 下列属于数字游民的是：",
       "options": [
         "小雷辞职后游走在不同的城市，白天在市区游玩特色街区，晚上到热闹的广场跟着市民一起跳舞，随时随地向天南地北的粉丝直播，月收入比以前多得多",
         "康女士居住在很远的小区，每天通勤时间差不多需要三四个小时，工作十分辛苦。最近，她的居家办公申请得到了批准，不用天天去公司打卡了",
         "黄先生年初被公司派驻到某山区工作，闲暇之余利用微信公众号帮助当地乡亲销售土特产，并通过网络众筹建起了雪乡旅舍，有时亲自担任导游。默默无闻的小山村很快变成了远近闻名的旅游村",
         "潮玩设计师周先生到新公司后，再也不担心迟到早退。昨天也许还是短裤、T恤和凉鞋，明天就换成了密不透风的户外运动装。他要做的只是每天晚上将自己的灵感、新想法报告给部门主管"
       ],
-      "raw_source_text_block": "112.数字游民：指工作时间不受限制，地域可以自主选择，利用网络数字手段完成本职工作的从业人员。 下列属于数字游民的是（ ）。 A.小雷辞职后游走在不同的城市，白天在市区游玩特色街区，晚上到热闹的广场跟着市民一起跳舞，随时随地向天南地北的粉丝直播，月收入比以前多得多 B.康女士居住在很远的小区，每天通勤时间差不多需要三四个小时，工作十分辛苦。最近，她的居家办公申请得到了批准，不用天天去公司打卡了 C.黄先生年初被公司派驻到某山区工作，闲暇之余利用微信公众号帮助当地乡亲销售土特产，并通过网络众筹建起了雪乡旅舍，有时亲自担任导游。默默无闻的小山村很快变成了远近闻名的旅游村 D.潮玩设计师周先生到新公司后，再也不担心迟到早退。昨天也许还是短裤、T恤和凉鞋，明天就换成了密不透风的户外运动装。他要做的只是每天晚上将自己的灵感、新想法报告给部门主管",
+      "raw_source_text_block": "112.数字游民：指工作时间不受限制，地域可以自主选择，利用网络数字手段完成本职工作的从业人员。 下列属于数字游民的是： A.小雷辞职后游走在不同的城市，白天在市区游玩特色街区，晚上到热闹的广场跟着市民一起跳舞，随时随地向天南地北的粉丝直播，月收入比以前多得多 B.康女士居住在很远的小区，每天通勤时间差不多需要三四个小时，工作十分辛苦。最近，她的居家办公申请得到了批准，不用天天去公司打卡了 C.黄先生年初被公司派驻到某山区工作，闲暇之余利用微信公众号帮助当地乡亲销售土特产，并通过网络众筹建起了雪乡旅舍，有时亲自担任导游。默默无闻的小山村很快变成了远近闻名的旅游村 D.潮玩设计师周先生到新公司后，再也不担心迟到早退。昨天也许还是短裤、T恤和凉鞋，明天就换成了密不透风的户外运动装。他要做的只是每天晚上将自己的灵感、新想法报告给部门主管",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
-      "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-111-115",
-      "asset_dependency": "shared_stimulus_and_chart_not_split_for_item_display",
-      "record_status": "held_shared_material_not_itemized",
-      "hold_reason": "shared_stimulus_and_chart_not_split_for_item_display",
+      "shared_stimulus_id": null,
+      "asset_dependency": "none",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q112",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 113,
-      "module": "data_analysis",
-      "section_order": 5,
-      "stem": "代际责任：指在不超出自身能力的前提下，相邻两代人的一方向另一方主动提供经济帮扶、生活照顾、健康保障、精神抚慰等各种支持的行为。 下列不属于代际责任的是（ ）。",
+      "module": "reasoning",
+      "section_order": 4,
+      "stem": "代际责任：指在不超出自身能力的前提下，相邻两代人的一方向另一方主动提供经济帮扶、生活照顾、健康保障、精神抚慰等各种支持的行为。 下列不属于代际责任的是：",
       "options": [
         "苏女士把父母接到身边后，忙乎了一个多月，带着父母熟悉小区健身器材，到社区老年活动中心打牌下棋，在公园找人聊天，终于帮他们重新找到了“组织”",
         "邵先生和妻子一直在城里忙于打拼，女儿正在读小学。每到寒暑假，邵先生的父母都会专程赶到城里，把孙女接回农村老家痛痛快快地玩上整个假期",
-        "罗奶奶像无数为孩子婚事发愁的长辈一样，每到周末就去附近公园的相亲角浏览展板上的照片、 简历，觉得合适的就记下基本情况、电话号码。虽然快三十岁的孙女根本不着急，她却一直乐此不疲",
+        "罗奶奶像无数为孩子婚事发愁的长辈一样，每到周末就去附近公园的相亲角浏览展板上的照片、简历，觉得合适的就记下基本情况、电话号码。虽然快三十岁的孙女根本不着急，她却一直乐此不疲",
         "毛先生喜欢第一时间把遇到的趣事分享到家族微信群，却很少得到期待的回应，一怒之下退了群。后来，儿子又把他请回，还邀约了几位有同样爱好的长辈，群里逐渐热闹起来，他也时不时点赞或评论几句"
       ],
-      "raw_source_text_block": "113.代际责任：指在不超出自身能力的前提下，相邻两代人的一方向另一方主动提供经济帮扶、生活照顾、健康保障、精神抚慰等各种支持的行为。 下列不属于代际责任的是（ ）。 A.苏女士把父母接到身边后，忙乎了一个多月，带着父母熟悉小区健身器材，到社区老年活动中心打牌下棋，在公园找人聊天，终于帮他们重新找到了“组织” B.邵先生和妻子一直在城里忙于打拼，女儿正在读小学。每到寒暑假，邵先生的父母都会专程赶到城里，把孙女接回农村老家痛痛快快地玩上整个假期 C.罗奶奶像无数为孩子婚事发愁的长辈一样，每到周末就去附近公园的相亲角浏览展板上的照片、 简历，觉得合适的就记下基本情况、电话号码。虽然快三十岁的孙女根本不着急，她却一直乐此不疲 D.毛先生喜欢第一时间把遇到的趣事分享到家族微信群，却很少得到期待的回应，一怒之下退了群。后来，儿子又把他请回，还邀约了几位有同样爱好的长辈，群里逐渐热闹起来，他也时不时点赞或评论几句",
+      "raw_source_text_block": "113.代际责任：指在不超出自身能力的前提下，相邻两代人的一方向另一方主动提供经济帮扶、生活照顾、健康保障、精神抚慰等各种支持的行为。 下列不属于代际责任的是： A.苏女士把父母接到身边后，忙乎了一个多月，带着父母熟悉小区健身器材，到社区老年活动中心打牌下棋，在公园找人聊天，终于帮他们重新找到了“组织” B.邵先生和妻子一直在城里忙于打拼，女儿正在读小学。每到寒暑假，邵先生的父母都会专程赶到城里，把孙女接回农村老家痛痛快快地玩上整个假期 C.罗奶奶像无数为孩子婚事发愁的长辈一样，每到周末就去附近公园的相亲角浏览展板上的照片、简历，觉得合适的就记下基本情况、电话号码。虽然快三十岁的孙女根本不着急，她却一直乐此不疲 D.毛先生喜欢第一时间把遇到的趣事分享到家族微信群，却很少得到期待的回应，一怒之下退了群。后来，儿子又把他请回，还邀约了几位有同样爱好的长辈，群里逐渐热闹起来，他也时不时点赞或评论几句",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
-      "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-111-115",
-      "asset_dependency": "shared_stimulus_and_chart_not_split_for_item_display",
-      "record_status": "held_shared_material_not_itemized",
-      "hold_reason": "shared_stimulus_and_chart_not_split_for_item_display",
+      "shared_stimulus_id": null,
+      "asset_dependency": "none",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q113",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 114,
-      "module": "data_analysis",
-      "section_order": 5,
-      "stem": "消费者教育：指通过有计划的宣传或培训，引导民众更新消费观念，掌握消费技能，培养消费习惯，使其形成产品购买的合理预期。 下列属于消费者教育的是（ ）。",
+      "module": "reasoning",
+      "section_order": 4,
+      "stem": "消费者教育：指通过有计划的宣传或培训，引导民众更新消费观念，掌握消费技能，培养消费习惯，使其形成产品购买的合理预期。 下列属于消费者教育的是：",
       "options": [
         "丁先生根据亲身经历写出了一份新疆自驾游的攻略，包括具体线路、沿途景点门票、酒店、美食等，还推荐了几个口碑很好的当地导游发布到了多家网站上，大批网友经过验证后给予了好评",
         "某网站的帖子图文并茂地分析了各种榨汁机、豆浆机、养生壶、料理机的优缺点，推荐了一款黑科技“破壁机”，详细介绍了它的材质、功能、操作方法以及明星的使用体验，最后还附上了商家的二维码",
-        "某购物网站邀请网络写手连载长篇小说，让员工发动亲朋好友评论转发，大批粉丝追更到凌晨， 网站贴心地附上了缓解眼睛疲劳的新产品供大家免费试用，两三个月后，访问量和营业额都有了显著提高",
+        "某购物网站邀请网络写手连载长篇小说，让员工发动亲朋好友评论转发，大批粉丝追更到凌晨，网站贴心地附上了缓解眼睛疲劳的新产品供大家免费试用，两三个月后，访问量和营业额都有了显著提高",
         "某知名品牌菜刀拍蒜后刀身断裂的视频在多个社交网站引发网友吐槽，厂家回应称视频中的菜刀属于高科技新品，硬度高，材质脆，受横向冲击时容易断裂，不适合拍蒜"
       ],
-      "raw_source_text_block": "114.消费者教育：指通过有计划的宣传或培训，引导民众更新消费观念，掌握消费技能，培养消费习惯，使其形成产品购买的合理预期。 下列属于消费者教育的是（ ）。 A.丁先生根据亲身经历写出了一份新疆自驾游的攻略，包括具体线路、沿途景点门票、酒店、美食等，还推荐了几个口碑很好的当地导游发布到了多家网站上，大批网友经过验证后给予了好评 B.某网站的帖子图文并茂地分析了各种榨汁机、豆浆机、养生壶、料理机的优缺点，推荐了一款黑科技“破壁机”，详细介绍了它的材质、功能、操作方法以及明星的使用体验，最后还附上了商家的二维码 C.某购物网站邀请网络写手连载长篇小说，让员工发动亲朋好友评论转发，大批粉丝追更到凌晨， 网站贴心地附上了缓解眼睛疲劳的新产品供大家免费试用，两三个月后，访问量和营业额都有了显著提高 D.某知名品牌菜刀拍蒜后刀身断裂的视频在多个社交网站引发网友吐槽，厂家回应称视频中的菜刀属于高科技新品，硬度高，材质脆，受横向冲击时容易断裂，不适合拍蒜",
+      "raw_source_text_block": "114.消费者教育：指通过有计划的宣传或培训，引导民众更新消费观念，掌握消费技能，培养消费习惯，使其形成产品购买的合理预期。 下列属于消费者教育的是： A.丁先生根据亲身经历写出了一份新疆自驾游的攻略，包括具体线路、沿途景点门票、酒店、美食等，还推荐了几个口碑很好的当地导游发布到了多家网站上，大批网友经过验证后给予了好评 B.某网站的帖子图文并茂地分析了各种榨汁机、豆浆机、养生壶、料理机的优缺点，推荐了一款黑科技“破壁机”，详细介绍了它的材质、功能、操作方法以及明星的使用体验，最后还附上了商家的二维码 C.某购物网站邀请网络写手连载长篇小说，让员工发动亲朋好友评论转发，大批粉丝追更到凌晨，网站贴心地附上了缓解眼睛疲劳的新产品供大家免费试用，两三个月后，访问量和营业额都有了显著提高 D.某知名品牌菜刀拍蒜后刀身断裂的视频在多个社交网站引发网友吐槽，厂家回应称视频中的菜刀属于高科技新品，硬度高，材质脆，受横向冲击时容易断裂，不适合拍蒜",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
-      "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-111-115",
-      "asset_dependency": "shared_stimulus_and_chart_not_split_for_item_display",
-      "record_status": "held_shared_material_not_itemized",
-      "hold_reason": "shared_stimulus_and_chart_not_split_for_item_display",
+      "shared_stimulus_id": null,
+      "asset_dependency": "none",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q114",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 115,
-      "module": "data_analysis",
-      "section_order": 5,
-      "stem": "灯谜是独具特色的中华优秀传统文化，可以根据谜面和谜底的关系分为多种类型。其中，摘顶格指去掉谜底的共同部首就扣合谜面；秋千格指从后往前读谜底就扣合谜面；白头格指谜底的第一个字作谐音读就扣合谜面。 根据上述定义，对下列三个灯谜的类型判断正确的是（ ）。 （1）谜面：黄昏（打一地名）。谜底：洛阳 （2）谜面：郎貌（打一花名）。谜底：芙蓉 （3）谜面：思量（打一文具）。谜底：算盘",
+      "module": "reasoning",
+      "section_order": 4,
+      "stem": "灯谜是独具特色的中华优秀传统文化，可以根据谜面和谜底的关系分为多种类型。其中，摘顶格指去掉谜底的共同部首就扣合谜面；秋千格指从后往前读谜底就扣合谜面；白头格指谜底的第一个字作谐音读就扣合谜面。 根据上述定义，对下列三个灯谜的类型判断正确的是： （1）谜面：黄昏（打一地名）。谜底：洛阳 （2）谜面：郎貌（打一花名）。谜底：芙蓉 （3）谜面：思量（打一文具）。谜底：算盘",
       "options": [
         "（1）秋千格，（2）白头格，（3）摘顶格",
         "（1）白头格，（2）摘顶格，（3）秋千格",
         "（1）白头格，（2）秋千格，（3）摘顶格",
         "（1）秋千格，（2）摘顶格，（3）白头格"
       ],
-      "raw_source_text_block": "115.灯谜是独具特色的中华优秀传统文化，可以根据谜面和谜底的关系分为多种类型。其中，摘顶格指去掉谜底的共同部首就扣合谜面；秋千格指从后往前读谜底就扣合谜面；白头格指谜底的第一个字作谐音读就扣合谜面。 根据上述定义，对下列三个灯谜的类型判断正确的是（ ）。 （1）谜面：黄昏（打一地名）。谜底：洛阳 （2）谜面：郎貌（打一花名）。谜底：芙蓉 （3）谜面：思量（打一文具）。谜底：算盘 A.（1）秋千格，（2）白头格，（3）摘顶格 B.（1）白头格，（2）摘顶格，（3）秋千格 C.（1）白头格，（2）秋千格，（3）摘顶格 D.（1）秋千格，（2）摘顶格，（3）白头格",
+      "raw_source_text_block": "115.灯谜是独具特色的中华优秀传统文化，可以根据谜面和谜底的关系分为多种类型。其中，摘顶格指去掉谜底的共同部首就扣合谜面；秋千格指从后往前读谜底就扣合谜面；白头格指谜底的第一个字作谐音读就扣合谜面。 根据上述定义，对下列三个灯谜的类型判断正确的是： （1）谜面：黄昏（打一地名）。谜底：洛阳 （2）谜面：郎貌（打一花名）。谜底：芙蓉 （3）谜面：思量（打一文具）。谜底：算盘 A.（1）秋千格，（2）白头格，（3）摘顶格 B.（1）白头格，（2）摘顶格，（3）秋千格 C.（1）白头格，（2）秋千格，（3）摘顶格 D.（1）秋千格，（2）摘顶格，（3）白头格",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
-      "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-111-115",
-      "asset_dependency": "shared_stimulus_and_chart_not_split_for_item_display",
-      "record_status": "held_shared_material_not_itemized",
-      "hold_reason": "shared_stimulus_and_chart_not_split_for_item_display",
+      "shared_stimulus_id": null,
+      "asset_dependency": "none",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q115",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 116,
       "module": "data_analysis",
       "section_order": 5,
-      "stem": "2023年第二季度末，全国跨省联网定点零售药店环比增加（ ）。",
+      "stem": "2023年第二季度末，全国跨省联网定点零售药店环比增加：",
       "options": [
         "3.2万家",
         "3.4万家",
         "3.6万家",
         "3.8万家"
       ],
-      "raw_source_text_block": "116.2023年第二季度末，全国跨省联网定点零售药店环比增加（ ）。 A.3.2万家 B.3.4万家 C.3.6万家 D.3.8万家",
+      "raw_source_text_block": "116.2023年第二季度末，全国跨省联网定点零售药店环比增加： A.3.2万家 B.3.4万家 C.3.6万家 D.3.8万家",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-116-120",
-      "asset_dependency": "shared_stimulus_and_chart_not_split_for_item_display",
-      "record_status": "held_shared_material_not_itemized",
-      "hold_reason": "shared_stimulus_and_chart_not_split_for_item_display",
+      "asset_dependency": "shared_stimulus_linked",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q116",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 117,
       "module": "data_analysis",
       "section_order": 5,
-      "stem": "2023年第二季度，全国住院费用跨省联网直接结算人均减少个人垫付（ ）。",
+      "stem": "2023年第二季度，全国住院费用跨省联网直接结算人均减少个人垫付：",
       "options": [
         "1.15万元",
         "1.20万元",
         "1.25万元",
         "1.30万元"
       ],
-      "raw_source_text_block": "117.2023年第二季度，全国住院费用跨省联网直接结算人均减少个人垫付（ ）。 A.1.15万元 B.1.20万元 C.1.25万元 D.1.30万元",
+      "raw_source_text_block": "117.2023年第二季度，全国住院费用跨省联网直接结算人均减少个人垫付： A.1.15万元 B.1.20万元 C.1.25万元 D.1.30万元",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-116-120",
-      "asset_dependency": "shared_stimulus_and_chart_not_split_for_item_display",
-      "record_status": "held_shared_material_not_itemized",
-      "hold_reason": "shared_stimulus_and_chart_not_split_for_item_display",
+      "asset_dependency": "shared_stimulus_linked",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q117",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 118,
       "module": "data_analysis",
       "section_order": 5,
-      "stem": "2023年第二季度，全国跨省联网异地就医费用直接结算人次占上半年的比重为（ ）。",
+      "stem": "2023年第二季度，全国跨省联网异地就医费用直接结算人次占上半年的比重为：",
       "options": [
         "57.1%",
         "59.3%",
         "60.4%",
         "61.2%"
       ],
-      "raw_source_text_block": "118.2023年第二季度，全国跨省联网异地就医费用直接结算人次占上半年的比重为（ ）。 A.57.1% B.59.3% C.60.4% D.61.2%",
+      "raw_source_text_block": "118.2023年第二季度，全国跨省联网异地就医费用直接结算人次占上半年的比重为： A.57.1% B.59.3% C.60.4% D.61.2%",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-116-120",
-      "asset_dependency": "shared_stimulus_and_chart_not_split_for_item_display",
-      "record_status": "held_shared_material_not_itemized",
-      "hold_reason": "shared_stimulus_and_chart_not_split_for_item_display",
+      "asset_dependency": "shared_stimulus_linked",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q118",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 119,
       "module": "data_analysis",
       "section_order": 5,
-      "stem": "2023年第二季度，全国跨省联网异地就医费用直接结算减少个人垫付人均金额环比有所增加的是（ ）。",
+      "stem": "2023年第二季度，全国跨省联网异地就医费用直接结算减少个人垫付人均金额环比有所增加的是：",
       "options": [
         "门诊费用跨省联网直接结算",
         "普通门诊费用跨省联网直接结算",
         "跨省联网定点零售药店直接结算",
         "门诊慢特病相关治疗费用跨省联网直接结算"
       ],
-      "raw_source_text_block": "119.2023年第二季度，全国跨省联网异地就医费用直接结算减少个人垫付人均金额环比有所增加的是（ ）。 A.门诊费用跨省联网直接结算 B.普通门诊费用跨省联网直接结算 C.跨省联网定点零售药店直接结算 D.门诊慢特病相关治疗费用跨省联网直接结算",
+      "raw_source_text_block": "119.2023年第二季度，全国跨省联网异地就医费用直接结算减少个人垫付人均金额环比有所增加的是： A.门诊费用跨省联网直接结算 B.普通门诊费用跨省联网直接结算 C.跨省联网定点零售药店直接结算 D.门诊慢特病相关治疗费用跨省联网直接结算",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-116-120",
-      "asset_dependency": "shared_stimulus_and_chart_not_split_for_item_display",
-      "record_status": "held_shared_material_not_itemized",
-      "hold_reason": "shared_stimulus_and_chart_not_split_for_item_display",
+      "asset_dependency": "shared_stimulus_linked",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q119",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 120,
       "module": "data_analysis",
       "section_order": 5,
-      "stem": "能够从上述资料中推出的是（ ）。",
+      "stem": "能够从上述资料中推出的是：",
       "options": [
         "2023年第二季度末，全国住院费用跨省联网定点医疗机构同比增加0.6万家",
-        "2023年第二季度，全国门诊费用跨省联网直接结算的人次比住院费用跨省联网直接结算的人次多 8.1倍",
+        "2023年第二季度，全国门诊费用跨省联网直接结算的人次比住院费用跨省联网直接结算的人次多8.1倍",
         "2023年第二季度，通过国家统一线上备案渠道成功办理备案的患者都享受了全国跨省联网异地就医费用直接结算的服务",
         "2023年第二季度末，全国门诊慢特病相关治疗费用跨省联网定点医疗机构数的环比增量不少于普通门诊费用跨省联网定点医疗机构数的环比增量"
       ],
-      "raw_source_text_block": "120.能够从上述资料中推出的是（ ）。 A.2023年第二季度末，全国住院费用跨省联网定点医疗机构同比增加0.6万家 B.2023年第二季度，全国门诊费用跨省联网直接结算的人次比住院费用跨省联网直接结算的人次多 8.1倍 C.2023年第二季度，通过国家统一线上备案渠道成功办理备案的患者都享受了全国跨省联网异地就医费用直接结算的服务 D.2023年第二季度末，全国门诊慢特病相关治疗费用跨省联网定点医疗机构数的环比增量不少于普通门诊费用跨省联网定点医疗机构数的环比增量",
+      "raw_source_text_block": "120.能够从上述资料中推出的是： A.2023年第二季度末，全国住院费用跨省联网定点医疗机构同比增加0.6万家 B.2023年第二季度，全国门诊费用跨省联网直接结算的人次比住院费用跨省联网直接结算的人次多8.1倍 C.2023年第二季度，通过国家统一线上备案渠道成功办理备案的患者都享受了全国跨省联网异地就医费用直接结算的服务 D.2023年第二季度末，全国门诊慢特病相关治疗费用跨省联网定点医疗机构数的环比增量不少于普通门诊费用跨省联网定点医疗机构数的环比增量",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-116-120",
-      "asset_dependency": "shared_stimulus_and_chart_not_split_for_item_display",
-      "record_status": "held_shared_material_not_itemized",
-      "hold_reason": "shared_stimulus_and_chart_not_split_for_item_display",
+      "asset_dependency": "shared_stimulus_linked",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q120",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 121,
       "module": "data_analysis",
       "section_order": 5,
-      "stem": "2023年第二季度，该市工业用电量同比增加（ ）。",
+      "stem": "2023年第二季度，该市工业用电量同比增加：",
       "options": [
         "4.5亿千瓦时",
         "3.8亿千瓦时",
         "11.7亿千瓦时",
         "3.0亿千瓦时"
       ],
-      "raw_source_text_block": "121.2023年第二季度，该市工业用电量同比增加（ ）。 A.4.5亿千瓦时 B.3.8亿千瓦时 C.11.7亿千瓦时 D.3.0亿千瓦时",
+      "raw_source_text_block": "121.2023年第二季度，该市工业用电量同比增加： A.4.5亿千瓦时 B.3.8亿千瓦时 C.11.7亿千瓦时 D.3.0亿千瓦时",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-121-125",
-      "asset_dependency": "shared_stimulus_and_chart_not_split_for_item_display",
-      "record_status": "held_shared_material_not_itemized",
-      "hold_reason": "shared_stimulus_and_chart_not_split_for_item_display",
+      "asset_dependency": "shared_stimulus_linked",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q121",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 122,
       "module": "data_analysis",
       "section_order": 5,
-      "stem": "2022年第一季度至2023年第二季度，该市进出口总额最多的季度是（ ）。",
+      "stem": "2022年第一季度—2023年第二季度，该市进出口总额最多的季度是：",
       "options": [
         "2022年第二季度",
         "2022年第三季度",
         "2022年第四季度",
         "2023年第二季度"
       ],
-      "raw_source_text_block": "122.2022年第一季度至2023年第二季度，该市进出口总额最多的季度是（ ）。 A.2022年第二季度 B.2022年第三季度 C.2022年第四季度 D.2023年第二季度",
+      "raw_source_text_block": "122.2022年第一季度—2023年第二季度，该市进出口总额最多的季度是： A.2022年第二季度 B.2022年第三季度 C.2022年第四季度 D.2023年第二季度",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-121-125",
-      "asset_dependency": "shared_stimulus_and_chart_not_split_for_item_display",
-      "record_status": "held_shared_material_not_itemized",
-      "hold_reason": "shared_stimulus_and_chart_not_split_for_item_display",
+      "asset_dependency": "shared_stimulus_linked",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q122",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 123,
       "module": "data_analysis",
       "section_order": 5,
-      "stem": "2023年第二季度，该市第三产业增加值是（ ）。",
+      "stem": "2023年第二季度，该市第三产业增加值是：",
       "options": [
         "2623亿元",
         "2766亿元",
         "3262亿元",
         "4087亿元"
       ],
-      "raw_source_text_block": "123.2023年第二季度，该市第三产业增加值是（ ）。 A.2623亿元 B.2766亿元 C.3262亿元 D.4087亿元",
+      "raw_source_text_block": "123.2023年第二季度，该市第三产业增加值是： A.2623亿元 B.2766亿元 C.3262亿元 D.4087亿元",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-121-125",
-      "asset_dependency": "shared_stimulus_and_chart_not_split_for_item_display",
-      "record_status": "held_shared_material_not_itemized",
-      "hold_reason": "shared_stimulus_and_chart_not_split_for_item_display",
+      "asset_dependency": "shared_stimulus_linked",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q123",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 124,
       "module": "data_analysis",
       "section_order": 5,
-      "stem": "2023年上半年，该市地区生产总值、社会消费品零售总额、实际利用外资、工业用电量四个指标中同比增速最快的是（ ）。",
+      "stem": "2023年上半年，该市地区生产总值、社会消费品零售总额、实际利用外资、工业用电量四个指标中同比增速最快的是：",
       "options": [
         "地区生产总值",
         "社会消费品零售总额",
         "实际利用外资",
         "工业用电量"
       ],
-      "raw_source_text_block": "124.2023年上半年，该市地区生产总值、社会消费品零售总额、实际利用外资、工业用电量四个指标中同比增速最快的是（ ）。 A.地区生产总值 B.社会消费品零售总额 C.实际利用外资 D.工业用电量",
+      "raw_source_text_block": "124.2023年上半年，该市地区生产总值、社会消费品零售总额、实际利用外资、工业用电量四个指标中同比增速最快的是： A.地区生产总值 B.社会消费品零售总额 C.实际利用外资 D.工业用电量",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-121-125",
-      "asset_dependency": "shared_stimulus_and_chart_not_split_for_item_display",
-      "record_status": "held_shared_material_not_itemized",
-      "hold_reason": "shared_stimulus_and_chart_not_split_for_item_display",
+      "asset_dependency": "shared_stimulus_linked",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q124",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 125,
       "module": "data_analysis",
       "section_order": 5,
-      "stem": "能够从上述资料中推出的是（ ）。",
+      "stem": "能够从上述资料中推出的是：",
       "options": [
-        "2023年1～6月，该市进口额没有超过1100亿元",
+        "2023年1—6月，该市进口额没有超过1100亿元",
         "2023年第二季度，该市出口额环比增速高于进出口总额环比增速",
-        "2022年第二季度至2023年第二季度，该市季度固定资产投资最大值是1705亿元",
-        "2022年1月～2023年6月，该市月平均社会消费品零售总额超过700亿元 2023年上半年，江苏省、设区市国资委监管企业实现营业收入、利润分别为6121亿元、678亿元，同比分别增长8.3%、16.1%，其中，省国资委监管企业实现营业收入、利润分别为2091亿元、306亿元，分别增长4%、30.4%。 2023年6月末，江苏省、设区市国资委监管企业资产总额89864亿元，同比增长7.7%；资产负债率 63.6%，较上年末上升0.8个百分点。其中省国资委监管企业资产总额24049亿元，增长6.7%，资产负债率64.8%，较上年末下降0.1个百分点。"
+        "2022年第二季度—2023年第二季度，该市季度固定资产投资最大值是1705亿元",
+        "2022年1月—2023年6月，该市月平均社会消费品零售总额超过700亿元"
       ],
-      "raw_source_text_block": "125.能够从上述资料中推出的是（ ）。 A.2023年1～6月，该市进口额没有超过1100亿元 B.2023年第二季度，该市出口额环比增速高于进出口总额环比增速 C.2022年第二季度至2023年第二季度，该市季度固定资产投资最大值是1705亿元 D.2022年1月～2023年6月，该市月平均社会消费品零售总额超过700亿元 2023年上半年，江苏省、设区市国资委监管企业实现营业收入、利润分别为6121亿元、678亿元，同比分别增长8.3%、16.1%，其中，省国资委监管企业实现营业收入、利润分别为2091亿元、306亿元，分别增长4%、30.4%。 2023年6月末，江苏省、设区市国资委监管企业资产总额89864亿元，同比增长7.7%；资产负债率 63.6%，较上年末上升0.8个百分点。其中省国资委监管企业资产总额24049亿元，增长6.7%，资产负债率64.8%，较上年末下降0.1个百分点。",
+      "raw_source_text_block": "125.能够从上述资料中推出的是： A.2023年1—6月，该市进口额没有超过1100亿元 B.2023年第二季度，该市出口额环比增速高于进出口总额环比增速 C.2022年第二季度—2023年第二季度，该市季度固定资产投资最大值是1705亿元 D.2022年1月—2023年6月，该市月平均社会消费品零售总额超过700亿元",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-121-125",
-      "asset_dependency": "shared_stimulus_and_chart_not_split_for_item_display",
-      "record_status": "held_shared_material_not_itemized",
-      "hold_reason": "shared_stimulus_and_chart_not_split_for_item_display",
+      "asset_dependency": "shared_stimulus_linked",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q125",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 126,
       "module": "data_analysis",
       "section_order": 5,
-      "stem": "2023年上半年，江苏省国资委监管企业实现营业收入约同比增加（ ）。",
+      "stem": "2023年上半年，江苏省国资委监管企业实现营业收入约同比增加：",
       "options": [
         "61亿元",
         "80亿元",
         "84亿元",
         "100亿元"
       ],
-      "raw_source_text_block": "126.2023年上半年，江苏省国资委监管企业实现营业收入约同比增加（ ）。 A.61亿元 B.80亿元 C.84亿元 D.100亿元",
+      "raw_source_text_block": "126.2023年上半年，江苏省国资委监管企业实现营业收入约同比增加： A.61亿元 B.80亿元 C.84亿元 D.100亿元",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-126-130",
-      "asset_dependency": "shared_stimulus_and_chart_not_split_for_item_display",
-      "record_status": "held_shared_material_not_itemized",
-      "hold_reason": "shared_stimulus_and_chart_not_split_for_item_display",
+      "asset_dependency": "shared_stimulus_linked",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q126",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 127,
       "module": "data_analysis",
       "section_order": 5,
-      "stem": "2022年末，江苏省国资委监管企业的资产负债率比省、设区市国资委监管企业高（ ）。",
+      "stem": "2022年末，江苏省国资委监管企业的资产负债率比省、设区市国资委监管企业高：",
       "options": [
         "1.2个百分点",
         "1.8个百分点",
         "2.1个百分点",
         "2.4个百分点"
       ],
-      "raw_source_text_block": "127.2022年末，江苏省国资委监管企业的资产负债率比省、设区市国资委监管企业高（ ）。 A.1.2个百分点 B.1.8个百分点 C.2.1个百分点 D.2.4个百分点",
+      "raw_source_text_block": "127.2022年末，江苏省国资委监管企业的资产负债率比省、设区市国资委监管企业高： A.1.2个百分点 B.1.8个百分点 C.2.1个百分点 D.2.4个百分点",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-126-130",
-      "asset_dependency": "shared_stimulus_and_chart_not_split_for_item_display",
-      "record_status": "held_shared_material_not_itemized",
-      "hold_reason": "shared_stimulus_and_chart_not_split_for_item_display",
+      "asset_dependency": "shared_stimulus_linked",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q127",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 128,
       "module": "data_analysis",
       "section_order": 5,
-      "stem": "2020年下半年～2023年上半年，江苏省、设区市国资委监管企业利润环比增加最多的半年是（ ）。",
+      "stem": "2020年下半年~2023年上半年，江苏省、设区市国资委监管企业利润环比增加最多的半年是：",
       "options": [
         "2020年下半年",
         "2021年上半年",
         "2022年上半年",
         "2023年上半年"
       ],
-      "raw_source_text_block": "128.2020年下半年～2023年上半年，江苏省、设区市国资委监管企业利润环比增加最多的半年是（ ）。 A.2020年下半年 B.2021年上半年 C.2022年上半年 D.2023年上半年",
+      "raw_source_text_block": "128.2020年下半年~2023年上半年，江苏省、设区市国资委监管企业利润环比增加最多的半年是： A.2020年下半年 B.2021年上半年 C.2022年上半年 D.2023年上半年",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-126-130",
-      "asset_dependency": "shared_stimulus_and_chart_not_split_for_item_display",
-      "record_status": "held_shared_material_not_itemized",
-      "hold_reason": "shared_stimulus_and_chart_not_split_for_item_display",
+      "asset_dependency": "shared_stimulus_linked",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q128",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 129,
@@ -2824,145 +3343,233 @@
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-126-130",
-      "asset_dependency": "shared_stimulus_and_chart_not_split_for_item_display",
-      "record_status": "held_shared_material_not_itemized",
-      "hold_reason": "shared_stimulus_and_chart_not_split_for_item_display",
+      "asset_dependency": "shared_stimulus_and_question_images_linked",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q129",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [
+          "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_d225080dd3b184d5.png"
+        ],
+        [
+          "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_c6ffd457d2c49504.png"
+        ],
+        [
+          "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_5b35b9b1ac01b9c3.png"
+        ],
+        [
+          "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_fef9084abadcc4e7.png"
+        ]
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 130,
       "module": "data_analysis",
       "section_order": 5,
-      "stem": "从上述材料中不能推出的是（ ）。",
+      "stem": "从上述材料中不能推出的是：",
       "options": [
         "2023年上半年，江苏省国资委监管企业营业收入利润率同比有所提高",
         "2023年上半年，江苏省、设区市国资委监管企业利润环比增速比上年同期快",
         "2023年上半年，江苏省国资委监管企业利润占江苏省、设区市国资委监管企业利润的比重同比有所提高",
-        "2020年下半年～2023年上半年，江苏省、设区市国资委监管企业半年营业收入同比与环比增速具有相同的变动趋势 2022年，我国网络购物用户8.5亿人，使用率为79.2%；网络直播用户7.5亿人，比上年增长6.8%，占网民总数的70.3%；直播电商行业交易额为3.5万亿元，较2017年增长178倍，直播电商行业渗透率（直播电商行业渗透率= ）为25.3%；重点监测电商平台直播场次超1.2亿场，较2020年增长5倍；直播电商行业三大平台交易额分别为1.5万亿元、0.9万亿元和0.8万亿元。"
+        "2020年下半年~2023年上半年，江苏省、设区市国资委监管企业半年营业收入同比与环比增速具有相同的变动趋势"
       ],
-      "raw_source_text_block": "130.从上述材料中不能推出的是（ ）。 A.2023年上半年，江苏省国资委监管企业营业收入利润率同比有所提高 B.2023年上半年，江苏省、设区市国资委监管企业利润环比增速比上年同期快 C.2023年上半年，江苏省国资委监管企业利润占江苏省、设区市国资委监管企业利润的比重同比有所提高 D.2020年下半年～2023年上半年，江苏省、设区市国资委监管企业半年营业收入同比与环比增速具有相同的变动趋势 2022年，我国网络购物用户8.5亿人，使用率为79.2%；网络直播用户7.5亿人，比上年增长6.8%，占网民总数的70.3%；直播电商行业交易额为3.5万亿元，较2017年增长178倍，直播电商行业渗透率（直播电商行业渗透率= ）为25.3%；重点监测电商平台直播场次超1.2亿场，较2020年增长5倍；直播电商行业三大平台交易额分别为1.5万亿元、0.9万亿元和0.8万亿元。",
+      "raw_source_text_block": "130.从上述材料中不能推出的是： A.2023年上半年，江苏省国资委监管企业营业收入利润率同比有所提高 B.2023年上半年，江苏省、设区市国资委监管企业利润环比增速比上年同期快 C.2023年上半年，江苏省国资委监管企业利润占江苏省、设区市国资委监管企业利润的比重同比有所提高 D.2020年下半年~2023年上半年，江苏省、设区市国资委监管企业半年营业收入同比与环比增速具有相同的变动趋势",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-126-130",
-      "asset_dependency": "shared_stimulus_and_chart_not_split_for_item_display",
-      "record_status": "held_shared_material_not_itemized",
-      "hold_reason": "shared_stimulus_and_chart_not_split_for_item_display",
+      "asset_dependency": "shared_stimulus_linked",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q130",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 131,
       "module": "data_analysis",
       "section_order": 5,
-      "stem": "2022年我国网络零售交易额为（ ）。",
+      "stem": "2022年我国网络零售交易额为：",
       "options": [
         "0.9万亿元",
         "8.5万亿元",
         "13.8万亿元",
         "15.3万亿元"
       ],
-      "raw_source_text_block": "131.2022年我国网络零售交易额为（ ）。 A.0.9万亿元 B.8.5万亿元 C.13.8万亿元 D.15.3万亿元",
+      "raw_source_text_block": "131.2022年我国网络零售交易额为： A.0.9万亿元 B.8.5万亿元 C.13.8万亿元 D.15.3万亿元",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-131-135",
-      "asset_dependency": "shared_stimulus_and_chart_not_split_for_item_display",
-      "record_status": "held_shared_material_not_itemized",
-      "hold_reason": "shared_stimulus_and_chart_not_split_for_item_display",
+      "asset_dependency": "shared_stimulus_linked",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q131",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 132,
       "module": "data_analysis",
       "section_order": 5,
-      "stem": "2022年与2021年我国直播电商行业交易额之比为（ ）。",
+      "stem": "2022年与2021年我国直播电商行业交易额之比为：",
       "options": [
-        "5:3",
-        "6:5",
-        "7:3",
-        "7:4"
+        "5：3",
+        "6：5",
+        "7：3",
+        "7：4"
       ],
-      "raw_source_text_block": "132.2022年与2021年我国直播电商行业交易额之比为（ ）。 A.5:3 B.6:5 C.7:3 D.7:4",
+      "raw_source_text_block": "132.2022年与2021年我国直播电商行业交易额之比为： A.5：3 B.6：5 C.7：3 D.7：4",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-131-135",
-      "asset_dependency": "shared_stimulus_and_chart_not_split_for_item_display",
-      "record_status": "held_shared_material_not_itemized",
-      "hold_reason": "shared_stimulus_and_chart_not_split_for_item_display",
+      "asset_dependency": "shared_stimulus_linked",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q132",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 133,
       "module": "data_analysis",
       "section_order": 5,
-      "stem": "若2019～2022年我国直播电商行业企业数、用户数、人均年消费额的年均增速分别用V1、V2、 V3表示。则下列关系式正确的是（ ）。",
-      "options": [
-        "V1≤V2≤V3",
-        "V2≤V1≤V3",
-        "V2≤V3≤V1",
-        "V3≤V2≤V1"
-      ],
-      "raw_source_text_block": "133.若2019～2022年我国直播电商行业企业数、用户数、人均年消费额的年均增速分别用V1、V2、 V3表示。则下列关系式正确的是（ ）。 A. V1≤V2≤V3 B. V2≤V1≤V3 C. V2≤V3≤V1 D. V3≤V2≤V1",
-      "paper_id": "jiangsu-2024-A-class",
-      "answer_key_status": "verified_source_answer_and_explanation",
-      "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-131-135",
-      "asset_dependency": "shared_stimulus_and_chart_not_split_for_item_display",
-      "record_status": "held_shared_material_not_itemized",
-      "hold_reason": "shared_stimulus_and_chart_not_split_for_item_display",
-      "app_question_id": "js2024a-q133",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
-    },
-    {
-      "original_question_no": 134,
-      "module": "data_analysis",
-      "section_order": 5,
-      "stem": "下列能够表示2022年我国直播电商行业三大平台交易额比例关系的示意图是（ ）。",
+      "stem": "若2019-2022年我国直播电商行业企业数、用户数、人均年消费额的年均增速分别用 、 、 表示。则下列关系式正确的是：",
       "options": [
         "",
         "",
         "",
         ""
       ],
-      "raw_source_text_block": "134.下列能够表示2022年我国直播电商行业三大平台交易额比例关系的示意图是（ ）。 A. B. C. D.",
+      "raw_source_text_block": "133.若2019-2022年我国直播电商行业企业数、用户数、人均年消费额的年均增速分别用 、 、 表示。则下列关系式正确的是： A. B. C. D.",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-131-135",
-      "asset_dependency": "shared_stimulus_and_chart_not_split_for_item_display",
-      "record_status": "held_shared_material_not_itemized",
-      "hold_reason": "shared_stimulus_and_chart_not_split_for_item_display",
+      "asset_dependency": "shared_stimulus_and_question_images_linked",
+      "record_status": "published",
+      "hold_reason": null,
+      "app_question_id": "js2024a-q133",
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [
+        "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_e790eef72767a737.png",
+        "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_a672935b4cc27e2c.png",
+        "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_48beabc32283d866.png"
+      ],
+      "option_image_urls": [
+        [
+          "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_7cb9de7fc29ae9a0.png"
+        ],
+        [
+          "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_342e8512dbf6b672.png"
+        ],
+        [
+          "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_d255f5c373ac07bd.png"
+        ],
+        [
+          "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_47b7c3b71f16809b.png"
+        ]
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
+    },
+    {
+      "original_question_no": 134,
+      "module": "data_analysis",
+      "section_order": 5,
+      "stem": "下列能够表示2022年我国直播电商行业三大平台交易额比例关系的示意图是：",
+      "options": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "raw_source_text_block": "134.下列能够表示2022年我国直播电商行业三大平台交易额比例关系的示意图是： A. B. C. D.",
+      "paper_id": "jiangsu-2024-A-class",
+      "answer_key_status": "verified_source_answer_and_explanation",
+      "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-131-135",
+      "asset_dependency": "shared_stimulus_and_question_images_linked",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q134",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [
+          "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_99f5dd646e083e93.png"
+        ],
+        [
+          "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_a62aaea2b6c00d13.png"
+        ],
+        [
+          "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_9bb43ad8456a9965.png"
+        ],
+        [
+          "https://www.aipta.com/uploadfile/doc/202408/9f0e99f265b2554/php8mTHjV_html_cc360cbff791df3b.png"
+        ]
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     },
     {
       "original_question_no": 135,
       "module": "data_analysis",
       "section_order": 5,
-      "stem": "能够从上述资料中推出的是（ ）。",
+      "stem": "能够从上述资料中推出的是：",
       "options": [
         "2017年我国直播电商行业交易额超过250亿元",
         "2020年我国直播电商行业直播场次超过2000万场",
-        "2019～2022年，我国直播电商行业企业数增速逐年加快",
-        "2019～2022年，我国直播电商行业用户数增加最多的是2022年"
+        "2019—2022年，我国直播电商行业企业数增速逐年加快",
+        "2019—2022年，我国直播电商行业用户数增加最多的是2022年"
       ],
-      "raw_source_text_block": "135.能够从上述资料中推出的是（ ）。 A.2017年我国直播电商行业交易额超过250亿元 B.2020年我国直播电商行业直播场次超过2000万场 C.2019～2022年，我国直播电商行业企业数增速逐年加快 D.2019～2022年，我国直播电商行业用户数增加最多的是2022年",
+      "raw_source_text_block": "135.能够从上述资料中推出的是： A.2017年我国直播电商行业交易额超过250亿元 B.2020年我国直播电商行业直播场次超过2000万场 C.2019—2022年，我国直播电商行业企业数增速逐年加快 D.2019—2022年，我国直播电商行业用户数增加最多的是2022年",
       "paper_id": "jiangsu-2024-A-class",
       "answer_key_status": "verified_source_answer_and_explanation",
       "shared_stimulus_id": "jiangsu-2024-A-class-stimulus-131-135",
-      "asset_dependency": "shared_stimulus_and_chart_not_split_for_item_display",
-      "record_status": "held_shared_material_not_itemized",
-      "hold_reason": "shared_stimulus_and_chart_not_split_for_item_display",
+      "asset_dependency": "shared_stimulus_linked",
+      "record_status": "published",
+      "hold_reason": null,
       "app_question_id": "js2024a-q135",
-      "source_page_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
-      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+      "source_page_url": "https://www.aipta.com/article/9441.html",
+      "answer_source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "stem_image_urls": [],
+      "option_image_urls": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "source_note": "题干、选项及图表按已归档公开题面页保留原文；答案与解析按同份出版卷核验。用户确认已获转载授权。"
     }
   ],
-  "normalization_note": "题干和选项按出版 PDF 原文抽取，仅合并分页换行并移除页眉页脚；答案与解析独立存放。图表/共享材料不完整的题暂不发布。"
+  "normalization_note": "按原卷模块边界归档；题干、选项文字与图像资源分别保存，共用材料按原题组关联；答案解析独立保存。题面缺失题保留为待核记录，不进入网站题库。",
+  "questions_parsed_count": 124,
+  "captured_question_text_count": 124,
+  "published_question_count": 124,
+  "held_question_count": 11
 }
