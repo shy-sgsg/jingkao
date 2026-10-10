@@ -9,6 +9,12 @@ import { createStoredAccount } from '../src/data/encryptedStore.js';
 import { studyLogKey } from '../src/data/sync.js';
 import { createPlanTask } from '../src/science/planTasks.js';
 import { getAptitudeQuestions } from '../src/aptitude/questions.js';
+import { getAptitudeModuleContent } from '../src/aptitude/content.js';
+import { APTITUDE_MODULES } from '../src/aptitude/modules.js';
+import { createAptitudeModuleSession } from '../src/aptitude/sessions.js';
+import { normalizeAptitudeModuleStudies } from '../src/aptitude/persistence.js';
+import { getScienceTree } from '../src/science/knowledge.js';
+import { getGeneralKnowledgeTree } from '../src/general-knowledge/knowledge.js';
 import { SCIENCE_QUESTION_BANK } from '../src/science/questionBank.js';
 import { GENERAL_KNOWLEDGE_QUESTION_BANK } from '../src/general-knowledge/questionBank.js';
 
@@ -25,7 +31,7 @@ async function listFiles(directory, prefix = '') {
   return files;
 }
 
-async function renderStandaloneRoute(script, route, storedState = null) {
+async function renderStandaloneRoute(script, route, storedState = null, { math } = {}) {
   const makeElement = () => ({
     innerHTML: '',
     textContent: '',
@@ -92,6 +98,7 @@ async function renderStandaloneRoute(script, route, storedState = null) {
     crypto: webcrypto,
     TextEncoder,
     TextDecoder,
+    ...(math ? { Math: math } : {}),
     btoa,
     atob,
     HTMLFormElement,
@@ -105,7 +112,7 @@ async function renderStandaloneRoute(script, route, storedState = null) {
   const unlockForm = new HTMLFormElement('site-access-form', {}, { password: TEST_PASSWORD });
   await listeners.get('submit')({ target: unlockForm, preventDefault() {} });
 
-  return { document: documentLike, root: elements.get('#root'), modalRoot: elements.get('#modal-root'), elements, listeners, windowListeners, location, localStorage, accountId: account.id };
+  return { document: documentLike, root: elements.get('#root'), modalRoot: elements.get('#modal-root'), elements, listeners, windowListeners, location, localStorage, accountId: account.id, HTMLFormElement };
 }
 
 test('standalone site build embeds the route transition helper used by the app', async () => {
@@ -302,12 +309,115 @@ test('temporarily exiting practice returns to each of the five general module pa
     const target = { closest: (selector) => selector === '[data-action]' ? exitButton : null };
     await app.listeners.get('click')({ target, preventDefault() {} });
     assert.equal(app.location.hash, `#/aptitude/${moduleId}`);
+    assert.match(app.root.innerHTML, /知识目录与讲解/, `${moduleId} should leave the question page immediately after the exit click`);
     await app.windowListeners.get('hashchange')();
 
     assert.match(app.root.innerHTML, /知识目录与讲解/, `${moduleId} should return to its directory`);
     assert.match(app.root.innerHTML, /继续未完成训练/, `${moduleId} should preserve a resume action`);
     assert.match(app.root.innerHTML, new RegExp(`href="#/aptitude/${moduleId}\\?session=${sessionId}"`));
     assert.doesNotMatch(app.root.innerHTML, /<h1>专项练习<\/h1>/, `${moduleId} should leave the question page`);
+  }
+});
+
+test('free practice launched from a module starts on a shuffled question, not the bank prefix', async () => {
+  await import('../scripts/build.mjs');
+  const html = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8');
+  const script = html.match(/<script>\s*([\s\S]*?)<\/script>/)?.[1];
+  const moduleId = 'verbal';
+  const bank = getAptitudeQuestions(moduleId);
+  const math = Object.create(Math);
+  math.random = () => 0;
+  const originalRandom = Math.random;
+  Math.random = () => 0;
+  let expected;
+  try {
+    expected = createAptitudeModuleSession(bank, normalizeAptitudeModuleStudies(), moduleId, {
+      mode: 'practice', targetQuestionCount: 5,
+    }, { id: 'expected-random-practice', now: '2026-10-09T00:00:00.000Z' });
+  } finally { Math.random = originalRandom; }
+  assert.notDeepEqual(expected.session.questionIds, bank.slice(0, 5).map((question) => question.id));
+
+  const app = await renderStandaloneRoute(script, 'aptitude/verbal', { onboarding: { hidden: true, completed: true } }, { math });
+  const launch = { dataset: { action: 'open-aptitude-module-practice', moduleId, mode: 'practice' } };
+  const clickTarget = { closest: (selector) => selector === '[data-action]' ? launch : null };
+  await app.listeners.get('click')({ target: clickTarget, preventDefault() {} });
+  const form = new app.HTMLFormElement('aptitude-module-session-setup', { moduleId }, {
+    mode: 'practice', targetQuestionCount: '5', subjectId: '', topicId: '', knowledgePointId: '',
+    durationMinutes: '20', difficultyFilter: 'all', sourceFilter: 'all', onlyUnanswered: '',
+  });
+  await app.listeners.get('submit')({ target: form, preventDefault() {} });
+  await app.windowListeners.get('hashchange')();
+
+  const firstQuestion = bank.find((question) => question.id === expected.session.questionIds[0]);
+  assert.ok(firstQuestion, 'the shuffled first question should belong to the module bank');
+  assert.ok(app.root.innerHTML.includes(firstQuestion.stem.slice(0, 24)),
+    `the first displayed question should match shuffled id ${firstQuestion.id}: ${firstQuestion.stem}; current route ${app.location.hash}; displayed excerpt ${app.root.innerHTML.match(/<h2>([^<]+)/)?.[1] || 'missing'}`);
+});
+
+test('completed module mock results open question review with answers, explanation, favorite, and return link', async () => {
+  await import('../scripts/build.mjs');
+  const html = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8');
+  const script = html.match(/<script>\s*([\s\S]*?)<\/script>/)?.[1];
+  const cases = [
+    ...['political-theory', 'verbal', 'quantitative', 'reasoning', 'data-analysis'].map((moduleId) => ({
+      route: `aptitude/${moduleId}`, moduleId, studyStore: 'aptitudeModuleStudies', favoriteAction: 'toggle-aptitude-module-favorite',
+      question: getAptitudeQuestions(moduleId)[0],
+    })),
+    { route: 'aptitude/science', moduleId: 'science_reasoning', studyStore: 'scienceStudy', favoriteAction: 'toggle-science-favorite',
+      question: SCIENCE_QUESTION_BANK.find((item) => item.publishStatus === 'published') },
+    { route: 'aptitude/general-knowledge', moduleId: 'general_knowledge', studyStore: 'generalKnowledgeStudy', favoriteAction: 'toggle-general-knowledge-favorite',
+      question: GENERAL_KNOWLEDGE_QUESTION_BANK.find((item) => item.publishStatus === 'published') },
+  ];
+
+  for (const item of cases) {
+    const sessionId = `${item.moduleId}-review-test`;
+    const selectedOptionId = item.question.options.find((option) => option.id !== item.question.correctAnswer)?.id;
+    assert.ok(selectedOptionId, `${item.moduleId} test question should have a distinct incorrect option`);
+    const study = {
+      knowledgeProgress: {},
+      sessions: [{ id: sessionId, moduleId: item.moduleId, mode: 'exam', status: 'completed', questionIds: [item.question.id], currentIndex: 0, draftAnswers: {} }],
+      answers: [{ id: `${sessionId}-answer`, sessionId, moduleId: item.moduleId, questionId: item.question.id, selectedOptionId, isCorrect: false }],
+      mistakes: {}, favorites: [], favoriteKnowledgePointIds: [], unclearKnowledgePointIds: [],
+    };
+    const storedState = { onboarding: { hidden: true, completed: true } };
+    if (item.studyStore === 'aptitudeModuleStudies') storedState.aptitudeModuleStudies = { [item.moduleId]: study };
+    else storedState[item.studyStore] = study;
+    const routePath = item.route;
+    const resultPage = await renderStandaloneRoute(script, `${routePath}?session=${sessionId}`, storedState);
+    const detailHref = `href="#/${routePath}?session=${sessionId}&review=${encodeURIComponent(item.question.id)}"`;
+    assert.ok(resultPage.root.innerHTML.includes(detailHref), `${item.moduleId} result rows should open the question review`);
+
+    const reviewPage = await renderStandaloneRoute(script, `${routePath}?session=${sessionId}&review=${encodeURIComponent(item.question.id)}`, storedState);
+    assert.match(reviewPage.root.innerHTML, /题目复盘/, `${item.moduleId} should identify the read-only review page`);
+    assert.ok(reviewPage.root.innerHTML.includes(item.question.stem.slice(0, 24)), `${item.moduleId} review should show the original question stem`);
+    assert.match(reviewPage.root.innerHTML, /你的答案/);
+    assert.match(reviewPage.root.innerHTML, /正确答案/);
+    assert.ok(reviewPage.root.innerHTML.includes(item.question.explanation.slice(0, 18)), `${item.moduleId} review should show the explanation`);
+    assert.match(reviewPage.root.innerHTML, new RegExp(`data-action="${item.favoriteAction}"`), `${item.moduleId} review should allow favoriting`);
+    assert.ok(reviewPage.root.innerHTML.includes(`href="#/${routePath}?session=${sessionId}">返回答题情况`), `${item.moduleId} review should return to its result list`);
+  }
+});
+
+test('knowledge lessons provide a next-point link in directory order across every aptitude module', async () => {
+  await import('../scripts/build.mjs');
+  const html = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8');
+  const script = html.match(/<script>\s*([\s\S]*?)<\/script>/)?.[1];
+  const flatten = (tree) => tree.flatMap((subject) => (subject.topics || []).flatMap((topic) => topic.knowledgePoints || []));
+  const modules = APTITUDE_MODULES.map((module) => {
+    const directory = module.id === 'science' ? getScienceTree()
+      : module.id === 'general-knowledge' ? getGeneralKnowledgeTree()
+        : getAptitudeModuleContent(module.id).directory;
+    return { module, points: flatten(directory) };
+  });
+
+  for (const { module, points } of modules) {
+    assert.ok(points.length > 1, `${module.id} should have a next knowledge point`);
+    const current = points[0];
+    const next = points[1];
+    const route = `${module.route.slice(2)}?knowledge=${encodeURIComponent(current.id)}`;
+    const page = await renderStandaloneRoute(script, route);
+    assert.match(page.root.innerHTML, /下一个知识点/ , `${module.id} lesson should offer next-point navigation`);
+    assert.ok(page.root.innerHTML.includes(`href="${module.route}?knowledge=${encodeURIComponent(next.id)}"`), `${module.id} should follow its directory order`);
   }
 });
 

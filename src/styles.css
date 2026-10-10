@@ -1916,8 +1916,18 @@ button.science-answer-option:hover { border-color: #c9d9ee; background: #f7faff;
 .science-result-row.is-wrong > div strong { color: #ad6568; }
 .science-result-row.is-unanswered > div strong { color: #9a835e; }
 .science-result-row > div span, .science-result-row p { color: #62738a; font-size: var(--font-xs); }
+.science-result-review-link { display: grid; gap: 8px; color: inherit; text-decoration: none; }
+.science-result-review-link > strong { color: #58826a; font-size: var(--font-xs); }
+.science-result-row.is-wrong .science-result-review-link > strong { color: #ad6568; }
+.science-result-row.is-unanswered .science-result-review-link > strong { color: #9a835e; }
+.science-result-review-link > span { color: #5c7fa9; font-size: var(--font-xs); font-weight: 650; }
+.science-result-review-link:hover > span { text-decoration: underline; }
 .science-result-row p { margin: 7px 0 3px; line-height: 1.65; }
 .science-result-row > small { color: #8995a4; font-size: var(--font-xs); }
+.question-review-answer-summary { display: grid; gap: 5px; margin-top: 14px; padding: 12px 14px; border: 1px solid #e7edf3; border-radius: 10px; background: #f8fafd; }
+.question-review-answer-summary p { margin: 0; color: #60718a; font-size: var(--font-sm); line-height: 1.6; }
+.question-review-answer-summary strong { color: #435a78; }
+.question-review-page .science-answer-explanation { margin-top: 12px; }
 .science-task-config { margin-top: 16px; padding: 16px; border: 1px solid #e5ebf2; border-radius: 12px; background: #fafcff; }
 .science-config-heading h3 { margin: 3px 0; color: #405670; font-size: var(--font-base); }
 .science-config-heading p { margin: 0 0 13px; color: #8995a5; font-size: var(--font-xs); }
@@ -1925,7 +1935,7 @@ button.science-answer-option:hover { border-color: #c9d9ee; background: #f7faff;
 .science-task-config .notice { margin-top: 12px; }
 #plan-task-form [data-plan-task-preview] { color: #627c9b; font-weight: 600; }
 #science-session-setup input[type="checkbox"] { width: 16px; height: 16px; accent-color: #5278b1; vertical-align: middle; }
-.science-reminder-item:focus-visible, .science-point-link:focus-visible, .science-answer-option:focus-visible { outline: 3px solid #89a8d3; outline-offset: 2px; }
+.science-reminder-item:focus-visible, .science-point-link:focus-visible, .science-answer-option:focus-visible, .science-result-review-link:focus-visible { outline: 3px solid #89a8d3; outline-offset: 2px; }
 @media (max-width: 1050px) {
   .plan-task-card { grid-template-columns: 100px minmax(0, 1fr); }
   .plan-task-actions { grid-column: 2; justify-content: flex-start; }

@@ -99,6 +99,7 @@ export function createScienceSession(bank, sourceStudy, options = {}, { id, now 
     status: 'active',
     planTaskId: options.planTaskId || null,
     questionIds,
+    randomizedQuestionOrder: randomizeQuestions,
     ...(sampled.selectedQuestionCount !== requestedQuestionCount ? {
       requestedQuestionCount,
       questionSelectionNote: `共用材料题按组抽取，目标题量 ${requestedQuestionCount} 道，本次完整抽取 ${sampled.selectedQuestionCount} 道。`,

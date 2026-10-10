@@ -6,6 +6,7 @@ import {
   goToExamQuestion,
   selectExamAnswer,
 } from '../science/sessions.js';
+import { randomizeQuestionGroups } from '../science/questions.js';
 import { getAptitudeModule } from './modules.js';
 import { normalizeAptitudeModuleStudies, setAptitudeModulePointStatus } from './persistence.js';
 
@@ -39,6 +40,24 @@ function sessionFor(source, moduleId, sessionId) {
   const session = normalizeAptitudeModuleStudies(source)[moduleId].sessions.find((item) => item.id === sessionId);
   if (!session || session.moduleId !== moduleId) throw new Error('找不到这次行测练习。');
   return session;
+}
+
+export function randomizeLegacyAptitudePracticeSession(session, bank) {
+  if (!session || session.mode !== 'practice' || session.status !== 'active' || session.randomizedQuestionOrder === true) return session;
+  const questionIds = Array.isArray(session.questionIds) ? session.questionIds : [];
+  const currentIndex = Math.min(Math.max(0, Number(session.currentIndex) || 0), Math.max(0, questionIds.length - 1));
+  const visitedQuestionIds = questionIds.slice(0, currentIndex + 1);
+  const remainingIds = questionIds.slice(currentIndex + 1);
+  const questionsById = new Map((Array.isArray(bank) ? bank : []).map((question) => [question.id, question]));
+  const remainingQuestions = remainingIds.map((id) => questionsById.get(id)).filter(Boolean);
+  const randomized = randomizeQuestionGroups(remainingQuestions, remainingQuestions.length);
+  const randomizedIds = randomized.questions.map((question) => question.id);
+  const unavailableIds = remainingIds.filter((id) => !questionsById.has(id));
+  return {
+    ...session,
+    questionIds: [...visitedQuestionIds, ...randomizedIds, ...unavailableIds],
+    randomizedQuestionOrder: true,
+  };
 }
 
 function rewriteError(moduleId, error) {

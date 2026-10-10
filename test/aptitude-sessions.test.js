@@ -10,6 +10,7 @@ const {
   createAptitudeModuleSession,
   finishAptitudeModuleSession,
   goToAptitudeModuleQuestion,
+  randomizeLegacyAptitudePracticeSession,
   selectAptitudeModuleAnswer,
 } = sessions;
 
@@ -83,6 +84,25 @@ test('free practice samples a randomized question order instead of the bank pref
     }, { id: 'verbal-random-practice', now: '2026-10-09T00:00:00.000Z' });
 
     assert.deepEqual(started.session.questionIds, ['random-q2', 'random-q3']);
+    assert.equal(started.session.randomizedQuestionOrder, true);
+  } finally {
+    Math.random = originalRandom;
+  }
+});
+
+test('resuming a legacy sequential practice randomizes only the unvisited questions once', () => {
+  const legacy = {
+    id: 'verbal-legacy-practice', moduleId: 'verbal', mode: 'practice', status: 'active',
+    questionIds: ['legacy-q1', 'legacy-q2', 'legacy-q3', 'legacy-q4'], currentIndex: 1,
+  };
+  const bank = legacy.questionIds.map((id) => question(id, 'verbal'));
+  const originalRandom = Math.random;
+  Math.random = () => 0;
+  try {
+    const randomized = randomizeLegacyAptitudePracticeSession(legacy, bank);
+    assert.deepEqual(randomized.questionIds, ['legacy-q1', 'legacy-q2', 'legacy-q4', 'legacy-q3']);
+    assert.equal(randomized.randomizedQuestionOrder, true);
+    assert.equal(randomizeLegacyAptitudePracticeSession(randomized, bank), randomized);
   } finally {
     Math.random = originalRandom;
   }
