@@ -1,0 +1,67 @@
+{
+  "paper_id": "jiangxi-2025-zhanhong-mock-1",
+  "title": "展鸿 2025 年江西省公务员录用考试模拟卷（一）《行测》",
+  "region": "江西",
+  "exam_year": 2025,
+  "variant": "模拟卷（一）",
+  "question_count": 135,
+  "source_type": "third_party_mock",
+  "source_id": "zhanhong-jiangxi-2025-mock-1",
+  "source_url": "https://static.32xueyuan.com/zq/u/cms/jx/202503/120855429qnm.pdf",
+  "answer_url": "https://static.32xueyuan.com/zq/u/cms/jx/202503/12085541lobk.pdf",
+  "directory": "jiangxi-2025-zhanhong-mock-1",
+  "sections": [
+    {
+      "module": "political_theory",
+      "section_order": 1,
+      "from": 1,
+      "to": 15
+    },
+    {
+      "module": "common_knowledge",
+      "section_order": 2,
+      "from": 16,
+      "to": 35
+    },
+    {
+      "module": "verbal",
+      "section_order": 3,
+      "from": 36,
+      "to": 60
+    },
+    {
+      "module": "quantitative",
+      "section_order": 4,
+      "from": 61,
+      "to": 80
+    },
+    {
+      "module": "reasoning",
+      "section_order": 5,
+      "from": 81,
+      "to": 115
+    },
+    {
+      "module": "data_analysis",
+      "section_order": 6,
+      "from": 116,
+      "to": 135
+    }
+  ],
+  "questions_parsed_count": 135,
+  "answer_count": 135,
+  "explanation_count": 135,
+  "published_count": 135,
+  "held_count": 0,
+  "authorization": {
+    "status": "user_confirmed_republication_authorization",
+    "confirmed_on": "2026-10-10"
+  },
+  "source_file": "publisher-question-paper.pdf",
+  "answer_file": "publisher-answer-explanations.pdf",
+  "question_records_file": "questions.json",
+  "answer_explanations_file": "answer-explanations.json",
+  "shared_stimuli_file": "shared-stimuli.json",
+  "whole_paper_mock_eligibility": "complete_full_paper_available",
+  "note": "题干、选项按原题本保留；共用材料、图表与图形资源已关联原题号；配套答案解析逐题核验。"
+}

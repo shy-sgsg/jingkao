@@ -263,9 +263,9 @@ const sourceQuestion = (question, source) => {
     originalQuestionNo: question.originalQuestionNo,
     sectionOrder: question.sectionOrder ?? source.sectionOrder,
     sharedStimulusId: question.sharedStimulusId ?? null,
-    verificationStatus: 'verified',
+    verificationStatus: question.verificationStatus || 'verified',
     copyrightStatus: question.copyrightStatus || 'adapted_public_source',
-    publishStatus: 'published',
+    publishStatus: question.publishStatus || 'published',
     presentationMode: question.presentationMode || 'adapted',
   };
 };

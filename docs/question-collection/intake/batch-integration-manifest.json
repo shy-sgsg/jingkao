@@ -221,6 +221,108 @@
       ],
       "source_url": "https://www.aipta.com/article/3524.html",
       "answer_url": "https://static.32xueyuan.com/zq//u/cms/zj/202310/20144954ob39.pdf"
+    },
+    {
+      "paper_id": "jiangxi-2025-zhanhong-mock-1",
+      "title": "展鸿 2025 年江西省公务员录用考试模拟卷（一）《行测》",
+      "question_count": 135,
+      "captured_question_count": 135,
+      "answer_count": 135,
+      "explanation_count": 135,
+      "published_count": 135,
+      "held_count": 0,
+      "sections": [
+        {
+          "module": "political_theory",
+          "section_order": 1,
+          "from": 1,
+          "to": 15
+        },
+        {
+          "module": "common_knowledge",
+          "section_order": 2,
+          "from": 16,
+          "to": 35
+        },
+        {
+          "module": "verbal",
+          "section_order": 3,
+          "from": 36,
+          "to": 60
+        },
+        {
+          "module": "quantitative",
+          "section_order": 4,
+          "from": 61,
+          "to": 80
+        },
+        {
+          "module": "reasoning",
+          "section_order": 5,
+          "from": 81,
+          "to": 115
+        },
+        {
+          "module": "data_analysis",
+          "section_order": 6,
+          "from": 116,
+          "to": 135
+        }
+      ],
+      "source_url": "https://static.32xueyuan.com/zq/u/cms/jx/202503/120855429qnm.pdf",
+      "answer_url": "https://static.32xueyuan.com/zq/u/cms/jx/202503/12085541lobk.pdf",
+      "note": "题面、选项、图形与共用材料已按原卷归档，答案与解析逐题配对核验。整卷及六个模块分区卷可用。"
+    },
+    {
+      "paper_id": "jiangxi-2025-zhanhong-mock-3",
+      "title": "展鸿 2025 年江西省公务员录用考试模拟卷（三）《行测》",
+      "question_count": 135,
+      "captured_question_count": 135,
+      "answer_count": 135,
+      "explanation_count": 135,
+      "published_count": 130,
+      "held_count": 5,
+      "sections": [
+        {
+          "module": "political_theory",
+          "section_order": 1,
+          "from": 1,
+          "to": 15
+        },
+        {
+          "module": "common_knowledge",
+          "section_order": 2,
+          "from": 16,
+          "to": 35
+        },
+        {
+          "module": "verbal",
+          "section_order": 3,
+          "from": 36,
+          "to": 60
+        },
+        {
+          "module": "quantitative",
+          "section_order": 4,
+          "from": 61,
+          "to": 80
+        },
+        {
+          "module": "reasoning",
+          "section_order": 5,
+          "from": 81,
+          "to": 115
+        },
+        {
+          "module": "data_analysis",
+          "section_order": 6,
+          "from": 116,
+          "to": 135
+        }
+      ],
+      "source_url": "https://static.32xueyuan.com/zq/u/cms/jx/202503/12085542c2xs.pdf",
+      "answer_url": "https://static.32xueyuan.com/zq/u/cms/jx/202503/051709044zd4.pdf",
+      "note": "题面、选项、图形与共用材料已按原卷归档，答案与解析逐题配对核验。多选题11–15暂缓发布；整卷及政治理论模块卷暂不开启。"
     }
   ],
   "app_integrated_question_count": 503,

@@ -330,10 +330,10 @@ function aptitudeQuestionSource(question) {
 }
 
 function safeUrl(value) {
-  const localAssetPrefix = './public/question-assets/';
-  if (typeof value === 'string' && value.startsWith(localAssetPrefix)
-    && /^[A-Za-z0-9._/-]+$/.test(value)
-    && !value.split('/').slice(2).some((segment) => !segment || segment === '.' || segment === '..')) return value;
+  const localAssetPrefixes = ['./public/question-assets/', './public/assets/question-bank/'];
+  if (typeof value === 'string' && /^[A-Za-z0-9._/-]+$/.test(value)
+    && localAssetPrefixes.some((prefix) => value.startsWith(prefix)
+      && value.slice(prefix.length).split('/').every((segment) => segment && segment !== '.' && segment !== '..'))) return value;
   try {
     const url = new URL(value);
     return url.protocol === 'https:' ? url.href : '#';

@@ -1,0 +1,87 @@
+{
+  "paper_id": "jiangxi-2025-zhanhong-mock-1",
+  "shared_stimuli": [
+    {
+      "id": "jiangxi-2025-zhanhong-mock-1-stimulus-116-120",
+      "paper_id": "jiangxi-2025-zhanhong-mock-1",
+      "question_numbers": [
+        116,
+        117,
+        118,
+        119,
+        120
+      ],
+      "text": "2020 年，我国规模以上互联网和相关服务企业（以下简称互联网企业）业务收入 12838 亿元，同比 增长 12.5%，增速低于上年同期 8.9 个百分点。 2020 年，互联网企业实现营业利润 1187 亿元，同比增长 13.2%，增速低于上年同期 3.7 个百分点； 得益于成本控制较好，营业成本仅增长 2.4%，行业营业利润高出同期收入增速 0.7 个百分点。 2020 年，互联网企业信息服务收入共 7068 亿元，同比增长 11.5%，增速低于上年同期 11.2 个百分 点。互联网接入及相关服务收入 447.5 亿元，同比增长 11.5%，增速低于上年同期 20.8 个百分点；互联 网数据服务（包括云服务、大数据服务等）收入 199.8 亿元，同比增长 29.5%，增速较上年同期提高 3.9 个百分点。 2020 年，东部地区互联网业务收入 11227 亿元，同比增长 14.8%，增速较上年同期回落 9 个百分点， 中部地区互联网业务收入 448.1 亿元，同比增长 3.4%，增速较上年同期回落 53.1 个百分点。西部地区 互联网业务收入 497.2 亿元，同比增长 6.9%，增速较上年同期回落 15.2 个百分点。东北地区互联网业 务收入 47.1 亿元，同比增长 9.1%。 2020 年，互联网业务累计收入居前 5 名的广东（增长 5.2%）、北京（增长 21.5%）、上海（增长 20.9%）、浙江（增长 24.4%）和江苏（增长 8.0%）共完成互联网业务收入 10706 亿元，同比增长 15.1%， 增速超过全国平均水平 2.6 个百分点，占全国（扣除跨地区企业）比重达 87.6%，占比较上年同期提高 0.8 个百分点。",
+      "image_urls": [],
+      "asset_files": [],
+      "asset_dependency": "shared_text",
+      "material_source_url": "https://static.32xueyuan.com/zq/u/cms/jx/202503/120855429qnm.pdf",
+      "material_note": "原卷连续题组共用材料，按原文保留；图表取自配套原卷页。"
+    },
+    {
+      "id": "jiangxi-2025-zhanhong-mock-1-stimulus-121-125",
+      "paper_id": "jiangxi-2025-zhanhong-mock-1",
+      "question_numbers": [
+        121,
+        122,
+        123,
+        124,
+        125
+      ],
+      "text": "2021 年第一季度全国 15 个重点旅游城市星级饭店经营情况统计表",
+      "image_urls": [
+        "./public/assets/question-bank/jiangxi-2025-zhanhong-mock-1-stimulus-121-125.jpg"
+      ],
+      "asset_files": [
+        "jiangxi-2025-zhanhong-mock-1-stimulus-121-125.jpg"
+      ],
+      "asset_dependency": "shared_chart_or_table_image",
+      "material_source_url": "https://static.32xueyuan.com/zq/u/cms/jx/202503/120855429qnm.pdf",
+      "material_note": "原卷连续题组共用材料，按原文保留；图表取自配套原卷页。"
+    },
+    {
+      "id": "jiangxi-2025-zhanhong-mock-1-stimulus-126-130",
+      "paper_id": "jiangxi-2025-zhanhong-mock-1",
+      "question_numbers": [
+        126,
+        127,
+        128,
+        129,
+        130
+      ],
+      "text": "图1 2018 年 7 月～2019 年 6 月我国摩托车产量及同比增速 图2 2018 年 7 月～2019 年 6 月我国摩托车销量及同比增速",
+      "image_urls": [
+        "./public/assets/question-bank/jiangxi-2025-zhanhong-mock-1-stimulus-126-130-1.jpg",
+        "./public/assets/question-bank/jiangxi-2025-zhanhong-mock-1-stimulus-126-130-2.jpg"
+      ],
+      "asset_files": [
+        "jiangxi-2025-zhanhong-mock-1-stimulus-126-130-1.jpg",
+        "jiangxi-2025-zhanhong-mock-1-stimulus-126-130-2.jpg"
+      ],
+      "asset_dependency": "shared_chart_or_table_image",
+      "material_source_url": "https://static.32xueyuan.com/zq/u/cms/jx/202503/120855429qnm.pdf",
+      "material_note": "原卷连续题组共用材料，按原文保留；图表取自配套原卷页。"
+    },
+    {
+      "id": "jiangxi-2025-zhanhong-mock-1-stimulus-131-135",
+      "paper_id": "jiangxi-2025-zhanhong-mock-1",
+      "question_numbers": [
+        131,
+        132,
+        133,
+        134,
+        135
+      ],
+      "text": "2015 年，电子计算机行业实现销售产值 22401 亿元，同比增长 5.5%，低于电子信息制造业 5.5 个 百分点。从各季度销售产值完成情况看，产业规模持续扩大，发展增速震荡回落，销售产值增速连续 16 个月低于电子信息制造业，且差距呈扩大趋势，从 2014 年末相差 1.4 个百分点扩大至 2015 年末的 5.5 个百分点，2015 年，共生产微型计算机 3.37 亿台，同比下降 4.9%，其中笔记本 2.73 亿台，同比增长 7.9%。 2015 年电子计算机行业各季度销售完成值情况",
+      "image_urls": [
+        "./public/assets/question-bank/jiangxi-2025-zhanhong-mock-1-stimulus-131-135.jpg"
+      ],
+      "asset_files": [
+        "jiangxi-2025-zhanhong-mock-1-stimulus-131-135.jpg"
+      ],
+      "asset_dependency": "shared_chart_or_table_image",
+      "material_source_url": "https://static.32xueyuan.com/zq/u/cms/jx/202503/120855429qnm.pdf",
+      "material_note": "原卷连续题组共用材料，按原文保留；图表取自配套原卷页。"
+    }
+  ]
+}

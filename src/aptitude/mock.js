@@ -90,6 +90,42 @@ const PAPER_CATALOG = [
       reasoning: [71, 110], 'data-analysis': [111, 125],
     },
   },
+  {
+    id: "jiangxi-2025-zhanhong-mock-1",
+    title: "展鸿 2025 年江西省公务员录用考试模拟卷（一）《行测》",
+    region: '江西',
+    examYear: 2025,
+    questionCount: 135,
+    sourceUrl: "https://static.32xueyuan.com/zq/u/cms/jx/202503/120855429qnm.pdf",
+    answerUrl: "https://static.32xueyuan.com/zq/u/cms/jx/202503/12085541lobk.pdf",
+    sourceType: 'third_party_mock',
+    ranges: {
+      'political-theory': [1, 15],
+      'general-knowledge': [16, 35],
+      verbal: [36, 60],
+      quantitative: [61, 80],
+      reasoning: [81, 115],
+      'data-analysis': [116, 135],
+    },
+  },
+  {
+    id: "jiangxi-2025-zhanhong-mock-3",
+    title: "展鸿 2025 年江西省公务员录用考试模拟卷（三）《行测》",
+    region: '江西',
+    examYear: 2025,
+    questionCount: 135,
+    sourceUrl: "https://static.32xueyuan.com/zq/u/cms/jx/202503/12085542c2xs.pdf",
+    answerUrl: "https://static.32xueyuan.com/zq/u/cms/jx/202503/051709044zd4.pdf",
+    sourceType: 'third_party_mock',
+    ranges: {
+      'political-theory': [1, 15],
+      'general-knowledge': [16, 35],
+      verbal: [36, 60],
+      quantitative: [61, 80],
+      reasoning: [81, 115],
+      'data-analysis': [116, 135],
+    },
+  },
 ];
 
 const PLACEHOLDER_STEMS = new Set([
@@ -101,10 +137,15 @@ function hasCompleteQuestion(question) {
   const hasOptionContent = (option) => Boolean(option?.text?.trim()
     || option?.imageUrl?.trim()
     || option?.imageUrls?.some((url) => typeof url === 'string' && url.trim()));
+  const optionCountIsValid = question?.optionType === 'true_false'
+    ? question.options?.length === 2
+    : question.options?.length === 4;
+  const visualOptionsArePresent = Boolean(question?.visualOptionsInStem
+    && question.stemImageUrls?.some((url) => typeof url === 'string' && url.trim()));
   return Boolean(question && question.id && question.stem?.trim()
     && !PLACEHOLDER_STEMS.has(question.stem.trim())
-    && Array.isArray(question.options) && question.options.length === 4
-    && question.options.every((option) => option?.id && hasOptionContent(option))
+    && Array.isArray(question.options) && optionCountIsValid
+    && question.options.every((option) => option?.id && (hasOptionContent(option) || visualOptionsArePresent))
     && question.options.some((option) => option.id === question.correctAnswer)
     && question.explanation?.trim() && question.explanation.trim() !== '缺'
     && question.verificationStatus === 'verified'
