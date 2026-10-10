@@ -45,7 +45,7 @@ test('2024–2025 Daxing position candidates are traceable and do not overstate 
   for (const expected of [
     { year: 2024, rows: 82, recruits: 188 },
     { year: 2025, rows: 92, recruits: 183 },
-    { year: 2026, rows: 12, recruits: 18 },
+    { year: 2026, rows: 13, recruits: 41 },
   ]) {
     const rows = publishedDaxing.filter((row) => row.year === expected.year);
     assert.equal(rows.length, expected.rows, `${expected.year} assigned to Daxing by supported unit names`);

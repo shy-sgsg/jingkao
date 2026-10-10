@@ -22,7 +22,7 @@ test('score sample count and bounds are derived from its concrete score rows', a
   const rows = data.scoreRows.filter((row) => row.year === 2026);
   const samples = data.scoreSamples.filter((item) => item.year === 2026);
 
-  assert.equal(samples.length, 7);
+  assert.equal(samples.length, 10);
   assert.equal(samples.reduce((total, sample) => total + sample.samplePositions, 0), rows.length);
   for (const sample of samples) {
     const sourceRows = rows.filter((row) => row.sourceId === sample.sourceId);
@@ -36,6 +36,81 @@ test('score sample count and bounds are derived from its concrete score rows', a
   assert.equal(fangshan.samplePositions, 8);
   assert.equal(fangshan.sampleRecruits, 91);
   assert.deepEqual([fangshan.minimum, fangshan.maximum], [100.75, 136.25]);
+
+  const daxing = samples.find((sample) => sample.sourceId === 'cgzj-2026-daxing-cutoff-sample');
+  assert.equal(daxing.samplePositions, 31);
+  assert.equal(daxing.sampleRecruits, 77);
+  assert.deepEqual([daxing.minimum, daxing.maximum], [102.25, 136.25]);
+  const daxingRows = rows.filter((row) => row.sourceId === 'cgzj-2026-daxing-cutoff-sample');
+  assert.deepEqual(daxingRows.reduce((counts, row) => ({ ...counts, [row.mappingConfidence]: counts[row.mappingConfidence] + 1 }), {
+    high: 0, ambiguous: 0, unmatched: 0,
+  }), { high: 5, ambiguous: 2, unmatched: 24 });
+
+  const shijingshan = samples.find((sample) => sample.sourceId === 'cgzj-2026-shijingshan-cutoff-sample');
+  assert.equal(shijingshan.samplePositions, 27);
+  assert.equal(shijingshan.sampleRecruits, 40);
+  assert.deepEqual([shijingshan.minimum, shijingshan.maximum], [98.75, 136]);
+  const shijingshanRows = rows.filter((row) => row.sourceId === 'cgzj-2026-shijingshan-cutoff-sample');
+  assert.deepEqual(shijingshanRows.reduce((counts, row) => ({ ...counts, [row.mappingConfidence]: counts[row.mappingConfidence] + 1 }), {
+    high: 0, ambiguous: 0, unmatched: 0,
+  }), { high: 26, ambiguous: 1, unmatched: 0 });
+
+  const fengtai = samples.find((sample) => sample.sourceId === 'cgzj-2026-fengtai-cutoff-sample');
+  assert.equal(fengtai.samplePositions, 9);
+  assert.equal(fengtai.sampleRecruits, 112);
+  assert.deepEqual([fengtai.minimum, fengtai.maximum], [52.15, 122]);
+  assert.match(fengtai.notes, /标题\/H1.*106\.25.*52\.15/);
+  const fengtaiRows = rows.filter((row) => row.sourceId === 'cgzj-2026-fengtai-cutoff-sample');
+  assert.deepEqual(fengtaiRows.reduce((counts, row) => ({ ...counts, [row.mappingConfidence]: counts[row.mappingConfidence] + 1 }), {
+    high: 0, ambiguous: 0, unmatched: 0,
+  }), { high: 1, ambiguous: 0, unmatched: 8 });
+});
+
+test('Shijingshan position cards receive exact code-linked cutoff scores from the partial district table', async () => {
+  const data = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const source = data.sources.find((item) => item.sourceId === 'cgzj-2026-shijingshan-cutoff-sample');
+  const position = data.positions.find((row) => row.year === 2026 && row.code === '820844303');
+  const evidence = getPositionCompetitionEvidence(position, {
+    observations: data.observations,
+    scoreRows: data.scoreRows,
+  });
+
+  assert.equal(source.samplePositions, 27);
+  assert.equal(source.sampleRecruits, 40);
+  assert.equal(evidence.cutoffScore, 136);
+  assert.deepEqual(evidence.cutoffSourceIds, ['cgzj-2026-shijingshan-cutoff-sample']);
+});
+
+test('Fengtai police post receives the exact 2026 interview cutoff exposed in the district table', async () => {
+  const data = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const position = data.positions.find((row) => row.year === 2026 && row.code === '232502201');
+  const evidence = getPositionCompetitionEvidence(position, {
+    observations: data.observations,
+    scoreRows: data.scoreRows,
+  });
+
+  assert.equal(evidence.cutoffScore, 52.15);
+  assert.deepEqual(evidence.cutoffSourceIds, ['cgzj-2026-fengtai-cutoff-sample']);
+});
+
+test('Daxing cutoff rows attach to unique positions while repeated names remain unresolved', async () => {
+  const data = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const source = data.sources.find((item) => item.sourceId === 'cgzj-2026-daxing-cutoff-sample');
+  const rows = data.scoreRows.filter((row) => row.sourceId === 'cgzj-2026-daxing-cutoff-sample');
+  const waterPosition = data.positions.find((row) => row.year === 2026 && row.code === '821565801');
+  const waterEvidence = getPositionCompetitionEvidence(waterPosition, {
+    observations: data.observations,
+    scoreRows: data.scoreRows,
+  });
+
+  assert.equal(source.samplePositions, 31);
+  assert.equal(source.sampleRecruits, 77);
+  assert.equal(rows.length, 31);
+  assert.equal(waterEvidence.cutoffScore, 136.25);
+  assert.deepEqual(waterEvidence.cutoffSourceIds, ['cgzj-2026-daxing-cutoff-sample']);
+  assert.ok(rows.filter((row) => row.mappingConfidence === 'ambiguous')
+    .every((row) => row.positionCode === null));
+  assert.match(source.notes, /部分/);
 });
 
 test('Fangshan position detail receives the source-backed 2026 interview cutoff by exact position code', async () => {

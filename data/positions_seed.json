@@ -30380,6 +30380,28 @@
     ]
   },
   {
+    "year": 2026,
+    "code": "232502901",
+    "unit": "北京市公安局大兴分局",
+    "title": "一线执法岗",
+    "orgType": "垂直/驻区",
+    "jobType": "行政执法",
+    "recruitCount": 23,
+    "education": "本科及以上",
+    "majorText": "不限",
+    "majorCriteria": {},
+    "workLocation": "北京 北京市 大兴区",
+    "eligibilityComplete": false,
+    "crossVerified": false,
+    "eligibilityText": "第三方职位镜像列出代码、单位、职位名称及计划招录数；官方面试名单可交叉确认代码、单位与名称，但未提供笔试分数。其他资格条件仍以官方招考简章为准。",
+    "sourceLevel": "secondary",
+    "verification": "第三方职位详情镜像；职位代码、单位和名称由官方面试名单交叉确认，招录数及资格条件仍待官方职位表核验",
+    "sources": [
+      "huatu-2026-daxing-police-232502901",
+      "beijing-gaj-2026-police-interview-list"
+    ]
+  },
+  {
     "year": 2025,
     "code": "242502801",
     "unit": "北京市公安局怀柔分局",

@@ -49,7 +49,7 @@ test('2026 cutoff rows link only to a unique exact year, unit, and title match',
     scoreRows.reduce((counts, row) => ({ ...counts, [row.mappingConfidence]: counts[row.mappingConfidence] + 1 }), {
       high: 0, ambiguous: 0, unmatched: 0,
     }),
-    { high: 102, ambiguous: 17, unmatched: 5 },
+    { high: 134, ambiguous: 20, unmatched: 37 },
   );
 });
 
@@ -142,7 +142,7 @@ test('2026 Yanqing partial interview-cutoff rows preserve unique matches and unr
     scoreRows.reduce((counts, row) => ({ ...counts, [row.mappingConfidence]: counts[row.mappingConfidence] + 1 }), {
       high: 0, ambiguous: 0, unmatched: 0,
     }),
-    { high: 102, ambiguous: 17, unmatched: 5 },
+    { high: 134, ambiguous: 20, unmatched: 37 },
   );
 });
 
@@ -250,4 +250,75 @@ test('2026 Chaoyang cutoff sample rows map only to their exact same-year job ide
     assert.equal(row.mappingConfidence, 'high');
     assert.equal(row.sourceId, 'cgzj-2026-chaoyang-cutoff-sample');
   }
+});
+
+test('2026 Daxing partial cutoff rows map only unique same-year unit and title matches', () => {
+  const expectedRows = {
+    '2026-cgzj-daxing-01': ['821565801', '北京市大兴区水务局', '财务岗', 136.25],
+    '2026-cgzj-daxing-03': ['821565301', '北京市大兴区人力资源和社会保障局', '信息化建设岗', 131.75],
+    '2026-cgzj-daxing-20': ['231566901', '北京市大兴区黄村镇', '经济管理岗', 126.25],
+    '2026-cgzj-daxing-21': ['821565304', '北京市大兴区人力资源和社会保障局', '案件审理岗', 126],
+    '2026-cgzj-daxing-26': ['121566703', '中共北京市大兴区纪律检查委员会、北京市大兴区监察委员会', '纪检监察岗3', 125.25],
+  };
+
+  for (const [id, [code, unit, title, score]] of Object.entries(expectedRows)) {
+    const row = scoreRows.find((item) => item.id === id);
+    const matches = positions.filter((position) => position.year === 2026
+      && position.unit === unit && position.title === title);
+
+    assert.equal(matches.length, 1, `${id} must match one exact same-year Daxing position`);
+    assert.equal(matches[0].code, code);
+    assert.equal(row.positionCode, code);
+    assert.equal(row.score, score);
+    assert.equal(row.mappingConfidence, 'high');
+    assert.equal(row.sourceId, 'cgzj-2026-daxing-cutoff-sample');
+  }
+
+  for (const id of ['2026-cgzj-daxing-13', '2026-cgzj-daxing-25']) {
+    const row = scoreRows.find((item) => item.id === id);
+    const matches = positions.filter((position) => position.year === 2026
+      && position.unit === row.unit && position.title === row.title);
+    assert.equal(matches.length, 2, `${id} must retain both same-name Education Commission positions`);
+    assert.equal(row.positionCode, null);
+    assert.equal(row.mappingConfidence, 'ambiguous');
+  }
+});
+
+test('2026 Shijingshan cutoff rows retain the source unit and map only unique same-year position identities', () => {
+  const sourceId = 'cgzj-2026-shijingshan-cutoff-sample';
+  const rows = scoreRows.filter((item) => item.sourceId === sourceId);
+  assert.equal(rows.length, 27);
+  assert.equal(rows.filter((item) => item.mappingConfidence === 'high').length, 26);
+  assert.equal(rows.filter((item) => item.mappingConfidence === 'ambiguous').length, 1);
+  assert.equal(rows.filter((item) => item.mappingConfidence === 'unmatched').length, 0);
+
+  for (const row of rows.filter((item) => item.mappingConfidence === 'high')) {
+    const matches = positions.filter((position) => position.year === row.year
+      && position.unit === row.unit && position.title === row.title);
+    assert.equal(matches.length, 1, `${row.id} maps to exactly one candidate position`);
+    assert.equal(row.positionCode, matches[0].code);
+    assert.ok(row.sourceUnit, `${row.id} retains the unit label visible in the source`);
+  }
+
+  const ambiguous = rows.find((row) => row.id === '2026-cgzj-shijingshan-27');
+  const candidates = positions.filter((position) => position.year === ambiguous.year
+    && position.unit === ambiguous.unit && position.title === ambiguous.title);
+  assert.equal(candidates.length, 2);
+  assert.equal(ambiguous.positionCode, null);
+  assert.equal(ambiguous.mappingConfidence, 'ambiguous');
+});
+
+test('2026 Fengtai cutoff sample links only the visible exact police job and leaves unresolved rows unassigned', () => {
+  const rows = scoreRows.filter((item) => item.sourceId === 'cgzj-2026-fengtai-cutoff-sample');
+  assert.equal(rows.length, 9);
+  const linked = rows.filter((row) => row.mappingConfidence === 'high');
+  assert.equal(linked.length, 1);
+  assert.equal(linked[0].id, '2026-cgzj-fengtai-09');
+  assert.equal(linked[0].positionCode, '232502201');
+  assert.equal(linked[0].score, 52.15);
+  assert.equal(linked[0].unit, '北京市公安局丰台分局');
+  assert.equal(linked[0].title, '一线执法岗1');
+  assert.ok(rows.filter((row) => row.mappingConfidence === 'unmatched')
+    .every((row) => row.positionCode === null));
+  assert.equal(rows.filter((row) => row.mappingConfidence === 'unmatched').length, 8);
 });

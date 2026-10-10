@@ -1399,6 +1399,12 @@
         "recruitCount": 30
       },
       {
+        "positionCode": "232502901",
+        "scope": "position-level",
+        "applicantsQualified": 109,
+        "recruitCount": 23
+      },
+      {
         "positionCode": "232502102",
         "scope": "position-level",
         "applicantsQualified": 197,
@@ -1473,6 +1479,12 @@
         "recruitCount": 1
       },
       {
+        "positionCode": "232502901",
+        "scope": "position-level",
+        "applicantsQualified": 187,
+        "recruitCount": 23
+      },
+      {
         "positionCode": "230531801",
         "scope": "position-level",
         "applicantsQualified": 71,
@@ -1515,6 +1527,12 @@
         "scope": "position-level",
         "applicantsQualified": 375,
         "recruitCount": 30
+      },
+      {
+        "positionCode": "232502901",
+        "scope": "position-level",
+        "applicantsQualified": 273,
+        "recruitCount": 23
       },
       {
         "positionCode": "232502102",
@@ -14562,5 +14580,88 @@
     "maximum": 141.5,
     "scope": "朝阳区岗位最低进面分部分样本",
     "notes": "页面称朝阳区163人进入面试，展示28条部分岗位最低进面分，表格没有职位代码。仅把单位+岗位名能与已收录2026候选岗位唯一对应的东坝平安建设岗和朝阳公安分局一线执法岗1关联到代码；分数和职位明细均为第三方材料，尚未逐代码与官方职位表核验，不能代表全区全量，也不是笔试合格线。"
+  },
+  {
+    "sourceId": "huatu-2026-daxing-police-232502901",
+    "title": "华图教育：2026大兴区公安分局一线执法岗职位详情",
+    "publisher": "华图教育（第三方职位镜像）",
+    "level": "secondary",
+    "evidenceType": "position_mirror",
+    "year": 2026,
+    "districtId": "daxing",
+    "geographicScope": "大兴区公安机关岗位",
+    "url": "https://ah.huatu.com/zw/bjgwy/2026/74.html",
+    "accessedAt": "2026-10-10",
+    "positionCode": "232502901",
+    "unit": "北京市公安局大兴分局",
+    "positionTitle": "一线执法岗",
+    "reportedRecruitCount": 23,
+    "notes": "第三方详情列出代码、单位、岗位名和计划招录23人；官方公安局2026面试名单可确认职位代码、单位及岗位名，但未披露笔试分数。该详情其余条件尚未与官方职位表逐代码核验。"
+  },
+  {
+    "sourceId": "beijing-gaj-2026-police-interview-list",
+    "title": "北京市公安局2026年度考试录用公务员面试名单（附件1）",
+    "publisher": "北京市公安局",
+    "level": "official",
+    "evidenceType": "interview_roster",
+    "year": 2026,
+    "geographicScope": "北京市公安局招录职位",
+    "url": "https://gaj.beijing.gov.cn/zhuanti/zlxx/tzgg/202601/P020260121605026166893.pdf",
+    "accessedAt": "2026-10-10",
+    "notes": "官方面试名单含职位代码232502901、单位北京市公安局大兴分局及职位名称一线执法岗；用于交叉确认岗位身份，不披露笔试分数，本地未保存考生姓名或报名序号。"
+  },
+  {
+    "sourceId": "cgzj-2026-daxing-cutoff-sample",
+    "title": "成公教育：2026北京公务员大兴区岗位最低进面分部分样本",
+    "publisher": "成公教育",
+    "level": "secondary",
+    "evidenceType": "partial_interview_score_sample",
+    "year": 2026,
+    "districtId": "daxing",
+    "geographicScope": "大兴区岗位最低进面分部分样本",
+    "url": "https://www.cgzj.com/gk/12625.html",
+    "accessedAt": "2026-10-10",
+    "samplePositions": 31,
+    "sampleRecruits": 77,
+    "minimum": 102.25,
+    "maximum": 136.25,
+    "scope": "大兴区岗位最低进面分部分样本",
+    "notes": "页面称大兴区77人进入面试，展示31条部分岗位最低分，范围102.25—136.25；表格没有职位代码。5条可按同年度单位+岗位名与候选职位唯一匹配，教育委员会两条同名记录对应两个职位、保留2条歧义，其余24条未在现有职位候选行找到唯一对应。均为第三方样本，不能代表全区全量，也不是笔试合格线。"
+  },
+  {
+    "sourceId": "cgzj-2026-shijingshan-cutoff-sample",
+    "title": "成公教育：2026北京公务员石景山区岗位最低进面分部分样本",
+    "publisher": "成公教育",
+    "level": "secondary",
+    "evidenceType": "partial_interview_score_sample",
+    "year": 2026,
+    "districtId": "shijingshan",
+    "geographicScope": "石景山区岗位最低进面分部分样本",
+    "url": "https://www.cgzj.com/sk/12636.html",
+    "accessedAt": "2026-10-10",
+    "samplePositions": 27,
+    "sampleRecruits": 40,
+    "minimum": 98.75,
+    "maximum": 136,
+    "scope": "石景山区岗位最低进面线部分样本",
+    "notes": "页面称石景山区40人进入面试，表格可见27条岗位最低分（98.75—136），并注明为部分样本；页面未给职位代码。26条以来源单位名、岗位名及候选库中唯一单位前缀匹配到代码，古城街道行政执法岗对应两个同名候选代码而保留歧义。职位底表仍为第三方镜像，所有分数非官方全量，也不是笔试合格线。"
+  },
+  {
+    "sourceId": "cgzj-2026-fengtai-cutoff-sample",
+    "title": "成公教育：2026北京公务员丰台区岗位最低进面分部分样本",
+    "publisher": "成公教育",
+    "level": "secondary",
+    "evidenceType": "partial_interview_score_sample",
+    "year": 2026,
+    "districtId": "fengtai",
+    "geographicScope": "丰台区岗位最低进面分部分样本",
+    "url": "https://www.cgzj.com/sk/12620.html",
+    "accessedAt": "2026-10-10",
+    "samplePositions": 9,
+    "sampleRecruits": 112,
+    "minimum": 52.15,
+    "maximum": 122,
+    "scope": "丰台区岗位最低进面线部分样本",
+    "notes": "页面称丰台区112人进入面试；可见表格有9条数值分数，另有一条显示“无”未作为数值分数记录。页面标题/H1写106.25分，但正文最低分说明和可见表格均为52.15分，保留此源内不一致提示并按表格录入。9条中仅公安丰台分局一线执法岗1能与当前职位候选行按同年度单位及岗位名精确匹配到代码232502201，其余8条未在现有候选行中唯一匹配，保留未关联。页面仅展示部分岗位，分数不是官方全量或笔试合格线。"
   }
 ]

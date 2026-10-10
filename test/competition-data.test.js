@@ -284,3 +284,28 @@ test('2026 Chaoyang position snapshots and interview cutoffs attach to exact yea
     assert.equal(row?.mappingConfidence, 'high');
   }
 });
+
+test('2026 Daxing police qualification snapshots attach to the exact mirrored position code', async () => {
+  const raw = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const dataset = normalizeDataset(raw);
+  const position = dataset.positions.find((item) => item.year === 2026 && item.code === '232502901');
+  const expected = [
+    ['eoffcn-2026-snapshot-20251118-1800', '2025-11-18 18:00', 109, 23],
+    ['eoffcn-2026-snapshot-20251119-0900', '2025-11-19 09:00', 187, 23],
+    ['eoffcn-2026-snapshot-20251119-1800', '2025-11-19 18:00', 273, 23],
+  ];
+
+  assert.ok(position, 'the Daxing Public Security Bureau position should be in the position library');
+  assert.equal(position.unit, '北京市公安局大兴分局');
+  assert.equal(position.title, '一线执法岗');
+  assert.equal(position.recruitCount, 23);
+  assert.equal(position.workLocation, '北京 北京市 大兴区');
+  for (const [sourceId, observedAt, qualified, recruits] of expected) {
+    const row = dataset.observations.find((item) => item.sourceId === sourceId
+      && item.year === 2026 && item.positionCode === '232502901');
+    assert.equal(row?.applicantsQualified, qualified);
+    assert.equal(row?.recruitCount, recruits);
+    assert.equal(row?.observedAt, observedAt);
+    assert.equal(row?.qualifiedCompetitionRatio, qualified / recruits);
+  }
+});
