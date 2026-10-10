@@ -68,7 +68,9 @@ test('five general aptitude modules publish usable questions linked to their kno
     assert.equal(legacyReview[0].moduleId, moduleId);
     assert.ok(legacyReview[0].explanation);
   }
-  assert.equal(questions.getAptitudeQuestions('verbal', { sourceType: 'third_party_mock' }).length, 0);
+  const thirdPartyMockQuestions = questions.getAptitudeQuestions('verbal', { sourceType: 'third_party_mock' });
+  assert.ok(thirdPartyMockQuestions.length > 0);
+  assert.ok(thirdPartyMockQuestions.every((question) => question.sourceType === 'third_party_mock'));
   assert.deepEqual(questions.getAptitudeSessionQuestions('verbal', ['unpublished-question']), []);
   assert.equal(questions.getAptitudeQuestions('reasoning').some((question) => question.id === 'apt-reasoning-008'), false);
   assert.equal(questions.getAptitudeSessionQuestions('reasoning', ['apt-reasoning-008'])[0]?.moduleId, 'reasoning');
