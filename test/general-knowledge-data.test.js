@@ -69,6 +69,23 @@ test('sourced questions rank ahead of original supplements and retain source tra
     .every((question) => question.moduleId === 'general_knowledge' && question.sourceId && question.sourceNote));
 });
 
+test('Beijing outline question with reference-only rights is excluded from published practice', async () => {
+  const [bank, sources, questionRules] = await Promise.all([
+    import('../src/general-knowledge/questionBank.js'),
+    import('../src/general-knowledge/sources.js'),
+    import('../src/general-knowledge/questions.js'),
+  ]);
+  const question = bank.GENERAL_KNOWLEDGE_QUESTION_BANK.find(({ id }) => id === 'bj2026-general-example-1');
+  const source = sources.GENERAL_KNOWLEDGE_SOURCES.find(({ id }) => id === 'beijing-2026-outline');
+
+  assert.ok(question, 'the sourced outline item remains in the local catalog for review');
+  assert.ok(source, 'the outline source must be registered');
+  assert.equal(question.copyrightStatus, 'reference_only');
+  assert.equal(source.publishStatus, 'reference_only');
+  assert.equal(questionRules.filterGeneralKnowledgeQuestions(bank.GENERAL_KNOWLEDGE_QUESTION_BANK)
+    .some(({ id }) => id === 'bj2026-general-example-1'), false);
+});
+
 test('every imported Jiangxi mock question links to a registered source', async () => {
   const [imported, sources] = await Promise.all([
     import('../src/aptitude/importedQuestionData.js'),

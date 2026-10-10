@@ -7,6 +7,13 @@ export const GENERAL_KNOWLEDGE_SOURCES = [
     note: '大纲将常识判断列为独立部分，并公开三道常识例题。题目在本站以短题意重述呈现，不标为正式真题。',
   },
   {
+    id: 'beijing-2026-outline', sourceType: 'official_outline_example', title: '北京市各级机关2026年度考试录用公务员公共科目笔试考试大纲（官方例题）',
+    organization: '北京市公务员局 / 北京市人民政府', examYear: 2026,
+    url: 'https://www.beijing.gov.cn/gongkai/rsxx/gwyzk/202511/P020251110416492086501.pdf', verificationStatus: 'verified',
+    publishStatus: 'reference_only', copyrightStatus: '题面展示授权待核验',
+    note: '题面、选项与答案已对照官方大纲核验；该来源可供核对，不代表已取得题面转载或公开练习许可。',
+  },
+  {
     id: 'npc-civil-code', sourceType: 'official_law', title: '中华人民共和国民法典', organization: '全国人民代表大会 / 国家法律法规数据库',
     url: 'https://flk.npc.gov.cn/detail2.html', verificationStatus: 'verified', publishStatus: 'published',
     copyrightStatus: '法规事实摘述并链接原文', note: '涉及具体法律条文时以国家法律法规数据库的有效文本为准。',

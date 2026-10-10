@@ -31226,7 +31226,7 @@ export const IMPORTED_SOURCE_QUESTIONS = [
     "sharedStimulus": null,
     "verificationStatus": "verified",
     "copyrightStatus": "reference_only",
-    "publishStatus": "published",
+    "publishStatus": "review",
     "presentationMode": "original"
   },
   {
