@@ -1382,6 +1382,12 @@
         "scope": "position-level",
         "applicantsQualified": 65,
         "recruitCount": 32
+      },
+      {
+        "positionCode": "221457901",
+        "scope": "position-level",
+        "applicantsQualified": 25,
+        "recruitCount": 1
       }
     ],
     "notes": "页面列出市级过审人数前十及竞争最激烈岗位；记录其中能与2026职位库按代码、招录人数匹配的岗位。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
@@ -1469,6 +1475,12 @@
         "scope": "position-level",
         "applicantsQualified": 109,
         "recruitCount": 32
+      },
+      {
+        "positionCode": "221457901",
+        "scope": "position-level",
+        "applicantsQualified": 47,
+        "recruitCount": 1
       }
     ],
     "notes": "报道注明竞争比按资格审查通过人数/招录人数计算；此处逐职位保存市级过审人数前十和高竞争岗位中可与2026职位库按职位代码、招录数匹配的记录。该页面不是全市完整清单；人数是第三方资格审查快照，不是最终缴费或实考人数。"
@@ -1542,6 +1554,13 @@
         "positionCode": "241780601",
         "scope": "position-level",
         "applicantsQualified": 51,
+        "recruitCount": 1
+      },
+      {
+        "positionCode": null,
+        "scope": "unit-level",
+        "unit": "北京市顺义区文化和旅游局（北京市顺义区文物局）",
+        "applicantsQualified": 47,
         "recruitCount": 1
       }
     ],
@@ -1640,6 +1659,13 @@
         "positionCode": "220946301",
         "scope": "position-level",
         "applicantsQualified": 135,
+        "recruitCount": 1
+      },
+      {
+        "positionCode": null,
+        "scope": "unit-level",
+        "unit": "北京市顺义区文化和旅游局（北京市顺义区文物局）",
+        "applicantsQualified": 76,
         "recruitCount": 1
       }
     ],
@@ -14752,5 +14778,218 @@
     "positionTitle": "综合管理岗",
     "reportedRecruitCount": 1,
     "notes": "列表按职位代码列出单位、学历、专业、政治面貌、工作年限要求、招录类别及人数；职位名称由中公报名快照中同代码行交叉确认。第三方镜像，尚未与官方职位简章逐代码核验。"
+  },
+  {
+    "sourceId": "gwyzwb-2026-shunyi-index",
+    "title": "京考职位网：2026顺义区职位目录",
+    "publisher": "京考职位网",
+    "level": "secondary",
+    "evidenceType": "position_mirror",
+    "year": 2026,
+    "districtId": "shunyi",
+    "geographicScope": "顺义区",
+    "url": "https://bj.gwyzwb.com/shunyi/",
+    "accessedAt": "2026-10-10",
+    "reportedPositionCount": 88,
+    "reportedRecruitCount": 138,
+    "notes": "第三方区级目录汇总88个职位、计划招录138人；本次仅补录取得可读单位详情页并能用于竞争样本关联的子集，未覆盖全区，未与官方招考简章逐代码复核。"
+  },
+  {
+    "sourceId": "gwyzwb-2026-shunyi-page-8",
+    "title": "京考职位网：2026顺义区教育委员会职位明细",
+    "publisher": "京考职位网",
+    "level": "secondary",
+    "evidenceType": "position_mirror",
+    "year": 2026,
+    "districtId": "shunyi",
+    "geographicScope": "顺义区",
+    "url": "https://bj.gwyzwb.com/shunyi/2026_8.html",
+    "accessedAt": "2026-10-10",
+    "reportedPositionCount": 2,
+    "reportedRecruitCount": 2,
+    "notes": "单位详情页列明代码、岗位名称及招录人数；第三方镜像，尚未与官方招考简章逐代码复核。"
+  },
+  {
+    "sourceId": "gwyzwb-2026-shunyi-investment-center",
+    "title": "京考职位网：2026顺义区投资促进服务中心职位明细",
+    "publisher": "京考职位网",
+    "level": "secondary",
+    "evidenceType": "position_mirror",
+    "year": 2026,
+    "districtId": "shunyi",
+    "geographicScope": "顺义区",
+    "url": "https://bj.gwyzwb.com/2026/1183.html",
+    "accessedAt": "2026-10-10",
+    "reportedPositionCount": 1,
+    "reportedRecruitCount": 1,
+    "notes": "职位详情列明代码821459001、产业促进岗、计划招录1人；第三方镜像，尚未与官方招考简章逐代码复核。"
+  },
+  {
+    "sourceId": "gwyzwb-2026-shunyi-page-36",
+    "title": "京考职位网：2026顺义区北石槽镇职位明细",
+    "publisher": "京考职位网",
+    "level": "secondary",
+    "evidenceType": "position_mirror",
+    "year": 2026,
+    "districtId": "shunyi",
+    "geographicScope": "顺义区",
+    "url": "https://bj.gwyzwb.com/shunyi/2026_36.html",
+    "accessedAt": "2026-10-10",
+    "reportedPositionCount": 2,
+    "reportedRecruitCount": 2,
+    "notes": "单位详情页列明代码、岗位名称及招录人数；第三方镜像，尚未与官方招考简章逐代码复核。"
+  },
+  {
+    "sourceId": "gwyzwb-2026-shunyi-page-13",
+    "title": "京考职位网：2026顺义区住房和城乡建设委员会职位明细",
+    "publisher": "京考职位网",
+    "level": "secondary",
+    "evidenceType": "position_mirror",
+    "year": 2026,
+    "districtId": "shunyi",
+    "geographicScope": "顺义区",
+    "url": "https://bj.gwyzwb.com/shunyi/2026_13.html",
+    "accessedAt": "2026-10-10",
+    "reportedPositionCount": 3,
+    "reportedRecruitCount": 5,
+    "notes": "单位详情页列明代码、岗位名称及招录人数；第三方镜像，尚未与官方招考简章逐代码复核。"
+  },
+  {
+    "sourceId": "gwyzwb-2026-shunyi-culture-tourism",
+    "title": "京考职位网：2026顺义区文化和旅游局综合管理岗职位详情",
+    "publisher": "京考职位网",
+    "level": "secondary",
+    "evidenceType": "position_mirror",
+    "year": 2026,
+    "districtId": "shunyi",
+    "geographicScope": "顺义区",
+    "url": "https://bj.gwyzwb.com/2026/1162.html",
+    "accessedAt": "2026-10-10",
+    "reportedPositionCount": 1,
+    "reportedRecruitCount": 1,
+    "notes": "职位详情列明代码221457901、综合管理岗、计划招录1人；第三方镜像，尚未与官方招考简章逐代码复核。"
+  },
+  {
+    "sourceId": "gwyzwb-2026-shunyi-page-15",
+    "title": "京考职位网：2026顺义区水务局职位明细",
+    "publisher": "京考职位网",
+    "level": "secondary",
+    "evidenceType": "position_mirror",
+    "year": 2026,
+    "districtId": "shunyi",
+    "geographicScope": "顺义区",
+    "url": "https://bj.gwyzwb.com/shunyi/2026_15.html",
+    "accessedAt": "2026-10-10",
+    "reportedPositionCount": 1,
+    "reportedRecruitCount": 1,
+    "notes": "单位详情页列明代码、岗位名称及招录人数；第三方镜像，尚未与官方招考简章逐代码复核。"
+  },
+  {
+    "sourceId": "gwyzwb-2026-shunyi-page-4",
+    "title": "京考职位网：2026顺义区人民检察院职位明细",
+    "publisher": "京考职位网",
+    "level": "secondary",
+    "evidenceType": "position_mirror",
+    "year": 2026,
+    "districtId": "shunyi",
+    "geographicScope": "顺义区",
+    "url": "https://bj.gwyzwb.com/shunyi/2026_4.html",
+    "accessedAt": "2026-10-10",
+    "reportedPositionCount": 2,
+    "reportedRecruitCount": 5,
+    "notes": "单位详情页列明代码、岗位名称及招录人数；第三方镜像，尚未与官方招考简章逐代码复核。"
+  },
+  {
+    "sourceId": "gwyzwb-2026-shunyi-page-21",
+    "title": "京考职位网：2026顺义区体育局职位明细",
+    "publisher": "京考职位网",
+    "level": "secondary",
+    "evidenceType": "position_mirror",
+    "year": 2026,
+    "districtId": "shunyi",
+    "geographicScope": "顺义区",
+    "url": "https://bj.gwyzwb.com/shunyi/2026_21.html",
+    "accessedAt": "2026-10-10",
+    "reportedPositionCount": 1,
+    "reportedRecruitCount": 1,
+    "notes": "单位详情页列明代码、岗位名称及招录人数；第三方镜像，尚未与官方招考简章逐代码复核。"
+  },
+  {
+    "sourceId": "gwyzwb-2026-shunyi-page-23",
+    "title": "京考职位网：2026顺义区园林绿化局职位明细",
+    "publisher": "京考职位网",
+    "level": "secondary",
+    "evidenceType": "position_mirror",
+    "year": 2026,
+    "districtId": "shunyi",
+    "geographicScope": "顺义区",
+    "url": "https://bj.gwyzwb.com/shunyi/2026_23.html",
+    "accessedAt": "2026-10-10",
+    "reportedPositionCount": 2,
+    "reportedRecruitCount": 3,
+    "notes": "单位详情页列明代码、岗位名称及招录人数；第三方镜像，尚未与官方招考简章逐代码复核。"
+  },
+  {
+    "sourceId": "gwyzwb-2026-shunyi-page-3",
+    "title": "京考职位网：2026顺义区人民法院职位明细",
+    "publisher": "京考职位网",
+    "level": "secondary",
+    "evidenceType": "position_mirror",
+    "year": 2026,
+    "districtId": "shunyi",
+    "geographicScope": "顺义区",
+    "url": "https://bj.gwyzwb.com/shunyi/2026_3.html",
+    "accessedAt": "2026-10-10",
+    "reportedPositionCount": 4,
+    "reportedRecruitCount": 12,
+    "notes": "单位详情页列明代码、岗位名称及招录人数；第三方镜像，尚未与官方招考简章逐代码复核。"
+  },
+  {
+    "sourceId": "gwyzwb-2026-shunyi-page-26",
+    "title": "京考职位网：2026顺义区城市管理综合行政执法局职位明细",
+    "publisher": "京考职位网",
+    "level": "secondary",
+    "evidenceType": "position_mirror",
+    "year": 2026,
+    "districtId": "shunyi",
+    "geographicScope": "顺义区",
+    "url": "https://bj.gwyzwb.com/shunyi/2026_26.html",
+    "accessedAt": "2026-10-10",
+    "reportedPositionCount": 2,
+    "reportedRecruitCount": 4,
+    "notes": "单位详情页列明代码、岗位名称及招录人数；第三方镜像，尚未与官方招考简章逐代码复核。"
+  },
+  {
+    "sourceId": "gwyzwb-2026-shunyi-page-30",
+    "title": "京考职位网：2026顺义区胜利街道职位明细",
+    "publisher": "京考职位网",
+    "level": "secondary",
+    "evidenceType": "position_mirror",
+    "year": 2026,
+    "districtId": "shunyi",
+    "geographicScope": "顺义区",
+    "url": "https://bj.gwyzwb.com/shunyi/2026_30.html",
+    "accessedAt": "2026-10-10",
+    "reportedPositionCount": 2,
+    "reportedRecruitCount": 4,
+    "notes": "单位详情页列明代码、岗位名称及招录人数；第三方镜像，尚未与官方招考简章逐代码复核。"
+  },
+  {
+    "sourceId": "cgzj-2026-shunyi-cutoff-sample",
+    "title": "成公教育：2026顺义区岗位最低进面分部分样本",
+    "publisher": "成公教育",
+    "level": "secondary",
+    "evidenceType": "partial_interview_score_sample",
+    "year": 2026,
+    "districtId": "shunyi",
+    "geographicScope": "顺义区岗位最低进面线部分样本",
+    "url": "https://www.cgzj.com/sk/12638.html",
+    "accessedAt": "2026-10-10",
+    "samplePositions": 29,
+    "intervieweeCount": 84,
+    "minimum": 100,
+    "maximum": 134,
+    "scope": "顺义区岗位最低进面线部分样本",
+    "notes": "页面称顺义区共84人进入面试，明列29条部分岗位分数线，范围100—134；其中14条可按同年度单位、岗位名及第三方职位详情代码唯一关联，3条同名职位存在候选歧义，另12条本轮尚无候选职位行，保留空代码。第三方部分样本，不代表完整进面名单；所列是进入面试的岗位最低笔试分，不是官方笔试合格线。"
   }
 ]

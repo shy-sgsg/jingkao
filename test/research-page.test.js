@@ -23,27 +23,27 @@ test('research findings derive sample coverage, score distribution, and evidence
     reportedRecruits: [138, 138],
   });
   assert.deepEqual(byId['score-sample-2026'].facts, {
-    sampleRows: 216,
+    sampleRows: 245,
     sampleRecruits: 853,
     minimum: 52.15,
     maximum: 142,
-    median: 125.5,
-    linkedRows: 157,
-    ambiguousRows: 20,
-    unmatchedRows: 39,
-    scope: '朝阳区岗位最低进面分部分样本、昌平区、大兴区岗位最低进面分部分样本、房山区、丰台区、海淀区、怀柔区、石景山区、通州区财政局岗位最低进面线样本（2岗）、西城区、延庆区岗位最低进面线部分样本',
+    median: 125.75,
+    linkedRows: 171,
+    ambiguousRows: 23,
+    unmatchedRows: 51,
+    scope: '朝阳区岗位最低进面分部分样本、昌平区、大兴区岗位最低进面分部分样本、房山区、丰台区、海淀区、怀柔区、石景山区、顺义区、通州区财政局岗位最低进面线样本（2岗）、西城区、延庆区岗位最低进面线部分样本',
   });
   assert.deepEqual(byId['qualification-coverage'].facts, {
-    positions: 699,
+    positions: 722,
     structuredRequirements: 12,
     completeEligibility: 0,
     officialPositionRows: 0,
   });
   assert.deepEqual(byId['competition-grain'].facts, {
-    observations: 84,
-    jobLevelObservations: 78,
-    aggregateObservations: 6,
-    jobLevelPositions: 30,
+    observations: 88,
+    jobLevelObservations: 80,
+    aggregateObservations: 8,
+    jobLevelPositions: 31,
   });
   assert.match(byId['competition-grain'].title, /岗位级资格审查快照/);
   assert.ok(byId['coverage-2026'].sourceIds.includes('huatu-2026-list'));
@@ -57,6 +57,7 @@ test('research findings derive sample coverage, score distribution, and evidence
   assert.ok(byId['score-sample-2026'].sourceIds.includes('cgzj-2026-daxing-cutoff-sample'));
   assert.ok(byId['score-sample-2026'].sourceIds.includes('cgzj-2026-shijingshan-cutoff-sample'));
   assert.ok(byId['score-sample-2026'].sourceIds.includes('cgzj-2026-fengtai-cutoff-sample'));
+  assert.ok(byId['score-sample-2026'].sourceIds.includes('cgzj-2026-shunyi-cutoff-sample'));
   assert.ok(byId['competition-grain'].sourceIds.includes('eoffcn-2025-tongzhou-final-day-snapshot'));
 });
 
@@ -93,6 +94,6 @@ test('the research route presents expandable source lineage and its topic filter
   await listeners.click({ target: { closest: (selector) => selector === '[data-action]' ? scoreFilter : null } });
 
   assert.match(root.innerHTML, /data-topic="分数样本" aria-pressed="true">/);
-  assert.match(root.innerHTML, /216 条/);
+  assert.match(root.innerHTML, /245 条/);
   assert.doesNotMatch(root.innerHTML, /class="research-finding[^\"]*"[^>]*data-topic="岗位覆盖"/);
 });
