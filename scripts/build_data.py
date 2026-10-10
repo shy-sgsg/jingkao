@@ -373,7 +373,7 @@ def build_aggregate_evidence(sources: list[dict[str, Any]], score_rows: list[dic
             values = [number(row["score"]) for row in source_rows]
             score_samples.append({
                 "year": year,
-                "scope": "昌平区岗位最低进面线部分样本",
+                "scope": source.get("scope", "北京市各区县岗位最低进面线部分样本"),
                 "samplePositions": len(source_rows),
                 "sampleRecruits": source.get("sampleRecruits"),
                 "minimum": min(values),

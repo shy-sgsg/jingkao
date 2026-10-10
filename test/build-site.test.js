@@ -163,7 +163,7 @@ test('standalone site executes and renders the homepage from its embedded app mo
     if (route === 'assistant') assert.match(rendered.root.innerHTML, /当前范围职位样例/);
     if (route === 'research') {
       assert.match(rendered.root.innerHTML, /2026 年昌平区来源清单列出 86 条岗位样例/);
-      assert.match(rendered.root.innerHTML, /31 条部分样本/);
+      assert.match(rendered.root.innerHTML, /120 条部分样本/);
       assert.match(rendered.root.innerHTML, /data-action="filter-research-topic"/);
     }
   }
@@ -700,7 +700,7 @@ test('assistant renders evidence-gated difficulty and fit breakdowns for real po
   assert.match(assistant.innerHTML, /适配综合分/);
   assert.match(assistant.innerHTML, /data-score-component="qualifiedCompetition"/);
   assert.match(assistant.innerHTML, /区级汇总不参与/);
-  assert.match(assistant.innerHTML, /2 个岗位有多时点资格审查快照/);
+  assert.match(assistant.innerHTML, /\d+ 个岗位有资格审查快照，未纳入本项评分/);
   assert.match(assistant.innerHTML, /非最终报名或实考数据，未纳入岗位竞争比分项/);
   assert.match(assistant.innerHTML, /查看评分依据/);
 });
@@ -730,8 +730,9 @@ test('assistant and score scenarios honor Beijing district scope without borrowi
   const scenarios = await renderStandaloneRoute(script, 'scenarios');
   await scenarios.listeners.get('change')({ target: { id: 'decision-district', value: 'haidian' } });
   assert.match(scenarios.root.innerHTML, /海淀区 · 全部单位类型/);
-  assert.match(scenarios.root.innerHTML, /不会借用其他区县的分数/);
-  assert.match(scenarios.root.innerHTML, /0 条 · 0 条代码已核对/);
+  assert.match(scenarios.root.innerHTML, /23 条 · 23 条代码已核对/);
+  assert.match(scenarios.root.innerHTML, /北京市海淀区/);
+  assert.doesNotMatch(scenarios.root.innerHTML, /北京市昌平区/);
 });
 
 test('position comparison distinguishes process snapshots from final registration data', async () => {
@@ -745,9 +746,27 @@ test('position comparison distinguishes process snapshots from final registratio
 
   assert.match(comparison.innerHTML, /岗位级报名 \/ 资格审查记录/);
   assert.match(comparison.innerHTML, /区县/);
-  assert.match(comparison.innerHTML, /2025-11-19 18:00 · 424 人资格审查通过（过程快照，非最终报名或实考）/);
-  assert.match(comparison.innerHTML, /2025-11-19 18:00 · 150 人资格审查通过（过程快照，非最终报名或实考）/);
-  assert.match(comparison.innerHTML, /过程快照不作为最终报名或实考数据/);
+  assert.match(comparison.innerHTML, /2025-11-21 09:00 · 615 人资格审查通过（招录 2 人，时点参考竞争比 1:307\.5；非最终报名或实考）/);
+  assert.match(comparison.innerHTML, /2025-11-19 18:00 · 150 人资格审查通过（招录 1 人，时点参考竞争比 1:150；非最终报名或实考）/);
+  assert.match(comparison.innerHTML, /不代表最终报名、缴费或实考竞争/);
+});
+
+test('position comparison shows a linked qualification snapshot ratio and an exact-code cutoff when available', async () => {
+  await import('../scripts/build.mjs');
+  const html = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8');
+  const script = html.match(/<script>\s*([\s\S]*?)<\/script>/)?.[1];
+  const { root: comparison } = await renderStandaloneRoute(script, 'compare', {
+    compared: ['2025:220527701', '2026:221262201', '2026:121049302'],
+    onboarding: { hidden: true, completed: true },
+  });
+
+  assert.match(comparison.innerHTML, /2024-11-21 18:00/);
+  assert.match(comparison.innerHTML, /245 人资格审查通过/);
+  assert.match(comparison.innerHTML, /时点参考竞争比 1:245/);
+  assert.match(comparison.innerHTML, /非最终报名或实考/);
+  assert.match(comparison.innerHTML, /同年代码匹配的最低进面线/);
+  assert.match(comparison.innerHTML, /136\.75 分/);
+  assert.match(comparison.innerHTML, /136\.25 分/);
 });
 
 test('score slider updates its visible track progress and score result together', async () => {
@@ -781,14 +800,14 @@ test('score scenario exposes every requested segment and labels the narrower mat
   const { root, listeners } = await renderStandaloneRoute(script, 'scenarios');
 
   assert.match(root.innerHTML, /<select id="scenario-scope"/);
-  for (const [segment, sampleCount] of [['全部区县', 31], ['区直', 23], ['街道', 3], ['镇', 5], ['普通职位', 15], ['行政执法', 7], ['公共管理相关', 4]]) {
+  for (const [segment, sampleCount] of [['全部区县', 120], ['区直', 84], ['街道', 22], ['镇', 7], ['普通职位', 30], ['行政执法', 11], ['公共管理相关', 8]]) {
     assert.ok(root.innerHTML.includes(`${segment} · n=${sampleCount}`), `score scope selector should show ${segment}'s ${sampleCount} source-backed rows`);
   }
   assert.match(root.innerHTML, /岗位类别仅纳入代码、单位与岗位名均唯一匹配的分数记录/);
 
   await listeners.get('change')({ target: { id: 'scenario-scope', value: 'enforcement' } });
-  assert.match(root.innerHTML, /行政执法 · n=7/);
-  assert.match(root.innerHTML, /7 条 · 7 条代码已核对/);
+  assert.match(root.innerHTML, /行政执法 · n=11/);
+  assert.match(root.innerHTML, /11 条 · 11 条代码已核对/);
   assert.match(root.innerHTML, /行政执法岗2/);
   assert.match(root.innerHTML, /综合行政执法岗/);
   assert.doesNotMatch(root.innerHTML, /综合统计岗/);

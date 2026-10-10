@@ -71,6 +71,52 @@ export function getPositionEvidenceGrade(position, sourceRegistry) {
   return 'D';
 }
 
+export function getPositionCompetitionEvidence(position, dataset = {}) {
+  const year = Number(position?.year);
+  const code = String(position?.code || '').trim();
+  const positionScopes = new Set(['position', 'position-level', '岗位级']);
+  const snapshots = (Array.isArray(dataset.observations) ? dataset.observations : [])
+    .filter((item) => Number(item.year) === year
+      && String(item.positionCode || '').trim() === code
+      && item.observationType === 'qualified_snapshot'
+      && positionScopes.has(item.scope)
+      && String(item.observedAt || '').trim())
+    .slice()
+    .sort((left, right) => String(left.observedAt).localeCompare(String(right.observedAt)));
+  const latestTime = snapshots.at(-1)?.observedAt || null;
+  const latestRows = latestTime ? snapshots.filter((item) => item.observedAt === latestTime) : [];
+  const latestFingerprints = new Set(latestRows.map((item) => `${item.applicantsQualified ?? ''}:${item.recruitCount ?? ''}`));
+  const latestSnapshot = latestFingerprints.size === 1 ? latestRows.at(-1) || null : null;
+  const qualified = numericValue(latestSnapshot?.applicantsQualified);
+  const recruits = numericValue(latestSnapshot?.recruitCount ?? position?.recruitCount);
+  const storedRatio = numericValue(latestSnapshot?.qualifiedCompetitionRatio);
+  const qualifiedCompetitionRatio = storedRatio !== null
+    ? storedRatio
+    : qualified !== null && recruits !== null && qualified >= 0 && recruits > 0
+      ? qualified / recruits
+      : null;
+
+  const positionUnit = String(position?.unit || '').trim();
+  const positionTitle = String(position?.title || '').trim();
+  const matchingScoreRows = (Array.isArray(dataset.scoreRows) ? dataset.scoreRows : [])
+    .filter((row) => Number(row.year) === year
+      && String(row.positionCode || '').trim() === code
+      && row.mappingConfidence === 'high'
+      && positionUnit && positionTitle
+      && row.unit === position.unit && row.title === position.title
+      && numericValue(row.score) !== null);
+  const cutoffScores = new Set(matchingScoreRows.map((row) => numericValue(row.score)));
+  const cutoffScore = cutoffScores.size === 1 ? [...cutoffScores][0] : null;
+
+  return {
+    snapshots,
+    latestSnapshot,
+    qualifiedCompetitionRatio,
+    cutoffScore,
+    cutoffSourceIds: cutoffScore === null ? [] : [...new Set(matchingScoreRows.map((row) => row.sourceId).filter(Boolean))],
+  };
+}
+
 export function filterAndSortPositions(positions, options = {}) {
   const rows = Array.isArray(positions) ? positions : [];
   const districtId = String(options.districtId || 'all');
@@ -80,8 +126,19 @@ export function filterAndSortPositions(positions, options = {}) {
   const majorTopic = String(options.majorTopic || 'all');
   const exactFilters = ['unit', 'education', 'politicalStatus', 'freshGraduate', 'physicalTest', 'professionalTest'];
   const recruitmentGroup = String(options.recruitmentGroup || 'all');
+  const competitionEvidence = String(options.competitionEvidence || 'all');
+  const cutoffEvidence = String(options.cutoffEvidence || 'all');
+  const observations = Array.isArray(options.observations) ? options.observations : [];
+  const scoreRows = Array.isArray(options.scoreRows) ? options.scoreRows : [];
   const query = String(options.query || '').trim().toLocaleLowerCase('zh-CN');
   const sortBy = String(options.sortBy || 'year-desc');
+  const evidenceByPosition = new Map();
+  const evidenceFor = (position) => {
+    if (!evidenceByPosition.has(position)) {
+      evidenceByPosition.set(position, getPositionCompetitionEvidence(position, { observations, scoreRows }));
+    }
+    return evidenceByPosition.get(position);
+  };
 
   const filtered = rows.filter((position) => {
     if (districtId !== 'all' && position.districtId !== districtId) return false;
@@ -107,6 +164,12 @@ export function filterAndSortPositions(positions, options = {}) {
     if (recruitmentGroup === 'one' && recruitCount !== 1) return false;
     if (recruitmentGroup === 'two-or-more' && (recruitCount === null || recruitCount < 2)) return false;
     if (recruitmentGroup === 'missing' && recruitCount !== null) return false;
+    const competitionAvailable = evidenceFor(position).qualifiedCompetitionRatio !== null;
+    if (competitionEvidence === 'has' && !competitionAvailable) return false;
+    if (competitionEvidence === 'missing' && competitionAvailable) return false;
+    const cutoffAvailable = evidenceFor(position).cutoffScore !== null;
+    if (cutoffEvidence === 'has' && !cutoffAvailable) return false;
+    if (cutoffEvidence === 'missing' && cutoffAvailable) return false;
     if (!query) return true;
     const searchable = [
       position.code,
@@ -128,6 +191,22 @@ export function filterAndSortPositions(positions, options = {}) {
       if (leftCount === null && rightCount !== null) return 1;
       if (rightCount === null && leftCount !== null) return -1;
       if (leftCount !== null && rightCount !== null && leftCount !== rightCount) return rightCount - leftCount;
+    } else if (sortBy === 'competition-desc' || sortBy === 'competition-asc') {
+      const leftValue = evidenceFor(left).qualifiedCompetitionRatio;
+      const rightValue = evidenceFor(right).qualifiedCompetitionRatio;
+      if (leftValue === null && rightValue !== null) return 1;
+      if (rightValue === null && leftValue !== null) return -1;
+      if (leftValue !== null && rightValue !== null && leftValue !== rightValue) {
+        return sortBy === 'competition-desc' ? rightValue - leftValue : leftValue - rightValue;
+      }
+    } else if (sortBy === 'cutoff-desc' || sortBy === 'cutoff-asc') {
+      const leftValue = evidenceFor(left).cutoffScore;
+      const rightValue = evidenceFor(right).cutoffScore;
+      if (leftValue === null && rightValue !== null) return 1;
+      if (rightValue === null && leftValue !== null) return -1;
+      if (leftValue !== null && rightValue !== null && leftValue !== rightValue) {
+        return sortBy === 'cutoff-desc' ? rightValue - leftValue : leftValue - rightValue;
+      }
     } else if (sortBy === 'unit-asc') {
       const byUnit = String(left.unit || '').localeCompare(String(right.unit || ''), 'zh-CN');
       if (byUnit) return byUnit;

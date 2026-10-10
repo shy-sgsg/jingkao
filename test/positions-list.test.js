@@ -79,6 +79,39 @@ test('position sort options keep missing recruit counts last and do not mutate s
   assert.deepEqual(rows.map((position) => position.code), ['missing', 'two', 'one']);
 });
 
+test('competition and cutoff filters and sorts use same-year position evidence and leave missing evidence last', () => {
+  const rows = [
+    { year: 2025, code: 'A', unit: '单位甲', title: '数据岗', recruitCount: 1 },
+    { year: 2025, code: 'B', unit: '单位乙', title: '综合岗', recruitCount: 2 },
+    { year: 2025, code: 'C', unit: '单位丙', title: '执法岗', recruitCount: 1 },
+    { year: 2024, code: 'A', unit: '旧单位', title: '数据岗', recruitCount: 1 },
+  ];
+  const observations = [
+    { year: 2025, positionCode: 'A', scope: 'position-level', observationType: 'qualified_snapshot', observedAt: '2024-11-20 18:00', applicantsQualified: 80, recruitCount: 1 },
+    { year: 2025, positionCode: 'A', scope: 'position-level', observationType: 'qualified_snapshot', observedAt: '2024-11-21 09:00', applicantsQualified: 177, recruitCount: 1 },
+    { year: 2025, positionCode: 'B', scope: 'position-level', observationType: 'qualified_snapshot', observedAt: '2024-11-21 09:00', applicantsQualified: 193, recruitCount: 2 },
+    { year: 2025, positionCode: null, scope: 'district', observationType: 'qualified_snapshot', observedAt: '2024-11-21 09:00', applicantsQualified: 9999, recruitCount: 1 },
+  ];
+  const scoreRows = [
+    { year: 2025, positionCode: 'A', unit: '单位甲', title: '数据岗', mappingConfidence: 'high', score: 125.5 },
+    { year: 2025, positionCode: 'B', unit: '错误单位', title: '综合岗', mappingConfidence: 'high', score: 140 },
+    { year: 2025, positionCode: 'C', unit: '单位丙', title: '执法岗', mappingConfidence: 'ambiguous', score: 130 },
+    { year: 2024, positionCode: 'A', unit: '旧单位', title: '数据岗', mappingConfidence: 'high', score: 110 },
+  ];
+
+  assert.deepEqual(filterAndSortPositions(rows, {
+    observations,
+    competitionEvidence: 'has',
+    sortBy: 'competition-desc',
+  }).map((position) => `${position.year}:${position.code}`), ['2025:A', '2025:B']);
+
+  assert.deepEqual(filterAndSortPositions(rows, {
+    scoreRows,
+    cutoffEvidence: 'has',
+    sortBy: 'cutoff-desc',
+  }).map((position) => `${position.year}:${position.code}`), ['2025:A', '2024:A']);
+});
+
 test('position pagination clamps page numbers and reports the visible range', () => {
   const rows = Array.from({ length: 62 }, (_, index) => index + 1);
   const second = paginateItems(rows, 2, 25);

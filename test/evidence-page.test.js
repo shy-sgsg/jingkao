@@ -110,7 +110,17 @@ test('the evidence center lists dated position-level qualification snapshots wit
   assert.match(root.innerHTML, /150 人/);
   assert.match(root.innerHTML, /eoffcn\.com\/kszx\/detail\/1903982\.html/);
   assert.match(root.innerHTML, /资格审查通过人数.*不等同最终报名人数、缴费人数或实考人数/s);
-  assert.match(root.innerHTML, /岗位级资格审查快照[\s\S]*?覆盖 2 个岗位/);
+  assert.match(root.innerHTML, /岗位级资格审查快照[\s\S]*?覆盖 26 个岗位 · 10 个时点/);
+});
+
+test('the evidence center separates citywide weighted competition snapshots from job-level ratios', async () => {
+  const { root } = await renderSourceApp('#/evidence');
+
+  assert.match(root.innerHTML, /全市资格审查加权快照/);
+  assert.match(root.innerHTML, /2025-11-20 09:00[\s\S]*?23194 人[\s\S]*?3694 人[\s\S]*?1:6\.28/);
+  assert.match(root.innerHTML, /2025-11-21 09:00[\s\S]*?48026 人[\s\S]*?3694 人[\s\S]*?1:13/);
+  assert.match(root.innerHTML, /按计划数加权的总比，不是各岗位竞争比的简单平均/);
+  assert.match(root.innerHTML, /sohu\.com\/a\/957051740_121124036/);
 });
 
 test('the overview keeps personal study summaries and shows citywide position coverage and sources', async () => {
@@ -156,7 +166,7 @@ test('the source page exposes evidence-based coverage without presenting mirror 
   assert.match(root.innerHTML, /2024[\s\S]*?95 \/ 95 条/);
   assert.match(root.innerHTML, /2025[\s\S]*?91 \/ 91 条/);
   assert.match(root.innerHTML, /2026[\s\S]*?86 \/ 88 条/);
-  assert.match(root.innerHTML, /31 条具名分数记录[\s\S]*?部分样本/);
+  assert.match(root.innerHTML, /120 条具名分数记录[\s\S]*?部分样本/);
   assert.match(root.innerHTML, /年度官方职位分母未知/);
   assert.match(root.innerHTML, /条数相同不代表职位代码集合一致/);
   assert.doesNotMatch(root.innerHTML, /官方覆盖率[：:]\s*100%/);

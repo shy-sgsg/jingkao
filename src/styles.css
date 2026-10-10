@@ -450,6 +450,10 @@ button { color: inherit; }
 .year-pill { display: inline-flex; padding: 3px 6px; border-radius: 5px; background: #f0f4fb; color: #6680b1; font-size: var(--font-xs); font-weight: 650; white-space: nowrap; }
 .position-evidence-cell { display: flex; min-width: 150px; flex-direction: column; align-items: flex-start; gap: 5px; }
 .position-evidence-cell .cell-secondary { white-space: normal; line-height: 1.4; }
+.position-competition-summary { display: flex; min-width: 166px; flex-direction: column; gap: 3px; line-height: 1.35; }
+.position-competition-summary strong { color: #315e91; font-size: var(--font-sm); font-weight: 680; }
+.position-competition-summary small { color: #7d8794; font-size: var(--font-xs); }
+.position-competition-summary span { color: #4f6379; font-size: var(--font-xs); }
 .position-title-link { padding: 0; border: 0; background: none; color: #47658f; font-size: var(--font-xs); font-weight: 650; text-align: left; cursor: pointer; }
 .position-title-link:hover { color: #254f88; text-decoration: underline; }
 .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }

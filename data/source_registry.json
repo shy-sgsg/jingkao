@@ -80,8 +80,8 @@
     "year": 2026,
     "url": "https://www.beijing.gov.cn/gongkai/rsxx/gwyzk/202601/t20260105_4400092.html",
     "publishedAt": "2026-01-05",
-    "accessedAt": "2026-10-07",
-    "notes": "区级普通职位行测至少60且总分至少105；乡镇街道普通职位行测至少60且总分至少100。属于资格门槛，不是岗位进面线。"
+    "accessedAt": "2026-10-10",
+    "notes": "官方分层笔试合格门槛：市级普通职位行测60/总分110，区级60/105，乡镇街道基层60/100，艰苦边远基层55/95；公安另有专业科目45分要求。此为资格门槛，不是具体岗位的实际最低进面分。"
   },
   {
     "sourceId": "beijing-2024-announcement",
@@ -1136,6 +1136,67 @@
     "notes": "昌平区资格审查通过人数1,738；来源以176人为计划人数，其他职位镜像为177人，快照不是最终缴费/实考人数。"
   },
   {
+    "sourceId": "huatu-2025-citywide-top3-day2-evening-ratios",
+    "title": "华图：2025京考职位过审竞争比（截至11月19日18时）",
+    "publisher": "北京华图",
+    "level": "secondary",
+    "evidenceType": "registration_snapshot",
+    "year": 2025,
+    "geographicScope": "北京市（过审竞争比前三职位，非全市清单）",
+    "url": "https://m.bj.huatu.com/2024/1120/1244583.html",
+    "observedAt": "2024-11-19 18:00",
+    "accessedAt": "2026-10-10",
+    "positionSnapshots": [
+      { "positionCode": "220527701", "scope": "position-level", "applicantsQualified": 111, "recruitCount": 1 },
+      { "positionCode": "241677103", "scope": "position-level", "applicantsQualified": 70, "recruitCount": 1 },
+      { "positionCode": "221460602", "scope": "position-level", "applicantsQualified": 60, "recruitCount": 1 }
+    ],
+    "notes": "报道时点为2024-11-19 18:00，列出2025京考过审竞争比前三岗位，分别为220527701（111:1）、241677103（70:1）、221460602（60:1）。三个职位在本地2025职位记录中的计划招录人数均为1人，故按来源所报比例换算过审数。只包含报道点名且能按职位代码匹配的岗位，不代表全市清单；不是最终缴费或实考人数。"
+  },
+  {
+    "sourceId": "huatu-2025-citywide-top10-qualified",
+    "title": "华图：2025京考过审人数最激烈的前十职位（截至11月21日9时）",
+    "publisher": "华图教育",
+    "level": "secondary",
+    "evidenceType": "registration_snapshot",
+    "year": 2025,
+    "geographicScope": "北京市（报名过审人数前十职位，非全市清单）",
+    "url": "https://www.huatu.com/2024/1121/2789842.html",
+    "observedAt": "2024-11-21 09:00",
+    "accessedAt": "2026-10-10",
+    "positionSnapshots": [
+      { "positionCode": "220527701", "scope": "position-level", "applicantsQualified": 177, "recruitCount": 1 },
+      { "positionCode": "221155801", "scope": "position-level", "applicantsQualified": 117, "recruitCount": 1 },
+      { "positionCode": "241677103", "scope": "position-level", "applicantsQualified": 102, "recruitCount": 1 },
+      { "positionCode": "220633901", "scope": "position-level", "applicantsQualified": 193, "recruitCount": 2 },
+      { "positionCode": "231569502", "scope": "position-level", "applicantsQualified": 92, "recruitCount": 1 },
+      { "positionCode": "241052801", "scope": "position-level", "applicantsQualified": 81, "recruitCount": 1 },
+      { "positionCode": "221460602", "scope": "position-level", "applicantsQualified": 74, "recruitCount": 1 },
+      { "positionCode": "231570503", "scope": "position-level", "applicantsQualified": 73, "recruitCount": 1 },
+      { "positionCode": "231568202", "scope": "position-level", "applicantsQualified": 140, "recruitCount": 2 },
+      { "positionCode": "221156501", "scope": "position-level", "applicantsQualified": 137, "recruitCount": 2 }
+    ],
+    "notes": "华图于2024-11-21 13:16发布，所列快照时点为当日9:00；公开的是资格审查通过人数，不是提交申请总人数、最终缴费人数或实考人数。该页仅列过审人数最激烈的前十职位，不代表全市完整职位清单。职位代码、单位、职位名和招录人数均可与本地2025职位样例唯一对应。"
+  },
+  {
+    "sourceId": "huatu-2025-citywide-top3-evening-ratios",
+    "title": "华图：2025京考职位过审竞争比（截至11月21日18时）",
+    "publisher": "北京华图",
+    "level": "secondary",
+    "evidenceType": "registration_snapshot",
+    "year": 2025,
+    "geographicScope": "北京市（市直过审人数最多岗位及竞争比前三岗位，非全市清单）",
+    "url": "https://bj.huatu.com/2024/1122/1244624.html",
+    "observedAt": "2024-11-21 18:00",
+    "accessedAt": "2026-10-10",
+    "positionSnapshots": [
+      { "positionCode": "220527701", "scope": "position-level", "applicantsQualified": 245, "recruitCount": 1 },
+      { "positionCode": "241677103", "scope": "position-level", "applicantsQualified": 157, "recruitCount": 1 },
+      { "positionCode": "221155801", "scope": "position-level", "applicantsQualified": 155, "recruitCount": 1 }
+    ],
+    "notes": "报道标明时点为2024-11-21 18:00，口径为资格审查通过人数及其相对招录计划的竞争比。所列三岗分别报道竞争比245:1、157:1、155:1；本地对应2025职位记录的招录计划均为1人，据此换算过审数。仅含报道中点名且能与本地职位库按代码匹配的三岗，不代表全市完整岗位清单；不代表最终缴费或实考人数。"
+  },
+  {
     "sourceId": "eoffcn-2026-snapshot-20251117-1800",
     "title": "中公网校：2026京考报名统计（11月17日18时）",
     "publisher": "中公网校 / 中公教育",
@@ -1144,12 +1205,48 @@
     "year": 2026,
     "url": "https://www.eoffcn.com/kszx/detail/1902238.html",
     "observedAt": "2025-11-17 18:00",
-    "accessedAt": "2026-10-08",
+    "accessedAt": "2026-10-10",
     "positionSnapshots": [
       {
         "positionCode": "821261102",
         "scope": "position-level",
         "applicantsQualified": 44,
+        "recruitCount": 2
+      },
+      {
+        "positionCode": "232502102",
+        "scope": "position-level",
+        "applicantsQualified": 76,
+        "recruitCount": 32
+      },
+      {
+        "positionCode": "232502501",
+        "scope": "position-level",
+        "applicantsQualified": 47,
+        "recruitCount": 30
+      },
+      {
+        "positionCode": "242503001",
+        "scope": "position-level",
+        "applicantsQualified": 43,
+        "recruitCount": 15
+      },
+      {
+        "positionCode": "241780601",
+        "scope": "position-level",
+        "applicantsQualified": 28,
+        "recruitCount": 1
+      },
+      {
+        "positionCode": "232502801",
+        "scope": "position-level",
+        "applicantsQualified": 23,
+        "recruitCount": 10
+      },
+      {
+        "positionCode": "220633601",
+        "scope": "position-level",
+        "applicantsQualified": 22,
         "recruitCount": 2
       },
       {
@@ -1160,7 +1257,7 @@
         "recruitCount": 1
       }
     ],
-    "notes": "页面逐职位表列示昌平区档案馆综合管理岗821261102为44人/计划2人；总工会9人/计划1人只见单位汇总，未展示职位代码，故仅记为单位级。以上为第三方资格审查快照，不是最终报名、缴费或实考人数。"
+    "notes": "页面逐职位表列出市级过审人数前十岗位；记录其中可与2026职位库按代码、招录人数匹配的岗位（含昌平区档案馆821261102为44人/计划2人）。另，昌平区总工会9人/计划1人仅见单位汇总，未展示职位代码，故仍记为单位级。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
   },
   {
     "sourceId": "eoffcn-2026-snapshot-20251118-0900",
@@ -1171,7 +1268,7 @@
     "year": 2026,
     "url": "https://www.eoffcn.com/kszx/detail/1902239.html",
     "observedAt": "2025-11-18 09:00",
-    "accessedAt": "2026-10-08",
+    "accessedAt": "2026-10-10",
     "positionSnapshots": [
       {
         "positionCode": "821261102",
@@ -1184,9 +1281,57 @@
         "scope": "position-level",
         "applicantsQualified": 22,
         "recruitCount": 1
+      },
+      {
+        "positionCode": "232502102",
+        "scope": "position-level",
+        "applicantsQualified": 76,
+        "recruitCount": 32
+      },
+      {
+        "positionCode": "242503301",
+        "scope": "position-level",
+        "applicantsQualified": 51,
+        "recruitCount": 18
+      },
+      {
+        "positionCode": "232502501",
+        "scope": "position-level",
+        "applicantsQualified": 47,
+        "recruitCount": 30
+      },
+      {
+        "positionCode": "242503001",
+        "scope": "position-level",
+        "applicantsQualified": 43,
+        "recruitCount": 15
+      },
+      {
+        "positionCode": "220633602",
+        "scope": "position-level",
+        "applicantsQualified": 29,
+        "recruitCount": 2
+      },
+      {
+        "positionCode": "241780601",
+        "scope": "position-level",
+        "applicantsQualified": 28,
+        "recruitCount": 1
+      },
+      {
+        "positionCode": "231052001",
+        "scope": "position-level",
+        "applicantsQualified": 26,
+        "recruitCount": 1
+      },
+      {
+        "positionCode": "221262601",
+        "scope": "position-level",
+        "applicantsQualified": 18,
+        "recruitCount": 1
       }
     ],
-    "notes": "页面逐职位表列示昌平区档案馆综合管理岗821261102为131人/计划2人、昌平区总工会文秘岗821263001为22人/计划1人。均为第三方资格审查快照，不是最终报名、缴费或实考人数。"
+    "notes": "页面列出市级过审人数前十及竞争最激烈岗位；记录其中能与2026职位库按代码、招录人数匹配的岗位。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
   },
   {
     "sourceId": "eoffcn-2026-snapshot-20251118-1800",
@@ -1195,9 +1340,10 @@
     "level": "secondary",
     "evidenceType": "registration_snapshot",
     "year": 2026,
+    "geographicScope": "北京市（报道中列出的市级前十岗位中可与职位库代码匹配的记录，非全市完整清单）",
     "url": "https://www.eoffcn.com/kszx/detail/1902242.html",
     "observedAt": "2025-11-18 18:00",
-    "accessedAt": "2026-10-08",
+    "accessedAt": "2026-10-10",
     "positionSnapshots": [
       {
         "positionCode": "821261102",
@@ -1206,13 +1352,49 @@
         "recruitCount": 2
       },
       {
+        "positionCode": "232502501",
+        "scope": "position-level",
+        "applicantsQualified": 249,
+        "recruitCount": 30
+      },
+      {
+        "positionCode": "232502102",
+        "scope": "position-level",
+        "applicantsQualified": 197,
+        "recruitCount": 32
+      },
+      {
+        "positionCode": "242503001",
+        "scope": "position-level",
+        "applicantsQualified": 107,
+        "recruitCount": 15
+      },
+      {
         "positionCode": "821263001",
         "scope": "position-level",
         "applicantsQualified": 81,
         "recruitCount": 1
+      },
+      {
+        "positionCode": "221154902",
+        "scope": "position-level",
+        "applicantsQualified": 56,
+        "recruitCount": 1
+      },
+      {
+        "positionCode": "220633601",
+        "scope": "position-level",
+        "applicantsQualified": 102,
+        "recruitCount": 2
+      },
+      {
+        "positionCode": "241780601",
+        "scope": "position-level",
+        "applicantsQualified": 51,
+        "recruitCount": 1
       }
     ],
-    "notes": "页面逐职位表列示昌平区档案馆综合管理岗821261102为275人/计划2人、昌平区总工会文秘岗821263001为81人/计划1人。均为第三方资格审查快照，不是最终报名、缴费或实考人数。"
+    "notes": "报道注明竞争比按资格审查通过人数/招录人数计算；此处逐职位保存市级过审人数前十和高竞争岗位中可与2026职位库按职位代码、招录数匹配的记录。该页面不是全市完整清单；人数是第三方资格审查快照，不是最终缴费或实考人数。"
   },
   {
     "sourceId": "eoffcn-2026-snapshot-20251119-0900",
@@ -1249,7 +1431,7 @@
     "year": 2026,
     "url": "https://www.eoffcn.com/kszx/detail/1903982.html",
     "observedAt": "2025-11-19 18:00",
-    "accessedAt": "2026-10-08",
+    "accessedAt": "2026-10-10",
     "positionSnapshots": [
       {
         "positionCode": "821261102",
@@ -1262,9 +1444,109 @@
         "scope": "position-level",
         "applicantsQualified": 150,
         "recruitCount": 1
+      },
+      {
+        "positionCode": "232502501",
+        "scope": "position-level",
+        "applicantsQualified": 375,
+        "recruitCount": 30
+      },
+      {
+        "positionCode": "232502102",
+        "scope": "position-level",
+        "applicantsQualified": 287,
+        "recruitCount": 32
+      },
+      {
+        "positionCode": "220633601",
+        "scope": "position-level",
+        "applicantsQualified": 213,
+        "recruitCount": 2
+      },
+      {
+        "positionCode": "232501901",
+        "scope": "position-level",
+        "applicantsQualified": 210,
+        "recruitCount": 30
+      },
+      {
+        "positionCode": "232502201",
+        "scope": "position-level",
+        "applicantsQualified": 199,
+        "recruitCount": 22
+      },
+      {
+        "positionCode": "221154902",
+        "scope": "position-level",
+        "applicantsQualified": 99,
+        "recruitCount": 1
+      },
+      {
+        "positionCode": "231156101",
+        "scope": "position-level",
+        "applicantsQualified": 176,
+        "recruitCount": 2
+      },
+      {
+        "positionCode": "241780601",
+        "scope": "position-level",
+        "applicantsQualified": 87,
+        "recruitCount": 1
       }
     ],
-    "notes": "页面逐职位表列示昌平区档案馆综合管理岗821261102为424人/计划2人、昌平区总工会文秘岗821263001为150人/计划1人。均为第三方资格审查快照，不是最终报名、缴费或实考人数。"
+    "notes": "页面逐职位列出市级过审人数前十及最激烈岗位；记录其中能与2026职位库按代码、招录人数匹配的岗位。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
+  },
+  {
+    "sourceId": "zhonggong-2026-snapshot-20251120-0900",
+    "title": "中公教育转载：2026京考报名统计（11月20日9时）",
+    "publisher": "中公教育（大数跨境转载）",
+    "level": "secondary",
+    "evidenceType": "registration_snapshot",
+    "year": 2026,
+    "url": "https://www.10100.com/article/103413571",
+    "observedAt": "2025-11-20 09:00",
+    "accessedAt": "2026-10-10",
+    "positionSnapshots": [
+      {
+        "positionCode": "821261102",
+        "scope": "position-level",
+        "applicantsQualified": 441,
+        "recruitCount": 2
+      },
+      {
+        "positionCode": null,
+        "scope": "citywide-level",
+        "applicantsQualified": 23194,
+        "recruitCount": 3694
+      }
+    ],
+    "notes": "报道注明截至11月20日9时全市资格审查通过23194人，竞争最激烈岗位为昌平区档案馆综合管理岗821261102、竞争比220.5:1；该岗计划招录2人，441人为按报道竞争比反算的通过人数。市级比值为通过人数/计划招录人数的加权总比，不是岗位平均竞争比；均非缴费或实考人数。"
+  },
+  {
+    "sourceId": "sohu-2026-final-day-snapshot-20251121-0900",
+    "title": "搜狐号转载：2026京考报名最后一日9时快照",
+    "publisher": "搜狐号转载作者（原始发布者待核）",
+    "level": "secondary",
+    "evidenceType": "registration_snapshot",
+    "year": 2026,
+    "url": "https://www.sohu.com/a/957051740_121124036",
+    "observedAt": "2025-11-21 09:00",
+    "accessedAt": "2026-10-10",
+    "positionSnapshots": [
+      {
+        "positionCode": "821261102",
+        "scope": "position-level",
+        "applicantsQualified": 615,
+        "recruitCount": 2
+      },
+      {
+        "positionCode": null,
+        "scope": "citywide-level",
+        "applicantsQualified": 48026,
+        "recruitCount": 3694
+      }
+    ],
+    "notes": "报道称报名最后一天9时全市资格审查通过48026人，昌平区档案馆综合管理岗821261102竞争比307.5:1；该岗计划招录2人，615人为按报道竞争比反算的通过人数。该时点是官方查询页面注明的最后一天9时更新点，报名仍持续至18时；市级比值为通过人数/计划招录人数的加权总比，不是最终缴费或实考人数。"
   },
   {
     "sourceId": "sohu-2026-competition",
@@ -1303,7 +1585,72 @@
     "sampleRecruits": 79,
     "minimum": 106.25,
     "maximum": 139.5,
+    "scope": "昌平区岗位最低进面线部分样本",
     "notes": "页面可见表格逐行列出31条昌平岗位最低进面分，页面称昌平共有79人进面并明确标为部分样本；不是官方全量分布，也不是笔试合格线。"
+  },
+  {
+    "sourceId": "cgzj-2026-haidian-cutoff-sample",
+    "title": "2026北京公务员考试进面分数线｜海淀区（可见岗位表）",
+    "publisher": "成公教育",
+    "level": "secondary",
+    "evidenceType": "partial_interview_score_sample",
+    "year": 2026,
+    "url": "https://www.cgzj.com/sydw/12619.html",
+    "accessedAt": "2026-10-10",
+    "samplePositions": 25,
+    "sampleRecruits": 95,
+    "minimum": 106.25,
+    "maximum": 136.5,
+    "scope": "海淀区岗位最低进面线部分样本",
+    "notes": "页面称海淀共有95人进入面试，公开表格可见25条岗位分数；其中23条与当前职位库唯一匹配，法院和香山街道各有同名岗位歧义。页面明确为部分样本，不能代表全区全量，也不是官方笔试合格线。"
+  },
+  {
+    "sourceId": "cgzj-2026-xicheng-cutoff-sample",
+    "title": "2026北京公务员考试进面分数线｜西城区（可见岗位表）",
+    "publisher": "成公教育",
+    "level": "secondary",
+    "evidenceType": "partial_interview_score_sample",
+    "year": 2026,
+    "url": "https://www.cgzj.com/sk/12640.html",
+    "accessedAt": "2026-10-10",
+    "samplePositions": 28,
+    "sampleRecruits": 111,
+    "minimum": 98,
+    "maximum": 140,
+    "scope": "西城区岗位最低进面线部分样本",
+    "notes": "页面称西城共有111人进入面试，公开表格可见28条岗位分数；其中25条与当前职位库唯一匹配，法院和检察院同名司法警察岗有歧义，广安门外街道一行暂与本地职位名称不符、未挂代码。页面明确为部分样本，不能代表全区全量，也不是官方笔试合格线。"
+  },
+  {
+    "sourceId": "cgzj-2026-yanqing-cutoff-sample",
+    "title": "2026北京公务员考试进面分数线｜延庆区（可见岗位表）",
+    "publisher": "成公教育",
+    "level": "secondary",
+    "evidenceType": "partial_interview_score_sample",
+    "year": 2026,
+    "url": "https://www.cgzj.com/sk/12661.html",
+    "accessedAt": "2026-10-10",
+    "samplePositions": 28,
+    "sampleRecruits": 49,
+    "minimum": 100,
+    "maximum": 128.75,
+    "scope": "延庆区岗位最低进面线部分样本",
+    "notes": "页面称延庆共有49人进入面试，公开表格可见28条岗位分数，明确注明为部分进面分数线。当前职位库中21条按年度+单位+岗位名唯一匹配，3条同名岗位歧义，4条未匹配；样本不代表全区全量，也不是官方笔试合格线。"
+  },
+  {
+    "sourceId": "cgzj-2026-fangshan-cutoff-sample",
+    "title": "2026北京公务员考试进面分数线｜房山区（可见岗位表）",
+    "publisher": "成公教育",
+    "level": "secondary",
+    "evidenceType": "partial_interview_score_sample",
+    "year": 2026,
+    "url": "https://www.cgzj.com/sydw/12622.html",
+    "accessedAt": "2026-10-10",
+    "samplePositions": 8,
+    "sampleRecruits": 91,
+    "minimum": 100.75,
+    "maximum": 136.25,
+    "scope": "房山区岗位最低进面线部分样本",
+    "notes": "页面称房山共91人进入面试，当前可读表格列出8条岗位分数并注明为部分样本；其中4条按同年度、单位、岗位名在候选职位库中唯一匹配，4条因同名岗位无法唯一匹配。样本不代表全区全量，也不是官方笔试合格线。职位候选仍未与官方职位表逐代码核验。"
   },
   {
     "sourceId": "gwyzwb-2025-example",
@@ -1599,8 +1946,8 @@
     "evidenceType": "official_registration_query",
     "year": 2026,
     "url": "https://fuwu.rsj.beijing.gov.cn/gwyquery/publicQueryH5/gzwbkrsssquery",
-    "accessedAt": "2026-10-08",
-    "notes": "官方查询页按职位代码查询招考人数、面试比例及资格审查通过人数；提示报名期间（最后一天除外）每日9:00和18:00更新，最后一天9:00更新。目前只登记查询入口，尚未导入昌平岗位级报名快照。"
+    "accessedAt": "2026-10-10",
+    "notes": "官方查询页说明按职位代码展示招考人数、面试比例、资格审查通过人数及相应报考比例，并提示报名期间（最后一天除外）每日9:00和18:00更新、最后一天9:00更新。页面当前内容未提供可回溯的历史快照日期；历史竞争记录仅按带明确时点的来源登记。"
   },
   {
     "sourceId": "beijing-2026-position-lookup",

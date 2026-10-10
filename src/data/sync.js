@@ -20,8 +20,9 @@ const DEFAULT_POSITION_FILTERS = Object.freeze({
   districtId: 'all', year: 'all', orgType: 'all', jobType: 'all', majorTopic: 'all', sourceLevel: 'all',
   unit: 'all', education: 'all', politicalStatus: 'all', freshGraduate: 'all',
   physicalTest: 'all', professionalTest: 'all', recruitmentGroup: 'all',
+  competitionEvidence: 'all', cutoffEvidence: 'all',
 });
-const POSITION_SORTS = new Set(['year-desc', 'recruit-desc', 'unit-asc', 'title-asc']);
+const POSITION_SORTS = new Set(['year-desc', 'recruit-desc', 'unit-asc', 'title-asc', 'competition-desc', 'competition-asc', 'cutoff-desc', 'cutoff-asc']);
 const SCENARIO_SCOPES = new Set(['all', 'district', 'street', 'town', 'ordinary', 'enforcement', 'public-management']);
 
 export function normalizePositionPreferences(source = {}) {

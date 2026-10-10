@@ -2,10 +2,11 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { summarizePositionCoverage } from '../src/data/coverage.js';
+import { getPositionCompetitionEvidence } from '../src/data/positions.js';
 
 test('all visible 2026 Changping interview cutoffs are available as source-backed rows', async () => {
   const data = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
-  const rows = data.scoreRows.filter((row) => row.year === 2026);
+  const rows = data.scoreRows.filter((row) => row.year === 2026 && row.sourceId === 'cgzj-2026-cutoff-sample');
   const source = data.sources.find((item) => item.sourceId === 'cgzj-2026-cutoff-sample');
 
   assert.equal(rows.length, 31);
@@ -19,12 +20,63 @@ test('all visible 2026 Changping interview cutoffs are available as source-backe
 test('score sample count and bounds are derived from its concrete score rows', async () => {
   const data = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
   const rows = data.scoreRows.filter((row) => row.year === 2026);
-  const sample = data.scoreSamples.find((item) => item.year === 2026);
+  const samples = data.scoreSamples.filter((item) => item.year === 2026);
 
-  assert.equal(sample.samplePositions, rows.length);
-  assert.equal(sample.minimum, Math.min(...rows.map((row) => row.score)));
-  assert.equal(sample.maximum, Math.max(...rows.map((row) => row.score)));
+  assert.equal(samples.length, 5);
+  assert.equal(samples.reduce((total, sample) => total + sample.samplePositions, 0), rows.length);
+  for (const sample of samples) {
+    const sourceRows = rows.filter((row) => row.sourceId === sample.sourceId);
+    assert.equal(sample.samplePositions, sourceRows.length);
+    assert.equal(sample.minimum, Math.min(...sourceRows.map((row) => row.score)));
+    assert.equal(sample.maximum, Math.max(...sourceRows.map((row) => row.score)));
+  }
   assert.equal(summarizePositionCoverage(data).find((row) => row.year === 2026).namedScoreExamples, rows.length);
+
+  const fangshan = samples.find((sample) => sample.sourceId === 'cgzj-2026-fangshan-cutoff-sample');
+  assert.equal(fangshan.samplePositions, 8);
+  assert.equal(fangshan.sampleRecruits, 91);
+  assert.deepEqual([fangshan.minimum, fangshan.maximum], [100.75, 136.25]);
+});
+
+test('Fangshan position detail receives the source-backed 2026 interview cutoff by exact position code', async () => {
+  const data = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const position = data.positions.find((row) => row.year === 2026 && row.code === '121049302');
+
+  const evidence = getPositionCompetitionEvidence(position, {
+    observations: data.observations,
+    scoreRows: data.scoreRows,
+  });
+
+  assert.equal(evidence.cutoffScore, 136.25);
+  assert.deepEqual(evidence.cutoffSourceIds, ['cgzj-2026-fangshan-cutoff-sample']);
+});
+
+test('Haidian and Xicheng third-party samples expose their partial scope and unresolved rows', async () => {
+  const data = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const haidian = data.scoreRows.filter((row) => row.sourceId === 'cgzj-2026-haidian-cutoff-sample');
+  const xicheng = data.scoreRows.filter((row) => row.sourceId === 'cgzj-2026-xicheng-cutoff-sample');
+
+  assert.equal(haidian.length, 25);
+  assert.equal(haidian.filter((row) => row.mappingConfidence === 'high').length, 23);
+  assert.equal(haidian.filter((row) => row.mappingConfidence === 'ambiguous').length, 2);
+  assert.equal(xicheng.length, 28);
+  assert.equal(xicheng.filter((row) => row.mappingConfidence === 'high').length, 25);
+  assert.equal(xicheng.filter((row) => row.mappingConfidence === 'ambiguous').length, 2);
+  assert.equal(xicheng.filter((row) => row.mappingConfidence === 'unmatched').length, 1);
+});
+
+test('Yanqing partial cutoff rows retain the visible sample size and mapping uncertainty', async () => {
+  const data = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const rows = data.scoreRows.filter((row) => row.sourceId === 'cgzj-2026-yanqing-cutoff-sample');
+  const source = data.sources.find((item) => item.sourceId === 'cgzj-2026-yanqing-cutoff-sample');
+
+  assert.equal(rows.length, 28);
+  assert.equal(rows.filter((row) => row.mappingConfidence === 'high').length, 21);
+  assert.equal(rows.filter((row) => row.mappingConfidence === 'ambiguous').length, 3);
+  assert.equal(rows.filter((row) => row.mappingConfidence === 'unmatched').length, 4);
+  assert.equal(source.samplePositions, 28);
+  assert.equal(source.sampleRecruits, 49);
+  assert.match(source.notes, /样本不代表全区全量/);
 });
 
 test('a conflicting-year 2025 score page is registered but excluded from named cutoff rows', async () => {

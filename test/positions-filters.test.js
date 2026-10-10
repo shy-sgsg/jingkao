@@ -8,7 +8,7 @@ async function renderPositionApp() {
   const dataset = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
   const listeners = {};
   const root = { innerHTML: '' };
-  const modalRoot = { innerHTML: '' };
+  const modalRoot = { innerHTML: '', querySelector: () => null };
   const toastRoot = { textContent: '', classList: { add() {}, remove() {} } };
   const documentElement = { dataset: {}, classList: { toggle() {} } };
   const getAdvancedOpen = () => {
@@ -50,7 +50,7 @@ async function renderPositionApp() {
   await import(`../src/app.js?positions-filter-test=${Date.now()}`);
   for (let attempt = 0; attempt < 5 && !root.innerHTML; attempt += 1) await new Promise(setImmediate);
   await unlockTestAccount(listeners, accountId);
-  return { dataset, listeners, root, advancedDetails };
+  return { dataset, listeners, root, modalRoot, advancedDetails };
 }
 
 test('position library filters real rows and keeps advanced controls open after changes', async () => {
@@ -116,4 +116,52 @@ test('district selector limits the visible sample to records assigned to that di
     .map((match) => match[1]);
   assert.ok(visibleKeys.length > 0);
   assert.ok(visibleKeys.every((key) => yanqingKeys.has(key)));
+});
+
+test('position library filters and sorts by exact-position competition snapshots and mapped cutoff evidence', async () => {
+  const { dataset, listeners, root, modalRoot } = await renderPositionApp();
+  const yearPositions = dataset.positions.filter((position) => Number(position.year) === 2026 && position.districtId === 'changping');
+  const snapshotCodes = new Set(dataset.observations
+    .filter((item) => Number(item.year) === 2026 && item.observationType === 'qualified_snapshot'
+      && ['position-level', 'position', '岗位级'].includes(item.scope) && item.positionCode)
+    .map((item) => item.positionCode));
+  const expectedSnapshotPositions = yearPositions.filter((position) => snapshotCodes.has(position.code));
+  const exactCutoffRows = dataset.scoreRows.filter((row) => Number(row.year) === 2026
+    && row.mappingConfidence === 'high' && row.positionCode
+    && yearPositions.some((position) => position.code === row.positionCode && position.unit === row.unit && position.title === row.title));
+  const expectedCutoffPositions = [...new Set(exactCutoffRows.map((row) => row.positionCode))];
+  assert.ok(expectedSnapshotPositions.length > 0);
+  assert.ok(expectedCutoffPositions.length > 0);
+
+  await listeners.change({ target: { id: 'job-district', value: 'changping' } });
+  await listeners.change({ target: { id: 'job-year', value: '2026' } });
+  await listeners.change({ target: { id: 'job-competition-evidence', value: 'has' } });
+
+  const snapshotKeys = [...root.innerHTML.matchAll(/class="position-title-link" data-action="open-job" data-position-key="([^"]+)"/g)]
+    .map((match) => match[1]);
+  assert.deepEqual(snapshotKeys.sort(), expectedSnapshotPositions.map((position) => `${position.year}:${position.code}`).sort());
+  assert.match(root.innerHTML, /id="job-competition-evidence"/);
+  assert.match(root.innerHTML, /资格审查 1:307\.5/);
+  assert.match(root.innerHTML, /2025-11-21 09:00 · 通过人数 \/ 计划招录/);
+
+  await listeners.change({ target: { id: 'job-competition-evidence', value: 'all' } });
+  await listeners.change({ target: { id: 'job-cutoff-evidence', value: 'has' } });
+  const cutoffKeys = [...root.innerHTML.matchAll(/class="position-title-link" data-action="open-job" data-position-key="([^"]+)"/g)]
+    .map((match) => match[1]);
+  assert.deepEqual(cutoffKeys.sort(), expectedCutoffPositions.map((code) => `2026:${code}`).sort());
+
+  await listeners.change({ target: { id: 'job-cutoff-evidence', value: 'all' } });
+  await listeners.change({ target: { id: 'job-sort', value: 'competition-desc' } });
+  const sortedSnapshotCodes = [...root.innerHTML.matchAll(/class="position-title-link" data-action="open-job" data-position-key="2026:([^"]+)"/g)]
+    .map((match) => match[1])
+    .filter((code) => snapshotCodes.has(code));
+  assert.deepEqual(sortedSnapshotCodes.slice(0, 2), ['821261102', '821263001']);
+
+  const openJobAction = { dataset: { action: 'open-job', positionKey: '2025:220527701' } };
+  await listeners.click({ target: { closest: (selector) => (selector === '[data-action]' ? openJobAction : null) } });
+  assert.match(modalRoot.innerHTML, /2024-11-21 09:00/);
+  assert.match(modalRoot.innerHTML, /时点参考竞争比 1:177/);
+  assert.match(modalRoot.innerHTML, /2024-11-21 18:00/);
+  assert.match(modalRoot.innerHTML, /时点参考竞争比 1:245/);
+  assert.match(modalRoot.innerHTML, /https:\/\/www\.huatu\.com\/2024\/1121\/2789842\.html/);
 });

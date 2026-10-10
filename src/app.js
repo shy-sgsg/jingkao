@@ -9,7 +9,7 @@ import { createSyncBranch, GITHUB_SYNC_TARGET, readRemoteBackup, writeUserDataBa
 import { clearGitHubToken, loadGitHubToken, saveGitHubToken } from './data/githubTokenStore.js';
 import { getPositionDataCompleteness, summarizePositionCoverage } from './data/coverage.js';
 import { buildResearchFindings, summarizeAnnualConflicts } from './data/findings.js';
-import { buildDecisionCoverageMatrix, classifyPublicManagementMatch, filterAndSortPositions, filterScoreRowsByScope, filterScoreRowsBySegment, findPositionByReference, getPositionEvidenceGrade, getPositionFilterValue, hasPositionReference, paginateItems, positionIdentity, summarizePublicManagementPositions } from './data/positions.js';
+import { buildDecisionCoverageMatrix, classifyPublicManagementMatch, filterAndSortPositions, filterScoreRowsByScope, filterScoreRowsBySegment, findPositionByReference, getPositionCompetitionEvidence, getPositionEvidenceGrade, getPositionFilterValue, hasPositionReference, paginateItems, positionIdentity, summarizePublicManagementPositions } from './data/positions.js';
 import { runViewTransition } from './ui/viewTransition.js';
 import { observePageSections } from './ui/scrollReveal.js';
 import { normalizeStudyState, setKnowledgePointStatus, toggleKnowledgePointFlag } from './science/persistence.js';
@@ -127,7 +127,7 @@ let resultTransition = false;
 let filters = {
   districtId: 'all', year: 'all', orgType: 'all', jobType: 'all', majorTopic: 'all', query: '', sourceLevel: 'all',
   unit: 'all', education: 'all', politicalStatus: 'all', freshGraduate: 'all',
-  physicalTest: 'all', professionalTest: 'all', recruitmentGroup: 'all',
+  physicalTest: 'all', professionalTest: 'all', recruitmentGroup: 'all', competitionEvidence: 'all', cutoffEvidence: 'all',
 };
 let jobSort = 'year-desc';
 let jobPage = 1;
@@ -346,6 +346,10 @@ function fmt(value, digits = 0) {
   return Number.isFinite(value) ? Number(value).toFixed(digits).replace(/\.0$/, '') : '—';
 }
 
+function fmtRatio(value) {
+  return Number.isFinite(value) ? String(Number(value.toFixed(2))) : '—';
+}
+
 function fmtPct(value) {
   return Number.isFinite(value) ? `${Math.round(value * 100)}%` : '待记录';
 }
@@ -458,6 +462,19 @@ function positionCompletenessMarkup(position) {
     : '八类信息均有可追溯记录';
   const description = `已收录 ${completeness.availableSections}/${completeness.totalSections} 类；${missing}`;
   return `<span class="chip chip-${tone}" data-completeness-grade="${escapeHtml(completeness.grade)}" title="${escapeHtml(description)}" aria-label="数据完整度：${escapeHtml(completeness.grade)}；${escapeHtml(description)}">数据${escapeHtml(completeness.grade)}</span>`;
+}
+
+function positionCompetitionMarkup(position) {
+  const evidence = getPositionCompetitionEvidence(position, dataset);
+  const snapshot = evidence.latestSnapshot;
+  const competition = Number.isFinite(evidence.qualifiedCompetitionRatio)
+    ? `资格审查 1:${fmtRatio(evidence.qualifiedCompetitionRatio)}`
+    : evidence.snapshots.length ? '快照口径待核' : '竞争数据待补';
+  const snapshotNote = snapshot
+    ? `${snapshot.observedAt} · 通过人数 / 计划招录`
+    : evidence.snapshots.length ? '存在多源冲突或招录分母缺失' : '暂无岗位级资格审查快照';
+  const cutoff = Number.isFinite(evidence.cutoffScore) ? `最低进面 ${fmt(evidence.cutoffScore, 2)} 分` : '进面线待补';
+  return `<div class="position-competition-summary"><strong>${escapeHtml(competition)}</strong><small>${escapeHtml(snapshotNote)}</small><span>${escapeHtml(cutoff)}</span></div>`;
 }
 
 function statusTone(status) {
@@ -1532,7 +1549,12 @@ function renderMockModuleSummary(mocks) {
 }
 
 function filteredPositions() {
-  return filterAndSortPositions(dataset.positions, { ...filters, sortBy: jobSort });
+  return filterAndSortPositions(dataset.positions, {
+    ...filters,
+    sortBy: jobSort,
+    observations: dataset.observations,
+    scoreRows: dataset.scoreRows,
+  });
 }
 
 function decisionScopePositions({ districtId = filters.districtId, year = filters.year } = {}) {
@@ -1590,7 +1612,7 @@ function renderPositions() {
     const positionKey = positionIdentity(position);
     const isFavorite = hasPositionReference(storage.favorites, position, dataset.positions);
     const districtName = districtNameById.get(position.districtId) || '区县待核';
-    return `<tr style="--row-index:${Math.min(index, 6)}"><td><span class="year-pill">${position.year}</span></td><td><strong>${escapeHtml(position.unit)}</strong><small class="cell-secondary">${escapeHtml(districtName)} · ${escapeHtml(position.orgType)} · ${escapeHtml(position.jobType || '类别待核')}</small></td><td><button type="button" class="position-title-link" data-action="open-job" data-position-key="${escapeHtml(positionKey)}">${escapeHtml(position.title)}</button><small class="cell-secondary mono">${escapeHtml(position.code)}</small></td><td>${fmt(position.recruitCount)} 人</td><td><span class="major-match-badge major-match-${majorMatch.status}">${matchLabels[majorMatch.status]}</span><span class="truncate-cell">${escapeHtml(position.majorText || '待核验')}</span></td><td><div class="position-evidence-cell">${positionEvidenceMarkup(position)}${positionCompletenessMarkup(position)}<small class="cell-secondary">${escapeHtml(position.verification || '核验状态未知')}</small></div></td><td><div class="row-actions"><button type="button" class="icon-button ${isFavorite ? 'favorited' : ''}" data-action="favorite" data-position-key="${escapeHtml(positionKey)}" aria-label="收藏职位">${isFavorite ? '★' : '☆'}</button><button type="button" class="icon-button" data-action="compare" data-position-key="${escapeHtml(positionKey)}" aria-label="加入比较">⇄</button></div></td></tr>`;
+    return `<tr style="--row-index:${Math.min(index, 6)}"><td><span class="year-pill">${position.year}</span></td><td><strong>${escapeHtml(position.unit)}</strong><small class="cell-secondary">${escapeHtml(districtName)} · ${escapeHtml(position.orgType)} · ${escapeHtml(position.jobType || '类别待核')}</small></td><td><button type="button" class="position-title-link" data-action="open-job" data-position-key="${escapeHtml(positionKey)}">${escapeHtml(position.title)}</button><small class="cell-secondary mono">${escapeHtml(position.code)}</small></td><td>${fmt(position.recruitCount)} 人</td><td>${positionCompetitionMarkup(position)}</td><td><span class="major-match-badge major-match-${majorMatch.status}">${matchLabels[majorMatch.status]}</span><span class="truncate-cell">${escapeHtml(position.majorText || '待核验')}</span></td><td><div class="position-evidence-cell">${positionEvidenceMarkup(position)}${positionCompletenessMarkup(position)}<small class="cell-secondary">${escapeHtml(position.verification || '核验状态未知')}</small></div></td><td><div class="row-actions"><button type="button" class="icon-button ${isFavorite ? 'favorited' : ''}" data-action="favorite" data-position-key="${escapeHtml(positionKey)}" aria-label="收藏职位">${isFavorite ? '★' : '☆'}</button><button type="button" class="icon-button" data-action="compare" data-position-key="${escapeHtml(positionKey)}" aria-label="加入比较">⇄</button></div></td></tr>`;
   }).join('');
   const districtScopedPositions = decisionScopePositions();
   const publicManagement = summarizePublicManagementPositions(districtScopedPositions);
@@ -1626,7 +1648,7 @@ function renderPositions() {
   }).join('；');
   const orgTypes = ['区直', '街道', '镇', '垂直/驻区'].filter((type) => dataset.positions.some((position) => position.orgType === type));
   const jobTypes = [...new Set(dataset.positions.map((position) => position.jobType).filter(Boolean))].sort((left, right) => left.localeCompare(right, 'zh-CN'));
-  const sortOptions = [['year-desc', '年度（新→旧）'], ['recruit-desc', '招录人数（多→少）'], ['unit-asc', '单位名称（A→Z）'], ['title-asc', '职位名称（A→Z）']];
+  const sortOptions = [['year-desc', '年度（新→旧）'], ['recruit-desc', '招录人数（多→少）'], ['competition-desc', '资格审查时点比（高→低）'], ['competition-asc', '资格审查时点比（低→高）'], ['cutoff-desc', '历史进面线（高→低）'], ['cutoff-asc', '历史进面线（低→高）'], ['unit-asc', '单位名称（A→Z）'], ['title-asc', '职位名称（A→Z）']];
   const advancedFields = [
     ['job-unit', 'unit', 'unit', '招录单位'],
     ['job-education', 'education', 'education', '学历要求'],
@@ -1645,9 +1667,11 @@ function renderPositions() {
   };
   const missingRecruitCount = dataset.positions.some((position) => !Number.isFinite(Number(position.recruitCount)));
   const recruitmentOptions = `<label class="job-advanced-field" style="--filter-index:${advancedFields.length}"><span>招录人数</span><select id="job-recruitment" aria-label="招录人数"><option value="all" ${filters.recruitmentGroup === 'all' ? 'selected' : ''}>全部</option><option value="one" ${filters.recruitmentGroup === 'one' ? 'selected' : ''}>招录 1 人</option><option value="two-or-more" ${filters.recruitmentGroup === 'two-or-more' ? 'selected' : ''}>招录 2 人及以上</option>${missingRecruitCount ? `<option value="missing" ${filters.recruitmentGroup === 'missing' ? 'selected' : ''}>未列明</option>` : ''}</select></label>`;
-  const advancedFilterCount = ['unit', 'education', 'politicalStatus', 'freshGraduate', 'physicalTest', 'professionalTest', 'recruitmentGroup']
+  const competitionEvidenceOptions = `<label class="job-advanced-field" style="--filter-index:${advancedFields.length + 1}"><span>竞争数据</span><select id="job-competition-evidence" aria-label="岗位级竞争数据"><option value="all" ${filters.competitionEvidence === 'all' ? 'selected' : ''}>全部</option><option value="has" ${filters.competitionEvidence === 'has' ? 'selected' : ''}>有可比资格审查快照</option><option value="missing" ${filters.competitionEvidence === 'missing' ? 'selected' : ''}>暂无可比快照</option></select></label>`;
+  const cutoffEvidenceOptions = `<label class="job-advanced-field" style="--filter-index:${advancedFields.length + 2}"><span>历史进面线</span><select id="job-cutoff-evidence" aria-label="岗位最低进面线"><option value="all" ${filters.cutoffEvidence === 'all' ? 'selected' : ''}>全部</option><option value="has" ${filters.cutoffEvidence === 'has' ? 'selected' : ''}>有代码匹配分数</option><option value="missing" ${filters.cutoffEvidence === 'missing' ? 'selected' : ''}>暂无代码匹配分数</option></select></label>`;
+  const advancedFilterCount = ['unit', 'education', 'politicalStatus', 'freshGraduate', 'physicalTest', 'professionalTest', 'recruitmentGroup', 'competitionEvidence', 'cutoffEvidence']
     .filter((key) => filters[key] !== 'all').length;
-  const advancedFilters = `<details id="job-advanced-filters" class="job-advanced-filters"><summary><span>更多条件筛选</span><span class="advanced-filter-count">${advancedFilterCount ? `已选 ${advancedFilterCount} 项` : '单位 · 学历 · 报考条件'}</span></summary><div class="job-advanced-grid">${advancedFields.map(advancedSelect).join('')}${recruitmentOptions}</div><p class="job-filter-footnote">未列明仅表示来源未提供，不表示不限或不符合；专业条件可用上方搜索框检索。</p></details>`;
+  const advancedFilters = `<details id="job-advanced-filters" class="job-advanced-filters"><summary><span>更多条件筛选</span><span class="advanced-filter-count">${advancedFilterCount ? `已选 ${advancedFilterCount} 项` : '单位 · 学历 · 竞争 / 进面证据'}</span></summary><div class="job-advanced-grid">${advancedFields.map(advancedSelect).join('')}${recruitmentOptions}${competitionEvidenceOptions}${cutoffEvidenceOptions}</div><p class="job-filter-footnote">资格审查时点比 = 通过人数 / 计划招录人数，不是最终报名或实考比；进面线仅纳入同年度、代码、单位与职位名均匹配的高置信样本。未列明仅表示来源未提供，不表示不限或不符合。</p></details>`;
   const pagination = pageState.totalPages > 1
     ? `<nav class="position-pagination" aria-label="职位列表分页"><span class="pagination-summary" aria-live="polite">显示 ${pageState.start}–${pageState.end} 条，共 ${pageState.total} 条</span><div class="pagination-controls"><button type="button" class="button button-secondary" data-action="positions-page" data-direction="previous" data-page="${pageState.page - 1}" aria-label="上一页" ${pageState.page <= 1 ? 'disabled' : ''}>← 上一页</button><span>第 ${pageState.page} / ${pageState.totalPages} 页</span><button type="button" class="button button-secondary" data-action="positions-page" data-direction="next" data-page="${pageState.page + 1}" aria-label="下一页" ${pageState.page >= pageState.totalPages ? 'disabled' : ''}>下一页 →</button></div></nav>`
     : `<div class="position-pagination"><span class="pagination-summary">显示 ${pageState.start}–${pageState.end} 条，共 ${pageState.total} 条</span></div>`;
@@ -1657,15 +1681,22 @@ function renderPositions() {
     <div class="notice notice-soft"><span>ⓘ</span><p>各年度当前可追溯样例：${yearDistrictCoverage}。职位行尚未完成全市官方原表逐码核验；汇总口径差异、来源等级和缺失条件在覆盖中心与每条职位记录中保留，不把样例数当作年度全量或竞争率。</p></div>
     ${publicManagementPanel}
     <div class="panel table-panel job-panel"><div class="job-filterbar"><label class="searchbox"><span>⌕</span><input id="job-search" type="search" placeholder="搜单位、职位、专业或代码" value="${escapeHtml(filters.query)}" autocomplete="off"/><kbd>⌘ K</kbd></label><select id="job-type" aria-label="单位类型"><option value="all" ${filters.orgType === 'all' ? 'selected' : ''}>全部单位类型</option>${orgTypes.map((type) => `<option value="${escapeHtml(type)}" ${filters.orgType === type ? 'selected' : ''}>${escapeHtml(type)}</option>`).join('')}</select><select id="job-jobtype" aria-label="职位类别"><option value="all" ${filters.jobType === 'all' ? 'selected' : ''}>全部职位类别</option>${jobTypes.map((type) => `<option value="${escapeHtml(type)}" ${filters.jobType === type ? 'selected' : ''}>${escapeHtml(type)}</option>`).join('')}</select><select id="job-sort" aria-label="职位排序">${sortOptions.map(([value, label]) => `<option value="${value}" ${jobSort === value ? 'selected' : ''}>${escapeHtml(label)}</option>`).join('')}</select><span class="filter-count">${allPositions.length} 条结果</span></div>${advancedFilters}
-    <div class="table-scroll"><table class="data-table job-table"><thead><tr><th>年度</th><th>招录单位</th><th>职位名称 / 代码</th><th>人数</th><th>专业条件片段</th><th>来源等级 / 数据完整度</th><th></th></tr></thead><tbody>${rows || `<tr><td colspan="7"><div class="table-empty compact-empty">${escapeHtml(emptyPositionText)}</div></td></tr>`}</tbody></table></div>${pagination}<div class="table-footnote">来源等级反映证据性质；数据完整度按 8 类信息是否可回查计算，两者互不替代。悬停完整度标签可看缺失项；职位数和招录数只表示可见候选，缺失值以“—”呈现，不按 0 人处理。</div></div></div>`;
+    <div class="table-scroll"><table class="data-table job-table"><thead><tr><th>年度</th><th>招录单位</th><th>职位名称 / 代码</th><th>人数</th><th>竞争 / 进面</th><th>专业条件片段</th><th>来源等级 / 数据完整度</th><th></th></tr></thead><tbody>${rows || `<tr><td colspan="8"><div class="table-empty compact-empty">${escapeHtml(emptyPositionText)}</div></td></tr>`}</tbody></table></div>${pagination}<div class="table-footnote">来源等级反映职位来源性质，数据完整度按 8 类信息是否可回查计算。竞争 / 进面只展示有对应年份、职位代码和来源的证据；空值是待补，不代表零竞争或零分。</div></div></div>`;
 }
 
 function renderCompare() {
   const selected = storage.compared.map((reference) => findPositionByReference(dataset.positions, reference)).filter(Boolean);
   if (!selected.length) return `<div class="page-body"><div class="page-heading-row"><div><div class="eyebrow muted">BEIJING · SIDE-BY-SIDE REVIEW</div><h1>岗位比较</h1><p>从北京全市职位库加入最多 5 个岗位；可跨区、跨年比较，但会明确展示范围和证据。</p></div><a href="#/positions" class="button button-primary">前往职位库选岗位 →</a></div><div class="panel empty-compare"><span class="empty-compare-icon">⇄</span><h2>先挑几个岗位放在一起看</h2><p>比较表会展示区县、年度、单位、职位条件、来源与已知数据空缺，不为缺失字段打分。</p><a href="#/positions" class="button button-secondary">浏览北京候选职位</a></div></div>`;
   const districtNameById = new Map((dataset.districts || []).map((district) => [district.id, district.name]));
-  const qualifiedSnapshotsFor = (position) => dataset.observations.filter((item) => item.observationType === 'qualified_snapshot'
-    && Number(item.year) === Number(position.year) && item.positionCode === position.code);
+  const evidenceFor = (position) => getPositionCompetitionEvidence(position, dataset);
+  const evidenceSourceIds = (position) => {
+    const evidence = evidenceFor(position);
+    return [...new Set([
+      ...(position.sources || []),
+      ...evidence.snapshots.map((item) => item.sourceId),
+      ...evidence.cutoffSourceIds,
+    ].filter(Boolean))];
+  };
   const fields = [
     ['区县', (position) => districtNameById.get(position.districtId) || '区县待核'],
     ['年度 / 代码', (position) => `${position.year} · ${position.code}`],
@@ -1676,16 +1707,21 @@ function renderCompare() {
     ['专业条件', (position) => position.majorText || '待核验'],
     ['资格核验', (position) => evaluateEligibility(position, storage.profile).status],
     ['岗位级报名 / 资格审查记录', (position) => {
-      const snapshots = qualifiedSnapshotsFor(position).sort((left, right) => String(left.observedAt).localeCompare(String(right.observedAt)));
-      const latest = snapshots.at(-1);
-      return latest
-        ? `${latest.observedAt} · ${fmt(latest.applicantsQualified)} 人资格审查通过（过程快照，非最终报名或实考）`
-        : '暂无可回查的岗位级过程或最终数据';
+      const evidence = evidenceFor(position);
+      const latest = evidence.latestSnapshot;
+      if (!latest) return evidence.snapshots.length ? '有岗位级快照，但最新时点存在冲突或缺少可计算分母' : '暂无可回查的岗位级过程或最终数据';
+      const recruits = latest.recruitCount ?? position.recruitCount;
+      const ratio = Number.isFinite(evidence.qualifiedCompetitionRatio)
+        ? `，时点参考竞争比 1:${fmtRatio(evidence.qualifiedCompetitionRatio)}`
+        : '';
+      return `${latest.observedAt} · ${fmt(latest.applicantsQualified)} 人资格审查通过（招录 ${fmt(recruits)} 人${ratio}；非最终报名或实考）`;
     }],
-    ['历史进面线 / 安全垫', () => '暂无逐岗位可比样本'],
+    ['同年代码匹配的最低进面线', (position) => Number.isFinite(evidenceFor(position).cutoffScore)
+      ? `${fmt(evidenceFor(position).cutoffScore, 2)} 分（高置信代码匹配）`
+      : '暂无同年度高置信代码匹配的岗位分数'],
     ['来源状态', (position) => position.verification],
   ];
-  return `<div class="page-body"><div class="page-heading-row"><div><div class="eyebrow muted">BEIJING · SIDE-BY-SIDE REVIEW</div><h1>岗位比较</h1><p>已选 ${selected.length} / 5 个 · ${new Set(selected.map((position) => position.districtId).filter(Boolean)).size} 个区县 · 缺失条件保持待核验</p></div><a href="#/positions" class="button button-secondary">＋ 添加岗位</a></div><div class="panel compare-panel" style="--compare-count:${selected.length}"><div class="compare-grid compare-header"><div class="compare-label-cell">对比字段</div>${selected.map((position) => `<div class="compare-job-head"><button class="remove-compare" data-action="remove-compare" data-position-key="${escapeHtml(positionIdentity(position))}" aria-label="移除">×</button><span class="year-pill">${escapeHtml(districtNameById.get(position.districtId) || '区县待核')} · ${position.year}</span><strong>${escapeHtml(position.unit)}</strong><span>${escapeHtml(position.title)}</span></div>`).join('')}</div>${fields.map(([label, getValue]) => `<div class="compare-grid compare-row"><div class="compare-label-cell">${escapeHtml(label)}</div>${selected.map((position) => `<div class="compare-value-cell">${escapeHtml(getValue(position))}</div>`).join('')}</div>`).join('')}<div class="compare-grid compare-row"><div class="compare-label-cell">来源</div>${selected.map((position) => `<div class="compare-value-cell">${(position.sources || []).map((id) => sourceLink(id, '打开来源 ↗')).join('<br/>')}</div>`).join('')}</div></div><div class="notice notice-soft"><span>ⓘ</span><p>以上均是 2024–2026 年历史职位样例，不代表 2027 职位。岗位级最终竞争比和逐岗进面线未核实；过程快照不作为最终报名或实考数据，也不用于计算个人安全垫。</p></div></div>`;
+  return `<div class="page-body"><div class="page-heading-row"><div><div class="eyebrow muted">BEIJING · SIDE-BY-SIDE REVIEW</div><h1>岗位比较</h1><p>已选 ${selected.length} / 5 个 · ${new Set(selected.map((position) => position.districtId).filter(Boolean)).size} 个区县 · 缺失条件保持待核验</p></div><a href="#/positions" class="button button-secondary">＋ 添加岗位</a></div><div class="panel compare-panel" style="--compare-count:${selected.length}"><div class="compare-grid compare-header"><div class="compare-label-cell">对比字段</div>${selected.map((position) => `<div class="compare-job-head"><button class="remove-compare" data-action="remove-compare" data-position-key="${escapeHtml(positionIdentity(position))}" aria-label="移除">×</button><span class="year-pill">${escapeHtml(districtNameById.get(position.districtId) || '区县待核')} · ${position.year}</span><strong>${escapeHtml(position.unit)}</strong><span>${escapeHtml(position.title)}</span></div>`).join('')}</div>${fields.map(([label, getValue]) => `<div class="compare-grid compare-row"><div class="compare-label-cell">${escapeHtml(label)}</div>${selected.map((position) => `<div class="compare-value-cell">${escapeHtml(getValue(position))}</div>`).join('')}</div>`).join('')}<div class="compare-grid compare-row"><div class="compare-label-cell">来源</div>${selected.map((position) => `<div class="compare-value-cell">${evidenceSourceIds(position).map((id) => sourceLink(id, '打开来源 ↗')).join('<br/>')}</div>`).join('')}</div></div><div class="notice notice-soft"><span>ⓘ</span><p>资格审查时点竞争参考值按“资格审查通过人数 / 计划招录人数”计算，不代表最终报名、缴费或实考竞争；进面线仅显示同年度且职位代码、单位、职位名高置信匹配的样本。未匹配数据保持空白。</p></div></div>`;
 }
 
 function renderWorkPreferenceChecks(position) {
@@ -1738,7 +1774,7 @@ function renderAssistant() {
     return !Number.isFinite(competition?.score) && dataset.observations.some((item) => item.observationType === 'qualified_snapshot'
       && Number(item.year) === Number(position.year) && item.positionCode === position.code);
   }).length;
-  const evidenceSummary = `<section class="assistant-score-overview" aria-label="评分证据覆盖"><article><span>难度综合分</span><strong>${completeDifficulty}<small> / ${results.length} 岗</small></strong><p>六个固定权重分项全部有证据</p></article><article><span>适配综合分</span><strong>${completeFit}<small> / ${results.length} 岗</small></strong><p>硬筛通过且七个固定权重分项齐全</p></article><article><span>代码匹配的进面线</span><strong>${mappedCutoffs}<small> 岗</small></strong><p>仅计入高置信、同年度代码匹配</p></article><article><span>岗位级竞争比</span><strong>${positionCompetition}<small> 岗</small></strong><p>另有 ${excludedSnapshotPositions} 个岗位有多时点资格审查快照，未纳入本项评分</p></article></section>`;
+  const evidenceSummary = `<section class="assistant-score-overview" aria-label="评分证据覆盖"><article><span>难度综合分</span><strong>${completeDifficulty}<small> / ${results.length} 岗</small></strong><p>六个固定权重分项全部有证据</p></article><article><span>适配综合分</span><strong>${completeFit}<small> / ${results.length} 岗</small></strong><p>硬筛通过且七个固定权重分项齐全</p></article><article><span>代码匹配的进面线</span><strong>${mappedCutoffs}<small> 岗</small></strong><p>仅计入高置信、同年度代码匹配</p></article><article><span>岗位级竞争比</span><strong>${positionCompetition}<small> 岗</small></strong><p>另有 ${excludedSnapshotPositions} 个岗位有资格审查快照，未纳入本项评分</p></article></section>`;
   const cards = visibleResults.map(({ position, eligibility, difficulty, fit }, index) => {
     const districtName = (dataset.districts || []).find((district) => district.id === position.districtId)?.name || '区县待核';
     const cutoff = difficulty.components.find((item) => item.key === 'interviewCutoff');
@@ -1921,7 +1957,7 @@ function renderResearch() {
   const emptyState = visibleFindings.length ? '' : '<div class="research-empty-state">该主题暂时没有可展示的结论。</div>';
   return `<div class="page-body research-page">
     <section class="research-hero"><div class="research-hero-copy"><div class="eyebrow">RESEARCH BRIEF · ${escapeHtml(dataset.dataAsOf)}</div><h1>研究结论</h1><p><strong>结论先行，证据可回查。</strong>以下仅总结当前网站收录的样例与来源，不把缺失数据补成事实。</p><div class="research-hero-actions"><a class="button button-light" href="#/evidence">查看覆盖核验 <span>↗</span></a><a class="research-source-jump" href="#/sources">浏览来源登记 →</a></div></div><div class="research-hero-art" aria-hidden="true"><div class="research-orbit research-orbit-one"></div><div class="research-orbit research-orbit-two"></div><div class="research-orbit research-orbit-three"></div><div class="research-orb"></div><span class="research-orb-label">DATA<br/>→ EVIDENCE<br/>→ INSIGHT</span></div></section>
-    <section class="research-quickfacts" aria-label="当前数据快照"><article><span>2026 岗位样例 / 第三方汇总</span><strong>${coverage2026 ? `${fmt(coverage2026.samplePositions)}<small> / ${fmt(coverage2026.reportedPositions[1])} 岗</small>` : '—'}</strong><p>${coverage2026 ? `${fmt(coverage2026.sampleRecruits)} / ${fmt(coverage2026.reportedRecruits[1])} 人 · 非官方全量对照` : '当前无可比数据'}</p></article><article><span>具名面试分数样本</span><strong>${scoreSample ? `${fmt(scoreSample.sampleRows)}<small> 条</small>` : '—'}</strong><p>${scoreSample ? `部分样本 · ${fmt(scoreSample.sampleRecruits)} 人` : '当前无可追溯样本'}</p></article><article><span>岗位级资格审查快照</span><strong>${competition ? `${fmt(competition.jobLevelObservations)}<small> 条</small>` : '—'}</strong><p>${competition ? `覆盖 ${fmt(competition.jobLevelPositions)} 个岗位 · 另有 ${fmt(competition.aggregateObservations)} 条区级 / 单位级观察` : '当前无可追溯观察'}</p></article></section>
+    <section class="research-quickfacts" aria-label="当前数据快照"><article><span>2026 岗位样例 / 第三方汇总</span><strong>${coverage2026 ? `${fmt(coverage2026.samplePositions)}<small> / ${fmt(coverage2026.reportedPositions[1])} 岗</small>` : '—'}</strong><p>${coverage2026 ? `${fmt(coverage2026.sampleRecruits)} / ${fmt(coverage2026.reportedRecruits[1])} 人 · 非官方全量对照` : '当前无可比数据'}</p></article><article><span>具名面试分数样本</span><strong>${scoreSample ? `${fmt(scoreSample.sampleRows)}<small> 条</small>` : '—'}</strong><p>${scoreSample ? `部分样本 · ${fmt(scoreSample.sampleRecruits)} 人` : '当前无可追溯样本'}</p></article><article><span>岗位级资格审查快照</span><strong>${competition ? `${fmt(competition.jobLevelObservations)}<small> 条</small>` : '—'}</strong><p>${competition ? `覆盖 ${fmt(competition.jobLevelPositions)} 个岗位 · 另有 ${fmt(competition.aggregateObservations)} 条区级 / 单位级 / 全市汇总观察` : '当前无可追溯观察'}</p></article></section>
     <section class="research-findings-section"><div class="research-section-heading"><div><div class="eyebrow muted">EVIDENCE-LED FINDINGS</div><h2>值得带走的结论</h2><p>按主题筛选；展开卡片可核对支撑来源与解释边界。</p></div><div class="research-result-count" aria-live="polite">显示 ${visibleFindings.length} / ${findings.length} 条</div></div><div class="research-filterbar" role="group" aria-label="按结论主题筛选">${[['all', '全部结论'], ...topics.map((topic) => [topic, topic])].map(([topic, label]) => {
       const count = topic === 'all' ? findings.length : findings.filter((item) => item.topic === topic).length;
       return `<button type="button" class="research-topic-button ${researchTopic === topic ? 'active' : ''}" data-action="filter-research-topic" data-topic="${escapeHtml(topic)}" aria-pressed="${researchTopic === topic}"><span>${escapeHtml(label)}</span><small>${count}</small></button>`;
@@ -1951,8 +1987,9 @@ function renderEvidence() {
   const observations = dataset.observations || [];
   const positionObservations = observations.filter((item) => item.positionCode !== null && item.positionCode !== undefined && item.positionCode !== '');
   const unitObservations = observations.filter((item) => item.scope === 'unit-level').length;
+  const citywideObservations = observations.filter((item) => item.scope === 'citywide-level').length;
   const aggregateObservations = observations.length - positionObservations.length;
-  const districtObservations = aggregateObservations - unitObservations;
+  const districtObservations = aggregateObservations - unitObservations - citywideObservations;
   const positionCodes = new Set(positionObservations.map((item) => item.positionCode));
   const positionTimes = new Set(positionObservations.map((item) => item.observedAt).filter(Boolean));
   const positionSnapshotRows = positionObservations
@@ -1967,20 +2004,44 @@ function renderEvidence() {
         : '<span>来源待登记</span>';
       return `<tr><td>${escapeHtml(item.observedAt || '—')}</td><td><span class="year-pill">${escapeHtml(item.positionCode)}</span></td><td>${escapeHtml(position?.unit || '单位待核验')}<small class="cell-secondary">${escapeHtml(position?.title || '职位待核验')}</small></td><td><strong>${fmt(item.applicantsQualified)} 人</strong></td><td>${fmt(item.recruitCount ?? position?.recruitCount)} 人</td><td>${sourceMarkup}</td></tr>`;
     }).join('');
-  const latestScoreSample = [...(dataset.scoreSamples || [])].sort((a, b) => Number(a.year) - Number(b.year)).at(-1);
-  const namedScores = latestScoreSample ? dataset.scoreRows.filter((item) => Number(item.year) === Number(latestScoreSample.year)) : [];
-  const linkedScoreRows = namedScores.filter((item) => item.positionCode && dataset.positions.some((position) => position.code === item.positionCode));
+  const citywideSnapshotRows = observations
+    .filter((item) => item.scope === 'citywide-level' && item.observationType === 'qualified_snapshot')
+    .slice()
+    .sort((left, right) => String(left.observedAt).localeCompare(String(right.observedAt)))
+    .map((item) => {
+      const source = sourceFor(item.sourceId);
+      const recruits = Number(item.recruitCount);
+      const qualified = Number(item.applicantsQualified);
+      const ratio = Number.isFinite(qualified) && Number.isFinite(recruits) && recruits > 0
+        ? `1:${fmtRatio(qualified / recruits)}`
+        : '—';
+      return `<tr><td>${escapeHtml(item.observedAt || '—')}</td><td><strong>${fmt(item.applicantsQualified)} 人</strong></td><td>${fmt(item.recruitCount)} 人</td><td><strong>${ratio}</strong></td><td>${source ? sourceLink(source.sourceId, `${source.publisher} ↗`) : '来源待登记'}</td></tr>`;
+    }).join('');
+  const scoreYears = [...new Set((dataset.scoreSamples || []).map((item) => Number(item.year)).filter(Number.isFinite))];
+  const latestScoreYear = scoreYears.length ? Math.max(...scoreYears) : null;
+  const latestScoreSamples = latestScoreYear === null
+    ? []
+    : (dataset.scoreSamples || []).filter((item) => Number(item.year) === latestScoreYear);
+  const namedScores = latestScoreYear === null ? [] : dataset.scoreRows.filter((item) => Number(item.year) === latestScoreYear);
+  const linkedScoreRows = namedScores.filter((item) => item.mappingConfidence === 'high' && item.positionCode
+    && dataset.positions.some((position) => Number(position.year) === Number(item.year)
+      && position.code === item.positionCode && position.unit === item.unit && position.title === item.title));
+  const scoreSampleRecruits = latestScoreSamples.every((item) => Number.isFinite(Number(item.sampleRecruits)))
+    ? latestScoreSamples.reduce((total, item) => total + Number(item.sampleRecruits), 0)
+    : null;
+  const scoreSampleSources = latestScoreSamples.map((item) => sourceLink(item.sourceId, '查看来源 ↗')).join(' · ');
   const officialPositionCount = dataset.positions.filter((item) => item.sourceLevel === 'official').length;
   const yearCount = new Set(dataset.positions.map((item) => Number(item.year)).filter(Number.isFinite)).size;
-  const scoreSummary = latestScoreSample ? `${fmt(latestScoreSample.samplePositions)} 岗 / ${fmt(latestScoreSample.sampleRecruits)} 人` : '暂无可用样本';
+  const scoreSummary = latestScoreYear === null ? '暂无可用样本' : `${fmt(namedScores.length)} 岗 / ${fmt(scoreSampleRecruits)} 人`;
   const tabs = [['all', '全部年度'], ['2024', '2024'], ['2025', '2025'], ['2026', '2026']]
     .map(([value, label]) => `<button type="button" class="evidence-year-tab ${evidenceYear === value ? 'active' : ''}" data-action="filter-evidence-year" data-year="${value}" aria-pressed="${evidenceYear === value}">${label}</button>`).join('');
   return `<div class="page-body">
     <section class="evidence-hero"><div class="evidence-hero-copy"><div class="eyebrow">EVIDENCE · ${escapeHtml(dataset.dataAsOf)}</div><h1>先看清证据，<br/><em>再做选岗决定。</em></h1><p>查看年度覆盖、来源差异与数据边界。每个数字都能回到对应来源，不用在报告和职位页之间来回找。</p><div class="evidence-hero-actions"><a href="#/positions" class="button button-light">查看职位样例 <span>↗</span></a><a href="#/sources" class="evidence-hero-link">浏览全部来源 →</a></div></div><div class="evidence-hero-art" aria-hidden="true"><div class="evidence-orbit evidence-orbit-one"></div><div class="evidence-orbit evidence-orbit-two"></div><div class="evidence-core"></div><span class="evidence-signal signal-one"></span><span class="evidence-signal signal-two"></span><span class="evidence-art-label">SOURCE<br/>→ REVIEW<br/>→ DECISION</span></div></section>
     <section class="metric-grid four-metrics evidence-topline">${metric('有来源职位样例', `${dataset.positions.length}<small> 条</small>`, `${officialPositionCount} 条直接标为官方来源`, '▤', 'blue')}${metric('覆盖招考年度', `${yearCount}<small> 年</small>`, '2024–2026 历史记录', '◷', 'mint')}${metric('岗位级资格审查快照', `${positionObservations.length}<small> 条</small>`, `覆盖 ${positionCodes.size} 个岗位 · ${positionTimes.size} 个时点`, '⌁', 'amber')}${metric('存在分数样本年度', `${new Set((dataset.scoreSamples || []).map((item) => item.year)).size}<small> 年</small>`, '范围样本不等于完整分布', '◎', 'purple')}</section>
     <section class="evidence-section"><div class="evidence-section-heading"><div><div class="eyebrow muted">SOURCE RECONCILIATION</div><h2>年度职位汇总对照</h2><p>保留各来源自己的数字，不把有差异的统计拼成单一“确定值”。</p></div><div class="evidence-year-tabs" role="group" aria-label="筛选年度">${tabs}</div></div><div class="evidence-year-grid">${cards}</div></section>
-    <section class="evidence-section"><div class="evidence-section-heading"><div><div class="eyebrow muted">WHAT THE DATA SUPPORTS</div><h2>目前可以确认到哪里</h2><p>结论仅代表当前导入数据；补齐原始职位表后会重新核验。</p></div></div><div class="evidence-insight-grid"><article class="evidence-insight-card"><span class="evidence-insight-icon icon-amber">↔</span><div><small>报名 / 竞争</small><strong>${districtObservations} 条区级观察 · ${unitObservations} 条单位级观察 · ${positionObservations.length} 条岗位级快照</strong><p>岗位级数据覆盖 ${positionCodes.size} 个职位代码的 ${positionTimes.size} 个时点；仍是第三方转载的资格审查通过人数，不是最终报名、缴费或实考人数。</p><a href="#/sources">查看报名来源与口径 →</a></div></article><article class="evidence-insight-card"><span class="evidence-insight-icon icon-blue">⌁</span><div><small>${latestScoreSample ? `${latestScoreSample.year} 面试分数范围样本` : '面试分数'}</small><strong>${escapeHtml(scoreSummary)}</strong><p>${latestScoreSample ? `范围样本标记为${latestScoreSample.complete ? '完整' : '部分'}；${namedScores.length} 条具名分数中 ${linkedScoreRows.length} 条匹配已收录职位代码。` : '当前没有可追溯的岗位级进面分范围样本。'}笔试合格线不当作岗位实际进面线。</p>${latestScoreSample ? sourceLink(latestScoreSample.sourceId, '打开样本来源 ↗') : '<a href="#/sources">查看来源登记 →</a>'}</div></article><article class="evidence-insight-card"><span class="evidence-insight-icon icon-mint">✓</span><div><small>职位记录状态</small><strong>${officialPositionCount} / ${dataset.positions.length} 条样例直接标为官方来源</strong><p>官方职位简章入口已登记，但候选行尚未完成职位代码逐项核对；当前样例数不代表全区覆盖率。</p><a href="#/positions">回到职位库核对字段 →</a></div></article></div></section>
-    <section class="evidence-section registration-snapshot-section"><div class="evidence-section-heading"><div><div class="eyebrow muted">POSITION-LEVEL REGISTRATION · 2026</div><h2>岗位级资格审查快照</h2><p>按职位代码和时点展示已找到的第三方逐岗数据，便于查看同一岗位在不同时间的变化。</p></div><span class="chip chip-amber">第三方转载</span></div><div class="panel table-panel"><div class="table-scroll"><table class="data-table registration-snapshot-table"><thead><tr><th>统计时点</th><th>职位代码</th><th>招录单位 / 职位</th><th>资格审查通过</th><th>计划招录</th><th>原始来源</th></tr></thead><tbody>${positionSnapshotRows || '<tr><td colspan="6"><div class="table-empty compact-empty">暂无可回查的岗位级资格审查快照。</div></td></tr>'}</tbody></table></div><p class="table-footnote">同一职位的多个时间点是重复快照，不应累加为岗位数；资格审查通过人数不等同最终报名人数、缴费人数或实考人数。</p></div></section>
+    <section class="evidence-section"><div class="evidence-section-heading"><div><div class="eyebrow muted">WHAT THE DATA SUPPORTS</div><h2>目前可以确认到哪里</h2><p>结论仅代表当前导入数据；补齐原始职位表后会重新核验。</p></div></div><div class="evidence-insight-grid"><article class="evidence-insight-card"><span class="evidence-insight-icon icon-amber">↔</span><div><small>报名 / 竞争</small><strong>${citywideObservations} 条全市汇总 · ${districtObservations} 条区级观察 · ${unitObservations} 条单位级观察 · ${positionObservations.length} 条岗位级快照</strong><p>岗位级数据覆盖 ${positionCodes.size} 个职位代码的 ${positionTimes.size} 个时点；仍是第三方转载的资格审查通过人数，不是最终报名、缴费或实考人数。</p><a href="#/sources">查看报名来源与口径 →</a></div></article><article class="evidence-insight-card"><span class="evidence-insight-icon icon-blue">⌁</span><div><small>${latestScoreYear === null ? '面试分数' : `${latestScoreYear} 面试分数范围样本`}</small><strong>${escapeHtml(scoreSummary)}</strong><p>${latestScoreYear === null ? '当前没有可追溯的岗位级进面分范围样本。' : `仅为${latestScoreSamples.length} 个区县页面公开的部分样本；${namedScores.length} 条具名分数中 ${linkedScoreRows.length} 条唯一匹配已收录职位代码。`}笔试合格线不当作岗位实际进面线。</p>${scoreSampleSources || '<a href="#/sources">查看来源登记 →</a>'}</div></article><article class="evidence-insight-card"><span class="evidence-insight-icon icon-mint">✓</span><div><small>职位记录状态</small><strong>${officialPositionCount} / ${dataset.positions.length} 条样例直接标为官方来源</strong><p>官方职位简章入口已登记，但候选行尚未完成职位代码逐项核对；当前样例数不代表全区覆盖率。</p><a href="#/positions">回到职位库核对字段 →</a></div></article></div></section>
+    <section class="evidence-section citywide-competition-section"><div class="evidence-section-heading"><div><div class="eyebrow muted">CITYWIDE WEIGHTED SNAPSHOTS · 2026</div><h2>全市资格审查加权快照</h2><p>市级通过人数 ÷ 市级计划招录人数；这是按计划数加权的总比，不是各岗位竞争比的简单平均。</p></div><span class="chip chip-amber">第三方历史快照</span></div><div class="panel table-panel"><div class="table-scroll"><table class="data-table citywide-competition-table"><thead><tr><th>统计时点</th><th>资格审查通过</th><th>计划招录</th><th>加权总比</th><th>来源</th></tr></thead><tbody>${citywideSnapshotRows || '<tr><td colspan="5"><div class="table-empty compact-empty">暂无可回查的全市级资格审查快照。</div></td></tr>'}</tbody></table></div><p class="table-footnote">全市汇总不等于职位级竞争比；报名最后一天官方查询页仅在 9:00 更新，历史快照仍由第三方转载。${sourceLink('beijing-2026-registration-query', '查看官方更新时间说明 ↗')}</p></div></section>
+    <section class="evidence-section registration-snapshot-section"><div class="evidence-section-heading"><div><div class="eyebrow muted">POSITION-LEVEL QUALIFICATION · 2025–2026</div><h2>岗位级资格审查快照</h2><p>按职位代码和时点展示已找到的第三方逐岗数据，便于查看同一岗位在不同时间的变化。</p></div><span class="chip chip-amber">第三方转载</span></div><div class="panel table-panel"><div class="table-scroll"><table class="data-table registration-snapshot-table"><thead><tr><th>统计时点</th><th>职位代码</th><th>招录单位 / 职位</th><th>资格审查通过</th><th>计划招录</th><th>原始来源</th></tr></thead><tbody>${positionSnapshotRows || '<tr><td colspan="6"><div class="table-empty compact-empty">暂无可回查的岗位级资格审查快照。</div></td></tr>'}</tbody></table></div><p class="table-footnote">同一职位的多个时间点是重复快照，不应累加为岗位数；资格审查通过人数不等同最终报名人数、缴费人数或实考人数。</p></div></section>
     ${renderCoveragePanel()}
     <section class="evidence-next-step"><span class="evidence-next-icon">↗</span><div><strong>下一步：补齐职位代码级证据</strong><p>先按官方职位表复核候选行，再更新年度覆盖分母与专业、学历和身份限制字段。</p></div><a class="button button-secondary" href="#/sources">查看官方来源入口</a></section>
   </div>`;
@@ -2027,13 +2088,15 @@ function renderSources() {
   const positionLevelSnapshotCount = positionSnapshots.length;
   const observationPositionCount = new Set(positionSnapshots.map((item) => item.positionCode)).size;
   const observationCount = dataset.observations.length;
-  const aggregateObservationCount = observationCount - positionLevelSnapshotCount;
+  const citywideObservationCount = dataset.observations.filter((item) => item.scope === 'citywide-level').length;
+  const unitObservationCount = dataset.observations.filter((item) => item.scope === 'unit-level').length;
+  const districtObservationCount = observationCount - positionLevelSnapshotCount - citywideObservationCount - unitObservationCount;
   const coverageDashboard = `<section class="panel source-coverage-panel" aria-label="当前研究完成度">
     <div class="panel-heading"><div><div class="eyebrow muted">RESEARCH COVERAGE</div><h2>当前研究完成度</h2><p>年度职位样例与第三方汇总对照</p></div>${chip('年度官方职位分母未知', 'amber')}</div>
     <p class="source-coverage-note">条数对照只用于定位收录缺口，不等于官方覆盖率；条数相同不代表职位代码集合一致。</p>
     <div class="source-coverage-grid">${positionCoverage}</div>
     <div class="source-score-section"><div class="source-score-heading"><div><strong>具名最低进面分</strong><span>只按有来源的岗位分数行计数</span></div><a href="#/scenarios">打开分数情景 →</a></div><div class="source-score-grid">${scoreCoverage}</div></div>
-    <div class="source-observation-summary"><div><strong>报名 / 资格审查观察</strong><span>${fmt(observationCount)} 条记录 · ${fmt(positionLevelSnapshotCount)} 条岗位级快照 · 覆盖 ${fmt(observationPositionCount)} 个职位代码 · 另有 ${fmt(aggregateObservationCount)} 条区级或单位级观察</span></div><a href="#/evidence">查看观察明细与统计口径 →</a></div>
+    <div class="source-observation-summary"><div><strong>报名 / 资格审查观察</strong><span>${fmt(observationCount)} 条记录 · ${fmt(positionLevelSnapshotCount)} 条岗位级快照 · 覆盖 ${fmt(observationPositionCount)} 个职位代码 · 另有 ${fmt(citywideObservationCount)} 条全市、${fmt(districtObservationCount)} 条区级和 ${fmt(unitObservationCount)} 条单位级汇总观察</span></div><a href="#/evidence">查看观察明细与统计口径 →</a></div>
   </section>`;
   return `<div class="page-body"><div class="page-heading-row"><div><div class="eyebrow muted">PROVENANCE · ${dataset.sources.length} RECORDS</div><h1>数据与来源</h1><p>每个岗位和统计数字都保留来源等级、观察口径及不确定性说明。</p></div>${chip(`${officialCount} 项官方来源`, 'green')}</div><div class="metric-grid three-metrics">${metric('官方规则 / 公告', `${officialCount}<small> 条</small>`, '用于招录流程、大纲和资格线', '✓', 'mint')}${metric('第三方职位与统计', `${dataset.sources.length - officialCount}<small> 条</small>`, '用于检索线索；不等同官方职位事实', 'ⓘ', 'amber')}${metric('岗位级资格审查快照', `${positionSnapshots.length}<small> 条</small>`, `覆盖 ${positionSnapshotCount} 个岗位 · ${positionSnapshotTimes} 个时点；非最终报名 / 缴费 / 实考人数`, '⌁', 'blue')}</div>${coverageDashboard}<div class="panel table-panel source-panel"><div class="job-filterbar"><label class="searchbox"><span>⌕</span><input id="source-search" type="search" placeholder="搜索来源、发布方或说明" value="${escapeHtml(filters.query)}" autocomplete="off"/></label><select id="source-level" aria-label="来源等级"><option value="all">全部来源级别</option><option value="official" ${filters.sourceLevel === 'official' ? 'selected' : ''}>官方来源</option><option value="secondary" ${filters.sourceLevel === 'secondary' ? 'selected' : ''}>第三方来源</option></select><span class="filter-count">${filtered.length} 条来源</span></div><div class="table-scroll"><table class="data-table source-table"><thead><tr><th>年度</th><th>来源 / 发布方</th><th>等级</th><th>证据类型</th><th>时间</th><th>口径与限制</th></tr></thead><tbody>${rows}</tbody></table></div></div><div class="source-legend"><span><i class="legend-dot official"></i>官方：公告、大纲、门槛</span><span><i class="legend-dot secondary"></i>第三方：岗位镜像、报名快照、部分分数样本</span><span><i class="legend-dot null"></i>空值：当前没有可追溯证据，不等于 0</span></div></div>`;
 }
@@ -2322,14 +2385,19 @@ function openJob(reference) {
   const code = position.code;
   const positionKey = positionIdentity(position);
   const eligibility = evaluateEligibility(position, storage.profile);
-  const sources = (position.sources || []).map((sourceId) => {
+  const competitionEvidence = getPositionCompetitionEvidence(position, dataset);
+  const linkedEvidenceSources = [...new Set([
+    ...(position.sources || []),
+    ...competitionEvidence.snapshots.map((item) => item.sourceId),
+    ...competitionEvidence.cutoffSourceIds,
+  ].filter(Boolean))];
+  const sources = linkedEvidenceSources.map((sourceId) => {
     const source = sourceFor(sourceId);
     return source ? `<a class="evidence-item" href="${escapeHtml(safeUrl(source.url))}" target="_blank" rel="noreferrer"><span>↗</span><div><strong>${escapeHtml(source.title)}</strong><small>${escapeHtml(sourceLevelLabel(source.level))} · ${escapeHtml(source.notes || '')}</small></div></a>` : '';
   }).join('');
   const officialLookup = position.year === 2026 && sourceFor('beijing-2026-position-lookup')
     ? `<aside class="official-position-lookup"><div><strong>官方复核工具 · 2026</strong><p>可按详情页上方职位代码手动查询；该入口是复核工具，不会自动将本条职位标记为官方核验。</p></div>${sourceLink('beijing-2026-position-lookup', '打开人社局代码查询 ↗')}</aside>`
     : '';
-  const observations = dataset.observations.filter((item) => Number(item.year) === Number(position.year) && item.positionCode === code);
   const majorAssessment = [majorCriteriaSummary(position), majorEligibilityText(position, storage.profile, eligibility)].filter(Boolean).join('；');
   const professionalTest = position.professionalTest === true
     ? `是${position.physicalTest === true ? '（含体能测试）' : ''}`
@@ -2358,8 +2426,15 @@ function openJob(reference) {
     { label: '咨询电话', value: position.consultPhone },
     { label: '单位网站', value: position.unitWebsite, link: true },
     { label: '数据完整度说明', value: `${completeness.grade} · ${completenessDescription}`, wide: true },
-    { label: '岗位级资格审查快照', value: observations.length ? observations.slice().sort((left, right) => String(left.observedAt).localeCompare(String(right.observedAt))).map((item) => `${item.observedAt}：${fmt(item.applicantsQualified)} 人通过 / 计划招录 ${fmt(item.recruitCount ?? position.recruitCount)} 人（第三方快照）`).join('；') : '暂无可回查的岗位级资格审查快照', wide: true },
-    { label: '历史进面线与安全垫', value: `暂无该岗位的可比历史进面线；${calculateSafeMargin(getMocks(), null).status}`, wide: true },
+    { label: '岗位级资格审查快照', value: competitionEvidence.snapshots.length ? competitionEvidence.snapshots.map((item) => {
+      const recruits = Number(item.recruitCount ?? position.recruitCount);
+      const applicants = Number(item.applicantsQualified);
+      const ratio = Number.isFinite(applicants) && Number.isFinite(recruits) && recruits > 0 ? ` · 时点参考竞争比 1:${fmtRatio(applicants / recruits)}` : '';
+      return `${item.observedAt}：${fmt(applicants)} 人资格审查通过 / 计划招录 ${fmt(recruits)} 人${ratio}（非最终报名或实考）`;
+    }).join('；') : '暂无可回查的岗位级资格审查快照', wide: true },
+    { label: '历史最低进面线', value: Number.isFinite(competitionEvidence.cutoffScore)
+      ? `${position.year} 年 ${fmt(competitionEvidence.cutoffScore, 2)} 分 · 同年度代码、单位与职位名高置信匹配的第三方样本`
+      : '暂无同年度高置信代码匹配的岗位最低进面线', wide: true },
   ].filter((row) => row.value !== null && row.value !== undefined && row.value !== '');
   const detailMarkup = detailRows.map((row, index) => {
     const classes = [row.wide ? 'detail-wide' : '', row.featured ? 'job-detail-featured' : ''].filter(Boolean).join(' ');
@@ -4129,6 +4204,7 @@ document.addEventListener('change', async (event) => {
     'job-unit': 'unit', 'job-education': 'education', 'job-politics': 'politicalStatus',
     'job-graduation': 'freshGraduate', 'job-physical-test': 'physicalTest',
     'job-professional-test': 'professionalTest', 'job-recruitment': 'recruitmentGroup',
+    'job-competition-evidence': 'competitionEvidence', 'job-cutoff-evidence': 'cutoffEvidence',
   }[event.target.id];
   if (positionFilter || event.target.id === 'job-sort') {
     const advancedWasOpen = Boolean(document.querySelector('#job-advanced-filters')?.open);

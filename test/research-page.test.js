@@ -23,13 +23,15 @@ test('research findings derive sample coverage, score distribution, and evidence
     reportedRecruits: [138, 138],
   });
   assert.deepEqual(byId['score-sample-2026'].facts, {
-    sampleRows: 31,
-    sampleRecruits: 79,
-    minimum: 106.25,
-    maximum: 139.5,
-    median: 127.75,
-    linkedRows: 25,
-    ambiguousRows: 6,
+    sampleRows: 120,
+    sampleRecruits: 425,
+    minimum: 98,
+    maximum: 140,
+    median: 126,
+    linkedRows: 98,
+    ambiguousRows: 17,
+    unmatchedRows: 5,
+    scope: '昌平区、房山区、海淀区、西城区、延庆区岗位最低进面线部分样本',
   });
   assert.deepEqual(byId['qualification-coverage'].facts, {
     positions: 695,
@@ -38,14 +40,18 @@ test('research findings derive sample coverage, score distribution, and evidence
     officialPositionRows: 0,
   });
   assert.deepEqual(byId['competition-grain'].facts, {
-    observations: 13,
-    jobLevelObservations: 9,
-    aggregateObservations: 4,
-    jobLevelPositions: 2,
+    observations: 61,
+    jobLevelObservations: 55,
+    aggregateObservations: 6,
+    jobLevelPositions: 26,
   });
   assert.match(byId['competition-grain'].title, /岗位级资格审查快照/);
   assert.ok(byId['coverage-2026'].sourceIds.includes('huatu-2026-list'));
   assert.ok(byId['score-sample-2026'].sourceIds.includes('cgzj-2026-cutoff-sample'));
+  assert.ok(byId['score-sample-2026'].sourceIds.includes('cgzj-2026-haidian-cutoff-sample'));
+  assert.ok(byId['score-sample-2026'].sourceIds.includes('cgzj-2026-xicheng-cutoff-sample'));
+  assert.ok(byId['score-sample-2026'].sourceIds.includes('cgzj-2026-yanqing-cutoff-sample'));
+  assert.ok(byId['score-sample-2026'].sourceIds.includes('cgzj-2026-fangshan-cutoff-sample'));
 });
 
 test('the research route presents expandable source lineage and its topic filter updates the visible findings', async () => {
@@ -81,6 +87,6 @@ test('the research route presents expandable source lineage and its topic filter
   await listeners.click({ target: { closest: (selector) => selector === '[data-action]' ? scoreFilter : null } });
 
   assert.match(root.innerHTML, /data-topic="分数样本" aria-pressed="true">/);
-  assert.match(root.innerHTML, /31 条/);
+  assert.match(root.innerHTML, /120 条/);
   assert.doesNotMatch(root.innerHTML, /class="research-finding[^\"]*"[^>]*data-topic="岗位覆盖"/);
 });

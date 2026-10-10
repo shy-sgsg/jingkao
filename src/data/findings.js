@@ -214,32 +214,46 @@ export function buildResearchFindings(dataset) {
     managementFacts,
   ));
 
-  const latestScoreSample = [...scoreSamples].sort((left, right) => Number(right.year) - Number(left.year))[0];
+  const latestScoreYear = Math.max(...scoreSamples.map((sample) => Number(sample.year)).filter(Number.isFinite));
+  const latestScoreSamples = scoreSamples.filter((sample) => Number(sample.year) === latestScoreYear);
+  const latestScoreSample = latestScoreSamples[0];
   if (latestScoreSample) {
-    const annualScores = scoreRows.filter((row) => Number(row.year) === Number(latestScoreSample.year)
+    const annualScores = scoreRows.filter((row) => Number(row.year) === latestScoreYear
       && row.score !== null && row.score !== undefined && row.score !== '' && Number.isFinite(Number(row.score)));
     const scores = annualScores.map((row) => Number(row.score));
     const linkedRows = annualScores.filter((row) => row.positionCode
-      && positions.some((position) => Number(position.year) === Number(row.year) && position.code === row.positionCode)).length;
+      && row.mappingConfidence === 'high'
+      && positions.some((position) => Number(position.year) === Number(row.year)
+        && position.code === row.positionCode && position.unit === row.unit && position.title === row.title)).length;
     const ambiguousRows = annualScores.filter((row) => row.mappingConfidence === 'ambiguous').length;
+    const unmatchedRows = annualScores.filter((row) => row.mappingConfidence === 'unmatched').length;
+    const sampleRecruits = latestScoreSamples.every((sample) => Number.isFinite(Number(sample.sampleRecruits)))
+      ? latestScoreSamples.reduce((total, sample) => total + Number(sample.sampleRecruits), 0)
+      : null;
+    const scopeNames = [...new Set(latestScoreSamples.map((sample) => String(sample.scope || '').replace(/岗位最低进面线部分样本$/, '')).filter(Boolean))];
+    const scope = scopeNames.length === 1 ? `${scopeNames[0]}岗位最低进面线部分样本` : `${scopeNames.join('、')}岗位最低进面线部分样本`;
+    const minimum = Math.min(...scores);
+    const maximum = Math.max(...scores);
     findings.push(finding(
-      `score-sample-${latestScoreSample.year}`,
+      `score-sample-${latestScoreYear}`,
       '分数样本',
       '⌁',
-      `${latestScoreSample.year} 年具名进面分：${annualScores.length} 条部分样本`,
-      `样本范围 ${latestScoreSample.minimum}–${latestScoreSample.maximum} 分，中位数 ${median(scores)} 分；来源称涉及 ${latestScoreSample.sampleRecruits} 人。仅描述可见样本，不代表全量分布。`,
-      `${linkedRows} 条分数记录可关联到已收录职位代码，${ambiguousRows} 条同名或同单位岗位存在歧义。岗位代码未唯一确认的分数不用于具体职位判断。`,
-      uniqueSourceIds([latestScoreSample, ...annualScores]),
+      `${latestScoreYear} 年具名进面分：${annualScores.length} 条部分样本`,
+      `范围 ${minimum}–${maximum} 分，中位数 ${median(scores)} 分；所列区县页面合计称 ${sampleRecruits ?? '—'} 人进入面试。范围覆盖 ${scope}，不代表全市全量分布。`,
+      `${linkedRows} 条分数记录可唯一关联到已收录职位代码，${ambiguousRows} 条同名岗位有歧义，${unmatchedRows} 条暂未匹配。未唯一确认的分数不用于具体职位判断。`,
+      uniqueSourceIds([...latestScoreSamples, ...annualScores]),
       '#/scenarios',
       '打开分数情景',
       {
         sampleRows: annualScores.length,
-        sampleRecruits: latestScoreSample.sampleRecruits,
-        minimum: latestScoreSample.minimum,
-        maximum: latestScoreSample.maximum,
+        sampleRecruits,
+        minimum,
+        maximum,
         median: median(scores),
         linkedRows,
         ambiguousRows,
+        unmatchedRows,
+        scope,
       },
     ));
 
@@ -249,7 +263,7 @@ export function buildResearchFindings(dataset) {
       scores.filter((score) => score <= threshold).length,
     ]));
     findings.push(finding(
-      `score-distribution-${latestScoreSample.year}`,
+      `score-distribution-${latestScoreYear}`,
       '分数样本',
       '⌁',
       '样本分数的累计分布',
@@ -311,9 +325,9 @@ export function buildResearchFindings(dataset) {
     '报考竞争',
     '↔',
     positionLevelObservations ? '已收录岗位级资格审查快照，仍非最终竞争情况' : '竞争观察目前停留在区级汇总',
-    `${observations.length} 条报名 / 竞争观察中，岗位级快照 ${positionLevelObservations} 条，覆盖 ${positionLevelCodes.size} 个职位代码；其余 ${aggregateObservations} 条为区级或单位级观察。`,
+    `${observations.length} 条报名 / 竞争观察中，岗位级快照 ${positionLevelObservations} 条，覆盖 ${positionLevelCodes.size} 个职位代码；其余 ${aggregateObservations} 条为全市、区级或单位级汇总。`,
     positionLevelObservations
-      ? '岗位级数据为中公网校转载的资格审查通过人数，且多个时点属于同一职位的重复快照；不等于最终报名、缴费或实考人数，也不能据此推断考试概率。'
+      ? '岗位级数据为第三方转载的资格审查通过人数，且多个时点属于同一职位的重复快照；全市总比按过审人数/计划招录人数计算，不是岗位竞争比的简单平均。以上均不等于最终报名、缴费或实考人数，也不能据此推断考试概率。'
       : '资格审查人数、报道平均竞争比和岗位计划人数不是同一统计口径；现有数据不能据此给具体单位或岗位排名。',
     uniqueSourceIds(observations),
     '#/evidence',

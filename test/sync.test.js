@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { createUserDataBackup, mergeUserData, resolveUserDataConflicts, studyLogKey, validateUserDataBackup } from '../src/data/sync.js';
+import { createUserDataBackup, mergeUserData, normalizePositionPreferences, resolveUserDataConflicts, studyLogKey, validateUserDataBackup } from '../src/data/sync.js';
 
 function makeBackup(data, options = {}) {
   return createUserDataBackup(data, {
@@ -45,6 +45,17 @@ test('backup carries position filters and accepts older schema-1 files without t
   assert.equal(upgraded.schemaVersion, 1);
   assert.equal(upgraded.data.positionPreferences.filters.districtId, 'all');
   assert.equal(upgraded.data.positionPreferences.jobSort, 'year-desc');
+});
+
+test('position competition evidence filters and sorts survive preference normalization', () => {
+  const preferences = normalizePositionPreferences({
+    filters: { competitionEvidence: 'has', cutoffEvidence: 'missing' },
+    jobSort: 'competition-desc',
+  });
+
+  assert.equal(preferences.filters.competitionEvidence, 'has');
+  assert.equal(preferences.filters.cutoffEvidence, 'missing');
+  assert.equal(preferences.jobSort, 'competition-desc');
 });
 
 test('two devices merge distinct attempts and deduplicate their shared attempt ID', () => {
