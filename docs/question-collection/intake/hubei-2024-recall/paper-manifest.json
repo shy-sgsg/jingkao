@@ -11,11 +11,21 @@
     ],
     "questionTextCount": 125,
     "answerKeyEntries": 125,
-    "itemLevelQuestionAnswerCrossCheck": false
+    "itemLevelQuestionAnswerCrossCheck": false,
+    "publishedQuestionCount": 82,
+    "pendingQuestionCount": 43,
+    "verifiedPublishedItemCrossCheckCount": 82,
+    "conflictingAnswerQuestionNumbers": [
+      13
+    ]
   },
   "moduleRanges": {
-    "common_knowledge": [
+    "political_theory": [
       1,
+      7
+    ],
+    "common_knowledge": [
+      8,
       20
     ],
     "verbal": [
@@ -38,19 +48,24 @@
   "sources": {
     "questionPage": "https://www.aipta.com/article/9625.html",
     "questionAndAnswerPdf": "https://www.163hubei.com/ueditor/php/upload/file/20240318/1710751920689656.pdf",
-    "answerExplanationFileListing": "https://down.kaosheng.com/202503/08/4285.html"
+    "answerExplanationFileListing": "https://down.kaosheng.com/202503/08/4285.html",
+    "thirdPartyQuestionAnswerExplanationRepository": "https://github.com/ERRRC/xingcezhenti/tree/278984401124db40da5163a31275b8deb9c282f4",
+    "independentQuestion4AnswerExplanation": "https://www.kkgwy.com/stk/hb/14658.html",
+    "conflictingQuestion13Explanation": "https://www.xingguanggongkao.com/Wb/quesView/id/48638.html"
   },
   "archiveFiles": [
     "hubei-2024-recall-with-answers.pdf",
-    "source-text-extraction.txt"
+    "source-text-extraction.txt",
+    "questions.json",
+    "answers-and-explanations.json"
   ],
-  "answerExplanationStatus": "Reference answer key is present in the archived PDF; separate answer/explanation PDF is listed publicly but was not retrieved.",
-  "assetStatus": "Charts and shared materials have not been audited and mirrored per question.",
+  "answerExplanationStatus": "A public third-party repository supplies per-item answers and explanations. Eighty-two text-only questions were cross-checked against the archived PDF answer key; question 4 was independently confirmed by a second public Q&A page. Question 13 remains held because the PDF key and two third-party explanations conflict.",
+  "assetStatus": "Forty-two questions remain held for question figures, formula images, or shared chart materials that are not mirrored in the application.",
   "republicationAuthorization": "User confirmed authorization for the project; individual source files still require item-level verification before release.",
-  "releaseStatus": "pending",
+  "releaseStatus": "partial_batch_published",
   "holdReasons": [
-    "Match the 125 answer-key entries to the exact archived question version.",
-    "Retrieve and verify item explanations.",
-    "Audit and mirror all charts and shared materials."
+    "Question 13 answer conflict: archived PDF key gives C while ERRRC and Xingguang explanations give A.",
+    "Forty-two questions depend on unmirrored question figures, explanation formula images, or shared data-analysis materials.",
+    "The full 125-question paper and incomplete module sections remain unavailable as mocks; only complete political-theory and verbal sections are open."
   ]
 }

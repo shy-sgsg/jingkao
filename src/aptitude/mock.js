@@ -3,6 +3,24 @@ import { getAptitudeQuestions } from './questions.js';
 
 const PAPER_CATALOG = [
   {
+    id: 'hubei-2024-recall-candidate',
+    title: '2024年湖北省公务员录用考试《行测》题（考生回忆版）',
+    region: '湖北',
+    examYear: 2024,
+    questionCount: 125,
+    sourceUrl: 'https://www.aipta.com/article/9625.html',
+    answerUrl: 'https://www.163hubei.com/ueditor/php/upload/file/20240318/1710751920689656.pdf',
+    sourceType: 'recalled',
+    ranges: {
+      'political-theory': [1, 7],
+      'general-knowledge': [8, 20],
+      verbal: [21, 55],
+      quantitative: [56, 70],
+      reasoning: [71, 105],
+      'data-analysis': [106, 125],
+    },
+  },
+  {
     id: 'jiangxi-2026-recall',
     title: '2026年江西省公务员录用考试《行测》题（网友回忆版）',
     region: '江西',

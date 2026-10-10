@@ -178,6 +178,9 @@ hubei-2025-xingguang-pdf,recalled_exam_recall,星光公考,2025年湖北省考�
 hubei-2025-aipta-page,recalled_exam_recall,爱真题,2025年湖北省考行测真题及答案解析题面页,https://m.aipta.com/article/10379.html,public_question_page,题面和模块范围待逐题核；答案解析下载入口待核
 hubei-2025-kkgwy-qae,answer_explanation,考考公务员,2025年湖北省考行测109页答案解析资料页,https://www.kkgwy.com/stk/hb/16031.html,preview_public_full_document_points_gated,公开预览仅3题；完整资料需2积分；预览答案不得替代全卷核验
 hubei-2024-gkzhenti-page,recalled_exam_recall,公开真题库,2024年湖北省考行测题面页,https://gwy.gkzhenti.cn/paper/1720413487446,public_question_page,公开题面可定位1—125题；图片和模块材料待逐题核
-hubei-2024-163hubei-pdf,question_and_answer_pdf,湖北网,2024年湖北公务员行测试题及参考答案PDF,https://www.163hubei.com/ueditor/php/upload/file/20240318/1710751920689656.pdf,public_pdf,26页；125题和125条参考答案；答案与题面逐题对应、图表资源待核
-hubei-2024-aipta-page,recalled_exam_recall,爱真题,2024年湖北省考行测真题及答案解析题面页,https://www.aipta.com/article/9625.html,public_question_page; explanation_download_link_listed,题面可读1—125题；页尾说明答案解析需下载；题面版本和图像待比对
-hubei-2024-kaosheng-qae,answer_explanation,考生网,2024年湖北省考行测答案解析PDF目录页,https://down.kaosheng.com/202503/08/4285.html,public_listing_file_not_retrieved,目录显示1.33 MB答案解析PDF；实际文件未取得，未用于答案核验
+hubei-2024-163hubei-pdf,question_and_answer_pdf,湖北网,2024年湖北公务员行测试题及参考答案PDF,https://www.163hubei.com/ueditor/php/upload/file/20240318/1710751920689656.pdf,public_pdf,125道题及125条参考答案；82道无图题逐题与答案解析来源核对后接入；第13题答案冲突，图表/公式资源仍待核。
+hubei-2024-aipta-page,recalled_exam_recall,爱真题,2024年湖北省考行测真题及答案解析题面页,https://www.aipta.com/article/9625.html,public_question_page; explanation_download_link_listed,公开题面覆盖1—125题；82道无图题题干选项与第三方题解档案核对后接入；含图题和答案冲突项留待核。
+hubei-2024-kaosheng-qae,answer_explanation,考生网,2024年湖北省考行测答案解析PDF目录页,https://down.kaosheng.com/202503/08/4285.html,public_listing_file_not_retrieved; alternative_public_QAE_repository_used,页面列出1.33 MB答案解析PDF但未取得该PDF；本次逐题解析改由ERRRC公开仓库核验，考生网文件未用于接入。
+errrc-2024-hubei-qae,third_party_question_explanation,ERRRC / xingcezhenti,2024年湖北省考行测六模块考生回忆题及逐题答案解析；本次筛出82道无图题接入,https://github.com/ERRRC/xingcezhenti/tree/278984401124db40da5163a31275b8deb9c282f4,public_github_repository_at_audited_commit,六模块共125道题均有答案解析条目；82道题的题面与湖北网参考答案逐题核对后接入；第13题与原答案键冲突；含图题保留待核。
+kkgwy-2024-hubei-qae,third_party_question_explanation,考考公务员,2024年湖北省考行测真题试卷及答案解析公开预览,https://www.kkgwy.com/stk/hb/14658.html,public_preview,公开预览覆盖前5题；第4题答案A及解释与湖北网参考答案相符，用于复核该题。
+xingguang-2024-hubei-q13,third_party_question_explanation,星光公考,2024年联考瑟弦音高题逐题答案解析,https://www.xingguanggongkao.com/Wb/quesView/id/48638.html,public_item_answer_and_explanation_page,同题解析给出答案A，与湖北网PDF第13题答案C不一致；冲突未解决，暂不接入。
