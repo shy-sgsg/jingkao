@@ -56,6 +56,28 @@ test('question validation rejects duplicate IDs and unsupported published conten
   assert.ok(invalid.issues.some((issue) => issue.code === 'invalid_answer'));
 });
 
+test('2022 Anhui recalled questions validate against a registered public source', async () => {
+  const [sources, knowledge, questionRules] = await Promise.all([
+    import('../src/general-knowledge/sources.js'),
+    import('../src/general-knowledge/knowledge.js'),
+    import('../src/general-knowledge/questions.js'),
+  ]);
+  const question = {
+    id: 'anhui-source-registration-check', moduleId: 'general_knowledge', subjectId: 'technology',
+    topicId: 'technology:railway', knowledgePointIds: ['technology:railway-track'],
+    stem: '安徽2022年回忆题来源登记检查。',
+    options: [{ id: 'A', text: '甲' }, { id: 'B', text: '乙' }], correctAnswer: 'A',
+    explanation: '来源注册应允许对应题目通过来源校验。', difficulty: 'easy', sourceType: 'recalled',
+    sourceId: 'anhui-2022-zhanhong-qae', sourceNote: '2022年安徽行测展鸿整理版。',
+    verificationStatus: 'verified', copyrightStatus: 'licensed', publishStatus: 'published',
+  };
+
+  assert.deepEqual(questionRules.validateGeneralKnowledgeQuestionBank([question], {
+    knowledgePointIds: knowledge.getGeneralKnowledgePointIds(),
+    sourceIds: sources.GENERAL_KNOWLEDGE_SOURCES.map(({ id }) => id),
+  }).issues, []);
+});
+
 test('sourced questions rank ahead of original supplements and retain source transparency', async () => {
   const bank = await import('../src/general-knowledge/questionBank.js').catch(() => ({}));
   const sources = await import('../src/general-knowledge/sources.js').catch(() => ({}));

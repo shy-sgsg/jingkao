@@ -128,6 +128,12 @@ export const GENERAL_KNOWLEDGE_SOURCES = [
     publishStatus: 'published', copyrightStatus: '例题摘要改写并链接官方大纲', note: '覆盖政治理论、常识判断、言语、数量、判断推理和资料分析公开例题；图片题因图像未随文字抽取而未纳入。',
   },
   {
+    id: 'anhui-2022-zhanhong-qae', sourceType: 'recalled', title: '2022年安徽省公务员录用考试《行测》题（展鸿整理版）', organization: '展鸿教育整理 / 32学苑题目与解析 PDF', examYear: 2022, region: '安徽',
+    url: 'https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf',
+    answerUrl: 'https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '用户确认已获得转载授权', note: '题面、必要图表及同版答案解析逐题核验；仅开放题面与答案解析均完整的题目。星光公考题面版本另行留档，不与本卷答案混用。',
+  },
+  {
     id: 'zhejiang-2025a-recall', sourceType: 'recalled', title: '2025年浙江省公务员考试《行测》A类回忆版及答案', organization: '公开真题库 / 考生回忆资料',
     url: 'https://gwy.gkzhenti.cn/paper/1739531137130', answerUrl: 'https://gwy.gkzhenti.cn/answer/1739531137130', verificationStatus: 'verified',
     publishStatus: 'published', copyrightStatus: '题意与选项摘要改写并注明回忆来源', note: '仅发布题面资源完整、答案可核的分项；Q12依赖未取得的路线图，继续暂缓。公开答案页用于核对答案，不代表官方命题文件。',
