@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "backupId": "6968ebc3-fd8c-4a7a-8d1c-49919ca0967d",
-  "updatedAt": "2026-10-10T04:11:22.023Z",
+  "updatedAt": "2026-10-10T05:23:44.518Z",
   "data": {
     "profile": {
       "major": "公共管理",
@@ -1129,10 +1129,10 @@
         }
       ],
       "mistakes": {
-        "sh-2020-outline-bicycle-friction": {
+        "beijing-2026-outline-dragonfly": {
           "count": 1,
-          "firstMissedAt": "2026-10-09T15:45:26.131Z",
-          "lastMissedAt": "2026-10-09T15:45:26.131Z",
+          "firstMissedAt": "2026-10-10T03:24:45.757Z",
+          "lastMissedAt": "2026-10-10T03:24:45.757Z",
           "lastSelectedOptionId": "C",
           "correctAnswer": "A"
         },
@@ -1143,10 +1143,10 @@
           "lastSelectedOptionId": "D",
           "correctAnswer": "C"
         },
-        "beijing-2026-outline-dragonfly": {
+        "sh-2020-outline-bicycle-friction": {
           "count": 1,
-          "firstMissedAt": "2026-10-10T03:24:45.757Z",
-          "lastMissedAt": "2026-10-10T03:24:45.757Z",
+          "firstMissedAt": "2026-10-09T15:45:26.131Z",
+          "lastMissedAt": "2026-10-09T15:45:26.131Z",
           "lastSelectedOptionId": "C",
           "correctAnswer": "A"
         }
@@ -1329,6 +1329,60 @@
       "unclearKnowledgePointIds": []
     },
     "aptitudeModuleStudies": {
+      "data-analysis": {
+        "knowledgeProgress": {},
+        "sessions": [
+          {
+            "id": "apt_data-analysis_mv1uqfgl_22wv9n",
+            "mode": "practice",
+            "status": "completed",
+            "planTaskId": null,
+            "questionIds": [
+              "ah2026-outline-data-1"
+            ],
+            "currentIndex": 1,
+            "correctCount": 1,
+            "reviewingAnswerId": null,
+            "draftAnswers": {},
+            "startedAt": "2026-10-10T03:45:50.277Z",
+            "deadline": null,
+            "durationSeconds": null,
+            "filters": {
+              "onlyUnanswered": false,
+              "onlyMistakes": false,
+              "onlyFavorites": false,
+              "excludeQuestionIds": [],
+              "answeredQuestionIds": [],
+              "mistakeQuestionIds": [],
+              "favoriteQuestionIds": []
+            },
+            "moduleId": "data-analysis",
+            "completedAt": "2026-10-10T03:46:26.371Z",
+            "session_id": "apt_data-analysis_mv1uqfgl_22wv9n"
+          }
+        ],
+        "answers": [
+          {
+            "id": "answer_apt_data-analysis_mv1uqfgl_22wv9n_1",
+            "sessionId": "apt_data-analysis_mv1uqfgl_22wv9n",
+            "questionId": "ah2026-outline-data-1",
+            "selectedOptionId": "D",
+            "correctAnswer": "D",
+            "isCorrect": true,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T03:46:21.631Z",
+            "knowledgePointIds": [
+              "data-analysis:share-change"
+            ],
+            "moduleId": "data-analysis",
+            "attempt_id": "answer_apt_data-analysis_mv1uqfgl_22wv9n_1"
+          }
+        ],
+        "mistakes": {},
+        "favorites": [],
+        "favoriteKnowledgePointIds": [],
+        "unclearKnowledgePointIds": []
+      },
       "political-theory": {
         "knowledgeProgress": {},
         "sessions": [
@@ -1451,6 +1505,163 @@
         "favoriteKnowledgePointIds": [],
         "unclearKnowledgePointIds": []
       },
+      "quantitative": {
+        "knowledgeProgress": {},
+        "sessions": [
+          {
+            "id": "apt_quantitative_mv1unb72_e4ydnl",
+            "mode": "practice",
+            "status": "active",
+            "planTaskId": null,
+            "questionIds": [
+              "ah2026-outline-quantitative-1",
+              "js2024a-q046",
+              "js2024a-q047",
+              "js2024a-q048",
+              "js2024a-q049",
+              "js2024a-q050",
+              "js2024a-q051",
+              "js2024a-q052",
+              "js2024a-q053",
+              "js2024a-q054",
+              "js2024a-q055",
+              "js2024a-q056",
+              "js2024a-q057",
+              "js2024a-q058",
+              "js2024a-q059"
+            ],
+            "currentIndex": 1,
+            "correctCount": 1,
+            "reviewingAnswerId": null,
+            "draftAnswers": {},
+            "startedAt": "2026-10-10T03:43:24.782Z",
+            "deadline": null,
+            "durationSeconds": null,
+            "filters": {
+              "onlyUnanswered": false,
+              "onlyMistakes": false,
+              "onlyFavorites": false,
+              "excludeQuestionIds": [],
+              "answeredQuestionIds": [],
+              "mistakeQuestionIds": [],
+              "favoriteQuestionIds": []
+            },
+            "moduleId": "quantitative",
+            "completedAt": null,
+            "session_id": "apt_quantitative_mv1unb72_e4ydnl"
+          }
+        ],
+        "answers": [
+          {
+            "id": "answer_apt_quantitative_mv1unb72_e4ydnl_1",
+            "sessionId": "apt_quantitative_mv1unb72_e4ydnl",
+            "questionId": "ah2026-outline-quantitative-1",
+            "selectedOptionId": "D",
+            "correctAnswer": "D",
+            "isCorrect": true,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T03:43:27.626Z",
+            "knowledgePointIds": [
+              "quantitative:geometry"
+            ],
+            "moduleId": "quantitative",
+            "attempt_id": "answer_apt_quantitative_mv1unb72_e4ydnl_1"
+          }
+        ],
+        "mistakes": {},
+        "favorites": [],
+        "favoriteKnowledgePointIds": [],
+        "unclearKnowledgePointIds": []
+      },
+      "reasoning": {
+        "knowledgeProgress": {},
+        "sessions": [
+          {
+            "id": "apt_reasoning_mv1u18su_7ulcu8",
+            "mode": "exam",
+            "status": "timed_out",
+            "planTaskId": null,
+            "questionIds": [
+              "zh2025b-q083",
+              "zj2023a-q100",
+              "zh2025c-q091",
+              "zj2023a-q076",
+              "js2024a-q084",
+              "zh2025a-q088",
+              "js2024a-q081",
+              "zj2023a-q072",
+              "zh2025b-q079",
+              "zj2023a-q088",
+              "zh2025c-q077",
+              "zj2023a-q086",
+              "js2024a-q068",
+              "zh2025c-q089",
+              "zh2025b-q101"
+            ],
+            "currentIndex": 1,
+            "correctCount": 0,
+            "reviewingAnswerId": null,
+            "draftAnswers": {
+              "zh2025b-q083": {
+                "optionId": "C",
+                "selectedAt": "2026-10-10T03:45:03.940Z"
+              }
+            },
+            "startedAt": "2026-10-10T03:26:15.246Z",
+            "deadline": "2026-10-10T03:46:15.246Z",
+            "durationSeconds": 1200,
+            "filters": {
+              "onlyUnanswered": false,
+              "onlyMistakes": false,
+              "onlyFavorites": false,
+              "excludeQuestionIds": [],
+              "answeredQuestionIds": [],
+              "mistakeQuestionIds": [],
+              "favoriteQuestionIds": []
+            },
+            "moduleId": "reasoning",
+            "answeredCount": 1,
+            "unansweredCount": 14,
+            "scoreRate": 0,
+            "answeredAccuracy": 0,
+            "submittedAt": "2026-10-10T03:46:39.562Z",
+            "completedAt": "2026-10-10T03:46:39.562Z",
+            "session_id": "apt_reasoning_mv1u18su_7ulcu8"
+          }
+        ],
+        "answers": [
+          {
+            "id": "answer_apt_reasoning_mv1u18su_7ulcu8_zh2025b-q083",
+            "sessionId": "apt_reasoning_mv1u18su_7ulcu8",
+            "questionId": "zh2025b-q083",
+            "selectedOptionId": "C",
+            "correctAnswer": "D",
+            "isCorrect": false,
+            "mode": "exam",
+            "answeredAt": "2026-10-10T03:45:03.940Z",
+            "submittedAt": "2026-10-10T03:46:39.562Z",
+            "questionIndex": 0,
+            "knowledgePointIds": [
+              "reasoning:case-matching"
+            ],
+            "moduleId": "reasoning",
+            "attempt_id": "answer_apt_reasoning_mv1u18su_7ulcu8_zh2025b-q083"
+          }
+        ],
+        "mistakes": {
+          "zh2025b-q083": {
+            "count": 1,
+            "firstMissedAt": "2026-10-10T03:45:03.940Z",
+            "lastMissedAt": "2026-10-10T03:45:03.940Z",
+            "lastSelectedOptionId": "C",
+            "correctAnswer": "D",
+            "moduleId": "reasoning"
+          }
+        },
+        "favorites": [],
+        "favoriteKnowledgePointIds": [],
+        "unclearKnowledgePointIds": []
+      },
       "verbal": {
         "knowledgeProgress": {},
         "sessions": [
@@ -1525,6 +1736,64 @@
             "moduleId": "verbal",
             "completedAt": "2026-10-10T04:08:36.462Z",
             "session_id": "apt_verbal_mv1vb8zf_mslzwa"
+          },
+          {
+            "id": "apt_verbal_mv1xyl9g_pxx4xg",
+            "mode": "exam",
+            "status": "completed",
+            "planTaskId": null,
+            "questionIds": [
+              "zj2023a-q050",
+              "zh2025c-q021",
+              "js2024a-q017",
+              "apt-verbal-002",
+              "zj2023a-q044"
+            ],
+            "currentIndex": 5,
+            "correctCount": 5,
+            "reviewingAnswerId": null,
+            "draftAnswers": {
+              "zj2023a-q050": {
+                "optionId": "C",
+                "selectedAt": "2026-10-10T05:16:56.102Z"
+              },
+              "zh2025c-q021": {
+                "optionId": "B",
+                "selectedAt": "2026-10-10T05:17:19.433Z"
+              },
+              "js2024a-q017": {
+                "optionId": "C",
+                "selectedAt": "2026-10-10T05:17:55.848Z"
+              },
+              "apt-verbal-002": {
+                "optionId": "B",
+                "selectedAt": "2026-10-10T05:18:07.892Z"
+              },
+              "zj2023a-q044": {
+                "optionId": "A",
+                "selectedAt": "2026-10-10T05:18:43.006Z"
+              }
+            },
+            "startedAt": "2026-10-10T05:16:09.892Z",
+            "deadline": "2026-10-10T05:21:09.892Z",
+            "durationSeconds": 300,
+            "filters": {
+              "onlyUnanswered": false,
+              "onlyMistakes": false,
+              "onlyFavorites": false,
+              "excludeQuestionIds": [],
+              "answeredQuestionIds": [],
+              "mistakeQuestionIds": [],
+              "favoriteQuestionIds": []
+            },
+            "moduleId": "verbal",
+            "answeredCount": 5,
+            "unansweredCount": 0,
+            "scoreRate": 1,
+            "answeredAccuracy": 1,
+            "submittedAt": "2026-10-10T05:18:49.159Z",
+            "completedAt": "2026-10-10T05:18:49.159Z",
+            "session_id": "apt_verbal_mv1xyl9g_pxx4xg"
           }
         ],
         "answers": [
@@ -1767,6 +2036,91 @@
             ],
             "moduleId": "verbal",
             "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_15"
+          },
+          {
+            "id": "answer_apt_verbal_mv1xyl9g_pxx4xg_zj2023a-q050",
+            "sessionId": "apt_verbal_mv1xyl9g_pxx4xg",
+            "questionId": "zj2023a-q050",
+            "selectedOptionId": "C",
+            "correctAnswer": "C",
+            "isCorrect": true,
+            "mode": "exam",
+            "answeredAt": "2026-10-10T05:16:56.102Z",
+            "submittedAt": "2026-10-10T05:18:49.159Z",
+            "questionIndex": 0,
+            "knowledgePointIds": [
+              "verbal:detail"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1xyl9g_pxx4xg_zj2023a-q050"
+          },
+          {
+            "id": "answer_apt_verbal_mv1xyl9g_pxx4xg_zh2025c-q021",
+            "sessionId": "apt_verbal_mv1xyl9g_pxx4xg",
+            "questionId": "zh2025c-q021",
+            "selectedOptionId": "B",
+            "correctAnswer": "B",
+            "isCorrect": true,
+            "mode": "exam",
+            "answeredAt": "2026-10-10T05:17:19.433Z",
+            "submittedAt": "2026-10-10T05:18:49.159Z",
+            "questionIndex": 1,
+            "knowledgePointIds": [
+              "verbal:context"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1xyl9g_pxx4xg_zh2025c-q021"
+          },
+          {
+            "id": "answer_apt_verbal_mv1xyl9g_pxx4xg_js2024a-q017",
+            "sessionId": "apt_verbal_mv1xyl9g_pxx4xg",
+            "questionId": "js2024a-q017",
+            "selectedOptionId": "C",
+            "correctAnswer": "C",
+            "isCorrect": true,
+            "mode": "exam",
+            "answeredAt": "2026-10-10T05:17:55.848Z",
+            "submittedAt": "2026-10-10T05:18:49.159Z",
+            "questionIndex": 2,
+            "knowledgePointIds": [
+              "verbal:main-idea"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1xyl9g_pxx4xg_js2024a-q017"
+          },
+          {
+            "id": "answer_apt_verbal_mv1xyl9g_pxx4xg_apt-verbal-002",
+            "sessionId": "apt_verbal_mv1xyl9g_pxx4xg",
+            "questionId": "apt-verbal-002",
+            "selectedOptionId": "B",
+            "correctAnswer": "B",
+            "isCorrect": true,
+            "mode": "exam",
+            "answeredAt": "2026-10-10T05:18:07.892Z",
+            "submittedAt": "2026-10-10T05:18:49.159Z",
+            "questionIndex": 3,
+            "knowledgePointIds": [
+              "verbal:context"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1xyl9g_pxx4xg_apt-verbal-002"
+          },
+          {
+            "id": "answer_apt_verbal_mv1xyl9g_pxx4xg_zj2023a-q044",
+            "sessionId": "apt_verbal_mv1xyl9g_pxx4xg",
+            "questionId": "zj2023a-q044",
+            "selectedOptionId": "A",
+            "correctAnswer": "A",
+            "isCorrect": true,
+            "mode": "exam",
+            "answeredAt": "2026-10-10T05:18:43.006Z",
+            "submittedAt": "2026-10-10T05:18:49.159Z",
+            "questionIndex": 4,
+            "knowledgePointIds": [
+              "verbal:detail"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1xyl9g_pxx4xg_zj2023a-q044"
           }
         ],
         "mistakes": {
@@ -1830,217 +2184,6 @@
         "favorites": [],
         "favoriteKnowledgePointIds": [],
         "unclearKnowledgePointIds": []
-      },
-      "quantitative": {
-        "knowledgeProgress": {},
-        "sessions": [
-          {
-            "id": "apt_quantitative_mv1unb72_e4ydnl",
-            "mode": "practice",
-            "status": "active",
-            "planTaskId": null,
-            "questionIds": [
-              "ah2026-outline-quantitative-1",
-              "js2024a-q046",
-              "js2024a-q047",
-              "js2024a-q048",
-              "js2024a-q049",
-              "js2024a-q050",
-              "js2024a-q051",
-              "js2024a-q052",
-              "js2024a-q053",
-              "js2024a-q054",
-              "js2024a-q055",
-              "js2024a-q056",
-              "js2024a-q057",
-              "js2024a-q058",
-              "js2024a-q059"
-            ],
-            "currentIndex": 1,
-            "correctCount": 1,
-            "reviewingAnswerId": null,
-            "draftAnswers": {},
-            "startedAt": "2026-10-10T03:43:24.782Z",
-            "deadline": null,
-            "durationSeconds": null,
-            "filters": {
-              "onlyUnanswered": false,
-              "onlyMistakes": false,
-              "onlyFavorites": false,
-              "excludeQuestionIds": [],
-              "answeredQuestionIds": [],
-              "mistakeQuestionIds": [],
-              "favoriteQuestionIds": []
-            },
-            "moduleId": "quantitative",
-            "completedAt": null,
-            "session_id": "apt_quantitative_mv1unb72_e4ydnl"
-          }
-        ],
-        "answers": [
-          {
-            "id": "answer_apt_quantitative_mv1unb72_e4ydnl_1",
-            "sessionId": "apt_quantitative_mv1unb72_e4ydnl",
-            "questionId": "ah2026-outline-quantitative-1",
-            "selectedOptionId": "D",
-            "correctAnswer": "D",
-            "isCorrect": true,
-            "mode": "practice",
-            "answeredAt": "2026-10-10T03:43:27.626Z",
-            "knowledgePointIds": [
-              "quantitative:geometry"
-            ],
-            "moduleId": "quantitative",
-            "attempt_id": "answer_apt_quantitative_mv1unb72_e4ydnl_1"
-          }
-        ],
-        "mistakes": {},
-        "favorites": [],
-        "favoriteKnowledgePointIds": [],
-        "unclearKnowledgePointIds": []
-      },
-      "reasoning": {
-        "knowledgeProgress": {},
-        "sessions": [
-          {
-            "id": "apt_reasoning_mv1u18su_7ulcu8",
-            "mode": "exam",
-            "status": "timed_out",
-            "planTaskId": null,
-            "questionIds": [
-              "zh2025b-q083",
-              "zj2023a-q100",
-              "zh2025c-q091",
-              "zj2023a-q076",
-              "js2024a-q084",
-              "zh2025a-q088",
-              "js2024a-q081",
-              "zj2023a-q072",
-              "zh2025b-q079",
-              "zj2023a-q088",
-              "zh2025c-q077",
-              "zj2023a-q086",
-              "js2024a-q068",
-              "zh2025c-q089",
-              "zh2025b-q101"
-            ],
-            "currentIndex": 1,
-            "correctCount": 0,
-            "reviewingAnswerId": null,
-            "draftAnswers": {
-              "zh2025b-q083": {
-                "optionId": "C",
-                "selectedAt": "2026-10-10T03:45:03.940Z"
-              }
-            },
-            "startedAt": "2026-10-10T03:26:15.246Z",
-            "deadline": "2026-10-10T03:46:15.246Z",
-            "durationSeconds": 1200,
-            "filters": {
-              "onlyUnanswered": false,
-              "onlyMistakes": false,
-              "onlyFavorites": false,
-              "excludeQuestionIds": [],
-              "answeredQuestionIds": [],
-              "mistakeQuestionIds": [],
-              "favoriteQuestionIds": []
-            },
-            "moduleId": "reasoning",
-            "answeredCount": 1,
-            "unansweredCount": 14,
-            "scoreRate": 0,
-            "answeredAccuracy": 0,
-            "submittedAt": "2026-10-10T03:46:39.562Z",
-            "completedAt": "2026-10-10T03:46:39.562Z",
-            "session_id": "apt_reasoning_mv1u18su_7ulcu8"
-          }
-        ],
-        "answers": [
-          {
-            "id": "answer_apt_reasoning_mv1u18su_7ulcu8_zh2025b-q083",
-            "sessionId": "apt_reasoning_mv1u18su_7ulcu8",
-            "questionId": "zh2025b-q083",
-            "selectedOptionId": "C",
-            "correctAnswer": "D",
-            "isCorrect": false,
-            "mode": "exam",
-            "answeredAt": "2026-10-10T03:45:03.940Z",
-            "submittedAt": "2026-10-10T03:46:39.562Z",
-            "questionIndex": 0,
-            "knowledgePointIds": [
-              "reasoning:case-matching"
-            ],
-            "moduleId": "reasoning",
-            "attempt_id": "answer_apt_reasoning_mv1u18su_7ulcu8_zh2025b-q083"
-          }
-        ],
-        "mistakes": {
-          "zh2025b-q083": {
-            "count": 1,
-            "firstMissedAt": "2026-10-10T03:45:03.940Z",
-            "lastMissedAt": "2026-10-10T03:45:03.940Z",
-            "lastSelectedOptionId": "C",
-            "correctAnswer": "D",
-            "moduleId": "reasoning"
-          }
-        },
-        "favorites": [],
-        "favoriteKnowledgePointIds": [],
-        "unclearKnowledgePointIds": []
-      },
-      "data-analysis": {
-        "knowledgeProgress": {},
-        "sessions": [
-          {
-            "id": "apt_data-analysis_mv1uqfgl_22wv9n",
-            "mode": "practice",
-            "status": "completed",
-            "planTaskId": null,
-            "questionIds": [
-              "ah2026-outline-data-1"
-            ],
-            "currentIndex": 1,
-            "correctCount": 1,
-            "reviewingAnswerId": null,
-            "draftAnswers": {},
-            "startedAt": "2026-10-10T03:45:50.277Z",
-            "deadline": null,
-            "durationSeconds": null,
-            "filters": {
-              "onlyUnanswered": false,
-              "onlyMistakes": false,
-              "onlyFavorites": false,
-              "excludeQuestionIds": [],
-              "answeredQuestionIds": [],
-              "mistakeQuestionIds": [],
-              "favoriteQuestionIds": []
-            },
-            "moduleId": "data-analysis",
-            "completedAt": "2026-10-10T03:46:26.371Z",
-            "session_id": "apt_data-analysis_mv1uqfgl_22wv9n"
-          }
-        ],
-        "answers": [
-          {
-            "id": "answer_apt_data-analysis_mv1uqfgl_22wv9n_1",
-            "sessionId": "apt_data-analysis_mv1uqfgl_22wv9n",
-            "questionId": "ah2026-outline-data-1",
-            "selectedOptionId": "D",
-            "correctAnswer": "D",
-            "isCorrect": true,
-            "mode": "practice",
-            "answeredAt": "2026-10-10T03:46:21.631Z",
-            "knowledgePointIds": [
-              "data-analysis:share-change"
-            ],
-            "moduleId": "data-analysis",
-            "attempt_id": "answer_apt_data-analysis_mv1uqfgl_22wv9n_1"
-          }
-        ],
-        "mistakes": {},
-        "favorites": [],
-        "favoriteKnowledgePointIds": [],
-        "unclearKnowledgePointIds": []
       }
     },
     "aptitudeLogs": {},
@@ -2074,9 +2217,9 @@
       "scenarioScope": "all"
     },
     "onboarding": {
-      "step": 0,
+      "completed": true,
       "hidden": true,
-      "completed": true
+      "step": 0
     }
   },
   "tombstones": []
