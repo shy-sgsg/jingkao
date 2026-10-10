@@ -45,8 +45,8 @@
   "questions_parsed_count": 125,
   "answer_count": 125,
   "explanation_count": 125,
-  "published_count": 107,
-  "held_count": 18,
+  "published_count": 125,
+  "held_count": 0,
   "authorization": {
     "status": "user_confirmed_republication_authorization",
     "confirmed_on": "2026-10-10"
@@ -56,6 +56,7 @@
   "shared_stimuli_file": "shared-stimuli.json",
   "captured_question_text_count": 125,
   "answer_explanation_count": 125,
-  "published_question_count": 107,
-  "held_question_count": 18
+  "published_question_count": 125,
+  "held_question_count": 0,
+  "asset_mirror_count": 39
 }

@@ -19837,5 +19837,822 @@
     "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "original"
+  },
+  {
+    "id": "zj2023a-q007",
+    "moduleId": "general-knowledge",
+    "subjectId": "history",
+    "topicId": "history:themes",
+    "knowledgePointIds": [
+      "history:historical-chronology"
+    ],
+    "originalQuestionNo": 7,
+    "sectionOrder": 1,
+    "stem": "下列4幅图是红军长征宣传图，按照发生时间先后排序正确的是： ① ② ③ ④",
+    "options": [
+      "①②④③",
+      "④③①②",
+      "②④③①",
+      "④①③②"
+    ],
+    "correctAnswer": "B",
+    "explanation": "①为红军长征爬雪山（1935 年 6 月）的场景图，②为红军长征过草地（1935 年 8 月 21 日）的场景图，③为红军长征飞夺泸定桥（1935 年 5 月 29 日）的场景图，④为红军长征强渡大渡河（1935 年 5 月 24 日～25 日）的场景图。综上可知，按照发生时间先后排序为④③①②。故本题选 B。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "zhejiang-2023-a-recall",
+    "sourceTitle": "2023 年浙江省考行测 A 卷（公开回忆题）",
+    "sourceNote": "公开考生回忆题面；题干和选项按 Aipta 公开题页原文录入，图形及公式使用原始题图资源；答案与解析按出版版答案 PDF 逐题核对。用户已确认获得转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/3524.html",
+    "region": "zhejiang",
+    "examYear": 2023,
+    "paperId": "zhejiang-2023-A-class",
+    "paperTitle": "2023 年浙江省公务员录用考试《行测》A 卷（公开回忆题）",
+    "answerSourceUrl": "answer-and-explanation.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original",
+    "stemImageUrls": [
+      "./public/question-assets/zhejiang-2023-a/phpBIw30M_html_95238d32743e14af.png",
+      "./public/question-assets/zhejiang-2023-a/phpBIw30M_html_12df0aba42538f50.png",
+      "./public/question-assets/zhejiang-2023-a/phpBIw30M_html_8e55d319424c83fd.png",
+      "./public/question-assets/zhejiang-2023-a/phpBIw30M_html_c3e0bb49f343a84d.png"
+    ]
+  },
+  {
+    "id": "zj2023a-q015",
+    "moduleId": "general-knowledge",
+    "subjectId": "geography",
+    "topicId": "geography:national",
+    "knowledgePointIds": [
+      "geography:population"
+    ],
+    "originalQuestionNo": 15,
+    "sectionOrder": 1,
+    "stem": "下列邮票图案与少数民族的对应关系，不正确的是：",
+    "options": [
+      {
+        "text": "朝鲜族",
+        "imageUrls": [
+          "./public/question-assets/zhejiang-2023-a/phpBIw30M_html_43a2828085f638dc.png"
+        ]
+      },
+      {
+        "text": "傣族",
+        "imageUrls": [
+          "./public/question-assets/zhejiang-2023-a/phpBIw30M_html_abe563fb9ba44e2e.png"
+        ]
+      },
+      {
+        "text": "回族",
+        "imageUrls": [
+          "./public/question-assets/zhejiang-2023-a/phpBIw30M_html_e0efb3b7ea391925.png"
+        ]
+      },
+      {
+        "text": "苗族",
+        "imageUrls": [
+          "./public/question-assets/zhejiang-2023-a/phpBIw30M_html_f8d4002c8fb6968a.png"
+        ]
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "A 项正确，朝鲜族服装的特点是斜襟，无纽扣，以长布带打结，女装袄短裙长，与图案相符合。图案中女子所奏乐器为长鼓，又称杖鼓、两杖鼓，是朝鲜族混合击膜鸣乐器。B 项正确，傣族男子的服饰差别不大，一般常穿无领对襟或大襟小袖短衫，下着长管裤，以白布、水红布或蓝布包头，与图案相符合。图案中的高脚酒杯形状的乐器，为傣族象脚鼓。C 项正确，回族服饰的主要标志在头部，男子们都喜爱戴白色的圆帽，回族妇女常戴盖头，与图案相符合。D 项错误，苗族女子以 “银衣”为主，下穿百褶裙，前后有围腰，与图案不符。图案对应的民族为彝族，彝族妇女一般上身穿镶边或绣花的大襟右衽上衣，戴黑色包头、耳环，领口别有银排花，图案中男子所持乐器为彝族月琴。 故本题选 D。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "zhejiang-2023-a-recall",
+    "sourceTitle": "2023 年浙江省考行测 A 卷（公开回忆题）",
+    "sourceNote": "公开考生回忆题面；题干和选项按 Aipta 公开题页原文录入，图形及公式使用原始题图资源；答案与解析按出版版答案 PDF 逐题核对。用户已确认获得转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/3524.html",
+    "region": "zhejiang",
+    "examYear": 2023,
+    "paperId": "zhejiang-2023-A-class",
+    "paperTitle": "2023 年浙江省公务员录用考试《行测》A 卷（公开回忆题）",
+    "answerSourceUrl": "answer-and-explanation.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "zj2023a-q023",
+    "moduleId": "verbal",
+    "subjectId": "reading",
+    "topicId": "verbal:context",
+    "knowledgePointIds": [
+      "verbal:context"
+    ],
+    "originalQuestionNo": 23,
+    "sectionOrder": 2,
+    "stem": "有的地方搞森林城市创建不计成本，选树种不考虑当地环境气候，一味______，大搞南方草原风光、中部沿海风情的反气候移植。这种贪图表面光鲜、______生态效益、忽视经济效益和社会效益的做法，无疑背离了森林城市创建的初心。 依次填入画横线部分最恰当的一项是：",
+    "options": [
+      "生搬硬套无视",
+      "标新立异罔顾",
+      "好大喜功弱化",
+      "贪大求全漠视"
+    ],
+    "correctAnswer": "B",
+    "explanation": "直接看第一空，由“大搞……反气候移植”“贪图表面光鲜”可知，横线处所填词语应表达当地选树种不合时宜，只追求表面，“生搬硬套”指不顾实际情况机械地搬用别人的方法、经验等，文段中并没有借鉴其他森林城市创建经验的意思，不符合语意，排除 A 项；“好大喜功” 指不管条件是否许可，一心想做大事，立大功，文段强调有些地方不合时宜、机械式地选树种，并非“立大功”，不符合语意，排除 C 项；“贪大求全”指过分地贪图规模大而全面，文段中未体现选树种要求全面的意思，不符合语意，排除 D 项；“标新立异”指提出新奇的主张，表示与一般的不同，用在横线处指森林城市创建错误的创新，不合时宜，符合语意。验证第二空，“罔顾”指不顾及、没有顾及，“罔顾生态效益”与后文“忽视经济效益”呼应，符合语意。故本题选 B。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "zhejiang-2023-a-recall",
+    "sourceTitle": "2023 年浙江省考行测 A 卷（公开回忆题）",
+    "sourceNote": "公开考生回忆题面；题干和选项按 Aipta 公开题页原文录入，图形及公式使用原始题图资源；答案与解析按出版版答案 PDF 逐题核对。用户已确认获得转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/3524.html",
+    "region": "zhejiang",
+    "examYear": 2023,
+    "paperId": "zhejiang-2023-A-class",
+    "paperTitle": "2023 年浙江省公务员录用考试《行测》A 卷（公开回忆题）",
+    "answerSourceUrl": "answer-and-explanation.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "zj2023a-q054",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative:number-patterns",
+    "knowledgePointIds": [
+      "quantitative:number-patterns"
+    ],
+    "originalQuestionNo": 54,
+    "sectionOrder": 3,
+    "stem": "2，2，2，，，（ ）",
+    "options": [
+      {
+        "text": "",
+        "imageUrls": [
+          "./public/question-assets/zhejiang-2023-a/phpBIw30M_html_662d5f0eeab57133.png"
+        ]
+      },
+      {
+        "text": "",
+        "imageUrls": [
+          "./public/question-assets/zhejiang-2023-a/phpBIw30M_html_c4e9c30aac166bdb.png"
+        ]
+      },
+      {
+        "text": "",
+        "imageUrls": [
+          "./public/question-assets/zhejiang-2023-a/phpBIw30M_html_5c5f799c2baab740.png"
+        ]
+      },
+      {
+        "text": "",
+        "imageUrls": [
+          "./public/question-assets/zhejiang-2023-a/phpBIw30M_html_4e5a0261932673ed.png"
+        ]
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "本题考查分数数列。第一步：观察数列。数列出现分数项，优先考虑反约分。 4 6 8 9 10 第二步：将原数列反约分得到： 、 、 、 、 ，分子列为合数列，分母列为等差数列。因此原 2 3 4 5 6 12 数列未知项为 。故本题选 D。 7",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "zhejiang-2023-a-recall",
+    "sourceTitle": "2023 年浙江省考行测 A 卷（公开回忆题）",
+    "sourceNote": "公开考生回忆题面；题干和选项按 Aipta 公开题页原文录入，图形及公式使用原始题图资源；答案与解析按出版版答案 PDF 逐题核对。用户已确认获得转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/3524.html",
+    "region": "zhejiang",
+    "examYear": 2023,
+    "paperId": "zhejiang-2023-A-class",
+    "paperTitle": "2023 年浙江省公务员录用考试《行测》A 卷（公开回忆题）",
+    "answerSourceUrl": "answer-and-explanation.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original",
+    "stemImageUrls": [
+      "./public/question-assets/zhejiang-2023-a/phpBIw30M_html_4a75286781ca63d7.png",
+      "./public/question-assets/zhejiang-2023-a/phpBIw30M_html_d1c2c7b32714013b.png"
+    ]
+  },
+  {
+    "id": "zj2023a-q060",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative:probability",
+    "knowledgePointIds": [
+      "quantitative:probability"
+    ],
+    "originalQuestionNo": 60,
+    "sectionOrder": 3,
+    "stem": "某停车场有7个连成一排的空车位。现有3辆车随机停在这排车位中，则任意两辆车之间至少间隔一个车位的概率为：",
+    "options": [
+      {
+        "text": "",
+        "imageUrls": [
+          "./public/question-assets/zhejiang-2023-a/phpBIw30M_html_e9f5d454a6ac2994.png"
+        ]
+      },
+      {
+        "text": "",
+        "imageUrls": [
+          "./public/question-assets/zhejiang-2023-a/phpBIw30M_html_b7871a972a2c81f5.png"
+        ]
+      },
+      {
+        "text": "",
+        "imageUrls": [
+          "./public/question-assets/zhejiang-2023-a/phpBIw30M_html_7bd99295fe853dd9.png"
+        ]
+      },
+      {
+        "text": "",
+        "imageUrls": [
+          "./public/question-assets/zhejiang-2023-a/phpBIw30M_html_a75728a531892661.png"
+        ]
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "本题考查基础概率问题。第一步：审阅题干。根据题意可知任意车辆之间不能相邻，可用插空法。第二步：3 辆车随机停在 7 个车位中，总情况数为 A 37 =210 种。有 4 个空车位， 60 2 形成 5 个“空”，把 3 辆车插入这 5 个“空”中的情况有 A 35 =60 种，因此题干所求为 = 。故本题 210 7 选 B。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "zhejiang-2023-a-recall",
+    "sourceTitle": "2023 年浙江省考行测 A 卷（公开回忆题）",
+    "sourceNote": "公开考生回忆题面；题干和选项按 Aipta 公开题页原文录入，图形及公式使用原始题图资源；答案与解析按出版版答案 PDF 逐题核对。用户已确认获得转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/3524.html",
+    "region": "zhejiang",
+    "examYear": 2023,
+    "paperId": "zhejiang-2023-A-class",
+    "paperTitle": "2023 年浙江省公务员录用考试《行测》A 卷（公开回忆题）",
+    "answerSourceUrl": "answer-and-explanation.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "zj2023a-q062",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative:geometry",
+    "knowledgePointIds": [
+      "quantitative:geometry"
+    ],
+    "originalQuestionNo": 62,
+    "sectionOrder": 3,
+    "stem": "某地打算在绿地上建两个圆形花坛，如下图所示，大圆的直径为6米，小圆的直径为2米，修建期间暂时在外围设置围栏。已知围栏呈矩形，大圆与围栏的三条边相切，小圆与围栏的两条边相切，且两圆相切，那么矩形围栏的面积是多少平方米？",
+    "options": [
+      {
+        "text": "",
+        "imageUrls": [
+          "./public/question-assets/zhejiang-2023-a/phpBIw30M_html_81d19911d766a96b.png"
+        ]
+      },
+      {
+        "text": "",
+        "imageUrls": [
+          "./public/question-assets/zhejiang-2023-a/phpBIw30M_html_eab3ddb1ab0577a0.png"
+        ]
+      },
+      {
+        "text": "",
+        "imageUrls": [
+          "./public/question-assets/zhejiang-2023-a/phpBIw30M_html_641071cdc5ab4403.png"
+        ]
+      },
+      {
+        "text": "",
+        "imageUrls": [
+          "./public/question-assets/zhejiang-2023-a/phpBIw30M_html_33f7b9c6bade9a38.png"
+        ]
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "本题考查平面几何问题。第一步：审阅题干。作辅助线如下图，B 为过大圆圆心 O 平行于矩形长的直线与过小圆圆心 A 平行于矩形宽的直线的交点： 第二步：大圆的半径为 6÷2=3 米，小圆的半径为 2÷2=1 米，AB⊥OB，∠OBA=90°，AB=3-1=2 米， OA=3+1=4 米，OB= OA 2  AB2 =2 3 米，则矩形的长为 3+1+2 3 =4+2 3 米，宽为 6 米，因此矩形围栏的面积是（4+2 3 ）×6=12（2+ 3 ）平方米。故本题选 A。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "zhejiang-2023-a-recall",
+    "sourceTitle": "2023 年浙江省考行测 A 卷（公开回忆题）",
+    "sourceNote": "公开考生回忆题面；题干和选项按 Aipta 公开题页原文录入，图形及公式使用原始题图资源；答案与解析按出版版答案 PDF 逐题核对。用户已确认获得转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/3524.html",
+    "region": "zhejiang",
+    "examYear": 2023,
+    "paperId": "zhejiang-2023-A-class",
+    "paperTitle": "2023 年浙江省公务员录用考试《行测》A 卷（公开回忆题）",
+    "answerSourceUrl": "answer-and-explanation.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original",
+    "stemImageUrls": [
+      "./public/question-assets/zhejiang-2023-a/phpBIw30M_html_9dd2822956d6a1c7.png"
+    ]
+  },
+  {
+    "id": "zj2023a-q066",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative:geometry",
+    "knowledgePointIds": [
+      "quantitative:geometry"
+    ],
+    "originalQuestionNo": 66,
+    "sectionOrder": 3,
+    "stem": "一只闹钟的秒针顶点距离表盘圆心4厘米，分针顶点距离表盘圆心3厘米。小王烧开一壶水的时间内，秒针顶点累计移动了厘米。那么这一时间段内，分针顶点与表盘圆心的连线扫过的扇形面积为多少平方厘米？",
+    "options": [
+      {
+        "text": "",
+        "imageUrls": [
+          "./public/question-assets/zhejiang-2023-a/phpBIw30M_html_ee627bc13530c69d.png"
+        ]
+      },
+      {
+        "text": "",
+        "imageUrls": [
+          "./public/question-assets/zhejiang-2023-a/phpBIw30M_html_4bd8ac4b73080f67.png"
+        ]
+      },
+      {
+        "text": "",
+        "imageUrls": [
+          "./public/question-assets/zhejiang-2023-a/phpBIw30M_html_cca2ba2e561f487f.png"
+        ]
+      },
+      {
+        "text": "",
+        "imageUrls": [
+          "./public/question-assets/zhejiang-2023-a/phpBIw30M_html_a7b9134cbbc75e9a.png"
+        ]
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "本题考查钟表问题。第一步：审阅题干。秒针转 1 圈为 1 分钟，此时顶点移动的距离即为圆的周长。第二步：秒针转 1 圈顶点移动了 2×π×4=8π厘米，即小王烧开一壶水的时间 1 内秒针转了 40π÷8π=5 圈，即 5 分钟，则分针转了 5÷60= 圈。因此分针顶点与表盘圆心的连线扫 12 1 过的扇形面积为 ×π×3×3=0.75π平方厘米。故本题选 B。 12",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "zhejiang-2023-a-recall",
+    "sourceTitle": "2023 年浙江省考行测 A 卷（公开回忆题）",
+    "sourceNote": "公开考生回忆题面；题干和选项按 Aipta 公开题页原文录入，图形及公式使用原始题图资源；答案与解析按出版版答案 PDF 逐题核对。用户已确认获得转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/3524.html",
+    "region": "zhejiang",
+    "examYear": 2023,
+    "paperId": "zhejiang-2023-A-class",
+    "paperTitle": "2023 年浙江省公务员录用考试《行测》A 卷（公开回忆题）",
+    "answerSourceUrl": "answer-and-explanation.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original",
+    "stemImageUrls": [
+      "./public/question-assets/zhejiang-2023-a/phpBIw30M_html_2525434c0532a0ec.png"
+    ]
+  },
+  {
+    "id": "zj2023a-q071",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:attributes",
+    "knowledgePointIds": [
+      "reasoning:attributes"
+    ],
+    "originalQuestionNo": 71,
+    "sectionOrder": 4,
+    "stem": "从所给的四个选项中选择最合适的一个填入问号处，使之呈现一定的规律性：",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "explanation": "本题考查标记类规律。第一步：观察图形。题干各图形中黑色部分标记性明显，考虑标记类规律。题干各图形的拐角处均为黑色正方形，则问号处图形的拐角处应为黑色正方形。第二步：分析选项，确定答案。A 项：拐角处均为黑色正方形，当选。B 项：拐角处不全为黑色正方形，排除。C 项：拐角处不全为黑色正方形，排除。D 项：非拐角处有黑色正方形，且拐角处不全为黑色正方形， 排除。故本题选 A。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "zhejiang-2023-a-recall",
+    "sourceTitle": "2023 年浙江省考行测 A 卷（公开回忆题）",
+    "sourceNote": "公开考生回忆题面；题干和选项按 Aipta 公开题页原文录入，图形及公式使用原始题图资源；答案与解析按出版版答案 PDF 逐题核对。用户已确认获得转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/3524.html",
+    "region": "zhejiang",
+    "examYear": 2023,
+    "paperId": "zhejiang-2023-A-class",
+    "paperTitle": "2023 年浙江省公务员录用考试《行测》A 卷（公开回忆题）",
+    "answerSourceUrl": "answer-and-explanation.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original",
+    "stemImageUrls": [
+      "./public/question-assets/zhejiang-2023-a/phpBIw30M_html_bb5fcdab310eaffa.png"
+    ]
+  },
+  {
+    "id": "zj2023a-q072",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:quantity",
+    "knowledgePointIds": [
+      "reasoning:quantity"
+    ],
+    "originalQuestionNo": 72,
+    "sectionOrder": 4,
+    "stem": "从所给的四个选项中选择最合适的一个填入问号处，使之呈现一定的规律性：",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "explanation": "本题考查数量类规律。第一步：观察图形。题干各图形不相似，内外部分明显，考虑数量类规律。题干各图形中外框直角数依次为：0、1、2、3、4，则问号处图形中外框直角数应为 5。第二步：分析选项，确定答案。A 项：外框直角数为 6，排除。B 项：外框直角数为 5，当选。C 项： 外框直角数为 1，排除。D 项：外框直角数为 4，排除。故本题选 B。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "zhejiang-2023-a-recall",
+    "sourceTitle": "2023 年浙江省考行测 A 卷（公开回忆题）",
+    "sourceNote": "公开考生回忆题面；题干和选项按 Aipta 公开题页原文录入，图形及公式使用原始题图资源；答案与解析按出版版答案 PDF 逐题核对。用户已确认获得转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/3524.html",
+    "region": "zhejiang",
+    "examYear": 2023,
+    "paperId": "zhejiang-2023-A-class",
+    "paperTitle": "2023 年浙江省公务员录用考试《行测》A 卷（公开回忆题）",
+    "answerSourceUrl": "answer-and-explanation.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original",
+    "stemImageUrls": [
+      "./public/question-assets/zhejiang-2023-a/phpBIw30M_html_9b64df6558a14c18.png"
+    ]
+  },
+  {
+    "id": "zj2023a-q073",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:position",
+    "knowledgePointIds": [
+      "reasoning:position"
+    ],
+    "originalQuestionNo": 73,
+    "sectionOrder": 4,
+    "stem": "从所给的四个选项中选择最合适的一个填入问号处，使之呈现一定的规律性：",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "A",
+    "explanation": "本题考查位置类规律。第一步：观察图形。题干各图形元素组成相同，优先考虑位置类规律。题干各图形中外圈白块依次顺时针移动 2 格，内圈白块依次逆时针移动 1 格得到下一个图形，则问号处图形应由第五个图形移动得到。第二步：分析选项，确定答案。A 项：符合题干移动规律， 当选。B 项：不符合题干移动规律，排除。C 项：不符合题干移动规律，排除。D 项：不符合题干移动规律，排除。故本题选 A。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "zhejiang-2023-a-recall",
+    "sourceTitle": "2023 年浙江省考行测 A 卷（公开回忆题）",
+    "sourceNote": "公开考生回忆题面；题干和选项按 Aipta 公开题页原文录入，图形及公式使用原始题图资源；答案与解析按出版版答案 PDF 逐题核对。用户已确认获得转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/3524.html",
+    "region": "zhejiang",
+    "examYear": 2023,
+    "paperId": "zhejiang-2023-A-class",
+    "paperTitle": "2023 年浙江省公务员录用考试《行测》A 卷（公开回忆题）",
+    "answerSourceUrl": "answer-and-explanation.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original",
+    "stemImageUrls": [
+      "./public/question-assets/zhejiang-2023-a/phpBIw30M_html_a5164c04559ef71f.png"
+    ]
+  },
+  {
+    "id": "zj2023a-q074",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:graphic-patterns",
+    "knowledgePointIds": [
+      "reasoning:graphic-patterns"
+    ],
+    "originalQuestionNo": 74,
+    "sectionOrder": 4,
+    "stem": "从所给的四个选项中选择最合适的一个填入问号处，使之呈现一定的规律性：",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "explanation": "本题考查形状类规律。第一步：观察图形。题干各图形黑白块明显，优先考虑叠加规律。第一组第一个图形与第二个图形叠加得到第三个图形，叠加规律为：黑+黑=空，空+空=空， 黑+白＝黑，白+白＝空，空+黑=黑，白+空=白，空+白=白，黑+空=黑。第二组图形遵循此规律，则问号处图形应由第二组前两个图形黑白叠加得到。第二步：分析选项，确定答案。A 项：不符合题干叠加规律，排除。B 项：不符合题干叠加规律，排除。C 项：符合题干叠加规律，当选。D 项：不符合题干叠加规律，排除。故本题选 C。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "zhejiang-2023-a-recall",
+    "sourceTitle": "2023 年浙江省考行测 A 卷（公开回忆题）",
+    "sourceNote": "公开考生回忆题面；题干和选项按 Aipta 公开题页原文录入，图形及公式使用原始题图资源；答案与解析按出版版答案 PDF 逐题核对。用户已确认获得转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/3524.html",
+    "region": "zhejiang",
+    "examYear": 2023,
+    "paperId": "zhejiang-2023-A-class",
+    "paperTitle": "2023 年浙江省公务员录用考试《行测》A 卷（公开回忆题）",
+    "answerSourceUrl": "answer-and-explanation.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original",
+    "stemImageUrls": [
+      "./public/question-assets/zhejiang-2023-a/phpBIw30M_html_34b0377539c3ccc4.png"
+    ]
+  },
+  {
+    "id": "zj2023a-q075",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:attributes",
+    "knowledgePointIds": [
+      "reasoning:attributes"
+    ],
+    "originalQuestionNo": 75,
+    "sectionOrder": 4,
+    "stem": "从所给的四个选项中选择最合适的一个填入问号处，使之呈现一定的规律性：",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "explanation": "本题考查属性类规律。第一步：观察图形。题干各图形组成不相似，但对称性明显，考虑属性类规律。题干第一组图形均为轴对称图形，且封闭空间数依次为：2、3、4，第二组前两个均为轴对称图形，且封闭空间数依次为：2、3，则问号处图形应为轴对称图形，且封闭空间数为 4。第二步：分析选项，确定答案。A 项：封闭空间数为 3，排除。B 项：不为轴对称图形，排除。C 项： 为轴对称图形，且封闭空间数为 4，当选。D 项：不为轴对称图形，排除。故本题选 C。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "zhejiang-2023-a-recall",
+    "sourceTitle": "2023 年浙江省考行测 A 卷（公开回忆题）",
+    "sourceNote": "公开考生回忆题面；题干和选项按 Aipta 公开题页原文录入，图形及公式使用原始题图资源；答案与解析按出版版答案 PDF 逐题核对。用户已确认获得转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/3524.html",
+    "region": "zhejiang",
+    "examYear": 2023,
+    "paperId": "zhejiang-2023-A-class",
+    "paperTitle": "2023 年浙江省公务员录用考试《行测》A 卷（公开回忆题）",
+    "answerSourceUrl": "answer-and-explanation.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original",
+    "stemImageUrls": [
+      "./public/question-assets/zhejiang-2023-a/phpBIw30M_html_28d29497aaf4558b.png"
+    ]
+  },
+  {
+    "id": "zj2023a-q076",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:position",
+    "knowledgePointIds": [
+      "reasoning:position"
+    ],
+    "originalQuestionNo": 76,
+    "sectionOrder": 4,
+    "stem": "把下面的六个图形分为两类，使每一类图形都有各自的共同特征或规律，分类正确的一项是：",
+    "options": [
+      "①③⑤，②④⑥",
+      "①③⑥，②④⑤",
+      "①②③，④⑤⑥",
+      "①④⑤，②③⑥"
+    ],
+    "correctAnswer": "D",
+    "explanation": "本题考查位置类规律。第一步：观察图形。题干各图形均由两个形状相似但位置不同的元素组成，考虑位置类规律。第二步：分析各组图形的位置类规律。①④⑤图形中前一个元素顺时针旋转 90°后能得到后一个元素，②③⑥图形中前一个元素旋转 180°后能得到后一个元素。故本题选 D。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "zhejiang-2023-a-recall",
+    "sourceTitle": "2023 年浙江省考行测 A 卷（公开回忆题）",
+    "sourceNote": "公开考生回忆题面；题干和选项按 Aipta 公开题页原文录入，图形及公式使用原始题图资源；答案与解析按出版版答案 PDF 逐题核对。用户已确认获得转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/3524.html",
+    "region": "zhejiang",
+    "examYear": 2023,
+    "paperId": "zhejiang-2023-A-class",
+    "paperTitle": "2023 年浙江省公务员录用考试《行测》A 卷（公开回忆题）",
+    "answerSourceUrl": "answer-and-explanation.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original",
+    "stemImageUrls": [
+      "./public/question-assets/zhejiang-2023-a/phpBIw30M_html_b947b7c32bd84d3d.png"
+    ]
+  },
+  {
+    "id": "zj2023a-q077",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:attributes",
+    "knowledgePointIds": [
+      "reasoning:attributes"
+    ],
+    "originalQuestionNo": 77,
+    "sectionOrder": 4,
+    "stem": "把下面的六个图形分为两类，使每一类图形都有各自的共同特征或规律，分类正确的一项是：",
+    "options": [
+      "①②⑤，③④⑥",
+      "①③④，②⑤⑥",
+      "①④⑤，②③⑥",
+      "①⑤⑥，②③④"
+    ],
+    "correctAnswer": "A",
+    "explanation": "本题考查关系类规律。第一步：观察图形。题干各图形组成相似，直线与圆存在明显相切，考虑关系类规律。第二步：分析各组图形的关系类规律。①②⑤图形中直线与 1 个圆相切，③④⑥图形中直线与 2 个圆相切。故本题选 A。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "zhejiang-2023-a-recall",
+    "sourceTitle": "2023 年浙江省考行测 A 卷（公开回忆题）",
+    "sourceNote": "公开考生回忆题面；题干和选项按 Aipta 公开题页原文录入，图形及公式使用原始题图资源；答案与解析按出版版答案 PDF 逐题核对。用户已确认获得转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/3524.html",
+    "region": "zhejiang",
+    "examYear": 2023,
+    "paperId": "zhejiang-2023-A-class",
+    "paperTitle": "2023 年浙江省公务员录用考试《行测》A 卷（公开回忆题）",
+    "answerSourceUrl": "answer-and-explanation.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original",
+    "stemImageUrls": [
+      "./public/question-assets/zhejiang-2023-a/phpBIw30M_html_4c5cf16b871e86b5.png"
+    ]
+  },
+  {
+    "id": "zj2023a-q078",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:attributes",
+    "knowledgePointIds": [
+      "reasoning:attributes"
+    ],
+    "originalQuestionNo": 78,
+    "sectionOrder": 4,
+    "stem": "从所给的四个选项中选择最合适的一个填入问号处，使之呈现一定的规律性：",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "B",
+    "explanation": "本题考查属性类规律。第一步：观察图形。题干各图形组成相似，对称性明显，考虑属性类规律。题干九宫格第一列图形均为竖轴对称图形，第二列图形均为横轴对称图形，第三列前两个图形均既为横轴又为竖轴对称图形，则问号处图形应既为横轴又为竖轴对称图形。第二步：分析选项，确定答案。A 项：为竖轴对称图形，排除。B 项：既为横轴又为竖轴对称图形，当选。C 项：为竖轴对称图形，排除。D 项：不为对称图形，排除。故本题选 B。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "zhejiang-2023-a-recall",
+    "sourceTitle": "2023 年浙江省考行测 A 卷（公开回忆题）",
+    "sourceNote": "公开考生回忆题面；题干和选项按 Aipta 公开题页原文录入，图形及公式使用原始题图资源；答案与解析按出版版答案 PDF 逐题核对。用户已确认获得转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/3524.html",
+    "region": "zhejiang",
+    "examYear": 2023,
+    "paperId": "zhejiang-2023-A-class",
+    "paperTitle": "2023 年浙江省公务员录用考试《行测》A 卷（公开回忆题）",
+    "answerSourceUrl": "answer-and-explanation.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original",
+    "stemImageUrls": [
+      "./public/question-assets/zhejiang-2023-a/phpBIw30M_html_70ec2e1efd725aaf.png"
+    ]
+  },
+  {
+    "id": "zj2023a-q079",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:spatial",
+    "knowledgePointIds": [
+      "reasoning:spatial"
+    ],
+    "originalQuestionNo": 79,
+    "sectionOrder": 4,
+    "stem": "左图给定的是纸盒的外表面，右边哪项能由它折叠而成？",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "C",
+    "explanation": "本题考查空间类规律。第一步：观察图形。题干是立体图形，选项为展开图， 观察各面与相邻面的位置关系。第二步：分析选项，确定答案。A 项：假设右面正确，左面直线应与右面直线有公共点，排除。B 项：假设右面正确，左面虚线应与右面直线有公共点，排除。C 项：可以由题干外表面折叠而成，当选。D 项：左面在展开图中不存在，排除。故本题选 C。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "zhejiang-2023-a-recall",
+    "sourceTitle": "2023 年浙江省考行测 A 卷（公开回忆题）",
+    "sourceNote": "公开考生回忆题面；题干和选项按 Aipta 公开题页原文录入，图形及公式使用原始题图资源；答案与解析按出版版答案 PDF 逐题核对。用户已确认获得转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/3524.html",
+    "region": "zhejiang",
+    "examYear": 2023,
+    "paperId": "zhejiang-2023-A-class",
+    "paperTitle": "2023 年浙江省公务员录用考试《行测》A 卷（公开回忆题）",
+    "answerSourceUrl": "answer-and-explanation.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original",
+    "stemImageUrls": [
+      "./public/question-assets/zhejiang-2023-a/phpBIw30M_html_85c2dab01d6e85d5.png"
+    ]
+  },
+  {
+    "id": "zj2023a-q080",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:spatial",
+    "knowledgePointIds": [
+      "reasoning:spatial"
+    ],
+    "originalQuestionNo": 80,
+    "sectionOrder": 4,
+    "stem": "左图为给定的多面体，将其从任一面剖开，哪项不可能是该多面体的截面？",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "correctAnswer": "D",
+    "explanation": "本题考查空间类规律。第一步：观察图形。题干为立体图，选项为截面形式， 本题考查截面图。第二步：沿下图所示线条剖开分别可得 A、B、C 项，只有 D 项不可能是该立体图形的截面。 故本题选 D。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "zhejiang-2023-a-recall",
+    "sourceTitle": "2023 年浙江省考行测 A 卷（公开回忆题）",
+    "sourceNote": "公开考生回忆题面；题干和选项按 Aipta 公开题页原文录入，图形及公式使用原始题图资源；答案与解析按出版版答案 PDF 逐题核对。用户已确认获得转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/3524.html",
+    "region": "zhejiang",
+    "examYear": 2023,
+    "paperId": "zhejiang-2023-A-class",
+    "paperTitle": "2023 年浙江省公务员录用考试《行测》A 卷（公开回忆题）",
+    "answerSourceUrl": "answer-and-explanation.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original",
+    "stemImageUrls": [
+      "./public/question-assets/zhejiang-2023-a/phpBIw30M_html_c440f1fcd04e8994.png"
+    ]
+  },
+  {
+    "id": "zj2023a-q110",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:strengthen-weaken",
+    "knowledgePointIds": [
+      "reasoning:strengthen-weaken"
+    ],
+    "originalQuestionNo": 110,
+    "sectionOrder": 4,
+    "stem": "许多心理学家将工作记忆描述为“当你遇到其他信息或任务干扰时，继续记住一定信息的能力”。工作记忆是大脑中负责储存和处理信息，进行决策跟计划的部分。它决定了短时记忆和长时记忆中能储存、处理多少信息，还决定了这些信息的注意控制、质量和数量。工作记忆较差的人很难将注意力分给不同的信息片段，导致他们难以高效处理多重任务——尤其是当他们遇到完全陌生的话题时。因此，工作记忆在多任务处理中扮演着重要的角色。 以下哪项如果为真，最能支持上述结论？",
+    "options": [
+      "噪音等外界干扰会降低人们处理多任务的能力",
+      "老年人或出现认知障碍的人的工作记忆会有所衰退",
+      "工作记忆并非一成不变，可以通过练习和训练得以加强",
+      {
+        "text": "工作记忆强的人能轻松地在不同内容的网页间切换并成功找到所要的结果 （一）",
+        "imageUrls": [
+          "./public/question-assets/zhejiang-2023-a/phpBIw30M_html_c8f3805b1f038187.png"
+        ]
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "本题考查加强类。第一步：分析题干论点、论据。论点：工作记忆在多任务处理中扮演着重要的角色。论据：工作记忆较差的人很难将注意力分给不同的信息片段，导致他们难以高效处理多重任务——尤其是当他们遇到完全陌生的话题时。第二步：分析选项，确定答案。A 项： 指出噪音等外界干扰会降低人们处理多任务的能力，而论点讨论的是工作记忆，话题不一致，排除。B 项：指出老年人或出现认知障碍的人的工作记忆会有所衰退，与工作记忆是否在多任务处理中扮演重要角色无关，排除。C 项：指出工作记忆并非一成不变，可以通过练习和训练得以加强，与工作记忆是否在多任务处理中扮演重要角色无关，排除。D 项：指出工作记忆强的人能轻松地在不同内容的网页间切换并成功找到所要的结果，举例说明工作记忆在多任务处理中扮演着重要的角色，支持题干论点，当选。 故本题选 D。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "zhejiang-2023-a-recall",
+    "sourceTitle": "2023 年浙江省考行测 A 卷（公开回忆题）",
+    "sourceNote": "公开考生回忆题面；题干和选项按 Aipta 公开题页原文录入，图形及公式使用原始题图资源；答案与解析按出版版答案 PDF 逐题核对。用户已确认获得转载授权。",
+    "sourceUrl": "https://www.aipta.com/article/3524.html",
+    "region": "zhejiang",
+    "examYear": 2023,
+    "paperId": "zhejiang-2023-A-class",
+    "paperTitle": "2023 年浙江省公务员录用考试《行测》A 卷（公开回忆题）",
+    "answerSourceUrl": "answer-and-explanation.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
   }
 ]
