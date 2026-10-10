@@ -140,6 +140,21 @@ const PAPER_CATALOG = [
       'general-knowledge': [91, 105],
     },
   },
+  {
+    id: 'anhui-2022-zhanhong-qae',
+    title: '2022年安徽省公务员录用考试《行测》题（展鸿整理版）',
+    region: '安徽',
+    examYear: 2022,
+    questionCount: 110,
+    sourceType: 'recalled',
+    ranges: {
+      quantitative: [1, 15],
+      verbal: [16, 40],
+      'general-knowledge': [41, 60],
+      reasoning: [61, 95],
+      'data-analysis': [96, 110],
+    },
+  },
 ];
 
 const PLACEHOLDER_STEMS = new Set([

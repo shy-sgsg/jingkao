@@ -34553,5 +34553,5668 @@ export const IMPORTED_SOURCE_QUESTIONS = [
     "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q001",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative:common-models",
+    "knowledgePointIds": [
+      "quantitative:arrangements"
+    ],
+    "originalQuestionNo": 1,
+    "sectionOrder": 1,
+    "stem": "滑雪和滑冰是冬奥会的两大项赛事，其中高山滑雪、自由式滑雪、单板滑雪、跳台滑雪、越野滑雪和北欧两项是滑雪大项中的 6 个分项，短道速滑、速度滑冰和花样滑冰是滑冰大项中的 3 个分项。小林打算去现场观看比赛，共选择 6 个项目，并且每个大项不少于 1 个，若所有项目比赛时间均不交叉，则不同的观赛方式有（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "83 种"
+      },
+      {
+        "id": "B",
+        "text": "84 种"
+      },
+      {
+        "id": "C",
+        "text": "92 种"
+      },
+      {
+        "id": "D",
+        "text": "102 种"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "滑冰最少选择 1 项，最多选择 3 项，分情况讨论。①滑冰选择 1 个项目，滑雪选择 5 个，有 C13 × C 56 =18 种方式；②滑冰选择 2 个项目，滑雪选择 4 个，有 C 32 × C 64 =45 种方式；③滑冰选择 3 个项目，滑雪选择 3 个，有 C 33 × C 36 =20 种方式。综上，共有 18+45+20=83 种方式。故本题选 A。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q002",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative:arithmetic-basics",
+    "knowledgePointIds": [
+      "quantitative:equations"
+    ],
+    "originalQuestionNo": 2,
+    "sectionOrder": 1,
+    "stem": "某单位四个党史宣讲小组各有若干组员，现增加 2 人并重新分配，使得四个小组人数相等。此时与原先相比，第一小组人数增加 10 人，第二小组人数减少 1 人，第三小组人数增加一倍，第四小组人数减半，则原先人数最多的小组与人数最少的小组之间相差（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "15 人"
+      },
+      {
+        "id": "B",
+        "text": "21 人"
+      },
+      {
+        "id": "C",
+        "text": "24 人"
+      },
+      {
+        "id": "D",
+        "text": "32 人"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "已知四组总人数增加 2，以及四组之间的数量关系，可设代数求解。设原先第三组有 x 人，第四组有 y 人，根据题意有 10−1+x−y/2=2，2x=y/2，解得 x=7，y=28。则原先第三组人数有 7 人，第四组有 28 人，第一组有 7×2−10=4 人，第二组有 7×2+1=15 人。因此原先人数最多的小组与人数最少的小组之间相差 28−4=24 人。故本题选 C。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q003",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative:arithmetic-basics",
+    "knowledgePointIds": [
+      "quantitative:ratio-percentage"
+    ],
+    "originalQuestionNo": 3,
+    "sectionOrder": 1,
+    "stem": "某方舱医院配有 1000 张床位，现已接收新冠确诊患者 200 名，并按床护比（护士人数与患者床位数的比值）0.6:1 配齐了护士。因疫情发展迅速，该医院又收治了 700 名患者，此时床护比下调为 0.2:1，那么还需增加护士（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "80 人"
+      },
+      {
+        "id": "B",
+        "text": "60 人"
+      },
+      {
+        "id": "C",
+        "text": "40 人"
+      },
+      {
+        "id": "D",
+        "text": "20 人"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "已知床护比与患者数，可求出原先护士人数与下调床护比后护士人数，相减可得题干所求。原先护士人数为 200×0.6=120 人，下调床护比后需要护士人数为（200+700）×0.2=180人，则还需增加护士 180-120=60 人。故本题选 B。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q004",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative:arithmetic-basics",
+    "knowledgePointIds": [
+      "quantitative:equations"
+    ],
+    "originalQuestionNo": 4,
+    "sectionOrder": 1,
+    "stem": "某助农志愿小分队采摘到甲、乙、丙三筐枸杞共 144 斤。第一次从甲筐中取出与乙筐一样重的枸杞放入乙筐，第二次再从现有乙筐中取出与丙筐一样重的枸杞放入丙筐，第三次从现有丙筐中取出与现有甲筐一样重的枸杞放入甲筐，此时三筐枸杞一样重。那么原来甲筐中有枸杞（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "36 斤"
+      },
+      {
+        "id": "B",
+        "text": "48 斤"
+      },
+      {
+        "id": "C",
+        "text": "56 斤"
+      },
+      {
+        "id": "D",
+        "text": "66 斤"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "甲、乙、丙筐中枸杞的重量之间存在数量关系，可设代数求解。最后三筐枸杞每筐重 144÷3=48 斤。设甲筐原来重 x 斤，乙筐重 y 斤，丙筐重 z 斤。第一次从甲筐取出枸杞后甲重 x−y 斤，第二次从乙筐取出枸杞后乙筐重 2y−z 斤，第三次从丙筐取出枸杞放入甲筐后甲筐重 2(x−y) 斤。根据题意有 x+y+z=144，2(x−y)=48，2y−z=48，解得 x=66，y=42，z=36，因此原来甲筐中枸杞有 66 斤。故本题选 D。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q005",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative:common-models",
+    "knowledgePointIds": [
+      "quantitative:work-rate"
+    ],
+    "originalQuestionNo": 5,
+    "sectionOrder": 1,
+    "stem": "某地采用传统销售模式，销售一批鸡蛋需要 20 天，销售一批桃子需要 25 天。为推动销售，当地开启直播带货模式，直播带货期间，鸡蛋的销售效率提高为原来的 2 倍，桃子销售效率为原来的 3 倍，其余销售时间依然按照传统模式进行，结果两种产品同时销售完成。那么销售期间直播带货的天数为（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "3"
+      },
+      {
+        "id": "B",
+        "text": "5"
+      },
+      {
+        "id": "C",
+        "text": "8"
+      },
+      {
+        "id": "D",
+        "text": "10"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "题干中鸡蛋、桃子的销售效率、总量都没有实际的量，所求为天数，可采用赋值法解题。赋值传统销售模式下，鸡蛋、桃子每天各能销售 1 个，则直播带货模式下鸡蛋每天能销售2 个，桃子能销售 3 个。设销售期间直播带货的天数为 x 天，则直播带货模式下卖出鸡蛋 2x 个，卖出桃子 3x 个。两种产品同时销售完，则桃子比鸡蛋多的数量与直播带货期间桃子多销售的量相同，则有25-20=3x-2x，解得 x=5，因此销售期间直播带货的天数为 5。故本题选 B。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q006",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative:common-models",
+    "knowledgePointIds": [
+      "quantitative:probability"
+    ],
+    "originalQuestionNo": 6,
+    "sectionOrder": 1,
+    "stem": "为了加强环境治理和生态修复，某市派出 4 位专家（甲、乙、丙、丁）前往某山区 3 个勘探点进行环境监测，要求每个勘探点至少安排一名专家。那么甲、乙两名专家去了不同勘探点的概率是（ ）。3 1 5 1",
+    "options": [
+      {
+        "id": "A",
+        "text": "3/4"
+      },
+      {
+        "id": "B",
+        "text": "1/6"
+      },
+      {
+        "id": "C",
+        "text": "5/6"
+      },
+      {
+        "id": "D",
+        "text": "1/4"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "甲、乙两名专家去了不同勘探点的概率求解较复杂，可先求反面情况即甲、乙两名专家去了相同勘探点的概率。4 位专家（甲、乙、丙、丁）前往某山区 3 个勘探点的情况总共有 C 24A 33 1× A 33 =36 种，则甲、乙两名专家去同一个勘探点的概率为 = ，因此甲、乙两名专家去了不同勘探36 61 5点的概率是 1- = 。故本题选 C。6 6",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q007",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative:arithmetic-basics",
+    "knowledgePointIds": [
+      "quantitative:profit"
+    ],
+    "originalQuestionNo": 7,
+    "sectionOrder": 1,
+    "stem": "某地的一种特色纪念品在旅游旺季时十分畅销，有商家发现，进价为每个 40 元的纪念品，当售价为 44 元时，每天可售出 300 个，售价每上涨 1 元，每天销量减少 10 个。现商家决定提价销售，若要使销售利润达到最大，则售价应为（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "51 元"
+      },
+      {
+        "id": "B",
+        "text": "52 元"
+      },
+      {
+        "id": "C",
+        "text": "54 元"
+      },
+      {
+        "id": "D",
+        "text": "57 元"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "根据题干可知利润与销量的数量关系，可设代数求解。售价为 44 元时利润为 44−40=4 元。设提价了 x 元，销量减少了 10x 个时，该纪念品的销售利润为（4+x）×（300−10x）=−10x²+260x+1200。根据一元二次方程特性可知，当 x=−b/(2a)=−260/[2×(−10)]=13 时，利润达到最大，此时售价为 44+13=57 元。故本题选 D。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q008",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative:common-models",
+    "knowledgePointIds": [
+      "quantitative:geometry"
+    ],
+    "originalQuestionNo": 8,
+    "sectionOrder": 1,
+    "stem": "某商场为庆祝开业三周年，制作了一个长方形大蛋糕并切成 4 块（如图所示）。假设整个大蛋糕平均可供 350 人享有，左下角那块蛋糕平均可供 50 人享用，右上角那块蛋糕平均可供 70 人享用，则中间最大那块蛋糕平均可供享用的人数为（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "150"
+      },
+      {
+        "id": "B",
+        "text": "155"
+      },
+      {
+        "id": "C",
+        "text": "175"
+      },
+      {
+        "id": "D",
+        "text": "180"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "把享用蛋糕的人数看成长方形大蛋糕的面积，则所求为中间三角形的面积。设长方形蛋糕的长为 a，宽为 b。由图可知，S1 的底边为 50×2÷a=100/a，S2 的高为 70×2÷b=140/b，则 S3 的底边为 b−100/a，高为 a−140/b，S3 的面积为 1/2×（b−100/a）×（a−140/b）=ab/2−120+7000/(ab)。整个蛋糕面积 ab=350，代入可得 S3=350/2−120+7000/350=75。S4=350−70−75−50=155。因此中间最大那块蛋糕平均可供 155 人享用。故本题选 B。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [
+      "./public/assets/question-bank/anhui-2022-q008.jpg"
+    ],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q009",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative:number-reasoning",
+    "knowledgePointIds": [
+      "quantitative:number-patterns"
+    ],
+    "originalQuestionNo": 9,
+    "sectionOrder": 1,
+    "stem": "某市举行庆典活动，将依次升空 105 架无人机，升空方式如下：每架无人机间距均相等，第一次升空 n 架，第二次升空 n-1 架，以此类推，最终在夜空中组成一个近似等边三角形背景的灯光秀，那么第 10 次升空的无人机数量是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "3 架"
+      },
+      {
+        "id": "B",
+        "text": "5 架"
+      },
+      {
+        "id": "C",
+        "text": "8 架"
+      },
+      {
+        "id": "D",
+        "text": "10 架"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "根据题干可知，无人机每次升空数量呈等差数列，最后升空了 1 架无人机。无人机总共升空了 n 次，根据等差数列特性可知 n(n+1)/2=105，解得 n=14，则第 10 次升空的无人机数量是 14+(10−1)×(−1)=5 架。故本题选 B。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q010",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative:common-models",
+    "knowledgePointIds": [
+      "quantitative:geometry"
+    ],
+    "originalQuestionNo": 10,
+    "sectionOrder": 1,
+    "stem": "某城市规划馆有一个边长为 40 米的正三角形数字展厅，展厅中布置有 5 台投影设备，用于展示城市的过去、现在，以及畅想城市的未来。每台投影设备的尺寸忽略不计，则任意两台设备之间的最小距离（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "小于 10 米"
+      },
+      {
+        "id": "B",
+        "text": "不超过 16 米"
+      },
+      {
+        "id": "C",
+        "text": "不超过 20 米"
+      },
+      {
+        "id": "D",
+        "text": "在 23～28 米之间"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "题干所求任意两台设备之间的最小距离即求最小距离的最大值。如下图所示，先将三台设备分别放在三角形三个顶点处，再将剩余两台设备放在任意两条边的中点处，此时任意两台设备之间的最小距离最大，为 40÷2=20 米。故本题选 C。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q011",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative:common-models",
+    "knowledgePointIds": [
+      "quantitative:arrangements"
+    ],
+    "originalQuestionNo": 11,
+    "sectionOrder": 1,
+    "stem": "某镇卫生院 50 多名医生被平均分配到 13 个基层诊所参与工作，其中男医生比女医生多 4 人。工作结束后，25%的男医生和一部分女医生继续到邻镇 4 个医疗点支援工作，这批人员中任意 6 人必有男医生，且保证必有一个医疗点的女医生多于 1 人，那么该卫生院到邻镇支援工作的医生共有（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "12 人"
+      },
+      {
+        "id": "B",
+        "text": "14 人"
+      },
+      {
+        "id": "C",
+        "text": "16 人"
+      },
+      {
+        "id": "D",
+        "text": "18 人"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "根据题干可知，卫生院分配的医生人数是 13 的倍数，则医生人数为 52 人，男医生为 52÷2+4÷2=28 人，女医生为 28-4=24 人。该卫生院到邻镇支援工作的男医生有 28×25%=7 人，根据题干“任意 6 人必有男医生”“保证必有一个医疗点的女医生多于 1 人”可知到邻镇支援工作的女医生人数为 5 人，因此该卫生院到邻镇支援工作的医生共有 7+5=12 人。故本题选 A。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q012",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative:common-models",
+    "knowledgePointIds": [
+      "quantitative:geometry"
+    ],
+    "originalQuestionNo": 12,
+    "sectionOrder": 1,
+    "stem": "用一根长为 20 厘米、宽为 2 厘米、高为 1.5 厘米的长方体木料，制作一串半径最大的木珠子，不考虑制作过程中的损耗，则这串珠子的数量最多为（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "10 个"
+      },
+      {
+        "id": "B",
+        "text": "13 个"
+      },
+      {
+        "id": "C",
+        "text": "14 个"
+      },
+      {
+        "id": "D",
+        "text": "20 个"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "根据题干可知，木珠子半径最大为 1.5÷2=0.75 厘米。由图可知，AC=2−1.5=0.5 厘米，AB=1.5 厘米，BC=√(1.5²−0.5²)=√2。设这串珠子的数量最多为 n 个，则有 √2(n−1)+1.5=20，解得 n≈14.08，因此这串珠子的数量最多为 14 个。故本题选 C。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q013",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative:common-models",
+    "knowledgePointIds": [
+      "quantitative:geometry"
+    ],
+    "originalQuestionNo": 13,
+    "sectionOrder": 1,
+    "stem": "三星堆一祭祀坑出土一枚圆柱形金杖（如图所示），全长 1.42 米，直径 2.3 厘米，用的是金皮包卷在圆柱形木头上。出土时，金皮重约 500 克，已知 60 克黄金的体积是 3.1088 立方厘米，则金皮的厚度大约是（ ）。（保留小数点后两位）",
+    "options": [
+      {
+        "id": "A",
+        "text": "0.25mm"
+      },
+      {
+        "id": "B",
+        "text": "0.51mm"
+      },
+      {
+        "id": "C",
+        "text": "0.87mm"
+      },
+      {
+        "id": "D",
+        "text": "1.02mm"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "根据题干可知，可先求出金皮的体积与底长，再通过体积公式求出金皮的厚度。金皮体积为 500÷60×3.1088≈25.91 立方厘米，底长为圆柱形金杖的底圆周长，为 2.3π厘米，则金皮的厚度为 25.91÷142÷2.3π≈26÷142÷2÷3=26÷852≈0.031 厘米=0.31 毫米，A 项与之最接近。故本题选 A。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [
+      "./public/assets/question-bank/anhui-2022-q013.jpg"
+    ],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q014",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative:common-models",
+    "knowledgePointIds": [
+      "quantitative:geometry"
+    ],
+    "originalQuestionNo": 14,
+    "sectionOrder": 1,
+    "stem": "商家门口摆放了一把正四棱锥形（底面为正方形，侧面为四个全等的等腰三角形）的遮阳伞，第一次伞撑开到如图 1 所示的位置，伞柄与伞骨成角∠CPQ 为 30°，继续撑开到如图 2 所示的位置，伞柄与伞骨成角∠C´PQ´变为 60°。那么第二次伞撑开后形成的正方形 A´B´C´D´面积是第一次撑开后正方形 ABCD 面积的（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "3/2 倍"
+      },
+      {
+        "id": "B",
+        "text": "√3 倍"
+      },
+      {
+        "id": "C",
+        "text": "2 倍"
+      },
+      {
+        "id": "D",
+        "text": "3 倍"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "根据题干可知，PC 长度不变，可求出 CQ 再求出底面的面积。赋值 PC 长度为1，∠CPQ=30°，则 AC=2CQ=1；PC´=1，∠C´PQ´=60°，则 A´C´=2C´Q´= 3 ，根据正方形的特性可知，A1 1´B´C´D´面积是第一次撑开后正方形 ABCD 面积的 × 3 × 3 ÷ =3 倍。故本题选 D。2 2",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [
+      "./public/assets/question-bank/anhui-2022-q014.jpg"
+    ],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q015",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative:common-models",
+    "knowledgePointIds": [
+      "quantitative:geometry"
+    ],
+    "originalQuestionNo": 15,
+    "sectionOrder": 1,
+    "stem": "A、B 两个乡镇分布于山谷两侧，山谷间有一条宽为 2km 的河道（如下图所示）。当地政府决定在两个乡镇间修建一条跨河公路促进旅游发展，由于架桥费用高昂，所以要求跨河公路中的桥梁路段长度最短。那么根据图中数据，从 A 镇前往 B 镇的最短路径长为（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "15km"
+      },
+      {
+        "id": "B",
+        "text": "17km"
+      },
+      {
+        "id": "C",
+        "text": "19km"
+      },
+      {
+        "id": "D",
+        "text": "20km"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "根据题干已知信息，可作如下图辅助线求解。由图可知，CD=2 km，BD+AC=A1B=√(12²+(4+1)²)=13 km。因此从 A 镇前往 B 镇的最短路径长为 AC+CD+BD=13+2=15 km。故本题选 A。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [
+      "./public/assets/question-bank/anhui-2022-q015.jpg"
+    ],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q016",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal:logical-cloze",
+    "knowledgePointIds": [
+      "verbal:context"
+    ],
+    "originalQuestionNo": 16,
+    "sectionOrder": 2,
+    "stem": "改革和法治如鸟之两翼、车之两轮。党的十八大以来，全面深化改革的一个鲜明特点，就是把法治贯穿于改革全过程，在法治下推进改革、在改革中完善法治，保证改革和法治相互促进、________。填入划横线部分最恰当的一项是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "交相辉映"
+      },
+      {
+        "id": "B",
+        "text": "相映成趣"
+      },
+      {
+        "id": "C",
+        "text": "相得益彰"
+      },
+      {
+        "id": "D",
+        "text": "相为表里"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "辨析四个成语的意思：“交相辉映”指各种光亮、色彩等互相映照，多用于形容美好的景象，“相映成趣”指相互衬托着，显得很有趣味，“相得益彰”指两个人或两件事物互相配合，双方的能力和作用更能显示出来，“相为表里”指内外互相配合，共为一体。此处形容改革和法治相互促进、更好地发挥各自的作用，并未体现光亮色彩、趣味性和内外关系，“相得益彰”最符合语意。故本题选 C。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q017",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal:logical-cloze",
+    "knowledgePointIds": [
+      "verbal:context"
+    ],
+    "originalQuestionNo": 17,
+    "sectionOrder": 2,
+    "stem": "中华传统节日的文化内涵蕴藏在人与自然、人与他人、人与自身的相处之道中，体现了中华民族的核心价值观念，而________其中的则是对“和”的追求。填入划横线部分最恰当的一项是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "分列"
+      },
+      {
+        "id": "B",
+        "text": "统贯"
+      },
+      {
+        "id": "C",
+        "text": "包含"
+      },
+      {
+        "id": "D",
+        "text": "纵横"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "辨析四个词语的意思：“分列”指按照一项准则分级或分类，“统贯”指统合贯彻，“包含”指包容含有，“纵横”指横、竖或奔放自如、奔驰无阻。此处讲中华民族传统节日的文化内涵体现了中华民族的核心价值观，对“和”的追求是贯穿其中的，蕴藏在人与自然、人与他人、人与自身的相处之道中，“统贯”最符合语意。故本题选 B。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q018",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal:logical-cloze",
+    "knowledgePointIds": [
+      "verbal:context"
+    ],
+    "originalQuestionNo": 18,
+    "sectionOrder": 2,
+    "stem": "修炼挨批评这项基本功，要有虚心接受的气度。接受批评，就要拿出虚心以待、胸若怀谷的姿态，砥砺________、从善如流的自觉。填入划横线部分最恰当的一项是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "见贤思齐"
+      },
+      {
+        "id": "B",
+        "text": "洗心革面"
+      },
+      {
+        "id": "C",
+        "text": "兼听则明"
+      },
+      {
+        "id": "D",
+        "text": "闻过则喜"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "“从善如流”形容乐于接受别人的好意见，由顿号可知填入的成语应与其构成并列关系。辨析四个成语的意思：“见贤思齐”指见到德才兼备的人就想向他看齐，文段中并未提及要向他人看齐的意思，不符合语意，排除 A 项；“洗心革面”比喻彻底悔改，词义过重且不符合语意，排除 B 项；“兼听则明”指要同时听取各方面的意见，才能正确认识事物，“各方面意见”文段并未提及，排除 C 项；“闻过则喜”指听到别人批评自己的缺点或错误就表示欢迎和高兴，与前文“修炼挨批评这项基本功”“接受批评”相呼应，符合语意。故本题选 D。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q019",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal:logical-cloze",
+    "knowledgePointIds": [
+      "verbal:context"
+    ],
+    "originalQuestionNo": 19,
+    "sectionOrder": 2,
+    "stem": "升腾的火箭，________的是一个民族的飞天梦想，镌刻的是一个国家的前行脚步。从“嫦娥奔月”到“祝融驭火”，从“天和筑穹”到“墨子传信”，从“北斗联网”到“天舟穿梭”……中国航天向浩瀚宇宙的每一次进发，振奋的是越来越昂扬的精神和气概，________的是越来越厚重的自信和底气。依次填入划横线部分最恰当的一项是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "承载夯实"
+      },
+      {
+        "id": "B",
+        "text": "记载树立"
+      },
+      {
+        "id": "C",
+        "text": "负载牢固"
+      },
+      {
+        "id": "D",
+        "text": "担负增强"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "先看第一空，“记载”指把事情写下来，无法与“火箭”搭配，排除 B 项；“担负”指承担责任、工作、费用等，无法与“飞天梦想”搭配，排除 D 项。再看第二空，“牢固”无法与“自信和底气”搭配，排除 C 项。验证 A 项，“承载飞天梦想”“夯实自信和底气”均搭配恰当且符合语意。故本题选 A。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q020",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal:logical-cloze",
+    "knowledgePointIds": [
+      "verbal:context"
+    ],
+    "originalQuestionNo": 20,
+    "sectionOrder": 2,
+    "stem": "文化自信是一个国家、一个民族发展中更基本、更深沉、更持久的力量。人类社会与文明的每一次________，无不伴随着文化的历史性进步，纵览历史长河，无论是传统还是现代社会的治理结构和治理体系中，文化发展无不________、推动着社会的发展和完善。依次填入划横线部分最恰当的一项是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "跨越滋补"
+      },
+      {
+        "id": "B",
+        "text": "跃进滋养"
+      },
+      {
+        "id": "C",
+        "text": "变迁滋润"
+      },
+      {
+        "id": "D",
+        "text": "突破滋生"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "直接看第一空，此处讲人类社会与文明的发展是伴随着文化的历史性进步的，填入的词语应体现向前进步的变化。“跨越”指越过地区或时期的界限，此处强调进步而非跨越，排除A 项；“变迁”指情况或阶段的变化转移，不一定是进步的，排除 C 项；“突破”指集中兵力向一点进攻或反攻，打开缺口，无法与“人类社会与文明”搭配，排除 D 项。验证 B 项，“跃进”指跳着前进，比喻极快地前进，“滋养”指供给养分，均符合语意。故本题选 B。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q021",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal:logical-cloze",
+    "knowledgePointIds": [
+      "verbal:context"
+    ],
+    "originalQuestionNo": 21,
+    "sectionOrder": 2,
+    "stem": "低碳转型是牵涉供应端和消费端全链条的________工程，不仅需要各行各业攻坚克难的决心，也需要我们每个人________的行动。夏天把空调温度调高一些，尽量购买节能型用品，积极参与义务植树活动，每个人都为地球的“凉热”出一份力，只有让低碳成为新风尚、新潮流，才能与技术革新形成合力。依次填入划横线部分最恰当的一项是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "核心事必躬亲"
+      },
+      {
+        "id": "B",
+        "text": "系统脚踏实地"
+      },
+      {
+        "id": "C",
+        "text": "特殊持之以恒"
+      },
+      {
+        "id": "D",
+        "text": "浩大厚积薄发"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "先看第一空，由前文“全链条”和后文“各行各业”可知，低碳转型是一项涉及多方面的大型工程，“核心”和“特殊”均不符合语意，排除 A、C 项。再看第二空，“脚踏实地”比喻做事踏实、认真，“厚积薄发”形容只有准备充分才能办好事情，由文段“每个人的行动”可知，脚踏实地侧重行动层面，更符合语意，文段并未强调准备充分，排除 D 项。故本题选 B。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q022",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal:logical-cloze",
+    "knowledgePointIds": [
+      "verbal:context"
+    ],
+    "originalQuestionNo": 22,
+    "sectionOrder": 2,
+    "stem": "奋斗者永远是年轻的。青春与否，无关乎年龄，而在于心境。用奋斗________时代，用拼搏定义未来，这不仅是年轻人该有的追求，更是每个与时代同行者应有的姿态。奋斗不息，青春不朽。让我们以梦为马，不负韶华，在奋勇搏击中放飞青春梦想，在________中激扬青春力量。依次填入划横线部分最恰当的一项是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "礼赞砥砺前行"
+      },
+      {
+        "id": "B",
+        "text": "拥抱继往开来"
+      },
+      {
+        "id": "C",
+        "text": "顺应一往无前"
+      },
+      {
+        "id": "D",
+        "text": "讴歌风雨兼程"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "先看第一空，“顺应”指顺从、适应，由“奋斗”“拼搏”可知，我们应主动把握未来，不符合文段积极昂扬的感情色彩，排除 C 项；“讴歌”指歌唱、歌颂，与前文“奋斗”无法搭配，排除 D 项。再看第二空，“砥砺前行”指经历磨炼、克服困难向前进步，“继往开来”指继承前人的事业，开辟未来的道路，由前文“奋勇搏击”可知，前者更符合语意，且文段并未提及继承前人的事业，排除 B 项。故本题选 A。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q023",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal:logical-cloze",
+    "knowledgePointIds": [
+      "verbal:context"
+    ],
+    "originalQuestionNo": 23,
+    "sectionOrder": 2,
+    "stem": "有统计表明，在由听力障碍者组成的家庭出生的孩子中，约有 90%听力是正常的，他们因出生于听障家庭，常常处在听障、健听两个世界的边缘地带。他们可能既无法真正________听障者世界，也不被健听人世界完全________。他们面临普通人无法想象的挫折和压力，比如语言________迟缓、人际沟通障碍等，社会应给予他们更多的关注。依次填入划横线部分最恰当的一项是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "融入接纳习得"
+      },
+      {
+        "id": "B",
+        "text": "汇入接受发展"
+      },
+      {
+        "id": "C",
+        "text": "进入纳入获取"
+      },
+      {
+        "id": "D",
+        "text": "深入接收运用"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "先看第一空，“汇入”指汇合流入或资金转账的一种方式，明显不符合语意，排除 B 项。再看第二空，“接收”常与信号、稿件等具体事物搭配，此处形容由听力障碍者组成的家庭出生的孩子不容易融入健听人世界这一抽象概念，不符合语意，排除 D 项。再看第三空，“习得”指因学习、练习而掌握，“获取”指取得，此处与“语言”搭配前者更为恰当，排除 C 项。故本题选 A。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q024",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal:logical-cloze",
+    "knowledgePointIds": [
+      "verbal:context"
+    ],
+    "originalQuestionNo": 24,
+    "sectionOrder": 2,
+    "stem": "宋代的“琼林宴”是专为新科进士们举办的宴会，它从唐代“闻喜宴”________而来。与“闻喜宴”不同的是，“琼林宴”的________更高，是皇帝亲自参与的“国宴”，因赐宴在著名的“琼林苑”而得名。明清时期，多将“琼林宴”称之为“恩荣宴”，其仪式内容基本不变，“琼林宴”的形式得以________。依次填入划横线部分最恰当的一项是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "转变标准流行"
+      },
+      {
+        "id": "B",
+        "text": "发展格局延续"
+      },
+      {
+        "id": "C",
+        "text": "演变规格传承"
+      },
+      {
+        "id": "D",
+        "text": "演化条件稳定"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "先看第一空，“转变”指由一种情况变到另一种情况，此处讲“琼林宴”是在“闻喜宴”的基础上发展而来，是一种顺承变化的关系，而非转变，排除 A 项。再看第二空，“格局”指结构和格式或人的眼界、胆识、胸襟，“规格”指规定的要求或条件，“条件”指影响事物发生、存在或发展的因素或为某事而提出的要求，此处用“更高”来修饰宴会且由“是皇帝亲自参与的”可知，“规格”最符合语意，锁定 C 项。验证第三空，“形式得以传承”搭配恰当且符合语意。故本题选 C。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q025",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal:logical-cloze",
+    "knowledgePointIds": [
+      "verbal:context"
+    ],
+    "originalQuestionNo": 25,
+    "sectionOrder": 2,
+    "stem": "衡量民众对美好生活需要的满足状况，获得感无疑是一个重要的社会心态________。而获得感的________，需要个体的持续努力，也需要政府和社会的赋能。共同富裕、教育减负、生育友好等国家战略和政策，都是有效的赋能方式，既可以直接________社会成员的负担，也有助于培养更加朝气蓬勃的社会生态，进而从体制机制上保障获得感的可持续性。依次填入划横线部分最恰当的一项是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "标志获取减少"
+      },
+      {
+        "id": "B",
+        "text": "标准增强释放"
+      },
+      {
+        "id": "C",
+        "text": "指标提升减轻"
+      },
+      {
+        "id": "D",
+        "text": "准绳巩固降低"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "先看第一空，“标志”指表明特征的记号，此处讲获得感可以用来衡量民众对美好生活需要的满足状况，“标志”无法起到衡量作用，排除 A 项。再看第二空，“巩固”指使坚固，无法与感觉搭配，排除 D 项。再看第三空，由前文“教育减负”与后文“社会成员的负担”可知，此处应体现负担的减少，“减轻”比“释放”更为合适，排除 B 项。故本题选 C。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q026",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal:reading",
+    "knowledgePointIds": [
+      "verbal:main-idea"
+    ],
+    "originalQuestionNo": 26,
+    "sectionOrder": 2,
+    "stem": "实现技术要素高效配置是高标准市场体系建设的战略使命。技术要素市场化改革为建设高标准市场体系带来内生动力。发展完善技术要素市场，对现有市场体系提出了更高要求，例如需要更加健全的产权保护制度，更加公平的市场竞争环境，更为成熟的劳动力、资本要素市场以及更加包容的市场监管。此外，由于市场管理与创新管理的部门分割，技术要素市场化改革必然要求高标准市场体系建设要着力解决深层次的体制机制障碍、更加有效地统筹市场体系与创新体系的关系、协调科技与经济社会发展的关系。这段文字的中心观点在于说明（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "科技与经济社会发展的关系"
+      },
+      {
+        "id": "B",
+        "text": "技术要素与高标准市场体系的关系"
+      },
+      {
+        "id": "C",
+        "text": "高标准市场体系与创新体系的关系"
+      },
+      {
+        "id": "D",
+        "text": "技术要素对市场体系提出了更高要求"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "文段首先提出实现技术要素高效配置是高标准市场体系建设的战略使命，随即具体分析阐明原因，接着用“此外”转向另一方面，即技术要素市场化改革必然对高标准市场体系建设有更高要求。可见，文段主要论述技术要素与高标准市场体系的关系，B 项正确。A 项偏离文段论述主体“技术要素”和“高标准市场体系”；C 项仅为文段的部分内容；D 项“市场体系”偷换“高标准市场体系”的概念。故本题选 B。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q027",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal:reading",
+    "knowledgePointIds": [
+      "verbal:main-idea"
+    ],
+    "originalQuestionNo": 27,
+    "sectionOrder": 2,
+    "stem": "人脸识别的相关应用需要公民肖像做支撑，因此，肖像权是人脸识别过程中最有可能受到侵害的权利，在人们看来，人脸识别当然是识别人脸，但实际上，人脸识别图像上显示的是人脸，不过后台能够看见的画面已不局限在人脸范围，这样的人脸识别采集图像，的确有“说话不算数”之嫌。进一步说来，如此人脸识别的 App 在法律上也涉嫌越权或者侵权。人脸识别只能采集公民主动提供人脸的图像信息，一旦采集范围扩大，将人脸周围的图像信息、公民所处的环境、正在从事的行为等信息进行采集，将侵犯公民不愿暴露的隐私。下列选项与文段意思不符的是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "扩大人脸识别采集范围有可能侵害公民隐私权"
+      },
+      {
+        "id": "B",
+        "text": "摄像头采集人脸周围的图像扩大了采集的范围"
+      },
+      {
+        "id": "C",
+        "text": "公民应主动提供人脸的图像信息并享有知情权"
+      },
+      {
+        "id": "D",
+        "text": "在人脸识别过程中公民肖像权最有可能受侵害"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "A 项相符，由“一旦采集范围扩大，将人脸周围的图像信息、公民所处的环境、正在从事的行为等信息进行采集，将侵犯公民不愿暴露的隐私”可知，扩大人脸识别采集范围有可能侵害公民隐私权。B 项相符，由“在人们看来，人脸识别当然是识别人脸，但实际上，人脸识别图像上显示的是人脸，不过后台能够看见的画面已不局限在人脸范围”可知，摄像头采集人脸周围的图像扩大了采集的范围。C 项不符，文段仅提及“人脸识别只能采集公民主动提供人脸的图像信息”，未提及公民应主动提供人脸的图像信息。D 项相符，由“肖像权是人脸识别过程中最有可能受到侵害的权利”可得知。故本题选 C。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q028",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal:reading",
+    "knowledgePointIds": [
+      "verbal:main-idea"
+    ],
+    "originalQuestionNo": 28,
+    "sectionOrder": 2,
+    "stem": "人们一般都喜欢追逐日出或日落景观，但绝大部分人可能没意识到，其实在太阳相反一侧的天空，也隐藏着鲜为人知的景观，比如说人们能看到的两种大尺度影子景观——“山影”和“地影”。日出或日落前后，在太阳照射下，高大山峰投射出巨大阴影。此时站在该山峰的观测者观察这个阴影，阴影看起来像金字塔，这就是山影。而地影，是地球本身投射在大气层上的影子。除了登山家或摄影师，几乎很少有人注意到山影和地影，并将它们作为一种景观来欣赏。对这段文字理解正确的是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "大多数人不喜欢欣赏“山影”“地影”景观"
+      },
+      {
+        "id": "B",
+        "text": "人们不把“山影”“地影”作为景观来欣赏"
+      },
+      {
+        "id": "C",
+        "text": "“山影”和“地影”是鲜为人知的山上景观"
+      },
+      {
+        "id": "D",
+        "text": "只有极少数人能发现和欣赏“山影”和“地影”"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "A、B 项错误，D 项正确，由“除了登山家或摄影师，几乎很少有人注意到山影和地影，并将它们作为一种景观来欣赏”可知，A 项“不喜欢欣赏”偷换了“很少有人注意到”的概念，B 项“不把”说法过于绝对，D 项说法正确。C 项错误，由“其实在太阳相反一侧的天空，也隐藏着鲜为人知的景观”可知，“山影”和“地影”出现在天空而非山上。故本题选 D。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q029",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal:reading",
+    "knowledgePointIds": [
+      "verbal:main-idea"
+    ],
+    "originalQuestionNo": 29,
+    "sectionOrder": 2,
+    "stem": "长棘海星，是一种像仙人球一般长满尖刺的生物，是珊瑚礁生态系统的主要捕食者。成年长棘海星的身体直径可以达到 35 厘米，有记录的最大个体甚至能超过 75 厘米，长棘海星以各类珊瑚，尤其是造礁珊瑚为食，被啃食的珊瑚只会留下白森森的外骨骼，如同肆虐于草原和农田的蝗灾一样，在全球范围内长棘海星会出现不规律的种群暴发，对珊瑚礁生态系统造成严重影响。这段文字没有提及长棘海星的（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "外形特征"
+      },
+      {
+        "id": "B",
+        "text": "捕食对象"
+      },
+      {
+        "id": "C",
+        "text": "种群密度"
+      },
+      {
+        "id": "D",
+        "text": "破坏作用"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "A 项有提及，“是一种像仙人球一般长满尖刺的生物”提及长棘海星的外形特征。B 项有提及，“是珊瑚礁生态系统的主要捕食者”提及长棘海星的捕食对象。C 项未提及，种群密度文段没有描述。D 项有提及，“如同肆虐于草原和农田的蝗灾一样，在全球范围内长棘海星会出现不规律的种群暴发，对珊瑚礁生态系统造成严重影响”提及长棘海星的破坏作用。故本题选 C。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q030",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal:reading",
+    "knowledgePointIds": [
+      "verbal:intent"
+    ],
+    "originalQuestionNo": 30,
+    "sectionOrder": 2,
+    "stem": "我国宏观调控体系伴随着社会主义市场经济体制改革的全面深化不断创新、完善。随着大数据、云计算、人工智能、区块链等加速创新，数字技术日益融入经济社会发展各领域全过程。数字技术不仅是数字经济发展的支撑，而且是辅助经济治理的基础，宏观经济是一个不可中断的连续进程，作为关键生产要素的数据也是动态的、系统化的，以不间断的“流”的形式存在，发挥数字技术在宏观经济治理中的作用，是创新和完善调控的重要任务，是提高调控前瞻性、针对性、有效性的重要条件。这段文字是一篇文章的引言，接下去作者最可能讲述的是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "如何运用数字技术创新完善宏观调控"
+      },
+      {
+        "id": "B",
+        "text": "如何完善宏观经济治理推动社会发展"
+      },
+      {
+        "id": "C",
+        "text": "如何深度挖掘宏观经济数据资源"
+      },
+      {
+        "id": "D",
+        "text": "如何让数字文明助力新发展格局"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "文段主要讲我国宏观调控体系的不断创新、完善，以及数字技术的不断普及，尾句具体阐述了发挥数字技术在宏观经济治理中的作用是创新和完善调控的重要任务。可见，接下去作者最可能根据尾句话题进行论述，即运用数字技术创新完善宏观调控的具体做法，A 项正确。B、C、D项偏离论述主体“数字技术”。故本题选 A。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q031",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal:sentence-expression",
+    "knowledgePointIds": [
+      "verbal:sentence-order"
+    ],
+    "originalQuestionNo": 31,
+    "sectionOrder": 2,
+    "stem": "①我国现存辽塔约有 90 座，其中辽宁省内就有约 40 座 ②辽宁辽塔的“辽”字，既有空间上的地理分布，又有时间上的历史积淀 ③辽代古塔简称辽塔，其以独特的风格造型和精美的建造艺术在中华古塔中独树一帜 ④一座座矗立在辽宁境内的辽塔，历经千年，记录着佛教在东北地区的传播流变，也成为我们窥探大辽王朝兴衰的一扇窗 ⑤契丹民族兴于辽河，辽宁省名源于辽河将以上 5 个句子重新排列，语序正确的是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "③①⑤②④"
+      },
+      {
+        "id": "B",
+        "text": "③⑤①②④"
+      },
+      {
+        "id": "C",
+        "text": "②③①④⑤"
+      },
+      {
+        "id": "D",
+        "text": "①③②⑤④"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "观察选项，确定首句。①讲我国现存辽塔的数量，②讲辽宁辽塔的“辽”字含义，③讲辽代古塔简称辽塔，引出文段论述话题“辽塔”，根据行文逻辑应先引出话题再进行论述，③最适合作为首句，排除 C、D 项。比较 A、B 项，③讲辽代古塔的简称与风格造型等，⑤讲契丹民族兴于辽河，辽宁省名源于辽河，③⑤衔接没有共同话题，属于话题跳跃，排除 B 项。验证 A 项，符合语句逻辑关系。故本题选 A。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q032",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal:logical-cloze",
+    "knowledgePointIds": [
+      "verbal:context"
+    ],
+    "originalQuestionNo": 32,
+    "sectionOrder": 2,
+    "stem": "热水和冷水混在一起会变成温水，但是，温水不会自发分成热水和冷水。热量只能从热的物体向冷的物体单向传递，这一原理称为“热力学第二定律”。如果用分子这一微观视角看这一定律，物质的温度取决于其中沿着随机方向运动的分子的速度。分子运动速度快就会变热，速度慢就会变冷。但是数量庞大的分子运动时，各个分子的运动速度不是固定的，说到底，温度只不过是以不同速度运动的分子的平均速度罢了。因此，如果能够从以各种速度运动的分子中，只筛选出运动速度快的分子，从理论上说，就应该能________________。填入划横线部分最恰当的句子是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "从温水中单独提取出热水"
+      },
+      {
+        "id": "B",
+        "text": "从温水中自发分出冷热水"
+      },
+      {
+        "id": "C",
+        "text": "不使用能量就把冷水烧开"
+      },
+      {
+        "id": "D",
+        "text": "不通过传递就把热水变温"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "横线位于文段末尾，并且由前文“因此”可知是对文段观点的提炼总结。文段主要讲热水和冷水混在一起会变成温水，但温水不会自发分成热水和冷水，从分子的微观视角看这一定律，即分子运动速度快就会变热，速度慢就会变冷。可见，热水的分子运动速度快，冷水的分子运动速度慢，“只筛选出运动速度快的分子”从理论上来说对应的是提取出热水，A 项正确。B 项“自发分出冷热水”说法与“但是，温水不会自发分成热水和冷水”矛盾；C 项未提及热水，与横线前文话题不一致；D 项填入无法衔接。故本题选 A。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q033",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal:reading",
+    "knowledgePointIds": [
+      "verbal:main-idea"
+    ],
+    "originalQuestionNo": 33,
+    "sectionOrder": 2,
+    "stem": "恐龙胚胎化石“英良贝贝”，是迄今为止发现的最完整的恐龙胚胎，该胚胎被认为属于一种非鸟类兽脚类恐龙——窃蛋龙。胚胎以一种奇怪的姿势蜷缩在蛋壳内。此姿势从未在恐龙胚胎中发现，反倒是现代鸟类胚胎的常见姿势。现代鸟类的胚胎会在孵化后期经历预折叠、折叠、后折叠 3 个阶段，而“英良贝贝”的姿势相当于处在“预折叠”阶段，研究人员推断，这种先前被认为是鸟类特有的预孵化行为，可能起源于几千万年甚至上亿年前的兽脚类恐龙。这段文字意在强调（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "“英良贝贝”的胚胎姿势在已知的恐龙胚胎中是独一无二的"
+      },
+      {
+        "id": "B",
+        "text": "现代鸟类的许多特征最初是从兽脚类恐龙祖先身上演化来的"
+      },
+      {
+        "id": "C",
+        "text": "孵蛋姿势同现代鸟类相似，证明恐龙存在孵化抚育后代行为"
+      },
+      {
+        "id": "D",
+        "text": "姿势奇特的胚胎为恐龙与现代鸟类之间的联结提供了新线索"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "文段主要讲恐龙胚胎化石“英良贝贝”的胚胎姿势从未在恐龙胚胎中发现，反倒是现代鸟类胚胎的常见姿势，而“英良贝贝”的姿势相当于处在鸟类胚胎的“预折叠”阶段，研究人员推断这种先前被认为是鸟类特有的预孵化行为，可能起源于兽脚类恐龙。可见，恐龙胚胎化石“英良贝贝”为恐龙与现代鸟类之间的联结提供了新线索，D 项正确。A 项为文段的部分内容，非重点；B项“许多特征”范围扩大，文段仅讲胚胎孵化姿势这一特征；C 项“证明恐龙存在孵化抚育后代行为”无中生有。故本题选 D。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q034",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal:reading",
+    "knowledgePointIds": [
+      "verbal:main-idea"
+    ],
+    "originalQuestionNo": 34,
+    "sectionOrder": 2,
+    "stem": "乾隆款绛州澄泥砚的设计非常单一，没有任何一方向新式的琢砚风格靠拢，其仿造的主要是文化昌隆的汉、唐、宋泥质砚的标准款式，而同期乾隆朝内务府制造的大量松花砚则几乎抛弃了这种仿古砚式，极尽所能地去追求甚至创造潮流——高浮雕与浅浮雕配合营造表面，器座堆叠，砚盒设计精巧，如果说，乾隆朝宫作松花砚体现的是清宫在艺术审美领域的无往不胜，那么仿古绛州澄泥砚则意在强调它在技术领域的无所不能。下列说法正确的是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "乾隆朝制造仿古砚的成就远远超出实用和观赏的目的"
+      },
+      {
+        "id": "B",
+        "text": "松花砚代表的新式琢砚风格是乾隆朝造砚的主要潮流"
+      },
+      {
+        "id": "C",
+        "text": "乾隆朝的澄泥砚旨在展示当时还原古砚制作的高超技艺"
+      },
+      {
+        "id": "D",
+        "text": "乾隆朝宫作砚以追求艺术创造的美感或技术极致而著称"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "A 项错误，“远远超出实用和观赏的目的”文段并未提及，属于无中生有。B项错误，由“而同期乾隆朝内务府制造的大量松花砚则几乎抛弃了这种仿古砚式，极尽所能地去追求甚至创造潮流”可知，松花砚造砚是去追求艺术潮流，而非是“造砚的潮流”，偷换概念。C 项正确，由“那么仿古绛州澄泥砚则意在强调它在技术领域的无所不能”可知，乾隆朝的澄泥砚旨在展示当时还原古砚制作的高超技艺。D 项错误，“乾隆朝宫作砚以追求技术极致而著称”文段并未体现，仅提及“在艺术审美领域的无往不胜”。故本题选 C。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q035",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal:reading",
+    "knowledgePointIds": [
+      "verbal:inference"
+    ],
+    "originalQuestionNo": 35,
+    "sectionOrder": 2,
+    "stem": "南极动物的食物链极有特色，有人这样形容：在南极生活的动物从食物链上划分只有三个可能：它是磷虾，它吃磷虾或它捕食吃磷虾的动物，这个说法简单清晰地揭示了南极磷虾在南极生物圈承担的关键角色——这里几乎所有的动物都直接或间接地依赖磷虾生存，有些动物的食谱只有磷虾，没有其他替代品，而且它们生长繁殖、捕猎与迁移的时间和地点均与磷虾的生长状态相耦合。由上述材料无法推出（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "南极磷虾是南极生物链中至关重要的一个环节"
+      },
+      {
+        "id": "B",
+        "text": "大多南极动物进化出以磷虾为中心的生存方式"
+      },
+      {
+        "id": "C",
+        "text": "部分南极动物的繁殖期与磷虾的丰产期相一致"
+      },
+      {
+        "id": "D",
+        "text": "企鹅数量的下降主要由于磷虾数量的减少所致"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "A 项可推出，由“它是磷虾，它吃磷虾或它捕食吃磷虾的动物，这个说法简单清晰地揭示了南极磷虾在南极生物圈承担的关键角色”可知，磷虾是南极生物链中至关重要的一个环节。B 项可推出，由“这里几乎所有的动物都直接或间接地依赖磷虾生存”可知，大多南极动物进化出以磷虾为中心的生存方式。C 项可推出，由“而且它们生长繁殖、捕猎与迁移的时间和地点均与磷虾的生长状态相耦合”可知，部分南极动物的繁殖期与磷虾的丰产期相一致。D 项无法推出，企鹅数量下降的原因文段并未提及，属于无中生有。故本题选 D。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q036",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal:reading",
+    "knowledgePointIds": [
+      "verbal:main-idea"
+    ],
+    "originalQuestionNo": 36,
+    "sectionOrder": 2,
+    "stem": "叙事医学是一种具有叙事能力的医学实践，而叙事能力是指能够吸收、解释并被疾病的故事所感动的能力。这种能力有助于临床医生在医疗活动中提升对患者的共情能力、职业精神、亲和力和对自我行为进行反思。叙事医学要求医生在临床决策过程中倾听病人的叙事，关注家属等社会关系人的叙事，这样，医生才可以获取更多有助于临床决策的信息，才能作出正确的疾病诊断，提出最适合病人的决策建议，最后和患方共同作出首先保障病人利益、又能平衡各方权益的诊疗选择。这段文字意在说明（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "叙事医学有助于医患共同决策"
+      },
+      {
+        "id": "B",
+        "text": "叙事医学可化解当下医疗分歧"
+      },
+      {
+        "id": "C",
+        "text": "叙事医学可避免技术至上误区"
+      },
+      {
+        "id": "D",
+        "text": "叙事医学有利于当前医学实践"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "文段首先阐述叙事医学和叙事能力的定义，并指出这种叙事能力有助于临床医生在医疗活动中拉近与患者的距离，并且叙事医学对医生提出的要求有助于和患方共同作出首先保障病人利益、又能平衡各方权益的诊疗选择。可见，文段意在说明叙事医学有助于医患共同决策，A 项正确。B 项“医疗分歧”、C 项“技术至上误区”文段并未提及；D 项“叙事医学”本身就是一种医学实践，且非文段论述重点。故本题选 A。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q037",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal:reading",
+    "knowledgePointIds": [
+      "verbal:main-idea"
+    ],
+    "originalQuestionNo": 37,
+    "sectionOrder": 2,
+    "stem": "制造与服务融合是智能制造的重要内容之一，服务要素渗透到制造各个环节中形成了生产性服务与制造服务化。本文从工业互联网的商业视角、使用视角、功能视角、实现视角建立了制造与服务融合中虚拟逻辑与实体活动交互的技术体系，针对性地提出了生态位驱动、供应链驱动、大数据驱动、物联网驱动的制造与服务融合方法。本文构建的制造与服务融合技术体系，深化了工业互联网在制造业余服务业中的应用，为数字经济中制造服务产业的技术创新奠定了基础。如果这是一篇论文的摘要，那么这篇论文的标题最有可能是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "数字经济中制造与服务融合的协同机制"
+      },
+      {
+        "id": "B",
+        "text": "四轮驱动下的制造与服务融合技术体系"
+      },
+      {
+        "id": "C",
+        "text": "工业互联网在智能制造中的体系化应用"
+      },
+      {
+        "id": "D",
+        "text": "基于工业互联网的制造与服务融合技术"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "文段是一篇论文的摘要，主要讲了制造与服务融合是智能制造的重要内容之一，并介绍本文从工业互联网的多个视角建立了制造与服务融合中虚拟逻辑与实体活动交互的技术体系，且针对各种驱动提出了融合方法，并指出这种体系深化了工业互联网在制造业余服务业中的应用，为数字经济中制造服务产业的技术创新奠定了基础。可见，这篇论文主要讲的是在工业互联网背景下建立起来的制造与服务融合技术体系，D 项作为标题最恰当。A、B 项未提及“工业互联网”这一论述要点；C 项未提及“制造与服务融合”这一论述主体。故本题选 D。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q038",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal:reading",
+    "knowledgePointIds": [
+      "verbal:main-idea"
+    ],
+    "originalQuestionNo": 38,
+    "sectionOrder": 2,
+    "stem": "我国全年降水量、河川径流量 60%～80%集中在汛期；同时，降水和径流年际变化显著，最大和最小年降水量南方地区相差 2～4 倍，北方地区相差 3～6 倍，径流量最大和最小年份相差 10～15 倍。天然来水过程与需水过程不匹配，很多地区出现旱涝急转，水资源开发利用难度加大。随着城镇化水平不断提升，人口和经济要素进一步向城市集聚，20 世纪 80 年代初，全国人口城镇化率仅 30%，2020 年已达到 63.8%。城市群尤其中心城市水资源保障问题将日益突出。这段文字意在说明（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "我国降水和河川径流年际变化较大"
+      },
+      {
+        "id": "B",
+        "text": "我国大部分水资源年内分配不均"
+      },
+      {
+        "id": "C",
+        "text": "我国北方地区水资源衰减态势可能会进一步持续"
+      },
+      {
+        "id": "D",
+        "text": "我国水资源分布失衡、供需矛盾突出，与自然和人为因素有关"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "文段首先讲由于自然原因造成的我国全年降水量、河川径流量的显著特点和地区差异，接着讲随着城镇化水平不断提升，受人为因素影响城市群尤其中心城市水资源保障问题将日益突出。可见，文段意在说明我国水资源分布失衡、供需矛盾突出，与自然和人为因素有关，D 项正确。A、B 项仅为文段部分内容；C 项“北方地区水资源衰减态势可能会进一步持续”文段并未提及，属于无中生有。故本题选 D。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q039",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal:reading",
+    "knowledgePointIds": [
+      "verbal:main-idea"
+    ],
+    "originalQuestionNo": 39,
+    "sectionOrder": 2,
+    "stem": "在高空气球技术取得进展的同时，航空和航天技术也迎来了飞速发展的时期。在大气层内，飞机是更便捷的飞行工具，而对于那些需要在大气层之上进行的科学研究，卫星提供了更加理想的环境。然而，高空气球这种历久弥新的工具却没有走出人们的视野，目前仍然是重要的科学研究工具。这段文字的核心观点是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "高空气球在科学研究中有独特优势"
+      },
+      {
+        "id": "B",
+        "text": "高空气球比飞机和卫星更重要"
+      },
+      {
+        "id": "C",
+        "text": "古老的高空气球仍在不断发展"
+      },
+      {
+        "id": "D",
+        "text": "高空气球可用作科学观测平台"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "文段先讲高空气球技术取得进展，接着讲航空和航天技术也迎来了飞速发展的时期，并论述了其作用和优势，“然而”转折指出随着技术的发展高空气球仍是重要的科学研究工具。可见，文段主要说明高空气球在科学研究中有独特优势，目前仍在发挥作用，A 项正确。B 项“更重要”无中生有，文段并未做出比较；C 项非文段论述重点，“仍在不断发展”仅是目前高空气球的状态，未点明其重要性；D 项“可用作科学观测平台”文段并未提及。故本题选 A。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q040",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal:reading",
+    "knowledgePointIds": [
+      "verbal:main-idea"
+    ],
+    "originalQuestionNo": 40,
+    "sectionOrder": 2,
+    "stem": "目前，水和肥料都没有在农业中得到最佳使用，传统的植物栽培方法，使大部分水和化学物质，包括对动物有毒的化学物质，穿过土壤“溜过”根部，与地下水混合。为此，全球农业科技工作者都在寻找可以解决问题的新材料。某大学科研人员开发出一种聚合物水凝胶。该凝胶可作为土壤的“智能”添加剂，有助于避免土壤污染，显著减少用水量并改善植物对肥料的吸收。该研究员说，新研发的水凝胶能够在下雨或灌溉时储存大量水分，然后随着土壤变干缓慢释放。同时，这种水凝胶完全可以生物降解，也就是说，经过一段时间后，它们会“溶解”在土壤中，毫无踪迹。这段文字意在说明（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "根部肥料往往远离根部未发挥其肥料作用"
+      },
+      {
+        "id": "B",
+        "text": "聚合物水凝胶可减少土地用水并避免污染"
+      },
+      {
+        "id": "C",
+        "text": "大量使用化学肥料使土壤状况被破坏"
+      },
+      {
+        "id": "D",
+        "text": "新研发的水凝胶在土壤中可完全降解"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "文段首先讲传统的植物栽培方法，使得水和肥料都没有在农业中得到最佳使用，可能造成土壤污染，接着介绍为解决这一问题某大学科研人员开发出一种聚合物水凝胶，以及其有助于避免土壤污染、显著减少用水量并改善植物对肥料的吸收等多方面的作用。可见，这段文字意在说明聚合物水凝胶可减少土地用水并避免污染，B 项正确。A、C 项未提及论述主体“水凝胶”；D 项属于水凝胶的优势之一，非文段论述重点。故本题选 B。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q041",
+    "moduleId": "general-knowledge",
+    "subjectId": "current-affairs",
+    "topicId": "current-affairs:reports",
+    "knowledgePointIds": [],
+    "originalQuestionNo": 41,
+    "sectionOrder": 3,
+    "stem": "中国共产党十九届六中全会决定，党的二十大将于 2022 年下半年在北京召开。下列有关二十大的说法正确的有几项？（ ）①党的二十大，是我们党进入全面建设社会主义现代化国家、向第二个百年奋斗目标进军新征程的重要时刻召开的一次十分重要的代表大会 ②代表产生程序的 5 个主要环节是：推荐提名、组织考察、确定代表候选人初步人选、确定代表候选人预备人选、会议选举 ③党的二十大代表的选举要严格资格条件，坚持把政治标准放在首位 ④党的二十大代表名额共 2300 名，与十九大时相同",
+    "options": [
+      {
+        "id": "A",
+        "text": "1 项"
+      },
+      {
+        "id": "B",
+        "text": "2 项"
+      },
+      {
+        "id": "C",
+        "text": "3 项"
+      },
+      {
+        "id": "D",
+        "text": "4 项"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "①正确，党的十九届六中全会决定，中国共产党第二十次全国代表大会于 2022年下半年在北京召开。全会认为，党的二十大是我们党进入全面建设社会主义现代化国家、向第二个百年奋斗目标进军新征程的重要时刻召开的一次十分重要的代表大会。②正确，《关于党的二十大代表选举工作的通知》指出，二十大代表的产生，要坚持和加强党的全面领导，充分发扬党内民主，采取自下而上、上下结合、反复酝酿、逐级遴选的办法进行。代表产生程序的 5 个主要环节是推荐提名、组织考察、确定代表候选人初步人选、确定代表候选人预备人选、会议选举。③正确，党中央提出，要严把人选政治关，坚持把政治标准放在首位，突出考察人选的理想信念、政治品格和道德修养，着重了解人选政治判断力、政治领悟力、政治执行力，增强“四个意识”、坚定“四个自信”、做到“两个维护”等方面的表现情况，对政治上不合格的一票否决。④正确，根据《关于党的二十大代表选举工作的通知》，党的二十大代表名额共 2300 名，与十九大时相同。党的二十大代表的选举共划分为省区市、中央和国家机关、中央金融系统、中央企业系统（在京）等 38 个选举单位。综上，正确的有 4 项。故本题选 D。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q042",
+    "moduleId": "general-knowledge",
+    "subjectId": "governance",
+    "topicId": "governance:public",
+    "knowledgePointIds": [],
+    "originalQuestionNo": 42,
+    "sectionOrder": 3,
+    "stem": "2022 年 5 月 10 日，习近平总书记在庆祝中国共产主义青年团成立 100 周年大会上发表重要讲话，激励广大青年团员在实现中华民族伟大复兴中国梦的新征程上奋勇前进。下列有关中国共产主义青年团的表述不正确的是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "团的地方组织和基层组织同时受同级党委和团的上级组织领导"
+      },
+      {
+        "id": "B",
+        "text": "中国共产主义青年团受中国共产党的委托领导中国少年先锋队的工作"
+      },
+      {
+        "id": "C",
+        "text": "团旗上环绕黄色五角星周围的黄色圆圈，象征中国青年一代紧密团结在中国共产党周围"
+      },
+      {
+        "id": "D",
+        "text": "团员在加入共产党后或年满二十八周岁，没有在团内担任职务的情况下，不再保留团籍"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "A 项正确，《中国共产主义青年团章程》总则规定，中国共产主义青年团中央委员会受中国共产党中央委员会领导，团的地方组织和基层组织受同级党的委员会领导，同时受团的上级组织领导。B 项正确，《中国共产主义青年团章程》总则规定，中国共产主义青年团受中国共产党的委托领导中国少年先锋队的工作。C 项正确，《中国共产主义青年团章程》第 37 条规定，中国共产主义青年团团旗旗面为红色，象征革命胜利；左上角缀黄色五角星，周围环绕黄色圆圈，象征中国青年一代紧密团结在中国共产党周围。D 项错误，《中国共产主义青年团章程》第 1 条第三款规定，团员加入共产党以后仍保留团籍，年满二十八周岁，没有在团内担任职务，不再保留团籍。故本题选 D。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q043",
+    "moduleId": "general-knowledge",
+    "subjectId": "law",
+    "topicId": "law:other-laws",
+    "knowledgePointIds": [],
+    "originalQuestionNo": 43,
+    "sectionOrder": 3,
+    "stem": "习近平总书记以统揽全局的战略思维和宽广的世界眼光深刻把握国家安全问题，提出了总体国家安全观，下列相关表述正确的有几项？（ ）①总体国家安全观是我党历史上第一个被确立为国家安全工作指导思想的重大战略思想 ②《中华人民共和国国家安全法》规定，每年 5 月 15 日为全民国家安全教育日 ③总体国家安全观主要聚焦于如何解决好大国发展进程中面临的共性安全问题 ④国家安全机关举报受理电话为 12339",
+    "options": [
+      {
+        "id": "A",
+        "text": "1 项"
+      },
+      {
+        "id": "B",
+        "text": "2 项"
+      },
+      {
+        "id": "C",
+        "text": "3 项"
+      },
+      {
+        "id": "D",
+        "text": "4 项"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "①正确，《总体国家安全观学习纲要》提出，总体国家安全观是我们党历史上第一个被确立为国家安全工作指导思想的重大战略思想，是中国共产党和中国人民捍卫国家主权、安全、发展利益百年奋斗实践经验和集体智慧的结晶，是马克思主义国家安全理论中国化的最新成果，是习近平新时代中国特色社会主义思想的重要组成部分，是新时代国家安全工作的根本遵循和行动指南。②错误，《国家安全法》第 14 条规定，每年 4 月 15 日为全民国家安全教育日。③错误，总体国家安全观从坚持和发展中国特色社会主义的战略高度，系统回答了中国特色社会主义进入新时代，如何既解决好大国发展进程中面临的共性安全问题，同时又处理好中华民族伟大复兴关键阶段面临的特殊安全问题这个重大时代课题，涉及治党治国治军等各个方面，是一个系统完整的科学理论体系。选项说法不完全。④正确，12339 是国家安全机关受理公民和组织举报电话，这条热线是由国家安全部设立的，为了方便公民和组织向国家安全机关举报间谍行为或线索。综上，正确的有 2 项。故本题选 B。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q044",
+    "moduleId": "general-knowledge",
+    "subjectId": "governance",
+    "topicId": "governance:social-security",
+    "knowledgePointIds": [],
+    "originalQuestionNo": 44,
+    "sectionOrder": 3,
+    "stem": "2022 年 3 月，习近平总书记在看望参加政协会议的社会福利和社会保障界委员时强调，要在推动社会保障事业高质量发展上持续用力，织密社会保障安全网，为人民生活安康托底，下列做法有助于推动社会保障事业高质量发展的有几项？（ ）①加大对因疫因灾遇困群众的临时救助力度 ②保障流浪乞讨人员人身安全和基本生活，关心关爱精神障碍人员 ③健全灵活就业人员社保制度，扩大失业、工伤、生育保险的覆盖面 ④健全社会保障基金监管体系，严厉打击欺诈骗保、套保和挪用贪占各类社会保障资金的违法行为",
+    "options": [
+      {
+        "id": "A",
+        "text": "1 项"
+      },
+      {
+        "id": "B",
+        "text": "2 项"
+      },
+      {
+        "id": "C",
+        "text": "3 项"
+      },
+      {
+        "id": "D",
+        "text": "4 项"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "①②正确，在 2022 年全国两会期间，习近平总书记强调，要加大对因疫因灾遇困群众的临时救助力度，做好残疾人康复、教育、就业等工作，保障流浪乞讨人员人身安全和基本生活，关心关爱精神障碍人员，坚决杜绝欺凌虐待妇女儿童、老年人、残疾人等违法行为。③④正确，在 2022 年全国两会期间，习近平总书记强调，我国已建成世界上规模最大的社会保障体系。要健全灵活就业人员社保制度，扩大失业、工伤、生育保险的覆盖面，实现制度安排更加公平，覆盖范围更加广泛，为人民生活安康托底。要健全社会保障基金监管体系，严厉打击欺诈骗保、套保和挪用贪占各类社会保障资金的违法行为，守护好人民群众的每一分“养老钱”“保命钱”。综上所述，有助于推动社会保障事业高质量发展的有 4 项。故本题选 D。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q045",
+    "moduleId": "general-knowledge",
+    "subjectId": "economy",
+    "topicId": "economy:development",
+    "knowledgePointIds": [],
+    "originalQuestionNo": 45,
+    "sectionOrder": 3,
+    "stem": "习近平总书记强调，必须深化对新的时代条件下我国各类资本及其作用的认识，规范和引导资本健康发展，发挥其作为重要生产要素的积极作用。下列对资本的认识不准确的是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "在社会主义市场经济体制下，资本是带动各类生产要素集聚配置的重要纽带"
+      },
+      {
+        "id": "B",
+        "text": "资本具有逐利本性，如不加以规范和约束，就会给经济社会发展带来不可估量的危害"
+      },
+      {
+        "id": "C",
+        "text": "要加强资本领域反腐败，保持反腐败高压态势、坚决打击以权力为依托的资本逐利行为"
+      },
+      {
+        "id": "D",
+        "text": "要正确处理资本和利益分配问题，既注重维护按劳分配的主体地位，更注重保障资本参与社会分配获得增殖和发展"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "A、B、C 三项均正确。D 项错误，2022 年 4 月 29 日，习近平总书记就依法规范和引导我国资本健康发展进行第三十八次集体学习时发表重要讲话。习近平指出，要正确处理资本和利益分配问题。我国社会主义的国家性质决定了我们必须坚持按劳分配为主体、多种分配方式并存，在社会分配中体现人民至上。要注重经济发展的普惠性和初次分配的公平性，既注重保障资本参与社会分配获得增殖和发展，更注重维护按劳分配的主体地位，坚持发展为了人民、发展依靠人民、发展成果由人民共享，坚定不移走全体人民共同富裕的道路。故本题选 D。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q046",
+    "moduleId": "general-knowledge",
+    "subjectId": "economy",
+    "topicId": "economy:macro",
+    "knowledgePointIds": [],
+    "originalQuestionNo": 46,
+    "sectionOrder": 3,
+    "stem": "2022 年，按照以习近平同志为核心的党中央的部署要求，为稳定宏观经济大盘、稳定上亿市场主体，各部门多措并举优化和落实助企纾困政策，为经济平稳运行提供有力支撑，下列属于“稳主体”对策的有几项？（ ）①实施大规模留抵退税政策 ②对特困行业实行阶段性缓缴养老保险费 ③中国人民银行宣布下调金融机构存款准备金率 ④设立 3 岁以下婴幼儿照护个人所得税专项附加扣除 ⑤央行、银保监会发布个人首套房商贷利率下限调整",
+    "options": [
+      {
+        "id": "A",
+        "text": "2 项"
+      },
+      {
+        "id": "B",
+        "text": "3 项"
+      },
+      {
+        "id": "C",
+        "text": "4 项"
+      },
+      {
+        "id": "D",
+        "text": "5 项"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "“稳主体”是稳市场主体。①正确，实施大规模增值税留抵退税的政策安排，可以为稳定宏观经济大盘提供强力支撑。②正确，对特困行业实行阶段性缓缴养老保险费政策，可以有效支持实体经济发展。③正确，下调金融机构存款准备金率，可以支持实体经济发展，促进综合融资成本稳中有降。④错误，设立婴幼儿照护个人所得税专项附加扣除，有利于减轻人民群众抚养子女负担，属于“保民生”的措施。⑤正确，个人首套房贷利率下限调整，可以促进房地产市场平稳健康发展。综上，属于“稳主体”对策的有 4 项。故本题选 C。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q047",
+    "moduleId": "general-knowledge",
+    "subjectId": "current-affairs",
+    "topicId": "current-affairs:policy",
+    "knowledgePointIds": [],
+    "originalQuestionNo": 47,
+    "sectionOrder": 3,
+    "stem": "2022 年，中央一号文件《中共中央国务院关于做好 2022 年全面推进乡村振兴重点工作的意见》明确提出，“三农”工作的首要任务是“全力抓好粮食生产和重要农产品的供给”，下列选项错误的是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "大力推进北方设施蔬菜、北菜南运基地建设、提高蔬菜应急保供能力"
+      },
+      {
+        "id": "B",
+        "text": "坚持中国人的饭碗任何时候都要牢牢端在自己手中，饭碗主要装中国粮"
+      },
+      {
+        "id": "C",
+        "text": "全面落实粮食安全党政同责，严格粮食安全责任考核，确保粮食播种面积稳定"
+      },
+      {
+        "id": "D",
+        "text": "坚持和加强党对“三农”工作的全面领导，牢牢守住保障国家粮食安全和不发生规模性返贫两条底线"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "A 项错误，《中共中央国务院关于做好 2022 年全面推进乡村振兴重点工作的意见》指出，保障“菜篮子”产品供给。稳定大中城市常年菜地保有量，大力推进北方设施蔬菜、南菜北运基地建设，提高蔬菜应急保供能力。选项“北菜南运”说法错误。B、C、D 三项均正确。故本题选 A。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q048",
+    "moduleId": "general-knowledge",
+    "subjectId": "current-affairs",
+    "topicId": "current-affairs:reports",
+    "knowledgePointIds": [],
+    "originalQuestionNo": 48,
+    "sectionOrder": 3,
+    "stem": "根据十三届全国人大五次会议审议通过的《政府工作报告》，下列属于 2022 年我国经济发展主要预期目标的是（ ）。 ①居民消费价格涨幅 3%左右 ②实现高水平科技自立自强 ③国内生产总值增长 6.5%左右 ④粮食产量保持在 1.3 万亿斤以上 ⑤坚持政府过紧日子，更好节用裕民 ⑥居民收入增长与经济增长基本同步",
+    "options": [
+      {
+        "id": "A",
+        "text": "①③④"
+      },
+      {
+        "id": "B",
+        "text": "①④⑥"
+      },
+      {
+        "id": "C",
+        "text": "②③④"
+      },
+      {
+        "id": "D",
+        "text": "②⑤⑥"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "根据 2022 年《政府工作报告》，2022 年我国经济发展主要预期目标包括：国内生产总值增长 5.5%左右；城镇新增就业 1100 万人以上，城镇调查失业率全年控制在 5.5%以内；居民消费价格涨幅 3%左右；居民收入增长与经济增长基本同步；进出口保稳提质，国际收支基本平衡；粮食产量保持在 1.3 万亿斤以上；生态环境质量持续改善，主要污染物排放量继续下降；能耗强度目标在“十四五”规划期内统筹考核，并留有适当弹性，新增可再生能源和原料用能不纳入能源消费总量控制。属于 2022 年我国经济发展主要预期目标的是①④⑥。故本题选 B。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q049",
+    "moduleId": "general-knowledge",
+    "subjectId": "law",
+    "topicId": "law:administrative-law",
+    "knowledgePointIds": [],
+    "originalQuestionNo": 49,
+    "sectionOrder": 3,
+    "stem": "某市为保护当地的湿地自然景观，制定颁布了《X 市湿地保护办法》，禁止私自采掘、捕捞、打猎等行为，张某闲来无事，前往湿地景区游玩，看到两只受伤的野鸭便顺手捡起，准备带回家去。在回家路上，张某携带的野鸭被正在巡逻的警察发现，警察依据《X 市湿地保护办法》对其处以 1000 元罚款。张某不服，欲提起行政诉讼，下列说法错误的是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "张某可以就罚款决定提起诉讼"
+      },
+      {
+        "id": "B",
+        "text": "张某认为《X 市湿地保护办法》违背上位法规定，可以只就其合法性提起诉讼"
+      },
+      {
+        "id": "C",
+        "text": "张某可以提供行政行为违法的证据，提供的证据不成立的，不免除公安机关的举证责任"
+      },
+      {
+        "id": "D",
+        "text": "公安机关对作出的行政行为负有举证责任，应当提供作出该行政行为的证据和所依据的规范性文件"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "A 项正确，根据《行政诉讼法》第 12 条第一款的规定，人民法院受理公民、法人或者其他组织提起的对行政拘留、暂扣或者吊销许可证和执照、责令停产停业、没收违法所得、没收非法财物、罚款、警告等行政处罚不服的诉讼。B 项错误，根据《行政诉讼法》第 13 条的规定，人民法院不受理公民、法人或者其他组织对行政法规、规章或者行政机关制定、发布的具有普遍约束力的决定、命令提起的诉讼。《X 市湿地保护办法》属于规章或行政机关制定、发布的具有普遍约束力的决定、命令，不得对其提起行政诉讼。C 项正确，《行政诉讼法》第 37 条规定，原告可以提供证明行政行为违法的证据。原告提供的证据不成立的，不免除被告的举证责任。D 项正确，根据《行政诉讼法》第 34条第一款规定，被告对作出的行政行为负有举证责任，应当提供作出该行政行为的证据和所依据的规范性文件。故本题选 B。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q050",
+    "moduleId": "general-knowledge",
+    "subjectId": "economy",
+    "topicId": "economy:money",
+    "knowledgePointIds": [],
+    "originalQuestionNo": 50,
+    "sectionOrder": 3,
+    "stem": "下列关于金融产品的说法正确的是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "金融产品价格波动属于信用风险"
+      },
+      {
+        "id": "B",
+        "text": "在开放式基金中风险最低的是混合型基金"
+      },
+      {
+        "id": "C",
+        "text": "存款保险制度的保障范围不包括银行自营的理财产品"
+      },
+      {
+        "id": "D",
+        "text": "按金融产品的风险由大到小排序：金融债券＞股票＞储蓄产品"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "A 项错误，金融产品价格波动属于价格波动风险。信用风险又称违约风险，是指借款人、证券发行人或交易对方因种种原因，不愿或无力履行合同条件而构成违约，致使银行、投资者或交易对方遭受损失的可能性。B 项错误，开放式基金分为四种基本类型：股票型基金、混合型基金、债券型基金、货币型基金。混合型基金指同时投资于股票、债券和货币市场的基金，货币型基金指主要投资于货币市场的基金，相对来说，货币型基金的风险是最低的。C 项正确，存款保险的保障范围，主要包括了投保银行续收的人民币存款、外币存款，个人储蓄以及企业单位的存款，即保障的是储蓄存款，因此不包括银行自营的理财产品。D 项错误，按金融产品的风险由大到小排序，股票的风险最大，其次是金融债券，最后是储蓄产品。故本题选 C。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q051",
+    "moduleId": "general-knowledge",
+    "subjectId": "technology",
+    "topicId": "technology:frontier",
+    "knowledgePointIds": [],
+    "originalQuestionNo": 51,
+    "sectionOrder": 3,
+    "stem": "“揭榜挂帅”是通过高额悬赏金征集科技创新成果，把需要攻关的科研项目张榜，谁有本事谁就揭榜。这充分体现了国家对改革科研项目管理模式、提高科技创新支撑能力的高度重视。关于“揭榜挂帅”，下列说法不准确的是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "采取“一对一”的揭榜方式"
+      },
+      {
+        "id": "B",
+        "text": "支持企业牵头组建的创新联合体“揭榜攻关”"
+      },
+      {
+        "id": "C",
+        "text": "是一种以科研成果来兑现的科研经费投入体制"
+      },
+      {
+        "id": "D",
+        "text": "“政府搭台、创新唱戏”将各自的资源优势有力整合到一起"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "A 项错误、B 项正确，“揭榜挂帅”制度从揭榜方式看，主要包括“一对一”和“赛马”制等。当前多数省份采取“一对一”的揭榜方式，同时鼓励揭榜单位组建创新联合体共同攻关，而针对需求方无法确定唯一合作对象的情况，部分地区注明揭榜方可为 2～3 家，实行“赛马”制。C 项正确，“揭榜挂帅”也被称为“科技悬赏制”，是一种以科研成果来兑现的科研经费投入体制，一般是为了解决社会中特定领域的技术难题，由政府组织面向全社会开放的、专门征集科技创新成果的一种非周期性科研资助安排。D 项正确，“政府搭台”指提供政策保障，“创新唱戏”是要激发高校、企业等创新主体的创新活力，整合各种创新资源，提升国家整体创新能力。故本题选 A。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q052",
+    "moduleId": "general-knowledge",
+    "subjectId": "humanities",
+    "topicId": "humanities:art",
+    "knowledgePointIds": [],
+    "originalQuestionNo": 52,
+    "sectionOrder": 3,
+    "stem": "下列诗句与其描述的乐器对应错误的一项是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "昆山玉碎凤凰叫，芙蓉泣露香兰笑——箜篌"
+      },
+      {
+        "id": "B",
+        "text": "幽音变调忽飘洒，长风吹林雨堕瓦——笛子"
+      },
+      {
+        "id": "C",
+        "text": "弦凝指咽声停处，别有深情一万重——古筝"
+      },
+      {
+        "id": "D",
+        "text": "间关莺语花底滑，幽咽泉流冰下难——琵琶"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "A 项正确，“昆山玉碎凤凰叫，芙蓉泣露香兰笑”出自李贺的《李凭箜篌引》，意思是乐声清脆动听得就像昆仑山美玉破碎，凤凰鸣叫；时而使芙蓉在露水中饮泣，时而使香兰开怀欢笑。描写的是箜篌。B 项错误，“幽音变调忽飘洒，长风吹林雨堕瓦”出自李颀的《听董大弹胡笳声兼寄语弄房给事》，意思是幽咽琴声忽转轻松潇洒，像大风吹林如大雨落瓦。所谓“胡笳声”，也就是《胡笳弄》，胡笳声调翻为琴曲，所以董大是弹琴而非吹奏胡笳，因此描写的是古琴。C 项正确，“弦凝指咽声停处，别有深情一万重”出自白居易的《夜筝》，意思是弦声凝绝、柔指轻顿，那片刻的宁静又诉说出千万重的深情。描写的是古筝。D 项正确，“间关莺语花底滑，幽咽泉流冰下难”出自白居易的《琵琶行》，意思是琵琶声一会儿像花底下婉转流畅的鸟鸣声，一会儿又像水在冰下流动受阻时艰涩低沉、呜咽断续的声音。描写的是琵琶。故本题选 B。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q053",
+    "moduleId": "general-knowledge",
+    "subjectId": "technology",
+    "topicId": "technology:biology",
+    "knowledgePointIds": [],
+    "originalQuestionNo": 53,
+    "sectionOrder": 3,
+    "stem": "关于下列诗句的生物学解释错误的是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "“儿童急走追黄蝶，飞入菜花无处寻”体现动物的拟态"
+      },
+      {
+        "id": "B",
+        "text": "“春色满园关不住，一枝红杏出墙来”体现植物的向光性"
+      },
+      {
+        "id": "C",
+        "text": "“落红不是无情物，化作春泥更护花”体现微生物的分解作用"
+      },
+      {
+        "id": "D",
+        "text": "“人间四月芳菲尽，山寺桃花始盛开”体现植物开花受温度影响"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "A 项错误，动物适应环境的方式：拟态、保护色、警戒色。拟态是动物的体色和形态特征都模拟了自然环境中的物体，比如尺蠖模仿成树枝的样子，枯叶蝶在落叶中间一动不动就像一片枯叶。保护色是动物适应栖息环境而具有的与环境色彩相似的体色。保护色基本是不变的。“儿童急走追黄蝶，飞入菜花无处寻”中，黄蝶和黄菜花颜色相似，体现了动物的保护色，而非拟态。B 项正确，向光性是指生物的生长受光源的方向而影响的性质。“春色满园关不住，一枝红杏出墙来”描写了红杏摆脱墙的阴影，出墙向阳生长，体现植物的向光性。C 项正确，“落红不是无情物，化作春泥更护花”其中落红化泥体现微生物的分解作用。D 项正确，“人间四月芳菲尽，山寺桃花始盛开”是因为山上的温度比山下的温度低，而温度会影响植物的分布、生长和发育。故本题选 A。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q054",
+    "moduleId": "general-knowledge",
+    "subjectId": "technology",
+    "topicId": "technology:biology",
+    "knowledgePointIds": [],
+    "originalQuestionNo": 54,
+    "sectionOrder": 3,
+    "stem": "高脂血症的临床表现主要是脂质在皮肤内沉积引起的黄色瘤和脂质在血管内皮沉积所引起的动脉粥样硬化，然而，多数患者并无明显症状和异常体征。下列关于这种疾病的说法正确的是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "容易引起白血病"
+      },
+      {
+        "id": "B",
+        "text": "只有肥胖者才会得高脂血症"
+      },
+      {
+        "id": "C",
+        "text": "患者血液中的部分脂质过高"
+      },
+      {
+        "id": "D",
+        "text": "患者日常饮食中的油脂摄入应当以动物油为主"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "A 项错误，白血病与高脂血症一般没有关系，属于两种不同的疾病。高脂血症不容易引起白血病。B 项错误，虽然胖的人更容易患高脂血症，但并不是只有胖的人才会得高脂血症，除了肥胖这种高危因素以外，还有很多的危险因素使高脂血症的发生率显著增加。C 项正确，高脂血症是指血脂水平过高，可直接引起一些严重危害人体健康的疾病。D 项错误，各项数据证明，高脂血症的生成与动物油没有直接的关系。当许多高脂血症患者的代谢系统出现严重的损坏，他们无法将血脂完全地代谢干净，慢慢就会出现高脂血症。故本题选 C。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q055",
+    "moduleId": "general-knowledge",
+    "subjectId": "technology",
+    "topicId": "technology:chemistry",
+    "knowledgePointIds": [],
+    "originalQuestionNo": 55,
+    "sectionOrder": 3,
+    "stem": "某品牌果汁饮料的配料表为：水、橙浓缩汁、木糖醇、山梨酸、维生素 C、羧甲基纤维素钠、黄原胶、姜黄、食用香精。下列关于该饮料中配料所对应的作用类型错误的是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "姜黄——色素"
+      },
+      {
+        "id": "B",
+        "text": "木糖醇——甜味剂"
+      },
+      {
+        "id": "C",
+        "text": "维生素 C——抗氧化剂"
+      },
+      {
+        "id": "D",
+        "text": "山梨酸——酸度调节剂"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "A 项正确，姜黄中约含姜黄素 3%～6%，是植物界很稀少的具有二酮结构的色素。B 项正确，木糖醇是一种有机化合物，是从白桦树、橡树、玉米芯、甘蔗渣等植物原料中提取出来的一种天然甜味剂。C 项正确，维生素 C 具有很强的还原性，是高效抗氧化剂。D 项错误，山梨酸和山梨酸钾是国际上应用最广的防腐剂。酸度调节剂亦称 pH 调节剂，规定允许使用的酸度调节剂有柠檬酸、柠檬酸钾、乳酸、酒石酸等。故本题选 D。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q056",
+    "moduleId": "general-knowledge",
+    "subjectId": "technology",
+    "topicId": "technology:chemistry",
+    "knowledgePointIds": [],
+    "originalQuestionNo": 56,
+    "sectionOrder": 3,
+    "stem": "在日常生活中，下列杯子的使用方法从长期来看对人体最没有危害的是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "用玻璃杯喝冰橙汁"
+      },
+      {
+        "id": "B",
+        "text": "用不锈钢杯喝碳酸饮料"
+      },
+      {
+        "id": "C",
+        "text": "用塑料杯盛放刚烧开的水"
+      },
+      {
+        "id": "D",
+        "text": "用内壁涂有彩釉的陶瓷杯喝热姜汁"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "A 项正确，玻璃杯性质稳定，即使加入热水，仍是一个稳定的固体物质，其中的化学成分也不会析出污染饮水，冰的饮料更加不会产生污染。因此，用玻璃杯喝冰橙汁理论上对身体没有伤害。B 项错误，碳酸饮料属于酸性物质，不锈钢材质对于酸性饮料不具有防腐蚀特性，长时间用不锈钢杯装碳酸饮料喝，不仅会破坏水杯内壁，更会对人体造成伤害。C 项错误，塑料中常添加增塑剂，其中含有一些有毒的化学物质，如果用塑料杯装热水或开水，有毒的化学物质就很容易稀释到水中，不利于人体健康。D 项错误，内壁涂有彩釉的陶瓷杯，在盛入热姜汁时，颜料中的铅等有毒金属就会溶解在液体中，从而对人体造成危害。故本题选 A。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q057",
+    "moduleId": "general-knowledge",
+    "subjectId": "technology",
+    "topicId": "technology:chemistry",
+    "knowledgePointIds": [],
+    "originalQuestionNo": 57,
+    "sectionOrder": 3,
+    "stem": "丙烯酰胺被世界卫生组织列为 2A 级致癌物，即可疑致癌物。食品中的丙烯酰胺并不是人为添加到食物中，而是在烘焙或烹饪过程中产生的。下列烹饪手法中生成丙烯酰胺最少的是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "干煸四季豆"
+      },
+      {
+        "id": "B",
+        "text": "炸油条"
+      },
+      {
+        "id": "C",
+        "text": "白灼虾"
+      },
+      {
+        "id": "D",
+        "text": "炝炒白菜"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "丙烯酰胺主要是一些富含淀粉的食物受热时在表面形成的。越薄的食物产生的丙烯酰胺越多；加热温度越高，水分越少，烹调时间越长，产生越多。炒菜先焯水，沸水焯后再炒也会降低丙烯酰胺的量。蔬菜生着吃、水煮或蒸着吃都不会产生丙烯酰胺。白灼虾是水煮的，因此是生成丙烯酰胺最少的。故本题选 C。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q058",
+    "moduleId": "general-knowledge",
+    "subjectId": "technology",
+    "topicId": "technology:physics",
+    "knowledgePointIds": [],
+    "originalQuestionNo": 58,
+    "sectionOrder": 3,
+    "stem": "传统的光刻技术中，镜头与光刻胶之间的介质是空气，而浸入式技术是将空气介质换成液体，得到合适波长的光，以提高成像分辨率。对此，下列说法错误的是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "液体局部温度起伏会引起成像质量恶化"
+      },
+      {
+        "id": "B",
+        "text": "为了减少液体对光线的吸收，液层厚度不能太大"
+      },
+      {
+        "id": "C",
+        "text": "以纯水为介质时，可以选取任意波长紫外光为光源"
+      },
+      {
+        "id": "D",
+        "text": "可以注入高折射率的液体以得到更高频率的光，提高成像分辨率"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "A 项正确，浸入式光刻技术问题之一是液体温度变化带来的影响。浸入式光刻机在工作过程中，光刻胶、BARC、硅片都会吸收照明光的热量，并把热传导给水，使水的温度升高。而水本身也会吸收照明光的能量而引起温度升高。水温度变化引起折射率的变化。如果水温变化不均匀，会导致像面聚焦偏移和球差的改变。在曝光系统中，局部的温度起伏将引起局部成像质量恶化。B 项正确，以水作介质为例，在大多数波段水的折射率为 1.33 左右，而在 193nm 附近，水的折射率高达 1.437。水在 193nm 波段的吸收系数很低。光刻机的生产率与照明光的透射率成正比，因此为了减少液体对光线的吸收，液层厚度不能太大。C 项错误，水作溶剂时，最低波长极限是 210nm，所以一般吸收都在远紫外区，因此以纯水为介质时，不能够选取任意波长紫外光为光源。D 项正确，注入高折射率的浸没液体可以使更高空间频率的光波折射到光刻胶上，因此成像分辨率得以提高。故本题选 C。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q059",
+    "moduleId": "general-knowledge",
+    "subjectId": "technology",
+    "topicId": "technology:physics",
+    "knowledgePointIds": [],
+    "originalQuestionNo": 59,
+    "sectionOrder": 3,
+    "stem": "乒乓球运动员在比赛中运用上旋打法进攻，在击球的过程中通过带有向上提拉的动作，打出上旋球。下列关于上旋球说法错误的是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "球体上表面相对空气的旋转速度大，下表面相对空气的旋转速度小"
+      },
+      {
+        "id": "B",
+        "text": "球体上方气体压强比球体下方大，上旋球下坠速度比正常快"
+      },
+      {
+        "id": "C",
+        "text": "乒乓球转速越大，上下表面压强差就越大，下坠得就越快"
+      },
+      {
+        "id": "D",
+        "text": "球体旋转向前飞行，上表面向前转动，下表面向后转动"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "A 项错误，上旋球的运动方向和自转方向一样，当乒乓球向前转动时，空气与球的上表面产生摩擦，就会导致球体上表面相对空气的旋转速度小，下表面相对空气的旋转速度大。B 项正确，由于球体的上表面相对空气的旋转速度小，下表面相对空气的旋转速度大，根据伯努利原理，流速大的地方压强小，所以下表面受的气体压强小，上旋球下坠速度比正常快。C 项正确，当乒乓球转速越大，上表面的空气流动速度和下表面的空气流动速度差就越大，上下表面压强差就越大，所以下坠得就越快。D 项正确，上旋球的运动方向和自转方向一样，球向前运动，上表面是向前转动，下表面是向后转动。故本题选 A。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q060",
+    "moduleId": "general-knowledge",
+    "subjectId": "technology",
+    "topicId": "technology:space",
+    "knowledgePointIds": [],
+    "originalQuestionNo": 60,
+    "sectionOrder": 3,
+    "stem": "下列关于伟大科学工程的说法正确的是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "阿波罗计划：1961 年在美国启动，尤里·加加林乘坐阿波罗 1 号宇宙飞船第一个登上月球表面"
+      },
+      {
+        "id": "B",
+        "text": "中国 863 计划：1986 年在中国启动，深海载人潜水器被列为该计划的研究专项之一"
+      },
+      {
+        "id": "C",
+        "text": "人类基因组计划：1990 年在法国启动，聚焦测定人染色体 DNA 序列，以破译遗传信息为目的"
+      },
+      {
+        "id": "D",
+        "text": "人类脑计划：1997 年在英国启动，以心理科学和信息科学研究为核心"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "A 项错误，“阿波罗计划”是美国于 20 世纪 60 年代至 70 年代初组织实施的载人登月工程，1969 年 7 月，阿姆斯特朗作为“阿波罗”11 号飞船指令长，完成人类首次登月飞行。B项正确，“中国 863 计划”是中国发展高技术及其产业的计划，全称国家高技术研究发展计划，于 1986年启动实施。2002 年中国科技部将深海载人潜水器研制列为国家高技术研究发展计划（863 计划）重大专项，启动“蛟龙号”载人深潜器的自行设计、自主集成研制工作。C 项错误，“人类基因组计划”由美国科学家于 1985 年提出，1990 年正式启动，其核心任务是要绘制出人类基因组的遗传图谱、物理图谱、转录图谱和序列图谱，最终测定出人类基因组 DNA 的全部核苷酸序列。D 项错误，“人类脑计划”于 1997 年在美国正式启动，人类脑计划包括神经科学和信息学相互结合的研究，其核心内容是神经信息学。故本题选 B。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q061",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:analogy-reasoning",
+    "knowledgePointIds": [
+      "reasoning:logical-relations"
+    ],
+    "originalQuestionNo": 61,
+    "sectionOrder": 4,
+    "stem": "姹紫∶嫣红",
+    "options": [
+      {
+        "id": "A",
+        "text": "小家∶碧玉"
+      },
+      {
+        "id": "B",
+        "text": "风刀∶霜剑"
+      },
+      {
+        "id": "C",
+        "text": "嘉言∶懿行"
+      },
+      {
+        "id": "D",
+        "text": "疾首∶蹙额"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "姹紫和嫣红都形容颜色鲜艳，二者为反对关系，且姹修饰紫，嫣修饰红。A项：小家修饰碧玉，二者为偏正关系，排除。B 项：刀一样的风，剑一样的霜，但词语前后位置与题干不一致，排除。C 项：嘉言指有益的言论，懿行指高尚的行为，二者为反对关系，且嘉修饰言，懿修饰行，当选。D 项：蹙额是动宾关系，排除。故本题选 C。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q062",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:analogy-reasoning",
+    "knowledgePointIds": [
+      "reasoning:logical-relations"
+    ],
+    "originalQuestionNo": 62,
+    "sectionOrder": 4,
+    "stem": "电脑∶设备",
+    "options": [
+      {
+        "id": "A",
+        "text": "广播∶传媒"
+      },
+      {
+        "id": "B",
+        "text": "颜料∶绘画"
+      },
+      {
+        "id": "C",
+        "text": "文言∶白话"
+      },
+      {
+        "id": "D",
+        "text": "能源∶煤炭"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "电脑是一种设备，二者为种属关系。A 项：广播是传媒的一种形式，二者为种属关系，当选。B 项：颜料是绘画过程中要用到的物品，排除。C 项：文言和白话是语言的两种形式，二者为反对关系，排除。D 项：煤炭是一种能源，二者为种属关系，词语前后位置与题干不一致，排除。故本题选 A。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q063",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:analogy-reasoning",
+    "knowledgePointIds": [
+      "reasoning:logical-relations"
+    ],
+    "originalQuestionNo": 63,
+    "sectionOrder": 4,
+    "stem": "帛书∶简牍",
+    "options": [
+      {
+        "id": "A",
+        "text": "日晷∶秒表"
+      },
+      {
+        "id": "B",
+        "text": "熊猫∶银杏"
+      },
+      {
+        "id": "C",
+        "text": "青铜∶礼器"
+      },
+      {
+        "id": "D",
+        "text": "牛车∶轿子"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "帛书和简牍是用来记录文字的不同载体，二者为反对关系，且简牍比帛书先出现。A 项：日晷和秒表都是用来表示时间的工具，二者为反对关系，日晷比秒表先出现，词语前后位置与题干不一致，排除。B 项：熊猫是动物，银杏是植物，二者不为反对关系，排除。C 项：青铜是制作礼器的原材料，排除。D 项：牛车和轿子都是交通工具，二者为反对关系，且轿子比牛车先出现，当选。故本题选 D。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q064",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:analogy-reasoning",
+    "knowledgePointIds": [
+      "reasoning:logical-relations"
+    ],
+    "originalQuestionNo": 64,
+    "sectionOrder": 4,
+    "stem": "针线∶布料∶服饰",
+    "options": [
+      {
+        "id": "A",
+        "text": "刻刀∶玺印∶玉石"
+      },
+      {
+        "id": "B",
+        "text": "剪刀∶彩纸∶窗花"
+      },
+      {
+        "id": "C",
+        "text": "玻璃∶窗户∶窗框"
+      },
+      {
+        "id": "D",
+        "text": "鸡精∶乌鸡∶鸡汤"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "用针线将布料制作成服饰，针线是工具，布料是材料。A 项：用刻刀将玉石制作成玺印，刻刀是工具，玉石是材料，但词语前后位置与题干不一致，排除。B 项：用剪刀将彩纸制作成窗花，剪刀是工具，彩纸是材料，当选。C 项：玻璃是窗户的组成部分，排除。D 项：乌鸡做成鸡汤，鸡精可以添加到鸡汤里，排除。故本题选 B。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q065",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:analogy-reasoning",
+    "knowledgePointIds": [
+      "reasoning:logical-relations"
+    ],
+    "originalQuestionNo": 65,
+    "sectionOrder": 4,
+    "stem": "电影院∶影片∶放映",
+    "options": [
+      {
+        "id": "A",
+        "text": "图书馆∶资料∶查阅"
+      },
+      {
+        "id": "B",
+        "text": "下水道∶地漏∶排水"
+      },
+      {
+        "id": "C",
+        "text": "传染病∶疫苗∶预防"
+      },
+      {
+        "id": "D",
+        "text": "朋友圈∶微信∶聊天"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "在电影院放映电影，电影院是场所，放映电影为动宾关系。A 项：在图书馆查阅资料，图书馆是场所，查阅资料为动宾关系，当选。B 项：地漏和排水不能形成动宾关系，排除。C项：传染病不是场所，排除。D 项：微信和聊天不能形成动宾关系，排除。故本题选 A。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q066",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:analogy-reasoning",
+    "knowledgePointIds": [
+      "reasoning:logical-relations"
+    ],
+    "originalQuestionNo": 66,
+    "sectionOrder": 4,
+    "stem": "马匹∶船只∶车辆",
+    "options": [
+      {
+        "id": "A",
+        "text": "银两∶金钱∶纸币"
+      },
+      {
+        "id": "B",
+        "text": "纸张∶试卷∶画册"
+      },
+      {
+        "id": "C",
+        "text": "水杯∶油瓶∶饭碗"
+      },
+      {
+        "id": "D",
+        "text": "官员∶武将∶首领"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "马匹、船只、车辆都有交通运输功能，三者为反对关系。A 项：银两、纸笔都是金钱的一种，排除。B 项：纸张是制作试卷和画册的原材料，排除。C 项：水杯、油瓶、饭碗都是可以装东西的容器，三者为反对关系，当选。D 项：武将是部队当中的官员，二者为种属关系，排除。故本题选 C。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q067",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:analogy-reasoning",
+    "knowledgePointIds": [
+      "reasoning:logical-relations"
+    ],
+    "originalQuestionNo": 67,
+    "sectionOrder": 4,
+    "stem": "肥∶瘦∶挑肥拣瘦",
+    "options": [
+      {
+        "id": "A",
+        "text": "上∶下∶欺上瞒下"
+      },
+      {
+        "id": "B",
+        "text": "来∶去∶翻来覆去"
+      },
+      {
+        "id": "C",
+        "text": "黑∶白∶黑白分明"
+      },
+      {
+        "id": "D",
+        "text": "是∶非∶口是心非"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "肥和瘦为反义关系，出现在成语的第二字和第四字，且挑肥和拣瘦为动宾关系。A 项：上和下为反义关系，出现在成语的第二字和第四字，且欺上和瞒下为动宾关系，当选。B 项：翻来和覆去不为动宾关系，排除。C 项：黑和白出现在成语的第一、二字，排除。D 项：口是和心非不为动宾关系，排除。故本题选 A。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q068",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:analogy-reasoning",
+    "knowledgePointIds": [
+      "reasoning:logical-relations"
+    ],
+    "originalQuestionNo": 68,
+    "sectionOrder": 4,
+    "stem": "征稿∶评选∶颁奖",
+    "options": [
+      {
+        "id": "A",
+        "text": "运动∶热身∶放松"
+      },
+      {
+        "id": "B",
+        "text": "节能∶减排∶环保"
+      },
+      {
+        "id": "C",
+        "text": "设计∶施工∶监理"
+      },
+      {
+        "id": "D",
+        "text": "麻醉∶切开∶缝合"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "先征稿，再评选，最后颁奖，三者为顺承关系。A 项：先热身再运动，词语前后位置与题干不一致，排除。B 项：节能减排是为了达到环保的效果，节能、减排为反对关系，排除。C 项：监理发生在施工的整个过程中，二者不为顺承关系，排除。D 项：先麻醉，再切开，最后缝合，三者为顺承关系，当选。故本题选 D。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q069",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:analogy-reasoning",
+    "knowledgePointIds": [
+      "reasoning:logical-relations"
+    ],
+    "originalQuestionNo": 69,
+    "sectionOrder": 4,
+    "stem": "晴空万里对于 （ ） 相当于 （ ） 对于识文断字",
+    "options": [
+      {
+        "id": "A",
+        "text": "天干物燥才高八斗"
+      },
+      {
+        "id": "B",
+        "text": "雨后春笋妙笔生花"
+      },
+      {
+        "id": "C",
+        "text": "阴云密布胸无点墨"
+      },
+      {
+        "id": "D",
+        "text": "倾盆大雨味同嚼蜡"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "选项逐一代入。A 项：晴空万里形容天气好，天干物燥形容天气干燥，二者无明显联系；才高八斗指才能出众，识文断字指有一点文化知识，二者无明显联系，排除。B 项：雨后春笋指新生事物涌现出来，与晴空万里无明显联系；妙笔生花形容文章写得好，与识文断字无明显联系，排除。C 项：阴云密布形容天气不好，与晴空万里为反义关系；胸无点墨指肚子里没有一点墨水，与识文断字为反义关系，前后逻辑关系一致，当选。D 项：倾盆大雨与晴空万里为反义关系；味同嚼蜡形容语言或文章枯燥无味，与识文断字无明显联系，排除。故本题选 C。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q070",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:analogy-reasoning",
+    "knowledgePointIds": [
+      "reasoning:logical-relations"
+    ],
+    "originalQuestionNo": 70,
+    "sectionOrder": 4,
+    "stem": "入木三分对于 （ ） 相当于 （ ） 对于音乐",
+    "options": [
+      {
+        "id": "A",
+        "text": "绘画珠圆玉润"
+      },
+      {
+        "id": "B",
+        "text": "雕刻黄钟大吕"
+      },
+      {
+        "id": "C",
+        "text": "建筑高山流水"
+      },
+      {
+        "id": "D",
+        "text": "书法余音绕梁"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "选项逐一代入。A 项：入木三分形容书法笔力刚劲，与绘画无明显联系；珠圆玉润形容歌声优美有力，可以用来形容音乐，前后逻辑关系不一致，排除。B 项：入木三分与雕刻无明显联系；黄钟大吕形容音乐庄严和谐，前后逻辑关系不一致，排除。C 项：入木三分与建筑无明显联系；高山流水形容音乐非常高妙，前后逻辑关系不一致，排除。D 项：入木三分形容书法笔力刚劲；余音绕梁形容音乐优美，前后逻辑关系一致，当选。故本题选 D。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q071",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:definition-judgment",
+    "knowledgePointIds": [
+      "reasoning:case-matching"
+    ],
+    "originalQuestionNo": 71,
+    "sectionOrder": 4,
+    "stem": "衰老通常分为生理性衰老和病理性衰老。生理性衰老是指随着年龄增长出现的衰老，也就是自然老化。病理性衰老是指衰老速度由于负面情绪、物理创伤、营养匮乏、身体疾病等各种因素的作用而加快。根据上述定义，下列诗词所描述的现象最符合病理性衰老的是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "白头搔更短，浑欲不胜簪"
+      },
+      {
+        "id": "B",
+        "text": "寒暑迭变，不觉渐成衰老"
+      },
+      {
+        "id": "C",
+        "text": "惟草木之零落兮，恐美人之迟暮"
+      },
+      {
+        "id": "D",
+        "text": "人生不得长欢乐，年少须臾老到来"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "“病理性衰老”的定义要点是“衰老速度由于负面情绪、物理创伤、营养匮乏、身体疾病等各种因素的作用而加快”。A 项：“白头搔更短”表达的是愁绪缠绕而导致头发白了，体现了衰老速度由于负面情绪加快，符合定义要点，当选。B 项：“寒暑迭变，不觉渐成衰老”表达的是随着时间的更替，年龄自然增长，不符合定义要点，排除。C 项：“惟草木之零落兮，恐美人之迟暮”的意思是想到草木不断地凋谢，不禁担忧美人日益衰老，不符合定义要点，排除。D 项：“人生不得长欢乐，年少须臾老到来”体现的是时间的变更，并没有体现负面情绪等，不符合定义要点，排除。故本题选 A。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q072",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:definition-judgment",
+    "knowledgePointIds": [
+      "reasoning:case-matching"
+    ],
+    "originalQuestionNo": 72,
+    "sectionOrder": 4,
+    "stem": "深度学习是指在模仿人脑机制的神经网络中，对人工神经元的层进行了“多层处理”，深度学习不仅可以让 AI（人工智能）读取大量图片，还可以让 AI 自主提取图片特征。得益于深度学习技术的面世，只要有大量数据，AI 就能以极高的准确率进行学习，从而大幅度拓展了 AI 的应用范围。根据上述定义，下列属于深度学习的是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "人工智能图片教学走进课堂让学生体验深度学习"
+      },
+      {
+        "id": "B",
+        "text": "问诊机器人可以迅速获取病患 B 超报告的风险信息"
+      },
+      {
+        "id": "C",
+        "text": "某设区市在数字峰会期间提供无人驾驶汽车试乘服务"
+      },
+      {
+        "id": "D",
+        "text": "安防巡检机器人通过图像识别技术判定工人是否佩戴安全帽"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "“深度学习”的定义要点是“在模仿人脑机制的神经网络中，对人工神经元的层进行了“多层处理”，深度学习不仅可以让 AI 读取大量图片，还可以让 AI 自主提取图片特征”。A 项：人工智能图片教学走进课堂让学生体验深度学习，学习主体是学生不是 AI，不符合定义要点，排除。B 项：问诊机器人可以迅速获取病患 B 超报告的风险信息，B 超报告可能是图片也可能是文字，保留。C 项：提供无人驾驶汽车试乘服务，没有体现对图片的读取，不符合定义要点，排除。D 项：安防巡检机器人通过图像识别技术判定工人是否佩戴安全帽，体现了 AI 通过读取图片识别特征，保留。比较 B、D 两项，D 项信息更为准确。故本题选 D。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q073",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:definition-judgment",
+    "knowledgePointIds": [
+      "reasoning:case-matching"
+    ],
+    "originalQuestionNo": 73,
+    "sectionOrder": 4,
+    "stem": "乡情治理是指乡情作用于基层社会治理主体和治理体系，在基层社会的意见整合、利益协调、矛盾化解、服务供给等治理过程中发挥重要作用的一种治理形态。“乡情”是一种基于地域以及附着在经济、社会、文化纽带上的特殊情感，体现为认同感、归属感、荣誉感及在此基础上的回馈意愿和公共精神。乡情治理的核心是存在一个由情感和认同构筑的场域，这个场域通过一些微观机制影响个体动机和群体行为，从而影响社会治理体系和过程。根据上述定义，下列属于乡情治理的是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "顺德人都以顺德是“世界美食之都”而自豪"
+      },
+      {
+        "id": "B",
+        "text": "敢拼会赢的精神一直激励着闽南人勇闯南洋"
+      },
+      {
+        "id": "C",
+        "text": "海外华侨华人一直有着爱国爱乡的光荣传统"
+      },
+      {
+        "id": "D",
+        "text": "北岸乡贤成立妈祖慈善基金会服务当地桑梓"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "“乡情治理”的定义要点是“乡情作用于基层社会治理主体和治理体系”，“乡情”的定义要点是“基于地域以及附着在经济、社会、文化纽带上的特殊情感，体现为认同感、归属感、荣誉感及在此基础上的回馈意愿和公共精神”。A 项：以顺德是“世界美食之都”而自豪，只体现了一种乡情，没有体现乡情作用于基层社会治理主体，不符合定义要点，排除。B 项：敢拼会赢的精神是一种创业精神，并不是乡情，不符合定义要点，排除。C 项：海外华侨华人一直有着爱国爱乡的光荣传统，是一种认同归属，没有体现用于哪方面的治理，不符合定义要点，排除。D 项：北岸乡贤成立妈祖慈善基金会服务当地桑梓，说明乡贤对于妈祖文化的认同，并回馈到基层的治理中，符合定义要点，当选。故本题选 D。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q074",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:definition-judgment",
+    "knowledgePointIds": [
+      "reasoning:case-matching"
+    ],
+    "originalQuestionNo": 74,
+    "sectionOrder": 4,
+    "stem": "参照群体理论是关于人的社会心理态度和行为怎样受其从属的或追求的群体参照力所影响的社会心理学理论。参照群体是指个体从心理上把自己列入，与之对照，并在评价、态度、行为上和在规范与价值观形成上接受其影响的群体。根据上述定义，下列选项不能用参照群体理论解释的是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "小王平时喜欢便装，但是参加面试时他决定穿着西装"
+      },
+      {
+        "id": "B",
+        "text": "夏秋之际，妈妈怕孩子受凉，很注意给孩子增减衣物"
+      },
+      {
+        "id": "C",
+        "text": "小刘看其他影迷都购买了偶像同款商品，自己也去买"
+      },
+      {
+        "id": "D",
+        "text": "小张父母都是医生，她比常人更在意身边的卫生状况"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "“参照群体”的定义要点是“个体从心理上把自己列入，与之对照，并在评价、态度、行为上和在规范与价值观形成上接受其影响的群体”。A 项：小王平时喜欢便装，但是参加面试时他决定穿着西装，体现出小王参照了面试者，受到了他们的影响并与之趋同，符合定义要点，排除。B 项：妈妈怕孩子受凉，很注意给孩子增减衣物，没有出现妈妈所参照的群体，不符合定义要点，当选。C 项：小刘看其他影迷都购买了偶像同款商品，自己也去买，影迷是小刘参照的群体，并受到了他们行为的影响，符合定义要点，排除。D 项：小张父母都是医生，她比常人更在意身边的卫生状况，其父母是小张参照的群体，并受到了他们行为的影响，符合定义要点，排除。故本题选 B。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q075",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:definition-judgment",
+    "knowledgePointIds": [
+      "reasoning:case-matching"
+    ],
+    "originalQuestionNo": 75,
+    "sectionOrder": 4,
+    "stem": "最小干预原则是指在保证文物安全的基本前提下，通过最小程度的介入来最大限度地维系文物的原本面貌，保留文物的历史、文化价值，以实现延续现状、降低保护性破坏的目标。根据上述定义，下列选项不属于最小干预原则的是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "某博物馆在修复古籍时不拆开原线绳，只修补蛀洞严重的书页，而不修补未受蛀洞影响的书页"
+      },
+      {
+        "id": "B",
+        "text": "某博物馆的一副雕塑作品中的人物手臂缺失，专家们查阅了原始资料，根据资料将其复原如初"
+      },
+      {
+        "id": "C",
+        "text": "某古城墙修缮时，保留其残损的现状，在靠近边墙的一侧恢复了很窄的台阶供游人安全通过"
+      },
+      {
+        "id": "D",
+        "text": "某古塔倾斜，专家们在研究后最终决定只纠偏一度，它看上去依旧是倾斜的状态"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "“最小干预原则”的定义要点：①通过最小程度的介入保证文物安全的基本前提下；②保证文物安全，最大限度地维系文物的原本面貌。A 项：修复古籍时不拆开原线绳，只修补蛀洞严重的书页，说明介入程度小且最大限度地维系文物的原本面貌，符合①②，符合定义要点，排除。B 项：雕塑作品中的人物手臂缺失，专家们查阅了原始资料，根据资料将其复原如初，说明没有维系原本面貌、延续现状，不符合②，不符合定义要点，当选。C 项：保留古城墙残损的现状，恢复了很窄的台阶供游人安全通过，说明是通过最小程度介入，保留古城墙残损的原本面貌，符合①②，符合定义要点，排除。D 项：只纠偏一度，古塔看上去依旧是倾斜的状态，说明是通过最小程度介入，维系原本面貌，符合①②，符合定义要点，排除。故本题选 B。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q076",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:definition-judgment",
+    "knowledgePointIds": [
+      "reasoning:case-matching"
+    ],
+    "originalQuestionNo": 76,
+    "sectionOrder": 4,
+    "stem": "回应性监管是指政府通过制度设计，采用多样化的监管手段和策略对市场主体和社会组织进行动态化、智能化、差别化的监管。回应性监管强调监管主体的多元化，除政府以外，企业、社会组织，乃至被监管对象都是监管主体；在监管策略上，采取差异化、阶梯化的监管方式，即政府首先鼓励自我监管，难以奏效时才采取更为严厉的强化型自我监管直至命令控制型监管。根据上述定义，下列选项没有体现回应性监管的是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "某地主管部门因食品安全问题突击整顿涉事企业"
+      },
+      {
+        "id": "B",
+        "text": "瑞典立法要求工作场所必须建立安全环保的内控体系"
+      },
+      {
+        "id": "C",
+        "text": "英国成立由企业、工会代表组成的大健康监管委员会"
+      },
+      {
+        "id": "D",
+        "text": "政府聘请专业的第三方机构对企业安全生产状况进行评估"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "“回应性监管”的定义要点是“政府通过制度设计，采用多样化的监管手段和策略对市场主体和社会组织进行动态化、智能化、差别化的监管”。A 项：某地主管部门因食品安全问题突击整顿涉事企业，只涉及到了政府本身的管理，并没有涉及到其他主体，没有体现主体多元化，不符合定义要点，当选。B 项：瑞典立法说明不仅仅有政府，也有制度设计在进行监管，体现了主体多元化，符合定义要点，排除。C 项：成立由企业、工会代表组成的大健康监管委员会，说明监管主体多元化，符合定义要点，排除。D 项：政府聘请专业的第三方机构对企业安全生产状况进行评估，有政府和第三方机构，体现了主体多元化，符合定义要点，排除。故本题选 A。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q077",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:definition-judgment",
+    "knowledgePointIds": [
+      "reasoning:case-matching"
+    ],
+    "originalQuestionNo": 77,
+    "sectionOrder": 4,
+    "stem": "生殖隔离可以区分为合子前隔离和合子后隔离。合子前隔离是指由于活动区域、生活习性、体态差异等各种因素导致无法进行基因交流，从而产生生殖隔离。相比来说，合子后隔离则是因为遗传信息的不匹配，即使双方的生殖细胞能够相遇结合，也无法完成正常的繁衍。根据上述定义，下列现象体现合子后隔离的是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "甲种兰花通过 a 昆虫授粉，乙种兰花通过 b 昆虫授粉，二者只能通过人工授粉进行繁殖"
+      },
+      {
+        "id": "B",
+        "text": "三倍体西瓜开花后，用二倍体西瓜的花朵进行授粉，培育无籽西瓜"
+      },
+      {
+        "id": "C",
+        "text": "富尔顿蟋蟀和宾州蟋蟀的鸣声不同，无法相互吸引，不会进行交配"
+      },
+      {
+        "id": "D",
+        "text": "13 年蝉和 17 年蝉的发情期不同，没有交配机会"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "“合子后隔离”的定义要点是“因为遗传信息的不匹配，即使双方的生殖细胞能够相遇结合，也无法完成正常的繁衍”。A 项：甲种兰花通过 a 昆虫授粉，乙种兰花通过 b 昆虫授粉，只是授粉的昆虫不同，不是遗传信息的不匹配，不符合定义要点，排除。B 项：三倍体西瓜和二倍体西瓜遗传信息不匹配，培育出无籽西瓜，说明无法完成正常的繁衍，符合定义要点，当选。C 项：富尔顿蟋蟀和宾州蟋蟀的鸣声不同，是本身的一种特性不同，没有体现遗传信息不匹配，不符合定义要点，排除。D 项：13 年蝉和 17 年蝉的发情期不同，是生活习性不同，没有体现遗传信息不匹配，不符合定义要点，排除。故本题选 B。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q078",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:definition-judgment",
+    "knowledgePointIds": [
+      "reasoning:case-matching"
+    ],
+    "originalQuestionNo": 78,
+    "sectionOrder": 4,
+    "stem": "薄膜干涉，指的是不同颜色的光波有不同的波长，当一束光波照射于薄膜，由于折射率不同，光波会被薄膜的上界面与下界面分别反射后再相遇，发生相互干涉而形成新的光波。对这一现象的研究可以用于计算薄膜的厚度、折射率等。根据上述定义，下列不属于薄膜干涉的是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "一片普通薄玻璃镶嵌在窗框里，屋外灿烂的阳光穿透玻璃，照在屋内镜子上也能产生强烈反光"
+      },
+      {
+        "id": "B",
+        "text": "汽车玻璃上的贴膜会改变折射光线和反射光线的能量分配比例，增加对某一光波的反射光强度"
+      },
+      {
+        "id": "C",
+        "text": "汽车在有积水的柏油路上驶过时，积水面会形成一层油膜，这层油膜在阳光下呈现出美丽的色彩"
+      },
+      {
+        "id": "D",
+        "text": "自然环境中，两块干净平整的玻璃片紧紧压叠形成极薄空间，出现一些平行条纹，手指用力压紧玻璃时，条纹随之发生变化"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "“薄膜干涉”的定义要点是“不同颜色的光波有不同的波长，当一束光波照射于薄膜，由于折射率不同，光波会被薄膜的上界面与下界面分别反射后再相遇，发生相互干涉而形成新的光波”。A 项：阳光穿透玻璃，照在屋内镜子上也能产生强烈反光，是把这束光反射回去了，没有产生新的光波，不符合定义要点，当选。B 项：贴膜会改变折射光线和反射光线的能量分配比例，增加对某一光波的反射光强度，说明光波已经发生了变化，符合定义要点，排除。C 项：积水面会形成一层油膜，这层油膜在阳光下呈现出美丽的色彩，说明原本没有颜色的光变成了新的光波，符合定义要点，排除。D 项：“平行条纹”是自然光照射而来的，挤压之后条纹变化，说明光波发生了变化，符合定义要点，排除。故本题选 A。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q079",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:definition-judgment",
+    "knowledgePointIds": [
+      "reasoning:case-matching"
+    ],
+    "originalQuestionNo": 79,
+    "sectionOrder": 4,
+    "stem": "过滤气泡是指以大数据与算法推荐为底层架构，根据用户的使用时间、地区以及浏览习惯生成用户画像，并通过算法技术为其呈现独一无二的界面体验，网络上这种针对个人化搜索而提供筛选后结果的推荐算法，被称为过滤气泡。根据上述定义，下列不属于过滤气泡的是（ ）",
+    "options": [
+      {
+        "id": "A",
+        "text": "赵先生准备买车，上网看了很多汽车测评类的文章，买完车之后，浏览器上的内容几乎全是汽车类的资讯"
+      },
+      {
+        "id": "B",
+        "text": "李先生经常网购图书，平台特意为他推送购书清单，打造个性化书店，让他在第一时间能得到新书的信息"
+      },
+      {
+        "id": "C",
+        "text": "刘先生经常去某网络贴吧发帖，得到了很多人的关注，一些与他有相同爱好的人还建立了一个微信群进行交流"
+      },
+      {
+        "id": "D",
+        "text": "王先生和张先生分别在各自手机上搜索某公司，王先生的搜索结果多为该公司的招聘信息，张先生的却多为该公司的投资信息"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "“过滤气泡”的定义要点是“以大数据与算法推荐为底层架构，根据用户的使用时间、地区以及浏览习惯生成用户画像，并通过算法技术为其呈现独一无二的界面体验”。A 项：赵先生看了汽车测评类的文章，浏览器便给他推送汽车类的咨询，体现了信息的私人订制，符合定义要点，排除。B 项：李先生经常网购图书，平台特意为他推送购书清单，体现了信息的私人订制，符合定义要点，排除。C 项：刘先生与他有相同爱好的人还建立了一个微信群进行交流，并没有提到网站对其进行私人订制信息推送，不符合定义要点，当选。D 项：王先生和张先生分别在各自手机上搜索某公司，结果不同，是由于他们平常的浏览习惯差异，体现出信息的私人订制，符合定义要点，排除。故本题选 C。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q080",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:definition-judgment",
+    "knowledgePointIds": [
+      "reasoning:case-matching"
+    ],
+    "originalQuestionNo": 80,
+    "sectionOrder": 4,
+    "stem": "马兰戈尼效应，指的是表面张力不同的两种液体存在表面张力梯度，表面张力大的对其周围表面张力小的液体的拉力强，使液体从表面张力小的一边向张力大的方向流动渗透。根据上述定义，下列属于马兰戈尼效应的是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "若干种不同的酒按密度大小依次缓慢倒进杯子，会形成分层。通过加冰块，可以加大或减小密度， 分层更明显"
+      },
+      {
+        "id": "B",
+        "text": "涂料配色过程中，涂料和干燥后的涂膜颜色存在细微差异，在湿膜时颜色一般比较浅，在干燥后， 颜色会加深"
+      },
+      {
+        "id": "C",
+        "text": "牛奶中加入几滴流体色素，没有搅拌的情况下色素相对集中，取少量洗洁精滴在色素所在位置， 色素迅速往牛奶边缘扩散"
+      },
+      {
+        "id": "D",
+        "text": "奶茶就是牛奶和茶叶水的充分混合，不同的奶粉和不同茶叶水搭配，产生不同风味的奶茶，而且奶粉和茶水的配比也影响奶茶口感"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "“马兰戈尼效应”的定义要点是“表面张力不同的两种液体存在表面张力梯度，表面张力大的对其周围表面张力小的液体的拉力强，使液体从表面张力小的一边向张力大的方向流动渗透”。A 项：不同的酒按密度大小依次缓慢倒进杯子，会形成分层，说明没有进行流动渗透，不符合定义要点，排除。B 项：涂料和干燥后的涂膜颜色存在细微差异，讲的是干湿不同时候的颜色变化，没有提到相互流动渗透，不符合定义要点，排除。C 项：取少量洗洁精滴在色素所在位置，色素迅速往牛奶边缘扩散，是改变了流体色素本身的张力，使其向牛奶流动渗透，符合定义要点，当选。D 项：不同的奶粉和不同茶叶水搭配，产生不同风味的奶茶，两种东西结合后是一种混合物，没有体现张力小的向张力大的方向流动渗透，不符合定义要点，排除。故本题选 C。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q081",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:graphic-reasoning",
+    "knowledgePointIds": [
+      "reasoning:graphic-patterns"
+    ],
+    "originalQuestionNo": 81,
+    "sectionOrder": 4,
+    "stem": "所给的四个选项中，哪一项填入问号处，不能使之呈现一定的规律性。",
+    "options": [
+      {
+        "id": "A",
+        "text": ""
+      },
+      {
+        "id": "B",
+        "text": ""
+      },
+      {
+        "id": "C",
+        "text": ""
+      },
+      {
+        "id": "D",
+        "text": ""
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "题干各图形组成不相似，存在明显一笔画特征的图形，考虑数量类规律。题干各图形均为一笔画图形，则问号处图形不应为一笔画图形。A 项：为一笔画图形，排除。B 项：为一笔画图形，排除。C 项：为一笔画图形，排除。D 项：为两笔画图形，当选。故本题选 D。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [
+      "./public/assets/question-bank/anhui-2022-q081.jpg"
+    ],
+    "visualOptionsInStem": true,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q082",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:graphic-reasoning",
+    "knowledgePointIds": [
+      "reasoning:graphic-patterns"
+    ],
+    "originalQuestionNo": 82,
+    "sectionOrder": 4,
+    "stem": "从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性。",
+    "options": [
+      {
+        "id": "A",
+        "text": ""
+      },
+      {
+        "id": "B",
+        "text": ""
+      },
+      {
+        "id": "C",
+        "text": ""
+      },
+      {
+        "id": "D",
+        "text": ""
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "题干每组图形组成相同，方向不同，考虑位置类规律。题干第一组第二个图形上边为第一个图形，下边为第一个图形上下翻转后得到；第三个图形上边为第一个图形上下翻转后得到，下边为第一个图形，左边为第一个图形顺时针旋转 90°后得到，右边为第一个图形逆时针旋转 90°后得到。第二组图形遵循此规律。A 项：不符合题干旋转规律，排除。B 项：符合题干旋转规律，当选。C 项：不符合题干旋转规律，排除。D 项：不符合题干旋转规律，排除。故本题选 B。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [
+      "./public/assets/question-bank/anhui-2022-q082.jpg"
+    ],
+    "visualOptionsInStem": true,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q083",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:graphic-reasoning",
+    "knowledgePointIds": [
+      "reasoning:graphic-patterns"
+    ],
+    "originalQuestionNo": 83,
+    "sectionOrder": 4,
+    "stem": "把下面的六个图形分为两类，使每一类图形都有各自的共同特征或规律，分类正确的一项是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "①②③，④⑤⑥"
+      },
+      {
+        "id": "B",
+        "text": "①③⑤，②④⑥"
+      },
+      {
+        "id": "C",
+        "text": "①④⑤，②③⑥"
+      },
+      {
+        "id": "D",
+        "text": "①⑤⑥，②③④"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "题干各图形组成不相似，存在明显封闭空间，考虑数量类规律。①⑤⑥图形中封闭空间数均为 6，②③④图形中封闭空间数均为 9。故本题选 D。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [
+      "./public/assets/question-bank/anhui-2022-q083.jpg"
+    ],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q084",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:graphic-reasoning",
+    "knowledgePointIds": [
+      "reasoning:graphic-patterns"
+    ],
+    "originalQuestionNo": 84,
+    "sectionOrder": 4,
+    "stem": "把下面的六个图形分为两类，使每一类图形都有各自的共同特征或规律，分类正确的一项是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "①②③，④⑤⑥"
+      },
+      {
+        "id": "B",
+        "text": "①③⑤，②④⑥"
+      },
+      {
+        "id": "C",
+        "text": "①④⑤，②③⑥"
+      },
+      {
+        "id": "D",
+        "text": "①⑤⑥，②③④"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "题干各图形存在网格，面积大小不同，考虑各图形的面积规律。分析各组图形的面积规律。①④⑤图形的面积均占 7.5 个网格，②③⑥图形的面积均占 10.5 个网格。故本题选 C。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [
+      "./public/assets/question-bank/anhui-2022-q084.jpg"
+    ],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q085",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:graphic-reasoning",
+    "knowledgePointIds": [
+      "reasoning:spatial"
+    ],
+    "originalQuestionNo": 85,
+    "sectionOrder": 4,
+    "stem": "下面右框内纸盒的外表面中，不能折叠成左框内所示的纸盒的是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": ""
+      },
+      {
+        "id": "B",
+        "text": ""
+      },
+      {
+        "id": "C",
+        "text": ""
+      },
+      {
+        "id": "D",
+        "text": ""
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "题干是立体图形，选项为展开图，观察各面的相对位置关系。A 项：符合题干折叠规律，排除。B 项：如下图所示将“云”所在的面平移后，“云”的位置错误，因此该项不能折叠成左框内所示的纸盒，当选。C 项：符合题干折叠规律，排除。D 项：符合题干折叠规律，排除。故本题选 B。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [
+      "./public/assets/question-bank/anhui-2022-q085.jpg"
+    ],
+    "visualOptionsInStem": true,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q086",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:logical-judgment",
+    "knowledgePointIds": [
+      "reasoning:strengthen-weaken"
+    ],
+    "originalQuestionNo": 86,
+    "sectionOrder": 4,
+    "stem": "研究发现，对居住地附近有至少 30%的土地是公园和绿地的成年人而言，他们感到孤独的几率比居住地附近绿地面积不足 10%的成年人要低 26%。对于独居者而言，关联性甚至更大——在绿地面积达到或超过 30%的地区，他们感到孤独的可能性降低了一半。以下哪项如果为真，最能支持上述观点？（ ）",
+    "options": [
+      {
+        "id": "A",
+        "text": "越来越多的证据表明，孤独感与罹患抑郁症的风险增加有关"
+      },
+      {
+        "id": "B",
+        "text": "城市重新造林可能有助于降低主观记忆减退甚至患阿尔茨海默症的风险"
+      },
+      {
+        "id": "C",
+        "text": "以前没有定期接触自然的人以安全、积极和可持续的方式定期与自然接触，就有希望缓解孤独感"
+      },
+      {
+        "id": "D",
+        "text": "绿地面积大小与社交互动频率正相关，与他人分享熟悉的自然环境有助于提升情绪"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "论点：对于独居者而言，关联性甚至更大——在绿地面积达到或超过 30%的地区，他们感到孤独的可能性降低了一半。论据：对居住地附近有至少 30%的土地是公园和绿地的成年人而言，他们感到孤独的几率比居住地附近绿地面积不足 10%的成年人要低 26%。A 项：阐述孤独感和抑郁症之间的关系，未提及公园和绿地，话题不一致，无法支持题干论点，排除。B 项：阐述造林与阿尔茨海默症之间的关系，未提及孤独，属于无关项，无法支持题干论点，排除。C 项：阐述与自然接触可缓解孤独感，但“自然”范围过大，不等同于公园和绿地，无法支持题干论点，排除。D 项：解释了绿地环境为什么会影响情绪，对论点进行解释说明，能够支持题干论点，当选。故本题选 D。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q087",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:logical-judgment",
+    "knowledgePointIds": [
+      "reasoning:strengthen-weaken"
+    ],
+    "originalQuestionNo": 87,
+    "sectionOrder": 4,
+    "stem": "研究人员对人的“头骨突起”进行了一项研究。在这项研究中，调查对象包括 1200 名年龄在 18岁至 86 岁的普通人群，研究发现，颅骨底部出现骨质突起的情况在年轻人中比在老年人中更为普遍，尤其是在 18 岁至 30 岁年龄组的男性当中。研究者认为，一些人颅骨底部出现的奇怪的“头骨突起”与他们长时间弯下脖子看智能手机时的奇怪角度有关。以下各项如果为真，最能质疑上述结论的是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "论文的作者在网上销售塑形枕头深受消费者欢迎"
+      },
+      {
+        "id": "B",
+        "text": "该研究样本人群是随机抽取，它的结论适用于普通人群"
+      },
+      {
+        "id": "C",
+        "text": "研究人员对年轻人更容易出现头骨突起的分析过程存在瑕疵"
+      },
+      {
+        "id": "D",
+        "text": "研究者并未对调查对象每日弯下脖子看智能手机的时间进行记录"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "论点：一些人颅骨底部出现的奇怪的“头骨突起”与他们长时间弯下脖子看智能手机时的奇怪角度有关。论据：研究发现，颅骨底部出现骨质突起的情况在年轻人中比在老年人中更为普遍，尤其是在 18 岁至 30 岁年龄组的男性当中。A 项：阐述作者在网上销售塑形枕头深受消费者欢迎，与研究的结论无关，无法削弱题干论点，排除。B 项：阐述该研究结论适用于普通人群，即大部分人，加强了题干论点，排除。C 项：阐述研究人员对年轻人出现头骨突起的分析过程存在瑕疵，而由论据可知，年轻人头骨突起的情况更为普遍，一定程度上削弱了论据，保留。D 项：阐述该研究未记录调查对象每日弯下脖子看手机的时间，那就不能通过调查对象推出头骨突起与他们弯下脖子看手机的角度有关，直接削弱了论点，比 C 项削弱力度强，当选。故本题选 D。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q088",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:logical-judgment",
+    "knowledgePointIds": [
+      "reasoning:strengthen-weaken"
+    ],
+    "originalQuestionNo": 88,
+    "sectionOrder": 4,
+    "stem": "有些人的心情比较容易受到外界影响，比如飞行员担心遇到雷暴，虽然没有什么奇招，但有些食物的确能让大脑更好地运作，可可就是其中之一。这是因为可可含有大量的茶碱和咖啡因，它们可以有效的减轻压力和缓解疼痛。以下各项如果为真，最能支持上述观点的是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "每天摄入主要原料为可可的黑巧克力对情绪会有一定影响"
+      },
+      {
+        "id": "B",
+        "text": "每天至少 30 分钟的运动，有助于大脑产生缓解压力和焦虑所需的激素"
+      },
+      {
+        "id": "C",
+        "text": "虽然可可富含咖啡因，但咖啡因只有在特定条件下才能发挥其减压作用"
+      },
+      {
+        "id": "D",
+        "text": "据研究显示，可可中含有的茶碱和咖啡因可以刺激大脑分泌内咖肽，而内啡肽对减轻压力和缓解疼痛非常有效"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "论点：有些食物的确能让大脑更好地运作，可可就是其中之一。论据：因为可可含有大量的茶碱和咖啡因，它们可以有效的减轻压力和缓解疼痛。A 项：指出可可对情绪的影响，而题干是在描述可可对压力的影响，属于无关项，无法支持题干论点，排除。B 项：指出运动对压力和焦虑的影响，未提及可可，属于无关项，无法支持题干论点，排除。C 项：指出可可里的咖啡因只有在特定条件下才能发挥其减压作用，而人们对可可的摄入是否满足特定条件不明确，无法支持题干论点，排除。D 项：指出可可中含有的茶碱和咖啡因可以刺激大脑分泌内啡肽，而内啡肽对减轻压力和缓解疼痛非常有效，对论据进行解释说明，能够支持题干论点，当选。故本题选 D。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q089",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:logical-judgment",
+    "knowledgePointIds": [
+      "reasoning:strengthen-weaken"
+    ],
+    "originalQuestionNo": 89,
+    "sectionOrder": 4,
+    "stem": "近日，有科学家撰文指出，即使保持现有的城市和农田面积，地球上至少还有种植 1 万亿棵或1.5 万亿棵树的空间，面积可达 900 万平方公里，大致相当于美国的国土面积。而这些新树未来几十年里可以从大气中吸收近 7500 亿吨导致温室效应的二氧化碳，这几乎等同于人类在过去 25 年排放的碳污染的总和。因此，该科学家认为，对抗全球变暖最根本的方法是，种植 1 万亿棵或 1.5 万亿棵树。以下各项如果为真，最能质疑这位科学家观点的是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "还有其他可行方法可以应对气候变化，例如让人们从吃肉转向吃素"
+      },
+      {
+        "id": "B",
+        "text": "对燃烧石油、煤炭和天然气的依赖，才是导致全球变暖的根本原因"
+      },
+      {
+        "id": "C",
+        "text": "随着全球变暖尤其是热带地区变干燥，当前树木植被已在大片消失"
+      },
+      {
+        "id": "D",
+        "text": "只有年轻的树木才能从空气中清除更多碳污染，热带地区最具潜力"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "论点：该科学家认为，对抗全球变暖最根本的方法是，种植 1 万亿棵或 1.5万亿棵树。论据：这些新树未来几十年里可以从大气中吸收近 7500 亿吨导致温室效应的二氧化碳，这几乎等同于人类在过去 25 年排放的碳污染的总和。A 项：指出还有其他可行方法可以应对气候变化，而题干讲的是对抗全球变暖最根本的方法是种树，话题不一致，无法削弱题干论点，排除。B 项：指出全球变暖的根本原因是对燃烧石油、煤炭和天然气的依赖，那应对全球变暖的根本方法是摆脱对这些能源的依赖，而不是种树，能够削弱题干论点，当选。C 项：指出当前树木植被的情况，而题干讲的是对抗全球变暖最根本的方法是种树，话题不一致，无法削弱题干论点，排除。D 项：指出只有年轻的树木才能从空气中清除更多碳污染，而题干侧重强调种树的数量，无法削弱题干论点，排除。故本题选 B。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q090",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:logical-judgment",
+    "knowledgePointIds": [
+      "reasoning:strengthen-weaken"
+    ],
+    "originalQuestionNo": 90,
+    "sectionOrder": 4,
+    "stem": "有观点认为，体质的酸化是百病之源。无论是癌症，还是常见的高血压、糖尿病、痛风等，都是由于“酸性食物”吃多了导致体质酸化引起的。而鱼、肉、米饭、酒等人类的主副食品都是酸性的，尤其是我们的主食米饭，更被渲染成“酸性食物”的典型代表。以下各项如果为真，最能反驳上述观点的是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "人体的皮肤处于弱酸性状态时，比较不容易滋生细菌"
+      },
+      {
+        "id": "B",
+        "text": "人体的酸碱度以 7.4 为佳，即身体偏碱性就是健康的"
+      },
+      {
+        "id": "C",
+        "text": "人体有三个调节系统平衡酸碱，人的体质不会是酸性"
+      },
+      {
+        "id": "D",
+        "text": "健康人的尿液是呈酸性的，人体本身就存在酸性物质"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "论点：体质的酸化是百病之源。论据：无论是癌症，还是常见的高血压、糖尿病、痛风等，都是由于“酸性食物”吃多了导致体质酸化引起的。A 项：指出人体的皮肤处于弱酸性状态时，比较不容易滋生细菌，皮肤处于弱酸状态不等同于体质酸化，话题不一致，无法削弱题干论点，排除。B 项：指出身体偏碱性就是健康的，未明确说明酸性体质是否健康，属于不明确项，无法削弱题干论点，排除。C 项：指出人的体质不会是酸性，说明酸性体质不存在，那酸性体质也不会成为百病之源，能够削弱题干论点，当选。D 项：指出健康人体本身就存在酸性物质，存在酸性物质不代表是酸性体质，话题不一致，无法削弱题干论点，排除。故本题选 C。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q091",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:logical-judgment",
+    "knowledgePointIds": [
+      "reasoning:assumption"
+    ],
+    "originalQuestionNo": 91,
+    "sectionOrder": 4,
+    "stem": "伤害感受神经能够对造血干细胞动员进行调控，增强造血干细胞的黏附或迁移。降钙素基因相关肽（CGRP）是伤害感受神经元主要分泌的神经递质分子。研究者发现，给予 CGRP 可以显著增强造血干细胞动员。CGRP 可以直接影响造血干细胞，诱导细胞表面形成 CALCRL 和 RAMPI 蛋白形成的二聚体受体，并促进造血干细胞进入血管。研究专家认为，吃辣可以促进造血干细胞动员。如果上述结论为真，需要补充的前提是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "骨髓神经纤维中高达 77%都是伤害感受神经元"
+      },
+      {
+        "id": "B",
+        "text": "辛辣食物导致的“辣味”是一种痛觉，会激活伤害感受神经"
+      },
+      {
+        "id": "C",
+        "text": "辣的食物能够促进消化液的分泌，增加消化酶的活性，加速胃肠道蠕动"
+      },
+      {
+        "id": "D",
+        "text": "造血干细胞会在神经的调控之下，从骨髓释放进入循环，对损失的血细胞进行补充"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "论点：吃辣可以促进造血干细胞动员。论据：伤害感受神经能够对造血干细胞动员进行调控，增强造血干细胞的黏附或迁移。降钙素基因相关肽（CGRP）是伤害感受神经元主要分泌的神经递质分子。给予 CGRP 可以显著增强造血干细胞动员。CGRP 可以直接影响造血干细胞，诱导细胞表面形成 CALCRL 和 RAMPI 蛋白形成的二聚体受体，并促进造血干细胞进入血管。A 项：指出骨髓神经纤维中伤害感受神经元的占比，未提及吃辣对造血干细胞的影响，属于无关项，排除。B 项：指出辣味会激活伤害感受神经，说明吃辣可以通过激活伤害感受神经，促进造血干细胞动员，在论点与论据之间搭桥，当选。C 项：指出辣的食物能加速胃肠道蠕动，未提及造血干细胞，属于无关项，排除。D 项：指出造血干细胞对损失血细胞的影响，未提及吃辣对其的影响，属于无关项，排除。故本题选 B。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q092",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:logical-judgment",
+    "knowledgePointIds": [
+      "reasoning:conditional-translation"
+    ],
+    "originalQuestionNo": 92,
+    "sectionOrder": 4,
+    "stem": "欧洲杯比赛期间，小赵、小钱、小孙、小李预测甲、乙两支队伍能否进入决赛。他们的对话如下：小赵：如果甲进入决赛，则乙也能进入决赛。小钱：我看甲进入决赛没有问题。小孙：在我看来，甲能够进入决赛，但乙进不了。小李：我的看法是，如果甲不能进入决赛，则乙进决赛。比赛结果出来后，他们四人的预测有两个真、两个假，关于甲和乙是否进入决赛，以下推论正确的是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "甲和乙都进入决赛"
+      },
+      {
+        "id": "B",
+        "text": "甲和乙都没有进入决赛"
+      },
+      {
+        "id": "C",
+        "text": "甲进入决赛，乙没有进入决赛"
+      },
+      {
+        "id": "D",
+        "text": "甲没有进入决赛，乙进入决赛"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "①小赵：甲→乙；②小钱：甲；③小孙：甲且¬乙；④小李：¬甲→乙。①③为矛盾关系，必有一真一假；四人的预测有两个真、两个假，则②④也是一真一假。假设②为真，即甲进入决赛，则④为假，④的矛盾关系为真，即¬甲且¬乙，与前提假设“甲进入决赛”矛盾，所以②为假，④为真，即甲没有进入决赛，乙进入决赛，只有 D 项符合。故本题选 D。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q093",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:logical-judgment",
+    "knowledgePointIds": [
+      "reasoning:conclusion"
+    ],
+    "originalQuestionNo": 93,
+    "sectionOrder": 4,
+    "stem": "研究者发现，蚕挑选桑叶要经过类似于计算机安全系统的验证。蚕口器下方的下颚须在触碰叶片时会先轻轻咬一口，下颚须中的味觉神经能以极高的灵敏度识别叶片表面的β—谷甾醇、绿原酸、异槲皮苷这 3 种物质；接着，它会用口器上的须形外颚叶来尝一下叶片叶汁中的糖分，须形外颚叶上的味觉神经比较迟钝，只有高浓度的糖才能激活；在确认是桑叶后它才开始大肆咀嚼。由此可以推出（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "桑叶会分泌适合蚕生长的糖分和物质，故而它几乎只吃桑叶"
+      },
+      {
+        "id": "B",
+        "text": "通过不同的器官感受不同的味道，这就是蚕判断桑叶的秘诀"
+      },
+      {
+        "id": "C",
+        "text": "蚕在演化的过程中，它的口器具备了通过触碰感知桑叶的能力"
+      },
+      {
+        "id": "D",
+        "text": "这项研究有助于改进蚕的人工饲养，可在没有桑树的环境下养蚕"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "本题为集合推理类题目，仔细阅读材料信息。A 项：题干指出蚕是通过高浓度糖分激活须形外颚叶上的味觉神经来确认桑叶，没有提及蚕只吃桑叶的原因，无中生有，排除。B 项：题干指出蚕口器下方的下颚须中的味觉神经能识别β—谷甾醇、绿原酸、异槲皮苷，接着，蚕会用口器上的须形外颚叶来尝一下叶片叶汁中的糖分，可以推出蚕通过不同的器官感受不同的味道来判断是否是桑叶，当选。C 项：题干指出蚕依靠下颚须中的味觉神经识别叶片表面的一些物质，用口器上的须形外颚叶来尝糖分，因此蚕是依靠味觉来感知桑叶，而非依靠触碰，无法推出，排除。D 项：题干中没有提及蚕的饲养，也没有提及改进蚕的人工饲料，无中生有，排除。故本题选 B。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q094",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:logical-judgment",
+    "knowledgePointIds": [
+      "reasoning:conditional-translation"
+    ],
+    "originalQuestionNo": 94,
+    "sectionOrder": 4,
+    "stem": "要控制冰川的退缩，一劳永逸的方法只有节能减排、减少温室气体排放、遏制地球气温升高。只有这样，冰川的加速退缩才能从根本上得到控制。如果不减少温室气体的排放，欧洲阿尔卑斯山将有94%的冰川会在 100 年内消失掉。也许人们只能在冷库中看到一点剩余的冰川冰。由此可以推出（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "如果节能减排、减少温室气体排放、遏制地球气温升高，就能够控制冰川的退缩"
+      },
+      {
+        "id": "B",
+        "text": "如果欧洲阿尔卑斯山有 94%的冰川在 100 年内消失掉，那就说明温室气体排放没有减少"
+      },
+      {
+        "id": "C",
+        "text": "除非减少温室气体排放，否则欧洲阿尔卑斯山将有 94%的冰川在 100 年内消失掉"
+      },
+      {
+        "id": "D",
+        "text": "只要节能减排、减少温室气体排放、遏制地球气温升高，就能控制冰川退缩"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "①冰川的加速退缩从根本上得到控制→节能减排、减少温室气体排放、遏制地球气温升高；②不减少温室气体的排放→欧洲阿尔卑斯山将有 94%的冰川会在 100 年内消失掉，也许人们只能在冷库中看到一点剩余的冰川冰。A 项：翻译为“节能减排、减少温室气体排放、遏制地球气温升高→能够控制冰川的退缩”，对①肯定后件不能推出肯定前件，排除。B 项：翻译为“欧洲阿尔卑斯山有 94%的冰川在 100 年内消失掉→温室气体排放没有减少”，对②肯定后件不能推出肯定前件，排除。C 项：翻译为“欧洲阿尔卑斯山将有 94%的冰川在 100 年内不会消失掉→减少温室气体排放”，对②否定后件能推出否定前件，当选。D 项：翻译为“节能减排、减少温室气体排放、遏制地球气温升高→能控制冰川退缩”，对①肯定后件不能推出肯定前件，排除。故本题选 C。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q095",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:logical-judgment",
+    "knowledgePointIds": [
+      "reasoning:strengthen-weaken"
+    ],
+    "originalQuestionNo": 95,
+    "sectionOrder": 4,
+    "stem": "科学家在金星大气层中探测到了磷化氢的踪迹，浓度极高，是地球大气层中磷化氢浓度的 1000倍至 100 万倍。在地球上，磷化氢仅见于工业生产领域或由厌氧微生物所产生。对于金星上磷化氢的来源，研究团队进行了大量分析，推断是否来自光照、闪电、火山或者从金星表面向上吹至大气层中的矿物质等，但根据已有知识的计算结果均不支持这些来源。研究人员因此表示，有磷化氢意味着没有充足的氧气存在，但有可能证明是存在厌氧生物的，故而金星大气层中的磷化氢有可能是某种生物留下的印记。以下哪项如果为真，最能削弱上述研究人员的观点？（ ）",
+    "options": [
+      {
+        "id": "A",
+        "text": "金星大气中含有大量二氧化碳以及浓硫酸云层，温室效应非常严重"
+      },
+      {
+        "id": "B",
+        "text": "科学家们发现了“不需要呼吸”的动物，比较符合金星的大气条件"
+      },
+      {
+        "id": "C",
+        "text": "金星上存在某些未知的光化学过程，这些光化学过程能够释放大量的磷化氢"
+      },
+      {
+        "id": "D",
+        "text": "磷化氢需要很多能量来制作，且任何行星上都不太可能存在太多磷，因此一颗行星产生大量磷化氢的可能性很低"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "论点：金星大气层中的磷化氢有可能是某种生物留下的印记。论据：有磷化氢意味着没有充足的氧气存在，但有可能证明是存在厌氧生物的。A 项：指出金星上温室效应非常严重，并未提及磷化氢和厌氧生物，属于无关项，无法削弱题干论点，排除。B 项：指出存在比较符合金星大气条件的“不需要呼吸”的动物，说明金星有可能存在厌氧生物，补充论据，属于加强项，无法削弱题干论点，排除。C 项：指出磷化氢来自于金星上某些未知的光化学过程，而不是来自于厌氧生物，削弱了题干论点，当选。D 项：指出任何行星上都不太可能存在太多磷，因此一颗行星产生大量磷化氢的可能性很低，而题干讲的是金星大气层中磷化氢的来源问题，话题不一致，无法削弱题干论点，排除。故本题选 C。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": null,
+    "sharedStimulus": null,
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q096",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:proportion",
+    "knowledgePointIds": [
+      "data-analysis:current-share"
+    ],
+    "originalQuestionNo": 96,
+    "sectionOrder": 5,
+    "stem": "2020 年电子商务平台技术服务收入占全行业收入的比重约为（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "7.6%"
+      },
+      {
+        "id": "B",
+        "text": "11.1%"
+      },
+      {
+        "id": "C",
+        "text": "15.3%"
+      },
+      {
+        "id": "D",
+        "text": "18.2%"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "题干命题点的对应材料在第三段，即 2020 年，信息技术服务实现收入 49868亿元，占全行业收入比重为 61.1%。其中，电子商务平台技术服务收入 9095 亿元，同比增长 10.5%。202049868 9095年全行业收入为亿元，2020 年电子商务平台技术服务收入占全行业收入的比重为 ×100%61.1% 4986861.1%≈ ×61%≈11.1%。故本题选 B。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": "ah2022-software-data",
+    "sharedStimulus": {
+      "text": "2020 年，由软件产品、信息技术服务、信息安全产品和服务、嵌入式系统软件四大业务形态构成的我国软件和信息技术服务业持续恢复，收入保持较快增长，信息技术服务加快云化发展，软件应用服务化、平台化趋势明显。2020 年，软件产品实现收入 22758 亿元，同比增长 10.1%，占全行业比重为 27.9%。其中，工业软件产品实现收入 1974 亿元，增长 11.2%，为支撑工业领域的自主可控发展发挥重要作用。2020 年，信息技术服务实现收入 49868 亿元，同比增长 15.2%，增速高出全行业平均水平 1.9 个百分点，占全行业收入比重为 61.1%。其中，电子商务平台技术服务收入 9095 亿元，同比增长 10.5%；云服务、大数据服务共实现收入 4116 亿元，同比增长 11.1%。2020 年，信息安全产品和服务实现收入 1498 亿元，同比增长 10.0%，增速较上年回落 2.4 个百分点。2020 年嵌入式系统软件实现收入 7492 亿元，同比增长 12.0%，增速较上年提高 4.2 个百分点，占全行业收入比重为 9.2%。嵌入式系统软件已成为产品和装备数字化改造、各领域智能化增值的关键性带动技术。",
+      "imageUrls": []
+    },
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q097",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:comprehensive-analysis",
+    "knowledgePointIds": [
+      "data-analysis:mixed-indicators"
+    ],
+    "originalQuestionNo": 97,
+    "sectionOrder": 5,
+    "stem": "2020 年四大业务形态收入同比增速高于全行业平均水平的有（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "1 个"
+      },
+      {
+        "id": "B",
+        "text": "2 个"
+      },
+      {
+        "id": "C",
+        "text": "3 个"
+      },
+      {
+        "id": "D",
+        "text": "4 个"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "题干命题点的对应材料在第二、三、四、五段，即 2020 年，软件产品实现收入同比增长 10.1%，信息技术服务实现收入同比增长 15.2%，增速高出全行业平均水平 1.9 个百分点，信息安全产品和服务实现收入同比增长 10.0%，嵌入式系统软件实现收入同比增长 12.0%。2020 年全行业平均水平收入同比增速为 15.2%-1.9%=13.3%，10.1%＜13.3%，15.2%＞13.3%，10.0%＜13.3%，12.0%＜13.3%，四大业务形态收入同比增速高于全行业平均水平的只有信息技术服务 1 个。故本题选 A。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": "ah2022-software-data",
+    "sharedStimulus": {
+      "text": "2020 年，由软件产品、信息技术服务、信息安全产品和服务、嵌入式系统软件四大业务形态构成的我国软件和信息技术服务业持续恢复，收入保持较快增长，信息技术服务加快云化发展，软件应用服务化、平台化趋势明显。2020 年，软件产品实现收入 22758 亿元，同比增长 10.1%，占全行业比重为 27.9%。其中，工业软件产品实现收入 1974 亿元，增长 11.2%，为支撑工业领域的自主可控发展发挥重要作用。2020 年，信息技术服务实现收入 49868 亿元，同比增长 15.2%，增速高出全行业平均水平 1.9 个百分点，占全行业收入比重为 61.1%。其中，电子商务平台技术服务收入 9095 亿元，同比增长 10.5%；云服务、大数据服务共实现收入 4116 亿元，同比增长 11.1%。2020 年，信息安全产品和服务实现收入 1498 亿元，同比增长 10.0%，增速较上年回落 2.4 个百分点。2020 年嵌入式系统软件实现收入 7492 亿元，同比增长 12.0%，增速较上年提高 4.2 个百分点，占全行业收入比重为 9.2%。嵌入式系统软件已成为产品和装备数字化改造、各领域智能化增值的关键性带动技术。",
+      "imageUrls": []
+    },
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q098",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:growth",
+    "knowledgePointIds": [
+      "data-analysis:base-period"
+    ],
+    "originalQuestionNo": 98,
+    "sectionOrder": 5,
+    "stem": "2019 年全行业实现收入约为（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "7.2 万亿元"
+      },
+      {
+        "id": "B",
+        "text": "7.4 万亿元"
+      },
+      {
+        "id": "C",
+        "text": "8.2 万亿元"
+      },
+      {
+        "id": "D",
+        "text": "8.4 万亿元"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "题干命题点的对应材料在第三段，即 2020 年，信息技术服务实现收入 49868 亿元，同比增长 15.2%，增速高出全行业平均水平 1.9 个百分点，占全行业收入比重为 61.1%。2020 年全行业实现收入为 49868÷61.1% 亿元，同比增速为 15.2%−1.9%=13.3%，则 2019 年全行业实现收入为（49868÷61.1%）÷（1+13.3%）≈7.25 万亿元，A 项与之最接近。故本题选 A。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": "ah2022-software-data",
+    "sharedStimulus": {
+      "text": "2020 年，由软件产品、信息技术服务、信息安全产品和服务、嵌入式系统软件四大业务形态构成的我国软件和信息技术服务业持续恢复，收入保持较快增长，信息技术服务加快云化发展，软件应用服务化、平台化趋势明显。2020 年，软件产品实现收入 22758 亿元，同比增长 10.1%，占全行业比重为 27.9%。其中，工业软件产品实现收入 1974 亿元，增长 11.2%，为支撑工业领域的自主可控发展发挥重要作用。2020 年，信息技术服务实现收入 49868 亿元，同比增长 15.2%，增速高出全行业平均水平 1.9 个百分点，占全行业收入比重为 61.1%。其中，电子商务平台技术服务收入 9095 亿元，同比增长 10.5%；云服务、大数据服务共实现收入 4116 亿元，同比增长 11.1%。2020 年，信息安全产品和服务实现收入 1498 亿元，同比增长 10.0%，增速较上年回落 2.4 个百分点。2020 年嵌入式系统软件实现收入 7492 亿元，同比增长 12.0%，增速较上年提高 4.2 个百分点，占全行业收入比重为 9.2%。嵌入式系统软件已成为产品和装备数字化改造、各领域智能化增值的关键性带动技术。",
+      "imageUrls": []
+    },
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q099",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:proportion",
+    "knowledgePointIds": [
+      "data-analysis:share-change"
+    ],
+    "originalQuestionNo": 99,
+    "sectionOrder": 5,
+    "stem": "与 2019 年相比，2020 年占全行业收入比重上升的是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "软件产品"
+      },
+      {
+        "id": "B",
+        "text": "信息技术服务"
+      },
+      {
+        "id": "C",
+        "text": "信息安全产品和服务"
+      },
+      {
+        "id": "D",
+        "text": "嵌入式系统软件"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "题干命题点的对应材料在材料第三段，即 2020 年，信息技术服务实现收入49868 亿元，同比增长 15.2%，增速高出全行业平均水平 1.9 个百分点 。2020 年全行业收入增长15.2%-1.9%=13.3%，根据部分增长率大于总体增长率，部分占总体的比重上升可知，与 2019 年相比，2020 年信息技术服务占全行业收入比重上升。故本题选 B。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": "ah2022-software-data",
+    "sharedStimulus": {
+      "text": "2020 年，由软件产品、信息技术服务、信息安全产品和服务、嵌入式系统软件四大业务形态构成的我国软件和信息技术服务业持续恢复，收入保持较快增长，信息技术服务加快云化发展，软件应用服务化、平台化趋势明显。2020 年，软件产品实现收入 22758 亿元，同比增长 10.1%，占全行业比重为 27.9%。其中，工业软件产品实现收入 1974 亿元，增长 11.2%，为支撑工业领域的自主可控发展发挥重要作用。2020 年，信息技术服务实现收入 49868 亿元，同比增长 15.2%，增速高出全行业平均水平 1.9 个百分点，占全行业收入比重为 61.1%。其中，电子商务平台技术服务收入 9095 亿元，同比增长 10.5%；云服务、大数据服务共实现收入 4116 亿元，同比增长 11.1%。2020 年，信息安全产品和服务实现收入 1498 亿元，同比增长 10.0%，增速较上年回落 2.4 个百分点。2020 年嵌入式系统软件实现收入 7492 亿元，同比增长 12.0%，增速较上年提高 4.2 个百分点，占全行业收入比重为 9.2%。嵌入式系统软件已成为产品和装备数字化改造、各领域智能化增值的关键性带动技术。",
+      "imageUrls": []
+    },
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q100",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:comprehensive-analysis",
+    "knowledgePointIds": [
+      "data-analysis:mixed-indicators"
+    ],
+    "originalQuestionNo": 100,
+    "sectionOrder": 5,
+    "stem": "下列选项不能从上述资料推出的是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "2019 年信息安全产品和服务实现收入约为 1361.8 亿元"
+      },
+      {
+        "id": "B",
+        "text": "2019 年信息安全产品和服务占全行业收入比重最低"
+      },
+      {
+        "id": "C",
+        "text": "2020 年信息安全产品和服务占全行业收入比重为 2.8%"
+      },
+      {
+        "id": "D",
+        "text": "2019 年信息技术服务收入占全行业收入比重低于 61.1%"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "本题考查综合分析。A 项正确：根据材料第四段可知，2020 年信息安全产品和服务实现收入 1498 亿元，同比增长 10.0%，则 2019 年实现收入为 1498÷(1+10.0%)≈1361.8 亿元，排除。B 项正确：根据材料第二、三、四、五段可知，信息安全产品和服务实现收入远远小于其他行业，因此 2019 年信息安全产品和服务占全行业收入比重最低，排除。C 项错误：2020 年全行业收入为 49868÷61.1% 亿元，信息安全产品和服务收入为 1498 亿元，则其占全行业收入比重为 1498÷(49868÷61.1%)≈1500/50000×61.1%≈1.8%，当选。D 项正确：2020 年信息技术服务收入同比增速高于全行业平均水平，部分占总体的比重上升，因此 2019 年信息技术服务收入占全行业收入比重低于 61.1%，排除。故本题选 C。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": "ah2022-software-data",
+    "sharedStimulus": {
+      "text": "2020 年，由软件产品、信息技术服务、信息安全产品和服务、嵌入式系统软件四大业务形态构成的我国软件和信息技术服务业持续恢复，收入保持较快增长，信息技术服务加快云化发展，软件应用服务化、平台化趋势明显。2020 年，软件产品实现收入 22758 亿元，同比增长 10.1%，占全行业比重为 27.9%。其中，工业软件产品实现收入 1974 亿元，增长 11.2%，为支撑工业领域的自主可控发展发挥重要作用。2020 年，信息技术服务实现收入 49868 亿元，同比增长 15.2%，增速高出全行业平均水平 1.9 个百分点，占全行业收入比重为 61.1%。其中，电子商务平台技术服务收入 9095 亿元，同比增长 10.5%；云服务、大数据服务共实现收入 4116 亿元，同比增长 11.1%。2020 年，信息安全产品和服务实现收入 1498 亿元，同比增长 10.0%，增速较上年回落 2.4 个百分点。2020 年嵌入式系统软件实现收入 7492 亿元，同比增长 12.0%，增速较上年提高 4.2 个百分点，占全行业收入比重为 9.2%。嵌入式系统软件已成为产品和装备数字化改造、各领域智能化增值的关键性带动技术。",
+      "imageUrls": []
+    },
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q101",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:growth",
+    "knowledgePointIds": [
+      "data-analysis:growth-rate"
+    ],
+    "originalQuestionNo": 101,
+    "sectionOrder": 5,
+    "stem": "2016～2021 年我国公共充电桩数量同比增速最大的年份是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "2016 年"
+      },
+      {
+        "id": "B",
+        "text": "2019 年"
+      },
+      {
+        "id": "C",
+        "text": "2020 年"
+      },
+      {
+        "id": "D",
+        "text": "2021 年"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "题干命题点的对应材料在图 1，即 2015～2021 年我国公共充电桩数量分别为 5.7 万台、15 万台、21.4 万台、30 万台、51.6 万台、80.7 万台、114.7 万台。2016～2021 年中，2016年公共充电桩数量约是 2015 年的 3 倍，其他年份公共充电桩数量与上年相比均不足 2 倍，因此 2016～2021 年我国公共充电桩数量同比增速最大的年份是 2016 年。故本题选 A。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": "ah2022-ev-chargers",
+    "sharedStimulus": {
+      "text": "近年来，我国新能源汽车销量及保有量快速提升，充电基础设施布局也日渐完善。2021 年新能源汽车销量 352.1 万辆，同比增长 157.51%；截止 2021 年，我国新能源汽车保有量达 784 万辆，同比增长 59.25%。图1：2015～2021 年我国公共充电桩数量（单位：万台）。图2：2021 年全国部分省级行政区域公共充电桩数量 TOP10（单位：台）。",
+      "imageUrls": [
+        "./public/assets/question-bank/anhui-2022-chargers-2015-2021.jpg",
+        "./public/assets/question-bank/anhui-2022-chargers-province-top10.jpg"
+      ]
+    },
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q102",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:averages-multiples",
+    "knowledgePointIds": [
+      "data-analysis:relative-comparison"
+    ],
+    "originalQuestionNo": 102,
+    "sectionOrder": 5,
+    "stem": "2021 年我国新能源汽车保有量与公共充电桩数量配比约为（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "3.1:1"
+      },
+      {
+        "id": "B",
+        "text": "4.2:1"
+      },
+      {
+        "id": "C",
+        "text": "6.8:1"
+      },
+      {
+        "id": "D",
+        "text": "7.7:1"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "题干命题点的对应材料在文字材料、图 1，即截止 2021 年，我国新能源汽车保有量达 784 万辆，公共充电桩数量 114.7 万台。第二步：根据已知条件解题。2021 年我国新能源汽车保有量与公共充电桩数量配比为 784:114.7，114.7×6=688.2＜784，114.7×7=802.9＞784，因此比值在 6 与 7 之间，只有 C 项符合。故本题选 C。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": "ah2022-ev-chargers",
+    "sharedStimulus": {
+      "text": "近年来，我国新能源汽车销量及保有量快速提升，充电基础设施布局也日渐完善。2021 年新能源汽车销量 352.1 万辆，同比增长 157.51%；截止 2021 年，我国新能源汽车保有量达 784 万辆，同比增长 59.25%。图1：2015～2021 年我国公共充电桩数量（单位：万台）。图2：2021 年全国部分省级行政区域公共充电桩数量 TOP10（单位：台）。",
+      "imageUrls": [
+        "./public/assets/question-bank/anhui-2022-chargers-2015-2021.jpg",
+        "./public/assets/question-bank/anhui-2022-chargers-province-top10.jpg"
+      ]
+    },
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q103",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:growth",
+    "knowledgePointIds": [
+      "data-analysis:growth-amount"
+    ],
+    "originalQuestionNo": 103,
+    "sectionOrder": 5,
+    "stem": "2016～2021 年我国公共充电桩数量年均增长量约为（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "15.57 万台"
+      },
+      {
+        "id": "B",
+        "text": "17.35 万台"
+      },
+      {
+        "id": "C",
+        "text": "18.17 万台"
+      },
+      {
+        "id": "D",
+        "text": "19.94 万台"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "题干命题点的对应材料在图 1，即 2016 年我国公共充电桩数量为 15 万台，2021 年为 114.7 万台。2016～2021 年我国公共充电桩数量年均增长量为（114.7−15）÷5=99.7÷5≈20 万台，D 项与之最接近。故本题选 D。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": "ah2022-ev-chargers",
+    "sharedStimulus": {
+      "text": "近年来，我国新能源汽车销量及保有量快速提升，充电基础设施布局也日渐完善。2021 年新能源汽车销量 352.1 万辆，同比增长 157.51%；截止 2021 年，我国新能源汽车保有量达 784 万辆，同比增长 59.25%。图1：2015～2021 年我国公共充电桩数量（单位：万台）。图2：2021 年全国部分省级行政区域公共充电桩数量 TOP10（单位：台）。",
+      "imageUrls": [
+        "./public/assets/question-bank/anhui-2022-chargers-2015-2021.jpg",
+        "./public/assets/question-bank/anhui-2022-chargers-province-top10.jpg"
+      ]
+    },
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q104",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:growth",
+    "knowledgePointIds": [
+      "data-analysis:growth-rate"
+    ],
+    "originalQuestionNo": 104,
+    "sectionOrder": 5,
+    "stem": "2016～2021 年我国公共充电桩数量同比增速未超过 50%的年份有（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "1 个"
+      },
+      {
+        "id": "B",
+        "text": "2 个"
+      },
+      {
+        "id": "C",
+        "text": "3 个"
+      },
+      {
+        "id": "D",
+        "text": "4 个"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "题干命题点的对应材料在图 1，即 2015～2021 年我国公共充电桩数量分别为 5.7 万台、15 万台、21.4 万台、30 万台、51.6 万台、80.7 万台、114.7 万台。同比增长率=（现期量−基期量）÷基期量×100%。2016、2017、2018、2019、2020、2021 年同比增速分别约为 163%、43%、40%、72%、56%、42%。因此，未超过 50%的年份有 2017 年、2018 年、2021 年，共 3 个。故本题选 C。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": "ah2022-ev-chargers",
+    "sharedStimulus": {
+      "text": "近年来，我国新能源汽车销量及保有量快速提升，充电基础设施布局也日渐完善。2021 年新能源汽车销量 352.1 万辆，同比增长 157.51%；截止 2021 年，我国新能源汽车保有量达 784 万辆，同比增长 59.25%。图1：2015～2021 年我国公共充电桩数量（单位：万台）。图2：2021 年全国部分省级行政区域公共充电桩数量 TOP10（单位：台）。",
+      "imageUrls": [
+        "./public/assets/question-bank/anhui-2022-chargers-2015-2021.jpg",
+        "./public/assets/question-bank/anhui-2022-chargers-province-top10.jpg"
+      ]
+    },
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q105",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:comprehensive-analysis",
+    "knowledgePointIds": [
+      "data-analysis:ranking"
+    ],
+    "originalQuestionNo": 105,
+    "sectionOrder": 5,
+    "stem": "下列选项能够从上述资料中推出的是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "2022 年我国公共充电桩数量超过 180 万台"
+      },
+      {
+        "id": "B",
+        "text": "2021 年我国公共充电桩数量超过 5 万台的省级行政区域有 7 个"
+      },
+      {
+        "id": "C",
+        "text": "2016～2021 年我国公共充电桩数量同比增速最小的年份是 2017 年"
+      },
+      {
+        "id": "D",
+        "text": "2021 年我国省级行政区域公共充电桩数量前 5 名之和占全国总数的比重约为 48.9%"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "本题考查综合分析。A 项错误：根据图 1 可知，2021 年我国公共充电桩数量为 114.7 万台，并未提到有关 2022 年的数据，排除。B 项错误：根据图 2 可知，2021 年我国公共充电桩数量超过 5 万台的省级行政区域有广东省、上海市、江苏省、北京市、浙江省、山东省、湖北省、安徽省，共 8 个，排除。C 项错误：根据本材料第 4 小题可知，2016～2021 年我国公共充电桩数量同比6 .4 8 .6增速未超过 50%的年份有 2017 年、2018 年、2021 年，2017 年增速为 ×100%≈43%，2018 年为15 21.4×100%≈40%，2021 年为 ×100%≈42%，最小的年份是 2018 年，排除。D 项正确：根据图 2 可知，80.72021 年我国省级行政区域公共充电桩数量前 5 名之和为 181846+103249+97265+96840+82041=561241 台，561241 561占全国总数的比重为 ×100%≈ ×100%≈48.9%，当选。故本题选 D。1147000 1147",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": "ah2022-ev-chargers",
+    "sharedStimulus": {
+      "text": "近年来，我国新能源汽车销量及保有量快速提升，充电基础设施布局也日渐完善。2021 年新能源汽车销量 352.1 万辆，同比增长 157.51%；截止 2021 年，我国新能源汽车保有量达 784 万辆，同比增长 59.25%。图1：2015～2021 年我国公共充电桩数量（单位：万台）。图2：2021 年全国部分省级行政区域公共充电桩数量 TOP10（单位：台）。",
+      "imageUrls": [
+        "./public/assets/question-bank/anhui-2022-chargers-2015-2021.jpg",
+        "./public/assets/question-bank/anhui-2022-chargers-province-top10.jpg"
+      ]
+    },
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q106",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:comprehensive-analysis",
+    "knowledgePointIds": [
+      "data-analysis:mixed-indicators"
+    ],
+    "originalQuestionNo": 106,
+    "sectionOrder": 5,
+    "stem": "2019 年，职工医保参保人数共（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "30322 万人"
+      },
+      {
+        "id": "B",
+        "text": "31681 万人"
+      },
+      {
+        "id": "C",
+        "text": "32924 万人"
+      },
+      {
+        "id": "D",
+        "text": "34455 万人"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "题干命题点的对应材料在柱状图，即 2019 年在职工医保参保人数为 24224万人，退休职工参保人数为 8700 万人。2019 年，职工医保参保人数共 24224+8700=32924 万人。故本题选 C。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": "ah2022-medical-insurance",
+    "sharedStimulus": {
+      "text": "2012～2020 年职工医保参保人员结构（单位：万人）。注：在职退休比指的是在职职工参保人数与退休职工参保人数之比。2012～2020 年居民医保基金收支情况（单位：亿元）。",
+      "imageUrls": [
+        "./public/assets/question-bank/anhui-2022-employee-insurance-chart.jpg",
+        "./public/assets/question-bank/anhui-2022-resident-insurance-table.png"
+      ]
+    },
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q107",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:averages-multiples",
+    "knowledgePointIds": [
+      "data-analysis:relative-comparison"
+    ],
+    "originalQuestionNo": 107,
+    "sectionOrder": 5,
+    "stem": "2012～2020 年间，职工医保在职退休比最接近 3 的是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "2020 年"
+      },
+      {
+        "id": "B",
+        "text": "2019 年"
+      },
+      {
+        "id": "C",
+        "text": "2013 年"
+      },
+      {
+        "id": "D",
+        "text": "2012 年"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "题干命题点的对应材料在柱状图、折线图，即 2012 年、2013 年职工医保在职参保人员分别为 19861 万人、20501 万人，退休参保人员分别为 6624 万人、6942 万人，2019 年与 202019861年明显差距较大。根据折线图可知，2012 年、2013 年的在职退休比更接近 3，2012 年在职退休比为662419872 20501 20826 19861 20501＜ =3，2013 年在职退休比为 ＜ =3，结合折线图可知， 相比更接近 3，6624 6942 6942 6624 6942因此 2012 年的在职退休比更接近 3。故本题选 D。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": "ah2022-medical-insurance",
+    "sharedStimulus": {
+      "text": "2012～2020 年职工医保参保人员结构（单位：万人）。注：在职退休比指的是在职职工参保人数与退休职工参保人数之比。2012～2020 年居民医保基金收支情况（单位：亿元）。",
+      "imageUrls": [
+        "./public/assets/question-bank/anhui-2022-employee-insurance-chart.jpg",
+        "./public/assets/question-bank/anhui-2022-resident-insurance-table.png"
+      ]
+    },
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q108",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:growth",
+    "knowledgePointIds": [
+      "data-analysis:base-period"
+    ],
+    "originalQuestionNo": 108,
+    "sectionOrder": 5,
+    "stem": "下列年份中，在职职工参保人数同比增速大小排序错误的是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "2017 年＞2016 年"
+      },
+      {
+        "id": "B",
+        "text": "2018 年＞2017 年"
+      },
+      {
+        "id": "C",
+        "text": "2019 年＞2018 年"
+      },
+      {
+        "id": "D",
+        "text": "2020 年＞2019 年"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "题干命题点的对应材料在柱状图，即 2015～2020 年在职职工参保人数分别为 21362 万人、21720 万人、22288 万人、23308 万人、24224 万人、25429 万人。2016～2020 年同比增长率分别为 358/21362、568/21720、1020/22288、916/23308、1205/24224。与 2018 年和 2019 年相比，2018 年的分子 1020 大于 916，分母 22288 小于 23308，因此 1020/22288 大于 916/23308，即 2018 年在职职工参保人数同比增速大于 2019 年，C 项错误。故本题选 C。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": "ah2022-medical-insurance",
+    "sharedStimulus": {
+      "text": "2012～2020 年职工医保参保人员结构（单位：万人）。注：在职退休比指的是在职职工参保人数与退休职工参保人数之比。2012～2020 年居民医保基金收支情况（单位：亿元）。",
+      "imageUrls": [
+        "./public/assets/question-bank/anhui-2022-employee-insurance-chart.jpg",
+        "./public/assets/question-bank/anhui-2022-resident-insurance-table.png"
+      ]
+    },
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q109",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:growth",
+    "knowledgePointIds": [
+      "data-analysis:growth-rate"
+    ],
+    "originalQuestionNo": 109,
+    "sectionOrder": 5,
+    "stem": "表中（？）处应填入的数字是（ ）。",
+    "options": [
+      {
+        "id": "A",
+        "text": "7822"
+      },
+      {
+        "id": "B",
+        "text": "8559"
+      },
+      {
+        "id": "C",
+        "text": "8577"
+      },
+      {
+        "id": "D",
+        "text": "8898"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "题干命题点的对应材料在表格，即 2019 年基金支出为 8191 亿元，基金结基金支出 8191余率为 4.5%。根据公式基金收入= 可知，表中（？）处应填入的是 2019 年的基金收入为1 - 结余率 1 - 4.5%≈8577 亿元。故本题选 C。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": "ah2022-medical-insurance",
+    "sharedStimulus": {
+      "text": "2012～2020 年职工医保参保人员结构（单位：万人）。注：在职退休比指的是在职职工参保人数与退休职工参保人数之比。2012～2020 年居民医保基金收支情况（单位：亿元）。",
+      "imageUrls": [
+        "./public/assets/question-bank/anhui-2022-employee-insurance-chart.jpg",
+        "./public/assets/question-bank/anhui-2022-resident-insurance-table.png"
+      ]
+    },
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
+  },
+  {
+    "id": "ah2022-q110",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:comprehensive-analysis",
+    "knowledgePointIds": [
+      "data-analysis:mixed-indicators"
+    ],
+    "originalQuestionNo": 110,
+    "sectionOrder": 5,
+    "stem": "下列选项能够从上述资料中推出的有（ ）。 ①2017 年职工医保在职退休比高于 2016 年 ②2020 年居民医保参保人数比上年略有增加 ③2012～2020 年间，职工医保参保人数总是增加 ④2012～2020 年间，居民医保基金支出增长金额最快的是 2017 年",
+    "options": [
+      {
+        "id": "A",
+        "text": "1 项"
+      },
+      {
+        "id": "B",
+        "text": "2 项"
+      },
+      {
+        "id": "C",
+        "text": "3 项"
+      },
+      {
+        "id": "D",
+        "text": "4 项"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "本题考查综合分析。①错误：2017 年职工医保在职退休比为 22288/8034≈2.77，2016 年为 21720/7812≈2.78，因此 2017 年比 2016 年低，排除。②错误：材料未给出 2020 年居民医保参保人数，排除。③正确：2012～2020 年间，在职职工医保参保人数和退休职工参保人数都增加，因此职工医保参保人数总是增加，当选。④正确：2017 年居民医保基金支出增长金额为 4955−2480=2475 亿元，高于其他年份的年度增量，因此增长金额最大的是 2017 年，当选。综上，③④正确，共 2 项。故本题选 B。",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "anhui-2022-zhanhong-qae",
+    "sourceTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "sourceNote": "题面、选项及解析依据同一份原卷整理；图形和资料图表取自原卷。",
+    "sourceUrl": null,
+    "region": "anhui",
+    "examYear": 2022,
+    "paperId": "anhui-2022-zhanhong-qae",
+    "paperTitle": "2022年安徽省公务员录用考试《行测》题（展鸿整理版）",
+    "answerSourceUrl": "https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf",
+    "sharedStimulusId": "ah2022-medical-insurance",
+    "sharedStimulus": {
+      "text": "2012～2020 年职工医保参保人员结构（单位：万人）。注：在职退休比指的是在职职工参保人数与退休职工参保人数之比。2012～2020 年居民医保基金收支情况（单位：亿元）。",
+      "imageUrls": [
+        "./public/assets/question-bank/anhui-2022-employee-insurance-chart.jpg",
+        "./public/assets/question-bank/anhui-2022-resident-insurance-table.png"
+      ]
+    },
+    "stemImageUrls": [],
+    "visualOptionsInStem": false,
+    "verificationStatus": "verified",
+    "copyrightStatus": "licensed",
+    "publishStatus": "published",
+    "presentationMode": "original"
   }
 ];
