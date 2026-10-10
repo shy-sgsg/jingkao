@@ -133,6 +133,13 @@ export const GENERAL_KNOWLEDGE_SOURCES = [
     publishStatus: 'published', copyrightStatus: '题意与选项摘要改写并注明回忆来源', note: '仅发布题面资源完整、答案可核的分项；Q12依赖未取得的路线图，继续暂缓。公开答案页用于核对答案，不代表官方命题文件。',
   },
   {
+    id: 'hubei-2024-recall-candidate', sourceType: 'recalled', title: '2024年湖北省公务员录用考试《行测》题（考生回忆版）', organization: '爱真题 / 湖北网 / ERRRC 公开题解', examYear: 2024, region: '湖北',
+    url: 'https://www.aipta.com/article/9625.html',
+    answerUrl: 'https://www.163hubei.com/ueditor/php/upload/file/20240318/1710751920689656.pdf', verificationStatus: 'verified',
+    publishStatus: 'published', copyrightStatus: '用户确认已获得转载授权',
+    note: '题面来自公开考生回忆版；答案按湖北网公开参考答案、解析按公开题解核对。题面与答案解析齐全且无未解决冲突的82题已接入；含图题及答案冲突项留档待核。',
+  },
+  {
     id: 'henan-2026-recall', sourceType: 'recalled', title: '2026年河南省公务员录用考试《行测》题（网友回忆版）', organization: '公开真题库 / 考生回忆资料', examYear: 2026, region: '河南',
     url: 'https://gwy.gkzhenti.cn/paper/1775360735848', answerUrl: 'https://gwy.gkzhenti.cn/answer/1775360735848', verificationStatus: 'verified',
     publishStatus: 'published', copyrightStatus: '用户确认已获得转载授权', note: '仅将题面、答案和解析完整的题目接入对应模块；河南常识第91–105题已核对，整卷及缺项题暂不开放。',
