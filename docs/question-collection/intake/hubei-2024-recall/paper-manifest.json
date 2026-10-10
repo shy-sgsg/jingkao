@@ -1,0 +1,56 @@
+{
+  "paperId": "hubei-2024-recall-candidate",
+  "title": "2024年湖北省公务员录用考试《行测》题（考生回忆版）",
+  "region": "湖北",
+  "examYear": 2024,
+  "variant": "考生回忆版",
+  "questionNumbers": {
+    "listed": [
+      1,
+      125
+    ],
+    "questionTextCount": 125,
+    "answerKeyEntries": 125,
+    "itemLevelQuestionAnswerCrossCheck": false
+  },
+  "moduleRanges": {
+    "common_knowledge": [
+      1,
+      20
+    ],
+    "verbal": [
+      21,
+      55
+    ],
+    "quantitative": [
+      56,
+      70
+    ],
+    "reasoning": [
+      71,
+      105
+    ],
+    "data_analysis": [
+      106,
+      125
+    ]
+  },
+  "sources": {
+    "questionPage": "https://www.aipta.com/article/9625.html",
+    "questionAndAnswerPdf": "https://www.163hubei.com/ueditor/php/upload/file/20240318/1710751920689656.pdf",
+    "answerExplanationFileListing": "https://down.kaosheng.com/202503/08/4285.html"
+  },
+  "archiveFiles": [
+    "hubei-2024-recall-with-answers.pdf",
+    "source-text-extraction.txt"
+  ],
+  "answerExplanationStatus": "Reference answer key is present in the archived PDF; separate answer/explanation PDF is listed publicly but was not retrieved.",
+  "assetStatus": "Charts and shared materials have not been audited and mirrored per question.",
+  "republicationAuthorization": "User confirmed authorization for the project; individual source files still require item-level verification before release.",
+  "releaseStatus": "pending",
+  "holdReasons": [
+    "Match the 125 answer-key entries to the exact archived question version.",
+    "Retrieve and verify item explanations.",
+    "Audit and mirror all charts and shared materials."
+  ]
+}
