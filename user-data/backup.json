@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "backupId": "6968ebc3-fd8c-4a7a-8d1c-49919ca0967d",
-  "updatedAt": "2026-10-09T15:46:03.118Z",
+  "updatedAt": "2026-10-10T04:09:22.684Z",
   "data": {
     "profile": {
       "major": "公共管理",
@@ -136,6 +136,333 @@
             "favoriteQuestionIds": []
           },
           "completedAt": null
+        },
+        {
+          "id": "science_mv1tmhxe_hshb3a",
+          "mode": "practice",
+          "status": "active",
+          "planTaskId": null,
+          "questionIds": [
+            "sh-2020-outline-bicycle-friction"
+          ],
+          "currentIndex": 0,
+          "correctCount": 0,
+          "reviewingAnswerId": null,
+          "draftAnswers": {},
+          "startedAt": "2026-10-10T03:14:47.234Z",
+          "deadline": null,
+          "durationSeconds": null,
+          "filters": {
+            "onlyUnanswered": false,
+            "onlyMistakes": true,
+            "onlyFavorites": false,
+            "excludeQuestionIds": [],
+            "answeredQuestionIds": [
+              "beijing-2026-outline-dragonfly",
+              "beijing-2026-outline-dragonfly",
+              "sh-2020-outline-bicycle-friction",
+              "sh-2026-outline-hall-effect",
+              "gd-2025-outline-grain-storage",
+              "gd-2026-outline-slope-forces",
+              "gd-2021-outline-ladder-climber",
+              "gd-2019-township-wind-energy",
+              "gd-2019-township-ear-pressure",
+              "gd-2019-township-hammer-lever",
+              "gd-2021-township-steelmaking",
+              "gd-2021-township-cooling-rate",
+              "gd-2023-township-karting-friction",
+              "gd-2023-township-sunlit-city",
+              "gd-2020-township-seed-storage",
+              "gd-2020-township-snowline",
+              "beijing-2026-outline-dragonfly",
+              "sh-2020-outline-bicycle-friction"
+            ],
+            "mistakeQuestionIds": [
+              "sh-2020-outline-bicycle-friction"
+            ],
+            "favoriteQuestionIds": []
+          }
+        },
+        {
+          "id": "science_mv1tub6p_jlubys",
+          "mode": "exam",
+          "status": "completed",
+          "planTaskId": null,
+          "questionIds": [
+            "gd-2023-township-greenhouse-yield",
+            "science-chemistry-007",
+            "science-physics-005",
+            "sh-2014-a-wetting-adhesion",
+            "science-chemistry-009",
+            "science-geography-025",
+            "science-geography-029",
+            "science-biology-023",
+            "science-chemistry-032",
+            "gd-2020-township-seed-storage",
+            "science-chemistry-037",
+            "science-chemistry-003",
+            "sh-2026-click-chemistry",
+            "science-biology-005",
+            "science-biology-026"
+          ],
+          "currentIndex": 14,
+          "correctCount": 14,
+          "reviewingAnswerId": null,
+          "draftAnswers": {
+            "gd-2023-township-greenhouse-yield": {
+              "optionId": "B",
+              "selectedAt": "2026-10-10T03:21:11.444Z"
+            },
+            "science-chemistry-007": {
+              "optionId": "B",
+              "selectedAt": "2026-10-10T03:21:43.578Z"
+            },
+            "science-physics-005": {
+              "optionId": "A",
+              "selectedAt": "2026-10-10T03:21:55.175Z"
+            },
+            "sh-2014-a-wetting-adhesion": {
+              "optionId": "D",
+              "selectedAt": "2026-10-10T03:22:34.168Z"
+            },
+            "science-chemistry-009": {
+              "optionId": "A",
+              "selectedAt": "2026-10-10T03:22:45.990Z"
+            },
+            "science-geography-025": {
+              "optionId": "A",
+              "selectedAt": "2026-10-10T03:22:57.558Z"
+            },
+            "science-geography-029": {
+              "optionId": "A",
+              "selectedAt": "2026-10-10T03:23:00.893Z"
+            },
+            "science-biology-023": {
+              "optionId": "A",
+              "selectedAt": "2026-10-10T03:23:05.932Z"
+            },
+            "science-chemistry-032": {
+              "optionId": "B",
+              "selectedAt": "2026-10-10T03:23:09.762Z"
+            },
+            "gd-2020-township-seed-storage": {
+              "optionId": "B",
+              "selectedAt": "2026-10-10T03:23:14.418Z"
+            },
+            "science-chemistry-037": {
+              "optionId": "A",
+              "selectedAt": "2026-10-10T03:23:24.344Z"
+            },
+            "science-chemistry-003": {
+              "optionId": "C",
+              "selectedAt": "2026-10-10T03:23:30.350Z"
+            },
+            "sh-2026-click-chemistry": {
+              "optionId": "C",
+              "selectedAt": "2026-10-10T03:24:04.919Z"
+            },
+            "science-biology-005": {
+              "optionId": "A",
+              "selectedAt": "2026-10-10T03:24:14.627Z"
+            },
+            "science-biology-026": {
+              "optionId": "A",
+              "selectedAt": "2026-10-10T03:24:23.870Z"
+            }
+          },
+          "startedAt": "2026-10-10T03:20:51.745Z",
+          "deadline": "2026-10-10T03:40:51.745Z",
+          "durationSeconds": 1200,
+          "filters": {
+            "onlyUnanswered": false,
+            "onlyMistakes": false,
+            "onlyFavorites": false,
+            "excludeQuestionIds": [],
+            "answeredQuestionIds": [
+              "beijing-2026-outline-dragonfly",
+              "beijing-2026-outline-dragonfly",
+              "sh-2020-outline-bicycle-friction",
+              "sh-2026-outline-hall-effect",
+              "gd-2025-outline-grain-storage",
+              "gd-2026-outline-slope-forces",
+              "gd-2021-outline-ladder-climber",
+              "gd-2019-township-wind-energy",
+              "gd-2019-township-ear-pressure",
+              "gd-2019-township-hammer-lever",
+              "gd-2021-township-steelmaking",
+              "gd-2021-township-cooling-rate",
+              "gd-2023-township-karting-friction",
+              "gd-2023-township-sunlit-city",
+              "gd-2020-township-seed-storage",
+              "gd-2020-township-snowline",
+              "beijing-2026-outline-dragonfly",
+              "sh-2020-outline-bicycle-friction"
+            ],
+            "mistakeQuestionIds": [
+              "sh-2020-outline-bicycle-friction"
+            ],
+            "favoriteQuestionIds": []
+          },
+          "answeredCount": 15,
+          "unansweredCount": 0,
+          "scoreRate": 0.9333333333333333,
+          "answeredAccuracy": 0.9333333333333333,
+          "submittedAt": "2026-10-10T03:24:25.700Z",
+          "completedAt": "2026-10-10T03:24:25.700Z"
+        },
+        {
+          "id": "science_mv1tzb73_w3r9mu",
+          "mode": "practice",
+          "status": "active",
+          "planTaskId": null,
+          "questionIds": [
+            "beijing-2026-outline-dragonfly",
+            "sh-2020-outline-bicycle-friction",
+            "sh-2026-outline-hall-effect",
+            "gd-2025-outline-grain-storage",
+            "gd-2026-outline-slope-forces",
+            "gd-2021-outline-ladder-climber",
+            "gd-2019-township-wind-energy",
+            "gd-2019-township-ear-pressure",
+            "gd-2019-township-hammer-lever",
+            "gd-2021-township-steelmaking",
+            "gd-2021-township-cooling-rate",
+            "gd-2023-township-karting-friction",
+            "gd-2023-township-sunlit-city",
+            "gd-2020-township-seed-storage",
+            "gd-2020-township-snowline"
+          ],
+          "currentIndex": 0,
+          "correctCount": 0,
+          "reviewingAnswerId": "answer_science_mv1tzb73_w3r9mu_1",
+          "draftAnswers": {},
+          "startedAt": "2026-10-10T03:24:45.039Z",
+          "deadline": null,
+          "durationSeconds": null,
+          "filters": {
+            "onlyUnanswered": false,
+            "onlyMistakes": false,
+            "onlyFavorites": false,
+            "excludeQuestionIds": [],
+            "answeredQuestionIds": [
+              "beijing-2026-outline-dragonfly",
+              "beijing-2026-outline-dragonfly",
+              "sh-2020-outline-bicycle-friction",
+              "sh-2026-outline-hall-effect",
+              "gd-2025-outline-grain-storage",
+              "gd-2026-outline-slope-forces",
+              "gd-2021-outline-ladder-climber",
+              "gd-2019-township-wind-energy",
+              "gd-2019-township-ear-pressure",
+              "gd-2019-township-hammer-lever",
+              "gd-2021-township-steelmaking",
+              "gd-2021-township-cooling-rate",
+              "gd-2023-township-karting-friction",
+              "gd-2023-township-sunlit-city",
+              "gd-2020-township-seed-storage",
+              "gd-2020-township-snowline",
+              "beijing-2026-outline-dragonfly",
+              "sh-2020-outline-bicycle-friction",
+              "gd-2023-township-greenhouse-yield",
+              "science-chemistry-007",
+              "science-physics-005",
+              "sh-2014-a-wetting-adhesion",
+              "science-chemistry-009",
+              "science-geography-025",
+              "science-geography-029",
+              "science-biology-023",
+              "science-chemistry-032",
+              "gd-2020-township-seed-storage",
+              "science-chemistry-037",
+              "science-chemistry-003",
+              "sh-2026-click-chemistry",
+              "science-biology-005",
+              "science-biology-026"
+            ],
+            "mistakeQuestionIds": [
+              "sh-2020-outline-bicycle-friction",
+              "sh-2014-a-wetting-adhesion"
+            ],
+            "favoriteQuestionIds": []
+          }
+        },
+        {
+          "id": "science_mv1tzn40_moxklr",
+          "mode": "exam",
+          "status": "active",
+          "planTaskId": null,
+          "questionIds": [
+            "science-physics-030",
+            "science-chemistry-010",
+            "science-geography-012",
+            "zj-2026-c-hair-follicle-stem-cells",
+            "science-chemistry-030",
+            "sh-2014-a-wetting-adhesion",
+            "science-biology-029",
+            "science-biology-030",
+            "science-chemistry-001",
+            "gd-2022-recall-pendulum-energy",
+            "science-physics-014",
+            "mock-zhonggong-2027-rocks-relative-motion",
+            "science-geography-014",
+            "science-geography-007",
+            "gd-2023-township-sucrose-crystallization"
+          ],
+          "currentIndex": 0,
+          "correctCount": 0,
+          "reviewingAnswerId": null,
+          "draftAnswers": {},
+          "startedAt": "2026-10-10T03:25:00.480Z",
+          "deadline": "2026-10-10T03:45:00.480Z",
+          "durationSeconds": 1200,
+          "filters": {
+            "onlyUnanswered": false,
+            "onlyMistakes": false,
+            "onlyFavorites": false,
+            "excludeQuestionIds": [],
+            "answeredQuestionIds": [
+              "beijing-2026-outline-dragonfly",
+              "beijing-2026-outline-dragonfly",
+              "sh-2020-outline-bicycle-friction",
+              "sh-2026-outline-hall-effect",
+              "gd-2025-outline-grain-storage",
+              "gd-2026-outline-slope-forces",
+              "gd-2021-outline-ladder-climber",
+              "gd-2019-township-wind-energy",
+              "gd-2019-township-ear-pressure",
+              "gd-2019-township-hammer-lever",
+              "gd-2021-township-steelmaking",
+              "gd-2021-township-cooling-rate",
+              "gd-2023-township-karting-friction",
+              "gd-2023-township-sunlit-city",
+              "gd-2020-township-seed-storage",
+              "gd-2020-township-snowline",
+              "beijing-2026-outline-dragonfly",
+              "sh-2020-outline-bicycle-friction",
+              "gd-2023-township-greenhouse-yield",
+              "science-chemistry-007",
+              "science-physics-005",
+              "sh-2014-a-wetting-adhesion",
+              "science-chemistry-009",
+              "science-geography-025",
+              "science-geography-029",
+              "science-biology-023",
+              "science-chemistry-032",
+              "gd-2020-township-seed-storage",
+              "science-chemistry-037",
+              "science-chemistry-003",
+              "sh-2026-click-chemistry",
+              "science-biology-005",
+              "science-biology-026",
+              "beijing-2026-outline-dragonfly"
+            ],
+            "mistakeQuestionIds": [
+              "sh-2020-outline-bicycle-friction",
+              "sh-2014-a-wetting-adhesion",
+              "beijing-2026-outline-dragonfly"
+            ],
+            "favoriteQuestionIds": []
+          }
         }
       ],
       "answers": [
@@ -376,6 +703,245 @@
           "knowledgePointIds": [
             "physics:friction"
           ]
+        },
+        {
+          "id": "answer_science_mv1tub6p_jlubys_gd-2023-township-greenhouse-yield",
+          "sessionId": "science_mv1tub6p_jlubys",
+          "questionId": "gd-2023-township-greenhouse-yield",
+          "selectedOptionId": "B",
+          "correctAnswer": "B",
+          "isCorrect": true,
+          "mode": "exam",
+          "answeredAt": "2026-10-10T03:21:11.444Z",
+          "submittedAt": "2026-10-10T03:24:25.700Z",
+          "questionIndex": 0,
+          "knowledgePointIds": [
+            "biology:photosynthesis",
+            "biology:respiration"
+          ]
+        },
+        {
+          "id": "answer_science_mv1tub6p_jlubys_science-chemistry-007",
+          "sessionId": "science_mv1tub6p_jlubys",
+          "questionId": "science-chemistry-007",
+          "selectedOptionId": "B",
+          "correctAnswer": "B",
+          "isCorrect": true,
+          "mode": "exam",
+          "answeredAt": "2026-10-10T03:21:43.578Z",
+          "submittedAt": "2026-10-10T03:24:25.700Z",
+          "questionIndex": 1,
+          "knowledgePointIds": [
+            "chemistry:acids-bases-salts"
+          ]
+        },
+        {
+          "id": "answer_science_mv1tub6p_jlubys_science-physics-005",
+          "sessionId": "science_mv1tub6p_jlubys",
+          "questionId": "science-physics-005",
+          "selectedOptionId": "A",
+          "correctAnswer": "A",
+          "isCorrect": true,
+          "mode": "exam",
+          "answeredAt": "2026-10-10T03:21:55.175Z",
+          "submittedAt": "2026-10-10T03:24:25.700Z",
+          "questionIndex": 2,
+          "knowledgePointIds": [
+            "physics:acceleration"
+          ]
+        },
+        {
+          "id": "answer_science_mv1tub6p_jlubys_sh-2014-a-wetting-adhesion",
+          "sessionId": "science_mv1tub6p_jlubys",
+          "questionId": "sh-2014-a-wetting-adhesion",
+          "selectedOptionId": "D",
+          "correctAnswer": "C",
+          "isCorrect": false,
+          "mode": "exam",
+          "answeredAt": "2026-10-10T03:22:34.168Z",
+          "submittedAt": "2026-10-10T03:24:25.700Z",
+          "questionIndex": 3,
+          "knowledgePointIds": [
+            "physics:wetting-adhesion"
+          ]
+        },
+        {
+          "id": "answer_science_mv1tub6p_jlubys_science-chemistry-009",
+          "sessionId": "science_mv1tub6p_jlubys",
+          "questionId": "science-chemistry-009",
+          "selectedOptionId": "A",
+          "correctAnswer": "A",
+          "isCorrect": true,
+          "mode": "exam",
+          "answeredAt": "2026-10-10T03:22:45.990Z",
+          "submittedAt": "2026-10-10T03:24:25.700Z",
+          "questionIndex": 4,
+          "knowledgePointIds": [
+            "chemistry:neutralization"
+          ]
+        },
+        {
+          "id": "answer_science_mv1tub6p_jlubys_science-geography-025",
+          "sessionId": "science_mv1tub6p_jlubys",
+          "questionId": "science-geography-025",
+          "selectedOptionId": "A",
+          "correctAnswer": "A",
+          "isCorrect": true,
+          "mode": "exam",
+          "answeredAt": "2026-10-10T03:22:57.558Z",
+          "submittedAt": "2026-10-10T03:24:25.700Z",
+          "questionIndex": 5,
+          "knowledgePointIds": [
+            "geography:terrain-reading"
+          ]
+        },
+        {
+          "id": "answer_science_mv1tub6p_jlubys_science-geography-029",
+          "sessionId": "science_mv1tub6p_jlubys",
+          "questionId": "science-geography-029",
+          "selectedOptionId": "A",
+          "correctAnswer": "A",
+          "isCorrect": true,
+          "mode": "exam",
+          "answeredAt": "2026-10-10T03:23:00.893Z",
+          "submittedAt": "2026-10-10T03:24:25.700Z",
+          "questionIndex": 6,
+          "knowledgePointIds": [
+            "geography:tides"
+          ]
+        },
+        {
+          "id": "answer_science_mv1tub6p_jlubys_science-biology-023",
+          "sessionId": "science_mv1tub6p_jlubys",
+          "questionId": "science-biology-023",
+          "selectedOptionId": "A",
+          "correctAnswer": "A",
+          "isCorrect": true,
+          "mode": "exam",
+          "answeredAt": "2026-10-10T03:23:05.932Z",
+          "submittedAt": "2026-10-10T03:24:25.700Z",
+          "questionIndex": 7,
+          "knowledgePointIds": [
+            "biology:nervous-regulation"
+          ]
+        },
+        {
+          "id": "answer_science_mv1tub6p_jlubys_science-chemistry-032",
+          "sessionId": "science_mv1tub6p_jlubys",
+          "questionId": "science-chemistry-032",
+          "selectedOptionId": "B",
+          "correctAnswer": "B",
+          "isCorrect": true,
+          "mode": "exam",
+          "answeredAt": "2026-10-10T03:23:09.762Z",
+          "submittedAt": "2026-10-10T03:24:25.700Z",
+          "questionIndex": 8,
+          "knowledgePointIds": [
+            "chemistry:experiments"
+          ]
+        },
+        {
+          "id": "answer_science_mv1tub6p_jlubys_gd-2020-township-seed-storage",
+          "sessionId": "science_mv1tub6p_jlubys",
+          "questionId": "gd-2020-township-seed-storage",
+          "selectedOptionId": "B",
+          "correctAnswer": "B",
+          "isCorrect": true,
+          "mode": "exam",
+          "answeredAt": "2026-10-10T03:23:14.418Z",
+          "submittedAt": "2026-10-10T03:24:25.700Z",
+          "questionIndex": 9,
+          "knowledgePointIds": [
+            "biology:plant-growth"
+          ]
+        },
+        {
+          "id": "answer_science_mv1tub6p_jlubys_science-chemistry-037",
+          "sessionId": "science_mv1tub6p_jlubys",
+          "questionId": "science-chemistry-037",
+          "selectedOptionId": "A",
+          "correctAnswer": "A",
+          "isCorrect": true,
+          "mode": "exam",
+          "answeredAt": "2026-10-10T03:23:24.344Z",
+          "submittedAt": "2026-10-10T03:24:25.700Z",
+          "questionIndex": 10,
+          "knowledgePointIds": [
+            "chemistry:everyday-chemistry"
+          ]
+        },
+        {
+          "id": "answer_science_mv1tub6p_jlubys_science-chemistry-003",
+          "sessionId": "science_mv1tub6p_jlubys",
+          "questionId": "science-chemistry-003",
+          "selectedOptionId": "C",
+          "correctAnswer": "C",
+          "isCorrect": true,
+          "mode": "exam",
+          "answeredAt": "2026-10-10T03:23:30.350Z",
+          "submittedAt": "2026-10-10T03:24:25.700Z",
+          "questionIndex": 11,
+          "knowledgePointIds": [
+            "chemistry:common-reactions"
+          ]
+        },
+        {
+          "id": "answer_science_mv1tub6p_jlubys_sh-2026-click-chemistry",
+          "sessionId": "science_mv1tub6p_jlubys",
+          "questionId": "sh-2026-click-chemistry",
+          "selectedOptionId": "C",
+          "correctAnswer": "C",
+          "isCorrect": true,
+          "mode": "exam",
+          "answeredAt": "2026-10-10T03:24:04.919Z",
+          "submittedAt": "2026-10-10T03:24:25.700Z",
+          "questionIndex": 12,
+          "knowledgePointIds": [
+            "chemistry:common-reactions"
+          ]
+        },
+        {
+          "id": "answer_science_mv1tub6p_jlubys_science-biology-005",
+          "sessionId": "science_mv1tub6p_jlubys",
+          "questionId": "science-biology-005",
+          "selectedOptionId": "A",
+          "correctAnswer": "A",
+          "isCorrect": true,
+          "mode": "exam",
+          "answeredAt": "2026-10-10T03:24:14.627Z",
+          "submittedAt": "2026-10-10T03:24:25.700Z",
+          "questionIndex": 13,
+          "knowledgePointIds": [
+            "biology:photosynthesis"
+          ]
+        },
+        {
+          "id": "answer_science_mv1tub6p_jlubys_science-biology-026",
+          "sessionId": "science_mv1tub6p_jlubys",
+          "questionId": "science-biology-026",
+          "selectedOptionId": "A",
+          "correctAnswer": "A",
+          "isCorrect": true,
+          "mode": "exam",
+          "answeredAt": "2026-10-10T03:24:23.870Z",
+          "submittedAt": "2026-10-10T03:24:25.700Z",
+          "questionIndex": 14,
+          "knowledgePointIds": [
+            "biology:immunity"
+          ]
+        },
+        {
+          "id": "answer_science_mv1tzb73_w3r9mu_1",
+          "sessionId": "science_mv1tzb73_w3r9mu",
+          "questionId": "beijing-2026-outline-dragonfly",
+          "selectedOptionId": "C",
+          "correctAnswer": "A",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-10-10T03:24:45.757Z",
+          "knowledgePointIds": [
+            "physics:uniform-motion"
+          ]
         }
       ],
       "mistakes": {
@@ -383,6 +949,20 @@
           "count": 1,
           "firstMissedAt": "2026-10-09T15:45:26.131Z",
           "lastMissedAt": "2026-10-09T15:45:26.131Z",
+          "lastSelectedOptionId": "C",
+          "correctAnswer": "A"
+        },
+        "sh-2014-a-wetting-adhesion": {
+          "count": 1,
+          "firstMissedAt": "2026-10-10T03:22:34.168Z",
+          "lastMissedAt": "2026-10-10T03:22:34.168Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "C"
+        },
+        "beijing-2026-outline-dragonfly": {
+          "count": 1,
+          "firstMissedAt": "2026-10-10T03:24:45.757Z",
+          "lastMissedAt": "2026-10-10T03:24:45.757Z",
           "lastSelectedOptionId": "C",
           "correctAnswer": "A"
         }
@@ -393,9 +973,171 @@
     },
     "generalKnowledgeStudy": {
       "knowledgeProgress": {},
-      "sessions": [],
-      "answers": [],
-      "mistakes": {},
+      "sessions": [
+        {
+          "id": "gk_mv1tpneh_j7clo4",
+          "mode": "practice",
+          "status": "active",
+          "planTaskId": null,
+          "questionIds": [
+            "gk-official-2026-fermentation",
+            "gk-official-2026-history",
+            "gk-official-2026-reaction",
+            "ah2026-outline-common-1",
+            "ah2026-outline-common-2",
+            "js2024a-q001",
+            "js2024a-q002",
+            "js2024a-q003",
+            "js2024a-q004",
+            "js2024a-q005",
+            "js2024a-q006",
+            "js2024a-q007",
+            "js2024a-q008",
+            "js2024a-q009",
+            "js2024a-q010"
+          ],
+          "currentIndex": 3,
+          "correctCount": 2,
+          "reviewingAnswerId": null,
+          "draftAnswers": {},
+          "startedAt": "2026-10-10T03:17:14.297Z",
+          "deadline": null,
+          "durationSeconds": null,
+          "filters": {
+            "onlyUnanswered": false,
+            "onlyMistakes": false,
+            "onlyFavorites": false,
+            "excludeQuestionIds": [],
+            "answeredQuestionIds": [],
+            "mistakeQuestionIds": [],
+            "favoriteQuestionIds": []
+          },
+          "moduleId": "general_knowledge",
+          "completedAt": null
+        },
+        {
+          "id": "gk_mv1u4jqa_ylb2iz",
+          "mode": "practice",
+          "status": "active",
+          "planTaskId": null,
+          "questionIds": [
+            "gk-official-2026-fermentation",
+            "gk-official-2026-history",
+            "gk-official-2026-reaction",
+            "ah2026-outline-common-1",
+            "ah2026-outline-common-2",
+            "js2024a-q001",
+            "js2024a-q002",
+            "js2024a-q003",
+            "js2024a-q004",
+            "js2024a-q005",
+            "js2024a-q006",
+            "js2024a-q007",
+            "js2024a-q008",
+            "js2024a-q009",
+            "js2024a-q010"
+          ],
+          "currentIndex": 0,
+          "correctCount": 1,
+          "reviewingAnswerId": "answer_gk_mv1u4jqa_ylb2iz_1",
+          "draftAnswers": {},
+          "startedAt": "2026-10-10T03:28:49.378Z",
+          "deadline": null,
+          "durationSeconds": null,
+          "filters": {
+            "onlyUnanswered": false,
+            "onlyMistakes": false,
+            "onlyFavorites": false,
+            "excludeQuestionIds": [],
+            "answeredQuestionIds": [
+              "gk-official-2026-fermentation",
+              "gk-official-2026-history",
+              "gk-official-2026-reaction"
+            ],
+            "mistakeQuestionIds": [
+              "gk-official-2026-reaction"
+            ],
+            "favoriteQuestionIds": []
+          },
+          "moduleId": "general_knowledge"
+        }
+      ],
+      "answers": [
+        {
+          "id": "answer_gk_mv1tpneh_j7clo4_1",
+          "sessionId": "gk_mv1tpneh_j7clo4",
+          "questionId": "gk-official-2026-fermentation",
+          "selectedOptionId": "A",
+          "correctAnswer": "A",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-10-10T03:17:20.144Z",
+          "knowledgePointIds": [
+            "technology:microorganisms"
+          ],
+          "moduleId": "general_knowledge",
+          "sourceType": "official_outline_example",
+          "sourceId": "gwy-2026-outline"
+        },
+        {
+          "id": "answer_gk_mv1tpneh_j7clo4_2",
+          "sessionId": "gk_mv1tpneh_j7clo4",
+          "questionId": "gk-official-2026-history",
+          "selectedOptionId": "A",
+          "correctAnswer": "A",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-10-10T03:17:39.285Z",
+          "knowledgePointIds": [
+            "history:revolutionary-period"
+          ],
+          "moduleId": "general_knowledge",
+          "sourceType": "official_outline_example",
+          "sourceId": "gwy-2026-outline"
+        },
+        {
+          "id": "answer_gk_mv1tpneh_j7clo4_3",
+          "sessionId": "gk_mv1tpneh_j7clo4",
+          "questionId": "gk-official-2026-reaction",
+          "selectedOptionId": "B",
+          "correctAnswer": "A",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-10-10T03:17:51.488Z",
+          "knowledgePointIds": [
+            "technology:reactions"
+          ],
+          "moduleId": "general_knowledge",
+          "sourceType": "official_outline_example",
+          "sourceId": "gwy-2026-outline"
+        },
+        {
+          "id": "answer_gk_mv1u4jqa_ylb2iz_1",
+          "sessionId": "gk_mv1u4jqa_ylb2iz",
+          "questionId": "gk-official-2026-fermentation",
+          "selectedOptionId": "A",
+          "correctAnswer": "A",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-10-10T03:28:56.278Z",
+          "knowledgePointIds": [
+            "technology:microorganisms"
+          ],
+          "moduleId": "general_knowledge",
+          "sourceType": "official_outline_example",
+          "sourceId": "gwy-2026-outline"
+        }
+      ],
+      "mistakes": {
+        "gk-official-2026-reaction": {
+          "count": 1,
+          "firstMissedAt": "2026-10-10T03:17:51.488Z",
+          "lastMissedAt": "2026-10-10T03:17:51.488Z",
+          "lastSelectedOptionId": "B",
+          "correctAnswer": "A",
+          "moduleId": "general_knowledge"
+        }
+      },
       "favorites": [],
       "favoriteKnowledgePointIds": [],
       "unclearKnowledgePointIds": []
@@ -403,26 +1145,569 @@
     "aptitudeModuleStudies": {
       "political-theory": {
         "knowledgeProgress": {},
-        "sessions": [],
-        "answers": [],
-        "mistakes": {},
+        "sessions": [
+          {
+            "id": "apt_political-theory_mv1u3bm6_bfp97z",
+            "mode": "practice",
+            "status": "active",
+            "planTaskId": null,
+            "questionIds": [
+              "ah2026-outline-political-1",
+              "ah2026-outline-political-2",
+              "zja2025-q1",
+              "zja2025-political-2",
+              "zja2025-political-3",
+              "zja2025-political-4",
+              "zja2025-political-5",
+              "zja2025-political-6",
+              "zja2025-political-8",
+              "zja2025-political-9",
+              "zja2025-political-10",
+              "apt-political-theory-001",
+              "apt-political-theory-002",
+              "apt-political-theory-003",
+              "apt-political-theory-004"
+            ],
+            "currentIndex": 1,
+            "correctCount": 0,
+            "reviewingAnswerId": null,
+            "draftAnswers": {},
+            "startedAt": "2026-10-10T03:27:52.206Z",
+            "deadline": null,
+            "durationSeconds": null,
+            "filters": {
+              "onlyUnanswered": false,
+              "onlyMistakes": false,
+              "onlyFavorites": false,
+              "excludeQuestionIds": [],
+              "answeredQuestionIds": [],
+              "mistakeQuestionIds": [],
+              "favoriteQuestionIds": []
+            },
+            "moduleId": "political-theory",
+            "completedAt": null,
+            "session_id": "apt_political-theory_mv1u3bm6_bfp97z"
+          },
+          {
+            "id": "apt_political-theory_mv1vaom4_m4adep",
+            "mode": "practice",
+            "status": "active",
+            "planTaskId": null,
+            "questionIds": [
+              "ah2026-outline-political-1",
+              "ah2026-outline-political-2",
+              "zja2025-q1",
+              "zja2025-political-2",
+              "zja2025-political-3",
+              "zja2025-political-4",
+              "zja2025-political-5",
+              "zja2025-political-6",
+              "zja2025-political-8",
+              "zja2025-political-9",
+              "zja2025-political-10",
+              "apt-political-theory-001",
+              "apt-political-theory-002",
+              "apt-political-theory-003",
+              "apt-political-theory-004"
+            ],
+            "currentIndex": 0,
+            "correctCount": 0,
+            "reviewingAnswerId": null,
+            "draftAnswers": {},
+            "startedAt": "2026-10-10T04:01:35.260Z",
+            "deadline": null,
+            "durationSeconds": null,
+            "filters": {
+              "onlyUnanswered": false,
+              "onlyMistakes": false,
+              "onlyFavorites": false,
+              "excludeQuestionIds": [],
+              "answeredQuestionIds": [
+                "ah2026-outline-political-1"
+              ],
+              "mistakeQuestionIds": [
+                "ah2026-outline-political-1"
+              ],
+              "favoriteQuestionIds": []
+            },
+            "moduleId": "political-theory",
+            "session_id": "apt_political-theory_mv1vaom4_m4adep"
+          }
+        ],
+        "answers": [
+          {
+            "id": "answer_apt_political-theory_mv1u3bm6_bfp97z_1",
+            "sessionId": "apt_political-theory_mv1u3bm6_bfp97z",
+            "questionId": "ah2026-outline-political-1",
+            "selectedOptionId": "C",
+            "correctAnswer": "B",
+            "isCorrect": false,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T03:28:00.919Z",
+            "knowledgePointIds": [
+              "political-theory:important-concepts"
+            ],
+            "moduleId": "political-theory",
+            "attempt_id": "answer_apt_political-theory_mv1u3bm6_bfp97z_1"
+          }
+        ],
+        "mistakes": {
+          "ah2026-outline-political-1": {
+            "count": 1,
+            "firstMissedAt": "2026-10-10T03:28:00.919Z",
+            "lastMissedAt": "2026-10-10T03:28:00.919Z",
+            "lastSelectedOptionId": "C",
+            "correctAnswer": "B",
+            "moduleId": "political-theory"
+          }
+        },
         "favorites": [],
         "favoriteKnowledgePointIds": [],
         "unclearKnowledgePointIds": []
       },
       "verbal": {
         "knowledgeProgress": {},
-        "sessions": [],
-        "answers": [],
-        "mistakes": {},
+        "sessions": [
+          {
+            "id": "apt_verbal_mv1unywd_y4c7et",
+            "mode": "practice",
+            "status": "completed",
+            "planTaskId": null,
+            "questionIds": [
+              "ah2026-outline-verbal-1"
+            ],
+            "currentIndex": 1,
+            "correctCount": 1,
+            "reviewingAnswerId": null,
+            "draftAnswers": {},
+            "startedAt": "2026-10-10T03:43:55.501Z",
+            "deadline": null,
+            "durationSeconds": null,
+            "filters": {
+              "onlyUnanswered": false,
+              "onlyMistakes": false,
+              "onlyFavorites": false,
+              "excludeQuestionIds": [],
+              "answeredQuestionIds": [],
+              "mistakeQuestionIds": [],
+              "favoriteQuestionIds": []
+            },
+            "moduleId": "verbal",
+            "completedAt": "2026-10-10T03:44:06.669Z",
+            "session_id": "apt_verbal_mv1unywd_y4c7et"
+          },
+          {
+            "id": "apt_verbal_mv1vb8zf_mslzwa",
+            "mode": "practice",
+            "status": "completed",
+            "planTaskId": null,
+            "questionIds": [
+              "ah2026-outline-verbal-1",
+              "ah2026-outline-verbal-2",
+              "ah2026-outline-verbal-3",
+              "ah2026-outline-verbal-4",
+              "js2024a-q016",
+              "js2024a-q017",
+              "js2024a-q018",
+              "js2024a-q019",
+              "js2024a-q020",
+              "js2024a-q021",
+              "js2024a-q022",
+              "js2024a-q023",
+              "js2024a-q024",
+              "js2024a-q026",
+              "js2024a-q027"
+            ],
+            "currentIndex": 15,
+            "correctCount": 8,
+            "reviewingAnswerId": null,
+            "draftAnswers": {},
+            "startedAt": "2026-10-10T04:02:01.659Z",
+            "deadline": null,
+            "durationSeconds": null,
+            "filters": {
+              "onlyUnanswered": false,
+              "onlyMistakes": false,
+              "onlyFavorites": false,
+              "excludeQuestionIds": [],
+              "answeredQuestionIds": [
+                "ah2026-outline-verbal-1"
+              ],
+              "mistakeQuestionIds": [],
+              "favoriteQuestionIds": []
+            },
+            "moduleId": "verbal",
+            "completedAt": "2026-10-10T04:08:36.462Z",
+            "session_id": "apt_verbal_mv1vb8zf_mslzwa"
+          }
+        ],
+        "answers": [
+          {
+            "id": "answer_apt_verbal_mv1unywd_y4c7et_1",
+            "sessionId": "apt_verbal_mv1unywd_y4c7et",
+            "questionId": "ah2026-outline-verbal-1",
+            "selectedOptionId": "C",
+            "correctAnswer": "C",
+            "isCorrect": true,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T03:44:00.012Z",
+            "knowledgePointIds": [
+              "verbal:context"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1unywd_y4c7et_1"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_1",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "ah2026-outline-verbal-1",
+            "selectedOptionId": "C",
+            "correctAnswer": "C",
+            "isCorrect": true,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T04:02:03.969Z",
+            "knowledgePointIds": [
+              "verbal:context"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_1"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_2",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "ah2026-outline-verbal-2",
+            "selectedOptionId": "A",
+            "correctAnswer": "A",
+            "isCorrect": true,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T04:03:44.325Z",
+            "knowledgePointIds": [
+              "verbal:main-idea"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_2"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_3",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "ah2026-outline-verbal-3",
+            "selectedOptionId": "A",
+            "correctAnswer": "A",
+            "isCorrect": true,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T04:04:03.652Z",
+            "knowledgePointIds": [
+              "verbal:context"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_3"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_4",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "ah2026-outline-verbal-4",
+            "selectedOptionId": "A",
+            "correctAnswer": "C",
+            "isCorrect": false,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T04:05:27.807Z",
+            "knowledgePointIds": [
+              "verbal:sentence-order"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_4"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_5",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "js2024a-q016",
+            "selectedOptionId": "D",
+            "correctAnswer": "D",
+            "isCorrect": true,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T04:05:46.068Z",
+            "knowledgePointIds": [
+              "verbal:main-idea"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_5"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_6",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "js2024a-q017",
+            "selectedOptionId": "C",
+            "correctAnswer": "C",
+            "isCorrect": true,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T04:06:01.047Z",
+            "knowledgePointIds": [
+              "verbal:main-idea"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_6"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_7",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "js2024a-q018",
+            "selectedOptionId": "A",
+            "correctAnswer": "B",
+            "isCorrect": false,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T04:06:22.511Z",
+            "knowledgePointIds": [
+              "verbal:detail"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_7"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_8",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "js2024a-q019",
+            "selectedOptionId": "D",
+            "correctAnswer": "C",
+            "isCorrect": false,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T04:06:51.667Z",
+            "knowledgePointIds": [
+              "verbal:main-idea"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_8"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_9",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "js2024a-q020",
+            "selectedOptionId": "B",
+            "correctAnswer": "B",
+            "isCorrect": true,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T04:07:03.596Z",
+            "knowledgePointIds": [
+              "verbal:main-idea"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_9"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_10",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "js2024a-q021",
+            "selectedOptionId": "D",
+            "correctAnswer": "C",
+            "isCorrect": false,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T04:07:12.488Z",
+            "knowledgePointIds": [
+              "verbal:detail"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_10"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_11",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "js2024a-q022",
+            "selectedOptionId": "A",
+            "correctAnswer": "A",
+            "isCorrect": true,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T04:07:24.129Z",
+            "knowledgePointIds": [
+              "verbal:context"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_11"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_12",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "js2024a-q023",
+            "selectedOptionId": "A",
+            "correctAnswer": "D",
+            "isCorrect": false,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T04:07:32.909Z",
+            "knowledgePointIds": [
+              "verbal:main-idea"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_12"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_13",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "js2024a-q024",
+            "selectedOptionId": "B",
+            "correctAnswer": "B",
+            "isCorrect": true,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T04:07:47.583Z",
+            "knowledgePointIds": [
+              "verbal:main-idea"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_13"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_14",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "js2024a-q026",
+            "selectedOptionId": "C",
+            "correctAnswer": "D",
+            "isCorrect": false,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T04:08:18.320Z",
+            "knowledgePointIds": [
+              "verbal:main-idea"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_14"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_15",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "js2024a-q027",
+            "selectedOptionId": "B",
+            "correctAnswer": "C",
+            "isCorrect": false,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T04:08:34.775Z",
+            "knowledgePointIds": [
+              "verbal:detail"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_15"
+          }
+        ],
+        "mistakes": {
+          "ah2026-outline-verbal-4": {
+            "count": 1,
+            "firstMissedAt": "2026-10-10T04:05:27.807Z",
+            "lastMissedAt": "2026-10-10T04:05:27.807Z",
+            "lastSelectedOptionId": "A",
+            "correctAnswer": "C",
+            "moduleId": "verbal"
+          },
+          "js2024a-q018": {
+            "count": 1,
+            "firstMissedAt": "2026-10-10T04:06:22.511Z",
+            "lastMissedAt": "2026-10-10T04:06:22.511Z",
+            "lastSelectedOptionId": "A",
+            "correctAnswer": "B",
+            "moduleId": "verbal"
+          },
+          "js2024a-q019": {
+            "count": 1,
+            "firstMissedAt": "2026-10-10T04:06:51.667Z",
+            "lastMissedAt": "2026-10-10T04:06:51.667Z",
+            "lastSelectedOptionId": "D",
+            "correctAnswer": "C",
+            "moduleId": "verbal"
+          },
+          "js2024a-q021": {
+            "count": 1,
+            "firstMissedAt": "2026-10-10T04:07:12.488Z",
+            "lastMissedAt": "2026-10-10T04:07:12.488Z",
+            "lastSelectedOptionId": "D",
+            "correctAnswer": "C",
+            "moduleId": "verbal"
+          },
+          "js2024a-q023": {
+            "count": 1,
+            "firstMissedAt": "2026-10-10T04:07:32.909Z",
+            "lastMissedAt": "2026-10-10T04:07:32.909Z",
+            "lastSelectedOptionId": "A",
+            "correctAnswer": "D",
+            "moduleId": "verbal"
+          },
+          "js2024a-q026": {
+            "count": 1,
+            "firstMissedAt": "2026-10-10T04:08:18.320Z",
+            "lastMissedAt": "2026-10-10T04:08:18.320Z",
+            "lastSelectedOptionId": "C",
+            "correctAnswer": "D",
+            "moduleId": "verbal"
+          },
+          "js2024a-q027": {
+            "count": 1,
+            "firstMissedAt": "2026-10-10T04:08:34.775Z",
+            "lastMissedAt": "2026-10-10T04:08:34.775Z",
+            "lastSelectedOptionId": "B",
+            "correctAnswer": "C",
+            "moduleId": "verbal"
+          }
+        },
         "favorites": [],
         "favoriteKnowledgePointIds": [],
         "unclearKnowledgePointIds": []
       },
       "quantitative": {
         "knowledgeProgress": {},
-        "sessions": [],
-        "answers": [],
+        "sessions": [
+          {
+            "id": "apt_quantitative_mv1unb72_e4ydnl",
+            "mode": "practice",
+            "status": "active",
+            "planTaskId": null,
+            "questionIds": [
+              "ah2026-outline-quantitative-1",
+              "js2024a-q046",
+              "js2024a-q047",
+              "js2024a-q048",
+              "js2024a-q049",
+              "js2024a-q050",
+              "js2024a-q051",
+              "js2024a-q052",
+              "js2024a-q053",
+              "js2024a-q054",
+              "js2024a-q055",
+              "js2024a-q056",
+              "js2024a-q057",
+              "js2024a-q058",
+              "js2024a-q059"
+            ],
+            "currentIndex": 1,
+            "correctCount": 1,
+            "reviewingAnswerId": null,
+            "draftAnswers": {},
+            "startedAt": "2026-10-10T03:43:24.782Z",
+            "deadline": null,
+            "durationSeconds": null,
+            "filters": {
+              "onlyUnanswered": false,
+              "onlyMistakes": false,
+              "onlyFavorites": false,
+              "excludeQuestionIds": [],
+              "answeredQuestionIds": [],
+              "mistakeQuestionIds": [],
+              "favoriteQuestionIds": []
+            },
+            "moduleId": "quantitative",
+            "completedAt": null,
+            "session_id": "apt_quantitative_mv1unb72_e4ydnl"
+          }
+        ],
+        "answers": [
+          {
+            "id": "answer_apt_quantitative_mv1unb72_e4ydnl_1",
+            "sessionId": "apt_quantitative_mv1unb72_e4ydnl",
+            "questionId": "ah2026-outline-quantitative-1",
+            "selectedOptionId": "D",
+            "correctAnswer": "D",
+            "isCorrect": true,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T03:43:27.626Z",
+            "knowledgePointIds": [
+              "quantitative:geometry"
+            ],
+            "moduleId": "quantitative",
+            "attempt_id": "answer_apt_quantitative_mv1unb72_e4ydnl_1"
+          }
+        ],
         "mistakes": {},
         "favorites": [],
         "favoriteKnowledgePointIds": [],
@@ -430,17 +1715,142 @@
       },
       "reasoning": {
         "knowledgeProgress": {},
-        "sessions": [],
-        "answers": [],
-        "mistakes": {},
+        "sessions": [
+          {
+            "id": "apt_reasoning_mv1u18su_7ulcu8",
+            "mode": "exam",
+            "status": "timed_out",
+            "planTaskId": null,
+            "questionIds": [
+              "zh2025b-q083",
+              "zj2023a-q100",
+              "zh2025c-q091",
+              "zj2023a-q076",
+              "js2024a-q084",
+              "zh2025a-q088",
+              "js2024a-q081",
+              "zj2023a-q072",
+              "zh2025b-q079",
+              "zj2023a-q088",
+              "zh2025c-q077",
+              "zj2023a-q086",
+              "js2024a-q068",
+              "zh2025c-q089",
+              "zh2025b-q101"
+            ],
+            "currentIndex": 1,
+            "correctCount": 0,
+            "reviewingAnswerId": null,
+            "draftAnswers": {
+              "zh2025b-q083": {
+                "optionId": "C",
+                "selectedAt": "2026-10-10T03:45:03.940Z"
+              }
+            },
+            "startedAt": "2026-10-10T03:26:15.246Z",
+            "deadline": "2026-10-10T03:46:15.246Z",
+            "durationSeconds": 1200,
+            "filters": {
+              "onlyUnanswered": false,
+              "onlyMistakes": false,
+              "onlyFavorites": false,
+              "excludeQuestionIds": [],
+              "answeredQuestionIds": [],
+              "mistakeQuestionIds": [],
+              "favoriteQuestionIds": []
+            },
+            "moduleId": "reasoning",
+            "answeredCount": 1,
+            "unansweredCount": 14,
+            "scoreRate": 0,
+            "answeredAccuracy": 0,
+            "submittedAt": "2026-10-10T03:46:39.562Z",
+            "completedAt": "2026-10-10T03:46:39.562Z",
+            "session_id": "apt_reasoning_mv1u18su_7ulcu8"
+          }
+        ],
+        "answers": [
+          {
+            "id": "answer_apt_reasoning_mv1u18su_7ulcu8_zh2025b-q083",
+            "sessionId": "apt_reasoning_mv1u18su_7ulcu8",
+            "questionId": "zh2025b-q083",
+            "selectedOptionId": "C",
+            "correctAnswer": "D",
+            "isCorrect": false,
+            "mode": "exam",
+            "answeredAt": "2026-10-10T03:45:03.940Z",
+            "submittedAt": "2026-10-10T03:46:39.562Z",
+            "questionIndex": 0,
+            "knowledgePointIds": [
+              "reasoning:case-matching"
+            ],
+            "moduleId": "reasoning",
+            "attempt_id": "answer_apt_reasoning_mv1u18su_7ulcu8_zh2025b-q083"
+          }
+        ],
+        "mistakes": {
+          "zh2025b-q083": {
+            "count": 1,
+            "firstMissedAt": "2026-10-10T03:45:03.940Z",
+            "lastMissedAt": "2026-10-10T03:45:03.940Z",
+            "lastSelectedOptionId": "C",
+            "correctAnswer": "D",
+            "moduleId": "reasoning"
+          }
+        },
         "favorites": [],
         "favoriteKnowledgePointIds": [],
         "unclearKnowledgePointIds": []
       },
       "data-analysis": {
         "knowledgeProgress": {},
-        "sessions": [],
-        "answers": [],
+        "sessions": [
+          {
+            "id": "apt_data-analysis_mv1uqfgl_22wv9n",
+            "mode": "practice",
+            "status": "completed",
+            "planTaskId": null,
+            "questionIds": [
+              "ah2026-outline-data-1"
+            ],
+            "currentIndex": 1,
+            "correctCount": 1,
+            "reviewingAnswerId": null,
+            "draftAnswers": {},
+            "startedAt": "2026-10-10T03:45:50.277Z",
+            "deadline": null,
+            "durationSeconds": null,
+            "filters": {
+              "onlyUnanswered": false,
+              "onlyMistakes": false,
+              "onlyFavorites": false,
+              "excludeQuestionIds": [],
+              "answeredQuestionIds": [],
+              "mistakeQuestionIds": [],
+              "favoriteQuestionIds": []
+            },
+            "moduleId": "data-analysis",
+            "completedAt": "2026-10-10T03:46:26.371Z",
+            "session_id": "apt_data-analysis_mv1uqfgl_22wv9n"
+          }
+        ],
+        "answers": [
+          {
+            "id": "answer_apt_data-analysis_mv1uqfgl_22wv9n_1",
+            "sessionId": "apt_data-analysis_mv1uqfgl_22wv9n",
+            "questionId": "ah2026-outline-data-1",
+            "selectedOptionId": "D",
+            "correctAnswer": "D",
+            "isCorrect": true,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T03:46:21.631Z",
+            "knowledgePointIds": [
+              "data-analysis:share-change"
+            ],
+            "moduleId": "data-analysis",
+            "attempt_id": "answer_apt_data-analysis_mv1uqfgl_22wv9n_1"
+          }
+        ],
         "mistakes": {},
         "favorites": [],
         "favoriteKnowledgePointIds": [],
@@ -459,14 +1869,14 @@
     },
     "positionPreferences": {
       "filters": {
-        "districtId": "all",
+        "districtId": "changping",
         "year": "all",
         "orgType": "all",
         "jobType": "all",
-        "majorTopic": "all",
+        "majorTopic": "public-management",
         "sourceLevel": "all",
         "unit": "all",
-        "education": "all",
+        "education": "仅限硕士研究生",
         "politicalStatus": "all",
         "freshGraduate": "all",
         "physicalTest": "all",
