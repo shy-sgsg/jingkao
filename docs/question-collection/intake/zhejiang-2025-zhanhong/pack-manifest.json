@@ -67,8 +67,8 @@
       "answer_explanations_file": "answer-explanations-A.json",
       "captured_question_text_count": 122,
       "answer_explanation_count": 125,
-      "published_question_count": 93,
-      "held_question_count": 32,
+      "published_question_count": 96,
+      "held_question_count": 29,
       "authorization": {
         "status": "user_confirmed_republication_authorization",
         "confirmed_on": "2026-10-10"
@@ -131,8 +131,8 @@
       "answer_explanations_file": "answer-explanations-B.json",
       "captured_question_text_count": 118,
       "answer_explanation_count": 120,
-      "published_question_count": 92,
-      "held_question_count": 28,
+      "published_question_count": 94,
+      "held_question_count": 26,
       "authorization": {
         "status": "user_confirmed_republication_authorization",
         "confirmed_on": "2026-10-10"
@@ -195,8 +195,8 @@
       "answer_explanations_file": "answer-explanations-C.json",
       "captured_question_text_count": 113,
       "answer_explanation_count": 115,
-      "published_question_count": 87,
-      "held_question_count": 28,
+      "published_question_count": 89,
+      "held_question_count": 26,
       "authorization": {
         "status": "user_confirmed_republication_authorization",
         "confirmed_on": "2026-10-10"
@@ -5246,5 +5246,5 @@
     }
   ],
   "answer_separation": "Question records do not contain answer values; each form has a separate answer JSON. The source PDF itself remains the archival publisher file and contains solutions after the question sections.",
-  "archive_status": "three mock forms and 360 publisher answer keys staged; figure-to-question asset audit pending; not yet imported into site question banks"
+  "archive_status": "A/B/C 三套模拟卷共 360 题已归档；279 道题面、选项、答案和解析齐全的题已接入模块，81 道因题面、选项或图表材料缺项暂缓；整卷模考待其余材料补齐。"
 }
