@@ -142,7 +142,7 @@ test('standalone site executes and renders the homepage from its embedded app mo
       assert.match(rendered.root.innerHTML, /北京京考职位决策范围/);
       assert.match(rendered.root.innerHTML, /<h1>职位库<\/h1>/);
       assert.match(rendered.root.innerHTML, /东城区/);
-      assert.match(rendered.root.innerHTML, /待补逐岗数据/);
+      assert.match(rendered.root.innerHTML, /空白区县是待补数据/);
       assert.doesNotMatch(rendered.root.innerHTML, /昌平职位库/);
     }
     if (route === 'matrix') {
