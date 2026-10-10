@@ -1392,7 +1392,9 @@ addPublishedReferenceQuestion({
   "moduleId": "science",
   "subjectId": "physics",
   "topicId": "physics:mechanics",
-  "knowledgePointIds": [],
+  "knowledgePointIds": [
+    "physics:solid-pressure"
+  ],
   "difficulty": "medium",
   "reasoningType": "data_interpretation",
   "sourceType": "third_party_mock",

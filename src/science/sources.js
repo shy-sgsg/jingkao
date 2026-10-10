@@ -282,6 +282,13 @@ export const SCIENCE_SOURCES = [
     note: '模拟卷第 78、79、81、83 题有完整题面和答案解析，改述收录。图示题未收录；第 82 题答案解析结论绝对化，第 85 题与已收录气体用途题核心知识重复，均不重复发布。',
   },
   {
+    id: 'zhanhong-2025-guangdong-mock-2', title: '展鸿 2025 年广东省公务员录用考试《行测》模拟卷（二）',
+    organization: '展鸿教育', sourceType: 'third_party_mock', region: '广东', examYear: 2025,
+    authority: 'third-party-publisher', verificationStatus: 'verified', copyrightStatus: 'licensed',
+    url: 'https://zhanhong-32-read-able.oss-cn-hangzhou.aliyuncs.com/upload/videos/2025/03/10/xc2163949910.pdf',
+    note: '科学推理第 76–80 题题面、选项和答案解析逐题按已授权题本核对；原图题已镜像其必要图示。',
+  },
+  {
     id: 'huatu-2022-science-examples', title: '华图科学推理浮力例题',
     organization: '华图教育广东分院', sourceType: 'third_party_mock', region: '广东', examYear: null,
     authority: 'third-party-publisher', verificationStatus: 'verified', copyrightStatus: 'reference_only',

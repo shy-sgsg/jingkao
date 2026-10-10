@@ -685,6 +685,27 @@ export const GENERAL_KNOWLEDGE_SOURCES = [
     note: '题面、答案及解析按展鸿配套题本与解析 PDF 核对；本站已获转载授权。',
   },
   {
+    id: 'anhui-2022-zhanhong-qae', sourceType: 'recalled', title: '2022年安徽省公务员录用考试《行测》题（展鸿整理版）', organization: '展鸿教育 / 32 学苑', examYear: 2022, region: '安徽',
+    url: 'https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf',
+    answerUrl: 'https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf',
+    verificationStatus: 'verified', publishStatus: 'published', copyrightStatus: '用户确认已获得转载授权',
+    note: '110题题面、选项与解析来自同一整理版；图形及资料分析材料已核对。',
+  },
+  {
+    id: 'zhanhong-2025-guangdong-mock-2', sourceType: 'third_party_mock', title: '展鸿 2025 年广东省公务员录用考试《行测》模拟卷（二）', organization: '展鸿教育', examYear: 2025, region: '广东',
+    url: 'https://zhanhong-32-read-able.oss-cn-hangzhou.aliyuncs.com/upload/videos/2025/03/10/xc2163949910.pdf',
+    answerUrl: 'https://zhanhong-32-read-able.oss-cn-hangzhou.aliyuncs.com/upload/videos/2025/03/10/xc2163949910.pdf',
+    verificationStatus: 'verified', publishStatus: 'published', copyrightStatus: '用户确认已获得转载授权',
+    note: '100题题面、答案与解析按配套卷逐题核验；95道单选题已接入，5道多选题暂缓。',
+  },
+  {
+    id: 'gkzhenti-2026-jiangxi', sourceType: 'recalled', title: '2026年江西省公务员录用考试《行测》题（网友回忆版）', organization: '爱真题 / 公开真题库（题面、答案键及公开解析归档）', examYear: 2026, region: '江西',
+    url: 'https://www.aipta.com/article/10594.html',
+    answerUrl: 'https://gwy.gkzhenti.cn/answer/1775360736151', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '用户确认已获得转载授权',
+    note: '题面按爱真题公开回忆版核定，答案键与公开真题库1–130题逐题一致；保留网友回忆版标注。',
+  },
+  {
     id: 'jiangsu-2024-a-32xueyuan', sourceType: 'verified_exam', title: '2024 年江苏省公务员录用考试行测 A 类真题（第三方出版原卷）', organization: '32 学苑', examYear: 2024,
     url: 'https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf',
     answerUrl: 'https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf',
