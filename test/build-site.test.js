@@ -163,7 +163,7 @@ test('standalone site executes and renders the homepage from its embedded app mo
     if (route === 'assistant') assert.match(rendered.root.innerHTML, /当前范围职位样例/);
     if (route === 'research') {
       assert.match(rendered.root.innerHTML, /2026 年昌平区来源清单列出 86 条岗位样例/);
-      assert.match(rendered.root.innerHTML, /具名面试分数样本[\s\S]*?245<small> 条<\/small>[\s\S]*?部分样本/);
+      assert.match(rendered.root.innerHTML, /具名面试分数样本[\s\S]*?275<small> 条<\/small>[\s\S]*?部分样本/);
       assert.match(rendered.root.innerHTML, /data-action="filter-research-topic"/);
     }
   }
@@ -800,7 +800,7 @@ test('score scenario exposes every requested segment and labels the narrower mat
   const { root, listeners } = await renderStandaloneRoute(script, 'scenarios');
 
   assert.match(root.innerHTML, /<select id="scenario-scope"/);
-  for (const [segment, sampleCount] of [['全部区县', 245], ['区直', 163], ['街道', 42], ['镇', 23], ['普通职位', 30], ['行政执法', 11], ['公共管理相关', 8]]) {
+  for (const [segment, sampleCount] of [['全部区县', 275], ['区直', 185], ['街道', 43], ['镇', 30], ['普通职位', 30], ['行政执法', 11], ['公共管理相关', 8]]) {
     assert.ok(root.innerHTML.includes(`${segment} · n=${sampleCount}`), `score scope selector should show ${segment}'s ${sampleCount} source-backed rows`);
   }
   assert.match(root.innerHTML, /岗位类别仅纳入代码、单位与岗位名均唯一匹配的分数记录/);

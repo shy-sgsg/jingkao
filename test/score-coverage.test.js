@@ -22,7 +22,7 @@ test('score sample count and bounds are derived from its concrete score rows', a
   const rows = data.scoreRows.filter((row) => row.year === 2026);
   const samples = data.scoreSamples.filter((item) => item.year === 2026);
 
-  assert.equal(samples.length, 12);
+  assert.equal(samples.length, 13);
   assert.equal(samples.reduce((total, sample) => total + sample.samplePositions, 0), rows.length);
   for (const sample of samples) {
     const sourceRows = rows.filter((row) => row.sourceId === sample.sourceId);

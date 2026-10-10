@@ -1285,6 +1285,12 @@
         "recruitCount": 1
       },
       {
+        "positionCode": "241369303",
+        "scope": "position-level",
+        "applicantsQualified": 11,
+        "recruitCount": 1
+      },
+      {
         "positionCode": null,
         "scope": "unit-level",
         "unit": "北京市昌平区总工会",
@@ -1292,7 +1298,7 @@
         "recruitCount": 1
       }
     ],
-    "notes": "页面逐职位表列出市级过审人数前十岗位；记录其中可与2026职位库按代码、招录人数匹配的岗位（含昌平区档案馆821261102、朝阳区东坝地区230531801及朝阳公安分局232502003）。昌平区总工会9人/计划1人仅见单位汇总，未展示职位代码，故仍记为单位级。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
+    "notes": "页面逐职位表列出市级过审人数前十岗位；记录其中可与2026职位库按代码、招录人数匹配的岗位（含昌平区档案馆821261102、朝阳区东坝地区230531801、朝阳公安分局232502003及平谷区市场监督管理局241369303）。昌平区总工会9人/计划1人仅见单位汇总，未展示职位代码，故仍记为单位级。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
   },
   {
     "sourceId": "eoffcn-2026-snapshot-20251118-0900",
@@ -14991,5 +14997,194 @@
     "maximum": 134,
     "scope": "顺义区岗位最低进面线部分样本",
     "notes": "页面称顺义区共84人进入面试，明列29条部分岗位分数线，范围100—134；其中14条可按同年度单位、岗位名及第三方职位详情代码唯一关联，3条同名职位存在候选歧义，另12条本轮尚无候选职位行，保留空代码。第三方部分样本，不代表完整进面名单；所列是进入面试的岗位最低笔试分，不是官方笔试合格线。"
+  },
+  {
+    "sourceId": "gwyzwb-2026-pinggu-index",
+    "title": "京考职位网：2026平谷区职位目录",
+    "publisher": "京考职位网",
+    "level": "secondary",
+    "evidenceType": "position_mirror",
+    "year": 2026,
+    "districtId": "pinggu",
+    "geographicScope": "平谷区职位目录汇总",
+    "url": "https://bj.gwyzwb.com/pinggu/",
+    "accessedAt": "2026-10-10",
+    "reportedPositionCount": 67,
+    "reportedRecruitCount": 125,
+    "notes": "第三方目录报告平谷区67岗/125人，仅作候选覆盖参照，不是官方分母；本地逐岗录入仅为可追溯子集。"
+  },
+  {
+    "sourceId": "xduim-2026-pinggu-code-list",
+    "title": "相对面职位库：2026平谷区职位代码列表",
+    "publisher": "相对面职位库",
+    "level": "secondary",
+    "evidenceType": "position_mirror",
+    "year": 2026,
+    "districtId": "pinggu",
+    "geographicScope": "平谷区职位代码、单位与计划招录数列表",
+    "url": "https://www.xduim.com/zw/beijing/gwylist?city=%E5%B9%B3%E8%B0%B7%E5%8C%BA&year=2026",
+    "accessedAt": "2026-10-10",
+    "notes": "第三方列表可见职位代码、单位名称和计划数；用于候选代码的交叉匹配，未与官方职位表逐代码复核。"
+  },
+  {
+    "sourceId": "cgzj-2026-pinggu-cutoff-sample",
+    "title": "成公教育：2026平谷区岗位最低进面分部分样本",
+    "publisher": "成公教育",
+    "level": "secondary",
+    "evidenceType": "partial_interview_score_sample",
+    "year": 2026,
+    "districtId": "pinggu",
+    "geographicScope": "平谷区岗位最低进面线部分样本",
+    "url": "https://www.cgzj.com/sk/12635.html",
+    "accessedAt": "2026-10-10",
+    "samplePositions": 30,
+    "intervieweeCount": 61,
+    "minimum": 104,
+    "maximum": 128,
+    "scope": "平谷区岗位最低进面线部分样本",
+    "notes": "页面称平谷区61人进入面试，明列30条部分岗位分数线，范围104—128；其中16条按同年度单位、岗位名和第三方职位代码唯一关联，8条同单位同名候选存在歧义，另6条本轮没有可唯一匹配的候选代码，均保留空代码。第三方部分样本，不代表完整名单；所列是岗位最低进面笔试分，不是官方笔试合格线。"
+  },
+  {
+    "sourceId": "gwyzwb-2026-pinggu-market",
+    "title": "京考职位网：2026平谷区市场监督管理局职位明细",
+    "publisher": "京考职位网",
+    "level": "secondary",
+    "evidenceType": "position_mirror",
+    "year": 2026,
+    "districtId": "pinggu",
+    "geographicScope": "平谷区市场监督管理局职位明细",
+    "url": "https://bj.gwyzwb.com/pinggu/2026_15.html",
+    "accessedAt": "2026-10-10",
+    "notes": "单位职位页用于核对相关岗位代码、名称与计划数；同单位存在多条同名职位，未将进面分样本强行挂到歧义代码。第三方镜像，未与官方职位表逐代码复核。"
+  },
+  {
+    "sourceId": "gwyzwb-2026-pinggu-finance-performance",
+    "title": "京考职位网：2026平谷区财政局绩效管理岗职位详情",
+    "publisher": "京考职位网",
+    "level": "secondary",
+    "evidenceType": "position_mirror",
+    "year": 2026,
+    "districtId": "pinggu",
+    "geographicScope": "平谷区财政局绩效管理岗",
+    "url": "https://bj.gwyzwb.com/2026/1347.html",
+    "accessedAt": "2026-10-10",
+    "notes": "职位详情列明代码821369003、绩效管理岗及计划招录1人；第三方镜像，未与官方职位表逐代码复核。"
+  },
+  {
+    "sourceId": "gwyzwb-2026-pinggu-housing",
+    "title": "京考职位网：2026平谷区住房和城乡建设委员会职位明细",
+    "publisher": "京考职位网",
+    "level": "secondary",
+    "evidenceType": "position_mirror",
+    "year": 2026,
+    "districtId": "pinggu",
+    "geographicScope": "平谷区住房和城乡建设委员会职位明细",
+    "url": "https://bj.gwyzwb.com/pinggu/2026_10.html",
+    "accessedAt": "2026-10-10",
+    "notes": "单位职位页列明相关职位代码、名称及计划数；第三方镜像，未与官方职位表逐代码复核。"
+  },
+  {
+    "sourceId": "gwyzwb-2026-pinggu-hr-social",
+    "title": "京考职位网：2026平谷区人社局社保综合岗职位详情",
+    "publisher": "京考职位网",
+    "level": "secondary",
+    "evidenceType": "position_mirror",
+    "year": 2026,
+    "districtId": "pinggu",
+    "geographicScope": "平谷区人力资源和社会保障局社保综合岗",
+    "url": "https://bj.gwyzwb.com/2026/1343.html",
+    "accessedAt": "2026-10-10",
+    "notes": "职位详情列明代码821368902、社保综合岗及计划招录2人；第三方镜像，未与官方职位表逐代码复核。"
+  },
+  {
+    "sourceId": "gwyzwb-2026-pinggu-procuratorate",
+    "title": "京考职位网：2026平谷区人民检察院职位明细",
+    "publisher": "京考职位网",
+    "level": "secondary",
+    "evidenceType": "position_mirror",
+    "year": 2026,
+    "districtId": "pinggu",
+    "geographicScope": "平谷区人民检察院职位明细",
+    "url": "https://bj.gwyzwb.com/pinggu/2026_5.html",
+    "accessedAt": "2026-10-10",
+    "notes": "单位职位页列明相关职位代码、名称及计划数；第三方镜像，未与官方职位表逐代码复核。"
+  },
+  {
+    "sourceId": "gwyzwb-2026-pinggu-mafang",
+    "title": "京考职位网：2026平谷区马坊镇职位明细",
+    "publisher": "京考职位网",
+    "level": "secondary",
+    "evidenceType": "position_mirror",
+    "year": 2026,
+    "districtId": "pinggu",
+    "geographicScope": "平谷区马坊镇职位明细",
+    "url": "https://bj.gwyzwb.com/pinggu/2026_30.html",
+    "accessedAt": "2026-10-10",
+    "notes": "单位职位页列明岗位代码、名称及计划数；第三方镜像，未与官方职位表逐代码复核。"
+  },
+  {
+    "sourceId": "gwyzwb-2026-pinggu-shandongzhuang",
+    "title": "京考职位网：2026平谷区山东庄镇综合管理岗职位详情",
+    "publisher": "京考职位网",
+    "level": "secondary",
+    "evidenceType": "position_mirror",
+    "year": 2026,
+    "districtId": "pinggu",
+    "geographicScope": "平谷区山东庄镇综合管理岗",
+    "url": "https://bj.gwyzwb.com/2026/1382.html",
+    "accessedAt": "2026-10-10",
+    "notes": "职位详情列明代码241371402、综合管理岗及计划招录1人；第三方镜像，未与官方职位表逐代码复核。"
+  },
+  {
+    "sourceId": "gwyzwb-2026-pinggu-dahuashan",
+    "title": "京考职位网：2026平谷区大华山镇综合管理岗职位详情",
+    "publisher": "京考职位网",
+    "level": "secondary",
+    "evidenceType": "position_mirror",
+    "year": 2026,
+    "districtId": "pinggu",
+    "geographicScope": "平谷区大华山镇综合管理岗",
+    "url": "https://bj.gwyzwb.com/2026/1383.html",
+    "accessedAt": "2026-10-10",
+    "notes": "职位详情列明代码241371501、综合管理岗及计划招录2人；第三方镜像，未与官方职位表逐代码复核。"
+  },
+  {
+    "sourceId": "gwyzwb-2026-pinggu-nandulehe",
+    "title": "京考职位网：2026平谷区南独乐河镇综合管理岗职位详情",
+    "publisher": "京考职位网",
+    "level": "secondary",
+    "evidenceType": "position_mirror",
+    "year": 2026,
+    "districtId": "pinggu",
+    "geographicScope": "平谷区南独乐河镇综合管理岗",
+    "url": "https://bj.gwyzwb.com/2026/1381.html",
+    "accessedAt": "2026-10-10",
+    "notes": "职位详情列明代码241371301、综合管理岗及计划招录1人；第三方镜像，未与官方职位表逐代码复核。"
+  },
+  {
+    "sourceId": "gwyzwb-2026-pinggu-binhe",
+    "title": "华图：2026平谷区滨河街道综合执法岗职位详情",
+    "publisher": "北京华图",
+    "level": "secondary",
+    "evidenceType": "position_mirror",
+    "year": 2026,
+    "districtId": "pinggu",
+    "geographicScope": "平谷区滨河街道综合执法岗",
+    "url": "https://ah.huatu.com/zw/bjgwy/pinggu/2026_26.html",
+    "accessedAt": "2026-10-10",
+    "notes": "职位详情可见代码241370502及计划招录2人；第三方镜像，未与官方职位表逐代码复核。"
+  },
+  {
+    "sourceId": "offcn-2026-pinggu-archives",
+    "title": "中公网校：2026平谷区档案馆综合管理岗职位详情",
+    "publisher": "中公网校 / 中公教育",
+    "level": "secondary",
+    "evidenceType": "position_mirror",
+    "year": 2026,
+    "districtId": "pinggu",
+    "geographicScope": "平谷区档案馆综合管理岗",
+    "url": "https://mbaokao.offcn.com/index.php/zwcx/zw/2511071988.html",
+    "accessedAt": "2026-10-10",
+    "notes": "第三方职位详情用于候选代码、名称及计划数匹配；未与官方职位表逐代码复核。"
   }
 ]

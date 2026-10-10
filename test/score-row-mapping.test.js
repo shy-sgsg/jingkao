@@ -50,7 +50,7 @@ test('2026 cutoff rows link only to a unique exact year, unit, and title match',
     scoreRows.reduce((counts, row) => ({ ...counts, [row.mappingConfidence]: counts[row.mappingConfidence] + 1 }), {
       high: 0, ambiguous: 0, unmatched: 0,
     }),
-    { high: 171, ambiguous: 23, unmatched: 51 },
+    { high: 187, ambiguous: 31, unmatched: 57 },
   );
 });
 
@@ -143,7 +143,7 @@ test('2026 Yanqing partial interview-cutoff rows preserve unique matches and unr
     scoreRows.reduce((counts, row) => ({ ...counts, [row.mappingConfidence]: counts[row.mappingConfidence] + 1 }), {
       high: 0, ambiguous: 0, unmatched: 0,
     }),
-    { high: 171, ambiguous: 23, unmatched: 51 },
+    { high: 187, ambiguous: 31, unmatched: 57 },
   );
 });
 
