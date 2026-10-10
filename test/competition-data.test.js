@@ -127,6 +127,7 @@ test('2026 citywide registration snapshots link dated qualified counts to matchi
         ['241780601', 28, 1],
         ['232502801', 23, 10],
         ['220633601', 22, 2],
+        ['220946301', 10, 1],
       ],
     },
     {
@@ -143,6 +144,7 @@ test('2026 citywide registration snapshots link dated qualified counts to matchi
         ['231052001', 26, 1],
         ['821263001', 22, 1],
         ['221262601', 18, 1],
+        ['220946301', 18, 1],
       ],
     },
     {
@@ -156,6 +158,23 @@ test('2026 citywide registration snapshots link dated qualified counts to matchi
         ['821263001', 81, 1],
         ['221154902', 56, 1],
         ['220633601', 102, 2],
+        ['241780601', 51, 1],
+        ['220946301', 76, 1],
+      ],
+    },
+    {
+      sourceId: 'eoffcn-2026-snapshot-20251119-0900',
+      observedAt: '2025-11-19 09:00',
+      expected: [
+        ['821261102', 275, 2],
+        ['821263001', 95, 1],
+        ['232502901', 187, 23],
+        ['230531801', 71, 1],
+        ['232502003', 183, 32],
+        ['220946301', 77, 1],
+        ['231156101', 123, 2],
+        ['221154902', 56, 1],
+        ['220633601', 106, 2],
         ['241780601', 51, 1],
       ],
     },
@@ -173,6 +192,7 @@ test('2026 citywide registration snapshots link dated qualified counts to matchi
         ['221154902', 99, 1],
         ['231156101', 176, 2],
         ['241780601', 87, 1],
+        ['220946301', 135, 1],
       ],
     },
   ];
@@ -307,5 +327,34 @@ test('2026 Daxing police qualification snapshots attach to the exact mirrored po
     assert.equal(row?.recruitCount, recruits);
     assert.equal(row?.observedAt, observedAt);
     assert.equal(row?.qualifiedCompetitionRatio, qualified / recruits);
+  }
+});
+
+test('2026 Mentougou Civil Affairs snapshots attach to the exact mirrored position code', async () => {
+  const raw = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const dataset = normalizeDataset(raw);
+  const position = dataset.positions.find((item) => item.year === 2026 && item.code === '220946301');
+  const source = dataset.sources.find((item) => item.sourceId === 'xduim-2026-mentougou-job-220946301');
+  const expected = [
+    ['eoffcn-2026-snapshot-20251117-1800', '2025-11-17 18:00', 10],
+    ['eoffcn-2026-snapshot-20251118-0900', '2025-11-18 09:00', 18],
+    ['eoffcn-2026-snapshot-20251118-1800', '2025-11-18 18:00', 76],
+    ['eoffcn-2026-snapshot-20251119-0900', '2025-11-19 09:00', 77],
+    ['eoffcn-2026-snapshot-20251119-1800', '2025-11-19 18:00', 135],
+  ];
+
+  assert.ok(position, 'Mentougou Civil Affairs position 220946301 should appear in the position library');
+  assert.equal(position.unit, '北京市门头沟区民政局');
+  assert.equal(position.title, '综合管理岗');
+  assert.equal(position.recruitCount, 1);
+  assert.equal(source?.url, 'https://www.xduim.com/zw/beijing/gwylist?city=%E9%97%A8%E5%A4%B4%E6%B2%9F%E5%8C%BA&year=2026');
+
+  for (const [sourceId, observedAt, qualified] of expected) {
+    const row = dataset.observations.find((item) => item.sourceId === sourceId
+      && item.year === 2026 && item.positionCode === '220946301');
+    assert.equal(row?.observedAt, observedAt);
+    assert.equal(row?.applicantsQualified, qualified);
+    assert.equal(row?.recruitCount, 1);
+    assert.equal(row?.qualifiedCompetitionRatio, qualified);
   }
 });

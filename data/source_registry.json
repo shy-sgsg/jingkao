@@ -1279,6 +1279,12 @@
         "recruitCount": 2
       },
       {
+        "positionCode": "220946301",
+        "scope": "position-level",
+        "applicantsQualified": 10,
+        "recruitCount": 1
+      },
+      {
         "positionCode": null,
         "scope": "unit-level",
         "unit": "北京市昌平区总工会",
@@ -1355,6 +1361,12 @@
       },
       {
         "positionCode": "221262601",
+        "scope": "position-level",
+        "applicantsQualified": 18,
+        "recruitCount": 1
+      },
+      {
+        "positionCode": "220946301",
         "scope": "position-level",
         "applicantsQualified": 18,
         "recruitCount": 1
@@ -1441,6 +1453,12 @@
         "recruitCount": 1
       },
       {
+        "positionCode": "220946301",
+        "scope": "position-level",
+        "applicantsQualified": 76,
+        "recruitCount": 1
+      },
+      {
         "positionCode": "230531801",
         "scope": "position-level",
         "applicantsQualified": 69,
@@ -1495,9 +1513,39 @@
         "scope": "position-level",
         "applicantsQualified": 183,
         "recruitCount": 32
+      },
+      {
+        "positionCode": "220946301",
+        "scope": "position-level",
+        "applicantsQualified": 77,
+        "recruitCount": 1
+      },
+      {
+        "positionCode": "231156101",
+        "scope": "position-level",
+        "applicantsQualified": 123,
+        "recruitCount": 2
+      },
+      {
+        "positionCode": "221154902",
+        "scope": "position-level",
+        "applicantsQualified": 56,
+        "recruitCount": 1
+      },
+      {
+        "positionCode": "220633601",
+        "scope": "position-level",
+        "applicantsQualified": 106,
+        "recruitCount": 2
+      },
+      {
+        "positionCode": "241780601",
+        "scope": "position-level",
+        "applicantsQualified": 51,
+        "recruitCount": 1
       }
     ],
-    "notes": "页面逐职位表列示昌平岗位821261102、821263001及朝阳岗位230531801、232502003的资格审查通过人数与招录数。均为第三方快照，不是最终报名、缴费或实考人数。"
+    "notes": "页面列出市级竞争最激烈岗位榜单；将其中能与本地候选职位按职位代码、招录数匹配的岗位逐行记录，包括昌平、门头沟、朝阳、通州、海淀和延庆的岗位。另保留该页过审人数最多表中与职位库匹配的朝阳公安和大兴公安岗位。不是全市完整报名清单；人数为第三方资格审查快照，不是最终报名、缴费或实考人数。"
   },
   {
     "sourceId": "eoffcn-2026-snapshot-20251119-1800",
@@ -1587,6 +1635,12 @@
         "scope": "position-level",
         "applicantsQualified": 269,
         "recruitCount": 32
+      },
+      {
+        "positionCode": "220946301",
+        "scope": "position-level",
+        "applicantsQualified": 135,
+        "recruitCount": 1
       }
     ],
     "notes": "页面逐职位列出市级过审人数前十及最激烈岗位；记录其中能与2026职位库按代码、招录人数匹配的岗位。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
@@ -14663,5 +14717,40 @@
     "maximum": 122,
     "scope": "丰台区岗位最低进面线部分样本",
     "notes": "页面称丰台区112人进入面试；可见表格有9条数值分数，另有一条显示“无”未作为数值分数记录。页面标题/H1写106.25分，但正文最低分说明和可见表格均为52.15分，保留此源内不一致提示并按表格录入。9条中仅公安丰台分局一线执法岗1能与当前职位候选行按同年度单位及岗位名精确匹配到代码232502201，其余8条未在现有候选行中唯一匹配，保留未关联。页面仅展示部分岗位，分数不是官方全量或笔试合格线。"
+  },
+  {
+    "sourceId": "cgzj-2026-huairou-cutoff-sample",
+    "title": "成公教育：2026北京公务员怀柔区岗位最低进面分部分样本",
+    "publisher": "成公教育",
+    "level": "secondary",
+    "evidenceType": "partial_interview_score_sample",
+    "year": 2026,
+    "districtId": "huairou",
+    "geographicScope": "怀柔区岗位最低进面分部分样本",
+    "url": "https://www.cgzj.com/sk/12637.html",
+    "accessedAt": "2026-10-10",
+    "samplePositions": 25,
+    "sampleRecruits": 36,
+    "minimum": 95.25,
+    "maximum": 129.75,
+    "scope": "怀柔区岗位最低进面线部分样本",
+    "notes": "页面称怀柔区共36人进入面试，表格展示25条部分样本，范围95.25—129.75。23条可按同年度单位+岗位名唯一匹配到当前候选职位代码；统计局综合统计岗1、北房镇行政执法岗未在现有候选行中匹配，保留未关联。岗位底表及分数均为第三方资料，非全区全量，也不是笔试合格线。"
+  },
+  {
+    "sourceId": "xduim-2026-mentougou-job-220946301",
+    "title": "相对面：2026门头沟区职位条件列表（民政局220946301）",
+    "publisher": "相对面职位库",
+    "level": "secondary",
+    "evidenceType": "position_mirror",
+    "year": 2026,
+    "districtId": "mentougou",
+    "geographicScope": "门头沟区2026职位列表",
+    "url": "https://www.xduim.com/zw/beijing/gwylist?city=%E9%97%A8%E5%A4%B4%E6%B2%9F%E5%8C%BA&year=2026",
+    "accessedAt": "2026-10-10",
+    "positionCode": "220946301",
+    "unit": "北京市门头沟区民政局",
+    "positionTitle": "综合管理岗",
+    "reportedRecruitCount": 1,
+    "notes": "列表按职位代码列出单位、学历、专业、政治面貌、工作年限要求、招录类别及人数；职位名称由中公报名快照中同代码行交叉确认。第三方镜像，尚未与官方职位简章逐代码核验。"
   }
 ]

@@ -22,7 +22,7 @@ test('score sample count and bounds are derived from its concrete score rows', a
   const rows = data.scoreRows.filter((row) => row.year === 2026);
   const samples = data.scoreSamples.filter((item) => item.year === 2026);
 
-  assert.equal(samples.length, 10);
+  assert.equal(samples.length, 11);
   assert.equal(samples.reduce((total, sample) => total + sample.samplePositions, 0), rows.length);
   for (const sample of samples) {
     const sourceRows = rows.filter((row) => row.sourceId === sample.sourceId);
@@ -64,6 +64,15 @@ test('score sample count and bounds are derived from its concrete score rows', a
   assert.deepEqual(fengtaiRows.reduce((counts, row) => ({ ...counts, [row.mappingConfidence]: counts[row.mappingConfidence] + 1 }), {
     high: 0, ambiguous: 0, unmatched: 0,
   }), { high: 1, ambiguous: 0, unmatched: 8 });
+
+  const huairou = samples.find((sample) => sample.sourceId === 'cgzj-2026-huairou-cutoff-sample');
+  assert.equal(huairou.samplePositions, 25);
+  assert.equal(huairou.sampleRecruits, 36);
+  assert.deepEqual([huairou.minimum, huairou.maximum], [95.25, 129.75]);
+  const huairouRows = rows.filter((row) => row.sourceId === 'cgzj-2026-huairou-cutoff-sample');
+  assert.deepEqual(huairouRows.reduce((counts, row) => ({ ...counts, [row.mappingConfidence]: counts[row.mappingConfidence] + 1 }), {
+    high: 0, ambiguous: 0, unmatched: 0,
+  }), { high: 23, ambiguous: 0, unmatched: 2 });
 });
 
 test('Shijingshan position cards receive exact code-linked cutoff scores from the partial district table', async () => {
@@ -124,6 +133,18 @@ test('Fangshan position detail receives the source-backed 2026 interview cutoff 
 
   assert.equal(evidence.cutoffScore, 136.25);
   assert.deepEqual(evidence.cutoffSourceIds, ['cgzj-2026-fangshan-cutoff-sample']);
+});
+
+test('Huairou position detail receives its exact 2026 cutoff from the partial district table', async () => {
+  const data = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const position = data.positions.find((row) => row.year === 2026 && row.code === '821673201');
+  const evidence = getPositionCompetitionEvidence(position, {
+    observations: data.observations,
+    scoreRows: data.scoreRows,
+  });
+
+  assert.equal(evidence.cutoffScore, 129.75);
+  assert.deepEqual(evidence.cutoffSourceIds, ['cgzj-2026-huairou-cutoff-sample']);
 });
 
 test('Tongzhou fiscal positions receive their distinct 2026 interview cutoffs by exact position code', async () => {

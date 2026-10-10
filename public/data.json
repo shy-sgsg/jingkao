@@ -84227,6 +84227,50 @@
       ],
       "districtId": "chaoyang",
       "districtMatch": "朝阳分局"
+    },
+    {
+      "year": 2026,
+      "code": "220946301",
+      "unit": "北京市门头沟区民政局",
+      "title": "综合管理岗",
+      "orgType": "区直",
+      "jobType": "综合管理",
+      "recruitCount": 1,
+      "education": "本科及以上",
+      "majorText": "本科：法学类（0301），社会工作（030302），中国语言文学类（0501），新闻传播学类（0503），工商管理类（1202） 研究生：法学（0301），法律（0351），社会工作（0352），中国语言文学（0501），新闻传播学（0503），新闻与传播（0552），工商管理学（1202），工商管理（1251）",
+      "majorCriteria": {
+        "undergraduate": [
+          "0301",
+          "030302",
+          "0501",
+          "0503",
+          "1202"
+        ],
+        "graduate": [
+          "0301",
+          "0351",
+          "0352",
+          "0501",
+          "0503",
+          "0552",
+          "1202",
+          "1251"
+        ]
+      },
+      "requirements": {
+        "politicalStatus": "不限"
+      },
+      "eligibilityComplete": false,
+      "crossVerified": false,
+      "eligibilityText": "相对面职位列表列出本科及以上、所列本科/研究生专业、政治面貌不限、基层工作年限无限制及普通职位；中公报名统计按代码交叉列出单位、职位名称和招录数。尚未与北京市官方招考简章逐代码核验。",
+      "sourceLevel": "secondary",
+      "verification": "单位、职位代码及资格字段来自相对面镜像；职位名和计划招录数与中公报名统计逐码对应；待官方逐码核验",
+      "sources": [
+        "xduim-2026-mentougou-job-220946301",
+        "eoffcn-2026-snapshot-20251118-0900"
+      ],
+      "districtId": "mentougou",
+      "districtMatch": "门头沟区"
     }
   ],
   "observations": [
@@ -84706,6 +84750,23 @@
     },
     {
       "year": 2026,
+      "scope": "position-level",
+      "positionCode": "220946301",
+      "unit": null,
+      "observationType": "qualified_snapshot",
+      "observedAt": "2025-11-17 18:00",
+      "applicantsRegistered": null,
+      "applicantsQualified": 10,
+      "applicantsPaid": null,
+      "applicantsConfirmed": null,
+      "actualTestTakers": null,
+      "recruitCount": 1,
+      "sourceId": "eoffcn-2026-snapshot-20251117-1800",
+      "sourceLevel": "secondary",
+      "notes": "页面逐职位表列出市级过审人数前十岗位；记录其中可与2026职位库按代码、招录人数匹配的岗位（含昌平区档案馆821261102、朝阳区东坝地区230531801及朝阳公安分局232502003）。昌平区总工会9人/计划1人仅见单位汇总，未展示职位代码，故仍记为单位级。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
+    },
+    {
+      "year": 2026,
       "scope": "unit-level",
       "positionCode": null,
       "unit": "北京市昌平区总工会",
@@ -84878,6 +84939,23 @@
       "year": 2026,
       "scope": "position-level",
       "positionCode": "221262601",
+      "unit": null,
+      "observationType": "qualified_snapshot",
+      "observedAt": "2025-11-18 09:00",
+      "applicantsRegistered": null,
+      "applicantsQualified": 18,
+      "applicantsPaid": null,
+      "applicantsConfirmed": null,
+      "actualTestTakers": null,
+      "recruitCount": 1,
+      "sourceId": "eoffcn-2026-snapshot-20251118-0900",
+      "sourceLevel": "secondary",
+      "notes": "页面列出市级过审人数前十及竞争最激烈岗位；记录其中能与2026职位库按代码、招录人数匹配的岗位。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
+    },
+    {
+      "year": 2026,
+      "scope": "position-level",
+      "positionCode": "220946301",
       "unit": null,
       "observationType": "qualified_snapshot",
       "observedAt": "2025-11-18 09:00",
@@ -85081,6 +85159,23 @@
     {
       "year": 2026,
       "scope": "position-level",
+      "positionCode": "220946301",
+      "unit": null,
+      "observationType": "qualified_snapshot",
+      "observedAt": "2025-11-18 18:00",
+      "applicantsRegistered": null,
+      "applicantsQualified": 76,
+      "applicantsPaid": null,
+      "applicantsConfirmed": null,
+      "actualTestTakers": null,
+      "recruitCount": 1,
+      "sourceId": "eoffcn-2026-snapshot-20251118-1800",
+      "sourceLevel": "secondary",
+      "notes": "报道注明竞争比按资格审查通过人数/招录人数计算；此处逐职位保存市级过审人数前十和高竞争岗位中可与2026职位库按职位代码、招录数匹配的记录。该页面不是全市完整清单；人数是第三方资格审查快照，不是最终缴费或实考人数。"
+    },
+    {
+      "year": 2026,
+      "scope": "position-level",
       "positionCode": "230531801",
       "unit": null,
       "observationType": "qualified_snapshot",
@@ -85127,7 +85222,7 @@
       "recruitCount": 2,
       "sourceId": "eoffcn-2026-snapshot-20251119-0900",
       "sourceLevel": "secondary",
-      "notes": "页面逐职位表列示昌平岗位821261102、821263001及朝阳岗位230531801、232502003的资格审查通过人数与招录数。均为第三方快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面列出市级竞争最激烈岗位榜单；将其中能与本地候选职位按职位代码、招录数匹配的岗位逐行记录，包括昌平、门头沟、朝阳、通州、海淀和延庆的岗位。另保留该页过审人数最多表中与职位库匹配的朝阳公安和大兴公安岗位。不是全市完整报名清单；人数为第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -85144,7 +85239,7 @@
       "recruitCount": 1,
       "sourceId": "eoffcn-2026-snapshot-20251119-0900",
       "sourceLevel": "secondary",
-      "notes": "页面逐职位表列示昌平岗位821261102、821263001及朝阳岗位230531801、232502003的资格审查通过人数与招录数。均为第三方快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面列出市级竞争最激烈岗位榜单；将其中能与本地候选职位按职位代码、招录数匹配的岗位逐行记录，包括昌平、门头沟、朝阳、通州、海淀和延庆的岗位。另保留该页过审人数最多表中与职位库匹配的朝阳公安和大兴公安岗位。不是全市完整报名清单；人数为第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -85161,7 +85256,7 @@
       "recruitCount": 23,
       "sourceId": "eoffcn-2026-snapshot-20251119-0900",
       "sourceLevel": "secondary",
-      "notes": "页面逐职位表列示昌平岗位821261102、821263001及朝阳岗位230531801、232502003的资格审查通过人数与招录数。均为第三方快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面列出市级竞争最激烈岗位榜单；将其中能与本地候选职位按职位代码、招录数匹配的岗位逐行记录，包括昌平、门头沟、朝阳、通州、海淀和延庆的岗位。另保留该页过审人数最多表中与职位库匹配的朝阳公安和大兴公安岗位。不是全市完整报名清单；人数为第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -85178,7 +85273,7 @@
       "recruitCount": 1,
       "sourceId": "eoffcn-2026-snapshot-20251119-0900",
       "sourceLevel": "secondary",
-      "notes": "页面逐职位表列示昌平岗位821261102、821263001及朝阳岗位230531801、232502003的资格审查通过人数与招录数。均为第三方快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面列出市级竞争最激烈岗位榜单；将其中能与本地候选职位按职位代码、招录数匹配的岗位逐行记录，包括昌平、门头沟、朝阳、通州、海淀和延庆的岗位。另保留该页过审人数最多表中与职位库匹配的朝阳公安和大兴公安岗位。不是全市完整报名清单；人数为第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -85195,7 +85290,92 @@
       "recruitCount": 32,
       "sourceId": "eoffcn-2026-snapshot-20251119-0900",
       "sourceLevel": "secondary",
-      "notes": "页面逐职位表列示昌平岗位821261102、821263001及朝阳岗位230531801、232502003的资格审查通过人数与招录数。均为第三方快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面列出市级竞争最激烈岗位榜单；将其中能与本地候选职位按职位代码、招录数匹配的岗位逐行记录，包括昌平、门头沟、朝阳、通州、海淀和延庆的岗位。另保留该页过审人数最多表中与职位库匹配的朝阳公安和大兴公安岗位。不是全市完整报名清单；人数为第三方资格审查快照，不是最终报名、缴费或实考人数。"
+    },
+    {
+      "year": 2026,
+      "scope": "position-level",
+      "positionCode": "220946301",
+      "unit": null,
+      "observationType": "qualified_snapshot",
+      "observedAt": "2025-11-19 09:00",
+      "applicantsRegistered": null,
+      "applicantsQualified": 77,
+      "applicantsPaid": null,
+      "applicantsConfirmed": null,
+      "actualTestTakers": null,
+      "recruitCount": 1,
+      "sourceId": "eoffcn-2026-snapshot-20251119-0900",
+      "sourceLevel": "secondary",
+      "notes": "页面列出市级竞争最激烈岗位榜单；将其中能与本地候选职位按职位代码、招录数匹配的岗位逐行记录，包括昌平、门头沟、朝阳、通州、海淀和延庆的岗位。另保留该页过审人数最多表中与职位库匹配的朝阳公安和大兴公安岗位。不是全市完整报名清单；人数为第三方资格审查快照，不是最终报名、缴费或实考人数。"
+    },
+    {
+      "year": 2026,
+      "scope": "position-level",
+      "positionCode": "231156101",
+      "unit": null,
+      "observationType": "qualified_snapshot",
+      "observedAt": "2025-11-19 09:00",
+      "applicantsRegistered": null,
+      "applicantsQualified": 123,
+      "applicantsPaid": null,
+      "applicantsConfirmed": null,
+      "actualTestTakers": null,
+      "recruitCount": 2,
+      "sourceId": "eoffcn-2026-snapshot-20251119-0900",
+      "sourceLevel": "secondary",
+      "notes": "页面列出市级竞争最激烈岗位榜单；将其中能与本地候选职位按职位代码、招录数匹配的岗位逐行记录，包括昌平、门头沟、朝阳、通州、海淀和延庆的岗位。另保留该页过审人数最多表中与职位库匹配的朝阳公安和大兴公安岗位。不是全市完整报名清单；人数为第三方资格审查快照，不是最终报名、缴费或实考人数。"
+    },
+    {
+      "year": 2026,
+      "scope": "position-level",
+      "positionCode": "221154902",
+      "unit": null,
+      "observationType": "qualified_snapshot",
+      "observedAt": "2025-11-19 09:00",
+      "applicantsRegistered": null,
+      "applicantsQualified": 56,
+      "applicantsPaid": null,
+      "applicantsConfirmed": null,
+      "actualTestTakers": null,
+      "recruitCount": 1,
+      "sourceId": "eoffcn-2026-snapshot-20251119-0900",
+      "sourceLevel": "secondary",
+      "notes": "页面列出市级竞争最激烈岗位榜单；将其中能与本地候选职位按职位代码、招录数匹配的岗位逐行记录，包括昌平、门头沟、朝阳、通州、海淀和延庆的岗位。另保留该页过审人数最多表中与职位库匹配的朝阳公安和大兴公安岗位。不是全市完整报名清单；人数为第三方资格审查快照，不是最终报名、缴费或实考人数。"
+    },
+    {
+      "year": 2026,
+      "scope": "position-level",
+      "positionCode": "220633601",
+      "unit": null,
+      "observationType": "qualified_snapshot",
+      "observedAt": "2025-11-19 09:00",
+      "applicantsRegistered": null,
+      "applicantsQualified": 106,
+      "applicantsPaid": null,
+      "applicantsConfirmed": null,
+      "actualTestTakers": null,
+      "recruitCount": 2,
+      "sourceId": "eoffcn-2026-snapshot-20251119-0900",
+      "sourceLevel": "secondary",
+      "notes": "页面列出市级竞争最激烈岗位榜单；将其中能与本地候选职位按职位代码、招录数匹配的岗位逐行记录，包括昌平、门头沟、朝阳、通州、海淀和延庆的岗位。另保留该页过审人数最多表中与职位库匹配的朝阳公安和大兴公安岗位。不是全市完整报名清单；人数为第三方资格审查快照，不是最终报名、缴费或实考人数。"
+    },
+    {
+      "year": 2026,
+      "scope": "position-level",
+      "positionCode": "241780601",
+      "unit": null,
+      "observationType": "qualified_snapshot",
+      "observedAt": "2025-11-19 09:00",
+      "applicantsRegistered": null,
+      "applicantsQualified": 51,
+      "applicantsPaid": null,
+      "applicantsConfirmed": null,
+      "actualTestTakers": null,
+      "recruitCount": 1,
+      "sourceId": "eoffcn-2026-snapshot-20251119-0900",
+      "sourceLevel": "secondary",
+      "notes": "页面列出市级竞争最激烈岗位榜单；将其中能与本地候选职位按职位代码、招录数匹配的岗位逐行记录，包括昌平、门头沟、朝阳、通州、海淀和延庆的岗位。另保留该页过审人数最多表中与职位库匹配的朝阳公安和大兴公安岗位。不是全市完整报名清单；人数为第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -85414,6 +85594,23 @@
       "applicantsConfirmed": null,
       "actualTestTakers": null,
       "recruitCount": 32,
+      "sourceId": "eoffcn-2026-snapshot-20251119-1800",
+      "sourceLevel": "secondary",
+      "notes": "页面逐职位列出市级过审人数前十及最激烈岗位；记录其中能与2026职位库按代码、招录人数匹配的岗位。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
+    },
+    {
+      "year": 2026,
+      "scope": "position-level",
+      "positionCode": "220946301",
+      "unit": null,
+      "observationType": "qualified_snapshot",
+      "observedAt": "2025-11-19 18:00",
+      "applicantsRegistered": null,
+      "applicantsQualified": 135,
+      "applicantsPaid": null,
+      "applicantsConfirmed": null,
+      "actualTestTakers": null,
+      "recruitCount": 1,
       "sourceId": "eoffcn-2026-snapshot-20251119-1800",
       "sourceLevel": "secondary",
       "notes": "页面逐职位列出市级过审人数前十及最激烈岗位；记录其中能与2026职位库按代码、招录人数匹配的岗位。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
@@ -86870,6 +87067,12 @@
           "recruitCount": 2
         },
         {
+          "positionCode": "220946301",
+          "scope": "position-level",
+          "applicantsQualified": 10,
+          "recruitCount": 1
+        },
+        {
           "positionCode": null,
           "scope": "unit-level",
           "unit": "北京市昌平区总工会",
@@ -86946,6 +87149,12 @@
         },
         {
           "positionCode": "221262601",
+          "scope": "position-level",
+          "applicantsQualified": 18,
+          "recruitCount": 1
+        },
+        {
+          "positionCode": "220946301",
           "scope": "position-level",
           "applicantsQualified": 18,
           "recruitCount": 1
@@ -87032,6 +87241,12 @@
           "recruitCount": 1
         },
         {
+          "positionCode": "220946301",
+          "scope": "position-level",
+          "applicantsQualified": 76,
+          "recruitCount": 1
+        },
+        {
           "positionCode": "230531801",
           "scope": "position-level",
           "applicantsQualified": 69,
@@ -87086,9 +87301,39 @@
           "scope": "position-level",
           "applicantsQualified": 183,
           "recruitCount": 32
+        },
+        {
+          "positionCode": "220946301",
+          "scope": "position-level",
+          "applicantsQualified": 77,
+          "recruitCount": 1
+        },
+        {
+          "positionCode": "231156101",
+          "scope": "position-level",
+          "applicantsQualified": 123,
+          "recruitCount": 2
+        },
+        {
+          "positionCode": "221154902",
+          "scope": "position-level",
+          "applicantsQualified": 56,
+          "recruitCount": 1
+        },
+        {
+          "positionCode": "220633601",
+          "scope": "position-level",
+          "applicantsQualified": 106,
+          "recruitCount": 2
+        },
+        {
+          "positionCode": "241780601",
+          "scope": "position-level",
+          "applicantsQualified": 51,
+          "recruitCount": 1
         }
       ],
-      "notes": "页面逐职位表列示昌平岗位821261102、821263001及朝阳岗位230531801、232502003的资格审查通过人数与招录数。均为第三方快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面列出市级竞争最激烈岗位榜单；将其中能与本地候选职位按职位代码、招录数匹配的岗位逐行记录，包括昌平、门头沟、朝阳、通州、海淀和延庆的岗位。另保留该页过审人数最多表中与职位库匹配的朝阳公安和大兴公安岗位。不是全市完整报名清单；人数为第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "sourceId": "eoffcn-2026-snapshot-20251119-1800",
@@ -87178,6 +87423,12 @@
           "scope": "position-level",
           "applicantsQualified": 269,
           "recruitCount": 32
+        },
+        {
+          "positionCode": "220946301",
+          "scope": "position-level",
+          "applicantsQualified": 135,
+          "recruitCount": 1
         }
       ],
       "notes": "页面逐职位列出市级过审人数前十及最激烈岗位；记录其中能与2026职位库按代码、招录人数匹配的岗位。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
@@ -100254,6 +100505,41 @@
       "maximum": 122,
       "scope": "丰台区岗位最低进面线部分样本",
       "notes": "页面称丰台区112人进入面试；可见表格有9条数值分数，另有一条显示“无”未作为数值分数记录。页面标题/H1写106.25分，但正文最低分说明和可见表格均为52.15分，保留此源内不一致提示并按表格录入。9条中仅公安丰台分局一线执法岗1能与当前职位候选行按同年度单位及岗位名精确匹配到代码232502201，其余8条未在现有候选行中唯一匹配，保留未关联。页面仅展示部分岗位，分数不是官方全量或笔试合格线。"
+    },
+    {
+      "sourceId": "cgzj-2026-huairou-cutoff-sample",
+      "title": "成公教育：2026北京公务员怀柔区岗位最低进面分部分样本",
+      "publisher": "成公教育",
+      "level": "secondary",
+      "evidenceType": "partial_interview_score_sample",
+      "year": 2026,
+      "districtId": "huairou",
+      "geographicScope": "怀柔区岗位最低进面分部分样本",
+      "url": "https://www.cgzj.com/sk/12637.html",
+      "accessedAt": "2026-10-10",
+      "samplePositions": 25,
+      "sampleRecruits": 36,
+      "minimum": 95.25,
+      "maximum": 129.75,
+      "scope": "怀柔区岗位最低进面线部分样本",
+      "notes": "页面称怀柔区共36人进入面试，表格展示25条部分样本，范围95.25—129.75。23条可按同年度单位+岗位名唯一匹配到当前候选职位代码；统计局综合统计岗1、北房镇行政执法岗未在现有候选行中匹配，保留未关联。岗位底表及分数均为第三方资料，非全区全量，也不是笔试合格线。"
+    },
+    {
+      "sourceId": "xduim-2026-mentougou-job-220946301",
+      "title": "相对面：2026门头沟区职位条件列表（民政局220946301）",
+      "publisher": "相对面职位库",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "districtId": "mentougou",
+      "geographicScope": "门头沟区2026职位列表",
+      "url": "https://www.xduim.com/zw/beijing/gwylist?city=%E9%97%A8%E5%A4%B4%E6%B2%9F%E5%8C%BA&year=2026",
+      "accessedAt": "2026-10-10",
+      "positionCode": "220946301",
+      "unit": "北京市门头沟区民政局",
+      "positionTitle": "综合管理岗",
+      "reportedRecruitCount": 1,
+      "notes": "列表按职位代码列出单位、学历、专业、政治面貌、工作年限要求、招录类别及人数；职位名称由中公报名快照中同代码行交叉确认。第三方镜像，尚未与官方职位简章逐代码核验。"
     }
   ],
   "studyPlan": [
@@ -101926,6 +102212,18 @@
       "sourceLevel": "secondary",
       "complete": false,
       "notes": "页面称海淀共有95人进入面试，公开表格可见25条岗位分数；其中23条与当前职位库唯一匹配，法院和香山街道各有同名岗位歧义。页面明确为部分样本，不能代表全区全量，也不是官方笔试合格线。"
+    },
+    {
+      "year": 2026,
+      "scope": "怀柔区岗位最低进面线部分样本",
+      "samplePositions": 25,
+      "sampleRecruits": 36,
+      "minimum": 95.25,
+      "maximum": 129.75,
+      "sourceId": "cgzj-2026-huairou-cutoff-sample",
+      "sourceLevel": "secondary",
+      "complete": false,
+      "notes": "页面称怀柔区共36人进入面试，表格展示25条部分样本，范围95.25—129.75。23条可按同年度单位+岗位名唯一匹配到当前候选职位代码；统计局综合统计岗1、北房镇行政执法岗未在现有候选行中匹配，保留未关联。岗位底表及分数均为第三方资料，非全区全量，也不是笔试合格线。"
     },
     {
       "year": 2026,
@@ -104857,6 +105155,381 @@
       "notes": "成公网页未提供职位代码；按同年度单位和岗位名精确匹配到职位候选代码232502201，分数和岗位信息仍待官方逐项核验。",
       "mappingConfidence": "high",
       "sourceId": "cgzj-2026-fengtai-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-huairou-01",
+      "year": 2026,
+      "unit": "北京市怀柔区住房和城乡建设委员会",
+      "title": "质量管理岗",
+      "name": "北京市怀柔区住房和城乡建设委员会｜质量管理岗",
+      "positionCode": "821673201",
+      "orgType": "区直",
+      "score": 129.75,
+      "notes": "成公网页未提供职位代码；按同年度单位及岗位名唯一匹配到候选代码821673201，分数和岗位信息仍待官方逐项核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-huairou-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-huairou-02",
+      "year": 2026,
+      "unit": "北京市怀柔区城市管理指挥中心",
+      "title": "数据管理岗",
+      "name": "北京市怀柔区城市管理指挥中心｜数据管理岗",
+      "positionCode": "821673702",
+      "orgType": "区直",
+      "score": 128.25,
+      "notes": "成公网页未提供职位代码；按同年度单位及岗位名唯一匹配到候选代码821673702，分数和岗位信息仍待官方逐项核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-huairou-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-huairou-03",
+      "year": 2026,
+      "unit": "北京市怀柔区财政局",
+      "title": "国库管理岗",
+      "name": "北京市怀柔区财政局｜国库管理岗",
+      "positionCode": "821672101",
+      "orgType": "区直",
+      "score": 128,
+      "notes": "成公网页未提供职位代码；按同年度单位及岗位名唯一匹配到候选代码821672101，分数和岗位信息仍待官方逐项核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-huairou-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-huairou-04",
+      "year": 2026,
+      "unit": "北京市怀柔区统计局",
+      "title": "综合统计岗2",
+      "name": "北京市怀柔区统计局｜综合统计岗2",
+      "positionCode": "821672902",
+      "orgType": "区直",
+      "score": 126.75,
+      "notes": "成公网页未提供职位代码；按同年度单位及岗位名唯一匹配到候选代码821672902，分数和岗位信息仍待官方逐项核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-huairou-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-huairou-05",
+      "year": 2026,
+      "unit": "北京市怀柔区市场监督管理局",
+      "title": "监督管理岗1",
+      "name": "北京市怀柔区市场监督管理局｜监督管理岗1",
+      "positionCode": "241672501",
+      "orgType": "区直",
+      "score": 126.25,
+      "notes": "成公网页未提供职位代码；按同年度单位及岗位名唯一匹配到候选代码241672501，分数和岗位信息仍待官方逐项核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-huairou-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-huairou-06",
+      "year": 2026,
+      "unit": "北京市怀柔区发展和改革委员会",
+      "title": "政策研究岗",
+      "name": "北京市怀柔区发展和改革委员会｜政策研究岗",
+      "positionCode": "221672601",
+      "orgType": "区直",
+      "score": 124.75,
+      "notes": "成公网页未提供职位代码；按同年度单位及岗位名唯一匹配到候选代码221672601，分数和岗位信息仍待官方逐项核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-huairou-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-huairou-07",
+      "year": 2026,
+      "unit": "北京市怀柔区人力资源和社会保障局",
+      "title": "稽核法务岗",
+      "name": "北京市怀柔区人力资源和社会保障局｜稽核法务岗",
+      "positionCode": "821672702",
+      "orgType": "区直",
+      "score": 124,
+      "notes": "成公网页未提供职位代码；按同年度单位及岗位名唯一匹配到候选代码821672702，分数和岗位信息仍待官方逐项核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-huairou-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-huairou-08",
+      "year": 2026,
+      "unit": "北京市怀柔区园林绿化局",
+      "title": "行政执法岗",
+      "name": "北京市怀柔区园林绿化局｜行政执法岗",
+      "positionCode": "221673001",
+      "orgType": "区直",
+      "score": 123.75,
+      "notes": "成公网页未提供职位代码；按同年度单位及岗位名唯一匹配到候选代码221673001，分数和岗位信息仍待官方逐项核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-huairou-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-huairou-09",
+      "year": 2026,
+      "unit": "北京市怀柔区统计局",
+      "title": "综合统计岗1",
+      "name": "北京市怀柔区统计局｜综合统计岗1",
+      "positionCode": null,
+      "orgType": "区直",
+      "score": 123.5,
+      "notes": "成公网页未提供职位代码；当前职位候选行没有该同名岗位，无法匹配，保留未关联。",
+      "mappingConfidence": "unmatched",
+      "sourceId": "cgzj-2026-huairou-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "岗位代码未唯一匹配；保留空代码"
+    },
+    {
+      "id": "2026-cgzj-huairou-10",
+      "year": 2026,
+      "unit": "北京市怀柔区城市管理委员会",
+      "title": "行政执法岗",
+      "name": "北京市怀柔区城市管理委员会｜行政执法岗",
+      "positionCode": "221673301",
+      "orgType": "区直",
+      "score": 122.75,
+      "notes": "成公网页未提供职位代码；按同年度单位及岗位名唯一匹配到候选代码221673301，分数和岗位信息仍待官方逐项核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-huairou-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-huairou-11",
+      "year": 2026,
+      "unit": "北京市怀柔区龙山街道",
+      "title": "司法助理员岗",
+      "name": "北京市怀柔区龙山街道｜司法助理员岗",
+      "positionCode": "241673801",
+      "orgType": "街道",
+      "score": 122.5,
+      "notes": "成公网页未提供职位代码；按同年度单位及岗位名唯一匹配到候选代码241673801，分数和岗位信息仍待官方逐项核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-huairou-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-huairou-12",
+      "year": 2026,
+      "unit": "中共北京市怀柔区委办公室",
+      "title": "综合管理岗",
+      "name": "中共北京市怀柔区委办公室｜综合管理岗",
+      "positionCode": "121672001",
+      "orgType": "区直",
+      "score": 121.25,
+      "notes": "成公网页未提供职位代码；按同年度单位及岗位名唯一匹配到候选代码121672001，分数和岗位信息仍待官方逐项核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-huairou-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-huairou-13",
+      "year": 2026,
+      "unit": "北京市怀柔区市场监督管理局",
+      "title": "行政执法岗",
+      "name": "北京市怀柔区市场监督管理局｜行政执法岗",
+      "positionCode": "221672505",
+      "orgType": "区直",
+      "score": 121.25,
+      "notes": "成公网页未提供职位代码；按同年度单位及岗位名唯一匹配到候选代码221672505，分数和岗位信息仍待官方逐项核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-huairou-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-huairou-14",
+      "year": 2026,
+      "unit": "北京市怀柔区城市管理指挥中心",
+      "title": "诉求处置岗",
+      "name": "北京市怀柔区城市管理指挥中心｜诉求处置岗",
+      "positionCode": "821673701",
+      "orgType": "区直",
+      "score": 121,
+      "notes": "成公网页未提供职位代码；按同年度单位及岗位名唯一匹配到候选代码821673701，分数和岗位信息仍待官方逐项核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-huairou-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-huairou-15",
+      "year": 2026,
+      "unit": "北京市怀柔区审计局",
+      "title": "财政审计岗",
+      "name": "北京市怀柔区审计局｜财政审计岗",
+      "positionCode": "221672802",
+      "orgType": "区直",
+      "score": 120.25,
+      "notes": "成公网页未提供职位代码；按同年度单位及岗位名唯一匹配到候选代码221672802，分数和岗位信息仍待官方逐项核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-huairou-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-huairou-16",
+      "year": 2026,
+      "unit": "北京市怀柔区农业农村局",
+      "title": "行政执法岗",
+      "name": "北京市怀柔区农业农村局｜行政执法岗",
+      "positionCode": "221672201",
+      "orgType": "区直",
+      "score": 117.5,
+      "notes": "成公网页未提供职位代码；按同年度单位及岗位名唯一匹配到候选代码221672201，分数和岗位信息仍待官方逐项核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-huairou-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-huairou-17",
+      "year": 2026,
+      "unit": "北京市怀柔区交通局",
+      "title": "行政执法岗",
+      "name": "北京市怀柔区交通局｜行政执法岗",
+      "positionCode": "221673401",
+      "orgType": "区直",
+      "score": 113.5,
+      "notes": "成公网页未提供职位代码；按同年度单位及岗位名唯一匹配到候选代码221673401，分数和岗位信息仍待官方逐项核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-huairou-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-huairou-18",
+      "year": 2026,
+      "unit": "北京市怀柔区市场监督管理局",
+      "title": "监督管理岗4",
+      "name": "北京市怀柔区市场监督管理局｜监督管理岗4",
+      "positionCode": "241672504",
+      "orgType": "区直",
+      "score": 112,
+      "notes": "成公网页未提供职位代码；按同年度单位及岗位名唯一匹配到候选代码241672504，分数和岗位信息仍待官方逐项核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-huairou-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-huairou-19",
+      "year": 2026,
+      "unit": "北京市怀柔区生态环境局",
+      "title": "行政执法岗",
+      "name": "北京市怀柔区生态环境局｜行政执法岗",
+      "positionCode": "221673601",
+      "orgType": "区直",
+      "score": 112,
+      "notes": "成公网页未提供职位代码；按同年度单位及岗位名唯一匹配到候选代码221673601，分数和岗位信息仍待官方逐项核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-huairou-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-huairou-20",
+      "year": 2026,
+      "unit": "北京市怀柔区龙山街道",
+      "title": "行政执法岗",
+      "name": "北京市怀柔区龙山街道｜行政执法岗",
+      "positionCode": "241673802",
+      "orgType": "街道",
+      "score": 109,
+      "notes": "成公网页未提供职位代码；按同年度单位及岗位名唯一匹配到候选代码241673802，分数和岗位信息仍待官方逐项核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-huairou-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-huairou-21",
+      "year": 2026,
+      "unit": "北京市怀柔区怀北镇",
+      "title": "行政执法岗",
+      "name": "北京市怀柔区怀北镇｜行政执法岗",
+      "positionCode": "241674001",
+      "orgType": "镇",
+      "score": 108.5,
+      "notes": "成公网页未提供职位代码；按同年度单位及岗位名唯一匹配到候选代码241674001，分数和岗位信息仍待官方逐项核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-huairou-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-huairou-22",
+      "year": 2026,
+      "unit": "北京市怀柔区审计局",
+      "title": "社保审计岗",
+      "name": "北京市怀柔区审计局｜社保审计岗",
+      "positionCode": "221672801",
+      "orgType": "区直",
+      "score": 106.75,
+      "notes": "成公网页未提供职位代码；按同年度单位及岗位名唯一匹配到候选代码221672801，分数和岗位信息仍待官方逐项核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-huairou-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-huairou-23",
+      "year": 2026,
+      "unit": "北京市怀柔区北房镇",
+      "title": "行政执法岗",
+      "name": "北京市怀柔区北房镇｜行政执法岗",
+      "positionCode": null,
+      "orgType": "镇",
+      "score": 106.75,
+      "notes": "成公网页未提供职位代码；当前职位候选行没有该单位及岗位名对应，无法匹配，保留未关联。",
+      "mappingConfidence": "unmatched",
+      "sourceId": "cgzj-2026-huairou-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "岗位代码未唯一匹配；保留空代码"
+    },
+    {
+      "id": "2026-cgzj-huairou-24",
+      "year": 2026,
+      "unit": "北京市怀柔区文化和旅游局",
+      "title": "行政执法岗",
+      "name": "北京市怀柔区文化和旅游局｜行政执法岗",
+      "positionCode": "221673501",
+      "orgType": "区直",
+      "score": 106.5,
+      "notes": "成公网页未提供职位代码；按同年度单位及岗位名唯一匹配到候选代码221673501，分数和岗位信息仍待官方逐项核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-huairou-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-huairou-25",
+      "year": 2026,
+      "unit": "北京市怀柔区宝山镇",
+      "title": "行政执法岗",
+      "name": "北京市怀柔区宝山镇｜行政执法岗",
+      "positionCode": "241674101",
+      "orgType": "镇",
+      "score": 95.25,
+      "notes": "成公网页未提供职位代码；按同年度单位及岗位名唯一匹配到候选代码241674101，分数和岗位信息仍待官方逐项核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-huairou-cutoff-sample",
       "sourceLevel": "secondary",
       "verification": "年度、单位与岗位名唯一匹配"
     }
