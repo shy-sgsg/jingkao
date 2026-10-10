@@ -1,0 +1,235 @@
+{
+  "batch_date": "2026-10-10",
+  "authorization": "user_confirmed_republication_authorization",
+  "source_papers": [
+    {
+      "paper_id": "zhanhong-2025-mock-A 类",
+      "title": "展鸿 2025 年浙江省公务员录用考试模拟卷（A 类）",
+      "question_count": 125,
+      "captured_question_count": 122,
+      "answer_count": 125,
+      "explanation_count": 125,
+      "published_count": 93,
+      "held_count": 32,
+      "sections": [
+        {
+          "module": "common_knowledge",
+          "section_order": 1,
+          "from": 1,
+          "to": 20
+        },
+        {
+          "module": "verbal",
+          "section_order": 2,
+          "from": 21,
+          "to": 50
+        },
+        {
+          "module": "quantitative",
+          "section_order": 3,
+          "from": 51,
+          "to": 70
+        },
+        {
+          "module": "reasoning",
+          "section_order": 4,
+          "from": 71,
+          "to": 110
+        },
+        {
+          "module": "data_analysis",
+          "section_order": 5,
+          "from": 111,
+          "to": 125
+        }
+      ],
+      "source_url": "https://static.32xueyuan.com/zq/u/cms/zj/202411/202048155177.pdf",
+      "answer_url": "https://zhanhong-32-read-able.oss-cn-hangzhou.aliyuncs.com/upload/videos/2024/11/02/%E5%B1%95%E9%B8%BF2025%E5%B9%B4%E6%B5%99%E6%B1%9F%E7%9C%81%E8%80%83%E3%80%8A%E8%A1%8C%E6%94%BF%E8%81%8C%E4%B8%9A%E8%83%BD%E5%8A%9B%E6%B5%8B%E9%AA%8C%E3%80%8B%E6%A8%A1%E6%8B%9F%E5%8D%B7110344187.pdf"
+    },
+    {
+      "paper_id": "zhanhong-2025-mock-B 类",
+      "title": "展鸿 2025 年浙江省公务员录用考试模拟卷（B 类）",
+      "question_count": 120,
+      "captured_question_count": 118,
+      "answer_count": 120,
+      "explanation_count": 120,
+      "published_count": 92,
+      "held_count": 28,
+      "sections": [
+        {
+          "module": "common_knowledge",
+          "section_order": 1,
+          "from": 1,
+          "to": 20
+        },
+        {
+          "module": "verbal",
+          "section_order": 2,
+          "from": 21,
+          "to": 50
+        },
+        {
+          "module": "quantitative",
+          "section_order": 3,
+          "from": 51,
+          "to": 70
+        },
+        {
+          "module": "reasoning",
+          "section_order": 4,
+          "from": 71,
+          "to": 105
+        },
+        {
+          "module": "data_analysis",
+          "section_order": 5,
+          "from": 106,
+          "to": 120
+        }
+      ],
+      "source_url": "https://static.32xueyuan.com/zq/u/cms/zj/202411/202048155177.pdf",
+      "answer_url": "https://zhanhong-32-read-able.oss-cn-hangzhou.aliyuncs.com/upload/videos/2024/11/02/%E5%B1%95%E9%B8%BF2025%E5%B9%B4%E6%B5%99%E6%B1%9F%E7%9C%81%E8%80%83%E3%80%8A%E8%A1%8C%E6%94%BF%E8%81%8C%E4%B8%9A%E8%83%BD%E5%8A%9B%E6%B5%8B%E9%AA%8C%E3%80%8B%E6%A8%A1%E6%8B%9F%E5%8D%B7110344187.pdf"
+    },
+    {
+      "paper_id": "zhanhong-2025-mock-C 类",
+      "title": "展鸿 2025 年浙江省公务员录用考试模拟卷（C 类）",
+      "question_count": 115,
+      "captured_question_count": 113,
+      "answer_count": 115,
+      "explanation_count": 115,
+      "published_count": 87,
+      "held_count": 28,
+      "sections": [
+        {
+          "module": "common_knowledge",
+          "section_order": 1,
+          "from": 1,
+          "to": 20
+        },
+        {
+          "module": "verbal",
+          "section_order": 2,
+          "from": 21,
+          "to": 50
+        },
+        {
+          "module": "quantitative",
+          "section_order": 3,
+          "from": 51,
+          "to": 65
+        },
+        {
+          "module": "reasoning",
+          "section_order": 4,
+          "from": 66,
+          "to": 100
+        },
+        {
+          "module": "data_analysis",
+          "section_order": 5,
+          "from": 101,
+          "to": 115
+        }
+      ],
+      "source_url": "https://static.32xueyuan.com/zq/u/cms/zj/202411/202048155177.pdf",
+      "answer_url": "https://zhanhong-32-read-able.oss-cn-hangzhou.aliyuncs.com/upload/videos/2024/11/02/%E5%B1%95%E9%B8%BF2025%E5%B9%B4%E6%B5%99%E6%B1%9F%E7%9C%81%E8%80%83%E3%80%8A%E8%A1%8C%E6%94%BF%E8%81%8C%E4%B8%9A%E8%83%BD%E5%8A%9B%E6%B5%8B%E9%AA%8C%E3%80%8B%E6%A8%A1%E6%8B%9F%E5%8D%B7110344187.pdf"
+    },
+    {
+      "paper_id": "jiangsu-2024-A-class",
+      "title": "2024 年江苏省公务员录用考试《行测》A 类真题",
+      "question_count": 135,
+      "captured_question_count": 133,
+      "answer_count": 135,
+      "explanation_count": 135,
+      "published_count": 77,
+      "held_count": 58,
+      "sections": [
+        {
+          "module": "common_knowledge",
+          "section_order": 1,
+          "from": 1,
+          "to": 15
+        },
+        {
+          "module": "verbal",
+          "section_order": 2,
+          "from": 16,
+          "to": 45
+        },
+        {
+          "module": "quantitative",
+          "section_order": 3,
+          "from": 46,
+          "to": 65
+        },
+        {
+          "module": "reasoning",
+          "section_order": 4,
+          "from": 66,
+          "to": 95
+        },
+        {
+          "module": "data_analysis",
+          "section_order": 5,
+          "from": 96,
+          "to": 135
+        }
+      ],
+      "source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+      "answer_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf"
+    },
+    {
+      "paper_id": "zhejiang-2023-A-class",
+      "title": "2023 年浙江省公务员录用考试《行测》A 卷（公开回忆题）",
+      "question_count": 125,
+      "captured_question_count": 125,
+      "answer_count": 125,
+      "explanation_count": 125,
+      "published_count": 107,
+      "held_count": 18,
+      "sections": [
+        {
+          "module": "common_knowledge",
+          "section_order": 1,
+          "from": 1,
+          "to": 20
+        },
+        {
+          "module": "verbal",
+          "section_order": 2,
+          "from": 21,
+          "to": 50
+        },
+        {
+          "module": "quantitative",
+          "section_order": 3,
+          "from": 51,
+          "to": 70
+        },
+        {
+          "module": "reasoning",
+          "section_order": 4,
+          "from": 71,
+          "to": 110
+        },
+        {
+          "module": "data_analysis",
+          "section_order": 5,
+          "from": 111,
+          "to": 125
+        }
+      ],
+      "source_url": "https://www.aipta.com/article/3524.html",
+      "answer_url": "https://static.32xueyuan.com/zq//u/cms/zj/202310/20144954ob39.pdf"
+    }
+  ],
+  "app_integrated_question_count": 456,
+  "app_integrated_by_module": {
+    "general-knowledge": 92,
+    "verbal": 142,
+    "quantitative": 77,
+    "reasoning": 130,
+    "data-analysis": 15
+  },
+  "policy": "Only complete exact-stem and exact-option items with source answer and explanation are published. Visual and shared-material questions remain in intake until all assets are itemized. Published records feed the corresponding module practice and verified random mock bank; complete source-module ranges may be selected as section mocks."
+}

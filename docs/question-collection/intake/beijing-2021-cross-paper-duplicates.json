@@ -1,0 +1,15 @@
+{
+  "paper_ids": [
+    "bj-2021-乡镇-24",
+    "bj-2021-区级及以上-23"
+  ],
+  "comparison_basis": "direct source-fragment string equality",
+  "exact_question_fragment_matches": [
+    1,
+    18,
+    19,
+    22,
+    25
+  ],
+  "note": "Only exact matches are listed. Preserve both full paper positions; deduplicate these items when building a cross-paper random module set."
+}

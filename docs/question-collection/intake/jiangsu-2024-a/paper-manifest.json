@@ -1,0 +1,61 @@
+{
+  "paper_id": "jiangsu-2024-A-class",
+  "title": "2024 年江苏省公务员录用考试《行测》A 类真题",
+  "region": "江苏",
+  "exam_year": 2024,
+  "variant": "A 类",
+  "question_count": 135,
+  "source_type": "verified_exam",
+  "source_id": "jiangsu-2024-a-32xueyuan",
+  "source_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+  "answer_url": "https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf",
+  "directory": "jiangsu-2024-a",
+  "sections": [
+    {
+      "module": "common_knowledge",
+      "section_order": 1,
+      "from": 1,
+      "to": 15
+    },
+    {
+      "module": "verbal",
+      "section_order": 2,
+      "from": 16,
+      "to": 45
+    },
+    {
+      "module": "quantitative",
+      "section_order": 3,
+      "from": 46,
+      "to": 65
+    },
+    {
+      "module": "reasoning",
+      "section_order": 4,
+      "from": 66,
+      "to": 95
+    },
+    {
+      "module": "data_analysis",
+      "section_order": 5,
+      "from": 96,
+      "to": 135
+    }
+  ],
+  "questions_parsed_count": 133,
+  "answer_count": 135,
+  "explanation_count": 135,
+  "published_count": 77,
+  "held_count": 58,
+  "authorization": {
+    "status": "user_confirmed_republication_authorization",
+    "confirmed_on": "2026-10-10"
+  },
+  "source_file": "publisher-paper.pdf",
+  "question_records_file": "questions.json",
+  "answer_explanations_file": "answer-explanations.json",
+  "captured_question_text_count": 133,
+  "answer_explanation_count": 135,
+  "published_question_count": 77,
+  "held_question_count": 58
+}

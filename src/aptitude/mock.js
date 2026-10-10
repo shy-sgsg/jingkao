@@ -20,6 +20,76 @@ const PAPER_CATALOG = [
       'data-analysis': [101, 125],
     },
   },
+  {
+    id: 'zhanhong-2025-mock-A 类',
+    title: '展鸿 2025 年浙江省考行测模拟卷 A 类',
+    region: '浙江',
+    examYear: 2025,
+    questionCount: 125,
+    sourceUrl: 'https://static.32xueyuan.com/zq/u/cms/zj/202411/202048155177.pdf',
+    answerUrl: 'https://zhanhong-32-read-able.oss-cn-hangzhou.aliyuncs.com/upload/videos/2024/11/02/%E5%B1%95%E9%B8%BF2025%E5%B9%B4%E6%B5%99%E6%B1%9F%E7%9C%81%E8%80%83%E3%80%8A%E8%A1%8C%E6%94%BF%E8%81%8C%E4%B8%9A%E8%83%BD%E5%8A%9B%E6%B5%8B%E9%AA%8C%E3%80%8B%E6%A8%A1%E6%8B%9F%E5%8D%B7110344187.pdf',
+    sourceType: 'third_party_mock',
+    ranges: {
+      'general-knowledge': [1, 20], verbal: [21, 50], quantitative: [51, 70],
+      reasoning: [71, 110], 'data-analysis': [111, 125],
+    },
+  },
+  {
+    id: 'zhanhong-2025-mock-B 类',
+    title: '展鸿 2025 年浙江省考行测模拟卷 B 类',
+    region: '浙江',
+    examYear: 2025,
+    questionCount: 120,
+    sourceUrl: 'https://static.32xueyuan.com/zq/u/cms/zj/202411/202048155177.pdf',
+    answerUrl: 'https://zhanhong-32-read-able.oss-cn-hangzhou.aliyuncs.com/upload/videos/2024/11/02/%E5%B1%95%E9%B8%BF2025%E5%B9%B4%E6%B5%99%E6%B1%9F%E7%9C%81%E8%80%83%E3%80%8A%E8%A1%8C%E6%94%BF%E8%81%8C%E4%B8%9A%E8%83%BD%E5%8A%9B%E6%B5%8B%E9%AA%8C%E3%80%8B%E6%A8%A1%E6%8B%9F%E5%8D%B7110344187.pdf',
+    sourceType: 'third_party_mock',
+    ranges: {
+      'general-knowledge': [1, 20], verbal: [21, 50], quantitative: [51, 70],
+      reasoning: [71, 105], 'data-analysis': [106, 120],
+    },
+  },
+  {
+    id: 'zhanhong-2025-mock-C 类',
+    title: '展鸿 2025 年浙江省考行测模拟卷 C 类',
+    region: '浙江',
+    examYear: 2025,
+    questionCount: 115,
+    sourceUrl: 'https://static.32xueyuan.com/zq/u/cms/zj/202411/202048155177.pdf',
+    answerUrl: 'https://zhanhong-32-read-able.oss-cn-hangzhou.aliyuncs.com/upload/videos/2024/11/02/%E5%B1%95%E9%B8%BF2025%E5%B9%B4%E6%B5%99%E6%B1%9F%E7%9C%81%E8%80%83%E3%80%8A%E8%A1%8C%E6%94%BF%E8%81%8C%E4%B8%9A%E8%83%BD%E5%8A%9B%E6%B5%8B%E9%AA%8C%E3%80%8B%E6%A8%A1%E6%8B%9F%E5%8D%B7110344187.pdf',
+    sourceType: 'third_party_mock',
+    ranges: {
+      'general-knowledge': [1, 20], verbal: [21, 50], quantitative: [51, 65],
+      reasoning: [66, 100], 'data-analysis': [101, 115],
+    },
+  },
+  {
+    id: 'jiangsu-2024-A-class',
+    title: '2024 年江苏省公务员录用考试行测 A 类真题',
+    region: '江苏',
+    examYear: 2024,
+    questionCount: 135,
+    sourceUrl: 'https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf',
+    answerUrl: 'https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf',
+    sourceType: 'verified_exam',
+    ranges: {
+      'general-knowledge': [1, 15], verbal: [16, 45], quantitative: [46, 65],
+      reasoning: [66, 95], 'data-analysis': [96, 135],
+    },
+  },
+  {
+    id: 'zhejiang-2023-A-class',
+    title: '2023 年浙江省公务员录用考试行测 A 卷（考生回忆题）',
+    region: '浙江',
+    examYear: 2023,
+    questionCount: 125,
+    sourceUrl: 'https://www.aipta.com/article/3524.html',
+    answerUrl: 'https://static.32xueyuan.com/zq//u/cms/zj/202310/20144954ob39.pdf',
+    sourceType: 'recalled',
+    ranges: {
+      'general-knowledge': [1, 20], verbal: [21, 50], quantitative: [51, 70],
+      reasoning: [71, 110], 'data-analysis': [111, 125],
+    },
+  },
 ];
 
 function hasCompleteQuestion(question) {
@@ -37,7 +107,8 @@ function stimulusIsComplete(stimulus) {
   if (typeof stimulus === 'string') return Boolean(stimulus.trim());
   if (!stimulus || typeof stimulus !== 'object') return false;
   return Boolean(stimulus.text?.trim() || stimulus.caption?.trim()
-    || stimulus.imageUrl?.trim() || stimulus.assetUrl?.trim());
+    || stimulus.imageUrl?.trim() || stimulus.assetUrl?.trim()
+    || stimulus.imageUrls?.some((url) => typeof url === 'string' && url.trim()));
 }
 
 function hasCompleteSharedStimuli(questions, fullBank) {
@@ -75,6 +146,22 @@ export function getAptitudeMockQuestionBank(moduleId = null) {
     .map((question) => question.sharedStimulusId && !question.sharedStimulus
       ? { ...question, sharedStimulus: materials.get(question.sharedStimulusId) }
       : question);
+}
+
+export function getUniqueAptitudeRandomQuestionBank(moduleId = null) {
+  const seen = new Set();
+  return getAptitudeMockQuestionBank(moduleId).filter((question) => {
+    if (question.sharedStimulusId) return true;
+    const normalize = (value) => String(value || '').normalize('NFKC').replace(/\s+/g, '').trim();
+    const signature = [
+      normalize(question.stem),
+      (question.options || []).map((option) => normalize(typeof option === 'string' ? option : option?.text)).join('|'),
+      question.correctAnswer || '',
+    ].join('\u001f');
+    if (seen.has(signature)) return false;
+    seen.add(signature);
+    return true;
+  });
 }
 
 export function getCompleteAptitudePapers(moduleId = null, questionBank = getAptitudeMockQuestionBank()) {

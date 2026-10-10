@@ -1,0 +1,1258 @@
+{
+  "paper_id": "guangdong-2019-乡镇卷",
+  "title": "2019年广东省公务员录用考试《行测》真题（乡镇卷）",
+  "region": "广东",
+  "exam_year": 2019,
+  "variant": "乡镇卷",
+  "question_count": 100,
+  "source_url": "https://www.aipta.com/article/3483.html",
+  "supporting_answer_source_url": "https://lasee.net/gongwuyuan/168334212414024.html",
+  "authorization": {
+    "status": "user_confirmed_republication_authorization",
+    "confirmed_on": "2026-10-10"
+  },
+  "source_page_file": "source-page.html",
+  "question_records_file": "questions.json",
+  "answer_file": "answers.json",
+  "sections": [
+    {
+      "module": "verbal",
+      "section_order": 1,
+      "from": 1,
+      "to": 10,
+      "label": "言语理解与表达"
+    },
+    {
+      "module": "quantitative",
+      "section_order": 2,
+      "from": 11,
+      "to": 25,
+      "label": "数量关系"
+    },
+    {
+      "module": "reasoning",
+      "section_order": 3,
+      "from": 26,
+      "to": 45,
+      "label": "判断推理"
+    },
+    {
+      "module": "science_reasoning",
+      "section_order": 4,
+      "from": 46,
+      "to": 60,
+      "label": "科学推理"
+    },
+    {
+      "module": "common_knowledge",
+      "section_order": 5,
+      "from": 61,
+      "to": 80,
+      "label": "常识判断"
+    },
+    {
+      "module": "data_analysis",
+      "section_order": 6,
+      "from": 81,
+      "to": 100,
+      "label": "资料分析"
+    }
+  ],
+  "captured_question_start_count": 100,
+  "source_page_image_count": 56,
+  "image_status": "image URLs are preserved; binary files not yet mirrored into this intake packet",
+  "content_gaps": [
+    "Aipta 主来源的第95题 C/D 选项缺失；已从同卷另一公开题面按题干及 A/B 选项核对补录，保留独立来源和原文，不覆盖主页面。",
+    "56 张图片仍是外链，尚未镜像到本地。"
+  ],
+  "archive_status": "full source page and 100 question blocks staged; separate answer key; q95 options cross-sourced; image assets remain to be mirrored",
+  "question_records": [
+    {
+      "original_question_no": 1,
+      "module": "verbal",
+      "section_order": 1,
+      "source_block_start": 1,
+      "source_block_end_exclusive": 6,
+      "raw_source_html_fragment": "<p>1.多元的发展机会和自由的成长空间，是时代给予每个追梦人的馈赠；（ \n  ）每个追梦人在前进道路上迈出的每一步，（ \n  ）都在推动时代的进步。</p><p>A、而\n也</p><p>B、但\n却</p><p>C、如果\n就</p><p>D、只有\n才</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 2,
+      "module": "verbal",
+      "section_order": 1,
+      "source_block_start": 6,
+      "source_block_end_exclusive": 11,
+      "raw_source_html_fragment": "<p>2.只要我们迈出的步伐足够坚实，前进的意志足够（ \n  ），奋斗路上的困难终将被克服，前进路上的沟壑终将被跨越。</p><p>A、强硬</p><p>B、奋勇</p><p>C、坚定</p><p>D、坚硬</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 3,
+      "module": "verbal",
+      "section_order": 1,
+      "source_block_start": 11,
+      "source_block_end_exclusive": 16,
+      "raw_source_html_fragment": "<p>3.近年来，各地纷纷大刀阔斧地开展（ \n  ），向不担当不作为亮剑。</p><p>A、整理</p><p>B、整治</p><p>C、修理</p><p>D、梳理</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 4,
+      "module": "verbal",
+      "section_order": 1,
+      "source_block_start": 16,
+      "source_block_end_exclusive": 21,
+      "raw_source_html_fragment": "<p>4.在落实乡村振兴战略的过程中，一定要科学规划，（ \n  ），才能最终实现目标，任何希望（ \n  ）的想法都是不切实际的。</p><p>A、循序渐进\n一蹴而就</p><p>B、寻根究底\n一鼓作气</p><p>C、蔚然成风\n一劳永逸</p><p>D、未雨绸缪\n一马当先</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 5,
+      "module": "verbal",
+      "section_order": 1,
+      "source_block_start": 21,
+      "source_block_end_exclusive": 26,
+      "raw_source_html_fragment": "<p>5.持续深入的人才发展体制机制改革，为（ \n  ）、（    ）、（ \n  ）、（   \n）打牢了坚实基础，有力推进了新时代中国特色社会主义伟大事业不断夺取新的伟大胜利。</p><p>A、引才\n聚才 用才 育才</p><p>B、聚才\n用才 育才 引才</p><p>C、用才\n育才 引才 聚才</p><p>D、育才\n引才 聚才 用才</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 6,
+      "module": "verbal",
+      "section_order": 1,
+      "source_block_start": 26,
+      "source_block_end_exclusive": 32,
+      "raw_source_html_fragment": "<p>6.回顾40年，改革开放旗帜之所以始终高高飘扬，关键得益于基层求新求变的强大意愿以及敢闯敢试的探索精神，改革再扬帆，也必须尊重基层干部群众在改革进程中的主体性作用。</p><p>对这段文字理解准确的是（    ）。</p><p>A、实践是改革开放最关键的一环</p><p>B、基层的探索精神完全决定于改革的效果</p><p>C、改革必须发挥基层干部群众的主观能动性</p><p>D、改革开放促使基层创新求变</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 7,
+      "module": "verbal",
+      "section_order": 1,
+      "source_block_start": 32,
+      "source_block_end_exclusive": 38,
+      "raw_source_html_fragment": "<p>7.尽管从农业社会走向现代社会，是经济社会发展的必然，但这样不是促使农业农村的“消亡”，做好“三农”工作，建设好农村，发展好农业，使广大农民获得感、安全感不断提升，依然是社会主义建设的主要内容。</p><p>这段文字主要说明了（    ）。</p><p>A、我国目前仍然处于农业社会</p><p>B、“三农”工作的重要性</p><p>C、农业农村会随着经济社会的发展“消亡”</p><p>D、广大农民的获得感、幸福感、安全感有待提升</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 8,
+      "module": "verbal",
+      "section_order": 1,
+      "source_block_start": 38,
+      "source_block_end_exclusive": 44,
+      "raw_source_html_fragment": "<p>8.扶贫干部自掏腰包到基层扶贫，是真扶贫、扶真贫的体现。但若一味宣扬扶贫干部自掏腰包扶贫，不仅会加重扶贫干部的经济负担，还会在一定程度上让贫困群众产生依赖心理。</p><p>对这段文字理解准确的是（ \n  ）。</p><p>A、一味宣扬扶贫干部自掏腰包扶贫具有一定的副作用</p><p>B、应该大力提倡扶贫干部自掏腰包支持贫困户</p><p>C、当前存在大量扶贫干部自掏腰包扶贫的情况</p><p>D、扶贫干部自掏腰包扶贫是不得已而为之的</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 9,
+      "module": "verbal",
+      "section_order": 1,
+      "source_block_start": 44,
+      "source_block_end_exclusive": 50,
+      "raw_source_html_fragment": "<p>9.完善村民自治，应推动乡村治理重心下移，尽可能把资源、服务、管理下放到基层，培育打造服务性、公益性、互动性农村社会组织，开展农村社会工作和志愿服务，发挥新乡贤作用。</p><p>对这段文字理解准确的是（    ）。</p><p>A、完善村民自治需要大量引进志愿者</p><p>B、完善村民自治需要让乡贤发挥主要作用</p><p>C、完善村民自治需要把所有资源下放到基层</p><p>D、完善村民自治需要发展农村社会组织</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 10,
+      "module": "verbal",
+      "section_order": 1,
+      "source_block_start": 50,
+      "source_block_end_exclusive": 57,
+      "raw_source_html_fragment": "<p>10.推动媒体融合发展，事关推进国家治理体系和治理能力现代化。在全媒体时代，媒体不仅是信息的提供者和传播者，而且在国家治理中也发挥着重要作用。因此，媒体融合不仅仅是一个传播命题，还是一个治理命题。</p><p>这段文字的主旨是（ \n  ）。</p><p>A、国家治理现代化需要促进媒体融合</p><p>B、媒体融合发展有利于促进信息传播</p><p>C、媒体融合发展是信息技术发展的需要</p><p>D、媒体在国家治理中应承担主要责任</p><p>二、数量关系。第二部分\n数量关系\n本部分包括数字推理和数学运算两部分，每道题呈现一段表述数字关系的文字，要求你迅速、准确地计算出答案。</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 11,
+      "module": "quantitative",
+      "section_order": 2,
+      "source_block_start": 57,
+      "source_block_end_exclusive": 62,
+      "raw_source_html_fragment": "<p>11.4 \n7  10  13  （ \n  ）</p><p>A、15</p><p>B、16</p><p>C、17</p><p>D、18</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 12,
+      "module": "quantitative",
+      "section_order": 2,
+      "source_block_start": 62,
+      "source_block_end_exclusive": 67,
+      "raw_source_html_fragment": "<p>12.5 \n9  17  33  （ \n  ）</p><p>A、35</p><p>B、45</p><p>C、65</p><p>D、85</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 13,
+      "module": "quantitative",
+      "section_order": 2,
+      "source_block_start": 67,
+      "source_block_end_exclusive": 72,
+      "raw_source_html_fragment": "<p>13.5 \n15  45  135  （ \n  ）</p><p>A、185</p><p>B、225</p><p>C、355</p><p>D、405</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 14,
+      "module": "quantitative",
+      "section_order": 2,
+      "source_block_start": 72,
+      "source_block_end_exclusive": 77,
+      "raw_source_html_fragment": "<p>14.64 \n32  16  8  （ \n  ）</p><p>A、4</p><p>B、5</p><p>C、6</p><p>D、7</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 15,
+      "module": "quantitative",
+      "section_order": 2,
+      "source_block_start": 77,
+      "source_block_end_exclusive": 82,
+      "raw_source_html_fragment": "<p>15.<img align=\"bottom\" border=\"0\" height=\"28\" name=\"剧 1517\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_edb2f7386dd51610.png\" width=\"10\">  <img align=\"bottom\" border=\"0\" height=\"28\" name=\"剧 1518\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_8caedf01e952fff1.png\" width=\"10\"/>  <img align=\"bottom\" border=\"0\" height=\"28\" name=\"剧 1519\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_a22ebac48f2f2bbe.png\" width=\"10\"/>  <img align=\"bottom\" border=\"0\" height=\"28\" name=\"剧 1520\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_80b9725cb744cc21.png\" width=\"16\"/> （   \n）</img></p><p>A、<img align=\"bottom\" border=\"0\" height=\"28\" name=\"剧 1521\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_21f8b17eedb88f91.png\" width=\"16\"/></p><p>B、<img align=\"bottom\" border=\"0\" height=\"28\" name=\"剧 1522\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_9d6ff2b38315ba44.png\" width=\"16\"/></p><p>C、<img align=\"bottom\" border=\"0\" height=\"28\" name=\"剧 1523\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_99f87081cf0de449.png\" width=\"16\"/></p><p>D、<img align=\"bottom\" border=\"0\" height=\"28\" name=\"剧 1524\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_4ebeb80a57932318.png\" width=\"16\"/></p>",
+      "image_urls_in_range": [
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_edb2f7386dd51610.png",
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_8caedf01e952fff1.png",
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_a22ebac48f2f2bbe.png",
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_80b9725cb744cc21.png",
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_21f8b17eedb88f91.png",
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_9d6ff2b38315ba44.png",
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_99f87081cf0de449.png",
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_4ebeb80a57932318.png"
+      ],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 16,
+      "module": "quantitative",
+      "section_order": 2,
+      "source_block_start": 82,
+      "source_block_end_exclusive": 87,
+      "raw_source_html_fragment": "<p>16.乡镇干部小李今天有3项不同的工作要完成，则他今天完成工作的顺序共有（ \n  ）种。</p><p>A、3</p><p>B、4</p><p>C、5</p><p>D、6</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 17,
+      "module": "quantitative",
+      "section_order": 2,
+      "source_block_start": 87,
+      "source_block_end_exclusive": 92,
+      "raw_source_html_fragment": "<p>17.某机构计划在一块边长为18米的正方形空地开展活动，需要在空地四边每隔2米插上一面彩旗，若该空地的四个角都需要插上彩旗，那么一共需要（ \n  ）面彩旗。</p><p>A、32</p><p>B、36</p><p>C、44</p><p>D、48</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 18,
+      "module": "quantitative",
+      "section_order": 2,
+      "source_block_start": 92,
+      "source_block_end_exclusive": 97,
+      "raw_source_html_fragment": "<p>18.在一次知识竞赛中，甲、乙两单位平均分为85分，甲单位得分比乙单位高10分，则乙单位得分为（ \n  ）分。</p><p>A、88</p><p>B、85</p><p>C、80</p><p>D、75</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 19,
+      "module": "quantitative",
+      "section_order": 2,
+      "source_block_start": 97,
+      "source_block_end_exclusive": 102,
+      "raw_source_html_fragment": "<p>19.某文印室有30袋A4纸和20袋B3纸。由于工作需要，该文印室每天都会用掉6袋A4纸和2袋B3纸，则三天后文印室的B3纸比A4纸多（ \n  ）袋。</p><p>A、1</p><p>B、2</p><p>C、3</p><p>D、4</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 20,
+      "module": "quantitative",
+      "section_order": 2,
+      "source_block_start": 102,
+      "source_block_end_exclusive": 107,
+      "raw_source_html_fragment": "<p>20.某单位男女干部人数相等，男干部中60%有基层工作经历，女干部中50%有基层工作经历。则在该单位全体干部中，有基层工作经历的占（ \n  ）。</p><p>A、<img align=\"bottom\" border=\"0\" height=\"18\" hspace=\"1\" name=\"剧 1527\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_3180216023e12040.png\" width=\"25\"/></p><p>B、<img align=\"bottom\" border=\"0\" height=\"18\" hspace=\"1\" name=\"剧 1528\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_e1b923084fc3e0b0.png\" width=\"25\"/></p><p>C、<img align=\"bottom\" border=\"0\" height=\"18\" hspace=\"1\" name=\"剧 1529\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_b36a1d6eadcd155e.png\" width=\"25\"/></p><p>D、<img align=\"bottom\" border=\"0\" height=\"18\" hspace=\"1\" name=\"剧 1530\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_910b5d424eb8a7da.png\" width=\"25\"/></p>",
+      "image_urls_in_range": [
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_3180216023e12040.png",
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_e1b923084fc3e0b0.png",
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_b36a1d6eadcd155e.png",
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_910b5d424eb8a7da.png"
+      ],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 21,
+      "module": "quantitative",
+      "section_order": 2,
+      "source_block_start": 107,
+      "source_block_end_exclusive": 112,
+      "raw_source_html_fragment": "<p>21.某商场为了提高销量，以七五折销售笔记本电脑，打折后销售3600元。则该笔记本原价为每台（    ）元。</p><p>A、4200</p><p>B、4500</p><p>C、4800</p><p>D、5100</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 22,
+      "module": "quantitative",
+      "section_order": 2,
+      "source_block_start": 112,
+      "source_block_end_exclusive": 117,
+      "raw_source_html_fragment": "<p>22.某办公室有大、中、小三种型号的文件袋共200个，已知大号文件袋数量是中号文件袋的2倍，小号文件袋的数量为50个，那么大号文件袋有（ \n  ）个。</p><p>A、50</p><p>B、60</p><p>C、80</p><p>D、100</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 23,
+      "module": "quantitative",
+      "section_order": 2,
+      "source_block_start": 117,
+      "source_block_end_exclusive": 122,
+      "raw_source_html_fragment": "<p>23.甲乙两人绕着周长为600米的环形跑道跑步，他们从相同的起点同时同向起跑。已知甲的速度为每秒4米，乙的速度为每秒3米，则当甲第一次回到起点时，乙距离起点还有（ \n  ）米。</p><p>A、100</p><p>B、150</p><p>C、200</p><p>D、250</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 24,
+      "module": "quantitative",
+      "section_order": 2,
+      "source_block_start": 122,
+      "source_block_end_exclusive": 127,
+      "raw_source_html_fragment": "<p>24.小王距离单位1.2公里，每天步行上班。速度为每分钟100米，则他上班需要花（\n   ）分钟。</p><p>A、12</p><p>B、15</p><p>C、18</p><p>D、20</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 25,
+      "module": "quantitative",
+      "section_order": 2,
+      "source_block_start": 127,
+      "source_block_end_exclusive": 133,
+      "raw_source_html_fragment": "<p>25.甲施工队每天能完成某项工程的1/9，乙施工队施工效率是甲施工队的两倍，则甲、乙两队同时施工（\n   ）天就能完成该工程。</p><p>A、2</p><p>B、3</p><p>C、4</p><p>D、5</p><p>三、判断推理。第三部分\n判断推理。\n本部分包括图形推理、类比推理与逻辑判断三种类型的试题，在四个选项中选出一个最恰当的答案。</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 26,
+      "module": "reasoning",
+      "section_order": 3,
+      "source_block_start": 133,
+      "source_block_end_exclusive": 139,
+      "raw_source_html_fragment": "<p>26.下列选项中最符合所给图形规律的是（ \n  ）。</p><p><img align=\"bottom\" border=\"0\" height=\"219\" hspace=\"1\" name=\"剧 1532\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_3b9fa14e4abf0fca.png\" vspace=\"1\" width=\"413\"/></p><p>A、A</p><p>B、B</p><p>C、C</p><p>D、D</p>",
+      "image_urls_in_range": [
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_3b9fa14e4abf0fca.png"
+      ],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 27,
+      "module": "reasoning",
+      "section_order": 3,
+      "source_block_start": 139,
+      "source_block_end_exclusive": 145,
+      "raw_source_html_fragment": "<p>27.下列选项中最符合所给图形规律的是（ \n  ）。</p><p><img align=\"bottom\" border=\"0\" height=\"241\" hspace=\"1\" name=\"剧 1533\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_1a1cd686402b4f6a.png\" vspace=\"1\" width=\"431\"/></p><p>A、A</p><p>B、B</p><p>C、C</p><p>D、D</p>",
+      "image_urls_in_range": [
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_1a1cd686402b4f6a.png"
+      ],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 28,
+      "module": "reasoning",
+      "section_order": 3,
+      "source_block_start": 145,
+      "source_block_end_exclusive": 151,
+      "raw_source_html_fragment": "<p>28.下列选项中最符合所给图形规律的是（ \n  ）。</p><p><img align=\"bottom\" border=\"0\" height=\"188\" hspace=\"1\" name=\"剧 1534\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_31742e4de0044d11.png\" vspace=\"1\" width=\"432\"/></p><p>A、A</p><p>B、B</p><p>C、C</p><p>D、D</p>",
+      "image_urls_in_range": [
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_31742e4de0044d11.png"
+      ],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 29,
+      "module": "reasoning",
+      "section_order": 3,
+      "source_block_start": 151,
+      "source_block_end_exclusive": 157,
+      "raw_source_html_fragment": "<p>29.如图所示，这三个小图形可以组成的图形是（ \n  ）。</p><p><img align=\"bottom\" border=\"0\" height=\"258\" name=\"剧 1535\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_48e3e468eab165dd.png\" vspace=\"1\" width=\"432\"/></p><p>A、A</p><p>B、B</p><p>C、C</p><p>D、D</p>",
+      "image_urls_in_range": [
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_48e3e468eab165dd.png"
+      ],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 30,
+      "module": "reasoning",
+      "section_order": 3,
+      "source_block_start": 157,
+      "source_block_end_exclusive": 163,
+      "raw_source_html_fragment": "<p>30.如图所示，四个相同的等腰直角三角形，不可能组成的图形是（    ）。</p><p><img align=\"bottom\" border=\"0\" height=\"94\" hspace=\"1\" name=\"剧 1536\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_9a8acf636fb29ea2.png\" vspace=\"1\" width=\"450\"/></p><p>A、长方形</p><p>B、三角形</p><p>C、直角梯形</p><p>D、平行四边形</p>",
+      "image_urls_in_range": [
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_9a8acf636fb29ea2.png"
+      ],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 31,
+      "module": "reasoning",
+      "section_order": 3,
+      "source_block_start": 163,
+      "source_block_end_exclusive": 169,
+      "raw_source_html_fragment": "<p>31.如图所示是从两个不同角度观察到的同一个正四面体的外表面，将该四面体展开，可能得到的图形是（ \n  ）。</p><p><img align=\"bottom\" border=\"0\" height=\"243\" hspace=\"1\" name=\"剧 1537\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_505eb0fc4d5d3255.png\" vspace=\"1\" width=\"386\"/></p><p>A、A</p><p>B、B</p><p>C、C</p><p>D、D</p>",
+      "image_urls_in_range": [
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_505eb0fc4d5d3255.png"
+      ],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 32,
+      "module": "reasoning",
+      "section_order": 3,
+      "source_block_start": 169,
+      "source_block_end_exclusive": 175,
+      "raw_source_html_fragment": "<p>32.下列选项，与所给立体图形不同的是（    ）。</p><p><img align=\"bottom\" border=\"0\" height=\"219\" hspace=\"1\" name=\"剧 1538\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_51e621a842c97216.png\" vspace=\"1\" width=\"402\"/></p><p>A、A</p><p>B、B</p><p>C、C</p><p>D、D</p>",
+      "image_urls_in_range": [
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_51e621a842c97216.png"
+      ],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 33,
+      "module": "reasoning",
+      "section_order": 3,
+      "source_block_start": 175,
+      "source_block_end_exclusive": 181,
+      "raw_source_html_fragment": "<p>33.下列选项中，不可能是所给立方体展开图的是（    ）。</p><p><img align=\"bottom\" border=\"0\" height=\"239\" hspace=\"1\" name=\"剧 1539\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_80f42307ef10938e.png\" vspace=\"1\" width=\"387\"/></p><p>A、A</p><p>B、B</p><p>C、C</p><p>D、D</p>",
+      "image_urls_in_range": [
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_80f42307ef10938e.png"
+      ],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 34,
+      "module": "reasoning",
+      "section_order": 3,
+      "source_block_start": 181,
+      "source_block_end_exclusive": 187,
+      "raw_source_html_fragment": "<p>34.一个正方形旋转<img align=\"bottom\" border=\"0\" height=\"18\" hspace=\"1\" name=\"剧 1540\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_b615f4434fd27394.png\" width=\"25\"/>后，其旋转轨迹不可能形成的图形是（    ）。</p><p><img align=\"bottom\" border=\"0\" height=\"136\" name=\"剧 1541\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_55d68526f387be0f.png\" vspace=\"1\" width=\"440\"/></p><p>A、A</p><p>B、B</p><p>C、C</p><p>D、D</p>",
+      "image_urls_in_range": [
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_b615f4434fd27394.png",
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_55d68526f387be0f.png"
+      ],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 35,
+      "module": "reasoning",
+      "section_order": 3,
+      "source_block_start": 187,
+      "source_block_end_exclusive": 193,
+      "raw_source_html_fragment": "<p>35.如图所示，所给物体的俯视图不可能是（    ）。</p><p><img align=\"bottom\" border=\"0\" height=\"245\" hspace=\"1\" name=\"剧 1542\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_454d117a77afaa09.png\" vspace=\"1\" width=\"404\"/></p><p>A、A</p><p>B、B</p><p>C、C</p><p>D、D</p>",
+      "image_urls_in_range": [
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_454d117a77afaa09.png"
+      ],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 36,
+      "module": "reasoning",
+      "section_order": 3,
+      "source_block_start": 193,
+      "source_block_end_exclusive": 198,
+      "raw_source_html_fragment": "<p>36.民风：淳朴（ \n  ）</p><p>A、阳光：灿烂</p><p>B、书本：文化</p><p>C、树木：开花</p><p>D、喜悦：笑容</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 37,
+      "module": "reasoning",
+      "section_order": 3,
+      "source_block_start": 198,
+      "source_block_end_exclusive": 203,
+      "raw_source_html_fragment": "<p>37.纺织：布匹（ \n  ）</p><p>A、矿石：金属</p><p>B、努力：收获</p><p>C、工作：奉献</p><p>D、耕种：粮食</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 38,
+      "module": "reasoning",
+      "section_order": 3,
+      "source_block_start": 203,
+      "source_block_end_exclusive": 208,
+      "raw_source_html_fragment": "<p>38.水稻：植物（ \n  ）</p><p>A、木耳：银耳</p><p>B、香蕉：水果</p><p>C、动物：田鼠</p><p>D、米饭：面条</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 39,
+      "module": "reasoning",
+      "section_order": 3,
+      "source_block_start": 208,
+      "source_block_end_exclusive": 213,
+      "raw_source_html_fragment": "<p>39.丰富：贫乏（ \n  ）</p><p>A、体贴：粗犷</p><p>B、精致：丑恶</p><p>C、拘束：随意</p><p>D、振奋：高兴</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 40,
+      "module": "reasoning",
+      "section_order": 3,
+      "source_block_start": 213,
+      "source_block_end_exclusive": 218,
+      "raw_source_html_fragment": "<p>40.贫困：扶贫：脱贫（ \n  ）</p><p>A、垃圾：清扫：整洁</p><p>B、拥堵：交警：畅通</p><p>C、噪音：抑制：平静</p><p>D、羸弱：锻炼：健壮</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 41,
+      "module": "reasoning",
+      "section_order": 3,
+      "source_block_start": 218,
+      "source_block_end_exclusive": 224,
+      "raw_source_html_fragment": "<p>41.一座城市要想发展好会展产业，就需要“筑巢引凤”——先具备软硬件基础，再吸引会展活动。拥有完备的会展设施和理想的交通条件，只是说明一座城市具备了发展会展产业的硬件基础，要想吸引足够数量的高质量会展活动，还需要提高公共服务水平、构建良好的营商环境，从而加强软实力的建设。</p><p>如果上述表述为真，则以下情况中不可能发生的是（    ）。</p><p>A、甲市具备了发展会展产业的硬件基础，却发展不好会展产业</p><p>B、乙市大力提升公共服务水平，吸引了足够数量的高质量会展活动</p><p>C、丙市的会展产业非常发达，但市政设施老化的问题日渐突出</p><p>D、丁市会展设施完备、交通条件理想，但未具备发展会展产业的硬件基础</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 42,
+      "module": "reasoning",
+      "section_order": 3,
+      "source_block_start": 224,
+      "source_block_end_exclusive": 230,
+      "raw_source_html_fragment": "<p>42.G市经济发达、教育资源丰富，许多在G市就读的大学生毕业后都选择留在G市工作生活。但在今年，G市周边的几个城市都出台了一系列针对大学生落户的优惠政策，许多G市大学生因此选择将户口迁往周边城市。由此可以预测，今年留在G市的大学生将会更容易找到工作。</p><p>以下最能反驳上述论证的是（ \n  ）。</p><p>A、G市周边的几个城市中，大学生同样不容易找到心仪的工作</p><p>B、与去年相比，今年G市的几个大型工厂招收工人数量有所减少</p><p>C、绝大多数将户口迁往周边城市的G市大学生仍然选择在G市工作</p><p>D、有调查指出，过去几年在G市的大学生并没有面临很大的就业压力</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 43,
+      "module": "reasoning",
+      "section_order": 3,
+      "source_block_start": 230,
+      "source_block_end_exclusive": 236,
+      "raw_source_html_fragment": "<p>43.在发达国家的产业结构中，服务业占了很高的比重。根据他们的经验，提高服务业占比就可以促进就业。但是，服务业具有较高的进入壁垒，这也是我国服务业发展相对滞后的一个重要原因。因此，我国可以通过打破服务业的行业壁垒进一步促进就业。</p><p>以下最可能是上述论证潜在假设的是（ \n  ）。</p><p>A、服务业促进就业的规律适用于我国</p><p>B、我国创造就业的能力弱于发达国家</p><p>C、发达国家的服务业也存在行业壁垒</p><p>D、其他行业对促进就业没有显著作用</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 44,
+      "module": "reasoning",
+      "section_order": 3,
+      "source_block_start": 236,
+      "source_block_end_exclusive": 242,
+      "raw_source_html_fragment": "<p>44.近年来随着大型野生动物园的兴起，有人提出，传统城市动物园已经没有存在的必要性。但传统城市动物园具有票价低、交通便利等优点，中小学组织参观十分方便，因而具有很强的教育功能，所以传统城市动物园不可或缺。</p><p>以下不属于上述论证缺陷的是（ \n  ）。</p><p>A、忽视了野生动物园和传统城市动物园具有并存的可能性</p><p>B、默认了具有很强教育功能的传统城市动物园就应该保留</p><p>C、忽视了票价低、交通便利不等同于方便中小学组织参观</p><p>D、默认了方便中小学组织参观的动物园都具有很强的教育功能</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 45,
+      "module": "reasoning",
+      "section_order": 3,
+      "source_block_start": 242,
+      "source_block_end_exclusive": 249,
+      "raw_source_html_fragment": "<p>45.历史经验告诉我们，世界经济危机往往伴随着巨大的世界变革：1857年世界经济危机后的电气革命，推动人类社会从蒸汽时代进入电气时代；1929年世界经济危机引发了第二次世界大战，客观上推动了科学技术的发展。由此可知，是经济危机造成了巨大的世界变革。</p><p>以下和该论证过程的逻辑最为类似的是（ \n  ）。</p><p>A、不正确的坐姿会加重颈部负担，因而是腰酸背痛的主要诱因</p><p>B、海底地震是海啸的主要成因，因为海啸发生前往往能观测到海底地震</p><p>C、宇航员的预期寿命明显高于一般人，因此太空旅行中的辐射暴露并不会危害人体</p><p>D、许多体弱多病的人都不喜欢吃蔬菜，所以想保持身体健康就必须从蔬菜中摄入足量的膳食纤维</p><p>四、科学推理。第四部分\n科学推理。\n每道题给出文字或图表信息，要求你在此基础上，用基本科学知识进行推理判断，从4个备选项中选出最合理的1项。</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 46,
+      "module": "science_reasoning",
+      "section_order": 4,
+      "source_block_start": 249,
+      "source_block_end_exclusive": 254,
+      "raw_source_html_fragment": "<p>46.风能是一种清洁的可再生能源，很早就被人们所利用。下列关于利用风能发电的说法不正确的是（ \n  ）。</p><p>A、风力发电场可以建在海上</p><p>B、风力发电是将风的动能转换为电能</p><p>C、风力发电的能量最终来源于太阳能</p><p>D、风力发电的过程中不会有能量的损失</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 47,
+      "module": "science_reasoning",
+      "section_order": 4,
+      "source_block_start": 254,
+      "source_block_end_exclusive": 259,
+      "raw_source_html_fragment": "<p>47.人在短时间内从低海拔处上升至高海拔处时，环境气压变化大，但鼓膜内的气压不变，鼓膜会感觉不适。这时，可通过做咀嚼运动或大口呼吸缓解，其原理是（    ）。</p><p>A、通过转移人的注意力，减少不适感</p><p>B、吸入更多的氧气，使机体的新陈代谢加快</p><p>C、疏通咽鼓管，使外耳道与鼓室之间的气压平衡</p><p>D、提高鼓膜的震动频率，缓解不适症状</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 48,
+      "module": "science_reasoning",
+      "section_order": 4,
+      "source_block_start": 259,
+      "source_block_end_exclusive": 265,
+      "raw_source_html_fragment": "<p>48.下图是具有起钉功能的锤子，要使锤子起钉时更省力，最科学的做法是（    ）。</p><p><img align=\"bottom\" border=\"0\" height=\"276\" hspace=\"1\" name=\"剧 1543\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_2123c6b1d5d948ec.png\" vspace=\"1\" width=\"277\"/></p><p>A、适当延长把手BC的长度</p><p>B、适当延长起钉部位OA的长度</p><p>C、增加锤子的重量</p><p>D、增加把手的重量</p>",
+      "image_urls_in_range": [
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_2123c6b1d5d948ec.png"
+      ],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 49,
+      "module": "science_reasoning",
+      "section_order": 4,
+      "source_block_start": 265,
+      "source_block_end_exclusive": 270,
+      "raw_source_html_fragment": "<p>49.将瘪了的乒乓球放在热水里一段时间后，乒乓球便会恢复原来的圆形状态。其原理是（ \n  ）。</p><p>A、乒乓球内部气体溢出，内部气体减少</p><p>B、乒乓球受热后球壁变软，恢复原来形状</p><p>C、乒乓球内部气体受热膨胀，挤压乒乓球内壁</p><p>D、水蒸气流入乒乓球内部，乒乓球内部压强增大</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 50,
+      "module": "science_reasoning",
+      "section_order": 4,
+      "source_block_start": 270,
+      "source_block_end_exclusive": 276,
+      "raw_source_html_fragment": "<p>50.如图所示，货车停在某处卸货时货物从倾斜的货箱滑下。那么，下列关于货车车轮所受的摩擦力说法正确的是（    ）。</p><p><img align=\"bottom\" border=\"0\" height=\"250\" hspace=\"1\" name=\"剧 1544\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_f600ace4f3becd13.png\" vspace=\"1\" width=\"301\"/></p><p>A、货车车轮与地面之间没有摩擦力</p><p>B、货车车轮所受摩擦力的方向水平向右</p><p>C、货车车轮所受摩擦力的方向水平向左</p><p>D、货车车轮与地面之间的摩力大小和方向都不确定</p>",
+      "image_urls_in_range": [
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_f600ace4f3becd13.png"
+      ],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 51,
+      "module": "science_reasoning",
+      "section_order": 4,
+      "source_block_start": 276,
+      "source_block_end_exclusive": 282,
+      "raw_source_html_fragment": "<p>51.如图所示，将一只充了气的密封小气球放在针筒壁内，封闭针筒孔后向外抽拉针筒推杆，忽略摩擦力的影响，则在这一过程中（    ）。</p><p><img align=\"bottom\" border=\"0\" height=\"114\" hspace=\"1\" name=\"剧 1545\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_5d9d9a30d946f3c4.png\" width=\"375\"/></p><p>A、小气球体积会变大</p><p>B、针筒内的压强保持不变</p><p>C、小气球受到的合力为零</p><p>D、针筒内的气体温度会升高</p>",
+      "image_urls_in_range": [
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_5d9d9a30d946f3c4.png"
+      ],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 52,
+      "module": "science_reasoning",
+      "section_order": 4,
+      "source_block_start": 282,
+      "source_block_end_exclusive": 287,
+      "raw_source_html_fragment": "<p>52.物质的用途与性质密切相关。下列说法正确的是（\n   ）。</p><p>A、木炭能作为炼钢的原料，是利用了木炭的可燃性</p><p>B、钨常用作灯丝，是因为钨在高温下化学性质稳定</p><p>C、活性炭可以去除水中杂质，是因为其具有很强的吸附能力</p><p>D、铝制品的表面可以不做防锈处理，是因为铝的金属活动性不强</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 53,
+      "module": "science_reasoning",
+      "section_order": 4,
+      "source_block_start": 287,
+      "source_block_end_exclusive": 293,
+      "raw_source_html_fragment": "<p>53.办公室里的四盏灯型号相同，电路如下图所示。如果逐一打开这四盏灯，在电源的输出电压不变的情况下，下列说法正确的是（    ）。</p><p><img align=\"bottom\" border=\"0\" height=\"289\" hspace=\"1\" name=\"剧 1546\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_ca8a34a0a1fc14fd.png\" vspace=\"1\" width=\"303\"/></p><p>A、打开的灯越多，通过各灯的电流变得越大</p><p>B、打开的灯越多，各灯两端的电压变得越小</p><p>C、打开的灯越多，通过电源的电流变得越大</p><p>D、打开的灯越多，各灯变得越暗</p>",
+      "image_urls_in_range": [
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_ca8a34a0a1fc14fd.png"
+      ],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 54,
+      "module": "science_reasoning",
+      "section_order": 4,
+      "source_block_start": 293,
+      "source_block_end_exclusive": 298,
+      "raw_source_html_fragment": "<p>54.冬天气温很低的时候往玻璃杯里倒开水，杯壁较厚的玻璃杯更容易发生炸裂，这是因为（\n   ）。</p><p>A、内壁和外壁受热不均</p><p>B、开水遇到玻璃后温度迅速降低</p><p>C、空气对杯壁的压力超过杯壁的承受范围</p><p>D、倒水时水的冲击力将玻璃杯击破</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 55,
+      "module": "science_reasoning",
+      "section_order": 4,
+      "source_block_start": 298,
+      "source_block_end_exclusive": 304,
+      "raw_source_html_fragment": "<p>55.如图所示，甲、乙两个大小相同的实心金属球放置在光滑水平面上，甲球以水平向右的速度碰撞静止的乙球。已知甲球质量大于乙球，则有关碰撞后的情形，下列说法正确的是（    ）。</p><p><img align=\"bottom\" border=\"0\" height=\"101\" hspace=\"1\" name=\"剧 1547\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_64fbafd4e80c794f.png\" vspace=\"1\" width=\"305\"/></p><p>A、甲球可能静止</p><p>B、乙球可能静止</p><p>C、甲球可能向左运动</p><p>D、甲球一定向右运动</p>",
+      "image_urls_in_range": [
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_64fbafd4e80c794f.png"
+      ],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 56,
+      "module": "science_reasoning",
+      "section_order": 4,
+      "source_block_start": 304,
+      "source_block_end_exclusive": 309,
+      "raw_source_html_fragment": "<p>56.细胞膜能够防止细胞外物质自由进入细胞，保证细胞内环境的相对稳定。这是因为（ \n  ）。</p><p>A、细胞膜具有流动性</p><p>B、细胞膜具有选择透过性</p><p>C、细胞膜主要由氨基酸构成</p><p>D、细胞膜具有维持细胞形状的功能</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 57,
+      "module": "science_reasoning",
+      "section_order": 4,
+      "source_block_start": 309,
+      "source_block_end_exclusive": 314,
+      "raw_source_html_fragment": "<p>57.人们在乘坐小船时，应尽量坐下，站立会降低小船的稳定性，其根本原因是（\n   ）。</p><p>A、人和船的整体重量增加</p><p>B、人和船的整体重心变高</p><p>C、船的行驶速度增加</p><p>D、水流波动幅度变大</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 58,
+      "module": "science_reasoning",
+      "section_order": 4,
+      "source_block_start": 314,
+      "source_block_end_exclusive": 319,
+      "raw_source_html_fragment": "<p>58.“后驱”是指发动机的动力通过传动轴传递给后轮，从而推动车辆前进的一种驱动形式。当后驱车在水平公路上匀速前进时，下列说法正确的是（\n   ）。</p><p>A、前轮和后轮受到的摩擦力均向前</p><p>B、前轮和后轮受到的摩擦力均向后</p><p>C、前轮受到的摩擦力向前，后轮受到的摩擦力向后</p><p>D、前轮受到的摩擦力向后，后轮受到的摩擦力向前</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 59,
+      "module": "science_reasoning",
+      "section_order": 4,
+      "source_block_start": 319,
+      "source_block_end_exclusive": 325,
+      "raw_source_html_fragment": "<p>59.如图所示，将所点燃的一高一矮两只蜡烛放入圆筒，圆筒顶端不封闭，并从圆筒侧壁缓慢注入二氧化碳气体。则最可能发生的情况是（    ）。</p><p><img align=\"bottom\" border=\"0\" height=\"168\" name=\"剧 1548\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_90a7aa1d58521e12.png\" width=\"194\"/></p><p>A、高蜡烛先熄灭</p><p>B、矮蜡烛先熄灭</p><p>C、两只蜡烛的火苗没有变化</p><p>D、两只蜡烛的火苗都变矮并逐渐熄灭</p>",
+      "image_urls_in_range": [
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_90a7aa1d58521e12.png"
+      ],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 60,
+      "module": "science_reasoning",
+      "section_order": 4,
+      "source_block_start": 325,
+      "source_block_end_exclusive": 331,
+      "raw_source_html_fragment": "<p>60.为了整治超速，交警采用了一套系统。在某一路段，系统会自动记录车辆进入和离开的时间，从而判断该车辆是否超速。这种方法是计算车辆的（\n   ）。</p><p>A、平均速率</p><p>B、瞬时速率</p><p>C、加速度</p><p>D、位移</p><p>五、常识判断。第五部分\n常识判断。 根据题目要求，在四个选项中选出一个最恰当的答案。</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 61,
+      "module": "common_knowledge",
+      "section_order": 5,
+      "source_block_start": 331,
+      "source_block_end_exclusive": 340,
+      "raw_source_html_fragment": "<p>61.习近平总书记在庆祝改革开放40周年大会上的重要讲话指出：（    ）是五四运动以来我国发生的三大历史性事件，是近代以来实现中华民族伟大复兴的三大里程碑。</p><p>①建立中国共产党</p><p>②成立中华人民共和国</p><p>③全面建成小康社会</p><p>④推进改革开放和中国特色社会主义事业</p><p>A、①②③</p><p>B、①②④</p><p>C、①③④</p><p>D、②④</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 62,
+      "module": "common_knowledge",
+      "section_order": 5,
+      "source_block_start": 340,
+      "source_block_end_exclusive": 345,
+      "raw_source_html_fragment": "<p>62.2019年3月，习近平总书记对欧洲三国进行了国事访问，推动共建“一带一路”在亚欧大陆开辟新的空间。这三国分别是（ \n  ）。</p><p>A、以色列\n乌克兰 英国</p><p>B、墨西哥\n奥地利 瑞典</p><p>C、意大利\n摩纳哥 法国</p><p>D、新西兰\n葡萄牙 德国</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 63,
+      "module": "common_knowledge",
+      "section_order": 5,
+      "source_block_start": 345,
+      "source_block_end_exclusive": 350,
+      "raw_source_html_fragment": "<p>63.2019年3月12日，十三届全国人大二次会议举行第三次全体会议，听取审议最高人民法院工作报告和最高人民检察院工作报告。这体现了人民代表大会的（ \n  ）。</p><p>A、立法权</p><p>B、决定权</p><p>C、任免权</p><p>D、监督权</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 64,
+      "module": "common_knowledge",
+      "section_order": 5,
+      "source_block_start": 350,
+      "source_block_end_exclusive": 355,
+      "raw_source_html_fragment": "<p>64.人才是实施乡村振兴战略的关键因素。以下举措不属于推动乡村人才振兴的是（ \n  ）。</p><p>A、大力支持乡村休闲旅游</p><p>B、实施新乡贤返乡工程</p><p>C、扩大“三支一扶”计划人员招募规模</p><p>D、完善农村劳动力技能培训补贴机制</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 65,
+      "module": "common_knowledge",
+      "section_order": 5,
+      "source_block_start": 355,
+      "source_block_end_exclusive": 363,
+      "raw_source_html_fragment": "<p>65.近几年，我国政府出台了一系列减税降费的举措。减税降费有利于（\n   ）。</p><p>①减轻企业负担、稳定就业</p><p>②优化经济和收入分配结构</p><p>③畅通小微企业融资渠道</p><p>A、①②</p><p>B、①③</p><p>C、②③</p><p>D、①②③</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 66,
+      "module": "common_knowledge",
+      "section_order": 5,
+      "source_block_start": 363,
+      "source_block_end_exclusive": 368,
+      "raw_source_html_fragment": "<p>66.2018年8月，国家提出衡量贫困人口是否脱贫的标准是“两不愁、三保障”，其中“两不愁”是指不愁吃、不愁穿。以下不属于“三保障”的是（\n   ）。</p><p>A、基本医疗</p><p>B、义务教育</p><p>C、住房安全</p><p>D、环境优美</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 67,
+      "module": "common_knowledge",
+      "section_order": 5,
+      "source_block_start": 368,
+      "source_block_end_exclusive": 373,
+      "raw_source_html_fragment": "<p>67.粤港澳大湾区包括香港特别行政区、澳门特别行政区和珠三角九市，是我国经济活力最强的区域之一，在国家发展大局中具有重要战略地位。以下关于粤港澳大湾区发展基础的说法，错误的是（    ）。</p><p>A、经济实力雄厚</p><p>B、创新要素集聚</p><p>C、内部发展差距小</p><p>D、国际化水平领先</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 68,
+      "module": "common_knowledge",
+      "section_order": 5,
+      "source_block_start": 373,
+      "source_block_end_exclusive": 378,
+      "raw_source_html_fragment": "<p>68.只要把握住历史发展大势，抓住历史变革时机，奋发有为，锐意进取，人类社会就能更好前进。这句话体现的哲学原理是（ \n  ）。</p><p>A、物质和意识的辩证关系</p><p>B、规律是可以认识和利用的</p><p>C、事物发展是前进性和曲折性的统一</p><p>D、实践是检验认识正确与否的唯一标准</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 69,
+      "module": "common_knowledge",
+      "section_order": 5,
+      "source_block_start": 378,
+      "source_block_end_exclusive": 383,
+      "raw_source_html_fragment": "<p>69.2018年10月，习近平总书记在广东考察时提出“要加快形成区域协调发展新格局”，把粤东、粤西的（    ）作为重要发展极，打造现代化沿海经济带。</p><p>A、珠海、肇庆</p><p>B、深圳、清远</p><p>C、广州、韶关</p><p>D、汕头、湛江</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 70,
+      "module": "common_knowledge",
+      "section_order": 5,
+      "source_block_start": 383,
+      "source_block_end_exclusive": 388,
+      "raw_source_html_fragment": "<p>70.扶贫先扶智，治贫先治愚。以下扶贫举措中不属于“扶智”的是（\n   ）。</p><p>A、在贫困村建设图书室</p><p>B、开展农业实用技能培训</p><p>C、组织大学生到贫困地区支教</p><p>D、向贫困户发放现代化农业机具</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 71,
+      "module": "common_knowledge",
+      "section_order": 5,
+      "source_block_start": 388,
+      "source_block_end_exclusive": 393,
+      "raw_source_html_fragment": "<p>71.自2018年起，我国将每年农历（\n   ）定为“中国农民丰收节”，作为亿万农民庆祝丰收、享受丰收的节日。</p><p>A、立春</p><p>B、芒种</p><p>C、秋分</p><p>D、冬至</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 72,
+      "module": "common_knowledge",
+      "section_order": 5,
+      "source_block_start": 393,
+      "source_block_end_exclusive": 398,
+      "raw_source_html_fragment": "<p>72.消除贫困、改善民生、逐步实现（ \n  ），是社会主义的本质要求，是我们党的重要使命。</p><p>A、共同富裕</p><p>B、同步富裕</p><p>C、同时富裕</p><p>D、全体富裕</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 73,
+      "module": "common_knowledge",
+      "section_order": 5,
+      "source_block_start": 398,
+      "source_block_end_exclusive": 403,
+      "raw_source_html_fragment": "<p>73.习近平总书记提出“绿水青山就是金山银山”的发展理念。以下最能体现这一理念的是（\n   ）。</p><p>A、精准扶贫</p><p>B、共建“一带一路”</p><p>C、实行“河长制”</p><p>D、加强知识产权保护</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 74,
+      "module": "common_knowledge",
+      "section_order": 5,
+      "source_block_start": 403,
+      "source_block_end_exclusive": 408,
+      "raw_source_html_fragment": "<p>74.广东属于岭南地区，具有深厚的岭南文化。以下诗句中描写岭南风物的是（ \n  ）。</p><p>A、此地空余黄鹤楼</p><p>B、罗浮山下四时春</p><p>C、风吹草低见牛羊</p><p>D、不识庐山真面目</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 75,
+      "module": "common_knowledge",
+      "section_order": 5,
+      "source_block_start": 408,
+      "source_block_end_exclusive": 413,
+      "raw_source_html_fragment": "<p>75.港珠澳大桥跨越（    ），东接香港，西接广东珠海和澳门，总长约55公里，是粤港澳三地首次合作共建的超大型跨海交通工程。</p><p>A、渤海</p><p>B、东海</p><p>C、北部湾</p><p>D、伶仃洋</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 76,
+      "module": "common_knowledge",
+      "section_order": 5,
+      "source_block_start": 413,
+      "source_block_end_exclusive": 418,
+      "raw_source_html_fragment": "<p>76.“山上多植物，胜似修水库，有雨它能吞，无雨它能吐”。这一谚语形象地说明了森林具有（ \n  ）的功能。</p><p>A、净化空气</p><p>B、过滤尘埃</p><p>C、减小噪音</p><p>D、涵养水源</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 77,
+      "module": "common_knowledge",
+      "section_order": 5,
+      "source_block_start": 418,
+      "source_block_end_exclusive": 423,
+      "raw_source_html_fragment": "<p>77.全面建成小康社会，最艰巨最繁重的任务在（ \n  ），特别是在贫困地区。</p><p>A、城市</p><p>B、城镇</p><p>C、社区</p><p>D、农村</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 78,
+      "module": "common_knowledge",
+      "section_order": 5,
+      "source_block_start": 423,
+      "source_block_end_exclusive": 428,
+      "raw_source_html_fragment": "<p>78.俗话说：正月十五闹元宵。“闹”元宵的习俗包括张灯、观灯、舞龙、舞狮等。以下诗句与元宵节有关的是（ \n  ）。</p><p>A、火树银花合</p><p>B、千里共婵娟</p><p>C、遍插茱萸少一人</p><p>D、爆竹声中一岁除</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 79,
+      "module": "common_knowledge",
+      "section_order": 5,
+      "source_block_start": 428,
+      "source_block_end_exclusive": 433,
+      "raw_source_html_fragment": "<p>79.2018年12月，中国发射的（ \n  ）成为人类第一个着陆月球背面的探测器。</p><p>A、神舟七号</p><p>B、长征三号</p><p>C、嫦娥四号</p><p>D、天宫一号</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 80,
+      "module": "common_knowledge",
+      "section_order": 5,
+      "source_block_start": 433,
+      "source_block_end_exclusive": 443,
+      "raw_source_html_fragment": "<p>80.地球内部具有巨大的热量，并通过不同途径由内向外散发地热能。以下现象与地热能有关的是（ \n  ）。</p><p>A、台风生成</p><p>B、火山喷发</p><p>C、山洪暴发</p><p>D、岩石风化</p><p>六、资料分析。第六部分\n资料分析。\n所给出的图、表、文字或综合性资料均有若干个问题要你回答。你应根据资料提供的信息进行分析、比较、计算和判断处理。</p><p>（一）</p><p>    过去5年，我国统筹开展交通扶贫和“四好农村路工作”，农村基础设施更加完善，服务乡村振兴成效显著。</p><p><img align=\"bottom\" border=\"0\" height=\"352\" hspace=\"1\" name=\"剧 1549\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_f585af88dd841623.png\" vspace=\"1\" width=\"557\"/></p><p><img align=\"bottom\" border=\"0\" height=\"267\" hspace=\"1\" name=\"剧 1550\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_44bf1ef90f36b716.png\" vspace=\"1\" width=\"541\"/></p>",
+      "image_urls_in_range": [
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_f585af88dd841623.png",
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_44bf1ef90f36b716.png"
+      ],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 81,
+      "module": "data_analysis",
+      "section_order": 6,
+      "source_block_start": 443,
+      "source_block_end_exclusive": 448,
+      "raw_source_html_fragment": "<p>81.2014~2018年，全国新改建农村公路里程共计（    ）万公里。</p><p>A、77.5</p><p>B、97.4</p><p>C、117.2</p><p>D、137.7</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 82,
+      "module": "data_analysis",
+      "section_order": 6,
+      "source_block_start": 448,
+      "source_block_end_exclusive": 453,
+      "raw_source_html_fragment": "<p>82.2015~2018年，全国新改建农村公路里程较上年增加最多的一年是（    ）。</p><p>A、2015</p><p>B、2016</p><p>C、2017</p><p>D、2018</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 83,
+      "module": "data_analysis",
+      "section_order": 6,
+      "source_block_start": 453,
+      "source_block_end_exclusive": 458,
+      "raw_source_html_fragment": "<p>83.与2014年相比，我国农村公路总里程增加了（ \n  ）万公里。</p><p>A、9.83</p><p>B、12.87</p><p>C、16.84</p><p>D、22.59</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 84,
+      "module": "data_analysis",
+      "section_order": 6,
+      "source_block_start": 458,
+      "source_block_end_exclusive": 463,
+      "raw_source_html_fragment": "<p>84.2018年，全国通硬化路面的乡镇占全国乡镇比例与2014年相比（ \n  ）个百分点。</p><p>A、增加1.56</p><p>B、增加0.25</p><p>C、减少1.56</p><p>D、减少0.25</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 85,
+      "module": "data_analysis",
+      "section_order": 6,
+      "source_block_start": 463,
+      "source_block_end_exclusive": 474,
+      "raw_source_html_fragment": "<p>85.下列说法正确的是：</p><p>A、2014~2018年，我国新改建农村公路里程逐年增加</p><p>B、2014~2018年，我国农村公路总里程逐年增加</p><p>C、2014~2018年，通硬化路面的乡镇占全国乡镇的比例逐年提高</p><p>D、2014~2018年，通公路的建制村占全国建制村的比例逐年提高</p><p>（二）</p><p>党的十八大以来，脱贫工作取得巨大成效，全国农村贫困人口大幅减少。截至2018年末，全国农村贫困人口从2012年末的9899万人减少至1660万人；农村贫困发生率从2012年的<img align=\"bottom\" border=\"0\" height=\"18\" name=\"剧 1551\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_499cc292ba3f769c.png\" width=\"36\"/>下降至<img align=\"bottom\" border=\"0\" height=\"18\" hspace=\"1\" name=\"剧 1552\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_c0c8cbffa22c7a.png\" width=\"29\"/>，累计下降8.5个百分点。</p><p><img align=\"bottom\" border=\"0\" height=\"296\" hspace=\"1\" name=\"剧 1553\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_e3092cd76dbdbb9b.jpg\" width=\"572\"/></p><p>2012—2018年全国农村贫困人口和贫困发生率</p><p>2018年，贫困地区农村居民人均可支配收入10371元，扣除价格因素，实际增长<img align=\"bottom\" border=\"0\" height=\"18\" hspace=\"1\" name=\"剧 1554\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_568bb1051bfbabb8.png\" width=\"29\"/>，实际增速高出全国农村居民人均可支配收入实际增速1.7个百分点，圆满完成增长幅度高于全国增速的年度目标任务。</p><p><img align=\"bottom\" border=\"0\" height=\"230\" hspace=\"1\" name=\"剧 1555\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_fac0a04a7ad04259.jpg\" vspace=\"1\" width=\"549\"/></p>",
+      "image_urls_in_range": [
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_499cc292ba3f769c.png",
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_c0c8cbffa22c7a.png",
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_e3092cd76dbdbb9b.jpg",
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_568bb1051bfbabb8.png",
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_fac0a04a7ad04259.jpg"
+      ],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 86,
+      "module": "data_analysis",
+      "section_order": 6,
+      "source_block_start": 474,
+      "source_block_end_exclusive": 479,
+      "raw_source_html_fragment": "<p>86.从2012年末到2018年末，全国农村贫困人口数减少了（ \n  ）万人。</p><p>A、6239</p><p>B、7239</p><p>C、8239</p><p>D、9230</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 87,
+      "module": "data_analysis",
+      "section_order": 6,
+      "source_block_start": 479,
+      "source_block_end_exclusive": 484,
+      "raw_source_html_fragment": "<p>87.2013—2018年，全国农村贫困发生率较上年下降最多的是（ \n  ）年。</p><p>A、2013</p><p>B、2015</p><p>C、2017</p><p>D、2018</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 88,
+      "module": "data_analysis",
+      "section_order": 6,
+      "source_block_start": 484,
+      "source_block_end_exclusive": 489,
+      "raw_source_html_fragment": "<p>88.2018年，我国贫困地区农村居民人均工资性收入约占人均可支配收入的（ \n  ）。</p><p>A、<img align=\"bottom\" border=\"0\" height=\"18\" hspace=\"1\" name=\"剧 1556\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_8cbe7ca305bb4445.png\" width=\"25\"/></p><p>B、<img align=\"bottom\" border=\"0\" height=\"18\" hspace=\"1\" name=\"剧 1557\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_de6d42c5e7b5b1ab.png\" width=\"25\"/></p><p>C、<img align=\"bottom\" border=\"0\" height=\"18\" hspace=\"1\" name=\"剧 1558\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_43e6fec94d24a87a.png\" width=\"25\"/></p><p>D、<img align=\"bottom\" border=\"0\" height=\"18\" hspace=\"1\" name=\"剧 1559\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_1135c0afaf2a5d94.png\" width=\"25\"/></p>",
+      "image_urls_in_range": [
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_8cbe7ca305bb4445.png",
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_de6d42c5e7b5b1ab.png",
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_43e6fec94d24a87a.png",
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_1135c0afaf2a5d94.png"
+      ],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 89,
+      "module": "data_analysis",
+      "section_order": 6,
+      "source_block_start": 489,
+      "source_block_end_exclusive": 494,
+      "raw_source_html_fragment": "<p>89.2018年，我国贫困地区农村居民收入来源中，最高的是（ \n   ）。</p><p>A、人均工资性收入</p><p>B、人均转移净收入</p><p>C、人均经营净收入</p><p>D、人均财产净收入</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 90,
+      "module": "data_analysis",
+      "section_order": 6,
+      "source_block_start": 494,
+      "source_block_end_exclusive": 504,
+      "raw_source_html_fragment": "<p>90.下列说法不正确的是（ \n  ）。</p><p>A、2012—2018年，全国农村贫困人口逐年递减</p><p>B、2018年，全国农村居民人均可支配收入实际增速为<img align=\"bottom\" border=\"0\" height=\"18\" hspace=\"1\" name=\"剧 1560\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_9b3e03807dec3fa.png\" width=\"29\"/></p><p>C、2018年，贫困地区农村居民各来源的人均收入较上年均有提高</p><p>D、2017年，贫困地区农村居民人均经营净收入比转移净收入高近1000元</p><p>（三）</p><p>近年来，B省营商环境不断优化，市场活力不断增强，新登记市场主体都保持较快增长势头。2018年，全省新登记市场主体229.74万户，日均新登记市场主体6294户，同比增长<img align=\"bottom\" border=\"0\" height=\"18\" hspace=\"1\" name=\"剧 1561\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_90f935ad7b2f93f.png\" width=\"43\"/>。</p><p>全省产业结构也进一步调整优化，新登记市场主体主要集中在第三产业。2018年，全省三大产业新登记市场主体分别为第一产业2.02万户，第二产业24.01万户，第三产业203.71万户。截止2018年12月末，全省三大产业的实有各类市场主体户数分别为9.83万户，157.38万户，978.92万户。</p><p>2018年，全省新登记企业最集中的三个行业分别是批发和零售业、租赁和商务服务业、制造业，新登记企业数分别为36.14万户、15.19万户、9.25万户，分别同比增长<img align=\"bottom\" border=\"0\" height=\"18\" name=\"剧 1562\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_e701821c3127a85.png\" width=\"36\"/>、增长<img align=\"bottom\" border=\"0\" height=\"18\" hspace=\"1\" name=\"剧 1563\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_cd6da645a64d309f.png\" width=\"43\"/>、下降<img align=\"bottom\" border=\"0\" height=\"18\" hspace=\"1\" name=\"剧 1564\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_633a4c3143a577fb.png\" width=\"29\"/>。</p><p><img align=\"bottom\" border=\"0\" height=\"216\" hspace=\"1\" name=\"剧 1565\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_d3ba73258ed209be.png\" vspace=\"1\" width=\"543\"/></p>",
+      "image_urls_in_range": [
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_9b3e03807dec3fa.png",
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_90f935ad7b2f93f.png",
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_e701821c3127a85.png",
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_cd6da645a64d309f.png",
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_633a4c3143a577fb.png",
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_d3ba73258ed209be.png"
+      ],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 91,
+      "module": "data_analysis",
+      "section_order": 6,
+      "source_block_start": 504,
+      "source_block_end_exclusive": 509,
+      "raw_source_html_fragment": "<p>91.2015-2018年，B省实有各类市场主体数增长了约（ \n  ）万户。</p><p>A、170</p><p>B、270</p><p>C、370</p><p>D、470</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 92,
+      "module": "data_analysis",
+      "section_order": 6,
+      "source_block_start": 509,
+      "source_block_end_exclusive": 514,
+      "raw_source_html_fragment": "<p>92.2018年，B省第三产业新登记市场主体约占全省实有各类市场主体的（ \n  ）。</p><p>A、<img align=\"bottom\" border=\"0\" height=\"18\" hspace=\"1\" name=\"剧 1566\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_cedcf7d7fc53087b.png\" width=\"25\"/></p><p>B、<img align=\"bottom\" border=\"0\" height=\"18\" hspace=\"1\" name=\"剧 1567\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_2b1071fc42720c35.png\" width=\"25\"/></p><p>C、<img align=\"bottom\" border=\"0\" height=\"18\" hspace=\"1\" name=\"剧 1568\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_4d5ec150a7aa0203.png\" width=\"25\"/></p><p>D、<img align=\"bottom\" border=\"0\" height=\"18\" hspace=\"1\" name=\"剧 1569\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_43e6fec94d24a87a.png\" width=\"25\"/></p>",
+      "image_urls_in_range": [
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_cedcf7d7fc53087b.png",
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_2b1071fc42720c35.png",
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_4d5ec150a7aa0203.png",
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_43e6fec94d24a87a.png"
+      ],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 93,
+      "module": "data_analysis",
+      "section_order": 6,
+      "source_block_start": 514,
+      "source_block_end_exclusive": 519,
+      "raw_source_html_fragment": "<p>93.2015-2018年，B省新登记个体工商户最多的是（ \n  ）年。</p><p>A、2015</p><p>B、2016</p><p>C、2017</p><p>D、2018</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 94,
+      "module": "data_analysis",
+      "section_order": 6,
+      "source_block_start": 519,
+      "source_block_end_exclusive": 524,
+      "raw_source_html_fragment": "<p>94.2018年，B省租赁和商务服务业新登记企业数较上年增加约（ \n  ）万户。</p><p>A、2.8</p><p>B、3.8</p><p>C、4.8</p><p>D、5.8</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 95,
+      "module": "data_analysis",
+      "section_order": 6,
+      "source_block_start": 524,
+      "source_block_end_exclusive": 534,
+      "raw_source_html_fragment": "<p>95.下列说法正确的是（ \n  ）。</p><p>A、2015-2018年，B省新登记农民专业合作社数量逐年增加</p><p>B、2015-2018年，B省新登记个体工商户均多于新登记企业数</p><p>C、选项缺失</p><p>D、选项缺失</p><p>（四）</p><p>近年来，A省大力发展绿色无公害农业。2017年，A省农药使用总量580万吨，与2016年相比减少<img align=\"bottom\" border=\"0\" height=\"18\" name=\"剧 1570\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_6dfca1de2e2c8a6e.png\" width=\"36\"/>；单位耕地面积农药使用量为1.47千克/亩。</p><p>全省新增申报无公害农产品产地认定221个，产品362个，新增绿色食品33个，认证有机食品60个。全省“三品一标”总数达2570个，其中：无公害农产品1710个，绿色食品745个，有机农产品87个，农产品地理标志28个，无公害农产品种植面积总计达1050万亩，生产总量970多万吨。</p><p>2014-2017年A省无公害农产品生产情况</p><p><img align=\"bottom\" border=\"0\" height=\"230\" hspace=\"1\" name=\"剧 1571\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_c19c781133ece534.png\" vspace=\"1\" width=\"556\"/></p>",
+      "image_urls_in_range": [
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_6dfca1de2e2c8a6e.png",
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_c19c781133ece534.png"
+      ],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture.",
+      "supplemental_verbatim_capture_file": "question-95-alternate-options.json"
+    },
+    {
+      "original_question_no": 96,
+      "module": "data_analysis",
+      "section_order": 6,
+      "source_block_start": 534,
+      "source_block_end_exclusive": 539,
+      "raw_source_html_fragment": "<p>96.2017年，A省“三品一标”总数较上年增加了（ \n  ）个。</p><p>A、8</p><p>B、9</p><p>C、10</p><p>D、11</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 97,
+      "module": "data_analysis",
+      "section_order": 6,
+      "source_block_start": 539,
+      "source_block_end_exclusive": 544,
+      "raw_source_html_fragment": "<p>97.2017年，A省农药使用总量比2016年减少了（ \n  ）万吨。</p><p>A、0.25</p><p>B、0.3</p><p>C、0.35</p><p>D、0.4</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 98,
+      "module": "data_analysis",
+      "section_order": 6,
+      "source_block_start": 544,
+      "source_block_end_exclusive": 549,
+      "raw_source_html_fragment": "<p>98.2017年，A省单位耕地面积农药使用量比2015年约（ \n  ）。</p><p>A、增加<img align=\"bottom\" border=\"0\" height=\"18\" hspace=\"1\" name=\"剧 1572\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_bbadfc6ddda2289b.png\" width=\"29\"/></p><p>B、下降<img align=\"bottom\" border=\"0\" height=\"18\" hspace=\"1\" name=\"剧 1573\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_bbadfc6ddda2289b.png\" width=\"29\"/></p><p>C、增加<img align=\"bottom\" border=\"0\" height=\"18\" hspace=\"1\" name=\"剧 1574\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_96f5670305cf59e5.png\" width=\"43\"/></p><p>D、下降<img align=\"bottom\" border=\"0\" height=\"18\" hspace=\"1\" name=\"剧 1575\" src=\"https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_cfc230290fbcbe7c.png\" width=\"43\"/></p>",
+      "image_urls_in_range": [
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_bbadfc6ddda2289b.png",
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_96f5670305cf59e5.png",
+        "https://www.aipta.com/uploadfile/doc/202301/4eaf4edfd67e690/phpytPD6H_html_cfc230290fbcbe7c.png"
+      ],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 99,
+      "module": "data_analysis",
+      "section_order": 6,
+      "source_block_start": 549,
+      "source_block_end_exclusive": 554,
+      "raw_source_html_fragment": "<p>99.2014-2017年，A省平均每年新增申报无公害农产品产地认定（ \n  ）个。</p><p>A、184</p><p>B、202</p><p>C、221</p><p>D、230</p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    },
+    {
+      "original_question_no": 100,
+      "module": "data_analysis",
+      "section_order": 6,
+      "source_block_start": 554,
+      "source_block_end_exclusive": 560,
+      "raw_source_html_fragment": "<p>100.下列说法不正确的是（ \n  ）。</p><p>A、2016年，A省有绿色食品712个</p><p>B、2017年，A省无公害农产品种植面积是2014年的3倍多</p><p>C、2014-2017年，A省单位耕地面积农药使用量逐年下降</p><p>D、2017年，A省无公害农产品平均亩产超1吨</p><p><strong>注：篇幅有限，答案及解析请下载试卷后查看。</strong></p>",
+      "image_urls_in_range": [],
+      "correct_option": null,
+      "source_note": "The canonical full source-page HTML is source-page.html; this fragment is an index into that preserved capture."
+    }
+  ],
+  "notes": [
+    "Question HTML and options are captured from the original source page; no answer is embedded in questions.json.",
+    "Questions 46–48 map to existing science-bank source records and must be deduplicated during later integration.",
+    "Data groups contain shared materials and figures; preserve group boundaries during import.",
+    "第95题完整选项另存于 question-95-alternate-options.json；主来源文件仍保持原始下载内容。"
+  ]
+}

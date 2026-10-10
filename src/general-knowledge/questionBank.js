@@ -1,3 +1,6 @@
+import { IMPORTED_SOURCE_QUESTIONS } from '../aptitude/importedQuestionData.js';
+import { getGeneralKnowledgeTree } from './knowledge.js';
+
 const sourcedKnowledgeQuestion = (question, source) => ({
   ...question,
   options: question.options.map((text, index) => ({ id: ['A', 'B', 'C', 'D'][index], text })),
@@ -14,9 +17,9 @@ const sourcedKnowledgeQuestion = (question, source) => ({
   sectionOrder: 2,
   sharedStimulusId: null,
   verificationStatus: 'verified',
-  copyrightStatus: 'adapted_public_source',
+  copyrightStatus: question.copyrightStatus || 'adapted_public_source',
   publishStatus: 'published',
-  presentationMode: 'adapted',
+  presentationMode: question.presentationMode || 'adapted',
 });
 
 const anhuiOutlineSource = {
@@ -402,3 +405,30 @@ GENERAL_KNOWLEDGE_QUESTION_BANK.push(
     originalQuestionNo: 16, factCheckSourceIds: ['nra-railway-track'],
   }, beijing2023RecallSource),
 );
+
+const importedKnowledgeTree = getGeneralKnowledgeTree();
+const importedKnowledgeQuestions = IMPORTED_SOURCE_QUESTIONS
+  .filter((question) => question.moduleId === 'general-knowledge')
+  .map((question) => {
+    const subject = importedKnowledgeTree.find((item) => item.id === question.subjectId);
+    const topic = subject?.topics.find((item) => item.id === question.topicId);
+    const questionText = `${question.stem} ${(question.options || []).join(' ')} ${question.explanation || ''}`;
+    const topicPoints = topic?.knowledgePoints || [];
+    const matchingPoint = topicPoints.find((point) => point.title
+      .split(/[、，：:与/（）()]/)
+      .map((term) => term.trim())
+      .filter((term) => term.length > 1)
+      .some((term) => questionText.includes(term)));
+    const point = matchingPoint || topicPoints[0];
+    return {
+      ...question,
+      moduleId: 'general_knowledge',
+      subjectTitle: subject?.title || question.subjectId,
+      topicTitle: topic?.title || question.topicId,
+      knowledgePointIds: question.knowledgePointIds?.length ? question.knowledgePointIds : (point ? [point.id] : []),
+      knowledgePointTitle: point?.title || null,
+      options: question.options.map((text, index) => ({ id: ['A', 'B', 'C', 'D'][index], text })),
+    };
+  });
+
+GENERAL_KNOWLEDGE_QUESTION_BANK.push(...importedKnowledgeQuestions);

@@ -1,0 +1,1284 @@
+{
+  "paper_id": "bj-2017-全卷-29",
+  "title": "2017年北京市公务员录用考试《行测》真题（考生回忆版）",
+  "region": "北京",
+  "exam_year": 2017,
+  "variant": "全卷（考生回忆版）",
+  "question_count": 135,
+  "source_url": "https://upload.xingguanggongkao.com/pdf/2017%E5%B9%B4%E5%8C%97%E4%BA%AC%E5%B8%82%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.pdf?time=1733727354",
+  "answer_source_url": "https://www.chinagwy.org/files/20180329161241_37453.pdf",
+  "authorization": {
+    "status": "user_confirmed_republication_authorization",
+    "confirmed_on": "2026-10-10"
+  },
+  "archive_status": "source_pdf_and_text_extraction_staged; answers_not_item_audited; figure_pages_preserved_in_pdf",
+  "figure_pages_reported_by_pdfimages": [
+    12,
+    13,
+    14,
+    15,
+    20,
+    22
+  ],
+  "sections": [
+    {
+      "module": "common_knowledge",
+      "section_order": 1,
+      "from": 1,
+      "to": 35,
+      "label": "第一部分 - 常识判断"
+    },
+    {
+      "module": "verbal",
+      "section_order": 2,
+      "from": 36,
+      "to": 70,
+      "label": "第二部分 - 言语理解与表达"
+    },
+    {
+      "module": "quantitative",
+      "section_order": 3,
+      "from": 71,
+      "to": 85,
+      "label": "第三部分 - 数量关系"
+    },
+    {
+      "module": "reasoning",
+      "section_order": 4,
+      "from": 86,
+      "to": 115,
+      "label": "第四部分 - 判断推理"
+    },
+    {
+      "module": "data_analysis",
+      "section_order": 5,
+      "from": 116,
+      "to": 135,
+      "label": "第五部分 - 资料分析"
+    }
+  ],
+  "answer_file": null,
+  "question_file": "source-recall.pdf",
+  "question_records": [
+    {
+      "original_question_no": 1,
+      "module": "common_knowledge",
+      "section_order": 1,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 2,
+      "module": "common_knowledge",
+      "section_order": 1,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 3,
+      "module": "common_knowledge",
+      "section_order": 1,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 4,
+      "module": "common_knowledge",
+      "section_order": 1,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 5,
+      "module": "common_knowledge",
+      "section_order": 1,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 6,
+      "module": "common_knowledge",
+      "section_order": 1,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 7,
+      "module": "common_knowledge",
+      "section_order": 1,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 8,
+      "module": "common_knowledge",
+      "section_order": 1,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 9,
+      "module": "common_knowledge",
+      "section_order": 1,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 10,
+      "module": "common_knowledge",
+      "section_order": 1,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 11,
+      "module": "common_knowledge",
+      "section_order": 1,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 12,
+      "module": "common_knowledge",
+      "section_order": 1,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 13,
+      "module": "common_knowledge",
+      "section_order": 1,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 14,
+      "module": "common_knowledge",
+      "section_order": 1,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 15,
+      "module": "common_knowledge",
+      "section_order": 1,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 16,
+      "module": "common_knowledge",
+      "section_order": 1,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 17,
+      "module": "common_knowledge",
+      "section_order": 1,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 18,
+      "module": "common_knowledge",
+      "section_order": 1,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 19,
+      "module": "common_knowledge",
+      "section_order": 1,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 20,
+      "module": "common_knowledge",
+      "section_order": 1,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 21,
+      "module": "common_knowledge",
+      "section_order": 1,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 22,
+      "module": "common_knowledge",
+      "section_order": 1,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 23,
+      "module": "common_knowledge",
+      "section_order": 1,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 24,
+      "module": "common_knowledge",
+      "section_order": 1,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 25,
+      "module": "common_knowledge",
+      "section_order": 1,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 26,
+      "module": "common_knowledge",
+      "section_order": 1,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 27,
+      "module": "common_knowledge",
+      "section_order": 1,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 28,
+      "module": "common_knowledge",
+      "section_order": 1,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 29,
+      "module": "common_knowledge",
+      "section_order": 1,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 30,
+      "module": "common_knowledge",
+      "section_order": 1,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "multiple_select"
+    },
+    {
+      "original_question_no": 31,
+      "module": "common_knowledge",
+      "section_order": 1,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "multiple_select"
+    },
+    {
+      "original_question_no": 32,
+      "module": "common_knowledge",
+      "section_order": 1,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "multiple_select"
+    },
+    {
+      "original_question_no": 33,
+      "module": "common_knowledge",
+      "section_order": 1,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "multiple_select"
+    },
+    {
+      "original_question_no": 34,
+      "module": "common_knowledge",
+      "section_order": 1,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "multiple_select"
+    },
+    {
+      "original_question_no": 35,
+      "module": "common_knowledge",
+      "section_order": 1,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "multiple_select"
+    },
+    {
+      "original_question_no": 36,
+      "module": "verbal",
+      "section_order": 2,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 37,
+      "module": "verbal",
+      "section_order": 2,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 38,
+      "module": "verbal",
+      "section_order": 2,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 39,
+      "module": "verbal",
+      "section_order": 2,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 40,
+      "module": "verbal",
+      "section_order": 2,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 41,
+      "module": "verbal",
+      "section_order": 2,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 42,
+      "module": "verbal",
+      "section_order": 2,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 43,
+      "module": "verbal",
+      "section_order": 2,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 44,
+      "module": "verbal",
+      "section_order": 2,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 45,
+      "module": "verbal",
+      "section_order": 2,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 46,
+      "module": "verbal",
+      "section_order": 2,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 47,
+      "module": "verbal",
+      "section_order": 2,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 48,
+      "module": "verbal",
+      "section_order": 2,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 49,
+      "module": "verbal",
+      "section_order": 2,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 50,
+      "module": "verbal",
+      "section_order": 2,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 51,
+      "module": "verbal",
+      "section_order": 2,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 52,
+      "module": "verbal",
+      "section_order": 2,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 53,
+      "module": "verbal",
+      "section_order": 2,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 54,
+      "module": "verbal",
+      "section_order": 2,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 55,
+      "module": "verbal",
+      "section_order": 2,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 56,
+      "module": "verbal",
+      "section_order": 2,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 57,
+      "module": "verbal",
+      "section_order": 2,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 58,
+      "module": "verbal",
+      "section_order": 2,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 59,
+      "module": "verbal",
+      "section_order": 2,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 60,
+      "module": "verbal",
+      "section_order": 2,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 61,
+      "module": "verbal",
+      "section_order": 2,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 62,
+      "module": "verbal",
+      "section_order": 2,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 63,
+      "module": "verbal",
+      "section_order": 2,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 64,
+      "module": "verbal",
+      "section_order": 2,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 65,
+      "module": "verbal",
+      "section_order": 2,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 66,
+      "module": "verbal",
+      "section_order": 2,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 67,
+      "module": "verbal",
+      "section_order": 2,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 68,
+      "module": "verbal",
+      "section_order": 2,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 69,
+      "module": "verbal",
+      "section_order": 2,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 70,
+      "module": "verbal",
+      "section_order": 2,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 71,
+      "module": "quantitative",
+      "section_order": 3,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 72,
+      "module": "quantitative",
+      "section_order": 3,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 73,
+      "module": "quantitative",
+      "section_order": 3,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 74,
+      "module": "quantitative",
+      "section_order": 3,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 75,
+      "module": "quantitative",
+      "section_order": 3,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 76,
+      "module": "quantitative",
+      "section_order": 3,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 77,
+      "module": "quantitative",
+      "section_order": 3,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 78,
+      "module": "quantitative",
+      "section_order": 3,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 79,
+      "module": "quantitative",
+      "section_order": 3,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 80,
+      "module": "quantitative",
+      "section_order": 3,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 81,
+      "module": "quantitative",
+      "section_order": 3,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 82,
+      "module": "quantitative",
+      "section_order": 3,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 83,
+      "module": "quantitative",
+      "section_order": 3,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 84,
+      "module": "quantitative",
+      "section_order": 3,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 85,
+      "module": "quantitative",
+      "section_order": 3,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 86,
+      "module": "reasoning",
+      "section_order": 4,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 87,
+      "module": "reasoning",
+      "section_order": 4,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 88,
+      "module": "reasoning",
+      "section_order": 4,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 89,
+      "module": "reasoning",
+      "section_order": 4,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 90,
+      "module": "reasoning",
+      "section_order": 4,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 91,
+      "module": "reasoning",
+      "section_order": 4,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 92,
+      "module": "reasoning",
+      "section_order": 4,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 93,
+      "module": "reasoning",
+      "section_order": 4,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 94,
+      "module": "reasoning",
+      "section_order": 4,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 95,
+      "module": "reasoning",
+      "section_order": 4,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 96,
+      "module": "reasoning",
+      "section_order": 4,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 97,
+      "module": "reasoning",
+      "section_order": 4,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 98,
+      "module": "reasoning",
+      "section_order": 4,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 99,
+      "module": "reasoning",
+      "section_order": 4,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 100,
+      "module": "reasoning",
+      "section_order": 4,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 101,
+      "module": "reasoning",
+      "section_order": 4,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 102,
+      "module": "reasoning",
+      "section_order": 4,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 103,
+      "module": "reasoning",
+      "section_order": 4,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 104,
+      "module": "reasoning",
+      "section_order": 4,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 105,
+      "module": "reasoning",
+      "section_order": 4,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 106,
+      "module": "reasoning",
+      "section_order": 4,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 107,
+      "module": "reasoning",
+      "section_order": 4,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 108,
+      "module": "reasoning",
+      "section_order": 4,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 109,
+      "module": "reasoning",
+      "section_order": 4,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 110,
+      "module": "reasoning",
+      "section_order": 4,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 111,
+      "module": "reasoning",
+      "section_order": 4,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 112,
+      "module": "reasoning",
+      "section_order": 4,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 113,
+      "module": "reasoning",
+      "section_order": 4,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 114,
+      "module": "reasoning",
+      "section_order": 4,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 115,
+      "module": "reasoning",
+      "section_order": 4,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 116,
+      "module": "data_analysis",
+      "section_order": 5,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 117,
+      "module": "data_analysis",
+      "section_order": 5,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 118,
+      "module": "data_analysis",
+      "section_order": 5,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 119,
+      "module": "data_analysis",
+      "section_order": 5,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 120,
+      "module": "data_analysis",
+      "section_order": 5,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 121,
+      "module": "data_analysis",
+      "section_order": 5,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 122,
+      "module": "data_analysis",
+      "section_order": 5,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 123,
+      "module": "data_analysis",
+      "section_order": 5,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 124,
+      "module": "data_analysis",
+      "section_order": 5,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 125,
+      "module": "data_analysis",
+      "section_order": 5,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 126,
+      "module": "data_analysis",
+      "section_order": 5,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 127,
+      "module": "data_analysis",
+      "section_order": 5,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 128,
+      "module": "data_analysis",
+      "section_order": 5,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 129,
+      "module": "data_analysis",
+      "section_order": 5,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 130,
+      "module": "data_analysis",
+      "section_order": 5,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 131,
+      "module": "data_analysis",
+      "section_order": 5,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 132,
+      "module": "data_analysis",
+      "section_order": 5,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 133,
+      "module": "data_analysis",
+      "section_order": 5,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 134,
+      "module": "data_analysis",
+      "section_order": 5,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    },
+    {
+      "original_question_no": 135,
+      "module": "data_analysis",
+      "section_order": 5,
+      "source_file": "source-recall.pdf",
+      "answer_status": "not_item_audited",
+      "content_status": "original_pdf_preserved",
+      "special_format": "as_printed"
+    }
+  ],
+  "notes": [
+    "原题面以 PDF 为准，文本文件仅作检索辅助。",
+    "多选题原题号 30–35；本次不把题目按单选题格式改写。",
+    "答案尚未逐题与该 PDF 交叉核验，因此整卷和随机练习暂不标为可发布。"
+  ]
+}

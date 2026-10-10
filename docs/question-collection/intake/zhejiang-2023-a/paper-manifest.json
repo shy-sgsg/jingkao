@@ -1,0 +1,61 @@
+{
+  "paper_id": "zhejiang-2023-A-class",
+  "title": "2023 年浙江省公务员录用考试《行测》A 卷（公开回忆题）",
+  "region": "浙江",
+  "exam_year": 2023,
+  "variant": "A 类",
+  "question_count": 125,
+  "source_type": "recalled",
+  "source_id": "zhejiang-2023-a-recall",
+  "source_url": "https://www.aipta.com/article/3524.html",
+  "answer_url": "https://static.32xueyuan.com/zq//u/cms/zj/202310/20144954ob39.pdf",
+  "directory": "zhejiang-2023-a",
+  "sections": [
+    {
+      "module": "common_knowledge",
+      "section_order": 1,
+      "from": 1,
+      "to": 20
+    },
+    {
+      "module": "verbal",
+      "section_order": 2,
+      "from": 21,
+      "to": 50
+    },
+    {
+      "module": "quantitative",
+      "section_order": 3,
+      "from": 51,
+      "to": 70
+    },
+    {
+      "module": "reasoning",
+      "section_order": 4,
+      "from": 71,
+      "to": 110
+    },
+    {
+      "module": "data_analysis",
+      "section_order": 5,
+      "from": 111,
+      "to": 125
+    }
+  ],
+  "questions_parsed_count": 125,
+  "answer_count": 125,
+  "explanation_count": 125,
+  "published_count": 107,
+  "held_count": 18,
+  "authorization": {
+    "status": "user_confirmed_republication_authorization",
+    "confirmed_on": "2026-10-10"
+  },
+  "question_records_file": "questions.json",
+  "answer_explanations_file": "answer-explanations.json",
+  "shared_stimuli_file": "shared-stimuli.json",
+  "captured_question_text_count": 125,
+  "answer_explanation_count": 125,
+  "published_question_count": 107,
+  "held_question_count": 18
+}

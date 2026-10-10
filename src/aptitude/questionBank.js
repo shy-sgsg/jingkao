@@ -1,4 +1,5 @@
 import { getAptitudeModuleKnowledgeTree } from './knowledge.js';
+import { IMPORTED_SOURCE_QUESTIONS } from './importedQuestionData.js';
 
 const QUESTION_SEEDS = [
   ['political-theory', 'theory', 'practice-and-knowledge', '基础理论', '实践是检验认识是否正确的主要标准，最直接的理由是？', ['实践只会重复已有认识', '理论一经提出便自动成为真理', '实践能把认识与客观效果联系起来检验', '多数人赞同就必然正确'], 'C', '实践把主观认识置于客观活动及其结果中检验；共识和书本结论都不能替代实践检验。', 'easy'],
@@ -246,23 +247,23 @@ const sourceQuestion = (question, source) => {
     knowledgePointTitle: entry.point.title,
     options: question.options.map((text, index) => ({ id: ['A', 'B', 'C', 'D'][index], text })),
     difficulty: question.difficulty || 'medium',
-    sourceType: source.sourceType,
-    sourceId: source.sourceId,
-    sourceTitle: source.sourceTitle,
-    sourceNote: source.sourceNote,
-    sourceUrl: source.url || null,
-    region: source.region,
-    examYear: source.examYear,
-    paperId: source.paperId,
-    paperTitle: source.paperTitle,
-    answerSourceUrl: source.answerUrl || null,
+    sourceType: question.sourceType || source.sourceType,
+    sourceId: question.sourceId || source.sourceId,
+    sourceTitle: question.sourceTitle || source.sourceTitle,
+    sourceNote: question.sourceNote || source.sourceNote,
+    sourceUrl: question.sourceUrl || source.url || null,
+    region: question.region || source.region,
+    examYear: question.examYear ?? source.examYear,
+    paperId: question.paperId || source.paperId,
+    paperTitle: question.paperTitle || source.paperTitle,
+    answerSourceUrl: question.answerSourceUrl || source.answerUrl || null,
     originalQuestionNo: question.originalQuestionNo,
-    sectionOrder: source.sectionOrder,
-    sharedStimulusId: null,
+    sectionOrder: question.sectionOrder ?? source.sectionOrder,
+    sharedStimulusId: question.sharedStimulusId ?? null,
     verificationStatus: 'verified',
-    copyrightStatus: 'adapted_public_source',
+    copyrightStatus: question.copyrightStatus || 'adapted_public_source',
     publishStatus: 'published',
-    presentationMode: 'adapted',
+    presentationMode: question.presentationMode || 'adapted',
   };
 };
 
@@ -460,4 +461,8 @@ const sourcedQuestions = [
 
 for (const question of sourcedQuestions) {
   APTITUDE_MODULE_QUESTION_BANKS[question.moduleId].push(question);
+}
+
+for (const question of IMPORTED_SOURCE_QUESTIONS.filter((item) => item.moduleId !== 'general-knowledge')) {
+  APTITUDE_MODULE_QUESTION_BANKS[question.moduleId].push(sourceQuestion(question, question));
 }

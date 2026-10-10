@@ -1,0 +1,59 @@
+{
+  "paper_id": "zhejiang-2023-A-class",
+  "groups": [
+    {
+      "shared_stimulus_id": "zhejiang-2023-A-class-stimulus-111-115",
+      "paper_id": "zhejiang-2023-A-class",
+      "question_numbers": [
+        111,
+        112,
+        113,
+        114,
+        115
+      ],
+      "asset_dependency": "complete_text_and_original_linked_images",
+      "material_source_url": "https://www.aipta.com/article/3524.html",
+      "material_note": "原卷连续五题共用的资料；文字与图表按公开题面页面原样关联。",
+      "text": "",
+      "image_urls": [
+        "https://www.aipta.com/uploadfile/doc/202301/9f284fac3d7d51b/phpBIw30M_html_c8f3805b1f038187.png"
+      ]
+    },
+    {
+      "shared_stimulus_id": "zhejiang-2023-A-class-stimulus-116-120",
+      "paper_id": "zhejiang-2023-A-class",
+      "question_numbers": [
+        116,
+        117,
+        118,
+        119,
+        120
+      ],
+      "asset_dependency": "complete_text_and_original_linked_images",
+      "material_source_url": "https://www.aipta.com/article/3524.html",
+      "material_note": "原卷连续五题共用的资料；文字与图表按公开题面页面原样关联。",
+      "text": "2021年上半年，S市工业战略性新兴产业总产值7164.68亿元，比去年同期增长19.6%，两年平均增长12.3%。其中，新能源汽车、新能源和高端装备产值同比分别增长2.5倍、32.1%和24.5%。\n2021年上半年，全市第三产业增加值15080.35亿元，比去年同期增长11.3%。其中，信息传输、软件和信息技术服务业增加值1770.06亿元，比去年同期增加245.5亿元；批发和零售业增加值2428.92亿元，同比增长15.2%；金融业增加值3842.65亿元，比去年同期增加274.7亿元；房地产业增加值1812.18亿元，同比增长13.6%。\n2021年上半年，全市社会消费品零售总额9048.44亿元，比去年同期增加了2104.14亿元。分行业看，批发和零售业零售额8287.13亿元，同比增长28.4%；住宿和餐饮业零售额761.31亿元，同比增长54.0%。2021年上半年，全市网上商店零售额1485.72亿元，比去年同期增加259.92亿元。\n2021年上半年，全市新建商品房销售面积832.83万平方米，比去年同期增长29.2%。其中，新建商品住宅销售面积667.94万平方米，同比增长23.0%。",
+      "image_urls": []
+    },
+    {
+      "shared_stimulus_id": "zhejiang-2023-A-class-stimulus-121-125",
+      "paper_id": "zhejiang-2023-A-class",
+      "question_numbers": [
+        121,
+        122,
+        123,
+        124,
+        125
+      ],
+      "asset_dependency": "complete_text_and_original_linked_images",
+      "material_source_url": "https://www.aipta.com/article/3524.html",
+      "material_note": "原卷连续五题共用的资料；文字与图表按公开题面页面原样关联。",
+      "text": "零售药店终端包含实体药店和网上药店两大市场。2021年，全国零售药店终端药品销售额4774亿元，同比增长10.3%。其中，实体药店市场药品销售额4405亿元，同比增长7.8%；网上药店市场药品销售额368亿元，同比增长51.5%。",
+      "image_urls": [
+        "https://www.aipta.com/uploadfile/doc/202301/9f284fac3d7d51b/phpBIw30M_html_28e20573268dee21.png",
+        "https://www.aipta.com/uploadfile/doc/202301/9f284fac3d7d51b/phpBIw30M_html_63326175cf392246.png"
+      ]
+    }
+  ],
+  "note": "资料分析各五题一组；原文材料/图表在 source-page.html 及其中的原始图资源中，未复制成单题 asset。"
+}

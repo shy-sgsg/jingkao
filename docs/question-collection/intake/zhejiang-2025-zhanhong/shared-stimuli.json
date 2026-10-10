@@ -1,0 +1,136 @@
+{
+  "paper_ids": [
+    "zhanhong-2025-mock-A 类",
+    "zhanhong-2025-mock-B 类",
+    "zhanhong-2025-mock-C 类"
+  ],
+  "groups": [
+    {
+      "shared_stimulus_id": "zhanhong-2025-mock-A 类-stimulus-111-115",
+      "paper_id": "zhanhong-2025-mock-A 类",
+      "question_numbers": [
+        111,
+        112,
+        113,
+        114,
+        115
+      ],
+      "asset_dependency": "source_pdf_chart_or_table_not_extracted_for_item_display",
+      "material_source_url": "https://static.32xueyuan.com/zq/u/cms/zj/202411/202048155177.pdf",
+      "material_note": "共用材料与图表保留在原卷 PDF；尚未拆成单题可展示资源。"
+    },
+    {
+      "shared_stimulus_id": "zhanhong-2025-mock-A 类-stimulus-116-120",
+      "paper_id": "zhanhong-2025-mock-A 类",
+      "question_numbers": [
+        116,
+        117,
+        118,
+        119,
+        120
+      ],
+      "asset_dependency": "source_pdf_chart_or_table_not_extracted_for_item_display",
+      "material_source_url": "https://static.32xueyuan.com/zq/u/cms/zj/202411/202048155177.pdf",
+      "material_note": "共用材料与图表保留在原卷 PDF；尚未拆成单题可展示资源。"
+    },
+    {
+      "shared_stimulus_id": "zhanhong-2025-mock-A 类-stimulus-121-125",
+      "paper_id": "zhanhong-2025-mock-A 类",
+      "question_numbers": [
+        121,
+        122,
+        123,
+        124,
+        125
+      ],
+      "asset_dependency": "source_pdf_chart_or_table_not_extracted_for_item_display",
+      "material_source_url": "https://static.32xueyuan.com/zq/u/cms/zj/202411/202048155177.pdf",
+      "material_note": "共用材料与图表保留在原卷 PDF；尚未拆成单题可展示资源。"
+    },
+    {
+      "shared_stimulus_id": "zhanhong-2025-mock-B 类-stimulus-106-110",
+      "paper_id": "zhanhong-2025-mock-B 类",
+      "question_numbers": [
+        106,
+        107,
+        108,
+        109,
+        110
+      ],
+      "asset_dependency": "source_pdf_chart_or_table_not_extracted_for_item_display",
+      "material_source_url": "https://static.32xueyuan.com/zq/u/cms/zj/202411/202048155177.pdf",
+      "material_note": "共用材料与图表保留在原卷 PDF；尚未拆成单题可展示资源。"
+    },
+    {
+      "shared_stimulus_id": "zhanhong-2025-mock-B 类-stimulus-111-115",
+      "paper_id": "zhanhong-2025-mock-B 类",
+      "question_numbers": [
+        111,
+        112,
+        113,
+        114,
+        115
+      ],
+      "asset_dependency": "source_pdf_chart_or_table_not_extracted_for_item_display",
+      "material_source_url": "https://static.32xueyuan.com/zq/u/cms/zj/202411/202048155177.pdf",
+      "material_note": "共用材料与图表保留在原卷 PDF；尚未拆成单题可展示资源。"
+    },
+    {
+      "shared_stimulus_id": "zhanhong-2025-mock-B 类-stimulus-116-120",
+      "paper_id": "zhanhong-2025-mock-B 类",
+      "question_numbers": [
+        116,
+        117,
+        118,
+        119,
+        120
+      ],
+      "asset_dependency": "source_pdf_chart_or_table_not_extracted_for_item_display",
+      "material_source_url": "https://static.32xueyuan.com/zq/u/cms/zj/202411/202048155177.pdf",
+      "material_note": "共用材料与图表保留在原卷 PDF；尚未拆成单题可展示资源。"
+    },
+    {
+      "shared_stimulus_id": "zhanhong-2025-mock-C 类-stimulus-101-105",
+      "paper_id": "zhanhong-2025-mock-C 类",
+      "question_numbers": [
+        101,
+        102,
+        103,
+        104,
+        105
+      ],
+      "asset_dependency": "source_pdf_chart_or_table_not_extracted_for_item_display",
+      "material_source_url": "https://static.32xueyuan.com/zq/u/cms/zj/202411/202048155177.pdf",
+      "material_note": "共用材料与图表保留在原卷 PDF；尚未拆成单题可展示资源。"
+    },
+    {
+      "shared_stimulus_id": "zhanhong-2025-mock-C 类-stimulus-106-110",
+      "paper_id": "zhanhong-2025-mock-C 类",
+      "question_numbers": [
+        106,
+        107,
+        108,
+        109,
+        110
+      ],
+      "asset_dependency": "source_pdf_chart_or_table_not_extracted_for_item_display",
+      "material_source_url": "https://static.32xueyuan.com/zq/u/cms/zj/202411/202048155177.pdf",
+      "material_note": "共用材料与图表保留在原卷 PDF；尚未拆成单题可展示资源。"
+    },
+    {
+      "shared_stimulus_id": "zhanhong-2025-mock-C 类-stimulus-111-115",
+      "paper_id": "zhanhong-2025-mock-C 类",
+      "question_numbers": [
+        111,
+        112,
+        113,
+        114,
+        115
+      ],
+      "asset_dependency": "source_pdf_chart_or_table_not_extracted_for_item_display",
+      "material_source_url": "https://static.32xueyuan.com/zq/u/cms/zj/202411/202048155177.pdf",
+      "material_note": "共用材料与图表保留在原卷 PDF；尚未拆成单题可展示资源。"
+    }
+  ],
+  "note": "原卷中的材料/图表仍保存在 publisher-original-pack.pdf；数据分析题按原卷连续五题组保留 shared_stimulus_id，未拆出的组不发布。"
+}

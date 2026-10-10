@@ -40,6 +40,7 @@ const appModules = [
   '../src/science/questionBank.js',
   '../src/science/sessions.js',
   '../src/aptitude/sessions.js',
+  '../src/aptitude/importedQuestionData.js',
   '../src/aptitude/questionBank.js',
   '../src/general-knowledge/lessonContent.js',
   '../src/general-knowledge/knowledge.js',
