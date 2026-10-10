@@ -89,3 +89,8 @@ huatu-2026-gansu-recall,third_party_exam_recall,华图教育,2026年甘肃省考
 iget100-guangdong-2026-question-answer,third_party_exam_question_and_answer,Iget100,2026年广东省公务员录用考试《行测》在线题页与参考答案,https://iget100.com/exam/civil-service/0bf9be8c-93db-4573-8eb1-8ebed591627b,public_question_and_answer_page,90 question page and answer key; verbal Q16–30 and quantitative Q31–45 crosschecked with gkzhenti; figures/shared materials remain under audit
 aipta-shaanxi-2026-question-answer,third_party_exam_question_and_answer,爱真题 Aipta,2026陕西省考行测真题及答案解析页面,https://www.aipta.com/article/10635.html,search_indexed_page_fetch_timeout,搜索索引可见题面与答案解析片段；本轮页面抓取超时，需重新取得正文并逐题与公开回忆卷核对。
 gkzhenti-guangdong-2026-answer,third_party_exam_answer_key,公考真题库,2026年广东省公务员录用考试《行测》回忆版答案页,https://gwy.gkzhenti.cn/answer/1767342832062,public_answer_key,数量关系第31–45题答案；与IGet100答案页交叉核对
+henan-2026-recall-page,third_party_exam_recall,粉笔（公开真题库转载页）,2026年河南省考行测网友回忆版题面,https://gwy.gkzhenti.cn/paper/1775360735848,public_question_page,列示120题；已逐题录入可核验文字题，图表、其他模块题继续审校。
+henan-2026-answer-key,public_answer_key,公开真题库,2026年河南省考行测回忆版答案页,https://gwy.gkzhenti.cn/answer/1775360735848,public_answer_page,提供1–120题答案键；本批46题逐题核对并独立复核解析。
+henan-2026-xingguang-91,third_party_explanation,星光公考,河南2026第91题答案解析,https://www.xingguanggongkao.com/pc/wb/quesView/id/54896.html,public,交叉核对嫦娥五号月面国旗材料题答案与解释。
+henan-2026-xingguang-94,third_party_explanation,星光公考,河南2026第94题答案解析,https://www.xingguanggongkao.com/pc/wb/quesView/id/54391.html,public,交叉核对常用电器题答案与向心力解释。
+henan-2026-xingguang-104,third_party_explanation,星光公考,河南2026第104题答案解析,https://www.xingguanggongkao.com/pc/wb/quesView/id/54371.html,public,交叉核对诉讼时效题答案；并核对《民法典》第一百九十六条。

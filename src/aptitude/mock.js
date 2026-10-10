@@ -126,6 +126,20 @@ const PAPER_CATALOG = [
       'data-analysis': [116, 135],
     },
   },
+  {
+    id: 'henan-2026-recall',
+    title: '2026 年河南省公务员录用考试《行测》题（网友回忆版）',
+    region: '河南',
+    examYear: 2026,
+    questionCount: 120,
+    sourceUrl: 'https://gwy.gkzhenti.cn/paper/1775360735848',
+    answerUrl: 'https://gwy.gkzhenti.cn/answer/1775360735848',
+    sourceType: 'recalled',
+    ranges: {
+      'political-theory': [76, 90],
+      'general-knowledge': [91, 105],
+    },
+  },
 ];
 
 const PLACEHOLDER_STEMS = new Set([
