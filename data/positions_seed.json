@@ -58602,5 +58602,38 @@
     "eligibilityComplete": false,
     "eligibilityText": "本轮仅补录岗位身份、计划数及一个报名阶段过审快照；学历、专业及其他资格条件以官方招考简章为准。",
     "sources": ["gwyzwb-2026-pinggu-market", "gwyzwb-2026-pinggu-index", "eoffcn-2026-snapshot-20251117-1800"]
+  },
+  {
+    "year": 2026,
+    "code": "232501603",
+    "unit": "北京市公安局公安交通管理局",
+    "title": "一线执法岗",
+    "jobType": "行政执法",
+    "recruitCount": 55,
+    "education": "本科及以上",
+    "majorText": "不限",
+    "eligibilityText": "京考职位网职位镜像列明计划招录55人、公安专业科目及体能测评要求；完整资格条件以官方招考简章为准。",
+    "sourceLevel": "secondary",
+    "verification": "京考职位网2026逐岗镜像列明代码、单位、职位名及计划数；未与官方招考简章逐代码复核",
+    "crossVerified": false,
+    "eligibilityComplete": false,
+    "sources": ["gwyzwb-2026-citywide-traffic-232501603"]
+  },
+  {
+    "year": 2026,
+    "code": "232501801",
+    "unit": "北京市公安局东城分局",
+    "title": "一线执法岗",
+    "orgType": "垂直/驻区",
+    "jobType": "行政执法",
+    "recruitCount": 20,
+    "education": "本科及以上",
+    "majorText": "不限",
+    "eligibilityText": "本轮仅补录岗位身份、学历、专业与招录数以关联进面分；其他资格条件以官方招考简章为准。",
+    "sourceLevel": "secondary",
+    "verification": "华图2026东城区职位列表页二手职位镜像；未与官方招考简章逐代码核验",
+    "crossVerified": false,
+    "eligibilityComplete": false,
+    "sources": ["huatu-2026-dongcheng-232501801"]
   }
 ]

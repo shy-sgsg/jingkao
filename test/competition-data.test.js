@@ -358,3 +358,62 @@ test('2026 Mentougou Civil Affairs snapshots attach to the exact mirrored positi
     assert.equal(row?.qualifiedCompetitionRatio, qualified);
   }
 });
+
+test('2026 Dongcheng police minimum interview score links to its unique year-and-code position', async () => {
+  const raw = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const dataset = normalizeDataset(raw);
+  const positionSource = dataset.sources.find((item) => item.sourceId === 'huatu-2026-dongcheng-232501801');
+  const cutoffSource = dataset.sources.find((item) => item.sourceId === 'cgzj-2026-dongcheng-cutoff-sample');
+  const expected = [
+    ['232501801', '北京市公安局东城分局', '一线执法岗', 20, 55.9],
+  ];
+
+  assert.equal(positionSource?.url, 'https://ah.huatu.com/zw/bjgwy/dongcheng/2026_1.html');
+  assert.equal(cutoffSource?.samplePositions, 26);
+  assert.equal(cutoffSource?.minimum, 55.9);
+
+  for (const [code, unit, title, recruits, score] of expected) {
+    const matches = dataset.positions.filter((item) => item.year === 2026 && item.code === code);
+    assert.equal(matches.length, 1, `${code} should identify exactly one 2026 position`);
+    assert.equal(matches[0].districtId, 'dongcheng');
+    assert.equal(matches[0].unit, unit);
+    assert.equal(matches[0].title, title);
+    assert.equal(matches[0].recruitCount, recruits);
+    assert.ok(matches[0].sources.includes('huatu-2026-dongcheng-232501801'));
+
+    const scoreRows = dataset.scoreRows.filter((item) => item.year === 2026
+      && item.sourceId === 'cgzj-2026-dongcheng-cutoff-sample'
+      && item.positionCode === code);
+    assert.equal(scoreRows.length, 1, `${code} should have one linked cutoff row`);
+    assert.equal(scoreRows[0].unit, unit);
+    assert.equal(scoreRows[0].title, title);
+    assert.equal(scoreRows[0].score, score);
+    assert.equal(scoreRows[0].mappingConfidence, 'high');
+  }
+});
+
+test('2026 citywide traffic police qualification snapshot links to the exact municipal position', async () => {
+  const raw = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const dataset = normalizeDataset(raw);
+  const position = dataset.positions.find((item) => item.year === 2026 && item.code === '232501603');
+  const source = dataset.sources.find((item) => item.sourceId === 'eoffcn-2026-snapshot-20251119-1800');
+  const positionSource = dataset.sources.find((item) => item.sourceId === 'gwyzwb-2026-citywide-traffic-232501603');
+
+  assert.ok(position, 'the municipal traffic police position should appear in the position library');
+  assert.equal(position.unit, '北京市公安局公安交通管理局');
+  assert.equal(position.title, '一线执法岗');
+  assert.equal(position.recruitCount, 55);
+  assert.equal(position.districtId, null, 'a citywide municipal post should not be assigned to a district');
+  assert.ok(position.sources.includes('gwyzwb-2026-citywide-traffic-232501603'));
+  assert.equal(positionSource?.url, 'https://bj.gwyzwb.com/2026/42.html');
+  assert.equal(source?.observedAt, '2025-11-19 18:00');
+
+  const observation = dataset.observations.find((item) => item.year === 2026
+    && item.sourceId === 'eoffcn-2026-snapshot-20251119-1800'
+    && item.positionCode === '232501603');
+  assert.ok(observation, 'the reported qualification count should remain linked to the exact position code');
+  assert.equal(observation.applicantsQualified, 714);
+  assert.equal(observation.recruitCount, 55);
+  assert.equal(observation.qualifiedCompetitionRatio, 714 / 55);
+  assert.equal(observation.observedAt, '2025-11-19 18:00');
+});

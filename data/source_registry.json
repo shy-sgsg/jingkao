@@ -1617,6 +1617,12 @@
     "accessedAt": "2026-10-10",
     "positionSnapshots": [
       {
+        "positionCode": "232501603",
+        "scope": "position-level",
+        "applicantsQualified": 714,
+        "recruitCount": 55
+      },
+      {
         "positionCode": "821261102",
         "scope": "position-level",
         "applicantsQualified": 424,
@@ -1708,7 +1714,7 @@
         "recruitCount": 1
       }
     ],
-    "notes": "页面逐职位列出市级过审人数前十及最激烈岗位；记录其中能与2026职位库按代码、招录人数匹配的岗位。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
+    "notes": "页面逐职位列出市级过审人数前十及最激烈岗位；记录其中能与2026职位库按代码、招录人数匹配的岗位，包括北京市公安局公安交通管理局一线执法岗（232501603，计划55人、714人过审）。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
   },
   {
     "sourceId": "zhonggong-2026-snapshot-20251120-0900",
@@ -15219,5 +15225,55 @@
     "url": "https://mbaokao.offcn.com/index.php/zwcx/zw/2511071988.html",
     "accessedAt": "2026-10-10",
     "notes": "第三方职位详情用于候选代码、名称及计划数匹配；未与官方职位表逐代码复核。"
+  },
+  {
+    "sourceId": "gwyzwb-2026-citywide-traffic-232501603",
+    "title": "京考职位网：北京市公安局公安交通管理局2026一线执法岗",
+    "publisher": "京考职位网",
+    "level": "secondary",
+    "evidenceType": "position_mirror",
+    "year": 2026,
+    "geographicScope": "北京市市级机关",
+    "url": "https://bj.gwyzwb.com/2026/42.html",
+    "accessedAt": "2026-10-10",
+    "positionCode": "232501603",
+    "unit": "北京市公安局公安交通管理局",
+    "positionTitle": "一线执法岗",
+    "reportedRecruitCount": 55,
+    "notes": "第三方逐岗镜像列出代码232501603、职位名及计划招录55人，并列明公安专业科目和体能测评要求；未与官方招考简章逐代码核验。"
+  },
+  {
+    "sourceId": "huatu-2026-dongcheng-232501801",
+    "title": "华图：2026东城区公安局东城分局职位列表",
+    "publisher": "北京华图",
+    "level": "secondary",
+    "evidenceType": "position_mirror",
+    "year": 2026,
+    "districtId": "dongcheng",
+    "geographicScope": "东城区职位镜像样本",
+    "url": "https://ah.huatu.com/zw/bjgwy/dongcheng/2026_1.html",
+    "accessedAt": "2026-10-10",
+    "positionCode": "232501801",
+    "unit": "北京市公安局东城分局",
+    "positionTitle": "一线执法岗",
+    "reportedRecruitCount": 20,
+    "notes": "页面列出职位代码232501801、单位、职位名称及计划招录20人；第三方职位镜像，未与官方招考简章逐代码核验。"
+  },
+  {
+    "sourceId": "cgzj-2026-dongcheng-cutoff-sample",
+    "title": "成公教育：2026北京公务员东城区岗位最低进面分部分样本",
+    "publisher": "成公教育",
+    "level": "secondary",
+    "evidenceType": "partial_interview_score_sample",
+    "year": 2026,
+    "districtId": "dongcheng",
+    "geographicScope": "东城区岗位进面分部分样本",
+    "url": "https://www.cgzj.com/sydw/12621.html",
+    "publishedAt": "2026-06-02",
+    "accessedAt": "2026-10-10",
+    "samplePositions": 26,
+    "minimum": 55.9,
+    "scope": "东城区部分职位的最低进面分；非全区完整名册",
+    "notes": "页面表格摘录包含26个岗位样本；其摘要称全区137人进入面试、最高分129.5，但表格出现137.5，最高分描述相互矛盾。表格中的北京市公安局东城分局一线执法岗列55.9分；公安岗位的分数尺度未说明，因此不宜与普通职位直接比较。当前仅保留这一条可与职位镜像唯一匹配的样本，不将摘要数字作为全区分布。"
   }
 ]

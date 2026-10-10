@@ -1,5 +1,5 @@
 [
-  {"id":"dongcheng","code":"110101","name":"东城区","unitMatchAliases":[],"sourceId":"beijing-district-codes-2026"},
+  {"id":"dongcheng","code":"110101","name":"东城区","unitMatchAliases":["东城分局"],"sourceId":"beijing-district-codes-2026"},
   {"id":"xicheng","code":"110102","name":"西城区","unitMatchAliases":["西城分局","西城运输管理分局"],"sourceId":"beijing-district-codes-2026"},
   {"id":"chaoyang","code":"110105","name":"朝阳区","unitMatchAliases":["朝阳分局","朝阳运输管理分局"],"sourceId":"beijing-district-codes-2026"},
   {"id":"fengtai","code":"110106","name":"丰台区","unitMatchAliases":["丰台分局","丰台运输管理分局"],"sourceId":"beijing-district-codes-2026"},
