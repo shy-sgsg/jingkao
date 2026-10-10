@@ -110,7 +110,7 @@ test('the evidence center lists dated position-level qualification snapshots wit
   assert.match(root.innerHTML, /150 人/);
   assert.match(root.innerHTML, /eoffcn\.com\/kszx\/detail\/1903982\.html/);
   assert.match(root.innerHTML, /资格审查通过人数.*不等同最终报名人数、缴费人数或实考人数/s);
-  assert.match(root.innerHTML, /岗位级资格审查快照[\s\S]*?覆盖 32 个岗位 · 11 个时点/);
+  assert.match(root.innerHTML, /岗位级资格审查快照[\s\S]*?覆盖 33 个岗位 · 12 个时点/);
 });
 
 test('the evidence center separates citywide weighted competition snapshots from job-level ratios', async () => {

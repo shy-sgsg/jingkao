@@ -85048,6 +85048,57 @@
     {
       "year": 2025,
       "scope": "position-level",
+      "positionCode": "232501902",
+      "unit": null,
+      "observationType": "qualified_snapshot",
+      "observedAt": "2024-11-19 09:00",
+      "applicantsRegistered": null,
+      "applicantsQualified": 119,
+      "applicantsPaid": null,
+      "applicantsConfirmed": null,
+      "actualTestTakers": null,
+      "recruitCount": 77,
+      "sourceId": "eoffcn-2025-haidian-job-snapshot-20241119-0900",
+      "sourceLevel": "secondary",
+      "notes": "文章明确列出职位代码232501902（北京市公安局海淀分局一线执法岗1）截至2024-11-19 9时资格审查通过119人、计划招录77人。仅记录公开榜单中的岗位样本，不代表该区或全市完整清单；资格审查通过人数不是最终缴费或实考人数。"
+    },
+    {
+      "year": 2025,
+      "scope": "position-level",
+      "positionCode": "232501902",
+      "unit": null,
+      "observationType": "qualified_snapshot",
+      "observedAt": "2024-11-22 09:00",
+      "applicantsRegistered": null,
+      "applicantsQualified": 605,
+      "applicantsPaid": null,
+      "applicantsConfirmed": null,
+      "actualTestTakers": null,
+      "recruitCount": 77,
+      "sourceId": "eoffcn-2025-citywide-hot-jobs-20241122-0900",
+      "sourceLevel": "secondary",
+      "notes": "文章逐岗表列出截至2024-11-22 9时职位232501902资格审查通过605人、计划招录77人，以及职位220633901资格审查通过304人、计划招录2人。仅记录公开榜单中的岗位样本，不代表该区或全市完整清单；资格审查通过人数不是最终缴费或实考人数。"
+    },
+    {
+      "year": 2025,
+      "scope": "position-level",
+      "positionCode": "220633901",
+      "unit": null,
+      "observationType": "qualified_snapshot",
+      "observedAt": "2024-11-22 09:00",
+      "applicantsRegistered": null,
+      "applicantsQualified": 304,
+      "applicantsPaid": null,
+      "applicantsConfirmed": null,
+      "actualTestTakers": null,
+      "recruitCount": 2,
+      "sourceId": "eoffcn-2025-citywide-hot-jobs-20241122-0900",
+      "sourceLevel": "secondary",
+      "notes": "文章逐岗表列出截至2024-11-22 9时职位232501902资格审查通过605人、计划招录77人，以及职位220633901资格审查通过304人、计划招录2人。仅记录公开榜单中的岗位样本，不代表该区或全市完整清单；资格审查通过人数不是最终缴费或实考人数。"
+    },
+    {
+      "year": 2025,
+      "scope": "position-level",
       "positionCode": "221155801",
       "unit": null,
       "observationType": "qualified_snapshot",
@@ -86738,7 +86789,55 @@
       "accessedAt": "2026-10-08",
       "reportedPositionCount": 90,
       "reportedRecruitCount": 176,
-      "notes": "页面列示截至2025-11-22 9时昌平90岗/176人并给出资格审查快照；未提供该总数对应的逐代码清单。与职位镜像页头91岗/177人差异暂未对账。"
+      "notes": "页面列示截至2024-11-22 9时的2025年度京考报名快照：昌平区90岗/176人；未提供该总数对应的逐代码清单。与职位镜像页头91岗/177人差异暂未对账。"
+    },
+    {
+      "sourceId": "eoffcn-2025-haidian-job-snapshot-20241119-0900",
+      "title": "中公网校：2025京考过审人数前十岗位（截至11月19日9时）",
+      "publisher": "中公教育",
+      "level": "secondary",
+      "evidenceType": "registration_snapshot",
+      "year": 2025,
+      "geographicScope": "北京市（过审人数前十岗位样本）",
+      "url": "https://www.eoffcn.com/kszx/detail/1514988.html",
+      "observedAt": "2024-11-19 09:00",
+      "accessedAt": "2026-10-10",
+      "positionSnapshots": [
+        {
+          "positionCode": "232501902",
+          "scope": "position-level",
+          "applicantsQualified": 119,
+          "recruitCount": 77
+        }
+      ],
+      "notes": "文章明确列出职位代码232501902（北京市公安局海淀分局一线执法岗1）截至2024-11-19 9时资格审查通过119人、计划招录77人。仅记录公开榜单中的岗位样本，不代表该区或全市完整清单；资格审查通过人数不是最终缴费或实考人数。"
+    },
+    {
+      "sourceId": "eoffcn-2025-citywide-hot-jobs-20241122-0900",
+      "title": "中公网校：2025京考过审人数前十岗位（截至11月22日9时）",
+      "publisher": "中公教育",
+      "level": "secondary",
+      "evidenceType": "registration_snapshot",
+      "year": 2025,
+      "geographicScope": "北京市（过审人数前十岗位样本）",
+      "url": "https://www.eoffcn.com/kszx/detail/1521605.html",
+      "observedAt": "2024-11-22 09:00",
+      "accessedAt": "2026-10-10",
+      "positionSnapshots": [
+        {
+          "positionCode": "232501902",
+          "scope": "position-level",
+          "applicantsQualified": 605,
+          "recruitCount": 77
+        },
+        {
+          "positionCode": "220633901",
+          "scope": "position-level",
+          "applicantsQualified": 304,
+          "recruitCount": 2
+        }
+      ],
+      "notes": "文章逐岗表列出截至2024-11-22 9时职位232501902资格审查通过605人、计划招录77人，以及职位220633901资格审查通过304人、计划招录2人。仅记录公开榜单中的岗位样本，不代表该区或全市完整清单；资格审查通过人数不是最终缴费或实考人数。"
     },
     {
       "sourceId": "gwyzwb-2025-org-1",
@@ -103339,7 +103438,7 @@
       "value": 90,
       "sourceId": "eoffcn-2025-list",
       "level": "secondary",
-      "notes": "页面列示截至2025-11-22 9时昌平90岗/176人并给出资格审查快照；未提供该总数对应的逐代码清单。与职位镜像页头91岗/177人差异暂未对账。"
+      "notes": "页面列示截至2024-11-22 9时的2025年度京考报名快照：昌平区90岗/176人；未提供该总数对应的逐代码清单。与职位镜像页头91岗/177人差异暂未对账。"
     },
     {
       "metric": "recruit_count",
@@ -103363,7 +103462,7 @@
       "value": 176,
       "sourceId": "eoffcn-2025-list",
       "level": "secondary",
-      "notes": "页面列示截至2025-11-22 9时昌平90岗/176人并给出资格审查快照；未提供该总数对应的逐代码清单。与职位镜像页头91岗/177人差异暂未对账。"
+      "notes": "页面列示截至2024-11-22 9时的2025年度京考报名快照：昌平区90岗/176人；未提供该总数对应的逐代码清单。与职位镜像页头91岗/177人差异暂未对账。"
     },
     {
       "metric": "position_count",

@@ -40,10 +40,10 @@ test('research findings derive sample coverage, score distribution, and evidence
     officialPositionRows: 0,
   });
   assert.deepEqual(byId['competition-grain'].facts, {
-    observations: 89,
-    jobLevelObservations: 81,
+    observations: 92,
+    jobLevelObservations: 84,
     aggregateObservations: 8,
-    jobLevelPositions: 32,
+    jobLevelPositions: 33,
   });
   assert.match(byId['competition-grain'].title, /岗位级资格审查快照/);
   assert.ok(byId['coverage-2026'].sourceIds.includes('huatu-2026-list'));
