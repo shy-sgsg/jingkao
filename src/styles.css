@@ -1884,6 +1884,7 @@ button.science-answer-option:hover { border-color: #c9d9ee; background: #f7faff;
 .science-answer-option.is-selected > span { background: #dfeaf8; color: #426b9d; }
 .science-source-diagram { margin: 0 0 13px; padding: 10px 14px 7px; border: 1px solid #ebeff3; border-radius: 11px; background: #fbfdff; }
 .science-source-diagram svg { display: block; width: min(100%, 520px); height: auto; margin: 0 auto; }
+.science-source-diagram img { display: block; width: min(100%, 520px); height: auto; margin: 0 auto; }
 .science-source-attribution { display: grid; gap: 3px; margin-top: 13px; color: #8491a1; font-size: var(--font-xs); }
 .science-source-attribution a { color: #5b7ca9; }
 .science-source-attribution small { color: #9aa4b1; font-size: 13px; }

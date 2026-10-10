@@ -1,0 +1,87 @@
+[
+  {
+    "questionId": "bj2026-political-example-1",
+    "correctAnswer": "B",
+    "explanation": "①②④均属于习近平新时代中国特色社会主义思想关于高质量发展的重要论述。表述③，高质量发展着力提升发展质量和效益，而不是以速度和规模为首要目标。故③错误。因此，正确的表述有①②④，选项 B 正确。"
+  },
+  {
+    "questionId": "bj2026-political-example-2",
+    "correctAnswer": "D",
+    "explanation": "习近平总书记在“枫桥经验”发源地枫桥镇考察时指出，“要坚持好、发展好新时代‘枫桥经验’，坚持党的群众路线，正确处理人民内部矛盾，紧紧依靠人民群众，把问题解决在基层、化解在萌芽状态”。选项 A、B、C 中的案例涉及的工作法均符合上述精神。选项 D 中的案例未鲜明体现上述精神，不适合报送评选征集活动。"
+  },
+  {
+    "questionId": "bj2026-general-example-1",
+    "correctAnswer": "B",
+    "explanation": "①③④对于做好生活必需品市场调控保障工作，抑制价格过快上涨势头均有一定的积极作用，②不是解决供需矛盾，从而解决价格问题的有效措施。"
+  },
+  {
+    "questionId": "bj2026-verbal-example-1-a",
+    "correctAnswer": "D",
+    "explanation": "这段公文的对象是各区县政府、市政府各部门及相关单位，针对的工作内容是办理人大代表建议工作，明确了领导班子、承办单位主要领导、承办单位主管领导等的工作要求。因此，选项 D 加强组织领导正确。"
+  },
+  {
+    "questionId": "bj2026-verbal-example-1-b",
+    "correctAnswer": "C",
+    "explanation": "从办理人大代表建议工作的流程来说，首先应对人大代表的建议进行分类，即认真分类研究；其次由有关单位针对建议进行处理，即进行积极恰当处理；随后应就人大代表建议的处理结果进行答复，即诚恳明确答复；最后，在办理过程中应加强统筹协调，推动问题解决。综上所述，选项 C 正确。"
+  },
+  {
+    "questionId": "bj2026-verbal-example-2",
+    "correctAnswer": "D",
+    "explanation": "“千头万绪”常用于形容一件事情头绪很多，十分复杂，与下文“错综复杂”表意一致，符合文意。“应接不暇”形容事情太多，应付不过来；“争分夺秒”形容对时间抓得很紧；“任重道远”比喻责任重大，需要长期艰苦奋斗，均不符合文意。"
+  },
+  {
+    "questionId": "bj2026-quantitative-example-1",
+    "correctAnswer": "B",
+    "explanation": "这一数列的排列规律是前一个数加 7 等于后一个数，故空缺项应为 37。"
+  },
+  {
+    "questionId": "bj2026-quantitative-example-2",
+    "correctAnswer": "B",
+    "explanation": "根据题意，调研工作于上午 9 点开始，需提前 10 分钟到达 B 单位，即 8 点 50 分到达；从地铁站出口步行至 B 单位所需时间为 1440/1.2 =1200 秒，即 20 分钟，因此小张应通知专家最晚 8 点 30 分一起从地铁站出口出发，步行前往 B 单位。"
+  },
+  {
+    "questionId": "bj2026-reasoning-example-figure",
+    "correctAnswer": "D",
+    "explanation": "因为只有 D 能使两套图形具有相似性，仅仅元素不同，一个是半圆，一个是半个正方形，但两套图形中元素的排列规律完全相同。"
+  },
+  {
+    "questionId": "bj2026-reasoning-example-cube-net",
+    "correctAnswer": "D",
+    "explanation": "正确答案为 D。"
+  },
+  {
+    "questionId": "bj2026-reasoning-example-syllogism",
+    "correctAnswer": "D",
+    "explanation": "观察 A、B、C、D 四个选项，似乎都有一定道理。只有结论 D 是由陈述“所有的计算机编程专家都是数学家”直接推出来的，是不需要附加任何假设和补充得出的结论。"
+  },
+  {
+    "questionId": "bj2026-reasoning-example-ecological-economy",
+    "correctAnswer": "C",
+    "explanation": "选项 A 开山伐树还是会对环境造成破坏；选项 B 政府是为了开发不可再生资源，不符合生态经济的定义要求；选项 D 对农药、肥料的过分依赖会破坏当地的水生环境和土地资源。"
+  },
+  {
+    "questionId": "bj2026-reasoning-example-event-order",
+    "correctAnswer": "B",
+    "explanation": "收集书籍（1）-雇用木工（4）-购买材料（2）-打造书架（3）-排列书籍（5），这一顺序相对于其他顺序而言最为合理。"
+  },
+  {
+    "questionId": "bj2026-reasoning-example-analogy",
+    "correctAnswer": "C",
+    "explanation": "“棉花”是“农作物”，前者和后者所反映的对象是小类和大类的关系。选项 C 中“榴莲”与“水果”的关系与“棉花”与“农作物”的关系一样。"
+  },
+  {
+    "questionId": "bj2026-data-example-1",
+    "correctAnswer": "B",
+    "explanation": "本题应为 2164-2164/（1+18.3%），可估算略低于 2164 的 1/6 但高于 2164 的 1/7，一定在 300 到 370 家之间，因此，答案是 B。"
+  },
+  {
+    "questionId": "bj2026-data-example-2",
+    "correctAnswer": "C",
+    "explanation": "新设立企业数同比增速大于 11.8 %，直接投资金额同比增速大于 6.4%的行业有信息传输、计算机服务和软件业以及批发和零售业，因此，答案是 C。"
+  },
+  {
+    "questionId": "beijing-2026-outline-dragonfly",
+    "correctAnswer": "A",
+    "explanation": "图中三个圆的圆心即为蜻蜓点过的位置，圆圈越大说明水波产生得越早，可知蜻蜓自右向左飞，可排除 C 和 D。水波的传播和蜻蜓的飞行都是匀速运动，相同时间内速度越快则运动距离越远。从蜻蜓第一次点水至无人机拍摄这段时间，水波传播距离为最大圆的半径，蜻蜓飞行距离明显大于最大圆的半径，可知蜻蜓飞行速度比水波传播的速度快，可排除 B。"
+  }
+]

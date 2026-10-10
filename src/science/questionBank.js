@@ -224,17 +224,21 @@ function addPublishedReferenceQuestion(question) {
   });
 }
 
-const dragonflyDiagram = `<svg viewBox="0 0 420 160" role="img" aria-label="三个水波圆依次由右向左变小，表示蜻蜓连续点水的位置和先后"><line x1="45" y1="125" x2="375" y2="125" stroke="#9aa7ba" stroke-dasharray="4 5"/><circle cx="300" cy="80" r="66" fill="#dbeafe" fill-opacity=".35" stroke="#3878be" stroke-width="2"/><circle cx="190" cy="80" r="42" fill="#dbeafe" fill-opacity=".35" stroke="#3878be" stroke-width="2"/><circle cx="95" cy="80" r="22" fill="#dbeafe" fill-opacity=".35" stroke="#3878be" stroke-width="2"/><circle cx="300" cy="80" r="4" fill="#1d4ed8"/><circle cx="190" cy="80" r="4" fill="#1d4ed8"/><circle cx="95" cy="80" r="4" fill="#1d4ed8"/><text x="279" y="154" fill="#42536d" font-size="12">最早点水</text><text x="77" y="154" fill="#42536d" font-size="12">最近点水</text><text x="181" y="22" fill="#42536d" font-size="12">水波扩散示意（重绘）</text></svg>`;
 const trainCupDiagram = `<svg viewBox="0 0 360 150" role="img" aria-label="列车向右行驶并制动，杯中水面右侧较高"><path d="M100 36h160l20 25v61H80V61z" fill="#eff6ff" stroke="#55708e" stroke-width="3"/><path d="M88 78 Q170 88 284 60v44H88z" fill="#8bd0e8" fill-opacity=".72" stroke="#1684a8" stroke-width="2"/><line x1="90" y1="105" x2="280" y2="105" stroke="#55708e" stroke-width="3"/><path d="M125 24h116" stroke="#55708e" stroke-width="3" marker-end="url(#train-arrow)"/><text x="150" y="17" fill="#42536d" font-size="12">列车向右</text><path d="M330 55v43" stroke="#c2413a" stroke-width="3" marker-end="url(#brake-arrow)"/><text x="300" y="45" fill="#8b2d2b" font-size="12">制动</text><defs><marker id="train-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8z" fill="#55708e"/></marker><marker id="brake-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8z" fill="#c2413a"/></marker></defs></svg>`;
 
 addPublishedReferenceQuestion({
-  id: 'beijing-2026-outline-dragonfly', subjectId: 'physics', topicId: 'physics:kinematics', knowledgePointIds: ['physics:uniform-motion'],
+  id: 'beijing-2026-outline-dragonfly', moduleId: 'science', subjectId: 'physics', topicId: 'physics:kinematics', knowledgePointIds: ['physics:uniform-motion'],
   difficulty: 'medium', reasoningType: 'data_interpretation', sourceType: 'official_outline_example', sourceId: 'beijing-2026-outline',
-  sourceTitle: '北京市 2026 年公务员考试大纲科学推理例题', region: '北京', examYear: 2026, diagramSvg: dragonflyDiagram,
-  sourceNote: '题面来源见上方题源；答案和解析在作答后查看。',
-  stem: '无人机俯拍到平静湖面上一只蜻蜓连续三次点水的波纹。图中三个圆为三次点水产生的波纹；水波匀速扩散，蜻蜓沿直线匀速运动。根据波纹大小和圆心位置，判断蜻蜓的运动情况。',
-  options: ['自右向左飞，速度比水波传播速度快', '自右向左飞，速度比水波传播速度慢', '自左向右飞，速度比水波传播速度快', '自左向右飞，速度比水波传播速度慢'],
-  correctAnswer: 'A', explanation: '圆心对应点水位置；波纹越大，点水越早。最大圆在右侧，因此蜻蜓由右向左。两次点水间隔相同，若蜻蜓在这段时间的位移大于最早波纹的半径，则飞行速度大于水波扩散速度。官方大纲给出的答案为 A。',
+  sourceTitle: '北京市各级机关 2026 年度考试录用公务员公共科目笔试考试大纲（科学推理例题）', region: '北京', examYear: 2026,
+  paperId: 'bj-2026-outline-example-1', paperTitle: '北京市 2026 年公共科目笔试大纲公开例题（17题；非考试卷）',
+  originalQuestionNo: '判断推理科学推理例题', sectionOrder: 5,
+  diagramImageUrl: './public/question-assets/beijing-2026-official-outline-examples/science-wave-q14.jpg',
+  diagramImageAlt: '北京市 2026 年公务员考试大纲科学推理例题原图：三个大小不同并部分重叠的水波圆',
+  sourceNote: '北京市公务员主管部门公开考试大纲中的例题；不是已举行考试的历年真题。答题前不展示答案，完成作答后查看解析。',
+  presentationMode: 'original',
+  stem: '无人机在平静的湖面上空俯拍到一只蜻蜓点水的画面，其截取后的示意图如下。该图中的三个圆为拍摄之前蜻蜓连续三次点水过程中激起的波纹，已知从俯视角度看，水波匀速扩散、蜻蜓沿直线匀速运动。则蜻蜓',
+  options: ['自右向左飞，飞行速度比水波传播的速度快', '自右向左飞，飞行速度比水波传播的速度慢', '自左向右飞，飞行速度比水波传播的速度快', '自左向右飞，飞行速度比水波传播的速度慢'],
+  correctAnswer: 'A', explanation: '图中三个圆的圆心即为蜻蜓点过的位置，圆圈越大说明水波产生得越早，可知蜻蜓自右向左飞，可排除 C 和 D。水波的传播和蜻蜓的飞行都是匀速运动，相同时间内速度越快则运动距离越远。从蜻蜓第一次点水至无人机拍摄这段时间，水波传播距离为最大圆的半径，蜻蜓飞行距离明显大于最大圆的半径，可知蜻蜓飞行速度比水波传播的速度快，可排除 B。',
 });
 
 addPublishedReferenceQuestion({

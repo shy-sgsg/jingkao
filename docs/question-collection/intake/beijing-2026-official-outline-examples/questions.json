@@ -1,0 +1,258 @@
+[
+  {
+    "id": "bj2026-political-example-1",
+    "moduleId": "political-theory",
+    "originalQuestionNo": "政治理论例题1",
+    "sectionOrder": 1,
+    "stem": "党的二十大报告指出，从现在起，中国共产党的中心任务就是团结带领全国各族人民全面建成社会主义现代化强国、实现第二个百年奋斗目标，以中国式现代化全面推进中华民族伟大复兴。报告指出，高质量发展是全面建设社会主义现代化国家的首要任务。下列关于高质量发展的表述，正确的有\n①我国经济发展已由高速增长阶段转向高质量发展阶段\n②高质量发展不只是一个经济要求，而是对经济社会发展方方面面的总要求\n③高质量发展是追求以速度和规模为首要目标的发展\n④推动高质量发展必须完整、准确、全面贯彻新发展理念",
+    "options": [
+      "A.①②③",
+      "B.①②④",
+      "C.①③④",
+      "D.②③④"
+    ]
+  },
+  {
+    "id": "bj2026-political-example-2",
+    "moduleId": "political-theory",
+    "originalQuestionNo": "政治理论例题2",
+    "sectionOrder": 1,
+    "stem": "党的二十大报告提出，在社会基层坚持和发展新时代“枫桥经验”，完善正确处理新形势下人民内部矛盾机制。日前，某地组织开展“枫桥式工作法”评选征集活动。以下案例中，不适合报送该评选征集活动的是",
+    "options": [
+      "A．甲区充分发掘网格、社区、街道、区四级独特优势，探索形成了矛盾纠纷“梯次递进 一体调处”工作法",
+      "B．乙区人民法院完善预防为先、非诉挺前、诉讼托底的矛盾预防化解体系，探索形成“全周期”诉源治理工作法",
+      "C．丙镇把“近邻”理念作为化解矛盾纠纷的出发点，创建“近邻互助”工作法，营造“无事常联系、有事互帮助、邻里一家亲”的浓厚氛围",
+      "D．丁市以治理重复信访、化解信访积案专项行动为抓手，组织各区、各部门集中开展矛盾纠纷排查化解工作"
+    ]
+  },
+  {
+    "id": "bj2026-general-example-1",
+    "moduleId": "general-knowledge",
+    "originalQuestionNo": "常识判断例题",
+    "sectionOrder": 2,
+    "stem": "近期，某市生活必需品市场供应紧张，出现价格过快上涨势头。如果你是该市相关部门的工作人员，你认为采取以下哪些措施可有助于改善这一状况？\n①强化价格监测预警，制定各项应急预案\n②落实居民救助政策，安排好困难群众生活\n③强化能源运行调度，做好煤电油气运协调工作\n④强化区域合作能力，保障农产品货源供应",
+    "options": [
+      "A.①②③",
+      "B.①③④",
+      "C.①②④",
+      "D.②③④"
+    ]
+  },
+  {
+    "id": "bj2026-verbal-example-1-a",
+    "moduleId": "verbal",
+    "originalQuestionNo": "言语理解例题1-①",
+    "sectionOrder": 3,
+    "stem": "① 对上述文字的基本精神，概括最准确的是",
+    "options": [
+      "A．增强履职意识",
+      "B．认真分析问题",
+      "C．科学分类指导",
+      "D．加强组织领导"
+    ],
+    "sharedStimulusId": "bj2026-verbal-example-1"
+  },
+  {
+    "id": "bj2026-verbal-example-1-b",
+    "moduleId": "verbal",
+    "originalQuestionNo": "言语理解例题1-②",
+    "sectionOrder": 3,
+    "stem": "② 根据文意，填入文中画横线处表述最恰当的是",
+    "options": [
+      "A．诚恳明确答复、认真分类研究、积极恰当处理、加强统筹协调",
+      "B．积极恰当处理、认真分类研究、诚恳明确答复、加强统筹协调",
+      "C．认真分类研究、积极恰当处理、诚恳明确答复、加强统筹协调",
+      "D．加强统筹协调、积极恰当处理、认真分类研究、诚恳明确答复"
+    ],
+    "sharedStimulusId": "bj2026-verbal-example-1"
+  },
+  {
+    "id": "bj2026-verbal-example-2",
+    "moduleId": "verbal",
+    "originalQuestionNo": "言语理解例题2",
+    "sectionOrder": 3,
+    "stem": "发展社会主义民主政治，要巩固基层政权。基层政权建设    ，错综复杂，抓住其中的主线，是有效破解难题、探索建设进路的重要前提。填入画横线部分最恰当的一项是",
+    "options": [
+      "A．应接不暇",
+      "B．争分夺秒",
+      "C．任重道远",
+      "D．千头万绪"
+    ]
+  },
+  {
+    "id": "bj2026-quantitative-example-1",
+    "moduleId": "quantitative",
+    "originalQuestionNo": "数量关系数字推理例题",
+    "sectionOrder": 4,
+    "stem": "2    9    16    23   30   （ ）",
+    "options": [
+      "A．35",
+      "B．37",
+      "C．39",
+      "D．41"
+    ]
+  },
+  {
+    "id": "bj2026-quantitative-example-2",
+    "moduleId": "quantitative",
+    "originalQuestionNo": "数量关系数学运算例题",
+    "sectionOrder": 4,
+    "stem": "小张带领三位专家到 B 单位调研，距离 B 单位 1.44 千米处设有地铁站出口。调研工作于上午 9 点开始，他们需提前 10 分钟到达 B 单位，则小张应通知专家最晚几点一起从地铁站出口出发，步行前往 B 单位？（假设小张和专家的步行速度均为 1.2 米/秒）",
+    "options": [
+      "A．8 点 26 分",
+      "B．8 点 30 分",
+      "C．8 点 36 分",
+      "D．8 点 40 分"
+    ]
+  },
+  {
+    "id": "bj2026-reasoning-example-figure",
+    "moduleId": "reasoning",
+    "originalQuestionNo": "判断推理图形推理例题1",
+    "sectionOrder": 5,
+    "stem": "从所给的四个选项中，选择最合适的一个填入问号处，不仅使两套图形表现出最大的相似性，而且使第二套图形也表现出自己的特征。",
+    "options": [
+      {
+        "id": "A",
+        "text": ""
+      },
+      {
+        "id": "B",
+        "text": ""
+      },
+      {
+        "id": "C",
+        "text": ""
+      },
+      {
+        "id": "D",
+        "text": ""
+      }
+    ],
+    "stemImageUrls": [
+      "./public/question-assets/beijing-2026-official-outline-examples/reasoning-figure-pattern-q09.jpg"
+    ]
+  },
+  {
+    "id": "bj2026-reasoning-example-cube-net",
+    "moduleId": "reasoning",
+    "originalQuestionNo": "判断推理图形推理例题2",
+    "sectionOrder": 5,
+    "stem": "以下为 4 个纸盒的外表面展开图，哪一个折成的纸盒与其他三个不一样？",
+    "options": [
+      {
+        "id": "A",
+        "text": ""
+      },
+      {
+        "id": "B",
+        "text": ""
+      },
+      {
+        "id": "C",
+        "text": ""
+      },
+      {
+        "id": "D",
+        "text": ""
+      }
+    ],
+    "stemImageUrls": [
+      "./public/question-assets/beijing-2026-official-outline-examples/reasoning-cube-nets-q10.png"
+    ]
+  },
+  {
+    "id": "bj2026-reasoning-example-syllogism",
+    "moduleId": "reasoning",
+    "originalQuestionNo": "判断推理演绎推理例题",
+    "sectionOrder": 5,
+    "stem": "彭平是一位计算机编程专家，姚欣是一位数学家。其实，所有的计算机编程专家都是数学家。我们知道，今天国内大多数综合性大学都在培养着计算机编程专家。据此，我们可以认为",
+    "options": [
+      "A．彭平是由综合性大学所培养的",
+      "B．大多数计算机编程专家是由综合性大学所培养的",
+      "C．姚欣并不是毕业于综合性大学",
+      "D．有些数学家是计算机编程专家"
+    ]
+  },
+  {
+    "id": "bj2026-reasoning-example-ecological-economy",
+    "moduleId": "reasoning",
+    "originalQuestionNo": "判断推理定义判断例题",
+    "sectionOrder": 5,
+    "stem": "生态经济是指在生态系统承载能力范围内，运用生态经济学原理和系统工程方法改变生产和消费方式，挖掘一切可以利用的资源潜力，发展一些经济发达、生态高效的产业，建设体制合理、社会和谐的文化以及生态健康、景观适宜的环境；生态经济的操作定义为，不破坏环境、不污染环境的经济，不以不可再生资源为基础的经济。根据上述定义，下列符合生态经济的是",
+    "options": [
+      "A．某地利用开山伐树筹集来的资金修建成马路后，极大地方便了村民的出行",
+      "B．某市在发展煤炭经济时注重改进技术、提高资源利用率，以保护并修复环境",
+      "C．某村利用家畜——沼气——经济作物的沼气工程发展当地经济",
+      "D．某乡运用新型肥料和农药发展鱼藕混养模式，农民收成再创新高"
+    ]
+  },
+  {
+    "id": "bj2026-reasoning-example-event-order",
+    "moduleId": "reasoning",
+    "originalQuestionNo": "判断推理事件排序例题",
+    "sectionOrder": 5,
+    "stem": "（1）收集书籍 （2）购买材料 （3）打造书架 （4）雇用木工 （5）排列书籍",
+    "options": [
+      "A．4-3-1-2-5",
+      "B．1-4-2-3-5",
+      "C．4-3-2-1-5",
+      "D．3-2-1-4-5"
+    ]
+  },
+  {
+    "id": "bj2026-reasoning-example-analogy",
+    "moduleId": "reasoning",
+    "originalQuestionNo": "判断推理类比推理例题",
+    "sectionOrder": 5,
+    "stem": "棉花︰农作物",
+    "options": [
+      "A．窗户︰房屋",
+      "B．动物︰爬行动物",
+      "C．榴莲︰水果",
+      "D．树木︰森林"
+    ]
+  },
+  {
+    "id": "bj2026-data-example-1",
+    "moduleId": "data-analysis",
+    "originalQuestionNo": "资料分析例题-①",
+    "sectionOrder": 6,
+    "stem": "① 2015 年从“一带一路”沿线国家吸收外商直接投资新设立企业数比上年增加了多少家？",
+    "options": [
+      "A．不到 300 家",
+      "B．300 多家",
+      "C．400 多家",
+      "D．500 家以上"
+    ],
+    "sharedStimulusId": "bj2026-data-example"
+  },
+  {
+    "id": "bj2026-data-example-2",
+    "moduleId": "data-analysis",
+    "originalQuestionNo": "资料分析例题-②",
+    "sectionOrder": 6,
+    "stem": "② 表中有几个行业在新设立企业数和直接投资金额同比增速上均快于全国总体水平？",
+    "options": [
+      "A．4",
+      "B．3",
+      "C．2",
+      "D．1"
+    ],
+    "sharedStimulusId": "bj2026-data-example"
+  },
+  {
+    "id": "beijing-2026-outline-dragonfly",
+    "moduleId": "science",
+    "originalQuestionNo": "判断推理科学推理例题",
+    "sectionOrder": 5,
+    "stem": "无人机在平静的湖面上空俯拍到一只蜻蜓点水的画面，其截取后的示意图如下。该图中的三个圆为拍摄之前蜻蜓连续三次点水过程中激起的波纹，已知从俯视角度看，水波匀速扩散、蜻蜓沿直线匀速运动。则蜻蜓",
+    "options": [
+      "自右向左飞，飞行速度比水波传播的速度快",
+      "自右向左飞，飞行速度比水波传播的速度慢",
+      "自左向右飞，飞行速度比水波传播的速度快",
+      "自左向右飞，飞行速度比水波传播的速度慢"
+    ],
+    "diagramImageUrl": "./public/question-assets/beijing-2026-official-outline-examples/science-wave-q14.jpg"
+  }
+]
