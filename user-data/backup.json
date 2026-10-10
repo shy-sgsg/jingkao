@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "backupId": "6968ebc3-fd8c-4a7a-8d1c-49919ca0967d",
-  "updatedAt": "2026-10-10T06:13:50.702Z",
+  "updatedAt": "2026-10-10T10:53:30.360Z",
   "data": {
     "profile": {
       "major": "公共管理",
@@ -1790,19 +1790,19 @@
             "questionIds": [
               "ah2026-outline-political-1",
               "ah2026-outline-political-2",
-              "zja2025-q1",
-              "zja2025-political-2",
-              "zja2025-political-3",
-              "zja2025-political-4",
-              "zja2025-political-5",
-              "zja2025-political-6",
               "zja2025-political-8",
-              "zja2025-political-9",
-              "zja2025-political-10",
               "apt-political-theory-001",
+              "zja2025-political-6",
+              "zja2025-political-3",
+              "apt-political-theory-004",
+              "zja2025-political-5",
+              "zja2025-political-4",
               "apt-political-theory-002",
+              "zja2025-political-10",
+              "zja2025-political-9",
+              "zja2025-q1",
               "apt-political-theory-003",
-              "apt-political-theory-004"
+              "zja2025-political-2"
             ],
             "currentIndex": 1,
             "correctCount": 0,
@@ -1822,7 +1822,8 @@
             },
             "moduleId": "political-theory",
             "completedAt": null,
-            "session_id": "apt_political-theory_mv1u3bm6_bfp97z"
+            "session_id": "apt_political-theory_mv1u3bm6_bfp97z",
+            "randomizedQuestionOrder": true
           },
           {
             "id": "apt_political-theory_mv1vaom4_m4adep",
@@ -1868,6 +1869,48 @@
             },
             "moduleId": "political-theory",
             "session_id": "apt_political-theory_mv1vaom4_m4adep"
+          },
+          {
+            "id": "apt_political-theory_mv21s3pb_gkjkv5",
+            "mode": "exam",
+            "status": "completed",
+            "planTaskId": null,
+            "questionIds": [
+              "apt-political-theory-009"
+            ],
+            "currentIndex": 0,
+            "correctCount": 1,
+            "reviewingAnswerId": null,
+            "draftAnswers": {
+              "apt-political-theory-009": {
+                "optionId": "A",
+                "selectedAt": "2026-10-10T07:03:12.442Z"
+              }
+            },
+            "startedAt": "2026-10-10T07:03:05.663Z",
+            "deadline": "2026-10-10T07:23:05.663Z",
+            "durationSeconds": 1200,
+            "filters": {
+              "onlyUnanswered": false,
+              "onlyMistakes": false,
+              "onlyFavorites": false,
+              "excludeQuestionIds": [],
+              "answeredQuestionIds": [
+                "ah2026-outline-political-1"
+              ],
+              "mistakeQuestionIds": [
+                "ah2026-outline-political-1"
+              ],
+              "favoriteQuestionIds": []
+            },
+            "moduleId": "political-theory",
+            "answeredCount": 1,
+            "unansweredCount": 0,
+            "scoreRate": 1,
+            "answeredAccuracy": 1,
+            "submittedAt": "2026-10-10T07:03:15.233Z",
+            "completedAt": "2026-10-10T07:03:15.233Z",
+            "session_id": "apt_political-theory_mv21s3pb_gkjkv5"
           }
         ],
         "answers": [
@@ -1885,6 +1928,23 @@
             ],
             "moduleId": "political-theory",
             "attempt_id": "answer_apt_political-theory_mv1u3bm6_bfp97z_1"
+          },
+          {
+            "id": "answer_apt_political-theory_mv21s3pb_gkjkv5_apt-political-theory-009",
+            "sessionId": "apt_political-theory_mv21s3pb_gkjkv5",
+            "questionId": "apt-political-theory-009",
+            "selectedOptionId": "A",
+            "correctAnswer": "A",
+            "isCorrect": true,
+            "mode": "exam",
+            "answeredAt": "2026-10-10T07:03:12.442Z",
+            "submittedAt": "2026-10-10T07:03:15.233Z",
+            "questionIndex": 0,
+            "knowledgePointIds": [
+              "political-theory:ecological-development"
+            ],
+            "moduleId": "political-theory",
+            "attempt_id": "answer_apt_political-theory_mv21s3pb_gkjkv5_apt-political-theory-009"
           }
         ],
         "mistakes": {
@@ -2546,6 +2606,81 @@
             "submittedAt": "2026-10-10T03:46:39.562Z",
             "completedAt": "2026-10-10T03:46:39.562Z",
             "session_id": "apt_reasoning_mv1u18su_7ulcu8"
+          },
+          {
+            "id": "apt_reasoning_mv21v3qf_9srkg1",
+            "mode": "practice",
+            "status": "active",
+            "planTaskId": null,
+            "questionIds": [
+              "js2024a-q070"
+            ],
+            "randomizedQuestionOrder": true,
+            "currentIndex": 0,
+            "correctCount": 0,
+            "reviewingAnswerId": null,
+            "draftAnswers": {},
+            "startedAt": "2026-10-10T07:05:25.671Z",
+            "deadline": null,
+            "durationSeconds": null,
+            "filters": {
+              "onlyUnanswered": false,
+              "onlyMistakes": false,
+              "onlyFavorites": false,
+              "excludeQuestionIds": [],
+              "answeredQuestionIds": [
+                "zh2025b-q083"
+              ],
+              "mistakeQuestionIds": [
+                "zh2025b-q083"
+              ],
+              "favoriteQuestionIds": []
+            },
+            "moduleId": "reasoning",
+            "session_id": "apt_reasoning_mv21v3qf_9srkg1"
+          },
+          {
+            "id": "apt_reasoning_mv21vq2s_py1bmz",
+            "mode": "exam",
+            "status": "completed",
+            "planTaskId": null,
+            "questionIds": [
+              "zh2025a-q082"
+            ],
+            "randomizedQuestionOrder": true,
+            "currentIndex": 0,
+            "correctCount": 0,
+            "reviewingAnswerId": null,
+            "draftAnswers": {
+              "zh2025a-q082": {
+                "optionId": "A",
+                "selectedAt": "2026-10-10T07:06:44.521Z"
+              }
+            },
+            "startedAt": "2026-10-10T07:05:54.628Z",
+            "deadline": "2026-10-10T07:25:54.628Z",
+            "durationSeconds": 1200,
+            "filters": {
+              "onlyUnanswered": false,
+              "onlyMistakes": false,
+              "onlyFavorites": false,
+              "excludeQuestionIds": [],
+              "answeredQuestionIds": [
+                "zh2025b-q083"
+              ],
+              "mistakeQuestionIds": [
+                "zh2025b-q083"
+              ],
+              "favoriteQuestionIds": []
+            },
+            "moduleId": "reasoning",
+            "answeredCount": 1,
+            "unansweredCount": 0,
+            "scoreRate": 0,
+            "answeredAccuracy": 0,
+            "submittedAt": "2026-10-10T07:06:46.162Z",
+            "completedAt": "2026-10-10T07:06:46.162Z",
+            "session_id": "apt_reasoning_mv21vq2s_py1bmz"
           }
         ],
         "answers": [
@@ -2565,6 +2700,23 @@
             ],
             "moduleId": "reasoning",
             "attempt_id": "answer_apt_reasoning_mv1u18su_7ulcu8_zh2025b-q083"
+          },
+          {
+            "id": "answer_apt_reasoning_mv21vq2s_py1bmz_zh2025a-q082",
+            "sessionId": "apt_reasoning_mv21vq2s_py1bmz",
+            "questionId": "zh2025a-q082",
+            "selectedOptionId": "A",
+            "correctAnswer": "D",
+            "isCorrect": false,
+            "mode": "exam",
+            "answeredAt": "2026-10-10T07:06:44.521Z",
+            "submittedAt": "2026-10-10T07:06:46.162Z",
+            "questionIndex": 0,
+            "knowledgePointIds": [
+              "reasoning:case-matching"
+            ],
+            "moduleId": "reasoning",
+            "attempt_id": "answer_apt_reasoning_mv21vq2s_py1bmz_zh2025a-q082"
           }
         ],
         "mistakes": {
@@ -2573,6 +2725,14 @@
             "firstMissedAt": "2026-10-10T03:45:03.940Z",
             "lastMissedAt": "2026-10-10T03:45:03.940Z",
             "lastSelectedOptionId": "C",
+            "correctAnswer": "D",
+            "moduleId": "reasoning"
+          },
+          "zh2025a-q082": {
+            "count": 1,
+            "firstMissedAt": "2026-10-10T07:06:44.521Z",
+            "lastMissedAt": "2026-10-10T07:06:44.521Z",
+            "lastSelectedOptionId": "A",
             "correctAnswer": "D",
             "moduleId": "reasoning"
           }
