@@ -3,6 +3,24 @@ import { getAptitudeQuestions } from './questions.js';
 
 const PAPER_CATALOG = [
   {
+    id: 'jiangxi-2026-recall',
+    title: '2026年江西省公务员录用考试《行测》题（网友回忆版）',
+    region: '江西',
+    examYear: 2026,
+    questionCount: 130,
+    sourceUrl: 'https://www.aipta.com/article/10594.html',
+    answerUrl: null,
+    sourceType: 'recalled',
+    ranges: {
+      'political-theory': [1, 20],
+      'general-knowledge': [21, 35],
+      verbal: [36, 65],
+      quantitative: [66, 75],
+      reasoning: [76, 110],
+      'data-analysis': [111, 130],
+    },
+  },
+  {
     "id": "zhanhong-2025-guangdong-mock-2",
     "title": "展鸿 2025 年广东省公务员录用考试《行测》模拟卷（二）",
     "region": "广东",
