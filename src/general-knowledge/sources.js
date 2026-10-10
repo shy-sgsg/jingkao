@@ -659,6 +659,20 @@ export const GENERAL_KNOWLEDGE_SOURCES = [
     note: '第三方机构模拟题。本站题面按原卷原文录入，答案与解析按该卷答案部分核对。',
   },
   {
+    id: 'zhanhong-jiangxi-2025-mock-1', sourceType: 'third_party_mock', title: '展鸿 2025 年江西省公务员录用考试模拟卷（一）《行测》', organization: '展鸿 / 32 学苑', examYear: 2025, region: '江西',
+    url: 'https://static.32xueyuan.com/zq/u/cms/jx/202503/120855429qnm.pdf',
+    answerUrl: 'https://static.32xueyuan.com/zq/u/cms/jx/202503/12085541lobk.pdf',
+    verificationStatus: 'verified', publishStatus: 'published', copyrightStatus: '用户确认已获得转载授权',
+    note: '题面、答案及解析按展鸿配套题本与解析 PDF 核对；本站已获转载授权。',
+  },
+  {
+    id: 'zhanhong-jiangxi-2025-mock-3', sourceType: 'third_party_mock', title: '展鸿 2025 年江西省公务员录用考试模拟卷（三）《行测》', organization: '展鸿 / 32 学苑', examYear: 2025, region: '江西',
+    url: 'https://static.32xueyuan.com/zq/u/cms/jx/202503/12085542c2xs.pdf',
+    answerUrl: 'https://static.32xueyuan.com/zq/u/cms/jx/202503/051709044zd4.pdf',
+    verificationStatus: 'verified', publishStatus: 'published', copyrightStatus: '用户确认已获得转载授权',
+    note: '题面、答案及解析按展鸿配套题本与解析 PDF 核对；本站已获转载授权。',
+  },
+  {
     id: 'jiangsu-2024-a-32xueyuan', sourceType: 'verified_exam', title: '2024 年江苏省公务员录用考试行测 A 类真题（第三方出版原卷）', organization: '32 学苑', examYear: 2024,
     url: 'https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf',
     answerUrl: 'https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf',

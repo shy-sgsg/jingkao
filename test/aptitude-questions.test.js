@@ -36,7 +36,7 @@ test('five general aptitude modules publish usable questions linked to their kno
       && question.verificationStatus === 'verified'
       && question.sourceTitle
       && question.sourceNote
-      && question.options.length === 4
+      && (question.optionType === 'true_false' ? question.options.length === 2 : question.options.length === 4)
       && question.options.some((option) => option.id === question.correctAnswer)
       && question.explanation), `${moduleId} published questions should have complete, source-labeled answer data`);
     for (const question of bank) {

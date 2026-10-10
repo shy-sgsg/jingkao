@@ -69,6 +69,20 @@ test('sourced questions rank ahead of original supplements and retain source tra
     .every((question) => question.moduleId === 'general_knowledge' && question.sourceId && question.sourceNote));
 });
 
+test('every imported Jiangxi mock question links to a registered source', async () => {
+  const [imported, sources] = await Promise.all([
+    import('../src/aptitude/importedQuestionData.js'),
+    import('../src/general-knowledge/sources.js'),
+  ]);
+  const sourceIds = new Set(sources.GENERAL_KNOWLEDGE_SOURCES.map(({ id }) => id));
+  const importedSourceIds = [...new Set(imported.IMPORTED_SOURCE_QUESTIONS
+    .filter((question) => question.moduleId === 'general-knowledge' && question.region === 'jiangxi')
+    .map((question) => question.sourceId))].sort();
+
+  assert.deepEqual(importedSourceIds, ['zhanhong-jiangxi-2025-mock-1', 'zhanhong-jiangxi-2025-mock-3']);
+  assert.deepEqual(importedSourceIds.filter((id) => !sourceIds.has(id)), [], 'published question sources must exist in the source registry');
+});
+
 test('administrative penalty and reconsideration practice is traceable to current official law texts', async () => {
   const [bank, sources, knowledge, lessonContent, questionRules] = await Promise.all([
     import('../src/general-knowledge/questionBank.js'),
