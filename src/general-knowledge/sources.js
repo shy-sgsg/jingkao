@@ -133,6 +133,12 @@ export const GENERAL_KNOWLEDGE_SOURCES = [
     publishStatus: 'published', copyrightStatus: '题意与选项摘要改写并注明回忆来源', note: '仅发布题面资源完整、答案可核的分项；Q12依赖未取得的路线图，继续暂缓。公开答案页用于核对答案，不代表官方命题文件。',
   },
   {
+    id: 'beijing-2022-recall', sourceType: 'recalled', title: '2022年北京市公务员录用考试《行测》题（考生回忆版）', organization: '公考真题网 / ERRRC xingcezhenti', examYear: 2022, region: '北京',
+    url: 'https://gwy.gkzhenti.cn/paper/1640265344758', answerUrl: 'https://gwy.gkzhenti.cn/answer/1640265344758', verificationStatus: 'verified',
+    publishStatus: 'published', copyrightStatus: '用户确认已获得转载授权',
+    note: '题干和选项按公开题面保存；答案键与固定版本的第三方逐题解析交叉核对。答题前不展示答案和解析。',
+  },
+  {
     id: 'hubei-2024-recall-candidate', sourceType: 'recalled', title: '2024年湖北省公务员录用考试《行测》题（考生回忆版）', organization: '爱真题 / 湖北网 / ERRRC 公开题解', examYear: 2024, region: '湖北',
     url: 'https://www.aipta.com/article/9625.html',
     answerUrl: 'https://www.163hubei.com/ueditor/php/upload/file/20240318/1710751920689656.pdf', verificationStatus: 'verified',
