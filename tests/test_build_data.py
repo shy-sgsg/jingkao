@@ -16,6 +16,13 @@ class WorkbookEvidenceTests(unittest.TestCase):
         snapshot_rows = [row for row in observations if row["sourceId"].startswith("eoffcn-2026-snapshot-")]
 
         expected = {
+            ("232501603", "2025-11-17 18:00", 117, "eoffcn-2026-snapshot-20251117-1800"),
+            ("232501603", "2025-11-18 09:00", 184, "eoffcn-2026-snapshot-20251118-0900"),
+            ("232501603", "2025-11-18 18:00", 450, "eoffcn-2026-snapshot-20251118-1800"),
+            ("232501603", "2025-11-19 09:00", 502, "eoffcn-2026-snapshot-20251119-0900"),
+            ("232502501", "2025-11-19 09:00", 249, "eoffcn-2026-snapshot-20251119-0900"),
+            ("232502102", "2025-11-19 09:00", 214, "eoffcn-2026-snapshot-20251119-0900"),
+            ("232502201", "2025-11-19 09:00", 120, "eoffcn-2026-snapshot-20251119-0900"),
             ("821261102", "2025-11-17 18:00", 44, "eoffcn-2026-snapshot-20251117-1800"),
             (None, "2025-11-17 18:00", 9, "eoffcn-2026-snapshot-20251117-1800"),
             ("821261102", "2025-11-18 09:00", 131, "eoffcn-2026-snapshot-20251118-0900"),
@@ -32,7 +39,7 @@ class WorkbookEvidenceTests(unittest.TestCase):
         }
 
         self.assertTrue(expected.issubset(actual))
-        self.assertEqual(len(snapshot_rows), 66)
+        self.assertEqual(len(snapshot_rows), 75)
         self.assertEqual(sum(row["positionCode"] is None for row in snapshot_rows), 3)
         for row in snapshot_rows:
             with self.subTest(source=row["sourceId"], position=row["positionCode"]):
@@ -313,14 +320,14 @@ class DataValidatorTests(unittest.TestCase):
             result.stdout,
         )
         self.assertIn(
-            "2026 coverage: org type 区直 176, 街道 82, 镇 33, 垂直/驻区 14, unknown 440; "
-            "major codes 491/745; structured requirements 12/745; eligibility complete 0/745; "
-            "cross verified 4/745; position sources official 0, secondary 745, other 0",
+            "2026 coverage: org type 区直 224, 街道 92, 镇 43, 垂直/驻区 15, unknown 443, 乡镇 4, 法检 2; "
+            "major codes 518/823; structured requirements 12/823; eligibility complete 0/823; "
+            "cross verified 6/823; position sources official 0, secondary 823, other 0",
             result.stdout,
         )
-        self.assertIn("Score mappings: high 207, ambiguous 32, unmatched 49 (288 rows)", result.stdout)
+        self.assertIn("Score mappings: high 266, ambiguous 44, unmatched 29 (339 rows)", result.stdout)
         self.assertIn(
-            "Observation metric rows: registered 0, qualified 202, paid 0, confirmed 0, actual test takers 0",
+            "Observation metric rows: registered 0, qualified 261, paid 0, confirmed 0, actual test takers 0",
             result.stdout,
         )
 

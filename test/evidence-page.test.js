@@ -113,7 +113,7 @@ test('the evidence center lists dated position-level qualification snapshots wit
   assert.match(root.innerHTML, /2025-11-19 18:00[\s\S]*?232501603[\s\S]*?714 人[\s\S]*?55 人[\s\S]*?1:12\.98[\s\S]*?eoffcn\.com\/kszx\/detail\/1903982\.html/);
   assert.match(root.innerHTML, /2025-11-20 18:00[\s\S]*?41477 人[\s\S]*?3694 人[\s\S]*?1:11\.23[\s\S]*?sohu\.com\/a\/956654507_121124036/);
   assert.match(root.innerHTML, /资格审查通过人数.*不等同最终报名人数、缴费人数或实考人数/s);
-  assert.match(root.innerHTML, /岗位级资格审查快照[\s\S]*?覆盖 69 个岗位 · 23 个时点/);
+  assert.match(root.innerHTML, /岗位级资格审查快照[\s\S]*?覆盖 71 个岗位 · 23 个时点/);
 });
 
 test('the evidence center separates citywide weighted competition snapshots from job-level ratios', async () => {
@@ -185,7 +185,7 @@ test('the source page exposes evidence-based coverage without presenting mirror 
   assert.match(root.innerHTML, /2024[\s\S]*?95 \/ 95 条/);
   assert.match(root.innerHTML, /2025[\s\S]*?91 \/ 91 条/);
   assert.match(root.innerHTML, /2026[\s\S]*?86 \/ 88 条/);
-  assert.match(root.innerHTML, /313 条具名分数记录[\s\S]*?部分样本/);
+  assert.match(root.innerHTML, /339 条具名分数记录[\s\S]*?部分样本/);
   assert.match(root.innerHTML, /年度官方职位分母未知/);
   assert.match(root.innerHTML, /条数相同不代表职位代码集合一致/);
   assert.doesNotMatch(root.innerHTML, /官方覆盖率[：:]\s*100%/);

@@ -356,12 +356,12 @@ export function filterScoreRowsBySegment(scoreRows, positions, segment = 'all') 
     if (position.unit !== row.unit || position.title !== row.title) return false;
     const jobType = String(position.jobType || '').trim();
     const majorText = String(position.majorText || '').trim();
-    if (!jobType) return false;
+    if (!jobType || !majorText || majorText.startsWith('待核实')) return false;
     const isEnforcement = jobType === '行政执法';
     const isPublicManagement = getPublicManagementMajorTypes(position).some((type) => type !== 'unrestricted');
     if (segment === 'enforcement') return isEnforcement;
     if (segment === 'public-management') return isPublicManagement;
-    return Boolean(majorText) && !isEnforcement && !isPublicManagement;
+    return !isEnforcement && !isPublicManagement;
   });
 }
 

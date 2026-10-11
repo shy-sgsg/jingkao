@@ -37103,6 +37103,100 @@
     },
     {
       "year": 2026,
+      "code": "821566201",
+      "unit": "北京市大兴区统计局",
+      "title": "综合统计岗",
+      "recruitCount": 4,
+      "education": "本科及以上",
+      "majorText": "本科：经济学类（0201），经济与贸易类（0204），统计学类（0712），会计学（120203K）；研究生：应用经济学（0202），金融（0251），应用统计（0252），统计学（0714），会计学（120201），会计（1253）",
+      "eligibilityText": "单位职位表列出代码、岗位名、学历、专业和招录数；其他资格条件需回到当年官方职位表核验。",
+      "sourceLevel": "secondary",
+      "verification": "第三方职位表候选，待官方逐码复核",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "sources": [
+        "daxing-2026-unit-statistics"
+      ],
+      "majorCriteria": {
+        "undergraduate": [
+          "0201",
+          "0204",
+          "0712",
+          "120203K"
+        ],
+        "graduate": [
+          "0202",
+          "0251",
+          "0252",
+          "0714",
+          "120201",
+          "1253"
+        ]
+      },
+      "districtId": "daxing",
+      "districtMatch": "大兴区"
+    },
+    {
+      "year": 2026,
+      "code": "821566202",
+      "unit": "北京市大兴区统计局",
+      "title": "综合统计岗",
+      "recruitCount": 2,
+      "education": "本科及以上",
+      "majorText": "本科：经济学（020101），经济与贸易类（0204），计算机科学与技术（080901），数据科学与大数据技术（080910T）；研究生：应用经济学（0202），金融（0251），计算机科学与技术（0812）",
+      "eligibilityText": "单位职位表列出代码、岗位名、学历、专业和招录数；其他资格条件需回到当年官方职位表核验。",
+      "sourceLevel": "secondary",
+      "verification": "第三方职位表候选，待官方逐码复核",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "sources": [
+        "daxing-2026-unit-statistics"
+      ],
+      "majorCriteria": {
+        "undergraduate": [
+          "020101",
+          "0204",
+          "080901",
+          "080910T"
+        ],
+        "graduate": [
+          "0202",
+          "0251",
+          "0812"
+        ]
+      },
+      "districtId": "daxing",
+      "districtMatch": "大兴区"
+    },
+    {
+      "year": 2026,
+      "code": "221566401",
+      "unit": "北京市大兴区政务服务和数据管理局",
+      "title": "信息化管理岗",
+      "recruitCount": 1,
+      "education": "硕士研究生及以上",
+      "majorText": "研究生：计算机科学与技术（0812），软件工程（0835），电子信息（0854）",
+      "eligibilityText": "职位详情另列应届身份、学历学位和在校经历要求；完整资格条件需回到当年官方职位表核验。",
+      "sourceLevel": "secondary",
+      "verification": "两家第三方职位镜像在职位代码、单位、名称及人数上相互核对；资格条件仍待官方逐码复核",
+      "crossVerified": true,
+      "eligibilityComplete": false,
+      "sources": [
+        "daxing-2026-unit-221566401",
+        "huatu-2026-daxing-job-221566401"
+      ],
+      "majorCriteria": {
+        "graduate": [
+          "0812",
+          "0835",
+          "0854"
+        ]
+      },
+      "districtId": "daxing",
+      "districtMatch": "大兴区"
+    },
+    {
+      "year": 2026,
       "code": "232502901",
       "unit": "北京市公安局大兴分局",
       "title": "一线执法岗",
@@ -85784,6 +85878,1304 @@
       ],
       "districtId": "dongcheng",
       "districtMatch": "东城区"
+    },
+    {
+      "year": 2026,
+      "code": "121876701",
+      "unit": "中共北京市密云区纪律检查委员会、北京市密云区监察委员会",
+      "title": "综合管理岗1",
+      "orgType": "区直",
+      "recruitCount": 2,
+      "sourceLevel": "secondary",
+      "verification": "粉笔职位列表列示同年单位、岗位名称、职位代码及招录数；与成公进面分样本唯一匹配，未与官方职位表逐代码复核",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "本轮仅补录岗位身份和招录数以关联公开进面分；完整资格条件以官方招考简章为准。",
+      "sources": [
+        "fenbi-2026-miyun-page-1"
+      ],
+      "districtId": "miyun",
+      "districtMatch": "密云区"
+    },
+    {
+      "year": 2026,
+      "code": "121876702",
+      "unit": "中共北京市密云区纪律检查委员会、北京市密云区监察委员会",
+      "title": "综合管理岗2",
+      "orgType": "区直",
+      "recruitCount": 1,
+      "sourceLevel": "secondary",
+      "verification": "粉笔职位列表列示同年单位、岗位名称、职位代码及招录数；与成公进面分样本唯一匹配，未与官方职位表逐代码复核",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "本轮仅补录岗位身份和招录数以关联公开进面分；完整资格条件以官方招考简章为准。",
+      "sources": [
+        "fenbi-2026-miyun-page-1"
+      ],
+      "districtId": "miyun",
+      "districtMatch": "密云区"
+    },
+    {
+      "year": 2026,
+      "code": "221875201",
+      "unit": "北京市密云区经济和信息化局",
+      "title": "综合管理岗",
+      "orgType": "区直",
+      "recruitCount": 1,
+      "sourceLevel": "secondary",
+      "verification": "粉笔职位列表列示同年单位、岗位名称、职位代码及招录数；与成公进面分样本唯一匹配，未与官方职位表逐代码复核",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "本轮仅补录岗位身份和招录数以关联公开进面分；完整资格条件以官方招考简章为准。",
+      "sources": [
+        "fenbi-2026-miyun-page-2"
+      ],
+      "districtId": "miyun",
+      "districtMatch": "密云区"
+    },
+    {
+      "year": 2026,
+      "code": "241877002",
+      "unit": "北京市密云区十里堡镇",
+      "title": "综合管理岗",
+      "orgType": "乡镇",
+      "recruitCount": 2,
+      "sourceLevel": "secondary",
+      "verification": "粉笔职位列表列示同年单位、岗位名称、职位代码及招录数；与成公进面分样本唯一匹配，未与官方职位表逐代码复核",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "本轮仅补录岗位身份和招录数以关联公开进面分；完整资格条件以官方招考简章为准。",
+      "sources": [
+        "fenbi-2026-miyun-page-5"
+      ],
+      "districtId": "miyun",
+      "districtMatch": "密云区"
+    },
+    {
+      "year": 2026,
+      "code": "241877401",
+      "unit": "北京市密云区溪翁庄镇",
+      "title": "综合管理岗",
+      "orgType": "乡镇",
+      "recruitCount": 1,
+      "sourceLevel": "secondary",
+      "verification": "粉笔职位列表列示同年单位、岗位名称、职位代码及招录数；与成公进面分样本唯一匹配，未与官方职位表逐代码复核",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "本轮仅补录岗位身份和招录数以关联公开进面分；完整资格条件以官方招考简章为准。",
+      "sources": [
+        "fenbi-2026-miyun-page-5"
+      ],
+      "districtId": "miyun",
+      "districtMatch": "密云区"
+    },
+    {
+      "year": 2026,
+      "code": "241877801",
+      "unit": "北京市密云区古北口镇",
+      "title": "综合管理岗",
+      "orgType": "乡镇",
+      "recruitCount": 1,
+      "sourceLevel": "secondary",
+      "verification": "粉笔职位列表列示同年单位、岗位名称、职位代码及招录数；与成公进面分样本唯一匹配，未与官方职位表逐代码复核",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "本轮仅补录岗位身份和招录数以关联公开进面分；完整资格条件以官方招考简章为准。",
+      "sources": [
+        "fenbi-2026-miyun-page-6"
+      ],
+      "districtId": "miyun",
+      "districtMatch": "密云区"
+    },
+    {
+      "year": 2026,
+      "code": "241878002",
+      "unit": "北京市密云区穆家峪镇",
+      "title": "综合管理岗",
+      "orgType": "乡镇",
+      "recruitCount": 1,
+      "sourceLevel": "secondary",
+      "verification": "粉笔职位列表列示同年单位、岗位名称、职位代码及招录数；与成公进面分样本唯一匹配，未与官方职位表逐代码复核",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "本轮仅补录岗位身份和招录数以关联公开进面分；完整资格条件以官方招考简章为准。",
+      "sources": [
+        "fenbi-2026-miyun-page-6"
+      ],
+      "districtId": "miyun",
+      "districtMatch": "密云区"
+    },
+    {
+      "year": 2026,
+      "code": "121874401",
+      "unit": "北京市密云区委办公室（保密局）",
+      "title": "综合管理岗",
+      "orgType": "区直",
+      "recruitCount": 2,
+      "sourceLevel": "secondary",
+      "verification": "京考职位网详情页列示代码、岗位名和计划招录数，单位名含“中共”前缀；展示单位按成公样本简称统一，未与官方职位表逐代码复核",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "本轮仅补录岗位身份和计划招录数以关联进面分；资格条件仍需以官方招考简章核验。",
+      "sources": [
+        "gwyzwb-2026-miyun-party-office"
+      ],
+      "districtId": "miyun",
+      "districtMatch": "密云区"
+    },
+    {
+      "year": 2026,
+      "code": "221875501",
+      "unit": "北京市密云区生态环境局",
+      "title": "行政执法岗1",
+      "orgType": "区直",
+      "recruitCount": 2,
+      "sourceLevel": "secondary",
+      "verification": "京考职位网详情页列示代码、单位、岗位名和计划招录数；与成公样本按同年单位名及岗位名唯一匹配，未与官方职位表逐代码复核",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "本轮仅补录岗位身份和计划招录数以关联进面分；资格条件仍需以官方招考简章核验。",
+      "sources": [
+        "gwyzwb-2026-miyun-eco-environment"
+      ],
+      "districtId": "miyun",
+      "districtMatch": "密云区"
+    },
+    {
+      "year": 2026,
+      "code": "221874801",
+      "unit": "北京市密云区人民政府办公室",
+      "title": "综合管理岗",
+      "orgType": "区直",
+      "recruitCount": 1,
+      "sourceLevel": "secondary",
+      "verification": "京考职位网单位职位表列示岗位代码、名称和计划招录数；未与官方职位表逐代码复核",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "本轮仅补录岗位身份和计划招录数以关联竞争样本；完整条件以官方招考简章为准。",
+      "sources": [
+        "gwyzwb-2026-miyun-government-office"
+      ],
+      "districtId": "miyun",
+      "districtMatch": "密云区"
+    },
+    {
+      "year": 2026,
+      "code": "221876101",
+      "unit": "北京市密云区市场监督管理局",
+      "title": "综合管理岗",
+      "orgType": "区直",
+      "recruitCount": 2,
+      "sourceLevel": "secondary",
+      "verification": "京考职位网单位职位表列示岗位代码、名称和计划招录数；未与官方职位表逐代码复核",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "本轮仅补录岗位身份和计划招录数以说明同名岗位歧义；完整条件以官方招考简章为准。",
+      "sources": [
+        "gwyzwb-2026-miyun-market-supervision"
+      ],
+      "districtId": "miyun",
+      "districtMatch": "密云区"
+    },
+    {
+      "year": 2026,
+      "code": "241876102",
+      "unit": "北京市密云区市场监督管理局",
+      "title": "综合管理岗1",
+      "orgType": "区直",
+      "recruitCount": 2,
+      "sourceLevel": "secondary",
+      "verification": "京考职位网单位职位表列示岗位代码、名称和计划招录数；未与官方职位表逐代码复核",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "本轮仅补录岗位身份和招录数以关联公开竞争样本；完整条件以官方招考简章为准。",
+      "sources": [
+        "gwyzwb-2026-miyun-market-supervision"
+      ],
+      "districtId": "miyun",
+      "districtMatch": "密云区"
+    },
+    {
+      "year": 2026,
+      "code": "241876104",
+      "unit": "北京市密云区市场监督管理局",
+      "title": "综合管理岗",
+      "orgType": "区直",
+      "recruitCount": 2,
+      "sourceLevel": "secondary",
+      "verification": "京考职位网单位职位表列示岗位代码、名称和计划招录数；未与官方职位表逐代码复核",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "本轮仅补录岗位身份和计划招录数以说明同名岗位歧义；完整条件以官方招考简章为准。",
+      "sources": [
+        "gwyzwb-2026-miyun-market-supervision"
+      ],
+      "districtId": "miyun",
+      "districtMatch": "密云区"
+    },
+    {
+      "year": 2026,
+      "code": "221875101",
+      "unit": "北京市密云区科学技术委员会",
+      "title": "综合管理岗",
+      "orgType": "区直",
+      "recruitCount": 1,
+      "sourceLevel": "secondary",
+      "verification": "京考职位网单位职位表列示岗位代码、名称和计划招录数；未与官方职位表逐代码复核",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "本轮仅补录岗位身份和计划招录数以关联竞争样本；完整条件以官方招考简章为准。",
+      "sources": [
+        "gwyzwb-2026-miyun-science-tech"
+      ],
+      "districtId": "miyun",
+      "districtMatch": "密云区"
+    },
+    {
+      "year": 2026,
+      "code": "821874601",
+      "unit": "中共北京市密云区委党史研究室",
+      "title": "党史研究岗",
+      "orgType": "区直",
+      "recruitCount": 1,
+      "sourceLevel": "secondary",
+      "verification": "京考职位网单位职位表列示岗位代码、名称和计划招录数；未与官方职位表逐代码复核",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "本轮仅补录岗位身份和计划招录数以关联竞争样本；完整条件以官方招考简章为准。",
+      "sources": [
+        "gwyzwb-2026-miyun-party-history"
+      ],
+      "districtId": "miyun",
+      "districtMatch": "密云区"
+    },
+    {
+      "year": 2026,
+      "code": "221876401",
+      "unit": "北京市密云区园林绿化局",
+      "title": "综合管理岗",
+      "orgType": "区直",
+      "recruitCount": 1,
+      "sourceLevel": "secondary",
+      "verification": "京考职位网单位职位表列示岗位代码、名称和计划招录数；未与官方职位表逐代码复核",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "本轮仅补录岗位身份和计划招录数以关联竞争样本；完整条件以官方招考简章为准。",
+      "sources": [
+        "gwyzwb-2026-miyun-greening"
+      ],
+      "districtId": "miyun",
+      "districtMatch": "密云区"
+    },
+    {
+      "year": 2026,
+      "code": "221875301",
+      "unit": "北京市密云区财政局",
+      "title": "综合管理岗",
+      "orgType": "区直",
+      "recruitCount": 2,
+      "sourceLevel": "secondary",
+      "verification": "京考职位网单位职位表列示岗位代码、名称和计划招录数；未与官方职位表逐代码复核",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "本轮仅补录岗位身份和计划招录数以关联竞争样本；完整条件以官方招考简章为准。",
+      "sources": [
+        "gwyzwb-2026-miyun-finance"
+      ],
+      "districtId": "miyun",
+      "districtMatch": "密云区"
+    },
+    {
+      "year": 2026,
+      "code": "821875303",
+      "unit": "北京市密云区财政局",
+      "title": "绩效考评岗",
+      "orgType": "区直",
+      "recruitCount": 1,
+      "sourceLevel": "secondary",
+      "verification": "京考职位网单位职位表列示岗位代码、名称和计划招录数；未与官方职位表逐代码复核",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "本轮仅补录岗位身份和计划招录数以关联竞争样本；完整条件以官方招考简章为准。",
+      "sources": [
+        "gwyzwb-2026-miyun-finance"
+      ],
+      "districtId": "miyun",
+      "districtMatch": "密云区"
+    },
+    {
+      "year": 2026,
+      "code": "241876801",
+      "unit": "北京市密云区鼓楼街道",
+      "title": "综合管理岗",
+      "orgType": "街道",
+      "recruitCount": 1,
+      "sourceLevel": "secondary",
+      "verification": "京考职位网单位职位表列示岗位代码、名称和计划招录数；未与官方职位表逐代码复核",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "本轮仅补录岗位身份和计划招录数以关联竞争样本；完整条件以官方招考简章为准。",
+      "sources": [
+        "gwyzwb-2026-miyun-gulou"
+      ],
+      "districtId": "miyun",
+      "districtMatch": "密云区"
+    },
+    {
+      "year": 2026,
+      "code": "221875601",
+      "unit": "北京市密云区住房和城乡建设委员会",
+      "title": "综合管理岗",
+      "orgType": "区直",
+      "recruitCount": 1,
+      "sourceLevel": "secondary",
+      "verification": "京考职位网单位职位表列示岗位代码、名称和计划招录数；未与官方职位表逐代码复核",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "本轮仅补录岗位身份和计划招录数以说明同名岗位歧义；完整条件以官方招考简章为准。",
+      "sources": [
+        "gwyzwb-2026-miyun-housing"
+      ],
+      "districtId": "miyun",
+      "districtMatch": "密云区"
+    },
+    {
+      "year": 2026,
+      "code": "221875602",
+      "unit": "北京市密云区住房和城乡建设委员会",
+      "title": "综合管理岗",
+      "orgType": "区直",
+      "recruitCount": 1,
+      "sourceLevel": "secondary",
+      "verification": "京考职位网单位职位表列示岗位代码、名称和计划招录数；未与官方职位表逐代码复核",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "本轮仅补录岗位身份和计划招录数以说明同名岗位歧义；完整条件以官方招考简章为准。",
+      "sources": [
+        "gwyzwb-2026-miyun-housing"
+      ],
+      "districtId": "miyun",
+      "districtMatch": "密云区"
+    },
+    {
+      "year": 2026,
+      "code": "526013304",
+      "unit": "北京市密云区人民法院",
+      "title": "法官助理岗",
+      "orgType": "法检",
+      "recruitCount": 6,
+      "sourceLevel": "secondary",
+      "verification": "京考职位网单位职位表列示岗位代码、名称和计划招录数；未与官方职位表逐代码复核",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "本轮仅补录岗位身份和计划招录数以关联竞争样本；完整条件以官方招考简章为准。",
+      "sources": [
+        "gwyzwb-2026-miyun-court"
+      ],
+      "districtId": "miyun",
+      "districtMatch": "密云区"
+    },
+    {
+      "year": 2026,
+      "code": "526013301",
+      "unit": "北京市密云区人民法院",
+      "title": "新闻宣传岗",
+      "orgType": "法检",
+      "recruitCount": 1,
+      "sourceLevel": "secondary",
+      "verification": "京考职位网单位职位表列示岗位代码、名称和计划招录数；未与官方职位表逐代码复核",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "本轮仅补录岗位身份和计划招录数以关联竞争样本；完整条件以官方招考简章为准。",
+      "sources": [
+        "gwyzwb-2026-miyun-court"
+      ],
+      "districtId": "miyun",
+      "districtMatch": "密云区"
+    },
+    {
+      "year": 2026,
+      "code": "821874501",
+      "unit": "北京市密云区档案馆",
+      "title": "数字档案管理岗",
+      "orgType": "区直",
+      "recruitCount": 2,
+      "sourceLevel": "secondary",
+      "verification": "京考职位网职位详情列示岗位代码、名称和计划招录数；未与官方职位表逐代码复核",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "本轮仅补录岗位身份和计划招录数以关联竞争样本；完整条件以官方招考简章为准。",
+      "sources": [
+        "gwyzwb-2026-miyun-archives"
+      ],
+      "districtId": "miyun",
+      "districtMatch": "密云区"
+    },
+    {
+      "year": 2026,
+      "code": "241877701",
+      "unit": "北京市密云区不老屯镇",
+      "title": "综合管理岗",
+      "orgType": "镇",
+      "recruitCount": 1,
+      "sourceLevel": "secondary",
+      "verification": "京考职位网职位详情列示岗位代码、名称和计划招录数；未与官方职位表逐代码复核",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "本轮仅补录岗位身份和计划招录数以关联竞争样本；完整条件以官方招考简章为准。",
+      "sources": [
+        "gwyzwb-2026-miyun-bulaotun"
+      ],
+      "districtId": "miyun",
+      "districtMatch": "密云区"
+    },
+    {
+      "year": 2026,
+      "code": "221875801",
+      "unit": "北京市密云区委农工委、区农业农村局",
+      "title": "综合管理岗",
+      "orgType": "区直",
+      "recruitCount": 1,
+      "sourceLevel": "secondary",
+      "verification": "京考职位网单位职位表列示岗位代码、名称和计划招录数；未与官方职位表逐代码复核",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "本轮仅补录岗位身份和计划招录数以关联竞争样本；完整条件以官方招考简章为准。",
+      "sources": [
+        "gwyzwb-2026-miyun-agriculture"
+      ],
+      "districtId": "miyun",
+      "districtMatch": "密云区"
+    },
+    {
+      "year": 2026,
+      "code": "221875902",
+      "unit": "北京市密云区卫生健康委员会",
+      "title": "财务管理岗",
+      "orgType": "区直",
+      "recruitCount": 1,
+      "sourceLevel": "secondary",
+      "verification": "京考职位网单位职位表列示岗位代码、名称和计划招录数；未与官方职位表逐代码复核",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "本轮仅补录岗位身份和计划招录数以关联竞争样本；完整条件以官方招考简章为准。",
+      "sources": [
+        "gwyzwb-2026-miyun-health"
+      ],
+      "districtId": "miyun",
+      "districtMatch": "密云区"
+    },
+    {
+      "year": 2026,
+      "code": "242503201",
+      "unit": "北京市公安局密云分局",
+      "title": "一线执法岗1",
+      "orgType": "垂直/驻区",
+      "jobType": "行政执法",
+      "recruitCount": 17,
+      "education": "本科及以上",
+      "majorText": "不限",
+      "sourceLevel": "secondary",
+      "verification": "京考职位网逐岗镜像列示代码、单位、岗位名称与计划数；中公报名快照按代码列过审人数；未与官方职位表逐代码复核",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "仅补录岗位身份、计划数和报名阶段竞争快照；完整条件以官方招考简章为准。",
+      "sources": [
+        "gwyzwb-2026-miyun-public-security",
+        "eoffcn-2026-snapshot-20251118-0900"
+      ],
+      "districtId": "miyun",
+      "districtMatch": "密云分局"
+    },
+    {
+      "year": 2026,
+      "code": "221565201",
+      "unit": "北京市大兴区财政局",
+      "title": "预算管理岗",
+      "orgType": "区直",
+      "jobType": "综合管理",
+      "recruitCount": 2,
+      "education": "硕士研究生及以上",
+      "majorText": "研究生：应用经济学（0202），金融（0251）",
+      "sourceLevel": "secondary",
+      "verification": "北京公务员职位网第三方单位职位镜像；未与官方职位表逐代码核验",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "镜像页列职位身份、学历、专业及招录数；完整资格条件仍需官方职位表核验。",
+      "sources": [
+        "daxing-2026-unit-finance"
+      ],
+      "majorCriteria": {
+        "graduate": [
+          "0202",
+          "0251"
+        ]
+      },
+      "districtId": "daxing",
+      "districtMatch": "大兴区"
+    },
+    {
+      "year": 2026,
+      "code": "821565202",
+      "unit": "北京市大兴区财政局",
+      "title": "综合管理岗",
+      "orgType": "区直",
+      "jobType": "综合管理",
+      "recruitCount": 2,
+      "education": "仅限本科",
+      "majorText": "本科：数据科学与大数据技术（080910T），会计学（120203K），财务管理（120204），审计学（120207），内部审计（120218T）",
+      "sourceLevel": "secondary",
+      "verification": "北京公务员职位网第三方单位职位镜像；未与官方职位表逐代码核验",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "镜像页列职位身份、学历、专业及招录数；完整资格条件仍需官方职位表核验。",
+      "sources": [
+        "daxing-2026-unit-finance"
+      ],
+      "majorCriteria": {
+        "undergraduate": [
+          "080910T",
+          "120203K",
+          "120204",
+          "120207",
+          "120218T"
+        ]
+      },
+      "districtId": "daxing",
+      "districtMatch": "大兴区"
+    },
+    {
+      "year": 2026,
+      "code": "221565203",
+      "unit": "北京市大兴区财政局",
+      "title": "综合管理岗",
+      "orgType": "区直",
+      "jobType": "综合管理",
+      "recruitCount": 2,
+      "education": "本科及以上",
+      "majorText": "本科：经济学（020101），经济与贸易类（0204），国际商务（120205）；研究生：应用经济学（0202），国际商务（0254）",
+      "sourceLevel": "secondary",
+      "verification": "北京公务员职位网第三方单位职位镜像；未与官方职位表逐代码核验",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "镜像页列职位身份、学历、专业及招录数；完整资格条件仍需官方职位表核验。",
+      "sources": [
+        "daxing-2026-unit-finance"
+      ],
+      "majorCriteria": {
+        "undergraduate": [
+          "020101",
+          "0204",
+          "120205"
+        ],
+        "graduate": [
+          "0202",
+          "0254"
+        ]
+      },
+      "districtId": "daxing",
+      "districtMatch": "大兴区"
+    },
+    {
+      "year": 2026,
+      "code": "526013001",
+      "unit": "北京市大兴区人民法院",
+      "title": "法官助理岗",
+      "orgType": "区直",
+      "jobType": "司法",
+      "recruitCount": 8,
+      "education": "仅限硕士研究生",
+      "majorText": "研究生：法学（0301），法律（0351）",
+      "sourceLevel": "secondary",
+      "verification": "北京公务员职位网第三方单位职位镜像；未与官方职位表逐代码核验",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "镜像页列职位身份、学历、专业及招录数；完整资格条件仍需官方职位表核验。",
+      "sources": [
+        "daxing-2026-unit-court"
+      ],
+      "majorCriteria": {
+        "graduate": [
+          "0301",
+          "0351"
+        ]
+      },
+      "districtId": "daxing",
+      "districtMatch": "大兴区"
+    },
+    {
+      "year": 2026,
+      "code": "625015101",
+      "unit": "北京市大兴区人民检察院",
+      "title": "司法警察岗",
+      "orgType": "区直",
+      "jobType": "司法",
+      "recruitCount": 2,
+      "education": "硕士研究生及以上",
+      "majorText": "研究生：法学（0301），公安学（0306），法律（0351）",
+      "sourceLevel": "secondary",
+      "verification": "北京公务员职位网第三方单位职位镜像；未与官方职位表逐代码核验",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "镜像页列职位身份、学历、专业及招录数；完整资格条件仍需官方职位表核验。",
+      "sources": [
+        "daxing-2026-unit-procuratorate"
+      ],
+      "majorCriteria": {
+        "graduate": [
+          "0301",
+          "0306",
+          "0351"
+        ]
+      },
+      "districtId": "daxing",
+      "districtMatch": "大兴区"
+    },
+    {
+      "year": 2026,
+      "code": "625015103",
+      "unit": "北京市大兴区人民检察院",
+      "title": "检察业务岗",
+      "orgType": "区直",
+      "jobType": "司法",
+      "recruitCount": 4,
+      "education": "硕士研究生及以上",
+      "majorText": "研究生：法学（0301），公安学（0306），法律（0351）",
+      "sourceLevel": "secondary",
+      "verification": "北京公务员职位网第三方单位职位镜像；未与官方职位表逐代码核验",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "镜像页列职位身份、学历、专业及招录数；完整资格条件仍需官方职位表核验。",
+      "sources": [
+        "daxing-2026-unit-procuratorate"
+      ],
+      "majorCriteria": {
+        "graduate": [
+          "0301",
+          "0306",
+          "0351"
+        ]
+      },
+      "districtId": "daxing",
+      "districtMatch": "大兴区"
+    },
+    {
+      "year": 2026,
+      "code": "625015102",
+      "unit": "北京市大兴区人民检察院",
+      "title": "检察综合岗",
+      "orgType": "区直",
+      "jobType": "综合管理",
+      "recruitCount": 2,
+      "education": "硕士研究生及以上",
+      "majorText": "研究生：哲学（0101），政治学（0302），马克思主义理论（0305），中国语言文学（0501），新闻传播学（0503），新闻与传播（0552），公共管理学（1204），公共管理（1252）",
+      "sourceLevel": "secondary",
+      "verification": "北京公务员职位网第三方单位职位镜像；未与官方职位表逐代码核验",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "镜像页列职位身份、学历、专业及招录数；完整资格条件仍需官方职位表核验。",
+      "sources": [
+        "daxing-2026-unit-procuratorate"
+      ],
+      "majorCriteria": {
+        "graduate": [
+          "0101",
+          "0302",
+          "0305",
+          "0501",
+          "0503",
+          "0552",
+          "1204",
+          "1252"
+        ]
+      },
+      "districtId": "daxing",
+      "districtMatch": "大兴区"
+    },
+    {
+      "year": 2026,
+      "code": "821565001",
+      "unit": "中共北京市大兴区委党校",
+      "title": "培训管理岗",
+      "orgType": "区直",
+      "jobType": "综合管理",
+      "recruitCount": 1,
+      "education": "硕士研究生及以上",
+      "majorText": "研究生：政治学（0302），马克思主义理论（0305），教育学（0401），教育（0451），中国语言文学（0501），信息与通信工程（0810），计算机科学与技术（0812），公共管理学（1204），公共管理（1252）",
+      "sourceLevel": "secondary",
+      "verification": "北京公务员职位网第三方单位职位镜像；未与官方职位表逐代码核验",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "镜像页列职位身份、学历、专业及招录数；完整资格条件仍需官方职位表核验。",
+      "sources": [
+        "daxing-2026-unit-party-school"
+      ],
+      "majorCriteria": {
+        "graduate": [
+          "0302",
+          "0305",
+          "0401",
+          "0451",
+          "0501",
+          "0810",
+          "0812",
+          "1204",
+          "1252"
+        ]
+      },
+      "districtId": "daxing",
+      "districtMatch": "大兴区"
+    },
+    {
+      "year": 2026,
+      "code": "221565401",
+      "unit": "北京市大兴区生态环境局",
+      "title": "行政执法岗",
+      "orgType": "区直",
+      "jobType": "行政执法",
+      "recruitCount": 2,
+      "education": "本科及以上",
+      "majorText": "本科：生态学（071004），环境科学与工程类（0825），农业资源与环境（090201）；研究生：生态学（0713），环境科学与工程（0830），资源与环境（0857），农业资源与环境（0903）",
+      "sourceLevel": "secondary",
+      "verification": "北京公务员职位网第三方单位职位镜像；未与官方职位表逐代码核验",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "镜像页列职位身份、学历、专业及招录数；完整资格条件仍需官方职位表核验。",
+      "sources": [
+        "daxing-2026-unit-ecology"
+      ],
+      "majorCriteria": {
+        "undergraduate": [
+          "071004",
+          "0825",
+          "090201"
+        ],
+        "graduate": [
+          "0713",
+          "0830",
+          "0857",
+          "0903"
+        ]
+      },
+      "districtId": "daxing",
+      "districtMatch": "大兴区"
+    },
+    {
+      "year": 2026,
+      "code": "821566601",
+      "unit": "北京市大兴区农村合作经济经营管理站",
+      "title": "综合管理岗",
+      "orgType": "区直",
+      "jobType": "综合管理",
+      "recruitCount": 1,
+      "education": "本科及以上",
+      "majorText": "本科：汉语言文学（050101），会计学（120203K），财务管理（120204），人力资源管理（120206），农林经济管理（120301），行政管理（120402）；研究生：汉语言文字学（050103），会计学（120201），农业经济管理（120301），行政管理（120401），会计（1253）",
+      "sourceLevel": "secondary",
+      "verification": "北京公务员职位网第三方单位职位镜像；未与官方职位表逐代码核验",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "镜像页列职位身份、学历、专业及招录数；完整资格条件仍需官方职位表核验。",
+      "sources": [
+        "daxing-2026-unit-coop"
+      ],
+      "majorCriteria": {
+        "undergraduate": [
+          "050101",
+          "120203K",
+          "120204",
+          "120206",
+          "120301",
+          "120402"
+        ],
+        "graduate": [
+          "050103",
+          "120201",
+          "120301",
+          "120401",
+          "1253"
+        ]
+      },
+      "districtId": "daxing",
+      "districtMatch": "大兴区"
+    },
+    {
+      "year": 2026,
+      "code": "231567102",
+      "unit": "北京市大兴区榆垡镇",
+      "title": "综合管理岗",
+      "orgType": "镇",
+      "jobType": "综合管理",
+      "recruitCount": 1,
+      "education": "本科及以上",
+      "majorText": "本科：统计学类（0712），自然保护与环境生态类（0902）；研究生：应用统计（0252），统计学（0714），农业资源与环境（0903），水土保持与荒漠化防治学（0910）",
+      "sourceLevel": "secondary",
+      "verification": "北京公务员职位网第三方单位职位镜像；未与官方职位表逐代码核验",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "镜像页列职位身份、学历、专业及招录数；完整资格条件仍需官方职位表核验。",
+      "sources": [
+        "daxing-2026-unit-yufa"
+      ],
+      "majorCriteria": {
+        "undergraduate": [
+          "0712",
+          "0902"
+        ],
+        "graduate": [
+          "0252",
+          "0714",
+          "0903",
+          "0910"
+        ]
+      },
+      "districtId": "daxing",
+      "districtMatch": "大兴区"
+    },
+    {
+      "year": 2026,
+      "code": "231567101",
+      "unit": "北京市大兴区榆垡镇",
+      "title": "综合管理岗",
+      "orgType": "镇",
+      "jobType": "综合管理",
+      "recruitCount": 1,
+      "education": "本科及以上",
+      "majorText": "本科：文学（05），理学（07），工学（08），艺术学（13）；研究生：文学（05），理学（07），工学（08），艺术学（13），设计学（1403）",
+      "sourceLevel": "secondary",
+      "verification": "北京公务员职位网第三方单位职位镜像；未与官方职位表逐代码核验",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "镜像页列职位身份、学历、专业及招录数；完整资格条件仍需官方职位表核验。",
+      "sources": [
+        "daxing-2026-unit-yufa"
+      ],
+      "majorCriteria": {
+        "undergraduate": [
+          "05",
+          "07",
+          "08",
+          "13"
+        ],
+        "graduate": [
+          "05",
+          "07",
+          "08",
+          "13",
+          "1403"
+        ]
+      },
+      "districtId": "daxing",
+      "districtMatch": "大兴区"
+    },
+    {
+      "year": 2026,
+      "code": "231567701",
+      "unit": "北京市大兴区采育镇",
+      "title": "综合管理岗",
+      "orgType": "镇",
+      "jobType": "综合管理",
+      "recruitCount": 1,
+      "education": "本科及以上",
+      "majorText": "本科：教育学类（0401）；研究生：教育学（0401），教育（0451）",
+      "sourceLevel": "secondary",
+      "verification": "北京公务员职位网第三方单位职位镜像；未与官方职位表逐代码核验",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "镜像页列职位身份、学历、专业及招录数；完整资格条件仍需官方职位表核验。",
+      "sources": [
+        "daxing-2026-unit-caiyu"
+      ],
+      "majorCriteria": {
+        "undergraduate": [
+          "0401"
+        ],
+        "graduate": [
+          "0401",
+          "0451"
+        ]
+      },
+      "districtId": "daxing",
+      "districtMatch": "大兴区"
+    },
+    {
+      "year": 2026,
+      "code": "231567702",
+      "unit": "北京市大兴区采育镇",
+      "title": "综合管理岗",
+      "orgType": "镇",
+      "jobType": "综合管理",
+      "recruitCount": 1,
+      "education": "本科及以上",
+      "majorText": "本科：统计学类（0712），计算机类（0809）；研究生：统计学（0714），计算机科学与技术（0812）",
+      "sourceLevel": "secondary",
+      "verification": "北京公务员职位网第三方单位职位镜像；未与官方职位表逐代码核验",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "镜像页列职位身份、学历、专业及招录数；完整资格条件仍需官方职位表核验。",
+      "sources": [
+        "daxing-2026-unit-caiyu"
+      ],
+      "majorCriteria": {
+        "undergraduate": [
+          "0712",
+          "0809"
+        ],
+        "graduate": [
+          "0714",
+          "0812"
+        ]
+      },
+      "districtId": "daxing",
+      "districtMatch": "大兴区"
+    },
+    {
+      "year": 2026,
+      "code": "231567704",
+      "unit": "北京市大兴区采育镇",
+      "title": "综合管理岗",
+      "orgType": "镇",
+      "jobType": "综合管理",
+      "recruitCount": 1,
+      "education": "本科及以上",
+      "majorText": "本科：水利类（0811），农业工程类（0823），林业工程类（0824）；研究生：水利工程（0815），农业工程（0828），林业工程（0829），土木水利（0859）",
+      "sourceLevel": "secondary",
+      "verification": "北京公务员职位网第三方单位职位镜像；未与官方职位表逐代码核验",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "镜像页列职位身份、学历、专业及招录数；完整资格条件仍需官方职位表核验。",
+      "sources": [
+        "daxing-2026-unit-caiyu"
+      ],
+      "majorCriteria": {
+        "undergraduate": [
+          "0811",
+          "0823",
+          "0824"
+        ],
+        "graduate": [
+          "0815",
+          "0828",
+          "0829",
+          "0859"
+        ]
+      },
+      "districtId": "daxing",
+      "districtMatch": "大兴区"
+    },
+    {
+      "year": 2026,
+      "code": "231567703",
+      "unit": "北京市大兴区采育镇",
+      "title": "综合管理岗",
+      "orgType": "镇",
+      "jobType": "综合管理",
+      "recruitCount": 1,
+      "education": "本科及以上",
+      "majorText": "本科及研究生：农学（09）",
+      "sourceLevel": "secondary",
+      "verification": "北京公务员职位网第三方单位职位镜像；未与官方职位表逐代码核验",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "镜像页列职位身份、学历、专业及招录数；完整资格条件仍需官方职位表核验。",
+      "sources": [
+        "daxing-2026-unit-caiyu"
+      ],
+      "majorCriteria": {
+        "graduate": [
+          "09"
+        ]
+      },
+      "districtId": "daxing",
+      "districtMatch": "大兴区"
+    },
+    {
+      "year": 2026,
+      "code": "231567705",
+      "unit": "北京市大兴区采育镇",
+      "title": "行政执法岗",
+      "orgType": "镇",
+      "jobType": "行政执法",
+      "recruitCount": 2,
+      "education": "本科及以上",
+      "majorText": "本科：环境科学与工程类（0825），食品科学与工程类（0827），安全科学与工程类（0829）；研究生：环境科学与工程（0830），食品科学与工程（0832），安全科学与工程（0837），资源与环境（0857）",
+      "sourceLevel": "secondary",
+      "verification": "北京公务员职位网第三方单位职位镜像；未与官方职位表逐代码核验",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "镜像页列职位身份、学历、专业及招录数；完整资格条件仍需官方职位表核验。",
+      "sources": [
+        "daxing-2026-unit-caiyu"
+      ],
+      "majorCriteria": {
+        "undergraduate": [
+          "0825",
+          "0827",
+          "0829"
+        ],
+        "graduate": [
+          "0830",
+          "0832",
+          "0837",
+          "0857"
+        ]
+      },
+      "districtId": "daxing",
+      "districtMatch": "大兴区"
+    },
+    {
+      "year": 2026,
+      "code": "231568101",
+      "unit": "北京市大兴区兴丰街道",
+      "title": "综合管理岗",
+      "orgType": "街道",
+      "jobType": "综合管理",
+      "recruitCount": 1,
+      "education": "本科及以上",
+      "majorText": "本科：应用统计学（071202），会计学（120203K），财务管理（120204），审计学（120207），内部审计（120218T）；研究生：统计学（0714），会计学（120201），会计（1253），审计（1257）",
+      "sourceLevel": "secondary",
+      "verification": "北京公务员职位网第三方单位职位镜像；未与官方职位表逐代码核验",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "镜像页列职位身份、学历、专业及招录数；完整资格条件仍需官方职位表核验。",
+      "sources": [
+        "daxing-2026-unit-xingfeng"
+      ],
+      "majorCriteria": {
+        "undergraduate": [
+          "071202",
+          "120203K",
+          "120204",
+          "120207",
+          "120218T"
+        ],
+        "graduate": [
+          "0714",
+          "120201",
+          "1253",
+          "1257"
+        ]
+      },
+      "districtId": "daxing",
+      "districtMatch": "大兴区"
+    },
+    {
+      "year": 2026,
+      "code": "231568301",
+      "unit": "北京市大兴区天宫院街道",
+      "title": "行政执法岗",
+      "orgType": "街道",
+      "jobType": "行政执法",
+      "recruitCount": 2,
+      "education": "本科及以上",
+      "majorText": "本科：经济学（020101），经济与贸易类（0204），工商管理类（1202），会展经济与管理（120903）；研究生：应用经济学（0202），金融（0251），国际商务（0254），工商管理学（1202），工商管理（1251）",
+      "sourceLevel": "secondary",
+      "verification": "北京公务员职位网第三方单位职位镜像；报名统计原文只列单位级数字，因该单位当前镜像仅见本职位而作为唯一候选关联；未与官方职位表逐代码核验",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "镜像页列职位身份、学历、专业及招录数；完整资格条件仍需官方职位表核验。",
+      "sources": [
+        "daxing-2026-unit-tiangongyuan",
+        "eoffcn-2026-snapshot-20251117-1800"
+      ],
+      "majorCriteria": {
+        "undergraduate": [
+          "020101",
+          "0204",
+          "1202",
+          "120903"
+        ],
+        "graduate": [
+          "0202",
+          "0251",
+          "0254",
+          "1202",
+          "1251"
+        ]
+      },
+      "districtId": "daxing",
+      "districtMatch": "大兴区"
+    },
+    {
+      "year": 2026,
+      "code": "231568401",
+      "unit": "北京市大兴区高米店街道",
+      "title": "综合管理岗",
+      "orgType": "街道",
+      "jobType": "综合管理",
+      "recruitCount": 1,
+      "education": "本科或硕士研究生",
+      "majorText": "本科：计算机类（0809），管理科学与工程类（1201），公共管理类（1204）；研究生：计算机科学与技术（0812），电子信息（0854），公共管理学（1204），公共管理（1252）",
+      "sourceLevel": "secondary",
+      "verification": "北京公务员职位网第三方单位职位镜像；未与官方职位表逐代码核验",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "镜像页列职位身份、学历、专业及招录数；完整资格条件仍需官方职位表核验。",
+      "sources": [
+        "daxing-2026-unit-gaomidian"
+      ],
+      "majorCriteria": {
+        "undergraduate": [
+          "0809",
+          "1201",
+          "1204"
+        ],
+        "graduate": [
+          "0812",
+          "0854",
+          "1204",
+          "1252"
+        ]
+      },
+      "districtId": "daxing",
+      "districtMatch": "大兴区"
+    },
+    {
+      "year": 2026,
+      "code": "231568001",
+      "unit": "北京市大兴区瀛海镇",
+      "title": "综合管理岗1",
+      "orgType": "镇",
+      "jobType": "综合管理",
+      "recruitCount": 2,
+      "education": "硕士研究生及以上",
+      "majorText": "研究生：应用经济学（0202），金融（0251），政治学（0302），马克思主义理论（0305），航空宇航科学与技术（0825），能源动力（0858）",
+      "sourceLevel": "secondary",
+      "verification": "北京公务员职位网第三方单位职位镜像；未与官方职位表逐代码核验",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "镜像页列职位身份、学历、专业及招录数；完整资格条件仍需官方职位表核验。",
+      "sources": [
+        "daxing-2026-unit-yinghai"
+      ],
+      "majorCriteria": {
+        "graduate": [
+          "0202",
+          "0251",
+          "0302",
+          "0305",
+          "0825",
+          "0858"
+        ]
+      },
+      "districtId": "daxing",
+      "districtMatch": "大兴区"
+    },
+    {
+      "year": 2026,
+      "code": "231568002",
+      "unit": "北京市大兴区瀛海镇",
+      "title": "综合管理岗2",
+      "orgType": "镇",
+      "jobType": "综合管理",
+      "recruitCount": 2,
+      "education": "硕士研究生及以上",
+      "majorText": "研究生：教育学（0401），教育（0451），新闻传播学（0503），新闻与传播（0552），信息与通信工程（0810），计算机科学与技术（0812）",
+      "sourceLevel": "secondary",
+      "verification": "北京公务员职位网第三方单位职位镜像；未与官方职位表逐代码核验",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "镜像页列职位身份、学历、专业及招录数；完整资格条件仍需官方职位表核验。",
+      "sources": [
+        "daxing-2026-unit-yinghai"
+      ],
+      "majorCriteria": {
+        "graduate": [
+          "0401",
+          "0451",
+          "0503",
+          "0552",
+          "0810",
+          "0812"
+        ]
+      },
+      "districtId": "daxing",
+      "districtMatch": "大兴区"
+    },
+    {
+      "year": 2026,
+      "code": "821565601",
+      "unit": "北京市大兴区住房和城乡建设委员会",
+      "title": "财务管理岗",
+      "orgType": "区直",
+      "jobType": "财务",
+      "recruitCount": 1,
+      "education": "本科及以上",
+      "majorText": "本科：财政学（020201K），税收学（020202），会计学（120203K），财务管理（120204），审计学（120207）；研究生：会计学（120201），会计（1253），审计（1257）",
+      "sourceLevel": "secondary",
+      "verification": "中公详情页与北京公务员职位网单位页在代码、名称及计划数上相互核对；仍属二手来源，未与官方职位表逐代码核验",
+      "crossVerified": true,
+      "eligibilityComplete": false,
+      "eligibilityText": "第三方详情页列职位身份、学历、专业及招录数；完整资格条件仍需官方职位表核验。",
+      "sources": [
+        "daxing-2026-unit-housing",
+        "daxing-2026-unit-housing-offcn-821565601"
+      ],
+      "majorCriteria": {
+        "undergraduate": [
+          "020201K",
+          "020202",
+          "120203K",
+          "120204",
+          "120207"
+        ],
+        "graduate": [
+          "120201",
+          "1253",
+          "1257"
+        ]
+      },
+      "districtId": "daxing",
+      "districtMatch": "大兴区"
+    },
+    {
+      "year": 2026,
+      "code": "821565604",
+      "unit": "北京市大兴区住房和城乡建设委员会",
+      "title": "综合管理岗3",
+      "orgType": "区直",
+      "jobType": "综合管理",
+      "recruitCount": 1,
+      "education": "待核实",
+      "majorText": "待核实；不用于专业条件匹配",
+      "sourceLevel": "secondary",
+      "verification": "职位镜像支持代码、单位、职位名和招录数；学历与专业详情本轮未能复核",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "本条仅用于挂接第三方进面分样本；学历、专业及其他条件仍需官方职位表核验。",
+      "sources": [
+        "daxing-2026-unit-housing"
+      ],
+      "districtId": "daxing",
+      "districtMatch": "大兴区"
+    },
+    {
+      "year": 2026,
+      "code": "239910901",
+      "unit": "北京市大兴区博兴街道",
+      "title": "城市管理岗",
+      "orgType": "街道",
+      "jobType": "行政执法",
+      "recruitCount": 1,
+      "education": "仅限硕士研究生",
+      "majorText": "研究生：法学（03），文学（05），工学（08），管理学（12）",
+      "sourceLevel": "secondary",
+      "verification": "华图第三方职位镜像列职位字段；官方面试通知可交叉确认代码、单位与职位名，未核官方职位表资格字段",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "镜像页列职位身份、学历、专业及招录数；完整资格条件仍需官方职位表核验。",
+      "sources": [
+        "daxing-2026-unit-boxing"
+      ],
+      "majorCriteria": {
+        "graduate": [
+          "03",
+          "05",
+          "08",
+          "12"
+        ]
+      },
+      "districtId": "daxing",
+      "districtMatch": "大兴区"
     }
   ],
   "observations": [
@@ -88738,6 +90130,24 @@
     {
       "year": 2026,
       "scope": "position-level",
+      "positionCode": "232501603",
+      "districtId": null,
+      "unit": null,
+      "observationType": "qualified_snapshot",
+      "observedAt": "2025-11-17 18:00",
+      "applicantsRegistered": null,
+      "applicantsQualified": 117,
+      "applicantsPaid": null,
+      "applicantsConfirmed": null,
+      "actualTestTakers": null,
+      "recruitCount": 55,
+      "sourceId": "eoffcn-2026-snapshot-20251117-1800",
+      "sourceLevel": "secondary",
+      "notes": "页面逐职位表列出市级过审人数前十岗位；记录其中可与2026职位库按代码、招录人数匹配的岗位，包括公安交通管理局职位232501603（117/55）。大兴天宫院街道20人/2人来自单位榜单、原文未列代码；职位镜像在该单位仅列一条岗位231568301，因此按唯一候选挂接，属于单位级数据推定岗位，不是原文直接报出的职位码。昌平区总工会9人/计划1人仅见单位汇总，未展示职位代码，仍记为单位级。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
+    },
+    {
+      "year": 2026,
+      "scope": "position-level",
       "positionCode": "821261102",
       "districtId": null,
       "unit": null,
@@ -88751,7 +90161,7 @@
       "recruitCount": 2,
       "sourceId": "eoffcn-2026-snapshot-20251117-1800",
       "sourceLevel": "secondary",
-      "notes": "页面逐职位表列出市级过审人数前十岗位；记录其中可与2026职位库按代码、招录人数匹配的岗位（含昌平区档案馆821261102、朝阳区东坝地区230531801、朝阳公安分局232502003及平谷区市场监督管理局241369303）。昌平区总工会9人/计划1人仅见单位汇总，未展示职位代码，故仍记为单位级。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面逐职位表列出市级过审人数前十岗位；记录其中可与2026职位库按代码、招录人数匹配的岗位，包括公安交通管理局职位232501603（117/55）。大兴天宫院街道20人/2人来自单位榜单、原文未列代码；职位镜像在该单位仅列一条岗位231568301，因此按唯一候选挂接，属于单位级数据推定岗位，不是原文直接报出的职位码。昌平区总工会9人/计划1人仅见单位汇总，未展示职位代码，仍记为单位级。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -88769,7 +90179,7 @@
       "recruitCount": 32,
       "sourceId": "eoffcn-2026-snapshot-20251117-1800",
       "sourceLevel": "secondary",
-      "notes": "页面逐职位表列出市级过审人数前十岗位；记录其中可与2026职位库按代码、招录人数匹配的岗位（含昌平区档案馆821261102、朝阳区东坝地区230531801、朝阳公安分局232502003及平谷区市场监督管理局241369303）。昌平区总工会9人/计划1人仅见单位汇总，未展示职位代码，故仍记为单位级。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面逐职位表列出市级过审人数前十岗位；记录其中可与2026职位库按代码、招录人数匹配的岗位，包括公安交通管理局职位232501603（117/55）。大兴天宫院街道20人/2人来自单位榜单、原文未列代码；职位镜像在该单位仅列一条岗位231568301，因此按唯一候选挂接，属于单位级数据推定岗位，不是原文直接报出的职位码。昌平区总工会9人/计划1人仅见单位汇总，未展示职位代码，仍记为单位级。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -88787,7 +90197,7 @@
       "recruitCount": 30,
       "sourceId": "eoffcn-2026-snapshot-20251117-1800",
       "sourceLevel": "secondary",
-      "notes": "页面逐职位表列出市级过审人数前十岗位；记录其中可与2026职位库按代码、招录人数匹配的岗位（含昌平区档案馆821261102、朝阳区东坝地区230531801、朝阳公安分局232502003及平谷区市场监督管理局241369303）。昌平区总工会9人/计划1人仅见单位汇总，未展示职位代码，故仍记为单位级。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面逐职位表列出市级过审人数前十岗位；记录其中可与2026职位库按代码、招录人数匹配的岗位，包括公安交通管理局职位232501603（117/55）。大兴天宫院街道20人/2人来自单位榜单、原文未列代码；职位镜像在该单位仅列一条岗位231568301，因此按唯一候选挂接，属于单位级数据推定岗位，不是原文直接报出的职位码。昌平区总工会9人/计划1人仅见单位汇总，未展示职位代码，仍记为单位级。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -88805,7 +90215,7 @@
       "recruitCount": 15,
       "sourceId": "eoffcn-2026-snapshot-20251117-1800",
       "sourceLevel": "secondary",
-      "notes": "页面逐职位表列出市级过审人数前十岗位；记录其中可与2026职位库按代码、招录人数匹配的岗位（含昌平区档案馆821261102、朝阳区东坝地区230531801、朝阳公安分局232502003及平谷区市场监督管理局241369303）。昌平区总工会9人/计划1人仅见单位汇总，未展示职位代码，故仍记为单位级。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面逐职位表列出市级过审人数前十岗位；记录其中可与2026职位库按代码、招录人数匹配的岗位，包括公安交通管理局职位232501603（117/55）。大兴天宫院街道20人/2人来自单位榜单、原文未列代码；职位镜像在该单位仅列一条岗位231568301，因此按唯一候选挂接，属于单位级数据推定岗位，不是原文直接报出的职位码。昌平区总工会9人/计划1人仅见单位汇总，未展示职位代码，仍记为单位级。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -88823,7 +90233,7 @@
       "recruitCount": 1,
       "sourceId": "eoffcn-2026-snapshot-20251117-1800",
       "sourceLevel": "secondary",
-      "notes": "页面逐职位表列出市级过审人数前十岗位；记录其中可与2026职位库按代码、招录人数匹配的岗位（含昌平区档案馆821261102、朝阳区东坝地区230531801、朝阳公安分局232502003及平谷区市场监督管理局241369303）。昌平区总工会9人/计划1人仅见单位汇总，未展示职位代码，故仍记为单位级。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面逐职位表列出市级过审人数前十岗位；记录其中可与2026职位库按代码、招录人数匹配的岗位，包括公安交通管理局职位232501603（117/55）。大兴天宫院街道20人/2人来自单位榜单、原文未列代码；职位镜像在该单位仅列一条岗位231568301，因此按唯一候选挂接，属于单位级数据推定岗位，不是原文直接报出的职位码。昌平区总工会9人/计划1人仅见单位汇总，未展示职位代码，仍记为单位级。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -88841,7 +90251,7 @@
       "recruitCount": 10,
       "sourceId": "eoffcn-2026-snapshot-20251117-1800",
       "sourceLevel": "secondary",
-      "notes": "页面逐职位表列出市级过审人数前十岗位；记录其中可与2026职位库按代码、招录人数匹配的岗位（含昌平区档案馆821261102、朝阳区东坝地区230531801、朝阳公安分局232502003及平谷区市场监督管理局241369303）。昌平区总工会9人/计划1人仅见单位汇总，未展示职位代码，故仍记为单位级。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面逐职位表列出市级过审人数前十岗位；记录其中可与2026职位库按代码、招录人数匹配的岗位，包括公安交通管理局职位232501603（117/55）。大兴天宫院街道20人/2人来自单位榜单、原文未列代码；职位镜像在该单位仅列一条岗位231568301，因此按唯一候选挂接，属于单位级数据推定岗位，不是原文直接报出的职位码。昌平区总工会9人/计划1人仅见单位汇总，未展示职位代码，仍记为单位级。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -88859,7 +90269,7 @@
       "recruitCount": 1,
       "sourceId": "eoffcn-2026-snapshot-20251117-1800",
       "sourceLevel": "secondary",
-      "notes": "页面逐职位表列出市级过审人数前十岗位；记录其中可与2026职位库按代码、招录人数匹配的岗位（含昌平区档案馆821261102、朝阳区东坝地区230531801、朝阳公安分局232502003及平谷区市场监督管理局241369303）。昌平区总工会9人/计划1人仅见单位汇总，未展示职位代码，故仍记为单位级。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面逐职位表列出市级过审人数前十岗位；记录其中可与2026职位库按代码、招录人数匹配的岗位，包括公安交通管理局职位232501603（117/55）。大兴天宫院街道20人/2人来自单位榜单、原文未列代码；职位镜像在该单位仅列一条岗位231568301，因此按唯一候选挂接，属于单位级数据推定岗位，不是原文直接报出的职位码。昌平区总工会9人/计划1人仅见单位汇总，未展示职位代码，仍记为单位级。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -88877,7 +90287,7 @@
       "recruitCount": 32,
       "sourceId": "eoffcn-2026-snapshot-20251117-1800",
       "sourceLevel": "secondary",
-      "notes": "页面逐职位表列出市级过审人数前十岗位；记录其中可与2026职位库按代码、招录人数匹配的岗位（含昌平区档案馆821261102、朝阳区东坝地区230531801、朝阳公安分局232502003及平谷区市场监督管理局241369303）。昌平区总工会9人/计划1人仅见单位汇总，未展示职位代码，故仍记为单位级。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面逐职位表列出市级过审人数前十岗位；记录其中可与2026职位库按代码、招录人数匹配的岗位，包括公安交通管理局职位232501603（117/55）。大兴天宫院街道20人/2人来自单位榜单、原文未列代码；职位镜像在该单位仅列一条岗位231568301，因此按唯一候选挂接，属于单位级数据推定岗位，不是原文直接报出的职位码。昌平区总工会9人/计划1人仅见单位汇总，未展示职位代码，仍记为单位级。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -88895,7 +90305,7 @@
       "recruitCount": 2,
       "sourceId": "eoffcn-2026-snapshot-20251117-1800",
       "sourceLevel": "secondary",
-      "notes": "页面逐职位表列出市级过审人数前十岗位；记录其中可与2026职位库按代码、招录人数匹配的岗位（含昌平区档案馆821261102、朝阳区东坝地区230531801、朝阳公安分局232502003及平谷区市场监督管理局241369303）。昌平区总工会9人/计划1人仅见单位汇总，未展示职位代码，故仍记为单位级。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面逐职位表列出市级过审人数前十岗位；记录其中可与2026职位库按代码、招录人数匹配的岗位，包括公安交通管理局职位232501603（117/55）。大兴天宫院街道20人/2人来自单位榜单、原文未列代码；职位镜像在该单位仅列一条岗位231568301，因此按唯一候选挂接，属于单位级数据推定岗位，不是原文直接报出的职位码。昌平区总工会9人/计划1人仅见单位汇总，未展示职位代码，仍记为单位级。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -88913,7 +90323,25 @@
       "recruitCount": 1,
       "sourceId": "eoffcn-2026-snapshot-20251117-1800",
       "sourceLevel": "secondary",
-      "notes": "页面逐职位表列出市级过审人数前十岗位；记录其中可与2026职位库按代码、招录人数匹配的岗位（含昌平区档案馆821261102、朝阳区东坝地区230531801、朝阳公安分局232502003及平谷区市场监督管理局241369303）。昌平区总工会9人/计划1人仅见单位汇总，未展示职位代码，故仍记为单位级。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面逐职位表列出市级过审人数前十岗位；记录其中可与2026职位库按代码、招录人数匹配的岗位，包括公安交通管理局职位232501603（117/55）。大兴天宫院街道20人/2人来自单位榜单、原文未列代码；职位镜像在该单位仅列一条岗位231568301，因此按唯一候选挂接，属于单位级数据推定岗位，不是原文直接报出的职位码。昌平区总工会9人/计划1人仅见单位汇总，未展示职位代码，仍记为单位级。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
+    },
+    {
+      "year": 2026,
+      "scope": "position-level",
+      "positionCode": "231568301",
+      "districtId": null,
+      "unit": null,
+      "observationType": "qualified_snapshot",
+      "observedAt": "2025-11-17 18:00",
+      "applicantsRegistered": null,
+      "applicantsQualified": 20,
+      "applicantsPaid": null,
+      "applicantsConfirmed": null,
+      "actualTestTakers": null,
+      "recruitCount": 2,
+      "sourceId": "eoffcn-2026-snapshot-20251117-1800",
+      "sourceLevel": "secondary",
+      "notes": "页面逐职位表列出市级过审人数前十岗位；记录其中可与2026职位库按代码、招录人数匹配的岗位，包括公安交通管理局职位232501603（117/55）。大兴天宫院街道20人/2人来自单位榜单、原文未列代码；职位镜像在该单位仅列一条岗位231568301，因此按唯一候选挂接，属于单位级数据推定岗位，不是原文直接报出的职位码。昌平区总工会9人/计划1人仅见单位汇总，未展示职位代码，仍记为单位级。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -88931,7 +90359,7 @@
       "recruitCount": 1,
       "sourceId": "eoffcn-2026-snapshot-20251117-1800",
       "sourceLevel": "secondary",
-      "notes": "页面逐职位表列出市级过审人数前十岗位；记录其中可与2026职位库按代码、招录人数匹配的岗位（含昌平区档案馆821261102、朝阳区东坝地区230531801、朝阳公安分局232502003及平谷区市场监督管理局241369303）。昌平区总工会9人/计划1人仅见单位汇总，未展示职位代码，故仍记为单位级。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面逐职位表列出市级过审人数前十岗位；记录其中可与2026职位库按代码、招录人数匹配的岗位，包括公安交通管理局职位232501603（117/55）。大兴天宫院街道20人/2人来自单位榜单、原文未列代码；职位镜像在该单位仅列一条岗位231568301，因此按唯一候选挂接，属于单位级数据推定岗位，不是原文直接报出的职位码。昌平区总工会9人/计划1人仅见单位汇总，未展示职位代码，仍记为单位级。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -88949,7 +90377,43 @@
       "recruitCount": 1,
       "sourceId": "eoffcn-2026-snapshot-20251117-1800",
       "sourceLevel": "secondary",
-      "notes": "页面逐职位表列出市级过审人数前十岗位；记录其中可与2026职位库按代码、招录人数匹配的岗位（含昌平区档案馆821261102、朝阳区东坝地区230531801、朝阳公安分局232502003及平谷区市场监督管理局241369303）。昌平区总工会9人/计划1人仅见单位汇总，未展示职位代码，故仍记为单位级。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面逐职位表列出市级过审人数前十岗位；记录其中可与2026职位库按代码、招录人数匹配的岗位，包括公安交通管理局职位232501603（117/55）。大兴天宫院街道20人/2人来自单位榜单、原文未列代码；职位镜像在该单位仅列一条岗位231568301，因此按唯一候选挂接，属于单位级数据推定岗位，不是原文直接报出的职位码。昌平区总工会9人/计划1人仅见单位汇总，未展示职位代码，仍记为单位级。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
+    },
+    {
+      "year": 2026,
+      "scope": "position-level",
+      "positionCode": "232501603",
+      "districtId": null,
+      "unit": null,
+      "observationType": "qualified_snapshot",
+      "observedAt": "2025-11-18 09:00",
+      "applicantsRegistered": null,
+      "applicantsQualified": 184,
+      "applicantsPaid": null,
+      "applicantsConfirmed": null,
+      "actualTestTakers": null,
+      "recruitCount": 55,
+      "sourceId": "eoffcn-2026-snapshot-20251118-0900",
+      "sourceLevel": "secondary",
+      "notes": "页面列出市级过审人数前十及竞争最激烈岗位；记录其中能与2026职位库按代码、招录人数匹配的岗位，包括交管局一线执法岗（232501603，184/55）和密云公安分局一线执法岗1（242503201，42/17）。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
+    },
+    {
+      "year": 2026,
+      "scope": "position-level",
+      "positionCode": "242503201",
+      "districtId": null,
+      "unit": null,
+      "observationType": "qualified_snapshot",
+      "observedAt": "2025-11-18 09:00",
+      "applicantsRegistered": null,
+      "applicantsQualified": 42,
+      "applicantsPaid": null,
+      "applicantsConfirmed": null,
+      "actualTestTakers": null,
+      "recruitCount": 17,
+      "sourceId": "eoffcn-2026-snapshot-20251118-0900",
+      "sourceLevel": "secondary",
+      "notes": "页面列出市级过审人数前十及竞争最激烈岗位；记录其中能与2026职位库按代码、招录人数匹配的岗位，包括交管局一线执法岗（232501603，184/55）和密云公安分局一线执法岗1（242503201，42/17）。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -88967,7 +90431,7 @@
       "recruitCount": 2,
       "sourceId": "eoffcn-2026-snapshot-20251118-0900",
       "sourceLevel": "secondary",
-      "notes": "页面列出市级过审人数前十及竞争最激烈岗位；记录其中能与2026职位库按代码、招录人数匹配的岗位。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面列出市级过审人数前十及竞争最激烈岗位；记录其中能与2026职位库按代码、招录人数匹配的岗位，包括交管局一线执法岗（232501603，184/55）和密云公安分局一线执法岗1（242503201，42/17）。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -88985,7 +90449,7 @@
       "recruitCount": 1,
       "sourceId": "eoffcn-2026-snapshot-20251118-0900",
       "sourceLevel": "secondary",
-      "notes": "页面列出市级过审人数前十及竞争最激烈岗位；记录其中能与2026职位库按代码、招录人数匹配的岗位。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面列出市级过审人数前十及竞争最激烈岗位；记录其中能与2026职位库按代码、招录人数匹配的岗位，包括交管局一线执法岗（232501603，184/55）和密云公安分局一线执法岗1（242503201，42/17）。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -89003,7 +90467,7 @@
       "recruitCount": 32,
       "sourceId": "eoffcn-2026-snapshot-20251118-0900",
       "sourceLevel": "secondary",
-      "notes": "页面列出市级过审人数前十及竞争最激烈岗位；记录其中能与2026职位库按代码、招录人数匹配的岗位。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面列出市级过审人数前十及竞争最激烈岗位；记录其中能与2026职位库按代码、招录人数匹配的岗位，包括交管局一线执法岗（232501603，184/55）和密云公安分局一线执法岗1（242503201，42/17）。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -89021,7 +90485,7 @@
       "recruitCount": 18,
       "sourceId": "eoffcn-2026-snapshot-20251118-0900",
       "sourceLevel": "secondary",
-      "notes": "页面列出市级过审人数前十及竞争最激烈岗位；记录其中能与2026职位库按代码、招录人数匹配的岗位。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面列出市级过审人数前十及竞争最激烈岗位；记录其中能与2026职位库按代码、招录人数匹配的岗位，包括交管局一线执法岗（232501603，184/55）和密云公安分局一线执法岗1（242503201，42/17）。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -89039,7 +90503,7 @@
       "recruitCount": 30,
       "sourceId": "eoffcn-2026-snapshot-20251118-0900",
       "sourceLevel": "secondary",
-      "notes": "页面列出市级过审人数前十及竞争最激烈岗位；记录其中能与2026职位库按代码、招录人数匹配的岗位。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面列出市级过审人数前十及竞争最激烈岗位；记录其中能与2026职位库按代码、招录人数匹配的岗位，包括交管局一线执法岗（232501603，184/55）和密云公安分局一线执法岗1（242503201，42/17）。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -89057,7 +90521,7 @@
       "recruitCount": 15,
       "sourceId": "eoffcn-2026-snapshot-20251118-0900",
       "sourceLevel": "secondary",
-      "notes": "页面列出市级过审人数前十及竞争最激烈岗位；记录其中能与2026职位库按代码、招录人数匹配的岗位。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面列出市级过审人数前十及竞争最激烈岗位；记录其中能与2026职位库按代码、招录人数匹配的岗位，包括交管局一线执法岗（232501603，184/55）和密云公安分局一线执法岗1（242503201，42/17）。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -89075,7 +90539,7 @@
       "recruitCount": 2,
       "sourceId": "eoffcn-2026-snapshot-20251118-0900",
       "sourceLevel": "secondary",
-      "notes": "页面列出市级过审人数前十及竞争最激烈岗位；记录其中能与2026职位库按代码、招录人数匹配的岗位。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面列出市级过审人数前十及竞争最激烈岗位；记录其中能与2026职位库按代码、招录人数匹配的岗位，包括交管局一线执法岗（232501603，184/55）和密云公安分局一线执法岗1（242503201，42/17）。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -89093,7 +90557,7 @@
       "recruitCount": 1,
       "sourceId": "eoffcn-2026-snapshot-20251118-0900",
       "sourceLevel": "secondary",
-      "notes": "页面列出市级过审人数前十及竞争最激烈岗位；记录其中能与2026职位库按代码、招录人数匹配的岗位。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面列出市级过审人数前十及竞争最激烈岗位；记录其中能与2026职位库按代码、招录人数匹配的岗位，包括交管局一线执法岗（232501603，184/55）和密云公安分局一线执法岗1（242503201，42/17）。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -89111,7 +90575,7 @@
       "recruitCount": 1,
       "sourceId": "eoffcn-2026-snapshot-20251118-0900",
       "sourceLevel": "secondary",
-      "notes": "页面列出市级过审人数前十及竞争最激烈岗位；记录其中能与2026职位库按代码、招录人数匹配的岗位。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面列出市级过审人数前十及竞争最激烈岗位；记录其中能与2026职位库按代码、招录人数匹配的岗位，包括交管局一线执法岗（232501603，184/55）和密云公安分局一线执法岗1（242503201，42/17）。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -89129,7 +90593,7 @@
       "recruitCount": 1,
       "sourceId": "eoffcn-2026-snapshot-20251118-0900",
       "sourceLevel": "secondary",
-      "notes": "页面列出市级过审人数前十及竞争最激烈岗位；记录其中能与2026职位库按代码、招录人数匹配的岗位。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面列出市级过审人数前十及竞争最激烈岗位；记录其中能与2026职位库按代码、招录人数匹配的岗位，包括交管局一线执法岗（232501603，184/55）和密云公安分局一线执法岗1（242503201，42/17）。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -89147,7 +90611,7 @@
       "recruitCount": 1,
       "sourceId": "eoffcn-2026-snapshot-20251118-0900",
       "sourceLevel": "secondary",
-      "notes": "页面列出市级过审人数前十及竞争最激烈岗位；记录其中能与2026职位库按代码、招录人数匹配的岗位。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面列出市级过审人数前十及竞争最激烈岗位；记录其中能与2026职位库按代码、招录人数匹配的岗位，包括交管局一线执法岗（232501603，184/55）和密云公安分局一线执法岗1（242503201，42/17）。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -89165,7 +90629,7 @@
       "recruitCount": 1,
       "sourceId": "eoffcn-2026-snapshot-20251118-0900",
       "sourceLevel": "secondary",
-      "notes": "页面列出市级过审人数前十及竞争最激烈岗位；记录其中能与2026职位库按代码、招录人数匹配的岗位。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面列出市级过审人数前十及竞争最激烈岗位；记录其中能与2026职位库按代码、招录人数匹配的岗位，包括交管局一线执法岗（232501603，184/55）和密云公安分局一线执法岗1（242503201，42/17）。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -89183,7 +90647,7 @@
       "recruitCount": 32,
       "sourceId": "eoffcn-2026-snapshot-20251118-0900",
       "sourceLevel": "secondary",
-      "notes": "页面列出市级过审人数前十及竞争最激烈岗位；记录其中能与2026职位库按代码、招录人数匹配的岗位。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面列出市级过审人数前十及竞争最激烈岗位；记录其中能与2026职位库按代码、招录人数匹配的岗位，包括交管局一线执法岗（232501603，184/55）和密云公安分局一线执法岗1（242503201，42/17）。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -89201,7 +90665,25 @@
       "recruitCount": 1,
       "sourceId": "eoffcn-2026-snapshot-20251118-0900",
       "sourceLevel": "secondary",
-      "notes": "页面列出市级过审人数前十及竞争最激烈岗位；记录其中能与2026职位库按代码、招录人数匹配的岗位。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面列出市级过审人数前十及竞争最激烈岗位；记录其中能与2026职位库按代码、招录人数匹配的岗位，包括交管局一线执法岗（232501603，184/55）和密云公安分局一线执法岗1（242503201，42/17）。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
+    },
+    {
+      "year": 2026,
+      "scope": "position-level",
+      "positionCode": "232501603",
+      "districtId": null,
+      "unit": null,
+      "observationType": "qualified_snapshot",
+      "observedAt": "2025-11-18 18:00",
+      "applicantsRegistered": null,
+      "applicantsQualified": 450,
+      "applicantsPaid": null,
+      "applicantsConfirmed": null,
+      "actualTestTakers": null,
+      "recruitCount": 55,
+      "sourceId": "eoffcn-2026-snapshot-20251118-1800",
+      "sourceLevel": "secondary",
+      "notes": "报道注明竞争比按资格审查通过人数/招录人数计算；此处逐职位保存市级过审人数前十和高竞争岗位中可与2026职位库按职位代码、招录数匹配的记录，包括交管局职位232501603（450/55）。该页面不是全市完整清单；人数是第三方资格审查快照，不是最终缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -89219,7 +90701,7 @@
       "recruitCount": 2,
       "sourceId": "eoffcn-2026-snapshot-20251118-1800",
       "sourceLevel": "secondary",
-      "notes": "报道注明竞争比按资格审查通过人数/招录人数计算；此处逐职位保存市级过审人数前十和高竞争岗位中可与2026职位库按职位代码、招录数匹配的记录。该页面不是全市完整清单；人数是第三方资格审查快照，不是最终缴费或实考人数。"
+      "notes": "报道注明竞争比按资格审查通过人数/招录人数计算；此处逐职位保存市级过审人数前十和高竞争岗位中可与2026职位库按职位代码、招录数匹配的记录，包括交管局职位232501603（450/55）。该页面不是全市完整清单；人数是第三方资格审查快照，不是最终缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -89237,7 +90719,7 @@
       "recruitCount": 30,
       "sourceId": "eoffcn-2026-snapshot-20251118-1800",
       "sourceLevel": "secondary",
-      "notes": "报道注明竞争比按资格审查通过人数/招录人数计算；此处逐职位保存市级过审人数前十和高竞争岗位中可与2026职位库按职位代码、招录数匹配的记录。该页面不是全市完整清单；人数是第三方资格审查快照，不是最终缴费或实考人数。"
+      "notes": "报道注明竞争比按资格审查通过人数/招录人数计算；此处逐职位保存市级过审人数前十和高竞争岗位中可与2026职位库按职位代码、招录数匹配的记录，包括交管局职位232501603（450/55）。该页面不是全市完整清单；人数是第三方资格审查快照，不是最终缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -89255,7 +90737,7 @@
       "recruitCount": 23,
       "sourceId": "eoffcn-2026-snapshot-20251118-1800",
       "sourceLevel": "secondary",
-      "notes": "报道注明竞争比按资格审查通过人数/招录人数计算；此处逐职位保存市级过审人数前十和高竞争岗位中可与2026职位库按职位代码、招录数匹配的记录。该页面不是全市完整清单；人数是第三方资格审查快照，不是最终缴费或实考人数。"
+      "notes": "报道注明竞争比按资格审查通过人数/招录人数计算；此处逐职位保存市级过审人数前十和高竞争岗位中可与2026职位库按职位代码、招录数匹配的记录，包括交管局职位232501603（450/55）。该页面不是全市完整清单；人数是第三方资格审查快照，不是最终缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -89273,7 +90755,7 @@
       "recruitCount": 32,
       "sourceId": "eoffcn-2026-snapshot-20251118-1800",
       "sourceLevel": "secondary",
-      "notes": "报道注明竞争比按资格审查通过人数/招录人数计算；此处逐职位保存市级过审人数前十和高竞争岗位中可与2026职位库按职位代码、招录数匹配的记录。该页面不是全市完整清单；人数是第三方资格审查快照，不是最终缴费或实考人数。"
+      "notes": "报道注明竞争比按资格审查通过人数/招录人数计算；此处逐职位保存市级过审人数前十和高竞争岗位中可与2026职位库按职位代码、招录数匹配的记录，包括交管局职位232501603（450/55）。该页面不是全市完整清单；人数是第三方资格审查快照，不是最终缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -89291,7 +90773,7 @@
       "recruitCount": 15,
       "sourceId": "eoffcn-2026-snapshot-20251118-1800",
       "sourceLevel": "secondary",
-      "notes": "报道注明竞争比按资格审查通过人数/招录人数计算；此处逐职位保存市级过审人数前十和高竞争岗位中可与2026职位库按职位代码、招录数匹配的记录。该页面不是全市完整清单；人数是第三方资格审查快照，不是最终缴费或实考人数。"
+      "notes": "报道注明竞争比按资格审查通过人数/招录人数计算；此处逐职位保存市级过审人数前十和高竞争岗位中可与2026职位库按职位代码、招录数匹配的记录，包括交管局职位232501603（450/55）。该页面不是全市完整清单；人数是第三方资格审查快照，不是最终缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -89309,7 +90791,7 @@
       "recruitCount": 1,
       "sourceId": "eoffcn-2026-snapshot-20251118-1800",
       "sourceLevel": "secondary",
-      "notes": "报道注明竞争比按资格审查通过人数/招录人数计算；此处逐职位保存市级过审人数前十和高竞争岗位中可与2026职位库按职位代码、招录数匹配的记录。该页面不是全市完整清单；人数是第三方资格审查快照，不是最终缴费或实考人数。"
+      "notes": "报道注明竞争比按资格审查通过人数/招录人数计算；此处逐职位保存市级过审人数前十和高竞争岗位中可与2026职位库按职位代码、招录数匹配的记录，包括交管局职位232501603（450/55）。该页面不是全市完整清单；人数是第三方资格审查快照，不是最终缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -89327,7 +90809,7 @@
       "recruitCount": 1,
       "sourceId": "eoffcn-2026-snapshot-20251118-1800",
       "sourceLevel": "secondary",
-      "notes": "报道注明竞争比按资格审查通过人数/招录人数计算；此处逐职位保存市级过审人数前十和高竞争岗位中可与2026职位库按职位代码、招录数匹配的记录。该页面不是全市完整清单；人数是第三方资格审查快照，不是最终缴费或实考人数。"
+      "notes": "报道注明竞争比按资格审查通过人数/招录人数计算；此处逐职位保存市级过审人数前十和高竞争岗位中可与2026职位库按职位代码、招录数匹配的记录，包括交管局职位232501603（450/55）。该页面不是全市完整清单；人数是第三方资格审查快照，不是最终缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -89345,7 +90827,7 @@
       "recruitCount": 2,
       "sourceId": "eoffcn-2026-snapshot-20251118-1800",
       "sourceLevel": "secondary",
-      "notes": "报道注明竞争比按资格审查通过人数/招录人数计算；此处逐职位保存市级过审人数前十和高竞争岗位中可与2026职位库按职位代码、招录数匹配的记录。该页面不是全市完整清单；人数是第三方资格审查快照，不是最终缴费或实考人数。"
+      "notes": "报道注明竞争比按资格审查通过人数/招录人数计算；此处逐职位保存市级过审人数前十和高竞争岗位中可与2026职位库按职位代码、招录数匹配的记录，包括交管局职位232501603（450/55）。该页面不是全市完整清单；人数是第三方资格审查快照，不是最终缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -89363,7 +90845,7 @@
       "recruitCount": 1,
       "sourceId": "eoffcn-2026-snapshot-20251118-1800",
       "sourceLevel": "secondary",
-      "notes": "报道注明竞争比按资格审查通过人数/招录人数计算；此处逐职位保存市级过审人数前十和高竞争岗位中可与2026职位库按职位代码、招录数匹配的记录。该页面不是全市完整清单；人数是第三方资格审查快照，不是最终缴费或实考人数。"
+      "notes": "报道注明竞争比按资格审查通过人数/招录人数计算；此处逐职位保存市级过审人数前十和高竞争岗位中可与2026职位库按职位代码、招录数匹配的记录，包括交管局职位232501603（450/55）。该页面不是全市完整清单；人数是第三方资格审查快照，不是最终缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -89381,7 +90863,7 @@
       "recruitCount": 1,
       "sourceId": "eoffcn-2026-snapshot-20251118-1800",
       "sourceLevel": "secondary",
-      "notes": "报道注明竞争比按资格审查通过人数/招录人数计算；此处逐职位保存市级过审人数前十和高竞争岗位中可与2026职位库按职位代码、招录数匹配的记录。该页面不是全市完整清单；人数是第三方资格审查快照，不是最终缴费或实考人数。"
+      "notes": "报道注明竞争比按资格审查通过人数/招录人数计算；此处逐职位保存市级过审人数前十和高竞争岗位中可与2026职位库按职位代码、招录数匹配的记录，包括交管局职位232501603（450/55）。该页面不是全市完整清单；人数是第三方资格审查快照，不是最终缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -89399,7 +90881,7 @@
       "recruitCount": 1,
       "sourceId": "eoffcn-2026-snapshot-20251118-1800",
       "sourceLevel": "secondary",
-      "notes": "报道注明竞争比按资格审查通过人数/招录人数计算；此处逐职位保存市级过审人数前十和高竞争岗位中可与2026职位库按职位代码、招录数匹配的记录。该页面不是全市完整清单；人数是第三方资格审查快照，不是最终缴费或实考人数。"
+      "notes": "报道注明竞争比按资格审查通过人数/招录人数计算；此处逐职位保存市级过审人数前十和高竞争岗位中可与2026职位库按职位代码、招录数匹配的记录，包括交管局职位232501603（450/55）。该页面不是全市完整清单；人数是第三方资格审查快照，不是最终缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -89417,7 +90899,7 @@
       "recruitCount": 32,
       "sourceId": "eoffcn-2026-snapshot-20251118-1800",
       "sourceLevel": "secondary",
-      "notes": "报道注明竞争比按资格审查通过人数/招录人数计算；此处逐职位保存市级过审人数前十和高竞争岗位中可与2026职位库按职位代码、招录数匹配的记录。该页面不是全市完整清单；人数是第三方资格审查快照，不是最终缴费或实考人数。"
+      "notes": "报道注明竞争比按资格审查通过人数/招录人数计算；此处逐职位保存市级过审人数前十和高竞争岗位中可与2026职位库按职位代码、招录数匹配的记录，包括交管局职位232501603（450/55）。该页面不是全市完整清单；人数是第三方资格审查快照，不是最终缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -89435,7 +90917,25 @@
       "recruitCount": 1,
       "sourceId": "eoffcn-2026-snapshot-20251118-1800",
       "sourceLevel": "secondary",
-      "notes": "报道注明竞争比按资格审查通过人数/招录人数计算；此处逐职位保存市级过审人数前十和高竞争岗位中可与2026职位库按职位代码、招录数匹配的记录。该页面不是全市完整清单；人数是第三方资格审查快照，不是最终缴费或实考人数。"
+      "notes": "报道注明竞争比按资格审查通过人数/招录人数计算；此处逐职位保存市级过审人数前十和高竞争岗位中可与2026职位库按职位代码、招录数匹配的记录，包括交管局职位232501603（450/55）。该页面不是全市完整清单；人数是第三方资格审查快照，不是最终缴费或实考人数。"
+    },
+    {
+      "year": 2026,
+      "scope": "position-level",
+      "positionCode": "232501603",
+      "districtId": null,
+      "unit": null,
+      "observationType": "qualified_snapshot",
+      "observedAt": "2025-11-19 09:00",
+      "applicantsRegistered": null,
+      "applicantsQualified": 502,
+      "applicantsPaid": null,
+      "applicantsConfirmed": null,
+      "actualTestTakers": null,
+      "recruitCount": 55,
+      "sourceId": "eoffcn-2026-snapshot-20251119-0900",
+      "sourceLevel": "secondary",
+      "notes": "页面列出过审人数前十与竞争最激烈岗位榜单；将可与2026职位库按职位代码、计划数匹配的岗位逐行记录。原榜另有3个代码（319900803、242501302、819910005）暂无本地候选职位，未挂到岗位；顺义文旅为单位级信息，未猜职位代码。不是全市完整报名清单；人数为第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -89453,7 +90953,43 @@
       "recruitCount": 2,
       "sourceId": "eoffcn-2026-snapshot-20251119-0900",
       "sourceLevel": "secondary",
-      "notes": "页面列出市级竞争最激烈岗位榜单；将其中能与本地候选职位按职位代码、招录数匹配的岗位逐行记录，包括昌平、门头沟、朝阳、通州、海淀和延庆的岗位。另保留该页过审人数最多表中与职位库匹配的朝阳公安和大兴公安岗位。不是全市完整报名清单；人数为第三方资格审查快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面列出过审人数前十与竞争最激烈岗位榜单；将可与2026职位库按职位代码、计划数匹配的岗位逐行记录。原榜另有3个代码（319900803、242501302、819910005）暂无本地候选职位，未挂到岗位；顺义文旅为单位级信息，未猜职位代码。不是全市完整报名清单；人数为第三方资格审查快照，不是最终报名、缴费或实考人数。"
+    },
+    {
+      "year": 2026,
+      "scope": "position-level",
+      "positionCode": "232502501",
+      "districtId": null,
+      "unit": null,
+      "observationType": "qualified_snapshot",
+      "observedAt": "2025-11-19 09:00",
+      "applicantsRegistered": null,
+      "applicantsQualified": 249,
+      "applicantsPaid": null,
+      "applicantsConfirmed": null,
+      "actualTestTakers": null,
+      "recruitCount": 30,
+      "sourceId": "eoffcn-2026-snapshot-20251119-0900",
+      "sourceLevel": "secondary",
+      "notes": "页面列出过审人数前十与竞争最激烈岗位榜单；将可与2026职位库按职位代码、计划数匹配的岗位逐行记录。原榜另有3个代码（319900803、242501302、819910005）暂无本地候选职位，未挂到岗位；顺义文旅为单位级信息，未猜职位代码。不是全市完整报名清单；人数为第三方资格审查快照，不是最终报名、缴费或实考人数。"
+    },
+    {
+      "year": 2026,
+      "scope": "position-level",
+      "positionCode": "232502102",
+      "districtId": null,
+      "unit": null,
+      "observationType": "qualified_snapshot",
+      "observedAt": "2025-11-19 09:00",
+      "applicantsRegistered": null,
+      "applicantsQualified": 214,
+      "applicantsPaid": null,
+      "applicantsConfirmed": null,
+      "actualTestTakers": null,
+      "recruitCount": 32,
+      "sourceId": "eoffcn-2026-snapshot-20251119-0900",
+      "sourceLevel": "secondary",
+      "notes": "页面列出过审人数前十与竞争最激烈岗位榜单；将可与2026职位库按职位代码、计划数匹配的岗位逐行记录。原榜另有3个代码（319900803、242501302、819910005）暂无本地候选职位，未挂到岗位；顺义文旅为单位级信息，未猜职位代码。不是全市完整报名清单；人数为第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -89471,7 +91007,7 @@
       "recruitCount": 1,
       "sourceId": "eoffcn-2026-snapshot-20251119-0900",
       "sourceLevel": "secondary",
-      "notes": "页面列出市级竞争最激烈岗位榜单；将其中能与本地候选职位按职位代码、招录数匹配的岗位逐行记录，包括昌平、门头沟、朝阳、通州、海淀和延庆的岗位。另保留该页过审人数最多表中与职位库匹配的朝阳公安和大兴公安岗位。不是全市完整报名清单；人数为第三方资格审查快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面列出过审人数前十与竞争最激烈岗位榜单；将可与2026职位库按职位代码、计划数匹配的岗位逐行记录。原榜另有3个代码（319900803、242501302、819910005）暂无本地候选职位，未挂到岗位；顺义文旅为单位级信息，未猜职位代码。不是全市完整报名清单；人数为第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -89489,7 +91025,7 @@
       "recruitCount": 23,
       "sourceId": "eoffcn-2026-snapshot-20251119-0900",
       "sourceLevel": "secondary",
-      "notes": "页面列出市级竞争最激烈岗位榜单；将其中能与本地候选职位按职位代码、招录数匹配的岗位逐行记录，包括昌平、门头沟、朝阳、通州、海淀和延庆的岗位。另保留该页过审人数最多表中与职位库匹配的朝阳公安和大兴公安岗位。不是全市完整报名清单；人数为第三方资格审查快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面列出过审人数前十与竞争最激烈岗位榜单；将可与2026职位库按职位代码、计划数匹配的岗位逐行记录。原榜另有3个代码（319900803、242501302、819910005）暂无本地候选职位，未挂到岗位；顺义文旅为单位级信息，未猜职位代码。不是全市完整报名清单；人数为第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -89507,7 +91043,7 @@
       "recruitCount": 1,
       "sourceId": "eoffcn-2026-snapshot-20251119-0900",
       "sourceLevel": "secondary",
-      "notes": "页面列出市级竞争最激烈岗位榜单；将其中能与本地候选职位按职位代码、招录数匹配的岗位逐行记录，包括昌平、门头沟、朝阳、通州、海淀和延庆的岗位。另保留该页过审人数最多表中与职位库匹配的朝阳公安和大兴公安岗位。不是全市完整报名清单；人数为第三方资格审查快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面列出过审人数前十与竞争最激烈岗位榜单；将可与2026职位库按职位代码、计划数匹配的岗位逐行记录。原榜另有3个代码（319900803、242501302、819910005）暂无本地候选职位，未挂到岗位；顺义文旅为单位级信息，未猜职位代码。不是全市完整报名清单；人数为第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -89525,7 +91061,25 @@
       "recruitCount": 32,
       "sourceId": "eoffcn-2026-snapshot-20251119-0900",
       "sourceLevel": "secondary",
-      "notes": "页面列出市级竞争最激烈岗位榜单；将其中能与本地候选职位按职位代码、招录数匹配的岗位逐行记录，包括昌平、门头沟、朝阳、通州、海淀和延庆的岗位。另保留该页过审人数最多表中与职位库匹配的朝阳公安和大兴公安岗位。不是全市完整报名清单；人数为第三方资格审查快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面列出过审人数前十与竞争最激烈岗位榜单；将可与2026职位库按职位代码、计划数匹配的岗位逐行记录。原榜另有3个代码（319900803、242501302、819910005）暂无本地候选职位，未挂到岗位；顺义文旅为单位级信息，未猜职位代码。不是全市完整报名清单；人数为第三方资格审查快照，不是最终报名、缴费或实考人数。"
+    },
+    {
+      "year": 2026,
+      "scope": "position-level",
+      "positionCode": "232502201",
+      "districtId": null,
+      "unit": null,
+      "observationType": "qualified_snapshot",
+      "observedAt": "2025-11-19 09:00",
+      "applicantsRegistered": null,
+      "applicantsQualified": 120,
+      "applicantsPaid": null,
+      "applicantsConfirmed": null,
+      "actualTestTakers": null,
+      "recruitCount": 22,
+      "sourceId": "eoffcn-2026-snapshot-20251119-0900",
+      "sourceLevel": "secondary",
+      "notes": "页面列出过审人数前十与竞争最激烈岗位榜单；将可与2026职位库按职位代码、计划数匹配的岗位逐行记录。原榜另有3个代码（319900803、242501302、819910005）暂无本地候选职位，未挂到岗位；顺义文旅为单位级信息，未猜职位代码。不是全市完整报名清单；人数为第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -89543,7 +91097,7 @@
       "recruitCount": 1,
       "sourceId": "eoffcn-2026-snapshot-20251119-0900",
       "sourceLevel": "secondary",
-      "notes": "页面列出市级竞争最激烈岗位榜单；将其中能与本地候选职位按职位代码、招录数匹配的岗位逐行记录，包括昌平、门头沟、朝阳、通州、海淀和延庆的岗位。另保留该页过审人数最多表中与职位库匹配的朝阳公安和大兴公安岗位。不是全市完整报名清单；人数为第三方资格审查快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面列出过审人数前十与竞争最激烈岗位榜单；将可与2026职位库按职位代码、计划数匹配的岗位逐行记录。原榜另有3个代码（319900803、242501302、819910005）暂无本地候选职位，未挂到岗位；顺义文旅为单位级信息，未猜职位代码。不是全市完整报名清单；人数为第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -89561,7 +91115,7 @@
       "recruitCount": 2,
       "sourceId": "eoffcn-2026-snapshot-20251119-0900",
       "sourceLevel": "secondary",
-      "notes": "页面列出市级竞争最激烈岗位榜单；将其中能与本地候选职位按职位代码、招录数匹配的岗位逐行记录，包括昌平、门头沟、朝阳、通州、海淀和延庆的岗位。另保留该页过审人数最多表中与职位库匹配的朝阳公安和大兴公安岗位。不是全市完整报名清单；人数为第三方资格审查快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面列出过审人数前十与竞争最激烈岗位榜单；将可与2026职位库按职位代码、计划数匹配的岗位逐行记录。原榜另有3个代码（319900803、242501302、819910005）暂无本地候选职位，未挂到岗位；顺义文旅为单位级信息，未猜职位代码。不是全市完整报名清单；人数为第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -89579,7 +91133,7 @@
       "recruitCount": 1,
       "sourceId": "eoffcn-2026-snapshot-20251119-0900",
       "sourceLevel": "secondary",
-      "notes": "页面列出市级竞争最激烈岗位榜单；将其中能与本地候选职位按职位代码、招录数匹配的岗位逐行记录，包括昌平、门头沟、朝阳、通州、海淀和延庆的岗位。另保留该页过审人数最多表中与职位库匹配的朝阳公安和大兴公安岗位。不是全市完整报名清单；人数为第三方资格审查快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面列出过审人数前十与竞争最激烈岗位榜单；将可与2026职位库按职位代码、计划数匹配的岗位逐行记录。原榜另有3个代码（319900803、242501302、819910005）暂无本地候选职位，未挂到岗位；顺义文旅为单位级信息，未猜职位代码。不是全市完整报名清单；人数为第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -89597,7 +91151,7 @@
       "recruitCount": 2,
       "sourceId": "eoffcn-2026-snapshot-20251119-0900",
       "sourceLevel": "secondary",
-      "notes": "页面列出市级竞争最激烈岗位榜单；将其中能与本地候选职位按职位代码、招录数匹配的岗位逐行记录，包括昌平、门头沟、朝阳、通州、海淀和延庆的岗位。另保留该页过审人数最多表中与职位库匹配的朝阳公安和大兴公安岗位。不是全市完整报名清单；人数为第三方资格审查快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面列出过审人数前十与竞争最激烈岗位榜单；将可与2026职位库按职位代码、计划数匹配的岗位逐行记录。原榜另有3个代码（319900803、242501302、819910005）暂无本地候选职位，未挂到岗位；顺义文旅为单位级信息，未猜职位代码。不是全市完整报名清单；人数为第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -89615,7 +91169,7 @@
       "recruitCount": 1,
       "sourceId": "eoffcn-2026-snapshot-20251119-0900",
       "sourceLevel": "secondary",
-      "notes": "页面列出市级竞争最激烈岗位榜单；将其中能与本地候选职位按职位代码、招录数匹配的岗位逐行记录，包括昌平、门头沟、朝阳、通州、海淀和延庆的岗位。另保留该页过审人数最多表中与职位库匹配的朝阳公安和大兴公安岗位。不是全市完整报名清单；人数为第三方资格审查快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面列出过审人数前十与竞争最激烈岗位榜单；将可与2026职位库按职位代码、计划数匹配的岗位逐行记录。原榜另有3个代码（319900803、242501302、819910005）暂无本地候选职位，未挂到岗位；顺义文旅为单位级信息，未猜职位代码。不是全市完整报名清单；人数为第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -89633,7 +91187,7 @@
       "recruitCount": 1,
       "sourceId": "eoffcn-2026-snapshot-20251119-0900",
       "sourceLevel": "secondary",
-      "notes": "页面列出市级竞争最激烈岗位榜单；将其中能与本地候选职位按职位代码、招录数匹配的岗位逐行记录，包括昌平、门头沟、朝阳、通州、海淀和延庆的岗位。另保留该页过审人数最多表中与职位库匹配的朝阳公安和大兴公安岗位。不是全市完整报名清单；人数为第三方资格审查快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面列出过审人数前十与竞争最激烈岗位榜单；将可与2026职位库按职位代码、计划数匹配的岗位逐行记录。原榜另有3个代码（319900803、242501302、819910005）暂无本地候选职位，未挂到岗位；顺义文旅为单位级信息，未猜职位代码。不是全市完整报名清单；人数为第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "year": 2026,
@@ -92785,8 +94339,14 @@
       "year": 2026,
       "url": "https://www.eoffcn.com/kszx/detail/1902238.html",
       "observedAt": "2025-11-17 18:00",
-      "accessedAt": "2026-10-10",
+      "accessedAt": "2026-10-11",
       "positionSnapshots": [
+        {
+          "positionCode": "232501603",
+          "scope": "position-level",
+          "applicantsQualified": 117,
+          "recruitCount": 55
+        },
         {
           "positionCode": "821261102",
           "scope": "position-level",
@@ -92848,6 +94408,12 @@
           "recruitCount": 1
         },
         {
+          "positionCode": "231568301",
+          "scope": "position-level",
+          "applicantsQualified": 20,
+          "recruitCount": 2
+        },
+        {
           "positionCode": "241369303",
           "scope": "position-level",
           "applicantsQualified": 11,
@@ -92861,7 +94427,7 @@
           "recruitCount": 1
         }
       ],
-      "notes": "页面逐职位表列出市级过审人数前十岗位；记录其中可与2026职位库按代码、招录人数匹配的岗位（含昌平区档案馆821261102、朝阳区东坝地区230531801、朝阳公安分局232502003及平谷区市场监督管理局241369303）。昌平区总工会9人/计划1人仅见单位汇总，未展示职位代码，故仍记为单位级。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面逐职位表列出市级过审人数前十岗位；记录其中可与2026职位库按代码、招录人数匹配的岗位，包括公安交通管理局职位232501603（117/55）。大兴天宫院街道20人/2人来自单位榜单、原文未列代码；职位镜像在该单位仅列一条岗位231568301，因此按唯一候选挂接，属于单位级数据推定岗位，不是原文直接报出的职位码。昌平区总工会9人/计划1人仅见单位汇总，未展示职位代码，仍记为单位级。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "sourceId": "eoffcn-2026-snapshot-20251118-0900",
@@ -92872,8 +94438,20 @@
       "year": 2026,
       "url": "https://www.eoffcn.com/kszx/detail/1902239.html",
       "observedAt": "2025-11-18 09:00",
-      "accessedAt": "2026-10-10",
+      "accessedAt": "2026-10-11",
       "positionSnapshots": [
+        {
+          "positionCode": "232501603",
+          "scope": "position-level",
+          "applicantsQualified": 184,
+          "recruitCount": 55
+        },
+        {
+          "positionCode": "242503201",
+          "scope": "position-level",
+          "applicantsQualified": 42,
+          "recruitCount": 17
+        },
         {
           "positionCode": "821261102",
           "scope": "position-level",
@@ -92959,7 +94537,7 @@
           "recruitCount": 1
         }
       ],
-      "notes": "页面列出市级过审人数前十及竞争最激烈岗位；记录其中能与2026职位库按代码、招录人数匹配的岗位。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面列出市级过审人数前十及竞争最激烈岗位；记录其中能与2026职位库按代码、招录人数匹配的岗位，包括交管局一线执法岗（232501603，184/55）和密云公安分局一线执法岗1（242503201，42/17）。该页面不是全市完整岗位明细；人数是第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "sourceId": "eoffcn-2026-snapshot-20251118-1800",
@@ -92971,8 +94549,14 @@
       "geographicScope": "北京市（报道中列出的市级前十岗位中可与职位库代码匹配的记录，非全市完整清单）",
       "url": "https://www.eoffcn.com/kszx/detail/1902242.html",
       "observedAt": "2025-11-18 18:00",
-      "accessedAt": "2026-10-10",
+      "accessedAt": "2026-10-11",
       "positionSnapshots": [
+        {
+          "positionCode": "232501603",
+          "scope": "position-level",
+          "applicantsQualified": 450,
+          "recruitCount": 55
+        },
         {
           "positionCode": "821261102",
           "scope": "position-level",
@@ -93052,7 +94636,7 @@
           "recruitCount": 1
         }
       ],
-      "notes": "报道注明竞争比按资格审查通过人数/招录人数计算；此处逐职位保存市级过审人数前十和高竞争岗位中可与2026职位库按职位代码、招录数匹配的记录。该页面不是全市完整清单；人数是第三方资格审查快照，不是最终缴费或实考人数。"
+      "notes": "报道注明竞争比按资格审查通过人数/招录人数计算；此处逐职位保存市级过审人数前十和高竞争岗位中可与2026职位库按职位代码、招录数匹配的记录，包括交管局职位232501603（450/55）。该页面不是全市完整清单；人数是第三方资格审查快照，不是最终缴费或实考人数。"
     },
     {
       "sourceId": "eoffcn-2026-snapshot-20251119-0900",
@@ -93063,13 +94647,31 @@
       "year": 2026,
       "url": "https://www.eoffcn.com/kszx/detail/1903971.html",
       "observedAt": "2025-11-19 09:00",
-      "accessedAt": "2026-10-08",
+      "accessedAt": "2026-10-11",
       "positionSnapshots": [
+        {
+          "positionCode": "232501603",
+          "scope": "position-level",
+          "applicantsQualified": 502,
+          "recruitCount": 55
+        },
         {
           "positionCode": "821261102",
           "scope": "position-level",
           "applicantsQualified": 275,
           "recruitCount": 2
+        },
+        {
+          "positionCode": "232502501",
+          "scope": "position-level",
+          "applicantsQualified": 249,
+          "recruitCount": 30
+        },
+        {
+          "positionCode": "232502102",
+          "scope": "position-level",
+          "applicantsQualified": 214,
+          "recruitCount": 32
         },
         {
           "positionCode": "821263001",
@@ -93094,6 +94696,12 @@
           "scope": "position-level",
           "applicantsQualified": 183,
           "recruitCount": 32
+        },
+        {
+          "positionCode": "232502201",
+          "scope": "position-level",
+          "applicantsQualified": 120,
+          "recruitCount": 22
         },
         {
           "positionCode": "220946301",
@@ -93133,7 +94741,7 @@
           "recruitCount": 1
         }
       ],
-      "notes": "页面列出市级竞争最激烈岗位榜单；将其中能与本地候选职位按职位代码、招录数匹配的岗位逐行记录，包括昌平、门头沟、朝阳、通州、海淀和延庆的岗位。另保留该页过审人数最多表中与职位库匹配的朝阳公安和大兴公安岗位。不是全市完整报名清单；人数为第三方资格审查快照，不是最终报名、缴费或实考人数。"
+      "notes": "页面列出过审人数前十与竞争最激烈岗位榜单；将可与2026职位库按职位代码、计划数匹配的岗位逐行记录。原榜另有3个代码（319900803、242501302、819910005）暂无本地候选职位，未挂到岗位；顺义文旅为单位级信息，未猜职位代码。不是全市完整报名清单；人数为第三方资格审查快照，不是最终报名、缴费或实考人数。"
     },
     {
       "sourceId": "eoffcn-2026-snapshot-20251119-1800",
@@ -97946,6 +99554,258 @@
       "reportedPositionCount": 1,
       "reportedRecruitCount": 2,
       "notes": "独立职位详情提供职位名称、学历、专业及可见资格条件摘要；未与官方职位表逐代码核验。"
+    },
+    {
+      "sourceId": "daxing-2026-unit-statistics",
+      "title": "北京公务员职位网 2026 大兴区单位职位表：北京市大兴区统计局",
+      "publisher": "北京公务员职位网（第三方职位镜像）",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "geographicScope": "按职位单位名称判定大兴区；未以地区筛选字段替代单位归属",
+      "url": "https://bj.gwyzwb.com/daxing/2026_20.html",
+      "accessedAt": "2026-10-11",
+      "reportedPositionCount": 2,
+      "reportedRecruitCount": 6,
+      "notes": "单位页列出两个同名综合统计岗：821566201招4人、821566202招2人。成公进面分样本没有岗位代码，两条同名分数因此均保留歧义，不分配到单个职位。资格条件仍待官方职位表逐码核验。"
+    },
+    {
+      "sourceId": "daxing-2026-unit-221566401",
+      "title": "北京公务员职位网 2026 大兴区单位职位表：北京市大兴区政务服务和数据管理局",
+      "publisher": "北京公务员职位网（第三方职位镜像）",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "geographicScope": "按职位单位名称判定大兴区；未以地区筛选字段替代单位归属",
+      "url": "https://bj.gwyzwb.com/daxing/2026_22.html",
+      "accessedAt": "2026-10-11",
+      "reportedPositionCount": 1,
+      "reportedRecruitCount": 1,
+      "notes": "单位页列代码221566401、职位名信息化管理岗、学历、专业和1人招录数；与华图独立职位详情交叉核对。资格条件仍待官方职位表逐码核验。"
+    },
+    {
+      "sourceId": "huatu-2026-daxing-job-221566401",
+      "title": "华图教育 2026 大兴区职位详情：北京市大兴区政务服务和数据管理局 信息化管理岗",
+      "publisher": "华图教育",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "geographicScope": "按职位单位名称判定大兴区；未以地区筛选字段替代单位归属",
+      "url": "https://ah.huatu.com/zw/bjgwy/2026/1305.html",
+      "accessedAt": "2026-10-11",
+      "reportedPositionCount": 1,
+      "reportedRecruitCount": 1,
+      "notes": "详情页列出代码221566401、单位、岗位名称、学历、专业、招录人数和可见资格条件，与北京公务员职位网的区级单位列表相互核对；不替代官方职位简章。"
+    },
+    {
+      "sourceId": "daxing-2026-unit-finance",
+      "title": "北京公务员职位网 2026 大兴区单位职位表：北京市大兴区财政局",
+      "publisher": "北京公务员职位网（第三方职位镜像）",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "geographicScope": "按职位单位名称判定大兴区；未以地区筛选字段替代单位归属",
+      "url": "https://bj.gwyzwb.com/daxing/2026_10.html",
+      "accessedAt": "2026-10-11",
+      "reportedPositionCount": 3,
+      "reportedRecruitCount": 6,
+      "notes": "单位页列3个岗位及代码、名称、学历、专业和招录数。两条综合管理岗同名，成公进面分样本因此只能保留歧义；职位镜像字段未与官方职位表逐码核验。"
+    },
+    {
+      "sourceId": "daxing-2026-unit-court",
+      "title": "北京公务员职位网 2026 大兴区单位职位表：北京市大兴区人民法院",
+      "publisher": "北京公务员职位网（第三方职位镜像）",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "geographicScope": "按职位单位名称判定大兴区；未以地区筛选字段替代单位归属",
+      "url": "https://bj.gwyzwb.com/daxing/2026_5.html",
+      "accessedAt": "2026-10-11",
+      "reportedPositionCount": 1,
+      "reportedRecruitCount": 8,
+      "notes": "单位页列代码526013001法官助理岗、学历、专业和8人招录数；未与官方职位表逐代码核验。"
+    },
+    {
+      "sourceId": "daxing-2026-unit-procuratorate",
+      "title": "北京公务员职位网 2026 大兴区单位职位表：北京市大兴区人民检察院",
+      "publisher": "北京公务员职位网（第三方职位镜像）",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "geographicScope": "按职位单位名称判定大兴区；未以地区筛选字段替代单位归属",
+      "url": "https://bj.gwyzwb.com/daxing/2026_6.html",
+      "accessedAt": "2026-10-11",
+      "reportedPositionCount": 3,
+      "reportedRecruitCount": 8,
+      "notes": "单位页列3个岗位及代码、名称、学历、专业和招录数；未与官方职位表逐代码核验。"
+    },
+    {
+      "sourceId": "daxing-2026-unit-party-school",
+      "title": "北京公务员职位网 2026 大兴区单位职位表：中共北京市大兴区委党校",
+      "publisher": "北京公务员职位网（第三方职位镜像）",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "geographicScope": "按职位单位名称判定大兴区；未以地区筛选字段替代单位归属",
+      "url": "https://bj.gwyzwb.com/daxing/2026_8.html",
+      "accessedAt": "2026-10-11",
+      "reportedPositionCount": 1,
+      "reportedRecruitCount": 1,
+      "notes": "单位页列代码821565001培训管理岗、学历、专业和1人招录数；未与官方职位表逐代码核验。"
+    },
+    {
+      "sourceId": "daxing-2026-unit-ecology",
+      "title": "北京公务员职位网 2026 大兴区单位职位表：北京市大兴区生态环境局",
+      "publisher": "北京公务员职位网（第三方职位镜像）",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "geographicScope": "按职位单位名称判定大兴区；未以地区筛选字段替代单位归属",
+      "url": "https://bj.gwyzwb.com/daxing/2026_12.html",
+      "accessedAt": "2026-10-11",
+      "reportedPositionCount": 1,
+      "reportedRecruitCount": 2,
+      "notes": "单位页列代码221565401行政执法岗、学历、专业和2人招录数；未与官方职位表逐代码核验。"
+    },
+    {
+      "sourceId": "daxing-2026-unit-housing",
+      "title": "华图教育 2026 大兴区单位职位表：北京市大兴区住房和城乡建设委员会",
+      "publisher": "华图教育",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "geographicScope": "按职位单位名称判定大兴区；未以地区筛选字段替代单位归属",
+      "url": "https://ah.huatu.com/zw/bjgwy/daxing/2026_14.html",
+      "accessedAt": "2026-10-11",
+      "reportedPositionCount": 5,
+      "reportedRecruitCount": 6,
+      "notes": "单位页汇总5个岗位、6人；本轮只导入与可见进面分样本对应的代码821565601及821565604。821565604的学历与专业字段尚未取得可复核文本，故职位记录明确留空为待核，不参与专业匹配。职位镜像未与官方职位表逐代码核验。"
+    },
+    {
+      "sourceId": "daxing-2026-unit-housing-offcn-821565601",
+      "title": "中公职位详情 2026 大兴区住房和城乡建设委员会财务管理岗",
+      "publisher": "中公职位库",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "geographicScope": "按职位单位名称判定大兴区；未以地区筛选字段替代单位归属",
+      "url": "https://zw.admin.offcn.com/index.php/zwcx/zw/2511071910.html",
+      "accessedAt": "2026-10-11",
+      "reportedPositionCount": 1,
+      "reportedRecruitCount": 1,
+      "notes": "详情页列代码821565601、职位名称财务管理岗、1人招录、学历与专业字段；与华图单位职位镜像相互核对，仍属二手来源。"
+    },
+    {
+      "sourceId": "daxing-2026-unit-coop",
+      "title": "北京公务员职位网 2026 大兴区单位职位表：北京市大兴区农村合作经济经营管理站",
+      "publisher": "北京公务员职位网（第三方职位镜像）",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "geographicScope": "按职位单位名称判定大兴区；未以地区筛选字段替代单位归属",
+      "url": "https://bj.gwyzwb.com/daxing/2026_24.html",
+      "accessedAt": "2026-10-11",
+      "reportedPositionCount": 1,
+      "reportedRecruitCount": 1,
+      "notes": "单位页列代码821566601综合管理岗、学历、专业和1人招录数；未与官方职位表逐代码核验。"
+    },
+    {
+      "sourceId": "daxing-2026-unit-yufa",
+      "title": "北京公务员职位网 2026 大兴区单位职位表：北京市大兴区榆垡镇",
+      "publisher": "北京公务员职位网（第三方职位镜像）",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "geographicScope": "按职位单位名称判定大兴区；未以地区筛选字段替代单位归属",
+      "url": "https://bj.gwyzwb.com/daxing/2026_28.html",
+      "accessedAt": "2026-10-11",
+      "reportedPositionCount": 2,
+      "reportedRecruitCount": 2,
+      "notes": "单位页列2个同名综合管理岗：231567102、231567101各招1人。进面分样本同一岗位名出现两行，均保留歧义，不分配代码。"
+    },
+    {
+      "sourceId": "daxing-2026-unit-caiyu",
+      "title": "北京公务员职位网 2026 大兴区单位职位表：北京市大兴区采育镇",
+      "publisher": "北京公务员职位网（第三方职位镜像）",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "geographicScope": "按职位单位名称判定大兴区；未以地区筛选字段替代单位归属",
+      "url": "https://bj.gwyzwb.com/daxing/2026_34.html",
+      "accessedAt": "2026-10-11",
+      "reportedPositionCount": 5,
+      "reportedRecruitCount": 6,
+      "notes": "单位页列4个同名综合管理岗及1个行政执法岗，共5岗/6人。进面分样本的综合管理岗不能映射到其中单一代码，保留歧义。"
+    },
+    {
+      "sourceId": "daxing-2026-unit-xingfeng",
+      "title": "北京公务员职位网 2026 大兴区单位职位表：北京市大兴区兴丰街道",
+      "publisher": "北京公务员职位网（第三方职位镜像）",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "geographicScope": "按职位单位名称判定大兴区；未以地区筛选字段替代单位归属",
+      "url": "https://bj.gwyzwb.com/daxing/2026_38.html",
+      "accessedAt": "2026-10-11",
+      "reportedPositionCount": 3,
+      "reportedRecruitCount": 4,
+      "notes": "单位页列3岗/4人，其中代码231568101为唯一综合管理岗，与进面分样本按单位+岗位名唯一匹配。"
+    },
+    {
+      "sourceId": "daxing-2026-unit-tiangongyuan",
+      "title": "北京公务员职位网 2026 大兴区单位职位表：北京市大兴区天宫院街道",
+      "publisher": "北京公务员职位网（第三方职位镜像）",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "geographicScope": "按职位单位名称判定大兴区；未以地区筛选字段替代单位归属",
+      "url": "https://bj.gwyzwb.com/daxing/2026_40.html",
+      "accessedAt": "2026-10-11",
+      "reportedPositionCount": 1,
+      "reportedRecruitCount": 2,
+      "notes": "单位页仅列代码231568301行政执法岗、2人招录；中公报名文章给出天宫院街道单位级20人过审/2人计划，按唯一岗位作推定映射。"
+    },
+    {
+      "sourceId": "daxing-2026-unit-gaomidian",
+      "title": "北京公务员职位网 2026 大兴区单位职位表：北京市大兴区高米店街道",
+      "publisher": "北京公务员职位网（第三方职位镜像）",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "geographicScope": "按职位单位名称判定大兴区；未以地区筛选字段替代单位归属",
+      "url": "https://bj.gwyzwb.com/daxing/2026_41.html",
+      "accessedAt": "2026-10-11",
+      "reportedPositionCount": 1,
+      "reportedRecruitCount": 1,
+      "notes": "单位页列代码231568401综合管理岗、学历、专业和1人招录数；未与官方职位表逐代码核验。"
+    },
+    {
+      "sourceId": "daxing-2026-unit-yinghai",
+      "title": "北京公务员职位网 2026 大兴区单位职位表：北京市大兴区瀛海镇",
+      "publisher": "北京公务员职位网（第三方职位镜像）",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "geographicScope": "按职位单位名称判定大兴区；未以地区筛选字段替代单位归属",
+      "url": "https://bj.gwyzwb.com/daxing/2026_37.html",
+      "accessedAt": "2026-10-11",
+      "reportedPositionCount": 2,
+      "reportedRecruitCount": 4,
+      "notes": "单位页列2个不同名称综合管理岗；“综合管理岗2”对应代码231568002。"
+    },
+    {
+      "sourceId": "daxing-2026-unit-boxing",
+      "title": "华图教育 2026 大兴区单位职位表：北京市大兴区博兴街道",
+      "publisher": "华图教育",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "geographicScope": "按职位单位名称判定大兴区；未以地区筛选字段替代单位归属",
+      "url": "https://ah.huatu.com/zw/bjgwy/daxing/2026_4.html",
+      "accessedAt": "2026-10-11",
+      "reportedPositionCount": 1,
+      "reportedRecruitCount": 1,
+      "notes": "职位页列代码239910901城市管理岗、硕士学历、专业摘要及1人招录；官方面试通知另以代码核实身份，本记录仍不是官方职位表逐代码核验。"
     },
     {
       "sourceId": "huairou-2025-gwy-index",
@@ -106313,7 +108173,7 @@
       "minimum": 102.25,
       "maximum": 136.25,
       "scope": "大兴区岗位最低进面分部分样本",
-      "notes": "页面称大兴区77人进入面试，展示31条部分岗位最低分，范围102.25—136.25；表格没有职位代码。5条可按同年度单位+岗位名与候选职位唯一匹配，教育委员会两条同名记录对应两个职位、保留2条歧义，其余24条未在现有职位候选行找到唯一对应。均为第三方样本，不能代表全区全量，也不是笔试合格线。"
+      "notes": "页面称大兴区77人进入面试，展示31条部分岗位最低分，范围102.25—136.25；表格没有职位代码。6条可按同年度单位+岗位名与候选职位唯一匹配；教育委员会两条同名记录及统计局两条分数均有同名多岗歧义，共4条不分配单一代码；其余21条未找到可唯一对应候选。均为第三方样本，不能代表全区全量，也不是笔试合格线。"
     },
     {
       "sourceId": "cgzj-2026-shijingshan-cutoff-sample",
@@ -107082,6 +108942,266 @@
       "notes": "第三方职位详情列代码241877202、东邵渠镇综合管理岗、计划招录2人及中共党员要求；未与官方职位表逐代码核验。"
     },
     {
+      "sourceId": "gwyzwb-2026-miyun-party-office",
+      "title": "京考职位网：密云区委办公室（保密局）综合管理岗职位详情（121874401）",
+      "publisher": "京考职位网",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "districtId": "miyun",
+      "geographicScope": "密云区",
+      "url": "https://bj.gwyzwb.com/2026/1419.html",
+      "accessedAt": "2026-10-11",
+      "notes": "职位详情列代码121874401、中共北京市密云区委办公室（保密局）综合管理岗、计划招录2人；成公分数表省略单位名中的“中共”前缀，按同年度单位实体和岗位名唯一匹配。第三方职位镜像和分数样本均未与官方职位表逐代码复核。"
+    },
+    {
+      "sourceId": "gwyzwb-2026-miyun-eco-environment",
+      "title": "京考职位网：密云区生态环境局行政执法岗1职位详情（221875501）",
+      "publisher": "京考职位网",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "districtId": "miyun",
+      "geographicScope": "密云区",
+      "url": "https://bj.gwyzwb.com/2026/1434.html",
+      "accessedAt": "2026-10-11",
+      "notes": "职位详情列代码221875501、密云区生态环境局行政执法岗1、计划招录2人；与成公进面分样本按同年度单位名和岗位名唯一匹配。第三方职位镜像和分数样本均未与官方职位表逐代码复核。"
+    },
+    {
+      "sourceId": "gwyzwb-2026-miyun-government-office",
+      "title": "京考职位网：密云区人民政府办公室2026职位表",
+      "publisher": "京考职位网",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "districtId": "miyun",
+      "geographicScope": "密云区",
+      "url": "https://bj.gwyzwb.com/miyun/2026_11.html",
+      "accessedAt": "2026-10-11",
+      "notes": "单位职位表列代码221874801、综合管理岗、计划招录1人；第三方镜像，未与官方职位表逐代码核验。"
+    },
+    {
+      "sourceId": "gwyzwb-2026-miyun-market-supervision",
+      "title": "京考职位网：密云区市场监督管理局2026职位表",
+      "publisher": "京考职位网",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "districtId": "miyun",
+      "geographicScope": "密云区",
+      "url": "https://bj.gwyzwb.com/miyun/2026_23.html",
+      "accessedAt": "2026-10-11",
+      "notes": "单位职位表列代码221876101、241876102、241876103、241876104及对应名称、计划数；其中两条同名综合管理岗无法仅凭成公分数表区分。第三方镜像，未与官方职位表逐代码核验。"
+    },
+    {
+      "sourceId": "gwyzwb-2026-miyun-science-tech",
+      "title": "京考职位网：密云区科学技术委员会2026职位表",
+      "publisher": "京考职位网",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "districtId": "miyun",
+      "geographicScope": "密云区",
+      "url": "https://bj.gwyzwb.com/miyun/2026_14.html",
+      "accessedAt": "2026-10-11",
+      "notes": "单位职位表列代码221875101、综合管理岗、计划招录1人；第三方镜像，未与官方职位表逐代码核验。"
+    },
+    {
+      "sourceId": "gwyzwb-2026-miyun-party-history",
+      "title": "京考职位网：密云区委党史研究室2026职位表",
+      "publisher": "京考职位网",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "districtId": "miyun",
+      "geographicScope": "密云区",
+      "url": "https://bj.gwyzwb.com/miyun/2026_9.html",
+      "accessedAt": "2026-10-11",
+      "notes": "单位职位表列代码821874601、党史研究岗、计划招录1人；第三方镜像，未与官方职位表逐代码核验。"
+    },
+    {
+      "sourceId": "gwyzwb-2026-miyun-greening",
+      "title": "京考职位网：密云区园林绿化局2026职位表",
+      "publisher": "京考职位网",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "districtId": "miyun",
+      "geographicScope": "密云区",
+      "url": "https://bj.gwyzwb.com/miyun/2026_26.html",
+      "accessedAt": "2026-10-11",
+      "notes": "单位职位表列代码221876401、综合管理岗、计划招录1人；第三方镜像，未与官方职位表逐代码核验。"
+    },
+    {
+      "sourceId": "gwyzwb-2026-miyun-finance",
+      "title": "京考职位网：密云区财政局2026职位表",
+      "publisher": "京考职位网",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "districtId": "miyun",
+      "geographicScope": "密云区",
+      "url": "https://bj.gwyzwb.com/miyun/2026_16.html",
+      "accessedAt": "2026-10-11",
+      "notes": "单位职位表列综合管理岗221875301（计划2人）及绩效考评岗821875303（计划1人）；第三方镜像，未与官方职位表逐代码核验。"
+    },
+    {
+      "sourceId": "gwyzwb-2026-miyun-gulou",
+      "title": "京考职位网：密云区鼓楼街道2026职位表",
+      "publisher": "京考职位网",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "districtId": "miyun",
+      "geographicScope": "密云区",
+      "url": "https://bj.gwyzwb.com/miyun/2026_29.html",
+      "accessedAt": "2026-10-11",
+      "notes": "单位职位表列代码241876801、综合管理岗、计划招录1人；第三方镜像，未与官方职位表逐代码核验。"
+    },
+    {
+      "sourceId": "gwyzwb-2026-miyun-housing",
+      "title": "京考职位网：密云区住房和城乡建设委员会2026职位表",
+      "publisher": "京考职位网",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "districtId": "miyun",
+      "geographicScope": "密云区",
+      "url": "https://bj.gwyzwb.com/miyun/2026_19.html",
+      "accessedAt": "2026-10-11",
+      "notes": "单位职位表列两个同名综合管理岗221875601、221875602，计划各1人；成公分数表未给职位代码，最低分126保留为歧义记录。第三方镜像，未与官方职位表逐代码核验。"
+    },
+    {
+      "sourceId": "gwyzwb-2026-miyun-court",
+      "title": "京考职位网：密云区人民法院2026职位表",
+      "publisher": "京考职位网",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "districtId": "miyun",
+      "geographicScope": "密云区",
+      "url": "https://bj.gwyzwb.com/miyun/2026_4.html",
+      "accessedAt": "2026-10-11",
+      "notes": "单位职位表列法官助理岗526013304（计划6人）及新闻宣传岗526013301（计划1人）；第三方镜像，未与官方职位表逐代码核验。"
+    },
+    {
+      "sourceId": "gwyzwb-2026-miyun-archives",
+      "title": "京考职位网：密云区档案馆数字档案管理岗职位详情（821874501）",
+      "publisher": "京考职位网",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "districtId": "miyun",
+      "geographicScope": "密云区",
+      "url": "https://bj.gwyzwb.com/2026/1420.html",
+      "accessedAt": "2026-10-11",
+      "notes": "职位详情列代码821874501、数字档案管理岗、计划招录2人；第三方镜像，未与官方职位表逐代码核验。"
+    },
+    {
+      "sourceId": "gwyzwb-2026-miyun-bulaotun",
+      "title": "京考职位网：密云区不老屯镇综合管理岗职位详情（241877701）",
+      "publisher": "京考职位网",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "districtId": "miyun",
+      "geographicScope": "密云区",
+      "url": "https://bj.gwyzwb.com/2026/1463.html",
+      "accessedAt": "2026-10-11",
+      "notes": "职位详情列代码241877701、综合管理岗、计划招录1人；第三方镜像，未与官方职位表逐代码核验。"
+    },
+    {
+      "sourceId": "gwyzwb-2026-miyun-agriculture",
+      "title": "京考职位网：密云区委农工委、区农业农村局2026职位表",
+      "publisher": "京考职位网",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "districtId": "miyun",
+      "geographicScope": "密云区",
+      "url": "https://bj.gwyzwb.com/miyun/2026_42.html",
+      "accessedAt": "2026-10-11",
+      "notes": "单位职位表列代码221875801、综合管理岗、计划招录1人；第三方镜像，未与官方职位表逐代码核验。"
+    },
+    {
+      "sourceId": "gwyzwb-2026-miyun-health",
+      "title": "京考职位网：密云区卫生健康委员会2026职位表",
+      "publisher": "京考职位网",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "districtId": "miyun",
+      "geographicScope": "密云区",
+      "url": "https://bj.gwyzwb.com/miyun/2026_21.html",
+      "accessedAt": "2026-10-11",
+      "notes": "单位职位表列代码221875902、财务管理岗、计划招录1人；第三方镜像，未与官方职位表逐代码核验。"
+    },
+    {
+      "sourceId": "gwyzwb-2026-miyun-public-security",
+      "title": "京考职位网：北京市公安局密云分局2026职位详情（242503201）",
+      "publisher": "京考职位网",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "districtId": "miyun",
+      "geographicScope": "密云区",
+      "url": "https://bj.gwyzwb.com/2026/82.html",
+      "accessedAt": "2026-10-11",
+      "notes": "职位详情列代码242503201、一线执法岗1、计划招录17人；第三方镜像，未与官方职位表逐代码核验。"
+    },
+    {
+      "sourceId": "fenbi-2026-miyun-page-1",
+      "title": "粉笔职位库：2026密云区职位表（第1页）",
+      "publisher": "粉笔职位库",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "districtId": "miyun",
+      "geographicScope": "密云区",
+      "url": "https://www.fenbi.com/page/positions/1/438923?region=170",
+      "accessedAt": "2026-10-11",
+      "notes": "列表列出纪委监委综合管理岗1（121876701，招2人）和综合管理岗2（121876702，招1人）的单位、岗位名、代码及招录数。页面过审/报考数字未见可核验的明确快照时点，本项目不将其录入报名观察。第三方职位镜像，未与官方职位表逐码复核。"
+    },
+    {
+      "sourceId": "fenbi-2026-miyun-page-2",
+      "title": "粉笔职位库：2026密云区职位表（第2页）",
+      "publisher": "粉笔职位库",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "districtId": "miyun",
+      "geographicScope": "密云区",
+      "url": "https://www.fenbi.com/page/positions/1/438923?page=2&region=170",
+      "accessedAt": "2026-10-11",
+      "notes": "列表列出经济和信息化局综合管理岗代码221875201、招录1人。页面过审/报考数字未见可核验的明确快照时点，本项目不将其录入报名观察。第三方职位镜像，未与官方职位表逐码复核。"
+    },
+    {
+      "sourceId": "fenbi-2026-miyun-page-5",
+      "title": "粉笔职位库：2026密云区职位表（第5页）",
+      "publisher": "粉笔职位库",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "districtId": "miyun",
+      "geographicScope": "密云区",
+      "url": "https://www.fenbi.com/page/positions/1/438923?page=5&region=170",
+      "accessedAt": "2026-10-11",
+      "notes": "列表列出十里堡镇综合管理岗（241877002，招2人）和溪翁庄镇综合管理岗（241877401，招1人）的单位、岗位名、代码及招录数。页面过审/报考数字未见可核验的明确快照时点，本项目不将其录入报名观察。第三方职位镜像，未与官方职位表逐码复核。"
+    },
+    {
+      "sourceId": "fenbi-2026-miyun-page-6",
+      "title": "粉笔职位库：2026密云区职位表（第6页）",
+      "publisher": "粉笔职位库",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "districtId": "miyun",
+      "geographicScope": "密云区",
+      "url": "https://www.fenbi.com/page/positions/1/438923?page=6&region=170",
+      "accessedAt": "2026-10-11",
+      "notes": "列表列出古北口镇综合管理岗（241877801，招1人）和穆家峪镇综合管理岗（241878002，招1人）的单位、岗位名、代码及招录数。页面过审/报考数字未见可核验的明确快照时点，本项目不将其录入报名观察。第三方职位镜像，未与官方职位表逐码复核。"
+    },
+    {
       "sourceId": "cgzj-2026-miyun-cutoff-sample",
       "title": "成公教育：2026京考密云区岗位最低进面分部分样本",
       "publisher": "成公教育",
@@ -107093,12 +109213,12 @@
       "url": "https://www.cgzj.com/sk/12627.html",
       "publishedAt": "2026-06-02",
       "accessedAt": "2026-10-11",
-      "samplePositions": 2,
+      "samplePositions": 28,
       "intervieweeCount": 63,
       "minimum": 95,
       "maximum": 140.25,
       "scope": "密云区岗位最低进面分部分样本",
-      "notes": "成公称密云区共63人进入面试，页面可见28条岗位分数。本库只保留可核实的极值样本：民政局综合管理岗140.25分可按同年单位和岗位名唯一匹配代码221874901；东邵渠镇综合管理岗95分未列代码，而京考职位网列同名代码241877201（面向服务基层项目人员）和241877202（中共党员），故保留为歧义记录、不挂到任一代码。均为第三方部分资料，非官方逐代码核验、非全区完整名单，也不是笔试合格线。"
+      "notes": "成公称密云区共63人进入面试，页面可见28条岗位最低进面分。本库保留全部28条可见样本：24条按同年单位/岗位名唯一匹配职位镜像代码，4条因同名岗位无法区分而不挂代码。分值范围95—140.25。均为第三方部分资料，非官方逐代码核验、非全区完整名单，也不是笔试合格线；公安类与普通职位计分口径可能不同，不直接横向比较。"
     }
   ],
   "studyPlan": [
@@ -108734,7 +110854,7 @@
       "sourceId": "cgzj-2026-daxing-cutoff-sample",
       "sourceLevel": "secondary",
       "complete": false,
-      "notes": "页面称大兴区77人进入面试，展示31条部分岗位最低分，范围102.25—136.25；表格没有职位代码。5条可按同年度单位+岗位名与候选职位唯一匹配，教育委员会两条同名记录对应两个职位、保留2条歧义，其余24条未在现有职位候选行找到唯一对应。均为第三方样本，不能代表全区全量，也不是笔试合格线。"
+      "notes": "页面称大兴区77人进入面试，展示31条部分岗位最低分，范围102.25—136.25；表格没有职位代码。6条可按同年度单位+岗位名与候选职位唯一匹配；教育委员会两条同名记录及统计局两条分数均有同名多岗歧义，共4条不分配单一代码；其余21条未找到可唯一对应候选。均为第三方样本，不能代表全区全量，也不是笔试合格线。"
     },
     {
       "year": 2026,
@@ -108799,14 +110919,14 @@
     {
       "year": 2026,
       "scope": "密云区岗位最低进面分部分样本",
-      "samplePositions": 2,
+      "samplePositions": 28,
       "sampleRecruits": null,
       "minimum": 95,
       "maximum": 140.25,
       "sourceId": "cgzj-2026-miyun-cutoff-sample",
       "sourceLevel": "secondary",
       "complete": false,
-      "notes": "成公称密云区共63人进入面试，页面可见28条岗位分数。本库只保留可核实的极值样本：民政局综合管理岗140.25分可按同年单位和岗位名唯一匹配代码221874901；东邵渠镇综合管理岗95分未列代码，而京考职位网列同名代码241877201（面向服务基层项目人员）和241877202（中共党员），故保留为歧义记录、不挂到任一代码。均为第三方部分资料，非官方逐代码核验、非全区完整名单，也不是笔试合格线。"
+      "notes": "成公称密云区共63人进入面试，页面可见28条岗位最低进面分。本库保留全部28条可见样本：24条按同年单位/岗位名唯一匹配职位镜像代码，4条因同名岗位无法区分而不挂代码。分值范围95—140.25。均为第三方部分资料，非官方逐代码核验、非全区完整名单，也不是笔试合格线；公安类与普通职位计分口径可能不同，不直接横向比较。"
     },
     {
       "year": 2026,
@@ -110838,8 +112958,8 @@
       "positionCode": null,
       "orgType": "区直",
       "score": 135,
-      "notes": "成公分数表未列职位代码；当前候选职位库没有同年度单位+岗位名的唯一对应，保留为未匹配，不推断代码。",
-      "mappingConfidence": "unmatched",
+      "notes": "成公分数表未列职位代码；大兴区统计局职位表有两个同名岗位：821566201（4人）和821566202（2人），无法唯一确认此分数对应哪一岗，未分配代码。",
+      "mappingConfidence": "ambiguous",
       "sourceId": "cgzj-2026-daxing-cutoff-sample",
       "sourceLevel": "secondary",
       "verification": "岗位代码未唯一匹配；保留空代码"
@@ -110868,8 +112988,8 @@
       "positionCode": null,
       "orgType": "区直",
       "score": 131.5,
-      "notes": "成公分数表未列职位代码；当前候选职位库没有同年度单位+岗位名的唯一对应，保留为未匹配，不推断代码。",
-      "mappingConfidence": "unmatched",
+      "notes": "成公分数表未列职位代码；大兴区财政局职位镜像中821565202与221565203均为同名综合管理岗，无法唯一确定对应代码，保留歧义、不将分数挂到单岗。",
+      "mappingConfidence": "ambiguous",
       "sourceId": "cgzj-2026-daxing-cutoff-sample",
       "sourceLevel": "secondary",
       "verification": "岗位代码未唯一匹配；保留空代码"
@@ -110883,8 +113003,8 @@
       "positionCode": null,
       "orgType": "区直",
       "score": 131.5,
-      "notes": "成公分数表未列职位代码；当前候选职位库没有同年度单位+岗位名的唯一对应，保留为未匹配，不推断代码。",
-      "mappingConfidence": "unmatched",
+      "notes": "成公分数表未列职位代码；大兴区统计局职位表有两个同名岗位：821566201（4人）和821566202（2人），无法唯一确认此分数对应哪一岗，未分配代码。",
+      "mappingConfidence": "ambiguous",
       "sourceId": "cgzj-2026-daxing-cutoff-sample",
       "sourceLevel": "secondary",
       "verification": "岗位代码未唯一匹配；保留空代码"
@@ -110895,14 +113015,14 @@
       "unit": "北京市大兴区博兴街道",
       "title": "城市管理岗",
       "name": "北京市大兴区博兴街道｜城市管理岗",
-      "positionCode": null,
+      "positionCode": "239910901",
       "orgType": "街道",
       "score": 130.75,
-      "notes": "成公分数表未列职位代码；当前候选职位库没有同年度单位+岗位名的唯一对应，保留为未匹配，不推断代码。",
-      "mappingConfidence": "unmatched",
+      "notes": "成公分数表未列职位代码；按同年度单位+岗位名唯一匹配到华图镜像代码239910901，官方面试通知另确认岗位身份；分数仍为第三方部分样本。",
+      "mappingConfidence": "high",
       "sourceId": "cgzj-2026-daxing-cutoff-sample",
       "sourceLevel": "secondary",
-      "verification": "岗位代码未唯一匹配；保留空代码"
+      "verification": "年度、单位与岗位名唯一匹配"
     },
     {
       "id": "2026-cgzj-daxing-07",
@@ -110910,14 +113030,14 @@
       "unit": "北京市大兴区兴丰街道",
       "title": "综合管理岗",
       "name": "北京市大兴区兴丰街道｜综合管理岗",
-      "positionCode": null,
+      "positionCode": "231568101",
       "orgType": "街道",
       "score": 130.5,
-      "notes": "成公分数表未列职位代码；当前候选职位库没有同年度单位+岗位名的唯一对应，保留为未匹配，不推断代码。",
-      "mappingConfidence": "unmatched",
+      "notes": "成公分数表未列职位代码；按同年度单位+岗位名唯一匹配到职位镜像代码231568101，兴丰街道单位页该名称唯一；分数仍为第三方部分样本。",
+      "mappingConfidence": "high",
       "sourceId": "cgzj-2026-daxing-cutoff-sample",
       "sourceLevel": "secondary",
-      "verification": "岗位代码未唯一匹配；保留空代码"
+      "verification": "年度、单位与岗位名唯一匹配"
     },
     {
       "id": "2026-cgzj-daxing-08",
@@ -110925,14 +113045,14 @@
       "unit": "北京市大兴区人民检察院",
       "title": "检察综合岗",
       "name": "北京市大兴区人民检察院｜检察综合岗",
-      "positionCode": null,
+      "positionCode": "625015102",
       "orgType": "区直",
       "score": 130.25,
-      "notes": "成公分数表未列职位代码；当前候选职位库没有同年度单位+岗位名的唯一对应，保留为未匹配，不推断代码。",
-      "mappingConfidence": "unmatched",
+      "notes": "成公分数表未列职位代码；按同年度单位+岗位名唯一匹配到职位镜像代码625015102，分数仍为第三方部分样本。",
+      "mappingConfidence": "high",
       "sourceId": "cgzj-2026-daxing-cutoff-sample",
       "sourceLevel": "secondary",
-      "verification": "岗位代码未唯一匹配；保留空代码"
+      "verification": "年度、单位与岗位名唯一匹配"
     },
     {
       "id": "2026-cgzj-daxing-09",
@@ -110940,14 +113060,14 @@
       "unit": "北京市大兴区财政局",
       "title": "预算管理岗",
       "name": "北京市大兴区财政局｜预算管理岗",
-      "positionCode": null,
+      "positionCode": "221565201",
       "orgType": "区直",
       "score": 130.25,
-      "notes": "成公分数表未列职位代码；当前候选职位库没有同年度单位+岗位名的唯一对应，保留为未匹配，不推断代码。",
-      "mappingConfidence": "unmatched",
+      "notes": "成公分数表未列职位代码；按同年度单位+岗位名唯一匹配到大兴区财政局职位镜像代码221565201，分数仍为第三方部分样本。",
+      "mappingConfidence": "high",
       "sourceId": "cgzj-2026-daxing-cutoff-sample",
       "sourceLevel": "secondary",
-      "verification": "岗位代码未唯一匹配；保留空代码"
+      "verification": "年度、单位与岗位名唯一匹配"
     },
     {
       "id": "2026-cgzj-daxing-10",
@@ -110970,14 +113090,14 @@
       "unit": "北京市大兴区农村合作经济经营管理站",
       "title": "综合管理岗",
       "name": "北京市大兴区农村合作经济经营管理站｜综合管理岗",
-      "positionCode": null,
+      "positionCode": "821566601",
       "orgType": "区直",
       "score": 130,
-      "notes": "成公分数表未列职位代码；当前候选职位库没有同年度单位+岗位名的唯一对应，保留为未匹配，不推断代码。",
-      "mappingConfidence": "unmatched",
+      "notes": "成公分数表未列职位代码；按同年度单位+岗位名唯一匹配到职位镜像代码821566601，分数仍为第三方部分样本。",
+      "mappingConfidence": "high",
       "sourceId": "cgzj-2026-daxing-cutoff-sample",
       "sourceLevel": "secondary",
-      "verification": "岗位代码未唯一匹配；保留空代码"
+      "verification": "年度、单位与岗位名唯一匹配"
     },
     {
       "id": "2026-cgzj-daxing-12",
@@ -110985,14 +113105,14 @@
       "unit": "中共北京市大兴区委党校",
       "title": "培训管理岗",
       "name": "中共北京市大兴区委党校｜培训管理岗",
-      "positionCode": null,
+      "positionCode": "821565001",
       "orgType": "区直",
       "score": 129.75,
-      "notes": "成公分数表未列职位代码；当前候选职位库没有同年度单位+岗位名的唯一对应，保留为未匹配，不推断代码。",
-      "mappingConfidence": "unmatched",
+      "notes": "成公分数表未列职位代码；按同年度单位+岗位名唯一匹配到职位镜像代码821565001，分数仍为第三方部分样本。",
+      "mappingConfidence": "high",
       "sourceId": "cgzj-2026-daxing-cutoff-sample",
       "sourceLevel": "secondary",
-      "verification": "岗位代码未唯一匹配；保留空代码"
+      "verification": "年度、单位与岗位名唯一匹配"
     },
     {
       "id": "2026-cgzj-daxing-13",
@@ -111018,8 +113138,8 @@
       "positionCode": null,
       "orgType": "镇",
       "score": 129,
-      "notes": "成公分数表未列职位代码；当前候选职位库没有同年度单位+岗位名的唯一对应，保留为未匹配，不推断代码。",
-      "mappingConfidence": "unmatched",
+      "notes": "成公分数表未列职位代码；采育镇有4个同名综合管理岗：231567701、231567702、231567703、231567704，无法唯一确定对应代码，保留歧义。",
+      "mappingConfidence": "ambiguous",
       "sourceId": "cgzj-2026-daxing-cutoff-sample",
       "sourceLevel": "secondary",
       "verification": "岗位代码未唯一匹配；保留空代码"
@@ -111030,14 +113150,14 @@
       "unit": "北京市大兴区人民法院",
       "title": "法官助理岗",
       "name": "北京市大兴区人民法院｜法官助理岗",
-      "positionCode": null,
+      "positionCode": "526013001",
       "orgType": "区直",
       "score": 128.75,
-      "notes": "成公分数表未列职位代码；当前候选职位库没有同年度单位+岗位名的唯一对应，保留为未匹配，不推断代码。",
-      "mappingConfidence": "unmatched",
+      "notes": "成公分数表未列职位代码；按同年度单位+岗位名唯一匹配到大兴区法院职位镜像代码526013001，分数仍为第三方部分样本。",
+      "mappingConfidence": "high",
       "sourceId": "cgzj-2026-daxing-cutoff-sample",
       "sourceLevel": "secondary",
-      "verification": "岗位代码未唯一匹配；保留空代码"
+      "verification": "年度、单位与岗位名唯一匹配"
     },
     {
       "id": "2026-cgzj-daxing-16",
@@ -111045,14 +113165,14 @@
       "unit": "北京市大兴区高米店街道",
       "title": "综合管理岗",
       "name": "北京市大兴区高米店街道｜综合管理岗",
-      "positionCode": null,
+      "positionCode": "231568401",
       "orgType": "街道",
       "score": 127.5,
-      "notes": "成公分数表未列职位代码；当前候选职位库没有同年度单位+岗位名的唯一对应，保留为未匹配，不推断代码。",
-      "mappingConfidence": "unmatched",
+      "notes": "成公分数表未列职位代码；按同年度单位+岗位名唯一匹配到职位镜像代码231568401，分数仍为第三方部分样本。",
+      "mappingConfidence": "high",
       "sourceId": "cgzj-2026-daxing-cutoff-sample",
       "sourceLevel": "secondary",
-      "verification": "岗位代码未唯一匹配；保留空代码"
+      "verification": "年度、单位与岗位名唯一匹配"
     },
     {
       "id": "2026-cgzj-daxing-17",
@@ -111075,14 +113195,14 @@
       "unit": "北京市大兴区生态环境局",
       "title": "行政执法岗",
       "name": "北京市大兴区生态环境局｜行政执法岗",
-      "positionCode": null,
+      "positionCode": "221565401",
       "orgType": "区直",
       "score": 126.75,
-      "notes": "成公分数表未列职位代码；当前候选职位库没有同年度单位+岗位名的唯一对应，保留为未匹配，不推断代码。",
-      "mappingConfidence": "unmatched",
+      "notes": "成公分数表未列职位代码；按同年度单位+岗位名唯一匹配到职位镜像代码221565401，分数仍为第三方部分样本。",
+      "mappingConfidence": "high",
       "sourceId": "cgzj-2026-daxing-cutoff-sample",
       "sourceLevel": "secondary",
-      "verification": "岗位代码未唯一匹配；保留空代码"
+      "verification": "年度、单位与岗位名唯一匹配"
     },
     {
       "id": "2026-cgzj-daxing-19",
@@ -111090,14 +113210,14 @@
       "unit": "北京市大兴区瀛海镇",
       "title": "综合管理岗2",
       "name": "北京市大兴区瀛海镇｜综合管理岗2",
-      "positionCode": null,
+      "positionCode": "231568002",
       "orgType": "镇",
       "score": 126.5,
-      "notes": "成公分数表未列职位代码；当前候选职位库没有同年度单位+岗位名的唯一对应，保留为未匹配，不推断代码。",
-      "mappingConfidence": "unmatched",
+      "notes": "成公分数表未列职位代码；按同年度单位+岗位名唯一匹配到职位镜像代码231568002，分数仍为第三方部分样本。",
+      "mappingConfidence": "high",
       "sourceId": "cgzj-2026-daxing-cutoff-sample",
       "sourceLevel": "secondary",
-      "verification": "岗位代码未唯一匹配；保留空代码"
+      "verification": "年度、单位与岗位名唯一匹配"
     },
     {
       "id": "2026-cgzj-daxing-20",
@@ -111135,14 +113255,14 @@
       "unit": "北京市大兴区政务服务和数据管理局",
       "title": "信息化管理岗",
       "name": "北京市大兴区政务服务和数据管理局｜信息化管理岗",
-      "positionCode": null,
+      "positionCode": "221566401",
       "orgType": "区直",
       "score": 126,
-      "notes": "成公分数表未列职位代码；当前候选职位库没有同年度单位+岗位名的唯一对应，保留为未匹配，不推断代码。",
-      "mappingConfidence": "unmatched",
+      "notes": "成公分数表未列职位代码；同年度单位+岗位名在大兴区职位表中唯一对应代码221566401，并由两家第三方职位镜像核对，按唯一候选关联；成公样本仍未公布该代码，未与官方逐码核验。",
+      "mappingConfidence": "high",
       "sourceId": "cgzj-2026-daxing-cutoff-sample",
       "sourceLevel": "secondary",
-      "verification": "岗位代码未唯一匹配；保留空代码"
+      "verification": "年度、单位与岗位名唯一匹配"
     },
     {
       "id": "2026-cgzj-daxing-23",
@@ -111153,8 +113273,8 @@
       "positionCode": null,
       "orgType": "镇",
       "score": 125.75,
-      "notes": "成公分数表未列职位代码；当前候选职位库没有同年度单位+岗位名的唯一对应，保留为未匹配，不推断代码。",
-      "mappingConfidence": "unmatched",
+      "notes": "成公分数表未列职位代码；榆垡镇有两个同名综合管理岗：231567101与231567102，无法唯一确定对应代码，保留歧义。",
+      "mappingConfidence": "ambiguous",
       "sourceId": "cgzj-2026-daxing-cutoff-sample",
       "sourceLevel": "secondary",
       "verification": "岗位代码未唯一匹配；保留空代码"
@@ -111165,14 +113285,14 @@
       "unit": "北京市大兴区采育镇",
       "title": "行政执法岗",
       "name": "北京市大兴区采育镇｜行政执法岗",
-      "positionCode": null,
+      "positionCode": "231567705",
       "orgType": "镇",
       "score": 125.75,
-      "notes": "成公分数表未列职位代码；当前候选职位库没有同年度单位+岗位名的唯一对应，保留为未匹配，不推断代码。",
-      "mappingConfidence": "unmatched",
+      "notes": "成公分数表未列职位代码；按同年度单位+岗位名唯一匹配到职位镜像代码231567705，分数仍为第三方部分样本。",
+      "mappingConfidence": "high",
       "sourceId": "cgzj-2026-daxing-cutoff-sample",
       "sourceLevel": "secondary",
-      "verification": "岗位代码未唯一匹配；保留空代码"
+      "verification": "年度、单位与岗位名唯一匹配"
     },
     {
       "id": "2026-cgzj-daxing-25",
@@ -111210,14 +113330,14 @@
       "unit": "北京市大兴区住房和城乡建设委员会",
       "title": "财务管理岗",
       "name": "北京市大兴区住房和城乡建设委员会｜财务管理岗",
-      "positionCode": null,
+      "positionCode": "821565601",
       "orgType": "区直",
       "score": 125,
-      "notes": "成公分数表未列职位代码；当前候选职位库没有同年度单位+岗位名的唯一对应，保留为未匹配，不推断代码。",
-      "mappingConfidence": "unmatched",
+      "notes": "成公分数表未列职位代码；按同年度单位+岗位名唯一匹配到两家第三方镜像均列出的代码821565601，分数仍为第三方部分样本。",
+      "mappingConfidence": "high",
       "sourceId": "cgzj-2026-daxing-cutoff-sample",
       "sourceLevel": "secondary",
-      "verification": "岗位代码未唯一匹配；保留空代码"
+      "verification": "年度、单位与岗位名唯一匹配"
     },
     {
       "id": "2026-cgzj-daxing-28",
@@ -111225,14 +113345,14 @@
       "unit": "北京市大兴区住房和城乡建设委员会",
       "title": "综合管理岗3",
       "name": "北京市大兴区住房和城乡建设委员会｜综合管理岗3",
-      "positionCode": null,
+      "positionCode": "821565604",
       "orgType": "区直",
       "score": 124.75,
-      "notes": "成公分数表未列职位代码；当前候选职位库没有同年度单位+岗位名的唯一对应，保留为未匹配，不推断代码。",
-      "mappingConfidence": "unmatched",
+      "notes": "成公分数表未列职位代码；单位镜像只列一个同名综合管理岗3（代码821565604、招1人），按唯一对应关联；学历和专业字段待核，分数仍为第三方部分样本。",
+      "mappingConfidence": "high",
       "sourceId": "cgzj-2026-daxing-cutoff-sample",
       "sourceLevel": "secondary",
-      "verification": "岗位代码未唯一匹配；保留空代码"
+      "verification": "年度、单位与岗位名唯一匹配"
     },
     {
       "id": "2026-cgzj-daxing-29",
@@ -111243,8 +113363,8 @@
       "positionCode": null,
       "orgType": "镇",
       "score": 105.5,
-      "notes": "成公分数表未列职位代码；当前候选职位库没有同年度单位+岗位名的唯一对应，保留为未匹配，不推断代码。",
-      "mappingConfidence": "unmatched",
+      "notes": "成公分数表未列职位代码；榆垡镇有两个同名综合管理岗：231567101与231567102，无法唯一确定对应代码，保留歧义。",
+      "mappingConfidence": "ambiguous",
       "sourceId": "cgzj-2026-daxing-cutoff-sample",
       "sourceLevel": "secondary",
       "verification": "岗位代码未唯一匹配；保留空代码"
@@ -113592,6 +115712,396 @@
       "orgType": "镇",
       "score": 95,
       "notes": "成公页面列最低分95但未列职位代码；职位镜像中东邵渠镇有同名代码241877201和241877202，无法唯一映射，不挂到任一岗位。",
+      "mappingConfidence": "ambiguous",
+      "sourceId": "cgzj-2026-miyun-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "岗位代码未唯一匹配；保留空代码"
+    },
+    {
+      "id": "2026-cgzj-miyun-03",
+      "year": 2026,
+      "unit": "北京市密云区人民政府办公室",
+      "title": "综合管理岗",
+      "name": "北京市密云区人民政府办公室｜综合管理岗",
+      "positionCode": "221874801",
+      "orgType": "区直",
+      "score": 132,
+      "notes": "成公分数表未列职位代码；按同年度单位及岗位名唯一匹配京考职位网镜像代码221874801。代码和岗位条件未与官方职位表逐代码核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-miyun-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-miyun-04",
+      "year": 2026,
+      "unit": "北京市密云区市场监督管理局",
+      "title": "综合管理岗",
+      "name": "北京市密云区市场监督管理局｜综合管理岗（同名岗位，130.75分，代码待核）",
+      "positionCode": null,
+      "orgType": "区直",
+      "score": 130.75,
+      "notes": "成公分数表未列职位代码；京考职位网密云岗位表列同名代码221876101和241876104，无法唯一映射，不挂到任一岗位。",
+      "mappingConfidence": "ambiguous",
+      "sourceId": "cgzj-2026-miyun-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "岗位代码未唯一匹配；保留空代码"
+    },
+    {
+      "id": "2026-cgzj-miyun-05",
+      "year": 2026,
+      "unit": "北京市密云区科学技术委员会",
+      "title": "综合管理岗",
+      "name": "北京市密云区科学技术委员会｜综合管理岗",
+      "positionCode": "221875101",
+      "orgType": "区直",
+      "score": 130.25,
+      "notes": "成公分数表未列职位代码；按同年度单位及岗位名唯一匹配京考职位网镜像代码221875101。代码和岗位条件未与官方职位表逐代码核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-miyun-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-miyun-06",
+      "year": 2026,
+      "unit": "中共北京市密云区委党史研究室",
+      "title": "党史研究岗",
+      "name": "中共北京市密云区委党史研究室｜党史研究岗",
+      "positionCode": "821874601",
+      "orgType": "区直",
+      "score": 130,
+      "notes": "成公分数表未列职位代码；按同年度单位及岗位名唯一匹配京考职位网镜像代码821874601。代码和岗位条件未与官方职位表逐代码核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-miyun-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-miyun-07",
+      "year": 2026,
+      "unit": "北京市密云区园林绿化局",
+      "title": "综合管理岗",
+      "name": "北京市密云区园林绿化局｜综合管理岗",
+      "positionCode": "221876401",
+      "orgType": "区直",
+      "score": 129.25,
+      "notes": "成公分数表未列职位代码；按同年度单位及岗位名唯一匹配京考职位网镜像代码221876401。代码和岗位条件未与官方职位表逐代码核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-miyun-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-miyun-08",
+      "year": 2026,
+      "unit": "北京市密云区财政局",
+      "title": "综合管理岗",
+      "name": "北京市密云区财政局｜综合管理岗",
+      "positionCode": "221875301",
+      "orgType": "区直",
+      "score": 128.5,
+      "notes": "成公分数表未列职位代码；按同年度单位及岗位名唯一匹配京考职位网镜像代码221875301。代码和岗位条件未与官方职位表逐代码核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-miyun-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-miyun-09",
+      "year": 2026,
+      "unit": "北京市密云区财政局",
+      "title": "绩效考评岗",
+      "name": "北京市密云区财政局｜绩效考评岗",
+      "positionCode": "821875303",
+      "orgType": "区直",
+      "score": 127,
+      "notes": "成公分数表未列职位代码；按同年度单位及岗位名唯一匹配京考职位网镜像代码821875303。代码和岗位条件未与官方职位表逐代码核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-miyun-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-miyun-10",
+      "year": 2026,
+      "unit": "北京市密云区市场监督管理局",
+      "title": "综合管理岗1",
+      "name": "北京市密云区市场监督管理局｜综合管理岗1",
+      "positionCode": "241876102",
+      "orgType": "区直",
+      "score": 127,
+      "notes": "成公分数表未列职位代码；按同年度单位及岗位名唯一匹配京考职位网镜像代码241876102。代码和岗位条件未与官方职位表逐代码核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-miyun-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-miyun-11",
+      "year": 2026,
+      "unit": "北京市密云区鼓楼街道",
+      "title": "综合管理岗",
+      "name": "北京市密云区鼓楼街道｜综合管理岗",
+      "positionCode": "241876801",
+      "orgType": "街道",
+      "score": 127,
+      "notes": "成公分数表未列职位代码；按同年度单位及岗位名唯一匹配京考职位网镜像代码241876801。代码和岗位条件未与官方职位表逐代码核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-miyun-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-miyun-12",
+      "year": 2026,
+      "unit": "北京市密云区住房和城乡建设委员会",
+      "title": "综合管理岗",
+      "name": "北京市密云区住房和城乡建设委员会｜综合管理岗（同名岗位，代码待核）",
+      "positionCode": null,
+      "orgType": "区直",
+      "score": 126,
+      "notes": "成公分数表未列职位代码；京考职位网单位职位表列同名代码221875601和221875602，无法唯一映射，不挂到任一岗位。",
+      "mappingConfidence": "ambiguous",
+      "sourceId": "cgzj-2026-miyun-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "岗位代码未唯一匹配；保留空代码"
+    },
+    {
+      "id": "2026-cgzj-miyun-13",
+      "year": 2026,
+      "unit": "中共北京市密云区纪律检查委员会、北京市密云区监察委员会",
+      "title": "综合管理岗1",
+      "name": "中共北京市密云区纪律检查委员会、北京市密云区监察委员会｜综合管理岗1",
+      "positionCode": "121876701",
+      "orgType": "区直",
+      "score": 123.5,
+      "notes": "成公未列职位代码；粉笔职位列表按同年度单位、岗位名唯一对应代码121876701、招录2人。职位代码来自第三方镜像，未与官方职位表逐码核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-miyun-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-miyun-14",
+      "year": 2026,
+      "unit": "北京市密云区人民法院",
+      "title": "法官助理岗",
+      "name": "北京市密云区人民法院｜法官助理岗",
+      "positionCode": "526013304",
+      "orgType": "法检",
+      "score": 123.25,
+      "notes": "成公分数表未列职位代码；按同年度单位及岗位名唯一匹配京考职位网镜像代码526013304。代码和岗位条件未与官方职位表逐代码核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-miyun-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-miyun-15",
+      "year": 2026,
+      "unit": "北京市密云区档案馆",
+      "title": "数字档案管理岗",
+      "name": "北京市密云区档案馆｜数字档案管理岗",
+      "positionCode": "821874501",
+      "orgType": "区直",
+      "score": 123.25,
+      "notes": "成公分数表未列职位代码；按同年度单位及岗位名唯一匹配京考职位网镜像代码821874501。代码和岗位条件未与官方职位表逐代码核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-miyun-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-miyun-16",
+      "year": 2026,
+      "unit": "中共北京市密云区纪律检查委员会、北京市密云区监察委员会",
+      "title": "综合管理岗2",
+      "name": "中共北京市密云区纪律检查委员会、北京市密云区监察委员会｜综合管理岗2",
+      "positionCode": "121876702",
+      "orgType": "区直",
+      "score": 122.75,
+      "notes": "成公未列职位代码；粉笔职位列表按同年度单位、岗位名唯一对应代码121876702、招录1人。职位代码来自第三方镜像，未与官方职位表逐码核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-miyun-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-miyun-17",
+      "year": 2026,
+      "unit": "北京市密云区委办公室（保密局）",
+      "title": "综合管理岗",
+      "name": "北京市密云区委办公室（保密局）｜综合管理岗",
+      "positionCode": "121874401",
+      "orgType": "区直",
+      "score": 122.75,
+      "notes": "成公页面未列职位代码；同年度单位名和岗位名与京考职位网详情唯一对应代码121874401、计划招录2人。该链接依赖第三方职位镜像，未与官方职位表逐代码复核；进面分仍为第三方部分样本。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-miyun-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-miyun-18",
+      "year": 2026,
+      "unit": "北京市密云区溪翁庄镇",
+      "title": "综合管理岗",
+      "name": "北京市密云区溪翁庄镇｜综合管理岗",
+      "positionCode": "241877401",
+      "orgType": "镇",
+      "score": 122.75,
+      "notes": "成公未列职位代码；粉笔职位列表按同年度单位、岗位名唯一对应代码241877401、招录1人。职位代码来自第三方镜像，未与官方职位表逐码核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-miyun-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-miyun-19",
+      "year": 2026,
+      "unit": "北京市密云区不老屯镇",
+      "title": "综合管理岗",
+      "name": "北京市密云区不老屯镇｜综合管理岗",
+      "positionCode": "241877701",
+      "orgType": "镇",
+      "score": 122.25,
+      "notes": "成公分数表未列职位代码；按同年度单位及岗位名唯一匹配京考职位网镜像代码241877701。代码和岗位条件未与官方职位表逐代码核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-miyun-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-miyun-20",
+      "year": 2026,
+      "unit": "北京市密云区古北口镇",
+      "title": "综合管理岗",
+      "name": "北京市密云区古北口镇｜综合管理岗",
+      "positionCode": "241877801",
+      "orgType": "镇",
+      "score": 122,
+      "notes": "成公未列职位代码；粉笔职位列表按同年度单位、岗位名唯一对应代码241877801、招录1人。职位代码来自第三方镜像，未与官方职位表逐码核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-miyun-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-miyun-21",
+      "year": 2026,
+      "unit": "北京市密云区生态环境局",
+      "title": "行政执法岗1",
+      "name": "北京市密云区生态环境局｜行政执法岗1",
+      "positionCode": "221875501",
+      "orgType": "区直",
+      "score": 121,
+      "notes": "成公页面未列职位代码；同年度单位名和岗位名与京考职位网详情唯一对应代码221875501、计划招录2人。该链接依赖第三方职位镜像，未与官方职位表逐代码复核；进面分仍为第三方部分样本。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-miyun-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-miyun-22",
+      "year": 2026,
+      "unit": "北京市密云区人民法院",
+      "title": "新闻宣传岗",
+      "name": "北京市密云区人民法院｜新闻宣传岗",
+      "positionCode": "526013301",
+      "orgType": "法检",
+      "score": 120.75,
+      "notes": "成公分数表未列职位代码；按同年度单位及岗位名唯一匹配京考职位网镜像代码526013301。代码和岗位条件未与官方职位表逐代码核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-miyun-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-miyun-23",
+      "year": 2026,
+      "unit": "北京市密云区经济和信息化局",
+      "title": "综合管理岗",
+      "name": "北京市密云区经济和信息化局｜综合管理岗",
+      "positionCode": "221875201",
+      "orgType": "区直",
+      "score": 120.25,
+      "notes": "成公未列职位代码；粉笔职位列表按同年度单位、岗位名唯一对应代码221875201、招录1人。职位代码来自第三方镜像，未与官方职位表逐码核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-miyun-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-miyun-24",
+      "year": 2026,
+      "unit": "北京市密云区委农工委、区农业农村局",
+      "title": "综合管理岗",
+      "name": "北京市密云区委农工委、区农业农村局｜综合管理岗",
+      "positionCode": "221875801",
+      "orgType": "区直",
+      "score": 120.25,
+      "notes": "成公分数表未列职位代码；按同年度单位及岗位名唯一匹配京考职位网镜像代码221875801。代码和岗位条件未与官方职位表逐代码核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-miyun-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-miyun-25",
+      "year": 2026,
+      "unit": "北京市密云区卫生健康委员会",
+      "title": "财务管理岗",
+      "name": "北京市密云区卫生健康委员会｜财务管理岗",
+      "positionCode": "221875902",
+      "orgType": "区直",
+      "score": 119.75,
+      "notes": "成公分数表未列职位代码；按同年度单位及岗位名唯一匹配京考职位网镜像代码221875902。代码和岗位条件未与官方职位表逐代码核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-miyun-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-miyun-26",
+      "year": 2026,
+      "unit": "北京市密云区穆家峪镇",
+      "title": "综合管理岗",
+      "name": "北京市密云区穆家峪镇｜综合管理岗",
+      "positionCode": "241878002",
+      "orgType": "镇",
+      "score": 119.75,
+      "notes": "成公未列职位代码；粉笔职位列表按同年度单位、岗位名唯一对应代码241878002、招录1人。职位代码来自第三方镜像，未与官方职位表逐码核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-miyun-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-miyun-27",
+      "year": 2026,
+      "unit": "北京市密云区十里堡镇",
+      "title": "综合管理岗",
+      "name": "北京市密云区十里堡镇｜综合管理岗",
+      "positionCode": "241877002",
+      "orgType": "镇",
+      "score": 102.5,
+      "notes": "成公未列职位代码；粉笔职位列表按同年度单位、岗位名唯一对应代码241877002、招录2人。职位代码来自第三方镜像，未与官方职位表逐码核验。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-miyun-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-miyun-28",
+      "year": 2026,
+      "unit": "北京市密云区市场监督管理局",
+      "title": "综合管理岗",
+      "name": "北京市密云区市场监督管理局｜综合管理岗（同名岗位，97分，代码待核）",
+      "positionCode": null,
+      "orgType": "区直",
+      "score": 97,
+      "notes": "成公分数表未列职位代码；京考职位网密云岗位表列同名代码221876101和241876104，无法唯一映射，不挂到任一岗位。",
       "mappingConfidence": "ambiguous",
       "sourceId": "cgzj-2026-miyun-cutoff-sample",
       "sourceLevel": "secondary",

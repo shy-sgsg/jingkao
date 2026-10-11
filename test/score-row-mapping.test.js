@@ -75,7 +75,7 @@ test('2026 cutoff rows link only to a unique exact year, unit, and title match',
     scoreRows.reduce((counts, row) => ({ ...counts, [row.mappingConfidence]: counts[row.mappingConfidence] + 1 }), {
       high: 0, ambiguous: 0, unmatched: 0,
     }),
-    { high: 229, ambiguous: 35, unmatched: 49 },
+    { high: 266, ambiguous: 44, unmatched: 29 },
   );
 });
 
@@ -199,7 +199,7 @@ test('2026 Yanqing partial interview-cutoff rows preserve unique matches and unr
     scoreRows.reduce((counts, row) => ({ ...counts, [row.mappingConfidence]: counts[row.mappingConfidence] + 1 }), {
       high: 0, ambiguous: 0, unmatched: 0,
     }),
-    { high: 229, ambiguous: 35, unmatched: 49 },
+    { high: 266, ambiguous: 44, unmatched: 29 },
   );
 });
 
@@ -399,6 +399,7 @@ test('2026 Daxing partial cutoff rows map only unique same-year unit and title m
     '2026-cgzj-daxing-20': ['231566901', '北京市大兴区黄村镇', '经济管理岗', 126.25],
     '2026-cgzj-daxing-21': ['821565304', '北京市大兴区人力资源和社会保障局', '案件审理岗', 126],
     '2026-cgzj-daxing-26': ['121566703', '中共北京市大兴区纪律检查委员会、北京市大兴区监察委员会', '纪检监察岗3', 125.25],
+    '2026-cgzj-daxing-22': ['221566401', '北京市大兴区政务服务和数据管理局', '信息化管理岗', 126],
   };
 
   for (const [id, [code, unit, title, score]] of Object.entries(expectedRows)) {
@@ -419,6 +420,15 @@ test('2026 Daxing partial cutoff rows map only unique same-year unit and title m
     const matches = positions.filter((position) => position.year === 2026
       && position.unit === row.unit && position.title === row.title);
     assert.equal(matches.length, 2, `${id} must retain both same-name Education Commission positions`);
+    assert.equal(row.positionCode, null);
+    assert.equal(row.mappingConfidence, 'ambiguous');
+  }
+
+  for (const id of ['2026-cgzj-daxing-02', '2026-cgzj-daxing-05']) {
+    const row = scoreRows.find((item) => item.id === id);
+    const matches = positions.filter((position) => position.year === 2026
+      && position.unit === row.unit && position.title === row.title);
+    assert.deepEqual(matches.map((position) => position.code).sort(), ['821566201', '821566202']);
     assert.equal(row.positionCode, null);
     assert.equal(row.mappingConfidence, 'ambiguous');
   }

@@ -483,6 +483,7 @@ test('2026 citywide registration snapshots link dated qualified counts to matchi
       sourceId: 'eoffcn-2026-snapshot-20251117-1800',
       observedAt: '2025-11-17 18:00',
       expected: [
+        ['232501603', 117, 55],
         ['232502102', 76, 32],
         ['232502501', 47, 30],
         ['242503001', 43, 15],
@@ -496,6 +497,7 @@ test('2026 citywide registration snapshots link dated qualified counts to matchi
       sourceId: 'eoffcn-2026-snapshot-20251118-0900',
       observedAt: '2025-11-18 09:00',
       expected: [
+        ['232501603', 184, 55],
         ['821261102', 131, 2],
         ['232502102', 76, 32],
         ['242503301', 51, 18],
@@ -513,6 +515,7 @@ test('2026 citywide registration snapshots link dated qualified counts to matchi
       sourceId: 'eoffcn-2026-snapshot-20251118-1800',
       observedAt: '2025-11-18 18:00',
       expected: [
+        ['232501603', 450, 55],
         ['821261102', 275, 2],
         ['232502501', 249, 30],
         ['232502102', 197, 32],
@@ -528,11 +531,15 @@ test('2026 citywide registration snapshots link dated qualified counts to matchi
       sourceId: 'eoffcn-2026-snapshot-20251119-0900',
       observedAt: '2025-11-19 09:00',
       expected: [
+        ['232501603', 502, 55],
         ['821261102', 275, 2],
+        ['232502501', 249, 30],
+        ['232502102', 214, 32],
         ['821263001', 95, 1],
         ['232502901', 187, 23],
         ['230531801', 71, 1],
         ['232502003', 183, 32],
+        ['232502201', 120, 22],
         ['220946301', 77, 1],
         ['231156101', 123, 2],
         ['221154902', 56, 1],
@@ -989,4 +996,23 @@ test('2026 November 20 evening snapshot keeps the citywide total and leaves an a
   assert.equal(citywide.applicantsQualified, 41477);
   assert.equal(citywide.recruitCount, 3694);
   assert.equal(citywide.qualifiedCompetitionRatio, 41477 / 3694);
+});
+
+test('2026 first-day Daxing single-position unit count links to its exact TianGongyuan job', async () => {
+  const raw = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const dataset = normalizeDataset(raw);
+  const sourceId = 'eoffcn-2026-snapshot-20251117-1800';
+  const position = dataset.positions.find((item) => item.year === 2026 && item.code === '231568301');
+  const rows = dataset.observations.filter((item) => item.sourceId === sourceId
+    && item.year === 2026 && item.positionCode === '231568301');
+
+  assert.equal(position?.unit, '北京市大兴区天宫院街道');
+  assert.equal(position?.title, '行政执法岗');
+  assert.equal(position?.recruitCount, 2);
+  assert.equal(rows.length, 1);
+  assert.equal(rows[0].scope, 'position-level');
+  assert.equal(rows[0].observedAt, '2025-11-17 18:00');
+  assert.equal(rows[0].applicantsQualified, 20);
+  assert.equal(rows[0].recruitCount, 2);
+  assert.equal(rows[0].qualifiedCompetitionRatio, 10);
 });

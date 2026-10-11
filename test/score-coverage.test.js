@@ -44,7 +44,7 @@ test('score sample count and bounds are derived from its concrete score rows', a
   const daxingRows = rows.filter((row) => row.sourceId === 'cgzj-2026-daxing-cutoff-sample');
   assert.deepEqual(daxingRows.reduce((counts, row) => ({ ...counts, [row.mappingConfidence]: counts[row.mappingConfidence] + 1 }), {
     high: 0, ambiguous: 0, unmatched: 0,
-  }), { high: 5, ambiguous: 2, unmatched: 24 });
+  }), { high: 19, ambiguous: 8, unmatched: 4 });
 
   const shijingshan = samples.find((sample) => sample.sourceId === 'cgzj-2026-shijingshan-cutoff-sample');
   assert.equal(shijingshan.samplePositions, 27);
@@ -75,9 +75,13 @@ test('score sample count and bounds are derived from its concrete score rows', a
   }), { high: 23, ambiguous: 0, unmatched: 2 });
 
   const miyun = samples.find((sample) => sample.sourceId === 'cgzj-2026-miyun-cutoff-sample');
-  assert.equal(miyun.samplePositions, 2);
+  assert.equal(miyun.samplePositions, 28);
   assert.deepEqual([miyun.minimum, miyun.maximum], [95, 140.25]);
-  assert.equal(miyun.notes.includes('不挂到任一代码'), true);
+  assert.equal(miyun.notes.includes('不挂代码'), true);
+  const miyunRows = rows.filter((row) => row.sourceId === 'cgzj-2026-miyun-cutoff-sample');
+  assert.deepEqual(miyunRows.reduce((counts, row) => ({ ...counts, [row.mappingConfidence]: counts[row.mappingConfidence] + 1 }), {
+    high: 0, ambiguous: 0, unmatched: 0,
+  }), { high: 24, ambiguous: 4, unmatched: 0 });
 });
 
 test('Shijingshan position cards receive exact code-linked cutoff scores from the partial district table', async () => {
@@ -93,6 +97,61 @@ test('Shijingshan position cards receive exact code-linked cutoff scores from th
   assert.equal(source.sampleRecruits, 40);
   assert.equal(evidence.cutoffScore, 136);
   assert.deepEqual(evidence.cutoffSourceIds, ['cgzj-2026-shijingshan-cutoff-sample']);
+});
+
+test('Daxing cutoff records link to unique 2026 positions and keep duplicate titles unassigned', async () => {
+  const data = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const sourceId = 'cgzj-2026-daxing-cutoff-sample';
+  const linked = [
+    ['2026-cgzj-daxing-06', '239910901', 130.75],
+    ['2026-cgzj-daxing-07', '231568101', 130.5],
+    ['2026-cgzj-daxing-08', '625015102', 130.25],
+    ['2026-cgzj-daxing-09', '221565201', 130.25],
+    ['2026-cgzj-daxing-11', '821566601', 130],
+    ['2026-cgzj-daxing-12', '821565001', 129.75],
+    ['2026-cgzj-daxing-15', '526013001', 128.75],
+    ['2026-cgzj-daxing-16', '231568401', 127.5],
+    ['2026-cgzj-daxing-18', '221565401', 126.75],
+    ['2026-cgzj-daxing-19', '231568002', 126.5],
+    ['2026-cgzj-daxing-24', '231567705', 125.75],
+    ['2026-cgzj-daxing-27', '821565601', 125],
+    ['2026-cgzj-daxing-28', '821565604', 124.75],
+  ];
+
+  for (const [rowId, code, cutoff] of linked) {
+    const scoreRow = data.scoreRows.find((row) => row.id === rowId);
+    const position = data.positions.find((row) => row.year === 2026 && row.code === code);
+    assert.ok(position, `position ${code} should be available for its cutoff record`);
+    assert.equal(scoreRow?.sourceId, sourceId);
+    assert.equal(scoreRow?.mappingConfidence, 'high');
+    assert.equal(scoreRow?.positionCode, code);
+    const evidence = getPositionCompetitionEvidence(position, {
+      observations: data.observations,
+      scoreRows: data.scoreRows,
+    });
+    assert.equal(evidence.cutoffScore, cutoff, `position ${code} should show its matched cutoff`);
+  }
+
+  const ambiguous = [
+    ['2026-cgzj-daxing-04', '北京市大兴区财政局', '综合管理岗', ['221565203', '821565202']],
+    ['2026-cgzj-daxing-14', '北京市大兴区采育镇', '综合管理岗', ['231567701', '231567702', '231567703', '231567704']],
+    ['2026-cgzj-daxing-23', '北京市大兴区榆垡镇', '综合管理岗', ['231567101', '231567102']],
+    ['2026-cgzj-daxing-29', '北京市大兴区榆垡镇', '综合管理岗', ['231567101', '231567102']],
+  ];
+  for (const [rowId, unit, title, expectedCodes] of ambiguous) {
+    const scoreRow = data.scoreRows.find((row) => row.id === rowId);
+    const candidates = data.positions.filter((row) => row.year === 2026 && row.unit === unit && row.title === title);
+    assert.deepEqual(candidates.map((row) => row.code).sort(), expectedCodes);
+    assert.equal(scoreRow?.mappingConfidence, 'ambiguous');
+    assert.equal(scoreRow?.positionCode, null);
+    for (const candidate of candidates) {
+      const evidence = getPositionCompetitionEvidence(candidate, {
+        observations: data.observations,
+        scoreRows: data.scoreRows,
+      });
+      assert.equal(evidence.cutoffScore, null, `ambiguous score ${rowId} must not leak to ${candidate.code}`);
+    }
+  }
 });
 
 test('Fengtai police post receives the exact 2026 interview cutoff exposed in the district table', async () => {
@@ -195,12 +254,27 @@ test('Daxing cutoff rows attach to unique positions while repeated names remain 
     observations: data.observations,
     scoreRows: data.scoreRows,
   });
+  const dataRole = data.positions.find((row) => row.year === 2026 && row.code === '221566401');
+  const dataRoleEvidence = getPositionCompetitionEvidence(dataRole, {
+    observations: data.observations,
+    scoreRows: data.scoreRows,
+  });
 
   assert.equal(source.samplePositions, 31);
   assert.equal(source.sampleRecruits, 77);
   assert.equal(rows.length, 31);
   assert.equal(waterEvidence.cutoffScore, 136.25);
   assert.deepEqual(waterEvidence.cutoffSourceIds, ['cgzj-2026-daxing-cutoff-sample']);
+  assert.equal(dataRoleEvidence.cutoffScore, 126);
+  assert.deepEqual(dataRoleEvidence.cutoffSourceIds, ['cgzj-2026-daxing-cutoff-sample']);
+  for (const code of ['821566201', '821566202']) {
+    const statisticsPosition = data.positions.find((row) => row.year === 2026 && row.code === code);
+    const statisticsEvidence = getPositionCompetitionEvidence(statisticsPosition, {
+      observations: data.observations,
+      scoreRows: data.scoreRows,
+    });
+    assert.equal(statisticsEvidence.cutoffScore, null, `${code} must not inherit an ambiguous same-title score`);
+  }
   assert.ok(rows.filter((row) => row.mappingConfidence === 'ambiguous')
     .every((row) => row.positionCode === null));
   assert.match(source.notes, /部分/);
@@ -363,6 +437,7 @@ test('score segments use organization fields directly and job categories only af
     { id: 'unclassified', year: 2026, unit: '分类资料缺失单位', title: '岗位', orgType: '区直', positionCode: '007', mappingConfidence: 'high' },
     { id: 'unmatched', year: 2026, unit: '未匹配单位', title: '岗位', orgType: '区直', positionCode: null, mappingConfidence: 'unmatched' },
     { id: 'conflicting-code', year: 2026, unit: '不唯一单位', title: '岗位', orgType: '区直', positionCode: 'DUP', mappingConfidence: 'high' },
+    { id: 'incomplete-major', year: 2026, unit: '专业待核单位', title: '综合管理岗', orgType: '区直', positionCode: '008', mappingConfidence: 'high' },
   ];
   const position = (row, code, jobType, majorText = '法学') => ({
     year: 2026, code, unit: row.unit, title: row.title, jobType, majorText,
@@ -377,10 +452,11 @@ test('score segments use organization fields directly and job categories only af
     position(rows[6], '007', '综合管理', ''),
     position(rows[8], 'DUP', '综合管理'),
     { ...position(rows[8], 'DUP', '综合管理'), unit: '另一单位' },
+    position(rows[9], '008', '综合管理', '待核实；不用于专业条件匹配'),
   ];
 
   assert.deepEqual(filterScoreRowsBySegment(rows, positions, 'district').map((row) => row.id), [
-    'district', 'ordinary', 'enforcement', 'public-management', 'unclassified', 'unmatched', 'conflicting-code',
+    'district', 'ordinary', 'enforcement', 'public-management', 'unclassified', 'unmatched', 'conflicting-code', 'incomplete-major',
   ]);
   assert.deepEqual(filterScoreRowsBySegment(rows, positions, 'street').map((row) => row.id), ['street']);
   assert.deepEqual(filterScoreRowsBySegment(rows, positions, 'town').map((row) => row.id), ['town']);

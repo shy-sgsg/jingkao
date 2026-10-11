@@ -45,7 +45,7 @@ test('2024–2025 Daxing position candidates are traceable and do not overstate 
   for (const expected of [
     { year: 2024, rows: 82, recruits: 188 },
     { year: 2025, rows: 92, recruits: 183 },
-    { year: 2026, rows: 13, recruits: 41 },
+    { year: 2026, rows: 41, recruits: 93 },
   ]) {
     const rows = publishedDaxing.filter((row) => row.year === expected.year);
     assert.equal(rows.length, expected.rows, `${expected.year} assigned to Daxing by supported unit names`);
@@ -68,17 +68,17 @@ test('2026 Daxing imports only rows with a recovered title and preserves the par
   const sourceById = new Map(registry.map((source) => [source.sourceId, source]));
   const rows = seed.filter((row) => row.year === 2026 && row.sources.some((id) => id.startsWith('daxing-2026-')));
 
-  assert.equal(rows.length, 12);
-  assert.equal(new Set(rows.map((row) => row.code)).size, 12);
-  assert.equal(rows.reduce((sum, row) => sum + row.recruitCount, 0), 18);
+  assert.equal(rows.length, 40);
+  assert.equal(new Set(rows.map((row) => row.code)).size, 40);
+  assert.equal(rows.reduce((sum, row) => sum + row.recruitCount, 0), 70);
   assert.ok(rows.every((row) => row.title && row.education && row.majorText && row.eligibilityText));
   assert.ok(rows.every((row) => row.sourceLevel === 'secondary'));
   assert.ok(rows.every((row) => row.eligibilityComplete === false));
   assert.ok(rows.every((row) => row.sources.every((id) => sourceById.get(id)?.level === 'secondary')));
   assert.deepEqual(
     rows.filter((row) => row.crossVerified).map((row) => row.code).sort(),
-    ['121566701', '121566703', '221565101', '221565102'],
-    'only rows with matching fields in the independent xduim and direct-detail mirrors are cross-confirmed',
+    ['121566701', '121566703', '221565101', '221565102', '221566401', '821565601'],
+    'only rows with matching fields in independent position mirrors are cross-confirmed',
   );
 
   const xduimSource = sourceById.get('daxing-2026-xduim-page-1');
@@ -87,10 +87,25 @@ test('2026 Daxing imports only rows with a recovered title and preserves the par
   assert.equal(rows.filter((row) => row.sources.includes('daxing-2026-xduim-page-1')).length, 4,
     'only title-confirmed overlaps from the partial listing page are linked as position rows');
 
+  for (const [code, recruitCount] of [['821566201', 4], ['821566202', 2]]) {
+    const row = rows.find((position) => position.code === code);
+    assert.equal(row?.unit, '北京市大兴区统计局');
+    assert.equal(row?.title, '综合统计岗');
+    assert.equal(row?.recruitCount, recruitCount);
+    assert.ok(row.sources.includes('daxing-2026-unit-statistics'));
+  }
+
+  const dataRole = rows.find((position) => position.code === '221566401');
+  assert.equal(dataRole?.unit, '北京市大兴区政务服务和数据管理局');
+  assert.equal(dataRole?.title, '信息化管理岗');
+  assert.equal(dataRole?.recruitCount, 1);
+  assert.ok(dataRole?.sources.includes('daxing-2026-unit-221566401'));
+  assert.ok(dataRole?.sources.includes('huatu-2026-daxing-job-221566401'));
+
   const titleMissingCodes = [
-    '121566702', '121566704', '121566705', '221565201', '221565203', '221565401', '221565501',
+    '121566702', '121566704', '121566705', '221565501',
     '221565605', '221565701', '221565901', '221565902', '221565903', '221566001', '221566002',
-    '221566301', '221566401',
+    '221566301',
   ];
   for (const code of titleMissingCodes) {
     assert.ok(!rows.some((row) => row.code === code), `${code} title must not be invented`);
