@@ -7,7 +7,7 @@ import { getPositionCompetitionEvidence } from '../src/data/positions.js';
 test('Fengtai 2026 reported applicant counts link to exact positions without implying official qualification counts', async () => {
   const raw = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
   const dataset = normalizeDataset(raw);
-  const pages = dataset.sources.filter((source) => /^fengtai-2026-fenbi-page-[1-3]$/.test(source.sourceId));
+  const pages = dataset.sources.filter((source) => /^fengtai-2026-fenbi-page-(?:[1-5]|10)$/.test(source.sourceId));
   const snapshots = pages.flatMap((source) => (source.positionSnapshots || []).map((snapshot) => ({
     ...snapshot,
     sourceId: source.sourceId,
@@ -27,10 +27,36 @@ test('Fengtai 2026 reported applicant counts link to exact positions without imp
     ['fengtai-2026-fenbi-page-2', '820739503', 6, 1],
     ['fengtai-2026-fenbi-page-2', '820739504', 3, 1],
     ['fengtai-2026-fenbi-page-3', '820739505', 44, 2],
+    ['fengtai-2026-fenbi-page-4', '220740302', 37, 4],
+    ['fengtai-2026-fenbi-page-4', '220740303', 53, 4],
+    ['fengtai-2026-fenbi-page-4', '220740304', 21, 2],
+    ['fengtai-2026-fenbi-page-4', '220740305', 12, 2],
+    ['fengtai-2026-fenbi-page-4', '220740306', 51, 2],
+    ['fengtai-2026-fenbi-page-4', '220740307', 14, 2],
+    ['fengtai-2026-fenbi-page-4', '230740308', 1, 1],
+    ['fengtai-2026-fenbi-page-4', '230740309', 20, 2],
+    ['fengtai-2026-fenbi-page-4', '230740310', 21, 2],
+    ['fengtai-2026-fenbi-page-4', '230740312', 44, 1],
+    ['fengtai-2026-fenbi-page-5', '820740401', 23, 2],
+    ['fengtai-2026-fenbi-page-5', '220740501', 23, 1],
+    ['fengtai-2026-fenbi-page-5', '820740601', 111, 2],
+    ['fengtai-2026-fenbi-page-5', '820740801', 26, 2],
+    ['fengtai-2026-fenbi-page-5', '820740901', 42, 2],
+    ['fengtai-2026-fenbi-page-5', '820741001', 36, 2],
+    ['fengtai-2026-fenbi-page-5', '820741002', 22, 2],
+    ['fengtai-2026-fenbi-page-5', '820741101', 13, 1],
+    ['fengtai-2026-fenbi-page-5', '220741301', 24, 1],
+    ['fengtai-2026-fenbi-page-5', '230741401', 2, 1],
+    ['fengtai-2026-fenbi-page-10', '230742504', 2, 1],
+    ['fengtai-2026-fenbi-page-10', '230742801', 2, 1],
+    ['fengtai-2026-fenbi-page-10', '230743202', 2, 1],
+    ['fengtai-2026-fenbi-page-10', '230741903', 5, 1],
+    ['fengtai-2026-fenbi-page-10', '230743201', 2, 1],
+    ['fengtai-2026-fenbi-page-10', '230740313', 25, 1],
   ];
 
-  assert.equal(pages.length, 3);
-  assert.equal(snapshots.length, expected.length);
+  assert.equal(pages.length, 6);
+  assert.equal(snapshots.length, 40);
   assert.equal(new Set(snapshots.map((row) => row.positionCode)).size, expected.length);
 
   for (const [sourceId, code, applicants, recruits] of expected) {

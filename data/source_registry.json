@@ -18685,6 +18685,77 @@
     "notes": "粉笔页面汇总显示96个职位、计划190人和‘过审人数’2525，但逐岗表头为‘报考人数’，且未注明观察时点或定义。仅将能与本地2026候选职位代码、计划数匹配的逐岗值按第三方报考人数参考保存，不代表官方资格审查通过数、最终缴费数或实考人数。"
   },
   {
+    "sourceId": "fengtai-2026-fenbi-page-4",
+    "title": "粉笔 2026 北京公务员丰台区职位列表（第4页）",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "fengtai",
+    "geographicScope": "丰台区2026职位列表第4页；逐岗保存页面所列10条岗位",
+    "url": "https://www.fenbi.com/page/positions/1/438923?page=4&region=166",
+    "accessedAt": "2026-10-12",
+    "positionSnapshots": [
+      { "positionCode": "220740302", "scope": "position-level", "applicantsRegistered": 37, "recruitCount": 4 },
+      { "positionCode": "220740303", "scope": "position-level", "applicantsRegistered": 53, "recruitCount": 4 },
+      { "positionCode": "220740304", "scope": "position-level", "applicantsRegistered": 21, "recruitCount": 2 },
+      { "positionCode": "220740305", "scope": "position-level", "applicantsRegistered": 12, "recruitCount": 2 },
+      { "positionCode": "220740306", "scope": "position-level", "applicantsRegistered": 51, "recruitCount": 2 },
+      { "positionCode": "220740307", "scope": "position-level", "applicantsRegistered": 14, "recruitCount": 2 },
+      { "positionCode": "230740308", "scope": "position-level", "applicantsRegistered": 1, "recruitCount": 1 },
+      { "positionCode": "230740309", "scope": "position-level", "applicantsRegistered": 20, "recruitCount": 2 },
+      { "positionCode": "230740310", "scope": "position-level", "applicantsRegistered": 21, "recruitCount": 2 },
+      { "positionCode": "230740312", "scope": "position-level", "applicantsRegistered": 44, "recruitCount": 1 }
+    ],
+    "notes": "粉笔页面逐岗表头为‘报考人数’，但区级汇总称‘过审人数’2525，二者口径不一致；未注明逐岗观察时点或计数定义。此处只保存逐行原值作为第三方参考，不等同于官方资格审查通过数、最终缴费数或实考人数。"
+  },
+  {
+    "sourceId": "fengtai-2026-fenbi-page-5",
+    "title": "粉笔 2026 北京公务员丰台区职位列表（第5页）",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "fengtai",
+    "geographicScope": "丰台区2026职位列表第5页；逐岗保存页面所列10条岗位",
+    "url": "https://www.fenbi.com/page/positions/1/438923?page=5&region=166",
+    "accessedAt": "2026-10-12",
+    "positionSnapshots": [
+      { "positionCode": "820740401", "scope": "position-level", "applicantsRegistered": 23, "recruitCount": 2 },
+      { "positionCode": "220740501", "scope": "position-level", "applicantsRegistered": 23, "recruitCount": 1 },
+      { "positionCode": "820740601", "scope": "position-level", "applicantsRegistered": 111, "recruitCount": 2 },
+      { "positionCode": "820740801", "scope": "position-level", "applicantsRegistered": 26, "recruitCount": 2 },
+      { "positionCode": "820740901", "scope": "position-level", "applicantsRegistered": 42, "recruitCount": 2 },
+      { "positionCode": "820741001", "scope": "position-level", "applicantsRegistered": 36, "recruitCount": 2 },
+      { "positionCode": "820741002", "scope": "position-level", "applicantsRegistered": 22, "recruitCount": 2 },
+      { "positionCode": "820741101", "scope": "position-level", "applicantsRegistered": 13, "recruitCount": 1 },
+      { "positionCode": "220741301", "scope": "position-level", "applicantsRegistered": 24, "recruitCount": 1 },
+      { "positionCode": "230741401", "scope": "position-level", "applicantsRegistered": 2, "recruitCount": 1 }
+    ],
+    "notes": "粉笔页面逐岗表头为‘报考人数’，但区级汇总称‘过审人数’2525，二者口径不一致；未注明逐岗观察时点或计数定义。此处只保存逐行原值作为第三方参考，不等同于官方资格审查通过数、最终缴费数或实考人数。"
+  },
+  {
+    "sourceId": "fengtai-2026-fenbi-page-10",
+    "title": "粉笔 2026 北京公务员丰台区职位列表（第10页）",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "fengtai",
+    "geographicScope": "丰台区2026职位列表第10页；逐岗保存页面所列6条岗位",
+    "url": "https://www.fenbi.com/page/positions/1/438923?page=10&region=166",
+    "accessedAt": "2026-10-12",
+    "positionSnapshots": [
+      { "positionCode": "230742504", "scope": "position-level", "applicantsRegistered": 2, "recruitCount": 1 },
+      { "positionCode": "230742801", "scope": "position-level", "applicantsRegistered": 2, "recruitCount": 1 },
+      { "positionCode": "230743202", "scope": "position-level", "applicantsRegistered": 2, "recruitCount": 1 },
+      { "positionCode": "230741903", "scope": "position-level", "applicantsRegistered": 5, "recruitCount": 1 },
+      { "positionCode": "230743201", "scope": "position-level", "applicantsRegistered": 2, "recruitCount": 1 },
+      { "positionCode": "230740313", "scope": "position-level", "applicantsRegistered": 25, "recruitCount": 1 }
+    ],
+    "notes": "粉笔页面逐岗表头为‘报考人数’，但区级汇总称‘过审人数’2525，二者口径不一致；未注明逐岗观察时点或计数定义。此处只保存逐行原值作为第三方参考，不等同于官方资格审查通过数、最终缴费数或实考人数。"
+  },
+  {
     "sourceId": "fengtai-2026-fenbi-police-page-6",
     "title": "粉笔职位库：2026北京职位全市快速选岗第6页（丰台匹配行）",
     "publisher": "粉笔职位库",

@@ -17,7 +17,7 @@ test('Fengtai position candidates preserve row-level sources and visible coverag
   assert.deepEqual(byYear, {
     2024: { positions: 2, recruits: 3 },
     2025: { positions: 10, recruits: 66 },
-    2026: { positions: 26, recruits: 92 },
+    2026: { positions: 52, recruits: 136 },
   });
   assert.equal(new Set(rows.map((position) => `${position.year}:${position.code}`)).size, rows.length);
   for (const row of rows) {
