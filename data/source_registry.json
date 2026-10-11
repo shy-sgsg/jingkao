@@ -1324,21 +1324,32 @@
   },
   {
     "sourceId": "eoffcn-2024-shijingshan-20231115-1800",
-    "title": "中公：2024京考报名统计（截至11月15日18时）",
+    "title": "中公：2024京考报名统计及岗位榜单样本（截至11月15日18时）",
     "publisher": "中公教育",
     "level": "secondary",
     "evidenceType": "registration_snapshot",
     "year": 2024,
-    "geographicScope": "北京市（区级汇总）",
+    "geographicScope": "北京市（区级汇总与职位榜样本）",
     "url": "https://www.eoffcn.com/kszx/detail/1236079.html",
     "observedAt": "2023-11-15 18:00",
-    "accessedAt": "2026-10-11",
+    "accessedAt": "2026-10-12",
     "positionSnapshots": [
       { "scope": "district-level", "unit": "石景山区", "applicantsQualified": 436, "recruitCount": 130 },
       { "scope": "district-level", "unit": "西城区", "applicantsQualified": 1971, "recruitCount": 496 },
-      { "positionCode": "220219306", "scope": "position-level", "applicantsQualified": 74, "recruitCount": 1 }
+      { "positionCode": "220219306", "scope": "position-level", "applicantsQualified": 74, "recruitCount": 1 },
+      { "positionCode": "230116901", "scope": "position-level", "applicantsQualified": 170, "recruitCount": 2 },
+      { "positionCode": "230527501", "scope": "position-level", "applicantsQualified": 307, "recruitCount": 2 },
+      { "positionCode": "232502203", "scope": "position-level", "applicantsQualified": 286, "recruitCount": 112 },
+      { "positionCode": "232502702", "scope": "position-level", "applicantsQualified": 157, "recruitCount": 34 },
+      { "positionCode": "242502602", "scope": "position-level", "applicantsQualified": 156, "recruitCount": 44 },
+      { "positionCode": "240943601", "scope": "position-level", "applicantsQualified": 76, "recruitCount": 1 },
+      { "positionCode": "819900501", "scope": "position-level", "applicantsQualified": 69, "recruitCount": 1 },
+      { "positionCode": "221452802", "scope": "position-level", "applicantsQualified": 65, "recruitCount": 1 },
+      { "positionCode": "221363901", "scope": "position-level", "applicantsQualified": 60, "recruitCount": 1 },
+      { "positionCode": "231454501", "scope": "position-level", "applicantsQualified": 57, "recruitCount": 1 },
+      { "positionCode": "119900203", "scope": "position-level", "applicantsQualified": 56, "recruitCount": 1 }
     ],
-    "notes": "该时点区级表报告石景山436/130、西城1971/496；西城区竞争榜另列文化活动岗（220219306）74/1。均为资格审查通过人数快照，不是最终缴费或实考人数；职位榜单仅是部分岗位样本。"
+    "notes": "该时点区级表报告石景山436/130、西城1971/496；职位榜中有12个代码和计划数可与本地2024职位唯一对应。以上均为资格审查通过人数快照，不是最终缴费或实考人数；职位榜单仅是部分岗位样本。"
   },
   {
     "sourceId": "eoffcn-2024-shijingshan-20231116-1800",

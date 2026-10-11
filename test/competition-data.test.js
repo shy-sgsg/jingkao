@@ -4,6 +4,83 @@ import { readFile } from 'node:fs/promises';
 import { normalizeDataset } from '../src/data/normalize.js';
 import { filterAndSortPositions, getPositionCompetitionEvidence } from '../src/data/positions.js';
 
+test('2024 November 15 evening Dongcheng snapshot stays attached to Dongsi Street position', async () => {
+  const raw = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const dataset = normalizeDataset(raw);
+  const code = '230116901';
+  const sourceId = 'eoffcn-2024-shijingshan-20231115-1800';
+  const position = dataset.positions.find((item) => Number(item.year) === 2024 && item.code === code);
+  const source = dataset.sources.find((item) => item.sourceId === sourceId);
+  const row = dataset.observations.find((item) => item.sourceId === sourceId
+    && Number(item.year) === 2024 && item.positionCode === code);
+
+  assert.equal(source?.url, 'https://www.eoffcn.com/kszx/detail/1236079.html');
+  assert.equal(source?.observedAt, '2023-11-15 18:00');
+  assert.equal(position?.unit, '北京市东城区东四街道');
+  assert.equal(position?.title, '综合管理岗');
+  assert.equal(position?.recruitCount, 2);
+  assert.equal(row?.scope, 'position-level');
+  assert.equal(row?.applicantsQualified, 170);
+  assert.equal(row?.recruitCount, 2);
+  assert.equal(row?.qualifiedCompetitionRatio, 85);
+  assert.equal(row?.applicantsRegistered, null);
+  assert.equal(row?.applicantsPaid, null);
+  assert.equal(row?.actualTestTakers, null);
+
+  const competition = getPositionCompetitionEvidence(position, dataset);
+  assert.deepEqual(competition.snapshots.map((snapshot) => snapshot.observedAt), [
+    '2023-11-15 09:00',
+    '2023-11-15 18:00',
+    '2023-11-16 09:00',
+    '2023-11-16 18:00',
+    '2023-11-17 09:00',
+  ]);
+  assert.equal(competition.snapshots.find((snapshot) => snapshot.observedAt === '2023-11-15 18:00')?.qualifiedCompetitionRatio, 85);
+  assert.equal(competition.qualifiedCompetitionRatio, 137);
+});
+
+test('2024 November 15 evening published position codes map only to exact local positions', async () => {
+  const raw = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const dataset = normalizeDataset(raw);
+  const sourceId = 'eoffcn-2024-shijingshan-20231115-1800';
+  const expected = [
+    ['220219306', 74, 1],
+    ['230527501', 307, 2],
+    ['232502203', 286, 112],
+    ['232502702', 157, 34],
+    ['242502602', 156, 44],
+    ['240943601', 76, 1],
+    ['819900501', 69, 1],
+    ['221452802', 65, 1],
+    ['221363901', 60, 1],
+    ['231454501', 57, 1],
+    ['119900203', 56, 1],
+  ];
+
+  for (const [code, qualified, recruits] of expected) {
+    const position = dataset.positions.find((item) => Number(item.year) === 2024 && item.code === code);
+    const row = dataset.observations.find((item) => item.sourceId === sourceId
+      && Number(item.year) === 2024 && item.positionCode === code);
+    assert.ok(position, `2024 position ${code} should exist in the position library`);
+    assert.equal(position.recruitCount, recruits, `${code} local recruitment count should match the cited row`);
+    assert.equal(row?.scope, 'position-level');
+    assert.equal(row?.observedAt, '2023-11-15 18:00');
+    assert.equal(row?.applicantsQualified, qualified);
+    assert.equal(row?.recruitCount, recruits);
+    assert.equal(row?.qualifiedCompetitionRatio, qualified / recruits);
+    assert.ok(getPositionCompetitionEvidence(position, dataset).snapshots.includes(row));
+  }
+
+  const filtered = filterAndSortPositions(dataset.positions, {
+    year: 2024,
+    observations: dataset.observations,
+    competitionEvidence: 'has',
+  });
+  for (const [code] of expected) {
+    assert.ok(filtered.some((position) => position.year === 2024 && position.code === code), `${code} should remain discoverable with the competition-data filter`);
+  }
+});
+
 test('2025 Beijing Jingkao registration snapshots stay attached to their position codes and snapshot ratios', async () => {
   const raw = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
   const dataset = normalizeDataset(raw);
