@@ -87176,6 +87176,114 @@
       },
       "districtId": "daxing",
       "districtMatch": "大兴区"
+    },
+    {
+      "year": 2026,
+      "code": "221457101",
+      "unit": "北京市顺义区民政局",
+      "title": "综合管理岗",
+      "orgType": "区直",
+      "recruitCount": 1,
+      "sourceLevel": "secondary",
+      "verification": "相对面职位代码清单列出该单位唯一候选代码；与成公进面分样本按同年单位及岗位名关联，尚未与官方职位表逐代码复核",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "本轮仅补录岗位身份与计划招录数用于关联公开进面分；完整资格条件以官方招考简章为准。",
+      "sources": [
+        "xduim-2026-shunyi-code-list"
+      ],
+      "districtId": "shunyi",
+      "districtMatch": "顺义区"
+    },
+    {
+      "year": 2026,
+      "code": "221457201",
+      "unit": "北京市顺义区司法局",
+      "title": "执法监督岗",
+      "orgType": "区直",
+      "recruitCount": 1,
+      "sourceLevel": "secondary",
+      "verification": "相对面职位代码清单列出该单位唯一候选代码；与成公进面分样本按同年单位及岗位名关联，尚未与官方职位表逐代码复核",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "本轮仅补录岗位身份与计划招录数用于关联公开进面分；完整资格条件以官方招考简章为准。",
+      "sources": [
+        "xduim-2026-shunyi-code-list"
+      ],
+      "districtId": "shunyi",
+      "districtMatch": "顺义区"
+    },
+    {
+      "year": 2026,
+      "code": "221458204",
+      "unit": "北京市顺义区市场监督管理局（北京市顺义区知识产权局）",
+      "title": "执法办案岗1",
+      "orgType": "区直",
+      "recruitCount": 2,
+      "sourceLevel": "secondary",
+      "verification": "华图职位详情镜像列明代码、岗位名及招录数；未与官方职位表逐代码复核",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "本轮仅补录岗位身份与计划招录数用于关联公开进面分；完整资格条件以官方招考简章为准。",
+      "sources": [
+        "huatu-2026-shunyi-market-page"
+      ],
+      "districtId": "shunyi",
+      "districtMatch": "顺义区"
+    },
+    {
+      "year": 2026,
+      "code": "821458901",
+      "unit": "北京市顺义区地震局",
+      "title": "地震管理岗",
+      "orgType": "区直",
+      "recruitCount": 2,
+      "sourceLevel": "secondary",
+      "verification": "京考职位网职位详情列明代码、岗位名及招录数；未与官方职位表逐代码复核",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "本轮仅补录岗位身份与计划招录数用于关联公开进面分；完整资格条件以官方招考简章为准。",
+      "sources": [
+        "gwyzwb-2026-shunyi-earthquake"
+      ],
+      "districtId": "shunyi",
+      "districtMatch": "顺义区"
+    },
+    {
+      "year": 2026,
+      "code": "821456801",
+      "unit": "北京市顺义区档案馆",
+      "title": "档案管理岗",
+      "orgType": "区直",
+      "recruitCount": 2,
+      "sourceLevel": "secondary",
+      "verification": "京考职位网职位详情列明代码、岗位名及招录数；未与官方职位表逐代码复核",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "本轮仅补录岗位身份与计划招录数用于关联公开进面分；完整资格条件以官方招考简章为准。",
+      "sources": [
+        "gwyzwb-2026-shunyi-archive"
+      ],
+      "districtId": "shunyi",
+      "districtMatch": "顺义区"
+    },
+    {
+      "year": 2026,
+      "code": "221458002",
+      "unit": "北京市顺义区卫生健康委员会（中共北京市顺义区委卫生健康工作委员会）",
+      "title": "卫生监督执法岗",
+      "orgType": "区直",
+      "recruitCount": 2,
+      "sourceLevel": "secondary",
+      "verification": "华图职位详情镜像列明代码、岗位名及招录数；未与官方职位表逐代码复核",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "本轮仅补录岗位身份与计划招录数用于关联公开进面分；完整资格条件以官方招考简章为准。",
+      "sources": [
+        "huatu-2026-shunyi-health-page"
+      ],
+      "districtId": "shunyi",
+      "districtMatch": "顺义区"
     }
   ],
   "observations": [
@@ -108460,6 +108568,79 @@
       "notes": "页面称顺义区共84人进入面试，明列29条部分岗位分数线，范围100—134；其中14条可按同年度单位、岗位名及第三方职位详情代码唯一关联，3条同名职位存在候选歧义，另12条本轮尚无候选职位行，保留空代码。第三方部分样本，不代表完整进面名单；所列是进入面试的岗位最低笔试分，不是官方笔试合格线。"
     },
     {
+      "sourceId": "xduim-2026-shunyi-code-list",
+      "title": "相对面职位库：2026顺义区职位代码列表",
+      "publisher": "相对面职位库",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "districtId": "shunyi",
+      "geographicScope": "顺义区职位代码、单位与计划招录数列表",
+      "url": "https://www.xduim.com/zw/beijing/gwylist?city=%E9%A1%BA%E4%B9%89%E5%8C%BA&year=2026",
+      "accessedAt": "2026-10-11",
+      "notes": "列表列出顺义区民政局代码221457101、司法局代码221457201，二者各招录1人；岗位名以成公分数样本为准，因列表页面未显示岗位名，属于按单位内唯一代码候选关联，尚未与官方职位表逐代码核验。"
+    },
+    {
+      "sourceId": "huatu-2026-shunyi-market-page",
+      "title": "华图职位库：2026顺义区市场监督管理局职位列表",
+      "publisher": "华图教育",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "districtId": "shunyi",
+      "geographicScope": "顺义区市场监督管理局职位详情",
+      "url": "https://ah.huatu.com/zw/bjgwy/shunyi/2026_20.html",
+      "accessedAt": "2026-10-11",
+      "notes": "职位详情列代码221458204、执法办案岗1、计划招录2人；第三方职位镜像，未与官方职位表逐代码核验。"
+    },
+    {
+      "sourceId": "huatu-2026-shunyi-health-page",
+      "title": "华图职位库：2026顺义区卫生健康委员会职位列表",
+      "publisher": "华图教育",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "districtId": "shunyi",
+      "geographicScope": "顺义区卫生健康委员会职位详情",
+      "url": "https://ah.huatu.com/zw/bjgwy/shunyi/2026_18.html",
+      "accessedAt": "2026-10-11",
+      "notes": "职位详情列代码221458002、卫生监督执法岗、计划招录2人；第三方职位镜像，未与官方职位表逐代码核验。"
+    },
+    {
+      "sourceId": "gwyzwb-2026-shunyi-earthquake",
+      "title": "京考职位网：2026顺义区地震局职位详情",
+      "publisher": "京考职位网",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "districtId": "shunyi",
+      "geographicScope": "顺义区地震局职位详情",
+      "url": "https://bj.gwyzwb.com/shunyi/2026_27.html",
+      "accessedAt": "2026-10-11",
+      "positionCode": "821458901",
+      "unit": "北京市顺义区地震局",
+      "positionTitle": "地震管理岗",
+      "reportedRecruitCount": 2,
+      "notes": "职位详情列出代码821458901、地震管理岗、计划招录2人；第三方职位镜像，未与官方职位表逐代码核验。"
+    },
+    {
+      "sourceId": "gwyzwb-2026-shunyi-archive",
+      "title": "京考职位网：2026顺义区档案馆职位详情",
+      "publisher": "京考职位网",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "districtId": "shunyi",
+      "geographicScope": "顺义区档案馆职位详情",
+      "url": "https://bj.gwyzwb.com/2026/1141.html",
+      "accessedAt": "2026-10-11",
+      "positionCode": "821456801",
+      "unit": "北京市顺义区档案馆",
+      "positionTitle": "档案管理岗",
+      "reportedRecruitCount": 2,
+      "notes": "职位详情列出代码821456801、档案管理岗、计划招录2人；第三方职位镜像，未与官方职位表逐代码核验。"
+    },
+    {
       "sourceId": "gwyzwb-2026-pinggu-index",
       "title": "京考职位网：2026平谷区职位目录",
       "publisher": "京考职位网",
@@ -114368,14 +114549,14 @@
       "unit": "北京市顺义区市场监督管理局（北京市顺义区知识产权局）",
       "title": "执法办案岗1",
       "name": "北京市顺义区市场监督管理局｜执法办案岗1",
-      "positionCode": null,
+      "positionCode": "221458204",
       "orgType": "区直",
       "score": 131.5,
-      "notes": "成公页面公开单位、岗位及分数，但本轮没有可唯一核验的顺义候选代码，保留未关联。",
-      "mappingConfidence": "unmatched",
+      "notes": "成公页面未列职位代码；华图同年度职位详情列明该岗位代码及招录数，按单位与岗位名唯一对应。职位镜像未与官方职位表逐代码核验。",
+      "mappingConfidence": "high",
       "sourceId": "cgzj-2026-shunyi-cutoff-sample",
       "sourceLevel": "secondary",
-      "verification": "岗位代码未唯一匹配；保留空代码"
+      "verification": "年度、单位与岗位名唯一匹配"
     },
     {
       "id": "2026-cgzj-shunyi-04",
@@ -114398,14 +114579,14 @@
       "unit": "北京市顺义区司法局",
       "title": "执法监督岗",
       "name": "北京市顺义区司法局｜执法监督岗",
-      "positionCode": null,
+      "positionCode": "221457201",
       "orgType": "区直",
       "score": 130.5,
-      "notes": "成公页面公开单位、岗位及分数，但本轮没有可唯一核验的顺义候选代码，保留未关联。",
-      "mappingConfidence": "unmatched",
+      "notes": "成公页面未列职位代码；相对面同年代码清单在该单位列出唯一候选代码，按单位及岗位名唯一关联。仍待官方逐代码核验。",
+      "mappingConfidence": "high",
       "sourceId": "cgzj-2026-shunyi-cutoff-sample",
       "sourceLevel": "secondary",
-      "verification": "岗位代码未唯一匹配；保留空代码"
+      "verification": "年度、单位与岗位名唯一匹配"
     },
     {
       "id": "2026-cgzj-shunyi-06",
@@ -114413,14 +114594,14 @@
       "unit": "北京市顺义区民政局",
       "title": "综合管理岗",
       "name": "北京市顺义区民政局｜综合管理岗",
-      "positionCode": null,
+      "positionCode": "221457101",
       "orgType": "区直",
       "score": 130.25,
-      "notes": "成公页面公开单位、岗位及分数，但本轮没有可唯一核验的顺义候选代码，保留未关联。",
-      "mappingConfidence": "unmatched",
+      "notes": "成公页面未列职位代码；相对面同年代码清单在该单位列出唯一候选代码，按单位及岗位名唯一关联。仍待官方逐代码核验。",
+      "mappingConfidence": "high",
       "sourceId": "cgzj-2026-shunyi-cutoff-sample",
       "sourceLevel": "secondary",
-      "verification": "岗位代码未唯一匹配；保留空代码"
+      "verification": "年度、单位与岗位名唯一匹配"
     },
     {
       "id": "2026-cgzj-shunyi-07",
@@ -114473,14 +114654,14 @@
       "unit": "北京市顺义区地震局",
       "title": "地震管理岗",
       "name": "北京市顺义区地震局｜地震管理岗",
-      "positionCode": null,
+      "positionCode": "821458901",
       "orgType": "区直",
       "score": 129.25,
-      "notes": "成公页面公开单位、岗位及分数，但本轮没有可唯一核验的顺义候选代码，保留未关联。",
-      "mappingConfidence": "unmatched",
+      "notes": "成公页面未列职位代码；京考职位网同年度职位详情列明唯一同名岗位及代码。第三方镜像未与官方职位表逐代码核验。",
+      "mappingConfidence": "high",
       "sourceId": "cgzj-2026-shunyi-cutoff-sample",
       "sourceLevel": "secondary",
-      "verification": "岗位代码未唯一匹配；保留空代码"
+      "verification": "年度、单位与岗位名唯一匹配"
     },
     {
       "id": "2026-cgzj-shunyi-11",
@@ -114593,14 +114774,14 @@
       "unit": "北京市顺义区档案馆",
       "title": "档案管理岗",
       "name": "北京市顺义区档案馆｜档案管理岗",
-      "positionCode": null,
+      "positionCode": "821456801",
       "orgType": "区直",
       "score": 126.25,
-      "notes": "成公页面公开单位、岗位及分数，但本轮没有可唯一核验的顺义候选代码，保留未关联。",
-      "mappingConfidence": "unmatched",
+      "notes": "成公页面未列职位代码；京考职位网同年度职位详情列明唯一同名岗位及代码。第三方镜像未与官方职位表逐代码核验。",
+      "mappingConfidence": "high",
       "sourceId": "cgzj-2026-shunyi-cutoff-sample",
       "sourceLevel": "secondary",
-      "verification": "岗位代码未唯一匹配；保留空代码"
+      "verification": "年度、单位与岗位名唯一匹配"
     },
     {
       "id": "2026-cgzj-shunyi-19",
@@ -114638,14 +114819,14 @@
       "unit": "北京市顺义区卫生健康委员会（中共北京市顺义区委卫生健康工作委员会）",
       "title": "卫生监督执法岗",
       "name": "北京市顺义区卫生健康委员会｜卫生监督执法岗",
-      "positionCode": null,
+      "positionCode": "221458002",
       "orgType": "区直",
       "score": 122.5,
-      "notes": "成公页面公开单位、岗位及分数，但本轮没有可唯一核验的顺义候选代码，保留未关联。",
-      "mappingConfidence": "unmatched",
+      "notes": "成公页面未列职位代码；华图同年度职位详情列明该单位该岗位代码及招录数，单位与岗位名唯一对应。职位镜像未与官方职位表逐代码核验。",
+      "mappingConfidence": "high",
       "sourceId": "cgzj-2026-shunyi-cutoff-sample",
       "sourceLevel": "secondary",
-      "verification": "岗位代码未唯一匹配；保留空代码"
+      "verification": "年度、单位与岗位名唯一匹配"
     },
     {
       "id": "2026-cgzj-shunyi-22",

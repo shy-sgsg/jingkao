@@ -320,12 +320,12 @@ class DataValidatorTests(unittest.TestCase):
             result.stdout,
         )
         self.assertIn(
-            "2026 coverage: org type 区直 224, 街道 92, 镇 43, 垂直/驻区 15, unknown 443, 乡镇 4, 法检 2; "
-            "major codes 518/823; structured requirements 12/823; eligibility complete 0/823; "
-            "cross verified 6/823; position sources official 0, secondary 823, other 0",
+            "2026 coverage: org type 区直 230, 街道 92, 镇 43, 垂直/驻区 15, unknown 443, 乡镇 4, 法检 2; "
+            "major codes 518/829; structured requirements 12/829; eligibility complete 0/829; "
+            "cross verified 6/829; position sources official 0, secondary 829, other 0",
             result.stdout,
         )
-        self.assertIn("Score mappings: high 266, ambiguous 44, unmatched 29 (339 rows)", result.stdout)
+        self.assertIn("Score mappings: high 272, ambiguous 44, unmatched 23 (339 rows)", result.stdout)
         self.assertIn(
             "Observation metric rows: registered 0, qualified 261, paid 0, confirmed 0, actual test takers 0",
             result.stdout,
