@@ -40,12 +40,12 @@ test('research findings derive sample coverage, score distribution, and evidence
     officialPositionRows: 0,
   });
   assert.deepEqual(byId['competition-grain'].facts, {
-    observations: 889,
-    jobLevelObservations: 846,
+    observations: 922,
+    jobLevelObservations: 879,
     aggregateObservations: 43,
-    jobLevelPositions: 664,
+    jobLevelPositions: 696,
     qualificationSnapshots: 221,
-    reportedApplicationSnapshots: 625,
+    reportedApplicationSnapshots: 658,
   });
   assert.match(byId['competition-grain'].title, /岗位级竞争观察/);
   assert.ok(byId['competition-grain'].sourceIds.includes('huatu-2025-first-day-20241118-1800'));
@@ -70,6 +70,9 @@ test('research findings derive sample coverage, score distribution, and evidence
   ]) assert.ok(byId['competition-grain'].sourceIds.includes(sourceId));
   for (const page of [2, 3, 4, 5, 6, 7, 8]) {
     assert.ok(byId['competition-grain'].sourceIds.includes(`changping-2026-fenbi-page-${page}`));
+  }
+  for (const page of [2, 3, 4, 5]) {
+    assert.ok(byId['competition-grain'].sourceIds.includes(`yanqing-2026-fenbi-page-${page}`));
   }
 });
 
@@ -107,6 +110,6 @@ test('the research route presents expandable source lineage and its topic filter
 
   assert.match(root.innerHTML, /data-topic="分数样本" aria-pressed="true">/);
   assert.match(root.innerHTML, /365 条/);
-  assert.match(root.innerHTML, /报考人数 625 条/);
+  assert.match(root.innerHTML, /报考人数 658 条/);
   assert.doesNotMatch(root.innerHTML, /class="research-finding[^\"]*"[^>]*data-topic="岗位覆盖"/);
 });
