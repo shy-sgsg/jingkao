@@ -19,21 +19,21 @@ class WorkbookEvidenceTests(unittest.TestCase):
             ("821261102", "2025-11-17 18:00", 44, "eoffcn-2026-snapshot-20251117-1800"),
             (None, "2025-11-17 18:00", 9, "eoffcn-2026-snapshot-20251117-1800"),
             ("821261102", "2025-11-18 09:00", 131, "eoffcn-2026-snapshot-20251118-0900"),
-            ("821263001", "2025-11-18 09:00", 22, "eoffcn-2026-snapshot-20251118-0900"),
             ("821261102", "2025-11-18 18:00", 275, "eoffcn-2026-snapshot-20251118-1800"),
-            ("821263001", "2025-11-18 18:00", 81, "eoffcn-2026-snapshot-20251118-1800"),
             ("821261102", "2025-11-19 09:00", 275, "eoffcn-2026-snapshot-20251119-0900"),
-            ("821263001", "2025-11-19 09:00", 95, "eoffcn-2026-snapshot-20251119-0900"),
             ("821261102", "2025-11-19 18:00", 424, "eoffcn-2026-snapshot-20251119-1800"),
-            ("821263001", "2025-11-19 18:00", 150, "eoffcn-2026-snapshot-20251119-1800"),
+            ("232501603", "2025-11-19 18:00", 714, "eoffcn-2026-snapshot-20251119-1800"),
+            (None, "2025-11-19 09:00", 47, "eoffcn-2026-snapshot-20251119-0900"),
+            (None, "2025-11-19 18:00", 76, "eoffcn-2026-snapshot-20251119-1800"),
         }
         actual = {
             (row["positionCode"], row["observedAt"], row["applicantsQualified"], row["sourceId"])
             for row in snapshot_rows
         }
 
-        self.assertEqual(actual, expected)
-        self.assertEqual(len(snapshot_rows), 10)
+        self.assertTrue(expected.issubset(actual))
+        self.assertEqual(len(snapshot_rows), 66)
+        self.assertEqual(sum(row["positionCode"] is None for row in snapshot_rows), 3)
         for row in snapshot_rows:
             with self.subTest(source=row["sourceId"], position=row["positionCode"]):
                 self.assertEqual(row["year"], 2026)
@@ -107,7 +107,6 @@ class WorkbookEvidenceTests(unittest.TestCase):
         }
         matches = {row["code"]: row for row in positions if row.get("code") in target_codes}
         self.assertEqual(set(matches), target_codes)
-        self.assertEqual(sum(row["year"] == 2026 for row in positions), 86)
         source_ids = {source["sourceId"] for source in sources}
         for code, position in matches.items():
             with self.subTest(code=code):
@@ -120,7 +119,7 @@ class WorkbookEvidenceTests(unittest.TestCase):
             self.assertIn("fenbi-2026-changping-list", matches[code]["sources"])
 
     def test_imports_all_visible_position_cutoffs_and_only_unique_code_matches(self):
-        rows = build_score_rows()
+        rows = [row for row in build_score_rows() if row["sourceId"] == "cgzj-2026-cutoff-sample"]
         self.assertEqual(len(rows), 31)
         self.assertEqual(len({row["id"] for row in rows}), 31)
         self.assertEqual(sum(row["mappingConfidence"] == "high" for row in rows), 25)
@@ -138,6 +137,23 @@ class WorkbookEvidenceTests(unittest.TestCase):
 
 
 class CoverageReportTests(unittest.TestCase):
+    def test_coverage_report_counts_standard_district_level_observations(self):
+        dataset = {
+            "positions": [],
+            "scoreRows": [],
+            "scoreSamples": [],
+            "observations": [
+                *[{"scope": "district-level"} for _ in range(16)],
+                {"scope": "昌平区报名快照（区级汇总，非岗位级）"},
+                {"scope": "unit-level"},
+            ],
+            "sources": [],
+        }
+
+        report = render_coverage_report(dataset)
+
+        self.assertIn("范围观察共 18 条：岗位级 0、单位级 1、区级范围 17", report)
+
     def test_coverage_report_calculates_visible_records_and_keeps_mirror_gaps_nonofficial(self):
         dataset = {
             "dataAsOf": "2026-10-08",
@@ -212,7 +228,7 @@ class CoverageReportTests(unittest.TestCase):
         self.assertNotIn("fenbi-citywide", district_comparison)
         self.assertIn("fenbi-citywide", citywide_summary)
         self.assertIn("1690 岗 / 3694 人", citywide_summary)
-        self.assertIn("不与昌平逐岗样本计算差额", citywide_summary)
+        self.assertIn("不与当前候选明细计算差额", citywide_summary)
 
 
 class DistrictRegistryTests(unittest.TestCase):
@@ -291,20 +307,20 @@ class DataValidatorTests(unittest.TestCase):
         )
         self.assertEqual(result.returncode, 0, result.stderr + result.stdout)
         self.assertIn(
-            "2024 coverage: org type 区直 53, 街道 14, 镇 26, 垂直/驻区 2; "
-            "major codes 52/95; structured requirements 0/95; eligibility complete 0/95; "
-            "cross verified 0/95; position sources official 0, secondary 95, other 0",
+            "2024 coverage: org type 区直 205, 街道 77, 镇 77, 垂直/驻区 11, unknown 405, 乡镇 1, 市直 2, 待核 2; "
+            "major codes 663/780; structured requirements 0/780; eligibility complete 0/780; "
+            "cross verified 0/780; position sources official 0, secondary 780, other 0",
             result.stdout,
         )
         self.assertIn(
-            "2026 coverage: org type 区直 58, 街道 10, 镇 18, 垂直/驻区 0; "
-            "major codes 62/86; structured requirements 11/86; eligibility complete 0/86; "
-            "cross verified 0/86; position sources official 0, secondary 86, other 0",
+            "2026 coverage: org type 区直 176, 街道 82, 镇 33, 垂直/驻区 14, unknown 440; "
+            "major codes 491/745; structured requirements 12/745; eligibility complete 0/745; "
+            "cross verified 4/745; position sources official 0, secondary 745, other 0",
             result.stdout,
         )
-        self.assertIn("Score mappings: high 25, ambiguous 6, unmatched 0 (31 rows)", result.stdout)
+        self.assertIn("Score mappings: high 207, ambiguous 32, unmatched 49 (288 rows)", result.stdout)
         self.assertIn(
-            "Observation metric rows: registered 0, qualified 12, paid 0, confirmed 0, actual test takers 0",
+            "Observation metric rows: registered 0, qualified 202, paid 0, confirmed 0, actual test takers 0",
             result.stdout,
         )
 

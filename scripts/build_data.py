@@ -309,6 +309,7 @@ def build_aggregate_evidence(sources: list[dict[str, Any]], score_rows: list[dic
                 "year": source["year"],
                 "scope": snapshot.get("scope", "position-level" if position_code else "unit-level"),
                 "positionCode": position_code,
+                "districtId": snapshot.get("districtId"),
                 "unit": snapshot.get("unit"),
                 "observationType": "qualified_snapshot",
                 "observedAt": source["observedAt"],
@@ -575,7 +576,8 @@ def render_coverage_report(dataset: dict[str, Any]) -> str:
         "unit-level": sum(observation.get("scope") == "unit-level" for observation in observations),
     }
     district_scoped = sum(
-        isinstance(observation.get("scope"), str) and observation["scope"].startswith("昌平区")
+        observation.get("scope") == "district-level"
+        or isinstance(observation.get("scope"), str) and observation["scope"].startswith("昌平区")
         for observation in observations
     )
     registered_counts = sum(has_value(observation.get("applicantsRegistered")) for observation in observations)

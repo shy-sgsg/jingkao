@@ -23,7 +23,7 @@ test('Xicheng candidate rows preserve row-level lineage and recovered totals by 
   });
   assert.deepEqual(totalsByYear(dataset.positions.filter((position) => position.districtId === 'xicheng')), {
     2024: { positions: 57, recruits: 135 },
-    2025: { positions: 89, recruits: 310 },
+    2025: { positions: 90, recruits: 311 },
     2026: { positions: 116, recruits: 354 },
   });
   assert.equal(new Set(rows.map((position) => `${position.year}:${position.code}`)).size, rows.length);

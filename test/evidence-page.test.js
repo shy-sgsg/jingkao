@@ -110,7 +110,7 @@ test('the evidence center lists dated position-level qualification snapshots wit
   assert.match(root.innerHTML, /150 人/);
   assert.match(root.innerHTML, /eoffcn\.com\/kszx\/detail\/1903982\.html/);
   assert.match(root.innerHTML, /资格审查通过人数.*不等同最终报名人数、缴费人数或实考人数/s);
-  assert.match(root.innerHTML, /岗位级资格审查快照[\s\S]*?覆盖 34 个岗位 · 12 个时点/);
+  assert.match(root.innerHTML, /岗位级资格审查快照[\s\S]*?覆盖 66 个岗位 · 20 个时点/);
 });
 
 test('the evidence center separates citywide weighted competition snapshots from job-level ratios', async () => {
@@ -120,7 +120,23 @@ test('the evidence center separates citywide weighted competition snapshots from
   assert.match(root.innerHTML, /2025-11-20 09:00[\s\S]*?23194 人[\s\S]*?3694 人[\s\S]*?1:6\.28/);
   assert.match(root.innerHTML, /2025-11-21 09:00[\s\S]*?48026 人[\s\S]*?3694 人[\s\S]*?1:13/);
   assert.match(root.innerHTML, /按计划数加权的总比，不是各岗位竞争比的简单平均/);
+  assert.match(root.innerHTML, /CITYWIDE WEIGHTED SNAPSHOTS · 2025–2026/);
   assert.match(root.innerHTML, /sohu\.com\/a\/957051740_121124036/);
+});
+
+test('the evidence center lists the complete 2025 district qualified snapshot with its own ratio grain', async () => {
+  const { root } = await renderSourceApp('#/evidence');
+  const table = root.innerHTML.match(/<table[^>]*class="data-table district-competition-table"[\s\S]*?<\/table>/)?.[0] || '';
+  const body = table.match(/<tbody>([\s\S]*?)<\/tbody>/)?.[1] || '';
+  const districts = ['东城区', '西城区', '朝阳区', '海淀区', '丰台区', '石景山区', '门头沟区', '房山区', '通州区', '顺义区', '昌平区', '大兴区', '怀柔区', '平谷区', '密云区', '延庆区'];
+
+  assert.match(root.innerHTML, /2025 各区资格审查竞争快照/);
+  assert.equal((body.match(/<tr>/g) || []).length, 16);
+  for (const district of districts) assert.match(table, new RegExp(district));
+  assert.match(table, /通州区[\s\S]*?2728 人[\s\S]*?212 人[\s\S]*?1:12\.87/);
+  assert.match(table, /石景山区[\s\S]*?1000 人[\s\S]*?125 人[\s\S]*?1:8/);
+  assert.match(root.innerHTML, /区级快照仅用于同一时点区级比较，不分摊到岗位/);
+  assert.match(root.innerHTML, /岗位级资格审查快照/);
 });
 
 test('the overview keeps personal study summaries and shows citywide position coverage and sources', async () => {
@@ -166,7 +182,7 @@ test('the source page exposes evidence-based coverage without presenting mirror 
   assert.match(root.innerHTML, /2024[\s\S]*?95 \/ 95 条/);
   assert.match(root.innerHTML, /2025[\s\S]*?91 \/ 91 条/);
   assert.match(root.innerHTML, /2026[\s\S]*?86 \/ 88 条/);
-  assert.match(root.innerHTML, /276 条具名分数记录[\s\S]*?部分样本/);
+  assert.match(root.innerHTML, /288 条具名分数记录[\s\S]*?部分样本/);
   assert.match(root.innerHTML, /年度官方职位分母未知/);
   assert.match(root.innerHTML, /条数相同不代表职位代码集合一致/);
   assert.doesNotMatch(root.innerHTML, /官方覆盖率[：:]\s*100%/);

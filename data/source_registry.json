@@ -231,20 +231,56 @@
   },
   {
     "sourceId": "eoffcn-2025-citywide-hot-jobs-20241122-0900",
-    "title": "中公网校：2025京考过审人数前十岗位（截至11月22日9时）",
+    "title": "中公网校：2025京考全市及各区报名统计、职位榜单（截至11月22日9时）",
     "publisher": "中公教育",
     "level": "secondary",
     "evidenceType": "registration_snapshot",
     "year": 2025,
-    "geographicScope": "北京市（过审人数前十岗位样本）",
+    "geographicScope": "北京市（全市、各区汇总及过审/竞争榜单岗位样本）",
     "url": "https://www.eoffcn.com/kszx/detail/1521605.html",
     "observedAt": "2024-11-22 09:00",
-    "accessedAt": "2026-10-10",
+    "accessedAt": "2026-10-11",
     "positionSnapshots": [
+      { "scope": "citywide-level", "applicantsQualified": 46546, "recruitCount": 4487 },
+      { "scope": "unit-level", "unit": "市直", "applicantsQualified": 7457, "recruitCount": 707 },
+      { "scope": "district-level", "districtId": "dongcheng", "unit": "东城区", "applicantsQualified": 3693, "recruitCount": 361 },
+      { "scope": "district-level", "districtId": "xicheng", "unit": "西城区", "applicantsQualified": 4055, "recruitCount": 447 },
+      { "scope": "district-level", "districtId": "chaoyang", "unit": "朝阳区", "applicantsQualified": 4064, "recruitCount": 403 },
+      { "scope": "district-level", "districtId": "haidian", "unit": "海淀区", "applicantsQualified": 4095, "recruitCount": 433 },
+      { "scope": "district-level", "districtId": "fengtai", "unit": "丰台区", "applicantsQualified": 3452, "recruitCount": 308 },
+      { "scope": "district-level", "districtId": "shijingshan", "unit": "石景山区", "applicantsQualified": 1000, "recruitCount": 125 },
+      { "scope": "district-level", "districtId": "mentougou", "unit": "门头沟区", "applicantsQualified": 1285, "recruitCount": 149 },
+      { "scope": "district-level", "districtId": "fangshan", "unit": "房山区", "applicantsQualified": 2888, "recruitCount": 244 },
+      { "scope": "district-level", "districtId": "tongzhou", "unit": "通州区", "applicantsQualified": 2728, "recruitCount": 212 },
+      { "scope": "district-level", "districtId": "shunyi", "unit": "顺义区", "applicantsQualified": 2185, "recruitCount": 181 },
+      { "scope": "district-level", "districtId": "changping", "unit": "昌平区", "applicantsQualified": 1738, "recruitCount": 176 },
+      { "scope": "district-level", "districtId": "daxing", "unit": "大兴区", "applicantsQualified": 2121, "recruitCount": 183 },
+      { "scope": "district-level", "districtId": "huairou", "unit": "怀柔区", "applicantsQualified": 1307, "recruitCount": 153 },
+      { "scope": "district-level", "districtId": "pinggu", "unit": "平谷区", "applicantsQualified": 1267, "recruitCount": 115 },
+      { "scope": "district-level", "districtId": "miyun", "unit": "密云区", "applicantsQualified": 1762, "recruitCount": 158 },
+      { "scope": "district-level", "districtId": "yanqing", "unit": "延庆区", "applicantsQualified": 1449, "recruitCount": 132 },
+      { "positionCode": "232501302", "scope": "position-level", "applicantsQualified": 1272, "recruitCount": 115 },
+      { "positionCode": "232501804", "scope": "position-level", "applicantsQualified": 744, "recruitCount": 78 },
+      { "positionCode": "232501702", "scope": "position-level", "applicantsQualified": 650, "recruitCount": 70 },
       { "positionCode": "232501902", "scope": "position-level", "applicantsQualified": 605, "recruitCount": 77 },
+      { "positionCode": "232501602", "scope": "position-level", "applicantsQualified": 544, "recruitCount": 65 },
+      { "positionCode": "242502301", "scope": "position-level", "applicantsQualified": 536, "recruitCount": 44 },
+      { "positionCode": "232502002", "scope": "position-level", "applicantsQualified": 496, "recruitCount": 52 },
+      { "positionCode": "232502401", "scope": "position-level", "applicantsQualified": 403, "recruitCount": 40 },
+      { "positionCode": "242503001", "scope": "position-level", "applicantsQualified": 337, "recruitCount": 30 },
+      { "positionCode": "232502702", "scope": "position-level", "applicantsQualified": 332, "recruitCount": 35 },
+      { "positionCode": "220527701", "scope": "position-level", "applicantsQualified": 256, "recruitCount": 1 },
+      { "positionCode": "241677103", "scope": "position-level", "applicantsQualified": 161, "recruitCount": 1 },
+      { "positionCode": "221155801", "scope": "position-level", "applicantsQualified": 155, "recruitCount": 1 },
+      { "positionCode": "230118902", "scope": "position-level", "applicantsQualified": 143, "recruitCount": 1 },
+      { "positionCode": "231569502", "scope": "position-level", "applicantsQualified": 133, "recruitCount": 1 },
+      { "positionCode": "820116908", "scope": "position-level", "applicantsQualified": 233, "recruitCount": 2 },
+      { "positionCode": "820528901", "scope": "position-level", "applicantsQualified": 116, "recruitCount": 1 },
+      { "positionCode": "221460602", "scope": "position-level", "applicantsQualified": 113, "recruitCount": 1 },
+      { "positionCode": "820220601", "scope": "position-level", "applicantsQualified": 110, "recruitCount": 1 },
       { "positionCode": "220633901", "scope": "position-level", "applicantsQualified": 304, "recruitCount": 2 }
     ],
-    "notes": "文章逐岗表列出截至2024-11-22 9时职位232501902资格审查通过605人、计划招录77人，以及职位220633901资格审查通过304人、计划招录2人。仅记录公开榜单中的岗位样本，不代表该区或全市完整清单；资格审查通过人数不是最终缴费或实考人数。"
+    "notes": "文章报告截至2024-11-22 09:00全市资格审查通过46,546人/招录4,487人、市直7,457/707及北京16区逐区过审数/计划数，并列过审人数和竞争比岗位榜样本。资格审查通过数不是最终缴费或实考人数；区级汇总不得分摊到单岗，岗位榜也不代表全市完整岗位清单。"
   },
   {
     "sourceId": "gwyzwb-2025-org-1",
@@ -1146,15 +1182,196 @@
   },
   {
     "sourceId": "eoffcn-2024-qualified",
-    "title": "中公：2024京考报名统计（昌平区快照）",
+    "title": "中公：2024京考报名统计（含昌平、石景山、西城区级快照）",
     "publisher": "中公教育",
     "level": "secondary",
     "evidenceType": "registration_snapshot",
     "year": 2024,
+    "geographicScope": "北京市（区级报名统计与公开岗位榜单样本）",
     "url": "https://www.eoffcn.com/kszx/detail/1237203.html",
     "observedAt": "2023-11-17 09:00",
-    "accessedAt": "2026-10-07",
-    "notes": "昌平区资格审查通过人数1,671；原统计以199人为计划人数，分母与职位镜像冲突，快照不是最终缴费/实考人数。"
+    "accessedAt": "2026-10-11",
+    "positionSnapshots": [
+      { "scope": "district-level", "unit": "石景山区", "applicantsQualified": 1083, "recruitCount": 130 },
+      { "scope": "district-level", "unit": "西城区", "applicantsQualified": 4669, "recruitCount": 496 },
+      { "positionCode": "220219306", "scope": "position-level", "applicantsQualified": 127, "recruitCount": 1 }
+    ],
+    "notes": "文章给出2024-11-17 09:00各区过审统计，石景山1,083/130、西城4,669/496；同文昌平区为1,671/199。并列出西城区文化活动岗（220219306）127/1。以上为资格审查通过快照，不是最终缴费或实考人数；岗位榜为部分样本。"
+  },
+  {
+    "sourceId": "eoffcn-2024-shijingshan-20231113-1800",
+    "title": "中公：2024京考报名首日竞争最激烈职位榜（石景山岗位）",
+    "publisher": "中公教育",
+    "level": "secondary",
+    "evidenceType": "registration_snapshot",
+    "year": 2024,
+    "geographicScope": "北京市（竞争最激烈职位榜样本）",
+    "url": "https://www.eoffcn.com/kszx/detail/1234407.html",
+    "observedAt": "2023-11-13 18:00",
+    "accessedAt": "2026-10-11",
+    "positionSnapshots": [
+      { "positionCode": "220840401", "scope": "position-level", "applicantsQualified": 13, "recruitCount": 1 }
+    ],
+    "notes": "竞争最激烈职位榜逐码列出石景山区城市管理委员会信息化管理岗（220840401）13人过审/招1人。该行是榜单样本，不是全区职位清单；资格审查通过数不是最终缴费或实考人数。"
+  },
+  {
+    "sourceId": "eoffcn-2024-shijingshan-20231114-0900",
+    "title": "中公：2024京考报名统计（截至11月14日9时）",
+    "publisher": "中公教育",
+    "level": "secondary",
+    "evidenceType": "registration_snapshot",
+    "year": 2024,
+    "geographicScope": "北京市（区级统计与竞争最激烈职位榜样本）",
+    "url": "https://www.eoffcn.com/kszx/detail/1234552.html",
+    "observedAt": "2023-11-14 09:00",
+    "accessedAt": "2026-10-11",
+    "positionSnapshots": [
+      { "positionCode": "220840401", "scope": "position-level", "applicantsQualified": 13, "recruitCount": 1 },
+      { "scope": "district-level", "unit": "石景山区", "applicantsQualified": 53, "recruitCount": 130 }
+    ],
+    "notes": "文章区级表报告石景山53人过审/计划招录130人；竞争榜另逐码列出信息化管理岗（220840401）13人/1人。区级与岗位级是不同统计粒度，资格审查通过数不是最终缴费或实考人数。"
+  },
+  {
+    "sourceId": "eoffcn-2024-shijingshan-20231114-1800",
+    "title": "中公：2024京考报名统计（截至11月14日18时）",
+    "publisher": "中公教育",
+    "level": "secondary",
+    "evidenceType": "registration_snapshot",
+    "year": 2024,
+    "geographicScope": "北京市（区级统计与竞争最激烈职位榜样本）",
+    "url": "https://www.eoffcn.com/kszx/detail/1235334.html",
+    "observedAt": "2023-11-14 18:00",
+    "accessedAt": "2026-10-11",
+    "positionSnapshots": [
+      { "positionCode": "220840401", "scope": "position-level", "applicantsQualified": 32, "recruitCount": 1 },
+      { "scope": "district-level", "unit": "石景山区", "applicantsQualified": 194, "recruitCount": 130 }
+    ],
+    "notes": "文章区级表报告石景山194人过审/计划招录130人；竞争榜逐码列出信息化管理岗（220840401）32人/1人。区级与岗位级是不同统计粒度，资格审查通过数不是最终缴费或实考人数。"
+  },
+  {
+    "sourceId": "eoffcn-2024-shijingshan-20231115-0900",
+    "title": "中公：2024京考报名统计（截至11月15日9时）",
+    "publisher": "中公教育",
+    "level": "secondary",
+    "evidenceType": "registration_snapshot",
+    "year": 2024,
+    "geographicScope": "北京市（区级汇总）",
+    "url": "https://www.eoffcn.com/kszx/detail/1235503.html",
+    "observedAt": "2023-11-15 09:00",
+    "accessedAt": "2026-10-11",
+    "positionSnapshots": [
+      { "scope": "district-level", "unit": "石景山区", "applicantsQualified": 224, "recruitCount": 130 }
+    ],
+    "notes": "区级表报告石景山224人过审/计划招录130人；属于资格审查通过人数的时点统计，不是全区逐岗汇总清单或最终缴费、实考人数。"
+  },
+  {
+    "sourceId": "eoffcn-2024-shijingshan-20231115-1800",
+    "title": "中公：2024京考报名统计（截至11月15日18时）",
+    "publisher": "中公教育",
+    "level": "secondary",
+    "evidenceType": "registration_snapshot",
+    "year": 2024,
+    "geographicScope": "北京市（区级汇总）",
+    "url": "https://www.eoffcn.com/kszx/detail/1236079.html",
+    "observedAt": "2023-11-15 18:00",
+    "accessedAt": "2026-10-11",
+    "positionSnapshots": [
+      { "scope": "district-level", "unit": "石景山区", "applicantsQualified": 436, "recruitCount": 130 },
+      { "scope": "district-level", "unit": "西城区", "applicantsQualified": 1971, "recruitCount": 496 },
+      { "positionCode": "220219306", "scope": "position-level", "applicantsQualified": 74, "recruitCount": 1 }
+    ],
+    "notes": "该时点区级表报告石景山436/130、西城1971/496；西城区竞争榜另列文化活动岗（220219306）74/1。均为资格审查通过人数快照，不是最终缴费或实考人数；职位榜单仅是部分岗位样本。"
+  },
+  {
+    "sourceId": "eoffcn-2024-shijingshan-20231116-1800",
+    "title": "中公：2024京考报名统计（截至11月16日18时）",
+    "publisher": "中公教育",
+    "level": "secondary",
+    "evidenceType": "registration_snapshot",
+    "year": 2024,
+    "geographicScope": "北京市（区级汇总）",
+    "url": "https://www.eoffcn.com/kszx/detail/1236985.html",
+    "observedAt": "2023-11-16 18:00",
+    "accessedAt": "2026-10-11",
+    "positionSnapshots": [
+      { "scope": "district-level", "unit": "石景山区", "applicantsQualified": 875, "recruitCount": 130 },
+      { "scope": "district-level", "unit": "西城区", "applicantsQualified": 4076, "recruitCount": 496 },
+      { "positionCode": "220219306", "scope": "position-level", "applicantsQualified": 128, "recruitCount": 1 }
+    ],
+    "notes": "该时点区级表报告石景山875/130、西城4076/496；文章岗位榜列西城区文化活动岗（220219306）128/1。该数与另一中公职位榜在同一时点列出的127人有1人差异，保留各自原值。资格审查通过数不是最终缴费或实考人数；榜单不是全区完整职位表。"
+  },
+  {
+    "sourceId": "eoffcn-2024-shijingshan-police-20231116-1800",
+    "title": "中公：2024京考招警职位报名统计（截至11月16日18时）",
+    "publisher": "中公教育",
+    "level": "secondary",
+    "evidenceType": "registration_snapshot",
+    "year": 2024,
+    "geographicScope": "北京市（公安职位报名统计中的石景山样本）",
+    "url": "https://www.eoffcn.com/kszx/detail/1237113.html",
+    "observedAt": "2023-11-16 18:00",
+    "accessedAt": "2026-10-11",
+    "positionSnapshots": [
+      { "positionCode": "232502402", "scope": "position-level", "applicantsQualified": 66, "recruitCount": 25 }
+    ],
+    "notes": "公安职位统计逐码列出北京市公安局石景山分局一线执法岗（232502402）66人过审/招25人。只记录该来源中的精确代码样本，不代表区内全部职位；过审人数不是最终缴费或实考人数。"
+  },
+  {
+    "sourceId": "eoffcn-2025-shijingshan-20241119-1800",
+    "title": "中公：2025京考报名统计（截至11月19日18时，石景山零过审职位）",
+    "publisher": "中公教育",
+    "level": "secondary",
+    "evidenceType": "registration_snapshot",
+    "year": 2025,
+    "geographicScope": "北京市（无过审职位部分样本）",
+    "url": "https://www.eoffcn.com/kszx/detail/1516652.html",
+    "observedAt": "2024-11-19 18:00",
+    "accessedAt": "2026-10-11",
+    "positionSnapshots": [
+      { "positionCode": "232502102", "scope": "position-level", "applicantsQualified": 0, "recruitCount": 3 }
+    ],
+    "notes": "无过审职位表（部分）逐码列出北京市公安局石景山分局特殊专业岗（232502102）3个计划、0人过审。零过审是该发布时点的资格审查状态，不等于最终无人报名或无人参考。"
+  },
+  {
+    "sourceId": "eoffcn-2025-shijingshan-20241121-0900",
+    "title": "中公：2025京考报名各区过审统计（截至11月21日9时）",
+    "publisher": "中公教育",
+    "level": "secondary",
+    "evidenceType": "registration_snapshot",
+    "year": 2025,
+    "geographicScope": "北京市（区级汇总）",
+    "url": "https://www.eoffcn.com/kszx/detail/1517201.html",
+    "observedAt": "2024-11-21 09:00",
+    "accessedAt": "2026-10-11",
+    "positionSnapshots": [
+      { "scope": "district-level", "unit": "石景山区", "applicantsQualified": 320, "recruitCount": 125 }
+    ],
+    "notes": "区级表报告石景山320人过审/计划招录125人；属于资格审查通过人数的时点统计，不是全区逐岗清单或最终缴费、实考人数。"
+  },
+  {
+    "sourceId": "eoffcn-2024-citywide-top10-20231116-0900",
+    "title": "中公网校：2024京考竞争最激烈职位前十（截至11月16日9时）",
+    "publisher": "中公教育",
+    "level": "secondary",
+    "evidenceType": "registration_snapshot",
+    "year": 2024,
+    "geographicScope": "北京市（竞争最激烈职位前十样本）",
+    "url": "https://www.eoffcn.com/kszx/detail/1236208.html",
+    "observedAt": "2023-11-16 09:00",
+    "accessedAt": "2026-10-11",
+    "positionSnapshots": [
+      { "positionCode": "230527501", "scope": "position-level", "applicantsQualified": 307, "recruitCount": 2 },
+      { "positionCode": "240943601", "scope": "position-level", "applicantsQualified": 107, "recruitCount": 1 },
+      { "positionCode": "230116901", "scope": "position-level", "applicantsQualified": 186, "recruitCount": 2 },
+      { "positionCode": "220219306", "scope": "position-level", "applicantsQualified": 75, "recruitCount": 1 },
+      { "positionCode": "819900501", "scope": "position-level", "applicantsQualified": 72, "recruitCount": 1 },
+      { "positionCode": "221452802", "scope": "position-level", "applicantsQualified": 65, "recruitCount": 1 },
+      { "positionCode": "240944202", "scope": "position-level", "applicantsQualified": 59, "recruitCount": 1 },
+      { "positionCode": "221363901", "scope": "position-level", "applicantsQualified": 59, "recruitCount": 1 },
+      { "positionCode": "231454501", "scope": "position-level", "applicantsQualified": 57, "recruitCount": 1 },
+      { "positionCode": "119900203", "scope": "position-level", "applicantsQualified": 56, "recruitCount": 1 }
+    ],
+    "notes": "中公网校文章逐岗列出职位代码、单位、招考职位、招录人数、资格审查通过人数及竞争比；记录该榜单全部10条岗位样本。仅为竞争最激烈职位榜单，不代表全市完整清单；资格审查通过人数不是最终缴费或实考人数。"
   },
   {
     "sourceId": "eoffcn-2025-qualified",
@@ -1167,23 +1384,6 @@
     "observedAt": "2024-11-22 09:00",
     "accessedAt": "2026-10-07",
     "notes": "昌平区资格审查通过人数1,738；来源以176人为计划人数，其他职位镜像为177人，快照不是最终缴费/实考人数。"
-  },
-  {
-    "sourceId": "eoffcn-2025-tongzhou-final-day-snapshot",
-    "title": "中公网校：2025京考通州商务局岗位快照（截至11月22日9时）",
-    "publisher": "中公教育",
-    "level": "secondary",
-    "evidenceType": "registration_snapshot",
-    "year": 2025,
-    "districtId": "tongzhou",
-    "geographicScope": "北京市通州区商务局产业发展岗",
-    "url": "https://www.eoffcn.com/kszx/detail/1521605.html",
-    "observedAt": "2024-11-22 09:00",
-    "accessedAt": "2026-10-10",
-    "positionSnapshots": [
-      { "positionCode": "221155801", "scope": "position-level", "applicantsQualified": 155, "recruitCount": 1 }
-    ],
-    "notes": "来源逐岗表明确列出通州区商务局产业发展岗代码221155801，资格审查通过155人、计划1人，竞争比155:1。仅为该报道列出的热点岗位，不是全区完整清单；资格审查通过人数不是最终缴费或实考人数。"
   },
   {
     "sourceId": "huatu-2025-citywide-top3-day2-evening-ratios",
@@ -1229,6 +1429,56 @@
     "notes": "华图于2024-11-21 13:16发布，所列快照时点为当日9:00；公开的是资格审查通过人数，不是提交申请总人数、最终缴费人数或实考人数。该页仅列过审人数最激烈的前十职位，不代表全市完整职位清单。职位代码、单位、职位名和招录人数均可与本地2025职位样例唯一对应。"
   },
   {
+    "sourceId": "huatu-2025-citywide-top10-qualified-20241120-1800",
+    "title": "华图：2025京考过审人数最多的前十职位（截至11月20日18时）",
+    "publisher": "华图教育",
+    "level": "secondary",
+    "evidenceType": "registration_snapshot",
+    "year": 2025,
+    "geographicScope": "北京市（全市汇总及过审人数前十岗位样本）",
+    "url": "https://m.huatu.com/2024/1121/2789811.html",
+    "observedAt": "2024-11-20 18:00",
+    "accessedAt": "2026-10-11",
+    "positionSnapshots": [
+      { "scope": "citywide-level", "applicantsQualified": 19590, "recruitCount": 4487 },
+      { "positionCode": "232501302", "scope": "position-level", "applicantsQualified": 624, "recruitCount": 115 },
+      { "positionCode": "232501804", "scope": "position-level", "applicantsQualified": 458, "recruitCount": 78 },
+      { "positionCode": "232501902", "scope": "position-level", "applicantsQualified": 365, "recruitCount": 77 },
+      { "positionCode": "232501702", "scope": "position-level", "applicantsQualified": 290, "recruitCount": 70 },
+      { "positionCode": "242502301", "scope": "position-level", "applicantsQualified": 288, "recruitCount": 44 },
+      { "positionCode": "232501602", "scope": "position-level", "applicantsQualified": 285, "recruitCount": 65 },
+      { "positionCode": "232502401", "scope": "position-level", "applicantsQualified": 251, "recruitCount": 40 },
+      { "positionCode": "232502002", "scope": "position-level", "applicantsQualified": 233, "recruitCount": 52 },
+      { "positionCode": "232502702", "scope": "position-level", "applicantsQualified": 212, "recruitCount": 35 },
+      { "positionCode": "220633901", "scope": "position-level", "applicantsQualified": 193, "recruitCount": 2 }
+    ],
+    "notes": "华图页面发布于2024-11-21 13:07，明确报告快照时点为2024-11-20 18:00，口径为资格审查通过人数；并报告全市过审19,590人、招录计划4,487人。岗位表列过审人数前十，代码、单位、岗位名、计划数和过审人数均与本地2025职位候选逐项核对。没有提交报名、缴费或实际参考人数；岗位表仅为榜单样本，不代表全市完整职位清单。"
+  },
+  {
+    "sourceId": "huatu-2025-citywide-top10-competition-20241120-1800",
+    "title": "华图：2025京考竞争最激烈职位前十（截至11月20日18时）",
+    "publisher": "华图教育",
+    "level": "secondary",
+    "evidenceType": "registration_snapshot",
+    "year": 2025,
+    "geographicScope": "北京市（过审竞争比较高的岗位部分榜单）",
+    "url": "https://m.huatu.com/2024/1121/2789813.html",
+    "observedAt": "2024-11-20 18:00",
+    "accessedAt": "2026-10-11",
+    "positionSnapshots": [
+      { "positionCode": "220527701", "scope": "position-level", "applicantsQualified": 177, "recruitCount": 1 },
+      { "positionCode": "221155801", "scope": "position-level", "applicantsQualified": 117, "recruitCount": 1 },
+      { "positionCode": "241677103", "scope": "position-level", "applicantsQualified": 102, "recruitCount": 1 },
+      { "positionCode": "231569502", "scope": "position-level", "applicantsQualified": 90, "recruitCount": 1 },
+      { "positionCode": "241052801", "scope": "position-level", "applicantsQualified": 81, "recruitCount": 1 },
+      { "positionCode": "221460602", "scope": "position-level", "applicantsQualified": 74, "recruitCount": 1 },
+      { "positionCode": "231570503", "scope": "position-level", "applicantsQualified": 71, "recruitCount": 1 },
+      { "positionCode": "231568202", "scope": "position-level", "applicantsQualified": 137, "recruitCount": 2 },
+      { "positionCode": "231052403", "scope": "position-level", "applicantsQualified": 68, "recruitCount": 1 }
+    ],
+    "notes": "华图2024-11-21发布的竞争比榜单标注快照时点为2024-11-20 18:00；口径为资格审查通过人数除以招录人数。页面列出十岗，其中海淀区发展改革委综合管理岗（220633901，193/2）与同一时点过审人数榜单重复，避免双计后只在前十竞争榜来源中登记另外9个岗位。代码、单位、岗位名与计划数均与本地2025职位候选逐项核对。不是全市完整职位清单，也不包含实际参考或录取概率。"
+  },
+  {
     "sourceId": "huatu-2025-citywide-top3-evening-ratios",
     "title": "华图：2025京考职位过审竞争比（截至11月21日18时）",
     "publisher": "北京华图",
@@ -1245,6 +1495,31 @@
       { "positionCode": "221155801", "scope": "position-level", "applicantsQualified": 155, "recruitCount": 1 }
     ],
     "notes": "报道标明时点为2024-11-21 18:00，口径为资格审查通过人数及其相对招录计划的竞争比。所列三岗分别报道竞争比245:1、157:1、155:1；本地对应2025职位记录的招录计划均为1人，据此换算过审数。仅含报道中点名且能与本地职位库按代码匹配的三岗，不代表全市完整岗位清单；不代表最终缴费或实考人数。"
+  },
+  {
+    "sourceId": "eoffcn-2025-citywide-top10-competition-20241121-1800",
+    "title": "中公网校：2025京考竞争最激烈职位前十（截至11月21日18时）",
+    "publisher": "中公教育",
+    "level": "secondary",
+    "evidenceType": "registration_snapshot",
+    "year": 2025,
+    "geographicScope": "北京市（竞争最激烈职位前十样本）",
+    "url": "https://www.eoffcn.com/kszx/detail/1517971.html",
+    "observedAt": "2024-11-21 18:00",
+    "accessedAt": "2026-10-11",
+    "positionSnapshots": [
+      { "positionCode": "220527701", "scope": "position-level", "applicantsQualified": 245, "recruitCount": 1 },
+      { "positionCode": "241677103", "scope": "position-level", "applicantsQualified": 157, "recruitCount": 1 },
+      { "positionCode": "221155801", "scope": "position-level", "applicantsQualified": 155, "recruitCount": 1 },
+      { "positionCode": "220633901", "scope": "position-level", "applicantsQualified": 280, "recruitCount": 2 },
+      { "positionCode": "231569502", "scope": "position-level", "applicantsQualified": 132, "recruitCount": 1 },
+      { "positionCode": "230118902", "scope": "position-level", "applicantsQualified": 115, "recruitCount": 1 },
+      { "positionCode": "221460602", "scope": "position-level", "applicantsQualified": 113, "recruitCount": 1 },
+      { "positionCode": "241052801", "scope": "position-level", "applicantsQualified": 102, "recruitCount": 1 },
+      { "positionCode": "231570503", "scope": "position-level", "applicantsQualified": 102, "recruitCount": 1 },
+      { "positionCode": "820528901", "scope": "position-level", "applicantsQualified": 101, "recruitCount": 1 }
+    ],
+    "notes": "中公网校逐岗表列出截至2024-11-21 18时竞争最激烈的10个职位及过审人数、招录人数；竞争比按过审人数除以计划招录数计算。仅为榜单样本，不代表全市完整清单；资格审查通过人数不是最终缴费或实考人数。"
   },
   {
     "sourceId": "eoffcn-2026-snapshot-20251117-1800",
@@ -1913,7 +2188,7 @@
   },
   {
     "sourceId": "cgzj-2026-tongzhou-fiscal-cutoff-sample",
-    "title": "2026北京公务员考试进面分数线｜财政局部分岗位样本（含通州条目）",
+    "title": "2026北京公务员考试进面分数线｜财政局岗位部分样本（跨区）",
     "publisher": "成公教育",
     "level": "secondary",
     "evidenceType": "partial_interview_score_sample",
@@ -1921,8 +2196,11 @@
     "url": "https://www.cgzj.com/sk/12691.html",
     "publishedAt": "2026-06-05",
     "accessedAt": "2026-10-10",
-    "scope": "通州区财政局岗位最低进面线样本（2岗）",
-    "notes": "成公财政局专题页可检索的逐岗表列出通州财政局绩效考评岗142分、财务管理岗132.5分；本轮只导入这两条通州记录。代码按同年度、单位、岗位名称与本地第三方职位镜像唯一匹配，尚未逐代码官方核验。成公的通州区摘要和财政局摘要均将142分归于财务管理岗，且页面标题年份与正文统计年份不一致；与本页逐岗表冲突，争议值未重复计入。部分样本不是通州全量，也不是笔试合格线。"
+    "samplePositions": 6,
+    "minimum": 112.75,
+    "maximum": 142,
+    "scope": "北京市财政局岗位最低进面线部分样本（本库当前已映射6岗）",
+    "notes": "专题页展示25条财政系统岗位部分分数。本库纳入6条同年度单位及岗位名可唯一映射到第三方职位代码、且未与其他已收录岗位分数重复的样本：通州2条此前已录入；本轮新增海淀、怀柔、昌平、西城各1条。成公页面未列职位代码，代码来自第三方职位镜像，尚未与官方职位表逐码核验。另有成公摘要将通州财政局财务管理岗写为142分、且标题与正文年份冲突；本逐岗表列绩效考评岗142分、财务管理岗132.5分，因此不导入摘要冲突值。该表不代表全市财政岗位全量，也不是官方笔试合格线。"
   },
   {
     "sourceId": "gwyzwb-2025-example",
@@ -3644,16 +3922,20 @@
   },
   {
     "sourceId": "eoffcn-2024-application-district-counts",
-    "title": "中公：2024京考报名阶段各区招考人数统计",
+    "title": "中公：2024京考各区过审统计（截至11月16日9时）",
     "publisher": "中公教育（eoffcn.com）",
     "level": "secondary",
-    "evidenceType": "aggregate_summary",
+    "evidenceType": "registration_snapshot",
     "year": 2024,
-    "geographicScope": "石景山区",
+    "geographicScope": "北京市（区级汇总）",
     "url": "https://www.eoffcn.com/kszx/detail/1236204.html",
-    "accessedAt": "2026-10-09",
+    "observedAt": "2023-11-16 09:00",
+    "accessedAt": "2026-10-11",
     "reportedRecruitCount": 130,
-    "notes": "报名阶段的分区表列示石景山招考人数130；这是区级聚合统计，不含职位代码，支持招录人数的二手交叉参照，但不能单独判定829908105是否应计入石景山。"
+    "positionSnapshots": [
+      { "scope": "district-level", "unit": "石景山区", "applicantsQualified": 663, "recruitCount": 130 }
+    ],
+    "notes": "文章截至2023-11-16 09:00的分区表列示石景山663人过审、计划招录130人；该快照只有区级粒度，不含职位代码，也不是缴费或实考人数。"
   },
   {
     "sourceId": "huatu-2025-beijing-district-summary",
@@ -14787,7 +15069,7 @@
     "minimum": 52.15,
     "maximum": 122,
     "scope": "丰台区岗位最低进面线部分样本",
-    "notes": "页面称丰台区112人进入面试；可见表格有9条数值分数，另有一条显示“无”未作为数值分数记录。页面标题/H1写106.25分，但正文最低分说明和可见表格均为52.15分，保留此源内不一致提示并按表格录入。9条中仅公安丰台分局一线执法岗1能与当前职位候选行按同年度单位及岗位名精确匹配到代码232502201，其余8条未在现有候选行中唯一匹配，保留未关联。页面仅展示部分岗位，分数不是官方全量或笔试合格线。"
+    "notes": "页面称丰台区112人进入面试；可见表格有9条数值分数，另有一条显示“无”未作为数值分数记录。页面标题/H1写106.25分，但正文最低分说明和可见表格均为52.15分，保留此源内不一致提示并按表格录入。9条数值分数均可按同年度单位名和岗位名唯一匹配到丰台职位候选，其中8条本轮补挂代码、1条此前已关联；职位码来自二手职位镜像，不代表官方逐码核验。表格仅展示部分岗位，分数不是官方全量或笔试合格线；公安职位分数口径不与普通职位直接比较。"
   },
   {
     "sourceId": "cgzj-2026-huairou-cutoff-sample",
@@ -15275,5 +15557,171 @@
     "minimum": 55.9,
     "scope": "东城区部分职位的最低进面分；非全区完整名册",
     "notes": "页面表格摘录包含26个岗位样本；其摘要称全区137人进入面试、最高分129.5，但表格出现137.5，最高分描述相互矛盾。表格中的北京市公安局东城分局一线执法岗列55.9分；公安岗位的分数尺度未说明，因此不宜与普通职位直接比较。当前仅保留这一条可与职位镜像唯一匹配的样本，不将摘要数字作为全区分布。"
+  },
+  {
+    "sourceId": "cgzj-2026-street-cutoff-sample",
+    "title": "成公教育：2026京考街道岗位最低进面分部分样本",
+    "publisher": "成公教育",
+    "level": "secondary",
+    "evidenceType": "partial_interview_score_sample",
+    "year": 2026,
+    "geographicScope": "北京多个区街道岗位的部分进面分样本",
+    "url": "https://www.cgzj.com/sk/12695.html",
+    "publishedAt": "2026-06-05",
+    "accessedAt": "2026-10-11",
+    "samplePositions": 6,
+    "intervieweeCount": 262,
+    "minimum": 101.5,
+    "maximum": 138.25,
+    "scope": "北京街道",
+    "notes": "页面称2026京考街道共有262人进面，可见表格列29条岗位分数并明确为部分样本。为避免与已有区级分数记录重复计数，本库当前新增其中6条此前未收录、且可按同年度单位和岗位名唯一匹配本地职位镜像的街道分数：海淀5条、门头沟大台街道1条；职位代码来自第三方镜像，非官方逐代码核验。其余可见行若与已有同分记录重叠则不重复录入，存在同名歧义或未能与本地职位唯一匹配的行不挂代码。街道表与区级表可能重叠，262为页面汇总进面人数，不与区级分数样本人数相加。"
+  },
+  {
+    "sourceId": "gwyzwb-2026-mentougou-240948402",
+    "title": "京考职位网：2026门头沟区大台街道司法岗职位表（240948402）",
+    "publisher": "京考职位网",
+    "level": "secondary",
+    "evidenceType": "position_mirror",
+    "year": 2026,
+    "districtId": "mentougou",
+    "geographicScope": "门头沟区",
+    "url": "https://bj.gwyzwb.com/mentougou/2026_30.html",
+    "accessedAt": "2026-10-11",
+    "positionCode": "240948402",
+    "unit": "北京市门头沟区大台街道",
+    "positionTitle": "司法岗",
+    "reportedRecruitCount": 1,
+    "notes": "职位镜像列代码240948402、北京市门头沟区大台街道司法岗、计划招录1人、本科及以上及法学专业要求；页面免责声明说明仅供参考，未与官方招考简章逐代码核验。"
+  },
+  {
+    "sourceId": "offcn-2024-xicheng-competition-20231116-1800",
+    "title": "中公职位报名大数据：西城区2024报名快照及岗位榜",
+    "publisher": "中公职位库（offcn.com）",
+    "level": "secondary",
+    "evidenceType": "registration_snapshot",
+    "year": 2024,
+    "geographicScope": "西城区区级汇总与可匹配岗位样本",
+    "url": "https://zw.admin.offcn.com/zwcx/lnblb/14894/37/",
+    "observedAt": "2023-11-16 18:00",
+    "accessedAt": "2026-10-11",
+    "positionSnapshots": [
+      { "scope": "district-level", "unit": "西城区", "applicantsQualified": 4076, "recruitCount": 496 },
+      { "positionCode": "220219306", "scope": "position-level", "applicantsQualified": 127, "recruitCount": 1 },
+      { "positionCode": "220220102", "scope": "position-level", "applicantsQualified": 72, "recruitCount": 1 }
+    ],
+    "notes": "页面报告西城区195个职位、招录496人、4,076人过审；岗位榜列文化活动岗（220219306）127/1、工程管理岗（220220102）72/1。报名过审时点快照，不是最终缴费或实考人数；榜单为部分岗位。"
+  },
+  {
+    "sourceId": "huatu-2025-xicheng-district-20241121-0900",
+    "title": "华图：2025京考各区过审统计（截至11月21日9时）",
+    "publisher": "华图教育",
+    "level": "secondary",
+    "evidenceType": "registration_snapshot",
+    "year": 2025,
+    "geographicScope": "西城区区级汇总",
+    "url": "https://www.huatu.com/sdgk/gk/2789833.html",
+    "observedAt": "2024-11-21 09:00",
+    "accessedAt": "2026-10-11",
+    "positionSnapshots": [
+      { "scope": "district-level", "unit": "西城区", "applicantsQualified": 1771, "recruitCount": 447 }
+    ],
+    "notes": "区级表列西城区1,771人资格审查通过、计划招录447人。按该口径计算约3.96名过审者/计划招录名额；这是报名期阶段快照，不是最终报名、缴费或实考人数。"
+  },
+  {
+    "sourceId": "huatu-2025-xicheng-selectivist-20241121-0900",
+    "title": "华图：西城区2025选调生岗位过审样本（截至11月21日9时）",
+    "publisher": "华图教育",
+    "level": "secondary",
+    "evidenceType": "registration_snapshot",
+    "year": 2025,
+    "geographicScope": "西城区委组织部6个选调生职位样本",
+    "url": "https://m.huatu.com/2024/1121/2789826.html",
+    "observedAt": "2024-11-21 09:00",
+    "accessedAt": "2026-10-11",
+    "positionSnapshots": [
+      { "positionCode": "120220301", "scope": "position-level", "applicantsQualified": 62, "recruitCount": 10 },
+      { "positionCode": "120220302", "scope": "position-level", "applicantsQualified": 109, "recruitCount": 8 },
+      { "positionCode": "120220303", "scope": "position-level", "applicantsQualified": 74, "recruitCount": 8 },
+      { "positionCode": "120220304", "scope": "position-level", "applicantsQualified": 80, "recruitCount": 8 },
+      { "positionCode": "120220305", "scope": "position-level", "applicantsQualified": 137, "recruitCount": 8 },
+      { "positionCode": "120220306", "scope": "position-level", "applicantsQualified": 139, "recruitCount": 8 }
+    ],
+    "notes": "文章逐代码列出区级选调生岗1—6的过审人数、招录数及竞争比；6岗合计601人/50人。只代表这6个选调生岗位样本，不代表西城区全部职位；过审人数不是最终缴费或实考人数。"
+  },
+  {
+    "sourceId": "eoffcn-2025-xicheng-selectivist-20241122-0900",
+    "title": "中公：西城区2025选调生岗位过审样本（截至11月22日9时）",
+    "publisher": "中公教育",
+    "level": "secondary",
+    "evidenceType": "registration_snapshot",
+    "year": 2025,
+    "geographicScope": "西城区委组织部6个选调生职位样本",
+    "url": "https://www.eoffcn.com/kszx/detail/1518249.html",
+    "observedAt": "2024-11-22 09:00",
+    "accessedAt": "2026-10-11",
+    "positionSnapshots": [
+      { "positionCode": "120220301", "scope": "position-level", "applicantsQualified": 124, "recruitCount": 10 },
+      { "positionCode": "120220302", "scope": "position-level", "applicantsQualified": 159, "recruitCount": 8 },
+      { "positionCode": "120220303", "scope": "position-level", "applicantsQualified": 125, "recruitCount": 8 },
+      { "positionCode": "120220304", "scope": "position-level", "applicantsQualified": 166, "recruitCount": 8 },
+      { "positionCode": "120220305", "scope": "position-level", "applicantsQualified": 219, "recruitCount": 8 },
+      { "positionCode": "120220306", "scope": "position-level", "applicantsQualified": 227, "recruitCount": 8 }
+    ],
+    "notes": "文章列出6个西城区选调生职位截至报名最后一天9时的资格审查通过数；合计1,020人/50人。过审快照不是最终报名、缴费或实际参考人数；不可外推为全区逐岗完整清单。"
+  },
+  {
+    "sourceId": "gwyzwb-2026-miyun-221874901",
+    "title": "京考职位网：密云区民政局2026职位详情（221874901）",
+    "publisher": "京考职位网",
+    "level": "secondary",
+    "evidenceType": "position_mirror",
+    "year": 2026,
+    "geographicScope": "密云区",
+    "url": "https://bj.gwyzwb.com/2026/1424.html",
+    "accessedAt": "2026-10-11",
+    "notes": "第三方职位详情列代码221874901、民政局综合管理岗、计划招录1人及学历、专业和应届要求；未与官方职位表逐代码核验。"
+  },
+  {
+    "sourceId": "gwyzwb-2026-miyun-241877201",
+    "title": "京考职位网：密云区东邵渠镇2026职位详情（241877201）",
+    "publisher": "京考职位网",
+    "level": "secondary",
+    "evidenceType": "position_mirror",
+    "year": 2026,
+    "geographicScope": "密云区",
+    "url": "https://bj.gwyzwb.com/2026/1663.html",
+    "accessedAt": "2026-10-11",
+    "notes": "第三方职位详情列代码241877201、东邵渠镇综合管理岗、计划招录1人及面向服务基层项目人员要求；未与官方职位表逐代码核验。"
+  },
+  {
+    "sourceId": "gwyzwb-2026-miyun-241877202",
+    "title": "京考职位网：密云区东邵渠镇2026职位详情（241877202）",
+    "publisher": "京考职位网",
+    "level": "secondary",
+    "evidenceType": "position_mirror",
+    "year": 2026,
+    "geographicScope": "密云区",
+    "url": "https://bj.gwyzwb.com/2026/1457.html",
+    "accessedAt": "2026-10-11",
+    "notes": "第三方职位详情列代码241877202、东邵渠镇综合管理岗、计划招录2人及中共党员要求；未与官方职位表逐代码核验。"
+  },
+  {
+    "sourceId": "cgzj-2026-miyun-cutoff-sample",
+    "title": "成公教育：2026京考密云区岗位最低进面分部分样本",
+    "publisher": "成公教育",
+    "level": "secondary",
+    "evidenceType": "partial_interview_score_sample",
+    "year": 2026,
+    "districtId": "miyun",
+    "geographicScope": "密云区部分岗位最低进面分样本（非全量）",
+    "url": "https://www.cgzj.com/sk/12627.html",
+    "publishedAt": "2026-06-02",
+    "accessedAt": "2026-10-11",
+    "samplePositions": 2,
+    "intervieweeCount": 63,
+    "minimum": 95,
+    "maximum": 140.25,
+    "scope": "密云区岗位最低进面分部分样本",
+    "notes": "成公称密云区共63人进入面试，页面可见28条岗位分数。本库只保留可核实的极值样本：民政局综合管理岗140.25分可按同年单位和岗位名唯一匹配代码221874901；东邵渠镇综合管理岗95分未列代码，而京考职位网列同名代码241877201（面向服务基层项目人员）和241877202（中共党员），故保留为歧义记录、不挂到任一代码。均为第三方部分资料，非官方逐代码核验、非全区完整名单，也不是笔试合格线。"
   }
 ]

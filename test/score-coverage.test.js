@@ -22,7 +22,7 @@ test('score sample count and bounds are derived from its concrete score rows', a
   const rows = data.scoreRows.filter((row) => row.year === 2026);
   const samples = data.scoreSamples.filter((item) => item.year === 2026);
 
-  assert.equal(samples.length, 14);
+  assert.equal(samples.length, 16);
   assert.equal(samples.reduce((total, sample) => total + sample.samplePositions, 0), rows.length);
   for (const sample of samples) {
     const sourceRows = rows.filter((row) => row.sourceId === sample.sourceId);
@@ -63,7 +63,7 @@ test('score sample count and bounds are derived from its concrete score rows', a
   const fengtaiRows = rows.filter((row) => row.sourceId === 'cgzj-2026-fengtai-cutoff-sample');
   assert.deepEqual(fengtaiRows.reduce((counts, row) => ({ ...counts, [row.mappingConfidence]: counts[row.mappingConfidence] + 1 }), {
     high: 0, ambiguous: 0, unmatched: 0,
-  }), { high: 1, ambiguous: 0, unmatched: 8 });
+  }), { high: 9, ambiguous: 0, unmatched: 0 });
 
   const huairou = samples.find((sample) => sample.sourceId === 'cgzj-2026-huairou-cutoff-sample');
   assert.equal(huairou.samplePositions, 25);
@@ -73,6 +73,11 @@ test('score sample count and bounds are derived from its concrete score rows', a
   assert.deepEqual(huairouRows.reduce((counts, row) => ({ ...counts, [row.mappingConfidence]: counts[row.mappingConfidence] + 1 }), {
     high: 0, ambiguous: 0, unmatched: 0,
   }), { high: 23, ambiguous: 0, unmatched: 2 });
+
+  const miyun = samples.find((sample) => sample.sourceId === 'cgzj-2026-miyun-cutoff-sample');
+  assert.equal(miyun.samplePositions, 2);
+  assert.deepEqual([miyun.minimum, miyun.maximum], [95, 140.25]);
+  assert.equal(miyun.notes.includes('不挂到任一代码'), true);
 });
 
 test('Shijingshan position cards receive exact code-linked cutoff scores from the partial district table', async () => {
@@ -100,6 +105,28 @@ test('Fengtai police post receives the exact 2026 interview cutoff exposed in th
 
   assert.equal(evidence.cutoffScore, 52.15);
   assert.deepEqual(evidence.cutoffSourceIds, ['cgzj-2026-fengtai-cutoff-sample']);
+});
+
+test('the 2026 street cutoff sample exposes its exact Haidian and Mentougou position cutoffs', async () => {
+  const data = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const source = data.sources.find((item) => item.sourceId === 'cgzj-2026-street-cutoff-sample');
+  const expected = [
+    ['230637402', 138.25],
+    ['230637602', 133],
+    ['230637701', 129.75],
+    ['230637703', 104.25],
+    ['230638302', 101.5],
+    ['240948402', 102.75],
+  ];
+
+  assert.equal(source.samplePositions, 6);
+  assert.equal(source.intervieweeCount, 262);
+  for (const [code, score] of expected) {
+    const position = data.positions.find((row) => row.year === 2026 && row.code === code);
+    const evidence = getPositionCompetitionEvidence(position, { scoreRows: data.scoreRows });
+    assert.equal(evidence.cutoffScore, score, `${code} should expose its source-backed cutoff`);
+    assert.deepEqual(evidence.cutoffSourceIds, ['cgzj-2026-street-cutoff-sample']);
+  }
 });
 
 test('Daxing cutoff rows attach to unique positions while repeated names remain unresolved', async () => {
@@ -145,6 +172,23 @@ test('Huairou position detail receives its exact 2026 cutoff from the partial di
 
   assert.equal(evidence.cutoffScore, 129.75);
   assert.deepEqual(evidence.cutoffSourceIds, ['cgzj-2026-huairou-cutoff-sample']);
+});
+
+test('Miyun position detail exposes its uniquely matched cutoff while the duplicate-name minimum stays unlinked', async () => {
+  const data = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const position = data.positions.find((row) => row.year === 2026 && row.code === '221874901');
+  assert.ok(position, 'Miyun source-backed position should be available in the position library');
+
+  const evidence = getPositionCompetitionEvidence(position, {
+    observations: data.observations,
+    scoreRows: data.scoreRows,
+  });
+  assert.equal(evidence.cutoffScore, 140.25);
+  assert.deepEqual(evidence.cutoffSourceIds, ['cgzj-2026-miyun-cutoff-sample']);
+
+  const ambiguousMinimum = data.scoreRows.find((row) => row.id === '2026-cgzj-miyun-02');
+  assert.equal(ambiguousMinimum.mappingConfidence, 'ambiguous');
+  assert.equal(ambiguousMinimum.positionCode, null);
 });
 
 test('Tongzhou fiscal positions receive their distinct 2026 interview cutoffs by exact position code', async () => {

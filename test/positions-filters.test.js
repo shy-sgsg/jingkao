@@ -148,7 +148,12 @@ test('position library filters and sorts by exact-position competition snapshots
   await listeners.change({ target: { id: 'job-cutoff-evidence', value: 'has' } });
   const cutoffKeys = [...root.innerHTML.matchAll(/class="position-title-link" data-action="open-job" data-position-key="([^"]+)"/g)]
     .map((match) => match[1]);
-  assert.deepEqual(cutoffKeys.sort(), expectedCutoffPositions.map((code) => `2026:${code}`).sort());
+  assert.match(root.innerHTML, new RegExp(`<span class="filter-count">${expectedCutoffPositions.length} 条结果</span>`));
+  const nextPositionPage = { dataset: { action: 'positions-page', page: '2' } };
+  await listeners.click({ target: { closest: (selector) => selector === '[data-action]' ? nextPositionPage : null } });
+  const nextCutoffKeys = [...root.innerHTML.matchAll(/class="position-title-link" data-action="open-job" data-position-key="([^"]+)"/g)]
+    .map((match) => match[1]);
+  assert.deepEqual([...cutoffKeys, ...nextCutoffKeys].sort(), expectedCutoffPositions.map((code) => `2026:${code}`).sort());
 
   await listeners.change({ target: { id: 'job-cutoff-evidence', value: 'all' } });
   await listeners.change({ target: { id: 'job-sort', value: 'competition-desc' } });

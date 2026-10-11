@@ -23,27 +23,27 @@ test('research findings derive sample coverage, score distribution, and evidence
     reportedRecruits: [138, 138],
   });
   assert.deepEqual(byId['score-sample-2026'].facts, {
-    sampleRows: 276,
+    sampleRows: 288,
     sampleRecruits: 853,
     minimum: 52.15,
     maximum: 142,
     median: 125,
-    linkedRows: 188,
-    ambiguousRows: 31,
-    unmatchedRows: 57,
-    scope: '朝阳区岗位最低进面分部分样本、昌平区、大兴区岗位最低进面分部分样本、东城区部分职位的最低进面分；非全区完整名册、房山区、丰台区、海淀区、怀柔区、平谷区、石景山区、顺义区、通州区财政局岗位最低进面线样本（2岗）、西城区、延庆区岗位最低进面线部分样本',
+    linkedRows: 207,
+    ambiguousRows: 32,
+    unmatchedRows: 49,
+    scope: '朝阳区岗位最低进面分部分样本、昌平区、大兴区岗位最低进面分部分样本、东城区部分职位的最低进面分；非全区完整名册、房山区、丰台区、海淀区、怀柔区、密云区岗位最低进面分部分样本、平谷区、石景山区、顺义区、北京街道、北京市财政局岗位最低进面线部分样本（本库当前已映射6岗）、西城区、延庆区岗位最低进面线部分样本',
   });
   assert.deepEqual(byId['qualification-coverage'].facts, {
-    positions: 741,
+    positions: 745,
     structuredRequirements: 12,
     completeEligibility: 0,
     officialPositionRows: 0,
   });
   assert.deepEqual(byId['competition-grain'].facts, {
-    observations: 93,
-    jobLevelObservations: 85,
-    aggregateObservations: 8,
-    jobLevelPositions: 34,
+    observations: 203,
+    jobLevelObservations: 163,
+    aggregateObservations: 40,
+    jobLevelPositions: 66,
   });
   assert.match(byId['competition-grain'].title, /岗位级资格审查快照/);
   assert.ok(byId['coverage-2026'].sourceIds.includes('huatu-2026-list'));
@@ -59,7 +59,8 @@ test('research findings derive sample coverage, score distribution, and evidence
   assert.ok(byId['score-sample-2026'].sourceIds.includes('cgzj-2026-fengtai-cutoff-sample'));
   assert.ok(byId['score-sample-2026'].sourceIds.includes('cgzj-2026-shunyi-cutoff-sample'));
   assert.ok(byId['score-sample-2026'].sourceIds.includes('cgzj-2026-pinggu-cutoff-sample'));
-  assert.ok(byId['competition-grain'].sourceIds.includes('eoffcn-2025-tongzhou-final-day-snapshot'));
+  assert.ok(byId['score-sample-2026'].sourceIds.includes('cgzj-2026-street-cutoff-sample'));
+  assert.ok(byId['competition-grain'].sourceIds.includes('eoffcn-2025-citywide-hot-jobs-20241122-0900'));
 });
 
 test('the research route presents expandable source lineage and its topic filter updates the visible findings', async () => {
@@ -95,6 +96,6 @@ test('the research route presents expandable source lineage and its topic filter
   await listeners.click({ target: { closest: (selector) => selector === '[data-action]' ? scoreFilter : null } });
 
   assert.match(root.innerHTML, /data-topic="分数样本" aria-pressed="true">/);
-  assert.match(root.innerHTML, /276 条/);
+  assert.match(root.innerHTML, /288 条/);
   assert.doesNotMatch(root.innerHTML, /class="research-finding[^\"]*"[^>]*data-topic="岗位覆盖"/);
 });

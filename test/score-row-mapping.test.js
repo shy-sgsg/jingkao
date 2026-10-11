@@ -6,6 +6,31 @@ const scoreRows = JSON.parse(readFileSync(new URL('../data/score_rows_seed.json'
 const positions = JSON.parse(readFileSync(new URL('../data/positions_seed.json', import.meta.url), 'utf8'));
 const sourceRegistry = JSON.parse(readFileSync(new URL('../data/source_registry.json', import.meta.url), 'utf8'));
 
+test('2026 Miyun cutoff rows link only the uniquely identified post and preserve the same-name ambiguity', () => {
+  const source = sourceRegistry.find((item) => item.sourceId === 'cgzj-2026-miyun-cutoff-sample');
+  assert.ok(source, 'Miyun cutoff evidence should retain its source record');
+  assert.equal(source.url, 'https://www.cgzj.com/sk/12627.html');
+
+  const linked = scoreRows.find((item) => item.id === '2026-cgzj-miyun-01');
+  const linkedMatches = positions.filter((position) => position.year === linked.year
+    && position.unit === linked.unit && position.title === linked.title);
+  assert.equal(linkedMatches.length, 1);
+  assert.equal(linkedMatches[0].code, '221874901');
+  assert.equal(linked.positionCode, '221874901');
+  assert.equal(linked.score, 140.25);
+  assert.equal(linked.mappingConfidence, 'high');
+  assert.equal(linked.sourceId, source.sourceId);
+
+  const ambiguous = scoreRows.find((item) => item.id === '2026-cgzj-miyun-02');
+  const ambiguousMatches = positions.filter((position) => position.year === ambiguous.year
+    && position.unit === ambiguous.unit && position.title === ambiguous.title);
+  assert.deepEqual(ambiguousMatches.map((position) => position.code).sort(), ['241877201', '241877202']);
+  assert.equal(ambiguous.positionCode, null);
+  assert.equal(ambiguous.score, 95);
+  assert.equal(ambiguous.mappingConfidence, 'ambiguous');
+  assert.equal(ambiguous.sourceId, source.sourceId);
+});
+
 test('2026 cutoff rows link only to a unique exact year, unit, and title match', () => {
   const expectedCodes = {
     '2026-cgzj-02': '221262201',
@@ -50,8 +75,39 @@ test('2026 cutoff rows link only to a unique exact year, unit, and title match',
     scoreRows.reduce((counts, row) => ({ ...counts, [row.mappingConfidence]: counts[row.mappingConfidence] + 1 }), {
       high: 0, ambiguous: 0, unmatched: 0,
     }),
-    { high: 188, ambiguous: 31, unmatched: 57 },
+    { high: 207, ambiguous: 32, unmatched: 49 },
   );
+});
+
+test('2026 street cutoff sample includes six newly covered exact unique position links', () => {
+  const expectedRows = {
+    '2026-cgzj-street-01': ['230637402', '北京市海淀区西三旗街道>内设部门', '城市管理岗', 138.25],
+    '2026-cgzj-street-02': ['230637602', '北京市海淀区中关村街道>综合行政执法队', '综合执法岗2', 133],
+    '2026-cgzj-street-03': ['230637701', '北京市海淀区清河街道>综合行政执法队', '综合执法岗1', 129.75],
+    '2026-cgzj-street-04': ['230637703', '北京市海淀区清河街道>综合行政执法队', '综合执法岗', 104.25],
+    '2026-cgzj-street-05': ['230638302', '北京市海淀区永定路街道>综合行政执法队', '综合执法岗2', 101.5],
+    '2026-cgzj-mentougou-daitai-01': ['240948402', '北京市门头沟区大台街道', '司法岗', 102.75],
+  };
+
+  const source = sourceRegistry.find((item) => item.sourceId === 'cgzj-2026-street-cutoff-sample');
+  assert.equal(source?.url, 'https://www.cgzj.com/sk/12695.html');
+  assert.equal(source?.samplePositions, 6);
+  assert.equal(source?.intervieweeCount, 262);
+  assert.match(source?.notes, /29条岗位分数/);
+
+  for (const [id, [code, unit, title, score]] of Object.entries(expectedRows)) {
+    const row = scoreRows.find((item) => item.id === id);
+    assert.ok(row, `${id} should be added from the visible partial street table`);
+    const exactMatches = positions.filter((position) => position.year === 2026
+      && position.unit === unit && position.title === title);
+
+    assert.equal(exactMatches.length, 1, `${id} must match one exact same-year position`);
+    assert.equal(exactMatches[0].code, code);
+    assert.equal(row.positionCode, code);
+    assert.equal(row.score, score);
+    assert.equal(row.mappingConfidence, 'high');
+    assert.equal(row.sourceId, source.sourceId);
+  }
 });
 
 test('2026 Haidian and Xicheng partial interview-cutoff tables link only unique local positions', () => {
@@ -143,7 +199,7 @@ test('2026 Yanqing partial interview-cutoff rows preserve unique matches and unr
     scoreRows.reduce((counts, row) => ({ ...counts, [row.mappingConfidence]: counts[row.mappingConfidence] + 1 }), {
       high: 0, ambiguous: 0, unmatched: 0,
     }),
-    { high: 188, ambiguous: 31, unmatched: 57 },
+    { high: 207, ambiguous: 32, unmatched: 49 },
   );
 });
 
@@ -230,6 +286,33 @@ test('2026 Tongzhou fiscal cutoff scores map to unique same-year unit and title 
     assert.equal(row.score, score);
     assert.equal(row.mappingConfidence, 'high');
     assert.equal(row.sourceId, 'cgzj-2026-tongzhou-fiscal-cutoff-sample');
+  }
+});
+
+test('2026 citywide fiscal cutoff sample links six unique positions including four newly uncovered scores', () => {
+  const expectedRows = {
+    '2026-cgzj-fiscal-01': ['220633903', '北京市海淀区财政局>内设科室', '预算管理岗', 133.25],
+    '2026-cgzj-fiscal-02': ['821672102', '北京市怀柔区财政局', '财政预算管理岗', 116.75],
+    '2026-cgzj-fiscal-03': ['821261402', '北京市昌平区财政局', '财务管理岗', 116.25],
+    '2026-cgzj-fiscal-04': ['820221703', '北京市西城区财政局', '预算管理岗', 112.75],
+  };
+  const sourceId = 'cgzj-2026-tongzhou-fiscal-cutoff-sample';
+  const source = sourceRegistry.find((item) => item.sourceId === sourceId);
+  const sourceRows = scoreRows.filter((item) => item.sourceId === sourceId);
+
+  assert.equal(source?.url, 'https://www.cgzj.com/sk/12691.html');
+  assert.equal(source?.samplePositions, 6);
+  assert.equal(sourceRows.length, 6);
+  for (const [id, [code, unit, title, score]] of Object.entries(expectedRows)) {
+    const row = sourceRows.find((item) => item.id === id);
+    const exactMatches = positions.filter((position) => position.year === 2026
+      && position.unit === unit && position.title === title);
+
+    assert.equal(exactMatches.length, 1, `${id} must map to one exact same-year position`);
+    assert.equal(exactMatches[0].code, code);
+    assert.equal(row?.positionCode, code);
+    assert.equal(row?.score, score);
+    assert.equal(row?.mappingConfidence, 'high');
   }
 });
 
@@ -365,17 +448,27 @@ test('2026 Shijingshan cutoff rows retain the source unit and map only unique sa
   assert.equal(ambiguous.mappingConfidence, 'ambiguous');
 });
 
-test('2026 Fengtai cutoff sample links only the visible exact police job and leaves unresolved rows unassigned', () => {
+test('2026 Fengtai cutoff sample links all unique exact same-year position identities', () => {
   const rows = scoreRows.filter((item) => item.sourceId === 'cgzj-2026-fengtai-cutoff-sample');
   assert.equal(rows.length, 9);
-  const linked = rows.filter((row) => row.mappingConfidence === 'high');
-  assert.equal(linked.length, 1);
-  assert.equal(linked[0].id, '2026-cgzj-fengtai-09');
-  assert.equal(linked[0].positionCode, '232502201');
-  assert.equal(linked[0].score, 52.15);
-  assert.equal(linked[0].unit, '北京市公安局丰台分局');
-  assert.equal(linked[0].title, '一线执法岗1');
-  assert.ok(rows.filter((row) => row.mappingConfidence === 'unmatched')
-    .every((row) => row.positionCode === null));
-  assert.equal(rows.filter((row) => row.mappingConfidence === 'unmatched').length, 8);
+  const expectedCodes = {
+    '2026-cgzj-fengtai-01': '823105805',
+    '2026-cgzj-fengtai-02': '823105802',
+    '2026-cgzj-fengtai-03': '823105803',
+    '2026-cgzj-fengtai-04': '823105801',
+    '2026-cgzj-fengtai-05': '223105804',
+    '2026-cgzj-fengtai-06': '829908201',
+    '2026-cgzj-fengtai-07': '232502204',
+    '2026-cgzj-fengtai-08': '232502203',
+    '2026-cgzj-fengtai-09': '232502201',
+  };
+
+  for (const row of rows) {
+    const matches = positions.filter((position) => position.year === row.year
+      && position.unit === row.unit && position.title === row.title);
+    assert.equal(matches.length, 1, `${row.id} should match one exact same-year position`);
+    assert.equal(matches[0].code, expectedCodes[row.id]);
+    assert.equal(row.positionCode, expectedCodes[row.id]);
+    assert.equal(row.mappingConfidence, 'high');
+  }
 });
