@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { classifyPublicManagementMatch } from '../src/data/positions.js';
+import { classifyPublicManagementMatch, getPositionCompetitionEvidence } from '../src/data/positions.js';
 import { installAccountBrowserAPIs, memoryLocalStorage, seedUnlockedTestAccount, unlockTestAccount } from './helpers/accountTestHarness.js';
 
 async function renderPositionApp() {
@@ -142,7 +142,7 @@ test('position library filters and sorts by exact-position competition snapshots
   assert.deepEqual(snapshotKeys.sort(), expectedSnapshotPositions.map((position) => `${position.year}:${position.code}`).sort());
   assert.match(root.innerHTML, /id="job-competition-evidence"/);
   assert.match(root.innerHTML, /资格审查 1:307\.5/);
-  assert.match(root.innerHTML, /2025-11-21 09:00 · 通过人数 \/ 计划招录/);
+  assert.match(root.innerHTML, /2025-11-21 09:00 · 资格审查通过人数 \/ 计划招录/);
 
   await listeners.change({ target: { id: 'job-competition-evidence', value: 'all' } });
   await listeners.change({ target: { id: 'job-cutoff-evidence', value: 'has' } });
@@ -169,4 +169,55 @@ test('position library filters and sorts by exact-position competition snapshots
   assert.match(modalRoot.innerHTML, /2024-11-21 18:00/);
   assert.match(modalRoot.innerHTML, /时点参考竞争比 1:245/);
   assert.match(modalRoot.innerHTML, /https:\/\/www\.huatu\.com\/2024\/1121\/2789842\.html/);
+});
+
+test('position library exposes reported applicant ratios without mixing them into qualification counts', async () => {
+  const { dataset, listeners, root, modalRoot } = await renderPositionApp();
+  const chaoyang2026 = dataset.positions.filter((position) => position.year === 2026 && position.districtId === 'chaoyang');
+  const expectedCompetitionCount = chaoyang2026.filter((position) => {
+    const evidence = getPositionCompetitionEvidence(position, dataset);
+    return evidence.registeredCompetitionRatio !== null || evidence.qualifiedCompetitionRatio !== null;
+  }).length;
+
+  await listeners.change({ target: { id: 'job-district', value: 'chaoyang' } });
+  await listeners.change({ target: { id: 'job-year', value: '2026' } });
+  await listeners.change({ target: { id: 'job-competition-evidence', value: 'has' } });
+  assert.match(root.innerHTML, new RegExp(`<span class="filter-count">${expectedCompetitionCount} 条结果</span>`));
+  assert.match(root.innerHTML, /有岗位级竞争数据/);
+
+  await listeners.change({ target: { id: 'job-sort', value: 'registration-desc' } });
+  const highestRegistrationCode = chaoyang2026
+    .map((position) => ({ position, ratio: getPositionCompetitionEvidence(position, dataset).registeredCompetitionRatio }))
+    .filter((item) => item.ratio !== null)
+    .sort((left, right) => right.ratio - left.ratio)[0].position.code;
+  const firstVisibleCode = root.innerHTML.match(/data-position-key="2026:([^"]+)"/)?.[1];
+  assert.equal(firstVisibleCode, highestRegistrationCode);
+
+  await listeners.change({ target: { id: 'job-unit', value: '北京市朝阳区人力资源和社会保障局' } });
+  assert.match(root.innerHTML, /报考 \/ 招录 1:7\.5/);
+  assert.match(root.innerHTML, /统计时点未注明/);
+  assert.match(root.innerHTML, /最低进面 141\.5/);
+
+  const openJobAction = { dataset: { action: 'open-job', positionKey: '2026:820526204' } };
+  await listeners.click({ target: { closest: (selector) => selector === '[data-action]' ? openJobAction : null } });
+  assert.match(modalRoot.innerHTML, /岗位级第三方报考人数/);
+  assert.match(modalRoot.innerHTML, /来源所列“报考人数” 15 人/);
+  assert.match(modalRoot.innerHTML, /资格审查通过人数/);
+});
+
+test('position library exposes same-name cutoff ambiguity without assigning scores to either job', async () => {
+  const { dataset, listeners, root } = await renderPositionApp();
+  const expectedCodes = ['220525901', '820525902', '526012102', '526012103', '625014202', '625014203'].sort();
+
+  await listeners.change({ target: { id: 'job-district', value: 'chaoyang' } });
+  await listeners.change({ target: { id: 'job-year', value: '2026' } });
+  await listeners.change({ target: { id: 'job-cutoff-evidence', value: 'ambiguous' } });
+
+  assert.match(root.innerHTML, new RegExp(`<span class="filter-count">${expectedCodes.length} 条结果</span>`));
+  const visibleCodes = [...root.innerHTML.matchAll(/data-position-key="2026:([^"]+)"/g)]
+    .map((match) => match[1])
+    .filter((code, index, all) => all.indexOf(code) === index)
+    .sort();
+  assert.deepEqual(visibleCodes, expectedCodes);
+  assert.match(root.innerHTML, /同名进面分待核/);
 });

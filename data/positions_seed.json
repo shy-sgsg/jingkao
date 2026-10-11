@@ -60268,5 +60268,150 @@
     "eligibilityComplete": false,
     "eligibilityText": "本轮仅补录岗位身份与计划招录数用于关联公开进面分；完整资格条件以官方招考简章为准。",
     "sources": ["gwyzwb-2026-shunyi-labor-arbitration"]
+  },
+  {
+    "year": 2026, "code": "820526204", "unit": "北京市朝阳区人力资源和社会保障局", "title": "综合文稿岗", "orgType": "区直", "jobType": "综合管理", "recruitCount": 2,
+    "sourceLevel": "secondary", "verification": "粉笔职位列表列明职位代码、名称与招录数；未与官方职位简章逐代码核验", "crossVerified": false, "eligibilityComplete": false,
+    "eligibilityText": "仅补录职位身份与招录数以关联进面分和第三方报考人数；完整报考条件以官方职位表为准。", "sources": ["fenbi-2026-chaoyang-page-3"]
+  },
+  {
+    "year": 2026, "code": "220526701", "unit": "北京市朝阳区文化和旅游局（北京市朝阳区文物局）", "title": "综合管理岗", "orgType": "区直", "jobType": "综合管理", "recruitCount": 1,
+    "sourceLevel": "secondary", "verification": "粉笔职位列表列明职位代码、名称与招录数；未与官方职位简章逐代码核验", "crossVerified": false, "eligibilityComplete": false,
+    "eligibilityText": "仅补录职位身份与招录数以关联进面分和第三方报考人数；完整报考条件以官方职位表为准。", "sources": ["fenbi-2026-chaoyang-page-4"]
+  },
+  {
+    "year": 2026, "code": "120525401", "unit": "中共北京市朝阳区委统一战线工作部", "title": "综合管理岗", "orgType": "区直", "jobType": "综合管理", "recruitCount": 1,
+    "sourceLevel": "secondary", "verification": "粉笔职位列表列明职位代码、名称与招录数；未与官方职位简章逐代码核验", "crossVerified": false, "eligibilityComplete": false,
+    "eligibilityText": "仅补录职位身份与招录数以关联进面分和第三方报考人数；完整报考条件以官方职位表为准。", "sources": ["fenbi-2026-chaoyang-page-1"]
+  },
+  {
+    "year": 2026, "code": "120525501", "unit": "中共北京市朝阳区委北京市朝阳区人民政府研究室", "title": "综合管理岗", "orgType": "区直", "jobType": "综合管理", "recruitCount": 1,
+    "sourceLevel": "secondary", "verification": "粉笔职位列表列明职位代码、名称与招录数；未与官方职位简章逐代码核验", "crossVerified": false, "eligibilityComplete": false,
+    "eligibilityText": "仅补录职位身份与招录数以关联进面分和第三方报考人数；完整报考条件以官方职位表为准。", "sources": ["fenbi-2026-chaoyang-page-1"]
+  },
+  {
+    "year": 2026, "code": "420528602", "unit": "北京市朝阳区政协", "title": "综合管理岗", "orgType": "区直", "jobType": "综合管理", "recruitCount": 1,
+    "sourceLevel": "secondary", "verification": "粉笔职位列表列明职位代码、名称与招录数；未与官方职位简章逐代码核验", "crossVerified": false, "eligibilityComplete": false,
+    "eligibilityText": "仅补录职位身份与招录数以关联进面分和第三方报考人数；完整报考条件以官方职位表为准。", "sources": ["fenbi-2026-chaoyang-page-8"]
+  },
+  {
+    "year": 2026, "code": "230528901", "unit": "北京市朝阳区八里庄街道", "title": "综合管理岗", "orgType": "街道", "jobType": "综合管理", "recruitCount": 1,
+    "sourceLevel": "secondary", "verification": "粉笔职位列表列明职位代码、名称与招录数；未与官方职位简章逐代码核验", "crossVerified": false, "eligibilityComplete": false,
+    "eligibilityText": "仅补录职位身份与招录数以关联进面分和第三方报考人数；完整报考条件以官方职位表为准。", "sources": ["fenbi-2026-chaoyang-page-8"]
+  },
+  {
+    "year": 2026, "code": "220526004", "unit": "中共北京市朝阳区委教育工作委员会、北京市朝阳区教育委员会", "title": "教师队伍建设岗", "orgType": "区直", "jobType": "综合管理", "recruitCount": 1,
+    "sourceLevel": "secondary", "verification": "粉笔职位列表列明职位代码、名称与招录数；未与官方职位简章逐代码核验", "crossVerified": false, "eligibilityComplete": false,
+    "eligibilityText": "仅补录职位身份与招录数以关联进面分和第三方报考人数；完整报考条件以官方职位表为准。", "sources": ["fenbi-2026-chaoyang-page-3"]
+  },
+  {
+    "year": 2026, "code": "220526901", "unit": "北京市朝阳区审计局", "title": "审计岗1", "orgType": "区直", "jobType": "专业技术", "recruitCount": 1,
+    "sourceLevel": "secondary", "verification": "粉笔职位列表列明职位代码、名称与招录数；未与官方职位简章逐代码核验", "crossVerified": false, "eligibilityComplete": false,
+    "eligibilityText": "仅补录职位身份与招录数以关联进面分和第三方报考人数；完整报考条件以官方职位表为准。", "sources": ["fenbi-2026-chaoyang-page-5"]
+  },
+  {
+    "year": 2026, "code": "230531001", "unit": "北京市朝阳区奥运村街道", "title": "综合管理岗", "orgType": "街道", "jobType": "综合管理", "recruitCount": 2,
+    "sourceLevel": "secondary", "verification": "粉笔职位列表列明职位代码、名称与招录数；未与官方职位简章逐代码核验", "crossVerified": false, "eligibilityComplete": false,
+    "eligibilityText": "仅补录职位身份与招录数以关联进面分和第三方报考人数；完整报考条件以官方职位表为准。", "sources": ["fenbi-2026-chaoyang-page-12"]
+  },
+  {
+    "year": 2026, "code": "526012102", "unit": "北京市朝阳区人民法院", "title": "司法警察岗", "orgType": "法检", "jobType": "司法警务", "recruitCount": 1,
+    "sourceLevel": "secondary", "verification": "粉笔职位列表列明一个同名职位代码与招录数；另一条同名岗位由京考职位网列表列出", "crossVerified": false, "eligibilityComplete": false,
+    "eligibilityText": "职位身份与招录数来自第三方镜像；分数表未列职位代码，未把进面分挂到该岗位。", "sources": ["fenbi-2026-chaoyang-page-1", "gwyzwb-2026-chaoyang-court"]
+  },
+  {
+    "year": 2026, "code": "526012103", "unit": "北京市朝阳区人民法院", "title": "司法警察岗", "orgType": "法检", "jobType": "司法警务", "recruitCount": 1,
+    "sourceLevel": "secondary", "verification": "京考职位网职位列表列明同名职位代码与招录数；未与官方职位简章逐代码核验", "crossVerified": false, "eligibilityComplete": false,
+    "eligibilityText": "职位身份与招录数来自第三方镜像；分数表未列职位代码，未把进面分挂到该岗位。", "sources": ["gwyzwb-2026-chaoyang-court"]
+  },
+  {
+    "year": 2026, "code": "625014202", "unit": "北京市朝阳区人民检察院", "title": "检察业务岗", "orgType": "法检", "jobType": "检察业务", "recruitCount": 1,
+    "sourceLevel": "secondary", "verification": "京考职位网职位详情列明同名职位代码与招录数；未与官方职位简章逐代码核验", "crossVerified": false, "eligibilityComplete": false,
+    "eligibilityText": "职位身份与招录数来自第三方镜像；分数表未列职位代码，未把进面分挂到该岗位。", "sources": ["gwyzwb-2026-chaoyang-prosecutor-625014202"]
+  },
+  {
+    "year": 2026, "code": "625014203", "unit": "北京市朝阳区人民检察院", "title": "检察业务岗", "orgType": "法检", "jobType": "检察业务", "recruitCount": 8,
+    "sourceLevel": "secondary", "verification": "粉笔职位列表列明同名职位代码与招录数；未与官方职位简章逐代码核验", "crossVerified": false, "eligibilityComplete": false,
+    "eligibilityText": "职位身份与招录数来自第三方镜像；分数表未列职位代码，未把进面分挂到该岗位。", "sources": ["fenbi-2026-chaoyang-page-1"]
+  },
+  {
+    "year": 2026, "code": "820528701", "unit": "北京市朝阳区妇女联合会", "title": "组织建设岗", "orgType": "区直", "jobType": "综合管理", "recruitCount": 1,
+    "sourceLevel": "secondary", "verification": "粉笔职位列表列明职位代码、名称与招录数；未与官方职位简章逐代码核验", "crossVerified": false, "eligibilityComplete": false,
+    "eligibilityText": "仅补录职位身份与招录数以关联进面分和第三方报考人数；完整报考条件以官方职位表为准。", "sources": ["fenbi-2026-chaoyang-page-8"]
+  },
+  {
+    "year": 2026, "code": "230529201", "unit": "北京市朝阳区双井街道", "title": "民生保障岗", "orgType": "街道", "jobType": "公共服务", "recruitCount": 1,
+    "sourceLevel": "secondary", "verification": "粉笔职位列表列明职位代码、名称与招录数；未与官方职位简章逐代码核验", "crossVerified": false, "eligibilityComplete": false,
+    "eligibilityText": "仅补录职位身份与招录数以关联进面分和第三方报考人数；完整报考条件以官方职位表为准。", "sources": ["fenbi-2026-chaoyang-page-9"]
+  },
+  {
+    "year": 2026, "code": "220527102", "unit": "北京市朝阳区体育局", "title": "综合管理岗", "orgType": "区直", "jobType": "综合管理", "recruitCount": 1,
+    "sourceLevel": "secondary", "verification": "粉笔职位列表列明职位代码、名称与招录数；未与官方职位简章逐代码核验", "crossVerified": false, "eligibilityComplete": false,
+    "eligibilityText": "仅补录职位身份与招录数以关联进面分和第三方报考人数；完整报考条件以官方职位表为准。", "sources": ["fenbi-2026-chaoyang-page-5"]
+  },
+  {
+    "year": 2026, "code": "230530301", "unit": "北京市朝阳区亚运村街道", "title": "财务管理岗", "orgType": "街道", "jobType": "财务审计", "recruitCount": 1,
+    "sourceLevel": "secondary", "verification": "粉笔职位列表列明职位代码、名称与招录数；未与官方职位简章逐代码核验", "crossVerified": false, "eligibilityComplete": false,
+    "eligibilityText": "仅补录职位身份与招录数以关联进面分和第三方报考人数；完整报考条件以官方职位表为准。", "sources": ["fenbi-2026-chaoyang-page-11"]
+  },
+  {
+    "year": 2026, "code": "230530402", "unit": "北京市朝阳区小关街道", "title": "综合管理岗", "orgType": "街道", "jobType": "综合管理", "recruitCount": 2,
+    "sourceLevel": "secondary", "verification": "粉笔职位列表列明职位代码、名称与招录数；未与官方职位简章逐代码核验", "crossVerified": false, "eligibilityComplete": false,
+    "eligibilityText": "仅补录职位身份与招录数以关联进面分和第三方报考人数；完整报考条件以官方职位表为准。", "sources": ["fenbi-2026-chaoyang-page-11"]
+  },
+  {
+    "year": 2026, "code": "220528503", "unit": "北京市朝阳区农业综合执法大队", "title": "财务会计岗", "orgType": "区直", "jobType": "财务审计", "recruitCount": 1,
+    "sourceLevel": "secondary", "verification": "粉笔职位列表列明职位代码、名称与招录数；未与官方职位简章逐代码核验", "crossVerified": false, "eligibilityComplete": false,
+    "eligibilityText": "仅补录职位身份与招录数以关联进面分和第三方报考人数；完整报考条件以官方职位表为准。", "sources": ["fenbi-2026-chaoyang-page-8"]
+  },
+  {
+    "year": 2026, "code": "220527401", "unit": "北京市朝阳区数据局", "title": "数字科技岗", "orgType": "区直", "jobType": "信息技术", "recruitCount": 2,
+    "sourceLevel": "secondary", "verification": "粉笔职位列表列明职位代码、名称与招录数；未与官方职位简章逐代码核验", "crossVerified": false, "eligibilityComplete": false,
+    "eligibilityText": "仅补录职位身份与招录数以关联进面分和第三方报考人数；完整报考条件以官方职位表为准。", "sources": ["fenbi-2026-chaoyang-page-6"]
+  },
+  {
+    "year": 2026, "code": "220528401", "unit": "北京市朝阳区民政局", "title": "综合管理岗", "orgType": "区直", "jobType": "综合管理", "recruitCount": 1,
+    "sourceLevel": "secondary", "verification": "粉笔职位列表列明职位代码、名称与招录数；未与官方职位简章逐代码核验", "crossVerified": false, "eligibilityComplete": false,
+    "eligibilityText": "仅补录职位身份与招录数以关联进面分和第三方报考人数；完整报考条件以官方职位表为准。", "sources": ["fenbi-2026-chaoyang-page-8"]
+  },
+  {
+    "year": 2026, "code": "220527201", "unit": "北京市朝阳区园林绿化局", "title": "绿化建设管理岗", "orgType": "区直", "jobType": "综合管理", "recruitCount": 2,
+    "sourceLevel": "secondary", "verification": "粉笔职位列表列明职位代码、名称与招录数；未与官方职位简章逐代码核验", "crossVerified": false, "eligibilityComplete": false,
+    "eligibilityText": "仅补录职位身份与招录数以关联进面分和第三方报考人数；完整报考条件以官方职位表为准。", "sources": ["fenbi-2026-chaoyang-page-5"]
+  },
+  {
+    "year": 2026, "code": "220525901", "unit": "北京市朝阳区发展和改革委员会", "title": "综合管理岗", "orgType": "区直", "jobType": "综合管理", "recruitCount": 1,
+    "sourceLevel": "secondary", "verification": "粉笔职位列表列出第一条同名综合管理岗；分数表未列职位代码，保留歧义", "crossVerified": false, "eligibilityComplete": false,
+    "eligibilityText": "职位身份与招录数来自第三方镜像；分数表未提供职位代码，未把进面分挂到该岗位。", "sources": ["fenbi-2026-chaoyang-page-2"]
+  },
+  {
+    "year": 2026, "code": "820525902", "unit": "北京市朝阳区发展和改革委员会", "title": "综合管理岗", "orgType": "区直", "jobType": "综合管理", "recruitCount": 1,
+    "sourceLevel": "secondary", "verification": "粉笔职位列表列出第二条同名综合管理岗；分数表未列职位代码，保留歧义", "crossVerified": false, "eligibilityComplete": false,
+    "eligibilityText": "职位身份与招录数来自第三方镜像；分数表未提供职位代码，未把进面分挂到该岗位。", "sources": ["fenbi-2026-chaoyang-page-2"]
+  },
+  {
+    "year": 2026, "code": "220526601", "unit": "北京市朝阳区水务局", "title": "工程管理岗", "orgType": "区直", "jobType": "工程管理", "recruitCount": 2,
+    "sourceLevel": "secondary", "verification": "粉笔职位列表列明职位代码、名称与招录数；未与官方职位简章逐代码核验", "crossVerified": false, "eligibilityComplete": false,
+    "eligibilityText": "仅补录职位身份与招录数以关联进面分和第三方报考人数；完整报考条件以官方职位表为准。", "sources": ["fenbi-2026-chaoyang-page-4"]
+  },
+  {
+    "year": 2026, "code": "220527001", "unit": "北京市朝阳区人民政府国有资产监督管理委员会", "title": "国资业务管理岗", "orgType": "区直", "jobType": "综合管理", "recruitCount": 1,
+    "sourceLevel": "secondary", "verification": "粉笔职位列表列明职位代码、名称与招录数；未与官方职位简章逐代码核验", "crossVerified": false, "eligibilityComplete": false,
+    "eligibilityText": "仅补录职位身份与招录数以关联进面分和第三方报考人数；完整报考条件以官方职位表为准。", "sources": ["fenbi-2026-chaoyang-page-5"]
+  },
+  {
+    "year": 2026, "code": "230531502", "unit": "北京市朝阳区十八里店地区（乡）", "title": "行政执法岗", "orgType": "街道", "jobType": "行政执法", "recruitCount": 2,
+    "sourceLevel": "secondary", "verification": "粉笔职位列表列明职位代码、名称与招录数；未与官方职位简章逐代码核验", "crossVerified": false, "eligibilityComplete": false,
+    "eligibilityText": "仅补录职位身份与招录数以关联进面分和第三方报考人数；完整报考条件以官方职位表为准。", "sources": ["fenbi-2026-chaoyang-page-13"]
+  },
+  {
+    "year": 2026, "code": "232502005", "unit": "北京市公安局朝阳分局", "title": "专业岗1", "orgType": "公安", "jobType": "公安专业", "recruitCount": 2,
+    "sourceLevel": "secondary", "verification": "粉笔职位列表列明职位代码、名称与招录数；未与官方职位简章逐代码核验", "crossVerified": false, "eligibilityComplete": false,
+    "eligibilityText": "仅补录职位身份与招录数以关联进面分和第三方报考人数；完整报考条件以官方职位表为准。", "sources": ["fenbi-2026-chaoyang-police-page-6"]
+  },
+  {
+    "year": 2026, "code": "232502002", "unit": "北京市公安局朝阳分局", "title": "网络技术岗", "orgType": "公安", "jobType": "公安专业", "recruitCount": 5,
+    "sourceLevel": "secondary", "verification": "粉笔职位列表列明职位代码、名称与招录数；未与官方职位简章逐代码核验", "crossVerified": false, "eligibilityComplete": false,
+    "eligibilityText": "仅补录职位身份与招录数以关联进面分和第三方报考人数；完整报考条件以官方职位表为准。", "sources": ["fenbi-2026-chaoyang-police-page-6"]
   }
 ]

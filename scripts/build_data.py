@@ -305,16 +305,23 @@ def build_aggregate_evidence(sources: list[dict[str, Any]], score_rows: list[dic
     for source in sources:
         for snapshot in source.get("positionSnapshots", []):
             position_code = snapshot.get("positionCode")
+            applicants_registered = snapshot.get("applicantsRegistered")
+            applicants_qualified = snapshot.get("applicantsQualified")
+            observation_type = snapshot.get("observationType") or (
+                "registration_snapshot"
+                if applicants_registered is not None and applicants_qualified is None
+                else "qualified_snapshot"
+            )
             observations.append({
                 "year": source["year"],
                 "scope": snapshot.get("scope", "position-level" if position_code else "unit-level"),
                 "positionCode": position_code,
                 "districtId": snapshot.get("districtId"),
                 "unit": snapshot.get("unit"),
-                "observationType": "qualified_snapshot",
-                "observedAt": source["observedAt"],
-                "applicantsRegistered": None,
-                "applicantsQualified": snapshot.get("applicantsQualified"),
+                "observationType": observation_type,
+                "observedAt": snapshot.get("observedAt", source.get("observedAt")),
+                "applicantsRegistered": applicants_registered,
+                "applicantsQualified": applicants_qualified,
                 "applicantsPaid": None,
                 "applicantsConfirmed": None,
                 "actualTestTakers": None,

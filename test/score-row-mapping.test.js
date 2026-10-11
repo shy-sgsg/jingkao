@@ -75,8 +75,90 @@ test('2026 cutoff rows link only to a unique exact year, unit, and title match',
     scoreRows.reduce((counts, row) => ({ ...counts, [row.mappingConfidence]: counts[row.mappingConfidence] + 1 }), {
       high: 0, ambiguous: 0, unmatched: 0,
     }),
-    { high: 279, ambiguous: 44, unmatched: 16 },
+    { high: 302, ambiguous: 47, unmatched: 16 },
   );
+});
+
+test('2026 Chaoyang cutoff sample preserves every publicly visible post score as a position-level row', () => {
+  const source = sourceRegistry.find((item) => item.sourceId === 'cgzj-2026-chaoyang-cutoff-sample');
+  const rows = scoreRows.filter((item) => item.sourceId === source?.sourceId);
+  const expected = [
+    ['北京市朝阳区人力资源和社会保障局', '综合文稿岗', 141.5],
+    ['北京市朝阳区文化和旅游局（北京市朝阳区文物局）', '综合管理岗', 141],
+    ['中共北京市朝阳区委统一战线工作部', '综合管理岗', 139.25],
+    ['中共北京市朝阳区委北京市朝阳区人民政府研究室', '综合管理岗', 139],
+    ['北京市朝阳区政协', '综合管理岗', 138.5],
+    ['北京市朝阳区八里庄街道', '综合管理岗', 138],
+    ['中共北京市朝阳区委教育工作委员会、北京市朝阳区教育委员会', '教师队伍建设岗', 136],
+    ['北京市朝阳区审计局', '审计岗1', 134.75],
+    ['北京市朝阳区东坝地区（乡）', '平安建设岗', 133.5],
+    ['北京市朝阳区奥运村街道', '综合管理岗', 133],
+    ['北京市朝阳区人民法院', '司法警察岗', 132.25],
+    ['北京市朝阳区人民检察院', '检察业务岗', 132.25],
+    ['北京市朝阳区妇女联合会', '组织建设岗', 132],
+    ['北京市朝阳区双井街道', '民生保障岗', 132],
+    ['北京市朝阳区体育局', '综合管理岗', 131.75],
+    ['北京市朝阳区亚运村街道', '财务管理岗', 131.75],
+    ['北京市朝阳区小关街道', '综合管理岗', 131.75],
+    ['北京市朝阳区农业综合执法大队', '财务会计岗', 131.5],
+    ['北京市朝阳区数据局', '数字科技岗', 131.25],
+    ['北京市朝阳区民政局', '综合管理岗', 131.25],
+    ['北京市朝阳区园林绿化局', '绿化建设管理岗', 130.5],
+    ['北京市朝阳区发展和改革委员会', '综合管理岗', 130.25],
+    ['北京市朝阳区水务局', '工程管理岗', 130],
+    ['北京市朝阳区人民政府国有资产监督管理委员会', '国资业务管理岗', 130],
+    ['北京市朝阳区十八里店地区（乡）', '行政执法岗', 130],
+    ['北京市公安局朝阳分局', '专业岗1', 57.55],
+    ['北京市公安局朝阳分局', '一线执法岗1', 56.35],
+    ['北京市公安局朝阳分局', '网络技术岗', 55.5],
+  ];
+
+  assert.equal(source?.samplePositions, 28);
+  assert.equal(source?.sampleRecruits, 163);
+  assert.equal(rows.length, expected.length, 'all visible scores should be retained, not just rows already linkable');
+  assert.deepEqual(rows.map((item) => [item.unit, item.title, item.score]), expected);
+
+  const expectedCodes = {
+    '2026-cgzj-chaoyang-01': '820526204',
+    '2026-cgzj-chaoyang-02': '220526701',
+    '2026-cgzj-chaoyang-03': '120525401',
+    '2026-cgzj-chaoyang-04': '120525501',
+    '2026-cgzj-chaoyang-05': '420528602',
+    '2026-cgzj-chaoyang-06': '230528901',
+    '2026-cgzj-chaoyang-07': '220526004',
+    '2026-cgzj-chaoyang-08': '220526901',
+    '2026-cgzj-chaoyang-09': '230531801',
+    '2026-cgzj-chaoyang-10': '230531001',
+    '2026-cgzj-chaoyang-13': '820528701',
+    '2026-cgzj-chaoyang-14': '230529201',
+    '2026-cgzj-chaoyang-15': '220527102',
+    '2026-cgzj-chaoyang-16': '230530301',
+    '2026-cgzj-chaoyang-17': '230530402',
+    '2026-cgzj-chaoyang-18': '220528503',
+    '2026-cgzj-chaoyang-19': '220527401',
+    '2026-cgzj-chaoyang-20': '220528401',
+    '2026-cgzj-chaoyang-21': '220527201',
+    '2026-cgzj-chaoyang-23': '220526601',
+    '2026-cgzj-chaoyang-24': '220527001',
+    '2026-cgzj-chaoyang-25': '230531502',
+    '2026-cgzj-chaoyang-26': '232502005',
+    '2026-cgzj-chaoyang-27': '232502003',
+    '2026-cgzj-chaoyang-28': '232502002',
+  };
+  for (const [id, code] of Object.entries(expectedCodes)) {
+    const row = rows.find((item) => item.id === id);
+    const matches = positions.filter((position) => position.year === 2026
+      && position.unit === row.unit && position.title === row.title);
+    assert.equal(matches.length, 1, `${id} should match one exact same-year position`);
+    assert.equal(matches[0].code, code);
+    assert.equal(row.positionCode, code);
+    assert.equal(row.mappingConfidence, 'high');
+  }
+  for (const id of ['2026-cgzj-chaoyang-11', '2026-cgzj-chaoyang-12', '2026-cgzj-chaoyang-22']) {
+    const row = rows.find((item) => item.id === id);
+    assert.equal(row.positionCode, null, `${id} must not choose between duplicate same-name posts`);
+    assert.equal(row.mappingConfidence, 'ambiguous');
+  }
 });
 
 test('2026 street cutoff sample includes six newly covered exact unique position links', () => {
@@ -199,7 +281,7 @@ test('2026 Yanqing partial interview-cutoff rows preserve unique matches and unr
     scoreRows.reduce((counts, row) => ({ ...counts, [row.mappingConfidence]: counts[row.mappingConfidence] + 1 }), {
       high: 0, ambiguous: 0, unmatched: 0,
     }),
-    { high: 279, ambiguous: 44, unmatched: 16 },
+    { high: 302, ambiguous: 47, unmatched: 16 },
   );
 });
 
@@ -318,8 +400,8 @@ test('2026 citywide fiscal cutoff sample links six unique positions including fo
 
 test('2026 Chaoyang cutoff sample rows map only to their exact same-year job identities', () => {
   const expectedRows = {
-    '2026-cgzj-chaoyang-01': ['230531801', '北京市朝阳区东坝地区（乡）', '平安建设岗', 133.5],
-    '2026-cgzj-chaoyang-02': ['232502003', '北京市公安局朝阳分局', '一线执法岗1', 56.35],
+    '2026-cgzj-chaoyang-09': ['230531801', '北京市朝阳区东坝地区（乡）', '平安建设岗', 133.5],
+    '2026-cgzj-chaoyang-27': ['232502003', '北京市公安局朝阳分局', '一线执法岗1', 56.35],
   };
 
   for (const [id, [code, unit, title, score]] of Object.entries(expectedRows)) {

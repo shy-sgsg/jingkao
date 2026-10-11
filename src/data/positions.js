@@ -96,6 +96,35 @@ export function getPositionCompetitionEvidence(position, dataset = {}) {
       ? qualified / recruits
       : null;
 
+  const registrationSnapshots = (Array.isArray(dataset.observations) ? dataset.observations : [])
+    .filter((item) => Number(item.year) === year
+      && String(item.positionCode || '').trim() === code
+      && item.observationType === 'registration_snapshot'
+      && positionScopes.has(item.scope))
+    .slice()
+    .sort((left, right) => String(left.observedAt || '').localeCompare(String(right.observedAt || '')));
+  const latestRegistrationTime = registrationSnapshots.filter((item) => String(item.observedAt || '').trim()).at(-1)?.observedAt || null;
+  const latestRegistrationRows = latestRegistrationTime
+    ? registrationSnapshots.filter((item) => item.observedAt === latestRegistrationTime)
+    : registrationSnapshots;
+  const undatedRegistrationRows = registrationSnapshots.filter((item) => !String(item.observedAt || '').trim());
+  const registrationFingerprint = (item) => `${item.applicantsRegistered ?? ''}:${item.recruitCount ?? position?.recruitCount ?? ''}`;
+  const latestRegistrationFingerprints = new Set([
+    ...latestRegistrationRows.map(registrationFingerprint),
+    ...(latestRegistrationTime ? undatedRegistrationRows.map(registrationFingerprint) : []),
+  ]);
+  const latestRegistrationSnapshot = latestRegistrationFingerprints.size === 1
+    ? latestRegistrationRows.at(-1) || null
+    : null;
+  const registered = numericValue(latestRegistrationSnapshot?.applicantsRegistered);
+  const registrationRecruits = numericValue(latestRegistrationSnapshot?.recruitCount ?? position?.recruitCount);
+  const storedRegisteredRatio = numericValue(latestRegistrationSnapshot?.registeredCompetitionRatio);
+  const registeredCompetitionRatio = storedRegisteredRatio !== null
+    ? storedRegisteredRatio
+    : registered !== null && registrationRecruits !== null && registered >= 0 && registrationRecruits > 0
+      ? registered / registrationRecruits
+      : null;
+
   const positionUnit = String(position?.unit || '').trim();
   const positionTitle = String(position?.title || '').trim();
   const matchingScoreRows = (Array.isArray(dataset.scoreRows) ? dataset.scoreRows : [])
@@ -107,13 +136,26 @@ export function getPositionCompetitionEvidence(position, dataset = {}) {
       && numericValue(row.score) !== null);
   const cutoffScores = new Set(matchingScoreRows.map((row) => numericValue(row.score)));
   const cutoffScore = cutoffScores.size === 1 ? [...cutoffScores][0] : null;
+  const ambiguousCutoffRows = (Array.isArray(dataset.scoreRows) ? dataset.scoreRows : [])
+    .filter((row) => Number(row.year) === year
+      && !String(row.positionCode || '').trim()
+      && row.mappingConfidence === 'ambiguous'
+      && positionUnit && positionTitle
+      && row.unit === position.unit && row.title === position.title
+      && numericValue(row.score) !== null);
 
   return {
     snapshots,
     latestSnapshot,
     qualifiedCompetitionRatio,
+    registrationSnapshots,
+    latestRegistrationSnapshot,
+    registeredCompetitionRatio,
+    registrationSourceIds: [...new Set(registrationSnapshots.map((item) => item.sourceId).filter(Boolean))],
     cutoffScore,
     cutoffSourceIds: cutoffScore === null ? [] : [...new Set(matchingScoreRows.map((row) => row.sourceId).filter(Boolean))],
+    ambiguousCutoffRows,
+    ambiguousCutoffSourceIds: [...new Set(ambiguousCutoffRows.map((row) => row.sourceId).filter(Boolean))],
   };
 }
 
@@ -164,12 +206,16 @@ export function filterAndSortPositions(positions, options = {}) {
     if (recruitmentGroup === 'one' && recruitCount !== 1) return false;
     if (recruitmentGroup === 'two-or-more' && (recruitCount === null || recruitCount < 2)) return false;
     if (recruitmentGroup === 'missing' && recruitCount !== null) return false;
-    const competitionAvailable = evidenceFor(position).qualifiedCompetitionRatio !== null;
+    const competition = evidenceFor(position);
+    const competitionAvailable = competition.qualifiedCompetitionRatio !== null || competition.registeredCompetitionRatio !== null;
     if (competitionEvidence === 'has' && !competitionAvailable) return false;
     if (competitionEvidence === 'missing' && competitionAvailable) return false;
-    const cutoffAvailable = evidenceFor(position).cutoffScore !== null;
+    const cutoff = evidenceFor(position);
+    const cutoffAvailable = cutoff.cutoffScore !== null;
+    const cutoffAmbiguous = cutoff.ambiguousCutoffRows.length > 0;
     if (cutoffEvidence === 'has' && !cutoffAvailable) return false;
-    if (cutoffEvidence === 'missing' && cutoffAvailable) return false;
+    if (cutoffEvidence === 'ambiguous' && !cutoffAmbiguous) return false;
+    if (cutoffEvidence === 'missing' && (cutoffAvailable || cutoffAmbiguous)) return false;
     if (!query) return true;
     const searchable = [
       position.code,
@@ -191,6 +237,14 @@ export function filterAndSortPositions(positions, options = {}) {
       if (leftCount === null && rightCount !== null) return 1;
       if (rightCount === null && leftCount !== null) return -1;
       if (leftCount !== null && rightCount !== null && leftCount !== rightCount) return rightCount - leftCount;
+    } else if (sortBy === 'registration-desc' || sortBy === 'registration-asc') {
+      const leftValue = evidenceFor(left).registeredCompetitionRatio;
+      const rightValue = evidenceFor(right).registeredCompetitionRatio;
+      if (leftValue === null && rightValue !== null) return 1;
+      if (rightValue === null && leftValue !== null) return -1;
+      if (leftValue !== null && rightValue !== null && leftValue !== rightValue) {
+        return sortBy === 'registration-desc' ? rightValue - leftValue : leftValue - rightValue;
+      }
     } else if (sortBy === 'competition-desc' || sortBy === 'competition-asc') {
       const leftValue = evidenceFor(left).qualifiedCompetitionRatio;
       const rightValue = evidenceFor(right).qualifiedCompetitionRatio;

@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { normalizeDataset } from '../src/data/normalize.js';
-import { getPositionCompetitionEvidence } from '../src/data/positions.js';
+import { filterAndSortPositions, getPositionCompetitionEvidence } from '../src/data/positions.js';
 
 test('2025 Beijing Jingkao registration snapshots stay attached to their position codes and snapshot ratios', async () => {
   const raw = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
@@ -785,6 +785,180 @@ test('2026 Chaoyang position snapshots and interview cutoffs attach to exact yea
   }
 });
 
+test('2026 Chaoyang reported application counts remain separate from qualification snapshots and link by code', async () => {
+  const raw = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const dataset = normalizeDataset(raw);
+  const position = dataset.positions.find((item) => item.year === 2026 && item.code === '820526204');
+  const observation = dataset.observations.find((item) => item.year === 2026
+    && item.positionCode === '820526204' && item.sourceId === 'fenbi-2026-chaoyang-page-3');
+  const evidence = getPositionCompetitionEvidence(position, dataset);
+
+  assert.ok(position, 'the HR comprehensive writing post should be present in the job library');
+  assert.equal(position.unit, '北京市朝阳区人力资源和社会保障局');
+  assert.equal(position.title, '综合文稿岗');
+  assert.equal(position.recruitCount, 2);
+  assert.equal(observation?.observationType, 'registration_snapshot');
+  assert.equal(observation?.applicantsRegistered, 15);
+  assert.equal(observation?.applicantsQualified, null, 'Fenbi list count is not qualification-passed count');
+  assert.equal(observation?.observedAt, null, 'the source page does not state a count timestamp');
+  assert.equal(evidence.registrationSnapshots.length, 1);
+  assert.equal(evidence.latestRegistrationSnapshot.applicantsRegistered, 15);
+  assert.equal(evidence.registeredCompetitionRatio, 7.5);
+});
+
+test('2026 Haidian and Xicheng reported applicant counts link by exact code and keep the undocumented timestamp separate', async () => {
+  const raw = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const dataset = normalizeDataset(raw);
+  const expected = [
+    ['haidian-2026-fenbi-page-1', '819909904', 1, 22],
+    ['haidian-2026-fenbi-page-1', '526012201', 1, 8],
+    ['haidian-2026-fenbi-page-1', '526012202', 1, 8],
+    ['haidian-2026-fenbi-page-1', '526012204', 1, 1],
+    ['haidian-2026-fenbi-page-1', '526012205', 1, 5],
+    ['haidian-2026-fenbi-page-1', '526012206', 15, 23],
+    ['haidian-2026-fenbi-page-1', '625014301', 2, 17],
+    ['haidian-2026-fenbi-page-1', '625014302', 4, 8],
+    ['haidian-2026-fenbi-page-1', '120636201', 2, 22],
+    ['haidian-2026-fenbi-page-1', '120632601', 1, 118],
+    ['haidian-2026-fenbi-page-2', '120632701', 1, 13],
+    ['haidian-2026-fenbi-page-2', '120632702', 1, 9],
+    ['haidian-2026-fenbi-page-2', '120632801', 1, 11],
+    ['haidian-2026-fenbi-page-2', '120632802', 2, 31],
+    ['haidian-2026-fenbi-page-2', '120632901', 1, 8],
+    ['haidian-2026-fenbi-page-2', '120633001', 2, 19],
+    ['haidian-2026-fenbi-page-2', '120633101', 2, 16],
+    ['haidian-2026-fenbi-page-2', '120633201', 2, 20],
+    ['haidian-2026-fenbi-page-2', '120633301', 1, 5],
+    ['haidian-2026-fenbi-page-2', '820633401', 2, 40],
+    ['xicheng-2026-mirror-016', '234104501', 5, 25],
+    ['xicheng-2026-mirror-016', '234104502', 1, 1],
+    ['xicheng-2026-mirror-016', '234104503', 1, 3],
+    ['xicheng-2026-mirror-016', '526012001', 24, 87],
+    ['xicheng-2026-mirror-016', '526012002', 2, 88],
+    ['xicheng-2026-mirror-016', '625014101', 12, 48],
+    ['xicheng-2026-mirror-016', '625014102', 1, 6],
+    ['xicheng-2026-mirror-016', '625014103', 1, 11],
+    ['xicheng-2026-mirror-016', '625014104', 1, 8],
+    ['xicheng-2026-mirror-016', '120223401', 1, 15],
+    ['xicheng-2026-mirror-008', '120223402', 4, 75],
+    ['xicheng-2026-mirror-008', '120220901', 10, 88],
+    ['xicheng-2026-mirror-008', '120220902', 8, 107],
+    ['xicheng-2026-mirror-008', '120220903', 4, 18],
+    ['xicheng-2026-mirror-008', '120220904', 10, 143],
+    ['xicheng-2026-mirror-008', '120220905', 8, 133],
+    ['xicheng-2026-mirror-008', '120220906', 10, 227],
+    ['xicheng-2026-mirror-008', '120221001', 2, 10],
+    ['xicheng-2026-mirror-008', '820221101', 2, 22],
+    ['xicheng-2026-mirror-008', '820221102', 1, 13],
+  ];
+
+  assert.equal(expected.length, 40);
+  for (const [sourceId, code, recruits, applicants] of expected) {
+    const position = dataset.positions.find((item) => item.year === 2026 && item.code === code);
+    const rows = dataset.observations.filter((item) => item.year === 2026
+      && item.sourceId === sourceId && item.positionCode === code);
+    const evidence = getPositionCompetitionEvidence(position, dataset);
+
+    assert.ok(position, `position ${code} should exist in the 2026 library`);
+    assert.equal(position.recruitCount, recruits, `${code} planned recruits should match the source listing`);
+    assert.equal(rows.length, 1, `${code} should have one source-linked applicant observation`);
+    assert.equal(rows[0].observationType, 'registration_snapshot');
+    assert.equal(rows[0].applicantsRegistered, applicants);
+    assert.equal(rows[0].applicantsQualified, null);
+    assert.equal(rows[0].observedAt, null, 'the source listing does not state a count timestamp');
+    assert.equal(rows[0].registeredCompetitionRatio, applicants / recruits);
+    assert.equal(evidence.latestRegistrationSnapshot.positionCode, code);
+  }
+});
+
+test('2026 Fangshan and Tongzhou applicant counts use only unique local position matches', async () => {
+  const raw = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const dataset = normalizeDataset(raw);
+  const expected = [
+    ['fenbi-2026-fangshan-page-1', '526012603', 16, 55],
+    ['fenbi-2026-fangshan-page-1', '625014701', 6, 18],
+    ['fenbi-2026-fangshan-page-1', '121051401', 2, 9],
+    ['fenbi-2026-fangshan-page-1', '121051402', 2, 12],
+    ['fenbi-2026-fangshan-page-1', '121049301', 1, 15],
+    ['fenbi-2026-fangshan-page-1', '121049302', 1, 6],
+    ['fenbi-2026-fangshan-page-1', '821049501', 1, 9],
+    ['fenbi-2026-tongzhou-page-2', '121153401', 1, 20],
+    ['fenbi-2026-tongzhou-page-2', '821153501', 2, 37],
+    ['fenbi-2026-tongzhou-page-2', '221153801', 2, 9],
+    ['fenbi-2026-tongzhou-page-2', '221153901', 2, 23],
+    ['fenbi-2026-tongzhou-page-2', '821153902', 2, 35],
+    ['fenbi-2026-tongzhou-page-2', '821153903', 4, 29],
+    ['fenbi-2026-tongzhou-page-2', '821154001', 2, 13],
+    ['fenbi-2026-tongzhou-page-2', '821154003', 2, 27],
+  ];
+
+  for (const [sourceId, code, recruits, applicants] of expected) {
+    const position = dataset.positions.find((item) => item.year === 2026 && item.code === code);
+    const observation = dataset.observations.find((item) => item.year === 2026
+      && item.sourceId === sourceId && item.positionCode === code);
+    assert.ok(position, `position ${code} should exist in the 2026 library`);
+    assert.equal(position.recruitCount, recruits, `${code} planned recruits should match the source row`);
+    assert.equal(observation?.scope, 'position-level');
+    assert.equal(observation?.applicantsRegistered, applicants);
+    assert.equal(observation?.applicantsQualified, null);
+    assert.equal(observation?.observedAt, null, 'the mobile listing does not state an applicant-count timestamp');
+    assert.equal(observation?.registeredCompetitionRatio, applicants / recruits);
+  }
+
+  for (const code of ['526012601', '526012602']) {
+    assert.equal(dataset.observations.some((item) => item.sourceId === 'fenbi-2026-fangshan-page-1'
+      && item.positionCode === code), false, `${code} shares an indistinguishable source title and must stay unlinked`);
+  }
+});
+
+test('2026 Dongcheng applicant counts attach only to exact code-and-recruitment matches', async () => {
+  const raw = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const dataset = normalizeDataset(raw);
+  const expected = [
+    ['fenbi-2026-dongcheng-page-1', '820116201', 1, 4],
+    ['fenbi-2026-dongcheng-page-2', '220116602', 1, 11],
+    ['fenbi-2026-dongcheng-page-2', '820116801', 2, 6],
+    ['fenbi-2026-dongcheng-page-2', '220116601', 2, 29],
+    ['fenbi-2026-dongcheng-page-3', '220116901', 1, 24],
+    ['fenbi-2026-dongcheng-page-4', '220117101', 1, 17],
+    ['fenbi-2026-dongcheng-page-4', '820117004', 1, 10],
+    ['fenbi-2026-dongcheng-page-4', '820117202', 1, 49],
+    ['fenbi-2026-dongcheng-page-5', '220117303', 1, 36],
+    ['fenbi-2026-dongcheng-page-5', '220117401', 1, 19],
+    ['fenbi-2026-dongcheng-page-6', '220117505', 2, 47],
+    ['fenbi-2026-dongcheng-page-6', '220117801', 2, 28],
+    ['fenbi-2026-dongcheng-page-6', '220118001', 1, 25],
+    ['fenbi-2026-dongcheng-page-7', '220118301', 1, 11],
+    ['fenbi-2026-dongcheng-page-7', '220118401', 1, 12],
+    ['fenbi-2026-dongcheng-page-8', '820118603', 1, 16],
+    ['fenbi-2026-dongcheng-page-8', '720119001', 1, 26],
+    ['fenbi-2026-dongcheng-page-9', '230119501', 1, 10],
+    ['fenbi-2026-dongcheng-page-9', '230119503', 2, 34],
+    ['fenbi-2026-dongcheng-page-9', '230119601', 1, 29],
+    ['fenbi-2026-dongcheng-page-10', '230119801', 2, 12],
+    ['fenbi-2026-dongcheng-page-10', '230119802', 1, 1],
+  ];
+
+  for (const [sourceId, code, recruits, applicants] of expected) {
+    const position = dataset.positions.find((item) => item.year === 2026 && item.code === code);
+    const observation = dataset.observations.find((item) => item.year === 2026
+      && item.sourceId === sourceId && item.positionCode === code);
+
+    assert.equal(position?.districtId, 'dongcheng', `${code} should be a Dongcheng position`);
+    assert.equal(position?.recruitCount, recruits, `${code} planned recruits should match the listing`);
+    assert.equal(observation?.scope, 'position-level');
+    assert.equal(observation?.applicantsRegistered, applicants);
+    assert.equal(observation?.applicantsQualified, null);
+    assert.equal(observation?.observedAt, null, 'Fenbi does not state the per-position count timestamp');
+    assert.equal(observation?.registeredCompetitionRatio, applicants / recruits);
+  }
+
+  assert.equal(dataset.sources.find((item) => item.sourceId === 'fenbi-2026-dongcheng-page-10')?.reportedPositionCount, 10);
+  assert.equal(dataset.observations.some((item) => item.year === 2026
+    && item.sourceId.startsWith('fenbi-2026-dongcheng-') && item.positionCode === '232501801'), false,
+  'the police role is not listed in the captured district pages and must remain without a reported count');
+});
+
 test('2026 Daxing police qualification snapshots attach to the exact mirrored position code', async () => {
   const raw = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
   const dataset = normalizeDataset(raw);
@@ -1156,4 +1330,40 @@ test('2026 first-day Daxing single-position unit count links to its exact TianGo
   assert.equal(rows[0].applicantsQualified, 20);
   assert.equal(rows[0].recruitCount, 2);
   assert.equal(rows[0].qualifiedCompetitionRatio, 10);
+});
+
+test('un-timestamped third-party registration counts stay separate and support position filtering and comparison', () => {
+  const positions = [
+    { year: 2026, code: '820526204', unit: '北京市朝阳区人力资源和社会保障局', title: '综合文稿岗', recruitCount: 2 },
+    { year: 2026, code: '220526701', unit: '北京市朝阳区文化和旅游局', title: '综合管理岗', recruitCount: 1 },
+    { year: 2026, code: 'not-observed', unit: '北京市朝阳区其他单位', title: '未观察岗位', recruitCount: 1 },
+  ];
+  const observations = [
+    {
+      year: 2026, positionCode: '820526204', scope: 'position-level', observationType: 'registration_snapshot',
+      observedAt: null, applicantsRegistered: 15, applicantsQualified: null, recruitCount: 2, sourceId: 'fenbi-page-3',
+    },
+    {
+      year: 2026, positionCode: '220526701', scope: 'position-level', observationType: 'registration_snapshot',
+      observedAt: null, applicantsRegistered: 23, applicantsQualified: null, recruitCount: 1, sourceId: 'fenbi-page-4',
+    },
+  ];
+  const hrEvidence = getPositionCompetitionEvidence(positions[0], { observations, scoreRows: [] });
+
+  assert.equal(hrEvidence.latestRegistrationSnapshot.applicantsRegistered, 15);
+  assert.equal(hrEvidence.latestRegistrationSnapshot.applicantsQualified, null);
+  assert.equal(hrEvidence.latestRegistrationSnapshot.observedAt, null);
+  assert.equal(hrEvidence.registeredCompetitionRatio, 7.5);
+  assert.equal(hrEvidence.qualifiedCompetitionRatio, null);
+
+  const hasRegistration = filterAndSortPositions(positions, {
+    observations,
+    competitionEvidence: 'has',
+    sortBy: 'registration-desc',
+  });
+  assert.deepEqual(hasRegistration.map((position) => position.code), ['220526701', '820526204']);
+  assert.deepEqual(filterAndSortPositions(positions, {
+    observations,
+    competitionEvidence: 'missing',
+  }).map((position) => position.code), ['not-observed']);
 });

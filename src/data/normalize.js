@@ -16,12 +16,14 @@ export function normalizeDataset(input) {
   data.observations = data.observations.map((observation) => {
     const linkedPosition = positionsByCode.get(observation.positionCode);
     const recruitCount = nullable(observation.recruitCount ?? linkedPosition?.recruitCount);
+    const registered = nullable(observation.applicantsRegistered);
     const qualified = nullable(observation.applicantsQualified);
     const denominator = typeof recruitCount === 'number' ? recruitCount : Number.NaN;
+    const registeredNumerator = typeof registered === 'number' ? registered : Number.NaN;
     const numerator = typeof qualified === 'number' ? qualified : Number.NaN;
     return {
       ...observation,
-      applicantsRegistered: nullable(observation.applicantsRegistered),
+      applicantsRegistered: registered,
       applicantsQualified: qualified,
       applicantsPaid: nullable(observation.applicantsPaid),
       applicantsConfirmed: nullable(observation.applicantsConfirmed),
@@ -29,6 +31,9 @@ export function normalizeDataset(input) {
       recruitCount,
       qualifiedCompetitionRatio: Number.isFinite(numerator) && Number.isFinite(denominator) && denominator > 0
         ? numerator / denominator
+        : null,
+      registeredCompetitionRatio: Number.isFinite(registeredNumerator) && Number.isFinite(denominator) && denominator > 0
+        ? registeredNumerator / denominator
         : null,
       unknownRegistrationRatio: nullable(observation.unknownRegistrationRatio),
     };

@@ -316,18 +316,20 @@ export function buildResearchFindings(dataset) {
 
   const positionLevelObservations = observations.filter((item) => item.positionCode !== null
     && item.positionCode !== undefined && item.positionCode !== '').length;
-  const positionLevelCodes = new Set(observations
-    .filter((item) => item.positionCode !== null && item.positionCode !== undefined && item.positionCode !== '')
-    .map((item) => item.positionCode));
+  const positionLevelRows = observations.filter((item) => item.positionCode !== null
+    && item.positionCode !== undefined && item.positionCode !== '');
+  const qualificationSnapshots = positionLevelRows.filter((item) => item.observationType === 'qualified_snapshot').length;
+  const reportedApplicationSnapshots = positionLevelRows.filter((item) => item.observationType === 'registration_snapshot').length;
+  const positionLevelCodes = new Set(positionLevelRows.map((item) => item.positionCode));
   const aggregateObservations = observations.length - positionLevelObservations;
   findings.push(finding(
     'competition-grain',
     '报考竞争',
     '↔',
-    positionLevelObservations ? '已收录岗位级资格审查快照，仍非最终竞争情况' : '竞争观察目前停留在区级汇总',
-    `${observations.length} 条报名 / 竞争观察中，岗位级快照 ${positionLevelObservations} 条，覆盖 ${positionLevelCodes.size} 个职位代码；其余 ${aggregateObservations} 条为全市、区级或单位级汇总。`,
+    positionLevelObservations ? '已收录岗位级竞争观察，口径分列且仍非最终竞争情况' : '竞争观察目前停留在区级汇总',
+    `${observations.length} 条报名 / 竞争观察中，岗位级记录 ${positionLevelObservations} 条（资格审查 ${qualificationSnapshots} 条、来源所列报考人数 ${reportedApplicationSnapshots} 条），覆盖 ${positionLevelCodes.size} 个职位代码；其余 ${aggregateObservations} 条为全市、区级或单位级汇总。`,
     positionLevelObservations
-      ? '岗位级数据为第三方转载的资格审查通过人数，且多个时点属于同一职位的重复快照；全市总比按过审人数/计划招录人数计算，不是岗位竞争比的简单平均。以上均不等于最终报名、缴费或实考人数，也不能据此推断考试概率。'
+      ? '资格审查快照按通过人数/计划招录计算；来源所列报考人数按各自页面字段单独保留，不与资格审查人数合并。多个时点属于同一职位的重复观察；全市总比按过审人数/计划招录人数计算，不是岗位竞争比的简单平均。第三方数据不等于官方最终报名、缴费或实考人数，也不能据此推断考试概率。'
       : '资格审查人数、报道平均竞争比和岗位计划人数不是同一统计口径；现有数据不能据此给具体单位或岗位排名。',
     uniqueSourceIds(observations),
     '#/evidence',
@@ -335,6 +337,8 @@ export function buildResearchFindings(dataset) {
     {
       observations: observations.length,
       jobLevelObservations: positionLevelObservations,
+      qualificationSnapshots,
+      reportedApplicationSnapshots,
       aggregateObservations,
       jobLevelPositions: positionLevelCodes.size,
     },

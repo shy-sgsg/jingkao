@@ -113,7 +113,9 @@ test('the evidence center lists dated position-level qualification snapshots wit
   assert.match(root.innerHTML, /2025-11-19 18:00[\s\S]*?232501603[\s\S]*?714 人[\s\S]*?55 人[\s\S]*?1:12\.98[\s\S]*?eoffcn\.com\/kszx\/detail\/1903982\.html/);
   assert.match(root.innerHTML, /2025-11-20 18:00[\s\S]*?41477 人[\s\S]*?3694 人[\s\S]*?1:11\.23[\s\S]*?sohu\.com\/a\/956654507_121124036/);
   assert.match(root.innerHTML, /资格审查通过人数.*不等同最终报名人数、缴费人数或实考人数/s);
-  assert.match(root.innerHTML, /岗位级资格审查快照[\s\S]*?覆盖 71 个岗位 · 23 个时点/);
+  assert.match(root.innerHTML, /岗位级竞争观察[\s\S]*?资格审查 221 条 · 第三方报考人数 106 条/);
+  assert.match(root.innerHTML, /岗位级第三方报考人数/);
+  assert.match(root.innerHTML, /未注明[\s\S]*?820526204[\s\S]*?15 人[\s\S]*?2 人[\s\S]*?1:7\.5[\s\S]*?fenbi\.com\/page\/positions\/1\/438923\?page=3/);
 });
 
 test('the evidence center separates citywide weighted competition snapshots from job-level ratios', async () => {
@@ -140,6 +142,7 @@ test('the evidence center lists the complete 2025 district qualified snapshot wi
   assert.match(table, /石景山区[\s\S]*?1000 人[\s\S]*?125 人[\s\S]*?1:8/);
   assert.match(root.innerHTML, /区级快照仅用于同一时点区级比较，不分摊到岗位/);
   assert.match(root.innerHTML, /岗位级资格审查快照/);
+  assert.match(root.innerHTML, /资格审查通过人数与来源所列报考人数分别展示/);
 });
 
 test('the overview keeps personal study summaries and shows citywide position coverage and sources', async () => {
@@ -185,7 +188,7 @@ test('the source page exposes evidence-based coverage without presenting mirror 
   assert.match(root.innerHTML, /2024[\s\S]*?95 \/ 95 条/);
   assert.match(root.innerHTML, /2025[\s\S]*?91 \/ 91 条/);
   assert.match(root.innerHTML, /2026[\s\S]*?86 \/ 88 条/);
-  assert.match(root.innerHTML, /339 条具名分数记录[\s\S]*?部分样本/);
+  assert.match(root.innerHTML, /365 条具名分数记录[\s\S]*?部分样本/);
   assert.match(root.innerHTML, /年度官方职位分母未知/);
   assert.match(root.innerHTML, /条数相同不代表职位代码集合一致/);
   assert.doesNotMatch(root.innerHTML, /官方覆盖率[：:]\s*100%/);

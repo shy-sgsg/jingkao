@@ -4714,10 +4714,22 @@
     "year": 2026,
     "geographicScope": "海淀区列表（含工作地点为海淀区的市级单位候选）",
     "url": "https://www.fenbi.com/page/positions/1/438923?page=1&region=167",
-    "accessedAt": "2026-10-09",
+    "accessedAt": "2026-10-12",
     "reportedPositionCount": 10,
     "reportedRecruitCount": 29,
-    "notes": "第三方列表页提供职位代码、单位、职位名、招录数、学历、专业和工作地点；其他资格条件及逐代码准确性待官方职位表核验。"
+    "positionSnapshots": [
+      { "positionCode": "819909904", "scope": "position-level", "applicantsRegistered": 22, "recruitCount": 1 },
+      { "positionCode": "526012201", "scope": "position-level", "applicantsRegistered": 8, "recruitCount": 1 },
+      { "positionCode": "526012202", "scope": "position-level", "applicantsRegistered": 8, "recruitCount": 1 },
+      { "positionCode": "526012204", "scope": "position-level", "applicantsRegistered": 1, "recruitCount": 1 },
+      { "positionCode": "526012205", "scope": "position-level", "applicantsRegistered": 5, "recruitCount": 1 },
+      { "positionCode": "526012206", "scope": "position-level", "applicantsRegistered": 23, "recruitCount": 15 },
+      { "positionCode": "625014301", "scope": "position-level", "applicantsRegistered": 17, "recruitCount": 2 },
+      { "positionCode": "625014302", "scope": "position-level", "applicantsRegistered": 8, "recruitCount": 4 },
+      { "positionCode": "120636201", "scope": "position-level", "applicantsRegistered": 22, "recruitCount": 2 },
+      { "positionCode": "120632601", "scope": "position-level", "applicantsRegistered": 118, "recruitCount": 1 }
+    ],
+    "notes": "页面列有职位代码、招录人数和“报考人数”；本次逐条核对该页10条岗位样本，职位代码与本地2026职位行、招录数一致。页面未说明逐岗人数的统计时点或官方口径；仅记录为第三方报考人数，不视作资格审查通过人数。"
   },
   {
     "sourceId": "haidian-2026-fenbi-page-2",
@@ -4728,10 +4740,22 @@
     "year": 2026,
     "geographicScope": "海淀区列表（含工作地点为海淀区的市级单位候选）",
     "url": "https://www.fenbi.com/page/positions/1/438923?page=2&region=167",
-    "accessedAt": "2026-10-09",
+    "accessedAt": "2026-10-12",
     "reportedPositionCount": 10,
     "reportedRecruitCount": 15,
-    "notes": "第三方列表页提供职位代码、单位、职位名、招录数、学历、专业和工作地点；其他资格条件及逐代码准确性待官方职位表核验。"
+    "positionSnapshots": [
+      { "positionCode": "120632701", "scope": "position-level", "applicantsRegistered": 13, "recruitCount": 1 },
+      { "positionCode": "120632702", "scope": "position-level", "applicantsRegistered": 9, "recruitCount": 1 },
+      { "positionCode": "120632801", "scope": "position-level", "applicantsRegistered": 11, "recruitCount": 1 },
+      { "positionCode": "120632802", "scope": "position-level", "applicantsRegistered": 31, "recruitCount": 2 },
+      { "positionCode": "120632901", "scope": "position-level", "applicantsRegistered": 8, "recruitCount": 1 },
+      { "positionCode": "120633001", "scope": "position-level", "applicantsRegistered": 19, "recruitCount": 2 },
+      { "positionCode": "120633101", "scope": "position-level", "applicantsRegistered": 16, "recruitCount": 2 },
+      { "positionCode": "120633201", "scope": "position-level", "applicantsRegistered": 20, "recruitCount": 2 },
+      { "positionCode": "120633301", "scope": "position-level", "applicantsRegistered": 5, "recruitCount": 1 },
+      { "positionCode": "820633401", "scope": "position-level", "applicantsRegistered": 40, "recruitCount": 2 }
+    ],
+    "notes": "页面列有职位代码、招录人数和“报考人数”；本次逐条核对该页10条岗位样本，职位代码与本地2026职位行、招录数一致。页面未说明逐岗人数的统计时点或官方口径；仅记录为第三方报考人数，不视作资格审查通过人数。"
   },
   {
     "sourceId": "haidian-2026-fenbi-page-3",
@@ -13983,10 +14007,22 @@
     "districtId": "xicheng",
     "geographicScope": "西城区",
     "url": "https://www.fenbi.com/page/positions/1/438923?page=2&region=176",
-    "accessedAt": "2026-10-10",
+    "accessedAt": "2026-10-12",
     "reportedPositionCount": 10,
     "reportedRecruitCount": 59,
-    "notes": "公开第三方镜像职位明细；页面计数为本库从该来源页恢复的候选行数，未与官方职位表逐代码核验。"
+    "positionSnapshots": [
+      { "positionCode": "120223402", "scope": "position-level", "applicantsRegistered": 75, "recruitCount": 4 },
+      { "positionCode": "120220901", "scope": "position-level", "applicantsRegistered": 88, "recruitCount": 10 },
+      { "positionCode": "120220902", "scope": "position-level", "applicantsRegistered": 107, "recruitCount": 8 },
+      { "positionCode": "120220903", "scope": "position-level", "applicantsRegistered": 18, "recruitCount": 4 },
+      { "positionCode": "120220904", "scope": "position-level", "applicantsRegistered": 143, "recruitCount": 10 },
+      { "positionCode": "120220905", "scope": "position-level", "applicantsRegistered": 133, "recruitCount": 8 },
+      { "positionCode": "120220906", "scope": "position-level", "applicantsRegistered": 227, "recruitCount": 10 },
+      { "positionCode": "120221001", "scope": "position-level", "applicantsRegistered": 10, "recruitCount": 2 },
+      { "positionCode": "820221101", "scope": "position-level", "applicantsRegistered": 22, "recruitCount": 2 },
+      { "positionCode": "820221102", "scope": "position-level", "applicantsRegistered": 13, "recruitCount": 1 }
+    ],
+    "notes": "页面列有职位代码、招录人数和“报考人数”；本次逐条核对该页10条岗位样本，职位代码与本地2026职位行、招录数一致。页面未说明逐岗人数的统计时点或官方口径；仅记录为第三方报考人数，不视作资格审查通过人数。"
   },
   {
     "sourceId": "xicheng-2026-mirror-009",
@@ -14103,10 +14139,22 @@
     "districtId": "xicheng",
     "geographicScope": "西城区",
     "url": "https://www.fenbi.com/page/positions/1/438923?region=176",
-    "accessedAt": "2026-10-10",
+    "accessedAt": "2026-10-12",
     "reportedPositionCount": 10,
     "reportedRecruitCount": 49,
-    "notes": "公开第三方镜像职位明细；页面计数为本库从该来源页恢复的候选行数，未与官方职位表逐代码核验。"
+    "positionSnapshots": [
+      { "positionCode": "234104501", "scope": "position-level", "applicantsRegistered": 25, "recruitCount": 5 },
+      { "positionCode": "234104502", "scope": "position-level", "applicantsRegistered": 1, "recruitCount": 1 },
+      { "positionCode": "234104503", "scope": "position-level", "applicantsRegistered": 3, "recruitCount": 1 },
+      { "positionCode": "526012001", "scope": "position-level", "applicantsRegistered": 87, "recruitCount": 24 },
+      { "positionCode": "526012002", "scope": "position-level", "applicantsRegistered": 88, "recruitCount": 2 },
+      { "positionCode": "625014101", "scope": "position-level", "applicantsRegistered": 48, "recruitCount": 12 },
+      { "positionCode": "625014102", "scope": "position-level", "applicantsRegistered": 6, "recruitCount": 1 },
+      { "positionCode": "625014103", "scope": "position-level", "applicantsRegistered": 11, "recruitCount": 1 },
+      { "positionCode": "625014104", "scope": "position-level", "applicantsRegistered": 8, "recruitCount": 1 },
+      { "positionCode": "120223401", "scope": "position-level", "applicantsRegistered": 15, "recruitCount": 1 }
+    ],
+    "notes": "页面列有职位代码、招录人数和“报考人数”；本次逐条核对该页10条岗位样本，职位代码与本地2026职位行、招录数一致。页面未说明逐岗人数的统计时点或官方口径；仅记录为第三方报考人数，不视作资格审查通过人数。"
   },
   {
     "sourceId": "tongzhou-2024-mirror-001",
@@ -15411,14 +15459,14 @@
     "year": 2026,
     "districtId": "chaoyang",
     "geographicScope": "朝阳区岗位分数部分样本",
-    "url": "https://www.cgzj.com/gk/12623.html",
-    "accessedAt": "2026-10-10",
+    "url": "https://www.cgzj.com/sydw/12623.html",
+    "accessedAt": "2026-10-12",
     "samplePositions": 28,
     "sampleRecruits": 163,
     "minimum": 55.5,
     "maximum": 141.5,
     "scope": "朝阳区岗位最低进面分部分样本",
-    "notes": "页面称朝阳区163人进入面试，展示28条部分岗位最低进面分，表格没有职位代码。仅把单位+岗位名能与已收录2026候选岗位唯一对应的东坝平安建设岗和朝阳公安分局一线执法岗1关联到代码；分数和职位明细均为第三方材料，尚未逐代码与官方职位表核验，不能代表全区全量，也不是笔试合格线。"
+    "notes": "页面称朝阳区163人进入面试，展示28条部分岗位最低进面分，表格没有职位代码。现按年度、单位和岗位名对照第三方职位列表，25条可唯一关联职位代码，法院、检察院、发改委3条因同名岗位保留歧义。分数和职位明细均为第三方材料，尚未逐代码与官方职位表核验，不能代表全区全量，也不是笔试合格线。"
   },
   {
     "sourceId": "huatu-2026-daxing-police-232502901",
@@ -16646,5 +16694,475 @@
     "maximum": 140.25,
     "scope": "密云区岗位最低进面分部分样本",
     "notes": "成公称密云区共63人进入面试，页面可见28条岗位最低进面分。本库保留全部28条可见样本：24条按同年单位/岗位名唯一匹配职位镜像代码，4条因同名岗位无法区分而不挂代码。分值范围95—140.25。均为第三方部分资料，非官方逐代码核验、非全区完整名单，也不是笔试合格线；公安类与普通职位计分口径可能不同，不直接横向比较。"
+  },
+  {
+    "sourceId": "fenbi-2026-chaoyang-page-1",
+    "title": "粉笔职位库：2026朝阳区职位列表第1页",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "chaoyang",
+    "geographicScope": "朝阳区2026职位列表第1页",
+    "url": "https://www.fenbi.com/page/positions/1/438923?page=1&region=179",
+    "accessedAt": "2026-10-12",
+    "positionSnapshots": [
+      { "positionCode": "526012102", "scope": "position-level", "applicantsRegistered": 28, "recruitCount": 1 },
+      { "positionCode": "625014203", "scope": "position-level", "applicantsRegistered": 12, "recruitCount": 8 },
+      { "positionCode": "120525401", "scope": "position-level", "applicantsRegistered": 12, "recruitCount": 1 },
+      { "positionCode": "120525501", "scope": "position-level", "applicantsRegistered": 20, "recruitCount": 1 }
+    ],
+    "notes": "粉笔筛选页列出职位代码、招录人数和“报考人数”；该页面另列152个职位、320个招录名额、2902人过审，但没有说明逐岗“报考人数”的统计时点或与过审口径的关系。本库仅按页面字段记为第三方报名人数，不当作资格审查通过人数、最终缴费人数或官方快照。"
+  },
+  {
+    "sourceId": "fenbi-2026-chaoyang-page-2",
+    "title": "粉笔职位库：2026朝阳区职位列表第2页",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "chaoyang",
+    "geographicScope": "朝阳区2026职位列表第2页",
+    "url": "https://www.fenbi.com/page/positions/1/438923?page=2&region=179",
+    "accessedAt": "2026-10-12",
+    "positionSnapshots": [
+      { "positionCode": "220525901", "scope": "position-level", "applicantsRegistered": 1, "recruitCount": 1 },
+      { "positionCode": "820525902", "scope": "position-level", "applicantsRegistered": 5, "recruitCount": 1 }
+    ],
+    "notes": "列表逐岗显示“报考人数”，未标注该计数的原始统计时点或定义。仅作为第三方报考人数样本；不得并入资格审查通过人数。"
+  },
+  {
+    "sourceId": "fenbi-2026-chaoyang-page-3",
+    "title": "粉笔职位库：2026朝阳区职位列表第3页",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "chaoyang",
+    "geographicScope": "朝阳区2026职位列表第3页",
+    "url": "https://www.fenbi.com/page/positions/1/438923?page=3&region=179",
+    "accessedAt": "2026-10-12",
+    "positionSnapshots": [
+      { "positionCode": "220526004", "scope": "position-level", "applicantsRegistered": 27, "recruitCount": 1 },
+      { "positionCode": "820526204", "scope": "position-level", "applicantsRegistered": 15, "recruitCount": 2 }
+    ],
+    "notes": "列表逐岗显示“报考人数”，未标注该计数的原始统计时点或定义。仅作为第三方报考人数样本；不得并入资格审查通过人数。"
+  },
+  {
+    "sourceId": "fenbi-2026-chaoyang-page-4",
+    "title": "粉笔职位库：2026朝阳区职位列表第4页",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "chaoyang",
+    "geographicScope": "朝阳区2026职位列表第4页",
+    "url": "https://www.fenbi.com/page/positions/1/438923?page=4&region=179",
+    "accessedAt": "2026-10-12",
+    "positionSnapshots": [
+      { "positionCode": "220526701", "scope": "position-level", "applicantsRegistered": 23, "recruitCount": 1 },
+      { "positionCode": "220526601", "scope": "position-level", "applicantsRegistered": 25, "recruitCount": 2 }
+    ],
+    "notes": "列表逐岗显示“报考人数”，未标注该计数的原始统计时点或定义。仅作为第三方报考人数样本；不得并入资格审查通过人数。"
+  },
+  {
+    "sourceId": "fenbi-2026-chaoyang-page-5",
+    "title": "粉笔职位库：2026朝阳区职位列表第5页",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "chaoyang",
+    "geographicScope": "朝阳区2026职位列表第5页",
+    "url": "https://www.fenbi.com/page/positions/1/438923?page=5&region=179",
+    "accessedAt": "2026-10-12",
+    "positionSnapshots": [
+      { "positionCode": "220526901", "scope": "position-level", "applicantsRegistered": 6, "recruitCount": 1 },
+      { "positionCode": "220527001", "scope": "position-level", "applicantsRegistered": 10, "recruitCount": 1 },
+      { "positionCode": "220527102", "scope": "position-level", "applicantsRegistered": 6, "recruitCount": 1 },
+      { "positionCode": "220527201", "scope": "position-level", "applicantsRegistered": 83, "recruitCount": 2 }
+    ],
+    "notes": "列表逐岗显示“报考人数”，未标注该计数的原始统计时点或定义。仅作为第三方报考人数样本；不得并入资格审查通过人数。"
+  },
+  {
+    "sourceId": "fenbi-2026-chaoyang-page-6",
+    "title": "粉笔职位库：2026朝阳区职位列表第6页",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "chaoyang",
+    "geographicScope": "朝阳区2026职位列表第6页",
+    "url": "https://www.fenbi.com/page/positions/1/438923?page=6&region=179",
+    "accessedAt": "2026-10-12",
+    "positionSnapshots": [
+      { "positionCode": "220527401", "scope": "position-level", "applicantsRegistered": 21, "recruitCount": 2 }
+    ],
+    "notes": "列表逐岗显示“报考人数”，未标注该计数的原始统计时点或定义。仅作为第三方报考人数样本；不得并入资格审查通过人数。"
+  },
+  {
+    "sourceId": "fenbi-2026-chaoyang-page-8",
+    "title": "粉笔职位库：2026朝阳区职位列表第8页",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "chaoyang",
+    "geographicScope": "朝阳区2026职位列表第8页",
+    "url": "https://www.fenbi.com/page/positions/1/438923?page=8&region=179",
+    "accessedAt": "2026-10-12",
+    "positionSnapshots": [
+      { "positionCode": "220528401", "scope": "position-level", "applicantsRegistered": 8, "recruitCount": 1 },
+      { "positionCode": "220528503", "scope": "position-level", "applicantsRegistered": 7, "recruitCount": 1 },
+      { "positionCode": "420528602", "scope": "position-level", "applicantsRegistered": 19, "recruitCount": 1 },
+      { "positionCode": "820528701", "scope": "position-level", "applicantsRegistered": 14, "recruitCount": 1 },
+      { "positionCode": "230528901", "scope": "position-level", "applicantsRegistered": 31, "recruitCount": 1 }
+    ],
+    "notes": "列表逐岗显示“报考人数”，未标注该计数的原始统计时点或定义。仅作为第三方报考人数样本；不得并入资格审查通过人数。"
+  },
+  {
+    "sourceId": "fenbi-2026-chaoyang-page-9",
+    "title": "粉笔职位库：2026朝阳区职位列表第9页",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "chaoyang",
+    "geographicScope": "朝阳区2026职位列表第9页",
+    "url": "https://www.fenbi.com/page/positions/1/438923?page=9&region=179",
+    "accessedAt": "2026-10-12",
+    "positionSnapshots": [
+      { "positionCode": "230529201", "scope": "position-level", "applicantsRegistered": 17, "recruitCount": 1 }
+    ],
+    "notes": "列表逐岗显示“报考人数”，未标注该计数的原始统计时点或定义。仅作为第三方报考人数样本；不得并入资格审查通过人数。"
+  },
+  {
+    "sourceId": "fenbi-2026-chaoyang-page-11",
+    "title": "粉笔职位库：2026朝阳区职位列表第11页",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "chaoyang",
+    "geographicScope": "朝阳区2026职位列表第11页",
+    "url": "https://www.fenbi.com/page/positions/1/438923?page=11&region=179",
+    "accessedAt": "2026-10-12",
+    "positionSnapshots": [
+      { "positionCode": "230530301", "scope": "position-level", "applicantsRegistered": 13, "recruitCount": 1 },
+      { "positionCode": "230530402", "scope": "position-level", "applicantsRegistered": 5, "recruitCount": 2 }
+    ],
+    "notes": "列表逐岗显示“报考人数”，未标注该计数的原始统计时点或定义。仅作为第三方报考人数样本；不得并入资格审查通过人数。"
+  },
+  {
+    "sourceId": "fenbi-2026-chaoyang-page-12",
+    "title": "粉笔职位库：2026朝阳区职位列表第12页",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "chaoyang",
+    "geographicScope": "朝阳区2026职位列表第12页",
+    "url": "https://www.fenbi.com/page/positions/1/438923?page=12&region=179",
+    "accessedAt": "2026-10-12",
+    "positionSnapshots": [
+      { "positionCode": "230531001", "scope": "position-level", "applicantsRegistered": 11, "recruitCount": 2 }
+    ],
+    "notes": "列表逐岗显示“报考人数”，未标注该计数的原始统计时点或定义。仅作为第三方报考人数样本；不得并入资格审查通过人数。"
+  },
+  {
+    "sourceId": "fenbi-2026-chaoyang-page-13",
+    "title": "粉笔职位库：2026朝阳区职位列表第13页",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "chaoyang",
+    "geographicScope": "朝阳区2026职位列表第13页",
+    "url": "https://www.fenbi.com/page/positions/1/438923?page=13&region=179",
+    "accessedAt": "2026-10-12",
+    "positionSnapshots": [
+      { "positionCode": "230531502", "scope": "position-level", "applicantsRegistered": 63, "recruitCount": 2 },
+      { "positionCode": "230531801", "scope": "position-level", "applicantsRegistered": 194, "recruitCount": 1 }
+    ],
+    "notes": "列表逐岗显示“报考人数”，未标注该计数的原始统计时点或定义。仅作为第三方报考人数样本；不得并入资格审查通过人数。"
+  },
+  {
+    "sourceId": "fenbi-2026-chaoyang-police-page-6",
+    "title": "粉笔职位库：2026北京公务员职位列表朝阳分局片段",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "chaoyang",
+    "geographicScope": "朝阳公安分局岗位列表片段",
+    "url": "https://www.fenbi.com/page/positions/1/438923?page=6&quickPick=%7B%22examId%22%3A438923%7D",
+    "accessedAt": "2026-10-12",
+    "positionSnapshots": [
+      { "positionCode": "232502002", "scope": "position-level", "applicantsRegistered": 8, "recruitCount": 5 },
+      { "positionCode": "232502003", "scope": "position-level", "applicantsRegistered": 674, "recruitCount": 32 },
+      { "positionCode": "232502005", "scope": "position-level", "applicantsRegistered": 12, "recruitCount": 2 }
+    ],
+    "notes": "粉笔职位列表显示朝阳分局相关代码、招录人数和“报考人数”；其中线页另有市级汇总口径。本库不据此声称报名时点或官方过审数。"
+  },
+  {
+    "sourceId": "fenbi-2026-fangshan-page-1",
+    "title": "粉笔职位库：2026房山区职位列表第1页",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "fangshan",
+    "geographicScope": "房山区2026职位列表第1页",
+    "url": "https://m.fenbi.com/page/positions/1/438923?page=1&region=165",
+    "accessedAt": "2026-10-12",
+    "reportedPositionCount": 10,
+    "reportedRecruitCount": 38,
+    "positionSnapshots": [
+      { "positionCode": "526012603", "scope": "position-level", "applicantsRegistered": 55, "recruitCount": 16 },
+      { "positionCode": "625014701", "scope": "position-level", "applicantsRegistered": 18, "recruitCount": 6 },
+      { "positionCode": "121051401", "scope": "position-level", "applicantsRegistered": 9, "recruitCount": 2 },
+      { "positionCode": "121051402", "scope": "position-level", "applicantsRegistered": 12, "recruitCount": 2 },
+      { "positionCode": "121049301", "scope": "position-level", "applicantsRegistered": 15, "recruitCount": 1 },
+      { "positionCode": "121049302", "scope": "position-level", "applicantsRegistered": 6, "recruitCount": 1 },
+      { "positionCode": "821049501", "scope": "position-level", "applicantsRegistered": 9, "recruitCount": 1 }
+    ],
+    "notes": "粉笔移动职位表仅列单位、职位名称及招录/报考人数，没有展示岗位代码或逐岗统计时点。以上7条按单位、职位名和招录数与本地2026职位库唯一匹配；同页房山区法院司法警察岗对应两个同名同招录职位，因此不挂代码；本地无唯一候选的记录不入岗位级样本。页面汇总过审人数为区级总量，不作为岗位报考数。"
+  },
+  {
+    "sourceId": "fenbi-2026-tongzhou-page-2",
+    "title": "粉笔职位库：2026通州区职位列表第2页",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "tongzhou",
+    "geographicScope": "通州区2026职位列表第2页",
+    "url": "https://m.fenbi.com/page/positions/1/438923?page=2&region=175",
+    "accessedAt": "2026-10-12",
+    "reportedPositionCount": 10,
+    "reportedRecruitCount": 20,
+    "positionSnapshots": [
+      { "positionCode": "121153401", "scope": "position-level", "applicantsRegistered": 20, "recruitCount": 1 },
+      { "positionCode": "821153501", "scope": "position-level", "applicantsRegistered": 37, "recruitCount": 2 },
+      { "positionCode": "221153801", "scope": "position-level", "applicantsRegistered": 9, "recruitCount": 2 },
+      { "positionCode": "221153901", "scope": "position-level", "applicantsRegistered": 23, "recruitCount": 2 },
+      { "positionCode": "821153902", "scope": "position-level", "applicantsRegistered": 35, "recruitCount": 2 },
+      { "positionCode": "821153903", "scope": "position-level", "applicantsRegistered": 29, "recruitCount": 4 },
+      { "positionCode": "821154001", "scope": "position-level", "applicantsRegistered": 13, "recruitCount": 2 },
+      { "positionCode": "821154003", "scope": "position-level", "applicantsRegistered": 27, "recruitCount": 2 }
+    ],
+    "notes": "粉笔移动职位表仅列单位、职位名称及招录/报考人数，没有展示岗位代码或逐岗统计时点。以上8条按单位、职位名和招录数与本地2026职位库唯一匹配；同页无法与本地职位行唯一对应的2条不挂代码。页面汇总过审人数为区级总量，不作为岗位报考数。"
+  },
+  {
+    "sourceId": "gwyzwb-2026-chaoyang-court",
+    "title": "京考职位网：2026朝阳区人民法院职位列表",
+    "publisher": "京考职位网",
+    "level": "secondary",
+    "evidenceType": "position_mirror",
+    "year": 2026,
+    "districtId": "chaoyang",
+    "geographicScope": "朝阳区人民法院职位",
+    "url": "https://bj.gwyzwb.com/zhaoyang/2026_5.html",
+    "accessedAt": "2026-10-12",
+    "notes": "列表列出朝阳区人民法院两条同名司法警察岗：526012102、526012103，各招1人。分数来源没有职位代码，不能判断对应哪一条。"
+  },
+  {
+    "sourceId": "gwyzwb-2026-chaoyang-prosecutor-625014202",
+    "title": "京考职位网：2026朝阳区人民检察院检察业务岗职位详情",
+    "publisher": "京考职位网",
+    "level": "secondary",
+    "evidenceType": "position_mirror",
+    "year": 2026,
+    "districtId": "chaoyang",
+    "geographicScope": "朝阳区人民检察院职位",
+    "url": "https://bj.gwyzwb.com/2026/1523.html",
+    "accessedAt": "2026-10-12",
+    "positionCode": "625014202",
+    "unit": "北京市朝阳区人民检察院",
+    "positionTitle": "检察业务岗",
+    "reportedRecruitCount": 1,
+    "notes": "第三方职位详情列明另一条检察业务岗代码625014202、招录1人；粉笔列表另列代码625014203同名岗。分数表未提供职位代码，因此该分数保持歧义。"
+  },
+  {
+    "sourceId": "fenbi-2026-dongcheng-page-1",
+    "title": "粉笔职位库：2026东城区职位列表第1页",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "dongcheng",
+    "geographicScope": "东城区2026职位列表第1页",
+    "url": "https://www.fenbi.com/page/positions/1/438923?page=1&region=163",
+    "accessedAt": "2026-10-12",
+    "reportedPositionCount": 10,
+    "positionSnapshots": [
+      { "positionCode": "820116201", "scope": "position-level", "applicantsRegistered": 4, "recruitCount": 1 }
+    ],
+    "notes": "粉笔页面列出职位代码、招录人数和“报考人数”；该列表汇总显示东城区132岗、230人、2293人过审，但未说明逐岗“报考人数”的统计时点与定义。本库仅将同年度职位代码及招录数均匹配的记录作为第三方报名人数观察，不等同资格审查通过数或最终报名数。"
+  },
+  {
+    "sourceId": "fenbi-2026-dongcheng-page-2",
+    "title": "粉笔职位库：2026东城区职位列表第2页",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "dongcheng",
+    "geographicScope": "东城区2026职位列表第2页",
+    "url": "https://www.fenbi.com/page/positions/1/438923?page=2&region=163",
+    "accessedAt": "2026-10-12",
+    "reportedPositionCount": 10,
+    "positionSnapshots": [
+      { "positionCode": "220116602", "scope": "position-level", "applicantsRegistered": 11, "recruitCount": 1 },
+      { "positionCode": "820116801", "scope": "position-level", "applicantsRegistered": 6, "recruitCount": 2 },
+      { "positionCode": "220116601", "scope": "position-level", "applicantsRegistered": 29, "recruitCount": 2 }
+    ],
+    "notes": "粉笔职位表逐岗列出“报考人数”，未标明其统计时点/定义；仅保留与本地2026职位代码及招录人数一致的三条记录，区级过审汇总不下推到岗位。"
+  },
+  {
+    "sourceId": "fenbi-2026-dongcheng-page-3",
+    "title": "粉笔职位库：2026东城区职位列表第3页",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "dongcheng",
+    "geographicScope": "东城区2026职位列表第3页",
+    "url": "https://www.fenbi.com/page/positions/1/438923?page=3&region=163",
+    "accessedAt": "2026-10-12",
+    "reportedPositionCount": 10,
+    "positionSnapshots": [
+      { "positionCode": "220116901", "scope": "position-level", "applicantsRegistered": 24, "recruitCount": 1 }
+    ],
+    "notes": "粉笔职位表逐岗列出“报考人数”，未标明其统计时点/定义；仅保留与本地2026职位代码及招录人数一致的岗位记录，不等同资格审查通过数或最终报名数。"
+  },
+  {
+    "sourceId": "fenbi-2026-dongcheng-page-4",
+    "title": "粉笔职位库：2026东城区职位列表第4页",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "dongcheng",
+    "geographicScope": "东城区2026职位列表第4页",
+    "url": "https://www.fenbi.com/page/positions/1/438923?page=4&region=163",
+    "accessedAt": "2026-10-12",
+    "reportedPositionCount": 10,
+    "positionSnapshots": [
+      { "positionCode": "220117101", "scope": "position-level", "applicantsRegistered": 17, "recruitCount": 1 },
+      { "positionCode": "820117004", "scope": "position-level", "applicantsRegistered": 10, "recruitCount": 1 },
+      { "positionCode": "820117202", "scope": "position-level", "applicantsRegistered": 49, "recruitCount": 1 }
+    ],
+    "notes": "粉笔职位表逐岗列出“报考人数”，未标明其统计时点/定义；仅保留与本地2026职位代码及招录人数一致的三条记录。"
+  },
+  {
+    "sourceId": "fenbi-2026-dongcheng-page-5",
+    "title": "粉笔职位库：2026东城区职位列表第5页",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "dongcheng",
+    "geographicScope": "东城区2026职位列表第5页",
+    "url": "https://www.fenbi.com/page/positions/1/438923?page=5&region=163",
+    "accessedAt": "2026-10-12",
+    "reportedPositionCount": 10,
+    "positionSnapshots": [
+      { "positionCode": "220117303", "scope": "position-level", "applicantsRegistered": 36, "recruitCount": 1 },
+      { "positionCode": "220117401", "scope": "position-level", "applicantsRegistered": 19, "recruitCount": 1 }
+    ],
+    "notes": "粉笔职位表逐岗列出“报考人数”，未标明其统计时点/定义；仅保留与本地2026职位代码及招录人数一致的两条记录。"
+  },
+  {
+    "sourceId": "fenbi-2026-dongcheng-page-6",
+    "title": "粉笔职位库：2026东城区职位列表第6页",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "dongcheng",
+    "geographicScope": "东城区2026职位列表第6页",
+    "url": "https://www.fenbi.com/page/positions/1/438923?page=6&region=163",
+    "accessedAt": "2026-10-12",
+    "reportedPositionCount": 10,
+    "positionSnapshots": [
+      { "positionCode": "220117505", "scope": "position-level", "applicantsRegistered": 47, "recruitCount": 2 },
+      { "positionCode": "220117801", "scope": "position-level", "applicantsRegistered": 28, "recruitCount": 2 },
+      { "positionCode": "220118001", "scope": "position-level", "applicantsRegistered": 25, "recruitCount": 1 }
+    ],
+    "notes": "粉笔职位表逐岗列出“报考人数”，未标明其统计时点/定义；仅保留与本地2026职位代码及招录人数一致的三条记录。"
+  },
+  {
+    "sourceId": "fenbi-2026-dongcheng-page-7",
+    "title": "粉笔职位库：2026东城区职位列表第7页",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "dongcheng",
+    "geographicScope": "东城区2026职位列表第7页",
+    "url": "https://www.fenbi.com/page/positions/1/438923?page=7&region=163",
+    "accessedAt": "2026-10-12",
+    "reportedPositionCount": 10,
+    "positionSnapshots": [
+      { "positionCode": "220118301", "scope": "position-level", "applicantsRegistered": 11, "recruitCount": 1 },
+      { "positionCode": "220118401", "scope": "position-level", "applicantsRegistered": 12, "recruitCount": 1 }
+    ],
+    "notes": "粉笔职位表逐岗列出“报考人数”，未标明其统计时点/定义；仅保留与本地2026职位代码及招录人数一致的两条记录。"
+  },
+  {
+    "sourceId": "fenbi-2026-dongcheng-page-8",
+    "title": "粉笔职位库：2026东城区职位列表第8页",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "dongcheng",
+    "geographicScope": "东城区2026职位列表第8页",
+    "url": "https://www.fenbi.com/page/positions/1/438923?page=8&region=163",
+    "accessedAt": "2026-10-12",
+    "reportedPositionCount": 10,
+    "positionSnapshots": [
+      { "positionCode": "820118603", "scope": "position-level", "applicantsRegistered": 16, "recruitCount": 1 },
+      { "positionCode": "720119001", "scope": "position-level", "applicantsRegistered": 26, "recruitCount": 1 }
+    ],
+    "notes": "粉笔职位表逐岗列出“报考人数”，未标明其统计时点/定义；仅保留与本地2026职位代码及招录人数一致的两条记录。"
+  },
+  {
+    "sourceId": "fenbi-2026-dongcheng-page-9",
+    "title": "粉笔职位库：2026东城区职位列表第9页",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "dongcheng",
+    "geographicScope": "东城区2026职位列表第9页",
+    "url": "https://www.fenbi.com/page/positions/1/438923?page=9&region=163",
+    "accessedAt": "2026-10-12",
+    "reportedPositionCount": 10,
+    "positionSnapshots": [
+      { "positionCode": "230119501", "scope": "position-level", "applicantsRegistered": 10, "recruitCount": 1 },
+      { "positionCode": "230119503", "scope": "position-level", "applicantsRegistered": 34, "recruitCount": 2 },
+      { "positionCode": "230119601", "scope": "position-level", "applicantsRegistered": 29, "recruitCount": 1 }
+    ],
+    "notes": "粉笔职位表逐岗列出“报考人数”，未标明其统计时点/定义；仅保留与本地2026职位代码及招录人数一致的三条记录。"
+  },
+  {
+    "sourceId": "fenbi-2026-dongcheng-page-10",
+    "title": "粉笔职位库：2026东城区职位列表第10页",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "dongcheng",
+    "geographicScope": "东城区2026职位列表第10页",
+    "url": "https://www.fenbi.com/page/positions/1/438923?page=10&region=163",
+    "accessedAt": "2026-10-12",
+    "reportedPositionCount": 10,
+    "positionSnapshots": [
+      { "positionCode": "230119801", "scope": "position-level", "applicantsRegistered": 12, "recruitCount": 2 },
+      { "positionCode": "230119802", "scope": "position-level", "applicantsRegistered": 1, "recruitCount": 1 }
+    ],
+    "notes": "粉笔职位表逐岗列出“报考人数”，未标明其统计时点/定义；仅保留与本地2026职位代码及招录人数一致的两条记录。榜单共132岗，本次已读取至第10页；东城分局职位代码232501801未出现在本次已读页面中，故不补报考数；剩余页另行核查。"
   }
 ]
