@@ -66,6 +66,12 @@ test('the competition matrix directs annual reconciliation to the evidence cente
   assert.doesNotMatch(root.innerHTML, /93–97 岗/);
 });
 
+test('position search explains untimed reported-applicant references generically', async () => {
+  const positions = await renderSourceApp('#/positions');
+  assert.match(positions.root.innerHTML, /部分第三方列表未注明统计时点或字段定义/);
+  assert.doesNotMatch(positions.root.innerHTML, /朝阳粉笔样本未注明统计时点/);
+});
+
 test('the rendered position library exposes citywide counts and the vertical-unit filter', async () => {
   const { root } = await renderSourceApp('#/positions');
   const dataset = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
@@ -113,8 +119,11 @@ test('the evidence center lists dated position-level qualification snapshots wit
   assert.match(root.innerHTML, /2025-11-19 18:00[\s\S]*?232501603[\s\S]*?714 人[\s\S]*?55 人[\s\S]*?1:12\.98[\s\S]*?eoffcn\.com\/kszx\/detail\/1903982\.html/);
   assert.match(root.innerHTML, /2025-11-20 18:00[\s\S]*?41477 人[\s\S]*?3694 人[\s\S]*?1:11\.23[\s\S]*?sohu\.com\/a\/956654507_121124036/);
   assert.match(root.innerHTML, /资格审查通过人数.*不等同最终报名人数、缴费人数或实考人数/s);
-  assert.match(root.innerHTML, /岗位级竞争观察[\s\S]*?资格审查 221 条 · 第三方报考人数 722 条/);
+  assert.match(root.innerHTML, /岗位级竞争观察[\s\S]*?资格审查 221 条 · 第三方报考人数 746 条/);
   assert.match(root.innerHTML, /岗位级第三方报考人数/);
+  const applicationSection = root.innerHTML.match(/<section class="evidence-section application-snapshot-section">([\s\S]*?)<\/section>/)?.[1] || '';
+  assert.match(applicationSection, /242503201[\s\S]*?324 人[\s\S]*?17 人[\s\S]*?1:19\.06[\s\S]*?fenbi\.com\/page\/positions\/1\/438923\?page=9/);
+  assert.match(applicationSection, /部分地区的第三方职位列表/);
   assert.match(root.innerHTML, /未注明[\s\S]*?820526204[\s\S]*?15 人[\s\S]*?2 人[\s\S]*?1:7\.5[\s\S]*?fenbi\.com\/page\/positions\/1\/438923\?page=3/);
 });
 

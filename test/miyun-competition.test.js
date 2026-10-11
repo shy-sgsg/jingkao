@@ -94,3 +94,80 @@ test('Miyun registration snapshot and visible 2026 interview cutoffs link only v
   assert.equal(cutoffRows.filter((row) => row.mappingConfidence === 'ambiguous' && !row.positionCode).length, 4);
   assert.equal(cutoffRows.filter((row) => row.mappingConfidence === 'unmatched' && !row.positionCode).length, 0);
 });
+
+test('Miyun Fenbi pages 2-7 and the citywide police row link competition references to all local positions', async () => {
+  const raw = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const data = normalizeDataset(raw);
+  const expectedByPage = {
+    2: [
+      ['221874801', 134, 1], ['221874901', 27, 1], ['221875101', 37, 1],
+      ['221875201', 12, 1], ['221875301', 26, 2], ['821875303', 9, 1],
+    ],
+    3: [['221875501', 10, 2], ['221875601', 3, 1], ['221875602', 14, 1], ['221875902', 28, 1]],
+    4: [['221876101', 11, 2], ['241876102', 16, 2], ['221876401', 113, 1], ['241876801', 55, 1]],
+    5: [['241877002', 98, 2], ['241877202', 17, 2], ['241877401', 23, 1], ['241877701', 72, 1]],
+    6: [['241877801', 76, 1], ['241878002', 32, 1], ['241876104', 12, 2], ['221875801', 4, 1]],
+    7: [['241877201', 2, 1]],
+  };
+
+  let applicantsTotal = 0;
+  let recruitsTotal = 0;
+  let importedCount = 0;
+  for (const [page, rows] of Object.entries(expectedByPage)) {
+    const sourceId = `miyun-2026-fenbi-page-${page}`;
+    const source = data.sources.find((item) => item.sourceId === sourceId);
+    assert.ok(source, `${sourceId} source exists`);
+    assert.match(source.url, new RegExp(`page=${page}&region=170`));
+    assert.equal(source.districtId, 'miyun');
+
+    for (const [code, applicants, recruits] of rows) {
+      importedCount += 1;
+      applicantsTotal += applicants;
+      recruitsTotal += recruits;
+      const position = data.positions.find((row) => row.year === 2026 && row.code === code);
+      assert.ok(position, `position ${code} exists`);
+      assert.equal(position.districtId, 'miyun', `${code} district`);
+      assert.equal(position.recruitCount, recruits, `${code} planned recruits`);
+      const observation = data.observations.find((row) => row.year === 2026
+        && row.positionCode === code && row.sourceId === sourceId);
+      assert.equal(observation?.observationType, 'registration_snapshot');
+      assert.equal(observation?.applicantsRegistered, applicants);
+      assert.equal(observation?.applicantsQualified, null);
+      assert.equal(observation?.observedAt, null);
+
+      const evidence = getPositionCompetitionEvidence(position, {
+        observations: data.observations,
+        scoreRows: data.scoreRows,
+      });
+      assert.equal(evidence.registeredCompetitionRatio, applicants / recruits);
+      assert.ok(evidence.registrationSourceIds.includes(sourceId));
+    }
+  }
+
+  assert.equal(importedCount, 23);
+  assert.equal(applicantsTotal, 831);
+  assert.equal(recruitsTotal, 30);
+
+  const policeSource = data.sources.find((item) => item.sourceId === 'miyun-2026-fenbi-police-page-9');
+  assert.ok(policeSource);
+  assert.match(policeSource.url, /page=9&quickPick=/);
+  assert.equal(policeSource.districtId, 'miyun');
+  const policePosition = data.positions.find((row) => row.year === 2026 && row.code === '242503201');
+  const policeEvidence = getPositionCompetitionEvidence(policePosition, {
+    observations: data.observations,
+    scoreRows: data.scoreRows,
+  });
+  assert.equal(policeEvidence.registeredCompetitionRatio, 324 / 17);
+  assert.equal(policeEvidence.qualifiedCompetitionRatio, 42 / 17);
+  assert.ok(policeEvidence.registrationSourceIds.includes('miyun-2026-fenbi-police-page-9'));
+
+  const positions = data.positions.filter((row) => row.year === 2026 && row.districtId === 'miyun');
+  const evidenceRows = positions.map((position) => getPositionCompetitionEvidence(position, {
+    observations: data.observations,
+    scoreRows: data.scoreRows,
+  }));
+  assert.equal(positions.length, 31);
+  assert.ok(evidenceRows.every((item) => item.registeredCompetitionRatio !== null));
+  assert.equal(evidenceRows.filter((item) => item.cutoffScore !== null).length, 24);
+  assert.equal(evidenceRows.filter((item) => item.cutoffScore !== null && item.registeredCompetitionRatio !== null).length, 24);
+});

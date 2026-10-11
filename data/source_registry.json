@@ -17393,7 +17393,7 @@
     "geographicScope": "密云区",
     "url": "https://www.fenbi.com/page/positions/1/438923?region=170",
     "accessedAt": "2026-10-11",
-    "notes": "列表列出纪委监委综合管理岗1（121876701，招2人）和综合管理岗2（121876702，招1人）的单位、岗位名、代码及招录数。页面过审/报考数字未见可核验的明确快照时点，本项目不将其录入报名观察。第三方职位镜像，未与官方职位表逐码复核。"
+    "notes": "职位身份与招录数来自第三方镜像，未与官方职位表逐码复核。页面逐岗报考人数参考另见miyun-2026-fenbi-page-1；因定义和观察时点未注明，该参考不等同于官方资格审查人数。"
   },
   {
     "sourceId": "fenbi-2026-miyun-page-2",
@@ -17406,7 +17406,7 @@
     "geographicScope": "密云区",
     "url": "https://www.fenbi.com/page/positions/1/438923?page=2&region=170",
     "accessedAt": "2026-10-11",
-    "notes": "列表列出经济和信息化局综合管理岗代码221875201、招录1人。页面过审/报考数字未见可核验的明确快照时点，本项目不将其录入报名观察。第三方职位镜像，未与官方职位表逐码复核。"
+    "notes": "职位身份与招录数来自第三方镜像，未与官方职位表逐码复核。页面逐岗报考人数参考另见miyun-2026-fenbi-page-2；因定义和观察时点未注明，该参考不等同于官方资格审查人数。"
   },
   {
     "sourceId": "fenbi-2026-miyun-page-5",
@@ -17419,7 +17419,7 @@
     "geographicScope": "密云区",
     "url": "https://www.fenbi.com/page/positions/1/438923?page=5&region=170",
     "accessedAt": "2026-10-11",
-    "notes": "列表列出十里堡镇综合管理岗（241877002，招2人）和溪翁庄镇综合管理岗（241877401，招1人）的单位、岗位名、代码及招录数。页面过审/报考数字未见可核验的明确快照时点，本项目不将其录入报名观察。第三方职位镜像，未与官方职位表逐码复核。"
+    "notes": "职位身份与招录数来自第三方镜像，未与官方职位表逐码复核。页面逐岗报考人数参考另见miyun-2026-fenbi-page-5；因定义和观察时点未注明，该参考不等同于官方资格审查人数。"
   },
   {
     "sourceId": "fenbi-2026-miyun-page-6",
@@ -17432,7 +17432,7 @@
     "geographicScope": "密云区",
     "url": "https://www.fenbi.com/page/positions/1/438923?page=6&region=170",
     "accessedAt": "2026-10-11",
-    "notes": "列表列出古北口镇综合管理岗（241877801，招1人）和穆家峪镇综合管理岗（241878002，招1人）的单位、岗位名、代码及招录数。页面过审/报考数字未见可核验的明确快照时点，本项目不将其录入报名观察。第三方职位镜像，未与官方职位表逐码复核。"
+    "notes": "职位身份与招录数来自第三方镜像，未与官方职位表逐码复核。页面逐岗报考人数参考另见miyun-2026-fenbi-page-6；因定义和观察时点未注明，该参考不等同于官方资格审查人数。"
   },
   {
     "sourceId": "cgzj-2026-miyun-cutoff-sample",
@@ -19068,6 +19068,135 @@
       { "positionCode": "821874601", "scope": "position-level", "applicantsRegistered": 9, "recruitCount": 1 }
     ],
     "notes": "粉笔页面头部将汇总人数标作‘过审人数’，逐岗表格却列‘报考人数’，且未注明统计时点或字段定义。仅将页面首屏内职位代码和招录数均与本地2026候选职位精确匹配的记录，作为第三方报考人数参考保存；不代表官方资格审查通过人数、最终缴费人数或实考人数。"
+  },
+  {
+    "sourceId": "miyun-2026-fenbi-page-2",
+    "title": "粉笔 2026 北京公务员密云区职位列表（第2页）",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "miyun",
+    "geographicScope": "密云区2026职位列表第2页；仅记录职位代码和计划招录数与本地候选完全匹配的岗位",
+    "url": "https://www.fenbi.com/page/positions/1/438923?page=2&region=170",
+    "accessedAt": "2026-10-12",
+    "positionSnapshots": [
+      { "positionCode": "221874801", "scope": "position-level", "applicantsRegistered": 134, "recruitCount": 1 },
+      { "positionCode": "221874901", "scope": "position-level", "applicantsRegistered": 27, "recruitCount": 1 },
+      { "positionCode": "221875101", "scope": "position-level", "applicantsRegistered": 37, "recruitCount": 1 },
+      { "positionCode": "221875201", "scope": "position-level", "applicantsRegistered": 12, "recruitCount": 1 },
+      { "positionCode": "221875301", "scope": "position-level", "applicantsRegistered": 26, "recruitCount": 2 },
+      { "positionCode": "821875303", "scope": "position-level", "applicantsRegistered": 9, "recruitCount": 1 }
+    ],
+    "notes": "页面汇总另标过审人数，逐岗表头标报考人数，但未说明逐岗字段定义或统计时点。以上记录的职位代码和计划数与本地2026职位词条匹配；仅作为第三方报考人数参考，不等同官方资格审查通过人数、最终报名或实考人数。"
+  },
+  {
+    "sourceId": "miyun-2026-fenbi-page-3",
+    "title": "粉笔 2026 北京公务员密云区职位列表（第3页）",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "miyun",
+    "geographicScope": "密云区2026职位列表第3页；仅记录职位代码和计划招录数与本地候选完全匹配的岗位",
+    "url": "https://www.fenbi.com/page/positions/1/438923?page=3&region=170",
+    "accessedAt": "2026-10-12",
+    "positionSnapshots": [
+      { "positionCode": "221875501", "scope": "position-level", "applicantsRegistered": 10, "recruitCount": 2 },
+      { "positionCode": "221875601", "scope": "position-level", "applicantsRegistered": 3, "recruitCount": 1 },
+      { "positionCode": "221875602", "scope": "position-level", "applicantsRegistered": 14, "recruitCount": 1 },
+      { "positionCode": "221875902", "scope": "position-level", "applicantsRegistered": 28, "recruitCount": 1 }
+    ],
+    "notes": "页面汇总另标过审人数，逐岗表头标报考人数，但未说明逐岗字段定义或统计时点。以上记录的职位代码和计划数与本地2026职位词条匹配；仅作为第三方报考人数参考，不等同官方资格审查通过人数、最终报名或实考人数。"
+  },
+  {
+    "sourceId": "miyun-2026-fenbi-page-4",
+    "title": "粉笔 2026 北京公务员密云区职位列表（第4页）",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "miyun",
+    "geographicScope": "密云区2026职位列表第4页；仅记录职位代码和计划招录数与本地候选完全匹配的岗位",
+    "url": "https://www.fenbi.com/page/positions/1/438923?page=4&region=170",
+    "accessedAt": "2026-10-12",
+    "positionSnapshots": [
+      { "positionCode": "221876101", "scope": "position-level", "applicantsRegistered": 11, "recruitCount": 2 },
+      { "positionCode": "241876102", "scope": "position-level", "applicantsRegistered": 16, "recruitCount": 2 },
+      { "positionCode": "221876401", "scope": "position-level", "applicantsRegistered": 113, "recruitCount": 1 },
+      { "positionCode": "241876801", "scope": "position-level", "applicantsRegistered": 55, "recruitCount": 1 }
+    ],
+    "notes": "页面汇总另标过审人数，逐岗表头标报考人数，但未说明逐岗字段定义或统计时点。以上记录的职位代码和计划数与本地2026职位词条匹配；仅作为第三方报考人数参考，不等同官方资格审查通过人数、最终报名或实考人数。"
+  },
+  {
+    "sourceId": "miyun-2026-fenbi-page-5",
+    "title": "粉笔 2026 北京公务员密云区职位列表（第5页）",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "miyun",
+    "geographicScope": "密云区2026职位列表第5页；仅记录职位代码和计划招录数与本地候选完全匹配的岗位",
+    "url": "https://www.fenbi.com/page/positions/1/438923?page=5&region=170",
+    "accessedAt": "2026-10-12",
+    "positionSnapshots": [
+      { "positionCode": "241877002", "scope": "position-level", "applicantsRegistered": 98, "recruitCount": 2 },
+      { "positionCode": "241877202", "scope": "position-level", "applicantsRegistered": 17, "recruitCount": 2 },
+      { "positionCode": "241877401", "scope": "position-level", "applicantsRegistered": 23, "recruitCount": 1 },
+      { "positionCode": "241877701", "scope": "position-level", "applicantsRegistered": 72, "recruitCount": 1 }
+    ],
+    "notes": "页面汇总另标过审人数，逐岗表头标报考人数，但未说明逐岗字段定义或统计时点。以上记录的职位代码和计划数与本地2026职位词条匹配；仅作为第三方报考人数参考，不等同官方资格审查通过人数、最终报名或实考人数。"
+  },
+  {
+    "sourceId": "miyun-2026-fenbi-page-6",
+    "title": "粉笔 2026 北京公务员密云区职位列表（第6页）",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "miyun",
+    "geographicScope": "密云区2026职位列表第6页；仅记录职位代码和计划招录数与本地候选完全匹配的岗位",
+    "url": "https://www.fenbi.com/page/positions/1/438923?page=6&region=170",
+    "accessedAt": "2026-10-12",
+    "positionSnapshots": [
+      { "positionCode": "241877801", "scope": "position-level", "applicantsRegistered": 76, "recruitCount": 1 },
+      { "positionCode": "241878002", "scope": "position-level", "applicantsRegistered": 32, "recruitCount": 1 },
+      { "positionCode": "241876104", "scope": "position-level", "applicantsRegistered": 12, "recruitCount": 2 },
+      { "positionCode": "221875801", "scope": "position-level", "applicantsRegistered": 4, "recruitCount": 1 }
+    ],
+    "notes": "页面汇总另标过审人数，逐岗表头标报考人数，但未说明逐岗字段定义或统计时点。以上记录的职位代码和计划数与本地2026职位词条匹配；仅作为第三方报考人数参考，不等同官方资格审查通过人数、最终报名或实考人数。"
+  },
+  {
+    "sourceId": "miyun-2026-fenbi-page-7",
+    "title": "粉笔 2026 北京公务员密云区职位列表（第7页）",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "miyun",
+    "geographicScope": "密云区2026职位列表第7页；仅记录职位代码和计划招录数与本地候选完全匹配的岗位",
+    "url": "https://www.fenbi.com/page/positions/1/438923?page=7&region=170",
+    "accessedAt": "2026-10-12",
+    "positionSnapshots": [
+      { "positionCode": "241877201", "scope": "position-level", "applicantsRegistered": 2, "recruitCount": 1 }
+    ],
+    "notes": "页面汇总另标过审人数，逐岗表头标报考人数，但未说明逐岗字段定义或统计时点。以上记录的职位代码和计划数与本地2026职位词条匹配；仅作为第三方报考人数参考，不等同官方资格审查通过人数、最终报名或实考人数。"
+  },
+  {
+    "sourceId": "miyun-2026-fenbi-police-page-9",
+    "title": "粉笔 2026 北京公务员警察岗位筛选结果（第9页）",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "miyun",
+    "geographicScope": "北京市公安局密云分局2026职位；仅记录本地职位词条中的岗位代码242503201",
+    "url": "https://www.fenbi.com/page/positions/1/438923?page=9&quickPick=%7B%22examId%22%3A438923%7D",
+    "accessedAt": "2026-10-12",
+    "positionSnapshots": [
+      { "positionCode": "242503201", "scope": "position-level", "applicantsRegistered": 324, "recruitCount": 17 }
+    ],
+    "notes": "警察岗位快速筛选页逐岗列职位代码、计划招录和‘报考人数’，未注明统计时点或字段定义；仅作为第三方报考人数参考，不等同官方资格审查人数。该岗位另有中公网校2025-11-18 09:00资格审查通过人数42人的独立快照，不混作同一口径。"
   },
   {
     "sourceId": "daxing-2026-fenbi-page-2",
