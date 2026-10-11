@@ -40,12 +40,12 @@ test('research findings derive sample coverage, score distribution, and evidence
     officialPositionRows: 0,
   });
   assert.deepEqual(byId['competition-grain'].facts, {
-    observations: 829,
-    jobLevelObservations: 786,
+    observations: 889,
+    jobLevelObservations: 846,
     aggregateObservations: 43,
-    jobLevelPositions: 607,
+    jobLevelPositions: 664,
     qualificationSnapshots: 221,
-    reportedApplicationSnapshots: 565,
+    reportedApplicationSnapshots: 625,
   });
   assert.match(byId['competition-grain'].title, /岗位级竞争观察/);
   assert.ok(byId['competition-grain'].sourceIds.includes('huatu-2025-first-day-20241118-1800'));
@@ -68,6 +68,9 @@ test('research findings derive sample coverage, score distribution, and evidence
     'changping-2026-fenbi-page-1', 'shijingshan-2026-fenbi-page-1', 'huairou-2026-fenbi-page-1',
     'yanqing-2026-fenbi-page-1', 'shunyi-2026-fenbi-page-1', 'pinggu-2026-fenbi-page-1', 'miyun-2026-fenbi-page-1',
   ]) assert.ok(byId['competition-grain'].sourceIds.includes(sourceId));
+  for (const page of [2, 3, 4, 5, 6, 7, 8]) {
+    assert.ok(byId['competition-grain'].sourceIds.includes(`changping-2026-fenbi-page-${page}`));
+  }
 });
 
 test('the research route presents expandable source lineage and its topic filter updates the visible findings', async () => {
@@ -104,6 +107,6 @@ test('the research route presents expandable source lineage and its topic filter
 
   assert.match(root.innerHTML, /data-topic="分数样本" aria-pressed="true">/);
   assert.match(root.innerHTML, /365 条/);
-  assert.match(root.innerHTML, /报考人数 565 条/);
+  assert.match(root.innerHTML, /报考人数 625 条/);
   assert.doesNotMatch(root.innerHTML, /class="research-finding[^\"]*"[^>]*data-topic="岗位覆盖"/);
 });

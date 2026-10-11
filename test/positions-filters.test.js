@@ -137,8 +137,16 @@ test('position library filters and sorts by exact-position competition snapshots
   await listeners.change({ target: { id: 'job-year', value: '2026' } });
   await listeners.change({ target: { id: 'job-competition-evidence', value: 'has' } });
 
-  const snapshotKeys = [...root.innerHTML.matchAll(/class="position-title-link" data-action="open-job" data-position-key="([^"]+)"/g)]
-    .map((match) => match[1]);
+  const snapshotKeys = [];
+  const snapshotPages = Math.ceil(expectedSnapshotPositions.length / 25);
+  for (let page = 1; page <= snapshotPages; page += 1) {
+    if (page > 1) {
+      const nextSnapshotPage = { dataset: { action: 'positions-page', page: String(page) } };
+      await listeners.click({ target: { closest: (selector) => selector === '[data-action]' ? nextSnapshotPage : null } });
+    }
+    snapshotKeys.push(...[...root.innerHTML.matchAll(/class="position-title-link" data-action="open-job" data-position-key="([^"]+)"/g)]
+      .map((match) => match[1]));
+  }
   assert.deepEqual(snapshotKeys.sort(), expectedSnapshotPositions.map((position) => `${position.year}:${position.code}`).sort());
   assert.match(root.innerHTML, /id="job-competition-evidence"/);
   assert.match(root.innerHTML, /资格审查 1:307\.5/);

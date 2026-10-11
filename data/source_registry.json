@@ -18589,7 +18589,7 @@
       { "positionCode": "121260801", "scope": "position-level", "applicantsRegistered": 5, "recruitCount": 1 },
       { "positionCode": "121260901", "scope": "position-level", "applicantsRegistered": 8, "recruitCount": 1 }
     ],
-    "notes": "粉笔页面头部将汇总人数标作‘过审人数’，逐岗表格却列‘报考人数’，且未注明统计时点或字段定义。仅将页面首屏内职位代码和招录数均与本地2026候选职位精确匹配的记录，作为第三方报考人数参考保存；不代表官方资格审查通过人数、最终缴费人数或实考人数。"
+    "notes": "首屏有10条职位代码和计划数可与本地2026候选词条对应；其中北京市统计局职位829910403为市级岗位，本地职位districtId保留空值、不计昌平区职位，其余9条为昌平区职位。粉笔页面头部将汇总人数标作‘过审人数’，逐岗表格却列‘报考人数’，且未注明统计时点或字段定义。仅将页面逐岗数字作为第三方报考人数参考保存；不代表官方资格审查通过人数、最终缴费人数或实考人数。"
   },
   {
     "sourceId": "shijingshan-2026-fenbi-page-1",
@@ -19053,5 +19053,170 @@
       { "positionCode": "241674101", "scope": "position-level", "applicantsRegistered": 4, "recruitCount": 1 }
     ],
     "notes": "本页6条逐岗职位中4条可按同年度单位、职位名称及招录数与本地职位词条唯一匹配；北房镇和长哨营满族乡的行政执法岗未匹配到本地2026候选职位，未关联。粉笔分页反复显示36岗/75人及页头‘过审人数’573，逐岗表头为‘招录/报考人数’；无逐岗统计时点或明确字段定义，逐岗人数只作第三方未注明时点的页面报考参考，不作为官方过审人数、最终缴费数或实考人数。"
+  },
+  {
+    "sourceId": "changping-2026-fenbi-page-2",
+    "title": "粉笔 2026 北京公务员昌平区职位列表（第2页）",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "changping",
+    "geographicScope": "昌平区2026职位列表第2页；逐岗参照只收录可唯一匹配本地候选职位的行",
+    "url": "https://m.fenbi.com/page/positions/1/438923?page=2&region=161",
+    "accessedAt": "2026-10-12",
+    "positionSnapshots": [
+      { "positionCode": "821261001", "scope": "position-level", "applicantsRegistered": 29, "recruitCount": 2 },
+      { "positionCode": "821261102", "scope": "position-level", "applicantsRegistered": 615, "recruitCount": 2 },
+      { "positionCode": "221261201", "scope": "position-level", "applicantsRegistered": 36, "recruitCount": 2 },
+      { "positionCode": "221261301", "scope": "position-level", "applicantsRegistered": 37, "recruitCount": 2 },
+      { "positionCode": "821261401", "scope": "position-level", "applicantsRegistered": 107, "recruitCount": 1 },
+      { "positionCode": "821261402", "scope": "position-level", "applicantsRegistered": 22, "recruitCount": 2 },
+      { "positionCode": "821261501", "scope": "position-level", "applicantsRegistered": 42, "recruitCount": 2 },
+      { "positionCode": "821261502", "scope": "position-level", "applicantsRegistered": 28, "recruitCount": 2 },
+      { "positionCode": "821261503", "scope": "position-level", "applicantsRegistered": 25, "recruitCount": 2 },
+      { "positionCode": "221261601", "scope": "position-level", "applicantsRegistered": 48, "recruitCount": 2 }
+    ],
+    "notes": "本页10行均可按单位、岗位名和招录数唯一匹配到本地职位。页面总栏反复显示昌平区80岗/114人、‘过审人数’2250；逐岗列名则是‘招录/报考人数’，无逐岗观察时间或明确定义。按未注明时点的第三方报名人数参考保存，不能视为官方过审数、缴费数或实考数。"
+  },
+  {
+    "sourceId": "changping-2026-fenbi-page-3",
+    "title": "粉笔 2026 北京公务员昌平区职位列表（第3页）",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "changping",
+    "geographicScope": "昌平区2026职位列表第3页；逐岗参照只收录可唯一匹配本地候选职位的行",
+    "url": "https://m.fenbi.com/page/positions/1/438923?page=3&region=161",
+    "accessedAt": "2026-10-12",
+    "positionSnapshots": [
+      { "positionCode": "221261701", "scope": "position-level", "applicantsRegistered": 29, "recruitCount": 1 },
+      { "positionCode": "821261703", "scope": "position-level", "applicantsRegistered": 20, "recruitCount": 2 },
+      { "positionCode": "221261702", "scope": "position-level", "applicantsRegistered": 38, "recruitCount": 1 },
+      { "positionCode": "221261801", "scope": "position-level", "applicantsRegistered": 32, "recruitCount": 1 },
+      { "positionCode": "221261802", "scope": "position-level", "applicantsRegistered": 5, "recruitCount": 1 },
+      { "positionCode": "221261803", "scope": "position-level", "applicantsRegistered": 66, "recruitCount": 2 },
+      { "positionCode": "221261901", "scope": "position-level", "applicantsRegistered": 5, "recruitCount": 1 },
+      { "positionCode": "221261902", "scope": "position-level", "applicantsRegistered": 2, "recruitCount": 2 },
+      { "positionCode": "821262001", "scope": "position-level", "applicantsRegistered": 40, "recruitCount": 2 },
+      { "positionCode": "221262101", "scope": "position-level", "applicantsRegistered": 54, "recruitCount": 2 }
+    ],
+    "notes": "本页10行均可按单位、岗位名和招录数唯一匹配到本地职位。页面总栏反复显示昌平区80岗/114人、‘过审人数’2250；逐岗列名则是‘招录/报考人数’，无逐岗观察时间或明确定义。按未注明时点的第三方报名人数参考保存，不能视为官方过审数、缴费数或实考数。"
+  },
+  {
+    "sourceId": "changping-2026-fenbi-page-4",
+    "title": "粉笔 2026 北京公务员昌平区职位列表（第4页）",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "changping",
+    "geographicScope": "昌平区2026职位列表第4页；仅收录可唯一匹配本地候选职位的行",
+    "url": "https://m.fenbi.com/page/positions/1/438923?page=4&region=161",
+    "accessedAt": "2026-10-12",
+    "positionSnapshots": [
+      { "positionCode": "221262102", "scope": "position-level", "applicantsRegistered": 27, "recruitCount": 2 },
+      { "positionCode": "221262201", "scope": "position-level", "applicantsRegistered": 32, "recruitCount": 1 },
+      { "positionCode": "221262301", "scope": "position-level", "applicantsRegistered": 12, "recruitCount": 2 },
+      { "positionCode": "221262401", "scope": "position-level", "applicantsRegistered": 16, "recruitCount": 2 },
+      { "positionCode": "221262501", "scope": "position-level", "applicantsRegistered": 10, "recruitCount": 2 },
+      { "positionCode": "231262503", "scope": "position-level", "applicantsRegistered": 2, "recruitCount": 1 }
+    ],
+    "notes": "本页仅将6条唯一行关联入职位库。另有城北所、城南所、龙泽园所、天通苑南所4条市场监管综合管理岗（各招1人）；本地有多个同单位同名同计划岗位，无法将页面分所行唯一指向职位代码，故保留未关联。页面总栏反复显示昌平区80岗/114人、‘过审人数’2250；逐岗报考人数未注明观察时间或定义。"
+  },
+  {
+    "sourceId": "changping-2026-fenbi-page-5",
+    "title": "粉笔 2026 北京公务员昌平区职位列表（第5页）",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "changping",
+    "geographicScope": "昌平区2026职位列表第5页；仅收录可唯一匹配本地候选职位的行",
+    "url": "https://m.fenbi.com/page/positions/1/438923?page=5&region=161",
+    "accessedAt": "2026-10-12",
+    "positionSnapshots": [
+      { "positionCode": "221262601", "scope": "position-level", "applicantsRegistered": 74, "recruitCount": 1 },
+      { "positionCode": "221262701", "scope": "position-level", "applicantsRegistered": 14, "recruitCount": 1 },
+      { "positionCode": "821262702", "scope": "position-level", "applicantsRegistered": 22, "recruitCount": 2 },
+      { "positionCode": "821263001", "scope": "position-level", "applicantsRegistered": 261, "recruitCount": 1 },
+      { "positionCode": "821263101", "scope": "position-level", "applicantsRegistered": 53, "recruitCount": 2 },
+      { "positionCode": "231263201", "scope": "position-level", "applicantsRegistered": 16, "recruitCount": 2 },
+      { "positionCode": "231263301", "scope": "position-level", "applicantsRegistered": 7, "recruitCount": 2 },
+      { "positionCode": "231263302", "scope": "position-level", "applicantsRegistered": 3, "recruitCount": 1 }
+    ],
+    "notes": "本页仅将8条唯一行关联入职位库。另有南口所、兴寿所2条市场监管综合管理岗（各招1人）；本地存在多个同单位同名同计划岗位，无法唯一匹配职位代码，未导入逐岗数据。页面总栏反复显示昌平区80岗/114人、‘过审人数’2250；逐岗人数无统计时点和明确口径。"
+  },
+  {
+    "sourceId": "changping-2026-fenbi-page-6",
+    "title": "粉笔 2026 北京公务员昌平区职位列表（第6页）",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "changping",
+    "geographicScope": "昌平区2026职位列表第6页；仅收录可唯一匹配本地候选职位的行",
+    "url": "https://m.fenbi.com/page/positions/1/438923?page=6&region=161",
+    "accessedAt": "2026-10-12",
+    "positionSnapshots": [
+      { "positionCode": "231263501", "scope": "position-level", "applicantsRegistered": 5, "recruitCount": 1 },
+      { "positionCode": "231263601", "scope": "position-level", "applicantsRegistered": 3, "recruitCount": 2 },
+      { "positionCode": "231263701", "scope": "position-level", "applicantsRegistered": 31, "recruitCount": 1 },
+      { "positionCode": "231263702", "scope": "position-level", "applicantsRegistered": 3, "recruitCount": 1 },
+      { "positionCode": "231263703", "scope": "position-level", "applicantsRegistered": 16, "recruitCount": 1 },
+      { "positionCode": "231263901", "scope": "position-level", "applicantsRegistered": 2, "recruitCount": 1 },
+      { "positionCode": "231263902", "scope": "position-level", "applicantsRegistered": 14, "recruitCount": 1 },
+      { "positionCode": "231263904", "scope": "position-level", "applicantsRegistered": 26, "recruitCount": 2 },
+      { "positionCode": "231264002", "scope": "position-level", "applicantsRegistered": 5, "recruitCount": 2 }
+    ],
+    "notes": "本页仅将9条唯一行关联入职位库。天通苑北街道平安建设办公室政法专项岗（1/2）未找到匹配的本地2026职位词条，未按名称猜测代码。页面总栏反复显示昌平区80岗/114人、‘过审人数’2250；逐岗人数未注明统计时间或定义。"
+  },
+  {
+    "sourceId": "changping-2026-fenbi-page-7",
+    "title": "粉笔 2026 北京公务员昌平区职位列表（第7页）",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "changping",
+    "geographicScope": "昌平区2026职位列表第7页；仅收录可唯一匹配本地候选职位的行",
+    "url": "https://m.fenbi.com/page/positions/1/438923?page=7&region=161",
+    "accessedAt": "2026-10-12",
+    "positionSnapshots": [
+      { "positionCode": "241264101", "scope": "position-level", "applicantsRegistered": 18, "recruitCount": 2 },
+      { "positionCode": "241264202", "scope": "position-level", "applicantsRegistered": 5, "recruitCount": 1 },
+      { "positionCode": "241264701", "scope": "position-level", "applicantsRegistered": 13, "recruitCount": 1 },
+      { "positionCode": "231264801", "scope": "position-level", "applicantsRegistered": 0, "recruitCount": 1 },
+      { "positionCode": "231264802", "scope": "position-level", "applicantsRegistered": 24, "recruitCount": 1 },
+      { "positionCode": "241264902", "scope": "position-level", "applicantsRegistered": 63, "recruitCount": 1 },
+      { "positionCode": "526012903", "scope": "position-level", "applicantsRegistered": 0, "recruitCount": 1 },
+      { "positionCode": "821261101", "scope": "position-level", "applicantsRegistered": 3, "recruitCount": 1 }
+    ],
+    "notes": "本页仅将8条唯一行关联入职位库。百善镇综合行政执法岗（1/3）与第8页同镇同名同计划职位都无法在本地两条同名岗位之间唯一分配；延寿镇综合行政执法岗（1/12）未找到本地候选，二者均保留未关联。页面总栏反复显示昌平区80岗/114人、‘过审人数’2250；逐岗人数未注明统计时间或定义。"
+  },
+  {
+    "sourceId": "changping-2026-fenbi-page-8",
+    "title": "粉笔 2026 北京公务员昌平区职位列表（第8页）",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "changping",
+    "geographicScope": "昌平区2026职位列表第8页；仅收录可唯一匹配本地候选职位的行",
+    "url": "https://m.fenbi.com/page/positions/1/438923?page=8&region=161",
+    "accessedAt": "2026-10-12",
+    "positionSnapshots": [
+      { "positionCode": "221261804", "scope": "position-level", "applicantsRegistered": 3, "recruitCount": 1 },
+      { "positionCode": "231263801", "scope": "position-level", "applicantsRegistered": 0, "recruitCount": 1 },
+      { "positionCode": "231263802", "scope": "position-level", "applicantsRegistered": 1, "recruitCount": 1 },
+      { "positionCode": "231263903", "scope": "position-level", "applicantsRegistered": 2, "recruitCount": 1 },
+      { "positionCode": "231264401", "scope": "position-level", "applicantsRegistered": 3, "recruitCount": 1 },
+      { "positionCode": "231264001", "scope": "position-level", "applicantsRegistered": 8, "recruitCount": 1 },
+      { "positionCode": "241264201", "scope": "position-level", "applicantsRegistered": 8, "recruitCount": 1 },
+      { "positionCode": "231264301", "scope": "position-level", "applicantsRegistered": 9, "recruitCount": 1 },
+      { "positionCode": "231264501", "scope": "position-level", "applicantsRegistered": 10, "recruitCount": 1 }
+    ],
+    "notes": "本页仅将9条唯一行关联入职位库。百善镇综合行政执法岗（1/1）与第7页同镇同名同计划职位都无法在本地两条同名岗位之间唯一分配；该页行未关联。页面总栏反复显示昌平区80岗/114人、‘过审人数’2250；逐岗人数未注明统计时间或定义。"
   }
 ]
