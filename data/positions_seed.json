@@ -60212,5 +60212,61 @@
     "eligibilityComplete": false,
     "eligibilityText": "本轮仅补录岗位身份与计划招录数用于关联公开进面分；完整资格条件以官方招考简章为准。",
     "sources": ["huatu-2026-shunyi-health-page"]
+  },
+  {
+    "year": 2026,
+    "code": "221457301",
+    "unit": "北京市顺义区财政局",
+    "title": "预算管理岗",
+    "orgType": "区直",
+    "recruitCount": 2,
+    "sourceLevel": "secondary",
+    "verification": "相对面职位列表列出代码、单位、岗位名及招录数；未与官方职位表逐代码复核",
+    "crossVerified": false,
+    "eligibilityComplete": false,
+    "eligibilityText": "本轮仅补录岗位身份与计划招录数用于关联公开进面分；完整资格条件以官方招考简章为准。",
+    "sources": ["xduim-2026-shunyi-code-list"]
+  },
+  {
+    "year": 2026,
+    "code": "821456701",
+    "unit": "中共北京市顺义区委党校（顺义区行政学院）",
+    "title": "综合管理岗",
+    "orgType": "区直",
+    "recruitCount": 3,
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位表列明代码、岗位名及招录数；未与官方职位表逐代码复核",
+    "crossVerified": false,
+    "eligibilityComplete": false,
+    "eligibilityText": "本轮仅补录岗位身份与计划招录数用于关联公开进面分；完整资格条件以官方招考简章为准。",
+    "sources": ["gwyzwb-2026-shunyi-party-school"]
+  },
+  {
+    "year": 2026,
+    "code": "231458202",
+    "unit": "北京市顺义区市场监督管理局（北京市顺义区知识产权局）",
+    "title": "监督管理岗",
+    "orgType": "区直",
+    "recruitCount": 1,
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位详情列明代码、岗位名及招录数；未与官方职位表逐代码复核",
+    "crossVerified": false,
+    "eligibilityComplete": false,
+    "eligibilityText": "本轮仅补录岗位身份与计划招录数用于关联公开进面分；完整资格条件以官方招考简章为准。",
+    "sources": ["gwyzwb-2026-shunyi-market-supervision"]
+  },
+  {
+    "year": 2026,
+    "code": "821457401",
+    "unit": "北京市顺义区人力资源和社会保障局",
+    "title": "案件审理岗",
+    "orgType": "区直",
+    "recruitCount": 1,
+    "sourceLevel": "secondary",
+    "verification": "京考职位网职位详情列明代码、岗位名及招录数；未与官方职位表逐代码复核",
+    "crossVerified": false,
+    "eligibilityComplete": false,
+    "eligibilityText": "本轮仅补录岗位身份与计划招录数用于关联公开进面分；完整资格条件以官方招考简章为准。",
+    "sources": ["gwyzwb-2026-shunyi-labor-arbitration"]
   }
 ]

@@ -14,8 +14,8 @@ test('2026 Shunyi cutoff samples attach only to exact year, unit, title, and cod
   const directory = dataset.sources.find((item) => item.sourceId === 'gwyzwb-2026-shunyi-index');
   assert.equal(directory?.reportedPositionCount, 88);
   assert.equal(directory?.reportedRecruitCount, 138);
-  assert.equal(shunyiPositions.length, 29, 'the local positions are a source-backed subset, not the full directory');
-  assert.equal(shunyiPositions.reduce((sum, item) => sum + item.recruitCount, 0), 51);
+  assert.equal(shunyiPositions.length, 33, 'the local positions are a source-backed subset, not the full directory');
+  assert.equal(shunyiPositions.reduce((sum, item) => sum + item.recruitCount, 0), 58);
   for (const source of districtSources) {
     const rows = shunyiPositions.filter((item) => item.sources.includes(source.sourceId));
     assert.equal(rows.length, source.reportedPositionCount, `${source.sourceId} visible page rows`);
@@ -30,13 +30,17 @@ test('2026 Shunyi cutoff samples attach only to exact year, unit, title, and cod
     ['821459001', '北京市顺义区投资促进服务中心', '产业促进岗', 1, 131],
     ['231459302', '北京市顺义区胜利街道', '综合管理岗', 2, 129],
     ['231460002', '北京市顺义区北石槽镇', '经济发展岗', 1, 127.5],
+    ['221457301', '北京市顺义区财政局', '预算管理岗', 2, 127.5],
     ['221457503', '北京市顺义区住房和城乡建设委员会（北京市顺义区住房保障办公室、北京市顺义区人民政府房屋征收办公室）', '综合管理岗', 2, 127.25],
     ['221457901', '北京市顺义区文化和旅游局（北京市顺义区文物局）', '综合管理岗', 1, 127.25],
     ['221457701', '北京市顺义区水务局', '综合管理岗', 1, 127],
     ['821458901', '北京市顺义区地震局', '地震管理岗', 2, 129.25],
     ['821456801', '北京市顺义区档案馆', '档案管理岗', 2, 126.25],
+    ['821456701', '中共北京市顺义区委党校（顺义区行政学院）', '综合管理岗', 3, 125.75],
+    ['231458202', '北京市顺义区市场监督管理局（北京市顺义区知识产权局）', '监督管理岗', 1, 125.25],
     ['221458204', '北京市顺义区市场监督管理局（北京市顺义区知识产权局）', '执法办案岗1', 2, 131.5],
     ['221458002', '北京市顺义区卫生健康委员会（中共北京市顺义区委卫生健康工作委员会）', '卫生监督执法岗', 2, 122.5],
+    ['821457401', '北京市顺义区人力资源和社会保障局', '案件审理岗', 1, 122.25],
     ['625014901', '北京市顺义区人民检察院', '检察业务岗', 4, 109.75],
     ['221458301', '北京市顺义区体育局', '综合管理岗', 1, 109.5],
     ['221458501', '北京市顺义区园林绿化局', '综合管理岗', 1, 108.75],
@@ -66,7 +70,7 @@ test('2026 Shunyi cutoff samples attach only to exact year, unit, title, and cod
   assert.equal(sample?.maximum, 134);
   assert.equal(dataset.scoreRows.filter((item) => item.year === 2026 && item.sourceId === sourceId).length, 29);
   assert.equal(dataset.scoreRows.filter((item) => item.year === 2026 && item.sourceId === sourceId
-    && item.positionCode === null).length, 9, 'ambiguous or absent codes must stay unlinked');
+    && item.positionCode === null).length, 5, 'ambiguous or absent codes must stay unlinked');
 });
 
 test('2026 Shunyi Culture and Tourism registration snapshots preserve four dated qualified-count observations', async () => {

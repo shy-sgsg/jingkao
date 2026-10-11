@@ -715,6 +715,27 @@ test('the last available 2026 registration snapshots preserve the named hot post
   }
 });
 
+test('2026 Nov 20 09:00 snapshot links the traffic-management position and qualified-applicant ratio by code', async () => {
+  const raw = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const dataset = normalizeDataset(raw);
+  const sourceId = 'zhonggong-2026-snapshot-20251120-0900';
+  const code = '232501603';
+  const position = dataset.positions.find((item) => item.year === 2026 && item.code === code);
+  const source = dataset.sources.find((item) => item.sourceId === sourceId);
+  const observation = dataset.observations.find((item) => item.sourceId === sourceId
+    && item.year === 2026 && item.positionCode === code);
+
+  assert.equal(source?.url, 'https://www.10100.com/article/103413571');
+  assert.equal(source?.observedAt, '2025-11-20 09:00');
+  assert.equal(position?.unit, '北京市公安局公安交通管理局');
+  assert.equal(position?.title, '一线执法岗');
+  assert.equal(position?.recruitCount, 55);
+  assert.equal(observation?.scope, 'position-level');
+  assert.equal(observation?.applicantsQualified, 822);
+  assert.equal(observation?.recruitCount, 55);
+  assert.equal(observation?.qualifiedCompetitionRatio, 822 / 55);
+});
+
 test('2026 Chaoyang position snapshots and interview cutoffs attach to exact year-and-code posts', async () => {
   const raw = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
   const dataset = normalizeDataset(raw);
@@ -879,6 +900,36 @@ test('2026 Fengtai cutoff sample links every unique unit-and-title match to its 
     assert.equal(scoreRows[0].title, title);
     assert.equal(scoreRows[0].score, score);
     assert.equal(scoreRows[0].mappingConfidence, 'high');
+  }
+});
+
+test('2026 Shunyi cutoff sample links newly sourced positions by unique code and title', async () => {
+  const raw = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const dataset = normalizeDataset(raw);
+  const cutoffSourceId = 'cgzj-2026-shunyi-cutoff-sample';
+  const expected = [
+    ['221457301', '北京市顺义区财政局', '预算管理岗', 2, 127.5, 'xduim-2026-shunyi-code-list'],
+    ['821456701', '中共北京市顺义区委党校（顺义区行政学院）', '综合管理岗', 3, 125.75, 'gwyzwb-2026-shunyi-party-school'],
+    ['231458202', '北京市顺义区市场监督管理局（北京市顺义区知识产权局）', '监督管理岗', 1, 125.25, 'gwyzwb-2026-shunyi-market-supervision'],
+    ['821457401', '北京市顺义区人力资源和社会保障局', '案件审理岗', 1, 122.25, 'gwyzwb-2026-shunyi-labor-arbitration'],
+  ];
+
+  for (const [code, unit, title, recruits, score, positionSourceId] of expected) {
+    const positions = dataset.positions.filter((item) => item.year === 2026 && item.code === code);
+    assert.equal(positions.length, 1, `${code} should identify exactly one 2026 position`);
+    const [position] = positions;
+    assert.equal(position.unit, unit);
+    assert.equal(position.title, title);
+    assert.equal(position.recruitCount, recruits);
+    assert.ok(position.sources.includes(positionSourceId));
+    assert.ok(dataset.sources.some((item) => item.sourceId === positionSourceId));
+
+    const scoreRows = dataset.scoreRows.filter((item) => item.year === 2026
+      && item.sourceId === cutoffSourceId && item.positionCode === code);
+    assert.equal(scoreRows.length, 1, `${code} should have one linked minimum interview score`);
+    assert.equal(scoreRows[0].score, score);
+    assert.equal(scoreRows[0].mappingConfidence, 'high');
+    assert.equal(getPositionCompetitionEvidence(position, dataset).cutoffScore, score);
   }
 });
 
