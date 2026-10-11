@@ -40,12 +40,12 @@ test('research findings derive sample coverage, score distribution, and evidence
     officialPositionRows: 0,
   });
   assert.deepEqual(byId['competition-grain'].facts, {
-    observations: 718,
-    jobLevelObservations: 675,
+    observations: 762,
+    jobLevelObservations: 719,
     aggregateObservations: 43,
-    jobLevelPositions: 499,
+    jobLevelPositions: 541,
     qualificationSnapshots: 221,
-    reportedApplicationSnapshots: 454,
+    reportedApplicationSnapshots: 498,
   });
   assert.match(byId['competition-grain'].title, /岗位级竞争观察/);
   assert.ok(byId['competition-grain'].sourceIds.includes('huatu-2025-first-day-20241118-1800'));
@@ -104,6 +104,6 @@ test('the research route presents expandable source lineage and its topic filter
 
   assert.match(root.innerHTML, /data-topic="分数样本" aria-pressed="true">/);
   assert.match(root.innerHTML, /365 条/);
-  assert.match(root.innerHTML, /报考人数 454 条/);
+  assert.match(root.innerHTML, /报考人数 498 条/);
   assert.doesNotMatch(root.innerHTML, /class="research-finding[^\"]*"[^>]*data-topic="岗位覆盖"/);
 });
