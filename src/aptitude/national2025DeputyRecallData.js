@@ -48,7 +48,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "毛中特"
@@ -102,7 +102,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "新思想"
@@ -156,7 +156,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "新思想"
@@ -210,7 +210,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "马克思主义"
@@ -264,7 +264,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "新思想"
@@ -318,7 +318,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "新思想"
@@ -372,7 +372,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "新思想"
@@ -426,7 +426,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "毛中特"
@@ -480,7 +480,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "新思想"
@@ -534,7 +534,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "新思想"
@@ -588,7 +588,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "新思想"
@@ -642,7 +642,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "时事政治"
@@ -696,7 +696,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "新思想"
@@ -750,7 +750,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "新思想"
@@ -804,7 +804,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "时事政治"
@@ -858,7 +858,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "新思想"
@@ -912,7 +912,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "马克思主义"
@@ -966,7 +966,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "新思想"
@@ -1020,7 +1020,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "新思想"
@@ -1074,7 +1074,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "新思想"
@@ -1128,7 +1128,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "时事政治"
@@ -1182,7 +1182,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "法律常识"
@@ -1236,7 +1236,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "法律常识"
@@ -1290,7 +1290,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "法律常识"
@@ -1344,7 +1344,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "新思想"
@@ -1400,7 +1400,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "地理国情"
@@ -1454,7 +1454,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "科技常识"
@@ -1508,7 +1508,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "人文常识"
@@ -1562,7 +1562,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "科技常识"
@@ -1616,7 +1616,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "地理国情"
@@ -1678,7 +1678,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "人文常识"
@@ -1732,7 +1732,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "科技常识"
@@ -1786,7 +1786,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "科技常识"
@@ -1849,7 +1849,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "科技常识"
@@ -1903,7 +1903,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "人文常识"
@@ -1957,7 +1957,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "逻辑填空"
@@ -2011,7 +2011,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "逻辑填空"
@@ -2065,7 +2065,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "逻辑填空"
@@ -2119,7 +2119,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "逻辑填空"
@@ -2173,7 +2173,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "逻辑填空"
@@ -2227,7 +2227,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "逻辑填空"
@@ -2281,7 +2281,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "逻辑填空"
@@ -2335,7 +2335,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "逻辑填空"
@@ -2389,7 +2389,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "逻辑填空"
@@ -2443,7 +2443,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "逻辑填空"
@@ -2497,7 +2497,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "片段阅读"
@@ -2551,7 +2551,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "片段阅读"
@@ -2605,7 +2605,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "片段阅读"
@@ -2659,7 +2659,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "语句表达"
@@ -2713,7 +2713,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "片段阅读"
@@ -2767,7 +2767,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "片段阅读"
@@ -2821,7 +2821,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "语句表达"
@@ -2875,7 +2875,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "片段阅读"
@@ -2929,7 +2929,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "片段阅读"
@@ -2983,7 +2983,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "片段阅读"
@@ -3040,7 +3040,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "语句表达"
@@ -3097,7 +3097,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "语句表达"
@@ -3154,7 +3154,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "片段阅读"
@@ -3211,7 +3211,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "片段阅读"
@@ -3268,7 +3268,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "片段阅读"
@@ -3325,7 +3325,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "语句表达"
@@ -3382,7 +3382,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "片段阅读"
@@ -3439,7 +3439,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "片段阅读"
@@ -3496,7 +3496,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "片段阅读"
@@ -3553,7 +3553,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "片段阅读"
@@ -3609,7 +3609,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "数学运算"
@@ -3666,7 +3666,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "数学运算"
@@ -3724,7 +3724,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "数学运算"
@@ -3782,7 +3782,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "数学运算"
@@ -3838,7 +3838,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "数学运算"
@@ -3895,7 +3895,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "数学运算"
@@ -3949,7 +3949,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "数学运算"
@@ -4008,7 +4008,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "数学运算"
@@ -4080,7 +4080,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "数学运算"
@@ -4136,7 +4136,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "数学运算"
@@ -4196,7 +4196,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "数学运算"
@@ -4252,7 +4252,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "数学运算"
@@ -4327,7 +4327,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "数学运算"
@@ -4399,7 +4399,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "数学运算"
@@ -4463,7 +4463,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "数学运算"
@@ -4521,7 +4521,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "图形推理"
@@ -4577,7 +4577,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "图形推理"
@@ -4635,7 +4635,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "图形推理"
@@ -4691,7 +4691,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "图形推理"
@@ -4749,7 +4749,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "图形推理"
@@ -4807,7 +4807,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "图形推理"
@@ -4865,7 +4865,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "图形推理"
@@ -4921,7 +4921,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "图形推理"
@@ -4977,7 +4977,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "图形推理"
@@ -5033,7 +5033,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "图形推理"
@@ -5087,7 +5087,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "定义判断"
@@ -5141,7 +5141,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "定义判断"
@@ -5195,7 +5195,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "定义判断"
@@ -5249,7 +5249,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "定义判断"
@@ -5303,7 +5303,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "定义判断"
@@ -5373,7 +5373,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "定义判断"
@@ -5427,7 +5427,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "定义判断"
@@ -5481,7 +5481,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "定义判断"
@@ -5535,7 +5535,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "定义判断"
@@ -5589,7 +5589,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "定义判断"
@@ -5643,7 +5643,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "类比推理"
@@ -5697,7 +5697,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "类比推理"
@@ -5751,7 +5751,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "类比推理"
@@ -5805,7 +5805,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "类比推理"
@@ -5859,7 +5859,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "类比推理"
@@ -5913,7 +5913,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "逻辑判断"
@@ -5967,7 +5967,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "逻辑判断"
@@ -6021,7 +6021,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "逻辑判断"
@@ -6075,7 +6075,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "逻辑判断"
@@ -6129,7 +6129,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "类比推理"
@@ -6183,7 +6183,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "逻辑判断"
@@ -6237,7 +6237,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "逻辑判断"
@@ -6293,7 +6293,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "逻辑判断"
@@ -6347,7 +6347,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "逻辑判断"
@@ -6405,7 +6405,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "类比推理"
@@ -6472,7 +6472,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "综合"
@@ -6535,7 +6535,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "增长"
@@ -6599,7 +6599,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "增长"
@@ -6668,7 +6668,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "综合"
@@ -6736,7 +6736,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "增长"
@@ -6800,7 +6800,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "综合"
@@ -6867,7 +6867,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "比重"
@@ -6927,7 +6927,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "综合"
@@ -6989,7 +6989,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "综合"
@@ -7068,7 +7068,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "平均数"
@@ -7134,7 +7134,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "平均数"
@@ -7198,7 +7198,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "综合"
@@ -7258,7 +7258,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "综合"
@@ -7321,7 +7321,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "综合"
@@ -7400,7 +7400,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "比重"
@@ -7462,7 +7462,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "平均数"
@@ -7523,7 +7523,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "增长"
@@ -7584,7 +7584,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "综合"
@@ -7655,7 +7655,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "增长"
@@ -7729,7 +7729,7 @@ export const NATIONAL_2025_DEPUTY_RECALL_QUESTIONS = [
     "paperId": "national-2025-deputy-recall",
     "paperTitle": "2025年国家公务员录用考试《行测》题（副省级网友回忆版）",
     "verificationStatus": "verified",
-    "copyrightStatus": "user_authorized_republication",
+    "copyrightStatus": "licensed",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized",
     "sourceCategory": "综合"
