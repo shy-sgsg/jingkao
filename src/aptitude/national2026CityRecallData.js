@@ -1922,5 +1922,1901 @@ export const NATIONAL_2026_CITY_RECALL_QUESTIONS = [
     "copyrightStatus": "user_confirmed_republication_authorization",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized"
+  },
+  {
+    "id": "national-2026-city-political-q1",
+    "sourceQuestionId": "kaoshiji-1180-q1",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "important-concepts",
+    "knowledgePointIds": [
+      "political-theory:important-concepts"
+    ],
+    "originalQuestionNo": 1,
+    "sectionOrder": 1,
+    "stem": "习近平总书记强调，必须坚持自信自立。中国人民和中华民族从近代以后的深重苦难走向伟大复兴的光明前景，从来就没有教科书，更没有现成答案。关于坚持自信自立，下列表述正确的有几项？\n①走自己的路，是党的全部理论和实践立足点，更是党百年奋斗得出的历史结论\n②推进中国式现代化，必须坚持把国家和民族发展放在自己力量的基点上\n③中国式现代化既要物质财富极大丰富，也要精神财富极大丰富、在思想文化上自信自强\n④独立自主是中华民族的优良传统，是中国共产党、中华人民共和国立党立国的重要原则",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "1项"
+      },
+      {
+        "id": "B",
+        "text": "2项"
+      },
+      {
+        "id": "C",
+        "text": "3项"
+      },
+      {
+        "id": "D",
+        "text": "4项"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "四项分别对应走自己的路、依靠自身力量推进现代化、物质与精神文明协调发展、坚持独立自主，均符合题干所述原则。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "1 习近平总书记强调，必须坚持自信自立。中国人民和中华民族从近代以后的深重苦难走向伟大复兴的光明前景，从来就没有教科书，更没有现成答案。关于坚持自信自立，下列表述正确的有几项？\n①走自己的路，是党的全部理论和实践立足点，更是党百年奋斗得出的历史结论\n②推进中国式现代化，必须坚持把国家和民族发展放在自己力量的基点上\n③中国式现代化既要物质财富极大丰富，也要精神财富极大丰富、在思想文化上自信自强\n④独立自主是中华民族的优良传统，是中国共产党、中华人民共和国立党立国的重要原则 A、1项 B、2项 C、3项 D、4项"
+  },
+  {
+    "id": "national-2026-city-political-q2",
+    "sourceQuestionId": "kaoshiji-1180-q2",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "meeting-documents",
+    "knowledgePointIds": [
+      "political-theory:meeting-documents"
+    ],
+    "originalQuestionNo": 2,
+    "sectionOrder": 1,
+    "stem": "习近平总书记强调，科学制定和接续实施五年规划，是我们党治国理政一条重要经验，也是中国特色社会主义一个重要政治优势。关于五年规划编制工作，下列说法正确的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "我国五年规划（计划）编制工作起始于1949年，有力推动了经济社会发展、综合国力提升、人民生活改善"
+      },
+      {
+        "id": "B",
+        "text": "中长期发展规划有助于充分发挥政府在资源配置中的决定性作用，彰显了政府对经济社会发展的宏观调控能力"
+      },
+      {
+        "id": "C",
+        "text": "从第一个五年计划到当前的五年规划，一以贯之的主题是把我国建设成为社会主义现代化国家"
+      },
+      {
+        "id": "D",
+        "text": "通过互联网就“十五五”规划编制向全社会征求意见和建议，在我国五年规划编制史上是第一次"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "五年规划一以贯之的主题是把我国建设成为社会主义现代化国家；其余选项分别错置了编制起点、市场与政府作用、首次征求意见的年份。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "2 习近平总书记强调，科学制定和接续实施五年规划，是我们党治国理政一条重要经验，也是中国特色社会主义一个重要政治优势。关于五年规划编制工作，下列说法正确的是： A、我国五年规划（计划）编制工作起始于1949年，有力推动了经济社会发展、综合国力提升、人民生活改善 B、中长期发展规划有助于充分发挥政府在资源配置中的决定性作用，彰显了政府对经济社会发展的宏观调控能力 C、从第一个五年计划到当前的五年规划，一以贯之的主题是把我国建设成为社会主义现代化国家 D、通过互联网就“十五五”规划编制向全社会征求意见和建议，在我国五年规划编制史上是第一次"
+  },
+  {
+    "id": "national-2026-city-political-q3",
+    "sourceQuestionId": "kaoshiji-1180-q3",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "policy-goals",
+    "knowledgePointIds": [
+      "political-theory:policy-goals"
+    ],
+    "originalQuestionNo": 3,
+    "sectionOrder": 1,
+    "stem": "建设文化强国，事关中国式现代化建设全局，事关中华民族复兴大业，事关提升国际竞争力，锚定2035年建成社会主义文化强国的战略目标，必须始终坚持文化建设着眼于人、落脚于人。下列有关说法正确的是：\n①文化强国之“强”最终要体现在为人民提供文化服务和文化产品的能力上\n②坚持以人民为中心，着眼满足人民群众多样化、多层次、多方面的精神文化需求\n③文化创造核心在人，要建设一支规模宏大、结构合理、锐意创新的高水平文化人才队伍\n④尊重人才成长规律，完善符合文化领域特点的人才选拔、培养、使用、激励机制，营造识才、重才、爱才的良好政策环境",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "①②③"
+      },
+      {
+        "id": "B",
+        "text": "②③④"
+      },
+      {
+        "id": "C",
+        "text": "①②④"
+      },
+      {
+        "id": "D",
+        "text": "①③④"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "②③④与以人民为中心、建设文化人才队伍和完善人才机制的要求相符；①把文化强国之“强”的最终体现说成了服务和产品供给能力。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "3 建设文化强国，事关中国式现代化建设全局，事关中华民族复兴大业，事关提升国际竞争力，锚定2035年建成社会主义文化强国的战略目标，必须始终坚持文化建设着眼于人、落脚于人。下列有关说法正确的是：\n①文化强国之“强”最终要体现在为人民提供文化服务和文化产品的能力上\n②坚持以人民为中心，着眼满足人民群众多样化、多层次、多方面的精神文化需求\n③文化创造核心在人，要建设一支规模宏大、结构合理、锐意创新的高水平文化人才队伍\n④尊重人才成长规律，完善符合文化领域特点的人才选拔、培养、使用、激励机制，营造识才、重才、爱才的良好政策环境 A、①②③ B、②③④ C、①②④ D、①③④"
+  },
+  {
+    "id": "national-2026-city-political-q4",
+    "sourceQuestionId": "kaoshiji-1180-q4",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "policy-implementation",
+    "knowledgePointIds": [
+      "political-theory:policy-implementation"
+    ],
+    "originalQuestionNo": 4,
+    "sectionOrder": 1,
+    "stem": "中共中央、国务院印发《加快建设农业强国规划（2024-2035年）》，提出面对新形势新要求，必须把加快建设农业强国作为统领“三农”工作的战略总纲，摆上建设社会主义现代化强国的重要位置，下列与加快建设农业强国有关的说法正确的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "推进生态综合补偿，健全横向生态保护补偿机制，统筹推进生态环境损害赔偿"
+      },
+      {
+        "id": "B",
+        "text": "建立健全长江流域信息共享系统，推进长江流域农业深度节水控水"
+      },
+      {
+        "id": "C",
+        "text": "完善粮食产销奖补制度，中央预算内投资向粮食主销区倾斜"
+      },
+      {
+        "id": "D",
+        "text": "推进农业科技推广体系，从经营性向公益性转变"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "农业强国规划提出推进生态综合补偿、健全横向生态保护补偿机制并统筹生态环境损害赔偿；其余选项混淆了区域或政策表述。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "4 中共中央、国务院印发《加快建设农业强国规划（2024-2035年）》，提出面对新形势新要求，必须把加快建设农业强国作为统领“三农”工作的战略总纲，摆上建设社会主义现代化强国的重要位置，下列与加快建设农业强国有关的说法正确的是： A、推进生态综合补偿，健全横向生态保护补偿机制，统筹推进生态环境损害赔偿 B、建立健全长江流域信息共享系统，推进长江流域农业深度节水控水 C、完善粮食产销奖补制度，中央预算内投资向粮食主销区倾斜 D、推进农业科技推广体系，从经营性向公益性转变"
+  },
+  {
+    "id": "national-2026-city-political-q5",
+    "sourceQuestionId": "kaoshiji-1180-q5",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "important-concepts",
+    "knowledgePointIds": [
+      "political-theory:important-concepts"
+    ],
+    "originalQuestionNo": 5,
+    "sectionOrder": 1,
+    "stem": "全面推进依法治国是一个系统工程，必须坚持法治国家、法治政府、法治社会一体建设。下列相关表述不准确的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "法治社会是构筑法治国家、法治政府的基础"
+      },
+      {
+        "id": "B",
+        "text": "建设法治政府对建设法治社会具有重要引领和带动作用"
+      },
+      {
+        "id": "C",
+        "text": "法治政府、法治社会建设必须服从、服务于法治国家建设"
+      },
+      {
+        "id": "D",
+        "text": "法治国家是依法治国的主体，是法治社会建设的先导和示范"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "法治政府是建设法治国家的主体，也是法治社会建设的先导和示范；选项D把这一关系中的主体误写成法治国家。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "5 全面推进依法治国是一个系统工程，必须坚持法治国家、法治政府、法治社会一体建设。下列相关表述不准确的是： A、法治社会是构筑法治国家、法治政府的基础 B、建设法治政府对建设法治社会具有重要引领和带动作用 C、法治政府、法治社会建设必须服从、服务于法治国家建设 D、法治国家是依法治国的主体，是法治社会建设的先导和示范"
+  },
+  {
+    "id": "national-2026-city-political-q6",
+    "sourceQuestionId": "kaoshiji-1180-q6",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "policy-implementation",
+    "knowledgePointIds": [
+      "political-theory:policy-implementation"
+    ],
+    "originalQuestionNo": 6,
+    "sectionOrder": 1,
+    "stem": "2025年7月，习近平总书记在中央城市工作会议上发表重要讲话，明确做好城市工作的总体要求、重要原则、重点任务，为做好新时代新征程的城市工作提供了根本遵循。关于城市工作，下列说法正确的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "要把握“我国城镇化正从快速增长期转向稳定发展期”的历史方位"
+      },
+      {
+        "id": "B",
+        "text": "城市工作重心应向更加注重建设投入转变"
+      },
+      {
+        "id": "C",
+        "text": "着力通过外延扩张发展组团式的现代化城市群和都市圈"
+      },
+      {
+        "id": "D",
+        "text": "城市政府应从城市事务管理的“掌舵人”转变为“划桨人”"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "中央城市工作会议指出，我国城镇化正从快速增长期转向稳定发展期，城市发展转向存量提质增效为主。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "6 2025年7月，习近平总书记在中央城市工作会议上发表重要讲话，明确做好城市工作的总体要求、重要原则、重点任务，为做好新时代新征程的城市工作提供了根本遵循。关于城市工作，下列说法正确的是： A、要把握“我国城镇化正从快速增长期转向稳定发展期”的历史方位 B、城市工作重心应向更加注重建设投入转变 C、着力通过外延扩张发展组团式的现代化城市群和都市圈 D、城市政府应从城市事务管理的“掌舵人”转变为“划桨人”"
+  },
+  {
+    "id": "national-2026-city-political-q7",
+    "sourceQuestionId": "kaoshiji-1180-q7",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "development-concepts",
+    "knowledgePointIds": [
+      "political-theory:development-concepts"
+    ],
+    "originalQuestionNo": 7,
+    "sectionOrder": 1,
+    "stem": "经济工作千头万绪，必须统筹好有效市场和有为政府的关系、总供给和总需求的关系、培育新动能和更新旧动能的关系、做优增量和盘活存量的关系、提升质量和做大总量的关系。下列相关说法不准确的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "要加快推动作为经济增长和就业收入基本依托的传统产业改造升级"
+      },
+      {
+        "id": "B",
+        "text": "要加快补上内需特别是消费短板，使内需成为拉动经济增长的主动力和稳定锚"
+      },
+      {
+        "id": "C",
+        "text": "要坚持以量取胜、充分发挥规模效应，用好超大规模市场优势和丰富应用场景"
+      },
+      {
+        "id": "D",
+        "text": "要用好各类增量资源和存量资源，通过盘活存量来带动增量"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "经济工作强调提高质量与做大总量并重、推动质的有效提升和量的合理增长；“坚持以量取胜”不符合这一要求。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.ndrc.gov.cn/fzggw/wld/lichunlin/zyhd/202501/t20250116_1395739.html",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "7 经济工作千头万绪，必须统筹好有效市场和有为政府的关系、总供给和总需求的关系、培育新动能和更新旧动能的关系、做优增量和盘活存量的关系、提升质量和做大总量的关系。下列相关说法不准确的是： A、要加快推动作为经济增长和就业收入基本依托的传统产业改造升级 B、要加快补上内需特别是消费短板，使内需成为拉动经济增长的主动力和稳定锚 C、要坚持以量取胜、充分发挥规模效应，用好超大规模市场优势和丰富应用场景 D、要用好各类增量资源和存量资源，通过盘活存量来带动增量"
+  },
+  {
+    "id": "national-2026-city-political-q8",
+    "sourceQuestionId": "kaoshiji-1180-q8",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "policy-goals",
+    "knowledgePointIds": [
+      "political-theory:policy-goals"
+    ],
+    "originalQuestionNo": 8,
+    "sectionOrder": 1,
+    "stem": "2025年7月30日，中共中央政治局召开会议，对扎实做好民生保障工作作了重要部署。下列相关表述不准确的是（    ）。",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "巩固拓展脱贫攻坚成果，确保不发生规模性返贫致贫"
+      },
+      {
+        "id": "B",
+        "text": "夯实“三农”基础，推动粮食和重要农产品价格保持在合理水平"
+      },
+      {
+        "id": "C",
+        "text": "突出就业优先政策导向，促进高校毕业生、退役军人、农民工等重点群体就业"
+      },
+      {
+        "id": "D",
+        "text": "始终把人民群众财产安全放在第一位，加强安全生产监管"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "会议要求始终把人民群众生命安全放在第一位，选项把“生命安全”替换成“财产安全”。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.nppa.gov.cn/xxfb/tt/202507/t20250731_925121.html",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "8 2025年7月30日，中共中央政治局召开会议，对扎实做好民生保障工作作了重要部署。下列相关表述不准确的是（    ）。 A、巩固拓展脱贫攻坚成果，确保不发生规模性返贫致贫 B、夯实“三农”基础，推动粮食和重要农产品价格保持在合理水平 C、突出就业优先政策导向，促进高校毕业生、退役军人、农民工等重点群体就业 D、始终把人民群众财产安全放在第一位，加强安全生产监管"
+  },
+  {
+    "id": "national-2026-city-political-q9",
+    "sourceQuestionId": "kaoshiji-1180-q9",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "policy-goals",
+    "knowledgePointIds": [
+      "political-theory:policy-goals"
+    ],
+    "originalQuestionNo": 9,
+    "sectionOrder": 1,
+    "stem": "做好新时代人口工作，要完善新时代人口发展战略，认识、适应、引领人口发展新常态，以人口高质量发展支撑中国式现代化。关于做好新时代人口工作，下列说法正确的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "要树立“大人口观”，推动人口与财政、货币、就业、产业、投资、消费、生态、区域等政策形成系统集成效应"
+      },
+      {
+        "id": "B",
+        "text": "必须推动人口工作由稳定总量、畅通流动向调节数量、优化结构转变"
+      },
+      {
+        "id": "C",
+        "text": "要更加重视“引导”和“激励”的办法，由社会治理向政府治理转变"
+      },
+      {
+        "id": "D",
+        "text": "坚持人民主体地位，把人口高速增长同人民高品质生活紧密结合起来"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "“大人口观”要求将人口变化纳入经济社会政策统筹，促进人口与财政、货币、就业、产业等政策形成系统效应。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.moe.gov.cn/jyb_xwfb/moe_176/202411/t20241115_1163142.html",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "9 做好新时代人口工作，要完善新时代人口发展战略，认识、适应、引领人口发展新常态，以人口高质量发展支撑中国式现代化。关于做好新时代人口工作，下列说法正确的是： A、要树立“大人口观”，推动人口与财政、货币、就业、产业、投资、消费、生态、区域等政策形成系统集成效应 B、必须推动人口工作由稳定总量、畅通流动向调节数量、优化结构转变 C、要更加重视“引导”和“激励”的办法，由社会治理向政府治理转变 D、坚持人民主体地位，把人口高速增长同人民高品质生活紧密结合起来"
+  },
+  {
+    "id": "national-2026-city-political-q10",
+    "sourceQuestionId": "kaoshiji-1180-q10",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "policy-goals",
+    "knowledgePointIds": [
+      "political-theory:policy-goals"
+    ],
+    "originalQuestionNo": 10,
+    "sectionOrder": 1,
+    "stem": "《中共中央关于制定国民经济和社会发展第十五个五年规划的建议》提出，推进国家安全体系和能力现代化，建设更高水平平安中国。下列有关说法正确的是（    ）。",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "锻造实战实用的国家安全能力，把捍卫国土安全摆在首位"
+      },
+      {
+        "id": "B",
+        "text": "统筹推进房地产、地方政府债务、中小金融机构等风险有序化解"
+      },
+      {
+        "id": "C",
+        "text": "健全国家安全体系，坚持以风险防控为先导、法治保障为落脚点"
+      },
+      {
+        "id": "D",
+        "text": "完善公共安全体系，推动公共安全治理模式由事后处理向事中控制转型"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "规划建议明确提出统筹推进房地产、地方政府债务、中小金融机构等风险有序化解。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://is.mofcom.gov.cn/zcfb/art/2025/art_e91ff36da2c448f6a4f9b67a3d5b0172.html",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "10 《中共中央关于制定国民经济和社会发展第十五个五年规划的建议》提出，推进国家安全体系和能力现代化，建设更高水平平安中国。下列有关说法正确的是（    ）。 A、锻造实战实用的国家安全能力，把捍卫国土安全摆在首位 B、统筹推进房地产、地方政府债务、中小金融机构等风险有序化解 C、健全国家安全体系，坚持以风险防控为先导、法治保障为落脚点 D、完善公共安全体系，推动公共安全治理模式由事后处理向事中控制转型"
+  },
+  {
+    "id": "national-2026-city-political-q11",
+    "sourceQuestionId": "kaoshiji-1180-q11",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "important-concepts",
+    "knowledgePointIds": [
+      "political-theory:important-concepts"
+    ],
+    "originalQuestionNo": 11,
+    "sectionOrder": 1,
+    "stem": "习近平总书记高度重视战略思维，多次强调党员领导干部要加强战略思维，增强战略定力。下列体现战略思维的说法，正确的有几项？\n①粮食多一点少一点是战略问题，粮食安全是战术问题\n②统战工作的本质要求是大团结大联合，解决的是人心和力量问题\n③要心怀“国之大者”，站在全局和战略的高度想问题、办事情，一切工作都要以贯彻落实党中央决策部署为前提\n④自觉把党的对外工作放到党和国家工作大局中来认识，放到中国与世界关系的发展变化中来把握",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "1项"
+      },
+      {
+        "id": "B",
+        "text": "2项"
+      },
+      {
+        "id": "C",
+        "text": "3项"
+      },
+      {
+        "id": "D",
+        "text": "4项"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "②③④体现统战工作凝聚人心力量、从全局落实决策部署和服务国家工作大局；①将粮食安全与经济工作的重要性倒置。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.sara.gov.cn/static/content/ywdt/qtyw/2025-01-08/1326558264922505216.html",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "11 习近平总书记高度重视战略思维，多次强调党员领导干部要加强战略思维，增强战略定力。下列体现战略思维的说法，正确的有几项？\n①粮食多一点少一点是战略问题，粮食安全是战术问题\n②统战工作的本质要求是大团结大联合，解决的是人心和力量问题\n③要心怀“国之大者”，站在全局和战略的高度想问题、办事情，一切工作都要以贯彻落实党中央决策部署为前提\n④自觉把党的对外工作放到党和国家工作大局中来认识，放到中国与世界关系的发展变化中来把握 A、1项 B、2项 C、3项 D、4项"
+  },
+  {
+    "id": "national-2026-city-political-q12",
+    "sourceQuestionId": "kaoshiji-1180-q12",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "policy-measures",
+    "knowledgePointIds": [
+      "political-theory:policy-measures"
+    ],
+    "originalQuestionNo": 12,
+    "sectionOrder": 1,
+    "stem": "习近平总书记指出，我们要建成的教育强国，是中国特色社会主义教育强国，应当具有强大的思政引领力、人才竞争力、科技支撑力、民生保障力、社会协同力、国际影响力，为以中国式现代化全面推进强国建设、民族复兴伟业提供有力支撑。关于建设教育强国，下列说法正确的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "要坚持教育均等化原则，把教育公平作为国家基本教育政策"
+      },
+      {
+        "id": "B",
+        "text": "要完善人才培养与经济社会发展需要适配机制，顺应时代发展要求，适度增加学科专业数量"
+      },
+      {
+        "id": "C",
+        "text": "要把引进全球顶尖科学家摆到更加突出位置，着力培育拔尖创新人才，推动实现高水平科技自立自强"
+      },
+      {
+        "id": "D",
+        "text": "从教育大国到教育强国是一个系统性跃升和质变，必须以改革创新为动力"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "教育强国建设是系统性跃升和质变，必须以改革创新为动力；其余选项对教育公平、专业设置或人才工作作了不准确表述。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.moe.gov.cn/jyb_xwfb/xw_zt/moe_357/s7865/s8417/?gd=8",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "12 习近平总书记指出，我们要建成的教育强国，是中国特色社会主义教育强国，应当具有强大的思政引领力、人才竞争力、科技支撑力、民生保障力、社会协同力、国际影响力，为以中国式现代化全面推进强国建设、民族复兴伟业提供有力支撑。关于建设教育强国，下列说法正确的是： A、要坚持教育均等化原则，把教育公平作为国家基本教育政策 B、要完善人才培养与经济社会发展需要适配机制，顺应时代发展要求，适度增加学科专业数量 C、要把引进全球顶尖科学家摆到更加突出位置，着力培育拔尖创新人才，推动实现高水平科技自立自强 D、从教育大国到教育强国是一个系统性跃升和质变，必须以改革创新为动力"
+  },
+  {
+    "id": "national-2026-city-political-q13",
+    "sourceQuestionId": "kaoshiji-1180-q13",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "policy-measures",
+    "knowledgePointIds": [
+      "political-theory:policy-measures"
+    ],
+    "originalQuestionNo": 13,
+    "sectionOrder": 1,
+    "stem": "习近平主席在二十国集团领导人第十九次峰会上指出，要完善全球贸易治理，建设开放型世界经济。下列相关表述正确的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "要适应经济问题政治化的潮流，通过强化绿色低碳要求推行贸易保护政策"
+      },
+      {
+        "id": "B",
+        "text": "要积极构建更具平等性、包容性和建设性的产业链供应链伙伴关系，呼吁各方加强合作"
+      },
+      {
+        "id": "C",
+        "text": "要把安全置于国际经贸议程中心地位，持续推动贸易和投资自由化便利化"
+      },
+      {
+        "id": "D",
+        "text": "要一以贯之保持世界贸易组织规则不变，提高多边贸易体制的权威性、有效性和相关性"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "G20讲话倡议构建更具平等性、包容性和建设性的产业链供应链伙伴关系，并呼吁加强合作。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.mfa.gov.cn/ziliao_674904/zyjh_674906/202412/t20241218_11497672.shtml",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "13 习近平主席在二十国集团领导人第十九次峰会上指出，要完善全球贸易治理，建设开放型世界经济。下列相关表述正确的是： A、要适应经济问题政治化的潮流，通过强化绿色低碳要求推行贸易保护政策 B、要积极构建更具平等性、包容性和建设性的产业链供应链伙伴关系，呼吁各方加强合作 C、要把安全置于国际经贸议程中心地位，持续推动贸易和投资自由化便利化 D、要一以贯之保持世界贸易组织规则不变，提高多边贸易体制的权威性、有效性和相关性"
+  },
+  {
+    "id": "national-2026-city-political-q14",
+    "sourceQuestionId": "kaoshiji-1180-q14",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "innovation-theory",
+    "knowledgePointIds": [
+      "political-theory:innovation-theory"
+    ],
+    "originalQuestionNo": 14,
+    "sectionOrder": 1,
+    "stem": "中国式现代化要靠科技现代化作支撑，实现高质量发展要靠科技创新培育新动能。关于建成科技强国的举措，下列说法正确的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "要坚持有所为有所不为，突出经济发展需求，在重要领域实施科技战略部署"
+      },
+      {
+        "id": "B",
+        "text": "要充分发挥人才在科技资源配置中的决定性作用，调动产学研各环节的积极性"
+      },
+      {
+        "id": "C",
+        "text": "要充分发挥科技领军企业龙头作用，鼓励中小企业和民营企业科技创新，支持企业牵头或参与国家重大科技项目"
+      },
+      {
+        "id": "D",
+        "text": "要降低基础研究组织化程度，强化自由探索，鼓励面向重大科学问题的协同攻关"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "科技强国建设强调发挥科技领军企业作用，鼓励多类企业创新并支持企业牵头或参与国家重大科技项目。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "14 中国式现代化要靠科技现代化作支撑，实现高质量发展要靠科技创新培育新动能。关于建成科技强国的举措，下列说法正确的是： A、要坚持有所为有所不为，突出经济发展需求，在重要领域实施科技战略部署 B、要充分发挥人才在科技资源配置中的决定性作用，调动产学研各环节的积极性 C、要充分发挥科技领军企业龙头作用，鼓励中小企业和民营企业科技创新，支持企业牵头或参与国家重大科技项目 D、要降低基础研究组织化程度，强化自由探索，鼓励面向重大科学问题的协同攻关"
+  },
+  {
+    "id": "national-2026-city-political-q15",
+    "sourceQuestionId": "kaoshiji-1180-q15",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "important-concepts",
+    "knowledgePointIds": [
+      "political-theory:important-concepts"
+    ],
+    "originalQuestionNo": 15,
+    "sectionOrder": 1,
+    "stem": "习近平总书记强调，选人用人要加强党性鉴别，注重考察干部的境界格局和忠诚度廉洁度。下列与党性相关的说法正确的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "树立和践行正确政绩观，起决定性作用的是党性"
+      },
+      {
+        "id": "B",
+        "text": "强党性，就是要自觉用马克思主义思想改造客观世界"
+      },
+      {
+        "id": "C",
+        "text": "党性、党风、党纪是有机整体，党性是根本，党风是保障，党纪是表现"
+      },
+      {
+        "id": "D",
+        "text": "作风问题本质上是党性问题，要把作风建设摆在党性修养的首位"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "树立和践行正确政绩观，起决定性作用的是党性。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "15 习近平总书记强调，选人用人要加强党性鉴别，注重考察干部的境界格局和忠诚度廉洁度。下列与党性相关的说法正确的是： A、树立和践行正确政绩观，起决定性作用的是党性 B、强党性，就是要自觉用马克思主义思想改造客观世界 C、党性、党风、党纪是有机整体，党性是根本，党风是保障，党纪是表现 D、作风问题本质上是党性问题，要把作风建设摆在党性修养的首位"
+  },
+  {
+    "id": "national-2026-city-political-q16",
+    "sourceQuestionId": "kaoshiji-1180-q16",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "theory-practice",
+    "knowledgePointIds": [
+      "political-theory:theory-practice"
+    ],
+    "originalQuestionNo": 16,
+    "sectionOrder": 1,
+    "stem": "坚持问题导向是习近平新时代中国特色社会主义思想的世界观和方法论的重要内容。关于坚持问题导向，下列说法不准确的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "坚持问题导向是马克思主义的鲜明特点"
+      },
+      {
+        "id": "B",
+        "text": "坚持问题导向要抓住人民最关心最直接最现实的利益问题"
+      },
+      {
+        "id": "C",
+        "text": "坚持问题导向体现了矛盾的普遍性和客观性"
+      },
+      {
+        "id": "D",
+        "text": "坚持问题导向本质是变与不变、继承与发展的辩证统一"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "选项D把坚持问题导向的内涵与“变与不变、继承与发展”的其他方法论表述混为一谈；其余说法符合问题导向的要求。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "16 坚持问题导向是习近平新时代中国特色社会主义思想的世界观和方法论的重要内容。关于坚持问题导向，下列说法不准确的是： A、坚持问题导向是马克思主义的鲜明特点 B、坚持问题导向要抓住人民最关心最直接最现实的利益问题 C、坚持问题导向体现了矛盾的普遍性和客观性 D、坚持问题导向本质是变与不变、继承与发展的辩证统一"
+  },
+  {
+    "id": "national-2026-city-political-q17",
+    "sourceQuestionId": "kaoshiji-1180-q17",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "theory-practice",
+    "knowledgePointIds": [
+      "political-theory:theory-practice"
+    ],
+    "originalQuestionNo": 17,
+    "sectionOrder": 1,
+    "stem": "恩格斯深刻指出：“马克思的整个世界观不是教义，而是方法。它提供的不是现成的教条，而是进一步研究的出发点和供这种研究使用的方法。”下列有关马克思主义理论的说法不准确的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "马克思创立了辩证法，成为我们认识世界和改造世界的根本方法"
+      },
+      {
+        "id": "B",
+        "text": "科学社会主义的原则不能丢，但科学社会主义也绝不是一成不变的教条"
+      },
+      {
+        "id": "C",
+        "text": "当代中国的伟大社会变革不是简单套用马克思主义经典作家设想的模板"
+      },
+      {
+        "id": "D",
+        "text": "《共产党宣言》发表至今，人类社会发生了翻天覆地的变化，但马克思主义所阐述的一般原理整个来说仍然是完全正确的"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "马克思批判继承并发展了既有辩证法，形成唯物辩证法，并非从无到有地创立辩证法。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "17 恩格斯深刻指出：“马克思的整个世界观不是教义，而是方法。它提供的不是现成的教条，而是进一步研究的出发点和供这种研究使用的方法。”下列有关马克思主义理论的说法不准确的是： A、马克思创立了辩证法，成为我们认识世界和改造世界的根本方法 B、科学社会主义的原则不能丢，但科学社会主义也绝不是一成不变的教条 C、当代中国的伟大社会变革不是简单套用马克思主义经典作家设想的模板 D、《共产党宣言》发表至今，人类社会发生了翻天覆地的变化，但马克思主义所阐述的一般原理整个来说仍然是完全正确的"
+  },
+  {
+    "id": "national-2026-city-political-q18",
+    "sourceQuestionId": "kaoshiji-1180-q18",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "theory-practice",
+    "knowledgePointIds": [
+      "political-theory:theory-practice"
+    ],
+    "originalQuestionNo": 18,
+    "sectionOrder": 1,
+    "stem": "以实践为基础，从整体上把握人与世界的关系，是马克思主义世界观的重要内容。关于马克思主义实践观，下列说法正确的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "正确发挥主观能动性是实践的根本途径"
+      },
+      {
+        "id": "B",
+        "text": "实践的过程就是对于结果的检验和评价"
+      },
+      {
+        "id": "C",
+        "text": "实践是人类生存和发展最基本的活动"
+      },
+      {
+        "id": "D",
+        "text": "实践是一种无目的的适应环境的本能活动"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "实践是人类生存和发展的最基本活动；其余选项片面否定实践的目的性或物质性。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "18 以实践为基础，从整体上把握人与世界的关系，是马克思主义世界观的重要内容。关于马克思主义实践观，下列说法正确的是： A、正确发挥主观能动性是实践的根本途径 B、实践的过程就是对于结果的检验和评价 C、实践是人类生存和发展最基本的活动 D、实践是一种无目的的适应环境的本能活动"
+  },
+  {
+    "id": "national-2026-city-political-q19",
+    "sourceQuestionId": "kaoshiji-1180-q19",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "policy-implementation",
+    "knowledgePointIds": [
+      "political-theory:policy-implementation"
+    ],
+    "originalQuestionNo": 19,
+    "sectionOrder": 1,
+    "stem": "习近平总书记在对各省区市进行深入考察调研的过程中，结合各地实际情况，对推进高质量发展作出一系列重要部署。下列对应关系正确的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "江苏——要建设国家资源型经济转型综合配套改革试验区，重点抓好能源转型、产业升级和适度多元发展"
+      },
+      {
+        "id": "B",
+        "text": "山东——要发挥海洋资源丰富的得天独厚优势，经略海洋、向海图强，打造世界级海洋港口群，打造现代海洋经济发展高地"
+      },
+      {
+        "id": "C",
+        "text": "云南——要把握好挑大梁的着力点，在推动科技创新和产业创新融合上打头阵"
+      },
+      {
+        "id": "D",
+        "text": "贵州——聚焦实现贸易、投资、跨境资金流动、人员进出、运输来往自由便利和数据安全有序流动"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "山东部署强调发挥海洋资源优势，经略海洋、向海图强，建设世界级海洋港口群和现代海洋经济发展高地。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "19 习近平总书记在对各省区市进行深入考察调研的过程中，结合各地实际情况，对推进高质量发展作出一系列重要部署。下列对应关系正确的是： A、江苏——要建设国家资源型经济转型综合配套改革试验区，重点抓好能源转型、产业升级和适度多元发展 B、山东——要发挥海洋资源丰富的得天独厚优势，经略海洋、向海图强，打造世界级海洋港口群，打造现代海洋经济发展高地 C、云南——要把握好挑大梁的着力点，在推动科技创新和产业创新融合上打头阵 D、贵州——聚焦实现贸易、投资、跨境资金流动、人员进出、运输来往自由便利和数据安全有序流动"
+  },
+  {
+    "id": "national-2026-city-political-q20",
+    "sourceQuestionId": "kaoshiji-1180-q20",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "meeting-documents",
+    "knowledgePointIds": [
+      "political-theory:meeting-documents"
+    ],
+    "originalQuestionNo": 20,
+    "sectionOrder": 1,
+    "stem": "2025年是中国人民抗日战争暨世界反法西斯战争胜利80周年。中国人民对战争带来的苦难有着刻骨铭心的记忆，对和平有着孜孜不倦的追求。关于中国人民抗日战争，下列表述不准确的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "中国人民抗日战争的伟大胜利，是以爱国主义为核心的民族精神的伟大胜利"
+      },
+      {
+        "id": "B",
+        "text": "中国人民抗日战争的伟大胜利，第一次确立了中国在世界上的大国地位，使中国人民赢得了世界爱好和平人民的尊敬"
+      },
+      {
+        "id": "C",
+        "text": "中国人民抗日战争的伟大胜利，是近代以来中国抗击外敌入侵的第一次完全胜利"
+      },
+      {
+        "id": "D",
+        "text": "中国人民抗日战争的伟大胜利，为中华民族由近代以来陷入深重危机走向伟大复兴确立了历史转折点"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "抗战胜利重新确立了中国的大国地位，并非“第一次确立”；故该表述不准确。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "20 2025年是中国人民抗日战争暨世界反法西斯战争胜利80周年。中国人民对战争带来的苦难有着刻骨铭心的记忆，对和平有着孜孜不倦的追求。关于中国人民抗日战争，下列表述不准确的是： A、中国人民抗日战争的伟大胜利，是以爱国主义为核心的民族精神的伟大胜利 B、中国人民抗日战争的伟大胜利，第一次确立了中国在世界上的大国地位，使中国人民赢得了世界爱好和平人民的尊敬 C、中国人民抗日战争的伟大胜利，是近代以来中国抗击外敌入侵的第一次完全胜利 D、中国人民抗日战争的伟大胜利，为中华民族由近代以来陷入深重危机走向伟大复兴确立了历史转折点"
+  },
+  {
+    "id": "national-2026-city-general-knowledge-q21",
+    "sourceQuestionId": "kaoshiji-1180-q21",
+    "moduleId": "general-knowledge",
+    "subjectId": "law",
+    "topicId": "law:fundamentals",
+    "knowledgePointIds": [
+      "law:legal-sources"
+    ],
+    "originalQuestionNo": 21,
+    "sectionOrder": 2,
+    "stem": "下列情形不符合《中华人民共和国监察法》及其实施条例规定的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "再派出的监察专员王某在开展监察工作过程中，受派出他的监察机构领导"
+      },
+      {
+        "id": "B",
+        "text": "公务员张某在怀孕期间因涉嫌严重职务违法被监察机关调查，经监察机关依法审批，对其采取责令候查措施"
+      },
+      {
+        "id": "C",
+        "text": "办理监察事项的监察人员黄某系监察对象刘某的丈夫，黄某应自行回避"
+      },
+      {
+        "id": "D",
+        "text": "监察人员李某涉嫌职务犯罪，监察机关决定对其采取15日禁闭措施"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "《监察法》规定，对涉嫌严重职务违法或职务犯罪的监察人员采取禁闭措施，期限不得超过七日；十五日超出法定上限。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://zygjjg.12388.gov.cn/html/law/8.html",
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "21 下列情形不符合《中华人民共和国监察法》及其实施条例规定的是： A、再派出的监察专员王某在开展监察工作过程中，受派出他的监察机构领导 B、公务员张某在怀孕期间因涉嫌严重职务违法被监察机关调查，经监察机关依法审批，对其采取责令候查措施 C、办理监察事项的监察人员黄某系监察对象刘某的丈夫，黄某应自行回避 D、监察人员李某涉嫌职务犯罪，监察机关决定对其采取15日禁闭措施"
+  },
+  {
+    "id": "national-2026-city-general-knowledge-q22",
+    "sourceQuestionId": "kaoshiji-1180-q22",
+    "moduleId": "general-knowledge",
+    "subjectId": "law",
+    "topicId": "law:fundamentals",
+    "knowledgePointIds": [
+      "law:legal-sources"
+    ],
+    "originalQuestionNo": 22,
+    "sectionOrder": 2,
+    "stem": "关于《中华人民共和国民营经济促进法》，下列说法错误的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "是我国第一部专门关于民营经济发展的基础性法律"
+      },
+      {
+        "id": "B",
+        "text": "规定司法行政部门建立涉企行政执法诉求沟通机制"
+      },
+      {
+        "id": "C",
+        "text": "规定地方各级人民政府与民营经济组织订立的合同不得变更"
+      },
+      {
+        "id": "D",
+        "text": "规定向民营经济组织开放国家重大科研基础设施"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "法律允许因国家利益或社会公共利益需要，依法定权限和程序变更合同约定，并对民营经济组织损失予以补偿；“不得变更”表述过于绝对。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2026/art_6bcebfe258864b21a44e1f7170c594a2.html",
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "22 关于《中华人民共和国民营经济促进法》，下列说法错误的是： A、是我国第一部专门关于民营经济发展的基础性法律 B、规定司法行政部门建立涉企行政执法诉求沟通机制 C、规定地方各级人民政府与民营经济组织订立的合同不得变更 D、规定向民营经济组织开放国家重大科研基础设施"
+  },
+  {
+    "id": "national-2026-city-general-knowledge-q23",
+    "sourceQuestionId": "kaoshiji-1180-q23",
+    "moduleId": "general-knowledge",
+    "subjectId": "law",
+    "topicId": "law:fundamentals",
+    "knowledgePointIds": [
+      "law:legal-sources"
+    ],
+    "originalQuestionNo": 23,
+    "sectionOrder": 2,
+    "stem": "根据《政务数据共享条例》，下列说法错误的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "政务数据需求部门提交的申请材料不全的，政务数据提供部门不得直接予以拒绝"
+      },
+      {
+        "id": "B",
+        "text": "政府部门通过共享获得政务数据后不得擅自将获得的政务数据提供给第三方"
+      },
+      {
+        "id": "C",
+        "text": "可以提供给所有政府部门共享使用的政务数据属于无条件共享类政务数据"
+      },
+      {
+        "id": "D",
+        "text": "政府部门应当新建政务数据共享交换系统开展跨层级政务数据共享相关工作"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "《政务数据共享条例》强调统筹推进数据共享，并未要求政府部门新建交换系统；共享数据也不得擅自提供给第三方。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.mee.gov.cn/zcwj/gwywj/202506/t20250604_1120657.shtml",
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "23 根据《政务数据共享条例》，下列说法错误的是： A、政务数据需求部门提交的申请材料不全的，政务数据提供部门不得直接予以拒绝 B、政府部门通过共享获得政务数据后不得擅自将获得的政务数据提供给第三方 C、可以提供给所有政府部门共享使用的政务数据属于无条件共享类政务数据 D、政府部门应当新建政务数据共享交换系统开展跨层级政务数据共享相关工作"
+  },
+  {
+    "id": "national-2026-city-general-knowledge-q24",
+    "sourceQuestionId": "kaoshiji-1180-q24",
+    "moduleId": "general-knowledge",
+    "subjectId": "economy",
+    "topicId": "economy:finance",
+    "knowledgePointIds": [
+      "economy:fiscal-policy"
+    ],
+    "originalQuestionNo": 24,
+    "sectionOrder": 2,
+    "stem": "下列经济目标与政策工具匹配错误的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "扩大基础设施投资规模——提高专项债发行额度"
+      },
+      {
+        "id": "B",
+        "text": "降低市场主体经营成本——延续小微企业增值税减免"
+      },
+      {
+        "id": "C",
+        "text": "拓宽房企的融资渠道——增加保障性住房再贷款额度"
+      },
+      {
+        "id": "D",
+        "text": "缓解基层“三保”支出压力——加大中央对地方转移支付"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "保障性住房再贷款支持收购存量商品房、增加保障性住房供给，不等同于直接拓宽房地产开发企业的融资渠道。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "24 下列经济目标与政策工具匹配错误的是： A、扩大基础设施投资规模——提高专项债发行额度 B、降低市场主体经营成本——延续小微企业增值税减免 C、拓宽房企的融资渠道——增加保障性住房再贷款额度 D、缓解基层“三保”支出压力——加大中央对地方转移支付"
+  },
+  {
+    "id": "national-2026-city-general-knowledge-q25",
+    "sourceQuestionId": "kaoshiji-1180-q25",
+    "moduleId": "general-knowledge",
+    "subjectId": "economy",
+    "topicId": "economy:development",
+    "knowledgePointIds": [
+      "economy:rural-urban-development"
+    ],
+    "originalQuestionNo": 25,
+    "sectionOrder": 2,
+    "stem": "2025年3月，中共中央办公厅、国务院办公厅印发《逐步把永久基本农田建成高标准农田实施方案》，下列有关说法正确的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "西北区要重点加强水平梯田改造建设"
+      },
+      {
+        "id": "B",
+        "text": "25度以上坡耕地、沿海内陆滩涂是开展建设的重点区域"
+      },
+      {
+        "id": "C",
+        "text": "高标准农田建设标准中的“两通”是指通水通路"
+      },
+      {
+        "id": "D",
+        "text": "黄淮海区应该把改善田块细碎化问题作为一个工作重点"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "高标准农田建设的“两通”指通水、通路。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://app.www.gov.cn/govdata/gov/202504/07/526167/article.html",
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "25 2025年3月，中共中央办公厅、国务院办公厅印发《逐步把永久基本农田建成高标准农田实施方案》，下列有关说法正确的是： A、西北区要重点加强水平梯田改造建设 B、25度以上坡耕地、沿海内陆滩涂是开展建设的重点区域 C、高标准农田建设标准中的“两通”是指通水通路 D、黄淮海区应该把改善田块细碎化问题作为一个工作重点"
+  },
+  {
+    "id": "national-2026-city-general-knowledge-q26",
+    "sourceQuestionId": "kaoshiji-1180-q26",
+    "moduleId": "general-knowledge",
+    "subjectId": "technology",
+    "topicId": "technology:frontier",
+    "knowledgePointIds": [
+      "technology:materials"
+    ],
+    "originalQuestionNo": 26,
+    "sectionOrder": 2,
+    "stem": "2025年自然资源部发布《新发现矿种公告》，高纯石英矿正式成为我国第174号矿种。下列与之相关的说法错误的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "高纯石英矿在分类上属于金属矿"
+      },
+      {
+        "id": "B",
+        "text": "天然水晶是石英的结晶体"
+      },
+      {
+        "id": "C",
+        "text": "高纯石英可用于芯片制造中的光刻环节"
+      },
+      {
+        "id": "D",
+        "text": "石英砂具有耐高温的特性"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "高纯石英矿主要成分为二氧化硅，属于非金属矿产，不属于金属矿。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "26 2025年自然资源部发布《新发现矿种公告》，高纯石英矿正式成为我国第174号矿种。下列与之相关的说法错误的是： A、高纯石英矿在分类上属于金属矿 B、天然水晶是石英的结晶体 C、高纯石英可用于芯片制造中的光刻环节 D、石英砂具有耐高温的特性"
+  },
+  {
+    "id": "national-2026-city-general-knowledge-q27",
+    "sourceQuestionId": "kaoshiji-1180-q27",
+    "moduleId": "general-knowledge",
+    "subjectId": "geography",
+    "topicId": "geography:national",
+    "knowledgePointIds": [
+      "geography:natural-resources"
+    ],
+    "originalQuestionNo": 27,
+    "sectionOrder": 2,
+    "stem": "下列与海洋经济有关的说法错误的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "海水中氢离子和氢氧根离子浓度高，利用海水制氢效率高"
+      },
+      {
+        "id": "B",
+        "text": "现代深远海养殖平台一般设置在有较大浪流的开放性水域"
+      },
+      {
+        "id": "C",
+        "text": "潮汐发电的水轮机结构要适应海水落差小、流量大的特点"
+      },
+      {
+        "id": "D",
+        "text": "液化天然气运输船的液舱通常采用超低温环境储存天然气"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "海水中可直接用于电解的氢、氢氧根离子浓度并不高，复杂离子还会影响电解过程，不能据此说制氢效率高。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "27 下列与海洋经济有关的说法错误的是： A、海水中氢离子和氢氧根离子浓度高，利用海水制氢效率高 B、现代深远海养殖平台一般设置在有较大浪流的开放性水域 C、潮汐发电的水轮机结构要适应海水落差小、流量大的特点 D、液化天然气运输船的液舱通常采用超低温环境储存天然气"
+  },
+  {
+    "id": "national-2026-city-general-knowledge-q28",
+    "sourceQuestionId": "kaoshiji-1180-q28",
+    "moduleId": "general-knowledge",
+    "subjectId": "geography",
+    "topicId": "geography:natural",
+    "knowledgePointIds": [
+      "geography:weather"
+    ],
+    "originalQuestionNo": 28,
+    "sectionOrder": 2,
+    "stem": "关于诗句中涉及的气象现象，下列说法错误的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "“白雪却嫌春色晚，故穿庭树作飞花”与春季较强冷空气活动有关"
+      },
+      {
+        "id": "B",
+        "text": "“雷车动地电火明，急雨遂作盆盎倾”多与积雨云中的电位差有关"
+      },
+      {
+        "id": "C",
+        "text": "“檐花穿雾凇，窗纸战风棱”的景观形成过程中包含凝华现象"
+      },
+      {
+        "id": "D",
+        "text": "“鸡声茅店月，人迹板桥霜”的“霜”包含在降水统计范围内"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "霜是在近地面物体表面形成的冰晶，不是从天空降落的降水，不计入降水统计。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "28 关于诗句中涉及的气象现象，下列说法错误的是： A、“白雪却嫌春色晚，故穿庭树作飞花”与春季较强冷空气活动有关 B、“雷车动地电火明，急雨遂作盆盎倾”多与积雨云中的电位差有关 C、“檐花穿雾凇，窗纸战风棱”的景观形成过程中包含凝华现象 D、“鸡声茅店月，人迹板桥霜”的“霜”包含在降水统计范围内"
+  },
+  {
+    "id": "national-2026-city-general-knowledge-q29",
+    "sourceQuestionId": "kaoshiji-1180-q29",
+    "moduleId": "general-knowledge",
+    "subjectId": "geography",
+    "topicId": "geography:china",
+    "knowledgePointIds": [
+      "geography:water-resources"
+    ],
+    "originalQuestionNo": 29,
+    "sectionOrder": 2,
+    "stem": "下列关于河流入海口的描述与河流对应错误的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "浑浊的河水奔流而至，汇入清澈的渤海，形成一条清晰的分界线——黄河"
+      },
+      {
+        "id": "B",
+        "text": "“三龙吐珠，八门入海”，生动地描绘出了它的奇特形态——淮河"
+      },
+      {
+        "id": "C",
+        "text": "在入海口的潮间带上，会看到一片耀眼的红色，又被称为“红海滩”——辽河"
+      },
+      {
+        "id": "D",
+        "text": "在其与东海海潮的相互激荡下，造就了我国第三大岛崇明岛——长江"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "“三龙吐珠、八门入海”描述珠江三角洲水系，不是淮河入海口形态。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "29 下列关于河流入海口的描述与河流对应错误的是： A、浑浊的河水奔流而至，汇入清澈的渤海，形成一条清晰的分界线——黄河 B、“三龙吐珠，八门入海”，生动地描绘出了它的奇特形态——淮河 C、在入海口的潮间带上，会看到一片耀眼的红色，又被称为“红海滩”——辽河 D、在其与东海海潮的相互激荡下，造就了我国第三大岛崇明岛——长江"
+  },
+  {
+    "id": "national-2026-city-general-knowledge-q30",
+    "sourceQuestionId": "kaoshiji-1180-q30",
+    "moduleId": "general-knowledge",
+    "subjectId": "technology",
+    "topicId": "technology:physics",
+    "knowledgePointIds": [
+      "technology:optics"
+    ],
+    "originalQuestionNo": 30,
+    "sectionOrder": 2,
+    "stem": "下列与自然界中的颜色有关的说法错误的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "“橙色月亮”通常发生在大气层中水汽或颗粒物质较多时"
+      },
+      {
+        "id": "B",
+        "text": "火烈鸟羽毛呈朱红色与摄入食物中的虾青素累积有关"
+      },
+      {
+        "id": "C",
+        "text": "蓝闪蝶翅膀呈蓝色是由于其表面鳞片具有特殊的微结构"
+      },
+      {
+        "id": "D",
+        "text": "蓝莓呈现靛蓝色是因为表面蜡质层中含高浓度花青素"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "蓝莓表面的蓝色果粉主要与蜡质层微结构产生的光学效应有关，不是蜡质层中含高浓度花青素所致。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026-%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98-%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B-%EF%BC%88%E5%89%AF%E7%9C%81%EF%BC%89%E7%9C%9F%E9%A2%98%E5%8F%8A%E7%AD%94%E6%A1%88%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89%281%29_a3ce53508e279d5ba2bac7aaf8f61f67eefd3b0e.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "30 下列与自然界中的颜色有关的说法错误的是： A、“橙色月亮”通常发生在大气层中水汽或颗粒物质较多时 B、火烈鸟羽毛呈朱红色与摄入食物中的虾青素累积有关 C、蓝闪蝶翅膀呈蓝色是由于其表面鳞片具有特殊的微结构 D、蓝莓呈现靛蓝色是因为表面蜡质层中含高浓度花青素"
+  },
+  {
+    "id": "national-2026-city-general-knowledge-q31",
+    "sourceQuestionId": "kaoshiji-1180-q31",
+    "moduleId": "general-knowledge",
+    "subjectId": "geography",
+    "topicId": "geography:world",
+    "knowledgePointIds": [
+      "geography:routes"
+    ],
+    "originalQuestionNo": 31,
+    "sectionOrder": 2,
+    "stem": "某物流公司要优化长三角到乌鲁木齐的易腐货物运输路线，下列方案最可行的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "夏季采用陇海——兰新铁路运输利用沿线低温天气自然保鲜"
+      },
+      {
+        "id": "B",
+        "text": "冬季选择长江——京杭大运河——黄河水运组合避开陆路交通拥堵"
+      },
+      {
+        "id": "C",
+        "text": "春秋季采用铁路冷藏集装箱运输平衡运输成本与时效性"
+      },
+      {
+        "id": "D",
+        "text": "全年优先使用连霍高速公路运输以追求最低的运输成本"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "冷藏集装箱能控制易腐货物运输温度；铁路在长距离运输中兼顾成本和时效，较符合题设要求。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "31 某物流公司要优化长三角到乌鲁木齐的易腐货物运输路线，下列方案最可行的是： A、夏季采用陇海——兰新铁路运输利用沿线低温天气自然保鲜 B、冬季选择长江——京杭大运河——黄河水运组合避开陆路交通拥堵 C、春秋季采用铁路冷藏集装箱运输平衡运输成本与时效性 D、全年优先使用连霍高速公路运输以追求最低的运输成本"
+  },
+  {
+    "id": "national-2026-city-general-knowledge-q32",
+    "sourceQuestionId": "kaoshiji-1180-q32",
+    "moduleId": "general-knowledge",
+    "subjectId": "technology",
+    "topicId": "technology:frontier",
+    "knowledgePointIds": [
+      "technology:science-literacy"
+    ],
+    "originalQuestionNo": 32,
+    "sectionOrder": 2,
+    "stem": "某款创意时钟要用不同的符号替代表盘上的数字，下列设计不合适的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "用45度角的正弦“sin45°”替代“1”"
+      },
+      {
+        "id": "B",
+        "text": "用3的阶乘“3!”替代“6”"
+      },
+      {
+        "id": "C",
+        "text": "用重力加速度“g”替代“10”"
+      },
+      {
+        "id": "D",
+        "text": "用二进制数“(1100)₂”替代“12”"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "sin45°约为0.707，并不等于表盘上的1；3!等于6，g常近似取10，二进制(1100)₂等于12。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [
+      "https://cos.kaoshiji.cn/uploads/allimg/20260602/1-2606022013004F.png",
+      "https://cos.kaoshiji.cn/uploads/allimg/20260602/1-260602201301629.png",
+      "https://cos.kaoshiji.cn/uploads/allimg/20260602/1-260602201302317.png"
+    ],
+    "raw_source_text_block": "32 某款创意时钟要用不同的符号替代表盘上的数字，下列设计不合适的是： A、用45度角的正弦“sin45°”替代“1” B、用3的阶乘“3!”替代“6” C、用重力加速度“g”替代“10” D、用二进制数“(1100)₂”替代“12”"
+  },
+  {
+    "id": "national-2026-city-general-knowledge-q33",
+    "sourceQuestionId": "kaoshiji-1180-q33",
+    "moduleId": "general-knowledge",
+    "subjectId": "technology",
+    "topicId": "technology:chemistry",
+    "knowledgePointIds": [
+      "technology:chemistry-in-context"
+    ],
+    "originalQuestionNo": 33,
+    "sectionOrder": 2,
+    "stem": "关于化学平衡在人类活动中的应用，下列说法错误的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "处理硬水时，可通过加入适量石灰乳作为软化剂调节水的硬度"
+      },
+      {
+        "id": "B",
+        "text": "血液中CO₂浓度增加时，血液中水电离出的氢氧根离子会增多"
+      },
+      {
+        "id": "C",
+        "text": "适当降低水温增大CO₂的溶解度可维持冷却水管道中的盐类平衡"
+      },
+      {
+        "id": "D",
+        "text": "向含有铜离子的废水中加入适量的碱可达到净化水质的环保目的"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "血液中CO₂增加会形成更多碳酸并提高H+浓度，水的电离受抑制，水电离产生的OH−不会增多。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [
+      "https://cos.kaoshiji.cn/uploads/allimg/20260602/1-2606022013025Q.png"
+    ],
+    "raw_source_text_block": "33 关于化学平衡在人类活动中的应用，下列说法错误的是： A、处理硬水时，可通过加入适量石灰乳作为软化剂调节水的硬度 B、血液中CO₂浓度增加时，血液中水电离出的氢氧根离子会增多 C、适当降低水温增大CO₂的溶解度可维持冷却水管道中的盐类平衡 D、向含有铜离子的废水中加入适量的碱可达到净化水质的环保目的"
+  },
+  {
+    "id": "national-2026-city-general-knowledge-q34",
+    "sourceQuestionId": "kaoshiji-1180-q34",
+    "moduleId": "general-knowledge",
+    "subjectId": "technology",
+    "topicId": "technology:biology",
+    "knowledgePointIds": [
+      "technology:human-body"
+    ],
+    "originalQuestionNo": 34,
+    "sectionOrder": 2,
+    "stem": "关于医学治疗手段及其原理，下列说法正确的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "体外冲击波碎石术利用次声波可以将肾结石击碎成小块，使其随尿液排出体外"
+      },
+      {
+        "id": "B",
+        "text": "免疫疗法治疗癌症，能够通过激活自身免疫系统，利用T细胞直接吞噬癌细胞"
+      },
+      {
+        "id": "C",
+        "text": "血液透析依据半透膜原理，将血液中的有害物质以及多余的水分清除出体外"
+      },
+      {
+        "id": "D",
+        "text": "激光治疗近视，利用激光对视网膜进行切割，改变视网膜的曲率，从而矫正视力"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "血液透析利用半透膜的选择透过性清除小分子代谢废物，并通过超滤去除多余水分。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "34 关于医学治疗手段及其原理，下列说法正确的是： A、体外冲击波碎石术利用次声波可以将肾结石击碎成小块，使其随尿液排出体外 B、免疫疗法治疗癌症，能够通过激活自身免疫系统，利用T细胞直接吞噬癌细胞 C、血液透析依据半透膜原理，将血液中的有害物质以及多余的水分清除出体外 D、激光治疗近视，利用激光对视网膜进行切割，改变视网膜的曲率，从而矫正视力"
+  },
+  {
+    "id": "national-2026-city-general-knowledge-q35",
+    "sourceQuestionId": "kaoshiji-1180-q35",
+    "moduleId": "general-knowledge",
+    "subjectId": "history",
+    "topicId": "history:themes",
+    "knowledgePointIds": [
+      "history:science-history"
+    ],
+    "originalQuestionNo": 35,
+    "sectionOrder": 2,
+    "stem": "下列技术与其在考古领域的应用，对应错误的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "光谱分析——揭示青铜器金属元素的含量和组成"
+      },
+      {
+        "id": "B",
+        "text": "中子成像技术——推断殷商青铜器铸造工艺"
+      },
+      {
+        "id": "C",
+        "text": "碳14测年技术——精确判定青铜器的铸造年代"
+      },
+      {
+        "id": "D",
+        "text": "3D数字建模结合X射线断层扫描——分析青铜器内部结构"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "碳14测年用于含碳有机材料，不能直接精确测定青铜器这一无机材料的铸造年代。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "35 下列技术与其在考古领域的应用，对应错误的是： A、光谱分析——揭示青铜器金属元素的含量和组成 B、中子成像技术——推断殷商青铜器铸造工艺 C、碳14测年技术——精确判定青铜器的铸造年代 D、3D数字建模结合X射线断层扫描——分析青铜器内部结构"
   }
 ];

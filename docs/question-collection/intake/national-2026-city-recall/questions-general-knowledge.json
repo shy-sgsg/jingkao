@@ -1,0 +1,728 @@
+[
+  {
+    "id": "national-2026-city-general-knowledge-q21",
+    "sourceQuestionId": "kaoshiji-1180-q21",
+    "moduleId": "general-knowledge",
+    "subjectId": "law",
+    "topicId": "law:fundamentals",
+    "knowledgePointIds": [
+      "law:legal-sources"
+    ],
+    "originalQuestionNo": 21,
+    "sectionOrder": 2,
+    "stem": "下列情形不符合《中华人民共和国监察法》及其实施条例规定的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "再派出的监察专员王某在开展监察工作过程中，受派出他的监察机构领导"
+      },
+      {
+        "id": "B",
+        "text": "公务员张某在怀孕期间因涉嫌严重职务违法被监察机关调查，经监察机关依法审批，对其采取责令候查措施"
+      },
+      {
+        "id": "C",
+        "text": "办理监察事项的监察人员黄某系监察对象刘某的丈夫，黄某应自行回避"
+      },
+      {
+        "id": "D",
+        "text": "监察人员李某涉嫌职务犯罪，监察机关决定对其采取15日禁闭措施"
+      }
+    ],
+    "explanationImageUrls": [],
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "21 下列情形不符合《中华人民共和国监察法》及其实施条例规定的是： A、再派出的监察专员王某在开展监察工作过程中，受派出他的监察机构领导 B、公务员张某在怀孕期间因涉嫌严重职务违法被监察机关调查，经监察机关依法审批，对其采取责令候查措施 C、办理监察事项的监察人员黄某系监察对象刘某的丈夫，黄某应自行回避 D、监察人员李某涉嫌职务犯罪，监察机关决定对其采取15日禁闭措施"
+  },
+  {
+    "id": "national-2026-city-general-knowledge-q22",
+    "sourceQuestionId": "kaoshiji-1180-q22",
+    "moduleId": "general-knowledge",
+    "subjectId": "law",
+    "topicId": "law:fundamentals",
+    "knowledgePointIds": [
+      "law:legal-sources"
+    ],
+    "originalQuestionNo": 22,
+    "sectionOrder": 2,
+    "stem": "关于《中华人民共和国民营经济促进法》，下列说法错误的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "是我国第一部专门关于民营经济发展的基础性法律"
+      },
+      {
+        "id": "B",
+        "text": "规定司法行政部门建立涉企行政执法诉求沟通机制"
+      },
+      {
+        "id": "C",
+        "text": "规定地方各级人民政府与民营经济组织订立的合同不得变更"
+      },
+      {
+        "id": "D",
+        "text": "规定向民营经济组织开放国家重大科研基础设施"
+      }
+    ],
+    "explanationImageUrls": [],
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "22 关于《中华人民共和国民营经济促进法》，下列说法错误的是： A、是我国第一部专门关于民营经济发展的基础性法律 B、规定司法行政部门建立涉企行政执法诉求沟通机制 C、规定地方各级人民政府与民营经济组织订立的合同不得变更 D、规定向民营经济组织开放国家重大科研基础设施"
+  },
+  {
+    "id": "national-2026-city-general-knowledge-q23",
+    "sourceQuestionId": "kaoshiji-1180-q23",
+    "moduleId": "general-knowledge",
+    "subjectId": "law",
+    "topicId": "law:fundamentals",
+    "knowledgePointIds": [
+      "law:legal-sources"
+    ],
+    "originalQuestionNo": 23,
+    "sectionOrder": 2,
+    "stem": "根据《政务数据共享条例》，下列说法错误的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "政务数据需求部门提交的申请材料不全的，政务数据提供部门不得直接予以拒绝"
+      },
+      {
+        "id": "B",
+        "text": "政府部门通过共享获得政务数据后不得擅自将获得的政务数据提供给第三方"
+      },
+      {
+        "id": "C",
+        "text": "可以提供给所有政府部门共享使用的政务数据属于无条件共享类政务数据"
+      },
+      {
+        "id": "D",
+        "text": "政府部门应当新建政务数据共享交换系统开展跨层级政务数据共享相关工作"
+      }
+    ],
+    "explanationImageUrls": [],
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "23 根据《政务数据共享条例》，下列说法错误的是： A、政务数据需求部门提交的申请材料不全的，政务数据提供部门不得直接予以拒绝 B、政府部门通过共享获得政务数据后不得擅自将获得的政务数据提供给第三方 C、可以提供给所有政府部门共享使用的政务数据属于无条件共享类政务数据 D、政府部门应当新建政务数据共享交换系统开展跨层级政务数据共享相关工作"
+  },
+  {
+    "id": "national-2026-city-general-knowledge-q24",
+    "sourceQuestionId": "kaoshiji-1180-q24",
+    "moduleId": "general-knowledge",
+    "subjectId": "economy",
+    "topicId": "economy:finance",
+    "knowledgePointIds": [
+      "economy:fiscal-policy"
+    ],
+    "originalQuestionNo": 24,
+    "sectionOrder": 2,
+    "stem": "下列经济目标与政策工具匹配错误的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "扩大基础设施投资规模——提高专项债发行额度"
+      },
+      {
+        "id": "B",
+        "text": "降低市场主体经营成本——延续小微企业增值税减免"
+      },
+      {
+        "id": "C",
+        "text": "拓宽房企的融资渠道——增加保障性住房再贷款额度"
+      },
+      {
+        "id": "D",
+        "text": "缓解基层“三保”支出压力——加大中央对地方转移支付"
+      }
+    ],
+    "explanationImageUrls": [],
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "24 下列经济目标与政策工具匹配错误的是： A、扩大基础设施投资规模——提高专项债发行额度 B、降低市场主体经营成本——延续小微企业增值税减免 C、拓宽房企的融资渠道——增加保障性住房再贷款额度 D、缓解基层“三保”支出压力——加大中央对地方转移支付"
+  },
+  {
+    "id": "national-2026-city-general-knowledge-q25",
+    "sourceQuestionId": "kaoshiji-1180-q25",
+    "moduleId": "general-knowledge",
+    "subjectId": "economy",
+    "topicId": "economy:development",
+    "knowledgePointIds": [
+      "economy:rural-urban-development"
+    ],
+    "originalQuestionNo": 25,
+    "sectionOrder": 2,
+    "stem": "2025年3月，中共中央办公厅、国务院办公厅印发《逐步把永久基本农田建成高标准农田实施方案》，下列有关说法正确的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "西北区要重点加强水平梯田改造建设"
+      },
+      {
+        "id": "B",
+        "text": "25度以上坡耕地、沿海内陆滩涂是开展建设的重点区域"
+      },
+      {
+        "id": "C",
+        "text": "高标准农田建设标准中的“两通”是指通水通路"
+      },
+      {
+        "id": "D",
+        "text": "黄淮海区应该把改善田块细碎化问题作为一个工作重点"
+      }
+    ],
+    "explanationImageUrls": [],
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "25 2025年3月，中共中央办公厅、国务院办公厅印发《逐步把永久基本农田建成高标准农田实施方案》，下列有关说法正确的是： A、西北区要重点加强水平梯田改造建设 B、25度以上坡耕地、沿海内陆滩涂是开展建设的重点区域 C、高标准农田建设标准中的“两通”是指通水通路 D、黄淮海区应该把改善田块细碎化问题作为一个工作重点"
+  },
+  {
+    "id": "national-2026-city-general-knowledge-q26",
+    "sourceQuestionId": "kaoshiji-1180-q26",
+    "moduleId": "general-knowledge",
+    "subjectId": "technology",
+    "topicId": "technology:frontier",
+    "knowledgePointIds": [
+      "technology:materials"
+    ],
+    "originalQuestionNo": 26,
+    "sectionOrder": 2,
+    "stem": "2025年自然资源部发布《新发现矿种公告》，高纯石英矿正式成为我国第174号矿种。下列与之相关的说法错误的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "高纯石英矿在分类上属于金属矿"
+      },
+      {
+        "id": "B",
+        "text": "天然水晶是石英的结晶体"
+      },
+      {
+        "id": "C",
+        "text": "高纯石英可用于芯片制造中的光刻环节"
+      },
+      {
+        "id": "D",
+        "text": "石英砂具有耐高温的特性"
+      }
+    ],
+    "explanationImageUrls": [],
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "26 2025年自然资源部发布《新发现矿种公告》，高纯石英矿正式成为我国第174号矿种。下列与之相关的说法错误的是： A、高纯石英矿在分类上属于金属矿 B、天然水晶是石英的结晶体 C、高纯石英可用于芯片制造中的光刻环节 D、石英砂具有耐高温的特性"
+  },
+  {
+    "id": "national-2026-city-general-knowledge-q27",
+    "sourceQuestionId": "kaoshiji-1180-q27",
+    "moduleId": "general-knowledge",
+    "subjectId": "geography",
+    "topicId": "geography:national",
+    "knowledgePointIds": [
+      "geography:natural-resources"
+    ],
+    "originalQuestionNo": 27,
+    "sectionOrder": 2,
+    "stem": "下列与海洋经济有关的说法错误的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "海水中氢离子和氢氧根离子浓度高，利用海水制氢效率高"
+      },
+      {
+        "id": "B",
+        "text": "现代深远海养殖平台一般设置在有较大浪流的开放性水域"
+      },
+      {
+        "id": "C",
+        "text": "潮汐发电的水轮机结构要适应海水落差小、流量大的特点"
+      },
+      {
+        "id": "D",
+        "text": "液化天然气运输船的液舱通常采用超低温环境储存天然气"
+      }
+    ],
+    "explanationImageUrls": [],
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "27 下列与海洋经济有关的说法错误的是： A、海水中氢离子和氢氧根离子浓度高，利用海水制氢效率高 B、现代深远海养殖平台一般设置在有较大浪流的开放性水域 C、潮汐发电的水轮机结构要适应海水落差小、流量大的特点 D、液化天然气运输船的液舱通常采用超低温环境储存天然气"
+  },
+  {
+    "id": "national-2026-city-general-knowledge-q28",
+    "sourceQuestionId": "kaoshiji-1180-q28",
+    "moduleId": "general-knowledge",
+    "subjectId": "geography",
+    "topicId": "geography:natural",
+    "knowledgePointIds": [
+      "geography:weather"
+    ],
+    "originalQuestionNo": 28,
+    "sectionOrder": 2,
+    "stem": "关于诗句中涉及的气象现象，下列说法错误的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "“白雪却嫌春色晚，故穿庭树作飞花”与春季较强冷空气活动有关"
+      },
+      {
+        "id": "B",
+        "text": "“雷车动地电火明，急雨遂作盆盎倾”多与积雨云中的电位差有关"
+      },
+      {
+        "id": "C",
+        "text": "“檐花穿雾凇，窗纸战风棱”的景观形成过程中包含凝华现象"
+      },
+      {
+        "id": "D",
+        "text": "“鸡声茅店月，人迹板桥霜”的“霜”包含在降水统计范围内"
+      }
+    ],
+    "explanationImageUrls": [],
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "28 关于诗句中涉及的气象现象，下列说法错误的是： A、“白雪却嫌春色晚，故穿庭树作飞花”与春季较强冷空气活动有关 B、“雷车动地电火明，急雨遂作盆盎倾”多与积雨云中的电位差有关 C、“檐花穿雾凇，窗纸战风棱”的景观形成过程中包含凝华现象 D、“鸡声茅店月，人迹板桥霜”的“霜”包含在降水统计范围内"
+  },
+  {
+    "id": "national-2026-city-general-knowledge-q29",
+    "sourceQuestionId": "kaoshiji-1180-q29",
+    "moduleId": "general-knowledge",
+    "subjectId": "geography",
+    "topicId": "geography:china",
+    "knowledgePointIds": [
+      "geography:water-resources"
+    ],
+    "originalQuestionNo": 29,
+    "sectionOrder": 2,
+    "stem": "下列关于河流入海口的描述与河流对应错误的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "浑浊的河水奔流而至，汇入清澈的渤海，形成一条清晰的分界线——黄河"
+      },
+      {
+        "id": "B",
+        "text": "“三龙吐珠，八门入海”，生动地描绘出了它的奇特形态——淮河"
+      },
+      {
+        "id": "C",
+        "text": "在入海口的潮间带上，会看到一片耀眼的红色，又被称为“红海滩”——辽河"
+      },
+      {
+        "id": "D",
+        "text": "在其与东海海潮的相互激荡下，造就了我国第三大岛崇明岛——长江"
+      }
+    ],
+    "explanationImageUrls": [],
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "29 下列关于河流入海口的描述与河流对应错误的是： A、浑浊的河水奔流而至，汇入清澈的渤海，形成一条清晰的分界线——黄河 B、“三龙吐珠，八门入海”，生动地描绘出了它的奇特形态——淮河 C、在入海口的潮间带上，会看到一片耀眼的红色，又被称为“红海滩”——辽河 D、在其与东海海潮的相互激荡下，造就了我国第三大岛崇明岛——长江"
+  },
+  {
+    "id": "national-2026-city-general-knowledge-q30",
+    "sourceQuestionId": "kaoshiji-1180-q30",
+    "moduleId": "general-knowledge",
+    "subjectId": "technology",
+    "topicId": "technology:physics",
+    "knowledgePointIds": [
+      "technology:optics"
+    ],
+    "originalQuestionNo": 30,
+    "sectionOrder": 2,
+    "stem": "下列与自然界中的颜色有关的说法错误的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "“橙色月亮”通常发生在大气层中水汽或颗粒物质较多时"
+      },
+      {
+        "id": "B",
+        "text": "火烈鸟羽毛呈朱红色与摄入食物中的虾青素累积有关"
+      },
+      {
+        "id": "C",
+        "text": "蓝闪蝶翅膀呈蓝色是由于其表面鳞片具有特殊的微结构"
+      },
+      {
+        "id": "D",
+        "text": "蓝莓呈现靛蓝色是因为表面蜡质层中含高浓度花青素"
+      }
+    ],
+    "explanationImageUrls": [],
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "30 下列与自然界中的颜色有关的说法错误的是： A、“橙色月亮”通常发生在大气层中水汽或颗粒物质较多时 B、火烈鸟羽毛呈朱红色与摄入食物中的虾青素累积有关 C、蓝闪蝶翅膀呈蓝色是由于其表面鳞片具有特殊的微结构 D、蓝莓呈现靛蓝色是因为表面蜡质层中含高浓度花青素"
+  },
+  {
+    "id": "national-2026-city-general-knowledge-q31",
+    "sourceQuestionId": "kaoshiji-1180-q31",
+    "moduleId": "general-knowledge",
+    "subjectId": "geography",
+    "topicId": "geography:world",
+    "knowledgePointIds": [
+      "geography:routes"
+    ],
+    "originalQuestionNo": 31,
+    "sectionOrder": 2,
+    "stem": "某物流公司要优化长三角到乌鲁木齐的易腐货物运输路线，下列方案最可行的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "夏季采用陇海——兰新铁路运输利用沿线低温天气自然保鲜"
+      },
+      {
+        "id": "B",
+        "text": "冬季选择长江——京杭大运河——黄河水运组合避开陆路交通拥堵"
+      },
+      {
+        "id": "C",
+        "text": "春秋季采用铁路冷藏集装箱运输平衡运输成本与时效性"
+      },
+      {
+        "id": "D",
+        "text": "全年优先使用连霍高速公路运输以追求最低的运输成本"
+      }
+    ],
+    "explanationImageUrls": [],
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "31 某物流公司要优化长三角到乌鲁木齐的易腐货物运输路线，下列方案最可行的是： A、夏季采用陇海——兰新铁路运输利用沿线低温天气自然保鲜 B、冬季选择长江——京杭大运河——黄河水运组合避开陆路交通拥堵 C、春秋季采用铁路冷藏集装箱运输平衡运输成本与时效性 D、全年优先使用连霍高速公路运输以追求最低的运输成本"
+  },
+  {
+    "id": "national-2026-city-general-knowledge-q32",
+    "sourceQuestionId": "kaoshiji-1180-q32",
+    "moduleId": "general-knowledge",
+    "subjectId": "technology",
+    "topicId": "technology:frontier",
+    "knowledgePointIds": [
+      "technology:science-literacy"
+    ],
+    "originalQuestionNo": 32,
+    "sectionOrder": 2,
+    "stem": "某款创意时钟要用不同的符号替代表盘上的数字，下列设计不合适的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "用45度角的正弦“sin45°”替代“1”"
+      },
+      {
+        "id": "B",
+        "text": "用3的阶乘“3!”替代“6”"
+      },
+      {
+        "id": "C",
+        "text": "用重力加速度“g”替代“10”"
+      },
+      {
+        "id": "D",
+        "text": "用二进制数“(1100)₂”替代“12”"
+      }
+    ],
+    "explanationImageUrls": [],
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [
+      "https://cos.kaoshiji.cn/uploads/allimg/20260602/1-2606022013004F.png",
+      "https://cos.kaoshiji.cn/uploads/allimg/20260602/1-260602201301629.png",
+      "https://cos.kaoshiji.cn/uploads/allimg/20260602/1-260602201302317.png"
+    ],
+    "raw_source_text_block": "32 某款创意时钟要用不同的符号替代表盘上的数字，下列设计不合适的是： A、用45度角的正弦“sin45°”替代“1” B、用3的阶乘“3!”替代“6” C、用重力加速度“g”替代“10” D、用二进制数“(1100)₂”替代“12”"
+  },
+  {
+    "id": "national-2026-city-general-knowledge-q33",
+    "sourceQuestionId": "kaoshiji-1180-q33",
+    "moduleId": "general-knowledge",
+    "subjectId": "technology",
+    "topicId": "technology:chemistry",
+    "knowledgePointIds": [
+      "technology:chemistry-in-context"
+    ],
+    "originalQuestionNo": 33,
+    "sectionOrder": 2,
+    "stem": "关于化学平衡在人类活动中的应用，下列说法错误的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "处理硬水时，可通过加入适量石灰乳作为软化剂调节水的硬度"
+      },
+      {
+        "id": "B",
+        "text": "血液中CO₂浓度增加时，血液中水电离出的氢氧根离子会增多"
+      },
+      {
+        "id": "C",
+        "text": "适当降低水温增大CO₂的溶解度可维持冷却水管道中的盐类平衡"
+      },
+      {
+        "id": "D",
+        "text": "向含有铜离子的废水中加入适量的碱可达到净化水质的环保目的"
+      }
+    ],
+    "explanationImageUrls": [],
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [
+      "https://cos.kaoshiji.cn/uploads/allimg/20260602/1-2606022013025Q.png"
+    ],
+    "raw_source_text_block": "33 关于化学平衡在人类活动中的应用，下列说法错误的是： A、处理硬水时，可通过加入适量石灰乳作为软化剂调节水的硬度 B、血液中CO₂浓度增加时，血液中水电离出的氢氧根离子会增多 C、适当降低水温增大CO₂的溶解度可维持冷却水管道中的盐类平衡 D、向含有铜离子的废水中加入适量的碱可达到净化水质的环保目的"
+  },
+  {
+    "id": "national-2026-city-general-knowledge-q34",
+    "sourceQuestionId": "kaoshiji-1180-q34",
+    "moduleId": "general-knowledge",
+    "subjectId": "technology",
+    "topicId": "technology:biology",
+    "knowledgePointIds": [
+      "technology:human-body"
+    ],
+    "originalQuestionNo": 34,
+    "sectionOrder": 2,
+    "stem": "关于医学治疗手段及其原理，下列说法正确的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "体外冲击波碎石术利用次声波可以将肾结石击碎成小块，使其随尿液排出体外"
+      },
+      {
+        "id": "B",
+        "text": "免疫疗法治疗癌症，能够通过激活自身免疫系统，利用T细胞直接吞噬癌细胞"
+      },
+      {
+        "id": "C",
+        "text": "血液透析依据半透膜原理，将血液中的有害物质以及多余的水分清除出体外"
+      },
+      {
+        "id": "D",
+        "text": "激光治疗近视，利用激光对视网膜进行切割，改变视网膜的曲率，从而矫正视力"
+      }
+    ],
+    "explanationImageUrls": [],
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "34 关于医学治疗手段及其原理，下列说法正确的是： A、体外冲击波碎石术利用次声波可以将肾结石击碎成小块，使其随尿液排出体外 B、免疫疗法治疗癌症，能够通过激活自身免疫系统，利用T细胞直接吞噬癌细胞 C、血液透析依据半透膜原理，将血液中的有害物质以及多余的水分清除出体外 D、激光治疗近视，利用激光对视网膜进行切割，改变视网膜的曲率，从而矫正视力"
+  },
+  {
+    "id": "national-2026-city-general-knowledge-q35",
+    "sourceQuestionId": "kaoshiji-1180-q35",
+    "moduleId": "general-knowledge",
+    "subjectId": "history",
+    "topicId": "history:themes",
+    "knowledgePointIds": [
+      "history:science-history"
+    ],
+    "originalQuestionNo": 35,
+    "sectionOrder": 2,
+    "stem": "下列技术与其在考古领域的应用，对应错误的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "光谱分析——揭示青铜器金属元素的含量和组成"
+      },
+      {
+        "id": "B",
+        "text": "中子成像技术——推断殷商青铜器铸造工艺"
+      },
+      {
+        "id": "C",
+        "text": "碳14测年技术——精确判定青铜器的铸造年代"
+      },
+      {
+        "id": "D",
+        "text": "3D数字建模结合X射线断层扫描——分析青铜器内部结构"
+      }
+    ],
+    "explanationImageUrls": [],
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "35 下列技术与其在考古领域的应用，对应错误的是： A、光谱分析——揭示青铜器金属元素的含量和组成 B、中子成像技术——推断殷商青铜器铸造工艺 C、碳14测年技术——精确判定青铜器的铸造年代 D、3D数字建模结合X射线断层扫描——分析青铜器内部结构"
+  }
+]
