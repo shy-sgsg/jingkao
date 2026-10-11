@@ -33,9 +33,13 @@ test('score sample count and bounds are derived from its concrete score rows', a
   assert.equal(summarizePositionCoverage(data).find((row) => row.year === 2026).namedScoreExamples, rows.length);
 
   const fangshan = samples.find((sample) => sample.sourceId === 'cgzj-2026-fangshan-cutoff-sample');
-  assert.equal(fangshan.samplePositions, 8);
+  assert.equal(fangshan.samplePositions, 23);
   assert.equal(fangshan.sampleRecruits, 91);
   assert.deepEqual([fangshan.minimum, fangshan.maximum], [100.75, 136.25]);
+  const fangshanRows = rows.filter((row) => row.sourceId === 'cgzj-2026-fangshan-cutoff-sample');
+  assert.deepEqual(fangshanRows.reduce((counts, row) => ({ ...counts, [row.mappingConfidence]: counts[row.mappingConfidence] + 1 }), {
+    high: 0, ambiguous: 0, unmatched: 0,
+  }), { high: 11, ambiguous: 12, unmatched: 0 });
 
   const daxing = samples.find((sample) => sample.sourceId === 'cgzj-2026-daxing-cutoff-sample');
   assert.equal(daxing.samplePositions, 31);

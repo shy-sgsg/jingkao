@@ -2319,13 +2319,13 @@
     "evidenceType": "partial_interview_score_sample",
     "year": 2026,
     "url": "https://www.cgzj.com/sydw/12622.html",
-    "accessedAt": "2026-10-10",
-    "samplePositions": 8,
+    "accessedAt": "2026-10-12",
+    "samplePositions": 23,
     "sampleRecruits": 91,
     "minimum": 100.75,
     "maximum": 136.25,
     "scope": "房山区岗位最低进面线部分样本",
-    "notes": "页面称房山共91人进入面试，当前可读表格列出8条岗位分数并注明为部分样本；其中4条按同年度、单位、岗位名在候选职位库中唯一匹配，4条因同名岗位无法唯一匹配。样本不代表全区全量，也不是官方笔试合格线。职位候选仍未与官方职位表逐代码核验。"
+    "notes": "页面称房山共91人进入面试，当前可读表格列出23条岗位最低进面分并注明为部分样本；其中11条按同年度、单位、岗位名在候选职位库中唯一匹配，12条因职位名称重复等无法唯一匹配。样本不代表全区全量，也不是官方笔试合格线。职位候选仍未与官方职位表逐代码核验。"
   },
   {
     "sourceId": "cgzj-2026-tongzhou-minimum-summary",
@@ -17848,6 +17848,24 @@
       { "positionCode": "231052301", "scope": "position-level", "applicantsRegistered": 1, "recruitCount": 1 }
     ],
     "notes": "页面逐岗字段为招录/报考人数，未注明逐岗人数统计时点。以上七条按2026年度、单位、职位名和招录数与本地候选唯一对应；法院司法警察岗、财政局综合管理岗及市场监管所综合管理岗均有多个本地代码候选，未强行挂接。网页本身未展示职位代码。"
+  },
+  {
+    "sourceId": "fenbi-2026-fangshan-page-10",
+    "title": "粉笔职位库：2026房山区职位列表第10页",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "fangshan",
+    "geographicScope": "房山区2026职位列表第10页",
+    "url": "https://m.fenbi.com/page/positions/1/438923?page=10&region=165",
+    "accessedAt": "2026-10-12",
+    "reportedPositionCount": 2,
+    "reportedRecruitCount": 2,
+    "positionSnapshots": [
+      { "positionCode": "241052601", "scope": "position-level", "applicantsRegistered": 1, "recruitCount": 1 }
+    ],
+    "notes": "页面显示十渡镇综合行政执法队综合执法岗为1/1，按同年度、单位、职位名和招录数唯一匹配至241052601；另有市场监管局良乡所综合管理岗1/0，但该单位同名候选过多，未分配代码。页面未注明逐岗统计时点；页头的过审人数是区级口径，不作为本条报考人数。"
   },
   {
     "sourceId": "fenbi-2026-tongzhou-page-2",

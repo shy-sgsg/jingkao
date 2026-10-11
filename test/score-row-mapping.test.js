@@ -75,7 +75,7 @@ test('2026 cutoff rows link only to a unique exact year, unit, and title match',
     scoreRows.reduce((counts, row) => ({ ...counts, [row.mappingConfidence]: counts[row.mappingConfidence] + 1 }), {
       high: 0, ambiguous: 0, unmatched: 0,
     }),
-    { high: 302, ambiguous: 47, unmatched: 16 },
+    { high: 309, ambiguous: 55, unmatched: 16 },
   );
 });
 
@@ -281,7 +281,7 @@ test('2026 Yanqing partial interview-cutoff rows preserve unique matches and unr
     scoreRows.reduce((counts, row) => ({ ...counts, [row.mappingConfidence]: counts[row.mappingConfidence] + 1 }), {
       high: 0, ambiguous: 0, unmatched: 0,
     }),
-    { high: 302, ambiguous: 47, unmatched: 16 },
+    { high: 309, ambiguous: 55, unmatched: 16 },
   );
 });
 
@@ -319,6 +319,13 @@ test('2026 Fangshan cutoff sample links only unique exact position rows', () => 
     '2026-cgzj-fangshan-02': ['221049601', 126],
     '2026-cgzj-fangshan-05': ['231051502', 102.5],
     '2026-cgzj-fangshan-08': ['241051901', 100.75],
+    '2026-cgzj-fangshan-10': ['221050202', 133.5],
+    '2026-cgzj-fangshan-12': ['821049501', 130.75],
+    '2026-cgzj-fangshan-14': ['221050003', 129.5],
+    '2026-cgzj-fangshan-18': ['821049401', 127.75],
+    '2026-cgzj-fangshan-19': ['221049801', 127.75],
+    '2026-cgzj-fangshan-21': ['221050102', 127.5],
+    '2026-cgzj-fangshan-23': ['241052101', 126.75],
   };
 
   for (const [id, [code, score]] of Object.entries(expectedCodes)) {
@@ -338,6 +345,10 @@ test('2026 Fangshan cutoff sample links only unique exact position rows', () => 
   for (const id of [
     '2026-cgzj-fangshan-03', '2026-cgzj-fangshan-04',
     '2026-cgzj-fangshan-06', '2026-cgzj-fangshan-07',
+    '2026-cgzj-fangshan-09', '2026-cgzj-fangshan-11',
+    '2026-cgzj-fangshan-13', '2026-cgzj-fangshan-15',
+    '2026-cgzj-fangshan-16', '2026-cgzj-fangshan-17',
+    '2026-cgzj-fangshan-20', '2026-cgzj-fangshan-22',
   ]) {
     const row = scoreRows.find((item) => item.id === id);
     const matches = positions.filter((position) => position.year === row.year

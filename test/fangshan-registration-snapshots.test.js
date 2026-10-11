@@ -43,6 +43,7 @@ const expected = new Map([
   ['241052902', [2, 10, 8]],
   ['241053001', [2, 73, 8]],
   ['221053202', [2, 1, 8]],
+  ['241052601', [1, 1, 10]],
   ['231053207', [1, 31, 9]],
   ['221050601', [1, 1, 9]],
   ['221051203', [1, 3, 9]],
@@ -96,6 +97,11 @@ test('Fangshan positions sort by the per-post reported applicants per planned sl
 test('Fangshan position entries expose linked registration and minimum interview score evidence together', () => {
   const expected = new Map([
     ['121049302', [136.25, 6]],
+    ['221050202', [133.5, 4]],
+    ['821049501', [130.75, 9]],
+    ['221050003', [129.5, 12.25]],
+    ['221050102', [127.5, 24.5]],
+    ['241052101', [126.75, 44]],
     ['231051502', [102.5, 21]],
     ['241051901', [100.75, 37.5]],
   ]);
