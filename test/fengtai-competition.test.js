@@ -81,6 +81,21 @@ test('Fengtai 2026 reported applicant counts link to exact positions without imp
   }
 });
 
+test('Fengtai Shiliuzhuang position combines its reported registration ratio and linked interview cutoff', async () => {
+  const raw = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const dataset = normalizeDataset(raw);
+  const position = dataset.positions.find((item) => item.year === 2026 && item.code === '230742504');
+  const evidence = getPositionCompetitionEvidence(position, {
+    observations: dataset.observations,
+    scoreRows: dataset.scoreRows,
+  });
+
+  assert.ok(position);
+  assert.equal(evidence.registeredCompetitionRatio, 2);
+  assert.equal(evidence.cutoffScore, 104.5);
+  assert.deepEqual(evidence.cutoffSourceIds, ['cgzj-2026-street-cutoff-sample']);
+});
+
 test('Fengtai police jobs on citywide Fenbi pages link applicant, qualified, and interview-cutoff evidence separately', async () => {
   const raw = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
   const dataset = normalizeDataset(raw);

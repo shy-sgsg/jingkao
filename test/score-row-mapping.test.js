@@ -147,7 +147,7 @@ test('2026 cutoff rows link only to a unique exact year, unit, and title match',
     scoreRows.reduce((counts, row) => ({ ...counts, [row.mappingConfidence]: counts[row.mappingConfidence] + 1 }), {
       high: 0, ambiguous: 0, unmatched: 0,
     }),
-    { high: 320, ambiguous: 55, unmatched: 15 },
+    { high: 321, ambiguous: 55, unmatched: 15 },
   );
 });
 
@@ -233,7 +233,7 @@ test('2026 Chaoyang cutoff sample preserves every publicly visible post score as
   }
 });
 
-test('2026 street cutoff sample includes six newly covered exact unique position links', () => {
+test('2026 street cutoff sample includes seven newly covered exact unique position links', () => {
   const expectedRows = {
     '2026-cgzj-street-01': ['230637402', '北京市海淀区西三旗街道>内设部门', '城市管理岗', 138.25],
     '2026-cgzj-street-02': ['230637602', '北京市海淀区中关村街道>综合行政执法队', '综合执法岗2', 133],
@@ -241,11 +241,11 @@ test('2026 street cutoff sample includes six newly covered exact unique position
     '2026-cgzj-street-04': ['230637703', '北京市海淀区清河街道>综合行政执法队', '综合执法岗', 104.25],
     '2026-cgzj-street-05': ['230638302', '北京市海淀区永定路街道>综合行政执法队', '综合执法岗2', 101.5],
     '2026-cgzj-mentougou-daitai-01': ['240948402', '北京市门头沟区大台街道', '司法岗', 102.75],
+    '2026-cgzj-fengtai-shiliuzhuang-01': ['230742504', '北京市丰台区石榴庄街道>综合行政执法队', '行政执法岗', 104.5],
   };
 
   const source = sourceRegistry.find((item) => item.sourceId === 'cgzj-2026-street-cutoff-sample');
   assert.equal(source?.url, 'https://www.cgzj.com/sk/12695.html');
-  assert.equal(source?.samplePositions, 6);
   assert.equal(source?.intervieweeCount, 262);
   assert.match(source?.notes, /29条岗位分数/);
 
@@ -262,6 +262,7 @@ test('2026 street cutoff sample includes six newly covered exact unique position
     assert.equal(row.mappingConfidence, 'high');
     assert.equal(row.sourceId, source.sourceId);
   }
+  assert.equal(source?.samplePositions, 7);
 });
 
 test('2026 Haidian and Xicheng partial interview-cutoff tables link only unique local positions', () => {
@@ -358,7 +359,7 @@ test('2026 Yanqing partial interview-cutoff rows preserve unique matches and unr
     scoreRows.reduce((counts, row) => ({ ...counts, [row.mappingConfidence]: counts[row.mappingConfidence] + 1 }), {
       high: 0, ambiguous: 0, unmatched: 0,
     }),
-    { high: 320, ambiguous: 55, unmatched: 15 },
+    { high: 321, ambiguous: 55, unmatched: 15 },
   );
 });
 
