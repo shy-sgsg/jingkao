@@ -28,9 +28,9 @@ test('research findings derive sample coverage, score distribution, and evidence
     minimum: 52.15,
     maximum: 142,
     median: 126,
-    linkedRows: 309,
+    linkedRows: 310,
     ambiguousRows: 55,
-    unmatchedRows: 16,
+    unmatchedRows: 15,
     scope: '朝阳区岗位最低进面分部分样本、昌平区、大兴区岗位最低进面分部分样本、东城区部分职位的最低进面分；非全区完整名册、房山区、丰台区、海淀区、怀柔区、密云区岗位最低进面分部分样本、平谷区、石景山区、顺义区、北京街道、北京市财政局岗位最低进面线部分样本（本库当前已映射6岗）、西城区、延庆区岗位最低进面线部分样本',
   });
   assert.deepEqual(byId['qualification-coverage'].facts, {

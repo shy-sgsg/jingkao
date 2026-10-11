@@ -342,11 +342,10 @@ test('Tongzhou fiscal positions receive their distinct 2026 interview cutoffs by
   }
 });
 
-test('Tongzhou district-only and year-conflicted score summaries do not become position cutoff rows', async () => {
+test('Tongzhou district-only cutoff stays unlinked while the dated 2025 police cutoff maps to its post', async () => {
   const data = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
   const minimum = data.sources.find((source) => source.sourceId === 'cgzj-2026-tongzhou-minimum-summary');
   const conflictIds = [
-    'cgzj-2026-tongzhou-cutoff-summary-conflict',
     'cgzj-2026-fiscal-cutoff-summary-conflict',
   ];
 
@@ -359,6 +358,23 @@ test('Tongzhou district-only and year-conflicted score summaries do not become p
     assert.equal(data.scoreRows.some((row) => row.sourceId === sourceId), false);
   }
   assert.equal(data.scoreRows.some((row) => row.positionCode === '221153901' && row.score === 142), false);
+
+  const policeSource = data.sources.find((source) => source.sourceId === 'cgzj-2025-tongzhou-cutoff-year-conflict');
+  const policeRow = data.scoreRows.find((row) => row.id === '2025-cgzj-tongzhou-police-01');
+  const position = data.positions.find((row) => row.year === 2025 && row.code === '232502401');
+  const evidence = getPositionCompetitionEvidence(position, {
+    observations: data.observations,
+    scoreRows: data.scoreRows,
+  });
+
+  assert.equal(policeSource?.evidenceType, 'cutoff_year_conflict');
+  assert.equal(policeSource?.year, 2025);
+  assert.equal(policeRow?.positionCode, position.code);
+  assert.equal(policeRow?.score, 54.5);
+  assert.equal(evidence.cutoffScore, 54.5);
+  assert.deepEqual(evidence.cutoffSourceIds, [policeSource.sourceId]);
+  assert.equal(evidence.snapshots.length, 4);
+  assert.equal(evidence.qualifiedCompetitionRatio, 403 / 40);
 });
 
 test('Haidian and Xicheng third-party samples expose their partial scope and unresolved rows', async () => {
@@ -370,9 +386,14 @@ test('Haidian and Xicheng third-party samples expose their partial scope and unr
   assert.equal(haidian.filter((row) => row.mappingConfidence === 'high').length, 23);
   assert.equal(haidian.filter((row) => row.mappingConfidence === 'ambiguous').length, 2);
   assert.equal(xicheng.length, 28);
-  assert.equal(xicheng.filter((row) => row.mappingConfidence === 'high').length, 25);
+  assert.equal(xicheng.filter((row) => row.mappingConfidence === 'high').length, 26);
   assert.equal(xicheng.filter((row) => row.mappingConfidence === 'ambiguous').length, 2);
-  assert.equal(xicheng.filter((row) => row.mappingConfidence === 'unmatched').length, 1);
+  assert.equal(xicheng.filter((row) => row.mappingConfidence === 'unmatched').length, 0);
+
+  const position = data.positions.find((row) => row.year === 2026 && row.code === '230225202');
+  const evidence = getPositionCompetitionEvidence(position, { scoreRows: data.scoreRows });
+  assert.equal(evidence.cutoffScore, 98);
+  assert.deepEqual(evidence.cutoffSourceIds, ['cgzj-2026-xicheng-cutoff-sample']);
 });
 
 test('Yanqing partial cutoff rows retain the visible sample size and mapping uncertainty', async () => {
@@ -389,16 +410,50 @@ test('Yanqing partial cutoff rows retain the visible sample size and mapping unc
   assert.match(source.notes, /样本不代表全区全量/);
 });
 
-test('a conflicting-year 2025 score page is registered but excluded from named cutoff rows', async () => {
+test('the dated 2025 Changping minimum links to its uniquely matching post despite the body-year typo', async () => {
   const data = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
   const source = data.sources.find((item) => item.sourceId === 'cgzj-2025-cutoff-year-conflict');
+  const scoreRow = data.scoreRows.find((row) => row.id === '2025-cgzj-changping-minimum-01');
+  const position = data.positions.find((row) => row.year === 2025 && row.code === '221264501');
+  const evidence = getPositionCompetitionEvidence(position, { scoreRows: data.scoreRows });
 
   assert.equal(source.level, 'secondary');
   assert.equal(source.year, 2025);
   assert.equal(source.url, 'https://www.cgzj.com/sk/4079.html');
   assert.match(source.notes, /标题.*2025.*正文.*2026/);
-  assert.equal(data.scoreRows.filter((row) => row.year === 2025).length, 0);
-  assert.equal(data.scoreSamples.some((sample) => sample.year === 2025), false);
+  assert.equal(scoreRow.positionCode, position.code);
+  assert.equal(scoreRow.score, 105);
+  assert.equal(evidence.cutoffScore, 105);
+  assert.deepEqual(evidence.cutoffSourceIds, [source.sourceId]);
+  assert.equal(data.scoreSamples.some((sample) => sample.sourceId === source.sourceId), true);
+  assert.equal(data.scoreRows.find((row) => row.id === '2025-cgzj-tongzhou-police-01')?.score, 54.5);
+});
+
+test('named 2025 district-minimum scores surface on the exact linked position records', async () => {
+  const data = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const expected = [
+    ['241053002', 97.75],
+    ['230638901', 102.25],
+    ['230531301', 104.25],
+    ['242502101', 53.75],
+    ['231462301', 111],
+    ['221372401', 108.75],
+    ['232501702', 56.7],
+  ];
+
+  for (const [code, score] of expected) {
+    const position = data.positions.find((row) => row.year === 2025 && row.code === code);
+    const evidence = getPositionCompetitionEvidence(position, { scoreRows: data.scoreRows });
+    assert.equal(evidence.cutoffScore, score, `${code} should display its linked historical cutoff`);
+  }
+
+  const westCityPolice = data.positions.find((row) => row.year === 2025 && row.code === '232501702');
+  const policeEvidence = getPositionCompetitionEvidence(westCityPolice, {
+    observations: data.observations,
+    scoreRows: data.scoreRows,
+  });
+  assert.equal(policeEvidence.snapshots.length, 4);
+  assert.equal(policeEvidence.qualifiedCompetitionRatio, 650 / 70);
 });
 
 test('matched cutoff codes point to one exact same-year position; ambiguous matches stay unassigned', async () => {

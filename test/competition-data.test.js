@@ -466,9 +466,9 @@ test('Xicheng district and exact-position qualification snapshots preserve their
 
   const cutoffs = dataset.scoreRows.filter((item) => item.sourceId === 'cgzj-2026-xicheng-cutoff-sample');
   assert.equal(cutoffs.length, 28);
-  assert.equal(cutoffs.filter((item) => item.mappingConfidence === 'high').length, 25);
+  assert.equal(cutoffs.filter((item) => item.mappingConfidence === 'high').length, 26);
   assert.equal(cutoffs.filter((item) => item.mappingConfidence === 'ambiguous').length, 2);
-  assert.equal(cutoffs.filter((item) => item.mappingConfidence === 'unmatched').length, 1);
+  assert.equal(cutoffs.filter((item) => item.mappingConfidence === 'unmatched').length, 0);
   assert.equal(Math.min(...cutoffs.map((item) => item.score)), 98);
   assert.equal(Math.max(...cutoffs.map((item) => item.score)), 140);
 });

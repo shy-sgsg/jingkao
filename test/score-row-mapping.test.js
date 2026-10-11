@@ -31,6 +31,78 @@ test('2026 Miyun cutoff rows link only the uniquely identified post and preserve
   assert.equal(ambiguous.sourceId, source.sourceId);
 });
 
+test('2025 Tongzhou police cutoff links to the uniquely matching 2025 position, not its 2026 counterpart', () => {
+  const source = sourceRegistry.find((item) => item.sourceId === 'cgzj-2025-tongzhou-cutoff-year-conflict');
+  assert.ok(source, 'Tongzhou cutoff reference should retain its year-conflict note');
+  assert.equal(source.year, 2025);
+  assert.equal(source.url, 'https://www.cgzj.com/sk/4237.html');
+
+  const row = scoreRows.find((item) => item.id === '2025-cgzj-tongzhou-police-01');
+  const exactMatches = positions.filter((position) => position.year === 2025
+    && position.unit === row.unit && position.title === row.title);
+
+  assert.equal(exactMatches.length, 1);
+  assert.equal(exactMatches[0].code, '232502401');
+  assert.equal(row.positionCode, '232502401');
+  assert.equal(row.score, 54.5);
+  assert.equal(row.mappingConfidence, 'high');
+  assert.equal(row.sourceId, source.sourceId);
+  assert.match(source.notes, /正文.*2026/);
+  assert.match(source.notes, /标题.*2025/);
+  assert.equal(scoreRows.some((item) => item.year === 2026 && item.score === 54.5
+    && item.unit === '北京市公安局通州分局'), false);
+});
+
+test('2025 Fengtai police cutoff links to the unique same-unit post and records the source title normalization', () => {
+  const source = sourceRegistry.find((item) => item.sourceId === 'cgzj-2025-fengtai-minimum-year-conflict');
+  assert.ok(source, 'Fengtai cutoff article should retain its year-conflict and title-normalization note');
+  assert.equal(source.year, 2025);
+  assert.equal(source.url, 'https://www.cgzj.com/examinfo/4086.cshtml');
+  assert.match(source.notes, /2026.*2025/);
+  assert.match(source.notes, /一线执法岗.*一线执法岗1/);
+
+  const row = scoreRows.find((item) => item.id === '2025-cgzj-fengtai-minimum-01');
+  const matches = positions.filter((position) => position.year === 2025
+    && position.unit === row.unit && position.code === row.positionCode);
+  assert.equal(matches.length, 1);
+  assert.equal(matches[0].code, '232502002');
+  assert.equal(matches[0].title, '一线执法岗1');
+  assert.equal(matches[0].recruitCount, 52);
+  assert.equal(row.score, 54.7);
+  assert.equal(row.mappingConfidence, 'high');
+  assert.equal(row.sourceId, source.sourceId);
+});
+
+test('2025 district minimum cutoff samples map only to unique same-year positions', () => {
+  const expectedRows = {
+    '2025-cgzj-changping-minimum-01': ['cgzj-2025-cutoff-year-conflict', '221264501', 105],
+    '2025-cgzj-fangshan-minimum-01': ['cgzj-2025-fangshan-minimum-year-conflict', '241053002', 97.75],
+    '2025-cgzj-haidian-minimum-01': ['cgzj-2025-haidian-minimum-year-conflict', '230638901', 102.25],
+    '2025-cgzj-chaoyang-minimum-01': ['cgzj-2025-chaoyang-minimum-year-conflict', '230531301', 104.25],
+    '2025-cgzj-shijingshan-minimum-01': ['cgzj-2025-shijingshan-minimum-year-conflict', '242502101', 53.75],
+    '2025-cgzj-shunyi-minimum-01': ['cgzj-2025-shunyi-minimum-year-conflict', '231462301', 111],
+    '2025-cgzj-pinggu-minimum-01': ['cgzj-2025-pinggu-minimum-year-conflict', '221372401', 108.75],
+    '2025-cgzj-xicheng-minimum-01': ['cgzj-2025-xicheng-minimum-year-conflict', '232501702', 56.7],
+  };
+
+  for (const [id, [sourceId, code, score]] of Object.entries(expectedRows)) {
+    const row = scoreRows.find((item) => item.id === id);
+    const source = sourceRegistry.find((item) => item.sourceId === sourceId);
+    const matches = positions.filter((position) => position.year === 2025
+      && position.unit === row.unit && position.title === row.title);
+
+    assert.equal(source?.year, 2025, `${sourceId} must retain its resolved historical year`);
+    assert.match(source?.notes, /正文.*2026/);
+    assert.match(source?.notes, /标题.*2025/);
+    assert.equal(matches.length, 1, `${id} must match one unique same-year position`);
+    assert.equal(matches[0].code, code);
+    assert.equal(row.positionCode, code);
+    assert.equal(row.score, score);
+    assert.equal(row.mappingConfidence, 'high');
+    assert.equal(row.sourceId, sourceId);
+  }
+});
+
 test('2026 cutoff rows link only to a unique exact year, unit, and title match', () => {
   const expectedCodes = {
     '2026-cgzj-02': '221262201',
@@ -75,7 +147,7 @@ test('2026 cutoff rows link only to a unique exact year, unit, and title match',
     scoreRows.reduce((counts, row) => ({ ...counts, [row.mappingConfidence]: counts[row.mappingConfidence] + 1 }), {
       high: 0, ambiguous: 0, unmatched: 0,
     }),
-    { high: 309, ambiguous: 55, unmatched: 16 },
+    { high: 320, ambiguous: 55, unmatched: 15 },
   );
 });
 
@@ -218,9 +290,14 @@ test('2026 Haidian and Xicheng partial interview-cutoff tables link only unique 
     assert.equal(row.mappingConfidence, 'ambiguous');
   }
 
-  const unmatched = scoreRows.find((item) => item.id === '2026-cgzj-xicheng-28');
-  assert.equal(unmatched.positionCode, null);
-  assert.equal(unmatched.mappingConfidence, 'unmatched');
+  const westCityEnforcement = scoreRows.find((item) => item.id === '2026-cgzj-xicheng-28');
+  const exactMatches = positions.filter((position) => position.year === westCityEnforcement.year
+    && position.unit === westCityEnforcement.unit
+    && position.title === westCityEnforcement.title);
+  assert.equal(exactMatches.length, 1);
+  assert.equal(exactMatches[0].code, '230225202');
+  assert.equal(westCityEnforcement.positionCode, '230225202');
+  assert.equal(westCityEnforcement.mappingConfidence, 'high');
 });
 
 test('2026 Yanqing partial interview-cutoff rows preserve unique matches and unresolved names', () => {
@@ -281,7 +358,7 @@ test('2026 Yanqing partial interview-cutoff rows preserve unique matches and unr
     scoreRows.reduce((counts, row) => ({ ...counts, [row.mappingConfidence]: counts[row.mappingConfidence] + 1 }), {
       high: 0, ambiguous: 0, unmatched: 0,
     }),
-    { high: 309, ambiguous: 55, unmatched: 16 },
+    { high: 320, ambiguous: 55, unmatched: 15 },
   );
 });
 

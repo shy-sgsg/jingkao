@@ -185,8 +185,8 @@ test('the source page keeps the unmatched Fenbi joint-exam list out of Jingkao t
   assert.match(root.innerHTML, /135岗、158人/);
   assert.match(root.innerHTML, /16位.*9位/);
   assert.match(root.innerHTML, /暂不纳入京考职位或年度汇总/);
-  assert.match(root.innerHTML, /成公教育：北京京考昌平进面分数页（年度待核）/);
-  assert.match(root.innerHTML, /标题标为2025.*2026年北京公务员考试即将开始/);
+  assert.match(root.innerHTML, /成公教育：2025昌平区最低进面线摘要（正文年份误写2026）/);
+  assert.match(root.innerHTML, /页面标题标为2025.*正文误称2026年考试即将开始/);
 });
 
 test('the source page exposes evidence-based coverage without presenting mirror parity as official completeness', async () => {
