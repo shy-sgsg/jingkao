@@ -39,6 +39,31 @@ test('2025 Beijing Jingkao registration snapshots stay attached to their positio
   }
 });
 
+test('2026 last-day qualified count links the uniquely named traffic-management post to the position library', async () => {
+  const raw = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const dataset = normalizeDataset(raw);
+  const sourceId = 'sohu-2026-final-day-snapshot-20251121-0900';
+  const code = '232501603';
+  const position = dataset.positions.find((item) => Number(item.year) === 2026 && item.code === code);
+  const source = dataset.sources.find((item) => item.sourceId === sourceId);
+  const rows = dataset.observations.filter((item) => item.sourceId === sourceId
+    && Number(item.year) === 2026 && item.positionCode === code);
+
+  assert.equal(source?.url, 'https://www.sohu.com/a/957051740_121124036');
+  assert.equal(source?.observedAt, '2025-11-21 09:00');
+  assert.equal(position?.unit, '北京市公安局公安交通管理局');
+  assert.equal(position?.title, '一线执法岗');
+  assert.equal(position?.recruitCount, 55);
+  assert.equal(rows.length, 1);
+  assert.equal(rows[0].scope, 'position-level');
+  assert.equal(rows[0].applicantsQualified, 1177);
+  assert.equal(rows[0].recruitCount, 55);
+  assert.equal(rows[0].qualifiedCompetitionRatio, 1177 / 55);
+  assert.equal(rows[0].applicantsRegistered, null);
+  assert.equal(rows[0].applicantsPaid, null);
+  assert.equal(rows[0].actualTestTakers, null);
+});
+
 test('2025 November 19 morning citywide leaderboard keeps named jobs and planned recruits aligned', async () => {
   const raw = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
   const dataset = normalizeDataset(raw);
