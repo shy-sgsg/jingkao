@@ -64,6 +64,23 @@ test('2026 last-day qualified count links the uniquely named traffic-management 
   assert.equal(rows[0].actualTestTakers, null);
 });
 
+test('2026 Pinggu city-management cutoff is linked to its exact position code', async () => {
+  const raw = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const dataset = normalizeDataset(raw);
+  const positionCode = '821370301';
+  const position = dataset.positions.find((item) => Number(item.year) === 2026 && item.code === positionCode);
+  const cutoff = dataset.scoreRows.find((item) => item.id === '2026-cgzj-pinggu-10');
+  const positionSource = dataset.sources.find((item) => item.sourceId === 'huatu-2026-pinggu-city-management-command');
+
+  assert.equal(positionSource?.url, 'https://ah.huatu.com/zw/bjgwy/pinggu/2026_25.html');
+  assert.equal(position?.unit, '北京市平谷区城市管理指挥中心');
+  assert.equal(position?.title, '数据分析岗');
+  assert.equal(position?.recruitCount, 1);
+  assert.equal(cutoff?.positionCode, positionCode);
+  assert.equal(cutoff?.score, 124.25);
+  assert.equal(cutoff?.mappingConfidence, 'high');
+});
+
 test('2025 November 19 morning citywide leaderboard keeps named jobs and planned recruits aligned', async () => {
   const raw = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
   const dataset = normalizeDataset(raw);

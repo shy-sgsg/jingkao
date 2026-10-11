@@ -85284,6 +85284,26 @@
     },
     {
       "year": 2026,
+      "code": "821370301",
+      "unit": "北京市平谷区城市管理指挥中心",
+      "title": "数据分析岗",
+      "orgType": "区直",
+      "recruitCount": 1,
+      "sourceLevel": "secondary",
+      "verification": "华图与京考职位网第三方镜像交叉列示代码、岗位名及计划招录数；未与官方招考简章逐代码复核",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "本轮仅补录岗位身份与计划招录数用于关联竞争样本；学历、专业及其他资格条件以官方招考简章为准。",
+      "sources": [
+        "huatu-2026-pinggu-city-management-command",
+        "gwyzwb-2026-pinggu-city-management-command",
+        "gwyzwb-2026-pinggu-index"
+      ],
+      "districtId": "pinggu",
+      "districtMatch": "平谷区"
+    },
+    {
+      "year": 2026,
       "code": "241371501",
       "unit": "北京市平谷区大华山镇",
       "title": "综合管理岗",
@@ -108708,7 +108728,33 @@
       "minimum": 104,
       "maximum": 128,
       "scope": "平谷区岗位最低进面线部分样本",
-      "notes": "页面称平谷区61人进入面试，明列30条部分岗位分数线，范围104—128；其中16条按同年度单位、岗位名和第三方职位代码唯一关联，8条同单位同名候选存在歧义，另6条本轮没有可唯一匹配的候选代码，均保留空代码。第三方部分样本，不代表完整名单；所列是岗位最低进面笔试分，不是官方笔试合格线。"
+      "notes": "页面称平谷区61人进入面试，明列30条部分岗位分数线，范围104—128；其中17条按同年度单位、岗位名和第三方职位代码唯一关联，8条同单位同名候选存在歧义，另5条当前没有可唯一匹配的候选代码，保留空代码。城市管理指挥中心数据分析岗代码821370301由两份独立第三方职位镜像交叉核对。第三方部分样本，不代表完整名单；所列是岗位最低进面笔试分，不是官方笔试合格线。"
+    },
+    {
+      "sourceId": "huatu-2026-pinggu-city-management-command",
+      "title": "华图：2026平谷区城市管理指挥中心职位明细",
+      "publisher": "华图教育",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "districtId": "pinggu",
+      "geographicScope": "平谷区城市管理指挥中心职位代码、岗位名及计划招录数",
+      "url": "https://ah.huatu.com/zw/bjgwy/pinggu/2026_25.html",
+      "accessedAt": "2026-10-11",
+      "notes": "职位目录明列数据分析岗代码821370301、计划招录1人；第三方职位镜像，未与官方招考简章逐代码复核。"
+    },
+    {
+      "sourceId": "gwyzwb-2026-pinggu-city-management-command",
+      "title": "京考职位网：2026平谷区城市管理指挥中心数据分析岗详情",
+      "publisher": "京考职位网",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "districtId": "pinggu",
+      "geographicScope": "平谷区城市管理指挥中心数据分析岗职位详情",
+      "url": "https://bj.gwyzwb.com/2026/1367.html",
+      "accessedAt": "2026-10-11",
+      "notes": "职位详情独立列示代码821370301、数据分析岗及计划招录1人，与华图镜像一致；第三方职位镜像，未与官方招考简章逐代码复核。"
     },
     {
       "sourceId": "gwyzwb-2026-pinggu-market",
@@ -111143,7 +111189,7 @@
       "sourceId": "cgzj-2026-pinggu-cutoff-sample",
       "sourceLevel": "secondary",
       "complete": false,
-      "notes": "页面称平谷区61人进入面试，明列30条部分岗位分数线，范围104—128；其中16条按同年度单位、岗位名和第三方职位代码唯一关联，8条同单位同名候选存在歧义，另6条本轮没有可唯一匹配的候选代码，均保留空代码。第三方部分样本，不代表完整名单；所列是岗位最低进面笔试分，不是官方笔试合格线。"
+      "notes": "页面称平谷区61人进入面试，明列30条部分岗位分数线，范围104—128；其中17条按同年度单位、岗位名和第三方职位代码唯一关联，8条同单位同名候选存在歧义，另5条当前没有可唯一匹配的候选代码，保留空代码。城市管理指挥中心数据分析岗代码821370301由两份独立第三方职位镜像交叉核对。第三方部分样本，不代表完整名单；所列是岗位最低进面笔试分，不是官方笔试合格线。"
     },
     {
       "year": 2026,
@@ -115113,14 +115159,14 @@
       "unit": "北京市平谷区城市管理指挥中心",
       "title": "数据分析岗",
       "name": "北京市平谷区城市管理指挥中心｜数据分析岗",
-      "positionCode": null,
+      "positionCode": "821370301",
       "orgType": "区直",
       "score": 124.25,
-      "notes": "成公页面公开单位、岗位及分数；本轮没有可唯一核对的候选职位代码，保留空代码。",
-      "mappingConfidence": "unmatched",
+      "notes": "成公页面列明单位、岗位名及124.25分；华图与京考职位网两份2026岗位镜像均将该唯一岗位对应代码821370301、计划1人。职位与分数仍未与官方简章逐代码核验。",
+      "mappingConfidence": "high",
       "sourceId": "cgzj-2026-pinggu-cutoff-sample",
       "sourceLevel": "secondary",
-      "verification": "岗位代码未唯一匹配；保留空代码"
+      "verification": "年度、单位与岗位名唯一匹配"
     },
     {
       "id": "2026-cgzj-pinggu-11",

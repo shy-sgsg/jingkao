@@ -58805,6 +58805,20 @@
   },
   {
     "year": 2026,
+    "code": "821370301",
+    "unit": "北京市平谷区城市管理指挥中心",
+    "title": "数据分析岗",
+    "orgType": "区直",
+    "recruitCount": 1,
+    "sourceLevel": "secondary",
+    "verification": "华图与京考职位网第三方镜像交叉列示代码、岗位名及计划招录数；未与官方招考简章逐代码复核",
+    "crossVerified": false,
+    "eligibilityComplete": false,
+    "eligibilityText": "本轮仅补录岗位身份与计划招录数用于关联竞争样本；学历、专业及其他资格条件以官方招考简章为准。",
+    "sources": ["huatu-2026-pinggu-city-management-command", "gwyzwb-2026-pinggu-city-management-command", "gwyzwb-2026-pinggu-index"]
+  },
+  {
+    "year": 2026,
     "code": "241371501",
     "unit": "北京市平谷区大华山镇",
     "title": "综合管理岗",
