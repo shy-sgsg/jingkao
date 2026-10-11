@@ -71,6 +71,9 @@ test('five general aptitude modules publish usable questions linked to their kno
   const thirdPartyMockQuestions = questions.getAptitudeQuestions('verbal', { sourceType: 'third_party_mock' });
   assert.ok(thirdPartyMockQuestions.length > 0);
   assert.ok(thirdPartyMockQuestions.every((question) => question.sourceType === 'third_party_mock'));
+  const nationalSpatialQuestion = questions.getAptitudeQuestions('reasoning')
+    .find((question) => question.id === 'national-2026-city-reasoning-q80');
+  assert.deepEqual(nationalSpatialQuestion?.knowledgePointIds, ['reasoning:spatial']);
   assert.deepEqual(questions.getAptitudeSessionQuestions('verbal', ['unpublished-question']), []);
   assert.equal(questions.getAptitudeQuestions('reasoning').some((question) => question.id === 'apt-reasoning-008'), false);
   assert.equal(questions.getAptitudeSessionQuestions('reasoning', ['apt-reasoning-008'])[0]?.moduleId, 'reasoning');

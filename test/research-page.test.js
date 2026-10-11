@@ -40,12 +40,12 @@ test('research findings derive sample coverage, score distribution, and evidence
     officialPositionRows: 0,
   });
   assert.deepEqual(byId['competition-grain'].facts, {
-    observations: 606,
-    jobLevelObservations: 563,
+    observations: 678,
+    jobLevelObservations: 635,
     aggregateObservations: 43,
-    jobLevelPositions: 388,
+    jobLevelPositions: 460,
     qualificationSnapshots: 221,
-    reportedApplicationSnapshots: 342,
+    reportedApplicationSnapshots: 414,
   });
   assert.match(byId['competition-grain'].title, /岗位级竞争观察/);
   assert.ok(byId['competition-grain'].sourceIds.includes('huatu-2025-first-day-20241118-1800'));
@@ -64,6 +64,10 @@ test('research findings derive sample coverage, score distribution, and evidence
   assert.ok(byId['score-sample-2026'].sourceIds.includes('cgzj-2026-pinggu-cutoff-sample'));
   assert.ok(byId['score-sample-2026'].sourceIds.includes('cgzj-2026-street-cutoff-sample'));
   assert.ok(byId['competition-grain'].sourceIds.includes('eoffcn-2025-citywide-hot-jobs-20241122-0900'));
+  for (const sourceId of [
+    'changping-2026-fenbi-page-1', 'shijingshan-2026-fenbi-page-1', 'huairou-2026-fenbi-page-1',
+    'yanqing-2026-fenbi-page-1', 'shunyi-2026-fenbi-page-1', 'pinggu-2026-fenbi-page-1', 'miyun-2026-fenbi-page-1',
+  ]) assert.ok(byId['competition-grain'].sourceIds.includes(sourceId));
 });
 
 test('the research route presents expandable source lineage and its topic filter updates the visible findings', async () => {
@@ -100,6 +104,6 @@ test('the research route presents expandable source lineage and its topic filter
 
   assert.match(root.innerHTML, /data-topic="分数样本" aria-pressed="true">/);
   assert.match(root.innerHTML, /365 条/);
-  assert.match(root.innerHTML, /报考人数 342 条/);
+  assert.match(root.innerHTML, /报考人数 414 条/);
   assert.doesNotMatch(root.innerHTML, /class="research-finding[^\"]*"[^>]*data-topic="岗位覆盖"/);
 });

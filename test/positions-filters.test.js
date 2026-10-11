@@ -122,7 +122,7 @@ test('position library filters and sorts by exact-position competition snapshots
   const { dataset, listeners, root, modalRoot } = await renderPositionApp();
   const yearPositions = dataset.positions.filter((position) => Number(position.year) === 2026 && position.districtId === 'changping');
   const snapshotCodes = new Set(dataset.observations
-    .filter((item) => Number(item.year) === 2026 && item.observationType === 'qualified_snapshot'
+    .filter((item) => Number(item.year) === 2026 && ['qualified_snapshot', 'registration_snapshot'].includes(item.observationType)
       && ['position-level', 'position', '岗位级'].includes(item.scope) && item.positionCode)
     .map((item) => item.positionCode));
   const expectedSnapshotPositions = yearPositions.filter((position) => snapshotCodes.has(position.code));
