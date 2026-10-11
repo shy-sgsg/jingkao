@@ -139,6 +139,12 @@ export const GENERAL_KNOWLEDGE_SOURCES = [
     publishStatus: 'published', copyrightStatus: '题意与选项摘要改写并注明回忆来源', note: '仅发布题面资源完整、答案可核的分项；Q12依赖未取得的路线图，继续暂缓。公开答案页用于核对答案，不代表官方命题文件。',
   },
   {
+    id: 'beijing-2022-recall', sourceType: 'recalled', title: '2022年北京市公务员录用考试《行测》题（考生回忆版）', organization: '公考真题网 / ERRRC xingcezhenti', examYear: 2022, region: '北京',
+    url: 'https://gwy.gkzhenti.cn/paper/1640265344758', answerUrl: 'https://gwy.gkzhenti.cn/answer/1640265344758', verificationStatus: 'verified',
+    publishStatus: 'published', copyrightStatus: '用户确认已获得转载授权',
+    note: '题干和选项按公开题面保存；答案键与固定版本的第三方逐题解析交叉核对。答题前不展示答案和解析。',
+  },
+  {
     id: 'hubei-2024-recall-candidate', sourceType: 'recalled', title: '2024年湖北省公务员录用考试《行测》题（考生回忆版）', organization: '爱真题 / 湖北网 / ERRRC 公开题解', examYear: 2024, region: '湖北',
     url: 'https://www.aipta.com/article/9625.html',
     answerUrl: 'https://www.163hubei.com/ueditor/php/upload/file/20240318/1710751920689656.pdf', verificationStatus: 'verified',
@@ -750,5 +756,20 @@ export const GENERAL_KNOWLEDGE_SOURCES = [
     answerUrl: 'https://static.32xueyuan.com/zq//u/cms/zj/202310/20144954ob39.pdf',
     verificationStatus: 'verified', publishStatus: 'published', copyrightStatus: '用户确认已获得转载授权',
     note: '题面来自公开考生回忆题页，答案及解析按出版版 PDF 核对；未拆清图像素材的题继续留在归档。',
+  },
+  {
+    id: 'zhanhong-2025-national-mock-1-deputy', sourceType: 'third_party_mock', title: '展鸿 2025 年国家公务员录用考试模拟卷（一）《行测》（副省级）', organization: '展鸿教育 / 32 学苑', examYear: 2025, region: '全国',
+    url: 'https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf', answerUrl: 'https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf', verificationStatus: 'verified', publishStatus: 'published', copyrightStatus: '用户确认已获得转载授权',
+    note: '三套原卷均含题面、答案及解析；题面选项逐题录入，图表、图形和公式解析以原卷配图补足。',
+  },
+  {
+    id: 'zhanhong-2025-national-mock-2-city', sourceType: 'third_party_mock', title: '展鸿 2025 年国家公务员录用考试模拟卷（二）《行测》（地市级）', organization: '展鸿教育 / 32 学苑', examYear: 2025, region: '全国',
+    url: 'https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf', answerUrl: 'https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf', verificationStatus: 'verified', publishStatus: 'published', copyrightStatus: '用户确认已获得转载授权',
+    note: '三套原卷均含题面、答案及解析；题面选项逐题录入，图表、图形和公式解析以原卷配图补足。',
+  },
+  {
+    id: 'zhanhong-2025-national-mock-3-law-enforcement', sourceType: 'third_party_mock', title: '展鸿 2025 年国家公务员录用考试模拟卷（三）《行测》（行政执法类）', organization: '展鸿教育 / 32 学苑', examYear: 2025, region: '全国',
+    url: 'https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf', answerUrl: 'https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf', verificationStatus: 'verified', publishStatus: 'published', copyrightStatus: '用户确认已获得转载授权',
+    note: '三套原卷均含题面、答案及解析；题面选项逐题录入，图表、图形和公式解析以原卷配图补足。',
   },
 ];

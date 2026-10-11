@@ -1,0 +1,165 @@
+{
+  "batch_date": "2026-10-11",
+  "authorization": "user_confirmed_republication_authorization",
+  "source_documents": [
+    {
+      "title": "展鸿 2025 年国家公务员录用考试模拟卷（一）至（三）《行测》题本、答案及解析",
+      "source_url": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf",
+      "local_original_pdf": "publisher-original-pack.pdf",
+      "text_extraction": "publisher-text-extraction.txt",
+      "note": "同一公开PDF包含副省级、地市级、行政执法类三套行测题本及逐题答案解析；按卷别、原题号配对。"
+    }
+  ],
+  "source_papers": [
+    {
+      "paper_id": "zhanhong-2025-national-mock-1-deputy",
+      "title": "展鸿 2025 年国家公务员录用考试模拟卷（一）《行测》（副省级）",
+      "question_count": 135,
+      "captured_question_count": 135,
+      "answer_count": 135,
+      "explanation_count": 135,
+      "published_count": 135,
+      "held_count": 0,
+      "sections": [
+        {
+          "module": "general-knowledge",
+          "section_order": 1,
+          "from": 1,
+          "to": 20
+        },
+        {
+          "module": "verbal",
+          "section_order": 2,
+          "from": 21,
+          "to": 60
+        },
+        {
+          "module": "quantitative",
+          "section_order": 3,
+          "from": 61,
+          "to": 75
+        },
+        {
+          "module": "reasoning",
+          "section_order": 4,
+          "from": 76,
+          "to": 115
+        },
+        {
+          "module": "data-analysis",
+          "section_order": 5,
+          "from": 116,
+          "to": 135
+        }
+      ],
+      "source_url": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf",
+      "answer_url": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf",
+      "note": "题面与答案解析逐题配对核验；图表、图形与公式解析使用原卷截图补足；整卷及完整模块分区可用于模考。"
+    },
+    {
+      "paper_id": "zhanhong-2025-national-mock-2-city",
+      "title": "展鸿 2025 年国家公务员录用考试模拟卷（二）《行测》（地市级）",
+      "question_count": 130,
+      "captured_question_count": 130,
+      "answer_count": 130,
+      "explanation_count": 130,
+      "published_count": 130,
+      "held_count": 0,
+      "sections": [
+        {
+          "module": "general-knowledge",
+          "section_order": 1,
+          "from": 1,
+          "to": 20
+        },
+        {
+          "module": "verbal",
+          "section_order": 2,
+          "from": 21,
+          "to": 60
+        },
+        {
+          "module": "quantitative",
+          "section_order": 3,
+          "from": 61,
+          "to": 70
+        },
+        {
+          "module": "reasoning",
+          "section_order": 4,
+          "from": 71,
+          "to": 110
+        },
+        {
+          "module": "data-analysis",
+          "section_order": 5,
+          "from": 111,
+          "to": 130
+        }
+      ],
+      "source_url": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf",
+      "answer_url": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf",
+      "note": "题面与答案解析逐题配对核验；图表、图形与公式解析使用原卷截图补足；整卷及完整模块分区可用于模考。"
+    },
+    {
+      "paper_id": "zhanhong-2025-national-mock-3-law-enforcement",
+      "title": "展鸿 2025 年国家公务员录用考试模拟卷（三）《行测》（行政执法类）",
+      "question_count": 130,
+      "captured_question_count": 130,
+      "answer_count": 130,
+      "explanation_count": 130,
+      "published_count": 130,
+      "held_count": 0,
+      "sections": [
+        {
+          "module": "general-knowledge",
+          "section_order": 1,
+          "from": 1,
+          "to": 20
+        },
+        {
+          "module": "verbal",
+          "section_order": 2,
+          "from": 21,
+          "to": 60
+        },
+        {
+          "module": "quantitative",
+          "section_order": 3,
+          "from": 61,
+          "to": 70
+        },
+        {
+          "module": "reasoning",
+          "section_order": 4,
+          "from": 71,
+          "to": 110
+        },
+        {
+          "module": "data-analysis",
+          "section_order": 5,
+          "from": 111,
+          "to": 130
+        }
+      ],
+      "source_url": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf",
+      "answer_url": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf",
+      "note": "题面与答案解析逐题配对核验；图表、图形与公式解析使用原卷截图补足；整卷及完整模块分区可用于模考。"
+    }
+  ],
+  "assets": {
+    "local_question_and_explanation_crops": 114,
+    "question_crops": 51,
+    "explanation_crops": 57,
+    "shared_stimulus_images": 6
+  },
+  "app_integrated_question_count": 395,
+  "app_integrated_by_module": {
+    "general-knowledge": 60,
+    "verbal": 120,
+    "quantitative": 35,
+    "reasoning": 120,
+    "data-analysis": 60
+  },
+  "policy": "Only complete exact-stem and exact-option items with a verified source answer and explanation are published. Original figures, charts and formula-heavy explanations are preserved as question or post-answer images; shared material questions remain grouped for random mock assembly."
+}
