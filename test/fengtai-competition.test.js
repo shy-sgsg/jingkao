@@ -54,3 +54,48 @@ test('Fengtai 2026 reported applicant counts link to exact positions without imp
     assert.equal(evidence.registeredCompetitionRatio, applicants / recruits, `${code} reported-count ratio`);
   }
 });
+
+test('Fengtai police jobs on citywide Fenbi pages link applicant, qualified, and interview-cutoff evidence separately', async () => {
+  const raw = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const dataset = normalizeDataset(raw);
+  const expected = [
+    ['fengtai-2026-fenbi-police-page-6', '232502201', 300, 22],
+    ['fengtai-2026-fenbi-police-page-6', '232502202', 24, 3],
+    ['fengtai-2026-fenbi-police-page-7', '232502203', 30, 10],
+    ['fengtai-2026-fenbi-police-page-7', '232502204', 23, 5],
+  ];
+
+  for (const [sourceId, code, applicants, recruits] of expected) {
+    const source = dataset.sources.find((item) => item.sourceId === sourceId);
+    assert.ok(source, `${sourceId} source exists`);
+    assert.match(source.url, new RegExp(`page=${sourceId.endsWith('6') ? 6 : 7}`));
+    assert.equal(source.districtId, 'fengtai');
+    const position = dataset.positions.find((item) => item.year === 2026 && item.code === code);
+    assert.ok(position, `position ${code} exists`);
+    assert.equal(position.districtId, 'fengtai');
+    assert.equal(position.recruitCount, recruits);
+    const observation = dataset.observations.find((item) => item.year === 2026
+      && item.positionCode === code && item.sourceId === sourceId);
+    assert.equal(observation?.observationType, 'registration_snapshot');
+    assert.equal(observation?.applicantsRegistered, applicants);
+    assert.equal(observation?.applicantsQualified, null);
+    assert.equal(observation?.observedAt, null);
+
+    const evidence = getPositionCompetitionEvidence(position, {
+      observations: dataset.observations,
+      scoreRows: dataset.scoreRows,
+    });
+    assert.equal(evidence.registeredCompetitionRatio, applicants / recruits);
+    assert.ok(evidence.registrationSourceIds.includes(sourceId));
+  }
+
+  const policePosition = dataset.positions.find((item) => item.year === 2026 && item.code === '232502201');
+  const policeEvidence = getPositionCompetitionEvidence(policePosition, {
+    observations: dataset.observations,
+    scoreRows: dataset.scoreRows,
+  });
+  assert.equal(policeEvidence.qualifiedCompetitionRatio, 199 / 22);
+  assert.equal(policeEvidence.registeredCompetitionRatio, 300 / 22);
+  assert.equal(policeEvidence.cutoffScore, 52.15);
+  assert.ok(policeEvidence.cutoffSourceIds.includes('cgzj-2026-fengtai-cutoff-sample'));
+});

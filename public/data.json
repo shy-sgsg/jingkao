@@ -100487,6 +100487,78 @@
     {
       "year": 2026,
       "scope": "position-level",
+      "positionCode": "232502201",
+      "districtId": null,
+      "unit": null,
+      "observationType": "registration_snapshot",
+      "observedAt": null,
+      "applicantsRegistered": 300,
+      "applicantsQualified": null,
+      "applicantsPaid": null,
+      "applicantsConfirmed": null,
+      "actualTestTakers": null,
+      "recruitCount": 22,
+      "sourceId": "fengtai-2026-fenbi-police-page-6",
+      "sourceLevel": "secondary",
+      "notes": "全市列表逐岗表头为‘报考人数’，未标明统计时点或计数定义。这里只保存页面中与丰台职位词条、计划数吻合的两行；作为第三方报考人数参考，不等同于资格审查通过数，也不代表丰台全区覆盖。"
+    },
+    {
+      "year": 2026,
+      "scope": "position-level",
+      "positionCode": "232502202",
+      "districtId": null,
+      "unit": null,
+      "observationType": "registration_snapshot",
+      "observedAt": null,
+      "applicantsRegistered": 24,
+      "applicantsQualified": null,
+      "applicantsPaid": null,
+      "applicantsConfirmed": null,
+      "actualTestTakers": null,
+      "recruitCount": 3,
+      "sourceId": "fengtai-2026-fenbi-police-page-6",
+      "sourceLevel": "secondary",
+      "notes": "全市列表逐岗表头为‘报考人数’，未标明统计时点或计数定义。这里只保存页面中与丰台职位词条、计划数吻合的两行；作为第三方报考人数参考，不等同于资格审查通过数，也不代表丰台全区覆盖。"
+    },
+    {
+      "year": 2026,
+      "scope": "position-level",
+      "positionCode": "232502203",
+      "districtId": null,
+      "unit": null,
+      "observationType": "registration_snapshot",
+      "observedAt": null,
+      "applicantsRegistered": 30,
+      "applicantsQualified": null,
+      "applicantsPaid": null,
+      "applicantsConfirmed": null,
+      "actualTestTakers": null,
+      "recruitCount": 10,
+      "sourceId": "fengtai-2026-fenbi-police-page-7",
+      "sourceLevel": "secondary",
+      "notes": "全市列表逐岗表头为‘报考人数’，未标明统计时点或计数定义。这里只保存页面中与丰台职位词条、计划数吻合的两行；作为第三方报考人数参考，不等同于资格审查通过数，也不代表丰台全区覆盖。"
+    },
+    {
+      "year": 2026,
+      "scope": "position-level",
+      "positionCode": "232502204",
+      "districtId": null,
+      "unit": null,
+      "observationType": "registration_snapshot",
+      "observedAt": null,
+      "applicantsRegistered": 23,
+      "applicantsQualified": null,
+      "applicantsPaid": null,
+      "applicantsConfirmed": null,
+      "actualTestTakers": null,
+      "recruitCount": 5,
+      "sourceId": "fengtai-2026-fenbi-police-page-7",
+      "sourceLevel": "secondary",
+      "notes": "全市列表逐岗表头为‘报考人数’，未标明统计时点或计数定义。这里只保存页面中与丰台职位词条、计划数吻合的两行；作为第三方报考人数参考，不等同于资格审查通过数，也不代表丰台全区覆盖。"
+    },
+    {
+      "year": 2026,
+      "scope": "position-level",
       "positionCode": "829910403",
       "districtId": null,
       "unit": null,
@@ -125620,6 +125692,60 @@
         }
       ],
       "notes": "粉笔页面汇总显示96个职位、计划190人和‘过审人数’2525，但逐岗表头为‘报考人数’，且未注明观察时点或定义。仅将能与本地2026候选职位代码、计划数匹配的逐岗值按第三方报考人数参考保存，不代表官方资格审查通过数、最终缴费数或实考人数。"
+    },
+    {
+      "sourceId": "fengtai-2026-fenbi-police-page-6",
+      "title": "粉笔职位库：2026北京职位全市快速选岗第6页（丰台匹配行）",
+      "publisher": "粉笔职位库",
+      "level": "secondary",
+      "evidenceType": "application_count_snapshot",
+      "year": 2026,
+      "districtId": "fengtai",
+      "geographicScope": "北京市职位快速选岗全市列表第6页；仅记录与丰台区本地候选职位代码、招录数匹配的行",
+      "url": "https://www.fenbi.com/page/positions/1/438923?page=6&quickPick=%7B%22examId%22%3A438923%7D",
+      "accessedAt": "2026-10-12",
+      "positionSnapshots": [
+        {
+          "positionCode": "232502201",
+          "scope": "position-level",
+          "applicantsRegistered": 300,
+          "recruitCount": 22
+        },
+        {
+          "positionCode": "232502202",
+          "scope": "position-level",
+          "applicantsRegistered": 24,
+          "recruitCount": 3
+        }
+      ],
+      "notes": "全市列表逐岗表头为‘报考人数’，未标明统计时点或计数定义。这里只保存页面中与丰台职位词条、计划数吻合的两行；作为第三方报考人数参考，不等同于资格审查通过数，也不代表丰台全区覆盖。"
+    },
+    {
+      "sourceId": "fengtai-2026-fenbi-police-page-7",
+      "title": "粉笔职位库：2026北京职位全市快速选岗第7页（丰台匹配行）",
+      "publisher": "粉笔职位库",
+      "level": "secondary",
+      "evidenceType": "application_count_snapshot",
+      "year": 2026,
+      "districtId": "fengtai",
+      "geographicScope": "北京市职位快速选岗全市列表第7页；仅记录与丰台区本地候选职位代码、招录数匹配的行",
+      "url": "https://www.fenbi.com/page/positions/1/438923?page=7&quickPick=%7B%22examId%22%3A438923%7D",
+      "accessedAt": "2026-10-12",
+      "positionSnapshots": [
+        {
+          "positionCode": "232502203",
+          "scope": "position-level",
+          "applicantsRegistered": 30,
+          "recruitCount": 10
+        },
+        {
+          "positionCode": "232502204",
+          "scope": "position-level",
+          "applicantsRegistered": 23,
+          "recruitCount": 5
+        }
+      ],
+      "notes": "全市列表逐岗表头为‘报考人数’，未标明统计时点或计数定义。这里只保存页面中与丰台职位词条、计划数吻合的两行；作为第三方报考人数参考，不等同于资格审查通过数，也不代表丰台全区覆盖。"
     },
     {
       "sourceId": "changping-2026-fenbi-page-1",
