@@ -1922,5 +1922,3935 @@ export const NATIONAL_2026_CITY_RECALL_QUESTIONS = [
     "copyrightStatus": "user_confirmed_republication_authorization",
     "publishStatus": "published",
     "presentationMode": "verbatim_authorized"
+  },
+  {
+    "id": "national-2026-city-political-q1",
+    "sourceQuestionId": "kaoshiji-1180-q1",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "important-concepts",
+    "knowledgePointIds": [
+      "political-theory:important-concepts"
+    ],
+    "originalQuestionNo": 1,
+    "sectionOrder": 1,
+    "stem": "习近平总书记强调，必须坚持自信自立。中国人民和中华民族从近代以后的深重苦难走向伟大复兴的光明前景，从来就没有教科书，更没有现成答案。关于坚持自信自立，下列表述正确的有几项？\n①走自己的路，是党的全部理论和实践立足点，更是党百年奋斗得出的历史结论\n②推进中国式现代化，必须坚持把国家和民族发展放在自己力量的基点上\n③中国式现代化既要物质财富极大丰富，也要精神财富极大丰富、在思想文化上自信自强\n④独立自主是中华民族的优良传统，是中国共产党、中华人民共和国立党立国的重要原则",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "1项"
+      },
+      {
+        "id": "B",
+        "text": "2项"
+      },
+      {
+        "id": "C",
+        "text": "3项"
+      },
+      {
+        "id": "D",
+        "text": "4项"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "四项分别对应走自己的路、依靠自身力量推进现代化、物质与精神文明协调发展、坚持独立自主，均符合题干所述原则。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "1 习近平总书记强调，必须坚持自信自立。中国人民和中华民族从近代以后的深重苦难走向伟大复兴的光明前景，从来就没有教科书，更没有现成答案。关于坚持自信自立，下列表述正确的有几项？\n①走自己的路，是党的全部理论和实践立足点，更是党百年奋斗得出的历史结论\n②推进中国式现代化，必须坚持把国家和民族发展放在自己力量的基点上\n③中国式现代化既要物质财富极大丰富，也要精神财富极大丰富、在思想文化上自信自强\n④独立自主是中华民族的优良传统，是中国共产党、中华人民共和国立党立国的重要原则 A、1项 B、2项 C、3项 D、4项"
+  },
+  {
+    "id": "national-2026-city-political-q2",
+    "sourceQuestionId": "kaoshiji-1180-q2",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "meeting-documents",
+    "knowledgePointIds": [
+      "political-theory:meeting-documents"
+    ],
+    "originalQuestionNo": 2,
+    "sectionOrder": 1,
+    "stem": "习近平总书记强调，科学制定和接续实施五年规划，是我们党治国理政一条重要经验，也是中国特色社会主义一个重要政治优势。关于五年规划编制工作，下列说法正确的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "我国五年规划（计划）编制工作起始于1949年，有力推动了经济社会发展、综合国力提升、人民生活改善"
+      },
+      {
+        "id": "B",
+        "text": "中长期发展规划有助于充分发挥政府在资源配置中的决定性作用，彰显了政府对经济社会发展的宏观调控能力"
+      },
+      {
+        "id": "C",
+        "text": "从第一个五年计划到当前的五年规划，一以贯之的主题是把我国建设成为社会主义现代化国家"
+      },
+      {
+        "id": "D",
+        "text": "通过互联网就“十五五”规划编制向全社会征求意见和建议，在我国五年规划编制史上是第一次"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "五年规划一以贯之的主题是把我国建设成为社会主义现代化国家；其余选项分别错置了编制起点、市场与政府作用、首次征求意见的年份。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "2 习近平总书记强调，科学制定和接续实施五年规划，是我们党治国理政一条重要经验，也是中国特色社会主义一个重要政治优势。关于五年规划编制工作，下列说法正确的是： A、我国五年规划（计划）编制工作起始于1949年，有力推动了经济社会发展、综合国力提升、人民生活改善 B、中长期发展规划有助于充分发挥政府在资源配置中的决定性作用，彰显了政府对经济社会发展的宏观调控能力 C、从第一个五年计划到当前的五年规划，一以贯之的主题是把我国建设成为社会主义现代化国家 D、通过互联网就“十五五”规划编制向全社会征求意见和建议，在我国五年规划编制史上是第一次"
+  },
+  {
+    "id": "national-2026-city-political-q3",
+    "sourceQuestionId": "kaoshiji-1180-q3",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "policy-goals",
+    "knowledgePointIds": [
+      "political-theory:policy-goals"
+    ],
+    "originalQuestionNo": 3,
+    "sectionOrder": 1,
+    "stem": "建设文化强国，事关中国式现代化建设全局，事关中华民族复兴大业，事关提升国际竞争力，锚定2035年建成社会主义文化强国的战略目标，必须始终坚持文化建设着眼于人、落脚于人。下列有关说法正确的是：\n①文化强国之“强”最终要体现在为人民提供文化服务和文化产品的能力上\n②坚持以人民为中心，着眼满足人民群众多样化、多层次、多方面的精神文化需求\n③文化创造核心在人，要建设一支规模宏大、结构合理、锐意创新的高水平文化人才队伍\n④尊重人才成长规律，完善符合文化领域特点的人才选拔、培养、使用、激励机制，营造识才、重才、爱才的良好政策环境",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "①②③"
+      },
+      {
+        "id": "B",
+        "text": "②③④"
+      },
+      {
+        "id": "C",
+        "text": "①②④"
+      },
+      {
+        "id": "D",
+        "text": "①③④"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "②③④与以人民为中心、建设文化人才队伍和完善人才机制的要求相符；①把文化强国之“强”的最终体现说成了服务和产品供给能力。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "3 建设文化强国，事关中国式现代化建设全局，事关中华民族复兴大业，事关提升国际竞争力，锚定2035年建成社会主义文化强国的战略目标，必须始终坚持文化建设着眼于人、落脚于人。下列有关说法正确的是：\n①文化强国之“强”最终要体现在为人民提供文化服务和文化产品的能力上\n②坚持以人民为中心，着眼满足人民群众多样化、多层次、多方面的精神文化需求\n③文化创造核心在人，要建设一支规模宏大、结构合理、锐意创新的高水平文化人才队伍\n④尊重人才成长规律，完善符合文化领域特点的人才选拔、培养、使用、激励机制，营造识才、重才、爱才的良好政策环境 A、①②③ B、②③④ C、①②④ D、①③④"
+  },
+  {
+    "id": "national-2026-city-political-q4",
+    "sourceQuestionId": "kaoshiji-1180-q4",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "policy-implementation",
+    "knowledgePointIds": [
+      "political-theory:policy-implementation"
+    ],
+    "originalQuestionNo": 4,
+    "sectionOrder": 1,
+    "stem": "中共中央、国务院印发《加快建设农业强国规划（2024-2035年）》，提出面对新形势新要求，必须把加快建设农业强国作为统领“三农”工作的战略总纲，摆上建设社会主义现代化强国的重要位置，下列与加快建设农业强国有关的说法正确的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "推进生态综合补偿，健全横向生态保护补偿机制，统筹推进生态环境损害赔偿"
+      },
+      {
+        "id": "B",
+        "text": "建立健全长江流域信息共享系统，推进长江流域农业深度节水控水"
+      },
+      {
+        "id": "C",
+        "text": "完善粮食产销奖补制度，中央预算内投资向粮食主销区倾斜"
+      },
+      {
+        "id": "D",
+        "text": "推进农业科技推广体系，从经营性向公益性转变"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "农业强国规划提出推进生态综合补偿、健全横向生态保护补偿机制并统筹生态环境损害赔偿；其余选项混淆了区域或政策表述。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "4 中共中央、国务院印发《加快建设农业强国规划（2024-2035年）》，提出面对新形势新要求，必须把加快建设农业强国作为统领“三农”工作的战略总纲，摆上建设社会主义现代化强国的重要位置，下列与加快建设农业强国有关的说法正确的是： A、推进生态综合补偿，健全横向生态保护补偿机制，统筹推进生态环境损害赔偿 B、建立健全长江流域信息共享系统，推进长江流域农业深度节水控水 C、完善粮食产销奖补制度，中央预算内投资向粮食主销区倾斜 D、推进农业科技推广体系，从经营性向公益性转变"
+  },
+  {
+    "id": "national-2026-city-political-q5",
+    "sourceQuestionId": "kaoshiji-1180-q5",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "important-concepts",
+    "knowledgePointIds": [
+      "political-theory:important-concepts"
+    ],
+    "originalQuestionNo": 5,
+    "sectionOrder": 1,
+    "stem": "全面推进依法治国是一个系统工程，必须坚持法治国家、法治政府、法治社会一体建设。下列相关表述不准确的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "法治社会是构筑法治国家、法治政府的基础"
+      },
+      {
+        "id": "B",
+        "text": "建设法治政府对建设法治社会具有重要引领和带动作用"
+      },
+      {
+        "id": "C",
+        "text": "法治政府、法治社会建设必须服从、服务于法治国家建设"
+      },
+      {
+        "id": "D",
+        "text": "法治国家是依法治国的主体，是法治社会建设的先导和示范"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "法治政府是建设法治国家的主体，也是法治社会建设的先导和示范；选项D把这一关系中的主体误写成法治国家。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "5 全面推进依法治国是一个系统工程，必须坚持法治国家、法治政府、法治社会一体建设。下列相关表述不准确的是： A、法治社会是构筑法治国家、法治政府的基础 B、建设法治政府对建设法治社会具有重要引领和带动作用 C、法治政府、法治社会建设必须服从、服务于法治国家建设 D、法治国家是依法治国的主体，是法治社会建设的先导和示范"
+  },
+  {
+    "id": "national-2026-city-political-q6",
+    "sourceQuestionId": "kaoshiji-1180-q6",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "policy-implementation",
+    "knowledgePointIds": [
+      "political-theory:policy-implementation"
+    ],
+    "originalQuestionNo": 6,
+    "sectionOrder": 1,
+    "stem": "2025年7月，习近平总书记在中央城市工作会议上发表重要讲话，明确做好城市工作的总体要求、重要原则、重点任务，为做好新时代新征程的城市工作提供了根本遵循。关于城市工作，下列说法正确的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "要把握“我国城镇化正从快速增长期转向稳定发展期”的历史方位"
+      },
+      {
+        "id": "B",
+        "text": "城市工作重心应向更加注重建设投入转变"
+      },
+      {
+        "id": "C",
+        "text": "着力通过外延扩张发展组团式的现代化城市群和都市圈"
+      },
+      {
+        "id": "D",
+        "text": "城市政府应从城市事务管理的“掌舵人”转变为“划桨人”"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "中央城市工作会议指出，我国城镇化正从快速增长期转向稳定发展期，城市发展转向存量提质增效为主。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "6 2025年7月，习近平总书记在中央城市工作会议上发表重要讲话，明确做好城市工作的总体要求、重要原则、重点任务，为做好新时代新征程的城市工作提供了根本遵循。关于城市工作，下列说法正确的是： A、要把握“我国城镇化正从快速增长期转向稳定发展期”的历史方位 B、城市工作重心应向更加注重建设投入转变 C、着力通过外延扩张发展组团式的现代化城市群和都市圈 D、城市政府应从城市事务管理的“掌舵人”转变为“划桨人”"
+  },
+  {
+    "id": "national-2026-city-political-q7",
+    "sourceQuestionId": "kaoshiji-1180-q7",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "development-concepts",
+    "knowledgePointIds": [
+      "political-theory:development-concepts"
+    ],
+    "originalQuestionNo": 7,
+    "sectionOrder": 1,
+    "stem": "经济工作千头万绪，必须统筹好有效市场和有为政府的关系、总供给和总需求的关系、培育新动能和更新旧动能的关系、做优增量和盘活存量的关系、提升质量和做大总量的关系。下列相关说法不准确的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "要加快推动作为经济增长和就业收入基本依托的传统产业改造升级"
+      },
+      {
+        "id": "B",
+        "text": "要加快补上内需特别是消费短板，使内需成为拉动经济增长的主动力和稳定锚"
+      },
+      {
+        "id": "C",
+        "text": "要坚持以量取胜、充分发挥规模效应，用好超大规模市场优势和丰富应用场景"
+      },
+      {
+        "id": "D",
+        "text": "要用好各类增量资源和存量资源，通过盘活存量来带动增量"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "经济工作强调提高质量与做大总量并重、推动质的有效提升和量的合理增长；“坚持以量取胜”不符合这一要求。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.ndrc.gov.cn/fzggw/wld/lichunlin/zyhd/202501/t20250116_1395739.html",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "7 经济工作千头万绪，必须统筹好有效市场和有为政府的关系、总供给和总需求的关系、培育新动能和更新旧动能的关系、做优增量和盘活存量的关系、提升质量和做大总量的关系。下列相关说法不准确的是： A、要加快推动作为经济增长和就业收入基本依托的传统产业改造升级 B、要加快补上内需特别是消费短板，使内需成为拉动经济增长的主动力和稳定锚 C、要坚持以量取胜、充分发挥规模效应，用好超大规模市场优势和丰富应用场景 D、要用好各类增量资源和存量资源，通过盘活存量来带动增量"
+  },
+  {
+    "id": "national-2026-city-political-q8",
+    "sourceQuestionId": "kaoshiji-1180-q8",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "policy-goals",
+    "knowledgePointIds": [
+      "political-theory:policy-goals"
+    ],
+    "originalQuestionNo": 8,
+    "sectionOrder": 1,
+    "stem": "2025年7月30日，中共中央政治局召开会议，对扎实做好民生保障工作作了重要部署。下列相关表述不准确的是（    ）。",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "巩固拓展脱贫攻坚成果，确保不发生规模性返贫致贫"
+      },
+      {
+        "id": "B",
+        "text": "夯实“三农”基础，推动粮食和重要农产品价格保持在合理水平"
+      },
+      {
+        "id": "C",
+        "text": "突出就业优先政策导向，促进高校毕业生、退役军人、农民工等重点群体就业"
+      },
+      {
+        "id": "D",
+        "text": "始终把人民群众财产安全放在第一位，加强安全生产监管"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "会议要求始终把人民群众生命安全放在第一位，选项把“生命安全”替换成“财产安全”。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.nppa.gov.cn/xxfb/tt/202507/t20250731_925121.html",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "8 2025年7月30日，中共中央政治局召开会议，对扎实做好民生保障工作作了重要部署。下列相关表述不准确的是（    ）。 A、巩固拓展脱贫攻坚成果，确保不发生规模性返贫致贫 B、夯实“三农”基础，推动粮食和重要农产品价格保持在合理水平 C、突出就业优先政策导向，促进高校毕业生、退役军人、农民工等重点群体就业 D、始终把人民群众财产安全放在第一位，加强安全生产监管"
+  },
+  {
+    "id": "national-2026-city-political-q9",
+    "sourceQuestionId": "kaoshiji-1180-q9",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "policy-goals",
+    "knowledgePointIds": [
+      "political-theory:policy-goals"
+    ],
+    "originalQuestionNo": 9,
+    "sectionOrder": 1,
+    "stem": "做好新时代人口工作，要完善新时代人口发展战略，认识、适应、引领人口发展新常态，以人口高质量发展支撑中国式现代化。关于做好新时代人口工作，下列说法正确的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "要树立“大人口观”，推动人口与财政、货币、就业、产业、投资、消费、生态、区域等政策形成系统集成效应"
+      },
+      {
+        "id": "B",
+        "text": "必须推动人口工作由稳定总量、畅通流动向调节数量、优化结构转变"
+      },
+      {
+        "id": "C",
+        "text": "要更加重视“引导”和“激励”的办法，由社会治理向政府治理转变"
+      },
+      {
+        "id": "D",
+        "text": "坚持人民主体地位，把人口高速增长同人民高品质生活紧密结合起来"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "“大人口观”要求将人口变化纳入经济社会政策统筹，促进人口与财政、货币、就业、产业等政策形成系统效应。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.moe.gov.cn/jyb_xwfb/moe_176/202411/t20241115_1163142.html",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "9 做好新时代人口工作，要完善新时代人口发展战略，认识、适应、引领人口发展新常态，以人口高质量发展支撑中国式现代化。关于做好新时代人口工作，下列说法正确的是： A、要树立“大人口观”，推动人口与财政、货币、就业、产业、投资、消费、生态、区域等政策形成系统集成效应 B、必须推动人口工作由稳定总量、畅通流动向调节数量、优化结构转变 C、要更加重视“引导”和“激励”的办法，由社会治理向政府治理转变 D、坚持人民主体地位，把人口高速增长同人民高品质生活紧密结合起来"
+  },
+  {
+    "id": "national-2026-city-political-q10",
+    "sourceQuestionId": "kaoshiji-1180-q10",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "policy-goals",
+    "knowledgePointIds": [
+      "political-theory:policy-goals"
+    ],
+    "originalQuestionNo": 10,
+    "sectionOrder": 1,
+    "stem": "《中共中央关于制定国民经济和社会发展第十五个五年规划的建议》提出，推进国家安全体系和能力现代化，建设更高水平平安中国。下列有关说法正确的是（    ）。",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "锻造实战实用的国家安全能力，把捍卫国土安全摆在首位"
+      },
+      {
+        "id": "B",
+        "text": "统筹推进房地产、地方政府债务、中小金融机构等风险有序化解"
+      },
+      {
+        "id": "C",
+        "text": "健全国家安全体系，坚持以风险防控为先导、法治保障为落脚点"
+      },
+      {
+        "id": "D",
+        "text": "完善公共安全体系，推动公共安全治理模式由事后处理向事中控制转型"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "规划建议明确提出统筹推进房地产、地方政府债务、中小金融机构等风险有序化解。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://is.mofcom.gov.cn/zcfb/art/2025/art_e91ff36da2c448f6a4f9b67a3d5b0172.html",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "10 《中共中央关于制定国民经济和社会发展第十五个五年规划的建议》提出，推进国家安全体系和能力现代化，建设更高水平平安中国。下列有关说法正确的是（    ）。 A、锻造实战实用的国家安全能力，把捍卫国土安全摆在首位 B、统筹推进房地产、地方政府债务、中小金融机构等风险有序化解 C、健全国家安全体系，坚持以风险防控为先导、法治保障为落脚点 D、完善公共安全体系，推动公共安全治理模式由事后处理向事中控制转型"
+  },
+  {
+    "id": "national-2026-city-political-q11",
+    "sourceQuestionId": "kaoshiji-1180-q11",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "important-concepts",
+    "knowledgePointIds": [
+      "political-theory:important-concepts"
+    ],
+    "originalQuestionNo": 11,
+    "sectionOrder": 1,
+    "stem": "习近平总书记高度重视战略思维，多次强调党员领导干部要加强战略思维，增强战略定力。下列体现战略思维的说法，正确的有几项？\n①粮食多一点少一点是战略问题，粮食安全是战术问题\n②统战工作的本质要求是大团结大联合，解决的是人心和力量问题\n③要心怀“国之大者”，站在全局和战略的高度想问题、办事情，一切工作都要以贯彻落实党中央决策部署为前提\n④自觉把党的对外工作放到党和国家工作大局中来认识，放到中国与世界关系的发展变化中来把握",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "1项"
+      },
+      {
+        "id": "B",
+        "text": "2项"
+      },
+      {
+        "id": "C",
+        "text": "3项"
+      },
+      {
+        "id": "D",
+        "text": "4项"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "②③④体现统战工作凝聚人心力量、从全局落实决策部署和服务国家工作大局；①将粮食安全与经济工作的重要性倒置。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.sara.gov.cn/static/content/ywdt/qtyw/2025-01-08/1326558264922505216.html",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "11 习近平总书记高度重视战略思维，多次强调党员领导干部要加强战略思维，增强战略定力。下列体现战略思维的说法，正确的有几项？\n①粮食多一点少一点是战略问题，粮食安全是战术问题\n②统战工作的本质要求是大团结大联合，解决的是人心和力量问题\n③要心怀“国之大者”，站在全局和战略的高度想问题、办事情，一切工作都要以贯彻落实党中央决策部署为前提\n④自觉把党的对外工作放到党和国家工作大局中来认识，放到中国与世界关系的发展变化中来把握 A、1项 B、2项 C、3项 D、4项"
+  },
+  {
+    "id": "national-2026-city-political-q12",
+    "sourceQuestionId": "kaoshiji-1180-q12",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "policy-measures",
+    "knowledgePointIds": [
+      "political-theory:policy-measures"
+    ],
+    "originalQuestionNo": 12,
+    "sectionOrder": 1,
+    "stem": "习近平总书记指出，我们要建成的教育强国，是中国特色社会主义教育强国，应当具有强大的思政引领力、人才竞争力、科技支撑力、民生保障力、社会协同力、国际影响力，为以中国式现代化全面推进强国建设、民族复兴伟业提供有力支撑。关于建设教育强国，下列说法正确的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "要坚持教育均等化原则，把教育公平作为国家基本教育政策"
+      },
+      {
+        "id": "B",
+        "text": "要完善人才培养与经济社会发展需要适配机制，顺应时代发展要求，适度增加学科专业数量"
+      },
+      {
+        "id": "C",
+        "text": "要把引进全球顶尖科学家摆到更加突出位置，着力培育拔尖创新人才，推动实现高水平科技自立自强"
+      },
+      {
+        "id": "D",
+        "text": "从教育大国到教育强国是一个系统性跃升和质变，必须以改革创新为动力"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "教育强国建设是系统性跃升和质变，必须以改革创新为动力；其余选项对教育公平、专业设置或人才工作作了不准确表述。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.moe.gov.cn/jyb_xwfb/xw_zt/moe_357/s7865/s8417/?gd=8",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "12 习近平总书记指出，我们要建成的教育强国，是中国特色社会主义教育强国，应当具有强大的思政引领力、人才竞争力、科技支撑力、民生保障力、社会协同力、国际影响力，为以中国式现代化全面推进强国建设、民族复兴伟业提供有力支撑。关于建设教育强国，下列说法正确的是： A、要坚持教育均等化原则，把教育公平作为国家基本教育政策 B、要完善人才培养与经济社会发展需要适配机制，顺应时代发展要求，适度增加学科专业数量 C、要把引进全球顶尖科学家摆到更加突出位置，着力培育拔尖创新人才，推动实现高水平科技自立自强 D、从教育大国到教育强国是一个系统性跃升和质变，必须以改革创新为动力"
+  },
+  {
+    "id": "national-2026-city-political-q13",
+    "sourceQuestionId": "kaoshiji-1180-q13",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "policy-measures",
+    "knowledgePointIds": [
+      "political-theory:policy-measures"
+    ],
+    "originalQuestionNo": 13,
+    "sectionOrder": 1,
+    "stem": "习近平主席在二十国集团领导人第十九次峰会上指出，要完善全球贸易治理，建设开放型世界经济。下列相关表述正确的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "要适应经济问题政治化的潮流，通过强化绿色低碳要求推行贸易保护政策"
+      },
+      {
+        "id": "B",
+        "text": "要积极构建更具平等性、包容性和建设性的产业链供应链伙伴关系，呼吁各方加强合作"
+      },
+      {
+        "id": "C",
+        "text": "要把安全置于国际经贸议程中心地位，持续推动贸易和投资自由化便利化"
+      },
+      {
+        "id": "D",
+        "text": "要一以贯之保持世界贸易组织规则不变，提高多边贸易体制的权威性、有效性和相关性"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "G20讲话倡议构建更具平等性、包容性和建设性的产业链供应链伙伴关系，并呼吁加强合作。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.mfa.gov.cn/ziliao_674904/zyjh_674906/202412/t20241218_11497672.shtml",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "13 习近平主席在二十国集团领导人第十九次峰会上指出，要完善全球贸易治理，建设开放型世界经济。下列相关表述正确的是： A、要适应经济问题政治化的潮流，通过强化绿色低碳要求推行贸易保护政策 B、要积极构建更具平等性、包容性和建设性的产业链供应链伙伴关系，呼吁各方加强合作 C、要把安全置于国际经贸议程中心地位，持续推动贸易和投资自由化便利化 D、要一以贯之保持世界贸易组织规则不变，提高多边贸易体制的权威性、有效性和相关性"
+  },
+  {
+    "id": "national-2026-city-political-q14",
+    "sourceQuestionId": "kaoshiji-1180-q14",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "innovation-theory",
+    "knowledgePointIds": [
+      "political-theory:innovation-theory"
+    ],
+    "originalQuestionNo": 14,
+    "sectionOrder": 1,
+    "stem": "中国式现代化要靠科技现代化作支撑，实现高质量发展要靠科技创新培育新动能。关于建成科技强国的举措，下列说法正确的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "要坚持有所为有所不为，突出经济发展需求，在重要领域实施科技战略部署"
+      },
+      {
+        "id": "B",
+        "text": "要充分发挥人才在科技资源配置中的决定性作用，调动产学研各环节的积极性"
+      },
+      {
+        "id": "C",
+        "text": "要充分发挥科技领军企业龙头作用，鼓励中小企业和民营企业科技创新，支持企业牵头或参与国家重大科技项目"
+      },
+      {
+        "id": "D",
+        "text": "要降低基础研究组织化程度，强化自由探索，鼓励面向重大科学问题的协同攻关"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "科技强国建设强调发挥科技领军企业作用，鼓励多类企业创新并支持企业牵头或参与国家重大科技项目。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "14 中国式现代化要靠科技现代化作支撑，实现高质量发展要靠科技创新培育新动能。关于建成科技强国的举措，下列说法正确的是： A、要坚持有所为有所不为，突出经济发展需求，在重要领域实施科技战略部署 B、要充分发挥人才在科技资源配置中的决定性作用，调动产学研各环节的积极性 C、要充分发挥科技领军企业龙头作用，鼓励中小企业和民营企业科技创新，支持企业牵头或参与国家重大科技项目 D、要降低基础研究组织化程度，强化自由探索，鼓励面向重大科学问题的协同攻关"
+  },
+  {
+    "id": "national-2026-city-political-q15",
+    "sourceQuestionId": "kaoshiji-1180-q15",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "important-concepts",
+    "knowledgePointIds": [
+      "political-theory:important-concepts"
+    ],
+    "originalQuestionNo": 15,
+    "sectionOrder": 1,
+    "stem": "习近平总书记强调，选人用人要加强党性鉴别，注重考察干部的境界格局和忠诚度廉洁度。下列与党性相关的说法正确的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "树立和践行正确政绩观，起决定性作用的是党性"
+      },
+      {
+        "id": "B",
+        "text": "强党性，就是要自觉用马克思主义思想改造客观世界"
+      },
+      {
+        "id": "C",
+        "text": "党性、党风、党纪是有机整体，党性是根本，党风是保障，党纪是表现"
+      },
+      {
+        "id": "D",
+        "text": "作风问题本质上是党性问题，要把作风建设摆在党性修养的首位"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "树立和践行正确政绩观，起决定性作用的是党性。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "15 习近平总书记强调，选人用人要加强党性鉴别，注重考察干部的境界格局和忠诚度廉洁度。下列与党性相关的说法正确的是： A、树立和践行正确政绩观，起决定性作用的是党性 B、强党性，就是要自觉用马克思主义思想改造客观世界 C、党性、党风、党纪是有机整体，党性是根本，党风是保障，党纪是表现 D、作风问题本质上是党性问题，要把作风建设摆在党性修养的首位"
+  },
+  {
+    "id": "national-2026-city-political-q16",
+    "sourceQuestionId": "kaoshiji-1180-q16",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "theory-practice",
+    "knowledgePointIds": [
+      "political-theory:theory-practice"
+    ],
+    "originalQuestionNo": 16,
+    "sectionOrder": 1,
+    "stem": "坚持问题导向是习近平新时代中国特色社会主义思想的世界观和方法论的重要内容。关于坚持问题导向，下列说法不准确的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "坚持问题导向是马克思主义的鲜明特点"
+      },
+      {
+        "id": "B",
+        "text": "坚持问题导向要抓住人民最关心最直接最现实的利益问题"
+      },
+      {
+        "id": "C",
+        "text": "坚持问题导向体现了矛盾的普遍性和客观性"
+      },
+      {
+        "id": "D",
+        "text": "坚持问题导向本质是变与不变、继承与发展的辩证统一"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "选项D把坚持问题导向的内涵与“变与不变、继承与发展”的其他方法论表述混为一谈；其余说法符合问题导向的要求。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "16 坚持问题导向是习近平新时代中国特色社会主义思想的世界观和方法论的重要内容。关于坚持问题导向，下列说法不准确的是： A、坚持问题导向是马克思主义的鲜明特点 B、坚持问题导向要抓住人民最关心最直接最现实的利益问题 C、坚持问题导向体现了矛盾的普遍性和客观性 D、坚持问题导向本质是变与不变、继承与发展的辩证统一"
+  },
+  {
+    "id": "national-2026-city-political-q17",
+    "sourceQuestionId": "kaoshiji-1180-q17",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "theory-practice",
+    "knowledgePointIds": [
+      "political-theory:theory-practice"
+    ],
+    "originalQuestionNo": 17,
+    "sectionOrder": 1,
+    "stem": "恩格斯深刻指出：“马克思的整个世界观不是教义，而是方法。它提供的不是现成的教条，而是进一步研究的出发点和供这种研究使用的方法。”下列有关马克思主义理论的说法不准确的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "马克思创立了辩证法，成为我们认识世界和改造世界的根本方法"
+      },
+      {
+        "id": "B",
+        "text": "科学社会主义的原则不能丢，但科学社会主义也绝不是一成不变的教条"
+      },
+      {
+        "id": "C",
+        "text": "当代中国的伟大社会变革不是简单套用马克思主义经典作家设想的模板"
+      },
+      {
+        "id": "D",
+        "text": "《共产党宣言》发表至今，人类社会发生了翻天覆地的变化，但马克思主义所阐述的一般原理整个来说仍然是完全正确的"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "马克思批判继承并发展了既有辩证法，形成唯物辩证法，并非从无到有地创立辩证法。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "17 恩格斯深刻指出：“马克思的整个世界观不是教义，而是方法。它提供的不是现成的教条，而是进一步研究的出发点和供这种研究使用的方法。”下列有关马克思主义理论的说法不准确的是： A、马克思创立了辩证法，成为我们认识世界和改造世界的根本方法 B、科学社会主义的原则不能丢，但科学社会主义也绝不是一成不变的教条 C、当代中国的伟大社会变革不是简单套用马克思主义经典作家设想的模板 D、《共产党宣言》发表至今，人类社会发生了翻天覆地的变化，但马克思主义所阐述的一般原理整个来说仍然是完全正确的"
+  },
+  {
+    "id": "national-2026-city-political-q18",
+    "sourceQuestionId": "kaoshiji-1180-q18",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "theory-practice",
+    "knowledgePointIds": [
+      "political-theory:theory-practice"
+    ],
+    "originalQuestionNo": 18,
+    "sectionOrder": 1,
+    "stem": "以实践为基础，从整体上把握人与世界的关系，是马克思主义世界观的重要内容。关于马克思主义实践观，下列说法正确的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "正确发挥主观能动性是实践的根本途径"
+      },
+      {
+        "id": "B",
+        "text": "实践的过程就是对于结果的检验和评价"
+      },
+      {
+        "id": "C",
+        "text": "实践是人类生存和发展最基本的活动"
+      },
+      {
+        "id": "D",
+        "text": "实践是一种无目的的适应环境的本能活动"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "实践是人类生存和发展的最基本活动；其余选项片面否定实践的目的性或物质性。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "18 以实践为基础，从整体上把握人与世界的关系，是马克思主义世界观的重要内容。关于马克思主义实践观，下列说法正确的是： A、正确发挥主观能动性是实践的根本途径 B、实践的过程就是对于结果的检验和评价 C、实践是人类生存和发展最基本的活动 D、实践是一种无目的的适应环境的本能活动"
+  },
+  {
+    "id": "national-2026-city-political-q19",
+    "sourceQuestionId": "kaoshiji-1180-q19",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "policy-implementation",
+    "knowledgePointIds": [
+      "political-theory:policy-implementation"
+    ],
+    "originalQuestionNo": 19,
+    "sectionOrder": 1,
+    "stem": "习近平总书记在对各省区市进行深入考察调研的过程中，结合各地实际情况，对推进高质量发展作出一系列重要部署。下列对应关系正确的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "江苏——要建设国家资源型经济转型综合配套改革试验区，重点抓好能源转型、产业升级和适度多元发展"
+      },
+      {
+        "id": "B",
+        "text": "山东——要发挥海洋资源丰富的得天独厚优势，经略海洋、向海图强，打造世界级海洋港口群，打造现代海洋经济发展高地"
+      },
+      {
+        "id": "C",
+        "text": "云南——要把握好挑大梁的着力点，在推动科技创新和产业创新融合上打头阵"
+      },
+      {
+        "id": "D",
+        "text": "贵州——聚焦实现贸易、投资、跨境资金流动、人员进出、运输来往自由便利和数据安全有序流动"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "山东部署强调发挥海洋资源优势，经略海洋、向海图强，建设世界级海洋港口群和现代海洋经济发展高地。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "19 习近平总书记在对各省区市进行深入考察调研的过程中，结合各地实际情况，对推进高质量发展作出一系列重要部署。下列对应关系正确的是： A、江苏——要建设国家资源型经济转型综合配套改革试验区，重点抓好能源转型、产业升级和适度多元发展 B、山东——要发挥海洋资源丰富的得天独厚优势，经略海洋、向海图强，打造世界级海洋港口群，打造现代海洋经济发展高地 C、云南——要把握好挑大梁的着力点，在推动科技创新和产业创新融合上打头阵 D、贵州——聚焦实现贸易、投资、跨境资金流动、人员进出、运输来往自由便利和数据安全有序流动"
+  },
+  {
+    "id": "national-2026-city-political-q20",
+    "sourceQuestionId": "kaoshiji-1180-q20",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "meeting-documents",
+    "knowledgePointIds": [
+      "political-theory:meeting-documents"
+    ],
+    "originalQuestionNo": 20,
+    "sectionOrder": 1,
+    "stem": "2025年是中国人民抗日战争暨世界反法西斯战争胜利80周年。中国人民对战争带来的苦难有着刻骨铭心的记忆，对和平有着孜孜不倦的追求。关于中国人民抗日战争，下列表述不准确的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "中国人民抗日战争的伟大胜利，是以爱国主义为核心的民族精神的伟大胜利"
+      },
+      {
+        "id": "B",
+        "text": "中国人民抗日战争的伟大胜利，第一次确立了中国在世界上的大国地位，使中国人民赢得了世界爱好和平人民的尊敬"
+      },
+      {
+        "id": "C",
+        "text": "中国人民抗日战争的伟大胜利，是近代以来中国抗击外敌入侵的第一次完全胜利"
+      },
+      {
+        "id": "D",
+        "text": "中国人民抗日战争的伟大胜利，为中华民族由近代以来陷入深重危机走向伟大复兴确立了历史转折点"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "抗战胜利重新确立了中国的大国地位，并非“第一次确立”；故该表述不准确。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "20 2025年是中国人民抗日战争暨世界反法西斯战争胜利80周年。中国人民对战争带来的苦难有着刻骨铭心的记忆，对和平有着孜孜不倦的追求。关于中国人民抗日战争，下列表述不准确的是： A、中国人民抗日战争的伟大胜利，是以爱国主义为核心的民族精神的伟大胜利 B、中国人民抗日战争的伟大胜利，第一次确立了中国在世界上的大国地位，使中国人民赢得了世界爱好和平人民的尊敬 C、中国人民抗日战争的伟大胜利，是近代以来中国抗击外敌入侵的第一次完全胜利 D、中国人民抗日战争的伟大胜利，为中华民族由近代以来陷入深重危机走向伟大复兴确立了历史转折点"
+  },
+  {
+    "id": "national-2026-city-general-knowledge-q21",
+    "sourceQuestionId": "kaoshiji-1180-q21",
+    "moduleId": "general-knowledge",
+    "subjectId": "law",
+    "topicId": "law:fundamentals",
+    "knowledgePointIds": [
+      "law:legal-sources"
+    ],
+    "originalQuestionNo": 21,
+    "sectionOrder": 2,
+    "stem": "下列情形不符合《中华人民共和国监察法》及其实施条例规定的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "再派出的监察专员王某在开展监察工作过程中，受派出他的监察机构领导"
+      },
+      {
+        "id": "B",
+        "text": "公务员张某在怀孕期间因涉嫌严重职务违法被监察机关调查，经监察机关依法审批，对其采取责令候查措施"
+      },
+      {
+        "id": "C",
+        "text": "办理监察事项的监察人员黄某系监察对象刘某的丈夫，黄某应自行回避"
+      },
+      {
+        "id": "D",
+        "text": "监察人员李某涉嫌职务犯罪，监察机关决定对其采取15日禁闭措施"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "《监察法》规定，对涉嫌严重职务违法或职务犯罪的监察人员采取禁闭措施，期限不得超过七日；十五日超出法定上限。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://zygjjg.12388.gov.cn/html/law/8.html",
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "21 下列情形不符合《中华人民共和国监察法》及其实施条例规定的是： A、再派出的监察专员王某在开展监察工作过程中，受派出他的监察机构领导 B、公务员张某在怀孕期间因涉嫌严重职务违法被监察机关调查，经监察机关依法审批，对其采取责令候查措施 C、办理监察事项的监察人员黄某系监察对象刘某的丈夫，黄某应自行回避 D、监察人员李某涉嫌职务犯罪，监察机关决定对其采取15日禁闭措施"
+  },
+  {
+    "id": "national-2026-city-general-knowledge-q22",
+    "sourceQuestionId": "kaoshiji-1180-q22",
+    "moduleId": "general-knowledge",
+    "subjectId": "law",
+    "topicId": "law:fundamentals",
+    "knowledgePointIds": [
+      "law:legal-sources"
+    ],
+    "originalQuestionNo": 22,
+    "sectionOrder": 2,
+    "stem": "关于《中华人民共和国民营经济促进法》，下列说法错误的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "是我国第一部专门关于民营经济发展的基础性法律"
+      },
+      {
+        "id": "B",
+        "text": "规定司法行政部门建立涉企行政执法诉求沟通机制"
+      },
+      {
+        "id": "C",
+        "text": "规定地方各级人民政府与民营经济组织订立的合同不得变更"
+      },
+      {
+        "id": "D",
+        "text": "规定向民营经济组织开放国家重大科研基础设施"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "法律允许因国家利益或社会公共利益需要，依法定权限和程序变更合同约定，并对民营经济组织损失予以补偿；“不得变更”表述过于绝对。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/bgt/art/2026/art_6bcebfe258864b21a44e1f7170c594a2.html",
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "22 关于《中华人民共和国民营经济促进法》，下列说法错误的是： A、是我国第一部专门关于民营经济发展的基础性法律 B、规定司法行政部门建立涉企行政执法诉求沟通机制 C、规定地方各级人民政府与民营经济组织订立的合同不得变更 D、规定向民营经济组织开放国家重大科研基础设施"
+  },
+  {
+    "id": "national-2026-city-general-knowledge-q23",
+    "sourceQuestionId": "kaoshiji-1180-q23",
+    "moduleId": "general-knowledge",
+    "subjectId": "law",
+    "topicId": "law:fundamentals",
+    "knowledgePointIds": [
+      "law:legal-sources"
+    ],
+    "originalQuestionNo": 23,
+    "sectionOrder": 2,
+    "stem": "根据《政务数据共享条例》，下列说法错误的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "政务数据需求部门提交的申请材料不全的，政务数据提供部门不得直接予以拒绝"
+      },
+      {
+        "id": "B",
+        "text": "政府部门通过共享获得政务数据后不得擅自将获得的政务数据提供给第三方"
+      },
+      {
+        "id": "C",
+        "text": "可以提供给所有政府部门共享使用的政务数据属于无条件共享类政务数据"
+      },
+      {
+        "id": "D",
+        "text": "政府部门应当新建政务数据共享交换系统开展跨层级政务数据共享相关工作"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "《政务数据共享条例》强调统筹推进数据共享，并未要求政府部门新建交换系统；共享数据也不得擅自提供给第三方。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.mee.gov.cn/zcwj/gwywj/202506/t20250604_1120657.shtml",
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "23 根据《政务数据共享条例》，下列说法错误的是： A、政务数据需求部门提交的申请材料不全的，政务数据提供部门不得直接予以拒绝 B、政府部门通过共享获得政务数据后不得擅自将获得的政务数据提供给第三方 C、可以提供给所有政府部门共享使用的政务数据属于无条件共享类政务数据 D、政府部门应当新建政务数据共享交换系统开展跨层级政务数据共享相关工作"
+  },
+  {
+    "id": "national-2026-city-general-knowledge-q24",
+    "sourceQuestionId": "kaoshiji-1180-q24",
+    "moduleId": "general-knowledge",
+    "subjectId": "economy",
+    "topicId": "economy:finance",
+    "knowledgePointIds": [
+      "economy:fiscal-policy"
+    ],
+    "originalQuestionNo": 24,
+    "sectionOrder": 2,
+    "stem": "下列经济目标与政策工具匹配错误的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "扩大基础设施投资规模——提高专项债发行额度"
+      },
+      {
+        "id": "B",
+        "text": "降低市场主体经营成本——延续小微企业增值税减免"
+      },
+      {
+        "id": "C",
+        "text": "拓宽房企的融资渠道——增加保障性住房再贷款额度"
+      },
+      {
+        "id": "D",
+        "text": "缓解基层“三保”支出压力——加大中央对地方转移支付"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "保障性住房再贷款支持收购存量商品房、增加保障性住房供给，不等同于直接拓宽房地产开发企业的融资渠道。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "24 下列经济目标与政策工具匹配错误的是： A、扩大基础设施投资规模——提高专项债发行额度 B、降低市场主体经营成本——延续小微企业增值税减免 C、拓宽房企的融资渠道——增加保障性住房再贷款额度 D、缓解基层“三保”支出压力——加大中央对地方转移支付"
+  },
+  {
+    "id": "national-2026-city-general-knowledge-q25",
+    "sourceQuestionId": "kaoshiji-1180-q25",
+    "moduleId": "general-knowledge",
+    "subjectId": "economy",
+    "topicId": "economy:development",
+    "knowledgePointIds": [
+      "economy:rural-urban-development"
+    ],
+    "originalQuestionNo": 25,
+    "sectionOrder": 2,
+    "stem": "2025年3月，中共中央办公厅、国务院办公厅印发《逐步把永久基本农田建成高标准农田实施方案》，下列有关说法正确的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "西北区要重点加强水平梯田改造建设"
+      },
+      {
+        "id": "B",
+        "text": "25度以上坡耕地、沿海内陆滩涂是开展建设的重点区域"
+      },
+      {
+        "id": "C",
+        "text": "高标准农田建设标准中的“两通”是指通水通路"
+      },
+      {
+        "id": "D",
+        "text": "黄淮海区应该把改善田块细碎化问题作为一个工作重点"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "高标准农田建设的“两通”指通水、通路。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://app.www.gov.cn/govdata/gov/202504/07/526167/article.html",
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "25 2025年3月，中共中央办公厅、国务院办公厅印发《逐步把永久基本农田建成高标准农田实施方案》，下列有关说法正确的是： A、西北区要重点加强水平梯田改造建设 B、25度以上坡耕地、沿海内陆滩涂是开展建设的重点区域 C、高标准农田建设标准中的“两通”是指通水通路 D、黄淮海区应该把改善田块细碎化问题作为一个工作重点"
+  },
+  {
+    "id": "national-2026-city-general-knowledge-q26",
+    "sourceQuestionId": "kaoshiji-1180-q26",
+    "moduleId": "general-knowledge",
+    "subjectId": "technology",
+    "topicId": "technology:frontier",
+    "knowledgePointIds": [
+      "technology:materials"
+    ],
+    "originalQuestionNo": 26,
+    "sectionOrder": 2,
+    "stem": "2025年自然资源部发布《新发现矿种公告》，高纯石英矿正式成为我国第174号矿种。下列与之相关的说法错误的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "高纯石英矿在分类上属于金属矿"
+      },
+      {
+        "id": "B",
+        "text": "天然水晶是石英的结晶体"
+      },
+      {
+        "id": "C",
+        "text": "高纯石英可用于芯片制造中的光刻环节"
+      },
+      {
+        "id": "D",
+        "text": "石英砂具有耐高温的特性"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "高纯石英矿主要成分为二氧化硅，属于非金属矿产，不属于金属矿。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "26 2025年自然资源部发布《新发现矿种公告》，高纯石英矿正式成为我国第174号矿种。下列与之相关的说法错误的是： A、高纯石英矿在分类上属于金属矿 B、天然水晶是石英的结晶体 C、高纯石英可用于芯片制造中的光刻环节 D、石英砂具有耐高温的特性"
+  },
+  {
+    "id": "national-2026-city-general-knowledge-q27",
+    "sourceQuestionId": "kaoshiji-1180-q27",
+    "moduleId": "general-knowledge",
+    "subjectId": "geography",
+    "topicId": "geography:national",
+    "knowledgePointIds": [
+      "geography:natural-resources"
+    ],
+    "originalQuestionNo": 27,
+    "sectionOrder": 2,
+    "stem": "下列与海洋经济有关的说法错误的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "海水中氢离子和氢氧根离子浓度高，利用海水制氢效率高"
+      },
+      {
+        "id": "B",
+        "text": "现代深远海养殖平台一般设置在有较大浪流的开放性水域"
+      },
+      {
+        "id": "C",
+        "text": "潮汐发电的水轮机结构要适应海水落差小、流量大的特点"
+      },
+      {
+        "id": "D",
+        "text": "液化天然气运输船的液舱通常采用超低温环境储存天然气"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "海水中可直接用于电解的氢、氢氧根离子浓度并不高，复杂离子还会影响电解过程，不能据此说制氢效率高。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "27 下列与海洋经济有关的说法错误的是： A、海水中氢离子和氢氧根离子浓度高，利用海水制氢效率高 B、现代深远海养殖平台一般设置在有较大浪流的开放性水域 C、潮汐发电的水轮机结构要适应海水落差小、流量大的特点 D、液化天然气运输船的液舱通常采用超低温环境储存天然气"
+  },
+  {
+    "id": "national-2026-city-general-knowledge-q28",
+    "sourceQuestionId": "kaoshiji-1180-q28",
+    "moduleId": "general-knowledge",
+    "subjectId": "geography",
+    "topicId": "geography:natural",
+    "knowledgePointIds": [
+      "geography:weather"
+    ],
+    "originalQuestionNo": 28,
+    "sectionOrder": 2,
+    "stem": "关于诗句中涉及的气象现象，下列说法错误的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "“白雪却嫌春色晚，故穿庭树作飞花”与春季较强冷空气活动有关"
+      },
+      {
+        "id": "B",
+        "text": "“雷车动地电火明，急雨遂作盆盎倾”多与积雨云中的电位差有关"
+      },
+      {
+        "id": "C",
+        "text": "“檐花穿雾凇，窗纸战风棱”的景观形成过程中包含凝华现象"
+      },
+      {
+        "id": "D",
+        "text": "“鸡声茅店月，人迹板桥霜”的“霜”包含在降水统计范围内"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "霜是在近地面物体表面形成的冰晶，不是从天空降落的降水，不计入降水统计。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "28 关于诗句中涉及的气象现象，下列说法错误的是： A、“白雪却嫌春色晚，故穿庭树作飞花”与春季较强冷空气活动有关 B、“雷车动地电火明，急雨遂作盆盎倾”多与积雨云中的电位差有关 C、“檐花穿雾凇，窗纸战风棱”的景观形成过程中包含凝华现象 D、“鸡声茅店月，人迹板桥霜”的“霜”包含在降水统计范围内"
+  },
+  {
+    "id": "national-2026-city-general-knowledge-q29",
+    "sourceQuestionId": "kaoshiji-1180-q29",
+    "moduleId": "general-knowledge",
+    "subjectId": "geography",
+    "topicId": "geography:china",
+    "knowledgePointIds": [
+      "geography:water-resources"
+    ],
+    "originalQuestionNo": 29,
+    "sectionOrder": 2,
+    "stem": "下列关于河流入海口的描述与河流对应错误的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "浑浊的河水奔流而至，汇入清澈的渤海，形成一条清晰的分界线——黄河"
+      },
+      {
+        "id": "B",
+        "text": "“三龙吐珠，八门入海”，生动地描绘出了它的奇特形态——淮河"
+      },
+      {
+        "id": "C",
+        "text": "在入海口的潮间带上，会看到一片耀眼的红色，又被称为“红海滩”——辽河"
+      },
+      {
+        "id": "D",
+        "text": "在其与东海海潮的相互激荡下，造就了我国第三大岛崇明岛——长江"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "“三龙吐珠、八门入海”描述珠江三角洲水系，不是淮河入海口形态。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "29 下列关于河流入海口的描述与河流对应错误的是： A、浑浊的河水奔流而至，汇入清澈的渤海，形成一条清晰的分界线——黄河 B、“三龙吐珠，八门入海”，生动地描绘出了它的奇特形态——淮河 C、在入海口的潮间带上，会看到一片耀眼的红色，又被称为“红海滩”——辽河 D、在其与东海海潮的相互激荡下，造就了我国第三大岛崇明岛——长江"
+  },
+  {
+    "id": "national-2026-city-general-knowledge-q30",
+    "sourceQuestionId": "kaoshiji-1180-q30",
+    "moduleId": "general-knowledge",
+    "subjectId": "technology",
+    "topicId": "technology:physics",
+    "knowledgePointIds": [
+      "technology:optics"
+    ],
+    "originalQuestionNo": 30,
+    "sectionOrder": 2,
+    "stem": "下列与自然界中的颜色有关的说法错误的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "“橙色月亮”通常发生在大气层中水汽或颗粒物质较多时"
+      },
+      {
+        "id": "B",
+        "text": "火烈鸟羽毛呈朱红色与摄入食物中的虾青素累积有关"
+      },
+      {
+        "id": "C",
+        "text": "蓝闪蝶翅膀呈蓝色是由于其表面鳞片具有特殊的微结构"
+      },
+      {
+        "id": "D",
+        "text": "蓝莓呈现靛蓝色是因为表面蜡质层中含高浓度花青素"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "蓝莓表面的蓝色果粉主要与蜡质层微结构产生的光学效应有关，不是蜡质层中含高浓度花青素所致。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026-%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98-%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B-%EF%BC%88%E5%89%AF%E7%9C%81%EF%BC%89%E7%9C%9F%E9%A2%98%E5%8F%8A%E7%AD%94%E6%A1%88%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89%281%29_a3ce53508e279d5ba2bac7aaf8f61f67eefd3b0e.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "30 下列与自然界中的颜色有关的说法错误的是： A、“橙色月亮”通常发生在大气层中水汽或颗粒物质较多时 B、火烈鸟羽毛呈朱红色与摄入食物中的虾青素累积有关 C、蓝闪蝶翅膀呈蓝色是由于其表面鳞片具有特殊的微结构 D、蓝莓呈现靛蓝色是因为表面蜡质层中含高浓度花青素"
+  },
+  {
+    "id": "national-2026-city-general-knowledge-q31",
+    "sourceQuestionId": "kaoshiji-1180-q31",
+    "moduleId": "general-knowledge",
+    "subjectId": "geography",
+    "topicId": "geography:world",
+    "knowledgePointIds": [
+      "geography:routes"
+    ],
+    "originalQuestionNo": 31,
+    "sectionOrder": 2,
+    "stem": "某物流公司要优化长三角到乌鲁木齐的易腐货物运输路线，下列方案最可行的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "夏季采用陇海——兰新铁路运输利用沿线低温天气自然保鲜"
+      },
+      {
+        "id": "B",
+        "text": "冬季选择长江——京杭大运河——黄河水运组合避开陆路交通拥堵"
+      },
+      {
+        "id": "C",
+        "text": "春秋季采用铁路冷藏集装箱运输平衡运输成本与时效性"
+      },
+      {
+        "id": "D",
+        "text": "全年优先使用连霍高速公路运输以追求最低的运输成本"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "冷藏集装箱能控制易腐货物运输温度；铁路在长距离运输中兼顾成本和时效，较符合题设要求。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "31 某物流公司要优化长三角到乌鲁木齐的易腐货物运输路线，下列方案最可行的是： A、夏季采用陇海——兰新铁路运输利用沿线低温天气自然保鲜 B、冬季选择长江——京杭大运河——黄河水运组合避开陆路交通拥堵 C、春秋季采用铁路冷藏集装箱运输平衡运输成本与时效性 D、全年优先使用连霍高速公路运输以追求最低的运输成本"
+  },
+  {
+    "id": "national-2026-city-general-knowledge-q32",
+    "sourceQuestionId": "kaoshiji-1180-q32",
+    "moduleId": "general-knowledge",
+    "subjectId": "technology",
+    "topicId": "technology:frontier",
+    "knowledgePointIds": [
+      "technology:science-literacy"
+    ],
+    "originalQuestionNo": 32,
+    "sectionOrder": 2,
+    "stem": "某款创意时钟要用不同的符号替代表盘上的数字，下列设计不合适的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "用45度角的正弦“sin45°”替代“1”"
+      },
+      {
+        "id": "B",
+        "text": "用3的阶乘“3!”替代“6”"
+      },
+      {
+        "id": "C",
+        "text": "用重力加速度“g”替代“10”"
+      },
+      {
+        "id": "D",
+        "text": "用二进制数“(1100)₂”替代“12”"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "sin45°约为0.707，并不等于表盘上的1；3!等于6，g常近似取10，二进制(1100)₂等于12。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [
+      "https://cos.kaoshiji.cn/uploads/allimg/20260602/1-2606022013004F.png",
+      "https://cos.kaoshiji.cn/uploads/allimg/20260602/1-260602201301629.png",
+      "https://cos.kaoshiji.cn/uploads/allimg/20260602/1-260602201302317.png"
+    ],
+    "raw_source_text_block": "32 某款创意时钟要用不同的符号替代表盘上的数字，下列设计不合适的是： A、用45度角的正弦“sin45°”替代“1” B、用3的阶乘“3!”替代“6” C、用重力加速度“g”替代“10” D、用二进制数“(1100)₂”替代“12”"
+  },
+  {
+    "id": "national-2026-city-general-knowledge-q33",
+    "sourceQuestionId": "kaoshiji-1180-q33",
+    "moduleId": "general-knowledge",
+    "subjectId": "technology",
+    "topicId": "technology:chemistry",
+    "knowledgePointIds": [
+      "technology:chemistry-in-context"
+    ],
+    "originalQuestionNo": 33,
+    "sectionOrder": 2,
+    "stem": "关于化学平衡在人类活动中的应用，下列说法错误的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "处理硬水时，可通过加入适量石灰乳作为软化剂调节水的硬度"
+      },
+      {
+        "id": "B",
+        "text": "血液中CO₂浓度增加时，血液中水电离出的氢氧根离子会增多"
+      },
+      {
+        "id": "C",
+        "text": "适当降低水温增大CO₂的溶解度可维持冷却水管道中的盐类平衡"
+      },
+      {
+        "id": "D",
+        "text": "向含有铜离子的废水中加入适量的碱可达到净化水质的环保目的"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "血液中CO₂增加会形成更多碳酸并提高H+浓度，水的电离受抑制，水电离产生的OH−不会增多。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [
+      "https://cos.kaoshiji.cn/uploads/allimg/20260602/1-2606022013025Q.png"
+    ],
+    "raw_source_text_block": "33 关于化学平衡在人类活动中的应用，下列说法错误的是： A、处理硬水时，可通过加入适量石灰乳作为软化剂调节水的硬度 B、血液中CO₂浓度增加时，血液中水电离出的氢氧根离子会增多 C、适当降低水温增大CO₂的溶解度可维持冷却水管道中的盐类平衡 D、向含有铜离子的废水中加入适量的碱可达到净化水质的环保目的"
+  },
+  {
+    "id": "national-2026-city-general-knowledge-q34",
+    "sourceQuestionId": "kaoshiji-1180-q34",
+    "moduleId": "general-knowledge",
+    "subjectId": "technology",
+    "topicId": "technology:biology",
+    "knowledgePointIds": [
+      "technology:human-body"
+    ],
+    "originalQuestionNo": 34,
+    "sectionOrder": 2,
+    "stem": "关于医学治疗手段及其原理，下列说法正确的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "体外冲击波碎石术利用次声波可以将肾结石击碎成小块，使其随尿液排出体外"
+      },
+      {
+        "id": "B",
+        "text": "免疫疗法治疗癌症，能够通过激活自身免疫系统，利用T细胞直接吞噬癌细胞"
+      },
+      {
+        "id": "C",
+        "text": "血液透析依据半透膜原理，将血液中的有害物质以及多余的水分清除出体外"
+      },
+      {
+        "id": "D",
+        "text": "激光治疗近视，利用激光对视网膜进行切割，改变视网膜的曲率，从而矫正视力"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "血液透析利用半透膜的选择透过性清除小分子代谢废物，并通过超滤去除多余水分。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "34 关于医学治疗手段及其原理，下列说法正确的是： A、体外冲击波碎石术利用次声波可以将肾结石击碎成小块，使其随尿液排出体外 B、免疫疗法治疗癌症，能够通过激活自身免疫系统，利用T细胞直接吞噬癌细胞 C、血液透析依据半透膜原理，将血液中的有害物质以及多余的水分清除出体外 D、激光治疗近视，利用激光对视网膜进行切割，改变视网膜的曲率，从而矫正视力"
+  },
+  {
+    "id": "national-2026-city-general-knowledge-q35",
+    "sourceQuestionId": "kaoshiji-1180-q35",
+    "moduleId": "general-knowledge",
+    "subjectId": "history",
+    "topicId": "history:themes",
+    "knowledgePointIds": [
+      "history:science-history"
+    ],
+    "originalQuestionNo": 35,
+    "sectionOrder": 2,
+    "stem": "下列技术与其在考古领域的应用，对应错误的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "光谱分析——揭示青铜器金属元素的含量和组成"
+      },
+      {
+        "id": "B",
+        "text": "中子成像技术——推断殷商青铜器铸造工艺"
+      },
+      {
+        "id": "C",
+        "text": "碳14测年技术——精确判定青铜器的铸造年代"
+      },
+      {
+        "id": "D",
+        "text": "3D数字建模结合X射线断层扫描——分析青铜器内部结构"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "碳14测年用于含碳有机材料，不能直接精确测定青铜器这一无机材料的铸造年代。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "中等",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文；答案按同版公开答案页逐项核对，并结合独立解析或官方资料复核。此卷为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "35 下列技术与其在考古领域的应用，对应错误的是： A、光谱分析——揭示青铜器金属元素的含量和组成 B、中子成像技术——推断殷商青铜器铸造工艺 C、碳14测年技术——精确判定青铜器的铸造年代 D、3D数字建模结合X射线断层扫描——分析青铜器内部结构"
+  },
+  {
+    "id": "national-2026-city-reasoning-q76",
+    "sourceQuestionId": "kaoshiji-1180-q76",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:graphic-patterns",
+    "knowledgePointIds": [
+      "reasoning:graphic-patterns"
+    ],
+    "originalQuestionNo": 76,
+    "sectionOrder": 5,
+    "sourceCategory": "图形推理",
+    "stem": "从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性：",
+    "stemImageUrls": [
+      "./public/question-assets/national-2026-city-reasoning/q76.png"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": ""
+      },
+      {
+        "id": "B",
+        "text": ""
+      },
+      {
+        "id": "C",
+        "text": ""
+      },
+      {
+        "id": "D",
+        "text": ""
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "观察黑色三角箭头在轨迹上的移动：每一步沿折线逆时针移动一个位置，同时箭头自身顺时针旋转90度；只有A同时满足位置和朝向变化。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文和原图；参考答案按同版公开答案页并结合第三方解析核验。回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [
+      "https://cos.kaoshiji.cn/uploads/allimg/20260602/1-260602201304b5.png"
+    ],
+    "raw_source_text_block": "从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性：",
+    "visualOptionsInStem": true,
+    "sharedStimulus": null
+  },
+  {
+    "id": "national-2026-city-reasoning-q77",
+    "sourceQuestionId": "kaoshiji-1180-q77",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:graphic-patterns",
+    "knowledgePointIds": [
+      "reasoning:graphic-patterns"
+    ],
+    "originalQuestionNo": 77,
+    "sectionOrder": 5,
+    "sourceCategory": "图形推理",
+    "stem": "从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性：",
+    "stemImageUrls": [
+      "./public/question-assets/national-2026-city-reasoning/q77.png"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": ""
+      },
+      {
+        "id": "B",
+        "text": ""
+      },
+      {
+        "id": "C",
+        "text": ""
+      },
+      {
+        "id": "D",
+        "text": ""
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "题干每幅图由两个部分组成，其中一部分含2个黑点，另一部分含1个黑点；D符合这一组成规律。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文和原图；参考答案按同版公开答案页并结合第三方解析核验。回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [
+      "https://cos.kaoshiji.cn/uploads/allimg/20260602/1-260602201305522.png"
+    ],
+    "raw_source_text_block": "从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性：",
+    "visualOptionsInStem": true,
+    "sharedStimulus": null
+  },
+  {
+    "id": "national-2026-city-reasoning-q78",
+    "sourceQuestionId": "kaoshiji-1180-q78",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:graphic-patterns",
+    "knowledgePointIds": [
+      "reasoning:graphic-patterns"
+    ],
+    "originalQuestionNo": 78,
+    "sectionOrder": 5,
+    "sourceCategory": "图形推理",
+    "stem": "从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性：",
+    "stemImageUrls": [
+      "./public/question-assets/national-2026-city-reasoning/q78.png"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": ""
+      },
+      {
+        "id": "B",
+        "text": ""
+      },
+      {
+        "id": "C",
+        "text": ""
+      },
+      {
+        "id": "D",
+        "text": ""
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "依次观察黑色构件围出的白色封闭区域，数量从0个递增到4个；下一幅应为5个，D符合。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.qy.school/daily-practice/daily-practice-2026-78-ea2fe33aac0f4f57a31dd6446d65b4ed",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文和原图；参考答案按同版公开答案页并结合第三方解析核验。回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [
+      "https://cos.kaoshiji.cn/uploads/allimg/20260602/1-2606022013064L.png"
+    ],
+    "raw_source_text_block": "从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性：",
+    "visualOptionsInStem": true,
+    "sharedStimulus": null
+  },
+  {
+    "id": "national-2026-city-reasoning-q79",
+    "sourceQuestionId": "kaoshiji-1180-q79",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:graphic-patterns",
+    "knowledgePointIds": [
+      "reasoning:graphic-patterns"
+    ],
+    "originalQuestionNo": 79,
+    "sectionOrder": 5,
+    "sourceCategory": "图形推理",
+    "stem": "从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性：",
+    "stemImageUrls": [
+      "./public/question-assets/national-2026-city-reasoning/q79.png"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": ""
+      },
+      {
+        "id": "B",
+        "text": ""
+      },
+      {
+        "id": "C",
+        "text": ""
+      },
+      {
+        "id": "D",
+        "text": ""
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "每行第三幅由前两幅线条作异或式叠加后旋转90度得到；按同一变化检验第三行，只有C符合。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文和原图；参考答案按同版公开答案页并结合第三方解析核验。回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [
+      "https://cos.kaoshiji.cn/uploads/allimg/20260602/1-26060220130L56.png"
+    ],
+    "raw_source_text_block": "从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性：",
+    "visualOptionsInStem": true,
+    "sharedStimulus": null
+  },
+  {
+    "id": "national-2026-city-reasoning-q80",
+    "sourceQuestionId": "kaoshiji-1180-q80",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:spatial-visualization",
+    "knowledgePointIds": [
+      "reasoning:spatial-visualization"
+    ],
+    "originalQuestionNo": 80,
+    "sectionOrder": 5,
+    "sourceCategory": "图形推理",
+    "stem": "左边为由15个白色正方体和3个黑色正方体组合而成的多面体俯视图和左视图，其正视图可能是：",
+    "stemImageUrls": [
+      "./public/question-assets/national-2026-city-reasoning/q80.png"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": ""
+      },
+      {
+        "id": "B",
+        "text": ""
+      },
+      {
+        "id": "C",
+        "text": ""
+      },
+      {
+        "id": "D",
+        "text": ""
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "结合俯视图确定各列位置，再用左视图核对每列高度及黑色方块位置；B是唯一同时满足两幅投影视图的正视图。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文和原图；参考答案按同版公开答案页并结合第三方解析核验。回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [
+      "https://cos.kaoshiji.cn/uploads/allimg/20260602/1-26060220130R01.png"
+    ],
+    "raw_source_text_block": "左边为由15个白色正方体和3个黑色正方体组合而成的多面体俯视图和左视图，其正视图可能是：",
+    "visualOptionsInStem": true,
+    "sharedStimulus": null
+  },
+  {
+    "id": "national-2026-city-reasoning-q81",
+    "sourceQuestionId": "kaoshiji-1180-q81",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:spatial-visualization",
+    "knowledgePointIds": [
+      "reasoning:spatial-visualization"
+    ],
+    "originalQuestionNo": 81,
+    "sectionOrder": 5,
+    "sourceCategory": "图形推理",
+    "stem": "左边为给定的正方体纸盒的外表面展开图，由2个该正方体纸盒组合而成的长方体可能是：",
+    "stemImageUrls": [
+      "./public/question-assets/national-2026-city-reasoning/q81.png"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": ""
+      },
+      {
+        "id": "B",
+        "text": ""
+      },
+      {
+        "id": "C",
+        "text": ""
+      },
+      {
+        "id": "D",
+        "text": ""
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "先由展开图确定六个面的相对关系，再把两个纸盒拼成长方体逐项核对相邻面和可见面；只有A可由该展开图折叠得到。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文和原图；参考答案按同版公开答案页并结合第三方解析核验。回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [
+      "https://cos.kaoshiji.cn/uploads/allimg/20260602/1-26060220130Y60.png"
+    ],
+    "raw_source_text_block": "左边为给定的正方体纸盒的外表面展开图，由2个该正方体纸盒组合而成的长方体可能是：",
+    "visualOptionsInStem": true,
+    "sharedStimulus": null
+  },
+  {
+    "id": "national-2026-city-reasoning-q82",
+    "sourceQuestionId": "kaoshiji-1180-q82",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:spatial-visualization",
+    "knowledgePointIds": [
+      "reasoning:spatial-visualization"
+    ],
+    "originalQuestionNo": 82,
+    "sectionOrder": 5,
+    "sourceCategory": "图形推理",
+    "stem": "左边为由12个白色正方体和3个灰色正方体组合而成的多面体前后两面直观图，问其可以由除哪项外的三个多面体组合而成？",
+    "stemImageUrls": [
+      "./public/question-assets/national-2026-city-reasoning/q82.png"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": ""
+      },
+      {
+        "id": "B",
+        "text": ""
+      },
+      {
+        "id": "C",
+        "text": ""
+      },
+      {
+        "id": "D",
+        "text": ""
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "按前后两面直观图确定目标立体的层数、凹凸和灰色方块位置；A、B、D的三个部件可拼出目标，C的灰色块与空缺位置无法吻合。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文和原图；参考答案按同版公开答案页并结合第三方解析核验。回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [
+      "https://cos.kaoshiji.cn/uploads/allimg/20260602/1-260602201309103.png"
+    ],
+    "raw_source_text_block": "左边为由12个白色正方体和3个灰色正方体组合而成的多面体前后两面直观图，问其可以由除哪项外的三个多面体组合而成？",
+    "visualOptionsInStem": true,
+    "sharedStimulus": null
+  },
+  {
+    "id": "national-2026-city-reasoning-q83",
+    "sourceQuestionId": "kaoshiji-1180-q83",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:graphic-classification",
+    "knowledgePointIds": [
+      "reasoning:graphic-classification"
+    ],
+    "originalQuestionNo": 83,
+    "sectionOrder": 5,
+    "sourceCategory": "图形推理",
+    "stem": "把下面的六个图形分为两类，使每一类图形都有各自的共同特征或规律，分类正确的一项是：",
+    "stemImageUrls": [
+      "./public/question-assets/national-2026-city-reasoning/q83.png"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "①②③，④⑤⑥"
+      },
+      {
+        "id": "B",
+        "text": "①③④，②⑤⑥"
+      },
+      {
+        "id": "C",
+        "text": "①③⑥，②④⑤"
+      },
+      {
+        "id": "D",
+        "text": "①⑤⑥，②③④"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "①③⑥中两个黑色六边形之间相隔2个白色六边形；②④⑤中两个黑色六边形之间相隔1个白色六边形，故选C。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文和原图；参考答案按同版公开答案页并结合第三方解析核验。回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [
+      "https://cos.kaoshiji.cn/uploads/allimg/20260602/1-260602201310204.png"
+    ],
+    "raw_source_text_block": "把下面的六个图形分为两类，使每一类图形都有各自的共同特征或规律，分类正确的一项是： A、①②③，④⑤⑥ B、①③④，②⑤⑥ B、①③⑥，②④⑤ B、①⑤⑥，②③④",
+    "sharedStimulus": null
+  },
+  {
+    "id": "national-2026-city-reasoning-q84",
+    "sourceQuestionId": "kaoshiji-1180-q84",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:graphic-classification",
+    "knowledgePointIds": [
+      "reasoning:graphic-classification"
+    ],
+    "originalQuestionNo": 84,
+    "sectionOrder": 5,
+    "sourceCategory": "图形推理",
+    "stem": "把下面的六个图形分为两类，使每一类图形都有各自的共同特征或规律，分类正确的一项是：",
+    "stemImageUrls": [
+      "./public/question-assets/national-2026-city-reasoning/q84.png"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "①②⑥，③④⑤"
+      },
+      {
+        "id": "B",
+        "text": "①②④，③⑤⑥"
+      },
+      {
+        "id": "C",
+        "text": "①⑤⑥，②③④"
+      },
+      {
+        "id": "D",
+        "text": "①④⑥，②③⑤"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "①②④中黑色部分对应两块白色面；③⑤⑥中黑色部分对应一块白色面，按黑白面数量关系分类为①②④和③⑤⑥。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文和原图；参考答案按同版公开答案页并结合第三方解析核验。回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [
+      "https://cos.kaoshiji.cn/uploads/allimg/20260602/1-260602201311Z9.png"
+    ],
+    "raw_source_text_block": "把下面的六个图形分为两类，使每一类图形都有各自的共同特征或规律，分类正确的一项是： A、①②⑥，③④⑤ B、①②④，③⑤⑥ B、①⑤⑥，②③④ B、①④⑥，②③⑤",
+    "sharedStimulus": null
+  },
+  {
+    "id": "national-2026-city-reasoning-q85",
+    "sourceQuestionId": "kaoshiji-1180-q85",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:graphic-classification",
+    "knowledgePointIds": [
+      "reasoning:graphic-classification"
+    ],
+    "originalQuestionNo": 85,
+    "sectionOrder": 5,
+    "sourceCategory": "图形推理",
+    "stem": "把下面6个图形分为两类，使每一类图形都有各自的共同特征或规律，分类正确的一项是：",
+    "stemImageUrls": [
+      "./public/question-assets/national-2026-city-reasoning/q85.png"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "①④⑤，②③⑥"
+      },
+      {
+        "id": "B",
+        "text": "①③⑥，②④⑤"
+      },
+      {
+        "id": "C",
+        "text": "①②⑥，③④⑤"
+      },
+      {
+        "id": "D",
+        "text": "①②④，③⑤⑥"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "①④⑤中线段交点均位于圆外，②③⑥中线段交点均位于圆内，故分为①④⑤和②③⑥。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文和原图；参考答案按同版公开答案页并结合第三方解析核验。回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [
+      "https://cos.kaoshiji.cn/uploads/allimg/20260602/1-260602201312347.png"
+    ],
+    "raw_source_text_block": "把下面6个图形分为两类，使每一类图形都有各自的共同特征或规律，分类正确的一项是： A、①④⑤，②③⑥ B、①③⑥，②④⑤ B、①②⑥，③④⑤ B、①②④，③⑤⑥",
+    "sharedStimulus": null
+  },
+  {
+    "id": "national-2026-city-reasoning-q86",
+    "sourceQuestionId": "kaoshiji-1180-q86",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:definition-judgment",
+    "knowledgePointIds": [
+      "reasoning:definition-judgment"
+    ],
+    "originalQuestionNo": 86,
+    "sectionOrder": 5,
+    "sourceCategory": "定义判断",
+    "stem": "《中国共产党纪律处分条例》规定，主动交代本人应当受到党纪处分的问题，可以从轻或者减轻处分。这里所称的主动交代主要包括两种情况：一是涉嫌违纪的党员在组织谈话函询、初步核实前向有关组织交代自己的问题。二是在谈话函询、初步核实和立案审查期间交代组织未掌握的问题。假定下列人员均受该条例约束，根据上述定义，下列属于主动交代的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "甲在参加违纪违法典型案例警示教育大会后，主动找到单位领导反映同事的违纪问题"
+      },
+      {
+        "id": "B",
+        "text": "乙在组织对其进行廉政谈话时，组织举证一项他才承认一项，对未涉及的情况闭口不谈"
+      },
+      {
+        "id": "C",
+        "text": "丙在纪委对其个人财产有关事项进行函询时，将其利用职权为自己和他人谋利的情况如实交代"
+      },
+      {
+        "id": "D",
+        "text": "丁在纪委对其立案审查期间，面对确凿的证据，交代了之前没有交代的收受大额礼金的问题"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "主动交代须由本人交代自身问题，且属于组织核查前主动报告，或核查期间交代组织尚未掌握的问题。丙在函询期间如实交代相关问题；丁是在确凿证据面前才承认，不能体现主动性。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文和原图；参考答案按同版公开答案页并结合第三方解析核验。回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "《中国共产党纪律处分条例》规定，主动交代本人应当受到党纪处分的问题，可以从轻或者减轻处分。这里所称的主动交代主要包括两种情况：一是涉嫌违纪的党员在组织谈话函询、初步核实前向有关组织交代自己的问题。二是在谈话函询、初步核实和立案审查期间交代组织未掌握的问题。假定下列人员均受该条例约束，根据上述定义，下列属于主动交代的是： A、甲在参加违纪违法典型案例警示教育大会后，主动找到单位领导反映同事的违纪问题 B、乙在组织对其进行廉政谈话时，组织举证一项他才承认一项，对未涉及的情况闭口不谈 B、丙在纪委对其个人财产有关事项进行函询时，将其利用职权为自己和他人谋利的情况如实交代 B、丁在纪委对其立案审查期间，面对确凿的证据，交代了之前没有交代的收受大额礼金的问题",
+    "sharedStimulus": null
+  },
+  {
+    "id": "national-2026-city-reasoning-q87",
+    "sourceQuestionId": "kaoshiji-1180-q87",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:definition-judgment",
+    "knowledgePointIds": [
+      "reasoning:definition-judgment"
+    ],
+    "originalQuestionNo": 87,
+    "sectionOrder": 5,
+    "sourceCategory": "定义判断",
+    "stem": "波特五力模型是一种竞争分析工具，用于评估一个行业的竞争力和吸引力。该模型通过对同行业竞争对手的威胁，潜在进入者的威胁、替代品的威胁、上游供应商的议价能力和下游购买者的议价能力这五个方面的分析，帮助企业了解其所处行业的竞争环境，以制定相应的竞争策略。根据上述定义，关于康复机器人行业，对下列问题的分析不能归入波特五力模型的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "康复机器人行业准入门槛高吗？需要强大的技术能力和创新能力吗？"
+      },
+      {
+        "id": "B",
+        "text": "医院和康复中心患者规模如何？对于康复机器人的需求有多大？"
+      },
+      {
+        "id": "C",
+        "text": "与传统物理治疗等康复治疗方法相比，康复机器人有竞争力吗？"
+      },
+      {
+        "id": "D",
+        "text": "康复机器人企业内部各部门之间的协同合作程度高吗？"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "波特五力分析的是行业外部竞争力量，包括潜在进入者、替代品、供应商、购买者和现有竞争者；企业内部部门协同不属于五力之一。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文和原图；参考答案按同版公开答案页并结合第三方解析核验。回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "波特五力模型是一种竞争分析工具，用于评估一个行业的竞争力和吸引力。该模型通过对同行业竞争对手的威胁，潜在进入者的威胁、替代品的威胁、上游供应商的议价能力和下游购买者的议价能力这五个方面的分析，帮助企业了解其所处行业的竞争环境，以制定相应的竞争策略。根据上述定义，关于康复机器人行业，对下列问题的分析不能归入波特五力模型的是： A、康复机器人行业准入门槛高吗？需要强大的技术能力和创新能力吗？ B、医院和康复中心患者规模如何？对于康复机器人的需求有多大？ B、与传统物理治疗等康复治疗方法相比，康复机器人有竞争力吗？ B、康复机器人企业内部各部门之间的协同合作程度高吗？",
+    "sharedStimulus": null
+  },
+  {
+    "id": "national-2026-city-reasoning-q88",
+    "sourceQuestionId": "kaoshiji-1180-q88",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:definition-judgment",
+    "knowledgePointIds": [
+      "reasoning:definition-judgment"
+    ],
+    "originalQuestionNo": 88,
+    "sectionOrder": 5,
+    "sourceCategory": "定义判断",
+    "stem": "组织结构可以划分为以下几种类型：（1）直线型组织结构，即每一个部门只对其直接的下属部门下达工作指令，不能越级指挥，每一个部门也只有一个直接的上级部门；（2）职能型组织结构，即每一个部门都可对其下属部门下达工作指令，每一个下属部门可能得到不同上级部门下达的多个工作指令；（3）直线职能型组织结构，即在主管之下设置相应的职能部门，实行主管统一指挥与职能部门参谋指导相结合的管理方式，各部门既受上级的管理，又受同级职能管理部门的业务指导和监督；（4）事业部组织结构，即由相对独立的事业部组成的组织结构，通常按照地区或项目来划分事业部，每个事业部拥有较大的自主权。根据上述定义，下列组织结构图代表的组织结构类型属于：",
+    "stemImageUrls": [
+      "./public/question-assets/national-2026-city-reasoning/q88.png"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "直线型组织结构"
+      },
+      {
+        "id": "B",
+        "text": "职能型组织结构"
+      },
+      {
+        "id": "C",
+        "text": "直线职能型组织结构"
+      },
+      {
+        "id": "D",
+        "text": "事业部组织结构"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "图中工种技术部、财务管理部、合同管理部都能向多个项目组下达工作指令；一个项目组因此可能接收多个上级部门的指令，符合职能型组织结构。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文和原图；参考答案按同版公开答案页并结合第三方解析核验。回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [
+      "https://cos.kaoshiji.cn/uploads/allimg/20260602/1-260602201312917.png"
+    ],
+    "raw_source_text_block": "组织结构可以划分为以下几种类型：（1）直线型组织结构，即每一个部门只对其直接的下属部门下达工作指令，不能越级指挥，每一个部门也只有一个直接的上级部门；（2）职能型组织结构，即每一个部门都可对其下属部门下达工作指令，每一个下属部门可能得到不同上级部门下达的多个工作指令；（3）直线职能型组织结构，即在主管之下设置相应的职能部门，实行主管统一指挥与职能部门参谋指导相结合的管理方式，各部门既受上级的管理，又受同级职能管理部门的业务指导和监督；（4）事业部组织结构，即由相对独立的事业部组成的组织结构，通常按照地区或项目来划分事业部，每个事业部拥有较大的自主权。根据上述定义，下列组织结构图代表的组织结构类型属于： A、直线型组织结构 B、职能型组织结构 B、直线职能型组织结构 B、事业部组织结构",
+    "sharedStimulus": null
+  },
+  {
+    "id": "national-2026-city-reasoning-q89",
+    "sourceQuestionId": "kaoshiji-1180-q89",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:definition-judgment",
+    "knowledgePointIds": [
+      "reasoning:definition-judgment"
+    ],
+    "originalQuestionNo": 89,
+    "sectionOrder": 5,
+    "sourceCategory": "定义判断",
+    "stem": "均变论认为，支配各种地质过程的法则在地质历史上没有发生过变化，现在起作用的各种自然营力在漫长的地质过程中具有普遍的均一性，即地质演变是一个渐变的过程，具有相同方式和相同的强度；地球上生物的种与种之间有过渡关系，生物进化过程是极其漫长的。灾变论认为，在整个地质发展的过程中，地球经常发生各种突如其来的、短暂的全球性灾难性变化，这些变化强烈地改变了地球的面貌；地球上生物的变化是反复多次灾变的结果。根据上述定义，下列说法最能体现灾变论观点的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "我们找不到开始的痕迹，也看不到结束的迹象"
+      },
+      {
+        "id": "B",
+        "text": "地质记录是一部被鲜血和火焰写成的史诗"
+      },
+      {
+        "id": "C",
+        "text": "现在是通往过去的一把钥匙"
+      },
+      {
+        "id": "D",
+        "text": "自然界里没有飞跃"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "灾变论强调突发、短暂且影响广泛的灾难性变化；“鲜血和火焰写成的史诗”最能体现这种剧烈的灾变过程。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文和原图；参考答案按同版公开答案页并结合第三方解析核验。回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "均变论认为，支配各种地质过程的法则在地质历史上没有发生过变化，现在起作用的各种自然营力在漫长的地质过程中具有普遍的均一性，即地质演变是一个渐变的过程，具有相同方式和相同的强度；地球上生物的种与种之间有过渡关系，生物进化过程是极其漫长的。灾变论认为，在整个地质发展的过程中，地球经常发生各种突如其来的、短暂的全球性灾难性变化，这些变化强烈地改变了地球的面貌；地球上生物的变化是反复多次灾变的结果。根据上述定义，下列说法最能体现灾变论观点的是： A、我们找不到开始的痕迹，也看不到结束的迹象 B、地质记录是一部被鲜血和火焰写成的史诗 B、现在是通往过去的一把钥匙 B、自然界里没有飞跃",
+    "sharedStimulus": null
+  },
+  {
+    "id": "national-2026-city-reasoning-q90",
+    "sourceQuestionId": "kaoshiji-1180-q90",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:definition-judgment",
+    "knowledgePointIds": [
+      "reasoning:definition-judgment"
+    ],
+    "originalQuestionNo": 90,
+    "sectionOrder": 5,
+    "sourceCategory": "定义判断",
+    "stem": "商品动销率是指在售的商品品种数与库存商品总品种数的比率。商品库销比是指商品库存量与销售额的比率。商品滞销率是指滞销的商品品种数占库存商品总品种数的比率。商品损耗率是指在一定的保管条件下，某商品在储存保管期间，其自然损耗量与商品在库总量的比例。根据上述定义，下列说法正确的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "若商品动销率超过100%，说明商品在售品种数高于库存商品总品种数"
+      },
+      {
+        "id": "B",
+        "text": "商品损耗率高表明有库存积压风险，商品损耗率低表明销售态势良好"
+      },
+      {
+        "id": "C",
+        "text": "库存商品数一定时，商品滞销率越高，说明滞销的商品越多"
+      },
+      {
+        "id": "D",
+        "text": "当商品库存量越大，销售额越高时，商品库销比就会越大"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "动销率为在售品种数除以库存总品种数；比率超过100%即分子大于分母。其他选项把损耗率、滞销率或库销比与未定义的经营结论混为一谈。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文和原图；参考答案按同版公开答案页并结合第三方解析核验。回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "商品动销率是指在售的商品品种数与库存商品总品种数的比率。商品库销比是指商品库存量与销售额的比率。商品滞销率是指滞销的商品品种数占库存商品总品种数的比率。商品损耗率是指在一定的保管条件下，某商品在储存保管期间，其自然损耗量与商品在库总量的比例。根据上述定义，下列说法正确的是： A、若商品动销率超过100%，说明商品在售品种数高于库存商品总品种数 B、商品损耗率高表明有库存积压风险，商品损耗率低表明销售态势良好 B、库存商品数一定时，商品滞销率越高，说明滞销的商品越多 B、当商品库存量越大，销售额越高时，商品库销比就会越大",
+    "sharedStimulus": null
+  },
+  {
+    "id": "national-2026-city-reasoning-q91",
+    "sourceQuestionId": "kaoshiji-1180-q91",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:definition-judgment",
+    "knowledgePointIds": [
+      "reasoning:definition-judgment"
+    ],
+    "originalQuestionNo": 91,
+    "sectionOrder": 5,
+    "sourceCategory": "定义判断",
+    "stem": "根据动词对其后所接的宾语小句（作宾语的句子）真值的不同预设能力可以把现代汉语中的相关动词分为叙实动词、非叙实动词和反叙实动词。叙实动词的肯定式和否定式都预设其宾语小句为真；非叙实动词的肯定式和否定式都不预设其宾语小句为真，也不预设其宾语小句为假；反叙实动词的肯定式和否定式都预设其宾语小句为假。根据上述定义，下列画线的动词属于非叙实动词的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "我听说他来过这里",
+        "underlineText": "听说"
+      },
+      {
+        "id": "B",
+        "text": "我庆幸听了你的建议",
+        "underlineText": "庆幸"
+      },
+      {
+        "id": "C",
+        "text": "我知道你帮助过我",
+        "underlineText": "知道"
+      },
+      {
+        "id": "D",
+        "text": "我幻想成为一只小鸟",
+        "underlineText": "幻想"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "“庆幸”“知道”都预设后接小句为真；“幻想”在该题分类中预设小句不成立。“听说”表达信息来源，不预设“小句”为真或假，属于非叙实动词。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文和原图；参考答案按同版公开答案页并结合第三方解析核验。回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "根据动词对其后所接的宾语小句（作宾语的句子）真值的不同预设能力可以把现代汉语中的相关动词分为叙实动词、非叙实动词和反叙实动词。叙实动词的肯定式和否定式都预设其宾语小句为真；非叙实动词的肯定式和否定式都不预设其宾语小句为真，也不预设其宾语小句为假；反叙实动词的肯定式和否定式都预设其宾语小句为假。根据上述定义，下列画线的动词属于非叙实动词的是：",
+    "sharedStimulus": null
+  },
+  {
+    "id": "national-2026-city-reasoning-q92",
+    "sourceQuestionId": "kaoshiji-1180-q92",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:definition-judgment",
+    "knowledgePointIds": [
+      "reasoning:definition-judgment"
+    ],
+    "originalQuestionNo": 92,
+    "sectionOrder": 5,
+    "sourceCategory": "定义判断",
+    "stem": "自主动机是指人们出于兴趣或内在满足感而从事某种活动，外部动机是指人们为获得外部奖励或避免惩罚而从事某种活动，这些动机背后的心理需求又分为三种：（1）自主性需求，即人们希望自己能控制和选择自己的行为，而不是受到外部强制；（2）胜任性需求，即人们希望能在自己做的事上获得成就感和自我效能感；（3）归属感需求，即人们希望与他人建立有意义的联系，感受到归属和支持。根据上述定义，下列说法错误的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "小张参加了一项感兴趣的社交活动，他认为这能帮助自己结交新朋友。这体现了自主动机和归属感需求"
+      },
+      {
+        "id": "B",
+        "text": "小李参加公司的培训课程，虽然对课程内容不感兴趣，但他担心如果不参加就会被扣绩效。这体现了外部动机和自主性需求"
+      },
+      {
+        "id": "C",
+        "text": "小王每天晨跑，很享受锻炼带来的满足感，也坚信这是促进健康的必要努力。这体现了自主动机和胜任性需求"
+      },
+      {
+        "id": "D",
+        "text": "小陈和队友为实现团体奖牌零的突破一直在努力，在艰苦的训练中与队友相互鼓励。这体现了胜任性需求和归属感需求"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "小李是为避免扣绩效而参加，属于外部动机；行为受惩罚压力驱动，并非自主选择，因此不能说体现自主性需求。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文和原图；参考答案按同版公开答案页并结合第三方解析核验。回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "自主动机是指人们出于兴趣或内在满足感而从事某种活动，外部动机是指人们为获得外部奖励或避免惩罚而从事某种活动，这些动机背后的心理需求又分为三种：（1）自主性需求，即人们希望自己能控制和选择自己的行为，而不是受到外部强制；（2）胜任性需求，即人们希望能在自己做的事上获得成就感和自我效能感；（3）归属感需求，即人们希望与他人建立有意义的联系，感受到归属和支持。根据上述定义，下列说法错误的是： A、小张参加了一项感兴趣的社交活动，他认为这能帮助自己结交新朋友。这体现了自主动机和归属感需求 B、小李参加公司的培训课程，虽然对课程内容不感兴趣，但他担心如果不参加就会被扣绩效。这体现了外部动机和自主性需求 B、小王每天晨跑，很享受锻炼带来的满足感，也坚信这是促进健康的必要努力。这体现了自主动机和胜任性需求 B、小陈和队友为实现团体奖牌零的突破一直在努力，在艰苦的训练中与队友相互鼓励。这体现了胜任性需求和归属感需求",
+    "sharedStimulus": null
+  },
+  {
+    "id": "national-2026-city-reasoning-q93",
+    "sourceQuestionId": "kaoshiji-1180-q93",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:definition-judgment",
+    "knowledgePointIds": [
+      "reasoning:definition-judgment"
+    ],
+    "originalQuestionNo": 93,
+    "sectionOrder": 5,
+    "sourceCategory": "定义判断",
+    "stem": "动作预期是指运动员在比赛过程中，根据已有信息，对即将发生的动作结果进行预测的过程。在这一过程中，运动员主要依赖两类信息：运动学信息和情境先验信息。运动学信息包括对手的动作、器材的运动轨迹或队员之间的相对位置，情境先验信息则涉及比赛情境中事件发生的概率。根据上述定义，下列不涉及上述任何一种信息的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "篮球队员甲在双方比分紧咬的情况下，基于对手今日比赛罚篮命中率不高，在对手投篮时选择直接犯规"
+      },
+      {
+        "id": "B",
+        "text": "网球运动员乙知道对手在比赛前有一系列习惯性动作，包括整理球衣、球裤、头发等，暗自提醒自己不要被其干扰"
+      },
+      {
+        "id": "C",
+        "text": "羽毛球双打运动员丙发现对方准备接发球的球员位置稍微靠前，可能来不及转身或后退接球，便发了个后场球"
+      },
+      {
+        "id": "D",
+        "text": "乒乓球运动员丁发现对方发过来的球位置较低、速度较慢，极有可能擦网变线，便没有后退，向前伸拍做好接球准备"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "动作预期依赖比赛过程中的运动学信息或事件概率。乙描述的是赛前惯常动作，并未提供比赛过程中的动作信息，也没有涉及事件发生概率。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文和原图；参考答案按同版公开答案页并结合第三方解析核验。回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "动作预期是指运动员在比赛过程中，根据已有信息，对即将发生的动作结果进行预测的过程。在这一过程中，运动员主要依赖两类信息：运动学信息和情境先验信息。运动学信息包括对手的动作、器材的运动轨迹或队员之间的相对位置，情境先验信息则涉及比赛情境中事件发生的概率。根据上述定义，下列不涉及上述任何一种信息的是： A、篮球队员甲在双方比分紧咬的情况下，基于对手今日比赛罚篮命中率不高，在对手投篮时选择直接犯规 B、网球运动员乙知道对手在比赛前有一系列习惯性动作，包括整理球衣、球裤、头发等，暗自提醒自己不要被其干扰 B、羽毛球双打运动员丙发现对方准备接发球的球员位置稍微靠前，可能来不及转身或后退接球，便发了个后场球 B、乒乓球运动员丁发现对方发过来的球位置较低、速度较慢，极有可能擦网变线，便没有后退，向前伸拍做好接球准备",
+    "sharedStimulus": null
+  },
+  {
+    "id": "national-2026-city-reasoning-q94",
+    "sourceQuestionId": "kaoshiji-1180-q94",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:definition-judgment",
+    "knowledgePointIds": [
+      "reasoning:definition-judgment"
+    ],
+    "originalQuestionNo": 94,
+    "sectionOrder": 5,
+    "sourceCategory": "定义判断",
+    "stem": "在制品控制是企业生产控制的基础工作，是企业对生产运作过程中各工序原材料、半成品等按照位置、数量、质量及车间之间的物料转运等进行的控制。根据上述定义，下列没有直接体现在制品控制的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "服装厂梳理了运动裤制作流程并制定规范，确保衣料在不同流水线上流转有序"
+      },
+      {
+        "id": "B",
+        "text": "食品厂设立质检员，定时对各个工序的食材抽样进行微生物检测，剔除不良品"
+      },
+      {
+        "id": "C",
+        "text": "制药厂规定员工进入洁净区后，每两小时洗手一次，避免药品生产环境被污染"
+      },
+      {
+        "id": "D",
+        "text": "家具厂对板材进行定期盘点，并合理摆放，确保板材库存合理且满足生产需要"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "在制品控制针对各工序的原材料、半成品及其位置、数量、质量和转运。定时洗手是在控制生产环境卫生，不是直接控制在制品。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文和原图；参考答案按同版公开答案页并结合第三方解析核验。回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "在制品控制是企业生产控制的基础工作，是企业对生产运作过程中各工序原材料、半成品等按照位置、数量、质量及车间之间的物料转运等进行的控制。根据上述定义，下列没有直接体现在制品控制的是： A、服装厂梳理了运动裤制作流程并制定规范，确保衣料在不同流水线上流转有序 B、食品厂设立质检员，定时对各个工序的食材抽样进行微生物检测，剔除不良品 B、制药厂规定员工进入洁净区后，每两小时洗手一次，避免药品生产环境被污染 B、家具厂对板材进行定期盘点，并合理摆放，确保板材库存合理且满足生产需要",
+    "sharedStimulus": null
+  },
+  {
+    "id": "national-2026-city-reasoning-q95",
+    "sourceQuestionId": "kaoshiji-1180-q95",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:definition-judgment",
+    "knowledgePointIds": [
+      "reasoning:definition-judgment"
+    ],
+    "originalQuestionNo": 95,
+    "sectionOrder": 5,
+    "sourceCategory": "定义判断",
+    "stem": "预防性维修是指在机械设备没有发生故障或尚未造成损坏的前提下，通过对产品的系统性检查、设备测试或更换以防止设备发生故障，使其保持在正常状态所进行的全部活动。根据上述定义，下列属于预防性维修的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "公路管理部门定期巡视道路两旁护栏并涂刷、除锈，发现护栏松动、断裂时进行修复"
+      },
+      {
+        "id": "B",
+        "text": "某车间在正式制造某种设备前，测量将要安装在该设备中的关键零部件是否符合检查标准"
+      },
+      {
+        "id": "C",
+        "text": "某数控车床突然发生摇动，无法切削物品，检查后发现电机出现故障，更换电机后车床可正常运行"
+      },
+      {
+        "id": "D",
+        "text": "雨季来临前，供电公司对辖区内变压器、配电器、电缆线路等电力设备设施隐患进行专项排查"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "预防性维修是在设备故障前通过检查或维护避免故障。供电公司在雨季前主动排查设备隐患，符合定义；C是在故障后维修。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文和原图；参考答案按同版公开答案页并结合第三方解析核验。回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "预防性维修是指在机械设备没有发生故障或尚未造成损坏的前提下，通过对产品的系统性检查、设备测试或更换以防止设备发生故障，使其保持在正常状态所进行的全部活动。根据上述定义，下列属于预防性维修的是： A、公路管理部门定期巡视道路两旁护栏并涂刷、除锈，发现护栏松动、断裂时进行修复 B、某车间在正式制造某种设备前，测量将要安装在该设备中的关键零部件是否符合检查标准 B、某数控车床突然发生摇动，无法切削物品，检查后发现电机出现故障，更换电机后车床可正常运行 B、雨季来临前，供电公司对辖区内变压器、配电器、电缆线路等电力设备设施隐患进行专项排查",
+    "sharedStimulus": null
+  },
+  {
+    "id": "national-2026-city-reasoning-q96",
+    "sourceQuestionId": "kaoshiji-1180-q96",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:analogy",
+    "knowledgePointIds": [
+      "reasoning:analogy"
+    ],
+    "originalQuestionNo": 96,
+    "sectionOrder": 5,
+    "sourceCategory": "类比推理",
+    "stem": "与“经年：积岁”在逻辑关系上最相近的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "善本：版本"
+      },
+      {
+        "id": "B",
+        "text": "秘方：偏方"
+      },
+      {
+        "id": "C",
+        "text": "仲夏：夏季"
+      },
+      {
+        "id": "D",
+        "text": "黎民：百姓"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "“经年”和“积岁”都指多年，二者为近义关系；“黎民”和“百姓”也为近义词。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文和原图；参考答案按同版公开答案页并结合第三方解析核验。回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "与“经年：积岁”在逻辑关系上最相近的是： A、善本：版本 B、秘方：偏方 B、仲夏：夏季 B、黎民：百姓",
+    "sharedStimulus": null
+  },
+  {
+    "id": "national-2026-city-reasoning-q97",
+    "sourceQuestionId": "kaoshiji-1180-q97",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:analogy",
+    "knowledgePointIds": [
+      "reasoning:analogy"
+    ],
+    "originalQuestionNo": 97,
+    "sectionOrder": 5,
+    "sourceCategory": "类比推理",
+    "stem": "与“细胞凋亡：基因调控：细胞增殖”在逻辑关系上最相近的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "成本降低：税率调整：成本增加"
+      },
+      {
+        "id": "B",
+        "text": "经济萧条：经济周期：经济复苏"
+      },
+      {
+        "id": "C",
+        "text": "价格尺度：货币职能：流通手段"
+      },
+      {
+        "id": "D",
+        "text": "人工智能：智能时代：具身智能"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "细胞凋亡与细胞增殖是相反的细胞过程，且都受基因调控；成本降低与成本增加方向相反，也都可受税率调整影响。该关系对应A。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.xingguanggongkao.com/Pc/XingQuestion/search/subject_id/2/keywords/2026%E6%B2%B3%E5%8D%97%E7%9C%81%E8%80%83%E7%94%B3%E8%AE%BA%E5%B8%82%E7%BA%A7/p/1.html",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文和原图；参考答案按同版公开答案页并结合第三方解析核验。回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "与“细胞凋亡：基因调控：细胞增殖”在逻辑关系上最相近的是： A、成本降低：税率调整：成本增加 B、经济萧条：经济周期：经济复苏 B、价格尺度：货币职能：流通手段 B、人工智能：智能时代：具身智能",
+    "sharedStimulus": null
+  },
+  {
+    "id": "national-2026-city-reasoning-q98",
+    "sourceQuestionId": "kaoshiji-1180-q98",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:analogy",
+    "knowledgePointIds": [
+      "reasoning:analogy"
+    ],
+    "originalQuestionNo": 98,
+    "sectionOrder": 5,
+    "sourceCategory": "类比推理",
+    "stem": "与“护士人数：护患比：患者人数”在逻辑关系上最相近的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "理赔总额：平均理赔金额：理赔次数"
+      },
+      {
+        "id": "B",
+        "text": "签收率：实际签收数量：应签收数量"
+      },
+      {
+        "id": "C",
+        "text": "流动资产：流动负债：流动比率"
+      },
+      {
+        "id": "D",
+        "text": "旅客数：入住率：客房数"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "护患比由护士人数与患者人数之比形成；平均理赔金额由理赔总额除以理赔次数得到，结构对应A。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文和原图；参考答案按同版公开答案页并结合第三方解析核验。回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "与“护士人数：护患比：患者人数”在逻辑关系上最相近的是： A、理赔总额：平均理赔金额：理赔次数 B、签收率：实际签收数量：应签收数量 B、流动资产：流动负债：流动比率 B、旅客数：入住率：客房数",
+    "sharedStimulus": null
+  },
+  {
+    "id": "national-2026-city-reasoning-q99",
+    "sourceQuestionId": "kaoshiji-1180-q99",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:analogy",
+    "knowledgePointIds": [
+      "reasoning:analogy"
+    ],
+    "originalQuestionNo": 99,
+    "sectionOrder": 5,
+    "sourceCategory": "类比推理",
+    "stem": "颅内疾病 对于 （    ） 相当于 （    ） 对于 岩石断裂 依次填入括号中最恰当的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "颅内感染；岩石熔融"
+      },
+      {
+        "id": "B",
+        "text": "机体疾病；地壳应力"
+      },
+      {
+        "id": "C",
+        "text": "核磁共振；地下采样"
+      },
+      {
+        "id": "D",
+        "text": "视野缺失；冰川运动"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "颅内疾病可能造成视野缺失；冰川运动会对岩石产生作用并导致岩石断裂，前后均为原因与结果关系。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文和原图；参考答案按同版公开答案页并结合第三方解析核验。回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "颅内疾病 对于 （    ） 相当于 （    ） 对于 岩石断裂 依次填入括号中最恰当的是： A、颅内感染；岩石熔融 B、机体疾病；地壳应力 B、核磁共振；地下采样 B、视野缺失；冰川运动",
+    "sharedStimulus": null
+  },
+  {
+    "id": "national-2026-city-reasoning-q100",
+    "sourceQuestionId": "kaoshiji-1180-q100",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:set-relationships",
+    "knowledgePointIds": [
+      "reasoning:set-relationships"
+    ],
+    "originalQuestionNo": 100,
+    "sectionOrder": 5,
+    "sourceCategory": "类比推理",
+    "stem": "如果用一个圆来表示词语所指称的对象的集合，那么以下哪项中画横线词语之间的关系符合下图？",
+    "stemImageUrls": [
+      "./public/question-assets/national-2026-city-reasoning/q100.png"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "船舶按用途分为军用船舶（①）和民用船舶两大类，潜艇、航空母舰（③）、驱逐舰等都属于军用船舶；按推进动力分为机动船和非机动船（②）"
+      },
+      {
+        "id": "B",
+        "text": "水杉（③）是我国的特有树种，属于落叶树（①），是一种高大的乔木（②），是世界上珍稀的“活化石”植物"
+      },
+      {
+        "id": "C",
+        "text": "图书按照读者群可分为少儿读物（③）和成人读物等；按照载体可分为纸质书和电子书（②）等；按照学科可分为历史书、文学书和哲学书（①）等"
+      },
+      {
+        "id": "D",
+        "text": "大熊猫属于哺乳动物（①），是中国特有动物（②），被列为中国国家一级保护野生动物（③）"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "图中③所在的小圆完全处于①与②的交集内，表示③既属于①也属于②。水杉既是落叶树，也是一种乔木，符合该集合关系。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文和原图；参考答案按同版公开答案页并结合第三方解析核验。回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [
+      "https://cos.kaoshiji.cn/uploads/allimg/20260602/1-260602201313424.png"
+    ],
+    "raw_source_text_block": "如果用一个圆来表示词语所指称的对象的集合，那么以下哪项中画横线词语之间的关系符合下图？ A、船舶按用途分为军用船舶（①）和民用船舶两大类，潜艇、航空母舰（③）、驱逐舰等都属于军用船舶；按推进动力分为机动船和非机动船（②） B、水杉（③）是我国的特有树种，属于落叶树（①），是一种高大的乔木（②），是世界上珍稀的“活化石”植物 B、图书按照读者群可分为少儿读物（③）和成人读物等；按照载体可分为纸质书和电子书（②）等；按照学科可分为历史书、文学书和哲学书（①）等 B、大熊猫属于哺乳动物（①），是中国特有动物（②），被列为中国国家一级保护野生动物（③）",
+    "sharedStimulus": null
+  },
+  {
+    "id": "national-2026-city-reasoning-q101",
+    "sourceQuestionId": "kaoshiji-1180-q101",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:argument-support",
+    "knowledgePointIds": [
+      "reasoning:argument-support"
+    ],
+    "originalQuestionNo": 101,
+    "sectionOrder": 5,
+    "sourceCategory": "逻辑判断",
+    "stem": "科技行业越来越多地使用合成数据来满足AI模型数据训练的需要。合成数据是通过算法和统计模型人为创建的数据，在理论上可以无限供应。但合成数据存在一个关键问题：当AI模型过于依赖合成数据时，它们会产生更多“幻觉”，编造看似合理可信但实际上并不存在的信息。可见，合成数据的使用会影响AI的准确性。以下哪项如果为真，最能支持上述结论？",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "即使经过处理，合成数据仍然可能泄露敏感信息，从而引发隐私风险"
+      },
+      {
+        "id": "B",
+        "text": "合成数据存在过于简单化的风险，无法完全模拟真实世界的复杂性"
+      },
+      {
+        "id": "C",
+        "text": "合成数据会放大源数据本身的错误或偏差，导致“失之毫厘，差之千里”"
+      },
+      {
+        "id": "D",
+        "text": "合成数据的多样性可能不如真实数据，限制了AI模型的泛化能力"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "如果合成数据会放大源数据中的错误或偏差，就会直接使训练数据偏离真实情况，进而支持其影响模型准确性的结论。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文和原图；参考答案按同版公开答案页并结合第三方解析核验。回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "科技行业越来越多地使用合成数据来满足AI模型数据训练的需要。合成数据是通过算法和统计模型人为创建的数据，在理论上可以无限供应。但合成数据存在一个关键问题：当AI模型过于依赖合成数据时，它们会产生更多“幻觉”，编造看似合理可信但实际上并不存在的信息。可见，合成数据的使用会影响AI的准确性。以下哪项如果为真，最能支持上述结论？ A、即使经过处理，合成数据仍然可能泄露敏感信息，从而引发隐私风险 B、合成数据存在过于简单化的风险，无法完全模拟真实世界的复杂性 B、合成数据会放大源数据本身的错误或偏差，导致“失之毫厘，差之千里” B、合成数据的多样性可能不如真实数据，限制了AI模型的泛化能力",
+    "sharedStimulus": null
+  },
+  {
+    "id": "national-2026-city-reasoning-q102",
+    "sourceQuestionId": "kaoshiji-1180-q102",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:argument-weakening",
+    "knowledgePointIds": [
+      "reasoning:argument-weakening"
+    ],
+    "originalQuestionNo": 102,
+    "sectionOrder": 5,
+    "sourceCategory": "逻辑判断",
+    "stem": "部分研究认为，白垩纪陆地生态系统的变革是由植物、昆虫、脊椎动物与地质过程等多个要素相互作用推动的，形成了一个高度协同演化的系统结构。鉴于这一机制在当时造就了复杂而稳定的生态格局，有学者提出，现代陆地生态系统的高度复杂性，正是这种古老协同机制延续和演化的结果。以下哪项如果为真，最能削弱上述学者的观点？",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "在地质记录中，白垩纪末期的生态危机主要影响海洋系统，而陆地系统显示出相对稳定的演替趋势"
+      },
+      {
+        "id": "B",
+        "text": "对白垩纪地层的系统分析表明，植物、昆虫、脊椎动物与地质过程的演化几乎是在同一时期进行的"
+      },
+      {
+        "id": "C",
+        "text": "现代陆地生态系统的复杂性主要受群落内部随机扰动、自组织演化和外源干扰的共同影响，与白垩纪显著不同"
+      },
+      {
+        "id": "D",
+        "text": "被子植物的全球扩张早于部分动物类群多样化，其当时对生态结构的主导作用可能被高估"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "观点把现代生态系统的复杂性归因于白垩纪协同机制的延续；C指出现代复杂性主要由不同机制共同影响，且与白垩纪显著不同，直接削弱这一因果解释。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文和原图；参考答案按同版公开答案页并结合第三方解析核验。回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "部分研究认为，白垩纪陆地生态系统的变革是由植物、昆虫、脊椎动物与地质过程等多个要素相互作用推动的，形成了一个高度协同演化的系统结构。鉴于这一机制在当时造就了复杂而稳定的生态格局，有学者提出，现代陆地生态系统的高度复杂性，正是这种古老协同机制延续和演化的结果。以下哪项如果为真，最能削弱上述学者的观点？ A、在地质记录中，白垩纪末期的生态危机主要影响海洋系统，而陆地系统显示出相对稳定的演替趋势 B、对白垩纪地层的系统分析表明，植物、昆虫、脊椎动物与地质过程的演化几乎是在同一时期进行的 B、现代陆地生态系统的复杂性主要受群落内部随机扰动、自组织演化和外源干扰的共同影响，与白垩纪显著不同 B、被子植物的全球扩张早于部分动物类群多样化，其当时对生态结构的主导作用可能被高估",
+    "sharedStimulus": null
+  },
+  {
+    "id": "national-2026-city-reasoning-q103",
+    "sourceQuestionId": "kaoshiji-1180-q103",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:logical-deduction",
+    "knowledgePointIds": [
+      "reasoning:logical-deduction"
+    ],
+    "originalQuestionNo": 103,
+    "sectionOrder": 5,
+    "sourceCategory": "逻辑判断",
+    "stem": "完善城乡融合发展体制机制是破除我国城乡二元结构、拓展高质量发展空间的必要举措。只有完善农业农村优先发展的投入保障机制，并且优化城乡公共资源配置机制，才能完善城乡融合发展体制机制。只有加大中央预算内投资和地方政府专项债券支持力度，并且提高土地出让收入用于农业农村的比例，才能完善农业农村优先发展的投入保障机制。只有推进户籍制度改革，才能优化城乡公共资源配置机制。由此可以推出的是（ ）。",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "如果推进户籍制度改革，就能优化城乡公共资源配置机制"
+      },
+      {
+        "id": "B",
+        "text": "只要完善农业农村优先发展的投入保障机制，就能完善城乡融合发展体制机制"
+      },
+      {
+        "id": "C",
+        "text": "除非完善农业农村优先发展的投入保障机制，否则不能提高土地出让收入用于农业农村的比例"
+      },
+      {
+        "id": "D",
+        "text": "加大中央预算内投资和地方政府专项债券支持力度是破除我国城乡二元结构、拓展高质量发展空间的必要前提"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "“只有……才能……”表达必要条件：城乡融合机制完善需要投入保障和公共资源配置完善；投入保障完善又需要加大中央及地方专项债支持并提高土地出让收入用于农业农村的比例。结合首句，这些措施是实现所述目标的必要条件，D可推出。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文和原图；参考答案按同版公开答案页并结合第三方解析核验。回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "完善城乡融合发展体制机制是破除我国城乡二元结构、拓展高质量发展空间的必要举措。只有完善农业农村优先发展的投入保障机制，并且优化城乡公共资源配置机制，才能完善城乡融合发展体制机制。只有加大中央预算内投资和地方政府专项债券支持力度，并且提高土地出让收入用于农业农村的比例，才能完善农业农村优先发展的投入保障机制。只有推进户籍制度改革，才能优化城乡公共资源配置机制。由此可以推出的是（ ）。 A、如果推进户籍制度改革，就能优化城乡公共资源配置机制 B、只要完善农业农村优先发展的投入保障机制，就能完善城乡融合发展体制机制 B、除非完善农业农村优先发展的投入保障机制，否则不能提高土地出让收入用于农业农村的比例 B、加大中央预算内投资和地方政府专项债券支持力度是破除我国城乡二元结构、拓展高质量发展空间的必要前提",
+    "sharedStimulus": null
+  },
+  {
+    "id": "national-2026-city-reasoning-q104",
+    "sourceQuestionId": "kaoshiji-1180-q104",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:argument-support",
+    "knowledgePointIds": [
+      "reasoning:argument-support"
+    ],
+    "originalQuestionNo": 104,
+    "sectionOrder": 5,
+    "sourceCategory": "逻辑判断",
+    "stem": "平台企业依赖金融资本投资，需要迎合金融市场的估值逻辑，通过轻资产运营、扩大市场规模和用户数据挖掘与开发等，来提升自身在金融市场上的估值。随着平台企业金融化程度的日益加深，平台劳动者的具体劳动和生产过程也在发生变化。研究者认为，平台企业金融化程度的加深使得平台劳动者的劳动权益保护问题日益突出。以下哪项如果为真，最能支持上述研究者的观点？",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "为扩大市场规模、争夺消费者注意力，平台企业在资金投入和服务提升方面容易陷入无序竞争"
+      },
+      {
+        "id": "B",
+        "text": "为塑造轻资产企业形象、摆脱劳动密集型标签，平台企业采用弹性用工制，增加劳动者就业不稳定性"
+      },
+      {
+        "id": "C",
+        "text": "越来越多的平台企业日益注重用户数据挖掘，以增加企业竞争力，为此更加注重员工培训"
+      },
+      {
+        "id": "D",
+        "text": "部分平台企业以缴纳保证金、押金或其他名义向劳动者收取财物，限制劳动者在多平台就业"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "金融化追求轻资产运营，弹性用工会加剧劳动者就业不稳定，直接说明平台金融化如何损害劳动权益，因而支持研究者观点。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文和原图；参考答案按同版公开答案页并结合第三方解析核验。回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "平台企业依赖金融资本投资，需要迎合金融市场的估值逻辑，通过轻资产运营、扩大市场规模和用户数据挖掘与开发等，来提升自身在金融市场上的估值。随着平台企业金融化程度的日益加深，平台劳动者的具体劳动和生产过程也在发生变化。研究者认为，平台企业金融化程度的加深使得平台劳动者的劳动权益保护问题日益突出。以下哪项如果为真，最能支持上述研究者的观点？ A、为扩大市场规模、争夺消费者注意力，平台企业在资金投入和服务提升方面容易陷入无序竞争 B、为塑造轻资产企业形象、摆脱劳动密集型标签，平台企业采用弹性用工制，增加劳动者就业不稳定性 B、越来越多的平台企业日益注重用户数据挖掘，以增加企业竞争力，为此更加注重员工培训 B、部分平台企业以缴纳保证金、押金或其他名义向劳动者收取财物，限制劳动者在多平台就业",
+    "sharedStimulus": null
+  },
+  {
+    "id": "national-2026-city-reasoning-q105",
+    "sourceQuestionId": "kaoshiji-1180-q105",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:necessary-assumption",
+    "knowledgePointIds": [
+      "reasoning:necessary-assumption"
+    ],
+    "originalQuestionNo": 105,
+    "sectionOrder": 5,
+    "sourceCategory": "逻辑判断",
+    "stem": "考古人员在某地发掘出一些似鸟动物化石，同位素测年显示这些动物生存于中侏罗世晚期（距今1.72亿～1.64亿年）。经考古推算，这些似鸟动物体型与现代鸟类大致接近，尾巴很短，最重要的是它们都具有愈合的尾综骨。考古人员据此认为，这些动物一定属于鸟类。以下哪项最有可能是考古人员论证的前提？",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "这些似鸟动物长有与现代鸟类相似的脚骨，可以在陆地上行走"
+      },
+      {
+        "id": "B",
+        "text": "这些化石保存了诸如肩胛骨、乌喙骨、尾综骨等骨骼，形态清晰"
+      },
+      {
+        "id": "C",
+        "text": "鸟类与爬行动物最显著的区别就是鸟类最后几枚尾椎愈合成为尾综骨"
+      },
+      {
+        "id": "D",
+        "text": "尾综骨结构的出现对似鸟动物后肢和尾骨的独立运动及飞行能力的完善至关重要"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "论证由“具有愈合的尾综骨”推出“属于鸟类”。要使推理成立，须补充尾综骨能区分鸟类与爬行动物这一前提；C提供了该关键条件。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": null,
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文和原图；参考答案按同版公开答案页并结合第三方解析核验。回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "考古人员在某地发掘出一些似鸟动物化石，同位素测年显示这些动物生存于中侏罗世晚期（距今1.72亿～1.64亿年）。经考古推算，这些似鸟动物体型与现代鸟类大致接近，尾巴很短，最重要的是它们都具有愈合的尾综骨。考古人员据此认为，这些动物一定属于鸟类。以下哪项最有可能是考古人员论证的前提？ A、这些似鸟动物长有与现代鸟类相似的脚骨，可以在陆地上行走 B、这些化石保存了诸如肩胛骨、乌喙骨、尾综骨等骨骼，形态清晰 B、鸟类与爬行动物最显著的区别就是鸟类最后几枚尾椎愈合成为尾综骨 B、尾综骨结构的出现对似鸟动物后肢和尾骨的独立运动及飞行能力的完善至关重要",
+    "sharedStimulus": null
+  },
+  {
+    "id": "national-2026-city-reasoning-q106",
+    "sourceQuestionId": "kaoshiji-1180-q106",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:conditional-reasoning",
+    "knowledgePointIds": [
+      "reasoning:conditional-reasoning"
+    ],
+    "originalQuestionNo": 106,
+    "sectionOrder": 5,
+    "sourceCategory": "逻辑判断",
+    "stem": "对于3支双打队伍的组成情况，以下哪项是可能的？",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "网球——王、宋；乒乓球——吴、宋；羽毛球——王、韩"
+      },
+      {
+        "id": "B",
+        "text": "网球——吴、韩；乒乓球——吴、王；羽毛球——韩、宋"
+      },
+      {
+        "id": "C",
+        "text": "网球——韩、宋；乒乓球——吴、王；羽毛球——王、宋"
+      },
+      {
+        "id": "D",
+        "text": "网球——王、宋；乒乓球——吴、韩；羽毛球——王、吴"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "D中三支队伍分别为网球王、宋，乒乓球吴、韩，羽毛球王、吴。王未参加乒乓球，吴也未参加网球；王和韩没有同队，韩未参加羽毛球，满足全部条件。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": "national-2026-city-reasoning-q106-stimulus",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文和原图；参考答案按同版公开答案页并结合第三方解析核验。回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "对于3支双打队伍的组成情况，以下哪项是可能的？ A、网球——王、宋；乒乓球——吴、宋；羽毛球——王、韩 B、网球——吴、韩；乒乓球——吴、王；羽毛球——韩、宋 B、网球——韩、宋；乒乓球——吴、王；羽毛球——王、宋 B、网球——王、宋；乒乓球——吴、韩；羽毛球——王、吴",
+    "sharedStimulus": {
+      "text": "为倡导团结合作精神，某单位举办了若干项目的双打比赛。该单位后勤部由王、吴、韩和宋4人组成网球、乒乓球和羽毛球3支双打队伍参赛，每支队伍由其中2人组成，4人均至少参加了其中的一支队伍。已知：（1）王和韩没有参加同一个项目；（2）若韩参加羽毛球项目，则宋参加网球项目；（3）若王参加乒乓球项目，则吴参加网球项目，若王不参加乒乓球项目，则吴也不参加网球项目。",
+      "imageUrls": []
+    }
+  },
+  {
+    "id": "national-2026-city-reasoning-q107",
+    "sourceQuestionId": "kaoshiji-1180-q107",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:conditional-reasoning",
+    "knowledgePointIds": [
+      "reasoning:conditional-reasoning"
+    ],
+    "originalQuestionNo": 107,
+    "sectionOrder": 5,
+    "sourceCategory": "逻辑判断",
+    "stem": "若宋和韩组队网球双打，则以下哪项一定正确？",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "吴参加乒乓球项目"
+      },
+      {
+        "id": "B",
+        "text": "王参加羽毛球项目"
+      },
+      {
+        "id": "C",
+        "text": "宋参加乒乓球项目"
+      },
+      {
+        "id": "D",
+        "text": "吴参加羽毛球项目"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "网球由宋、韩组成。王不能与韩参加同一项目，因此王不能参加网球；按第三条，王不参加乒乓球时吴也不参加网球。结合王、吴、韩、宋都至少参加一项以及每队恰有两人，可推出王必须参加羽毛球。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": "national-2026-city-reasoning-q106-stimulus",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文和原图；参考答案按同版公开答案页并结合第三方解析核验。回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "若宋和韩组队网球双打，则以下哪项一定正确？ A、吴参加乒乓球项目 B、王参加羽毛球项目 B、宋参加乒乓球项目 B、吴参加羽毛球项目",
+    "sharedStimulus": {
+      "text": "为倡导团结合作精神，某单位举办了若干项目的双打比赛。该单位后勤部由王、吴、韩和宋4人组成网球、乒乓球和羽毛球3支双打队伍参赛，每支队伍由其中2人组成，4人均至少参加了其中的一支队伍。已知：（1）王和韩没有参加同一个项目；（2）若韩参加羽毛球项目，则宋参加网球项目；（3）若王参加乒乓球项目，则吴参加网球项目，若王不参加乒乓球项目，则吴也不参加网球项目。",
+      "imageUrls": []
+    }
+  },
+  {
+    "id": "national-2026-city-reasoning-q108",
+    "sourceQuestionId": "kaoshiji-1180-q108",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:conditional-reasoning",
+    "knowledgePointIds": [
+      "reasoning:conditional-reasoning"
+    ],
+    "originalQuestionNo": 108,
+    "sectionOrder": 5,
+    "sourceCategory": "逻辑判断",
+    "stem": "若吴参加3个项目，则以下哪项是可能的？",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "宋参加网球项目"
+      },
+      {
+        "id": "B",
+        "text": "王参加网球项目"
+      },
+      {
+        "id": "C",
+        "text": "宋参加乒乓球项目"
+      },
+      {
+        "id": "D",
+        "text": "王参加羽毛球项目"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "可构造满足条件的安排：网球为吴、宋，乒乓球为吴、王，羽毛球为吴、韩。吴参加三项；王与韩没有同队；韩参加羽毛球时宋参加网球；王参加乒乓球时吴参加网球，故A可能。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": "national-2026-city-reasoning-q106-stimulus",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文和原图；参考答案按同版公开答案页并结合第三方解析核验。回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "若吴参加3个项目，则以下哪项是可能的？ A、宋参加网球项目 B、王参加网球项目 B、宋参加乒乓球项目 B、王参加羽毛球项目",
+    "sharedStimulus": {
+      "text": "为倡导团结合作精神，某单位举办了若干项目的双打比赛。该单位后勤部由王、吴、韩和宋4人组成网球、乒乓球和羽毛球3支双打队伍参赛，每支队伍由其中2人组成，4人均至少参加了其中的一支队伍。已知：（1）王和韩没有参加同一个项目；（2）若韩参加羽毛球项目，则宋参加网球项目；（3）若王参加乒乓球项目，则吴参加网球项目，若王不参加乒乓球项目，则吴也不参加网球项目。",
+      "imageUrls": []
+    }
+  },
+  {
+    "id": "national-2026-city-reasoning-q109",
+    "sourceQuestionId": "kaoshiji-1180-q109",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:conditional-reasoning",
+    "knowledgePointIds": [
+      "reasoning:conditional-reasoning"
+    ],
+    "originalQuestionNo": 109,
+    "sectionOrder": 5,
+    "sourceCategory": "逻辑判断",
+    "stem": "以下哪项中的两人可能同时组队网球和羽毛球双打？",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "王和吴"
+      },
+      {
+        "id": "B",
+        "text": "王和宋"
+      },
+      {
+        "id": "C",
+        "text": "吴和宋"
+      },
+      {
+        "id": "D",
+        "text": "韩和宋"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "王和宋可同时组成网球队与羽毛球队，另由吴、韩组乒乓球队。王与韩不在同一项目；韩不参加羽毛球时第二条不触发；王不参加乒乓球时吴不参加网球，均符合规则。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": "national-2026-city-reasoning-q106-stimulus",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文和原图；参考答案按同版公开答案页并结合第三方解析核验。回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "以下哪项中的两人可能同时组队网球和羽毛球双打？ A、王和吴 B、王和宋 B、吴和宋 B、韩和宋",
+    "sharedStimulus": {
+      "text": "为倡导团结合作精神，某单位举办了若干项目的双打比赛。该单位后勤部由王、吴、韩和宋4人组成网球、乒乓球和羽毛球3支双打队伍参赛，每支队伍由其中2人组成，4人均至少参加了其中的一支队伍。已知：（1）王和韩没有参加同一个项目；（2）若韩参加羽毛球项目，则宋参加网球项目；（3）若王参加乒乓球项目，则吴参加网球项目，若王不参加乒乓球项目，则吴也不参加网球项目。",
+      "imageUrls": []
+    }
+  },
+  {
+    "id": "national-2026-city-reasoning-q110",
+    "sourceQuestionId": "kaoshiji-1180-q110",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning:conditional-reasoning",
+    "knowledgePointIds": [
+      "reasoning:conditional-reasoning"
+    ],
+    "originalQuestionNo": 110,
+    "sectionOrder": 5,
+    "sourceCategory": "逻辑判断",
+    "stem": "若宋和韩组队乒乓球双打，则以下哪项是可能的？",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "吴和韩组队网球双打"
+      },
+      {
+        "id": "B",
+        "text": "吴和宋组队网球双打"
+      },
+      {
+        "id": "C",
+        "text": "宋和韩组队羽毛球双打"
+      },
+      {
+        "id": "D",
+        "text": "吴和宋组队羽毛球双打"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "可安排乒乓球为宋、韩，羽毛球为吴、宋，网球为王、宋。王与韩不在同一项目；韩不参加羽毛球，且王不参加乒乓球时吴也不参加网球。所有条件均满足，D可能。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
+    "sharedStimulusId": "national-2026-city-reasoning-q106-stimulus",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题面保留公开考生回忆版原文和原图；参考答案按同版公开答案页并结合第三方解析核验。回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [],
+    "raw_source_text_block": "若宋和韩组队乒乓球双打，则以下哪项是可能的？ A、吴和韩组队网球双打 B、吴和宋组队网球双打 B、宋和韩组队羽毛球双打 B、吴和宋组队羽毛球双打",
+    "sharedStimulus": {
+      "text": "为倡导团结合作精神，某单位举办了若干项目的双打比赛。该单位后勤部由王、吴、韩和宋4人组成网球、乒乓球和羽毛球3支双打队伍参赛，每支队伍由其中2人组成，4人均至少参加了其中的一支队伍。已知：（1）王和韩没有参加同一个项目；（2）若韩参加羽毛球项目，则宋参加网球项目；（3）若王参加乒乓球项目，则吴参加网球项目，若王不参加乒乓球项目，则吴也不参加网球项目。",
+      "imageUrls": []
+    }
   }
 ];

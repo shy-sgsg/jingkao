@@ -1236,7 +1236,16 @@ function renderSourceQuestionStem(question, { heading = true } = {}) {
 
 function renderSourceQuestionOption(option) {
   const value = typeof option === 'string' ? { text: option } : option || {};
-  const text = value.text ? '<span>' + escapeHtml(value.text) + '</span>' : '';
+  const sourceText = String(value.text || '');
+  const underlineText = String(value.underlineText || '');
+  let renderedText = escapeHtml(sourceText);
+  const underlineIndex = underlineText ? sourceText.indexOf(underlineText) : -1;
+  if (underlineIndex >= 0) {
+    renderedText = escapeHtml(sourceText.slice(0, underlineIndex))
+      + '<u>' + escapeHtml(underlineText) + '</u>'
+      + escapeHtml(sourceText.slice(underlineIndex + underlineText.length));
+  }
+  const text = sourceText ? '<span>' + renderedText + '</span>' : '';
   const images = sourceQuestionImageUrls(value).map((url, index, urls) => {
     const suffix = urls.length > 1 ? ' ' + (index + 1) : '';
     return '<img src="' + escapeHtml(url) + '" alt="' + escapeHtml('选项配图' + suffix) + '" loading="lazy"/>';
