@@ -18969,5 +18969,21 @@
       { "positionCode": "231567703", "scope": "position-level", "applicantsRegistered": 5, "recruitCount": 1 }
     ],
     "notes": "粉笔分页结果汇总为88岗/178人，页头另标‘过审人数’2235；逐岗字段名为‘报考人数’。本站未给该字段的定义或统计时点，故只保留为第三方报考人数参考，不作为官方资格审查通过数、最终缴费数或实考人数；不与有日期的官方/中公过审快照混算。"
+  },
+  {
+    "sourceId": "fenbi-2026-mentougou-page-6",
+    "title": "粉笔职位库：2026北京公务员门头沟区职位列表第6页",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "mentougou",
+    "geographicScope": "门头沟区2026职位列表第6页；仅记录可与本地岗位词条对应的职位",
+    "url": "https://m.fenbi.com/page/positions/1/438923?page=6&region=169",
+    "accessedAt": "2026-10-12",
+    "positionSnapshots": [
+      { "positionCode": "240948402", "scope": "position-level", "applicantsRegistered": 4, "recruitCount": 1 }
+    ],
+    "notes": "粉笔页头显示73岗/129人及‘过审人数’1557，逐岗表头写‘招录/报考人数’；大台街道司法岗显示1/4。页面未给出逐岗统计时点，也未明确该数是报考人数还是过审人数，仅作为第三方无时点页面人数参考，竞争参考比按4/1计算；不视为官方资格审查通过数、最终缴费人数或实考人数。岗位代码和计划数依同年度、单位及岗位名与第三方职位列表唯一匹配，尚非官方逐码核验。"
   }
 ]
