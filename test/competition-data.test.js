@@ -1388,6 +1388,15 @@ test('2024 and 2025 citywide hot-post snapshots stay linked to same-year positio
         ['820220601', 110, 1],
       ],
     },
+    {
+      sourceId: 'huatu-2025-citywide-top-jobs-20241121-0900',
+      year: 2025,
+      observedAt: '2024-11-21 09:00',
+      url: 'https://www.huatu.com/2024/1121/2789840.html',
+      expected: [
+        ['242502301', 289, 44],
+      ],
+    },
   ];
 
   for (const { sourceId, year, observedAt, url, expected } of snapshots) {
@@ -1408,6 +1417,10 @@ test('2024 and 2025 citywide hot-post snapshots stay linked to same-year positio
       assert.equal(rows[0].qualifiedCompetitionRatio, qualified / recruits);
     }
   }
+
+  const fangshanPosition = dataset.positions.find((item) => item.year === 2025 && item.code === '242502301');
+  const fangshanEvidence = getPositionCompetitionEvidence(fangshanPosition, dataset);
+  assert.equal(fangshanEvidence.snapshots.find((item) => item.sourceId === 'huatu-2025-citywide-top-jobs-20241121-0900')?.qualifiedCompetitionRatio, 289 / 44);
 });
 
 test('2026 November 20 evening snapshot keeps the citywide total and leaves an ambiguous job ratio unlinked', async () => {
