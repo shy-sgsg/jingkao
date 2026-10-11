@@ -18819,6 +18819,136 @@
     "notes": "粉笔页面头部将汇总人数标作‘过审人数’，逐岗表格却列‘报考人数’，且未注明统计时点或字段定义。仅将页面首屏内职位代码和招录数均与本地2026候选职位精确匹配的记录，作为第三方报考人数参考保存；不代表官方资格审查通过人数、最终缴费人数或实考人数。"
   },
   {
+    "sourceId": "shunyi-2026-fenbi-page-2",
+    "title": "粉笔 2026 北京公务员顺义区职位列表（第2页）",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "shunyi",
+    "geographicScope": "顺义区2026职位列表第2页；仅录入与本地候选职位代码、招录数匹配的岗位",
+    "url": "https://www.fenbi.com/page/positions/1/438923?page=2&region=174",
+    "accessedAt": "2026-10-12",
+    "positionSnapshots": [
+      { "positionCode": "221457002", "scope": "position-level", "applicantsRegistered": 40, "recruitCount": 1 },
+      { "positionCode": "221457101", "scope": "position-level", "applicantsRegistered": 33, "recruitCount": 1 },
+      { "positionCode": "221457201", "scope": "position-level", "applicantsRegistered": 31, "recruitCount": 1 },
+      { "positionCode": "221457301", "scope": "position-level", "applicantsRegistered": 30, "recruitCount": 2 },
+      { "positionCode": "821457401", "scope": "position-level", "applicantsRegistered": 6, "recruitCount": 1 },
+      { "positionCode": "821457501", "scope": "position-level", "applicantsRegistered": 22, "recruitCount": 2 },
+      { "positionCode": "221457502", "scope": "position-level", "applicantsRegistered": 8, "recruitCount": 1 }
+    ],
+    "notes": "粉笔顺义列表页头显示85岗/127人及‘过审人数’2180；逐岗表格列‘报考人数’，但未标明人数定义或观察时点。仅保存与本地2026候选职位代码和招录数吻合的行，作为第三方报考人数参考，不视为资格审查通过数或最终竞争比。"
+  },
+  {
+    "sourceId": "shunyi-2026-fenbi-page-3",
+    "title": "粉笔 2026 北京公务员顺义区职位列表（第3页）",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "shunyi",
+    "geographicScope": "顺义区2026职位列表第3页；仅录入与本地候选职位代码、招录数匹配的岗位",
+    "url": "https://www.fenbi.com/page/positions/1/438923?page=3&region=174",
+    "accessedAt": "2026-10-12",
+    "positionSnapshots": [
+      { "positionCode": "221457503", "scope": "position-level", "applicantsRegistered": 86, "recruitCount": 2 },
+      { "positionCode": "221457701", "scope": "position-level", "applicantsRegistered": 47, "recruitCount": 1 },
+      { "positionCode": "221457901", "scope": "position-level", "applicantsRegistered": 131, "recruitCount": 1 }
+    ],
+    "notes": "粉笔顺义列表页头显示85岗/127人及‘过审人数’2180；逐岗表格列‘报考人数’，但未标明人数定义或观察时点。仅保存与本地2026候选职位代码和招录数吻合的行，作为第三方报考人数参考，不视为资格审查通过数或最终竞争比。"
+  },
+  {
+    "sourceId": "shunyi-2026-fenbi-page-4",
+    "title": "粉笔 2026 北京公务员顺义区职位列表（第4页）",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "shunyi",
+    "geographicScope": "顺义区2026职位列表第4页；仅录入与本地候选职位代码、招录数匹配的岗位",
+    "url": "https://www.fenbi.com/page/positions/1/438923?page=4&region=174",
+    "accessedAt": "2026-10-12",
+    "positionSnapshots": [
+      { "positionCode": "221458002", "scope": "position-level", "applicantsRegistered": 4, "recruitCount": 2 },
+      { "positionCode": "221458204", "scope": "position-level", "applicantsRegistered": 40, "recruitCount": 2 }
+    ],
+    "notes": "粉笔顺义列表页头显示85岗/127人及‘过审人数’2180；逐岗表格列‘报考人数’，但未标明人数定义或观察时点。仅保存与本地2026候选职位代码和招录数吻合的行，作为第三方报考人数参考，不视为资格审查通过数或最终竞争比。"
+  },
+  {
+    "sourceId": "shunyi-2026-fenbi-page-5",
+    "title": "粉笔 2026 北京公务员顺义区职位列表（第5页）",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "shunyi",
+    "geographicScope": "顺义区2026职位列表第5页；仅录入与本地候选职位代码、招录数匹配的岗位",
+    "url": "https://www.fenbi.com/page/positions/1/438923?page=5&region=174",
+    "accessedAt": "2026-10-12",
+    "positionSnapshots": [
+      { "positionCode": "221458301", "scope": "position-level", "applicantsRegistered": 29, "recruitCount": 1 },
+      { "positionCode": "221458501", "scope": "position-level", "applicantsRegistered": 48, "recruitCount": 1 },
+      { "positionCode": "221458502", "scope": "position-level", "applicantsRegistered": 84, "recruitCount": 2 },
+      { "positionCode": "221458801", "scope": "position-level", "applicantsRegistered": 30, "recruitCount": 2 },
+      { "positionCode": "221458802", "scope": "position-level", "applicantsRegistered": 9, "recruitCount": 2 },
+      { "positionCode": "821458901", "scope": "position-level", "applicantsRegistered": 30, "recruitCount": 2 },
+      { "positionCode": "821459001", "scope": "position-level", "applicantsRegistered": 15, "recruitCount": 1 }
+    ],
+    "notes": "粉笔顺义列表页头显示85岗/127人及‘过审人数’2180；逐岗表格列‘报考人数’，但未标明人数定义或观察时点。仅保存与本地2026候选职位代码和招录数吻合的行，作为第三方报考人数参考，不视为资格审查通过数或最终竞争比。"
+  },
+  {
+    "sourceId": "shunyi-2026-fenbi-page-6",
+    "title": "粉笔 2026 北京公务员顺义区职位列表（第6页）",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "shunyi",
+    "geographicScope": "顺义区2026职位列表第6页；仅录入与本地候选职位代码、招录数匹配的岗位",
+    "url": "https://www.fenbi.com/page/positions/1/438923?page=6&region=174",
+    "accessedAt": "2026-10-12",
+    "positionSnapshots": [
+      { "positionCode": "231459301", "scope": "position-level", "applicantsRegistered": 97, "recruitCount": 2 },
+      { "positionCode": "231459302", "scope": "position-level", "applicantsRegistered": 64, "recruitCount": 2 }
+    ],
+    "notes": "粉笔顺义列表页头显示85岗/127人及‘过审人数’2180；逐岗表格列‘报考人数’，但未标明人数定义或观察时点。仅保存与本地2026候选职位代码和招录数吻合的行，作为第三方报考人数参考，不视为资格审查通过数或最终竞争比。"
+  },
+  {
+    "sourceId": "shunyi-2026-fenbi-page-7",
+    "title": "粉笔 2026 北京公务员顺义区职位列表（第7页）",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "shunyi",
+    "geographicScope": "顺义区2026职位列表第7页；仅录入与本地候选职位代码、招录数匹配的岗位",
+    "url": "https://www.fenbi.com/page/positions/1/438923?page=7&region=174",
+    "accessedAt": "2026-10-12",
+    "positionSnapshots": [
+      { "positionCode": "231460001", "scope": "position-level", "applicantsRegistered": 18, "recruitCount": 1 },
+      { "positionCode": "231460002", "scope": "position-level", "applicantsRegistered": 16, "recruitCount": 1 }
+    ],
+    "notes": "粉笔顺义列表页头显示85岗/127人及‘过审人数’2180；逐岗表格列‘报考人数’，但未标明人数定义或观察时点。仅保存与本地2026候选职位代码和招录数吻合的行，作为第三方报考人数参考，不视为资格审查通过数或最终竞争比。"
+  },
+  {
+    "sourceId": "shunyi-2026-fenbi-page-8",
+    "title": "粉笔 2026 北京公务员顺义区职位列表（第8页）",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "shunyi",
+    "geographicScope": "顺义区2026职位列表第8页；仅录入与本地候选职位代码、招录数匹配的岗位",
+    "url": "https://www.fenbi.com/page/positions/1/438923?page=8&region=174",
+    "accessedAt": "2026-10-12",
+    "positionSnapshots": [
+      { "positionCode": "526012803", "scope": "position-level", "applicantsRegistered": 0, "recruitCount": 1 },
+      { "positionCode": "231458202", "scope": "position-level", "applicantsRegistered": 4, "recruitCount": 1 }
+    ],
+    "notes": "粉笔顺义列表页头显示85岗/127人及‘过审人数’2180；逐岗表格列‘报考人数’，但未标明人数定义或观察时点。仅保存与本地2026候选职位代码和招录数吻合的行，作为第三方报考人数参考，不视为资格审查通过数或最终竞争比。"
+  },
+  {
     "sourceId": "pinggu-2026-fenbi-page-1",
     "title": "粉笔 2026 北京公务员平谷区职位列表（第1页）",
     "publisher": "粉笔职位库",
