@@ -1,0 +1,38 @@
+{
+  "paperId": "hubei-2025-recall-candidate",
+  "title": "2025年湖北省公务员录用考试《行测》题（考生回忆版）",
+  "region": "湖北",
+  "examYear": 2025,
+  "variant": "考生回忆版",
+  "questionNumbers": {
+    "listed": [
+      1,
+      125
+    ],
+    "questionTextCount": 123,
+    "missingQuestionNumbers": [
+      11,
+      12
+    ],
+    "placeholderDefaultAValues": 2,
+    "verifiedAnswerCount": 0
+  },
+  "sources": {
+    "questionPage": "https://gwy.gkzhenti.cn/paper/1743902344312",
+    "starPublicPdf": "https://upload.xingguanggongkao.com/pdf/2025%E5%B9%B4%E6%B9%96%E5%8C%97%E7%9C%81%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89.pdf?time=1764301030",
+    "answerExplanationPreview": "https://www.kkgwy.com/stk/hb/16031.html"
+  },
+  "archiveFiles": [
+    "xingguang-2025-hubei-recall.pdf",
+    "source-text-extraction.txt"
+  ],
+  "answerExplanationStatus": "The full 109-page document requires points; the public preview only covers the first three questions. The default A values for missing items are not verified answers.",
+  "assetStatus": "Question images and shared materials have not been audited per item.",
+  "republicationAuthorization": "User confirmed authorization for the project; item completeness and answer verification remain required.",
+  "releaseStatus": "pending",
+  "holdReasons": [
+    "Obtain or otherwise verify the exact question text for questions 11 and 12.",
+    "Verify answers and explanations for the full paper.",
+    "Audit and mirror all necessary question images and shared materials."
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "paper_id": "jiangxi-2026-recall",
+  "title": "2026年江西省公务员录用考试《行测》题（网友回忆版）",
+  "region": "江西",
+  "exam_year": 2026,
+  "variant": "2026年3月14日多省联考；网友回忆版",
+  "question_count": 130,
+  "source_type": "recalled",
+  "source_id": "gkzhenti-2026-jiangxi",
+  "question_source_url": "https://www.aipta.com/article/10594.html",
+  "answer_source_url": "https://gwy.gkzhenti.cn/answer/1775360736151",
+  "explanation_source_url": "https://github.com/ERRRC/xingcezhenti/tree/278984401124db40da5163a31275b8deb9c282f4",
+  "source_repository_commit": "278984401124db40da5163a31275b8deb9c282f4",
+  "question_records_file": "questions.json",
+  "answer_explanations_file": "answer-explanations.json",
+  "shared_stimuli_file": "shared-stimuli.json",
+  "sections": [
+    {
+      "module": "political_theory",
+      "section_order": 1,
+      "from": 1,
+      "to": 20
+    },
+    {
+      "module": "common_knowledge",
+      "section_order": 2,
+      "from": 21,
+      "to": 35
+    },
+    {
+      "module": "verbal",
+      "section_order": 3,
+      "from": 36,
+      "to": 65
+    },
+    {
+      "module": "quantitative",
+      "section_order": 4,
+      "from": 66,
+      "to": 75
+    },
+    {
+      "module": "reasoning",
+      "section_order": 5,
+      "from": 76,
+      "to": 110
+    },
+    {
+      "module": "data_analysis",
+      "section_order": 6,
+      "from": 111,
+      "to": 130
+    }
+  ],
+  "questions_parsed_count": 130,
+  "answer_count": 130,
+  "explanation_count": 130,
+  "published_count": 130,
+  "held_count": 0,
+  "answer_key_crosscheck": {
+    "source": "https://gwy.gkzhenti.cn/answer/1775360736151",
+    "questions_checked": 130,
+    "mismatches": 0
+  },
+  "image_files_mirrored": 139,
+  "shared_stimulus_groups": 4,
+  "authorization": {
+    "status": "user_confirmed_republication_authorization",
+    "confirmed_on": "2026-10-10"
+  },
+  "whole_paper_mock_eligibility": "eligible_complete_paper",
+  "note": "题面选项取自公开原题归档，原题号和分区按爱真题页面核定；答案键与公开答案页逐题一致。解析文本与图片取自公开题库归档。答案解析单独保存，原题号、分区与4组资料分析共用材料均保留；第23题按爱真题分区归入常识判断。"
+}

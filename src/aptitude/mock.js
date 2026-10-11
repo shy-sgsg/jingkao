@@ -3,6 +3,132 @@ import { getAptitudeQuestions } from './questions.js';
 
 const PAPER_CATALOG = [
   {
+    id: 'hubei-2024-recall-candidate',
+    title: '2024年湖北省公务员录用考试《行测》题（考生回忆版）',
+    region: '湖北',
+    examYear: 2024,
+    questionCount: 125,
+    sourceUrl: 'https://www.aipta.com/article/9625.html',
+    answerUrl: 'https://www.163hubei.com/ueditor/php/upload/file/20240318/1710751920689656.pdf',
+    sourceType: 'recalled',
+    ranges: {
+      'political-theory': [1, 7],
+      'general-knowledge': [8, 20],
+      verbal: [21, 55],
+      quantitative: [56, 70],
+      reasoning: [71, 105],
+      'data-analysis': [106, 125],
+    },
+  },
+  {
+    id: 'jiangxi-2026-recall',
+    title: '2026年江西省公务员录用考试《行测》题（网友回忆版）',
+    region: '江西',
+    examYear: 2026,
+    questionCount: 130,
+    sourceUrl: 'https://www.aipta.com/article/10594.html',
+    answerUrl: null,
+    sourceType: 'recalled',
+    ranges: {
+      'political-theory': [1, 20],
+      'general-knowledge': [21, 35],
+      verbal: [36, 65],
+      quantitative: [66, 75],
+      reasoning: [76, 110],
+      'data-analysis': [111, 130],
+    },
+  },
+  {
+    id: 'jiangxi-2025-recall',
+    title: '2025年江西省公务员录用考试《行测》题（网友回忆版）',
+    region: '江西',
+    examYear: 2025,
+    questionCount: 135,
+    sourceUrl: 'https://github.com/ERRRC/xingcezhenti/tree/278984401124db40da5163a31275b8deb9c282f4',
+    answerUrl: 'https://github.com/ERRRC/xingcezhenti/tree/278984401124db40da5163a31275b8deb9c282f4',
+    sourceType: 'recalled',
+    ranges: {
+      'political-theory': [1, 20],
+      'general-knowledge': [21, 35],
+      verbal: [36, 65],
+      quantitative: [66, 80],
+      reasoning: [81, 115],
+      'data-analysis': [116, 135],
+    },
+  },
+  {
+    id: 'hebei-2025-recall',
+    title: '2025年河北省公务员录用考试《行测》题（网友回忆版）',
+    region: '河北',
+    examYear: 2025,
+    questionCount: 130,
+    sourceUrl: 'https://github.com/ERRRC/xingcezhenti/tree/278984401124db40da5163a31275b8deb9c282f4',
+    answerUrl: 'https://github.com/ERRRC/xingcezhenti/tree/278984401124db40da5163a31275b8deb9c282f4',
+    sourceType: 'recalled',
+    ranges: {
+      'political-theory': [1, 20],
+      'general-knowledge': [21, 30],
+      verbal: [31, 65],
+      quantitative: [66, 80],
+      reasoning: [81, 110],
+      'data-analysis': [111, 130],
+    },
+  },
+  {
+    id: 'national-2025-deputy-recall',
+    title: '2025年国家公务员录用考试《行测》题（副省级网友回忆版）',
+    region: '国考',
+    examYear: 2025,
+    questionCount: 135,
+    sourceUrl: 'https://gwy.gkzhenti.cn/paper/1735356969686',
+    answerUrl: 'https://gwy.gkzhenti.cn/answer/1735356969686',
+    sourceType: 'recalled',
+    ranges: {
+      'political-theory': [1, 20],
+      'general-knowledge': [21, 35],
+      verbal: [36, 65],
+      quantitative: [66, 80],
+      reasoning: [81, 115],
+      'data-analysis': [116, 135],
+    },
+  },
+  {
+    "id": "zhanhong-2025-guangdong-mock-2",
+    "title": "展鸿 2025 年广东省公务员录用考试《行测》模拟卷（二）",
+    "region": "广东",
+    "examYear": 2025,
+    "questionCount": 100,
+    "sourceUrl": null,
+    "answerUrl": null,
+    "sourceType": "third_party_mock",
+    "ranges": {
+      "general-knowledge": [
+        16,
+        25
+      ],
+      "verbal": [
+        26,
+        40
+      ],
+      "quantitative": [
+        41,
+        55
+      ],
+      "reasoning": [
+        56,
+        75
+      ],
+      "science": [
+        76,
+        80
+      ],
+      "data-analysis": [
+        81,
+        100
+      ]
+    }
+  },
+  {
     id: 'zhejiang-2025-A-类',
     title: '2025 年浙江省考行测 A 类（考生回忆版）',
     region: '浙江',
@@ -138,6 +264,21 @@ const PAPER_CATALOG = [
     ranges: {
       'political-theory': [76, 90],
       'general-knowledge': [91, 105],
+    },
+  },
+  {
+    id: 'anhui-2022-zhanhong-qae',
+    title: '2022年安徽省公务员录用考试《行测》题（展鸿整理版）',
+    region: '安徽',
+    examYear: 2022,
+    questionCount: 110,
+    sourceType: 'recalled',
+    ranges: {
+      quantitative: [1, 15],
+      verbal: [16, 40],
+      'general-knowledge': [41, 60],
+      reasoning: [61, 95],
+      'data-analysis': [96, 110],
     },
   },
 ];

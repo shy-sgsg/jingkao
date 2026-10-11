@@ -1,0 +1,70 @@
+{
+  "paper_id": "zhanhong-2025-guangdong-mock-2",
+  "title": "展鸿 2025 年广东省公务员录用考试《行测》模拟卷（二）",
+  "region": "广东",
+  "exam_year": 2025,
+  "variant": "展鸿模拟卷（二）",
+  "question_count": 100,
+  "source_type": "third_party_mock",
+  "source_id": "zhanhong-2025-guangdong-mock-2",
+  "source_url": "https://zhanhong-32-read-able.oss-cn-hangzhou.aliyuncs.com/upload/videos/2025/03/10/xc2163949910.pdf",
+  "source_file": "publisher-question-and-answer.pdf",
+  "question_records_file": "questions.json",
+  "answer_explanations_file": "answer-explanations.json",
+  "shared_stimuli_file": "shared-stimuli.json",
+  "sections": [
+    {
+      "module": "political_theory",
+      "section_order": 1,
+      "from": 1,
+      "to": 15
+    },
+    {
+      "module": "common_knowledge",
+      "section_order": 2,
+      "from": 16,
+      "to": 25
+    },
+    {
+      "module": "verbal",
+      "section_order": 3,
+      "from": 26,
+      "to": 40
+    },
+    {
+      "module": "quantitative",
+      "section_order": 4,
+      "from": 41,
+      "to": 55
+    },
+    {
+      "module": "reasoning",
+      "section_order": 5,
+      "from": 56,
+      "to": 75
+    },
+    {
+      "module": "science_reasoning",
+      "section_order": 6,
+      "from": 76,
+      "to": 80
+    },
+    {
+      "module": "data_analysis",
+      "section_order": 7,
+      "from": 81,
+      "to": 100
+    }
+  ],
+  "questions_parsed_count": 100,
+  "answer_count": 100,
+  "explanation_count": 100,
+  "published_count": 95,
+  "held_count": 5,
+  "authorization": {
+    "status": "user_confirmed_republication_authorization",
+    "confirmed_on": "2026-10-10"
+  },
+  "whole_paper_mock_eligibility": "hold_full_paper; political-theory questions 11-15 are multiple-select and current player supports single-select only",
+  "note": "题干与选项按发布题本原文录入；第 11-15 题按原卷保留在档案中，因当前答题器不支持多选而暂缓发布。其余 95 题答案、解析和必要材料逐题核验；共用资料按组关联。答案解析与题面归档分文件保存，组合 PDF 来源链接不在答题前展示。"
+}

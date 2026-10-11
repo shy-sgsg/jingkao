@@ -139,9 +139,35 @@ export const GENERAL_KNOWLEDGE_SOURCES = [
     publishStatus: 'published', copyrightStatus: '题意与选项摘要改写并注明回忆来源', note: '仅发布题面资源完整、答案可核的分项；Q12依赖未取得的路线图，继续暂缓。公开答案页用于核对答案，不代表官方命题文件。',
   },
   {
+    id: 'hubei-2024-recall-candidate', sourceType: 'recalled', title: '2024年湖北省公务员录用考试《行测》题（考生回忆版）', organization: '爱真题 / 湖北网 / ERRRC 公开题解', examYear: 2024, region: '湖北',
+    url: 'https://www.aipta.com/article/9625.html',
+    answerUrl: 'https://www.163hubei.com/ueditor/php/upload/file/20240318/1710751920689656.pdf', verificationStatus: 'verified',
+    publishStatus: 'published', copyrightStatus: '用户确认已获得转载授权',
+    note: '题面来自公开考生回忆版；答案按湖北网公开参考答案、解析按公开题解核对。题面与答案解析齐全且无未解决冲突的82题已接入；含图题及答案冲突项留档待核。',
+  },
+  {
+    id: 'jiangxi-2025-recall', sourceType: 'recalled', title: '2025年江西省公务员录用考试《行测》题（网友回忆版）', organization: 'ERRRC / xingcezhenti 公开题库', examYear: 2025, region: '江西',
+    url: 'https://github.com/ERRRC/xingcezhenti/tree/278984401124db40da5163a31275b8deb9c282f4',
+    answerUrl: 'https://github.com/ERRRC/xingcezhenti/tree/278984401124db40da5163a31275b8deb9c282f4', verificationStatus: 'verified',
+    publishStatus: 'published', copyrightStatus: '用户确认已获得转载授权',
+    note: '六个模块共135题，保留原题号、题面和选项；必要图表及共用材料已镜像，答案与公开解析已归档并按卷题号核对。',
+  },
+  {
+    id: 'hebei-2025-recall', sourceType: 'recalled', title: '2025年河北省公务员录用考试《行测》题（网友回忆版）', organization: 'ERRRC / xingcezhenti 公开题库', examYear: 2025, region: '河北',
+    url: 'https://github.com/ERRRC/xingcezhenti/tree/278984401124db40da5163a31275b8deb9c282f4',
+    answerUrl: 'https://github.com/ERRRC/xingcezhenti/tree/278984401124db40da5163a31275b8deb9c282f4', verificationStatus: 'verified',
+    publishStatus: 'published', copyrightStatus: '用户确认已获得转载授权',
+    note: '六个模块共130题，保留原题号、题面和选项；205张题干、公式及必要图表已镜像，4组资料材料按题号归组，答案和解析单独归档。',
+  },
+  {
     id: 'henan-2026-recall', sourceType: 'recalled', title: '2026年河南省公务员录用考试《行测》题（网友回忆版）', organization: '公开真题库 / 考生回忆资料', examYear: 2026, region: '河南',
     url: 'https://gwy.gkzhenti.cn/paper/1775360735848', answerUrl: 'https://gwy.gkzhenti.cn/answer/1775360735848', verificationStatus: 'verified',
     publishStatus: 'published', copyrightStatus: '用户确认已获得转载授权', note: '仅将题面、答案和解析完整的题目接入对应模块；河南常识第91–105题已核对，整卷及缺项题暂不开放。',
+  },
+  {
+    id: 'national-2025-deputy-recall', sourceType: 'recalled', title: '2025年国家公务员录用考试《行测》题（副省级网友回忆版）', organization: '公开真题库 / 考生回忆资料 / ERRRC公开题解', examYear: 2025, region: '国考',
+    url: 'https://gwy.gkzhenti.cn/paper/1735356969686', answerUrl: 'https://gwy.gkzhenti.cn/answer/1735356969686', verificationStatus: 'verified',
+    publishStatus: 'published', copyrightStatus: '用户确认已获得转载授权', note: '政治理论、常识判断、言语理解、数量关系、判断推理和资料分析共135题均已按原题号接入；题解来自第三方公开整理，答案与公开答案页逐题核对。',
   },
   {
     id: 'mofcom-emergency-supplies', sourceType: 'official_policy', title: '生活必需品市场供应应急管理相关规定', organization: '中华人民共和国商务部',
@@ -689,6 +715,27 @@ export const GENERAL_KNOWLEDGE_SOURCES = [
     answerUrl: 'https://static.32xueyuan.com/zq/u/cms/jx/202503/051709044zd4.pdf',
     verificationStatus: 'verified', publishStatus: 'published', copyrightStatus: '用户确认已获得转载授权',
     note: '题面、答案及解析按展鸿配套题本与解析 PDF 核对；本站已获转载授权。',
+  },
+  {
+    id: 'anhui-2022-zhanhong-qae', sourceType: 'recalled', title: '2022年安徽省公务员录用考试《行测》题（展鸿整理版）', organization: '展鸿教育 / 32 学苑', examYear: 2022, region: '安徽',
+    url: 'https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf',
+    answerUrl: 'https://static.32xueyuan.com/zq/u/cms/ah/202501/23111927qi0v.pdf',
+    verificationStatus: 'verified', publishStatus: 'published', copyrightStatus: '用户确认已获得转载授权',
+    note: '110题题面、选项与解析来自同一整理版；图形及资料分析材料已核对。',
+  },
+  {
+    id: 'zhanhong-2025-guangdong-mock-2', sourceType: 'third_party_mock', title: '展鸿 2025 年广东省公务员录用考试《行测》模拟卷（二）', organization: '展鸿教育', examYear: 2025, region: '广东',
+    url: 'https://zhanhong-32-read-able.oss-cn-hangzhou.aliyuncs.com/upload/videos/2025/03/10/xc2163949910.pdf',
+    answerUrl: 'https://zhanhong-32-read-able.oss-cn-hangzhou.aliyuncs.com/upload/videos/2025/03/10/xc2163949910.pdf',
+    verificationStatus: 'verified', publishStatus: 'published', copyrightStatus: '用户确认已获得转载授权',
+    note: '100题题面、答案与解析按配套卷逐题核验；95道单选题已接入，5道多选题暂缓。',
+  },
+  {
+    id: 'gkzhenti-2026-jiangxi', sourceType: 'recalled', title: '2026年江西省公务员录用考试《行测》题（网友回忆版）', organization: '爱真题 / 公开真题库（题面、答案键及公开解析归档）', examYear: 2026, region: '江西',
+    url: 'https://www.aipta.com/article/10594.html',
+    answerUrl: 'https://gwy.gkzhenti.cn/answer/1775360736151', verificationStatus: 'verified', publishStatus: 'published',
+    copyrightStatus: '用户确认已获得转载授权',
+    note: '题面按爱真题公开回忆版核定，答案键与公开真题库1–130题逐题一致；保留网友回忆版标注。',
   },
   {
     id: 'jiangsu-2024-a-32xueyuan', sourceType: 'verified_exam', title: '2024 年江苏省公务员录用考试行测 A 类真题（第三方出版原卷）', organization: '32 学苑', examYear: 2024,
