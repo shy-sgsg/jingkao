@@ -1,0 +1,816 @@
+{
+  "paperId": "zhanhong-2025-national-mock-1-deputy",
+  "title": "展鸿 2025 年国家公务员录用考试模拟卷（一）《行测》（副省级）",
+  "answers": [
+    {
+      "questionId": "zhanhong2025national1-q001",
+      "originalQuestionNo": 1,
+      "correctAnswer": "A",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q002",
+      "originalQuestionNo": 2,
+      "correctAnswer": "D",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q003",
+      "originalQuestionNo": 3,
+      "correctAnswer": "B",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q004",
+      "originalQuestionNo": 4,
+      "correctAnswer": "D",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q005",
+      "originalQuestionNo": 5,
+      "correctAnswer": "B",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q006",
+      "originalQuestionNo": 6,
+      "correctAnswer": "A",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q007",
+      "originalQuestionNo": 7,
+      "correctAnswer": "B",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q008",
+      "originalQuestionNo": 8,
+      "correctAnswer": "B",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q009",
+      "originalQuestionNo": 9,
+      "correctAnswer": "B",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q010",
+      "originalQuestionNo": 10,
+      "correctAnswer": "C",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q011",
+      "originalQuestionNo": 11,
+      "correctAnswer": "D",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q012",
+      "originalQuestionNo": 12,
+      "correctAnswer": "B",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q013",
+      "originalQuestionNo": 13,
+      "correctAnswer": "C",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q014",
+      "originalQuestionNo": 14,
+      "correctAnswer": "B",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q015",
+      "originalQuestionNo": 15,
+      "correctAnswer": "C",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q016",
+      "originalQuestionNo": 16,
+      "correctAnswer": "D",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q017",
+      "originalQuestionNo": 17,
+      "correctAnswer": "C",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q018",
+      "originalQuestionNo": 18,
+      "correctAnswer": "A",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q019",
+      "originalQuestionNo": 19,
+      "correctAnswer": "A",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q020",
+      "originalQuestionNo": 20,
+      "correctAnswer": "C",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q021",
+      "originalQuestionNo": 21,
+      "correctAnswer": "C",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q022",
+      "originalQuestionNo": 22,
+      "correctAnswer": "C",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q023",
+      "originalQuestionNo": 23,
+      "correctAnswer": "B",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q024",
+      "originalQuestionNo": 24,
+      "correctAnswer": "A",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q025",
+      "originalQuestionNo": 25,
+      "correctAnswer": "A",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q026",
+      "originalQuestionNo": 26,
+      "correctAnswer": "B",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q027",
+      "originalQuestionNo": 27,
+      "correctAnswer": "C",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q028",
+      "originalQuestionNo": 28,
+      "correctAnswer": "C",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q029",
+      "originalQuestionNo": 29,
+      "correctAnswer": "A",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q030",
+      "originalQuestionNo": 30,
+      "correctAnswer": "A",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q031",
+      "originalQuestionNo": 31,
+      "correctAnswer": "A",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q032",
+      "originalQuestionNo": 32,
+      "correctAnswer": "B",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q033",
+      "originalQuestionNo": 33,
+      "correctAnswer": "B",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q034",
+      "originalQuestionNo": 34,
+      "correctAnswer": "A",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q035",
+      "originalQuestionNo": 35,
+      "correctAnswer": "A",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q036",
+      "originalQuestionNo": 36,
+      "correctAnswer": "D",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q037",
+      "originalQuestionNo": 37,
+      "correctAnswer": "A",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q038",
+      "originalQuestionNo": 38,
+      "correctAnswer": "D",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q039",
+      "originalQuestionNo": 39,
+      "correctAnswer": "D",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q040",
+      "originalQuestionNo": 40,
+      "correctAnswer": "A",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q041",
+      "originalQuestionNo": 41,
+      "correctAnswer": "D",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q042",
+      "originalQuestionNo": 42,
+      "correctAnswer": "B",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q043",
+      "originalQuestionNo": 43,
+      "correctAnswer": "C",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q044",
+      "originalQuestionNo": 44,
+      "correctAnswer": "C",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q045",
+      "originalQuestionNo": 45,
+      "correctAnswer": "C",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q046",
+      "originalQuestionNo": 46,
+      "correctAnswer": "D",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q047",
+      "originalQuestionNo": 47,
+      "correctAnswer": "B",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q048",
+      "originalQuestionNo": 48,
+      "correctAnswer": "A",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q049",
+      "originalQuestionNo": 49,
+      "correctAnswer": "B",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q050",
+      "originalQuestionNo": 50,
+      "correctAnswer": "A",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q051",
+      "originalQuestionNo": 51,
+      "correctAnswer": "C",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q052",
+      "originalQuestionNo": 52,
+      "correctAnswer": "C",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q053",
+      "originalQuestionNo": 53,
+      "correctAnswer": "B",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q054",
+      "originalQuestionNo": 54,
+      "correctAnswer": "C",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q055",
+      "originalQuestionNo": 55,
+      "correctAnswer": "A",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q056",
+      "originalQuestionNo": 56,
+      "correctAnswer": "D",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q057",
+      "originalQuestionNo": 57,
+      "correctAnswer": "D",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q058",
+      "originalQuestionNo": 58,
+      "correctAnswer": "A",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q059",
+      "originalQuestionNo": 59,
+      "correctAnswer": "D",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q060",
+      "originalQuestionNo": 60,
+      "correctAnswer": "A",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q061",
+      "originalQuestionNo": 61,
+      "correctAnswer": "A",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q062",
+      "originalQuestionNo": 62,
+      "correctAnswer": "B",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q063",
+      "originalQuestionNo": 63,
+      "correctAnswer": "C",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q064",
+      "originalQuestionNo": 64,
+      "correctAnswer": "B",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q065",
+      "originalQuestionNo": 65,
+      "correctAnswer": "B",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q066",
+      "originalQuestionNo": 66,
+      "correctAnswer": "C",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q067",
+      "originalQuestionNo": 67,
+      "correctAnswer": "B",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q068",
+      "originalQuestionNo": 68,
+      "correctAnswer": "C",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q069",
+      "originalQuestionNo": 69,
+      "correctAnswer": "B",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q070",
+      "originalQuestionNo": 70,
+      "correctAnswer": "D",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q071",
+      "originalQuestionNo": 71,
+      "correctAnswer": "D",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q072",
+      "originalQuestionNo": 72,
+      "correctAnswer": "A",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q073",
+      "originalQuestionNo": 73,
+      "correctAnswer": "D",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q074",
+      "originalQuestionNo": 74,
+      "correctAnswer": "C",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q075",
+      "originalQuestionNo": 75,
+      "correctAnswer": "D",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q076",
+      "originalQuestionNo": 76,
+      "correctAnswer": "A",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q077",
+      "originalQuestionNo": 77,
+      "correctAnswer": "B",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q078",
+      "originalQuestionNo": 78,
+      "correctAnswer": "D",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q079",
+      "originalQuestionNo": 79,
+      "correctAnswer": "C",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q080",
+      "originalQuestionNo": 80,
+      "correctAnswer": "D",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q081",
+      "originalQuestionNo": 81,
+      "correctAnswer": "C",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q082",
+      "originalQuestionNo": 82,
+      "correctAnswer": "A",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q083",
+      "originalQuestionNo": 83,
+      "correctAnswer": "C",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q084",
+      "originalQuestionNo": 84,
+      "correctAnswer": "D",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q085",
+      "originalQuestionNo": 85,
+      "correctAnswer": "B",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q086",
+      "originalQuestionNo": 86,
+      "correctAnswer": "B",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q087",
+      "originalQuestionNo": 87,
+      "correctAnswer": "D",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q088",
+      "originalQuestionNo": 88,
+      "correctAnswer": "C",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q089",
+      "originalQuestionNo": 89,
+      "correctAnswer": "B",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q090",
+      "originalQuestionNo": 90,
+      "correctAnswer": "B",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q091",
+      "originalQuestionNo": 91,
+      "correctAnswer": "D",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q092",
+      "originalQuestionNo": 92,
+      "correctAnswer": "D",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q093",
+      "originalQuestionNo": 93,
+      "correctAnswer": "A",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q094",
+      "originalQuestionNo": 94,
+      "correctAnswer": "B",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q095",
+      "originalQuestionNo": 95,
+      "correctAnswer": "B",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q096",
+      "originalQuestionNo": 96,
+      "correctAnswer": "B",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q097",
+      "originalQuestionNo": 97,
+      "correctAnswer": "B",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q098",
+      "originalQuestionNo": 98,
+      "correctAnswer": "C",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q099",
+      "originalQuestionNo": 99,
+      "correctAnswer": "C",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q100",
+      "originalQuestionNo": 100,
+      "correctAnswer": "A",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q101",
+      "originalQuestionNo": 101,
+      "correctAnswer": "B",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q102",
+      "originalQuestionNo": 102,
+      "correctAnswer": "A",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q103",
+      "originalQuestionNo": 103,
+      "correctAnswer": "A",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q104",
+      "originalQuestionNo": 104,
+      "correctAnswer": "B",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q105",
+      "originalQuestionNo": 105,
+      "correctAnswer": "C",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q106",
+      "originalQuestionNo": 106,
+      "correctAnswer": "C",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q107",
+      "originalQuestionNo": 107,
+      "correctAnswer": "D",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q108",
+      "originalQuestionNo": 108,
+      "correctAnswer": "B",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q109",
+      "originalQuestionNo": 109,
+      "correctAnswer": "C",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q110",
+      "originalQuestionNo": 110,
+      "correctAnswer": "C",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q111",
+      "originalQuestionNo": 111,
+      "correctAnswer": "C",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q112",
+      "originalQuestionNo": 112,
+      "correctAnswer": "C",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q113",
+      "originalQuestionNo": 113,
+      "correctAnswer": "B",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q114",
+      "originalQuestionNo": 114,
+      "correctAnswer": "A",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q115",
+      "originalQuestionNo": 115,
+      "correctAnswer": "A",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q116",
+      "originalQuestionNo": 116,
+      "correctAnswer": "D",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q117",
+      "originalQuestionNo": 117,
+      "correctAnswer": "A",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q118",
+      "originalQuestionNo": 118,
+      "correctAnswer": "C",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q119",
+      "originalQuestionNo": 119,
+      "correctAnswer": "B",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q120",
+      "originalQuestionNo": 120,
+      "correctAnswer": "D",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q121",
+      "originalQuestionNo": 121,
+      "correctAnswer": "C",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q122",
+      "originalQuestionNo": 122,
+      "correctAnswer": "B",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q123",
+      "originalQuestionNo": 123,
+      "correctAnswer": "D",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q124",
+      "originalQuestionNo": 124,
+      "correctAnswer": "B",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q125",
+      "originalQuestionNo": 125,
+      "correctAnswer": "C",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q126",
+      "originalQuestionNo": 126,
+      "correctAnswer": "B",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q127",
+      "originalQuestionNo": 127,
+      "correctAnswer": "C",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q128",
+      "originalQuestionNo": 128,
+      "correctAnswer": "C",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q129",
+      "originalQuestionNo": 129,
+      "correctAnswer": "A",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q130",
+      "originalQuestionNo": 130,
+      "correctAnswer": "D",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q131",
+      "originalQuestionNo": 131,
+      "correctAnswer": "C",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q132",
+      "originalQuestionNo": 132,
+      "correctAnswer": "A",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q133",
+      "originalQuestionNo": 133,
+      "correctAnswer": "B",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q134",
+      "originalQuestionNo": 134,
+      "correctAnswer": "B",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    },
+    {
+      "questionId": "zhanhong2025national1-q135",
+      "originalQuestionNo": 135,
+      "correctAnswer": "B",
+      "sourceUrl": "https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf"
+    }
+  ]
+}

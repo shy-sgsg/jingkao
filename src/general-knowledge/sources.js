@@ -751,4 +751,19 @@ export const GENERAL_KNOWLEDGE_SOURCES = [
     verificationStatus: 'verified', publishStatus: 'published', copyrightStatus: '用户确认已获得转载授权',
     note: '题面来自公开考生回忆题页，答案及解析按出版版 PDF 核对；未拆清图像素材的题继续留在归档。',
   },
+  {
+    id: 'zhanhong-2025-national-mock-1-deputy', sourceType: 'third_party_mock', title: '展鸿 2025 年国家公务员录用考试模拟卷（一）《行测》（副省级）', organization: '展鸿教育 / 32 学苑', examYear: 2025, region: '全国',
+    url: 'https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf', answerUrl: 'https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf', verificationStatus: 'verified', publishStatus: 'published', copyrightStatus: '用户确认已获得转载授权',
+    note: '三套原卷均含题面、答案及解析；题面选项逐题录入，图表、图形和公式解析以原卷配图补足。',
+  },
+  {
+    id: 'zhanhong-2025-national-mock-2-city', sourceType: 'third_party_mock', title: '展鸿 2025 年国家公务员录用考试模拟卷（二）《行测》（地市级）', organization: '展鸿教育 / 32 学苑', examYear: 2025, region: '全国',
+    url: 'https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf', answerUrl: 'https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf', verificationStatus: 'verified', publishStatus: 'published', copyrightStatus: '用户确认已获得转载授权',
+    note: '三套原卷均含题面、答案及解析；题面选项逐题录入，图表、图形和公式解析以原卷配图补足。',
+  },
+  {
+    id: 'zhanhong-2025-national-mock-3-law-enforcement', sourceType: 'third_party_mock', title: '展鸿 2025 年国家公务员录用考试模拟卷（三）《行测》（行政执法类）', organization: '展鸿教育 / 32 学苑', examYear: 2025, region: '全国',
+    url: 'https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf', answerUrl: 'https://static.32xueyuan.com/zq/u/cms/jx/202411/0615582176bj.pdf', verificationStatus: 'verified', publishStatus: 'published', copyrightStatus: '用户确认已获得转载授权',
+    note: '三套原卷均含题面、答案及解析；题面选项逐题录入，图表、图形和公式解析以原卷配图补足。',
+  },
 ];
