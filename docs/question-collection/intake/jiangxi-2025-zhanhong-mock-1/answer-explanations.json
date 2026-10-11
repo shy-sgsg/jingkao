@@ -776,9 +776,9 @@
     },
     {
       "original_question_no": 111,
-      "correct_option": "B",
+      "correct_option": "C",
       "explanation": "本题考查智力推理。 第一步：整理题干信息。①橙葫芦是第三个葫芦；②红葫芦和黄葫芦相邻，青葫芦和紫葫芦不相邻； ③绿葫芦在紫葫芦和黄葫芦的前面；④青葫芦在黄葫芦之前一位。 第二步：分析题干信息，确定答案。 由②④可知，红葫芦、黄葫芦和青葫芦相邻，且顺序依次为青葫芦、黄葫芦、红葫芦。结合①可知， 青、黄、红三个葫芦只能位于橙葫芦之后。再结合②③可知，紫葫芦不能在第四位，则绿葫芦只能在第 一位或第二位。列表如下： 故本题选 C。",
-      "verification_status": "verified_against_paired_publisher_answer_pdf",
+      "verification_status": "publisher_key_conflicts_with_explanation; corrected_to_C_by_constraint_analysis",
       "publish_status": "published"
     },
     {
