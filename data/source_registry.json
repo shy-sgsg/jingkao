@@ -15862,7 +15862,7 @@
     "minimum": 104,
     "maximum": 128,
     "scope": "平谷区岗位最低进面线部分样本",
-    "notes": "页面称平谷区61人进入面试，明列30条部分岗位分数线，范围104—128；其中17条按同年度单位、岗位名和第三方职位代码唯一关联，8条同单位同名候选存在歧义，另5条当前没有可唯一匹配的候选代码，保留空代码。城市管理指挥中心数据分析岗代码821370301由两份独立第三方职位镜像交叉核对。第三方部分样本，不代表完整名单；所列是岗位最低进面笔试分，不是官方笔试合格线。"
+    "notes": "页面称平谷区61人进入面试，明列30条部分岗位分数线，范围104—128；其中19条按同年度单位、岗位名和第三方职位目录唯一关联，8条同单位同名候选存在歧义，另3条当前没有可唯一匹配的候选代码，保留空代码。城市管理指挥中心数据分析岗由华图与京考职位网交叉核对；夏各庄镇、刘家店镇两个岗位由京考职位网镇级目录及职位详情核对。第三方部分样本，不代表完整名单；所列是岗位最低进面笔试分，不是官方笔试合格线。"
   },
   {
     "sourceId": "huatu-2026-pinggu-city-management-command",
@@ -15889,6 +15889,71 @@
     "url": "https://bj.gwyzwb.com/2026/1367.html",
     "accessedAt": "2026-10-11",
     "notes": "职位详情独立列示代码821370301、数据分析岗及计划招录1人，与华图镜像一致；第三方职位镜像，未与官方招考简章逐代码复核。"
+  },
+  {
+    "sourceId": "gwyzwb-2026-pinggu-xiagezhuang-index",
+    "title": "京考职位网：2026平谷区夏各庄镇职位目录",
+    "publisher": "京考职位网",
+    "level": "secondary",
+    "evidenceType": "position_mirror",
+    "year": 2026,
+    "districtId": "pinggu",
+    "geographicScope": "平谷区夏各庄镇职位代码、岗位名及计划招录数",
+    "url": "https://bj.gwyzwb.com/pinggu/2026_33.html",
+    "accessedAt": "2026-10-11",
+    "notes": "目录列出夏各庄镇3个岗位；其中仅1条综合管理岗，代码241371203、计划2人。第三方职位镜像，未与官方招考简章逐代码复核。"
+  },
+  {
+    "sourceId": "gwyzwb-2026-pinggu-xiagezhuang-detail",
+    "title": "京考职位网：2026平谷区夏各庄镇综合管理岗详情",
+    "publisher": "京考职位网",
+    "level": "secondary",
+    "evidenceType": "position_mirror",
+    "year": 2026,
+    "districtId": "pinggu",
+    "geographicScope": "平谷区夏各庄镇综合管理岗职位详情",
+    "url": "https://bj.gwyzwb.com/2026/1380.html",
+    "accessedAt": "2026-10-11",
+    "notes": "职位详情列示代码241371203、综合管理岗及计划招录2人；第三方职位镜像，未与官方招考简章逐代码复核。"
+  },
+  {
+    "sourceId": "gwyzwb-2026-pinggu-liujiadian-index",
+    "title": "京考职位网：2026平谷区刘家店镇职位目录",
+    "publisher": "京考职位网",
+    "level": "secondary",
+    "evidenceType": "position_mirror",
+    "year": 2026,
+    "districtId": "pinggu",
+    "geographicScope": "平谷区刘家店镇职位代码、岗位名及计划招录数",
+    "url": "https://bj.gwyzwb.com/pinggu/2026_39.html",
+    "accessedAt": "2026-10-11",
+    "notes": "目录报告刘家店镇唯一岗位计划2人；第三方职位镜像，未与官方招考简章逐代码复核。"
+  },
+  {
+    "sourceId": "gwyzwb-2026-pinggu-liujiadian-detail",
+    "title": "京考职位网：2026平谷区刘家店镇综合管理岗详情",
+    "publisher": "京考职位网",
+    "level": "secondary",
+    "evidenceType": "position_mirror",
+    "year": 2026,
+    "districtId": "pinggu",
+    "geographicScope": "平谷区刘家店镇综合管理岗职位详情",
+    "url": "https://bj.gwyzwb.com/2026/1386.html",
+    "accessedAt": "2026-10-11",
+    "notes": "职位详情列示代码241371801、综合管理岗及计划招录2人；第三方职位镜像，未与官方招考简章逐代码复核。"
+  },
+  {
+    "sourceId": "fenbi-2026-pinggu-page-5",
+    "title": "粉笔职位库：2026平谷区职位表（第5页）",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "position_mirror",
+    "year": 2026,
+    "districtId": "pinggu",
+    "geographicScope": "平谷区2026职位行与职位库报考人数展示",
+    "url": "https://m.fenbi.com/page/positions/1/438923?page=5&region=171",
+    "accessedAt": "2026-10-11",
+    "notes": "页面列示夏各庄镇综合管理岗计划2人、报考人数92，合计平谷区61岗/93人/过审人数1195；未给岗位行统计时点，也未解释报考人数与过审人数的对应关系，因此92人及46:1只作线索，不作为带时点的竞争观察入库。"
   },
   {
     "sourceId": "gwyzwb-2026-pinggu-market",

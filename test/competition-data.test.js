@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { normalizeDataset } from '../src/data/normalize.js';
+import { getPositionCompetitionEvidence } from '../src/data/positions.js';
 
 test('2025 Beijing Jingkao registration snapshots stay attached to their position codes and snapshot ratios', async () => {
   const raw = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
@@ -79,6 +80,53 @@ test('2026 Pinggu city-management cutoff is linked to its exact position code', 
   assert.equal(cutoff?.positionCode, positionCode);
   assert.equal(cutoff?.score, 124.25);
   assert.equal(cutoff?.mappingConfidence, 'high');
+});
+
+test('2026 Pinggu summer-village and Liujiadian cutoffs link to exact position codes', async () => {
+  const raw = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const dataset = normalizeDataset(raw);
+  const expected = [
+    {
+      scoreId: '2026-cgzj-pinggu-15',
+      code: '241371203',
+      unit: '北京市平谷区夏各庄镇',
+      title: '综合管理岗',
+      score: 122,
+      sources: [
+        ['gwyzwb-2026-pinggu-xiagezhuang-index', 'https://bj.gwyzwb.com/pinggu/2026_33.html'],
+        ['gwyzwb-2026-pinggu-xiagezhuang-detail', 'https://bj.gwyzwb.com/2026/1380.html'],
+      ],
+    },
+    {
+      scoreId: '2026-cgzj-pinggu-25',
+      code: '241371801',
+      unit: '北京市平谷区刘家店镇',
+      title: '综合管理岗',
+      score: 110.25,
+      sources: [
+        ['gwyzwb-2026-pinggu-liujiadian-index', 'https://bj.gwyzwb.com/pinggu/2026_39.html'],
+        ['gwyzwb-2026-pinggu-liujiadian-detail', 'https://bj.gwyzwb.com/2026/1386.html'],
+      ],
+    },
+  ];
+
+  for (const item of expected) {
+    const position = dataset.positions.find((row) => Number(row.year) === 2026 && row.code === item.code);
+    const cutoff = dataset.scoreRows.find((row) => row.id === item.scoreId);
+    assert.equal(position?.unit, item.unit);
+    assert.equal(position?.title, item.title);
+    assert.equal(position?.recruitCount, 2);
+    assert.equal(cutoff?.positionCode, item.code);
+    assert.equal(cutoff?.score, item.score);
+    assert.equal(cutoff?.mappingConfidence, 'high');
+    assert.equal(getPositionCompetitionEvidence(position, dataset).cutoffScore, item.score);
+
+    for (const [sourceId, url] of item.sources) {
+      const source = dataset.sources.find((row) => row.sourceId === sourceId);
+      assert.equal(source?.url, url);
+      assert.ok(position.sources.includes(sourceId));
+    }
+  }
 });
 
 test('2025 November 19 morning citywide leaderboard keeps named jobs and planned recruits aligned', async () => {

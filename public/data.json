@@ -85304,6 +85304,47 @@
     },
     {
       "year": 2026,
+      "code": "241371203",
+      "unit": "北京市平谷区夏各庄镇",
+      "title": "综合管理岗",
+      "orgType": "镇",
+      "recruitCount": 2,
+      "sourceLevel": "secondary",
+      "verification": "京考职位网2026平谷区目录及职位详情列示代码、岗位名和计划招录数；粉笔职位库单位、岗位名、计划数相符。未与官方招考简章逐代码复核。",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "本轮仅补录岗位身份与计划招录数用于关联竞争样本；学历、专业及其他资格条件以官方招考简章为准。",
+      "sources": [
+        "gwyzwb-2026-pinggu-xiagezhuang-index",
+        "gwyzwb-2026-pinggu-xiagezhuang-detail",
+        "fenbi-2026-pinggu-page-5",
+        "gwyzwb-2026-pinggu-index"
+      ],
+      "districtId": "pinggu",
+      "districtMatch": "平谷区"
+    },
+    {
+      "year": 2026,
+      "code": "241371801",
+      "unit": "北京市平谷区刘家店镇",
+      "title": "综合管理岗",
+      "orgType": "镇",
+      "recruitCount": 2,
+      "sourceLevel": "secondary",
+      "verification": "京考职位网2026平谷区目录及职位详情列示代码、岗位名和计划招录数；未与官方招考简章逐代码复核。",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "本轮仅补录岗位身份与计划招录数用于关联竞争样本；学历、专业及其他资格条件以官方招考简章为准。",
+      "sources": [
+        "gwyzwb-2026-pinggu-liujiadian-index",
+        "gwyzwb-2026-pinggu-liujiadian-detail",
+        "gwyzwb-2026-pinggu-index"
+      ],
+      "districtId": "pinggu",
+      "districtMatch": "平谷区"
+    },
+    {
+      "year": 2026,
       "code": "241371501",
       "unit": "北京市平谷区大华山镇",
       "title": "综合管理岗",
@@ -108728,7 +108769,7 @@
       "minimum": 104,
       "maximum": 128,
       "scope": "平谷区岗位最低进面线部分样本",
-      "notes": "页面称平谷区61人进入面试，明列30条部分岗位分数线，范围104—128；其中17条按同年度单位、岗位名和第三方职位代码唯一关联，8条同单位同名候选存在歧义，另5条当前没有可唯一匹配的候选代码，保留空代码。城市管理指挥中心数据分析岗代码821370301由两份独立第三方职位镜像交叉核对。第三方部分样本，不代表完整名单；所列是岗位最低进面笔试分，不是官方笔试合格线。"
+      "notes": "页面称平谷区61人进入面试，明列30条部分岗位分数线，范围104—128；其中19条按同年度单位、岗位名和第三方职位目录唯一关联，8条同单位同名候选存在歧义，另3条当前没有可唯一匹配的候选代码，保留空代码。城市管理指挥中心数据分析岗由华图与京考职位网交叉核对；夏各庄镇、刘家店镇两个岗位由京考职位网镇级目录及职位详情核对。第三方部分样本，不代表完整名单；所列是岗位最低进面笔试分，不是官方笔试合格线。"
     },
     {
       "sourceId": "huatu-2026-pinggu-city-management-command",
@@ -108755,6 +108796,71 @@
       "url": "https://bj.gwyzwb.com/2026/1367.html",
       "accessedAt": "2026-10-11",
       "notes": "职位详情独立列示代码821370301、数据分析岗及计划招录1人，与华图镜像一致；第三方职位镜像，未与官方招考简章逐代码复核。"
+    },
+    {
+      "sourceId": "gwyzwb-2026-pinggu-xiagezhuang-index",
+      "title": "京考职位网：2026平谷区夏各庄镇职位目录",
+      "publisher": "京考职位网",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "districtId": "pinggu",
+      "geographicScope": "平谷区夏各庄镇职位代码、岗位名及计划招录数",
+      "url": "https://bj.gwyzwb.com/pinggu/2026_33.html",
+      "accessedAt": "2026-10-11",
+      "notes": "目录列出夏各庄镇3个岗位；其中仅1条综合管理岗，代码241371203、计划2人。第三方职位镜像，未与官方招考简章逐代码复核。"
+    },
+    {
+      "sourceId": "gwyzwb-2026-pinggu-xiagezhuang-detail",
+      "title": "京考职位网：2026平谷区夏各庄镇综合管理岗详情",
+      "publisher": "京考职位网",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "districtId": "pinggu",
+      "geographicScope": "平谷区夏各庄镇综合管理岗职位详情",
+      "url": "https://bj.gwyzwb.com/2026/1380.html",
+      "accessedAt": "2026-10-11",
+      "notes": "职位详情列示代码241371203、综合管理岗及计划招录2人；第三方职位镜像，未与官方招考简章逐代码复核。"
+    },
+    {
+      "sourceId": "gwyzwb-2026-pinggu-liujiadian-index",
+      "title": "京考职位网：2026平谷区刘家店镇职位目录",
+      "publisher": "京考职位网",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "districtId": "pinggu",
+      "geographicScope": "平谷区刘家店镇职位代码、岗位名及计划招录数",
+      "url": "https://bj.gwyzwb.com/pinggu/2026_39.html",
+      "accessedAt": "2026-10-11",
+      "notes": "目录报告刘家店镇唯一岗位计划2人；第三方职位镜像，未与官方招考简章逐代码复核。"
+    },
+    {
+      "sourceId": "gwyzwb-2026-pinggu-liujiadian-detail",
+      "title": "京考职位网：2026平谷区刘家店镇综合管理岗详情",
+      "publisher": "京考职位网",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "districtId": "pinggu",
+      "geographicScope": "平谷区刘家店镇综合管理岗职位详情",
+      "url": "https://bj.gwyzwb.com/2026/1386.html",
+      "accessedAt": "2026-10-11",
+      "notes": "职位详情列示代码241371801、综合管理岗及计划招录2人；第三方职位镜像，未与官方招考简章逐代码复核。"
+    },
+    {
+      "sourceId": "fenbi-2026-pinggu-page-5",
+      "title": "粉笔职位库：2026平谷区职位表（第5页）",
+      "publisher": "粉笔职位库",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "districtId": "pinggu",
+      "geographicScope": "平谷区2026职位行与职位库报考人数展示",
+      "url": "https://m.fenbi.com/page/positions/1/438923?page=5&region=171",
+      "accessedAt": "2026-10-11",
+      "notes": "页面列示夏各庄镇综合管理岗计划2人、报考人数92，合计平谷区61岗/93人/过审人数1195；未给岗位行统计时点，也未解释报考人数与过审人数的对应关系，因此92人及46:1只作线索，不作为带时点的竞争观察入库。"
     },
     {
       "sourceId": "gwyzwb-2026-pinggu-market",
@@ -111189,7 +111295,7 @@
       "sourceId": "cgzj-2026-pinggu-cutoff-sample",
       "sourceLevel": "secondary",
       "complete": false,
-      "notes": "页面称平谷区61人进入面试，明列30条部分岗位分数线，范围104—128；其中17条按同年度单位、岗位名和第三方职位代码唯一关联，8条同单位同名候选存在歧义，另5条当前没有可唯一匹配的候选代码，保留空代码。城市管理指挥中心数据分析岗代码821370301由两份独立第三方职位镜像交叉核对。第三方部分样本，不代表完整名单；所列是岗位最低进面笔试分，不是官方笔试合格线。"
+      "notes": "页面称平谷区61人进入面试，明列30条部分岗位分数线，范围104—128；其中19条按同年度单位、岗位名和第三方职位目录唯一关联，8条同单位同名候选存在歧义，另3条当前没有可唯一匹配的候选代码，保留空代码。城市管理指挥中心数据分析岗由华图与京考职位网交叉核对；夏各庄镇、刘家店镇两个岗位由京考职位网镇级目录及职位详情核对。第三方部分样本，不代表完整名单；所列是岗位最低进面笔试分，不是官方笔试合格线。"
     },
     {
       "year": 2026,
@@ -115234,14 +115340,14 @@
       "unit": "北京市平谷区夏各庄镇",
       "title": "综合管理岗",
       "name": "北京市平谷区夏各庄镇｜综合管理岗",
-      "positionCode": null,
+      "positionCode": "241371203",
       "orgType": "镇",
       "score": 122,
-      "notes": "成公页面公开单位、岗位及分数；本轮没有可唯一核对的候选职位代码，保留空代码。",
-      "mappingConfidence": "unmatched",
+      "notes": "成公页面列明单位、岗位名及122分；京考职位网镇级列表和详情均列示唯一综合管理岗代码241371203、计划2人。岗位与分数均未与官方简章逐代码核验。",
+      "mappingConfidence": "high",
       "sourceId": "cgzj-2026-pinggu-cutoff-sample",
       "sourceLevel": "secondary",
-      "verification": "岗位代码未唯一匹配；保留空代码"
+      "verification": "年度、单位与岗位名唯一匹配"
     },
     {
       "id": "2026-cgzj-pinggu-16",
@@ -115384,14 +115490,14 @@
       "unit": "北京市平谷区刘家店镇",
       "title": "综合管理岗",
       "name": "北京市平谷区刘家店镇｜综合管理岗",
-      "positionCode": null,
+      "positionCode": "241371801",
       "orgType": "镇",
       "score": 110.25,
-      "notes": "成公页面公开单位、岗位及分数；本轮没有可唯一核对的候选职位代码，保留空代码。",
-      "mappingConfidence": "unmatched",
+      "notes": "成公页面列明单位、岗位名及110.25分；京考职位网镇级目录报告该单位唯一岗位计划2人，详情页列示代码241371801、岗位名和计划数。岗位与分数均未与官方简章逐代码核验。",
+      "mappingConfidence": "high",
       "sourceId": "cgzj-2026-pinggu-cutoff-sample",
       "sourceLevel": "secondary",
-      "verification": "岗位代码未唯一匹配；保留空代码"
+      "verification": "年度、单位与岗位名唯一匹配"
     },
     {
       "id": "2026-cgzj-pinggu-26",
