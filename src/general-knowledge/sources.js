@@ -140,6 +140,13 @@ export const GENERAL_KNOWLEDGE_SOURCES = [
     note: '题面来自公开考生回忆版；答案按湖北网公开参考答案、解析按公开题解核对。题面与答案解析齐全且无未解决冲突的82题已接入；含图题及答案冲突项留档待核。',
   },
   {
+    id: 'jiangxi-2025-recall', sourceType: 'recalled', title: '2025年江西省公务员录用考试《行测》题（网友回忆版）', organization: 'ERRRC / xingcezhenti 公开题库', examYear: 2025, region: '江西',
+    url: 'https://github.com/ERRRC/xingcezhenti/tree/278984401124db40da5163a31275b8deb9c282f4',
+    answerUrl: 'https://github.com/ERRRC/xingcezhenti/tree/278984401124db40da5163a31275b8deb9c282f4', verificationStatus: 'verified',
+    publishStatus: 'published', copyrightStatus: '用户确认已获得转载授权',
+    note: '六个模块共135题，保留原题号、题面和选项；必要图表及共用材料已镜像，答案与公开解析已归档并按卷题号核对。',
+  },
+  {
     id: 'henan-2026-recall', sourceType: 'recalled', title: '2026年河南省公务员录用考试《行测》题（网友回忆版）', organization: '公开真题库 / 考生回忆资料', examYear: 2026, region: '河南',
     url: 'https://gwy.gkzhenti.cn/paper/1775360735848', answerUrl: 'https://gwy.gkzhenti.cn/answer/1775360735848', verificationStatus: 'verified',
     publishStatus: 'published', copyrightStatus: '用户确认已获得转载授权', note: '仅将题面、答案和解析完整的题目接入对应模块；河南常识第91–105题已核对，整卷及缺项题暂不开放。',
