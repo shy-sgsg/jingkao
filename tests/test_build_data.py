@@ -327,7 +327,7 @@ class DataValidatorTests(unittest.TestCase):
         )
         self.assertIn("Score mappings: high 302, ambiguous 47, unmatched 16 (365 rows)", result.stdout)
         self.assertIn(
-            "Observation metric rows: registered 498, qualified 263, paid 0, confirmed 0, actual test takers 0",
+            "Observation metric rows: registered 511, qualified 263, paid 0, confirmed 0, actual test takers 0",
             result.stdout,
         )
 

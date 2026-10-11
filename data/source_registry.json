@@ -18593,6 +18593,87 @@
     "notes": "粉笔页面头部将汇总人数标作‘过审人数’，逐岗表格却列‘报考人数’，且未注明统计时点或字段定义。仅将页面首屏内职位代码和招录数均与本地2026候选职位精确匹配的记录，作为第三方报考人数参考保存；不代表官方资格审查通过人数、最终缴费人数或实考人数。"
   },
   {
+    "sourceId": "pinggu-2026-fenbi-page-2",
+    "title": "粉笔 2026 北京公务员平谷区职位列表（第2页）",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "pinggu",
+    "geographicScope": "平谷区2026职位列表第2页；仅录入与本地候选职位精确匹配的岗位",
+    "url": "https://m.fenbi.com/page/positions/1/438923?page=2&region=171",
+    "accessedAt": "2026-10-12",
+    "reportedPositionCount": 10,
+    "reportedRecruitCount": 14,
+    "positionSnapshots": [
+      { "positionCode": "821368802", "scope": "position-level", "applicantsRegistered": 10, "recruitCount": 1 },
+      { "positionCode": "821368902", "scope": "position-level", "applicantsRegistered": 17, "recruitCount": 2 },
+      { "positionCode": "821369003", "scope": "position-level", "applicantsRegistered": 65, "recruitCount": 1 },
+      { "positionCode": "221369101", "scope": "position-level", "applicantsRegistered": 6, "recruitCount": 1 }
+    ],
+    "notes": "页面列标题为招录/报考人数，未注明逐岗时间或定义。以上4条按2026年度、单位、岗位名和招录数与本地候选唯一匹配；页面未展示职位代码。页头另列区级过审人数，不作为岗位人数或时点。"
+  },
+  {
+    "sourceId": "pinggu-2026-fenbi-page-3",
+    "title": "粉笔 2026 北京公务员平谷区职位列表（第3页）",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "pinggu",
+    "geographicScope": "平谷区2026职位列表第3页；仅录入与本地候选职位精确匹配的岗位",
+    "url": "https://m.fenbi.com/page/positions/1/438923?page=3&region=171",
+    "accessedAt": "2026-10-12",
+    "reportedPositionCount": 10,
+    "reportedRecruitCount": 14,
+    "positionSnapshots": [
+      { "positionCode": "221369601", "scope": "position-level", "applicantsRegistered": 18, "recruitCount": 2 },
+      { "positionCode": "221369701", "scope": "position-level", "applicantsRegistered": 62, "recruitCount": 2 }
+    ],
+    "notes": "页面列标题为招录/报考人数，未注明逐岗时间或定义。以上2条按2026年度、单位、岗位名和招录数与本地候选唯一匹配；页面未展示职位代码。市场监督管理局多个分所的同名监督管理岗未分配到单一代码。"
+  },
+  {
+    "sourceId": "pinggu-2026-fenbi-page-4",
+    "title": "粉笔 2026 北京公务员平谷区职位列表（第4页）",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "pinggu",
+    "geographicScope": "平谷区2026职位列表第4页；仅录入与本地候选职位精确匹配的岗位",
+    "url": "https://m.fenbi.com/page/positions/1/438923?page=4&region=171",
+    "accessedAt": "2026-10-12",
+    "reportedPositionCount": 10,
+    "reportedRecruitCount": 12,
+    "positionSnapshots": [
+      { "positionCode": "821370201", "scope": "position-level", "applicantsRegistered": 42, "recruitCount": 1 },
+      { "positionCode": "821370301", "scope": "position-level", "applicantsRegistered": 12, "recruitCount": 1 },
+      { "positionCode": "241370502", "scope": "position-level", "applicantsRegistered": 8, "recruitCount": 2 }
+    ],
+    "notes": "页面列标题为招录/报考人数，未注明逐岗时间或定义。以上3条按2026年度、单位、岗位名和招录数与本地候选唯一匹配；页面未展示职位代码。"
+  },
+  {
+    "sourceId": "pinggu-2026-fenbi-page-5",
+    "title": "粉笔 2026 北京公务员平谷区职位列表（第5页）",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "pinggu",
+    "geographicScope": "平谷区2026职位列表第5页；仅录入与本地候选职位精确匹配的岗位",
+    "url": "https://m.fenbi.com/page/positions/1/438923?page=5&region=171",
+    "accessedAt": "2026-10-12",
+    "reportedPositionCount": 10,
+    "reportedRecruitCount": 14,
+    "positionSnapshots": [
+      { "positionCode": "241370901", "scope": "position-level", "applicantsRegistered": 17, "recruitCount": 1 },
+      { "positionCode": "241370902", "scope": "position-level", "applicantsRegistered": 49, "recruitCount": 1 },
+      { "positionCode": "241371203", "scope": "position-level", "applicantsRegistered": 92, "recruitCount": 2 },
+      { "positionCode": "241371301", "scope": "position-level", "applicantsRegistered": 35, "recruitCount": 1 }
+    ],
+    "notes": "页面列标题为招录/报考人数，未注明逐岗时间或定义。以上4条按2026年度、单位、岗位名和招录数与本地候选唯一匹配；页面未展示职位代码，其他同名或无唯一候选行不挂接。"
+  },
+  {
     "sourceId": "miyun-2026-fenbi-page-1",
     "title": "粉笔 2026 北京公务员密云区职位列表（第1页）",
     "publisher": "粉笔职位库",
