@@ -19,19 +19,21 @@ test('Xicheng candidate rows preserve row-level lineage and recovered totals by 
   assert.deepEqual(totalsByYear(rows), {
     2024: { positions: 57, recruits: 135 },
     2025: { positions: 89, recruits: 310 },
-    2026: { positions: 119, recruits: 361 },
+    2026: { positions: 121, recruits: 364 },
   });
   assert.deepEqual(totalsByYear(dataset.positions.filter((position) => position.districtId === 'xicheng')), {
     2024: { positions: 57, recruits: 135 },
     2025: { positions: 90, recruits: 311 },
-    2026: { positions: 116, recruits: 354 },
+    2026: { positions: 118, recruits: 357 },
   });
   assert.equal(new Set(rows.map((position) => `${position.year}:${position.code}`)).size, rows.length);
   assert.ok(rows.every((position) => position.sourceLevel === 'secondary'));
-  assert.ok(rows.every((position) => position.verification === '待官方逐码复核'));
+  assert.ok(rows.every((position) => position.verification.includes('待官方') && position.verification.includes('逐码复核')));
   assert.ok(rows.every((position) => position.crossVerified === false));
   assert.ok(rows.every((position) => position.eligibilityComplete === false));
-  assert.ok(rows.every((position) => position.sources.some((sourceId) => sourceId.startsWith('xicheng-'))));
+  assert.ok(rows.every((position) => position.sources.some((sourceId) => (
+    sourceId.startsWith('xicheng-') || sourceId.startsWith('fenbi-2026-xicheng-page-')
+  ))));
   const unresolved = rows.filter((position) => position.districtId !== 'xicheng');
   assert.deepEqual(unresolved.map(({ year, code, recruitCount }) => ({ year, code, recruitCount })), [
     { year: 2026, code: '234104501', recruitCount: 5 },

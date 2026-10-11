@@ -53286,6 +53286,25 @@
   },
   {
     "year": 2026,
+    "code": "230225001",
+    "unit": "北京市西城区牛街街道",
+    "title": "综合执法岗",
+    "orgType": "街道",
+    "jobType": "行政执法",
+    "recruitCount": 1,
+    "education": "本科及以上",
+    "majorText": "不限",
+    "eligibilityText": "粉笔2026职位列表显示的职位名称、招录人数、学历和专业；其他资格条件仍需以官方职位表核验。",
+    "sourceLevel": "secondary",
+    "verification": "粉笔职位列表逐岗记录；待官方职位表逐码复核",
+    "crossVerified": false,
+    "eligibilityComplete": false,
+    "sources": [
+      "fenbi-2026-xicheng-page-12"
+    ]
+  },
+  {
+    "year": 2026,
     "code": "230225002",
     "unit": "北京市西城区牛街街道",
     "title": "综合执法岗",
@@ -53333,6 +53352,25 @@
     "eligibilityComplete": false,
     "sources": [
       "xicheng-2026-mirror-006"
+    ]
+  },
+  {
+    "year": 2026,
+    "code": "230225202",
+    "unit": "北京市西城区广安门外街道",
+    "title": "执法岗",
+    "orgType": "街道",
+    "jobType": "行政执法",
+    "recruitCount": 2,
+    "education": "本科或硕士研究生",
+    "majorText": "不限",
+    "eligibilityText": "粉笔2026职位列表显示的职位名称、招录人数、学历和专业；其他资格条件仍需以官方职位表核验。",
+    "sourceLevel": "secondary",
+    "verification": "粉笔职位列表逐岗记录；待官方职位表逐码复核",
+    "crossVerified": false,
+    "eligibilityComplete": false,
+    "sources": [
+      "fenbi-2026-xicheng-page-12"
     ]
   },
   {

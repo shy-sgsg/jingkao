@@ -959,6 +959,54 @@ test('2026 Dongcheng applicant counts attach only to exact code-and-recruitment 
   'the police role is not listed in the captured district pages and must remain without a reported count');
 });
 
+test('2026 Xicheng Fenbi applicant counts cover only exact position-code matches', async () => {
+  const raw = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const dataset = normalizeDataset(raw);
+  const expectedSamples = [
+    ['fenbi-2026-xicheng-page-1', '526012002', 2, 88],
+    ['fenbi-2026-xicheng-page-2', '120220906', 10, 227],
+    ['fenbi-2026-xicheng-page-3', '220221502', 4, 193],
+    ['fenbi-2026-xicheng-page-4', '820221802', 2, 52],
+    ['fenbi-2026-xicheng-page-5', '220222301', 2, 52],
+    ['fenbi-2026-xicheng-page-6', '220222510', 2, 0],
+    ['fenbi-2026-xicheng-page-7', '820223003', 2, 49],
+    ['fenbi-2026-xicheng-page-8', '820223801', 1, 48],
+    ['fenbi-2026-xicheng-page-9', '230224201', 4, 41],
+    ['fenbi-2026-xicheng-page-10', '230225101', 4, 38],
+    ['fenbi-2026-xicheng-page-11', '230224001', 4, 22],
+    ['fenbi-2026-xicheng-page-12', '220222203', 1, 11],
+  ];
+  const sources = dataset.sources.filter((item) => item.sourceId.startsWith('fenbi-2026-xicheng-page-'));
+  const observations = dataset.observations.filter((item) => item.year === 2026
+    && item.sourceId.startsWith('fenbi-2026-xicheng-page-'));
+
+  assert.equal(sources.length, 12);
+  assert.equal(observations.length, 114);
+  assert.equal(new Set(observations.map((item) => item.positionCode)).size, 114);
+  assert.deepEqual(sources.map((item) => item.positionSnapshots.length), [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 4]);
+
+  for (const [sourceId, code, recruits, applicants] of expectedSamples) {
+    const position = dataset.positions.find((item) => item.year === 2026 && item.code === code);
+    const observation = observations.find((item) => item.sourceId === sourceId && item.positionCode === code);
+    const source = sources.find((item) => item.sourceId === sourceId);
+
+    assert.equal(source?.districtId, 'xicheng', `${sourceId} should represent the Xicheng listing page`);
+    assert.ok(position, `${code} should match a position in the library`);
+    assert.equal(position?.recruitCount, recruits);
+    assert.equal(observation?.applicantsRegistered, applicants);
+    assert.equal(observation?.applicantsQualified, null);
+    assert.equal(observation?.observedAt, null, 'Fenbi does not state the per-position count timestamp');
+    assert.equal(observation?.registeredCompetitionRatio, applicants / recruits);
+  }
+
+  for (const observation of observations) {
+    const position = dataset.positions.find((item) => item.year === 2026 && item.code === observation.positionCode);
+    assert.ok(position, `${observation.positionCode} should match a position in the library`);
+    assert.equal(position?.recruitCount, observation.recruitCount,
+      `${observation.positionCode} planned recruits should match the listing`);
+  }
+});
+
 test('2026 Daxing police qualification snapshots attach to the exact mirrored position code', async () => {
   const raw = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
   const dataset = normalizeDataset(raw);
