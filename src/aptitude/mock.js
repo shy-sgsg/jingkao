@@ -93,6 +93,22 @@ const PAPER_CATALOG = [
     },
   },
   {
+    id: 'bj-2022-全卷-22',
+    title: '2022年北京市公务员录用考试《行测》题（网友回忆版）',
+    region: '北京',
+    examYear: 2022,
+    questionCount: 135,
+    sourceUrl: 'https://gwy.gkzhenti.cn/paper/1640265344758',
+    answerUrl: 'https://gwy.gkzhenti.cn/answer/1640265344758',
+    sourceType: 'recalled',
+    ranges: {
+      verbal: [36, 70],
+      quantitative: [71, 85],
+      reasoning: [86, 115],
+      'data-analysis': [116, 135],
+    },
+  },
+  {
     "id": "zhanhong-2025-guangdong-mock-2",
     "title": "展鸿 2025 年广东省公务员录用考试《行测》模拟卷（二）",
     "region": "广东",

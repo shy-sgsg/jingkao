@@ -1,0 +1,5025 @@
+[
+  {
+    "id": "bj2022-q1",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "political-theory:policy-reading",
+    "knowledgePointIds": [
+      "political-theory:meeting-documents"
+    ],
+    "originalQuestionNo": 1,
+    "sectionOrder": 1,
+    "stem": "党的十九届六中全会是在中国共产党百年华诞的重要时刻，在“两个一百年”奋斗目标历史交汇关键节点上召开的一次重要会议。关于本次全会审议通过的《中共中央关于党的百年奋斗重大成就和历史经验的决议》，下列表述中正确的有： ①是党在历史上形成的第三个历史决议 ②指出了中国共产党百年奋斗的历史意义 ③深刻揭示了“过去我们为什么能够成功、未来我们怎样才能继续成功” ④从13个方面分领域总结了党和国家在各个时期取得的历史性成就、发生的历史性变革",
+    "options": [
+      {
+        "id": "A",
+        "text": "①②③",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "①②④",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "①③④",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "②③④",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "时事政治"
+  },
+  {
+    "id": "bj2022-q2",
+    "moduleId": "general-knowledge",
+    "subjectId": "governance",
+    "topicId": "governance:grassroots",
+    "knowledgePointIds": [
+      "governance:conflict-resolution"
+    ],
+    "originalQuestionNo": 2,
+    "sectionOrder": 1,
+    "stem": "北京市S区本着“小事不出社区，大事不出街道”的原则，推出线上矛盾纠纷多元化解平台，通过大数据等技术汇聚多方调节力量，让百姓遇到纠纷可在线答疑，足不出户调解纠纷，降低矛盾化解成本，为百姓维权提供新途径。这有利于： ①为矛盾纠纷化解提供跨时空、跨地域的一站式解决方案 ②形成“社会调节替代法律诉讼”的新型调解纠纷模式 ③提升诉讼服务水平，从根本上消除社区居民矛盾 ④形成基层社会治理新格局，打造城市版的“枫桥经验”",
+    "options": [
+      {
+        "id": "A",
+        "text": "①②",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "①③",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "①④",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "②④",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "法律常识"
+  },
+  {
+    "id": "bj2022-q3",
+    "moduleId": "general-knowledge",
+    "subjectId": "ecology",
+    "topicId": "ecology:protection",
+    "knowledgePointIds": [
+      "ecology:solid-waste"
+    ],
+    "originalQuestionNo": 3,
+    "sectionOrder": 1,
+    "stem": "《中共中央 国务院关于深入打好污染防治攻坚战的意见》中提出，“十四五”时期，推进100个左右地级及以上城市开展“无废城市”建设，鼓励有条件的省份全域推进“无废城市”建设。下列关于“无废城市”的理解正确的是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "“无废城市”意味着城市没有固体废物产生",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "“无废城市”旨在将固体废物环境影响降至最低",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "“无废城市”将不再采用填埋的方式进行固体废物处理",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "“无废城市”意味着固体废物能完全资源化利用",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "人文常识"
+  },
+  {
+    "id": "bj2022-q4",
+    "moduleId": "general-knowledge",
+    "subjectId": "law",
+    "topicId": "law:administrative-law",
+    "knowledgePointIds": [
+      "law:administrative-permission"
+    ],
+    "originalQuestionNo": 4,
+    "sectionOrder": 1,
+    "stem": "近年来，各地开始全面推行证明事项和涉企经营许可事项告知承诺制。下列说法中，正确的是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "直接涉及国家安全、国家秘密和公共安全等事项的证明，首先适用告知承诺制",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "实行告知承诺制后，所有申请人不再提交证明，只提交承诺",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "告知承诺中的“承诺”，指的是申请人以口头形式承诺已经符合告知的相关要求，并愿意承担不实承诺的法律责任",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "告知承诺中的“告知”指的是审批部门以书面形式将证明义务、证明内容以及不实承诺的法律责任一次性告知申请人",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "法律常识"
+  },
+  {
+    "id": "bj2022-q5",
+    "moduleId": "general-knowledge",
+    "subjectId": "ecology",
+    "topicId": "ecology:climate",
+    "knowledgePointIds": [
+      "ecology:low-carbon"
+    ],
+    "originalQuestionNo": 5,
+    "sectionOrder": 1,
+    "stem": "碳中和的实现离不开我们在生活中时刻践行“低碳生活”。以下哪项不属于日常生活中倡导的低碳生活方式?",
+    "options": [
+      {
+        "id": "A",
+        "text": "选择使用电动牙刷",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "节能灯代替普通灯泡",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "晾晒衣服代替干衣机",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "外出自备购物布袋",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "科技常识"
+  },
+  {
+    "id": "bj2022-q6",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "political-theory:theory-foundations",
+    "knowledgePointIds": [
+      "political-theory:people-and-history"
+    ],
+    "originalQuestionNo": 6,
+    "sectionOrder": 1,
+    "stem": "习近平总书记《在党史学习教育动员大会上的讲话》指出，我们党历来重视党史学习教育，注重用党的奋斗历程和伟大成就鼓舞斗志、明确方向，用党的光荣传统和优良作风坚定信念、凝聚力量，用党的实践创造和历史经验启迪智慧、砥砺品格。这体现的哲学原理有： ①社会存在决定社会意识 ②实践到认识到再实践再认识，是一个循环往复的辩证发展过程 ③实践是检验真理的唯一标准 ④先进的社会意识对社会发展起推动作用",
+    "options": [
+      {
+        "id": "A",
+        "text": "①④",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "②③",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "①③",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "②④",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "毛中特"
+  },
+  {
+    "id": "bj2022-q7",
+    "moduleId": "general-knowledge",
+    "subjectId": "law",
+    "topicId": "law:constitution",
+    "knowledgePointIds": [
+      "law:state-structure"
+    ],
+    "originalQuestionNo": 7,
+    "sectionOrder": 1,
+    "stem": "下列说法中，不符合《中华人民共和国宪法》规定的是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "中华人民共和国国务院实行领导集体负责制",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "中华人民共和国国务院是最高国家权力机关的执行机关",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "中华人民共和国国务院是最高国家行政机关",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "中华人民共和国国务院即中央人民政府",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "法律常识"
+  },
+  {
+    "id": "bj2022-q8",
+    "moduleId": "general-knowledge",
+    "subjectId": "law",
+    "topicId": "law:criminal-law",
+    "knowledgePointIds": [
+      "law:crime-stages"
+    ],
+    "originalQuestionNo": 8,
+    "sectionOrder": 1,
+    "stem": "李某因盗窃罪被判处有期徒刑2年，缓刑3年。缓刑期间李某再次盗窃邻居财产，数额巨大，对李某应当：",
+    "options": [
+      {
+        "id": "A",
+        "text": "维持缓刑，从重对新罪处罚",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "维持缓刑，对原罪和新罪合并处罚",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "撤销缓刑，从重对新罪处罚",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "撤销缓刑，对原罪和新罪合并处罚",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "法律常识"
+  },
+  {
+    "id": "bj2022-q9",
+    "moduleId": "general-knowledge",
+    "subjectId": "law",
+    "topicId": "law:civil-law",
+    "knowledgePointIds": [
+      "law:property-contract"
+    ],
+    "originalQuestionNo": 9,
+    "sectionOrder": 1,
+    "stem": "王某带3岁的小孙子到某餐厅用餐时，小孙子将一餐盘打碎，结账时餐厅拿出损失赔偿单，要求按上面规定的价格赔偿500元。事实上，此餐盘的市场价格为50元左右，王某和餐厅发生争执。下列说法正确的是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "由于餐厅赔偿单价格明显高于市场价格，故王某应以市场价格予以赔偿",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "王某的小孙子为无行为能力人，打碎餐盘不需要承担赔偿责任，王某也不需要承担赔偿责任",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "由于餐厅赔偿单价格明显高于市场价格，餐厅涉嫌欺诈犯罪，故王某不应予以赔偿",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "餐厅制定的赔偿单具有法律效力，王某到餐厅就餐说明对赔偿的认可，应当按赔偿单规定的价格赔偿",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "法律常识"
+  },
+  {
+    "id": "bj2022-q10",
+    "moduleId": "general-knowledge",
+    "subjectId": "law",
+    "topicId": "law:other-laws",
+    "knowledgePointIds": [
+      "law:environment-civil-service"
+    ],
+    "originalQuestionNo": 10,
+    "sectionOrder": 1,
+    "stem": "小李为某行政机关正式工作人员，因工作失误受到行政处分。小李不可能受到的行政处分是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "警告",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "记过",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "诫勉",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "撤职",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "人文常识"
+  },
+  {
+    "id": "bj2022-q11",
+    "moduleId": "general-knowledge",
+    "subjectId": "technology",
+    "topicId": "technology:physics",
+    "knowledgePointIds": [
+      "technology:energy"
+    ],
+    "originalQuestionNo": 11,
+    "sectionOrder": 1,
+    "stem": "下列哪种仪器，不以图中所示原理为基础：",
+    "options": [
+      {
+        "id": "A",
+        "text": "电子导盲仪",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "甲醛检测仪",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "海底地貌探测仪",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "B型超声诊断仪",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [
+      "./assets/question-bank/beijing-2022-recall/17dae324b163e0d.png"
+    ],
+    "sharedStimulusId": null,
+    "sourceCategory": "科技常识"
+  },
+  {
+    "id": "bj2022-q12",
+    "moduleId": "general-knowledge",
+    "subjectId": "technology",
+    "topicId": "technology:chemistry",
+    "knowledgePointIds": [
+      "technology:household-chemistry"
+    ],
+    "originalQuestionNo": 12,
+    "sectionOrder": 1,
+    "stem": "下列物质中，最不可能用于防疫消毒的是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "过氧化氢",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "二氧化氯",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "高锰酸钾",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "丙烯酰胺",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "科技常识"
+  },
+  {
+    "id": "bj2022-q13",
+    "moduleId": "general-knowledge",
+    "subjectId": "history",
+    "topicId": "history:ancient",
+    "knowledgePointIds": [
+      "history:ming-qing"
+    ],
+    "originalQuestionNo": 13,
+    "sectionOrder": 1,
+    "stem": "孙某生活在明朝中叶，在他的一生中，最有可能发生的事情是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "追随郑成功收复台湾",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "与戚继光抵抗倭寇的侵掠骚扰",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "欣赏孔尚任的新戏《桃花扇》",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "与关汉卿讨论《西厢记》的创作",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "人文常识"
+  },
+  {
+    "id": "bj2022-q14",
+    "moduleId": "general-knowledge",
+    "subjectId": "humanities",
+    "topicId": "humanities:tradition",
+    "knowledgePointIds": [
+      "humanities:solar-terms"
+    ],
+    "originalQuestionNo": 14,
+    "sectionOrder": 1,
+    "stem": "下列节气与物候对应错误的是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "立春——东风解冻",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "大暑——大雨时行",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "处暑——腐草为萤",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "寒露——菊有黄华",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "人文常识"
+  },
+  {
+    "id": "bj2022-q15",
+    "moduleId": "general-knowledge",
+    "subjectId": "technology",
+    "topicId": "technology:information",
+    "knowledgePointIds": [
+      "technology:thermal-printing"
+    ],
+    "originalQuestionNo": 15,
+    "sectionOrder": 1,
+    "stem": "在超市中广泛使用的消费明细单是由下列哪种打印技术实现的？",
+    "options": [
+      {
+        "id": "A",
+        "text": "3D打印",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "喷墨打印",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "热敏打印",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "激光打印",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "科技常识"
+  },
+  {
+    "id": "bj2022-q16",
+    "moduleId": "general-knowledge",
+    "subjectId": "technology",
+    "topicId": "technology:biology",
+    "knowledgePointIds": [
+      "technology:human-body"
+    ],
+    "originalQuestionNo": 16,
+    "sectionOrder": 1,
+    "stem": "血压是重要的生命体征，在测量中我们获得高压、低压两个数值，并以此评估血压水平。下列与血压有关的说法错误的是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "高血压是指高压和低压同时高于正常值的现象",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "测量得到的低压是指心室舒张时产生的压力",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "高钠低钾膳食是我国人群重要的高血压发病危险因素",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "高血压患者在血压过高时常常伴随头晕等症状",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "人文常识"
+  },
+  {
+    "id": "bj2022-q17",
+    "moduleId": "general-knowledge",
+    "subjectId": "geography",
+    "topicId": "geography:beijing",
+    "knowledgePointIds": [
+      "geography:beijing-districts"
+    ],
+    "originalQuestionNo": 17,
+    "sectionOrder": 1,
+    "stem": "某小学生给北京市行政区划图上色。按照老师要求，将全区或该区部分区域属于生态涵养区的行政区涂为绿色，其他区涂为黄色。下列行政区中，与其相邻的区被涂为绿色最多的是:",
+    "options": [
+      {
+        "id": "A",
+        "text": "密云区",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "顺义区",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "石景山区",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "海淀区",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [
+      "./assets/question-bank/beijing-2022-recall/17dae463cdcb7a6.png"
+    ],
+    "sharedStimulusId": null,
+    "sourceCategory": "人文常识"
+  },
+  {
+    "id": "bj2022-q18",
+    "moduleId": "general-knowledge",
+    "subjectId": "beijing",
+    "topicId": "beijing:regional",
+    "knowledgePointIds": [
+      "beijing:jingjinji"
+    ],
+    "originalQuestionNo": 18,
+    "sectionOrder": 1,
+    "stem": "根据《中共中央 国务院关于对<北京城市副中心控制性详细规划（街区层面）（2016年-2035年）>的批复》，下列地区与北京市通州区统一规划、统一政策、统一标准、统一管控的有： ①三河  ②宝坻  ③香河  ④固安  ⑤大厂  ⑥武清",
+    "options": [
+      {
+        "id": "A",
+        "text": "①④⑤",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "②④⑥",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "①③⑤",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "②③⑥",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-common-q18-21-jingjinji",
+    "sourceCategory": "人文常识"
+  },
+  {
+    "id": "bj2022-q19",
+    "moduleId": "general-knowledge",
+    "subjectId": "beijing",
+    "topicId": "beijing:regional",
+    "knowledgePointIds": [
+      "beijing:jingjinji"
+    ],
+    "originalQuestionNo": 19,
+    "sectionOrder": 1,
+    "stem": "北京2022年冬奥会是我国重要历史节点的重大标志性活动，京津冀三地在公共安全、公共卫生、道路交通等方面出台临时性行政措施，共同保障冬奥会筹办工作。下列冬奥会比赛场馆与所承接比赛项目对应正确的是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "首都体育馆——花样滑冰",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "国家高山滑雪中心——钢架雪车",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "五棵松体育中心——速度滑冰",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "云顶滑雪公园——冬季两项",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-common-q18-21-jingjinji",
+    "sourceCategory": "人文常识"
+  },
+  {
+    "id": "bj2022-q20",
+    "moduleId": "general-knowledge",
+    "subjectId": "beijing",
+    "topicId": "beijing:regional",
+    "knowledgePointIds": [
+      "beijing:jingjinji"
+    ],
+    "originalQuestionNo": 20,
+    "sectionOrder": 1,
+    "stem": "为充分整合京津冀三地文化和旅游等资源，有关部门发行了“京津冀旅游一卡通”。下列不可能列入其中的旅游景点是:",
+    "options": [
+      {
+        "id": "A",
+        "text": "盘山风景名胜区",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "赵州桥展览馆",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "古北口古镇",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "沙家浜旅游区",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-common-q18-21-jingjinji",
+    "sourceCategory": "人文常识"
+  },
+  {
+    "id": "bj2022-q21",
+    "moduleId": "general-knowledge",
+    "subjectId": "beijing",
+    "topicId": "beijing:regional",
+    "knowledgePointIds": [
+      "beijing:jingjinji"
+    ],
+    "originalQuestionNo": 21,
+    "sectionOrder": 1,
+    "stem": "2021年8月北京市政府印发的《北京市“十四五”时期高精尖产业发展规划》指出，2035年京津冀产业协同发展新格局将全面形成。下列哪项不可能是该文件提出的相关措施？",
+    "options": [
+      {
+        "id": "A",
+        "text": "完善以智能网联汽车为核心的京津冀汽车产业生态圈，加快有条件自动驾驶的智能网联汽车研发生产和示范应用",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "支持北京工业互联网和智能制造头部企业对接津冀生产制造资源，加速赋能津冀传统产业",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "抓紧抓好协同发展重点任务落实，促进养老、教育、医疗等公共服务的跨区域协同",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "推动京津冀规模化、协同化布局氢能产业，重点布局制备、运输、存储、加注和氢燃料电池产业链环节",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-common-q18-21-jingjinji",
+    "sourceCategory": "人文常识"
+  },
+  {
+    "id": "bj2022-q22",
+    "moduleId": "general-knowledge",
+    "subjectId": "beijing",
+    "topicId": "beijing:construction",
+    "knowledgePointIds": [
+      "beijing:urban-renewal"
+    ],
+    "originalQuestionNo": 22,
+    "sectionOrder": 1,
+    "stem": "北京市的城市更新行动主要在（    ）开展。",
+    "options": [
+      {
+        "id": "A",
+        "text": "城市建成区",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "城市核心区",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "城市规划区",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "城乡结合部",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-common-q22-25-urban-renewal",
+    "sourceCategory": "人文常识"
+  },
+  {
+    "id": "bj2022-q23",
+    "moduleId": "general-knowledge",
+    "subjectId": "beijing",
+    "topicId": "beijing:construction",
+    "knowledgePointIds": [
+      "beijing:urban-renewal"
+    ],
+    "originalQuestionNo": 23,
+    "sectionOrder": 1,
+    "stem": "按照北京市的政策，下述选项中，不符合城市更新行动精神的是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "规划引领，试点推行",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "大拆大建，更新城市面貌",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "提质增效，盘活存量空间资源",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "政府引导，多种方式吸引社会资本参与",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-common-q22-25-urban-renewal",
+    "sourceCategory": "人文常识"
+  },
+  {
+    "id": "bj2022-q24",
+    "moduleId": "general-knowledge",
+    "subjectId": "beijing",
+    "topicId": "beijing:construction",
+    "knowledgePointIds": [
+      "beijing:urban-renewal"
+    ],
+    "originalQuestionNo": 24,
+    "sectionOrder": 1,
+    "stem": "城市更新行动中，应当注重加强“微空间”更新改造。下列措施中，最能体现这一点的是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "将798老厂区改为798艺术区",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "将老旧小区楼房外立面涂新",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "将批发市场拆迁后改为城市送风通道",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "将街道“边角地”改为口袋公园",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-common-q22-25-urban-renewal",
+    "sourceCategory": "人文常识"
+  },
+  {
+    "id": "bj2022-q25",
+    "moduleId": "general-knowledge",
+    "subjectId": "law",
+    "topicId": "law:beijing-local",
+    "knowledgePointIds": [
+      "law:beijing-renewal-law"
+    ],
+    "originalQuestionNo": 25,
+    "sectionOrder": 1,
+    "stem": "北京市推进城市更新立法工作的意义在于： ①为城市更新工作提供制度保障 ②进一步明确有关部门各自职责范围，协同开展相关工作 ③依法保障公众在城市更新行动中的知情权、参与权、表达权和监督权 ④为国家出台法律规范全国的城市更新工作起到示范作用",
+    "options": [
+      {
+        "id": "A",
+        "text": "①②③",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "①②④",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "①③④",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "②③④",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-common-q22-25-urban-renewal",
+    "sourceCategory": "法律常识"
+  },
+  {
+    "id": "bj2022-q26",
+    "moduleId": "political-theory",
+    "subjectId": "political-theory",
+    "topicId": "political-theory:party-policy",
+    "knowledgePointIds": [
+      "political-theory:policy-measures"
+    ],
+    "originalQuestionNo": 26,
+    "sectionOrder": 1,
+    "stem": "因为不会使用智能手机，许多老年人遭遇了就医难、购票难、购物难等问题。2021年3月第十三届全国人民代表大会第四次会议在北京举行，会议通过的《政府工作报告》指出，推进智能化服务要适应老年人需求，并做到不让智能工具给他们日常生活造成障碍。为此，必须：",
+    "options": [
+      {
+        "id": "A",
+        "text": "强化政府信息公开，打造阳光政府",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "坚持传统服务与智能创新相结合，实施惠民政策",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "优化政府公共服务职能，保障社会公平正义",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "坚持依法行政，改善营商环境",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "时事政治"
+  },
+  {
+    "id": "bj2022-q27",
+    "moduleId": "general-knowledge",
+    "subjectId": "philosophy",
+    "topicId": "philosophy:logic",
+    "knowledgePointIds": [
+      "philosophy:contradiction"
+    ],
+    "originalQuestionNo": 27,
+    "sectionOrder": 1,
+    "stem": "下列各项体现出矛盾双方相互依存或相互转化的辩证思想的有：",
+    "options": [
+      {
+        "id": "A",
+        "text": "有无相生，难易相成，长短相形",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "祸兮福所倚，福兮祸所伏",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "物必先腐，而后虫生",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "贵上极则反贱，贱下极则反贵",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "人文常识"
+  },
+  {
+    "id": "bj2022-q28",
+    "moduleId": "general-knowledge",
+    "subjectId": "philosophy",
+    "topicId": "philosophy:logic",
+    "knowledgePointIds": [
+      "philosophy:systems-thinking"
+    ],
+    "originalQuestionNo": 28,
+    "sectionOrder": 1,
+    "stem": "“十四五规划”提出要“坚持系统观念”，加强前瞻性思考、全局性谋划、战略性布局、整体性推进，实现发展质量、结构、规模、速度、效益、安全相统一。“系统观念”所蕴含的哲学原理有：",
+    "options": [
+      {
+        "id": "A",
+        "text": "世界是一个普遍联系的有机整体",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "掌握系统优化的方法，要着眼于事物的整体性",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "部分的功能及其变化决定整体的功能及其变化",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "事物内部不同部分之间和不同事物之间存在着固有的联系",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "人文常识"
+  },
+  {
+    "id": "bj2022-q29",
+    "moduleId": "general-knowledge",
+    "subjectId": "law",
+    "topicId": "law:civil-law",
+    "knowledgePointIds": [
+      "law:property-contract"
+    ],
+    "originalQuestionNo": 29,
+    "sectionOrder": 1,
+    "stem": "甲、乙、丙和丁四人计划合作出资成立一股份公司，注册时可以被认可的出资形式有：",
+    "options": [
+      {
+        "id": "A",
+        "text": "甲以现金出资",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "乙以自己的发明出资",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "丙以自己的产权房出资",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "丁以自己的机械设备出资",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "人文常识"
+  },
+  {
+    "id": "bj2022-q30",
+    "moduleId": "general-knowledge",
+    "subjectId": "history",
+    "topicId": "history:modern",
+    "knowledgePointIds": [
+      "history:revolutionary-period"
+    ],
+    "originalQuestionNo": 30,
+    "sectionOrder": 1,
+    "stem": "党的七大把党在长期奋斗中形成的优良作风概括为三大作风，即：",
+    "options": [
+      {
+        "id": "A",
+        "text": "理论和实践相结合的作风",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "和人民群众紧密联系在一起的作风",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "艰苦奋斗的作风",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "自我批评的作风",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "人文常识"
+  },
+  {
+    "id": "bj2022-q31",
+    "moduleId": "general-knowledge",
+    "subjectId": "economy",
+    "topicId": "economy:money",
+    "knowledgePointIds": [
+      "economy:money-functions"
+    ],
+    "originalQuestionNo": 31,
+    "sectionOrder": 1,
+    "stem": "货币的职能包括：",
+    "options": [
+      {
+        "id": "A",
+        "text": "价值尺度",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "流通手段",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "贮藏手段",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "支付手段",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "经济常识"
+  },
+  {
+    "id": "bj2022-q32",
+    "moduleId": "general-knowledge",
+    "subjectId": "philosophy",
+    "topicId": "philosophy:politics",
+    "knowledgePointIds": [
+      "philosophy:citizenship"
+    ],
+    "originalQuestionNo": 32,
+    "sectionOrder": 1,
+    "stem": "下列选项中，前后表述内涵对应一致的有：",
+    "options": [
+      {
+        "id": "A",
+        "text": "政之所兴，在顺民心。政之所废，在逆民心——江山就是人民，人民就是江山",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "当官避事平生耻，视死如归社稷心——科学决策，精准施策",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "廉者，民之表也；贪者，民之贼也——清正廉洁，严格自律",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "成功不必在我，而功力必不唐捐——依法行政，处事公正",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "人文常识"
+  },
+  {
+    "id": "bj2022-q33",
+    "moduleId": "general-knowledge",
+    "subjectId": "humanities",
+    "topicId": "humanities:literature",
+    "knowledgePointIds": [
+      "humanities:poetry"
+    ],
+    "originalQuestionNo": 33,
+    "sectionOrder": 1,
+    "stem": "中国古代许多诗人喜欢写“山”，以下诗句与作者对应正确的有：",
+    "options": [
+      {
+        "id": "A",
+        "text": "不识庐山真面目，只缘身在此山中——苏轼",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "五岳寻仙不辞远，一生好入名山游——谢灵运",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "会当凌绝顶，一览众山小——杜甫",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "采菊东篱下，悠然见南山——陶渊明",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "人文常识"
+  },
+  {
+    "id": "bj2022-q34",
+    "moduleId": "general-knowledge",
+    "subjectId": "geography",
+    "topicId": "geography:natural",
+    "knowledgePointIds": [
+      "geography:tectonics"
+    ],
+    "originalQuestionNo": 34,
+    "sectionOrder": 1,
+    "stem": "根据板块学说，喜马拉雅山脉是由下列哪些板块碰撞造成的？",
+    "options": [
+      {
+        "id": "A",
+        "text": "欧亚板块",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "非洲板块",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "太平洋板块",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "印度洋板块",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "地理国情"
+  },
+  {
+    "id": "bj2022-q35",
+    "moduleId": "general-knowledge",
+    "subjectId": "humanities",
+    "topicId": "humanities:art",
+    "knowledgePointIds": [
+      "humanities:painting"
+    ],
+    "originalQuestionNo": 35,
+    "sectionOrder": 1,
+    "stem": "在以下绘画技法中，属于中国画的技法有：",
+    "options": [
+      {
+        "id": "A",
+        "text": "白描",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "素描",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "写意",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "水墨",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "人文常识"
+  },
+  {
+    "id": "bj2022-q36",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal",
+    "knowledgePointIds": [
+      "verbal:main-idea"
+    ],
+    "originalQuestionNo": 36,
+    "sectionOrder": 2,
+    "stem": "在现代信息社会，信息以海量的形式存在，而且十分复杂，瞬息万变，这不但使信息收集和处理的难度加大，而且使信息对决策来说变得更加重要。在决策过程中，如果信息一旦失真，或以片面的甚至过时的信息作为决策的依据，就必然会导致决策失误。现代信息技术的创新和发展为科学收集和处理信息提供了有力支撑，从而为科学决策提供了技术保障。 这段文字意在说明：",
+    "options": [
+      {
+        "id": "A",
+        "text": "全面、真实和及时的信息，是科学决策的重要保证",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "现代信息技术能够帮助提高决策的准确性和科学性",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "信息的复杂性、海量性和多变性使决策时难度增加",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "信息在国家治理能力现代化中的重要作用与日俱增",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "片段阅读"
+  },
+  {
+    "id": "bj2022-q37",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal",
+    "knowledgePointIds": [
+      "verbal:detail"
+    ],
+    "originalQuestionNo": 37,
+    "sectionOrder": 2,
+    "stem": "除了捕食者的捕杀之外，巨鸟们的身体状况也是其灭绝的原因之一。巨鸟身材高大，体重也惊人，无法再在天空翱翔，久而久之，翅膀退化，它们只能在地上行走。当捕食者的威胁并不严峻时，巨鸟不需要快速奔跑以躲避追捕，因此它们的活动能力也随着身体日渐庞大而衰退。当捕食者突然出现时，它们跑也跑不快，体型太大想躲没地方可躲，因此只能被吃掉。 最适合做这段文字标题的是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "巨鸟的末路",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "鸟的天敌",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "盘点史前致命捕食者",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "从飞翔到行走",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "片段阅读"
+  },
+  {
+    "id": "bj2022-q38",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal",
+    "knowledgePointIds": [
+      "verbal:main-idea"
+    ],
+    "originalQuestionNo": 38,
+    "sectionOrder": 2,
+    "stem": "痛风是由单钠尿酸盐结晶沉积引起的开始于滑膜的剧烈炎症反应，发作时，局部关节可红、肿、热、痛，这就是炎症最典型的表现。炎症持续时间越长，痛风反复发作次数越多，越容易出现局部关节的破坏，导致慢性痛风性关节炎。因此，在急性期足量、足疗程地应用抗炎药物如糖皮质激素等，是非常必要的，可以止痛。等关节不疼不肿了，开始降尿酸治疗，才是杜绝痛风复发的最根本做法。 关于痛风，这段文字没有提及：",
+    "options": [
+      {
+        "id": "A",
+        "text": "发病原因",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "急性期的典型症状",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "治疗方法和步骤",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "患者日常生活管理",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "片段阅读"
+  },
+  {
+    "id": "bj2022-q39",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal",
+    "knowledgePointIds": [
+      "verbal:detail"
+    ],
+    "originalQuestionNo": 39,
+    "sectionOrder": 2,
+    "stem": "相较于《汉魏六朝碑刻数据库》《唐代墓志铭数据库》等聚焦于断代，《三晋石刻大全数据库》集中于一隅，《历代石刻拓片汇编》具有较强的通代性，并且不设地域范围限制，同时在尽量避免收录与上述数据库重复篇目的前提下，利用已经搜集的石刻拓片、传世古籍以及出版整理的古籍等，全面收录、整合了各种刻有文字内容的石刻资源。 这段文字意在强调：",
+    "options": [
+      {
+        "id": "A",
+        "text": "已有石刻数据库内容丰富",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "我国古籍数据库分类齐全",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "《历代石刻拓片汇编》独具特色",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "几种重要石刻资源存在巨大差异",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "片段阅读"
+  },
+  {
+    "id": "bj2022-q40",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal",
+    "knowledgePointIds": [
+      "verbal:sentence-order"
+    ],
+    "originalQuestionNo": 40,
+    "sectionOrder": 2,
+    "stem": "下面6个句子的最佳顺序是： ①一方面，消费者可能不再只是消费食物本身，而是理念上的消费；另一方面，消费者可能持低价、重量不重质的消费观念 ②在这个过程中，消费者对食物的控制权、认知权会很少，这是现在一些大公司希望推动的食品体系 ③由于我国农耕方式的多样性，部分人会回归这种传统农业种植方式，或者寻求新型健康的有机农业发展方向 ④未来，我们将面临两种食物生产方式。一种朝向更工业化的生态体系，从生产加工到食品供应这一系列过程都由大公司操控 ⑤与此同时，消费者在食物上的消费水平以及消费理念也会出现两极分化现象 ⑥另一种是采用小规模、精致化的耕作方式",
+    "options": [
+      {
+        "id": "A",
+        "text": "④②⑥③⑤①",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "③②⑤①④⑥",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "④⑥⑤①③②",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "③⑤④⑥②①",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "片段阅读"
+  },
+  {
+    "id": "bj2022-q41",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal",
+    "knowledgePointIds": [
+      "verbal:detail"
+    ],
+    "originalQuestionNo": 41,
+    "sectionOrder": 2,
+    "stem": "选文最可能出自下列哪篇公文？",
+    "options": [
+      {
+        "id": "A",
+        "text": "《北京市关于“十四五”时期深化推进“疏解整治促提升”专项行动的实施意见》",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "《北京市关于“十四五”时期构建现代环境治理体系的实施方案》",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "《北京市“十四五”时期智慧城市发展行动纲要》",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "《北京市“十四五”时期交通综合治理行动计划》",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-verbal-q41-45-smart-city",
+    "sourceCategory": "片段阅读"
+  },
+  {
+    "id": "bj2022-q42",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal",
+    "knowledgePointIds": [
+      "verbal:context"
+    ],
+    "originalQuestionNo": 42,
+    "sectionOrder": 2,
+    "stem": "依次填入文中画横线处最恰当的是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "强化 探索",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "优化 扩大",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "更新 拓展",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "创新 深化",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-verbal-q41-45-smart-city",
+    "sourceCategory": "逻辑填空"
+  },
+  {
+    "id": "bj2022-q43",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal",
+    "knowledgePointIds": [
+      "verbal:detail"
+    ],
+    "originalQuestionNo": 43,
+    "sectionOrder": 2,
+    "stem": "“推动开展线上文旅展出、线上体育健康活动和线上演出活动，加强云转播、沉浸式观赛、多场景一脸通行等智能技术应用体验”这一措施最可能出自文中的哪一段？",
+    "options": [
+      {
+        "id": "A",
+        "text": "①",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "②",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "③",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "④",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-verbal-q41-45-smart-city",
+    "sourceCategory": "片段阅读"
+  },
+  {
+    "id": "bj2022-q44",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal",
+    "knowledgePointIds": [
+      "verbal:detail"
+    ],
+    "originalQuestionNo": 44,
+    "sectionOrder": 2,
+    "stem": "下列哪一情景不涉及选文部署的工作事项？",
+    "options": [
+      {
+        "id": "A",
+        "text": "在景区网站上预约门票后进行参观",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "利用“北京通”政务移动端提取住房公积金",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "使用一个乘车码乘坐公交、地铁等",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "通过“随手拍”方式举报城市管理中的问题",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-verbal-q41-45-smart-city",
+    "sourceCategory": "片段阅读"
+  },
+  {
+    "id": "bj2022-q45",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal",
+    "knowledgePointIds": [
+      "verbal:detail"
+    ],
+    "originalQuestionNo": 45,
+    "sectionOrder": 2,
+    "stem": "落实选文中提及的各项措施，有助于政府部门实现下列哪些目标？ ①提升政务管理效能 ②惠民服务便捷高效 ③增强政民互动效能 ④精准分析海量数据",
+    "options": [
+      {
+        "id": "A",
+        "text": "①②③",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "①②④",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "①③④",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "②③④",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-verbal-q41-45-smart-city",
+    "sourceCategory": "片段阅读"
+  },
+  {
+    "id": "bj2022-q46",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal",
+    "knowledgePointIds": [
+      "verbal:sentence-completion"
+    ],
+    "originalQuestionNo": 46,
+    "sectionOrder": 2,
+    "stem": "填入材料一画横线处最恰当的是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "大象归家，生态保护还需一以贯之",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "我们有理由相信，经济发展与环境保护并不矛盾，人与自然可以和谐共生",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "保护野生动物，不再只是国家层面的政策措施，更得到每一个人发自内心的认可",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "当全世界都在围观中国大象的时候，不妨以此为契机，让世界看到我们在生态文明建设上取得的成就",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-verbal-q46-50-ecology",
+    "sourceCategory": "语句表达"
+  },
+  {
+    "id": "bj2022-q47",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal",
+    "knowledgePointIds": [
+      "verbal:detail"
+    ],
+    "originalQuestionNo": 47,
+    "sectionOrder": 2,
+    "stem": "材料一反映出了我国生态文明建设在哪方面取得的成就？",
+    "options": [
+      {
+        "id": "A",
+        "text": "绿色低碳循环发展",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "生物多样性保护",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "建立保护环境的生产方式",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "应对外来物种入侵",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-verbal-q46-50-ecology",
+    "sourceCategory": "片段阅读"
+  },
+  {
+    "id": "bj2022-q48",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal",
+    "knowledgePointIds": [
+      "verbal:detail"
+    ],
+    "originalQuestionNo": 48,
+    "sectionOrder": 2,
+    "stem": "以下与材料二对应现代化的理解分析不一致的一项是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "我国的现代化将按照工业化、城市化、农业产业化、信息化的顺序发展",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "将绿色化与工业化、农业现代化、信息化等相结合发展才是社会主义的现代化道路",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "西方的现代化经历了先污染后治理的道路，是不符合当下先进生产力的发展方向的",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "我们不能走西方国家的现代化路程，应开辟代表人类文明新形态的发展方向",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-verbal-q46-50-ecology",
+    "sourceCategory": "片段阅读"
+  },
+  {
+    "id": "bj2022-q49",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal",
+    "knowledgePointIds": [
+      "verbal:detail"
+    ],
+    "originalQuestionNo": 49,
+    "sectionOrder": 2,
+    "stem": "2021年6月5日世界环境日主题是“人与自然和谐共生”，下列哪项最能体现该主题：",
+    "options": [
+      {
+        "id": "A",
+        "text": "取之有度，用之有节",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "子钓而不纲，弋不射宿",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "天行健，君子以自强不息",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "天地与我并生，而万物与我为一",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-verbal-q46-50-ecology",
+    "sourceCategory": "片段阅读"
+  },
+  {
+    "id": "bj2022-q50",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal",
+    "knowledgePointIds": [
+      "verbal:detail"
+    ],
+    "originalQuestionNo": 50,
+    "sectionOrder": 2,
+    "stem": "根据材料三，下列选项中不属于为了节约资源和保护环境所采取的措施的是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "2020年北京市共完成148条道路、382公里自行车道整治任务，核心区主干路自行车道整治实现全覆盖，王府井、CBD等一批慢行示范区建成，市民“伴着街景骑回家”的美好愿景成为现实",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "“十三五”时期，北京市累计疏解退出一般制造业企业2154家，退出企业主要集中在建材、机械制造与加工、家具和木制品加工等行业",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "城市副中心因地制宜，用背街小巷周边腾出的可利用空间，在居民停车需求强烈的街区开辟了便民停车场；在“溜娃”需求强烈的街区增设滑梯等儿童游乐设施；在养老需求强烈的街区建起了养老驿站",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "北京市等级旅游景区针对不同重点突出区域，采取不同的生活垃圾分类精细化落实方案。如餐饮区设置“可回收物、厨余垃圾、其他垃圾”桶；办公区张贴（展示）生活垃圾分类投放指引宣传画等",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-verbal-q46-50-ecology",
+    "sourceCategory": "片段阅读"
+  },
+  {
+    "id": "bj2022-q51",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal",
+    "knowledgePointIds": [
+      "verbal:detail"
+    ],
+    "originalQuestionNo": 51,
+    "sectionOrder": 2,
+    "stem": "根据文中第2段，为了产生“鲇鱼效应”应该：",
+    "options": [
+      {
+        "id": "A",
+        "text": "建设更高水平开放型经济新体制",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "构建全新的国际服务业发展格局",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "吸引国际先进服务业进入中国市场",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "推动我国实施全面高水平对外开放",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-verbal-q51-55-service-opening",
+    "sourceCategory": "片段阅读"
+  },
+  {
+    "id": "bj2022-q52",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal",
+    "knowledgePointIds": [
+      "verbal:detail"
+    ],
+    "originalQuestionNo": 52,
+    "sectionOrder": 2,
+    "stem": "关于我国目前的服务业，下列说法正确的是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "服务业已成为吸收外资的主力",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "服务消费成为消费形态的主要形式",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "服务业与制造业融合发展日臻完善",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "服务业增加值占GDP的比值与发达国家持平",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-verbal-q51-55-service-opening",
+    "sourceCategory": "片段阅读"
+  },
+  {
+    "id": "bj2022-q53",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal",
+    "knowledgePointIds": [
+      "verbal:detail"
+    ],
+    "originalQuestionNo": 53,
+    "sectionOrder": 2,
+    "stem": "根据本文，下列说法中错误的是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "我国服务业已形成强大的国际市场，在国际竞争中占有领先地位",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "发挥地方首创精神有利于对全国服务业开放发挥示范带动作用",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "北京市24项创新性较强的试点任务约占总体试点任务的一成多",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "4省市开展好共性领域开放探索的同时，还可进行差异化探索",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-verbal-q51-55-service-opening",
+    "sourceCategory": "片段阅读"
+  },
+  {
+    "id": "bj2022-q54",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal",
+    "knowledgePointIds": [
+      "verbal:word-choice"
+    ],
+    "originalQuestionNo": 54,
+    "sectionOrder": 2,
+    "stem": "填入横线处的词语最恰当的一项是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "重庆 上海 海南",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "上海 重庆 海南",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "海南 重庆 上海",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "重庆 海南 上海",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-verbal-q51-55-service-opening",
+    "sourceCategory": "逻辑填空"
+  },
+  {
+    "id": "bj2022-q55",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal",
+    "knowledgePointIds": [
+      "verbal:title"
+    ],
+    "originalQuestionNo": 55,
+    "sectionOrder": 2,
+    "stem": "最适合做本文标题的是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "服务业支撑经济发展再破新纪录",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "现代服务业推动经济高质量发展",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "服务业创新塑造城市竞争新优势",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "以扩大开放培育服务业发展动能",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-verbal-q51-55-service-opening",
+    "sourceCategory": "片段阅读"
+  },
+  {
+    "id": "bj2022-q56",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal",
+    "knowledgePointIds": [
+      "verbal:intent"
+    ],
+    "originalQuestionNo": 56,
+    "sectionOrder": 2,
+    "stem": "文中第1段意在：",
+    "options": [
+      {
+        "id": "A",
+        "text": "强调应完善鸟类撞击玻璃幕墙致死的统计数据",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "凸显野生动物中鸟类的生态环境非常恶劣",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "揭示鸟类撞击玻璃幕墙致死的主要原因",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "说明鸟类撞击玻璃幕墙致死已成为普遍现象",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-verbal-q56-60-bird-collision",
+    "sourceCategory": "片段阅读"
+  },
+  {
+    "id": "bj2022-q57",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal",
+    "knowledgePointIds": [
+      "verbal:detail"
+    ],
+    "originalQuestionNo": 57,
+    "sectionOrder": 2,
+    "stem": "文中第2段中画横线的“其”字是指：",
+    "options": [
+      {
+        "id": "A",
+        "text": "钢骨架",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "玻璃幕墙",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "天然石材",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "节能材料",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-verbal-q56-60-bird-collision",
+    "sourceCategory": "逻辑填空"
+  },
+  {
+    "id": "bj2022-q58",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal",
+    "knowledgePointIds": [
+      "verbal:sentence-connection"
+    ],
+    "originalQuestionNo": 58,
+    "sectionOrder": 2,
+    "stem": "“玻璃幕墙给飞鸟造成了不小的困扰。”一句最适合填入文中第3段哪处？",
+    "options": [
+      {
+        "id": "A",
+        "text": "①",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "②",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "③",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "④",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-verbal-q56-60-bird-collision",
+    "sourceCategory": "片段阅读"
+  },
+  {
+    "id": "bj2022-q59",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal",
+    "knowledgePointIds": [
+      "verbal:detail"
+    ],
+    "originalQuestionNo": 59,
+    "sectionOrder": 2,
+    "stem": "文中提到的解决鸟类撞击玻璃幕墙现象的有关建议包括： ①改变玻璃安装的角度 ②在玻璃上粘贴猛禽图案贴纸 ③使用有醒目花纹的玻璃 ④利用环境公益诉讼手段 ⑤组建鸟类保护志愿者组织",
+    "options": [
+      {
+        "id": "A",
+        "text": "①②③",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "②③④",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "①④⑤",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "②④⑤",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-verbal-q56-60-bird-collision",
+    "sourceCategory": "片段阅读"
+  },
+  {
+    "id": "bj2022-q60",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal",
+    "knowledgePointIds": [
+      "verbal:title"
+    ],
+    "originalQuestionNo": 60,
+    "sectionOrder": 2,
+    "stem": "最适合做本文标题的是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "城市中炫目的玻璃幕墙",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "鸟儿为什么会迷路",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "鸟撞玻璃幕墙难题如何破解",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "由鸟类死亡谈生态环境建设",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-verbal-q56-60-bird-collision",
+    "sourceCategory": "片段阅读"
+  },
+  {
+    "id": "bj2022-q61",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal",
+    "knowledgePointIds": [
+      "verbal:sentence-completion"
+    ],
+    "originalQuestionNo": 61,
+    "sectionOrder": 2,
+    "stem": "填入文中画横线部分最恰当的一项是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "科学家反而是一群特别容易“犯错”的人",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "有无数科学家脚踏实地勇攀科学的“高峰”",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "推测尽管看似科学，却往往会颠覆我们的认知",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "在这些领域的科学突破，才能给人类带来希望",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-verbal-q61-65-falsifiability",
+    "sourceCategory": "语句表达"
+  },
+  {
+    "id": "bj2022-q62",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal",
+    "knowledgePointIds": [
+      "verbal:detail"
+    ],
+    "originalQuestionNo": 62,
+    "sectionOrder": 2,
+    "stem": "勒维耶之所以提出了新行星假设，是因为：",
+    "options": [
+      {
+        "id": "A",
+        "text": "有位天文爱好者观测到与之相关的行星凌日现象",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "当时天体力学的计算均未考虑其他行星的引力摄动",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "水星的近日点进动与天体力学的计算结果存在偏差",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "他运用当时最先进的设备积累了多年的观测数据",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-verbal-q61-65-falsifiability",
+    "sourceCategory": "片段阅读"
+  },
+  {
+    "id": "bj2022-q63",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal",
+    "knowledgePointIds": [
+      "verbal:detail"
+    ],
+    "originalQuestionNo": 63,
+    "sectionOrder": 2,
+    "stem": "人们一开始质疑“祝融星”的存在，是因为它：",
+    "options": [
+      {
+        "id": "A",
+        "text": "被太阳的光芒遮挡",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "不符合经典力学理论",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "亮度不够而难以被观测到",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "未被专业天文学家观测到",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-verbal-q61-65-falsifiability",
+    "sourceCategory": "片段阅读"
+  },
+  {
+    "id": "bj2022-q64",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal",
+    "knowledgePointIds": [
+      "verbal:main-idea"
+    ],
+    "originalQuestionNo": 64,
+    "sectionOrder": 2,
+    "stem": "本文意在说明：",
+    "options": [
+      {
+        "id": "A",
+        "text": "科学观察的重要性",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "科学的可证伪性",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "科学发展的复杂性",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "科学与科技的差异性",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-verbal-q61-65-falsifiability",
+    "sourceCategory": "片段阅读"
+  },
+  {
+    "id": "bj2022-q65",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal",
+    "knowledgePointIds": [
+      "verbal:inference"
+    ],
+    "originalQuestionNo": 65,
+    "sectionOrder": 2,
+    "stem": "“祝融星”的例子最适合作为下列哪项科学家精神的例证？",
+    "options": [
+      {
+        "id": "A",
+        "text": "追求真理、严谨治学的求实精神",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "淡泊名利、潜心研究的奉献精神",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "集智攻关、团结协作的协同精神",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "不断尝试、敢为人先的创新精神",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-verbal-q61-65-falsifiability",
+    "sourceCategory": "片段阅读"
+  },
+  {
+    "id": "bj2022-q66",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal",
+    "knowledgePointIds": [
+      "verbal:detail"
+    ],
+    "originalQuestionNo": 66,
+    "sectionOrder": 2,
+    "stem": "加拿大研究人员的试验说明：",
+    "options": [
+      {
+        "id": "A",
+        "text": "利用污泥生产燃料可以实现机械化操作",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "高温蒸馏法是污泥资源化处置的最佳手段",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "加拿大是最早实现城市污泥资源化的国家",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "污泥中含有可以进行资源化利用的成分",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-verbal-q66-70-sludge",
+    "sourceCategory": "片段阅读"
+  },
+  {
+    "id": "bj2022-q67",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal",
+    "knowledgePointIds": [
+      "verbal:detail"
+    ],
+    "originalQuestionNo": 67,
+    "sectionOrder": 2,
+    "stem": "根据本文，污泥处置顺序最可能是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "减量化 稳定化 无害化 资源化",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "无害化 稳定化 减量化 资源化",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "资源化 无害化 减量化 稳定化",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "稳定化 减量化 资源化 无害化",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-verbal-q66-70-sludge",
+    "sourceCategory": "片段阅读"
+  },
+  {
+    "id": "bj2022-q68",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal",
+    "knowledgePointIds": [
+      "verbal:detail"
+    ],
+    "originalQuestionNo": 68,
+    "sectionOrder": 2,
+    "stem": "关于厌氧消化技术，以下说法与本文不相符的是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "可同时实现稳定化和资源化的目标",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "是国际上成熟的污泥处理处置技术",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "目前在我国面临着水土不服的问题",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "利用微生物把有机物氧化成无机物",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-verbal-q66-70-sludge",
+    "sourceCategory": "片段阅读"
+  },
+  {
+    "id": "bj2022-q69",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal",
+    "knowledgePointIds": [
+      "verbal:inference"
+    ],
+    "originalQuestionNo": 69,
+    "sectionOrder": 2,
+    "stem": "根据本文，可以推断出哪项结论？",
+    "options": [
+      {
+        "id": "A",
+        "text": "焚烧是污泥减量化处置的主要手段",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "金属含量对污泥厌氧消化性能造成影响",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "超低有机质污泥可适用厌氧消化技术",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "浓缩是指降低污泥中有害物质的含量",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-verbal-q66-70-sludge",
+    "sourceCategory": "片段阅读"
+  },
+  {
+    "id": "bj2022-q70",
+    "moduleId": "verbal",
+    "subjectId": "verbal",
+    "topicId": "verbal",
+    "knowledgePointIds": [
+      "verbal:inference"
+    ],
+    "originalQuestionNo": 70,
+    "sectionOrder": 2,
+    "stem": "本文是某篇文章的节选，该文接下来最可能写的是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "微细砂导致厌氧消化技术效率低的发生机制",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "我国当前污泥处理处置市场发育缓慢的原因",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "污泥厌氧消化技术“中国方案”的研究成果",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "借鉴国外经验推动厌氧消化技术应用的案例",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-verbal-q66-70-sludge",
+    "sourceCategory": "片段阅读"
+  },
+  {
+    "id": "bj2022-q71",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative",
+    "knowledgePointIds": [
+      "quantitative:travel"
+    ],
+    "originalQuestionNo": 71,
+    "sectionOrder": 3,
+    "stem": "一辆车每天都比前一天多开15千米，第三天开的距离正好是第一天的2倍。则前三天一共开了多少千米？",
+    "options": [
+      {
+        "id": "A",
+        "text": "225",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "190",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "135",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "130",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "数学运算"
+  },
+  {
+    "id": "bj2022-q72",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative",
+    "knowledgePointIds": [
+      "quantitative:profit"
+    ],
+    "originalQuestionNo": 72,
+    "sectionOrder": 3,
+    "stem": "某种商品如果每件降价30元，单价比打八折销售时贵10元，则这种商品的定价是多少元/件？",
+    "options": [
+      {
+        "id": "A",
+        "text": "200",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "250",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "300",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "350",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "数学运算"
+  },
+  {
+    "id": "bj2022-q73",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative",
+    "knowledgePointIds": [
+      "quantitative:equations"
+    ],
+    "originalQuestionNo": 73,
+    "sectionOrder": 3,
+    "stem": "某测试共有100道题，答对一道题得3分，不答或答错一道题扣2分，小张测试成绩为285分，则他一共答对了多少道题？",
+    "options": [
+      {
+        "id": "A",
+        "text": "85",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "90",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "95",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "97",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "数学运算"
+  },
+  {
+    "id": "bj2022-q74",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative",
+    "knowledgePointIds": [
+      "quantitative:geometry"
+    ],
+    "originalQuestionNo": 74,
+    "sectionOrder": 3,
+    "stem": "农户张某今年年初将一块长方形农田扩建为正方形农田，使得正方形边长与长方形的长相同，今年的农作物产量是去年的1.5倍。已知今年农作物亩产量比去年高20%，则原来长方形农田的长是宽的多少倍？",
+    "options": [
+      {
+        "id": "A",
+        "text": "1.2",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "1.25",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "1.5",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "1.6",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "数学运算"
+  },
+  {
+    "id": "bj2022-q75",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative",
+    "knowledgePointIds": [
+      "quantitative:profit"
+    ],
+    "originalQuestionNo": 75,
+    "sectionOrder": 3,
+    "stem": "商店销售某种商品，先按定价卖了300件，打七五折卖了200件，后在此基础上再打八折卖完了剩下的100件，总利润为总成本的 。单件成本相当于单件定价的：",
+    "options": [
+      {
+        "id": "A",
+        "text": "57%",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "54%",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "51%",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "48%",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [
+      "./assets/question-bank/beijing-2022-recall/formula-f7503efd18b5bc8f.png"
+    ],
+    "sharedStimulusId": null,
+    "sourceCategory": "数学运算"
+  },
+  {
+    "id": "bj2022-q76",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative",
+    "knowledgePointIds": [
+      "quantitative:travel"
+    ],
+    "originalQuestionNo": 76,
+    "sectionOrder": 3,
+    "stem": "甲和乙同时出发，在长360米的环形道路上沿同一方向各自匀速散步。甲出发2圈后第一次追上乙，又走了4圈半第二次追上乙。则甲出发后走了多少米第一次到达乙的出发点？",
+    "options": [
+      {
+        "id": "A",
+        "text": "160",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "200",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "240",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "280",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "数学运算"
+  },
+  {
+    "id": "bj2022-q77",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative",
+    "knowledgePointIds": [
+      "quantitative:profit"
+    ],
+    "originalQuestionNo": 77,
+    "sectionOrder": 3,
+    "stem": "商店做促销活动，购买店内商品第一件原价，第二件（价格不高于第一件）4折，第三件（价格不高于第二件）1折。小刘买了1件A和2件B商品，优惠后的总价格相当于定价的56.25%。已知A商品比B商品贵，则按原价买10件A商品的钱最多可以按原价买多少件B商品？",
+    "options": [
+      {
+        "id": "A",
+        "text": "20",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "16",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "14",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "12",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "数学运算"
+  },
+  {
+    "id": "bj2022-q78",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative",
+    "knowledgePointIds": [
+      "quantitative:geometry"
+    ],
+    "originalQuestionNo": 78,
+    "sectionOrder": 3,
+    "stem": "一个圆形水库的半径为1千米。一艘船从水库边的A点出发，直线行驶1千米后到达水库边的B点，又从B点出发直线行驶2千米后到达水库边的C点。则C点与A点的直线距离最短可能为多少千米？",
+    "options": [
+      {
+        "id": "A",
+        "text": "不到1千米",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "1—1.3千米之间",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "1.3—1.6千米之间",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "超过1.6千米",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "数学运算"
+  },
+  {
+    "id": "bj2022-q79",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative",
+    "knowledgePointIds": [
+      "quantitative:option-substitution"
+    ],
+    "originalQuestionNo": 79,
+    "sectionOrder": 3,
+    "stem": "某单位组织文艺表演需要统一购买15套服装，下表为甲、乙、丙和丁四个网店同款上衣和裤子的价格，上衣和裤子可以分开购买，每个网店发货均收取40元快递费，则本次购买服装的最低成本为：",
+    "options": [
+      {
+        "id": "A",
+        "text": "2125元",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "2155元",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "2165元",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "2185元",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [
+      "./assets/question-bank/beijing-2022-recall/17dae15ce70d813.png"
+    ],
+    "sharedStimulusId": null,
+    "sourceCategory": "数学运算"
+  },
+  {
+    "id": "bj2022-q80",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative",
+    "knowledgePointIds": [
+      "quantitative:work-rate"
+    ],
+    "originalQuestionNo": 80,
+    "sectionOrder": 3,
+    "stem": "甲、乙两条生产线每小时分别可以生产15000件和9000件某种零件，产品合格率分别为99%和99.8%。现接到36万件这种零件的生产任务，要求合格率不得低于99.5%，则两条生产线合作，至少需要多少小时完成?",
+    "options": [
+      {
+        "id": "A",
+        "text": "15",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "18",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "24",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "25",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "数学运算"
+  },
+  {
+    "id": "bj2022-q81",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative",
+    "knowledgePointIds": [
+      "quantitative:arrangements"
+    ],
+    "originalQuestionNo": 81,
+    "sectionOrder": 3,
+    "stem": "下方九宫格中为从1到9不重复的9个整数，虚线上角的数字为虚线所经过区域的数字之和，则灰色格子中的数字最大可能是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "7",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "6",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "5",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "4",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [
+      "./assets/question-bank/beijing-2022-recall/17dae100a66a5bd.png"
+    ],
+    "sharedStimulusId": null,
+    "sourceCategory": "数学运算"
+  },
+  {
+    "id": "bj2022-q82",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative",
+    "knowledgePointIds": [
+      "quantitative:equations"
+    ],
+    "originalQuestionNo": 82,
+    "sectionOrder": 3,
+    "stem": "A、B两个运动队分别有x人和y人，两队所有人员刚好组成一个不到100人的正方形实心方队。在为两个运动队分配运动服时，错给A队分了y套，给B队分了x套。发现后A队将领到的运动服拿出20%给B队，B队又拿出1套给A队，此时两队的队员刚好一人分到一套运动服。则x的值为：",
+    "options": [
+      {
+        "id": "A",
+        "text": "17",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "25",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "29",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "35",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "数学运算"
+  },
+  {
+    "id": "bj2022-q83",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative",
+    "knowledgePointIds": [
+      "quantitative:arrangements"
+    ],
+    "originalQuestionNo": 83,
+    "sectionOrder": 3,
+    "stem": "将张、王、李、陈、赵五名应届毕业生分配到甲、乙、丙3个不同的科室，要求每个科室至少分配1人，甲科室分配的人数多于乙科室，且张和王不能去丙科室。则有多少种不同的分法？",
+    "options": [
+      {
+        "id": "A",
+        "text": "12",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "21",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "35",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "72",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "数学运算"
+  },
+  {
+    "id": "bj2022-q84",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative",
+    "knowledgePointIds": [
+      "quantitative:periodic-schedule"
+    ],
+    "originalQuestionNo": 84,
+    "sectionOrder": 3,
+    "stem": "早上8：00，甲、乙两车开始在A、B两地之间往返运货，两车先在A地装货后驶往B地卸货，然后返回A地再装货，如是重复。13：35甲完成了第四次卸货，又过了2小时5分，乙完成了第五次装货。已知两车均匀速行驶，每次装货或卸货需要20分钟，则甲的行驶速度是乙的多少倍？",
+    "options": [
+      {
+        "id": "A",
+        "text": "1.25",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "1.4",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "1.5",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "1.6",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "数学运算"
+  },
+  {
+    "id": "bj2022-q85",
+    "moduleId": "quantitative",
+    "subjectId": "quantitative",
+    "topicId": "quantitative",
+    "knowledgePointIds": [
+      "quantitative:arrangements"
+    ],
+    "originalQuestionNo": 85,
+    "sectionOrder": 3,
+    "stem": "单位组织职工前往甲、乙、丙三个爱国主义教育基地学习，要求每名职工至少去1个基地。已知有48人去了甲基地，有42人未去乙基地，去丙基地的人中，去1个、2个、3个基地的人数比为3：2：1。如仅去2个基地和去3个基地的职工分别有x人和y人，则x和y的关系为：",
+    "options": [
+      {
+        "id": "A",
+        "text": "x=4y+6",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "x=4y-6",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "x=3y+6",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "x=3y-6",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "数学运算"
+  },
+  {
+    "id": "bj2022-q86",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning",
+    "knowledgePointIds": [
+      "reasoning:graphic-patterns"
+    ],
+    "originalQuestionNo": 86,
+    "sectionOrder": 4,
+    "stem": "每道题包含两套图形和可供选择的4个图形。这两套图形具有某种相似性，也存在某种差异。要求你从四个选项中选择最适合取代问号的一个。正确的答案应不仅使两套图形表现出最大的相似性，而且使第二套图形也表现出自己的特征。",
+    "options": [
+      {
+        "id": "A",
+        "text": "A",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "B",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "C",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "D",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [
+      "./assets/question-bank/beijing-2022-recall/17dae045d83e871.png"
+    ],
+    "sharedStimulusId": null,
+    "sourceCategory": "图形推理"
+  },
+  {
+    "id": "bj2022-q87",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning",
+    "knowledgePointIds": [
+      "reasoning:graphic-patterns"
+    ],
+    "originalQuestionNo": 87,
+    "sectionOrder": 4,
+    "stem": "每道题包含两套图形和可供选择的4个图形。这两套图形具有某种相似性，也存在某种差异。要求你从四个选项中选择最适合取代问号的一个。正确的答案应不仅使两套图形表现出最大的相似性，而且使第二套图形也表现出自己的特征。",
+    "options": [
+      {
+        "id": "A",
+        "text": "A",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "B",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "C",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "D",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [
+      "./assets/question-bank/beijing-2022-recall/17dadfa96d45208.png"
+    ],
+    "sharedStimulusId": null,
+    "sourceCategory": "图形推理"
+  },
+  {
+    "id": "bj2022-q88",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning",
+    "knowledgePointIds": [
+      "reasoning:graphic-patterns"
+    ],
+    "originalQuestionNo": 88,
+    "sectionOrder": 4,
+    "stem": "每道题包含两套图形和可供选择的4个图形。这两套图形具有某种相似性，也存在某种差异。要求你从四个选项中选择最适合取代问号的一个。正确的答案应不仅使两套图形表现出最大的相似性，而且使第二套图形也表现出自己的特征。",
+    "options": [
+      {
+        "id": "A",
+        "text": "A",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "B",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "C",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "D",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [
+      "./assets/question-bank/beijing-2022-recall/17dae22c14c5c14.png"
+    ],
+    "sharedStimulusId": null,
+    "sourceCategory": "图形推理"
+  },
+  {
+    "id": "bj2022-q89",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning",
+    "knowledgePointIds": [
+      "reasoning:attributes"
+    ],
+    "originalQuestionNo": 89,
+    "sectionOrder": 4,
+    "stem": "请从四个选项中选出最恰当的一项填在问号处，使图形呈现一定的规律性。",
+    "options": [
+      {
+        "id": "A",
+        "text": "A",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "B",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "C",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "D",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [
+      "./assets/question-bank/beijing-2022-recall/189f893e088f5e1.jpg"
+    ],
+    "sharedStimulusId": null,
+    "sourceCategory": "图形推理"
+  },
+  {
+    "id": "bj2022-q90",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning",
+    "knowledgePointIds": [
+      "reasoning:graphic-patterns"
+    ],
+    "originalQuestionNo": 90,
+    "sectionOrder": 4,
+    "stem": "从所给的四个选项中，选择最合适的一个填入问号处，使之呈现一定的规律性：",
+    "options": [
+      {
+        "id": "A",
+        "text": "A",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "B",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "C",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "D",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [
+      "./assets/question-bank/beijing-2022-recall/17dae0e21e2391e.png"
+    ],
+    "sharedStimulusId": null,
+    "sourceCategory": "图形推理"
+  },
+  {
+    "id": "bj2022-q91",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning",
+    "knowledgePointIds": [
+      "reasoning:conditional-translation"
+    ],
+    "originalQuestionNo": 91,
+    "sectionOrder": 4,
+    "stem": "小明说：“只有高级工程师才能成为公司新组建的技术专家组成员。”小红说：“不对呀，老黄是高级工程师，但是他没有被任命为技术专家组成员。” 小红的回答说明她把小明的话理解为了：",
+    "options": [
+      {
+        "id": "A",
+        "text": "有的高级工程师是技术专家组成员",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "有的高级工程师不是技术专家组成员",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "所有的技术专家组成员都应该是高级工程师",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "所有的高级工程师都应该是技术专家组成员",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "类比推理"
+  },
+  {
+    "id": "bj2022-q92",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning",
+    "knowledgePointIds": [
+      "reasoning:strengthen-weaken"
+    ],
+    "originalQuestionNo": 92,
+    "sectionOrder": 4,
+    "stem": "某研究团队用没有生命的细菌纤维素（由细菌制造并排泄出的有机化合物，拥有许多独特的力学性能，比如柔韧性、强度和保持形状的能力）充当打印纸，用活微藻充当“墨水”，通过3D打印将活微藻沉积在细菌纤维素上，进而可以产生一种独特材料。研究人员称该项技术有望广泛应用于医疗和轻工业领域。 以下陈述如果为真，哪项无法支持上述结论？",
+    "options": [
+      {
+        "id": "A",
+        "text": "该材料可以制造用于皮肤移植的光合皮肤，产生的氧气将有助于伤口修复",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "该材料能利用阳光将水和二氧化碳转化为氧气和能量，可以制造可持续能源",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "该材料制成的服装不需要像传统服装那样经常清洗，能大大减少水的使用",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "该材料是可完全生物降解的高质量织物，将解决纺织业目前面临的环保问题",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "逻辑判断"
+  },
+  {
+    "id": "bj2022-q93",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning",
+    "knowledgePointIds": [
+      "reasoning:assumption"
+    ],
+    "originalQuestionNo": 93,
+    "sectionOrder": 4,
+    "stem": "今年的一次大学生招聘会上，某宿舍所有6名同学均向甲公司和乙公司投递了简历。甲、乙两公司通知了他们各自所收上百份简历中一半的人员参加面试。因此，这6名同学每人获得了来自甲公司或乙公司的仅一次面试机会。 要使上述论证成立，以下哪项假设是必须的？",
+    "options": [
+      {
+        "id": "A",
+        "text": "除向甲、乙公司投递简历外，该宿舍同学未向其他单位投递简历",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "该宿舍所有同学既符合甲公司的招聘条件，也符合乙公司的招聘条件",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "甲、乙两公司没有同时通知该宿舍的同一个人去参加他们的面试",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "该宿舍的这6名同学都愿意参加甲公司或乙公司所通知的面试",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "逻辑判断"
+  },
+  {
+    "id": "bj2022-q94",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning",
+    "knowledgePointIds": [
+      "reasoning:strengthen-weaken"
+    ],
+    "originalQuestionNo": 94,
+    "sectionOrder": 4,
+    "stem": "某研究调查了数千名被试者的睡眠情况与健康状况，结果发现，从中年至老年（50岁至70岁间）一直处于较短睡眠模式（即每晚睡眠时长少于6小时）的人，失智风险会增加30%。研究者呼吁，中老年人适当增加睡眠时长，可以预防失智的发生。 以下陈述如果为真，哪项最能质疑研究者的观点？",
+    "options": [
+      {
+        "id": "A",
+        "text": "老年人每日睡眠时间过长不仅会有疲劳感，还会记忆力降低，精力不集中",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "随着年龄的增加，身体的细胞也慢慢衰老，这就导致睡眠时间开始变短",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "心血管代谢问题和精神疾患等都是失智的重要风险因素",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "失智是一种因脑部疾病所导致的渐进性认知功能退化，跟睡眠时长无关",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "逻辑判断"
+  },
+  {
+    "id": "bj2022-q95",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning",
+    "knowledgePointIds": [
+      "reasoning:strengthen-weaken"
+    ],
+    "originalQuestionNo": 95,
+    "sectionOrder": 4,
+    "stem": "研究人员以某大型科技公司办公区为观察对象，探索工作场所各方面因素对员工工作效率的影响。研究者发现，与坐在墙旁的人相比，位置靠窗的员工工作效率更高，精力更集中，座位面对整个房间，且视线范围内的办公桌相对较少的员工更加专注和高效。研究人员认为，办公室布局会影响员工的工作专注力和工作效率。 以下各项如果为真，哪项不能支持研究者的结论？",
+    "options": [
+      {
+        "id": "A",
+        "text": "自然光可调节人的生物节律，位置靠窗的员工更多接受自然光照射，上班时精力更加充沛",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "优秀的员工对于工位有更多的选择权，而新入职的员工往往被安排在靠墙或门口位置",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "如果员工视线范围内可以看到很多同事，会很容易分心，而且容易被别的同事之间的沟通所打扰",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "办公室空气污染比户外严重，远离窗户的员工更容易因空气污染而头疼疲倦，影响办公效率",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "逻辑判断"
+  },
+  {
+    "id": "bj2022-q96",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning",
+    "knowledgePointIds": [
+      "reasoning:conclusion"
+    ],
+    "originalQuestionNo": 96,
+    "sectionOrder": 4,
+    "stem": "咖啡因是一种中枢神经系统兴奋剂，通过与腺苷受体竞争性结合等机制，刺激神经元活性，间接影响多巴胺等的释放，从而增强注意力和认知控制，有助于我们完成常规的没有挑战性的任务。不过在需要创造性地解决问题时，增强的认知控制和自发想法缺一不可，而后者有时是可遇不可求的。 根据上述材料，以下推论正确的是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "发明家的脑子里经常自发冒出很多新奇的点子",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "咖啡因直接作用于大脑，能提神醒脑促进记忆",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "面对枯燥无趣的常规工作时，咖啡或许能提高效率",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "作为神经系统兴奋剂的咖啡，也会导致失眠和心跳过速",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "逻辑判断"
+  },
+  {
+    "id": "bj2022-q97",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning",
+    "knowledgePointIds": [
+      "reasoning:conclusion"
+    ],
+    "originalQuestionNo": 97,
+    "sectionOrder": 4,
+    "stem": "中华世纪坛举办“岁月夏宫展”期间，某志愿服务分队有15名队员担任讲解员。关于这15名讲解员是否去过俄罗斯夏宫，有如下断定： （1）所有队员都去过俄罗斯夏宫； （2）队员清仪去过俄罗斯夏宫； （3）有的队员去过俄罗斯夏宫； （4）有的队员没去过俄罗斯夏宫。 后来，经详细核查，得知上述断定中只有两个为真。据此，可必然推出：",
+    "options": [
+      {
+        "id": "A",
+        "text": "队员清仪去过俄罗斯夏宫",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "有队员没去过俄罗斯夏宫",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "队员们都去过俄罗斯夏宫",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "队员们都没去过俄罗斯夏宫",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "类比推理"
+  },
+  {
+    "id": "bj2022-q98",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning",
+    "knowledgePointIds": [
+      "reasoning:conditional-translation"
+    ],
+    "originalQuestionNo": 98,
+    "sectionOrder": 4,
+    "stem": "要稳定地提高在逻辑考试上的成绩，关键是要在基本概念上有真正的理解，如果没有真正的理解，即使投入再多的精力，做再多的练习，也不可能取得真正稳定的好成绩。 以下各选项中，除了哪项外，都表达了与上述言论相同的意思？",
+    "options": [
+      {
+        "id": "A",
+        "text": "只有在基本概念上有真正的理解，才能取得真正稳定的好成绩",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "除非在基本概念上有真正的理解，否则不能取得真正稳定的好成绩",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "只要在基本概念上有真正的理解，即使没有花很多精力，也能取得真正稳定的好成绩",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "如果取得了真正稳定的好成绩，说明一定在基本概念上有了真正的理解",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "逻辑判断"
+  },
+  {
+    "id": "bj2022-q99",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning",
+    "knowledgePointIds": [
+      "reasoning:strengthen-weaken"
+    ],
+    "originalQuestionNo": 99,
+    "sectionOrder": 4,
+    "stem": "某研究将行走模式分为两类：一类是零星地短时间行走，另一类是不间断地行走10分钟以上。该研究追踪了某国16732名66岁至78岁女性，4年随访期间有804名女性去世。结果发现，不管是零星散步还是较长时间的不间断行走，步数更多的人寿命更长；在约4500步之后，这种效应趋于稳定。研究者提出，只要开始走路，就能降低老年女性死亡风险。 以下各项如果为真，哪项不能质疑研究者的结论？",
+    "options": [
+      {
+        "id": "A",
+        "text": "中青年女性的生活方式和老年女性有很大不同，每天行走步数与死亡率没有显著关联",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "正确的走路方式，才能使身体变得健壮，不当的走路方式和姿势，会危害身体健康",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "在这个年龄段，每天能够自主行走达到一定步数，通常意味着有更好的整体健康状况",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "能够坚持走路的人，或者有更多的生活内容，或者有更好的健康意识，这两者均有益健康",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "逻辑判断"
+  },
+  {
+    "id": "bj2022-q100",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning",
+    "knowledgePointIds": [
+      "reasoning:constraint-order"
+    ],
+    "originalQuestionNo": 100,
+    "sectionOrder": 4,
+    "stem": "某校辩论队的小赵、小钱、小孙和小李分别是哲学、中文、历史和英语专业的，他们也都爱好下围棋。还知道如下情况： （1）小孙和历史专业的下过围棋，并且各有输赢； （2）哲学专业的只和中文专业的下过围棋，而且从没赢过； （3）小钱和小孙二人曾和哲学专业的同学一起爬过山； （4）某日小李、小赵下围棋，且小赵取胜。 据此，可以推出：",
+    "options": [
+      {
+        "id": "A",
+        "text": "小赵是学英语的，小钱是学历史的",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "小钱是学历史的，小孙是学中文的",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "小赵是学历史的，小孙是学英语的",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "小李是学哲学的，小钱是学历史的",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "逻辑判断"
+  },
+  {
+    "id": "bj2022-q101",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning",
+    "knowledgePointIds": [
+      "reasoning:conclusion"
+    ],
+    "originalQuestionNo": 101,
+    "sectionOrder": 4,
+    "stem": "人的平均智商每十年有一定幅度增长，这个现象被称为弗林效应，它可能是儿童时期营养、医疗和教育品质不断提升的结果。而且数据显示，平均智商最大幅的增长发生在发展中国家和地区。在这些地方，儿童时期营养、标准化教育和医疗条件的提升是影响智商的最重要因素。 由此可以推出：",
+    "options": [
+      {
+        "id": "A",
+        "text": "人的平均智商并非一成不变，而是会受到社会发展变化的影响",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "人的平均智商水平反映了该国家和地区的经济发展水平",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "发展中国家人的平均智商要远低于发达国家人的平均智商",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "发达国家人的平均智商增幅缓慢是因为在营养、医疗和教育方面已无太多提升空间",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "逻辑判断"
+  },
+  {
+    "id": "bj2022-q102",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning",
+    "knowledgePointIds": [
+      "reasoning:conclusion"
+    ],
+    "originalQuestionNo": 102,
+    "sectionOrder": 4,
+    "stem": "科学家们在给老鼠准备的“饮料”里分别加入了糖或甜味剂——安赛蜜。起初，小鼠们两种饮料都喝。可到了第二天，它们就几乎完全放弃了甜味剂，只爱喝真正的糖饮料。更“夸张”的是，被去除了味蕾上的甜味受体的小鼠，舌头尝不出任何甜味，也会偏爱选择真正的糖。后来科学家发现，小鼠和人的脑中都有一个区域只对葡萄糖而不是甜味剂有反应。这个区域在孤束核尾部（简称cNST），隐藏于大脑最原始的区域——脑干，并不在小鼠处理味觉的脑区。 根据上述材料，以下判断正确的是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "甜味剂的“甜”和糖的“甜”，作用在味蕾不同的受体上",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "无糖可乐受人欢迎，并不是因为它更好喝，而是因为它更健康",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "小鼠能区别出甜味剂和糖的不同是因为大脑的处理区域存在差异",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "小鼠大脑处理味觉的区域仅对安赛蜜敏感，而cNST则对葡萄糖敏感",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "逻辑判断"
+  },
+  {
+    "id": "bj2022-q103",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning",
+    "knowledgePointIds": [
+      "reasoning:strengthen-weaken"
+    ],
+    "originalQuestionNo": 103,
+    "sectionOrder": 4,
+    "stem": "人类的视觉功能包括察觉物体存在、分辨物体细节、觉察物体色彩、从视觉背景中分辨视觉对象的能力等。一项研究测查了133名年龄25-45岁的志愿者，其中63人每天吸烟超过20支，另外70人是非吸烟者。研究者测试了志愿者辨别对比度（阴影的细微差别）和颜色的能力，发现与非吸烟者相比，过量吸烟者辨别对比度和颜色的能力明显降低，或多或少有色盲或色弱的表现，红绿色和蓝黄色视觉存在缺陷。研究者提出，吸烟会损害视觉功能。 以下各项如果为真，哪一项最能支持研究者的观点？",
+    "options": [
+      {
+        "id": "A",
+        "text": "调取的体检资料显示，这些志愿者小学毕业时视力指标均正常",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "测量显示，所有志愿者的视力或矫正视力，即人眼辨认细节的能力正常",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "调查发现，长期吸烟会导致与年龄相关的视网膜黄斑变性的风险成倍增加",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "该研究被试志愿者中，长期吸烟的群体的年龄明显大于不吸烟的群体",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "逻辑判断"
+  },
+  {
+    "id": "bj2022-q104",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning",
+    "knowledgePointIds": [
+      "reasoning:strengthen-weaken"
+    ],
+    "originalQuestionNo": 104,
+    "sectionOrder": 4,
+    "stem": "研究人员对1971年到2008年间的36400名某国公民的膳食数据和1984年到2006年间的该国14419人的运动数据进行分析和整合。他们发现，生活在2000年代和1980年代的同龄人，摄入同样的热量、同样质量的蛋白和脂肪，做同样多的运动，2000年代的人还是会比1980年代的人在体重指数上高2.3%。换句话说，即使我们遵循同样的饮食和锻炼计划，今天的人也要比上世纪80年代的人重10%。研究者认为，这种情况可能和科技的发展有关。 以下哪项如果为真，不能支持以上观点？",
+    "options": [
+      {
+        "id": "A",
+        "text": "近年来，越来越多的新型化工产品应用于日常生活，这些物质可能改变人体的荷尔蒙进程，让人体调整和维持体重的机制发生变化",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "90年代后，新型的抗抑郁药被研发出来，成为了很多国家最常用的处方药之一，而这些药物都有让人变得虚胖的副作用",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "近年来，科技发展使得人类的工作和生活方式发生了很大转变，体力劳动的比例显著下降，即使维持日常运动，总的体能支出也明显降低",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "现代人吃的肉比几十年前的人多得多，需要新的肠道菌群来消化，肠道菌群的变化可能让人的食欲大增从而体重增长",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "逻辑判断"
+  },
+  {
+    "id": "bj2022-q105",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning",
+    "knowledgePointIds": [
+      "reasoning:constraint-order"
+    ],
+    "originalQuestionNo": 105,
+    "sectionOrder": 4,
+    "stem": "三位小学老师虞老师、高老师和冯老师，他们每人分别担任音乐、科学、英语、体育、思想品德和数学6科中两门课的教学。已知： （1）科学老师和体育老师住在同一幢公寓楼； （2）虞老师在三人中年龄最小； （3）冯老师、音乐老师和体育老师三个人经常一起去打球； （4）音乐老师比数学老师年龄要大些； （5）假日里，英语老师、数学老师和虞老师喜欢结伴去旅行。 根据以上条件，可知，冯老师教：",
+    "options": [
+      {
+        "id": "A",
+        "text": "音乐",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "思想品德",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "英语",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "科学",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "类比推理"
+  },
+  {
+    "id": "bj2022-q106",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning",
+    "knowledgePointIds": [
+      "reasoning:definition-elements"
+    ],
+    "originalQuestionNo": 106,
+    "sectionOrder": 4,
+    "stem": "消费决策是指人们根据自己的消费需要，在一定的收入和其他消费环境的约束下，为了实现一定的消费目标而作出关于消费层次、消费方式、消费途径、消费范围等方面的决定或方案。 根据上述定义，以下哪种行为不属于消费决策？",
+    "options": [
+      {
+        "id": "A",
+        "text": "大学生小李没有时间逛街，因此喜欢在网上买东西",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "某公司采购员计划与供应商签订乙烯采购合同",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "在朋友的推荐下，小王选择购买某款高性价比的入门级单反相机",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "某老师决定在学生毕业前自费为他们每人买一本书",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "定义判断"
+  },
+  {
+    "id": "bj2022-q107",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning",
+    "knowledgePointIds": [
+      "reasoning:qualifiers"
+    ],
+    "originalQuestionNo": 107,
+    "sectionOrder": 4,
+    "stem": "劳动者的受教育水平、工作经验或知识、技能、能力高于岗位需求的现象被称为资质过剩。客观资质过剩指劳动者实际拥有的任职资格超出岗位平均需求的情况，主观资质过剩指劳动者对这种情况的主观评估或感受，也被称为资质过剩感。 根据上述定义，以下符合资质过剩感的是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "小张想要离职，他觉得自己的技能和目前岗位不够匹配，一些工作技能用不上",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "小梁去公司应聘，招聘者认为小梁的条件已超出该岗位要求，小梁顺利入职",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "小方未能升职为市场总监，很不高兴，她觉得以自己的能力早就该升职了",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "小江一直做公司会计，他的朋友都觉得，以小江的资质一直做普通会计太屈才了",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "定义判断"
+  },
+  {
+    "id": "bj2022-q108",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning",
+    "knowledgePointIds": [
+      "reasoning:case-matching"
+    ],
+    "originalQuestionNo": 108,
+    "sectionOrder": 4,
+    "stem": "连环马策略是指在谈判中坚持你要我让一步，我也要你让一步，确保条件互换的做法。 根据上述定义，以下属于连环马策略的是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "甲厂家答应购买乙公司的精密设备，乙公司需要同意免去设备使用培训费",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "果农与经销商谈判，希望将三千斤芒果全部收购，部分次果也一并收购",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "吴某去买车，发现经销商没有现车还需要加价排队买，吴某要求正价买现车",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "食客对菜品不满意，不打算付钱，餐馆经理过来理论，食客只能照价结账",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "定义判断"
+  },
+  {
+    "id": "bj2022-q109",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning",
+    "knowledgePointIds": [
+      "reasoning:negative-conditions"
+    ],
+    "originalQuestionNo": 109,
+    "sectionOrder": 4,
+    "stem": "“自然后果”是一种常被运用于育儿的概念，意指行为本身会导致一个自然的后果，此结果是孩子事先未知的，但孩子可以从此自然后果的经验中，学会预期结果，控制他们之后的行为。譬如小朋友玩火烫到了之后就不会乱玩火。 根据上述定义，以下不属于自然后果的是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "孩子吃饭时告诉他如果不好好吃饭就会饿肚子，结果孩子担心挨饿便吃完了饭",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "孩子因迟到被批评后，每晚都整理好第二天要用的物品以免临时寻找耽误时间",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "孩子因为跑太快而摔倒，家长没有马上去扶，孩子自己爬起来后不再快跑",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "孩子饭后不爱刷牙，结果有了龋齿，看完医生后坚持每天好好刷牙",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "定义判断"
+  },
+  {
+    "id": "bj2022-q110",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning",
+    "knowledgePointIds": [
+      "reasoning:definition-elements"
+    ],
+    "originalQuestionNo": 110,
+    "sectionOrder": 4,
+    "stem": "虚拟货币是指没有实际形态的货币，一般是指网络运营商发行的一种类法币，只能在网络空间使用。其作用主要是企业为了在特定的范围内进行流通，吸引更多的用户参与进来。它也是一种营销手段，其本质上也是一种商品。虚拟货币只能进行单向的流通，不能作为现实世界的现金使用。 根据上述定义，以下不属于虚拟货币的是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "网络游戏充值后用于购买战斗装备的游戏币",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "在某电商平台购物后被赠送的可用来在该平台购物的购物豆",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "在某网络店家充值500元后得到的只能在该店家用的550元购物金",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "游戏厅里面塞进并启动夹娃娃机的游戏币",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "定义判断"
+  },
+  {
+    "id": "bj2022-q111",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning",
+    "knowledgePointIds": [
+      "reasoning:case-matching"
+    ],
+    "originalQuestionNo": 111,
+    "sectionOrder": 4,
+    "stem": "负需求是指部分或大部分潜在购买者对某种产品或劳务不但没有需求，可能还有厌恶情绪。因此，营销管理的任务是分析人们为什么不喜欢这些产品，并针对目标顾客的需求调整定价，做更积极的促销，或改变顾客对某些产品或服务的信念，把负需求变为正需求。 根据上述定义，以下不属于针对负需求进行的营销管理的是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "某地人不爱吃动物内脏，商场播放视频介绍动物内脏富含哪些矿物质，对人体有哪些好处，并赠送了相应的菜谱，显著提升了销量",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "A国民众不喜欢酱油，B国一家酱油企业通过在A国开办铁板烧餐厅，让该国民众了解“什么是酱油及其烹饪方法”，从而打开了A国市场",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "很多男性不喜欢皮肤护理美容保养服务，某美容院改造一块区域出租给理发师，上门的男顾客日渐增多",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "大部分小朋友都害怕看牙医，对牙医诊所很抗拒，诊所将诊室打造成动漫风格，在等待区放满毛绒玩具，受到小朋友的欢迎",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "定义判断"
+  },
+  {
+    "id": "bj2022-q112",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning",
+    "knowledgePointIds": [
+      "reasoning:case-matching"
+    ],
+    "originalQuestionNo": 112,
+    "sectionOrder": 4,
+    "stem": "麦格克效应是一种认知现象，表现为语音感知过程中听觉和视觉之间的相互作用。人类的听觉有时会过多地受到视觉的影响，产生误听的现象；当视觉看到的一种“声音”与耳朵听到的另一种声音不匹配时，会让人们察觉到第三种声音。 根据上述定义，以下符合麦格克效应的是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "小梅看美剧时，总是选择有中文字幕的原音版本。妈妈说：“不是有中文配音的吗？”小梅说：“中文配音的，口型对不上，看着别扭。”",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "流感爆发时期，小王说：“最近跟大家沟通好像有些困难，现在大家都带着口罩，看不见嘴，我更听不清别人说话了。”",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "研究者给成年志愿者观看一段视频，视频中人的嘴唇发出“ga”的音，但放出的配音却是“ba”，结果98%的志愿者表示他们听到的是“da”音",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "表演者用腹语为手中的木偶配音，坐在他面前的观众会明知不可能，还是感到声音是从木偶口中发出的",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "定义判断"
+  },
+  {
+    "id": "bj2022-q113",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning",
+    "knowledgePointIds": [
+      "reasoning:case-matching"
+    ],
+    "originalQuestionNo": 113,
+    "sectionOrder": 4,
+    "stem": "隐形冠军企业是指那些不为公众所熟知，却在某个细分行业或市场占据领先地位，拥有核心竞争力和明确战略，其产品、服务难以被超越和模仿的中小型企业。 根据上述定义，以下属于隐形冠军企业的是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "某食品公司的主要产品是陈醋。该公司的陈醋味道醇厚，深受老百姓的欢迎，占据了全国陈醋市场份额的70%以上，其他品牌的陈醋始终无法超越",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "某公司只有80余名员工，给自己的定位是“给餐厅和宾馆做最好的洗洁精”，使用这种洗洁精洗出来的餐具格外晶莹闪亮，虽然大众很少听说过这家企业，它却是国内餐饮企业购买洗洁精时的不二选择",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "呼吸道传染病全球爆发时，口罩最核心的材料——熔喷布的全球需求井喷。某熔喷布生产厂商提出“做全球最大的熔喷布生产商”，积极扩大生产规模，很快将自己的产品卖到了全世界",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "某公司有多个子公司，分布在不同领域，每个子公司都有各自的知名品牌，并在所属领域内拥有强大的竞争力。但这些品牌表面上并没有什么联系，这家总公司实力雄厚，公众却很少听说过这家企业",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "定义判断"
+  },
+  {
+    "id": "bj2022-q114",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning",
+    "knowledgePointIds": [
+      "reasoning:definition-elements"
+    ],
+    "originalQuestionNo": 114,
+    "sectionOrder": 4,
+    "stem": "城市景观分为活动景观和实质景观两个方面，活动景观主要包含的是市民的日常生活、公共活动、节日集会等反应地方民族特色、文化艺术传统、风俗习惯等浓厚生活气氛的内容，它表现为动态的“物”；实质景观指的是社区和自然环境、文化古迹、建筑群以及道路等社区各项功能设施的总体，它表现为静态的“物”。 根据上述定义，以下活动属于活动景观的是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "某村被确定为历史文化古村后，村民全部迁出，村里打造了一条售卖各地特产的商业街",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "某镇每年元宵节办社火，精心打扮的孩子被大人用特定方式扛在肩上表演“背棍”",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "曲阜孔庙是祭祀中国古代著名思想家和教育家孔子的祠庙，每天都游人如织",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "今年清明节，某校组织学生到新落成的烈士公墓进行公祭，缅怀先烈",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "定义判断"
+  },
+  {
+    "id": "bj2022-q115",
+    "moduleId": "reasoning",
+    "subjectId": "reasoning",
+    "topicId": "reasoning",
+    "knowledgePointIds": [
+      "reasoning:case-matching"
+    ],
+    "originalQuestionNo": 115,
+    "sectionOrder": 4,
+    "stem": "政府购买服务是指通过发挥市场机制作用，把政府直接向社会公众提供的一部分公共服务事项，按照一定的方式和程序，交由具备条件的社会力量承担，并由政府根据服务数量和质量向其支付费用。 根据上述定义，下列属于政府购买服务的是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "某地为了应对幼儿园数量不足的困境，鼓励民办幼儿园发展。申请人需提交申请，满足当地政府要求的资质条件。获得办园许可后，政府根据规模给予补助",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "某区为了提高本区居民的生活便利程度，由政府出资，在各个居民小区建设“便民菜站”，并通过招标投标流程，确定数家农副产品企业入驻经营",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "随着城市发展，某地政府需要建设新的供热厂，经过招标投标流程，甲公司中标，负责建设，市政府按期支付工程款",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "某市推行“免费孕前优生健康检查项目”，根据项目要求和各家医疗机构提交的申报材料等信息，选定16家民营医疗机构，并按照年终工作量支付费用",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": null,
+    "sourceCategory": "定义判断"
+  },
+  {
+    "id": "bj2022-q116",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis",
+    "knowledgePointIds": [
+      "data-analysis:multiple"
+    ],
+    "originalQuestionNo": 116,
+    "sectionOrder": 5,
+    "stem": "2020年该行业销售费用约是管理、财务费用之和的多少倍？",
+    "options": [
+      {
+        "id": "A",
+        "text": "2.5",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "2.9",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "3.4",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "4.0",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-data-q116-120-industry-expenses",
+    "sourceCategory": "综合"
+  },
+  {
+    "id": "bj2022-q117",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis",
+    "knowledgePointIds": [
+      "data-analysis:chart-reading"
+    ],
+    "originalQuestionNo": 117,
+    "sectionOrder": 5,
+    "stem": "以下饼图中，最能准确反映2020年7月该行业销售（用白色表示）、管理（用灰色表示）和财务（用黑色表示）费用占比关系的是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "",
+        "imageUrls": [
+          "./assets/question-bank/beijing-2022-recall/17dae05fe694984.png"
+        ]
+      },
+      {
+        "id": "B",
+        "text": "",
+        "imageUrls": [
+          "./assets/question-bank/beijing-2022-recall/17dae0862011ad3.png"
+        ]
+      },
+      {
+        "id": "C",
+        "text": "",
+        "imageUrls": [
+          "./assets/question-bank/beijing-2022-recall/17dae06300c1793.png"
+        ]
+      },
+      {
+        "id": "D",
+        "text": "",
+        "imageUrls": [
+          "./assets/question-bank/beijing-2022-recall/17dae066913d284.png"
+        ]
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-data-q116-120-industry-expenses",
+    "sourceCategory": "比重"
+  },
+  {
+    "id": "bj2022-q118",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis",
+    "knowledgePointIds": [
+      "data-analysis:mixed-indicators"
+    ],
+    "originalQuestionNo": 118,
+    "sectionOrder": 5,
+    "stem": "在该行业销售费用、管理费用和财务费用三项费用中，2020年前7个月费用额不到全年总额一半的有几项？",
+    "options": [
+      {
+        "id": "A",
+        "text": "0",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "1",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "2",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "3",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-data-q116-120-industry-expenses",
+    "sourceCategory": "综合"
+  },
+  {
+    "id": "bj2022-q119",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis",
+    "knowledgePointIds": [
+      "data-analysis:ranking"
+    ],
+    "originalQuestionNo": 119,
+    "sectionOrder": 5,
+    "stem": "2020年下半年该行业财务费用最高的月份是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "9月",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "10月",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "11月",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "12月",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-data-q116-120-industry-expenses",
+    "sourceCategory": "综合"
+  },
+  {
+    "id": "bj2022-q120",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis",
+    "knowledgePointIds": [
+      "data-analysis:mixed-indicators"
+    ],
+    "originalQuestionNo": 120,
+    "sectionOrder": 5,
+    "stem": "关于2020年该行业销售、管理和财务费用，能够用上述资料中推出的是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "二季度销售费用低于一季度水平",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "四季度每个月的销售费用都超过400亿元",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "管理费用累计超过1000亿元是在第四季度",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "二季度各月，财务费用逐月递减",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-data-q116-120-industry-expenses",
+    "sourceCategory": "综合"
+  },
+  {
+    "id": "bj2022-q121",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis",
+    "knowledgePointIds": [
+      "data-analysis:base-period"
+    ],
+    "originalQuestionNo": 121,
+    "sectionOrder": 5,
+    "stem": "2019年末S省常住人口总数约为多少万人？",
+    "options": [
+      {
+        "id": "A",
+        "text": "7910",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "8030",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "8096",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "8199",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-data-q121-125-employment",
+    "sourceCategory": "综合"
+  },
+  {
+    "id": "bj2022-q122",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis",
+    "knowledgePointIds": [
+      "data-analysis:share-compare"
+    ],
+    "originalQuestionNo": 122,
+    "sectionOrder": 5,
+    "stem": "2020年末S省第二产业就业人口在就业人口中的占比比第三产业约高：",
+    "options": [
+      {
+        "id": "A",
+        "text": "0.5个百分点",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "1.7个百分点",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "3.5个百分点",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "5.1个百分点",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-data-q121-125-employment",
+    "sourceCategory": "比重"
+  },
+  {
+    "id": "bj2022-q123",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis",
+    "knowledgePointIds": [
+      "data-analysis:growth-rate"
+    ],
+    "originalQuestionNo": 123,
+    "sectionOrder": 5,
+    "stem": "2020年末S省第一产业就业人口同比：",
+    "options": [
+      {
+        "id": "A",
+        "text": "减少了不到50万人",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "减少了50万人以上",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "增加了不到50万人",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "増加了50万人以上",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-data-q121-125-employment",
+    "sourceCategory": "增长"
+  },
+  {
+    "id": "bj2022-q124",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis",
+    "knowledgePointIds": [
+      "data-analysis:multiple"
+    ],
+    "originalQuestionNo": 124,
+    "sectionOrder": 5,
+    "stem": "2020年末S省未就业常住人口数量约为第三产业就业人口的多少倍？",
+    "options": [
+      {
+        "id": "A",
+        "text": "1.4",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "1.5",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "1.7",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "1.9",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-data-q121-125-employment",
+    "sourceCategory": "综合"
+  },
+  {
+    "id": "bj2022-q125",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis",
+    "knowledgePointIds": [
+      "data-analysis:mixed-indicators"
+    ],
+    "originalQuestionNo": 125,
+    "sectionOrder": 5,
+    "stem": "能够从上述资料中推出的是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "2020年末S省第一产业就业人口占就业人口的15%以下",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "2018年末S省就业人口同比增量低于上年同期数值",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "2019年末S省就业人口数量较上年增长0.1%以上",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "2020年末S省第二产业就业人口比上年减少0.1%以上",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-data-q121-125-employment",
+    "sourceCategory": "综合"
+  },
+  {
+    "id": "bj2022-q126",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis",
+    "knowledgePointIds": [
+      "data-analysis:growth-amount"
+    ],
+    "originalQuestionNo": 126,
+    "sectionOrder": 5,
+    "stem": "2019年A市专利密集型产业实现增加值比上年约增长多少亿元？",
+    "options": [
+      {
+        "id": "A",
+        "text": "413",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "502",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "606",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "698",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-data-q126-130-patent-industry",
+    "sourceCategory": "增长"
+  },
+  {
+    "id": "bj2022-q127",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis",
+    "knowledgePointIds": [
+      "data-analysis:calculation-choice"
+    ],
+    "originalQuestionNo": 127,
+    "sectionOrder": 5,
+    "stem": "现已知2019年A市①专利密集型产业专利申请总量、②专利密集型产业R&D经费占专利密集型产业实现增加值的比重。如果想得到当年A市专利密集型产业发明专利申请量的数值，下列说法正确的是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "补充①可以得到，补充②不可以得到",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "补充①不可以得到，补充②可以得到",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "补充①和②中任一条可以得到",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "①和②两条相加才可以得到",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-data-q126-130-patent-industry",
+    "sourceCategory": "比重"
+  },
+  {
+    "id": "bj2022-q128",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis",
+    "knowledgePointIds": [
+      "data-analysis:average-value"
+    ],
+    "originalQuestionNo": 128,
+    "sectionOrder": 5,
+    "stem": "2019年A市专利密集型产业企业户均拥有已被成功实施的发明专利约多少件？",
+    "options": [
+      {
+        "id": "A",
+        "text": "9",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "10",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "11",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "12",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-data-q126-130-patent-industry",
+    "sourceCategory": "平均数"
+  },
+  {
+    "id": "bj2022-q129",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis",
+    "knowledgePointIds": [
+      "data-analysis:multiple"
+    ],
+    "originalQuestionNo": 129,
+    "sectionOrder": 5,
+    "stem": "在专利密集型产业中，2019年A市信息通信技术服务业单位企业实现利润额约为多少亿元？",
+    "options": [
+      {
+        "id": "A",
+        "text": "0.18",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "0.23",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "0.35",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "0.59",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-data-q126-130-patent-industry",
+    "sourceCategory": "综合"
+  },
+  {
+    "id": "bj2022-q130",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis",
+    "knowledgePointIds": [
+      "data-analysis:mixed-indicators"
+    ],
+    "originalQuestionNo": 130,
+    "sectionOrder": 5,
+    "stem": "关于A市专利密集型产业发展状况，能够从上述资料中推出的是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "2018年增加值占全市GDP比重为19.9%",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "2019年发明专利申请量比非发明专利申请量高一倍以上",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "2018年信息通信技术服务业实现利润超过100亿元",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "2019年医药医疗产业利润占营业收入的比重低于上年水平",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-data-q126-130-patent-industry",
+    "sourceCategory": "综合"
+  },
+  {
+    "id": "bj2022-q131",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis",
+    "knowledgePointIds": [
+      "data-analysis:mixed-indicators"
+    ],
+    "originalQuestionNo": 131,
+    "sectionOrder": 5,
+    "stem": "2020年中国耐磨材料的产量比消费量：",
+    "options": [
+      {
+        "id": "A",
+        "text": "高不到20万吨",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "高20万吨以上",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "低不到20万吨",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "低20万吨以上",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-data-q131-135-wear-materials",
+    "sourceCategory": "综合"
+  },
+  {
+    "id": "bj2022-q132",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis",
+    "knowledgePointIds": [
+      "data-analysis:calculation-choice"
+    ],
+    "originalQuestionNo": 132,
+    "sectionOrder": 5,
+    "stem": "2018—2020年中国耐磨材料市场规模总计比2014—2016年高约多少亿元？",
+    "options": [
+      {
+        "id": "A",
+        "text": "256",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "286",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "316",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "346",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-data-q131-135-wear-materials",
+    "sourceCategory": "综合"
+  },
+  {
+    "id": "bj2022-q133",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis",
+    "knowledgePointIds": [
+      "data-analysis:ranking"
+    ],
+    "originalQuestionNo": 133,
+    "sectionOrder": 5,
+    "stem": "2015—2020年中国金属、陶瓷、树脂耐磨材料消费量均高于上年水平的年份有几个？",
+    "options": [
+      {
+        "id": "A",
+        "text": "1",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "2",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "3",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "4",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-data-q131-135-wear-materials",
+    "sourceCategory": "综合"
+  },
+  {
+    "id": "bj2022-q134",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis",
+    "knowledgePointIds": [
+      "data-analysis:average-growth"
+    ],
+    "originalQuestionNo": 134,
+    "sectionOrder": 5,
+    "stem": "将①金属耐磨材料、②陶瓷耐磨材料和③树脂耐磨材料按2014—2020年消费量年均增速（以2014年为基础）从高到低排列，以下正确的是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "①②③",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "③②①",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "②③①",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "①③②",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-data-q131-135-wear-materials",
+    "sourceCategory": "增长"
+  },
+  {
+    "id": "bj2022-q135",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis",
+    "knowledgePointIds": [
+      "data-analysis:mixed-indicators"
+    ],
+    "originalQuestionNo": 135,
+    "sectionOrder": 5,
+    "stem": "能够从上述材料中推出的是：",
+    "options": [
+      {
+        "id": "A",
+        "text": "2014—2020年中国耐磨材料产量逐年递增",
+        "imageUrls": []
+      },
+      {
+        "id": "B",
+        "text": "2020年中国耐磨材料市场规模同比增速快于产量同比增速",
+        "imageUrls": []
+      },
+      {
+        "id": "C",
+        "text": "2019年中国金属耐磨材料消费量占耐磨材料总消费量的比重同比上升",
+        "imageUrls": []
+      },
+      {
+        "id": "D",
+        "text": "2015年中国耐磨材料总消费量高于上年水平",
+        "imageUrls": []
+      }
+    ],
+    "stemImageUrls": [],
+    "sharedStimulusId": "bj2022-data-q131-135-wear-materials",
+    "sourceCategory": "综合"
+  }
+]

@@ -1,0 +1,79 @@
+{
+  "paperId": "bj-2022-全卷-22",
+  "title": "2022年北京市公务员录用考试《行测》题（网友回忆版）",
+  "region": "北京",
+  "examYear": 2022,
+  "questionCount": 135,
+  "publishedSingleChoiceCount": 125,
+  "heldMultiSelectQuestionNos": [
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35
+  ],
+  "questionUrl": "https://gwy.gkzhenti.cn/paper/1640265344758",
+  "answerUrl": "https://gwy.gkzhenti.cn/answer/1640265344758",
+  "pinnedExplanationSource": "https://github.com/ERRRC/xingcezhenti/tree/278984401124db40da5163a31275b8deb9c282f4",
+  "pinnedCommit": "278984401124db40da5163a31275b8deb9c282f4",
+  "sharedStimulusCount": 12,
+  "imageAssetCount": 123,
+  "moduleCounts": {
+    "data-analysis": {
+      "archived": 20,
+      "published": 20,
+      "heldMultiSelect": 0
+    },
+    "general-knowledge": {
+      "archived": 32,
+      "published": 23,
+      "heldMultiSelect": 9
+    },
+    "political-theory": {
+      "archived": 3,
+      "published": 2,
+      "heldMultiSelect": 1
+    },
+    "quantitative": {
+      "archived": 15,
+      "published": 15,
+      "heldMultiSelect": 0
+    },
+    "reasoning": {
+      "archived": 30,
+      "published": 30,
+      "heldMultiSelect": 0
+    },
+    "verbal": {
+      "archived": 35,
+      "published": 35,
+      "heldMultiSelect": 0
+    }
+  },
+  "answerKeyCrosscheck": "All 135 answer keys match the public answer page; 10 multi-select items remain archived and are not published into single-choice practice.",
+  "wholePaperMock": "closed_until_multi_select_interaction_is_supported",
+  "completeModuleMockRanges": {
+    "verbal": [
+      36,
+      70
+    ],
+    "quantitative": [
+      71,
+      85
+    ],
+    "reasoning": [
+      86,
+      115
+    ],
+    "data-analysis": [
+      116,
+      135
+    ]
+  },
+  "questionOnlyArchive": "questions.json contains no answer or explanation fields; answer and explanation data are in answer-explanations.json."
+}
