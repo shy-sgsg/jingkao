@@ -39,6 +39,132 @@ test('2025 Beijing Jingkao registration snapshots stay attached to their positio
   }
 });
 
+test('2025 November 19 morning citywide leaderboard keeps named jobs and planned recruits aligned', async () => {
+  const raw = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const dataset = normalizeDataset(raw);
+  const sourceId = 'eoffcn-2025-citywide-top10-qualified-20241119-0900';
+  const expected = [
+    ['232501302', 221, 115],
+    ['232501804', 107, 78],
+    ['232502401', 82, 40],
+    ['232501702', 79, 70],
+    ['232501602', 63, 65],
+    ['220527701', 45, 1],
+    ['232502602', 43, 35],
+    ['221156501', 39, 2],
+    ['231568202', 39, 2],
+  ];
+
+  const source = dataset.sources.find((item) => item.sourceId === sourceId);
+  assert.equal(source?.url, 'https://www.eoffcn.com/kszx/detail/1514988.html');
+  assert.equal(source?.observedAt, '2024-11-19 09:00');
+
+  for (const [code, qualified, recruits] of expected) {
+    const position = dataset.positions.find((item) => item.year === 2025 && item.code === code);
+    assert.equal(position?.recruitCount, recruits, `2025 position ${code} planned recruits`);
+    const rows = dataset.observations.filter((item) => item.sourceId === sourceId
+      && item.year === 2025 && item.positionCode === code);
+    assert.equal(rows.length, 1, `position ${code} should have one morning snapshot`);
+    assert.equal(rows[0].scope, 'position-level');
+    assert.equal(rows[0].observedAt, '2024-11-19 09:00');
+    assert.equal(rows[0].applicantsQualified, qualified);
+    assert.equal(rows[0].recruitCount, recruits);
+    assert.equal(rows[0].qualifiedCompetitionRatio, qualified / recruits);
+    assert.equal(rows[0].applicantsRegistered, null);
+    assert.equal(rows[0].applicantsPaid, null);
+    assert.equal(rows[0].actualTestTakers, null);
+  }
+});
+
+test('2025 November 20 morning citywide leaderboards attach only exact-code qualification snapshots', async () => {
+  const raw = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const dataset = normalizeDataset(raw);
+  const sourceId = 'eoffcn-2025-citywide-top10-qualified-20241120-0900';
+  const expected = [
+    ['232501302', 436, 115],
+    ['232501902', 267, 77],
+    ['232501804', 246, 78],
+    ['232502401', 197, 40],
+    ['232502702', 165, 35],
+    ['232502002', 160, 52],
+    ['232501702', 156, 70],
+    ['232501602', 150, 65],
+    ['242502301', 145, 44],
+    ['242503001', 135, 30],
+    ['220527701', 112, 1],
+    ['241677103', 70, 1],
+    ['220633901', 122, 2],
+    ['221460602', 60, 1],
+    ['231569502', 56, 1],
+    ['221155801', 55, 1],
+    ['231570503', 47, 1],
+    ['820116908', 93, 2],
+    ['231052403', 45, 1],
+    ['231568202', 84, 2],
+  ];
+
+  const source = dataset.sources.find((item) => item.sourceId === sourceId);
+  assert.equal(source?.year, 2025);
+  assert.equal(source?.observedAt, '2024-11-20 09:00');
+  assert.equal(source?.url, 'https://www.eoffcn.com/kszx/detail/1516653.html');
+  assert.equal(source?.positionSnapshots.length, 21, '20 named jobs plus one citywide aggregate');
+  const citywide = dataset.observations.find((item) => item.sourceId === sourceId
+    && item.scope === 'citywide-level');
+  assert.equal(citywide?.applicantsQualified, 10510);
+  assert.equal(citywide?.recruitCount, 4487);
+  assert.equal(citywide?.positionCode, null, 'the citywide total must not be attached to a job code');
+
+  for (const [code, qualified, recruits] of expected) {
+    const position = dataset.positions.find((item) => item.year === 2025 && item.code === code);
+    assert.equal(position?.recruitCount, recruits, `2025 position ${code} planned recruits`);
+    const rows = dataset.observations.filter((item) => item.sourceId === sourceId
+      && item.year === 2025 && item.positionCode === code);
+    assert.equal(rows.length, 1, `position ${code} should have one morning snapshot`);
+    assert.equal(rows[0].scope, 'position-level');
+    assert.equal(rows[0].observedAt, '2024-11-20 09:00');
+    assert.equal(rows[0].applicantsQualified, qualified);
+    assert.equal(rows[0].recruitCount, recruits);
+    assert.equal(rows[0].qualifiedCompetitionRatio, qualified / recruits);
+    assert.equal(rows[0].applicantsRegistered, null);
+    assert.equal(rows[0].applicantsPaid, null);
+    assert.equal(rows[0].actualTestTakers, null);
+  }
+});
+
+test('2025 first-day Huatu competition highlights retain the early citywide and unique-match job snapshots', async () => {
+  const raw = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const dataset = normalizeDataset(raw);
+  const sourceId = 'huatu-2025-first-day-20241118-1800';
+  const source = dataset.sources.find((item) => item.sourceId === sourceId);
+  assert.equal(source?.year, 2025);
+  assert.equal(source?.observedAt, '2024-11-18 18:00');
+  assert.equal(source?.url, 'https://bj.huatu.com/2024/1118/1244540.html');
+
+  const citywide = dataset.observations.find((item) => item.sourceId === sourceId
+    && item.scope === 'citywide-level');
+  assert.equal(citywide?.positionCode, null);
+  assert.equal(citywide?.applicantsQualified, 2255);
+  assert.equal(citywide?.recruitCount, 4487);
+
+  for (const [code, qualified, recruits] of [
+    ['220527701', 45, 1],
+    ['221155801', 33, 1],
+    ['221460602', 29, 1],
+    ['232501804', 104, 78],
+  ]) {
+    const position = dataset.positions.find((item) => item.year === 2025 && item.code === code);
+    assert.equal(position?.recruitCount, recruits, `2025 position ${code} planned recruits`);
+    const rows = dataset.observations.filter((item) => item.sourceId === sourceId
+      && item.year === 2025 && item.positionCode === code);
+    assert.equal(rows.length, 1, `position ${code} should have one first-day snapshot`);
+    assert.equal(rows[0].scope, 'position-level');
+    assert.equal(rows[0].observedAt, '2024-11-18 18:00');
+    assert.equal(rows[0].applicantsQualified, qualified);
+    assert.equal(rows[0].recruitCount, recruits);
+    assert.equal(rows[0].qualifiedCompetitionRatio, qualified / recruits);
+  }
+});
+
 test('Shijingshan district competition snapshots stay separate from exact-code position snapshots', async () => {
   const raw = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
   const dataset = normalizeDataset(raw);
@@ -685,6 +811,68 @@ test('2026 citywide traffic police qualification snapshot links to the exact mun
   assert.equal(observation.observedAt, '2025-11-19 18:00');
 });
 
+test('Dongcheng 2024 role-level competition history retains four dated qualification snapshots', async () => {
+  const raw = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const dataset = normalizeDataset(raw);
+  const expected = [
+    ['eoffcn-2024-shijingshan-20231115-0900', '2023-11-15 09:00', 108, 2],
+    ['eoffcn-2024-citywide-top10-20231116-0900', '2023-11-16 09:00', 186, 2],
+    ['huatu-2024-citywide-top-jobs-20231116-1800', '2023-11-16 18:00', 256, 2],
+    ['eoffcn-2024-qualified', '2023-11-17 09:00', 274, 2],
+  ];
+
+  for (const [sourceId, observedAt, qualified, recruits] of expected) {
+    const rows = dataset.observations.filter((item) => item.year === 2024
+      && item.positionCode === '230116901'
+      && item.sourceId === sourceId
+      && item.observedAt === observedAt);
+    assert.equal(rows.length, 1, `${sourceId} should retain the exact Dongcheng position snapshot`);
+    assert.equal(rows[0].scope, 'position-level');
+    assert.equal(rows[0].applicantsQualified, qualified);
+    assert.equal(rows[0].recruitCount, recruits);
+    assert.equal(rows[0].qualifiedCompetitionRatio, qualified / recruits);
+  }
+});
+
+test('2024 November 16 evening leaderboard attaches only uniquely available year-code positions', async () => {
+  const raw = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const dataset = normalizeDataset(raw);
+  const sourceId = 'huatu-2024-citywide-top-jobs-20231116-1800';
+  const expected = [
+    ['230527501', 438, 2],
+    ['232502203', 435, 112],
+    ['230116901', 256, 2],
+    ['232502702', 245, 34],
+    ['232502902', 239, 49],
+    ['240943601', 152, 1],
+    ['220219306', 128, 1],
+    ['221452802', 111, 1],
+    ['819900501', 109, 1],
+    ['119900203', 105, 1],
+    ['231454501', 90, 1],
+    ['240944202', 85, 1],
+  ];
+
+  const source = dataset.sources.find((item) => item.sourceId === sourceId);
+  assert.equal(source?.url, 'https://www.huatu.com/2023/1117/2703894.html');
+  assert.equal(source?.observedAt, '2023-11-16 18:00');
+  assert.equal(source?.positionSnapshots.length, 12, 'include every exact-code match from both top-ten tables');
+
+  for (const [code, qualified, recruits] of expected) {
+    const positions = dataset.positions.filter((item) => item.year === 2024 && item.code === code);
+    assert.equal(positions.length, 1, `2024 position ${code} should be uniquely identifiable`);
+    assert.equal(positions[0].recruitCount, recruits);
+    const rows = dataset.observations.filter((item) => item.sourceId === sourceId
+      && item.year === 2024 && item.positionCode === code);
+    assert.equal(rows.length, 1, `position ${code} should have one 18:00 snapshot`);
+    assert.equal(rows[0].scope, 'position-level');
+    assert.equal(rows[0].observedAt, '2023-11-16 18:00');
+    assert.equal(rows[0].applicantsQualified, qualified);
+    assert.equal(rows[0].recruitCount, recruits);
+    assert.equal(rows[0].qualifiedCompetitionRatio, qualified / recruits);
+  }
+});
+
 test('2024 and 2025 citywide hot-post snapshots stay linked to same-year positions and exact counts', async () => {
   const raw = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
   const dataset = normalizeDataset(raw);
@@ -773,4 +961,32 @@ test('2024 and 2025 citywide hot-post snapshots stay linked to same-year positio
       assert.equal(rows[0].qualifiedCompetitionRatio, qualified / recruits);
     }
   }
+});
+
+test('2026 November 20 evening snapshot keeps the citywide total and leaves an ambiguous job ratio unlinked', async () => {
+  const raw = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const dataset = normalizeDataset(raw);
+  const sourceId = 'sohu-2026-snapshot-20251120-1800';
+  const source = dataset.sources.find((item) => item.sourceId === sourceId);
+
+  assert.equal(source?.observedAt, '2025-11-20 18:00');
+  assert.equal(source?.url, 'https://www.sohu.com/a/956654507_121124036');
+
+  const archivePositions = dataset.positions.filter((item) => item.year === 2026
+    && item.unit === '北京市昌平区档案馆');
+  assert.deepEqual(archivePositions.map((item) => item.code).sort(), ['821261101', '821261102']);
+  assert.equal(dataset.observations.some((item) => item.year === 2026
+    && item.sourceId === sourceId && item.positionCode), false,
+  'the report names the unit but cannot identify which of its two positions owns the ratio');
+  assert.match(source?.notes || '', /288\.5/);
+  assert.match(source?.notes || '', /821261101.*821261102/);
+  assert.match(source?.notes || '', /未导入岗位级记录|无法.*关联/);
+
+  const citywide = dataset.observations.find((item) => item.year === 2026
+    && item.sourceId === sourceId && item.scope === 'citywide-level');
+  assert.ok(citywide, 'the reported citywide qualified total should remain separate from position-level data');
+  assert.equal(citywide.positionCode, null);
+  assert.equal(citywide.applicantsQualified, 41477);
+  assert.equal(citywide.recruitCount, 3694);
+  assert.equal(citywide.qualifiedCompetitionRatio, 41477 / 3694);
 });

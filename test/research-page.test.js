@@ -23,29 +23,30 @@ test('research findings derive sample coverage, score distribution, and evidence
     reportedRecruits: [138, 138],
   });
   assert.deepEqual(byId['score-sample-2026'].facts, {
-    sampleRows: 288,
+    sampleRows: 313,
     sampleRecruits: 853,
     minimum: 52.15,
     maximum: 142,
-    median: 125,
-    linkedRows: 207,
-    ambiguousRows: 32,
+    median: 125.5,
+    linkedRows: 229,
+    ambiguousRows: 35,
     unmatchedRows: 49,
     scope: '朝阳区岗位最低进面分部分样本、昌平区、大兴区岗位最低进面分部分样本、东城区部分职位的最低进面分；非全区完整名册、房山区、丰台区、海淀区、怀柔区、密云区岗位最低进面分部分样本、平谷区、石景山区、顺义区、北京街道、北京市财政局岗位最低进面线部分样本（本库当前已映射6岗）、西城区、延庆区岗位最低进面线部分样本',
   });
   assert.deepEqual(byId['qualification-coverage'].facts, {
-    positions: 745,
+    positions: 767,
     structuredRequirements: 12,
     completeEligibility: 0,
     officialPositionRows: 0,
   });
   assert.deepEqual(byId['competition-grain'].facts, {
-    observations: 203,
-    jobLevelObservations: 163,
-    aggregateObservations: 40,
-    jobLevelPositions: 66,
+    observations: 253,
+    jobLevelObservations: 210,
+    aggregateObservations: 43,
+    jobLevelPositions: 69,
   });
   assert.match(byId['competition-grain'].title, /岗位级资格审查快照/);
+  assert.ok(byId['competition-grain'].sourceIds.includes('huatu-2025-first-day-20241118-1800'));
   assert.ok(byId['coverage-2026'].sourceIds.includes('huatu-2026-list'));
   assert.ok(byId['score-sample-2026'].sourceIds.includes('cgzj-2026-cutoff-sample'));
   assert.ok(byId['score-sample-2026'].sourceIds.includes('cgzj-2026-haidian-cutoff-sample'));
@@ -96,6 +97,6 @@ test('the research route presents expandable source lineage and its topic filter
   await listeners.click({ target: { closest: (selector) => selector === '[data-action]' ? scoreFilter : null } });
 
   assert.match(root.innerHTML, /data-topic="分数样本" aria-pressed="true">/);
-  assert.match(root.innerHTML, /288 条/);
+  assert.match(root.innerHTML, /313 条/);
   assert.doesNotMatch(root.innerHTML, /class="research-finding[^\"]*"[^>]*data-topic="岗位覆盖"/);
 });

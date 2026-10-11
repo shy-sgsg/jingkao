@@ -129,6 +129,63 @@ test('the 2026 street cutoff sample exposes its exact Haidian and Mentougou posi
   }
 });
 
+test('the 2026 Dongcheng cutoff table is captured and only uniquely matched jobs receive scores', async () => {
+  const data = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
+  const sourceId = 'cgzj-2026-dongcheng-cutoff-sample';
+  const rows = data.scoreRows.filter((row) => row.sourceId === sourceId);
+  const sample = data.scoreSamples.find((item) => item.sourceId === sourceId);
+  const expectedLinked = [
+    ['220116602', 137.5],
+    ['220118401', 137],
+    ['230119601', 136.25],
+    ['220117101', 134.75],
+    ['820116801', 134.25],
+    ['720119001', 133.75],
+    ['230119802', 133.75],
+    ['820116201', 133.5],
+    ['230119501', 133.5],
+    ['220116901', 132.75],
+    ['220118001', 132.75],
+    ['230119801', 132.75],
+    ['220118301', 132.5],
+    ['820118603', 132.5],
+    ['820117202', 132.25],
+    ['220116601', 132],
+    ['220117401', 132],
+    ['220117801', 131.5],
+    ['820117004', 131.25],
+    ['220117303', 131.25],
+    ['220117505', 108.25],
+    ['230119503', 103],
+    ['232501801', 55.9],
+  ];
+
+  assert.equal(rows.length, 26);
+  assert.equal(sample.samplePositions, 26);
+  assert.deepEqual([sample.minimum, sample.maximum], [55.9, 137.5]);
+  assert.equal(rows.filter((row) => row.mappingConfidence === 'high').length, 23);
+  assert.equal(rows.filter((row) => row.mappingConfidence === 'ambiguous').length, 3);
+  assert.ok(rows.every((row) => row.orgType), 'all table rows should retain the source-backed unit type for filtering');
+
+  for (const [code, score] of expectedLinked) {
+    const position = data.positions.find((row) => row.year === 2026 && row.code === code);
+    assert.ok(position, `position ${code} should be available for comparison`);
+    const scoreRow = rows.find((row) => row.positionCode === code);
+    assert.equal(scoreRow.orgType, position.orgType, `${code} should use its matched job's unit type`);
+    const evidence = getPositionCompetitionEvidence(position, {
+      observations: data.observations,
+      scoreRows: data.scoreRows,
+    });
+    assert.equal(evidence.cutoffScore, score, `${code} should expose its source-backed cutoff`);
+    assert.deepEqual(evidence.cutoffSourceIds, [sourceId]);
+  }
+
+  const unresolved = rows.filter((row) => row.mappingConfidence === 'ambiguous');
+  assert.ok(unresolved.every((row) => row.positionCode === null));
+  assert.ok(unresolved.some((row) => row.title === '纪检监察岗'));
+  assert.equal(data.positions.filter((row) => row.year === 2026 && row.districtId === 'dongcheng').length, 23);
+});
+
 test('Daxing cutoff rows attach to unique positions while repeated names remain unresolved', async () => {
   const data = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
   const source = data.sources.find((item) => item.sourceId === 'cgzj-2026-daxing-cutoff-sample');

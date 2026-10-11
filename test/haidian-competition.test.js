@@ -11,7 +11,7 @@ test('Haidian 2025 dated qualified-count snapshots link to exact positions witho
     ['220633901', '北京市海淀区发展和改革委员会', '综合管理岗', 2],
   ];
   const expected = [
-    ['232501902', 'eoffcn-2025-haidian-job-snapshot-20241119-0900', '2024-11-19 09:00', 119, 77, 1.5454545454545454],
+    ['232501902', 'eoffcn-2025-citywide-top10-qualified-20241119-0900', '2024-11-19 09:00', 119, 77, 1.5454545454545454],
     ['232501902', 'eoffcn-2025-citywide-hot-jobs-20241122-0900', '2024-11-22 09:00', 605, 77, 7.857142857142857],
     ['220633901', 'huatu-2025-citywide-top10-qualified', '2024-11-21 09:00', 193, 2, 96.5],
     ['220633901', 'eoffcn-2025-citywide-hot-jobs-20241122-0900', '2024-11-22 09:00', 304, 2, 152],
