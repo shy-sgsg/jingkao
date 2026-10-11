@@ -145,6 +145,11 @@ export const GENERAL_KNOWLEDGE_SOURCES = [
     publishStatus: 'published', copyrightStatus: '用户确认已获得转载授权', note: '仅将题面、答案和解析完整的题目接入对应模块；河南常识第91–105题已核对，整卷及缺项题暂不开放。',
   },
   {
+    id: 'national-2025-deputy-recall', sourceType: 'recalled', title: '2025年国家公务员录用考试《行测》题（副省级网友回忆版）', organization: '公开真题库 / 考生回忆资料 / ERRRC公开题解', examYear: 2025, region: '国考',
+    url: 'https://gwy.gkzhenti.cn/paper/1735356969686', answerUrl: 'https://gwy.gkzhenti.cn/answer/1735356969686', verificationStatus: 'verified',
+    publishStatus: 'published', copyrightStatus: '用户确认已获得转载授权', note: '政治理论、常识判断、言语理解、数量关系、判断推理和资料分析共135题均已按原题号接入；题解来自第三方公开整理，答案与公开答案页逐题核对。',
+  },
+  {
     id: 'mofcom-emergency-supplies', sourceType: 'official_policy', title: '生活必需品市场供应应急管理相关规定', organization: '中华人民共和国商务部',
     url: 'https://www.mofcom.gov.cn/zcfb/blgg/art/2011/art_9c44dbc882cd47a2a2db6ddd07e242fd.html', verificationStatus: 'verified', publishStatus: 'published',
     copyrightStatus: '政策事实概述并链接原文', note: '用于应急组织货源、储备投放和生活必需品市场供应管理的基础概念。',
