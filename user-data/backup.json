@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "backupId": "6968ebc3-fd8c-4a7a-8d1c-49919ca0967d",
-  "updatedAt": "2026-10-12T04:03:44.552Z",
+  "updatedAt": "2026-10-12T06:13:19.475Z",
   "data": {
     "profile": {
       "major": "公共管理",
@@ -2528,6 +2528,65 @@
             "moduleId": "quantitative",
             "completedAt": null,
             "session_id": "apt_quantitative_mv1unb72_e4ydnl"
+          },
+          {
+            "id": "apt_quantitative_mv4uqbed_n6dufh",
+            "mode": "exam",
+            "status": "completed",
+            "planTaskId": null,
+            "questionIds": [
+              "hebei-2025-recall-q74",
+              "apt-quantitative-010",
+              "national-2025-deputy-q80",
+              "zh2025b-q056",
+              "js2024a-q056",
+              "js2024a-q064",
+              "zj2023a-q067",
+              "national-2025-deputy-q79",
+              "zj2023a-q058",
+              "jiangxi-2025-recall-q72",
+              "zh2025b-q066",
+              "zj2023a-q052",
+              "national-2025-deputy-q69",
+              "zh2025c-q055",
+              "bj2022-q72"
+            ],
+            "randomizedQuestionOrder": true,
+            "currentIndex": 1,
+            "correctCount": 2,
+            "reviewingAnswerId": null,
+            "draftAnswers": {
+              "hebei-2025-recall-q74": {
+                "optionId": "B",
+                "selectedAt": "2026-10-12T06:11:25.041Z"
+              },
+              "apt-quantitative-010": {
+                "optionId": "B",
+                "selectedAt": "2026-10-12T06:11:50.366Z"
+              }
+            },
+            "startedAt": "2026-10-12T06:09:03.541Z",
+            "deadline": "2026-10-12T06:29:03.541Z",
+            "durationSeconds": 1200,
+            "filters": {
+              "onlyUnanswered": false,
+              "onlyMistakes": false,
+              "onlyFavorites": false,
+              "excludeQuestionIds": [],
+              "answeredQuestionIds": [
+                "ah2026-outline-quantitative-1"
+              ],
+              "mistakeQuestionIds": [],
+              "favoriteQuestionIds": []
+            },
+            "moduleId": "quantitative",
+            "answeredCount": 2,
+            "unansweredCount": 13,
+            "scoreRate": 0.13333333333333333,
+            "answeredAccuracy": 1,
+            "submittedAt": "2026-10-12T06:11:53.367Z",
+            "completedAt": "2026-10-12T06:11:53.367Z",
+            "session_id": "apt_quantitative_mv4uqbed_n6dufh"
           }
         ],
         "answers": [
@@ -2545,6 +2604,40 @@
             ],
             "moduleId": "quantitative",
             "attempt_id": "answer_apt_quantitative_mv1unb72_e4ydnl_1"
+          },
+          {
+            "id": "answer_apt_quantitative_mv4uqbed_n6dufh_hebei-2025-recall-q74",
+            "sessionId": "apt_quantitative_mv4uqbed_n6dufh",
+            "questionId": "hebei-2025-recall-q74",
+            "selectedOptionId": "B",
+            "correctAnswer": "B",
+            "isCorrect": true,
+            "mode": "exam",
+            "answeredAt": "2026-10-12T06:11:25.041Z",
+            "submittedAt": "2026-10-12T06:11:53.367Z",
+            "questionIndex": 0,
+            "knowledgePointIds": [
+              "quantitative:equations"
+            ],
+            "moduleId": "quantitative",
+            "attempt_id": "answer_apt_quantitative_mv4uqbed_n6dufh_hebei-2025-recall-q74"
+          },
+          {
+            "id": "answer_apt_quantitative_mv4uqbed_n6dufh_apt-quantitative-010",
+            "sessionId": "apt_quantitative_mv4uqbed_n6dufh",
+            "questionId": "apt-quantitative-010",
+            "selectedOptionId": "B",
+            "correctAnswer": "B",
+            "isCorrect": true,
+            "mode": "exam",
+            "answeredAt": "2026-10-12T06:11:50.366Z",
+            "submittedAt": "2026-10-12T06:11:53.367Z",
+            "questionIndex": 1,
+            "knowledgePointIds": [
+              "quantitative:travel"
+            ],
+            "moduleId": "quantitative",
+            "attempt_id": "answer_apt_quantitative_mv4uqbed_n6dufh_apt-quantitative-010"
           }
         ],
         "mistakes": {},
