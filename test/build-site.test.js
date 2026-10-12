@@ -192,6 +192,39 @@ test('standalone aptitude routes preserve dedicated pages and expose available m
   assert.match(generalKnowledgePage, /常识判断知识点目录|法律/);
 });
 
+test('standalone site can resume a 2026 national city recall question', async () => {
+  await import('../scripts/build.mjs');
+  const html = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8');
+  const script = html.match(/<script>\s*([\s\S]*?)<\/script>/)?.[1];
+  const sessionId = 'national-2026-city-recall-test';
+  const storedState = {
+    onboarding: { hidden: true, completed: true },
+    aptitudeModuleStudies: {
+      verbal: {
+        knowledgeProgress: {},
+        sessions: [{
+          id: sessionId,
+          moduleId: 'verbal',
+          mode: 'practice',
+          status: 'active',
+          questionIds: ['national-2026-city-verbal-q36'],
+          currentIndex: 0,
+          draftAnswers: {},
+        }],
+        answers: [],
+        mistakes: {},
+        favorites: [],
+        favoriteKnowledgePointIds: [],
+        unclearKnowledgePointIds: [],
+      },
+    },
+  };
+
+  const page = await renderStandaloneRoute(script, `aptitude/verbal?session=${sessionId}`, storedState);
+
+  assert.ok(page.root.innerHTML.includes('2024年，我国脱贫县农民人均可支配收入增幅'));
+});
+
 test('clicking each general module from the aptitude overview keeps the selected module route', async () => {
   await import('../scripts/build.mjs');
   const html = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8');
