@@ -59,6 +59,54 @@ const quantitativeSource = source(
   'beijing-offcn-2025-quantitative-2024-09-19',
   3,
 );
+const commonKnowledgeSeptemberSource = source(
+  'offcn-beijing-2024-common-september-2023',
+  '2024北京公务员笔试模拟题：行测常识判断',
+  'https://www.eoffcn.com/kszx/detail/1120518.html',
+  2024,
+  'beijing-offcn-2024-common-september-2023',
+  1,
+);
+const commonKnowledgeOctoberSource = source(
+  'offcn-beijing-2024-common-2023-10-24',
+  '2024北京公务员考试行测题库：行测常识判断模拟题2023.10.24',
+  'https://www.eoffcn.com/kszx/detail/1221271.html',
+  2024,
+  'beijing-offcn-2024-common-2023-10-24',
+  1,
+);
+const verbal2024Source = source(
+  'offcn-beijing-2024-verbal-fragment-reading',
+  '2024北京公务员考试行测题库：行测片段阅读模拟题',
+  'https://www.eoffcn.com/kszx/detail/1034068.html',
+  2024,
+  'beijing-offcn-2024-verbal-fragment-reading',
+  2,
+);
+const quantitative2024Source = source(
+  'offcn-beijing-2024-quantitative-2023-09-18',
+  '2024北京公务员考试行测题库：行测数量关系模拟题2023.09.18',
+  'https://www.eoffcn.com/kszx/detail/1201412.html',
+  2024,
+  'beijing-offcn-2024-quantitative-2023-09-18',
+  3,
+);
+const dataAnalysis2024Source = source(
+  'offcn-beijing-2024-data-2023-08-31',
+  '2024北京公务员考试行测题库：行测资料分析模拟题2023.08.31',
+  'https://www.eoffcn.com/kszx/detail/1192050.html',
+  2024,
+  'beijing-offcn-2024-data-2023-08-31',
+  5,
+);
+const reasoning2025ArticleSource = source(
+  'offcn-beijing-2025-reasoning-article-1308720',
+  '2025北京公务员考试职位表页面所附行测判断推理模拟题',
+  'https://www.eoffcn.com/kszx/detail/1308720.html',
+  2025,
+  'beijing-offcn-2025-reasoning-article-1308720',
+  4,
+);
 
 const question = (sourceData, fields) => ({
   ...sourceData,
@@ -170,6 +218,167 @@ return [
     stem: '双十一来临之际，某商家开始进行活动，已知某件商品原价999,在使用了100元抵199元的优惠券后打九折并减40元，这时候的价格仍有10%的利润，那么这件商品进价是多少?',
     options: ['600', '660', '700', '770'], correctAnswer: 'C',
     explanation: '中公解析：使用100元抵199元的优惠券后，价格为999−99=900元；打九折并减40元后售价为900×0.9−40=770元。售价是进价的1.1倍，因此进价为770÷1.1=700元，选择C。',
+  }),
+  question(commonKnowledgeSeptemberSource, {
+    id: 'bj2024offcn-common-september-q1', moduleId: 'general-knowledge', subjectId: 'geography',
+    topicId: 'geography:world', knowledgePointIds: ['geography:countries'], originalQuestionNo: 1,
+    stem: '下列国家属于我国陆上邻国的是( )。',
+    options: ['阿富汗', '白俄罗斯', '伊朗', '日本'], correctAnswer: 'A',
+    explanation: '中公解析：我国有14个陆上接壤的国家，其中包括阿富汗；白俄罗斯和伊朗不是我国陆上邻国，日本与我国隔海相望，故本题答案为A。',
+  }),
+  question(commonKnowledgeSeptemberSource, {
+    id: 'bj2024offcn-common-september-q2', moduleId: 'general-knowledge', subjectId: 'history',
+    topicId: 'history:modern', knowledgePointIds: ['history:new-china'], originalQuestionNo: 2,
+    stem: '有关新中国成立以来的中国外交，下列表述错误的是( )。',
+    options: [
+      '新中国成立初期，实行“另起炉灶”、“打扫干净屋子再请客”、“一边倒”的三大外交决策',
+      '当前，我国的时代背景是和平与发展',
+      '构建新型国际关系以相互尊重、公平正义、合作共赢为原则',
+      '2013年习近平在出访中亚和印度期间先后提出共建“丝绸之路经济带”和“21世纪海上丝绸之路”的倡议',
+    ], correctAnswer: 'D',
+    explanation: '中公解析：新中国成立初期的三大外交决策、和平与发展的时代背景，以及新型国际关系原则均正确。“一带一路”倡议是在出访中亚和东南亚国家期间提出，D项将印度写入，表述错误，答案为D。',
+  }),
+  question(commonKnowledgeSeptemberSource, {
+    id: 'bj2024offcn-common-september-q3', moduleId: 'general-knowledge', subjectId: 'economy',
+    topicId: 'economy:development', knowledgePointIds: ['economy:quality-growth'], originalQuestionNo: 3,
+    stem: '1992年，党的十四大指出，经济体制改革的目标是( )。',
+    options: ['建立现代化经济体系', '完善产权制度和要素市场化改革', '解放和发展生产力', '建立社会主义市场经济体制'], correctAnswer: 'D',
+    explanation: '中公解析：建立现代化经济体系是我国发展的战略目标；完善产权制度和要素市场化配置是经济体制改革的重点；解放和发展生产力是改革的根本目的。1992年党的十四大明确改革目标是建立社会主义市场经济体制，答案为D。',
+  }),
+  question(commonKnowledgeOctoberSource, {
+    id: 'bj2024offcn-common-october-q1', moduleId: 'general-knowledge', subjectId: 'humanities',
+    topicId: 'humanities:art', knowledgePointIds: ['humanities:painting'], originalQuestionNo: 1,
+    stem: '假如中外举办联合画展，下列作品标签信息错误的是：',
+    options: [
+      '德国画家米勒《拾穗者》',
+      '元代画家赵孟頫《秋郊饮马图》',
+      '西班牙画家毕加索《格尔尼卡》',
+      '五代南唐画家顾闳中《韩熙载夜宴图》',
+    ], correctAnswer: 'A',
+    explanation: '中公解析：米勒是法国巴比松画派的代表人物，《拾穗者》是其代表作，A项将其国籍写为德国，标签信息错误，答案为A。',
+  }),
+  question(commonKnowledgeOctoberSource, {
+    id: 'bj2024offcn-common-october-q2', moduleId: 'general-knowledge', subjectId: 'humanities',
+    topicId: 'humanities:literature', knowledgePointIds: ['humanities:poetry'], originalQuestionNo: 2,
+    stem: '下列有关爱国精神和民族气节的诗文按其时间先后顺序排列正确的是：\n①位卑未敢忘忧国，事定犹须待阖棺\n②苟利国家生死以，岂因祸福避趋之\n③人生自古谁无死，留取丹心照汗青\n④先天下之忧而忧，后天下之乐而乐\n⑤保国者，其君其臣肉食者谋之;保天下者，匹夫之贱与有责焉耳矣',
+    options: ['④①③⑤②', '③④①②⑤', '④②⑤③①', '①②④⑤③'], correctAnswer: 'A',
+    explanation: '中公解析：①出自南宋陆游，②出自清代林则徐，③出自南宋文天祥，④出自北宋范仲淹，⑤出自明末清初顾炎武。按时间先后为④①③⑤②，答案为A。',
+  }),
+  question(commonKnowledgeOctoberSource, {
+    id: 'bj2024offcn-common-october-q3', moduleId: 'general-knowledge', subjectId: 'humanities',
+    topicId: 'humanities:literature', knowledgePointIds: ['humanities:literary-history'], originalQuestionNo: 3,
+    stem: '下列文学作品与其创作时代对应关系正确的是：',
+    options: [
+      '王维《山居秋暝》、陶渊明《闲情赋》——唐代',
+      '冯梦龙《警世通言》、巴金《随想录》——现当代',
+      '刘勰《文心雕龙》、王羲之《兰亭序》——魏晋南北朝',
+      '文天祥《过零丁洋》、纳兰性德《长相思·山一程》——宋代',
+    ], correctAnswer: 'C',
+    explanation: '中公解析：刘勰是南朝梁文学理论批评家，王羲之是东晋书法家，二者均属魏晋南北朝时期，C项对应正确，答案为C。',
+  }),
+  question(verbal2024Source, {
+    id: 'bj2024offcn-verbal-q1', moduleId: 'verbal', subjectId: 'verbal',
+    topicId: 'verbal:reading', knowledgePointIds: ['verbal:main-idea'], originalQuestionNo: 1,
+    stem: '城墙是古代城市的标志，也是研究城市发展的独特角度。对中国城墙的描述，自古以来就大量出现在正史、方志、文学作品或绘图绘画中，并且是都城学、规划学、军事学等多门学科的重要研究对象，这说明城墙并非一堵“墙”那么简单。可以说，每一座古城墙，都是一本厚重的大书，每一块城砖、每一座城门、每一段护城河，都是这本大书中的一行一页。面对如此厚重的中国城墙，我们当心存敬畏。这段文字意在说明：',
+    options: [
+      '应对古城墙的文化遗产价值予以重视',
+      '古城墙的文化价值远高于其商业价值',
+      '亟须对现存的古城墙开展保护和研究',
+      '城墙为研究城市发展提供了独特视角',
+    ], correctAnswer: 'A',
+    explanation: '中公解析：文段指出古城墙具有独特的文化和研究价值，结尾强调应对其心存敬畏，A项概括了对古城墙文化遗产价值予以重视的主旨。',
+  }),
+  question(verbal2024Source, {
+    id: 'bj2024offcn-verbal-q2', moduleId: 'verbal', subjectId: 'verbal',
+    topicId: 'verbal:reading', knowledgePointIds: ['verbal:main-idea'], originalQuestionNo: 2,
+    stem: '将“幸福”传感器放在人体表面或植入人体，通过各项指标可测出人们每一刻的幸福指数。没有一个“幸福”传感器会是完美无缺的，而且也不需要。温度计被发明出来时也很不精确，但随着时间推移，温度计的设计日渐精致，现已是不可或缺的日用品。科学家们相信，“幸福”传感器也将遵循类似进化进程，虽然它们在评估人们心理状态时总会有一定程度的不确定性，可穿戴传感器却已比衡量幸福的传统工具来得更为低调，更加易用。这段文字意在强调：',
+    options: [
+      '任何“幸福”传感器都不可能完美无缺',
+      '“幸福”传感器将成为不可或缺的日用品',
+      '“幸福”传感器会向着高精度的方向发展',
+      '人类并不需要完美无缺的“幸福”传感器',
+    ], correctAnswer: 'B',
+    explanation: '中公解析：文段将“幸福”传感器与温度计的演进过程类比，指出传感器会逐步发展并成为不可或缺的日用品，答案为B。',
+  }),
+  question(verbal2024Source, {
+    id: 'bj2024offcn-verbal-q3', moduleId: 'verbal', subjectId: 'verbal',
+    topicId: 'verbal:sentence-expression', knowledgePointIds: ['verbal:sentence-order'], originalQuestionNo: 3,
+    stem: '①单纯罗列史料，构不成历史\n②只有在史料引导下发挥想象力，才能把历史人物和事件的丰富内涵表现出来\n③历史研究不仅需要发掘史料，而且需要史学家通过史料发挥合理想象\n④所谓合理想象，就是要尽可能避免不实之虚构\n⑤这是一种悖论，又难以杜绝\n⑥但是，只要想象就难以避免不实虚构出现\n将以上6个句子重新排列，语序正确的是( )',
+    options: ['④⑤⑥③②①', '③①②④⑥⑤', '⑤③②①④⑥', '①③④⑥⑤②'], correctAnswer: 'B',
+    explanation: '中公解析：⑤以“这”指代前文，不能作首句；③引出“合理想象”，④再作解释，故③应在④前。结合句间衔接，顺序为③①②④⑥⑤，答案为B。',
+  }),
+  question(quantitative2024Source, {
+    id: 'bj2024offcn-quant-q1', moduleId: 'quantitative', subjectId: 'quantitative',
+    topicId: 'quantitative:arithmetic-basics', knowledgePointIds: ['quantitative:option-substitution'], originalQuestionNo: 1,
+    stem: '已知赵先生的年龄是钱先生的年龄的2倍，钱先生比孙先生小7岁，三位先生的年龄之和是小于70的素数，且素数的各位数字之和为13，那么赵、钱、孙三位先生的年龄分别为：',
+    options: ['30岁，15岁，22岁', '36岁，18岁，13岁', '28岁，14岁，25岁', '14岁，7岁，46岁'], correctAnswer: 'A',
+    explanation: '中公解析：代入选项检验。A项中赵先生30岁，是钱先生15岁的2倍；孙先生22岁，钱先生比孙先生小7岁；三人年龄和为67，是小于70且各位数字之和为13的素数，选择A。',
+  }),
+  question(quantitative2024Source, {
+    id: 'bj2024offcn-quant-q2', moduleId: 'quantitative', subjectId: 'quantitative',
+    topicId: 'quantitative:arithmetic-basics', knowledgePointIds: ['quantitative:equations'], originalQuestionNo: 2,
+    stem: '姐弟俩相差3岁，2000年姐弟两人年龄之和是妈妈年龄的四分之一，2006年姐弟两人年龄之和是妈妈的二分之一。问那一年姐弟两人年龄之和等于妈妈的年龄?',
+    options: ['2012', '2018', '2024', '2027'], correctAnswer: 'D',
+    explanation: '中公解析：设2000年妈妈年龄为x、姐弟年龄和为y，则y=x/4；到2006年，妈妈长6岁，姐弟年龄和增加12岁，满足y+12=(x+6)/2，解得x=36、y=9。若再过n年姐弟年龄和等于妈妈年龄，则x+n=y+2n，解得n=27，即2027年，选择D。',
+  }),
+  question(quantitative2024Source, {
+    id: 'bj2024offcn-quant-q3', moduleId: 'quantitative', subjectId: 'quantitative',
+    topicId: 'quantitative:common-models', knowledgePointIds: ['quantitative:equivalent-relations'], originalQuestionNo: 3,
+    stem: '一条直线上依次有甲乙丙丁四个煤场，相邻两个煤场之间的距离都是 3 千米，目前甲有煤 100 吨，乙有煤 90 吨，丙有煤 12 吨，丁没有煤。现在要将四个煤场的煤集中到一个煤场，已知 1 吨运输 1 千米的花费是 10 元，那么为使得运费最少，则应该把煤集中到哪个煤场?',
+    options: ['甲', '乙', '丙', '丁'], correctAnswer: 'B',
+    explanation: '中公解析：把煤场视为一条线上的位置，最小化总运输距离时应选加权中位位置。乙左侧有100吨，右侧有12吨，乙处及其右侧累计重量首次超过总重量的一半，故集中到乙煤场，选择B。',
+  }),
+  question(dataAnalysis2024Source, {
+    id: 'bj2024offcn-data-q1', moduleId: 'data-analysis', subjectId: 'data-analysis',
+    topicId: 'data-analysis:growth', knowledgePointIds: ['data-analysis:average-growth'], originalQuestionNo: 1,
+    stem: '2019年前三季度，黑色金属冶炼行业用电量4200亿千瓦时，同比增长4.9%，增速比上年同期回落5.4个百分点。2019年前三季度，全国黑色金属冶炼行业用电量比2017年同期约增长了：',
+    options: ['15.7%', '10.3%', '5.4%', '0.5%'], correctAnswer: 'A',
+    explanation: '中公解析：2019年前三季度同比增长4.9%，较上年同期回落5.4个百分点，因此2018年同期增长率为10.3%。隔年增长率为(1+4.9%)×(1+10.3%)−1≈15.7%，选择A。',
+  }),
+  question(dataAnalysis2024Source, {
+    id: 'bj2024offcn-data-q2', moduleId: 'data-analysis', subjectId: 'data-analysis',
+    topicId: 'data-analysis:comprehensive-analysis', knowledgePointIds: ['data-analysis:mixed-indicators'], originalQuestionNo: 2,
+    stem: '2018年，我国原油进口7686.8万吨，同比增长4.1%，进口均价为每吨2045.5元，同比增长27.5%。问：2018年我国原油进口总额增加了百分之几?',
+    options: ['35%', '33%', '31%', '29%'], correctAnswer: 'B',
+    explanation: '中公解析：进口总额=进口量×进口均价，两项增长率分别为4.1%和27.5%，总额增长率=(1+4.1%)×(1+27.5%)−1≈32.7%，最接近33%，选择B。',
+  }),
+  question(dataAnalysis2024Source, {
+    id: 'bj2024offcn-data-q3', moduleId: 'data-analysis', subjectId: 'data-analysis',
+    topicId: 'data-analysis:proportion', knowledgePointIds: ['data-analysis:share-change'], originalQuestionNo: 3,
+    stem: '2019年1-11月全国规模以上船舶工业企业1052家，实现主营业收入3947.7亿元，同比增长11.9%。其中，船舶制造企业2879.9亿元，同比增长10.6%;船舶配套企业430.76亿元，同比增长7.3%;船舶修理企业212.9亿元，同比增长15.3%。问题：2019年1-11月全国规模以上船舶修理企业实现主营业收入占规模以上船舶工业企业的比重同比约：',
+    options: ['上升了0.2个百分点', '下降了0.2个百分点', '上升了3.4个百分点', '下降了3.4个百分点'], correctAnswer: 'A',
+    explanation: '中公解析：船舶修理收入增长率15.3%高于全行业收入增长率11.9%，其占比上升。比重变化量约为现期比重×(部分增长率−整体增长率)/(1+部分增长率)，结果小于3.4个百分点，约为0.2个百分点，选择A。',
+  }),
+  question(reasoning2025ArticleSource, {
+    id: 'bj2025offcn-reasoning-article-q1', moduleId: 'reasoning', subjectId: 'reasoning',
+    topicId: 'reasoning:logical-judgment', knowledgePointIds: ['reasoning:conclusion'], originalQuestionNo: 1,
+    stem: '甲、乙、丙、丁4位同学参加学校运动会。已知，他们4人每人都至少获得1个奖项，4人获奖总数为10。关于具体获奖情况，4人还有如下说法：\n甲：乙和丙的获奖总数为5;\n乙：丙和丁的获奖总数为5;\n丙：丁和甲的获奖总数为5：\n丁：甲和乙的获奖总数为4。\n后来得知，获得2个奖项的人说了假话，而其他人均说了真话。根据以上信息，甲、乙、丙、丁4人具体的获奖数分别应是：',
+    options: ['2、3、2、3', '2、4、1、3', '2、2、2、4', '2、2、3、3'], correctAnswer: 'C',
+    explanation: '中公解析：四个选项中甲均获得2个奖项，因此甲说了假话，乙和丙的获奖总数不为5。只有C项满足这一条件，答案为C。',
+  }),
+  question(reasoning2025ArticleSource, {
+    id: 'bj2025offcn-reasoning-article-q2', moduleId: 'reasoning', subjectId: 'reasoning',
+    topicId: 'reasoning:logical-judgment', knowledgePointIds: ['reasoning:strengthen-weaken'], originalQuestionNo: 2,
+    stem: '近日，有研究团队通过对44个反刍动物物种的基因组测序研究，创建了一个反刍动物的系统进化树，从而解析大量反刍动物的演化史。结果揭示，在近10万年前，反刍动物种群大幅衰减，而这些种群数的减少与人类向非洲之外迁徙的时间相符。有人据此认为，这佐证了早期人类活动造成了反刍动物种群的衰减。以下哪项如果为真，最能质疑上述结论?',
+    options: [
+      '反刍动物种群衰减后，植被愈加茂盛，为人类提供了更多食物',
+      '反刍动物通常有角，在遇到人类攻击时能发挥一定的防御作用',
+      '同一时期的马、驴等奇蹄目动物的种群也出现大幅衰减的现象',
+      '同一时期大型猫科动物繁盛，它们大规模捕杀反刍动物',
+    ], correctAnswer: 'D',
+    explanation: '中公解析：题干将人类活动作为反刍动物种群衰减的原因。若同一时期大型猫科动物繁盛并大规模捕杀反刍动物，就提供了另一种可能原因，属于另有他因，能够削弱结论，选择D。',
+  }),
+  question(reasoning2025ArticleSource, {
+    id: 'bj2025offcn-reasoning-article-q3', moduleId: 'reasoning', subjectId: 'reasoning',
+    topicId: 'reasoning:logical-judgment', knowledgePointIds: ['reasoning:conditional-translation'], originalQuestionNo: 3,
+    stem: '2009年法国航空公司一架客机失事。如果法国及其他多国没有采取积极的搜救行动，就不会尽早发现失事飞机的残骸。如果失事飞机设计公司提供技术支持并且派专家参与失事原因分析，那么关于失事事件的调查报告就会更客观。以上陈述如果为真，以下哪项不可能为假?',
+    options: [
+      '或者法国及其他多国采取积极的搜救行动，或者不会尽早发现失事飞机的残骸',
+      '除非失事飞机设计公司提供技术支持，否则就不会尽早发现失事飞机的残骸',
+      '如果法国及其他多国采取积极的搜救行动，就会尽早发现失事飞机的残骸',
+      '如果失事飞机设计公司提供技术支持，那么关于失事事件的调查报告就会更客观。',
+    ], correctAnswer: 'A',
+    explanation: '中公解析：题干的第一条假言命题“没有采取积极搜救行动→不会尽早发现残骸”等价于“采取积极搜救行动，或者不会尽早发现残骸”，与A项一致，因此A项不可能为假。',
   }),
 ];
 })();
