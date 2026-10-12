@@ -42,6 +42,7 @@ const appModules = [
   '../src/aptitude/sessions.js',
   '../src/aptitude/importedQuestionData.js',
   '../src/aptitude/jiangxi2026RecallData.js',
+  '../src/aptitude/innerMongolia2026RecallData.js',
   '../src/aptitude/jiangxi2025RecallData.js',
   '../src/aptitude/hebei2025RecallData.js',
   '../src/aptitude/hubei2024RecallData.js',
