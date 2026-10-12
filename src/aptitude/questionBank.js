@@ -9,6 +9,7 @@ import { NATIONAL_2026_CITY_RECALL_QUESTIONS } from './national2026CityRecallDat
 import { BEIJING_2021_DISTRICT_VERBAL_QUESTIONS } from './beijing2021DistrictVerbalData.js';
 import { BEIJING_2021_DISTRICT_QUANTITATIVE_QUESTIONS } from './beijing2021DistrictQuantitativeData.js';
 import { BEIJING_2021_DISTRICT_REASONING_QUESTIONS } from './beijing2021DistrictReasoningData.js';
+import { BEIJING_2021_DISTRICT_DATA_ANALYSIS_QUESTIONS } from './beijing2021DistrictDataAnalysisData.js';
 
 const QUESTION_SEEDS = [
   ['political-theory', 'theory', 'practice-and-knowledge', '基础理论', '实践是检验认识是否正确的主要标准，最直接的理由是？', ['实践只会重复已有认识', '理论一经提出便自动成为真理', '实践能把认识与客观效果联系起来检验', '多数人赞同就必然正确'], 'C', '实践把主观认识置于客观活动及其结果中检验；共识和书本结论都不能替代实践检验。', 'easy'],
@@ -484,6 +485,6 @@ for (const question of sourcedQuestions) {
   APTITUDE_MODULE_QUESTION_BANKS[question.moduleId].push(question);
 }
 
-for (const question of [...IMPORTED_SOURCE_QUESTIONS, ...JIANGXI_2026_RECALL_QUESTIONS, ...JIANGXI_2025_RECALL_QUESTIONS, ...HEBEI_2025_RECALL_QUESTIONS, ...HUBEI_2024_RECALL_QUESTIONS, ...NATIONAL_2025_DEPUTY_RECALL_QUESTIONS, ...NATIONAL_2026_CITY_RECALL_QUESTIONS, ...BEIJING_2021_DISTRICT_VERBAL_QUESTIONS, ...BEIJING_2021_DISTRICT_QUANTITATIVE_QUESTIONS, ...BEIJING_2021_DISTRICT_REASONING_QUESTIONS].filter((item) => item.moduleId !== 'general-knowledge')) {
+for (const question of [...IMPORTED_SOURCE_QUESTIONS, ...JIANGXI_2026_RECALL_QUESTIONS, ...JIANGXI_2025_RECALL_QUESTIONS, ...HEBEI_2025_RECALL_QUESTIONS, ...HUBEI_2024_RECALL_QUESTIONS, ...NATIONAL_2025_DEPUTY_RECALL_QUESTIONS, ...NATIONAL_2026_CITY_RECALL_QUESTIONS, ...BEIJING_2021_DISTRICT_VERBAL_QUESTIONS, ...BEIJING_2021_DISTRICT_QUANTITATIVE_QUESTIONS, ...BEIJING_2021_DISTRICT_REASONING_QUESTIONS, ...BEIJING_2021_DISTRICT_DATA_ANALYSIS_QUESTIONS].filter((item) => item.moduleId !== 'general-knowledge')) {
   APTITUDE_MODULE_QUESTION_BANKS[question.moduleId].push(sourceQuestion(question, question));
 }
