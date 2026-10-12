@@ -55,8 +55,8 @@
   "source_page_file": "source-page.html",
   "question_records_file": "questions.json",
   "answer_files": [],
-  "image_status": "image URLs preserved in captured page; binary assets not yet mirrored",
-  "archive_status": "full question page and question blocks captured; answer keys linked but not individually captured or audited",
+  "image_status": "题36两张行内公式图按原样转录；本次发布题段不依赖外链图片；其他题段图片仍待镜像核验。",
+  "archive_status": "全卷 135 题原始题块已归档；言语题 36–70 的题面、答案、解析与六组共用材料已逐题核验并接入；其余模块待核。",
   "question_records": [
     {
       "original_question_no": 1,
@@ -1509,7 +1509,7 @@
   ],
   "notes": [
     "原始 Aipta 题页已按字节保存；结构化区块对应题号和模块，题面来源仍以原页面为准。",
-    "该页未包含答案，只提示下载答案解析；答案单独核验后再建答案文件。",
-    "卷内多选题、图题和共享材料均按原题页保留，尚未逐题检查资产完整性。"
+    "言语题 36–70 的题干、选项、答案和解析已核验；答案来源链接保存在每道题记录中。",
+    "言语题六组共享材料已按原文归组；第36题两张行内公式图片已转录为对应温度数值；其他题段的图像与答案仍待逐题核验。"
   ]
 }
