@@ -6,6 +6,7 @@ import { HUBEI_2024_RECALL_QUESTIONS } from '../aptitude/hubei2024RecallData.js'
 import { NATIONAL_2025_DEPUTY_RECALL_QUESTIONS } from '../aptitude/national2025DeputyRecallData.js';
 import { NATIONAL_2026_CITY_RECALL_QUESTIONS } from '../aptitude/national2026CityRecallData.js';
 import { BEIJING_2021_DISTRICT_GENERAL_KNOWLEDGE_QUESTIONS } from '../aptitude/beijing2021DistrictGeneralKnowledgeData.js';
+import { BEIJING_OFFCN_MOCK_QUESTIONS } from '../aptitude/beijingOffcnMockData.js';
 import { getGeneralKnowledgeTree } from './knowledge.js';
 
 const sourcedKnowledgeQuestion = (question, source) => ({
@@ -417,7 +418,7 @@ GENERAL_KNOWLEDGE_QUESTION_BANK.push(
 );
 
 const importedKnowledgeTree = getGeneralKnowledgeTree();
-const importedKnowledgeQuestions = [...IMPORTED_SOURCE_QUESTIONS, ...JIANGXI_2026_RECALL_QUESTIONS, ...JIANGXI_2025_RECALL_QUESTIONS, ...HEBEI_2025_RECALL_QUESTIONS, ...HUBEI_2024_RECALL_QUESTIONS, ...NATIONAL_2025_DEPUTY_RECALL_QUESTIONS, ...NATIONAL_2026_CITY_RECALL_QUESTIONS, ...BEIJING_2021_DISTRICT_GENERAL_KNOWLEDGE_QUESTIONS]
+const importedKnowledgeQuestions = [...IMPORTED_SOURCE_QUESTIONS, ...JIANGXI_2026_RECALL_QUESTIONS, ...JIANGXI_2025_RECALL_QUESTIONS, ...HEBEI_2025_RECALL_QUESTIONS, ...HUBEI_2024_RECALL_QUESTIONS, ...NATIONAL_2025_DEPUTY_RECALL_QUESTIONS, ...NATIONAL_2026_CITY_RECALL_QUESTIONS, ...BEIJING_2021_DISTRICT_GENERAL_KNOWLEDGE_QUESTIONS, ...BEIJING_OFFCN_MOCK_QUESTIONS]
   .filter((question) => question.moduleId === 'general-knowledge')
   .map((question) => {
     const subject = importedKnowledgeTree.find((item) => item.id === question.subjectId);

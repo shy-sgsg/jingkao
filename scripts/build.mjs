@@ -52,6 +52,7 @@ const appModules = [
   '../src/aptitude/beijing2021DistrictReasoningData.js',
   '../src/aptitude/beijing2021DistrictDataAnalysisData.js',
   '../src/aptitude/beijing2021DistrictGeneralKnowledgeData.js',
+  '../src/aptitude/beijingOffcnMockData.js',
   '../src/aptitude/questionBank.js',
   '../src/general-knowledge/lessonContent.js',
   '../src/general-knowledge/knowledge.js',
