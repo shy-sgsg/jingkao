@@ -738,6 +738,12 @@ export const GENERAL_KNOWLEDGE_SOURCES = [
     note: '题面按爱真题公开回忆版核定，答案键与公开真题库1–130题逐题一致；保留网友回忆版标注。',
   },
   {
+    id: 'national-2026-city-level-recall', sourceType: 'recalled', title: '2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）', organization: '公开考生回忆题源 / 公开答案与解析资料', examYear: 2026, region: '全国',
+    url: 'https://www.kaoshiji.cn/gwyhc/1180.html', answerUrl: 'https://iget100.com/gongkao/guokao/2026-dishiji-xingce',
+    verificationStatus: 'verified', publishStatus: 'published', copyrightStatus: '用户确认已获转载授权',
+    note: '常识判断题面按公开考生回忆版归档，答案结合配套公开答案与法规、官方资料核验；本站已获转载授权。',
+  },
+  {
     id: 'jiangsu-2024-a-32xueyuan', sourceType: 'verified_exam', title: '2024 年江苏省公务员录用考试行测 A 类真题（第三方出版原卷）', organization: '32 学苑', examYear: 2024,
     url: 'https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf',
     answerUrl: 'https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf',

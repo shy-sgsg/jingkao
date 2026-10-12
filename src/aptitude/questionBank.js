@@ -233,7 +233,16 @@ const SOURCE_POINT_IDS = {
   'verbal:contextual-word-choice': 'verbal:context',
   'quantitative:volume-displacement': 'quantitative:geometry',
   'reasoning:definition-judgment': 'reasoning:case-matching',
+  'reasoning:graphic-classification': 'reasoning:attributes',
+  'reasoning:analogy': 'reasoning:logical-relations',
+  'reasoning:set-relationships': 'reasoning:logical-relations',
+  'reasoning:argument-support': 'reasoning:strengthen-weaken',
+  'reasoning:argument-weakening': 'reasoning:strengthen-weaken',
+  'reasoning:logical-deduction': 'reasoning:conclusion',
+  'reasoning:necessary-assumption': 'reasoning:assumption',
+  'reasoning:conditional-reasoning': 'reasoning:conditional-translation',
   'reasoning:paired-tools': 'reasoning:logical-relations',
+  'reasoning:spatial-visualization': 'reasoning:spatial',
   'reasoning:argument-criticism': 'reasoning:strengthen-weaken',
 };
 

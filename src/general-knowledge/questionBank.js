@@ -433,6 +433,9 @@ const importedKnowledgeQuestions = [...IMPORTED_SOURCE_QUESTIONS, ...JIANGXI_202
     return {
       ...question,
       moduleId: 'general_knowledge',
+      copyrightStatus: question.copyrightStatus === 'user_confirmed_republication_authorization'
+        ? 'licensed'
+        : question.copyrightStatus,
       subjectTitle: subject?.title || question.subjectId,
       topicTitle: topic?.title || question.topicId,
       knowledgePointIds: question.knowledgePointIds?.length ? question.knowledgePointIds : (point ? [point.id] : []),
