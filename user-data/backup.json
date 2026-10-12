@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "backupId": "6968ebc3-fd8c-4a7a-8d1c-49919ca0967d",
-  "updatedAt": "2026-10-11T13:48:51.343Z",
+  "updatedAt": "2026-10-12T04:03:44.552Z",
   "data": {
     "profile": {
       "major": "公共管理",
@@ -2796,6 +2796,71 @@
             "submittedAt": "2026-10-11T02:32:54.798Z",
             "completedAt": "2026-10-11T02:32:54.798Z",
             "session_id": "apt_reasoning_mv3711jq_l6mc7p"
+          },
+          {
+            "id": "apt_reasoning_mv3wa4a8_kp1esu",
+            "mode": "practice",
+            "status": "active",
+            "planTaskId": null,
+            "questionIds": [
+              "apt-reasoning-011",
+              "js2024a-q079",
+              "national-2025-deputy-q86",
+              "zh2025a-q095",
+              "jxzh2025m1-q111",
+              "zh2025a-q082",
+              "zh2025a-q096",
+              "zh2025c-q097",
+              "zh2025b-q083"
+            ],
+            "randomizedQuestionOrder": true,
+            "currentIndex": 4,
+            "correctCount": 2,
+            "reviewingAnswerId": "answer_apt_reasoning_mv3wa4a8_kp1esu_5",
+            "draftAnswers": {},
+            "startedAt": "2026-10-11T14:04:40.880Z",
+            "deadline": null,
+            "durationSeconds": null,
+            "filters": {
+              "onlyUnanswered": false,
+              "onlyMistakes": true,
+              "onlyFavorites": false,
+              "excludeQuestionIds": [],
+              "answeredQuestionIds": [
+                "zh2025b-q083",
+                "zh2025a-q082",
+                "zj2023a-q075",
+                "zh2025a-q096",
+                "apt-reasoning-011",
+                "zh2025a-q095",
+                "national-2025-deputy-q86",
+                "jxzh2025m1-q104",
+                "national-2025-deputy-q89",
+                "zh2025c-q097",
+                "ah2022-q061",
+                "js2024a-q079",
+                "zj2023a-q105",
+                "jxzh2025m1-q111",
+                "hubei2024-q099",
+                "bj2026-reasoning-example-syllogism",
+                "js2024a-q067"
+              ],
+              "mistakeQuestionIds": [
+                "zh2025b-q083",
+                "zh2025a-q082",
+                "zh2025a-q096",
+                "apt-reasoning-011",
+                "zh2025a-q095",
+                "national-2025-deputy-q86",
+                "zh2025c-q097",
+                "js2024a-q079",
+                "jxzh2025m1-q111"
+              ],
+              "favoriteQuestionIds": []
+            },
+            "moduleId": "reasoning",
+            "completedAt": null,
+            "session_id": "apt_reasoning_mv3wa4a8_kp1esu"
           }
         ],
         "answers": [
@@ -3087,6 +3152,81 @@
             ],
             "moduleId": "reasoning",
             "attempt_id": "answer_apt_reasoning_mv3711jq_l6mc7p_js2024a-q067"
+          },
+          {
+            "id": "answer_apt_reasoning_mv3wa4a8_kp1esu_1",
+            "sessionId": "apt_reasoning_mv3wa4a8_kp1esu",
+            "questionId": "apt-reasoning-011",
+            "selectedOptionId": "B",
+            "correctAnswer": "B",
+            "isCorrect": true,
+            "mode": "practice",
+            "answeredAt": "2026-10-11T14:04:56.162Z",
+            "knowledgePointIds": [
+              "reasoning:conditional-translation"
+            ],
+            "moduleId": "reasoning",
+            "attempt_id": "answer_apt_reasoning_mv3wa4a8_kp1esu_1"
+          },
+          {
+            "id": "answer_apt_reasoning_mv3wa4a8_kp1esu_2",
+            "sessionId": "apt_reasoning_mv3wa4a8_kp1esu",
+            "questionId": "js2024a-q079",
+            "selectedOptionId": "C",
+            "correctAnswer": "B",
+            "isCorrect": false,
+            "mode": "practice",
+            "answeredAt": "2026-10-11T14:05:36.710Z",
+            "knowledgePointIds": [
+              "reasoning:graphic-patterns"
+            ],
+            "moduleId": "reasoning",
+            "attempt_id": "answer_apt_reasoning_mv3wa4a8_kp1esu_2"
+          },
+          {
+            "id": "answer_apt_reasoning_mv3wa4a8_kp1esu_3",
+            "sessionId": "apt_reasoning_mv3wa4a8_kp1esu",
+            "questionId": "national-2025-deputy-q86",
+            "selectedOptionId": "B",
+            "correctAnswer": "D",
+            "isCorrect": false,
+            "mode": "practice",
+            "answeredAt": "2026-10-11T14:05:40.826Z",
+            "knowledgePointIds": [
+              "reasoning:spatial"
+            ],
+            "moduleId": "reasoning",
+            "attempt_id": "answer_apt_reasoning_mv3wa4a8_kp1esu_3"
+          },
+          {
+            "id": "answer_apt_reasoning_mv3wa4a8_kp1esu_4",
+            "sessionId": "apt_reasoning_mv3wa4a8_kp1esu",
+            "questionId": "zh2025a-q095",
+            "selectedOptionId": "B",
+            "correctAnswer": "A",
+            "isCorrect": false,
+            "mode": "practice",
+            "answeredAt": "2026-10-11T14:05:45.963Z",
+            "knowledgePointIds": [
+              "reasoning:conclusion"
+            ],
+            "moduleId": "reasoning",
+            "attempt_id": "answer_apt_reasoning_mv3wa4a8_kp1esu_4"
+          },
+          {
+            "id": "answer_apt_reasoning_mv3wa4a8_kp1esu_5",
+            "sessionId": "apt_reasoning_mv3wa4a8_kp1esu",
+            "questionId": "jxzh2025m1-q111",
+            "selectedOptionId": "C",
+            "correctAnswer": "C",
+            "isCorrect": true,
+            "mode": "practice",
+            "answeredAt": "2026-10-11T14:05:53.633Z",
+            "knowledgePointIds": [
+              "reasoning:logical-relations"
+            ],
+            "moduleId": "reasoning",
+            "attempt_id": "answer_apt_reasoning_mv3wa4a8_kp1esu_5"
           }
         ],
         "mistakes": {
@@ -3123,18 +3263,18 @@
             "moduleId": "reasoning"
           },
           "zh2025a-q095": {
-            "count": 1,
+            "count": 2,
             "firstMissedAt": "2026-10-11T02:21:09.207Z",
-            "lastMissedAt": "2026-10-11T02:21:09.207Z",
+            "lastMissedAt": "2026-10-11T14:05:45.963Z",
             "lastSelectedOptionId": "B",
             "correctAnswer": "A",
             "moduleId": "reasoning"
           },
           "national-2025-deputy-q86": {
-            "count": 1,
+            "count": 2,
             "firstMissedAt": "2026-10-11T02:21:39.750Z",
-            "lastMissedAt": "2026-10-11T02:21:39.750Z",
-            "lastSelectedOptionId": "A",
+            "lastMissedAt": "2026-10-11T14:05:40.826Z",
+            "lastSelectedOptionId": "B",
             "correctAnswer": "D",
             "moduleId": "reasoning"
           },
@@ -3147,10 +3287,10 @@
             "moduleId": "reasoning"
           },
           "js2024a-q079": {
-            "count": 1,
+            "count": 2,
             "firstMissedAt": "2026-10-11T02:25:55.744Z",
-            "lastMissedAt": "2026-10-11T02:25:55.744Z",
-            "lastSelectedOptionId": "A",
+            "lastMissedAt": "2026-10-11T14:05:36.710Z",
+            "lastSelectedOptionId": "C",
             "correctAnswer": "B",
             "moduleId": "reasoning"
           },
