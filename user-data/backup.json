@@ -1,15 +1,111 @@
 {
   "schemaVersion": 1,
   "backupId": "6968ebc3-fd8c-4a7a-8d1c-49919ca0967d",
-  "updatedAt": "2026-10-12T06:13:19.475Z",
+  "updatedAt": "2026-10-12T12:18:44.425Z",
   "data": {
     "profile": {
       "major": "公共管理",
       "degree": ""
     },
     "dayLogs": {},
-    "planOverrides": {},
-    "studyPlanTasks": [],
+    "planOverrides": {
+      "1": {
+        "date": "2026-11-27",
+        "stage": "阶段1：补课建模",
+        "focus": "基线诊断+策略",
+        "coreTask": "120分钟行测基线（不会也做标记）+建立错题标签；晚上做1道申论概括题",
+        "plannedQuestions": 80,
+        "plannedHours": 6.5
+      }
+    },
+    "studyPlanTasks": [
+      {
+        "id": "task_13c70351-a98b-405c-8cb6-3c0e2a7423b6",
+        "date": "2026-10-13",
+        "taskType": "science_reasoning",
+        "customTypeName": null,
+        "title": "科推刷题",
+        "description": "",
+        "estimatedMinutes": 100,
+        "priority": "normal",
+        "status": "in_progress",
+        "completionSource": "not_completed",
+        "scienceConfig": {
+          "activityType": "practice",
+          "subjectId": null,
+          "topicId": null,
+          "knowledgePointIds": [],
+          "mode": "practice",
+          "targetQuestionCount": 100,
+          "durationSeconds": null,
+          "sourceFilter": "all",
+          "difficultyFilter": "all"
+        },
+        "generalKnowledgeConfig": null,
+        "aptitudeConfig": null,
+        "createdAt": "2026-10-12T12:14:03.978Z",
+        "updatedAt": "2026-10-12T12:16:17.916Z",
+        "archivedAt": "2026-10-12T12:16:17.916Z",
+        "task_id": "task_13c70351-a98b-405c-8cb6-3c0e2a7423b6"
+      },
+      {
+        "id": "task_b3217f8a-ecd0-403f-9e33-40b6a66f9c77",
+        "date": "2026-10-13",
+        "taskType": "science_reasoning",
+        "customTypeName": null,
+        "title": "科推刷题",
+        "description": "",
+        "estimatedMinutes": 100,
+        "priority": "normal",
+        "status": "in_progress",
+        "completionSource": "not_completed",
+        "scienceConfig": {
+          "activityType": "practice",
+          "subjectId": null,
+          "topicId": null,
+          "knowledgePointIds": [],
+          "mode": "practice",
+          "targetQuestionCount": 100,
+          "durationSeconds": null,
+          "sourceFilter": "all",
+          "difficultyFilter": "all"
+        },
+        "generalKnowledgeConfig": null,
+        "aptitudeConfig": null,
+        "createdAt": "2026-10-12T12:17:06.384Z",
+        "updatedAt": "2026-10-12T12:18:12.252Z",
+        "archivedAt": null,
+        "task_id": "task_b3217f8a-ecd0-403f-9e33-40b6a66f9c77"
+      },
+      {
+        "id": "task_b7660208-dfc9-4f94-9613-de34ddecf2d7",
+        "date": "2026-10-13",
+        "taskType": "general_knowledge",
+        "customTypeName": null,
+        "title": "常识刷题",
+        "description": "",
+        "estimatedMinutes": 100,
+        "priority": "normal",
+        "status": "in_progress",
+        "completionSource": "not_completed",
+        "scienceConfig": null,
+        "generalKnowledgeConfig": {
+          "activityType": "practice",
+          "subjectId": null,
+          "topicId": null,
+          "knowledgePointIds": [],
+          "targetQuestionCount": 100,
+          "durationSeconds": null,
+          "sourceFilter": "all",
+          "difficultyFilter": "all"
+        },
+        "aptitudeConfig": null,
+        "createdAt": "2026-10-12T12:17:46.079Z",
+        "updatedAt": "2026-10-12T12:18:08.392Z",
+        "archivedAt": null,
+        "task_id": "task_b7660208-dfc9-4f94-9613-de34ddecf2d7"
+      }
+    ],
     "scienceStudy": {
       "knowledgeProgress": {
         "physics:displacement-distance": {
@@ -599,6 +695,348 @@
           "completionSource": "manual",
           "startedAt": "2026-10-10T05:42:31.313Z",
           "completedAt": "2026-10-10T05:42:31.313Z"
+        },
+        {
+          "id": "science_mv57tewt_hag68a",
+          "mode": "practice",
+          "status": "active",
+          "planTaskId": "task_13c70351-a98b-405c-8cb6-3c0e2a7423b6",
+          "questionIds": [
+            "mock-zhonggong-2027-red-object-color",
+            "science-biology-027",
+            "science-geography-025",
+            "science-geography-038",
+            "science-chemistry-007",
+            "mock-sh-2022-v5-static-friction",
+            "sh-2025-b-membrane-filtration",
+            "sh-2026-fast-charging-battery",
+            "sh-2020-b-binary-star-force",
+            "science-biology-005",
+            "science-physics-037",
+            "sh-2026-bowl-water-resonance",
+            "mock-train-cup-inertia",
+            "science-geography-032",
+            "gd-2019-township-wind-energy",
+            "zh-gd2025m2-q078",
+            "sh-2022-b-ship-buoyancy",
+            "sh-2026-bladeless-fan-airflow",
+            "science-chemistry-001",
+            "gd-2021-county-foam-extinguisher",
+            "science-chemistry-035",
+            "zj-2025-mock-mars-microbes",
+            "zh-gd2025m2-q076",
+            "sh-2025-b-quantum-tunneling",
+            "science-chemistry-020",
+            "science-geography-021",
+            "zh-gd2025m2-q077",
+            "mock-zhanhong-seashore-specific-heat",
+            "gd-2025-outline-grain-storage",
+            "mock-zhanhong-blind-path-pressure",
+            "science-chemistry-010",
+            "zj-2024-c-animal-aging",
+            "gd-2022-recall-thermal-expansion",
+            "gd-2019-township-ear-pressure",
+            "gd-2025-recall-bacteria",
+            "science-physics-026",
+            "gd-2020-township-gas-properties",
+            "sh-2019-b-single-photon-interference",
+            "science-chemistry-016",
+            "science-biology-009",
+            "science-chemistry-013",
+            "science-physics-006",
+            "science-physics-039",
+            "gd-2023-township-karting-friction",
+            "science-physics-029",
+            "sh-2026-click-chemistry",
+            "sh-2019-b-semi-submersible-loading",
+            "sh-2026-bci-decoding",
+            "gd-2023-township-green-glass",
+            "science-geography-027",
+            "science-physics-031",
+            "science-biology-024",
+            "science-chemistry-006",
+            "science-geography-037",
+            "sh-2025-b-space-elevator",
+            "science-biology-012",
+            "science-chemistry-025",
+            "science-geography-011",
+            "science-physics-025",
+            "zj-2025-c-stork-migration",
+            "science-physics-007",
+            "science-biology-008",
+            "science-geography-015",
+            "gd-2020-township-everyday-materials",
+            "sh-2026-infrared-thermal-imaging",
+            "sh-2020-b-metal-smelting-order",
+            "gd-2023-township-asexual-reproduction",
+            "science-chemistry-019",
+            "sh-2026-outline-hall-effect",
+            "science-geography-034",
+            "science-geography-004",
+            "sh-2026-capacitive-touchscreen",
+            "science-biology-006",
+            "science-physics-023",
+            "science-geography-013",
+            "science-chemistry-028",
+            "science-geography-010",
+            "sh-2020-b-peroxide-concentration",
+            "science-biology-003",
+            "science-geography-018",
+            "zj-2024-c-breath-biometrics",
+            "science-physics-019",
+            "science-chemistry-004",
+            "mock-sh-2022-v5-camera-distance",
+            "gd-2022-recall-excavator-tracks",
+            "sh-2026-mask-layers",
+            "science-physics-015",
+            "gd-2023-township-fertilizer-use",
+            "science-chemistry-034",
+            "gd-2026-recall-front-rain",
+            "science-geography-022",
+            "gd-2023-township-grain-storage",
+            "science-physics-001",
+            "science-geography-030",
+            "sh-2026-vr-force-feedback",
+            "gd-2023-township-greenhouse-yield",
+            "science-chemistry-009",
+            "sh-2018-b-camera-lens",
+            "science-biology-021",
+            "science-biology-017"
+          ],
+          "randomizedQuestionOrder": true,
+          "currentIndex": 0,
+          "correctCount": 0,
+          "reviewingAnswerId": null,
+          "draftAnswers": {},
+          "startedAt": "2026-10-12T12:15:23.069Z",
+          "deadline": null,
+          "durationSeconds": null,
+          "filters": {
+            "onlyUnanswered": false,
+            "onlyMistakes": false,
+            "onlyFavorites": false,
+            "excludeQuestionIds": [],
+            "answeredQuestionIds": [
+              "beijing-2026-outline-dragonfly",
+              "beijing-2026-outline-dragonfly",
+              "sh-2020-outline-bicycle-friction",
+              "sh-2026-outline-hall-effect",
+              "gd-2025-outline-grain-storage",
+              "gd-2026-outline-slope-forces",
+              "gd-2021-outline-ladder-climber",
+              "gd-2019-township-wind-energy",
+              "gd-2019-township-ear-pressure",
+              "gd-2019-township-hammer-lever",
+              "gd-2021-township-steelmaking",
+              "gd-2021-township-cooling-rate",
+              "gd-2023-township-karting-friction",
+              "gd-2023-township-sunlit-city",
+              "gd-2020-township-seed-storage",
+              "gd-2020-township-snowline",
+              "beijing-2026-outline-dragonfly",
+              "sh-2020-outline-bicycle-friction",
+              "gd-2023-township-greenhouse-yield",
+              "science-chemistry-007",
+              "science-physics-005",
+              "sh-2014-a-wetting-adhesion",
+              "science-chemistry-009",
+              "science-geography-025",
+              "science-geography-029",
+              "science-biology-023",
+              "science-chemistry-032",
+              "gd-2020-township-seed-storage",
+              "science-chemistry-037",
+              "science-chemistry-003",
+              "sh-2026-click-chemistry",
+              "science-biology-005",
+              "science-biology-026",
+              "beijing-2026-outline-dragonfly",
+              "beijing-2026-outline-dragonfly",
+              "sh-2020-outline-bicycle-friction",
+              "sh-2026-outline-hall-effect",
+              "gd-2020-township-seawater-density",
+              "gd-2020-township-acid-indicator"
+            ],
+            "mistakeQuestionIds": [
+              "beijing-2026-outline-dragonfly",
+              "sh-2014-a-wetting-adhesion",
+              "sh-2020-outline-bicycle-friction"
+            ],
+            "favoriteQuestionIds": [
+              "sh-2026-outline-hall-effect"
+            ]
+          }
+        },
+        {
+          "id": "science_mv57vxdi_mtndzv",
+          "mode": "practice",
+          "status": "active",
+          "planTaskId": "task_b3217f8a-ecd0-403f-9e33-40b6a66f9c77",
+          "questionIds": [
+            "zh-gd2025m2-q079",
+            "zh-gd2025m2-q077",
+            "sh-2018-b-jump-landing-force",
+            "science-physics-026",
+            "science-physics-030",
+            "science-biology-018",
+            "science-chemistry-014",
+            "science-biology-008",
+            "science-physics-010",
+            "science-physics-015",
+            "science-biology-015",
+            "science-geography-025",
+            "science-physics-003",
+            "science-geography-032",
+            "gd-2023-township-karting-friction",
+            "science-chemistry-033",
+            "science-biology-010",
+            "sh-2026-capacitive-touchscreen",
+            "science-physics-011",
+            "science-physics-028",
+            "science-physics-034",
+            "science-physics-004",
+            "science-chemistry-007",
+            "science-geography-016",
+            "sh-2025-b-absorption-spectrum",
+            "science-biology-022",
+            "zj-2026-c-hair-follicle-stem-cells",
+            "science-geography-038",
+            "gd-2021-outline-ladder-climber",
+            "science-biology-023",
+            "science-chemistry-018",
+            "sh-2020-outline-bicycle-friction",
+            "science-chemistry-035",
+            "zj-2024-c-breath-biometrics",
+            "sh-2022-b-powerbank-capacity",
+            "science-chemistry-011",
+            "science-chemistry-019",
+            "science-physics-037",
+            "science-biology-003",
+            "science-chemistry-022",
+            "science-physics-008",
+            "sh-2021-b-pressure-estimate",
+            "gd-2024-insulin-glucose",
+            "science-chemistry-037",
+            "science-geography-034",
+            "mock-sh-2022-v5-galileo-thermometer",
+            "science-geography-007",
+            "science-geography-005",
+            "science-chemistry-031",
+            "gd-2020-township-gas-properties",
+            "mock-zhonggong-2027-rocks-relative-motion",
+            "science-geography-018",
+            "science-chemistry-005",
+            "mock-zhanhong-water-mechanical-energy",
+            "mock-zhanhong-gas-identification",
+            "science-geography-011",
+            "mock-zhanhong-blind-path-pressure",
+            "gd-2023-township-asexual-reproduction",
+            "sh-2026-mask-layers",
+            "science-biology-009",
+            "science-physics-035",
+            "science-chemistry-030",
+            "beijing-2026-outline-dragonfly",
+            "gd-2026-recall-front-rain",
+            "science-biology-034",
+            "science-biology-030",
+            "science-geography-019",
+            "sh-2025-b-membrane-filtration",
+            "sh-2025-b-railway-resonance",
+            "gd-2022-recall-excavator-tracks",
+            "gd-2020-township-acid-indicator",
+            "sh-2019-b-semi-submersible-loading",
+            "gd-2023-township-graphite-diamond",
+            "science-biology-036",
+            "gd-2023-township-polar-star",
+            "gd-2020-township-electric-charge",
+            "science-geography-030",
+            "science-chemistry-006",
+            "gd-2025-outline-grain-storage",
+            "science-geography-022",
+            "science-physics-022",
+            "science-physics-017",
+            "science-chemistry-017",
+            "sh-2020-b-ultrasound-vacuum",
+            "science-biology-016",
+            "science-biology-031",
+            "sh-2026-infrared-thermal-imaging",
+            "science-geography-010",
+            "science-biology-032",
+            "gd-2023-township-grain-storage",
+            "sh-2019-b-single-photon-interference",
+            "mock-sh-2022-v5-camera-distance",
+            "sh-2020-b-binary-star-force",
+            "science-physics-025",
+            "sh-2025-b-quantum-tunneling",
+            "mock-rollercoaster-energy",
+            "science-physics-036",
+            "sh-2025-b-space-elevator",
+            "science-physics-014",
+            "mock-train-cup-inertia"
+          ],
+          "randomizedQuestionOrder": true,
+          "currentIndex": 0,
+          "correctCount": 0,
+          "reviewingAnswerId": null,
+          "draftAnswers": {},
+          "startedAt": "2026-10-12T12:17:20.310Z",
+          "deadline": null,
+          "durationSeconds": null,
+          "filters": {
+            "onlyUnanswered": false,
+            "onlyMistakes": false,
+            "onlyFavorites": false,
+            "excludeQuestionIds": [],
+            "answeredQuestionIds": [
+              "beijing-2026-outline-dragonfly",
+              "beijing-2026-outline-dragonfly",
+              "sh-2020-outline-bicycle-friction",
+              "sh-2026-outline-hall-effect",
+              "gd-2025-outline-grain-storage",
+              "gd-2026-outline-slope-forces",
+              "gd-2021-outline-ladder-climber",
+              "gd-2019-township-wind-energy",
+              "gd-2019-township-ear-pressure",
+              "gd-2019-township-hammer-lever",
+              "gd-2021-township-steelmaking",
+              "gd-2021-township-cooling-rate",
+              "gd-2023-township-karting-friction",
+              "gd-2023-township-sunlit-city",
+              "gd-2020-township-seed-storage",
+              "gd-2020-township-snowline",
+              "beijing-2026-outline-dragonfly",
+              "sh-2020-outline-bicycle-friction",
+              "gd-2023-township-greenhouse-yield",
+              "science-chemistry-007",
+              "science-physics-005",
+              "sh-2014-a-wetting-adhesion",
+              "science-chemistry-009",
+              "science-geography-025",
+              "science-geography-029",
+              "science-biology-023",
+              "science-chemistry-032",
+              "gd-2020-township-seed-storage",
+              "science-chemistry-037",
+              "science-chemistry-003",
+              "sh-2026-click-chemistry",
+              "science-biology-005",
+              "science-biology-026",
+              "beijing-2026-outline-dragonfly",
+              "beijing-2026-outline-dragonfly",
+              "sh-2020-outline-bicycle-friction",
+              "sh-2026-outline-hall-effect",
+              "gd-2020-township-seawater-density",
+              "gd-2020-township-acid-indicator"
+            ],
+            "mistakeQuestionIds": [
+              "beijing-2026-outline-dragonfly",
+              "sh-2014-a-wetting-adhesion",
+              "sh-2020-outline-bicycle-friction"
+            ],
+            "favoriteQuestionIds": [
+              "sh-2026-outline-hall-effect"
+            ]
+          }
         }
       ],
       "answers": [
@@ -1404,6 +1842,158 @@
           },
           "moduleId": "general_knowledge",
           "completedAt": "2026-10-10T05:36:03.453Z"
+        },
+        {
+          "id": "gk_mv57wonk_7hd4i5",
+          "mode": "practice",
+          "status": "active",
+          "planTaskId": "task_b7660208-dfc9-4f94-9613-de34ddecf2d7",
+          "questionIds": [
+            "zhanhong2025national2-q013",
+            "zja2025-common-13",
+            "bj2021district-q2",
+            "jx2026-q023",
+            "zh2025a-q010",
+            "zhanhong2025national1-q002",
+            "hebei-2025-recall-q29",
+            "bj2021district-q16",
+            "zh-gd2025m2-q021",
+            "jx2026-q027",
+            "national-2025-deputy-q30",
+            "national-2025-deputy-q33",
+            "gk-original-review-oral-application",
+            "jxzh2025m3-q024",
+            "zh2025b-q005",
+            "gk-original-rights",
+            "bj2024offcn-common-october-q1",
+            "jiangxi-2025-recall-q25",
+            "zh2025a-q014",
+            "jxzh2025m1-q028",
+            "jxzh2025m1-q020",
+            "national-2025-deputy-q21",
+            "js2024a-q007",
+            "ah2022-q045",
+            "bj2025offcn-common-1298579-q3",
+            "zh2025b-q007",
+            "jx2026-q033",
+            "zhanhong2025national3-q004",
+            "bj2022-q11",
+            "bj2021district-q11",
+            "js2024a-q009",
+            "national-2026-city-general-knowledge-q27",
+            "hn2026-q104",
+            "zh2025c-q008",
+            "jxzh2025m3-q033",
+            "zh2025c-q006",
+            "bj2022-q18",
+            "bj2022-q19",
+            "bj2022-q20",
+            "bj2022-q21",
+            "jiangxi-2025-recall-q24",
+            "bj2024offcn-common-october-q3",
+            "zhanhong2025national2-q017",
+            "jiangxi-2025-recall-q33",
+            "zhanhong2025national3-q017",
+            "zj2023a-q013",
+            "zh2025c-q011",
+            "zja2025-common-20",
+            "zhanhong2025national3-q010",
+            "zja2025-common-16",
+            "ah2022-q057",
+            "bj2022-q17",
+            "hn2026-q091",
+            "ah2022-q052",
+            "zhanhong2025national2-q005",
+            "zh2025b-q003",
+            "zh2025a-q001",
+            "zh2025a-q009",
+            "national-2026-city-general-knowledge-q30",
+            "zh2025c-q020",
+            "zh2025b-q015",
+            "zj2023a-q016",
+            "jxzh2025m1-q026",
+            "gk-official-2026-fermentation",
+            "bj2021district-q14",
+            "jx2026-q021",
+            "zhanhong2025national1-q004",
+            "jxzh2025m3-q028",
+            "zhanhong2025national1-q006",
+            "zh2025c-q003",
+            "jxzh2025m3-q026",
+            "national-2025-deputy-q25",
+            "hn2026-q098",
+            "zh-gd2025m2-q019",
+            "js2024a-q004",
+            "zh2025a-q011",
+            "zja2025-common-19",
+            "zhanhong2025national2-q012",
+            "bj2023-q3",
+            "zh-gd2025m2-q020",
+            "zhanhong2025national1-q018",
+            "zhanhong2025national3-q006",
+            "zhanhong2025national2-q010",
+            "bj2021district-q10",
+            "zhanhong2025national1-q007",
+            "hebei-2025-recall-q24",
+            "zh2025a-q013",
+            "bj2022-q16",
+            "gk-original-review-prerequisite",
+            "bj2023-q7",
+            "ah2022-q046",
+            "zhanhong2025national3-q014",
+            "jxzh2025m3-q027",
+            "zh2025a-q002",
+            "national-2026-city-general-knowledge-q31",
+            "bj2025offcn-common-1298579-q2",
+            "zh2025c-q017",
+            "jxzh2025m3-q023",
+            "zj2023a-q011",
+            "jxzh2025m1-q023"
+          ],
+          "randomizedQuestionOrder": true,
+          "currentIndex": 0,
+          "correctCount": 0,
+          "reviewingAnswerId": null,
+          "draftAnswers": {},
+          "startedAt": "2026-10-12T12:17:55.664Z",
+          "deadline": null,
+          "durationSeconds": null,
+          "filters": {
+            "onlyUnanswered": false,
+            "onlyMistakes": false,
+            "onlyFavorites": false,
+            "excludeQuestionIds": [],
+            "answeredQuestionIds": [
+              "gk-official-2026-fermentation",
+              "gk-official-2026-history",
+              "gk-official-2026-reaction",
+              "gk-official-2026-fermentation",
+              "zh2025a-q016",
+              "zh2025c-q001",
+              "zh2025a-q010",
+              "zh2025b-q010",
+              "bj2023-q7",
+              "zh2025a-q005",
+              "bj2023-q3",
+              "zh2025c-q017",
+              "js2024a-q013",
+              "zh2025a-q003",
+              "gk-official-2026-reaction",
+              "zh2025a-q010",
+              "zh2025b-q010",
+              "bj2023-q3",
+              "zh2025a-q016"
+            ],
+            "mistakeQuestionIds": [
+              "gk-official-2026-reaction",
+              "zh2025a-q016",
+              "zh2025a-q010",
+              "zh2025b-q010",
+              "bj2023-q3"
+            ],
+            "favoriteQuestionIds": []
+          },
+          "moduleId": "general_knowledge"
         }
       ],
       "answers": [
@@ -1779,6 +2369,60 @@
       "unclearKnowledgePointIds": []
     },
     "aptitudeModuleStudies": {
+      "data-analysis": {
+        "knowledgeProgress": {},
+        "sessions": [
+          {
+            "id": "apt_data-analysis_mv1uqfgl_22wv9n",
+            "mode": "practice",
+            "status": "completed",
+            "planTaskId": null,
+            "questionIds": [
+              "ah2026-outline-data-1"
+            ],
+            "currentIndex": 1,
+            "correctCount": 1,
+            "reviewingAnswerId": null,
+            "draftAnswers": {},
+            "startedAt": "2026-10-10T03:45:50.277Z",
+            "deadline": null,
+            "durationSeconds": null,
+            "filters": {
+              "onlyUnanswered": false,
+              "onlyMistakes": false,
+              "onlyFavorites": false,
+              "excludeQuestionIds": [],
+              "answeredQuestionIds": [],
+              "mistakeQuestionIds": [],
+              "favoriteQuestionIds": []
+            },
+            "moduleId": "data-analysis",
+            "completedAt": "2026-10-10T03:46:26.371Z",
+            "session_id": "apt_data-analysis_mv1uqfgl_22wv9n"
+          }
+        ],
+        "answers": [
+          {
+            "id": "answer_apt_data-analysis_mv1uqfgl_22wv9n_1",
+            "sessionId": "apt_data-analysis_mv1uqfgl_22wv9n",
+            "questionId": "ah2026-outline-data-1",
+            "selectedOptionId": "D",
+            "correctAnswer": "D",
+            "isCorrect": true,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T03:46:21.631Z",
+            "knowledgePointIds": [
+              "data-analysis:share-change"
+            ],
+            "moduleId": "data-analysis",
+            "attempt_id": "answer_apt_data-analysis_mv1uqfgl_22wv9n_1"
+          }
+        ],
+        "mistakes": {},
+        "favorites": [],
+        "favoriteKnowledgePointIds": [],
+        "unclearKnowledgePointIds": []
+      },
       "political-theory": {
         "knowledgeProgress": {},
         "sessions": [
@@ -1955,529 +2599,6 @@
             "lastSelectedOptionId": "C",
             "correctAnswer": "B",
             "moduleId": "political-theory"
-          }
-        },
-        "favorites": [],
-        "favoriteKnowledgePointIds": [],
-        "unclearKnowledgePointIds": []
-      },
-      "verbal": {
-        "knowledgeProgress": {},
-        "sessions": [
-          {
-            "id": "apt_verbal_mv1unywd_y4c7et",
-            "mode": "practice",
-            "status": "completed",
-            "planTaskId": null,
-            "questionIds": [
-              "ah2026-outline-verbal-1"
-            ],
-            "currentIndex": 1,
-            "correctCount": 1,
-            "reviewingAnswerId": null,
-            "draftAnswers": {},
-            "startedAt": "2026-10-10T03:43:55.501Z",
-            "deadline": null,
-            "durationSeconds": null,
-            "filters": {
-              "onlyUnanswered": false,
-              "onlyMistakes": false,
-              "onlyFavorites": false,
-              "excludeQuestionIds": [],
-              "answeredQuestionIds": [],
-              "mistakeQuestionIds": [],
-              "favoriteQuestionIds": []
-            },
-            "moduleId": "verbal",
-            "completedAt": "2026-10-10T03:44:06.669Z",
-            "session_id": "apt_verbal_mv1unywd_y4c7et"
-          },
-          {
-            "id": "apt_verbal_mv1vb8zf_mslzwa",
-            "mode": "practice",
-            "status": "completed",
-            "planTaskId": null,
-            "questionIds": [
-              "ah2026-outline-verbal-1",
-              "ah2026-outline-verbal-2",
-              "ah2026-outline-verbal-3",
-              "ah2026-outline-verbal-4",
-              "js2024a-q016",
-              "js2024a-q017",
-              "js2024a-q018",
-              "js2024a-q019",
-              "js2024a-q020",
-              "js2024a-q021",
-              "js2024a-q022",
-              "js2024a-q023",
-              "js2024a-q024",
-              "js2024a-q026",
-              "js2024a-q027"
-            ],
-            "currentIndex": 15,
-            "correctCount": 8,
-            "reviewingAnswerId": null,
-            "draftAnswers": {},
-            "startedAt": "2026-10-10T04:02:01.659Z",
-            "deadline": null,
-            "durationSeconds": null,
-            "filters": {
-              "onlyUnanswered": false,
-              "onlyMistakes": false,
-              "onlyFavorites": false,
-              "excludeQuestionIds": [],
-              "answeredQuestionIds": [
-                "ah2026-outline-verbal-1"
-              ],
-              "mistakeQuestionIds": [],
-              "favoriteQuestionIds": []
-            },
-            "moduleId": "verbal",
-            "completedAt": "2026-10-10T04:08:36.462Z",
-            "session_id": "apt_verbal_mv1vb8zf_mslzwa"
-          },
-          {
-            "id": "apt_verbal_mv1xyl9g_pxx4xg",
-            "mode": "exam",
-            "status": "completed",
-            "planTaskId": null,
-            "questionIds": [
-              "zj2023a-q050",
-              "zh2025c-q021",
-              "js2024a-q017",
-              "apt-verbal-002",
-              "zj2023a-q044"
-            ],
-            "currentIndex": 5,
-            "correctCount": 5,
-            "reviewingAnswerId": null,
-            "draftAnswers": {
-              "zj2023a-q050": {
-                "optionId": "C",
-                "selectedAt": "2026-10-10T05:16:56.102Z"
-              },
-              "zh2025c-q021": {
-                "optionId": "B",
-                "selectedAt": "2026-10-10T05:17:19.433Z"
-              },
-              "js2024a-q017": {
-                "optionId": "C",
-                "selectedAt": "2026-10-10T05:17:55.848Z"
-              },
-              "apt-verbal-002": {
-                "optionId": "B",
-                "selectedAt": "2026-10-10T05:18:07.892Z"
-              },
-              "zj2023a-q044": {
-                "optionId": "A",
-                "selectedAt": "2026-10-10T05:18:43.006Z"
-              }
-            },
-            "startedAt": "2026-10-10T05:16:09.892Z",
-            "deadline": "2026-10-10T05:21:09.892Z",
-            "durationSeconds": 300,
-            "filters": {
-              "onlyUnanswered": false,
-              "onlyMistakes": false,
-              "onlyFavorites": false,
-              "excludeQuestionIds": [],
-              "answeredQuestionIds": [],
-              "mistakeQuestionIds": [],
-              "favoriteQuestionIds": []
-            },
-            "moduleId": "verbal",
-            "answeredCount": 5,
-            "unansweredCount": 0,
-            "scoreRate": 1,
-            "answeredAccuracy": 1,
-            "submittedAt": "2026-10-10T05:18:49.159Z",
-            "completedAt": "2026-10-10T05:18:49.159Z",
-            "session_id": "apt_verbal_mv1xyl9g_pxx4xg"
-          }
-        ],
-        "answers": [
-          {
-            "id": "answer_apt_verbal_mv1unywd_y4c7et_1",
-            "sessionId": "apt_verbal_mv1unywd_y4c7et",
-            "questionId": "ah2026-outline-verbal-1",
-            "selectedOptionId": "C",
-            "correctAnswer": "C",
-            "isCorrect": true,
-            "mode": "practice",
-            "answeredAt": "2026-10-10T03:44:00.012Z",
-            "knowledgePointIds": [
-              "verbal:context"
-            ],
-            "moduleId": "verbal",
-            "attempt_id": "answer_apt_verbal_mv1unywd_y4c7et_1"
-          },
-          {
-            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_1",
-            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
-            "questionId": "ah2026-outline-verbal-1",
-            "selectedOptionId": "C",
-            "correctAnswer": "C",
-            "isCorrect": true,
-            "mode": "practice",
-            "answeredAt": "2026-10-10T04:02:03.969Z",
-            "knowledgePointIds": [
-              "verbal:context"
-            ],
-            "moduleId": "verbal",
-            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_1"
-          },
-          {
-            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_2",
-            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
-            "questionId": "ah2026-outline-verbal-2",
-            "selectedOptionId": "A",
-            "correctAnswer": "A",
-            "isCorrect": true,
-            "mode": "practice",
-            "answeredAt": "2026-10-10T04:03:44.325Z",
-            "knowledgePointIds": [
-              "verbal:main-idea"
-            ],
-            "moduleId": "verbal",
-            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_2"
-          },
-          {
-            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_3",
-            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
-            "questionId": "ah2026-outline-verbal-3",
-            "selectedOptionId": "A",
-            "correctAnswer": "A",
-            "isCorrect": true,
-            "mode": "practice",
-            "answeredAt": "2026-10-10T04:04:03.652Z",
-            "knowledgePointIds": [
-              "verbal:context"
-            ],
-            "moduleId": "verbal",
-            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_3"
-          },
-          {
-            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_4",
-            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
-            "questionId": "ah2026-outline-verbal-4",
-            "selectedOptionId": "A",
-            "correctAnswer": "C",
-            "isCorrect": false,
-            "mode": "practice",
-            "answeredAt": "2026-10-10T04:05:27.807Z",
-            "knowledgePointIds": [
-              "verbal:sentence-order"
-            ],
-            "moduleId": "verbal",
-            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_4"
-          },
-          {
-            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_5",
-            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
-            "questionId": "js2024a-q016",
-            "selectedOptionId": "D",
-            "correctAnswer": "D",
-            "isCorrect": true,
-            "mode": "practice",
-            "answeredAt": "2026-10-10T04:05:46.068Z",
-            "knowledgePointIds": [
-              "verbal:main-idea"
-            ],
-            "moduleId": "verbal",
-            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_5"
-          },
-          {
-            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_6",
-            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
-            "questionId": "js2024a-q017",
-            "selectedOptionId": "C",
-            "correctAnswer": "C",
-            "isCorrect": true,
-            "mode": "practice",
-            "answeredAt": "2026-10-10T04:06:01.047Z",
-            "knowledgePointIds": [
-              "verbal:main-idea"
-            ],
-            "moduleId": "verbal",
-            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_6"
-          },
-          {
-            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_7",
-            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
-            "questionId": "js2024a-q018",
-            "selectedOptionId": "A",
-            "correctAnswer": "B",
-            "isCorrect": false,
-            "mode": "practice",
-            "answeredAt": "2026-10-10T04:06:22.511Z",
-            "knowledgePointIds": [
-              "verbal:detail"
-            ],
-            "moduleId": "verbal",
-            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_7"
-          },
-          {
-            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_8",
-            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
-            "questionId": "js2024a-q019",
-            "selectedOptionId": "D",
-            "correctAnswer": "C",
-            "isCorrect": false,
-            "mode": "practice",
-            "answeredAt": "2026-10-10T04:06:51.667Z",
-            "knowledgePointIds": [
-              "verbal:main-idea"
-            ],
-            "moduleId": "verbal",
-            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_8"
-          },
-          {
-            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_9",
-            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
-            "questionId": "js2024a-q020",
-            "selectedOptionId": "B",
-            "correctAnswer": "B",
-            "isCorrect": true,
-            "mode": "practice",
-            "answeredAt": "2026-10-10T04:07:03.596Z",
-            "knowledgePointIds": [
-              "verbal:main-idea"
-            ],
-            "moduleId": "verbal",
-            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_9"
-          },
-          {
-            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_10",
-            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
-            "questionId": "js2024a-q021",
-            "selectedOptionId": "D",
-            "correctAnswer": "C",
-            "isCorrect": false,
-            "mode": "practice",
-            "answeredAt": "2026-10-10T04:07:12.488Z",
-            "knowledgePointIds": [
-              "verbal:detail"
-            ],
-            "moduleId": "verbal",
-            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_10"
-          },
-          {
-            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_11",
-            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
-            "questionId": "js2024a-q022",
-            "selectedOptionId": "A",
-            "correctAnswer": "A",
-            "isCorrect": true,
-            "mode": "practice",
-            "answeredAt": "2026-10-10T04:07:24.129Z",
-            "knowledgePointIds": [
-              "verbal:context"
-            ],
-            "moduleId": "verbal",
-            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_11"
-          },
-          {
-            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_12",
-            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
-            "questionId": "js2024a-q023",
-            "selectedOptionId": "A",
-            "correctAnswer": "D",
-            "isCorrect": false,
-            "mode": "practice",
-            "answeredAt": "2026-10-10T04:07:32.909Z",
-            "knowledgePointIds": [
-              "verbal:main-idea"
-            ],
-            "moduleId": "verbal",
-            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_12"
-          },
-          {
-            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_13",
-            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
-            "questionId": "js2024a-q024",
-            "selectedOptionId": "B",
-            "correctAnswer": "B",
-            "isCorrect": true,
-            "mode": "practice",
-            "answeredAt": "2026-10-10T04:07:47.583Z",
-            "knowledgePointIds": [
-              "verbal:main-idea"
-            ],
-            "moduleId": "verbal",
-            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_13"
-          },
-          {
-            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_14",
-            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
-            "questionId": "js2024a-q026",
-            "selectedOptionId": "C",
-            "correctAnswer": "D",
-            "isCorrect": false,
-            "mode": "practice",
-            "answeredAt": "2026-10-10T04:08:18.320Z",
-            "knowledgePointIds": [
-              "verbal:main-idea"
-            ],
-            "moduleId": "verbal",
-            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_14"
-          },
-          {
-            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_15",
-            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
-            "questionId": "js2024a-q027",
-            "selectedOptionId": "B",
-            "correctAnswer": "C",
-            "isCorrect": false,
-            "mode": "practice",
-            "answeredAt": "2026-10-10T04:08:34.775Z",
-            "knowledgePointIds": [
-              "verbal:detail"
-            ],
-            "moduleId": "verbal",
-            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_15"
-          },
-          {
-            "id": "answer_apt_verbal_mv1xyl9g_pxx4xg_zj2023a-q050",
-            "sessionId": "apt_verbal_mv1xyl9g_pxx4xg",
-            "questionId": "zj2023a-q050",
-            "selectedOptionId": "C",
-            "correctAnswer": "C",
-            "isCorrect": true,
-            "mode": "exam",
-            "answeredAt": "2026-10-10T05:16:56.102Z",
-            "submittedAt": "2026-10-10T05:18:49.159Z",
-            "questionIndex": 0,
-            "knowledgePointIds": [
-              "verbal:detail"
-            ],
-            "moduleId": "verbal",
-            "attempt_id": "answer_apt_verbal_mv1xyl9g_pxx4xg_zj2023a-q050"
-          },
-          {
-            "id": "answer_apt_verbal_mv1xyl9g_pxx4xg_zh2025c-q021",
-            "sessionId": "apt_verbal_mv1xyl9g_pxx4xg",
-            "questionId": "zh2025c-q021",
-            "selectedOptionId": "B",
-            "correctAnswer": "B",
-            "isCorrect": true,
-            "mode": "exam",
-            "answeredAt": "2026-10-10T05:17:19.433Z",
-            "submittedAt": "2026-10-10T05:18:49.159Z",
-            "questionIndex": 1,
-            "knowledgePointIds": [
-              "verbal:context"
-            ],
-            "moduleId": "verbal",
-            "attempt_id": "answer_apt_verbal_mv1xyl9g_pxx4xg_zh2025c-q021"
-          },
-          {
-            "id": "answer_apt_verbal_mv1xyl9g_pxx4xg_js2024a-q017",
-            "sessionId": "apt_verbal_mv1xyl9g_pxx4xg",
-            "questionId": "js2024a-q017",
-            "selectedOptionId": "C",
-            "correctAnswer": "C",
-            "isCorrect": true,
-            "mode": "exam",
-            "answeredAt": "2026-10-10T05:17:55.848Z",
-            "submittedAt": "2026-10-10T05:18:49.159Z",
-            "questionIndex": 2,
-            "knowledgePointIds": [
-              "verbal:main-idea"
-            ],
-            "moduleId": "verbal",
-            "attempt_id": "answer_apt_verbal_mv1xyl9g_pxx4xg_js2024a-q017"
-          },
-          {
-            "id": "answer_apt_verbal_mv1xyl9g_pxx4xg_apt-verbal-002",
-            "sessionId": "apt_verbal_mv1xyl9g_pxx4xg",
-            "questionId": "apt-verbal-002",
-            "selectedOptionId": "B",
-            "correctAnswer": "B",
-            "isCorrect": true,
-            "mode": "exam",
-            "answeredAt": "2026-10-10T05:18:07.892Z",
-            "submittedAt": "2026-10-10T05:18:49.159Z",
-            "questionIndex": 3,
-            "knowledgePointIds": [
-              "verbal:context"
-            ],
-            "moduleId": "verbal",
-            "attempt_id": "answer_apt_verbal_mv1xyl9g_pxx4xg_apt-verbal-002"
-          },
-          {
-            "id": "answer_apt_verbal_mv1xyl9g_pxx4xg_zj2023a-q044",
-            "sessionId": "apt_verbal_mv1xyl9g_pxx4xg",
-            "questionId": "zj2023a-q044",
-            "selectedOptionId": "A",
-            "correctAnswer": "A",
-            "isCorrect": true,
-            "mode": "exam",
-            "answeredAt": "2026-10-10T05:18:43.006Z",
-            "submittedAt": "2026-10-10T05:18:49.159Z",
-            "questionIndex": 4,
-            "knowledgePointIds": [
-              "verbal:detail"
-            ],
-            "moduleId": "verbal",
-            "attempt_id": "answer_apt_verbal_mv1xyl9g_pxx4xg_zj2023a-q044"
-          }
-        ],
-        "mistakes": {
-          "ah2026-outline-verbal-4": {
-            "count": 1,
-            "firstMissedAt": "2026-10-10T04:05:27.807Z",
-            "lastMissedAt": "2026-10-10T04:05:27.807Z",
-            "lastSelectedOptionId": "A",
-            "correctAnswer": "C",
-            "moduleId": "verbal"
-          },
-          "js2024a-q018": {
-            "count": 1,
-            "firstMissedAt": "2026-10-10T04:06:22.511Z",
-            "lastMissedAt": "2026-10-10T04:06:22.511Z",
-            "lastSelectedOptionId": "A",
-            "correctAnswer": "B",
-            "moduleId": "verbal"
-          },
-          "js2024a-q019": {
-            "count": 1,
-            "firstMissedAt": "2026-10-10T04:06:51.667Z",
-            "lastMissedAt": "2026-10-10T04:06:51.667Z",
-            "lastSelectedOptionId": "D",
-            "correctAnswer": "C",
-            "moduleId": "verbal"
-          },
-          "js2024a-q021": {
-            "count": 1,
-            "firstMissedAt": "2026-10-10T04:07:12.488Z",
-            "lastMissedAt": "2026-10-10T04:07:12.488Z",
-            "lastSelectedOptionId": "D",
-            "correctAnswer": "C",
-            "moduleId": "verbal"
-          },
-          "js2024a-q023": {
-            "count": 1,
-            "firstMissedAt": "2026-10-10T04:07:32.909Z",
-            "lastMissedAt": "2026-10-10T04:07:32.909Z",
-            "lastSelectedOptionId": "A",
-            "correctAnswer": "D",
-            "moduleId": "verbal"
-          },
-          "js2024a-q026": {
-            "count": 1,
-            "firstMissedAt": "2026-10-10T04:08:18.320Z",
-            "lastMissedAt": "2026-10-10T04:08:18.320Z",
-            "lastSelectedOptionId": "C",
-            "correctAnswer": "D",
-            "moduleId": "verbal"
-          },
-          "js2024a-q027": {
-            "count": 1,
-            "firstMissedAt": "2026-10-10T04:08:34.775Z",
-            "lastMissedAt": "2026-10-10T04:08:34.775Z",
-            "lastSelectedOptionId": "B",
-            "correctAnswer": "C",
-            "moduleId": "verbal"
           }
         },
         "favorites": [],
@@ -3400,22 +3521,22 @@
         "favoriteKnowledgePointIds": [],
         "unclearKnowledgePointIds": []
       },
-      "data-analysis": {
+      "verbal": {
         "knowledgeProgress": {},
         "sessions": [
           {
-            "id": "apt_data-analysis_mv1uqfgl_22wv9n",
+            "id": "apt_verbal_mv1unywd_y4c7et",
             "mode": "practice",
             "status": "completed",
             "planTaskId": null,
             "questionIds": [
-              "ah2026-outline-data-1"
+              "ah2026-outline-verbal-1"
             ],
             "currentIndex": 1,
             "correctCount": 1,
             "reviewingAnswerId": null,
             "draftAnswers": {},
-            "startedAt": "2026-10-10T03:45:50.277Z",
+            "startedAt": "2026-10-10T03:43:55.501Z",
             "deadline": null,
             "durationSeconds": null,
             "filters": {
@@ -3427,29 +3548,498 @@
               "mistakeQuestionIds": [],
               "favoriteQuestionIds": []
             },
-            "moduleId": "data-analysis",
-            "completedAt": "2026-10-10T03:46:26.371Z",
-            "session_id": "apt_data-analysis_mv1uqfgl_22wv9n"
+            "moduleId": "verbal",
+            "completedAt": "2026-10-10T03:44:06.669Z",
+            "session_id": "apt_verbal_mv1unywd_y4c7et"
+          },
+          {
+            "id": "apt_verbal_mv1vb8zf_mslzwa",
+            "mode": "practice",
+            "status": "completed",
+            "planTaskId": null,
+            "questionIds": [
+              "ah2026-outline-verbal-1",
+              "ah2026-outline-verbal-2",
+              "ah2026-outline-verbal-3",
+              "ah2026-outline-verbal-4",
+              "js2024a-q016",
+              "js2024a-q017",
+              "js2024a-q018",
+              "js2024a-q019",
+              "js2024a-q020",
+              "js2024a-q021",
+              "js2024a-q022",
+              "js2024a-q023",
+              "js2024a-q024",
+              "js2024a-q026",
+              "js2024a-q027"
+            ],
+            "currentIndex": 15,
+            "correctCount": 8,
+            "reviewingAnswerId": null,
+            "draftAnswers": {},
+            "startedAt": "2026-10-10T04:02:01.659Z",
+            "deadline": null,
+            "durationSeconds": null,
+            "filters": {
+              "onlyUnanswered": false,
+              "onlyMistakes": false,
+              "onlyFavorites": false,
+              "excludeQuestionIds": [],
+              "answeredQuestionIds": [
+                "ah2026-outline-verbal-1"
+              ],
+              "mistakeQuestionIds": [],
+              "favoriteQuestionIds": []
+            },
+            "moduleId": "verbal",
+            "completedAt": "2026-10-10T04:08:36.462Z",
+            "session_id": "apt_verbal_mv1vb8zf_mslzwa"
+          },
+          {
+            "id": "apt_verbal_mv1xyl9g_pxx4xg",
+            "mode": "exam",
+            "status": "completed",
+            "planTaskId": null,
+            "questionIds": [
+              "zj2023a-q050",
+              "zh2025c-q021",
+              "js2024a-q017",
+              "apt-verbal-002",
+              "zj2023a-q044"
+            ],
+            "currentIndex": 5,
+            "correctCount": 5,
+            "reviewingAnswerId": null,
+            "draftAnswers": {
+              "zj2023a-q050": {
+                "optionId": "C",
+                "selectedAt": "2026-10-10T05:16:56.102Z"
+              },
+              "zh2025c-q021": {
+                "optionId": "B",
+                "selectedAt": "2026-10-10T05:17:19.433Z"
+              },
+              "js2024a-q017": {
+                "optionId": "C",
+                "selectedAt": "2026-10-10T05:17:55.848Z"
+              },
+              "apt-verbal-002": {
+                "optionId": "B",
+                "selectedAt": "2026-10-10T05:18:07.892Z"
+              },
+              "zj2023a-q044": {
+                "optionId": "A",
+                "selectedAt": "2026-10-10T05:18:43.006Z"
+              }
+            },
+            "startedAt": "2026-10-10T05:16:09.892Z",
+            "deadline": "2026-10-10T05:21:09.892Z",
+            "durationSeconds": 300,
+            "filters": {
+              "onlyUnanswered": false,
+              "onlyMistakes": false,
+              "onlyFavorites": false,
+              "excludeQuestionIds": [],
+              "answeredQuestionIds": [],
+              "mistakeQuestionIds": [],
+              "favoriteQuestionIds": []
+            },
+            "moduleId": "verbal",
+            "answeredCount": 5,
+            "unansweredCount": 0,
+            "scoreRate": 1,
+            "answeredAccuracy": 1,
+            "submittedAt": "2026-10-10T05:18:49.159Z",
+            "completedAt": "2026-10-10T05:18:49.159Z",
+            "session_id": "apt_verbal_mv1xyl9g_pxx4xg"
           }
         ],
         "answers": [
           {
-            "id": "answer_apt_data-analysis_mv1uqfgl_22wv9n_1",
-            "sessionId": "apt_data-analysis_mv1uqfgl_22wv9n",
-            "questionId": "ah2026-outline-data-1",
+            "id": "answer_apt_verbal_mv1unywd_y4c7et_1",
+            "sessionId": "apt_verbal_mv1unywd_y4c7et",
+            "questionId": "ah2026-outline-verbal-1",
+            "selectedOptionId": "C",
+            "correctAnswer": "C",
+            "isCorrect": true,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T03:44:00.012Z",
+            "knowledgePointIds": [
+              "verbal:context"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1unywd_y4c7et_1"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_1",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "ah2026-outline-verbal-1",
+            "selectedOptionId": "C",
+            "correctAnswer": "C",
+            "isCorrect": true,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T04:02:03.969Z",
+            "knowledgePointIds": [
+              "verbal:context"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_1"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_2",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "ah2026-outline-verbal-2",
+            "selectedOptionId": "A",
+            "correctAnswer": "A",
+            "isCorrect": true,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T04:03:44.325Z",
+            "knowledgePointIds": [
+              "verbal:main-idea"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_2"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_3",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "ah2026-outline-verbal-3",
+            "selectedOptionId": "A",
+            "correctAnswer": "A",
+            "isCorrect": true,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T04:04:03.652Z",
+            "knowledgePointIds": [
+              "verbal:context"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_3"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_4",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "ah2026-outline-verbal-4",
+            "selectedOptionId": "A",
+            "correctAnswer": "C",
+            "isCorrect": false,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T04:05:27.807Z",
+            "knowledgePointIds": [
+              "verbal:sentence-order"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_4"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_5",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "js2024a-q016",
             "selectedOptionId": "D",
             "correctAnswer": "D",
             "isCorrect": true,
             "mode": "practice",
-            "answeredAt": "2026-10-10T03:46:21.631Z",
+            "answeredAt": "2026-10-10T04:05:46.068Z",
             "knowledgePointIds": [
-              "data-analysis:share-change"
+              "verbal:main-idea"
             ],
-            "moduleId": "data-analysis",
-            "attempt_id": "answer_apt_data-analysis_mv1uqfgl_22wv9n_1"
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_5"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_6",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "js2024a-q017",
+            "selectedOptionId": "C",
+            "correctAnswer": "C",
+            "isCorrect": true,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T04:06:01.047Z",
+            "knowledgePointIds": [
+              "verbal:main-idea"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_6"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_7",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "js2024a-q018",
+            "selectedOptionId": "A",
+            "correctAnswer": "B",
+            "isCorrect": false,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T04:06:22.511Z",
+            "knowledgePointIds": [
+              "verbal:detail"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_7"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_8",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "js2024a-q019",
+            "selectedOptionId": "D",
+            "correctAnswer": "C",
+            "isCorrect": false,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T04:06:51.667Z",
+            "knowledgePointIds": [
+              "verbal:main-idea"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_8"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_9",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "js2024a-q020",
+            "selectedOptionId": "B",
+            "correctAnswer": "B",
+            "isCorrect": true,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T04:07:03.596Z",
+            "knowledgePointIds": [
+              "verbal:main-idea"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_9"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_10",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "js2024a-q021",
+            "selectedOptionId": "D",
+            "correctAnswer": "C",
+            "isCorrect": false,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T04:07:12.488Z",
+            "knowledgePointIds": [
+              "verbal:detail"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_10"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_11",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "js2024a-q022",
+            "selectedOptionId": "A",
+            "correctAnswer": "A",
+            "isCorrect": true,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T04:07:24.129Z",
+            "knowledgePointIds": [
+              "verbal:context"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_11"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_12",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "js2024a-q023",
+            "selectedOptionId": "A",
+            "correctAnswer": "D",
+            "isCorrect": false,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T04:07:32.909Z",
+            "knowledgePointIds": [
+              "verbal:main-idea"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_12"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_13",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "js2024a-q024",
+            "selectedOptionId": "B",
+            "correctAnswer": "B",
+            "isCorrect": true,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T04:07:47.583Z",
+            "knowledgePointIds": [
+              "verbal:main-idea"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_13"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_14",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "js2024a-q026",
+            "selectedOptionId": "C",
+            "correctAnswer": "D",
+            "isCorrect": false,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T04:08:18.320Z",
+            "knowledgePointIds": [
+              "verbal:main-idea"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_14"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_15",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "js2024a-q027",
+            "selectedOptionId": "B",
+            "correctAnswer": "C",
+            "isCorrect": false,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T04:08:34.775Z",
+            "knowledgePointIds": [
+              "verbal:detail"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_15"
+          },
+          {
+            "id": "answer_apt_verbal_mv1xyl9g_pxx4xg_zj2023a-q050",
+            "sessionId": "apt_verbal_mv1xyl9g_pxx4xg",
+            "questionId": "zj2023a-q050",
+            "selectedOptionId": "C",
+            "correctAnswer": "C",
+            "isCorrect": true,
+            "mode": "exam",
+            "answeredAt": "2026-10-10T05:16:56.102Z",
+            "submittedAt": "2026-10-10T05:18:49.159Z",
+            "questionIndex": 0,
+            "knowledgePointIds": [
+              "verbal:detail"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1xyl9g_pxx4xg_zj2023a-q050"
+          },
+          {
+            "id": "answer_apt_verbal_mv1xyl9g_pxx4xg_zh2025c-q021",
+            "sessionId": "apt_verbal_mv1xyl9g_pxx4xg",
+            "questionId": "zh2025c-q021",
+            "selectedOptionId": "B",
+            "correctAnswer": "B",
+            "isCorrect": true,
+            "mode": "exam",
+            "answeredAt": "2026-10-10T05:17:19.433Z",
+            "submittedAt": "2026-10-10T05:18:49.159Z",
+            "questionIndex": 1,
+            "knowledgePointIds": [
+              "verbal:context"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1xyl9g_pxx4xg_zh2025c-q021"
+          },
+          {
+            "id": "answer_apt_verbal_mv1xyl9g_pxx4xg_js2024a-q017",
+            "sessionId": "apt_verbal_mv1xyl9g_pxx4xg",
+            "questionId": "js2024a-q017",
+            "selectedOptionId": "C",
+            "correctAnswer": "C",
+            "isCorrect": true,
+            "mode": "exam",
+            "answeredAt": "2026-10-10T05:17:55.848Z",
+            "submittedAt": "2026-10-10T05:18:49.159Z",
+            "questionIndex": 2,
+            "knowledgePointIds": [
+              "verbal:main-idea"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1xyl9g_pxx4xg_js2024a-q017"
+          },
+          {
+            "id": "answer_apt_verbal_mv1xyl9g_pxx4xg_apt-verbal-002",
+            "sessionId": "apt_verbal_mv1xyl9g_pxx4xg",
+            "questionId": "apt-verbal-002",
+            "selectedOptionId": "B",
+            "correctAnswer": "B",
+            "isCorrect": true,
+            "mode": "exam",
+            "answeredAt": "2026-10-10T05:18:07.892Z",
+            "submittedAt": "2026-10-10T05:18:49.159Z",
+            "questionIndex": 3,
+            "knowledgePointIds": [
+              "verbal:context"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1xyl9g_pxx4xg_apt-verbal-002"
+          },
+          {
+            "id": "answer_apt_verbal_mv1xyl9g_pxx4xg_zj2023a-q044",
+            "sessionId": "apt_verbal_mv1xyl9g_pxx4xg",
+            "questionId": "zj2023a-q044",
+            "selectedOptionId": "A",
+            "correctAnswer": "A",
+            "isCorrect": true,
+            "mode": "exam",
+            "answeredAt": "2026-10-10T05:18:43.006Z",
+            "submittedAt": "2026-10-10T05:18:49.159Z",
+            "questionIndex": 4,
+            "knowledgePointIds": [
+              "verbal:detail"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1xyl9g_pxx4xg_zj2023a-q044"
           }
         ],
-        "mistakes": {},
+        "mistakes": {
+          "ah2026-outline-verbal-4": {
+            "count": 1,
+            "firstMissedAt": "2026-10-10T04:05:27.807Z",
+            "lastMissedAt": "2026-10-10T04:05:27.807Z",
+            "lastSelectedOptionId": "A",
+            "correctAnswer": "C",
+            "moduleId": "verbal"
+          },
+          "js2024a-q018": {
+            "count": 1,
+            "firstMissedAt": "2026-10-10T04:06:22.511Z",
+            "lastMissedAt": "2026-10-10T04:06:22.511Z",
+            "lastSelectedOptionId": "A",
+            "correctAnswer": "B",
+            "moduleId": "verbal"
+          },
+          "js2024a-q019": {
+            "count": 1,
+            "firstMissedAt": "2026-10-10T04:06:51.667Z",
+            "lastMissedAt": "2026-10-10T04:06:51.667Z",
+            "lastSelectedOptionId": "D",
+            "correctAnswer": "C",
+            "moduleId": "verbal"
+          },
+          "js2024a-q021": {
+            "count": 1,
+            "firstMissedAt": "2026-10-10T04:07:12.488Z",
+            "lastMissedAt": "2026-10-10T04:07:12.488Z",
+            "lastSelectedOptionId": "D",
+            "correctAnswer": "C",
+            "moduleId": "verbal"
+          },
+          "js2024a-q023": {
+            "count": 1,
+            "firstMissedAt": "2026-10-10T04:07:32.909Z",
+            "lastMissedAt": "2026-10-10T04:07:32.909Z",
+            "lastSelectedOptionId": "A",
+            "correctAnswer": "D",
+            "moduleId": "verbal"
+          },
+          "js2024a-q026": {
+            "count": 1,
+            "firstMissedAt": "2026-10-10T04:08:18.320Z",
+            "lastMissedAt": "2026-10-10T04:08:18.320Z",
+            "lastSelectedOptionId": "C",
+            "correctAnswer": "D",
+            "moduleId": "verbal"
+          },
+          "js2024a-q027": {
+            "count": 1,
+            "firstMissedAt": "2026-10-10T04:08:34.775Z",
+            "lastMissedAt": "2026-10-10T04:08:34.775Z",
+            "lastSelectedOptionId": "B",
+            "correctAnswer": "C",
+            "moduleId": "verbal"
+          }
+        },
         "favorites": [],
         "favoriteKnowledgePointIds": [],
         "unclearKnowledgePointIds": []
