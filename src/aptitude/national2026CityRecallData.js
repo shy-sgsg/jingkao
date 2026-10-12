@@ -5852,5 +5852,1291 @@ export const NATIONAL_2026_CITY_RECALL_QUESTIONS = [
       "text": "为倡导团结合作精神，某单位举办了若干项目的双打比赛。该单位后勤部由王、吴、韩和宋4人组成网球、乒乓球和羽毛球3支双打队伍参赛，每支队伍由其中2人组成，4人均至少参加了其中的一支队伍。已知：（1）王和韩没有参加同一个项目；（2）若韩参加羽毛球项目，则宋参加网球项目；（3）若王参加乒乓球项目，则吴参加网球项目，若王不参加乒乓球项目，则吴也不参加网球项目。",
       "imageUrls": []
     }
+  },
+  {
+    "id": "national-2026-city-data-analysis-q111",
+    "sourceQuestionId": "kaoshiji-1180-q111",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:growth-rate",
+    "knowledgePointIds": [
+      "data-analysis:growth-rate"
+    ],
+    "originalQuestionNo": 111,
+    "sectionOrder": 6,
+    "sourceCategory": "资料分析",
+    "stem": "2024年上半年，中国医药保健品进出口贸易顺差（出口额-进口额）比上年同期：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "下降了20%以上"
+      },
+      {
+        "id": "B",
+        "text": "下降了不到20%"
+      },
+      {
+        "id": "C",
+        "text": "上升了20%以上"
+      },
+      {
+        "id": "D",
+        "text": "上升了不到20%"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "2024年上半年顺差为525.79−451.76=74.03亿美元。按同比增速反推，上年同期出口约515.69亿美元、进口约479.38亿美元，顺差约36.31亿美元；现期顺差增长约104%，属于上升20%以上。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.qy.school/daily-practice/daily-practice-2026-111-115-9070fe51dc54481d93da1708d72e3eb3",
+    "sharedStimulusId": "national-2026-city-data-analysis-q111-q115-stimulus",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题干与选项按IGet100公开回忆题面原文收录，必要图表与星光公考同卷回忆版PDF对照；不同公开版本的个别选项顺序存在差异，本题库保留IGet100页面顺序并按选项内容核对答案。此为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [
+      "https://upload.xingguanggongkao.com/pdf/2026%E5%B9%B4%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88%E5%9C%B0%E5%B8%82%E5%8D%B7-%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89-%E4%BC%B0%E5%88%86.pdf?time=1764726045"
+    ],
+    "raw_source_text_block": "2024年上半年，中国医药保健品进出口贸易顺差（出口额-进口额）比上年同期： A、下降了20%以上 B、下降了不到20% C、上升了20%以上 D、上升了不到20%",
+    "sharedStimulus": {
+      "text": "",
+      "imageUrls": [
+        "./public/question-assets/national-2026-city-data-analysis/q111-material.png"
+      ]
+    }
+  },
+  {
+    "id": "national-2026-city-data-analysis-q112",
+    "sourceQuestionId": "kaoshiji-1180-q112",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:share-change",
+    "knowledgePointIds": [
+      "data-analysis:share-change"
+    ],
+    "originalQuestionNo": 112,
+    "sectionOrder": 6,
+    "sourceCategory": "资料分析",
+    "stem": "2024年上半年，中药提取物出口额占医药保健品出口总额的比重比上年同期：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "上升了3个百分点以上"
+      },
+      {
+        "id": "B",
+        "text": "下降了3个百分点以上"
+      },
+      {
+        "id": "C",
+        "text": "上升了不到3个百分点"
+      },
+      {
+        "id": "D",
+        "text": "下降了不到3个百分点"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "现期比重为14.92÷525.79≈2.84%。按表中同比增速反推，上年同期提取物出口额约17.41亿美元、医药保健品出口总额约515.69亿美元，比重约3.37%；下降约0.54个百分点，未达到3个百分点。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.qy.school/daily-practice/daily-practice-2026-111-115-9070fe51dc54481d93da1708d72e3eb3",
+    "sharedStimulusId": "national-2026-city-data-analysis-q111-q115-stimulus",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题干与选项按IGet100公开回忆题面原文收录，必要图表与星光公考同卷回忆版PDF对照；不同公开版本的个别选项顺序存在差异，本题库保留IGet100页面顺序并按选项内容核对答案。此为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [
+      "https://upload.xingguanggongkao.com/pdf/2026%E5%B9%B4%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88%E5%9C%B0%E5%B8%82%E5%8D%B7-%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89-%E4%BC%B0%E5%88%86.pdf?time=1764726045"
+    ],
+    "raw_source_text_block": "2024年上半年，中药提取物出口额占医药保健品出口总额的比重比上年同期： A、上升了3个百分点以上 B、下降了3个百分点以上 C、上升了不到3个百分点 D、下降了不到3个百分点",
+    "sharedStimulus": {
+      "text": "",
+      "imageUrls": [
+        "./public/question-assets/national-2026-city-data-analysis/q111-material.png"
+      ]
+    }
+  },
+  {
+    "id": "national-2026-city-data-analysis-q113",
+    "sourceQuestionId": "kaoshiji-1180-q113",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:mixed-indicators",
+    "knowledgePointIds": [
+      "data-analysis:mixed-indicators"
+    ],
+    "originalQuestionNo": 113,
+    "sectionOrder": 6,
+    "sourceCategory": "资料分析",
+    "stem": "表中所列医药保健品12个小类中，2024年上半年进出口总额同比上升的有几类？",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "7"
+      },
+      {
+        "id": "B",
+        "text": "6"
+      },
+      {
+        "id": "C",
+        "text": "5"
+      },
+      {
+        "id": "D",
+        "text": "4"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "分别按各小类出口额和进口额的同比增速反推上年同期值，再比较本期与上年同期进出口总额；12类中有7类总额上升。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.qy.school/daily-practice/daily-practice-2026-111-115-9070fe51dc54481d93da1708d72e3eb3",
+    "sharedStimulusId": "national-2026-city-data-analysis-q111-q115-stimulus",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题干与选项按IGet100公开回忆题面原文收录，必要图表与星光公考同卷回忆版PDF对照；不同公开版本的个别选项顺序存在差异，本题库保留IGet100页面顺序并按选项内容核对答案。此为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [
+      "https://upload.xingguanggongkao.com/pdf/2026%E5%B9%B4%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88%E5%9C%B0%E5%B8%82%E5%8D%B7-%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89-%E4%BC%B0%E5%88%86.pdf?time=1764726045"
+    ],
+    "raw_source_text_block": "表中所列医药保健品12个小类中，2024年上半年进出口总额同比上升的有几类？ A、7 B、6 C、5 D、4",
+    "sharedStimulus": {
+      "text": "",
+      "imageUrls": [
+        "./public/question-assets/national-2026-city-data-analysis/q111-material.png"
+      ]
+    }
+  },
+  {
+    "id": "national-2026-city-data-analysis-q114",
+    "sourceQuestionId": "kaoshiji-1180-q114",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:growth-amount",
+    "knowledgePointIds": [
+      "data-analysis:growth-amount"
+    ],
+    "originalQuestionNo": 114,
+    "sectionOrder": 6,
+    "sourceCategory": "资料分析",
+    "stem": "将2024年上半年①医用敷料②一次性耗材③保健康复用品④口腔设备与材料进口额同比增量从高到低排序正确的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "③④①②"
+      },
+      {
+        "id": "B",
+        "text": "③④②①"
+      },
+      {
+        "id": "C",
+        "text": "④③①②"
+      },
+      {
+        "id": "D",
+        "text": "④③②①"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "对进口额按“现期量÷（1+同比增速）”求上年同期，再求增量。口腔设备与材料增量约0.91亿美元，保健康复用品约0.79亿美元；医用敷料和一次性耗材均下降，降幅较小者在前，排序为④③①②。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.qy.school/daily-practice/daily-practice-2026-111-115-9070fe51dc54481d93da1708d72e3eb3",
+    "sharedStimulusId": "national-2026-city-data-analysis-q111-q115-stimulus",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题干与选项按IGet100公开回忆题面原文收录，必要图表与星光公考同卷回忆版PDF对照；不同公开版本的个别选项顺序存在差异，本题库保留IGet100页面顺序并按选项内容核对答案。此为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [
+      "https://upload.xingguanggongkao.com/pdf/2026%E5%B9%B4%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88%E5%9C%B0%E5%B8%82%E5%8D%B7-%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89-%E4%BC%B0%E5%88%86.pdf?time=1764726045"
+    ],
+    "raw_source_text_block": "将2024年上半年①医用敷料②一次性耗材③保健康复用品④口腔设备与材料进口额同比增量从高到低排序正确的是： A、③④①② B、③④②① C、④③①② D、④③②①",
+    "sharedStimulus": {
+      "text": "",
+      "imageUrls": [
+        "./public/question-assets/national-2026-city-data-analysis/q111-material.png"
+      ]
+    }
+  },
+  {
+    "id": "national-2026-city-data-analysis-q115",
+    "sourceQuestionId": "kaoshiji-1180-q115",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:current-share",
+    "knowledgePointIds": [
+      "data-analysis:current-share"
+    ],
+    "originalQuestionNo": 115,
+    "sectionOrder": 6,
+    "sourceCategory": "资料分析",
+    "stem": "以下饼图中，最能准确反映2024年上半年中国西药类进出口总额中，西药原料（白色）、西成药（横线）和生化药（黑色）占比关系的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "",
+        "imageUrls": [
+          "./public/question-assets/national-2026-city-data-analysis/q115-option-a.png"
+        ]
+      },
+      {
+        "id": "B",
+        "text": "",
+        "imageUrls": [
+          "./public/question-assets/national-2026-city-data-analysis/q115-option-b.png"
+        ]
+      },
+      {
+        "id": "C",
+        "text": "",
+        "imageUrls": [
+          "./public/question-assets/national-2026-city-data-analysis/q115-option-c.png"
+        ]
+      },
+      {
+        "id": "D",
+        "text": "",
+        "imageUrls": [
+          "./public/question-assets/national-2026-city-data-analysis/q115-option-d.png"
+        ]
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "各类进出口总额分别为：西药原料213.43+51.78=265.21亿美元，西成药35.24+110.28=145.52亿美元，生化药20.71+97.84=118.55亿美元。三者约占总额的50%、28%、22%，与D图相符。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.qy.school/daily-practice/daily-practice-2026-111-115-9070fe51dc54481d93da1708d72e3eb3",
+    "sharedStimulusId": "national-2026-city-data-analysis-q111-q115-stimulus",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题干与选项按IGet100公开回忆题面原文收录，必要图表与星光公考同卷回忆版PDF对照；不同公开版本的个别选项顺序存在差异，本题库保留IGet100页面顺序并按选项内容核对答案。此为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [
+      "https://upload.xingguanggongkao.com/pdf/2026%E5%B9%B4%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88%E5%9C%B0%E5%B8%82%E5%8D%B7-%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89-%E4%BC%B0%E5%88%86.pdf?time=1764726045"
+    ],
+    "raw_source_text_block": "以下饼图中，最能准确反映2024年上半年中国西药类进出口总额中，西药原料（白色）、西成药（横线）和生化药（黑色）占比关系的是： A、如图所示 B、如图所示 C、如图所示 D、如图所示",
+    "sharedStimulus": {
+      "text": "",
+      "imageUrls": [
+        "./public/question-assets/national-2026-city-data-analysis/q111-material.png"
+      ]
+    }
+  },
+  {
+    "id": "national-2026-city-data-analysis-q116",
+    "sourceQuestionId": "kaoshiji-1180-q116",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:units-time",
+    "knowledgePointIds": [
+      "data-analysis:units-time"
+    ],
+    "originalQuestionNo": 116,
+    "sectionOrder": 6,
+    "sourceCategory": "资料分析",
+    "stem": "2024年，全国核发的不可交易绿证对应约多少万亿千瓦时可再生能源电量？",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "1.6"
+      },
+      {
+        "id": "B",
+        "text": "3.2"
+      },
+      {
+        "id": "C",
+        "text": "7.9"
+      },
+      {
+        "id": "D",
+        "text": "15.8"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "不可交易绿证为47.34−31.58=15.76亿个。每个绿证对应1000千瓦时，电量为15.76×1000亿千瓦时=1.576万亿千瓦时，约为1.6万亿。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.qy.school/daily-practice/daily-practice-2026-116-120-034044c42d1f4999b6a07b612bdfae1a",
+    "sharedStimulusId": "national-2026-city-data-analysis-q116-q120-stimulus",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题干与选项按IGet100公开回忆题面原文收录，必要图表与星光公考同卷回忆版PDF对照；不同公开版本的个别选项顺序存在差异，本题库保留IGet100页面顺序并按选项内容核对答案。此为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [
+      "https://upload.xingguanggongkao.com/pdf/2026%E5%B9%B4%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88%E5%9C%B0%E5%B8%82%E5%8D%B7-%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89-%E4%BC%B0%E5%88%86.pdf?time=1764726045"
+    ],
+    "raw_source_text_block": "2024年，全国核发的不可交易绿证对应约多少万亿千瓦时可再生能源电量？ A、1.6 B、3.2 C、7.9 D、15.8",
+    "sharedStimulus": {
+      "text": "绿证是对可再生能源绿色电力颁发的具有独特标识代码的电子证书，1个绿证单位对应1000千瓦时可再生能源电量。2024年全国核发绿证47.34亿个，其中可交易绿证31.58亿个。截至2024年12月底全国累计核发绿证49.55亿个，其中可交易绿证33.79亿个。2024年，全国集中式项目核发绿证46.77亿个。按项目类型划分，风电19.07亿个，常规水电15.78亿个，太阳能发电8.03亿个，生物质发电3.81亿个，风光一体化项目755万个，地热能发电52万个，海洋能发电1.1万个。2024年全国分布式项目核发绿证5695万个，同比增长27.8倍。其中，分散式风电核发绿证3364万个，分布式光伏核发绿证2331万个。",
+      "imageUrls": [
+        "./public/question-assets/national-2026-city-data-analysis/q116-material-1.png",
+        "./public/question-assets/national-2026-city-data-analysis/q116-material-2.png"
+      ]
+    }
+  },
+  {
+    "id": "national-2026-city-data-analysis-q117",
+    "sourceQuestionId": "kaoshiji-1180-q117",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:growth-rate",
+    "knowledgePointIds": [
+      "data-analysis:growth-rate"
+    ],
+    "originalQuestionNo": 117,
+    "sectionOrder": 6,
+    "sourceCategory": "资料分析",
+    "stem": "2023年，全国核发绿证数量约是2022年的多少倍？",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "3.7"
+      },
+      {
+        "id": "B",
+        "text": "5.1"
+      },
+      {
+        "id": "C",
+        "text": "6.3"
+      },
+      {
+        "id": "D",
+        "text": "7.8"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "图表给的是年末累计核发量。2023年新增约22075−5954=16121万个，2022年新增约5954−3893=2061万个；前者约为后者的7.8倍。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.qy.school/daily-practice/daily-practice-2026-116-120-034044c42d1f4999b6a07b612bdfae1a",
+    "sharedStimulusId": "national-2026-city-data-analysis-q116-q120-stimulus",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题干与选项按IGet100公开回忆题面原文收录，必要图表与星光公考同卷回忆版PDF对照；不同公开版本的个别选项顺序存在差异，本题库保留IGet100页面顺序并按选项内容核对答案。此为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [
+      "https://upload.xingguanggongkao.com/pdf/2026%E5%B9%B4%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88%E5%9C%B0%E5%B8%82%E5%8D%B7-%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89-%E4%BC%B0%E5%88%86.pdf?time=1764726045"
+    ],
+    "raw_source_text_block": "2023年，全国核发绿证数量约是2022年的多少倍？ A、3.7 B、5.1 C、6.3 D、7.8",
+    "sharedStimulus": {
+      "text": "绿证是对可再生能源绿色电力颁发的具有独特标识代码的电子证书，1个绿证单位对应1000千瓦时可再生能源电量。2024年全国核发绿证47.34亿个，其中可交易绿证31.58亿个。截至2024年12月底全国累计核发绿证49.55亿个，其中可交易绿证33.79亿个。2024年，全国集中式项目核发绿证46.77亿个。按项目类型划分，风电19.07亿个，常规水电15.78亿个，太阳能发电8.03亿个，生物质发电3.81亿个，风光一体化项目755万个，地热能发电52万个，海洋能发电1.1万个。2024年全国分布式项目核发绿证5695万个，同比增长27.8倍。其中，分散式风电核发绿证3364万个，分布式光伏核发绿证2331万个。",
+      "imageUrls": [
+        "./public/question-assets/national-2026-city-data-analysis/q116-material-1.png",
+        "./public/question-assets/national-2026-city-data-analysis/q116-material-2.png"
+      ]
+    }
+  },
+  {
+    "id": "national-2026-city-data-analysis-q118",
+    "sourceQuestionId": "kaoshiji-1180-q118",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:current-share",
+    "knowledgePointIds": [
+      "data-analysis:current-share"
+    ],
+    "originalQuestionNo": 118,
+    "sectionOrder": 6,
+    "sourceCategory": "资料分析",
+    "stem": "2024年绿证核发量最多的5个省级行政区，绿证核发量约占全国总量的：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "38%"
+      },
+      {
+        "id": "B",
+        "text": "42%"
+      },
+      {
+        "id": "C",
+        "text": "46%"
+      },
+      {
+        "id": "D",
+        "text": "50%"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "核发量前五的省级行政区为云南、内蒙古、四川、新疆、湖北，合计199732万个；除以全国核发量47.34亿个，约占42%。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.qy.school/daily-practice/daily-practice-2026-116-120-034044c42d1f4999b6a07b612bdfae1a",
+    "sharedStimulusId": "national-2026-city-data-analysis-q116-q120-stimulus",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题干与选项按IGet100公开回忆题面原文收录，必要图表与星光公考同卷回忆版PDF对照；不同公开版本的个别选项顺序存在差异，本题库保留IGet100页面顺序并按选项内容核对答案。此为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [
+      "https://upload.xingguanggongkao.com/pdf/2026%E5%B9%B4%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88%E5%9C%B0%E5%B8%82%E5%8D%B7-%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89-%E4%BC%B0%E5%88%86.pdf?time=1764726045"
+    ],
+    "raw_source_text_block": "2024年绿证核发量最多的5个省级行政区，绿证核发量约占全国总量的： A、38% B、42% C、46% D、50%",
+    "sharedStimulus": {
+      "text": "绿证是对可再生能源绿色电力颁发的具有独特标识代码的电子证书，1个绿证单位对应1000千瓦时可再生能源电量。2024年全国核发绿证47.34亿个，其中可交易绿证31.58亿个。截至2024年12月底全国累计核发绿证49.55亿个，其中可交易绿证33.79亿个。2024年，全国集中式项目核发绿证46.77亿个。按项目类型划分，风电19.07亿个，常规水电15.78亿个，太阳能发电8.03亿个，生物质发电3.81亿个，风光一体化项目755万个，地热能发电52万个，海洋能发电1.1万个。2024年全国分布式项目核发绿证5695万个，同比增长27.8倍。其中，分散式风电核发绿证3364万个，分布式光伏核发绿证2331万个。",
+      "imageUrls": [
+        "./public/question-assets/national-2026-city-data-analysis/q116-material-1.png",
+        "./public/question-assets/national-2026-city-data-analysis/q116-material-2.png"
+      ]
+    }
+  },
+  {
+    "id": "national-2026-city-data-analysis-q119",
+    "sourceQuestionId": "kaoshiji-1180-q119",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:share-change",
+    "knowledgePointIds": [
+      "data-analysis:share-change"
+    ],
+    "originalQuestionNo": 119,
+    "sectionOrder": 6,
+    "sourceCategory": "资料分析",
+    "stem": "2024年，全国集中式风电项目核发绿证数量占当年集中式项目核发绿证数量的比重比太阳能发电项目的占比高约多少个百分点？",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "16"
+      },
+      {
+        "id": "B",
+        "text": "20"
+      },
+      {
+        "id": "C",
+        "text": "24"
+      },
+      {
+        "id": "D",
+        "text": "28"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "风电与太阳能项目占集中式项目总量的比重差为（19.07−8.03）÷46.77≈23.6个百分点，约为24个百分点。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.qy.school/daily-practice/daily-practice-2026-116-120-034044c42d1f4999b6a07b612bdfae1a",
+    "sharedStimulusId": "national-2026-city-data-analysis-q116-q120-stimulus",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题干与选项按IGet100公开回忆题面原文收录，必要图表与星光公考同卷回忆版PDF对照；不同公开版本的个别选项顺序存在差异，本题库保留IGet100页面顺序并按选项内容核对答案。此为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [
+      "https://upload.xingguanggongkao.com/pdf/2026%E5%B9%B4%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88%E5%9C%B0%E5%B8%82%E5%8D%B7-%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89-%E4%BC%B0%E5%88%86.pdf?time=1764726045"
+    ],
+    "raw_source_text_block": "2024年，全国集中式风电项目核发绿证数量占当年集中式项目核发绿证数量的比重比太阳能发电项目的占比高约多少个百分点？ A、16 B、20 C、24 D、28",
+    "sharedStimulus": {
+      "text": "绿证是对可再生能源绿色电力颁发的具有独特标识代码的电子证书，1个绿证单位对应1000千瓦时可再生能源电量。2024年全国核发绿证47.34亿个，其中可交易绿证31.58亿个。截至2024年12月底全国累计核发绿证49.55亿个，其中可交易绿证33.79亿个。2024年，全国集中式项目核发绿证46.77亿个。按项目类型划分，风电19.07亿个，常规水电15.78亿个，太阳能发电8.03亿个，生物质发电3.81亿个，风光一体化项目755万个，地热能发电52万个，海洋能发电1.1万个。2024年全国分布式项目核发绿证5695万个，同比增长27.8倍。其中，分散式风电核发绿证3364万个，分布式光伏核发绿证2331万个。",
+      "imageUrls": [
+        "./public/question-assets/national-2026-city-data-analysis/q116-material-1.png",
+        "./public/question-assets/national-2026-city-data-analysis/q116-material-2.png"
+      ]
+    }
+  },
+  {
+    "id": "national-2026-city-data-analysis-q120",
+    "sourceQuestionId": "kaoshiji-1180-q120",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:mixed-indicators",
+    "knowledgePointIds": [
+      "data-analysis:mixed-indicators"
+    ],
+    "originalQuestionNo": 120,
+    "sectionOrder": 6,
+    "sourceCategory": "资料分析",
+    "stem": "能够从上述资料中推出的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "截至2023年底，全国累计核发绿证中，可交易绿证的占比不到1%"
+      },
+      {
+        "id": "B",
+        "text": "2024年，湖北、湖南核发绿证之和占全国比重比广东、广西之和高1个百分点以上"
+      },
+      {
+        "id": "C",
+        "text": "2019年，全国绿证核发量多于2018年"
+      },
+      {
+        "id": "D",
+        "text": "2024年，全国常规水电核发绿证不到集中式项目核发绿证总数量的三分之一"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "湖北、湖南合计核发32025万个，广东、广西合计核发26096万个，差额5929万个；占全国47.34亿个的约1.25%，超过1个百分点。其余说法与累计量、年度增量或占比数据不符。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.qy.school/daily-practice/daily-practice-2026-116-120-034044c42d1f4999b6a07b612bdfae1a",
+    "sharedStimulusId": "national-2026-city-data-analysis-q116-q120-stimulus",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题干与选项按IGet100公开回忆题面原文收录，必要图表与星光公考同卷回忆版PDF对照；不同公开版本的个别选项顺序存在差异，本题库保留IGet100页面顺序并按选项内容核对答案。此为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [
+      "https://upload.xingguanggongkao.com/pdf/2026%E5%B9%B4%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88%E5%9C%B0%E5%B8%82%E5%8D%B7-%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89-%E4%BC%B0%E5%88%86.pdf?time=1764726045"
+    ],
+    "raw_source_text_block": "能够从上述资料中推出的是： A、截至2023年底，全国累计核发绿证中，可交易绿证的占比不到1% B、2024年，湖北、湖南核发绿证之和占全国比重比广东、广西之和高1个百分点以上 C、2019年，全国绿证核发量多于2018年 D、2024年，全国常规水电核发绿证不到集中式项目核发绿证总数量的三分之一",
+    "sharedStimulus": {
+      "text": "绿证是对可再生能源绿色电力颁发的具有独特标识代码的电子证书，1个绿证单位对应1000千瓦时可再生能源电量。2024年全国核发绿证47.34亿个，其中可交易绿证31.58亿个。截至2024年12月底全国累计核发绿证49.55亿个，其中可交易绿证33.79亿个。2024年，全国集中式项目核发绿证46.77亿个。按项目类型划分，风电19.07亿个，常规水电15.78亿个，太阳能发电8.03亿个，生物质发电3.81亿个，风光一体化项目755万个，地热能发电52万个，海洋能发电1.1万个。2024年全国分布式项目核发绿证5695万个，同比增长27.8倍。其中，分散式风电核发绿证3364万个，分布式光伏核发绿证2331万个。",
+      "imageUrls": [
+        "./public/question-assets/national-2026-city-data-analysis/q116-material-1.png",
+        "./public/question-assets/national-2026-city-data-analysis/q116-material-2.png"
+      ]
+    }
+  },
+  {
+    "id": "national-2026-city-data-analysis-q121",
+    "sourceQuestionId": "kaoshiji-1180-q121",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:multiple",
+    "knowledgePointIds": [
+      "data-analysis:multiple"
+    ],
+    "originalQuestionNo": 121,
+    "sectionOrder": 6,
+    "sourceCategory": "资料分析",
+    "stem": "2021~2024年，我国科幻产业累计营收额约是2017~2020年的多少倍？",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "2.5"
+      },
+      {
+        "id": "B",
+        "text": "2.2"
+      },
+      {
+        "id": "C",
+        "text": "1.9"
+      },
+      {
+        "id": "D",
+        "text": "1.6"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "2021—2024年合计829.6+877.5+1132.9+1089.6=3929.6亿元；2017—2020年合计140.0+456.4+658.7+551.1=1806.2亿元。前者约为后者的2.18倍，最接近2.2倍。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.qy.school/daily-practice/daily-practice-2026-121-125-6de54b6dc22947dabf17ea3333469f9c",
+    "sharedStimulusId": "national-2026-city-data-analysis-q121-q125-stimulus",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题干与选项按IGet100公开回忆题面原文收录，必要图表与星光公考同卷回忆版PDF对照；不同公开版本的个别选项顺序存在差异，本题库保留IGet100页面顺序并按选项内容核对答案。此为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [
+      "https://upload.xingguanggongkao.com/pdf/2026%E5%B9%B4%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88%E5%9C%B0%E5%B8%82%E5%8D%B7-%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89-%E4%BC%B0%E5%88%86.pdf?time=1764726045"
+    ],
+    "raw_source_text_block": "2021~2024年，我国科幻产业累计营收额约是2017~2020年的多少倍？ A、2.5 B、2.2 C、1.9 D、1.6",
+    "sharedStimulus": {
+      "text": "科幻产业包括科幻阅读、科幻影视、科幻游戏、科幻衍生品、科幻文旅五大领域。2024年，我国科幻产业总营收1089.6亿元。",
+      "imageUrls": [
+        "./public/question-assets/national-2026-city-data-analysis/q121-material-1.png",
+        "./public/question-assets/national-2026-city-data-analysis/q121-material-2.png"
+      ]
+    }
+  },
+  {
+    "id": "national-2026-city-data-analysis-q122",
+    "sourceQuestionId": "kaoshiji-1180-q122",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:growth-amount",
+    "knowledgePointIds": [
+      "data-analysis:growth-amount"
+    ],
+    "originalQuestionNo": 122,
+    "sectionOrder": 6,
+    "sourceCategory": "资料分析",
+    "stem": "如保持2024年同比增量不变，则2026-2030年，我国科幻游戏产业累计营收将在以下哪个范围内？",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "不到4500亿元"
+      },
+      {
+        "id": "B",
+        "text": "4500亿～4750亿元之间"
+      },
+      {
+        "id": "C",
+        "text": "超过5000亿元"
+      },
+      {
+        "id": "D",
+        "text": "4750亿～5000亿元之间"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "2024年科幻游戏营收同比增量为718.1−651.9=66.2亿元。按该增量逐年外推，2026—2030年合计约4914.5亿元，落在4750亿～5000亿元之间。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.qy.school/daily-practice/daily-practice-2026-121-125-6de54b6dc22947dabf17ea3333469f9c",
+    "sharedStimulusId": "national-2026-city-data-analysis-q121-q125-stimulus",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题干与选项按IGet100公开回忆题面原文收录，必要图表与星光公考同卷回忆版PDF对照；不同公开版本的个别选项顺序存在差异，本题库保留IGet100页面顺序并按选项内容核对答案。此为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [
+      "https://upload.xingguanggongkao.com/pdf/2026%E5%B9%B4%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88%E5%9C%B0%E5%B8%82%E5%8D%B7-%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89-%E4%BC%B0%E5%88%86.pdf?time=1764726045"
+    ],
+    "raw_source_text_block": "如保持2024年同比增量不变，则2026-2030年，我国科幻游戏产业累计营收将在以下哪个范围内？ A、不到4500亿元 B、4500亿～4750亿元之间 C、超过5000亿元 D、4750亿～5000亿元之间",
+    "sharedStimulus": {
+      "text": "科幻产业包括科幻阅读、科幻影视、科幻游戏、科幻衍生品、科幻文旅五大领域。2024年，我国科幻产业总营收1089.6亿元。",
+      "imageUrls": [
+        "./public/question-assets/national-2026-city-data-analysis/q121-material-1.png",
+        "./public/question-assets/national-2026-city-data-analysis/q121-material-2.png"
+      ]
+    }
+  },
+  {
+    "id": "national-2026-city-data-analysis-q123",
+    "sourceQuestionId": "kaoshiji-1180-q123",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:growth-rate",
+    "knowledgePointIds": [
+      "data-analysis:growth-rate"
+    ],
+    "originalQuestionNo": 123,
+    "sectionOrder": 6,
+    "sourceCategory": "资料分析",
+    "stem": "我国科幻产业五大领域中，2024年营收额同比增速快于2023年水平的有几个？",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "4"
+      },
+      {
+        "id": "B",
+        "text": "3"
+      },
+      {
+        "id": "C",
+        "text": "2"
+      },
+      {
+        "id": "D",
+        "text": "1"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "逐项比较2023年和2024年同比增速：科幻阅读与科幻衍生品增速提高；科幻影视、科幻游戏和科幻文旅增速下降，共有2个领域增速快于2023年。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.qy.school/daily-practice/daily-practice-2026-121-125-6de54b6dc22947dabf17ea3333469f9c",
+    "sharedStimulusId": "national-2026-city-data-analysis-q121-q125-stimulus",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题干与选项按IGet100公开回忆题面原文收录，必要图表与星光公考同卷回忆版PDF对照；不同公开版本的个别选项顺序存在差异，本题库保留IGet100页面顺序并按选项内容核对答案。此为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [
+      "https://upload.xingguanggongkao.com/pdf/2026%E5%B9%B4%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88%E5%9C%B0%E5%B8%82%E5%8D%B7-%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89-%E4%BC%B0%E5%88%86.pdf?time=1764726045"
+    ],
+    "raw_source_text_block": "我国科幻产业五大领域中，2024年营收额同比增速快于2023年水平的有几个？ A、4 B、3 C、2 D、1",
+    "sharedStimulus": {
+      "text": "科幻产业包括科幻阅读、科幻影视、科幻游戏、科幻衍生品、科幻文旅五大领域。2024年，我国科幻产业总营收1089.6亿元。",
+      "imageUrls": [
+        "./public/question-assets/national-2026-city-data-analysis/q121-material-1.png",
+        "./public/question-assets/national-2026-city-data-analysis/q121-material-2.png"
+      ]
+    }
+  },
+  {
+    "id": "national-2026-city-data-analysis-q124",
+    "sourceQuestionId": "kaoshiji-1180-q124",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:current-share",
+    "knowledgePointIds": [
+      "data-analysis:current-share"
+    ],
+    "originalQuestionNo": 124,
+    "sectionOrder": 6,
+    "sourceCategory": "资料分析",
+    "stem": "2022~2024年，科幻文旅营收额占科幻产业营收额的比重超过20%的年份仅包括：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "2023和2024年"
+      },
+      {
+        "id": "B",
+        "text": "2023年"
+      },
+      {
+        "id": "C",
+        "text": "2022和2024年"
+      },
+      {
+        "id": "D",
+        "text": "2022年"
+      }
+    ],
+    "correctAnswer": "A",
+    "explanation": "科幻文旅占比：2022年150.3÷877.5≈17.1%，2023年310.6÷1132.9≈27.4%，2024年244.0÷1089.6≈22.4%。超过20%的为2023年和2024年。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.qy.school/daily-practice/daily-practice-2026-121-125-6de54b6dc22947dabf17ea3333469f9c",
+    "sharedStimulusId": "national-2026-city-data-analysis-q121-q125-stimulus",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题干与选项按IGet100公开回忆题面原文收录，必要图表与星光公考同卷回忆版PDF对照；不同公开版本的个别选项顺序存在差异，本题库保留IGet100页面顺序并按选项内容核对答案。此为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [
+      "https://upload.xingguanggongkao.com/pdf/2026%E5%B9%B4%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88%E5%9C%B0%E5%B8%82%E5%8D%B7-%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89-%E4%BC%B0%E5%88%86.pdf?time=1764726045"
+    ],
+    "raw_source_text_block": "2022~2024年，科幻文旅营收额占科幻产业营收额的比重超过20%的年份仅包括： A、2023和2024年 B、2023年 C、2022和2024年 D、2022年",
+    "sharedStimulus": {
+      "text": "科幻产业包括科幻阅读、科幻影视、科幻游戏、科幻衍生品、科幻文旅五大领域。2024年，我国科幻产业总营收1089.6亿元。",
+      "imageUrls": [
+        "./public/question-assets/national-2026-city-data-analysis/q121-material-1.png",
+        "./public/question-assets/national-2026-city-data-analysis/q121-material-2.png"
+      ]
+    }
+  },
+  {
+    "id": "national-2026-city-data-analysis-q125",
+    "sourceQuestionId": "kaoshiji-1180-q125",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:growth-amount",
+    "knowledgePointIds": [
+      "data-analysis:growth-amount"
+    ],
+    "originalQuestionNo": 125,
+    "sectionOrder": 6,
+    "sourceCategory": "资料分析",
+    "stem": "以下柱状图反映了哪一时间段内，我国科幻产业营收额同比增量的变化情况（横轴位置表示增量为0）？",
+    "stemImageUrls": [
+      "./public/question-assets/national-2026-city-data-analysis/q125-chart.png"
+    ],
+    "options": [
+      {
+        "id": "A",
+        "text": "2021~2024年"
+      },
+      {
+        "id": "B",
+        "text": "2020~2023年"
+      },
+      {
+        "id": "C",
+        "text": "2019~2022年"
+      },
+      {
+        "id": "D",
+        "text": "2018~2021年"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "2018—2021年营收同比增量依次为316.4、202.3、−107.6、278.5亿元，呈现“正、正、负、正”的柱形次序，且相对高低与图示一致。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.qy.school/daily-practice/daily-practice-2026-121-125-6de54b6dc22947dabf17ea3333469f9c",
+    "sharedStimulusId": "national-2026-city-data-analysis-q121-q125-stimulus",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题干与选项按IGet100公开回忆题面原文收录，必要图表与星光公考同卷回忆版PDF对照；不同公开版本的个别选项顺序存在差异，本题库保留IGet100页面顺序并按选项内容核对答案。此为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [
+      "https://upload.xingguanggongkao.com/pdf/2026%E5%B9%B4%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88%E5%9C%B0%E5%B8%82%E5%8D%B7-%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89-%E4%BC%B0%E5%88%86.pdf?time=1764726045"
+    ],
+    "raw_source_text_block": "以下柱状图反映了哪一时间段内，我国科幻产业营收额同比增量的变化情况（横轴位置表示增量为0）？ A、2021~2024年 B、2020~2023年 C、2019~2022年 D、2018~2021年",
+    "sharedStimulus": {
+      "text": "科幻产业包括科幻阅读、科幻影视、科幻游戏、科幻衍生品、科幻文旅五大领域。2024年，我国科幻产业总营收1089.6亿元。",
+      "imageUrls": [
+        "./public/question-assets/national-2026-city-data-analysis/q121-material-1.png",
+        "./public/question-assets/national-2026-city-data-analysis/q121-material-2.png"
+      ]
+    }
+  },
+  {
+    "id": "national-2026-city-data-analysis-q126",
+    "sourceQuestionId": "kaoshiji-1180-q126",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:current-share",
+    "knowledgePointIds": [
+      "data-analysis:current-share"
+    ],
+    "originalQuestionNo": 126,
+    "sectionOrder": 6,
+    "sourceCategory": "资料分析",
+    "stem": "2024年，我国外贸进出口总值在以下哪个范围内？",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "不到44万亿元"
+      },
+      {
+        "id": "B",
+        "text": "44万亿元~45万亿元之间"
+      },
+      {
+        "id": "C",
+        "text": "45万亿元~46万亿元之间"
+      },
+      {
+        "id": "D",
+        "text": "超过46万亿元"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "最不发达国家进出口额14230.2亿元，占全国外贸总值3.2%。14230.2÷3.2%≈444694亿元，即约44.47万亿元，处于44万亿～45万亿元之间。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.xingguanggongkao.com/Wb/quesView/id/53796.html",
+    "sharedStimulusId": "national-2026-city-data-analysis-q126-q130-stimulus",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题干与选项按IGet100公开回忆题面原文收录，必要图表与星光公考同卷回忆版PDF对照；不同公开版本的个别选项顺序存在差异，本题库保留IGet100页面顺序并按选项内容核对答案。此为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [
+      "https://upload.xingguanggongkao.com/pdf/2026%E5%B9%B4%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88%E5%9C%B0%E5%B8%82%E5%8D%B7-%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89-%E4%BC%B0%E5%88%86.pdf?time=1764726045"
+    ],
+    "raw_source_text_block": "2024年，我国外贸进出口总值在以下哪个范围内？ A、不到44万亿元 B、44万亿元~45万亿元之间 C、45万亿元~46万亿元之间 D、超过46万亿元",
+    "sharedStimulus": {
+      "text": "2024年，我国对联合国定义的45个最不发达国家（以下简称最不发达国家）进出口14230.2亿元人民币，占同期我国外贸进出口总值的3.2%。其中出口8664.6亿元，同比（下同）增长4.3%；进口5565.5亿元，增长12.8%。\n\n2024年，我国对最不发达国家出口机电产品3942.2亿元，增长13.5%。其中出口船舶690.8亿元，增长65.9%，主要出口至全球第一大船旗国利比里亚。出口金额654.3亿元，增长67%；出口工程机械、火车分别为165.3亿元、91.6亿元，分别增长28.9%、39.5%；出口劳动密集型产品2481亿元，增长3.7%，其中纺织品1623.5亿元，增长15.3%。\n\n2024年，我国自最不发达国家进口铜材、原油、金属矿砂分别为1469.6亿元、1364.2亿元、1221亿元。最不发达国家成为我国钢材、铝矿、锡矿，钨矿，钛矿第一大进元来源地，分别占我国同类商品进口总值的38.2%，73.1%，65.4%，57.7%，58.1%。\n\n2024年12月1日起，我国给予所有已建交的最不发达国家100%税目产品零关税待遇。12月，我国自最不发达国家进口512.7亿元，增长18.1%，其中自刚果民主共和国、几内亚、老挝、赞比亚分别进口156.3亿元，54.7亿元，35.6亿元，33.9亿元，分别增长84.6%，40.3%，25.7%、127.27%。",
+      "imageUrls": []
+    }
+  },
+  {
+    "id": "national-2026-city-data-analysis-q127",
+    "sourceQuestionId": "kaoshiji-1180-q127",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:growth-rate",
+    "knowledgePointIds": [
+      "data-analysis:growth-rate"
+    ],
+    "originalQuestionNo": 127,
+    "sectionOrder": 6,
+    "sourceCategory": "资料分析",
+    "stem": "2024年，我国对最不发达国家进出口总值同比增速约为：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "9.5%"
+      },
+      {
+        "id": "B",
+        "text": "8.5%"
+      },
+      {
+        "id": "C",
+        "text": "7.5%"
+      },
+      {
+        "id": "D",
+        "text": "10.5%"
+      }
+    ],
+    "correctAnswer": "C",
+    "explanation": "按出口、进口增速分别反推上年同期值：出口约8307.8亿元，进口约4933.8亿元，合计约13241.6亿元。现期14230.2亿元同比增长约7.5%。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.xingguanggongkao.com/Wb/quesView/id/53797.html",
+    "sharedStimulusId": "national-2026-city-data-analysis-q126-q130-stimulus",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题干与选项按IGet100公开回忆题面原文收录，必要图表与星光公考同卷回忆版PDF对照；不同公开版本的个别选项顺序存在差异，本题库保留IGet100页面顺序并按选项内容核对答案。此为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [
+      "https://upload.xingguanggongkao.com/pdf/2026%E5%B9%B4%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88%E5%9C%B0%E5%B8%82%E5%8D%B7-%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89-%E4%BC%B0%E5%88%86.pdf?time=1764726045"
+    ],
+    "raw_source_text_block": "2024年，我国对最不发达国家进出口总值同比增速约为： A、9.5% B、8.5% C、7.5% D、10.5%",
+    "sharedStimulus": {
+      "text": "2024年，我国对联合国定义的45个最不发达国家（以下简称最不发达国家）进出口14230.2亿元人民币，占同期我国外贸进出口总值的3.2%。其中出口8664.6亿元，同比（下同）增长4.3%；进口5565.5亿元，增长12.8%。\n\n2024年，我国对最不发达国家出口机电产品3942.2亿元，增长13.5%。其中出口船舶690.8亿元，增长65.9%，主要出口至全球第一大船旗国利比里亚。出口金额654.3亿元，增长67%；出口工程机械、火车分别为165.3亿元、91.6亿元，分别增长28.9%、39.5%；出口劳动密集型产品2481亿元，增长3.7%，其中纺织品1623.5亿元，增长15.3%。\n\n2024年，我国自最不发达国家进口铜材、原油、金属矿砂分别为1469.6亿元、1364.2亿元、1221亿元。最不发达国家成为我国钢材、铝矿、锡矿，钨矿，钛矿第一大进元来源地，分别占我国同类商品进口总值的38.2%，73.1%，65.4%，57.7%，58.1%。\n\n2024年12月1日起，我国给予所有已建交的最不发达国家100%税目产品零关税待遇。12月，我国自最不发达国家进口512.7亿元，增长18.1%，其中自刚果民主共和国、几内亚、老挝、赞比亚分别进口156.3亿元，54.7亿元，35.6亿元，33.9亿元，分别增长84.6%，40.3%，25.7%、127.27%。",
+      "imageUrls": []
+    }
+  },
+  {
+    "id": "national-2026-city-data-analysis-q128",
+    "sourceQuestionId": "kaoshiji-1180-q128",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:current-share",
+    "knowledgePointIds": [
+      "data-analysis:current-share"
+    ],
+    "originalQuestionNo": 128,
+    "sectionOrder": 6,
+    "sourceCategory": "资料分析",
+    "stem": "下列饼状图，最能准确反映2024年我国自最不发达国家进口值中，铜材（黑色），原油（横线），金属矿砂（白色）和其他（竖线）进口值占比关系的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "",
+        "imageUrls": [
+          "./public/question-assets/national-2026-city-data-analysis/q128-option-a.png"
+        ]
+      },
+      {
+        "id": "B",
+        "text": "",
+        "imageUrls": [
+          "./public/question-assets/national-2026-city-data-analysis/q128-option-b.png"
+        ]
+      },
+      {
+        "id": "C",
+        "text": "",
+        "imageUrls": [
+          "./public/question-assets/national-2026-city-data-analysis/q128-option-c.png"
+        ]
+      },
+      {
+        "id": "D",
+        "text": "",
+        "imageUrls": [
+          "./public/question-assets/national-2026-city-data-analysis/q128-option-d.png"
+        ]
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "铜材、原油、金属矿砂分别占进口总额约26%、25%、22%，其他约27%。四部分占比接近，但排序为其他最多、铜材次之、原油再次、金属矿砂略低，与B图相符。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.xingguanggongkao.com/Wb/quesView/id/53798.html",
+    "sharedStimulusId": "national-2026-city-data-analysis-q126-q130-stimulus",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题干与选项按IGet100公开回忆题面原文收录，必要图表与星光公考同卷回忆版PDF对照；不同公开版本的个别选项顺序存在差异，本题库保留IGet100页面顺序并按选项内容核对答案。此为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [
+      "https://upload.xingguanggongkao.com/pdf/2026%E5%B9%B4%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88%E5%9C%B0%E5%B8%82%E5%8D%B7-%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89-%E4%BC%B0%E5%88%86.pdf?time=1764726045"
+    ],
+    "raw_source_text_block": "下列饼状图，最能准确反映2024年我国自最不发达国家进口值中，铜材（黑色），原油（横线），金属矿砂（白色）和其他（竖线）进口值占比关系的是： A、如图所示 B、如图所示 C、如图所示 D、如图所示",
+    "sharedStimulus": {
+      "text": "2024年，我国对联合国定义的45个最不发达国家（以下简称最不发达国家）进出口14230.2亿元人民币，占同期我国外贸进出口总值的3.2%。其中出口8664.6亿元，同比（下同）增长4.3%；进口5565.5亿元，增长12.8%。\n\n2024年，我国对最不发达国家出口机电产品3942.2亿元，增长13.5%。其中出口船舶690.8亿元，增长65.9%，主要出口至全球第一大船旗国利比里亚。出口金额654.3亿元，增长67%；出口工程机械、火车分别为165.3亿元、91.6亿元，分别增长28.9%、39.5%；出口劳动密集型产品2481亿元，增长3.7%，其中纺织品1623.5亿元，增长15.3%。\n\n2024年，我国自最不发达国家进口铜材、原油、金属矿砂分别为1469.6亿元、1364.2亿元、1221亿元。最不发达国家成为我国钢材、铝矿、锡矿，钨矿，钛矿第一大进元来源地，分别占我国同类商品进口总值的38.2%，73.1%，65.4%，57.7%，58.1%。\n\n2024年12月1日起，我国给予所有已建交的最不发达国家100%税目产品零关税待遇。12月，我国自最不发达国家进口512.7亿元，增长18.1%，其中自刚果民主共和国、几内亚、老挝、赞比亚分别进口156.3亿元，54.7亿元，35.6亿元，33.9亿元，分别增长84.6%，40.3%，25.7%、127.27%。",
+      "imageUrls": []
+    }
+  },
+  {
+    "id": "national-2026-city-data-analysis-q129",
+    "sourceQuestionId": "kaoshiji-1180-q129",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:average-value",
+    "knowledgePointIds": [
+      "data-analysis:average-value"
+    ],
+    "originalQuestionNo": 129,
+    "sectionOrder": 6,
+    "sourceCategory": "资料分析",
+    "stem": "2023年1~11月，我国对最不发达国家月均进口值约为多少亿元？",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "395"
+      },
+      {
+        "id": "B",
+        "text": "409"
+      },
+      {
+        "id": "C",
+        "text": "468"
+      },
+      {
+        "id": "D",
+        "text": "502"
+      }
+    ],
+    "correctAnswer": "B",
+    "explanation": "2023年进口总额约为5565.5÷1.128≈4933.8亿元。2023年12月进口额约为512.7÷1.181≈434.1亿元，前11个月合计约4499.7亿元；月均约409亿元。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.xingguanggongkao.com/Wb/quesView/id/53799.html",
+    "sharedStimulusId": "national-2026-city-data-analysis-q126-q130-stimulus",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题干与选项按IGet100公开回忆题面原文收录，必要图表与星光公考同卷回忆版PDF对照；不同公开版本的个别选项顺序存在差异，本题库保留IGet100页面顺序并按选项内容核对答案。此为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [
+      "https://upload.xingguanggongkao.com/pdf/2026%E5%B9%B4%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88%E5%9C%B0%E5%B8%82%E5%8D%B7-%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89-%E4%BC%B0%E5%88%86.pdf?time=1764726045"
+    ],
+    "raw_source_text_block": "2023年1~11月，我国对最不发达国家月均进口值约为多少亿元？ A、395 B、409 C、468 D、502",
+    "sharedStimulus": {
+      "text": "2024年，我国对联合国定义的45个最不发达国家（以下简称最不发达国家）进出口14230.2亿元人民币，占同期我国外贸进出口总值的3.2%。其中出口8664.6亿元，同比（下同）增长4.3%；进口5565.5亿元，增长12.8%。\n\n2024年，我国对最不发达国家出口机电产品3942.2亿元，增长13.5%。其中出口船舶690.8亿元，增长65.9%，主要出口至全球第一大船旗国利比里亚。出口金额654.3亿元，增长67%；出口工程机械、火车分别为165.3亿元、91.6亿元，分别增长28.9%、39.5%；出口劳动密集型产品2481亿元，增长3.7%，其中纺织品1623.5亿元，增长15.3%。\n\n2024年，我国自最不发达国家进口铜材、原油、金属矿砂分别为1469.6亿元、1364.2亿元、1221亿元。最不发达国家成为我国钢材、铝矿、锡矿，钨矿，钛矿第一大进元来源地，分别占我国同类商品进口总值的38.2%，73.1%，65.4%，57.7%，58.1%。\n\n2024年12月1日起，我国给予所有已建交的最不发达国家100%税目产品零关税待遇。12月，我国自最不发达国家进口512.7亿元，增长18.1%，其中自刚果民主共和国、几内亚、老挝、赞比亚分别进口156.3亿元，54.7亿元，35.6亿元，33.9亿元，分别增长84.6%，40.3%，25.7%、127.27%。",
+      "imageUrls": []
+    }
+  },
+  {
+    "id": "national-2026-city-data-analysis-q130",
+    "sourceQuestionId": "kaoshiji-1180-q130",
+    "moduleId": "data-analysis",
+    "subjectId": "data-analysis",
+    "topicId": "data-analysis:mixed-indicators",
+    "knowledgePointIds": [
+      "data-analysis:mixed-indicators"
+    ],
+    "originalQuestionNo": 130,
+    "sectionOrder": 6,
+    "sourceCategory": "资料分析",
+    "stem": "关于2024年我国进出口情况，能根据上述资料推出的是：",
+    "stemImageUrls": [],
+    "options": [
+      {
+        "id": "A",
+        "text": "铜材进口总值不到3000亿元"
+      },
+      {
+        "id": "B",
+        "text": "我国对最不发达国家火车出口值同比增量高于对其工程机械出口值同比增量"
+      },
+      {
+        "id": "C",
+        "text": "劳动密集型产品出口值占我国最不发达国家出口总值的比重高于上年水平"
+      },
+      {
+        "id": "D",
+        "text": "12月自刚果民主共和国、几内亚、老挝、赞比亚的进口总值超过当月我国自最不发达国家进口总值的一半"
+      }
+    ],
+    "correctAnswer": "D",
+    "explanation": "四国进口额合计156.3+54.7+35.6+33.9=280.5亿元；当月我国自最不发达国家进口额一半为512.7÷2=256.35亿元，四国合计超过一半。",
+    "explanationImageUrls": [],
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.xingguanggongkao.com/Wb/quesView/id/53800.html",
+    "sharedStimulusId": "national-2026-city-data-analysis-q126-q130-stimulus",
+    "difficulty": "medium",
+    "sourceType": "recalled",
+    "sourceId": "national-2026-city-level-recall",
+    "sourceTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "sourceNote": "题干与选项按IGet100公开回忆题面原文收录，必要图表与星光公考同卷回忆版PDF对照；不同公开版本的个别选项顺序存在差异，本题库保留IGet100页面顺序并按选项内容核对答案。此为考生回忆版，非官方原卷。",
+    "sourceUrl": "https://www.kaoshiji.cn/gwyhc/1180.html",
+    "region": "国考",
+    "examYear": 2026,
+    "paperId": "national-2026-city-level-recall",
+    "paperTitle": "2026年国家公务员录用考试《行测》题（市地级卷，考生回忆版）",
+    "verificationStatus": "verified",
+    "copyrightStatus": "user_confirmed_republication_authorization",
+    "publishStatus": "published",
+    "presentationMode": "verbatim_authorized",
+    "sourceImageAuditUrls": [
+      "https://upload.xingguanggongkao.com/pdf/2026%E5%B9%B4%E5%9B%BD%E5%AE%B6%E5%85%AC%E5%8A%A1%E5%91%98%E5%BD%95%E7%94%A8%E8%80%83%E8%AF%95%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%E7%9C%9F%E9%A2%98%EF%BC%88%E5%9C%B0%E5%B8%82%E5%8D%B7-%E8%80%83%E7%94%9F%E5%9B%9E%E5%BF%86%E7%89%88%EF%BC%89-%E4%BC%B0%E5%88%86.pdf?time=1764726045"
+    ],
+    "raw_source_text_block": "关于2024年我国进出口情况，能根据上述资料推出的是： A、铜材进口总值不到3000亿元 B、我国对最不发达国家火车出口值同比增量高于对其工程机械出口值同比增量 C、劳动密集型产品出口值占我国最不发达国家出口总值的比重高于上年水平 D、12月自刚果民主共和国、几内亚、老挝、赞比亚的进口总值超过当月我国自最不发达国家进口总值的一半",
+    "sharedStimulus": {
+      "text": "2024年，我国对联合国定义的45个最不发达国家（以下简称最不发达国家）进出口14230.2亿元人民币，占同期我国外贸进出口总值的3.2%。其中出口8664.6亿元，同比（下同）增长4.3%；进口5565.5亿元，增长12.8%。\n\n2024年，我国对最不发达国家出口机电产品3942.2亿元，增长13.5%。其中出口船舶690.8亿元，增长65.9%，主要出口至全球第一大船旗国利比里亚。出口金额654.3亿元，增长67%；出口工程机械、火车分别为165.3亿元、91.6亿元，分别增长28.9%、39.5%；出口劳动密集型产品2481亿元，增长3.7%，其中纺织品1623.5亿元，增长15.3%。\n\n2024年，我国自最不发达国家进口铜材、原油、金属矿砂分别为1469.6亿元、1364.2亿元、1221亿元。最不发达国家成为我国钢材、铝矿、锡矿，钨矿，钛矿第一大进元来源地，分别占我国同类商品进口总值的38.2%，73.1%，65.4%，57.7%，58.1%。\n\n2024年12月1日起，我国给予所有已建交的最不发达国家100%税目产品零关税待遇。12月，我国自最不发达国家进口512.7亿元，增长18.1%，其中自刚果民主共和国、几内亚、老挝、赞比亚分别进口156.3亿元，54.7亿元，35.6亿元，33.9亿元，分别增长84.6%，40.3%，25.7%、127.27%。",
+      "imageUrls": []
+    }
   }
 ];
