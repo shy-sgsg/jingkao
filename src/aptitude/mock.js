@@ -138,6 +138,7 @@ const PAPER_CATALOG = [
     ranges: {
       verbal: [36, 70],
       quantitative: [71, 85],
+      reasoning: [86, 115],
     },
   },
   {
