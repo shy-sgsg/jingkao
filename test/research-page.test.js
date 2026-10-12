@@ -34,18 +34,18 @@ test('research findings derive sample coverage, score distribution, and evidence
     scope: '朝阳区岗位最低进面分部分样本、昌平区、大兴区岗位最低进面分部分样本、东城区部分职位的最低进面分；非全区完整名册、房山区、丰台区、海淀区、怀柔区、密云区岗位最低进面分部分样本、平谷区、石景山区、顺义区、北京街道、北京市财政局岗位最低进面线部分样本（本库当前已映射6岗）、西城区、延庆区岗位最低进面线部分样本',
   });
   assert.deepEqual(byId['qualification-coverage'].facts, {
-    positions: 895,
+    positions: 898,
     structuredRequirements: 12,
     completeEligibility: 0,
     officialPositionRows: 0,
   });
   assert.deepEqual(byId['competition-grain'].facts, {
-    observations: 1059,
-    jobLevelObservations: 1016,
+    observations: 1064,
+    jobLevelObservations: 1021,
     aggregateObservations: 43,
-    jobLevelPositions: 818,
+    jobLevelPositions: 823,
     qualificationSnapshots: 243,
-    reportedApplicationSnapshots: 773,
+    reportedApplicationSnapshots: 778,
   });
   assert.match(byId['competition-grain'].title, /岗位级竞争观察/);
   assert.ok(byId['competition-grain'].sourceIds.includes('huatu-2025-first-day-20241118-1800'));
@@ -113,6 +113,6 @@ test('the research route presents expandable source lineage and its topic filter
 
   assert.match(root.innerHTML, /data-topic="分数样本" aria-pressed="true">/);
   assert.match(root.innerHTML, /383 条/);
-  assert.match(root.innerHTML, /报考人数 773 条/);
+  assert.match(root.innerHTML, /报考人数 778 条/);
   assert.doesNotMatch(root.innerHTML, /class="research-finding[^\"]*"[^>]*data-topic="岗位覆盖"/);
 });

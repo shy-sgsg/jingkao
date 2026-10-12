@@ -69,6 +69,38 @@ test('Tongzhou 2026 Fenbi applicant counts link only uniquely matched positions 
   }
 });
 
+test('citywide Fenbi pages link additional Tongzhou applicant counts only by exact position identity', () => {
+  const expected = new Map([
+    ['231156001', [2, 5, 'fenbi-2026-citywide-page-161']],
+    ['231156403', [2, 9, 'fenbi-2026-citywide-page-161']],
+    ['231156601', [1, 0, 'fenbi-2026-citywide-page-161']],
+    ['821154002', [2, 0, 'fenbi-2026-citywide-page-165']],
+    ['821154104', [1, 0, 'fenbi-2026-citywide-page-168']],
+  ]);
+  const sourceIds = new Set([...expected.values()].map(([, , sourceId]) => sourceId));
+  for (const sourceId of sourceIds) {
+    assert.ok(dataset.sources.some((source) => source.sourceId === sourceId), `${sourceId} should be registered`);
+  }
+
+  const rows = dataset.observations.filter((row) => sourceIds.has(row.sourceId));
+  assert.equal(rows.length, expected.size);
+  for (const [code, [recruitCount, applicantsRegistered, sourceId]] of expected) {
+    const position = dataset.positions.find((item) => item.year === 2026 && item.code === code);
+    assert.ok(position, `${code} should resolve to a local 2026 position`);
+    assert.equal(position.districtId, 'tongzhou');
+    assert.equal(position.recruitCount, recruitCount);
+
+    const row = rows.find((item) => item.positionCode === code);
+    assert.ok(row, `${code} should have a linked third-party count`);
+    assert.equal(row.sourceId, sourceId);
+    assert.equal(row.applicantsRegistered, applicantsRegistered);
+    assert.equal(row.applicantsQualified, null);
+    assert.equal(row.observedAt, null);
+    assert.equal(getPositionCompetitionEvidence(position, dataset).registeredCompetitionRatio,
+      applicantsRegistered / recruitCount);
+  }
+});
+
 test('Tongzhou positions sort by linked per-slot Fenbi applicant references', () => {
   const positions = dataset.positions.filter((position) => position.year === 2026 && position.districtId === 'tongzhou');
   const sorted = filterAndSortPositions(positions, {

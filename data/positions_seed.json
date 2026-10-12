@@ -58205,6 +58205,67 @@
   },
   {
     "year": 2026,
+    "code": "231156001",
+    "unit": "北京市通州区北苑街道",
+    "title": "综合管理岗",
+    "recruitCount": 2,
+    "education": "硕士研究生及以上",
+    "majorText": "研究生：经济学（02），工学（08），管理学（12）",
+    "majorCriteria": {
+      "graduate": ["02", "08", "12"]
+    },
+    "eligibilityText": "粉笔2026全市职位表分页列出职位代码、名称、学历、专业与招录人数；其他资格条件以官方招考简章为准。",
+    "sourceLevel": "secondary",
+    "verification": "待官方逐码复核",
+    "crossVerified": false,
+    "eligibilityComplete": false,
+    "sources": [
+      "fenbi-2026-citywide-page-161"
+    ]
+  },
+  {
+    "year": 2026,
+    "code": "231156403",
+    "unit": "北京市通州区张家湾镇",
+    "title": "行政执法岗",
+    "recruitCount": 2,
+    "education": "本科及以上",
+    "majorText": "本科：法学类（0301），中国语言文学类（0501），管理学（12）研究生：法学（0301），法律（0351），中国语言文学（0501），工学（08），管理学（12）",
+    "majorCriteria": {
+      "undergraduate": ["0301", "0501", "12"],
+      "graduate": ["0301", "0351", "0501", "08", "12"]
+    },
+    "eligibilityText": "粉笔2026全市职位表分页列出职位代码、名称、学历、专业与招录人数；其他资格条件以官方招考简章为准。",
+    "sourceLevel": "secondary",
+    "verification": "待官方逐码复核",
+    "crossVerified": false,
+    "eligibilityComplete": false,
+    "sources": [
+      "fenbi-2026-citywide-page-161"
+    ]
+  },
+  {
+    "year": 2026,
+    "code": "231156601",
+    "unit": "北京市通州区于家务回族乡",
+    "title": "政法专项岗",
+    "recruitCount": 1,
+    "education": "硕士研究生及以上",
+    "majorText": "研究生：法学（0301），马克思主义理论（0305），法律（0351），中国语言文学（0501），安全科学与工程（0837）",
+    "majorCriteria": {
+      "graduate": ["0301", "0305", "0351", "0501", "0837"]
+    },
+    "eligibilityText": "粉笔2026全市职位表分页列出职位代码、名称、学历、专业与招录人数；其他资格条件以官方招考简章为准。",
+    "sourceLevel": "secondary",
+    "verification": "待官方逐码复核",
+    "crossVerified": false,
+    "eligibilityComplete": false,
+    "sources": [
+      "fenbi-2026-citywide-page-161"
+    ]
+  },
+  {
+    "year": 2026,
     "code": "231156101",
     "unit": "北京市通州区中仓街道",
     "title": "综合管理岗",
