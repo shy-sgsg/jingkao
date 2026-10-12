@@ -14,6 +14,13 @@ export const GENERAL_KNOWLEDGE_SOURCES = [
     note: '题面、选项与答案已对照官方大纲核验；该来源可供核对，不代表已取得题面转载或公开练习许可。',
   },
   {
+    id: 'offcn-beijing-2024-common-2023-08-09', sourceType: 'third_party_mock', title: '2024北京公务员考试行测题库：行测常识判断模拟题2023.08.09',
+    organization: '中公网校（中公教育）', examYear: 2024,
+    url: 'https://www.eoffcn.com/kszx/detail/1173526.html', verificationStatus: 'verified',
+    publishStatus: 'published', copyrightStatus: 'user_confirmed_republication_authorization',
+    note: '收录该页面常识判断题；题干、选项和答案解析已按来源核对，答题前不展示答案。',
+  },
+  {
     id: 'npc-civil-code', sourceType: 'official_law', title: '中华人民共和国民法典', organization: '全国人民代表大会 / 国家法律法规数据库',
     url: 'https://flk.npc.gov.cn/detail2.html', verificationStatus: 'verified', publishStatus: 'published',
     copyrightStatus: '法规事实摘述并链接原文', note: '涉及具体法律条文时以国家法律法规数据库的有效文本为准。',
