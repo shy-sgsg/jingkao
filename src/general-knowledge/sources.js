@@ -804,6 +804,12 @@ export const GENERAL_KNOWLEDGE_SOURCES = [
     note: '常识判断题面按公开考生回忆版归档，答案结合配套公开答案与法规、官方资料核验；本站已获转载授权。',
   },
   {
+    id: 'national-2026-deputy-recall', sourceType: 'recalled', title: '2026年国家公务员录用考试《行测》题（副省级卷，考生回忆版）', organization: '公开真题库 / 考生回忆资料 / 环球网校解析', examYear: 2026, region: '国考',
+    url: 'https://gwy.gkzhenti.cn/paper/1767342831860', answerUrl: 'https://gwy.gkzhenti.cn/answer/1767342831860', verificationStatus: 'verified',
+    publishStatus: 'published', copyrightStatus: '用户确认已获得转载授权',
+    note: '本站仅开放题面、答案和解析已核对的第24、32、35题；其余题目尚在审校中。第35题独立解析PDF中的选项次序与题面不同，已按错项陈述内容核验后采用题面及同站答案键。',
+  },
+  {
     id: 'jiangsu-2024-a-32xueyuan', sourceType: 'verified_exam', title: '2024 年江苏省公务员录用考试行测 A 类真题（第三方出版原卷）', organization: '32 学苑', examYear: 2024,
     url: 'https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf',
     answerUrl: 'https://static.32xueyuan.com/zq//u/cms/zj/202411/221409378lxq.pdf',
