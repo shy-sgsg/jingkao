@@ -147,6 +147,46 @@ const dataAnalysis2025AprilSource = source(
   'beijing-offcn-2025-data-2024-04-29',
   5,
 );
+const commonKnowledge2024AugustSource = source(
+  'offcn-beijing-2024-common-1058895',
+  '2024北京公务员考试行测常识判断模拟题',
+  'https://www.eoffcn.com/kszx/detail/1058895.html',
+  2024,
+  'beijing-offcn-2024-common-1058895',
+  1,
+);
+const commonKnowledge2024August30Source = source(
+  'offcn-beijing-2024-common-2023-08-30',
+  '2024北京公务员考试行测题库：行测常识判断模拟题2023.08.30',
+  'https://www.eoffcn.com/kszx/detail/1190827.html',
+  2024,
+  'beijing-offcn-2024-common-2023-08-30',
+  1,
+);
+const verbal2025SeptemberSource = source(
+  'offcn-beijing-2025-verbal-2024-09-13',
+  '2025北京公务员考试行测言语理解模拟题2024.09.13',
+  'https://www.eoffcn.com/kszx/detail/1457764.html',
+  2025,
+  'beijing-offcn-2025-verbal-2024-09-13',
+  2,
+);
+const verbal2025MarchSource = source(
+  'offcn-beijing-2025-verbal-2024-03-13',
+  '2025北京公务员考试行测题库：行测言语理解模拟题2024.3.13',
+  'https://www.eoffcn.com/kszx/detail/1300640.html',
+  2025,
+  'beijing-offcn-2025-verbal-2024-03-13',
+  2,
+);
+const quantitative2025FebruarySource = source(
+  'offcn-beijing-2025-quantitative-2025-02-26',
+  '2025北京公务员考试行测题库：行测数学运算模拟题2025.02.26',
+  'https://www.eoffcn.com/kszx/detail/1597409.html',
+  2025,
+  'beijing-offcn-2025-quantitative-2025-02-26',
+  3,
+);
 
 const question = (sourceData, fields) => ({
   ...sourceData,
@@ -461,6 +501,119 @@ return [
     stem: '2015年，我国出口纺织品、服装2919亿美元，同比下降4.8%。按出口商品类型看，纺织品出口1153亿美元，同比下降2.3%;服装出口1759亿美元，同比下降6.4%。按出口对象看，对美国出口额同比增长6.7%，对欧盟出口额同比下降9.3%，对日本出口额同比下降11.6%，对东盟出口额同比下降0.8%。问：在美国、欧盟、东盟和日本四大贸易伙伴中，2015年我国纺织品、服装对其出口额占我国当年纺织品、服装出口总额比重低于2014年水平的有：',
     options: ['仅东盟', '美国和东盟', '欧盟和日本', '欧盟、日本和东盟'], correctAnswer: 'C',
     explanation: '中公解析：当某部分增长率低于整体增长率−4.8%时，该部分占整体的比重下降。欧盟和日本的出口额分别下降9.3%和11.6%，均低于整体降幅，选择C。',
+  }),
+  question(commonKnowledge2024AugustSource, {
+    id: 'bj2024offcn-common-1058895-q1', moduleId: 'general-knowledge', subjectId: 'history',
+    topicId: 'history:ancient', knowledgePointIds: ['history:institutions'], originalQuestionNo: 1,
+    stem: '中国古代选拔人才的科举制度始建于( )。',
+    options: ['隋', '唐', '五代', '宋'], correctAnswer: 'A',
+    explanation: '中公解析：科举制度是由隋朝隋文帝杨坚所提出，由隋炀帝杨广正式创立的，由于魏晋以来选官注重门第，不利于选拔有真才实学的人做官，为改变这个弊端，隋朝创立了一种新的选官制度。开始用分科考试的方法选拔官员，隋炀帝杨广时正式设进士科，按考试成绩选拔人才，我国科举制度正式诞生。故本题正确答案为A。',
+  }),
+  question(commonKnowledge2024AugustSource, {
+    id: 'bj2024offcn-common-1058895-q2', moduleId: 'general-knowledge', subjectId: 'geography',
+    topicId: 'geography:national', knowledgePointIds: ['geography:territory'], originalQuestionNo: 2,
+    stem: '我国海域广阔，有四大海域，从南到北排列依次为()',
+    options: ['南海、黄海、渤海、东海', '南海、黄海、东海、渤海', '南海、东海、黄海、渤海', '南海、东海、渤海、黄海'], correctAnswer: 'C',
+    explanation: '中公解析：我国位于亚洲大陆的东部，面向太平洋，拥有辽阔的海域，濒临的四大海域从南到北排列依次为南海、东海、黄海、渤海。故本题答案为C选项。',
+  }),
+  question(commonKnowledge2024AugustSource, {
+    id: 'bj2024offcn-common-1058895-q3', moduleId: 'general-knowledge', subjectId: 'geography',
+    topicId: 'geography:national', knowledgePointIds: ['geography:population'], originalQuestionNo: 3,
+    stem: '我国人口分布有一条明显的地理分界线，该线东南部人口多，西北部人口少。这条分界线是( )。',
+    options: ['漠河——腾冲连线', '黑河——腾冲连线', '秦岭——淮河连线', '天山——阴山连线'], correctAnswer: 'B',
+    explanation: '中公解析：中国人口地区分布不均.一般来说，以黑龙江省的黑河-云南省的腾冲线为界，东部地区人口多(稠密)，西部地区人口少(稀疏);沿海、沿河、沿湖地区人口多，干旱荒漠地区人口少;平原、盆地人口多，山地、高原人口少;经济和交通运输发达的地区人口多，经济落后、交通闭塞的地区人口少;城镇密集、工业发达的地区人口多，偏僻的农业、牧业地区人口少;汉族地区人口多，大部分少数民族地区人口少.故此选B。',
+  }),
+  question(commonKnowledge2024August30Source, {
+    id: 'bj2024offcn-common-1190827-q1', moduleId: 'general-knowledge', subjectId: 'current-affairs',
+    topicId: 'current-affairs:reports', knowledgePointIds: ['current-affairs:party-congress'], originalQuestionNo: 1,
+    stem: '党的二十大的主题是：高举中国特色社会主义伟大旗帜，全面贯彻新时代中国特色社会主义思想，弘扬伟大建党精神，自信自强、守正创新，( )、勇毅前行，为全面建设社会主义现代化国家、全面推进中华民族伟大复兴而团结奋斗。',
+    options: ['踔厉奋发', '踔厉骏发', '踔厉风发', '踔厉迸发'], correctAnswer: 'A',
+    explanation: '中公解析：高举中国特色社会主义伟大旗帜，全面贯彻新时代中国特色社会主义思想，弘扬伟大建党精神，自信自强、守正创新，踔厉奋发、勇毅前行，为全面建设社会主义现代化国家、全面推进中华民族伟大复兴而团结奋斗。',
+  }),
+  question(commonKnowledge2024August30Source, {
+    id: 'bj2024offcn-common-1190827-q2', moduleId: 'general-knowledge', subjectId: 'humanities',
+    topicId: 'humanities:tradition', knowledgePointIds: ['humanities:calendar'], originalQuestionNo: 2,
+    stem: '(单选)下列各句所涉及的年龄，由小到大排列正确的一项是：\n①余自束发读书轩中\n②豆蔻梢头二月初\n③既加冠，益慕圣贤之道\n④行行向不惑，淹留遂无成\n⑤年近知命，位止方州',
+    options: ['③①②④⑤', '②①③④⑤', '②④③①⑤', '②①③⑤④'], correctAnswer: 'B',
+    explanation: '中公解析：束发：清朝以前汉族男孩十五岁时束发为髻。在古代，男孩到了束发之年，就可以上大学读书了。豆蔻：女子十三四岁;加冠：男子二十岁。知命：五十知天命。不惑：四十岁，故由小到大为豆蔻、束发、加冠、不惑、知命，本题答案为B。',
+  }),
+  question(commonKnowledge2024August30Source, {
+    id: 'bj2024offcn-common-1190827-q3', moduleId: 'general-knowledge', subjectId: 'history',
+    topicId: 'history:ancient', knowledgePointIds: ['history:institutions'], originalQuestionNo: 3,
+    stem: '(单选)下列关于稷下学宫说法，有误的一项是：',
+    options: [
+      '稷下学宫是世界上第一所由官方举办、私家主持的高等学府',
+      '“稷”是齐国国都临淄城(今山东省淄博市)一处城门的名称',
+      '在春秋时期，中国历史上出现了最早的学生守则《弟子职》',
+      '曾在稷下学宫讲学的学者有淳于髡、孟子(孟轲)、邹子(邹衍)',
+    ], correctAnswer: 'C',
+    explanation: '中公解析：《弟子职》是一份非常真实、非常完整、非常宝贵的研究中国历史特别是中国教育史的文献，收录在《管子》之中，是战国时齐国稷下学者托名管仲所作。D项，淳于髡，齐国黄县(今山东省龙口市)人，齐威王拜其为政卿大夫。以滑稽多辩著称，后人把他誉为“稷下之冠”，主要成语典故有：谏威王“一鸣惊人”“乐极生悲”等。故本题选择C。',
+  }),
+  question(verbal2025SeptemberSource, {
+    id: 'bj2025offcn-verbal-1457764-q1', moduleId: 'verbal', subjectId: 'verbal',
+    topicId: 'verbal:contextual-word-choice', knowledgePointIds: ['verbal:contextual-word-choice'], originalQuestionNo: 1,
+    stem: '地球村内，防疫无国界，需要吸取教训、分享经验、共同御敌。抗击疫情，这是“我们”的战争，在________的全球网络中，置身事外的“我”无法取胜，只有身处命运共同体的“我们”，才能有效________发起“军备竞赛”的病菌株。',
+    options: ['变幻莫测 抵抗', '唇齿相依 对抗', '瞬息万变 抵挡', '休戚相关 对付'], correctAnswer: 'B',
+    explanation: '解析：由“地球村”“命运共同体”等表述可知，第一空所填词语应可以表达全球网络的联系紧密，没有人可以置身事外之意。“变幻莫测”和“瞬息万变”都强调变化，排除A、C。第二空，与“病菌株”暗含的疾病意思相搭配，“对抗”填入更恰当。故本题选B。',
+  }),
+  question(verbal2025SeptemberSource, {
+    id: 'bj2025offcn-verbal-1457764-q2', moduleId: 'verbal', subjectId: 'verbal',
+    topicId: 'verbal:contextual-word-choice', knowledgePointIds: ['verbal:contextual-word-choice'], originalQuestionNo: 2,
+    stem: '由于竞选活动需要雇用工作人员、制作竞选标语和招贴画、布置演讲场地、发布广播和电视广告等，因此花费高昂，这是近代民主政治的普遍现象。而在美国，总统选举从党内初选到两党全国代表大会再到最后投票历时至少一年，选举费用更是________。',
+    options: ['事随境迁', '水涨船高', '居高不下', '居高临下'], correctAnswer: 'C',
+    explanation: '解析：文段首先指出竞选活动花费高昂是普遍现象，然后用“而”字强调美国总统选举历时至少一年，选举费用更加高昂。“事随境迁”指在环境改变的同时，事情也发生改变;“居高临下”形容处于有利的地位或傲视他人。这两个词语均不能形容花费高，排除A、D。“水涨船高”比喻事物随着它所凭借的基础的而增长。句中只是单纯强调选举费用高，不存在“水”与“船”的联动关系，排除B。本题选C。',
+  }),
+  question(verbal2025SeptemberSource, {
+    id: 'bj2025offcn-verbal-1457764-q3', moduleId: 'verbal', subjectId: 'verbal',
+    topicId: 'verbal:contextual-word-choice', knowledgePointIds: ['verbal:contextual-word-choice'], originalQuestionNo: 3,
+    stem: '在现代社会，公民能独立地表达自己的观点，却不傲慢，对政治表示服从，却不________;看到弱者知道同情，看到邪恶知道________。',
+    options: ['卑躬屈膝 愤怒', '溜须拍马 愤慨', '阿谀奉承 悲愤', '趋炎附势 气愤'], correctAnswer: 'A',
+    explanation: '解析：第一空所在句子意为要把握好处事的尺度，即对政治可以服从，但不能丧失原则。“溜须拍马”、“阿谀奉承”常用于对他人不切实际甚至虚妄地夸大、赞扬，以博取对方好感。“趋炎附势”常用来形容人势利。均不能表达无限度服从的意思，排除B、C、D。本题选A。',
+  }),
+  question(verbal2025MarchSource, {
+    id: 'bj2025offcn-verbal-1300640-q1', moduleId: 'verbal', subjectId: 'verbal',
+    topicId: 'verbal:reading', knowledgePointIds: ['verbal:main-idea'], originalQuestionNo: 1,
+    stem: '近年来，“文化+科技”的应用，使收藏在博物馆里，远在祖国各地的文物“活”了起来，在过去的一年里，文化创新与科技创新发生“化学反应”，从舞美设计到文物保护，从互联网在线直播到博物馆数字化，从互联网在线直播到博物馆数字化展陈，文化领域各行各业纷纷插上科技的翅膀，科技对文化发展的推动力愈加强劲。\n\n这段文字中的“化学反应”是：',
+    options: [
+      '文化事业与科技事业融合发展，相辅相成',
+      '之前鲜为人知的文物通过科技“活”了起来',
+      '科技创新支撑文化创新，文化自信点燃科技创新',
+      '文化领域各行业借助科技蓬勃发展，百花齐放',
+    ], correctAnswer: 'D',
+    explanation: '中公解析：文段开篇提出“文化+科技”的应用，使各地博物馆里的文物“活”了起来，意在强调科技对于文化的影响。后文论述“科技对文化发展的推动力愈加强劲”，强调科技对于文化的影响力越来越强，所以文段的重点在于强调科技对于文化的作用。故“文化创意与科技创新发生化学反应”中的“化学反应”即指科技对于文化巨大的推动作用，文化借助科技蓬勃发展，对应D项。',
+  }),
+  question(verbal2025MarchSource, {
+    id: 'bj2025offcn-verbal-1300640-q2', moduleId: 'verbal', subjectId: 'verbal',
+    topicId: 'verbal:reading', knowledgePointIds: ['verbal:main-idea'], originalQuestionNo: 2,
+    stem: '从时间的精密测量与相对论的密切关系，我们可以感受到万物相通的奥妙。根据广义相对论，地面(或任何星球)上的两点之间，如果高度不同，时间流逝速度就会有所不同，高处略快。地面上每米的高度差，时间流逝差异大约为10-16。这意味着，________________，就能推测两点的高度差。这进一步表明，原子钟在测地学、水文学里都会有巨大的应用潜力。\n\n填入划横线部分最恰当的一句是:',
+    options: [
+      '只要用原子钟精确测量两点的时间流逝的差异',
+      '只要明确时间的精密测量与相对论的密切关系',
+      '只要能掌握原子钟碰撞频移的规律和基本参数',
+      '只要能够运用自然界万物相通的法则举一反三',
+    ], correctAnswer: 'A',
+    explanation: '中公解析：横线处位于文段中间，应起到承上启下的作用。横线前提到“如果高度不同，时间流逝速度就会有所不同”“地面上每米的高度差，时间流逝差异大约为10~16”可知，高度差与时间流逝差异相关。由横线后提到的“这进一步表明，原子钟在测地学、水文学里都会有巨大的应用潜力”可知，空缺处句子应与“原子钟”相关。分析整个文段可知，所填句子应是推测两点高度差的方法。A项表明可以通过测量时间流逝差异来推测高度差，且体现了原子钟测量时间的作用，填入衔接紧密。B、D两项未提及“原子钟”，与后文衔接不当，排除。C项的“碰撞频移”文段未涉及，填入衔接不当，排除。故本题选A。',
+  }),
+  question(quantitative2025FebruarySource, {
+    id: 'bj2025offcn-quantitative-1597409-q2', moduleId: 'quantitative', subjectId: 'quantitative',
+    topicId: 'quantitative:probability', knowledgePointIds: ['quantitative:probability'], originalQuestionNo: 2,
+    stem: '学校要举行夏令营活动，由于名额有限，需要在符合条件的5个同学中通过抓阄的方式选择出两个同学去参加此次活动。于是班长就做了5个阄，其中两个阄上写有“去”字，其余三个阄空白，混合后5个同学依次随机抓取。计算第二个同学抓到“去”字阄的概率为( )',
+    options: ['0.2', '0.25', '0.4', '0.1'], correctAnswer: 'C',
+    explanation: '中公解析：5个签中有2个“去”字签，随机抓取时每名同学获得“去”字签的机会相同。第二名同学抓到“去”字签的概率为2/5=0.4，答案为C。',
+  }),
+  question(dataAnalysisSource, {
+    id: 'bj2025offcn-data-1349450-q1', moduleId: 'data-analysis', subjectId: 'data-analysis',
+    topicId: 'data-analysis:growth-rate', knowledgePointIds: ['data-analysis:growth-rate'], originalQuestionNo: 1,
+    stem: '2021年1-3月份，全国社会消费品零售总额105221亿元。按经营单位所在地分，城镇消费品零售额91345亿元，同比增长34.6%;乡村消费品零售额13876亿元，增长29.4%。\n\n问题：2021年1-3月份，全国社会消费品零售总额比上年同期增长：',
+    options: ['33.9%', '28.6%', '37.5%', '26.1%'], correctAnswer: 'A',
+    explanation: '中公解析：城镇和乡村消费品零售额的同比增速分别为34.6%和29.4%，全国总额增速应介于两者之间。四个选项中只有33.9%位于该范围内，故选A。',
+  }),
+  question(dataAnalysisSource, {
+    id: 'bj2025offcn-data-1349450-q2', moduleId: 'data-analysis', subjectId: 'data-analysis',
+    topicId: 'data-analysis:growth-rate', knowledgePointIds: ['data-analysis:growth-rate'], originalQuestionNo: 2,
+    stem: '1—8月，房地产开发企业土地购置面积12236万平方米，同比下降25.6%，每平方米土地价格同比上涨4.5%，土地成交额6374亿元。\n\n问题：2019年1—8月，房地产开发企业土地成交额与去年同期相比增长约：',
+    options: ['-17%', '-22%', '-27%', '1.2%'], correctAnswer: 'B',
+    explanation: '中公解析：土地成交额=土地购置面积×每平方米土地价格。其同比变化率为(1−25.6%)×(1+4.5%)−1≈−22.3%，与选项中的−22%最接近，故选B。',
   }),
   question(quantitative2025OctoberSource, {
     id: 'bj2025offcn-quant-october-q1', moduleId: 'quantitative', subjectId: 'quantitative',
