@@ -1977,3 +1977,48 @@ button.science-answer-option:hover { border-color: #c9d9ee; background: #f7faff;
   .science-lesson-footer > span { width: 100%; margin-left: 0; }
   .science-task-config { margin-inline: -6px; padding: 12px; }
 }
+
+.question-review-selection { min-width: 0; padding: 16px; }
+.question-review-selection .panel-heading { margin-bottom: 11px; }
+.question-review-selection .panel-heading p { max-width: 760px; }
+.question-review-tabs { display: flex; gap: 7px; margin-bottom: 10px; }
+.question-review-tab { display: inline-flex; min-height: 36px; align-items: center; gap: 7px; padding: 0 12px; border: 1px solid #e6ebf2; border-radius: 8px; background: #fff; color: #728096; font-size: var(--font-xs); cursor: pointer; }
+.question-review-tab span { display: inline-grid; min-width: 19px; height: 19px; place-items: center; padding: 0 4px; border-radius: 10px; background: #f1f4f8; color: #66768e; font-size: 11px; }
+.question-review-tab.is-active { border-color: #d7e2f2; background: #eff4fb; color: #365782; font-weight: 650; }
+.question-review-tab.is-active span { background: #dce7f6; color: #365782; }
+.question-review-auxiliary-counts { display: flex; flex-wrap: wrap; gap: 14px; margin: 0 0 10px; color: #7a8798; font-size: var(--font-xs); }
+.question-review-auxiliary-counts span { display: inline-flex; align-items: baseline; gap: 5px; }
+.question-review-auxiliary-counts strong { color: #455d7b; font-size: var(--font-sm); }
+.question-review-kind-panel[hidden] { display: none; }
+.question-review-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 8px; }
+.question-review-toolbar > div { display: flex; flex-wrap: wrap; gap: 5px; }
+.question-review-toolbar [data-question-review-selected-count] { color: #718097; font-size: var(--font-xs); white-space: nowrap; }
+.question-review-entry-list { display: grid; gap: 7px; }
+.question-review-entry { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: start; gap: 9px; padding: 10px; border: 1px solid #e9edf2; border-radius: 9px; background: #fff; }
+.question-review-entry.is-group-linked { border-style: dashed; background: #fbfcfe; }
+.question-review-entry-select { display: inline-flex; min-height: 31px; align-items: center; gap: 6px; padding: 0 5px; color: #718097; font-size: 12px; cursor: pointer; }
+.question-review-entry-select input { width: 16px; height: 16px; margin: 0; accent-color: #5478b7; }
+.question-review-entry-preview { min-width: 0; }
+.question-review-entry-preview summary { display: grid; gap: 3px; color: #53657d; cursor: pointer; list-style-position: outside; }
+.question-review-entry-preview summary > span { color: #8894a4; font-size: 11px; line-height: 1.5; }
+.question-review-entry-preview summary > strong { overflow: hidden; color: #40546f; font-size: var(--font-xs); font-weight: 600; line-height: 1.55; text-overflow: ellipsis; }
+.question-review-entry-content { padding-top: 10px; color: #5d6d83; font-size: var(--font-xs); }
+.question-review-entry-content .aptitude-shared-stimulus { margin: 0 0 10px; }
+.question-review-entry-content .aptitude-source-question-content { margin-bottom: 8px; }
+.question-review-option-list { display: grid; gap: 5px; margin-top: 8px; }
+.question-review-option { display: grid; grid-template-columns: 24px minmax(0, 1fr); gap: 6px; align-items: start; padding: 7px 9px; border-radius: 7px; background: #f7f9fc; line-height: 1.55; }
+.question-review-option > span { color: #5b7191; font-weight: 650; }
+.question-review-option > div { min-width: 0; overflow-wrap: anywhere; }
+.question-review-group-note, .question-review-unavailable-note { display: block; margin: 6px 0 0; color: #92764f; font-size: 11px; line-height: 1.5; }
+.question-review-unavailable-note { margin: 0 0 8px; }
+.question-review-start-row { display: flex; justify-content: flex-end; margin-top: 10px; }
+.question-review-start-row .button:disabled { opacity: .55; cursor: not-allowed; }
+.question-review-tab:focus-visible, .question-review-entry-select:focus-within, .question-review-entry-preview summary:focus-visible { outline: 3px solid #89a8d3; outline-offset: 2px; }
+
+@media (max-width: 560px) {
+  .question-review-selection { padding: 13px; }
+  .question-review-entry { grid-template-columns: 1fr; gap: 6px; }
+  .question-review-entry-select { min-height: 28px; }
+  .question-review-entry-preview { padding-left: 2px; }
+  .question-review-start-row .button { width: 100%; }
+}
