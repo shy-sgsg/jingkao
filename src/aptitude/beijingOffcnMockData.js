@@ -187,6 +187,54 @@ const quantitative2025FebruarySource = source(
   'beijing-offcn-2025-quantitative-2025-02-26',
   3,
 );
+const verbal2025OctoberFragmentSource = source(
+  'offcn-beijing-2025-verbal-2024-10-21',
+  '2025北京公务员考试行测题库：行测片段阅读模拟题52024.10.21',
+  'https://www.eoffcn.com/kszx/detail/1484839.html',
+  2025,
+  'beijing-offcn-2025-verbal-2024-10-21',
+  2,
+);
+const verbal2025JuneSource = source(
+  'offcn-beijing-2025-verbal-2024-06-04',
+  '2025北京公务员考试行测言语理解模拟题2024.6.4',
+  'https://www.eoffcn.com/kszx/detail/1368303.html',
+  2025,
+  'beijing-offcn-2025-verbal-2024-06-04',
+  2,
+);
+const commonKnowledge2025MarchSource = source(
+  'offcn-beijing-2025-common-2024-03-11',
+  '2025北京公务员考试行测题库：行测常识判断模拟题2024.3.11',
+  'https://www.eoffcn.com/kszx/detail/1298579.html',
+  2025,
+  'beijing-offcn-2025-common-2024-03-11',
+  1,
+);
+const quantitative2025MarchSource = source(
+  'offcn-beijing-2025-quantitative-2025-03-11',
+  '2025北京公务员考试行测题库：行测数学运算模拟题3.11',
+  'https://www.eoffcn.com/kszx/detail/1612124.html',
+  2025,
+  'beijing-offcn-2025-quantitative-2025-03-11',
+  3,
+);
+const reasoning2025MaySource = source(
+  'offcn-beijing-2025-reasoning-2025-05-09',
+  '2025北京公务员考试行测题库：行测逻辑判断模拟题5.09',
+  'https://www.eoffcn.com/kszx/detail/1679840.html',
+  2025,
+  'beijing-offcn-2025-reasoning-2025-05-09',
+  4,
+);
+const dataAnalysis2024UnnumberedSource = source(
+  'offcn-beijing-2024-data-1091749',
+  '2024北京公务员考试行测资料分析模拟题',
+  'https://www.eoffcn.com/kszx/detail/1091749.html',
+  2024,
+  'beijing-offcn-2024-data-1091749',
+  5,
+);
 
 const question = (sourceData, fields) => ({
   ...sourceData,
@@ -684,6 +732,107 @@ return [
     stem: '大义凛然：卑躬屈膝',
     options: ['安分守己：好高骛远', '穷奢极欲：节衣缩食', '得心应手：百无一用', '持之以恒：虎头蛇尾'], correctAnswer: 'D',
     explanation: '中公解析：题干两个成语构成反义关系，且分别为褒义、贬义。D项也符合反义关系且褒贬相对，答案为D。',
+  }),
+  question(verbal2025OctoberFragmentSource, {
+    id: 'bj2025offcn-verbal-1484839-q1', moduleId: 'verbal', subjectId: 'verbal',
+    topicId: 'verbal:reading', knowledgePointIds: ['verbal:main-idea'], originalQuestionNo: 1,
+    stem: '中国正处在经济和产业转型时期，技术工人紧缺，高级技工尤其匮乏。技能型人才的紧缺，既是制约中国经济结构调整和实现经济增长方式转变的瓶颈，也是当前中国经济确实存在大量新增就业岗位的重要原因。各地政府应该组织调动各种资源，引导适合的城乡青年选择接受职业教育，利用中国经济转型中的就业机会。职业教育不仅仅是面向青年学生的教育，它还应该成为继续教育的核心组成部分，尤其是针对外出务工的农民工群体。\n\n对这段话的主旨归纳准确的是：',
+    options: ['职教办得好，小康生活来得早', '推动职业教育，人力资本', '办好职业教育，加快经济转型', '要引导城乡青年接受职业教育'], correctAnswer: 'B',
+    explanation: '中公解析：前文指出技能型人才紧缺，后文提出通过职业教育解决人才短缺问题，文段围绕人才与职业教育展开，答案为B。',
+  }),
+  question(verbal2025OctoberFragmentSource, {
+    id: 'bj2025offcn-verbal-1484839-q2', moduleId: 'verbal', subjectId: 'verbal',
+    topicId: 'verbal:reading', knowledgePointIds: ['verbal:main-idea'], originalQuestionNo: 2,
+    stem: '在一线城市，过去一派田园风光的郊区，如今也已高楼林立，无“农”可学正成为不少学校农学专业面临的窘境。再加上时间、场地和内容的限制，学农对农学专业学生的吸引力逐渐减弱，学农的必要性也遭受质疑。\n\n这段文字意在说明：',
+    options: ['吸引学生学农迫在眉睫', '农学专业面临双重困境', '农学专业应适应城市化发展趋', '国家应为农学发展提供必要条件'], correctAnswer: 'B',
+    explanation: '中公解析：文段分别指出农学专业无“农”可学、吸引力减弱两个问题，概括为农学专业面临双重困境，答案为B。',
+  }),
+  question(verbal2025OctoberFragmentSource, {
+    id: 'bj2025offcn-verbal-1484839-q3', moduleId: 'verbal', subjectId: 'verbal',
+    topicId: 'verbal:reading', knowledgePointIds: ['verbal:main-idea'], originalQuestionNo: 3,
+    stem: '历朝历代的皇家、文人以及社会主流，对北宋五大名窑瓷器倍加宠爱，深为以青色为基调的天然淡雅而倾倒。至今，神秘的“柴窑”未见影踪，珍稀的“汝窑”，于青色之中淡酝霞光，存世仅几十件，苏富比拍了一件，价逾千万。南宋时，“龙泉窑”的青瓷成为主流，于今也备受崇尚。我们看到的许多古瓷器，仍然闪烁着青釉色的高贵，人们对其的喜爱依旧是器物审美中的主流之一。\n\n这段表述旨在说明：',
+    options: ['官窑瓷器有极高的收藏价值', '青色对瓷器审美意义非凡', '色彩决定瓷器价值而非窑口', '古往今来瓷器备受人们喜爱'], correctAnswer: 'B',
+    explanation: '中公解析：文段多次写到青色、青瓷和青釉色，说明青色在瓷器审美中意义非凡，答案为B。',
+  }),
+  question(verbal2025OctoberFragmentSource, {
+    id: 'bj2025offcn-verbal-1484839-q4', moduleId: 'verbal', subjectId: 'verbal',
+    topicId: 'verbal:reading', knowledgePointIds: ['verbal:main-idea'], originalQuestionNo: 4,
+    stem: '供暖上的"南北分治"，究竟科学性何在?如果说是气候原因，长江以南很多地方的气候也够得上北方地区的供暖条件。何况，近些年气温反差很大，南方一些地方冬天零下好几摄氏度也是常有的事。若说是经济发展水平的缘故，这在现在更加不成问题了。北方公众用得起暖气，南方民众同样也用得起。这且不说，作为一种公共产品，南方许多民众对集中供暖也有迫切需求。\n\n对作者观点概括最准确的是：',
+    options: ['集中供暖是一种公共产品', '南方有经济条件集中供暖', '南方有必要集中供暖', '集中供暖应摒弃“南北分治”'], correctAnswer: 'D',
+    explanation: '中公解析：文段围绕“南北分治”的科学性展开，分别指出气候、经济和公共需求方面的理由，作者认为集中供暖不应继续“南北分治”，答案为D。',
+  }),
+  question(verbal2025JuneSource, {
+    id: 'bj2025offcn-verbal-1368303-q1', moduleId: 'verbal', subjectId: 'verbal',
+    topicId: 'verbal:reading', knowledgePointIds: ['verbal:intent'], originalQuestionNo: 1,
+    stem: '语言从来不是固化的，而是随着社会的发展而变化的。任何一种语言的形成和发展，都是使用这种语言的人们在生活中的约定俗成，可以说，语言本身就是一种社会现象，是一个社会中人们的精神状态和社会心态投射而成的具象。因此，网络语言粗鄙化的现象不应当被视作孤立的语言问题来看待，粗鄙化折射出的浮躁心态、社会发展中积累的戾气等问题，恐怕比语言粗鄙化本身更值得关注。\n\n这段文字意在强调：',
+    options: ['语言是人类精神状态和社会心态的反映', '网络语言的粗鄙化应成为社会关注的问题', '语言研究应以语言随着时代发生的变化为重点', '应重视网络语言粗鄙化折射出的社会问题'], correctAnswer: 'D',
+    explanation: '中公解析：文段由网络语言粗鄙化引出其背后的浮躁心态和社会戾气，强调应重视这些社会问题，答案为D。',
+  }),
+  question(reasoning2025MaySource, {
+    id: 'bj2025offcn-reasoning-1679840-q1', moduleId: 'reasoning', subjectId: 'reasoning',
+    topicId: 'reasoning:logical-judgment', knowledgePointIds: ['reasoning:strengthen-weaken'], originalQuestionNo: 1,
+    stem: '新型平板电脑比传统平板电脑更便捷，它安装了新型操作系统，因此，新型平板电脑的销售情况比传统平板电脑好。下列最能削弱上述观点的是：',
+    options: [
+      '某些平板电脑使用者的使用环境和平常人不同',
+      '传统平板电脑最常用的功能在新型平板电脑中找不到',
+      '新型平板电脑的操作系统是全新的',
+      '无论平板电脑使用何种操作系统，使用习惯都因人而异',
+    ], correctAnswer: 'B',
+    explanation: '中公解析：题干由更便捷推出销售更好。新型平板电脑缺少传统平板最常用的功能，说明用户可能不愿购买新型产品，直接削弱结论，答案为B。',
+  }),
+  question(commonKnowledge2025MarchSource, {
+    id: 'bj2025offcn-common-1298579-q2', moduleId: 'general-knowledge', subjectId: 'history',
+    topicId: 'history:ancient', knowledgePointIds: ['history:culture-exchanges'], originalQuestionNo: 2,
+    stem: '2013年是“一带一路”战略提出十周年，以下关于“一带一路”相关说法错误的是( )。',
+    options: [
+      '“一带一路”是指，“丝绸之路经济带”和“21世纪海上丝绸之路”',
+      '“一带一路”原则是共商共建共享',
+      '古丝绸之路起点是现在的西安',
+      '唐代，海上丝绸之路被叫作"泉州通海夷道"',
+    ], correctAnswer: 'D',
+    explanation: '中公解析：唐代海上丝绸之路最早的叫法为“广州通海夷道”，不是“泉州通海夷道”，答案为D。',
+  }),
+  question(commonKnowledge2025MarchSource, {
+    id: 'bj2025offcn-common-1298579-q3', moduleId: 'general-knowledge', subjectId: 'humanities',
+    topicId: 'humanities:literature', knowledgePointIds: ['humanities:writers'], originalQuestionNo: 3,
+    stem: '元代剧作家白朴的《梧桐雨》是以( )的爱情故事为写作背景的。',
+    options: ['唐明皇和杨贵妃', '西施和范蠡', '王昭君和汉元帝', '貂蝉和吕布'], correctAnswer: 'A',
+    explanation: '中公解析：元代剧作家白朴的《梧桐雨》以唐明皇和杨贵妃的爱情故事为写作背景，答案为A。',
+  }),
+  question(dataAnalysis2024UnnumberedSource, {
+    id: 'bj2024offcn-data-1091749-q3', moduleId: 'data-analysis', subjectId: 'data-analysis',
+    topicId: 'data-analysis:growth', knowledgePointIds: ['data-analysis:average-growth'], originalQuestionNo: 3,
+    stem: '2019年A省招商引资额为2640亿元，比上年增长15.8%，增幅较上年上升3.6个百分点。\n\n问题：2019年比2017年A省招商引资额增长百分之几?',
+    options: ['26.3%', '27.3%', '28%', '29.3%'], correctAnswer: 'D',
+    explanation: '中公解析：2018年增长率为15.8%−3.6%=12.2%。2019年相对2017年的隔年增长率为(1+15.8%)×(1+12.2%)−1≈29.3%，答案为D。',
+  }),
+  question(quantitative2025OctoberSource, {
+    id: 'bj2025offcn-quant-october-q3', moduleId: 'quantitative', subjectId: 'quantitative',
+    topicId: 'quantitative:common-models', knowledgePointIds: ['quantitative:arrangements'], originalQuestionNo: 3,
+    stem: '有关部门对120种抽样食品进行化验分析，结果显示，抗氧化剂达标的有68种，防腐剂达标的有77种，漂白剂达标的有59种，抗氧化剂和防腐剂都达标的有54种，防腐剂和漂白剂都达标的有43种，抗氧化剂和漂白剂都达标的有35种，三种食品添加剂都达标的有30种，那么三种食品添加剂都不达标的有( )种。',
+    options: ['14', '15', '16', '17', '18', '19', '20', '21'], correctAnswer: 'E',
+    explanation: '中公解析：由容斥原理，至少一种添加剂达标的有68+77+59−54−43−35+30=102种，因此三种都不达标的有120−102=18种，答案为E。',
+  }),
+  question(quantitative2025MarchSource, {
+    id: 'bj2025offcn-quant-1612124-q1', moduleId: 'quantitative', subjectId: 'quantitative',
+    topicId: 'quantitative:arithmetic-basics', knowledgePointIds: ['quantitative:number-patterns'], originalQuestionNo: 1,
+    stem: '今年是鸡年，公历年数为2017，小王发现，在未来十年内的某一年，他年龄的平方数正好是那年的公历年数，则小王的属相为( )',
+    options: ['牛', '虎', '兔', '龙', '蛇', '马', '羊', '猴'], correctAnswer: 'H',
+    explanation: '中公解析：从2017年起的十年间，2017至2027之间的平方数只有2025=45²。小王在2025年45岁，出生于1980年；1980年属猴，答案为H。',
+  }),
+  question(quantitative2025MarchSource, {
+    id: 'bj2025offcn-quant-1612124-q2', moduleId: 'quantitative', subjectId: 'quantitative',
+    topicId: 'quantitative:arithmetic-basics', knowledgePointIds: ['quantitative:geometry'], originalQuestionNo: 2,
+    stem: '某次军事演习中，一架无人机停在空中对三个地面目标点进行侦察。已知三个目标点在地面上的连线为直角三角形，两个点之间的最远距离为600 米。问无人机与三个点同时保持500 米距离时，其飞行高度为多少米?',
+    options: ['300', '400', '500', '600'], correctAnswer: 'B',
+    explanation: '中公解析：直角三角形的外接圆半径为斜边的一半，即300米。无人机到三个地面点等距，其地面投影为外心；由勾股定理，飞行高度为√(500²−300²)=400米，答案为B。',
+  }),
+  question(quantitative2025MarchSource, {
+    id: 'bj2025offcn-quant-1612124-q3', moduleId: 'quantitative', subjectId: 'quantitative',
+    topicId: 'quantitative:common-models', knowledgePointIds: ['quantitative:work-rate'], originalQuestionNo: 3,
+    stem: '一项工程，甲单独做7天完成，乙单独做14天完成。现两人合作，乙有事先离开，这最后用了5天完成这项工程。乙提前离开了几天?',
+    options: ['3', '2.5', '2', '1'], correctAnswer: 'D',
+    explanation: '中公解析：设乙提前离开x天，则甲工作5天，乙工作5−x天。按工作量列式5/7+(5−x)/14=1，解得x=1，答案为D。',
   }),
 ];
 })();
