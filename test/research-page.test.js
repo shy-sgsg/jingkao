@@ -40,11 +40,11 @@ test('research findings derive sample coverage, score distribution, and evidence
     officialPositionRows: 0,
   });
   assert.deepEqual(byId['competition-grain'].facts, {
-    observations: 1074,
-    jobLevelObservations: 1031,
+    observations: 1075,
+    jobLevelObservations: 1032,
     aggregateObservations: 43,
     jobLevelPositions: 833,
-    qualificationSnapshots: 243,
+    qualificationSnapshots: 244,
     reportedApplicationSnapshots: 788,
   });
   assert.match(byId['competition-grain'].title, /岗位级竞争观察/);

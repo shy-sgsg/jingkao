@@ -126,3 +126,24 @@ test('Tongzhou position entries expose linked application ratio together with mi
     assert.ok(evidence.registrationSourceIds.length > 0);
   }
 });
+
+test('Tongzhou 2026 first-day qualification snapshot links the exact position and time', () => {
+  const position = dataset.positions.find((item) => item.year === 2026 && item.code === '221155301');
+  assert.ok(position, 'position 221155301 should resolve in the 2026 position library');
+  assert.equal(position.districtId, 'tongzhou');
+  assert.equal(position.recruitCount, 1);
+
+  const sourceId = 'eoffcn-2026-snapshot-20251117-1800';
+  const source = dataset.sources.find((item) => item.sourceId === sourceId);
+  assert.equal(source?.url, 'https://www.eoffcn.com/kszx/detail/1902238.html');
+
+  const rows = dataset.observations.filter((item) => item.sourceId === sourceId
+    && item.positionCode === '221155301');
+  assert.equal(rows.length, 1);
+  assert.equal(rows[0].scope, 'position-level');
+  assert.equal(rows[0].observedAt, '2025-11-17 18:00');
+  assert.equal(rows[0].applicantsQualified, 11);
+  assert.equal(rows[0].applicantsRegistered, null);
+  assert.equal(rows[0].recruitCount, 1);
+  assert.equal(getPositionCompetitionEvidence(position, dataset).qualifiedCompetitionRatio, 11);
+});
