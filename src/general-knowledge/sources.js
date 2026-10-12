@@ -35,6 +35,27 @@ export const GENERAL_KNOWLEDGE_SOURCES = [
     note: '收录该页面常识判断单选题；题干、选项和答案解析已按来源核对，答题前不展示答案。',
   },
   {
+    id: 'offcn-beijing-2024-common-1058895', sourceType: 'third_party_mock', title: '2024北京公务员考试行测常识判断模拟题',
+    organization: '中公网校（中公教育）', examYear: 2024,
+    url: 'https://www.eoffcn.com/kszx/detail/1058895.html', verificationStatus: 'verified',
+    publishStatus: 'published', copyrightStatus: 'user_confirmed_republication_authorization',
+    note: '收录该页完整常识题；题干、选项、答案和解析逐题核对，答题前不展示答案。',
+  },
+  {
+    id: 'offcn-beijing-2024-common-2023-08-30', sourceType: 'third_party_mock', title: '2024北京公务员考试行测题库：行测常识判断模拟题2023.08.30',
+    organization: '中公网校（中公教育）', examYear: 2024,
+    url: 'https://www.eoffcn.com/kszx/detail/1190827.html', verificationStatus: 'verified',
+    publishStatus: 'published', copyrightStatus: 'user_confirmed_republication_authorization',
+    note: '收录该页完整常识题；题干、选项、答案和解析逐题核对，答题前不展示答案。',
+  },
+  {
+    id: 'offcn-beijing-2025-common-2024-03-11', sourceType: 'third_party_mock', title: '2025北京公务员考试行测题库：行测常识判断模拟题2024.3.11',
+    organization: '中公网校（中公教育）', examYear: 2025,
+    url: 'https://www.eoffcn.com/kszx/detail/1298579.html', verificationStatus: 'verified',
+    publishStatus: 'published', copyrightStatus: 'user_confirmed_republication_authorization',
+    note: '收录原题号2、3的单选题；第1题页面给出的答案与题面选项事实不一致，未接入。',
+  },
+  {
     id: 'npc-civil-code', sourceType: 'official_law', title: '中华人民共和国民法典', organization: '全国人民代表大会 / 国家法律法规数据库',
     url: 'https://flk.npc.gov.cn/detail2.html', verificationStatus: 'verified', publishStatus: 'published',
     copyrightStatus: '法规事实摘述并链接原文', note: '涉及具体法律条文时以国家法律法规数据库的有效文本为准。',

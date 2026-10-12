@@ -268,7 +268,7 @@ const sourceQuestion = (question, source) => {
     knowledgePointTitle: entry.point.title,
     options: question.options.map((option, index) => {
       const value = typeof option === 'string' ? { text: option } : option || {};
-      return { ...value, id: value.id || ['A', 'B', 'C', 'D'][index], text: String(value.text || '') };
+      return { ...value, id: value.id || String.fromCharCode(65 + index), text: String(value.text || '') };
     }),
     difficulty: question.difficulty || 'medium',
     sourceType: question.sourceType || source.sourceType,

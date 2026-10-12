@@ -377,7 +377,9 @@ function hasCompleteQuestion(question) {
     || option?.imageUrls?.some((url) => typeof url === 'string' && url.trim()));
   const optionCountIsValid = question?.optionType === 'true_false'
     ? question.options?.length === 2
-    : question.options?.length === 4;
+    : question?.optionType === 'single_choice'
+      ? question.options?.length >= 4 && question.options?.length <= 26
+      : question.options?.length === 4;
   const visualOptionsArePresent = Boolean(question?.visualOptionsInStem
     && question.stemImageUrls?.some((url) => typeof url === 'string' && url.trim()));
   return Boolean(question && question.id && question.stem?.trim()
