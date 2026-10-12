@@ -14,6 +14,27 @@ export const GENERAL_KNOWLEDGE_SOURCES = [
     note: '题面、选项与答案已对照官方大纲核验；该来源可供核对，不代表已取得题面转载或公开练习许可。',
   },
   {
+    id: 'offcn-beijing-2024-common-2023-08-09', sourceType: 'third_party_mock', title: '2024北京公务员考试行测题库：行测常识判断模拟题2023.08.09',
+    organization: '中公网校（中公教育）', examYear: 2024,
+    url: 'https://www.eoffcn.com/kszx/detail/1173526.html', verificationStatus: 'verified',
+    publishStatus: 'published', copyrightStatus: 'user_confirmed_republication_authorization',
+    note: '收录该页面常识判断题；题干、选项和答案解析已按来源核对，答题前不展示答案。',
+  },
+  {
+    id: 'offcn-beijing-2024-common-september-2023', sourceType: 'third_party_mock', title: '2024北京公务员笔试模拟题：行测常识判断',
+    organization: '中公网校（中公教育）', examYear: 2024,
+    url: 'https://www.eoffcn.com/kszx/detail/1120518.html', verificationStatus: 'verified',
+    publishStatus: 'published', copyrightStatus: 'user_confirmed_republication_authorization',
+    note: '收录该页面常识判断单选题；题干、选项和答案解析已按来源核对，答题前不展示答案。',
+  },
+  {
+    id: 'offcn-beijing-2024-common-2023-10-24', sourceType: 'third_party_mock', title: '2024北京公务员考试行测题库：行测常识判断模拟题2023.10.24',
+    organization: '中公网校（中公教育）', examYear: 2024,
+    url: 'https://www.eoffcn.com/kszx/detail/1221271.html', verificationStatus: 'verified',
+    publishStatus: 'published', copyrightStatus: 'user_confirmed_republication_authorization',
+    note: '收录该页面常识判断单选题；题干、选项和答案解析已按来源核对，答题前不展示答案。',
+  },
+  {
     id: 'npc-civil-code', sourceType: 'official_law', title: '中华人民共和国民法典', organization: '全国人民代表大会 / 国家法律法规数据库',
     url: 'https://flk.npc.gov.cn/detail2.html', verificationStatus: 'verified', publishStatus: 'published',
     copyrightStatus: '法规事实摘述并链接原文', note: '涉及具体法律条文时以国家法律法规数据库的有效文本为准。',
@@ -143,6 +164,18 @@ export const GENERAL_KNOWLEDGE_SOURCES = [
     url: 'https://gwy.gkzhenti.cn/paper/1640265344758', answerUrl: 'https://gwy.gkzhenti.cn/answer/1640265344758', verificationStatus: 'verified',
     publishStatus: 'published', copyrightStatus: '用户确认已获得转载授权',
     note: '题干和选项按公开题面保存；答案键与固定版本的第三方逐题解析交叉核对。答题前不展示答案和解析。',
+  },
+  {
+    id: 'aipta-beijing-2021-district', sourceType: 'recalled', title: '2021年北京市公务员录用考试《行测》题（区级及以上卷）（考生回忆版）', organization: 'Aipta / 考生回忆版', examYear: 2021, region: '北京',
+    url: 'https://www.aipta.com/article/1855.html', answerUrl: 'https://www.lasee.net/gongwuyuan/16710893685247.html', verificationStatus: 'verified',
+    publishStatus: 'published', copyrightStatus: '用户确认已获得转载授权',
+    note: '常识判断第1–25题与言语理解第36–70题已按回忆版原文接入；第17题图据华图同题页恢复，垃圾分类材料中的图片数字已转为可读文本。该卷为考生回忆版，非官方原卷。',
+  },
+  {
+    id: 'huatu-beijing-2021-district-q17', sourceType: 'recalled', title: '华图在线：2021年北京区级及以上卷第17题', organization: '华图教育', examYear: 2021, region: '北京',
+    url: 'https://m.shenzhen.huatu.com/tiku/3579340.html', verificationStatus: 'verified',
+    publishStatus: 'reference_only', copyrightStatus: '用于恢复题图及核对答案的来源页',
+    note: '题号、题干、选项和答案与 Aipta 回忆版条目对应；题图由此页公开图片恢复。',
   },
   {
     id: 'hubei-2024-recall-candidate', sourceType: 'recalled', title: '2024年湖北省公务员录用考试《行测》题（考生回忆版）', organization: '爱真题 / 湖北网 / ERRRC 公开题解', examYear: 2024, region: '湖北',
