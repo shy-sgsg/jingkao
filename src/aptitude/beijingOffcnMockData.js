@@ -810,14 +810,14 @@ return [
     id: 'bj2025offcn-quant-october-q3', moduleId: 'quantitative', subjectId: 'quantitative',
     topicId: 'quantitative:common-models', knowledgePointIds: ['quantitative:arrangements'], originalQuestionNo: 3,
     stem: '有关部门对120种抽样食品进行化验分析，结果显示，抗氧化剂达标的有68种，防腐剂达标的有77种，漂白剂达标的有59种，抗氧化剂和防腐剂都达标的有54种，防腐剂和漂白剂都达标的有43种，抗氧化剂和漂白剂都达标的有35种，三种食品添加剂都达标的有30种，那么三种食品添加剂都不达标的有( )种。',
-    options: ['14', '15', '16', '17', '18', '19', '20', '21'], correctAnswer: 'E',
+    options: ['14', '15', '16', '17', '18', '19', '20', '21'], optionType: 'single_choice', correctAnswer: 'E',
     explanation: '中公解析：由容斥原理，至少一种添加剂达标的有68+77+59−54−43−35+30=102种，因此三种都不达标的有120−102=18种，答案为E。',
   }),
   question(quantitative2025MarchSource, {
     id: 'bj2025offcn-quant-1612124-q1', moduleId: 'quantitative', subjectId: 'quantitative',
     topicId: 'quantitative:arithmetic-basics', knowledgePointIds: ['quantitative:number-patterns'], originalQuestionNo: 1,
     stem: '今年是鸡年，公历年数为2017，小王发现，在未来十年内的某一年，他年龄的平方数正好是那年的公历年数，则小王的属相为( )',
-    options: ['牛', '虎', '兔', '龙', '蛇', '马', '羊', '猴'], correctAnswer: 'H',
+    options: ['牛', '虎', '兔', '龙', '蛇', '马', '羊', '猴'], optionType: 'single_choice', correctAnswer: 'H',
     explanation: '中公解析：从2017年起的十年间，2017至2027之间的平方数只有2025=45²。小王在2025年45岁，出生于1980年；1980年属猴，答案为H。',
   }),
   question(quantitative2025MarchSource, {
