@@ -15,6 +15,16 @@ test('existing science and general knowledge banks are exposed as published apti
   assert.ok([...science, ...generalKnowledge].every((question) => question.publishStatus === 'published'));
 });
 
+test('national city reasoning questions link to visible knowledge points', () => {
+  const reasoning = getAptitudeModuleContent('reasoning');
+  const nationalQuestions = questions.getAptitudeQuestions('reasoning')
+    .filter((question) => /^national-2026-city-reasoning-q(?:8[0-9]|9[0-9]|10[0-9])$/.test(question.id));
+  assert.equal(nationalQuestions.length, 30);
+  for (const question of nationalQuestions) {
+    assert.ok(findAptitudeModuleKnowledgePoint(reasoning, question.knowledgePointIds[0]), question.id);
+  }
+});
+
 test('five general aptitude modules publish usable questions linked to their knowledge outlines', () => {
   assert.equal(typeof questions.getAptitudeSessionQuestions, 'function');
   const expectedCounts = {

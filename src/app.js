@@ -940,6 +940,7 @@ function renderScience() {
     <div class="metric-grid science-metrics">${metric('练习题库', `${SCIENCE_QUESTION_BANK.length}<small> 道</small>`, `${questionCounts.official_outline_example} 道官方大纲例题 · ${questionCounts.recalled} 道回忆题 · ${questionCounts.third_party_mock} 道机构模拟 · ${questionCounts.original} 道现有原创`, '⚗', 'blue')}${metric('已作答', `${stats.attemptedCount}<small> 题</small>`, `${stats.completedSessionCount} 次练习完成`, '✓', 'mint')}${metric('实际正确率', fmtPct(stats.accuracy), stats.accuracy === null ? '暂无答案记录' : '按已提交答案计算', '◎', 'amber')}${metric('错题 / 收藏', `${mistakeIds.length}<small> / ${favoriteCount}</small>`, '错题和收藏独立保存', '☆', 'purple')}</div>
     ${renderAptitudeRecords(APTITUDE_MODULES.find((module) => module.id === 'science'), aptitudeItemsForArea('科学推理'))}
     <section class="science-shortcuts">${activeSession ? `<a class="panel science-shortcut-card science-resume-card" href="#/aptitude/science?session=${encodeURIComponent(activeSession.id)}"><span>继续未完成训练 · ${activeSession.mode === 'exam' ? '限时模拟' : '专项练习'}</span><strong>第 ${activeSession.currentIndex + 1} / ${activeSession.questionIds.length} 题</strong><small>剩余答题和已选答案均已保存</small></a>` : ''}<button type="button" class="panel science-shortcut-card" data-action="open-science-practice" data-mode="mistakes"><span>错题复习</span><strong>${mistakeIds.length} 道</strong><small>仅从已记录错题中抽题</small></button><button type="button" class="panel science-shortcut-card" data-action="open-science-practice" data-mode="exam"><span>随机组卷模考</span><strong>自选题量与时长</strong><small>从已核验题目抽题；专项练习和错题记录继续保留</small></button><a class="panel science-shortcut-card" href="#/plan"><span>学习计划</span><strong>把训练排进日程</strong><small>通过计划任务核验实际完成量</small></a></section>${renderAptitudeModuleMockModes('science', { includeRandom: false })}
+    ${renderQuestionReviewSelection({ moduleId: 'science', moduleLabel: '科学推理', bank: SCIENCE_QUESTION_BANK, mistakeIds, favoriteIds: storage.scienceStudy.favorites })}
     <div class="science-subject-grid">${subjects}</div>
     <section class="panel science-source-panel"><div class="science-panel-heading"><div><span class="eyebrow muted">SOURCE CATALOG</span><h2>官方与公开题源</h2><p>“官方大纲例题”来自考试大纲；“考生回忆版”和“机构模拟题”均明确标为非官方。</p></div><span>${SCIENCE_SOURCES.length} 个来源</span></div><div class="science-source-list">${sourceRows}</div></section>
   </div>`;
@@ -1113,6 +1114,84 @@ function aptitudeModuleKnowledgeStatus(study, pointId) {
   return status === 'completed' ? '已学完' : status === 'learning' ? '学习中' : '未开始';
 }
 
+function getQuestionReviewBank(moduleId) {
+  if (moduleId === 'science') return SCIENCE_QUESTION_BANK.filter((question) => question.publishStatus === 'published');
+  if (moduleId === 'general-knowledge') return GENERAL_KNOWLEDGE_QUESTION_BANK.filter((question) => question.publishStatus === 'published');
+  return getAptitudeQuestions(moduleId);
+}
+
+function getQuestionReviewItems(bank, questionIds = []) {
+  const markedIds = new Set(questionIds);
+  const availableIds = new Set(bank.map((question) => question.id));
+  const directIds = new Set([...markedIds].filter((id) => availableIds.has(id)));
+  const sharedStimulusIds = new Set(bank
+    .filter((question) => directIds.has(question.id) && question.sharedStimulusId)
+    .map((question) => question.sharedStimulusId));
+  const questions = bank.filter((question) => directIds.has(question.id)
+    || Boolean(question.sharedStimulusId && sharedStimulusIds.has(question.sharedStimulusId)));
+  return {
+    questions,
+    directIds,
+    unavailableCount: [...markedIds].filter((id) => !availableIds.has(id)).length,
+  };
+}
+
+function renderQuestionReviewSelection({ moduleId, moduleLabel, bank, mistakeIds = [], favoriteIds = [], auxiliaryCounts = [] }) {
+  const publishedBank = (Array.isArray(bank) ? bank : []).filter((question) => question.publishStatus === 'published');
+  const lists = {
+    mistakes: getQuestionReviewItems(publishedBank, mistakeIds),
+    favorites: getQuestionReviewItems(publishedBank, favoriteIds),
+  };
+  const renderQuestionRows = (kind, list) => list.questions.map((question, index) => {
+    const groupId = question.sharedStimulusId || '';
+    const groupNote = groupId && !list.directIds.has(question.id)
+      ? '<small class="question-review-group-note">同材料题组成员 · 会随整组加入本次复习</small>' : '';
+    const optionRows = (question.options || []).map((option, optionIndex) => {
+      const optionId = typeof option === 'string' ? String.fromCharCode(65 + optionIndex) : option?.id || String.fromCharCode(65 + optionIndex);
+      return `<div class="question-review-option"><span>${escapeHtml(optionId)}</span><div>${renderSourceQuestionOption(option)}</div></div>`;
+    }).join('');
+    const meta = [question.sourceTitle || question.paperTitle, question.subjectTitle, question.topicTitle]
+      .filter(Boolean).map(escapeHtml).join(' · ');
+    const summary = String(question.stem || '').replace(/\s+/gu, ' ').trim();
+    const preview = summary ? `${summary.slice(0, 88)}${summary.length > 88 ? '…' : ''}` : '展开查看题干与选项';
+    return `<article class="question-review-entry ${groupNote ? 'is-group-linked' : ''}">
+      <label class="question-review-entry-select"><input type="checkbox" value="${escapeHtml(question.id)}" data-question-review-checkbox data-review-kind="${kind}" data-review-group="${escapeHtml(groupId)}" aria-label="选择${escapeHtml(moduleLabel)}第 ${index + 1} 道${kind === 'mistakes' ? '错题' : '收藏题'}"/><span>选择</span></label>
+      <details class="question-review-entry-preview"><summary><span>${meta || escapeHtml(moduleLabel)}${renderOriginalQuestionReference(question)}</span><strong>${escapeHtml(preview)}</strong></summary>
+        <div class="question-review-entry-content">${renderAptitudeSharedStimulus(question.sharedStimulus)}${renderSourceQuestionStem(question, { heading: false })}${renderScienceQuestionDiagram(question)}<div class="question-review-option-list">${optionRows || '<p class="panel-hint">选项内容待补齐。</p>'}</div>${groupNote}</div>
+      </details>
+    </article>`;
+  }).join('');
+  const renderList = (kind, list) => {
+    const title = kind === 'mistakes' ? '错题' : '收藏题';
+    const unavailableNote = list.unavailableCount
+      ? `<p class="question-review-unavailable-note">${list.unavailableCount} 条${title}记录对应的题目暂未在本模块已发布题库中，暂时不能复习。</p>` : '';
+    const items = list.questions.length
+      ? `<div class="question-review-entry-list">${renderQuestionRows(kind, list)}</div>`
+      : `<div class="empty-state compact">当前没有可复习的${title}。</div>`;
+    return `<section class="question-review-kind-panel" data-question-review-kind-panel data-review-kind="${kind}"${kind === 'mistakes' ? '' : ' hidden'}>
+      <div class="question-review-toolbar"><div><button type="button" class="button button-quiet button-small" data-action="select-all-question-review" data-review-kind="${kind}" ${list.questions.length ? '' : 'disabled'}>全选${title}</button><button type="button" class="button button-quiet button-small" data-action="clear-question-review-selection" data-review-kind="${kind}" ${list.questions.length ? '' : 'disabled'}>清空</button></div><span data-question-review-selected-count>已选 0 题</span></div>
+      ${unavailableNote}${items}
+      <div class="question-review-start-row"><button type="button" class="button button-primary" data-action="start-selected-question-review" data-review-kind="${kind}" disabled>开始复习选中题目</button></div>
+    </section>`;
+  };
+  const auxiliaryStatus = auxiliaryCounts.length
+    ? `<div class="question-review-auxiliary-counts">${auxiliaryCounts.map(([label, count]) => `<span><strong>${escapeHtml(count)}</strong>${escapeHtml(label)}</span>`).join('')}</div>` : '';
+  return `<article class="panel aptitude-module-content-panel question-review-selection" data-section="aptitude-module-mistakes" data-question-review-selection data-module-id="${escapeHtml(moduleId)}" data-module-label="${escapeHtml(moduleLabel)}" data-active-review-kind="mistakes">
+    <div class="panel-heading"><div><div class="eyebrow muted">QUESTION REVIEW</div><h2>错题与收藏</h2><p>展开查看每道题的题干和选项；答案与解析会在答题后显示。共用材料题按完整题组复习。</p></div></div>
+    <div class="question-review-tabs" role="group" aria-label="选择复习清单"><button type="button" class="question-review-tab is-active" data-action="set-question-review-kind" data-review-kind="mistakes" aria-pressed="true">错题 <span>${lists.mistakes.directIds.size}</span></button><button type="button" class="question-review-tab" data-action="set-question-review-kind" data-review-kind="favorites" aria-pressed="false">收藏题 <span>${lists.favorites.directIds.size}</span></button></div>
+    ${auxiliaryStatus}${renderList('mistakes', lists.mistakes)}${renderList('favorites', lists.favorites)}
+  </article>`;
+}
+
+function syncQuestionReviewSelectionPanel(panel) {
+  if (!panel) return;
+  const count = panel.querySelectorAll('[data-question-review-checkbox]:checked').length;
+  const countLabel = panel.querySelector('[data-question-review-selected-count]');
+  const startButton = panel.querySelector('[data-action="start-selected-question-review"]');
+  if (countLabel) countLabel.textContent = `已选 ${count} 题`;
+  if (startButton) startButton.disabled = count === 0;
+}
+
 function renderAptitudeModuleContent(module, content, questionCount, study, tasks) {
   const topics = content.directory.flatMap((subject) => (subject.topics || []).map((topic) => ({ subject, topic })));
   const lessonRows = Object.entries(content.lessons).map(([id, lesson]) => `<a class="aptitude-module-lesson" href="${escapeHtml(module.route)}?knowledge=${encodeURIComponent(id)}"><strong>${escapeHtml(lesson.title || id)}</strong><p>${escapeHtml(lesson.summary || lesson.explanation || lesson.examAngle || '打开讲解')}</p></a>`).join('');
@@ -1144,7 +1223,7 @@ function renderAptitudeModuleContent(module, content, questionCount, study, task
   return `<section class="aptitude-module-learning-grid" aria-label="${escapeHtml(module.area)}学习与练习">
     <article class="panel aptitude-module-content-panel" data-section="aptitude-module-knowledge"><div class="panel-heading"><div><div class="eyebrow muted">KNOWLEDGE</div><h2>知识目录与讲解</h2><p>${content.directory.length ? `${content.directory.length} 个学科 · ${topics.length} 个专题` : '知识目录待接入；占位内容不会计为已学。'}</p></div><span class="aptitude-module-status">${content.directory.length ? '目录已接入' : '知识目录待接入'}</span></div>${topicRows ? `<div class="aptitude-module-topic-list science-topic-list">${topicRows}</div>` : '<div class="empty-state compact">当前没有可浏览的知识目录。</div>'}${lessonRows ? `<div class="aptitude-module-lesson-list">${lessonRows}</div>` : '<div class="aptitude-module-lesson-empty">讲解待接入</div>'}</article>
     <article class="panel aptitude-module-content-panel" data-section="aptitude-module-practice"><div class="panel-heading"><div><div class="eyebrow muted">PRACTICE · MOCK</div><h2>专项练习与限时模拟</h2><p>${unavailable ? '当前模块没有已发布题目，训练入口暂不可用。' : `当前有 ${questionCount} 道已发布题目。`}</p></div><span class="aptitude-module-status">${unavailable ? '题库待接入' : `${questionCount} 道题`}</span></div><div class="aptitude-module-practice-actions">${practiceControls}${resume}</div><p class="aptitude-module-unavailable-note">${unavailable ? '题库待接入；现在无法创建会话或增加站内答题记录。' : '训练交互和记录由本模块会话适配器负责。'}</p></article>
-    <article class="panel aptitude-module-content-panel" data-section="aptitude-module-mistakes"><div class="panel-heading"><div><div class="eyebrow muted">REVIEW</div><h2>错题与收藏</h2><p>状态仅读取 ${escapeHtml(module.area)} 自己的学习档案。</p></div></div><div class="aptitude-module-counts"><span><strong>${Object.keys(study.mistakes).length}</strong><small>错题</small></span><span><strong>${study.favorites.length}</strong><small>收藏题</small></span><span><strong>${study.favoriteKnowledgePointIds.length}</strong><small>知识点收藏</small></span><span><strong>${study.unclearKnowledgePointIds.length}</strong><small>待复习知识点</small></span></div><div class="empty-state compact">${questionCount ? '完成站内练习后，错题和收藏会在这里显示。' : '题库待接入，暂时没有可打开的错题或收藏题。'}</div></article>
+    ${renderQuestionReviewSelection({ moduleId: module.id, moduleLabel: module.area, bank: getAptitudeQuestions(module.id), mistakeIds: Object.keys(study.mistakes), favoriteIds: study.favorites, auxiliaryCounts: [['知识点收藏', study.favoriteKnowledgePointIds.length], ['待复习知识点', study.unclearKnowledgePointIds.length]] })}
     <article class="panel aptitude-module-content-panel" data-section="aptitude-module-plan"><div class="panel-heading"><div><div class="eyebrow muted">STUDY PLAN</div><h2>学习计划</h2><p>只汇总关联到本模块的任务与站内进度。</p></div><a class="panel-link" href="#/plan">管理计划 →</a></div>${taskRows || '<div class="empty-state compact">还没有本模块计划任务。</div>'}</article>
   </section>`;
 }
@@ -1538,6 +1617,7 @@ function renderGeneralKnowledge() {
     <div class="metric-grid science-metrics">${metric('已发布题库', `${sourceCounts.official_outline_example + sourceCounts.verified_exam + sourceCounts.third_party_mock + sourceCounts.recalled + sourceCounts.original}<small> 道</small>`, `${sourceCounts.official_outline_example + sourceCounts.verified_exam} 道官方例题/真题 · ${sourceCounts.third_party_mock} 道模拟 · ${sourceCounts.original} 道原创`, '常', 'blue')}${metric('站内已作答', `${stats.attemptedCount}<small> 题</small>`, `${stats.completedSessionCount} 次训练完成`, '✓', 'mint')}${metric('站内正确率', fmtPct(stats.accuracy), stats.accuracy === null ? '暂无答题记录' : '只按常识判断站内答案计算', '◎', 'amber')}${metric('错题 / 收藏', `${mistakes.length}<small> / ${study.favorites.length}</small>`, '错题和收藏按常识判断独立保存', '☆', 'purple')}</div>
     ${renderAptitudeRecords(APTITUDE_MODULES.find((module) => module.id === 'general-knowledge'), manualItems)}
     <section class="science-shortcuts">${study.sessions.some((item) => item.status === 'active') ? `<a class="panel science-shortcut-card science-resume-card" href="#/aptitude/general-knowledge?session=${encodeURIComponent(study.sessions.find((item) => item.status === 'active').id)}"><span>继续未完成训练</span><strong>恢复答题</strong><small>进度和已选答案保存在本机加密档案中</small></a>` : ''}<button type="button" class="panel science-shortcut-card" data-action="open-general-knowledge-practice" data-mode="mistakes"><span>错题复习</span><strong>${mistakes.length} 道</strong><small>只抽取常识判断错题</small></button><button type="button" class="panel science-shortcut-card" data-action="open-general-knowledge-practice" data-mode="exam"><span>随机组卷模考</span><strong>题量与时长可选</strong><small>交卷后显示成绩、空题数和逐题解析</small></button><button type="button" class="panel science-shortcut-card" data-action="open-general-knowledge-practice" data-mode="favorites"><span>收藏题复习</span><strong>${study.favorites.length} 道</strong><small>按自己的收藏清单练习</small></button></section>${renderAptitudeModuleMockModes('general-knowledge', { includeRandom: false })}
+    ${renderQuestionReviewSelection({ moduleId: 'general-knowledge', moduleLabel: '常识判断', bank: GENERAL_KNOWLEDGE_QUESTION_BANK, mistakeIds: mistakes, favoriteIds: study.favorites })}
     <section class="panel science-source-panel general-knowledge-flashcards"><div class="science-panel-heading"><div><span class="eyebrow muted">SPACED REVIEW</span><h2>知识闪卡 · 到期 ${dueCards.length} 张</h2><p>根据自评安排下次复习；熟悉程度由你判断。</p></div><a class="panel-link" href="#/aptitude/general-knowledge">查看全部知识点 →</a></div>${flashcard ? `<article class="science-example"><h3>${escapeHtml(flashcard.title)}</h3>${revealedGeneralKnowledgeFlashcardId === flashcard.id ? `<p>${escapeHtml(flashcardContent.principle)}</p><p>${escapeHtml(flashcardContent.memory?.join(' · ') || flashcardContent.explanation)}</p>` : `<p>先回忆这个知识点的核心判断方法，再显示答案。</p><button type="button" class="button button-secondary button-small" data-action="reveal-general-knowledge-flashcard" data-point-id="${escapeHtml(flashcard.id)}">显示答案</button>`}${revealedGeneralKnowledgeFlashcardId === flashcard.id ? `<div class="science-lesson-footer">${[['again', '没记住'], ['hard', '有些困难'], ['good', '记得'], ['easy', '很熟']].map(([rating, label]) => `<button type="button" class="button button-quiet button-small" data-action="review-general-knowledge-flashcard" data-point-id="${escapeHtml(flashcard.id)}" data-rating="${rating}">${label}</button>`).join('')}</div>` : ''}</article>` : '<div class="empty-state">当前没有到期闪卡；完成知识点讲解后可开始复习。</div>'}</section>
     <div class="science-subject-grid">${subjects}</div><section class="panel science-source-panel"><div class="science-panel-heading"><div><span class="eyebrow muted">SOURCE CATALOG</span><h2>题源与内容参考</h2><p>官方例题经过题意重述；未核实展示授权的第三方题面只保留来源链接。</p></div><span>${GENERAL_KNOWLEDGE_SOURCES.length} 个来源</span></div><div class="science-source-list">${sourceRows}</div></section></div>`;
 }
@@ -3098,6 +3178,46 @@ async function persistPositionPreferences() {
   return persist();
 }
 
+async function startSelectedQuestionReview(moduleId, selectedIds) {
+  const selectedIdSet = new Set((selectedIds || []).filter((id) => typeof id === 'string' && id));
+  if (!selectedIdSet.size) { notify('请先选择要复习的题目。'); return; }
+  const module = APTITUDE_MODULES.find((item) => item.id === moduleId);
+  if (!module) { notify('找不到这条行测模块。'); return; }
+  const bank = getQuestionReviewBank(moduleId);
+  const selectedQuestions = bank.filter((question) => selectedIdSet.has(question.id));
+  if (selectedQuestions.length !== selectedIdSet.size) { notify('部分题目已不在当前已发布题库中，请刷新后重新选择。'); return; }
+  const selectedStimulusIds = new Set(selectedQuestions.map((question) => question.sharedStimulusId).filter(Boolean));
+  const reviewBank = bank.filter((question) => selectedIdSet.has(question.id)
+    || Boolean(question.sharedStimulusId && selectedStimulusIds.has(question.sharedStimulusId)));
+  if (!reviewBank.length) { notify('当前没有可复习的已发布题目。'); return; }
+  const options = { mode: 'practice', targetQuestionCount: reviewBank.length };
+  try {
+    if (moduleId === 'science') {
+      const started = createScienceSession(reviewBank, storage.scienceStudy, options);
+      storage.scienceStudy = started.scienceStudy;
+      await persist();
+      navigate('science', `session=${encodeURIComponent(started.session.id)}`);
+      notify(`已开始复习 ${reviewBank.length} 道科学推理题`);
+      return;
+    }
+    if (moduleId === 'general-knowledge') {
+      const started = createGeneralKnowledgeSession(reviewBank, storage.generalKnowledgeStudy, options);
+      storage.generalKnowledgeStudy = started.generalKnowledgeStudy;
+      await persist();
+      navigate('generalKnowledge', `session=${encodeURIComponent(started.session.id)}`);
+      notify(`已开始复习 ${reviewBank.length} 道常识判断题`);
+      return;
+    }
+    if (module.studyStore !== 'aptitudeModuleStudies') { notify('这条行测模块暂不支持题目复习。'); return; }
+    const started = createAptitudeModuleSession(reviewBank, storage.aptitudeModuleStudies, moduleId, options);
+    storage.aptitudeModuleStudies = started.aptitudeModuleStudies;
+    activeAptitudeModuleId = moduleId;
+    await persist();
+    navigate('aptitudeModule', `session=${encodeURIComponent(started.session.id)}`, moduleId);
+    notify(`已开始复习 ${reviewBank.length} 道${module.area}题`);
+  } catch (error) { notify(error.message); }
+}
+
 document.addEventListener('click', async (event) => {
   const nav = event.target.closest('a[href^="#/"]');
   if (nav) {
@@ -3115,6 +3235,38 @@ document.addEventListener('click', async (event) => {
   if (!actionEl) return;
   const { action, code } = actionEl.dataset;
   const positionReference = actionEl.dataset.positionKey || code;
+  if (action === 'set-question-review-kind') {
+    const selection = actionEl.closest('[data-question-review-selection]');
+    const kind = ['mistakes', 'favorites'].includes(actionEl.dataset.reviewKind) ? actionEl.dataset.reviewKind : 'mistakes';
+    if (!selection) return;
+    selection.dataset.activeReviewKind = kind;
+    selection.querySelectorAll('[data-action="set-question-review-kind"]').forEach((tab) => {
+      const active = tab.dataset.reviewKind === kind;
+      tab.classList.toggle('is-active', active);
+      tab.setAttribute('aria-pressed', String(active));
+    });
+    selection.querySelectorAll('[data-question-review-kind-panel]').forEach((panel) => {
+      panel.hidden = panel.dataset.reviewKind !== kind;
+    });
+    return;
+  }
+  if (action === 'select-all-question-review' || action === 'clear-question-review-selection') {
+    const panel = actionEl.closest('[data-question-review-kind-panel]');
+    if (!panel) return;
+    const checked = action === 'select-all-question-review';
+    panel.querySelectorAll('[data-question-review-checkbox]').forEach((checkbox) => { checkbox.checked = checked; });
+    syncQuestionReviewSelectionPanel(panel);
+    return;
+  }
+  if (action === 'start-selected-question-review') {
+    const selection = actionEl.closest('[data-question-review-selection]');
+    if (!selection) return;
+    const kind = selection?.dataset.activeReviewKind || actionEl.dataset.reviewKind;
+    const panel = selection?.querySelector(`[data-question-review-kind-panel][data-review-kind="${kind}"]`);
+    const selectedIds = [...(panel?.querySelectorAll('[data-question-review-checkbox]:checked') || [])].map((checkbox) => checkbox.value);
+    await startSelectedQuestionReview(selection.dataset.moduleId, selectedIds);
+    return;
+  }
   if (action === 'toggle-site-password') {
     const input = document.querySelector('#site-access-form input[name="password"]');
     if (input) {
@@ -4293,6 +4445,17 @@ document.addEventListener('input', (event) => {
 
 document.addEventListener('change', async (event) => {
   if (!accountSession) return;
+  if (event.target.matches?.('[data-question-review-checkbox]')) {
+    const panel = event.target.closest('[data-question-review-kind-panel]');
+    const groupId = event.target.dataset.reviewGroup;
+    if (panel && groupId) {
+      const checked = event.target.checked;
+      panel.querySelectorAll('[data-question-review-checkbox]').forEach((checkbox) => {
+        if (checkbox.dataset.reviewGroup === groupId) checkbox.checked = checked;
+      });
+    }
+    syncQuestionReviewSelectionPanel(panel);
+  }
   syncAptitudeModulePracticeSetup(event.target.closest?.('#aptitude-module-session-setup'));
   if (['plan-task-type', 'science-subject', 'science-topic', 'science-activity-type'].includes(event.target.id)) {
     syncPlanTaskScienceControls(event.target.closest('#plan-task-form'));

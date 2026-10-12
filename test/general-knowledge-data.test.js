@@ -122,6 +122,21 @@ test('every imported Jiangxi mock question links to a registered source', async 
   assert.deepEqual(importedSourceIds.filter((id) => !sourceIds.has(id)), [], 'published question sources must exist in the source registry');
 });
 
+test('national city 2026 general knowledge questions use a registered licensed source', async () => {
+  const [bank, sources] = await Promise.all([
+    import('../src/general-knowledge/questionBank.js'),
+    import('../src/general-knowledge/sources.js'),
+  ]);
+  const questions = bank.GENERAL_KNOWLEDGE_QUESTION_BANK
+    .filter(({ id }) => /^national-2026-city-general-knowledge-q(?:2[1-9]|3[0-5])$/.test(id));
+  const sourceIds = new Set(sources.GENERAL_KNOWLEDGE_SOURCES.map(({ id }) => id));
+
+  assert.equal(questions.length, 15);
+  assert.ok(questions.every((question) => question.sourceId === 'national-2026-city-level-recall'
+    && question.copyrightStatus === 'licensed'
+    && sourceIds.has(question.sourceId)));
+});
+
 test('administrative penalty and reconsideration practice is traceable to current official law texts', async () => {
   const [bank, sources, knowledge, lessonContent, questionRules] = await Promise.all([
     import('../src/general-knowledge/questionBank.js'),

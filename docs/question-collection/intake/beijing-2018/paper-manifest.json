@@ -11,7 +11,7 @@
     "status": "user_confirmed_republication_authorization",
     "confirmed_on": "2026-10-10"
   },
-  "archive_status": "source_pdf_and_text_extraction_staged; answers_not_item_audited; figures_preserved_in_pdf",
+  "archive_status": "source_pdf_and_text_extraction_staged; figures_preserved_in_pdf; per_question_text_exported_135; shared_stimuli_linked_by_question_group",
   "source_page_count": 25,
   "sections": [
     {
@@ -1270,8 +1270,11 @@
     }
   ],
   "notes": [
-    "原题面以 PDF 为准，文本文件仅作检索辅助。",
+    "原题面以 PDF 为准；questions.json 和文本文件仅供检索、逐题核验。",
     "该卷含多选题和图题；题型、图表均保留在原 PDF 中。",
-    "答案尚未逐题与该 PDF 交叉核验，暂不标为可练或可模考。"
-  ]
+    "答案尚未逐题与该 PDF 交叉核验，暂不标为可练或可模考。",
+    "言语阅读材料按原卷题组单独归档，原题通过 shared_stimulus_id 关联；页面题面移除 PDF 页眉、分部说明和扫描页脚。"
+  ],
+  "question_text_export": "questions.json",
+  "shared_stimulus_export": "shared-stimuli.json"
 }
