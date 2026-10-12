@@ -55,8 +55,8 @@
   "source_page_file": "source-page.html",
   "question_records_file": "questions.json",
   "answer_files": [],
-  "image_status": "题36两张行内公式图按原样转录；本次发布题段不依赖外链图片；其他题段图片仍待镜像核验。",
-  "archive_status": "全卷 135 题原始题块已归档；言语题 36–70 的题面、答案、解析与六组共用材料已逐题核验并接入；其余模块待核。",
+  "image_status": "常识第17题图由华图同题页恢复并镜像；常识第22–25题共用材料内两张数字图核读为19.79%与32%；言语第36题两张行内公式图已转录；其他题段图片待核。",
+  "archive_status": "全卷135题原始题块已归档；常识判断1–25题、言语理解36–70题的题面、答案、解析及必要材料已核验并接入；其余题段待核。",
   "question_records": [
     {
       "original_question_no": 1,
@@ -1509,7 +1509,34 @@
   ],
   "notes": [
     "原始 Aipta 题页已按字节保存；结构化区块对应题号和模块，题面来源仍以原页面为准。",
-    "言语题 36–70 的题干、选项、答案和解析已核验；答案来源链接保存在每道题记录中。",
-    "言语题六组共享材料已按原文归组；第36题两张行内公式图片已转录为对应温度数值；其他题段的图像与答案仍待逐题核验。"
+    "常识判断1–25题的题干、选项、答案与解析已核验；第17题图由华图同题页恢复，18–21题及22–25题按共用材料题组归组。",
+    "常识判断共用材料中的两张行内图片已按图面转录为19.79%和32%；言语题36–70及六组共用材料已核验，第36题两张公式图已转录。",
+    "常识判断26–35题为多选题，暂未接入当前单选练习；其他题段仍待题面、答案、解析和图像逐题核验。"
+  ],
+  "recovered_assets": [
+    {
+      "question_no": 17,
+      "source_url": "https://m.shenzhen.huatu.com/tiku/3579340.html",
+      "image_source_url": "https://tp.mxqe.com/data/378/17198443_0.png",
+      "local_path": "public/question-assets/beijing-2021-district-gk/q17-pressure-wind.png",
+      "note": "华图同题条目标记为2021北京区级第17题；题干、选项、答案与回忆版对应。"
+    },
+    {
+      "question_nos": [
+        22,
+        23,
+        24,
+        25
+      ],
+      "source_image_urls": [
+        "https://www.aipta.com/uploadfile/doc/202211/ad36216dc66db6d/phpyuf085_html_7cdf0d5b22720c84.png",
+        "https://www.aipta.com/uploadfile/doc/202211/ad36216dc66db6d/phpyuf085_html_c5ceb8b96b677cf9.png"
+      ],
+      "rendered_values": [
+        "19.79%",
+        "32%"
+      ],
+      "note": "两张行内图片按原图数字转录到共享材料文本。"
+    }
   ]
 }

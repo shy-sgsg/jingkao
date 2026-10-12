@@ -139,6 +139,18 @@ export const GENERAL_KNOWLEDGE_SOURCES = [
     note: '题干和选项按公开题面保存；答案键与固定版本的第三方逐题解析交叉核对。答题前不展示答案和解析。',
   },
   {
+    id: 'aipta-beijing-2021-district', sourceType: 'recalled', title: '2021年北京市公务员录用考试《行测》题（区级及以上卷）（考生回忆版）', organization: 'Aipta / 考生回忆版', examYear: 2021, region: '北京',
+    url: 'https://www.aipta.com/article/1855.html', answerUrl: 'https://www.lasee.net/gongwuyuan/16710893685247.html', verificationStatus: 'verified',
+    publishStatus: 'published', copyrightStatus: '用户确认已获得转载授权',
+    note: '常识判断第1–25题与言语理解第36–70题已按回忆版原文接入；第17题图据华图同题页恢复，垃圾分类材料中的图片数字已转为可读文本。该卷为考生回忆版，非官方原卷。',
+  },
+  {
+    id: 'huatu-beijing-2021-district-q17', sourceType: 'recalled', title: '华图在线：2021年北京区级及以上卷第17题', organization: '华图教育', examYear: 2021, region: '北京',
+    url: 'https://m.shenzhen.huatu.com/tiku/3579340.html', verificationStatus: 'verified',
+    publishStatus: 'reference_only', copyrightStatus: '用于恢复题图及核对答案的来源页',
+    note: '题号、题干、选项和答案与 Aipta 回忆版条目对应；题图由此页公开图片恢复。',
+  },
+  {
     id: 'hubei-2024-recall-candidate', sourceType: 'recalled', title: '2024年湖北省公务员录用考试《行测》题（考生回忆版）', organization: '爱真题 / 湖北网 / ERRRC 公开题解', examYear: 2024, region: '湖北',
     url: 'https://www.aipta.com/article/9625.html',
     answerUrl: 'https://www.163hubei.com/ueditor/php/upload/file/20240318/1710751920689656.pdf', verificationStatus: 'verified',
