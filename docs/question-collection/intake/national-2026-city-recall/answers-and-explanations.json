@@ -1078,5 +1078,205 @@
     "explanationSourceUrl": "https://oss-hqwx-video.hqwx.com/2026%E5%B9%B4%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B%EF%BC%88%E5%B8%82%E5%9C%B0%E7%BA%A7%EF%BC%89%E7%AD%94%E6%A1%88%E5%8F%8A%E8%A7%A3%E6%9E%90%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89_2ae7359ca27b234771d2753342525b8ed1d8e675.pdf",
     "verificationStatus": "verified",
     "publishStatus": "published"
+  },
+  {
+    "id": "national-2026-city-data-analysis-q111",
+    "originalQuestionNo": 111,
+    "correctAnswer": "C",
+    "explanation": "2024年上半年顺差为525.79−451.76=74.03亿美元。按同比增速反推，上年同期出口约515.69亿美元、进口约479.38亿美元，顺差约36.31亿美元；现期顺差增长约104%，属于上升20%以上。",
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.qy.school/daily-practice/daily-practice-2026-111-115-9070fe51dc54481d93da1708d72e3eb3",
+    "verificationStatus": "verified",
+    "publishStatus": "published"
+  },
+  {
+    "id": "national-2026-city-data-analysis-q112",
+    "originalQuestionNo": 112,
+    "correctAnswer": "D",
+    "explanation": "现期比重为14.92÷525.79≈2.84%。按表中同比增速反推，上年同期提取物出口额约17.41亿美元、医药保健品出口总额约515.69亿美元，比重约3.37%；下降约0.54个百分点，未达到3个百分点。",
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.qy.school/daily-practice/daily-practice-2026-111-115-9070fe51dc54481d93da1708d72e3eb3",
+    "verificationStatus": "verified",
+    "publishStatus": "published"
+  },
+  {
+    "id": "national-2026-city-data-analysis-q113",
+    "originalQuestionNo": 113,
+    "correctAnswer": "A",
+    "explanation": "分别按各小类出口额和进口额的同比增速反推上年同期值，再比较本期与上年同期进出口总额；12类中有7类总额上升。",
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.qy.school/daily-practice/daily-practice-2026-111-115-9070fe51dc54481d93da1708d72e3eb3",
+    "verificationStatus": "verified",
+    "publishStatus": "published"
+  },
+  {
+    "id": "national-2026-city-data-analysis-q114",
+    "originalQuestionNo": 114,
+    "correctAnswer": "C",
+    "explanation": "对进口额按“现期量÷（1+同比增速）”求上年同期，再求增量。口腔设备与材料增量约0.91亿美元，保健康复用品约0.79亿美元；医用敷料和一次性耗材均下降，降幅较小者在前，排序为④③①②。",
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.qy.school/daily-practice/daily-practice-2026-111-115-9070fe51dc54481d93da1708d72e3eb3",
+    "verificationStatus": "verified",
+    "publishStatus": "published"
+  },
+  {
+    "id": "national-2026-city-data-analysis-q115",
+    "originalQuestionNo": 115,
+    "correctAnswer": "D",
+    "explanation": "各类进出口总额分别为：西药原料213.43+51.78=265.21亿美元，西成药35.24+110.28=145.52亿美元，生化药20.71+97.84=118.55亿美元。三者约占总额的50%、28%、22%，与D图相符。",
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.qy.school/daily-practice/daily-practice-2026-111-115-9070fe51dc54481d93da1708d72e3eb3",
+    "verificationStatus": "verified",
+    "publishStatus": "published"
+  },
+  {
+    "id": "national-2026-city-data-analysis-q116",
+    "originalQuestionNo": 116,
+    "correctAnswer": "A",
+    "explanation": "不可交易绿证为47.34−31.58=15.76亿个。每个绿证对应1000千瓦时，电量为15.76×1000亿千瓦时=1.576万亿千瓦时，约为1.6万亿。",
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.qy.school/daily-practice/daily-practice-2026-116-120-034044c42d1f4999b6a07b612bdfae1a",
+    "verificationStatus": "verified",
+    "publishStatus": "published"
+  },
+  {
+    "id": "national-2026-city-data-analysis-q117",
+    "originalQuestionNo": 117,
+    "correctAnswer": "D",
+    "explanation": "图表给的是年末累计核发量。2023年新增约22075−5954=16121万个，2022年新增约5954−3893=2061万个；前者约为后者的7.8倍。",
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.qy.school/daily-practice/daily-practice-2026-116-120-034044c42d1f4999b6a07b612bdfae1a",
+    "verificationStatus": "verified",
+    "publishStatus": "published"
+  },
+  {
+    "id": "national-2026-city-data-analysis-q118",
+    "originalQuestionNo": 118,
+    "correctAnswer": "B",
+    "explanation": "核发量前五的省级行政区为云南、内蒙古、四川、新疆、湖北，合计199732万个；除以全国核发量47.34亿个，约占42%。",
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.qy.school/daily-practice/daily-practice-2026-116-120-034044c42d1f4999b6a07b612bdfae1a",
+    "verificationStatus": "verified",
+    "publishStatus": "published"
+  },
+  {
+    "id": "national-2026-city-data-analysis-q119",
+    "originalQuestionNo": 119,
+    "correctAnswer": "C",
+    "explanation": "风电与太阳能项目占集中式项目总量的比重差为（19.07−8.03）÷46.77≈23.6个百分点，约为24个百分点。",
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.qy.school/daily-practice/daily-practice-2026-116-120-034044c42d1f4999b6a07b612bdfae1a",
+    "verificationStatus": "verified",
+    "publishStatus": "published"
+  },
+  {
+    "id": "national-2026-city-data-analysis-q120",
+    "originalQuestionNo": 120,
+    "correctAnswer": "B",
+    "explanation": "湖北、湖南合计核发32025万个，广东、广西合计核发26096万个，差额5929万个；占全国47.34亿个的约1.25%，超过1个百分点。其余说法与累计量、年度增量或占比数据不符。",
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.qy.school/daily-practice/daily-practice-2026-116-120-034044c42d1f4999b6a07b612bdfae1a",
+    "verificationStatus": "verified",
+    "publishStatus": "published"
+  },
+  {
+    "id": "national-2026-city-data-analysis-q121",
+    "originalQuestionNo": 121,
+    "correctAnswer": "B",
+    "explanation": "2021—2024年合计829.6+877.5+1132.9+1089.6=3929.6亿元；2017—2020年合计140.0+456.4+658.7+551.1=1806.2亿元。前者约为后者的2.18倍，最接近2.2倍。",
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.qy.school/daily-practice/daily-practice-2026-121-125-6de54b6dc22947dabf17ea3333469f9c",
+    "verificationStatus": "verified",
+    "publishStatus": "published"
+  },
+  {
+    "id": "national-2026-city-data-analysis-q122",
+    "originalQuestionNo": 122,
+    "correctAnswer": "D",
+    "explanation": "2024年科幻游戏营收同比增量为718.1−651.9=66.2亿元。按该增量逐年外推，2026—2030年合计约4914.5亿元，落在4750亿～5000亿元之间。",
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.qy.school/daily-practice/daily-practice-2026-121-125-6de54b6dc22947dabf17ea3333469f9c",
+    "verificationStatus": "verified",
+    "publishStatus": "published"
+  },
+  {
+    "id": "national-2026-city-data-analysis-q123",
+    "originalQuestionNo": 123,
+    "correctAnswer": "C",
+    "explanation": "逐项比较2023年和2024年同比增速：科幻阅读与科幻衍生品增速提高；科幻影视、科幻游戏和科幻文旅增速下降，共有2个领域增速快于2023年。",
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.qy.school/daily-practice/daily-practice-2026-121-125-6de54b6dc22947dabf17ea3333469f9c",
+    "verificationStatus": "verified",
+    "publishStatus": "published"
+  },
+  {
+    "id": "national-2026-city-data-analysis-q124",
+    "originalQuestionNo": 124,
+    "correctAnswer": "A",
+    "explanation": "科幻文旅占比：2022年150.3÷877.5≈17.1%，2023年310.6÷1132.9≈27.4%，2024年244.0÷1089.6≈22.4%。超过20%的为2023年和2024年。",
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.qy.school/daily-practice/daily-practice-2026-121-125-6de54b6dc22947dabf17ea3333469f9c",
+    "verificationStatus": "verified",
+    "publishStatus": "published"
+  },
+  {
+    "id": "national-2026-city-data-analysis-q125",
+    "originalQuestionNo": 125,
+    "correctAnswer": "D",
+    "explanation": "2018—2021年营收同比增量依次为316.4、202.3、−107.6、278.5亿元，呈现“正、正、负、正”的柱形次序，且相对高低与图示一致。",
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.qy.school/daily-practice/daily-practice-2026-121-125-6de54b6dc22947dabf17ea3333469f9c",
+    "verificationStatus": "verified",
+    "publishStatus": "published"
+  },
+  {
+    "id": "national-2026-city-data-analysis-q126",
+    "originalQuestionNo": 126,
+    "correctAnswer": "B",
+    "explanation": "最不发达国家进出口额14230.2亿元，占全国外贸总值3.2%。14230.2÷3.2%≈444694亿元，即约44.47万亿元，处于44万亿～45万亿元之间。",
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.xingguanggongkao.com/Wb/quesView/id/53796.html",
+    "verificationStatus": "verified",
+    "publishStatus": "published"
+  },
+  {
+    "id": "national-2026-city-data-analysis-q127",
+    "originalQuestionNo": 127,
+    "correctAnswer": "C",
+    "explanation": "按出口、进口增速分别反推上年同期值：出口约8307.8亿元，进口约4933.8亿元，合计约13241.6亿元。现期14230.2亿元同比增长约7.5%。",
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.xingguanggongkao.com/Wb/quesView/id/53797.html",
+    "verificationStatus": "verified",
+    "publishStatus": "published"
+  },
+  {
+    "id": "national-2026-city-data-analysis-q128",
+    "originalQuestionNo": 128,
+    "correctAnswer": "B",
+    "explanation": "铜材、原油、金属矿砂分别占进口总额约26%、25%、22%，其他约27%。四部分占比接近，但排序为其他最多、铜材次之、原油再次、金属矿砂略低，与B图相符。",
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.xingguanggongkao.com/Wb/quesView/id/53798.html",
+    "verificationStatus": "verified",
+    "publishStatus": "published"
+  },
+  {
+    "id": "national-2026-city-data-analysis-q129",
+    "originalQuestionNo": 129,
+    "correctAnswer": "B",
+    "explanation": "2023年进口总额约为5565.5÷1.128≈4933.8亿元。2023年12月进口额约为512.7÷1.181≈434.1亿元，前11个月合计约4499.7亿元；月均约409亿元。",
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.xingguanggongkao.com/Wb/quesView/id/53799.html",
+    "verificationStatus": "verified",
+    "publishStatus": "published"
+  },
+  {
+    "id": "national-2026-city-data-analysis-q130",
+    "originalQuestionNo": 130,
+    "correctAnswer": "D",
+    "explanation": "四国进口额合计156.3+54.7+35.6+33.9=280.5亿元；当月我国自最不发达国家进口额一半为512.7÷2=256.35亿元，四国合计超过一半。",
+    "answerSourceUrl": "https://iget100.com/gongkao/guokao/2026-dishiji-xingce",
+    "explanationSourceUrl": "https://www.xingguanggongkao.com/Wb/quesView/id/53800.html",
+    "verificationStatus": "verified",
+    "publishStatus": "published"
   }
 ]
