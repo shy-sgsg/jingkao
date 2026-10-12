@@ -1256,6 +1256,37 @@
     "notes": "文章给出2024-11-17 09:00各区过审统计，石景山1,083/130、西城4,669/496；同文昌平区为1,671/199。职位榜另列西城区文化活动岗（220219306）127/1及东城区东四街道综合管理岗（230116901）274/2。以上为资格审查通过快照，不是最终缴费或实考人数；岗位榜为部分样本。"
   },
   {
+    "sourceId": "offcn-2024-tongzhou-final-20231117-0900",
+    "title": "中公职位报名大数据：2024通州区过审快照与竞争最激烈职位榜",
+    "publisher": "中公职位库（offcn.com）",
+    "level": "secondary",
+    "evidenceType": "registration_snapshot",
+    "year": 2024,
+    "districtId": "tongzhou",
+    "geographicScope": "通州区区级阶段汇总及末日具名岗位榜单样本",
+    "url": "https://zw.admin.offcn.com/zwcx/lnblb/14894/45/",
+    "observedAt": "2023-11-17 09:00",
+    "accessedAt": "2026-10-12",
+    "positionSnapshots": [
+      { "scope": "district-level", "unit": "通州区", "applicantsQualified": 74, "recruitCount": 168, "observedAt": "2023-11-13 18:00" },
+      { "scope": "district-level", "unit": "通州区", "applicantsQualified": 419, "recruitCount": 168, "observedAt": "2023-11-14 18:00" },
+      { "scope": "district-level", "unit": "通州区", "applicantsQualified": 796, "recruitCount": 168, "observedAt": "2023-11-15 18:00" },
+      { "scope": "district-level", "unit": "通州区", "applicantsQualified": 1541, "recruitCount": 168, "observedAt": "2023-11-16 18:00" },
+      { "scope": "district-level", "unit": "通州区", "applicantsQualified": 1664, "recruitCount": 168, "observedAt": "2023-11-17 09:00" },
+      { "positionCode": "231149202", "scope": "position-level", "applicantsQualified": 80, "recruitCount": 1 },
+      { "positionCode": "221150001", "scope": "position-level", "applicantsQualified": 56, "recruitCount": 1 },
+      { "positionCode": "121148401", "scope": "position-level", "applicantsQualified": 48, "recruitCount": 1 },
+      { "positionCode": "221149101", "scope": "position-level", "applicantsQualified": 73, "recruitCount": 2 },
+      { "positionCode": "231151001", "scope": "position-level", "applicantsQualified": 34, "recruitCount": 1 },
+      { "positionCode": "231151103", "scope": "position-level", "applicantsQualified": 34, "recruitCount": 1 },
+      { "positionCode": "231150901", "scope": "position-level", "applicantsQualified": 67, "recruitCount": 2 },
+      { "positionCode": "231151201", "scope": "position-level", "applicantsQualified": 61, "recruitCount": 2 },
+      { "positionCode": "221149502", "scope": "position-level", "applicantsQualified": 30, "recruitCount": 1 },
+      { "positionCode": "231151601", "scope": "position-level", "applicantsQualified": 58, "recruitCount": 2 }
+    ],
+    "notes": "页面列出普通2024京考通州区报名各时点区级过审总量，并在末日9时竞争最激烈职位榜中列出10个岗位代码、过审人数及招录计划；10条均已与本地同年度职位代码和计划数逐项核对后关联。页面报告通州87岗/168人，本地2024候选为86岗/166人，区级序列沿用来源分母，不能据此补造缺失岗位或视作本地完整覆盖；具名榜单仅为部分岗位。过审数是报名期快照，不是提交申请、最终缴费或实考人数。"
+  },
+  {
     "sourceId": "eoffcn-2024-shijingshan-20231113-1800",
     "title": "中公：2024京考报名首日竞争最激烈职位榜（石景山岗位）",
     "publisher": "中公教育",

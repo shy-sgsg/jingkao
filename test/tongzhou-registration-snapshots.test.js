@@ -147,3 +147,47 @@ test('Tongzhou 2026 first-day qualification snapshot links the exact position an
   assert.equal(rows[0].recruitCount, 1);
   assert.equal(getPositionCompetitionEvidence(position, dataset).qualifiedCompetitionRatio, 11);
 });
+
+test('Tongzhou 2024 final-morning leaderboard links all named job snapshots by exact code and plan', () => {
+  const sourceId = 'offcn-2024-tongzhou-final-20231117-0900';
+  const source = dataset.sources.find((item) => item.sourceId === sourceId);
+  assert.equal(source?.url, 'https://zw.admin.offcn.com/zwcx/lnblb/14894/45/');
+  assert.equal(source?.observedAt, '2023-11-17 09:00');
+
+  const rows = dataset.observations.filter((item) => item.sourceId === sourceId);
+  assert.equal(rows.length, 15);
+  assert.deepEqual(rows.filter((item) => item.scope === 'district-level')
+    .map(({ observedAt, applicantsQualified, recruitCount }) => [observedAt, applicantsQualified, recruitCount]), [
+      ['2023-11-13 18:00', 74, 168],
+      ['2023-11-14 18:00', 419, 168],
+      ['2023-11-15 18:00', 796, 168],
+      ['2023-11-16 18:00', 1541, 168],
+      ['2023-11-17 09:00', 1664, 168],
+    ]);
+
+  const expected = [
+    ['231149202', 1, 80], ['221150001', 1, 56], ['121148401', 1, 48],
+    ['221149101', 2, 73], ['231151001', 1, 34], ['231151103', 1, 34],
+    ['231150901', 2, 67], ['231151201', 2, 61], ['221149502', 1, 30],
+    ['231151601', 2, 58],
+  ];
+  const positionRows = rows.filter((item) => item.scope === 'position-level');
+  assert.equal(positionRows.length, expected.length);
+
+  for (const [code, recruitCount, applicantsQualified] of expected) {
+    const position = dataset.positions.find((item) => item.year === 2024 && item.code === code);
+    assert.ok(position, `${code} should resolve in the 2024 position library`);
+    assert.equal(position.districtId, 'tongzhou');
+    assert.equal(position.recruitCount, recruitCount);
+
+    const row = positionRows.find((item) => item.positionCode === code);
+    assert.ok(row, `${code} should have its own exact-code qualification snapshot`);
+    assert.equal(row.scope, 'position-level');
+    assert.equal(row.observedAt, '2023-11-17 09:00');
+    assert.equal(row.applicantsQualified, applicantsQualified);
+    assert.equal(row.applicantsRegistered, null);
+    assert.equal(row.recruitCount, recruitCount);
+    assert.equal(getPositionCompetitionEvidence(position, dataset).qualifiedCompetitionRatio,
+      applicantsQualified / recruitCount);
+  }
+});
