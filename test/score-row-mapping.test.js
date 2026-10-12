@@ -147,7 +147,7 @@ test('2026 cutoff rows link only to a unique exact year, unit, and title match',
     scoreRows.reduce((counts, row) => ({ ...counts, [row.mappingConfidence]: counts[row.mappingConfidence] + 1 }), {
       high: 0, ambiguous: 0, unmatched: 0,
     }),
-    { high: 323, ambiguous: 55, unmatched: 15 },
+    { high: 327, ambiguous: 55, unmatched: 14 },
   );
 });
 
@@ -351,18 +351,52 @@ test('2026 Yanqing partial interview-cutoff rows preserve unique matches and unr
     assert.equal(row.mappingConfidence, 'ambiguous');
   }
 
-  for (const id of ['2026-cgzj-yanqing-08', '2026-cgzj-yanqing-16', '2026-cgzj-yanqing-24', '2026-cgzj-yanqing-25']) {
+  for (const id of ['2026-cgzj-yanqing-08', '2026-cgzj-yanqing-16', '2026-cgzj-yanqing-25']) {
     const row = scoreRows.find((item) => item.id === id);
     assert.equal(row.positionCode, null);
     assert.equal(row.mappingConfidence, 'unmatched');
   }
 
+  const educationManagement = scoreRows.find((item) => item.id === '2026-cgzj-yanqing-24');
+  const educationManagementPosition = positions.find((item) => item.year === 2026 && item.code === '221778401');
+  assert.equal(educationManagementPosition?.title, '教育管理岗');
+  assert.equal(educationManagement.positionCode, '221778401');
+  assert.equal(educationManagement.mappingConfidence, 'high');
+
   assert.deepEqual(
     scoreRows.reduce((counts, row) => ({ ...counts, [row.mappingConfidence]: counts[row.mappingConfidence] + 1 }), {
       high: 0, ambiguous: 0, unmatched: 0,
     }),
-    { high: 323, ambiguous: 55, unmatched: 15 },
+    { high: 327, ambiguous: 55, unmatched: 14 },
   );
+});
+
+test('2025 Yanqing cutoff examples link only to their unique same-year job entries', () => {
+  const source = sourceRegistry.find((item) => item.sourceId === 'huatu-2025-yanqing-cutoff-examples');
+  assert.ok(source, 'the limited 2025 Yanqing examples should keep their source record');
+  assert.equal(source.year, 2025);
+  assert.equal(source.url, 'https://m.huatu.com/2026/0117/2846948.html');
+  assert.equal(source.samplePositions, 3);
+  assert.match(source.notes, /部分|示例/);
+
+  const expectedRows = {
+    '2025-huatu-yanqing-01': ['北京市规划和自然资源委员会延庆分局', '行政执法岗', '243106701', 127.25],
+    '2025-huatu-yanqing-02': ['北京市延庆区珍珠泉乡', '行政执法岗', '241785702', 117.75],
+    '2025-huatu-yanqing-03': ['北京市延庆区旧县镇', '综合管理岗', '241784901', 113.25],
+  };
+
+  for (const [id, [unit, title, code, score]] of Object.entries(expectedRows)) {
+    const row = scoreRows.find((item) => item.id === id);
+    const matches = positions.filter((position) => position.year === 2025
+      && position.unit === unit && position.title === title);
+
+    assert.equal(matches.length, 1, `${id} must match one unique same-year position`);
+    assert.equal(matches[0].code, code);
+    assert.equal(row?.positionCode, code);
+    assert.equal(row?.score, score);
+    assert.equal(row?.mappingConfidence, 'high');
+    assert.equal(row?.sourceId, source.sourceId);
+  }
 });
 
 test('same-name multi-position rows stay ambiguous while source-backed matches use the exact code', () => {

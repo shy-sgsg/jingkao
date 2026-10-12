@@ -405,9 +405,9 @@ test('Yanqing partial cutoff rows retain the visible sample size and mapping unc
   const source = data.sources.find((item) => item.sourceId === 'cgzj-2026-yanqing-cutoff-sample');
 
   assert.equal(rows.length, 28);
-  assert.equal(rows.filter((row) => row.mappingConfidence === 'high').length, 21);
+  assert.equal(rows.filter((row) => row.mappingConfidence === 'high').length, 22);
   assert.equal(rows.filter((row) => row.mappingConfidence === 'ambiguous').length, 3);
-  assert.equal(rows.filter((row) => row.mappingConfidence === 'unmatched').length, 4);
+  assert.equal(rows.filter((row) => row.mappingConfidence === 'unmatched').length, 3);
   assert.equal(source.samplePositions, 28);
   assert.equal(source.sampleRecruits, 49);
   assert.match(source.notes, /样本不代表全区全量/);

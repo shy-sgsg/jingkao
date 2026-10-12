@@ -13236,17 +13236,18 @@
     "year": 2026,
     "code": "221778401",
     "unit": "中共北京市延庆区委教育工作委员会、北京市延庆区教育委员会",
-    "title": "职位名称待核",
+    "title": "教育管理岗",
     "recruitCount": 1,
     "education": "本科及以上",
     "majorText": "不限",
     "eligibilityComplete": false,
     "crossVerified": false,
-    "eligibilityText": "第三方列表未列职位名称；显示须有两年以上（含两年）工作经历。职位名称和其他资格待官方职位表核验。",
+    "eligibilityText": "第三方基础职位表列本科及以上、不限专业、两年以上（含两年）工作经历；职位名称按同年度单位唯一岗位目录与进面样本交叉对应为教育管理岗，其他资格待官方职位表核验。",
     "sourceLevel": "secondary",
-    "verification": "相对面职位库第三方检索表第1页/3；页面未提供职位名称，未与官方职位表核验",
+    "verification": "职位代码、单位及招录数见相对面职位库第三方检索表；职位名称按成公进面样本与同年度该单位唯一1岗/1人目录交叉对应。未与官方招考简章逐代码核验。",
     "sources": [
-      "xduim-2026-yanqing-page-1"
+      "xduim-2026-yanqing-page-1",
+      "huatu-2026-yanqing-district-catalogue"
     ]
   },
   {

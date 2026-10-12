@@ -2422,6 +2422,22 @@
     "notes": "页面称西城共有111人进入面试，公开表格可见28条岗位分数；其中26条与当前职位库唯一匹配，法院和检察院同名司法警察岗2条有歧义。广安门外街道执法岗按同年度、单位和岗位名唯一匹配到第三方职位镜像代码230225202（粉笔职位明细，计划2人）；成公分数页未直列代码。页面明确为部分样本，不能代表全区全量，也不是官方笔试合格线。"
   },
   {
+    "sourceId": "huatu-2025-yanqing-cutoff-examples",
+    "title": "华图：2025延庆京考岗位进面分数示例",
+    "publisher": "华图教育",
+    "level": "secondary",
+    "evidenceType": "partial_interview_score_sample",
+    "year": 2025,
+    "districtId": "yanqing",
+    "url": "https://m.huatu.com/2026/0117/2846948.html",
+    "accessedAt": "2026-10-12",
+    "samplePositions": 3,
+    "minimum": 113.25,
+    "maximum": 127.25,
+    "scope": "延庆区2025北京市考三条具体岗位最低进面分数示例",
+    "notes": "页面列规自委延庆分局行政执法岗127.25、珍珠泉乡行政执法岗117.75、旧县镇综合管理岗113.25三条2025北京市考岗位示例，未给职位代码，且非全区全量分布。按本地2025候选职位中的同年度+单位+职位名称唯一对应岗位代码；代码尚未与官方原始职位简章逐项核验。未找到这三岗可验证的官方历史报考人数快照，不据此推算报录比。"
+  },
+  {
     "sourceId": "cgzj-2026-yanqing-cutoff-sample",
     "title": "2026北京公务员考试进面分数线｜延庆区（可见岗位表）",
     "publisher": "成公教育",
@@ -2435,7 +2451,7 @@
     "minimum": 100,
     "maximum": 128.75,
     "scope": "延庆区岗位最低进面线部分样本",
-    "notes": "页面称延庆共有49人进入面试，公开表格可见28条岗位分数，明确注明为部分进面分数线。当前职位库中21条按年度+单位+岗位名唯一匹配，3条同名岗位歧义，4条未匹配；样本不代表全区全量，也不是官方笔试合格线。"
+    "notes": "页面称延庆共有49人进入面试，公开表格可见28条岗位分数，明确注明为部分进面分数线。当前职位库中22条按年度+单位+唯一岗位证据匹配，3条同名岗位歧义，3条未匹配；其中教育管理岗按同年度单位仅1岗1人的独立目录交叉关联，名称仍待官方逐代码核验。样本不代表全区全量，也不是官方笔试合格线。"
   },
   {
     "sourceId": "cgzj-2026-fangshan-cutoff-sample",
@@ -3075,6 +3091,33 @@
     "reportedPositionCount": 100,
     "reportedRecruitCount": 170,
     "notes": "列表明细逐行录入并复算岗位数/招录人数；第三方镜像，未与官方职位表逐代码核验。仅包含镜像可见的代码、单位、职位名称、学历、专业及招录数。"
+  },
+  {
+    "sourceId": "offcn-2024-yanqing-final-20231117-0900",
+    "title": "中公：2024延庆区报名末日竞争最激烈岗位榜",
+    "publisher": "中公教育",
+    "level": "secondary",
+    "evidenceType": "registration_snapshot",
+    "year": 2024,
+    "districtId": "yanqing",
+    "geographicScope": "延庆区岗位级竞争最激烈前十榜单样本",
+    "url": "https://zw.admin.offcn.com/zwcx/lnblb/14894/52/",
+    "observedAt": "2023-11-17 09:00",
+    "accessedAt": "2026-10-12",
+    "samplePositions": 10,
+    "positionSnapshots": [
+      { "positionCode": "241774602", "scope": "position-level", "applicantsQualified": 90, "recruitCount": 2 },
+      { "positionCode": "241775401", "scope": "position-level", "applicantsQualified": 30, "recruitCount": 1 },
+      { "positionCode": "221773801", "scope": "position-level", "applicantsQualified": 28, "recruitCount": 1 },
+      { "positionCode": "821772603", "scope": "position-level", "applicantsQualified": 26, "recruitCount": 1 },
+      { "positionCode": "241774604", "scope": "position-level", "applicantsQualified": 26, "recruitCount": 1 },
+      { "positionCode": "221772701", "scope": "position-level", "applicantsQualified": 25, "recruitCount": 1 },
+      { "positionCode": "241773403", "scope": "position-level", "applicantsQualified": 90, "recruitCount": 4 },
+      { "positionCode": "221772202", "scope": "position-level", "applicantsQualified": 21, "recruitCount": 1 },
+      { "positionCode": "221772301", "scope": "position-level", "applicantsQualified": 21, "recruitCount": 1 },
+      { "positionCode": "241775002", "scope": "position-level", "applicantsQualified": 40, "recruitCount": 2 }
+    ],
+    "notes": "中公页面截至2023-11-17 09:00列示延庆区竞争最激烈前十岗位及过审人数；各项仅为资格审查通过人数/计划招录人数，不能当作原始报名人数、缴费人数或实考人数。仅录入榜单中的10条岗位样本，不代表延庆100岗全量竞争数据；岗位代码、计划数与2024延庆职位镜像精确对应，职位镜像尚未与官方职位表逐代码复核。"
   },
   {
     "sourceId": "gwyzwb-2025-yanqing-org-1",
@@ -3846,6 +3889,20 @@
     "reportedPositionCount": 20,
     "reportedRecruitCount": 42,
     "notes": "第三方检索表第1/3页，列示20岗/42人；该表不显示职位名称和职位简介。仅作逐岗候选来源，非官方核验。"
+  },
+  {
+    "sourceId": "huatu-2026-yanqing-district-catalogue",
+    "title": "华图：2026延庆区公务员职位目录（单位汇总）",
+    "publisher": "华图教育",
+    "level": "secondary",
+    "evidenceType": "position_catalogue_summary",
+    "year": 2026,
+    "districtId": "yanqing",
+    "url": "https://ah.huatu.com/zw/bjgwy/yanqing/",
+    "accessedAt": "2026-10-12",
+    "reportedPositionCount": 54,
+    "reportedRecruitCount": 123,
+    "notes": "目录汇总显示延庆区54岗、123人，并列出教育工作委员会/教育委员会为1岗1人；此页不列该岗位名称或代码，仅用于与第三方代码表核对同年度单位和计划数，不视为官方职位表。"
   },
   {
     "sourceId": "gwyzwb-2026-yanqing-org-7",
@@ -19845,7 +19902,7 @@
       { "positionCode": "821778901", "scope": "position-level", "applicantsRegistered": 27, "recruitCount": 2 },
       { "positionCode": "221778902", "scope": "position-level", "applicantsRegistered": 1, "recruitCount": 1 }
     ],
-    "notes": "本页10行中9行关联：8行按同年度单位、岗位名和计划数唯一匹配；粉笔未列教育管理岗代码，该行依据同年度单位和1人计划在本地唯一候选（职位名称待核）暂关联221778401，属单位/计划数唯一匹配推定，并非来源直接给码。延庆区司法局法律援助岗未在本地2026候选中找到。页头为50岗/100人、“过审人数”1123，逐岗表头为“招录/报考人数”，未标统计时间或定义；页面值只作第三方报考参考。"
+    "notes": "本页10行中9行关联：8行按同年度单位、岗位名和计划数唯一匹配；粉笔未列教育管理岗代码，现以相对面代码表（该单位唯一代码221778401、计划1人）及华图区目录（同单位1岗1人）交叉唯一关联。职位名称来自成公进面样本，仍未获官方逐代码名称核验。延庆区司法局法律援助岗未在本地2026候选中找到。页头为50岗/100人、“过审人数”1123，逐岗表头为“招录/报考人数”，未标统计时间或定义；页面值只作第三方报考参考。"
   },
   {
     "sourceId": "yanqing-2026-fenbi-page-3",
