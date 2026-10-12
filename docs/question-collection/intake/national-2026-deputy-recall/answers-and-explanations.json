@@ -1,0 +1,36 @@
+[
+  {
+    "id": "national-2026-deputy-q024",
+    "originalQuestionNo": 24,
+    "correctAnswer": "D",
+    "explanation": "民勤治沙主要阻止腾格里沙漠与巴丹吉林沙漠合拢；毛乌素沙地位于陕北和鄂尔多斯南部，与民勤治沙工程对应的沙漠不同。国家林草局资料确认我国已在全球率先实现土地退化“零增长”，塔克拉玛干沙漠完成锁边合龙，麦草方格固沙技术在中卫沙坡头的治沙实践中形成。",
+    "answerSourceUrl": "https://gwy.gkzhenti.cn/answer/1767342831860",
+    "verificationSourceUrls": [
+      "https://www.forestry.gov.cn/c/www/lcdt/597907.jhtml",
+      "https://www.xjyt.gov.cn/zfgk/zfrd/2025-03-12/10928.html",
+      "https://www.forestry.gov.cn/c/www/xxgcjqdxal/513363.jhtml",
+      "https://www.forestry.gov.cn/c/www/lcdt/526582.jhtml"
+    ]
+  },
+  {
+    "id": "national-2026-deputy-q032",
+    "originalQuestionNo": 32,
+    "correctAnswer": "C",
+    "explanation": "核裂变改变的是原子核内部结构，属于核反应而非化学变化；裂变释放的中子还可以引发后续裂变，形成链式反应。",
+    "answerSourceUrl": "https://gwy.gkzhenti.cn/answer/1767342831860",
+    "verificationSourceUrls": [
+      "https://nnsa.mee.gov.cn/ztzl/haqshmhsh/hyfsaqkp/kptw/202406/t20240624_1076682.html"
+    ]
+  },
+  {
+    "id": "national-2026-deputy-q035",
+    "originalQuestionNo": 35,
+    "correctAnswer": "B",
+    "explanation": "超声波传感器的探测距离较短，主要用于泊车等近距离场景；汽车雷达适合较远距离的目标探测。B项把两类传感器的适用距离说反了。",
+    "answerSourceUrl": "https://gwy.gkzhenti.cn/answer/1767342831860",
+    "verificationSourceUrls": [
+      "https://www.bosch-mobility.com/en/mobility-topics/automated-driving-sense-think-act/sense/"
+    ],
+    "versionAuditNote": "The independent solution PDF reorders options A and B versus the recalled question page. The answer was matched to the statement and then checked against the same-site key; PDF answer letters were not reused."
+  }
+]

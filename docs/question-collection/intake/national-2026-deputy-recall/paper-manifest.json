@@ -1,0 +1,49 @@
+{
+  "paperId": "national-2026-deputy-recall-candidate",
+  "title": "2026年国家公务员录用考试《行测》题（副省级卷，考生回忆版）",
+  "variant": "2026年国考副省级卷；公开考生回忆版",
+  "questionCount": 135,
+  "publishedQuestionNumbers": [24, 32, 35],
+  "pendingQuestionRanges": [[1, 23], [25, 31], [33, 135]],
+  "releaseStatus": "partial_batch_published",
+  "copyrightStatus": "licensed",
+  "authorizationNote": "paper-index.csv records user-confirmed republication authorization.",
+  "verificationStatus": "verified_for_questions_24_32_35",
+  "wholePaperMockEligibility": "held_until_questions_1_to_135_and_required_assets_are_audited",
+  "sources": [
+    {
+      "role": "recalled_question_page",
+      "url": "https://gwy.gkzhenti.cn/paper/1767342831860"
+    },
+    {
+      "role": "same_site_answer_key",
+      "url": "https://gwy.gkzhenti.cn/answer/1767342831860"
+    },
+    {
+      "role": "independent_answer_explanation_pdf",
+      "url": "https://oss-hqwx-video.hqwx.com/2026-%E5%9B%BD%E8%80%83%E7%9C%9F%E9%A2%98-%E3%80%8A%E8%A1%8C%E6%B5%8B%E3%80%8B-%EF%BC%88%E5%89%AF%E7%9C%81%EF%BC%89%E7%9C%9F%E9%A2%98%E5%8F%8A%E7%AD%94%E6%A1%88%EF%BC%88%E7%BD%91%E5%8F%8B%E5%9B%9E%E5%BF%86%EF%BC%89%281%29_a3ce53508e279d5ba2bac7aaf8f61f67eefd3b0e.pdf",
+      "versionAuditNote": "Question 35 has the same statements but different option order in the PDF and question page; the false statement was matched by content, and the answer letter follows the question page and same-site key."
+    },
+    {
+      "role": "official_cross_checks",
+      "urls": [
+        "https://www.forestry.gov.cn/c/www/lcdt/597907.jhtml",
+        "https://www.xjyt.gov.cn/zfgk/zfrd/2025-03-12/10928.html",
+        "https://www.forestry.gov.cn/c/www/xxgcjqdxal/513363.jhtml",
+        "https://www.forestry.gov.cn/c/www/lcdt/526582.jhtml",
+        "https://nnsa.mee.gov.cn/ztzl/haqshmhsh/hyfsaqkp/kptw/202406/t20240624_1076682.html",
+        "https://www.bosch-mobility.com/en/mobility-topics/automated-driving-sense-think-act/sense/"
+      ]
+    }
+  ],
+  "auditNotes": [
+    "Questions 24, 32, and 35 are complete text-only single-choice items. Their question stems and option order were transcribed from the recalled question page; answers were checked against the same site's answer key and independent sources.",
+    "Question 35's independent solution PDF reorders the ultrasonic-radar and lidar options. The explanation was matched to the false statement by content, not by answer letter.",
+    "Question 25 is held because public versions place its answer statements in different option orders; image-based and shared-stimulus items remain pending their own audits.",
+    "Questions 1–23, 25–31, and 33–135 remain pending item, version, answer, image, and shared-stimulus audits. The whole paper is not eligible as a full-paper mock."
+  ],
+  "archiveFiles": {
+    "questions": "questions.json",
+    "answersAndExplanations": "answers-and-explanations.json"
+  }
+}

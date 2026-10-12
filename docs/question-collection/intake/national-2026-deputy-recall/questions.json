@@ -1,0 +1,47 @@
+[
+  {
+    "id": "national-2026-deputy-q024",
+    "originalQuestionNo": 24,
+    "sectionOrder": 2,
+    "module": "common_knowledge",
+    "submodule": "荒漠化防治",
+    "stem": "我国始终高度重视荒漠化的治理工作，把防沙治沙作为荒漠化防治工作的主要任务。下列与我国荒漠化防治有关的说法错误的是：",
+    "options": [
+      "A. 我国是全球首个实现土地退化零增长的国家",
+      "B. 塔克拉玛干沙漠实现生态屏障全面“锁边合龙”",
+      "C. 草方格固沙技术最早用于治理宁夏中卫的沙坡头地区",
+      "D. 甘肃民勤治沙工程有效阻止了毛乌素沙漠的推进"
+    ],
+    "questionSourceUrl": "https://gwy.gkzhenti.cn/paper/1767342831860"
+  },
+  {
+    "id": "national-2026-deputy-q032",
+    "originalQuestionNo": 32,
+    "sectionOrder": 2,
+    "module": "common_knowledge",
+    "submodule": "核物理",
+    "stem": "关于核裂变与核衰变，下列说法错误的是：",
+    "options": [
+      "A. 核衰变的过程中电荷数是守恒的",
+      "B. 放射性元素衰变是自然界自发进行的",
+      "C. 核裂变是一种异常剧烈的化学变化",
+      "D. 核裂变释放出的中子可以引起链式反应"
+    ],
+    "questionSourceUrl": "https://gwy.gkzhenti.cn/paper/1767342831860"
+  },
+  {
+    "id": "national-2026-deputy-q035",
+    "originalQuestionNo": 35,
+    "sectionOrder": 2,
+    "module": "common_knowledge",
+    "submodule": "汽车自动驾驶传感器",
+    "stem": "关于汽车自动驾驶技术，下列说法错误的是：",
+    "options": [
+      "A. 激光雷达通过发射激光束来探测目标的位置、速度",
+      "B. 相对于毫米波雷达，超声波雷达更适合远距离探测",
+      "C. 强化学习有助于实现车辆的自主学习和智能决策",
+      "D. 陀螺仪和加速度计可用来测算车辆的姿态和运动信息"
+    ],
+    "questionSourceUrl": "https://gwy.gkzhenti.cn/paper/1767342831860"
+  }
+]

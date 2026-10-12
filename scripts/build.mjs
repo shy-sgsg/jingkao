@@ -48,6 +48,7 @@ const appModules = [
   '../src/aptitude/hubei2024RecallData.js',
   '../src/aptitude/national2025DeputyRecallData.js',
   '../src/aptitude/national2026CityRecallData.js',
+  '../src/aptitude/national2026DeputyRecallData.js',
   '../src/aptitude/beijing2021DistrictVerbalData.js',
   '../src/aptitude/beijing2021DistrictQuantitativeData.js',
   '../src/aptitude/beijing2021DistrictReasoningData.js',
