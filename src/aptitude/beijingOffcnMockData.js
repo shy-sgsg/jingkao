@@ -107,6 +107,46 @@ const reasoning2025ArticleSource = source(
   'beijing-offcn-2025-reasoning-article-1308720',
   4,
 );
+const verbal2024FillBlankSource = source(
+  'offcn-beijing-2024-verbal-fill-blank-1140864',
+  '2024北京公务员考试行测言语理解模拟题',
+  'https://www.eoffcn.com/kszx/detail/1140864.html',
+  2024,
+  'beijing-offcn-2024-verbal-fill-blank-1140864',
+  2,
+);
+const quantitative2025OctoberSource = source(
+  'offcn-beijing-2025-quantitative-2024-10-18',
+  '2025北京公务员考试行测题库：行测数量关系模拟题2024.10.18',
+  'https://www.eoffcn.com/kszx/detail/1483381.html',
+  2025,
+  'beijing-offcn-2025-quantitative-2024-10-18',
+  3,
+);
+const reasoning2025AprilSource = source(
+  'offcn-beijing-2025-reasoning-2024-04-26',
+  '2025北京公务员行测题库：行测判断推理模拟题2024.4.26',
+  'https://www.eoffcn.com/kszx/detail/1333286.html',
+  2025,
+  'beijing-offcn-2025-reasoning-2024-04-26',
+  4,
+);
+const reasoning2025SeptemberSource = source(
+  'offcn-beijing-2025-reasoning-2024-09-27',
+  '2025北京公务员考试行测题库：行测类比推理模拟题2024.09.27',
+  'https://www.eoffcn.com/kszx/detail/1468951.html',
+  2025,
+  'beijing-offcn-2025-reasoning-2024-09-27',
+  4,
+);
+const dataAnalysis2025AprilSource = source(
+  'offcn-beijing-2025-data-2024-04-29',
+  '2025北京公务员考试行测题库：行测资料分析模拟题4.29',
+  'https://www.eoffcn.com/kszx/detail/1670496.html',
+  2025,
+  'beijing-offcn-2025-data-2024-04-29',
+  5,
+);
 
 const question = (sourceData, fields) => ({
   ...sourceData,
@@ -379,6 +419,118 @@ return [
       '如果失事飞机设计公司提供技术支持，那么关于失事事件的调查报告就会更客观。',
     ], correctAnswer: 'A',
     explanation: '中公解析：题干的第一条假言命题“没有采取积极搜救行动→不会尽早发现残骸”等价于“采取积极搜救行动，或者不会尽早发现残骸”，与A项一致，因此A项不可能为假。',
+  }),
+  question(verbal2024FillBlankSource, {
+    id: 'bj2024offcn-verbal-fill-blank-q1', moduleId: 'verbal', subjectId: 'verbal',
+    topicId: 'verbal:contextual-word-choice', knowledgePointIds: ['verbal:contextual-word-choice'], originalQuestionNo: 1,
+    stem: '观察过去五年广东的发展路径，可以________地看到当地政府、企业、民众从歧路彷徨到艰难转型的过程。要触动既得利益，要牺牲眼前利益，不仅需要勇气，更需要智慧。要________已有的“获利”路径，要________用惯了的政策“拐杖”，不仅需要“自我革命”，还需要“群体参与”。填入画横线部分最恰当的一项是：',
+    options: ['完整 抛弃 脱离', '欣慰 放弃 放开', '客观 背弃 松开', '清楚 舍弃 扔掉'], correctAnswer: 'D',
+    explanation: '中公解析：第二空“背弃”通常用于不该背弃的事物，不适合“获利路径”，排除C。第三空与“政策拐杖”搭配，“扔掉”更恰当，答案为D。',
+  }),
+  question(verbal2024FillBlankSource, {
+    id: 'bj2024offcn-verbal-fill-blank-q2', moduleId: 'verbal', subjectId: 'verbal',
+    topicId: 'verbal:contextual-word-choice', knowledgePointIds: ['verbal:contextual-word-choice'], originalQuestionNo: 2,
+    stem: '就数字出版生存所依赖的“土壤”——网络来说，这是一个信息爆炸的时代，海量的、碎片的信息常常过于________，以致阅读者很容易产生________，使得注意力和阅读兴趣迅速________，很难真正静下心来阅读。填入画横线部分最恰当的一项是：',
+    options: ['凌乱 疲惫 偏离', '杂乱 倦怠 转移', '庞杂 困惑 分散', '复杂 迷惑 涣散'], correctAnswer: 'B',
+    explanation: '中公解析：“海量”强调信息多，“碎片”强调信息杂乱，第一空需兼顾二者；“注意力和阅读兴趣迅速转移”搭配恰当，选择B。',
+  }),
+  question(verbal2024FillBlankSource, {
+    id: 'bj2024offcn-verbal-fill-blank-q3', moduleId: 'verbal', subjectId: 'verbal',
+    topicId: 'verbal:contextual-word-choice', knowledgePointIds: ['verbal:contextual-word-choice'], originalQuestionNo: 3,
+    stem: '随着时代变迁，摩天大楼能耗过大、维护成本过高、影响环境等多种弊端促使人们重新________超高建筑的必要性和合理性。世界上许多城市都对建设超高建筑持________态度，并用严格的规划控制城市建筑高度，力求制订更为科学合理的城市规划，________绿色宜居可持续的城市发展理念。填入画横线部分最恰当的一项是：',
+    options: ['审视 谨慎 践行', '论证 反对 坚持', '反思 消极 扩大', '批判 保守 发展'], correctAnswer: 'A',
+    explanation: '中公解析：文段体现的是重新考察超高建筑、谨慎控制高度，并落实绿色宜居理念。“反对”“消极”语气过重，“批判”也不合语境，答案为A。',
+  }),
+  question(dataAnalysis2025AprilSource, {
+    id: 'bj2025offcn-data-april-q1', moduleId: 'data-analysis', subjectId: 'data-analysis',
+    topicId: 'data-analysis:growth-rate', knowledgePointIds: ['data-analysis:growth-rate'], originalQuestionNo: 1,
+    stem: '2014年全国社会物流总额213.5万亿元，同比增长7.9%，其中上半年101.5万亿元，同比增长8.7%。问题：2014年下半年社会物流总额比上年同期增长百分之几?',
+    options: ['7.2%', '8.0%', '8.6%', '9.3%'], correctAnswer: 'A',
+    explanation: '中公解析：全年增速7.9%是上、下半年增速的加权结果；上半年增速为8.7%，因此下半年增速低于7.9%。选项中只有7.2%符合，答案为A。',
+  }),
+  question(dataAnalysis2025AprilSource, {
+    id: 'bj2025offcn-data-april-q2', moduleId: 'data-analysis', subjectId: 'data-analysis',
+    topicId: 'data-analysis:growth-rate', knowledgePointIds: ['data-analysis:growth-rate'], originalQuestionNo: 2,
+    stem: '2012年上半年，我国外贸进出口总值18398.4亿美元，同比增长8%，其中出口9543.8亿美元，增长9.2%，进口8854.6亿美元。问题：2012年进口总额的增长率为多少?',
+    options: ['7.7%', '6.7%', '8.6%', '10.1%'], correctAnswer: 'B',
+    explanation: '中公解析：进出口总额增速是出口和进口增速的加权平均。整体增速8%介于出口增速9.2%和进口增速之间，且基期出口额大于进口额，进口增速应比8%低得更多，答案为B。',
+  }),
+  question(dataAnalysis2025AprilSource, {
+    id: 'bj2025offcn-data-april-q3', moduleId: 'data-analysis', subjectId: 'data-analysis',
+    topicId: 'data-analysis:share-change', knowledgePointIds: ['data-analysis:share-change'], originalQuestionNo: 3,
+    stem: '2015年，我国出口纺织品、服装2919亿美元，同比下降4.8%。按出口商品类型看，纺织品出口1153亿美元，同比下降2.3%;服装出口1759亿美元，同比下降6.4%。按出口对象看，对美国出口额同比增长6.7%，对欧盟出口额同比下降9.3%，对日本出口额同比下降11.6%，对东盟出口额同比下降0.8%。问：在美国、欧盟、东盟和日本四大贸易伙伴中，2015年我国纺织品、服装对其出口额占我国当年纺织品、服装出口总额比重低于2014年水平的有：',
+    options: ['仅东盟', '美国和东盟', '欧盟和日本', '欧盟、日本和东盟'], correctAnswer: 'C',
+    explanation: '中公解析：当某部分增长率低于整体增长率−4.8%时，该部分占整体的比重下降。欧盟和日本的出口额分别下降9.3%和11.6%，均低于整体降幅，选择C。',
+  }),
+  question(quantitative2025OctoberSource, {
+    id: 'bj2025offcn-quant-october-q1', moduleId: 'quantitative', subjectId: 'quantitative',
+    topicId: 'quantitative:profit', knowledgePointIds: ['quantitative:profit'], originalQuestionNo: 1,
+    stem: '姐弟两人同时看上了同一款小猪佩奇的书包，但是两个人的压岁钱都不够买此款书包。如果该书包按7折出售的话，姐姐还缺35元，而弟弟还缺32元;两人的钱放到一起合买的话两人的压岁钱还多出3元钱，则这款书包原售价是多少钱?',
+    options: ['80', '100', '120', '140'], correctAnswer: 'B',
+    explanation: '中公解析：设原售价为x元，打七折后售价为0.7x。姐姐和弟弟分别有0.7x−35元、0.7x−32元，两人合计比售价多3元，列式得(0.7x−35)+(0.7x−32)=0.7x+3，解得x=100，答案为B。',
+  }),
+  question(quantitative2025OctoberSource, {
+    id: 'bj2025offcn-quant-october-q2', moduleId: 'quantitative', subjectId: 'quantitative',
+    topicId: 'quantitative:profit', knowledgePointIds: ['quantitative:profit'], originalQuestionNo: 2,
+    stem: '一批电脑按原定价出售，每台利润为成本的20%，实际出售时进行了降价处理，按原定价9折出售，结果每天的销量,是降价前的3倍，降价后每天经营该批电脑的总利润比降价前增加了()?',
+    options: ['20%', '25%', '40%', '45%'], correctAnswer: 'A',
+    explanation: '原定价为成本的1.2倍，打九折后售价为成本的1.08倍，单台利润变为成本的8%。销量变为原来的3倍后，总利润为原来的0.08×3÷0.20=1.2倍，增加20%，答案为A。',
+  }),
+  question(quantitative2025OctoberSource, {
+    id: 'bj2025offcn-quant-october-q4', moduleId: 'quantitative', subjectId: 'quantitative',
+    topicId: 'quantitative:travel', knowledgePointIds: ['quantitative:travel'], originalQuestionNo: 4,
+    stem: '一艘轮船先顺水航行40千米，再逆水航行24千米，共用了8小时。若该船先逆水航行20千米，再顺水航行60千米，也用了8小时。则在静水中这艘船每小时航行( )千米。',
+    options: ['11', '12', '13', '14'], correctAnswer: 'B',
+    explanation: '设顺水和逆水速度分别为u、v，则40/u+24/v=8，60/u+20/v=8。解得u=20、v=4，静水速度为(u+v)/2=12千米/小时，答案为B。',
+  }),
+  question(reasoning2025AprilSource, {
+    id: 'bj2025offcn-reasoning-april-q2', moduleId: 'reasoning', subjectId: 'reasoning',
+    topicId: 'reasoning:conclusion', knowledgePointIds: ['reasoning:conclusion'], originalQuestionNo: 2,
+    stem: '“经济金融化”成为产生金融危机的直接原因。当货币拥有了在市场上购买一切的魔力，它就成为财富的象征，使那些重利轻义者陷入货币拜物教泥潭。无限追求货币财富自古以来都会给社会带来灾难。在经济全球化的今天，其危害更大，会迅速蔓延成为全球化危机。为此，必须重视对金融业的治理与监管。关于这段文字，以下理解准确的是( )',
+    options: ['货币是财富的象征', '货币使人陷入拜物教泥潭', '经济全球化可能导致全球金融危机', '追求货币财富可能会给社会带来灾难'], correctAnswer: 'D',
+    explanation: '中公解析：原文说“无限追求货币财富”会给社会带来灾难，D项保留了这一条件并准确概括。A、B扩大了原文限定，C项把文本关系改成因果关系，答案为D。',
+  }),
+  question(reasoning2025SeptemberSource, {
+    id: 'bj2025offcn-reasoning-analogy-q1', moduleId: 'reasoning', subjectId: 'reasoning',
+    topicId: 'reasoning:analogy', knowledgePointIds: ['reasoning:analogy'], originalQuestionNo: 1,
+    stem: '莲蓬对于()相当于()对于葛根',
+    options: ['荷叶：葛藤', '荷花：葛粉', '喜爱：纠缠', '荷塘：山岗'], correctAnswer: 'A',
+    explanation: '中公解析：莲蓬与荷叶都是荷花的组成部分，葛藤与葛根都是野葛的组成部分，两组均为组成部分之间的并列关系，答案为A。',
+  }),
+  question(reasoning2025SeptemberSource, {
+    id: 'bj2025offcn-reasoning-analogy-q2', moduleId: 'reasoning', subjectId: 'reasoning',
+    topicId: 'reasoning:analogy', knowledgePointIds: ['reasoning:analogy'], originalQuestionNo: 2,
+    stem: '衣服：衣领：衣袖',
+    options: ['鱼：鱼头：鱼尾', '警察：刑警：交警', '音乐：古典音乐：流行音乐', '人民币：美元：韩币'], correctAnswer: 'A',
+    explanation: '中公解析：衣领和衣袖分别是衣服的组成部分，二者为并列关系。鱼头和鱼尾同样分别是鱼的组成部分，彼此并列，答案为A。',
+  }),
+  question(reasoning2025SeptemberSource, {
+    id: 'bj2025offcn-reasoning-analogy-q3', moduleId: 'reasoning', subjectId: 'reasoning',
+    topicId: 'reasoning:analogy', knowledgePointIds: ['reasoning:analogy'], originalQuestionNo: 3,
+    stem: '峰回路转 ：山穷水尽',
+    options: ['安居乐业：四海为家', '比比皆是：一成不变', '沉默寡言：豪言壮语', '囫囵吞枣：融汇贯通'], correctAnswer: 'D',
+    explanation: '中公解析：“峰回路转”和“山穷水尽”意义相反；“囫囵吞枣”和“融会贯通”也构成反义关系，答案为D。',
+  }),
+  question(reasoning2025SeptemberSource, {
+    id: 'bj2025offcn-reasoning-analogy-q4', moduleId: 'reasoning', subjectId: 'reasoning',
+    topicId: 'reasoning:analogy', knowledgePointIds: ['reasoning:analogy'], originalQuestionNo: 4,
+    stem: '丰功：伟绩',
+    options: ['维和：行动', '风餐：露宿', '文化：传播', '风卷：残云'], correctAnswer: 'B',
+    explanation: '中公解析：“丰功”和“伟绩”都是偏正结构的并列词语；“风餐”和“露宿”也都是偏正结构并列，答案为B。',
+  }),
+  question(reasoning2025SeptemberSource, {
+    id: 'bj2025offcn-reasoning-analogy-q5', moduleId: 'reasoning', subjectId: 'reasoning',
+    topicId: 'reasoning:analogy', knowledgePointIds: ['reasoning:analogy'], originalQuestionNo: 5,
+    stem: '专家:学者',
+    options: ['教师：教授', '花生：小麦', '领导：干部', '钢材：材料'], correctAnswer: 'C',
+    explanation: '中公解析：专家与学者属于交叉关系；干部与领导也属于交叉关系，答案为C。',
+  }),
+  question(reasoning2025SeptemberSource, {
+    id: 'bj2025offcn-reasoning-analogy-q6', moduleId: 'reasoning', subjectId: 'reasoning',
+    topicId: 'reasoning:analogy', knowledgePointIds: ['reasoning:analogy'], originalQuestionNo: 6,
+    stem: '大义凛然：卑躬屈膝',
+    options: ['安分守己：好高骛远', '穷奢极欲：节衣缩食', '得心应手：百无一用', '持之以恒：虎头蛇尾'], correctAnswer: 'D',
+    explanation: '中公解析：题干两个成语构成反义关系，且分别为褒义、贬义。D项也符合反义关系且褒贬相对，答案为D。',
   }),
 ];
 })();
