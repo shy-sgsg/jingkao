@@ -55,7 +55,7 @@
   "source_page_file": "source-page.html",
   "question_records_file": "questions.json",
   "answer_files": [],
-  "image_status": "常识第17题图由华图同题页恢复并镜像；常识第22–25题共用材料内两张数字图核读为19.79%与32%；言语第36题两张行内公式图已转录；其他题段图片待核。",
+  "image_status": "数量关系 q73、q74、q76、q81、q82、q84 的15张行内公式/选项图已从原题页恢复、镜像并逐张核读转录；该模块本批无未恢复图像。判断推理及资料分析仍待核验。",
   "archive_status": "全卷135题原始题块已归档；常识判断1–25题、言语理解36–70题的题面、答案、解析及必要材料已核验并接入；其余题段待核。",
   "question_records": [
     {
@@ -772,7 +772,7 @@
       "source_block_end_exclusive": 439,
       "raw_source_html_fragment": "<p>71.小张早上起床的时候，发现挂钟电池没电已经停止了，他把挂钟换好电池，但未来得及调整时间就匆忙出门上班了，出门前挂钟显示时间是5点25分。小张赶到单位时，刚好是8点整。中午12点小张从单位返回家中吃饭，12点半进门。假设小张上下班路上花费时间相等，则小张进门时家里挂钟显示时间为：</p><p>A、9点25分</p><p>B、9点55分</p><p>C、10点25分</p><p>D、10点55分</p>",
       "image_urls_in_range": [],
-      "correct_option": null
+      "correct_option": "C"
     },
     {
       "original_question_no": 72,
@@ -782,7 +782,7 @@
       "source_block_end_exclusive": 444,
       "raw_source_html_fragment": "<p>72.甲、乙两家公司共同实施某个项目，甲公司的实际出资额比乙公司高60万元，投入人力是乙公司的一半，如将人力折算为出资额，则最终两家公司分得的利润相同。问两家公司投入的人力之和折算为多少万元的出资额？</p><p>A、240</p><p>B、180</p><p>C、120</p><p>D、60</p>",
       "image_urls_in_range": [],
-      "correct_option": null
+      "correct_option": "B"
     },
     {
       "original_question_no": 73,
@@ -794,7 +794,7 @@
       "image_urls_in_range": [
         "https://www.aipta.com/uploadfile/doc/202211/ad36216dc66db6d/phpyuf085_html_c039ea99c3ed4a69.png"
       ],
-      "correct_option": null
+      "correct_option": "C"
     },
     {
       "original_question_no": 74,
@@ -807,7 +807,7 @@
         "https://www.aipta.com/uploadfile/doc/202211/ad36216dc66db6d/phpyuf085_html_de6d42c5e7b5b1ab.png",
         "https://www.aipta.com/uploadfile/doc/202211/ad36216dc66db6d/phpyuf085_html_bbd510742fe78946.png"
       ],
-      "correct_option": null
+      "correct_option": "C"
     },
     {
       "original_question_no": 75,
@@ -817,7 +817,7 @@
       "source_block_end_exclusive": 459,
       "raw_source_html_fragment": "<p>75.某电商平台开通会员费用为99元/年，全年最多可免240元运费，且会员在购买服饰类、非服饰类商品时可分别享受9折和95折优惠。小王去年在该平台上未开通会员，全年购买服饰类、食品类、家电类和其他类商品分别花费1480元、3200元、3600元和1500元，运费花费235元。如他去年开通会员，则在该平台支付总金额可减少：</p><p>A、不到500元</p><p>B、500-750元之间</p><p>C、750-1000元之间</p><p>D、1000元以上</p>",
       "image_urls_in_range": [],
-      "correct_option": null
+      "correct_option": "B"
     },
     {
       "original_question_no": 76,
@@ -831,7 +831,7 @@
         "https://www.aipta.com/uploadfile/doc/202211/ad36216dc66db6d/phpyuf085_html_eb846c3a404c6bc0.png",
         "https://www.aipta.com/uploadfile/doc/202211/ad36216dc66db6d/phpyuf085_html_1129455851f736d.png"
       ],
-      "correct_option": null
+      "correct_option": "D"
     },
     {
       "original_question_no": 77,
@@ -841,7 +841,7 @@
       "source_block_end_exclusive": 469,
       "raw_source_html_fragment": "<p>77.甲、乙、丙三条生产线生产某种零件，效率比为3：4：5，甲和乙生产线共同生产A订单，完成时甲比乙少生产250个。乙和丙共同生产B订单，完成时乙生产了720个。问A订单的零件个数比B订单：</p><p>A、少不到100个</p><p>B、少100个以上</p><p>C、多不到100个</p><p>D、多100个以上</p>",
       "image_urls_in_range": [],
-      "correct_option": null
+      "correct_option": "D"
     },
     {
       "original_question_no": 78,
@@ -851,7 +851,7 @@
       "source_block_end_exclusive": 474,
       "raw_source_html_fragment": "<p>78.为响应国家“做好重点群体就业工作”的号召，某企业扩大招聘规模，计划在年内招聘高校毕业生240名，但实际招聘的高校毕业生数量多于计划招聘的数量。已知企业将招聘到的高校毕业生平均分配到7个部门培训，并在培训结束后将他们平均分配到9个分公司工作。问该企业实际招聘的高校毕业生至少比计划招聘数多多少人？</p><p>A、6</p><p>B、12</p><p>C、14</p><p>D、28</p>",
       "image_urls_in_range": [],
-      "correct_option": null
+      "correct_option": "B"
     },
     {
       "original_question_no": 79,
@@ -861,7 +861,7 @@
       "source_block_end_exclusive": 479,
       "raw_source_html_fragment": "<p>79.一种设备打九折出售，销售12件与原价出售销售10件时获利相同。已知这种设备的进价为50元/件，其他成本为10元/件。问如打八折出售，1万元最多可以买多少件？</p><p>A、80</p><p>B、83</p><p>C、86</p><p>D、90</p>",
       "image_urls_in_range": [],
-      "correct_option": null
+      "correct_option": "B"
     },
     {
       "original_question_no": 80,
@@ -871,7 +871,7 @@
       "source_block_end_exclusive": 484,
       "raw_source_html_fragment": "<p>80.一本书每页的每一面都有页码，页码1出现在右手页，且最后一页的页码为242。己知该书中有1页缺失，缺失页不是第一页也不是最后一页，且剩余部分的页码之和正好是缺失页两面页码之和的整数倍。问满足条件的缺失页有多少种不同的可能性？</p><p>A、5</p><p>B、6</p><p>C、7</p><p>D、8</p>",
       "image_urls_in_range": [],
-      "correct_option": null
+      "correct_option": "A"
     },
     {
       "original_question_no": 81,
@@ -886,7 +886,7 @@
         "https://www.aipta.com/uploadfile/doc/202211/ad36216dc66db6d/phpyuf085_html_bbd510742fe78946.png",
         "https://www.aipta.com/uploadfile/doc/202211/ad36216dc66db6d/phpyuf085_html_63531f06c1efd5ae.png"
       ],
-      "correct_option": null
+      "correct_option": "A"
     },
     {
       "original_question_no": 82,
@@ -901,7 +901,7 @@
         "https://www.aipta.com/uploadfile/doc/202211/ad36216dc66db6d/phpyuf085_html_48f4b1a7da10dcf8.png",
         "https://www.aipta.com/uploadfile/doc/202211/ad36216dc66db6d/phpyuf085_html_1a278fc1381e2916.png"
       ],
-      "correct_option": null
+      "correct_option": "C"
     },
     {
       "original_question_no": 83,
@@ -911,7 +911,7 @@
       "source_block_end_exclusive": 499,
       "raw_source_html_fragment": "<p>83.为响应党中央“绿水青山就是金山银山”号召，某地投入500万元用于植树造林、河流治理和野生动物保护三项工作。已知植树造林投资比河流治理投资的1.2倍少56万元，野生动物保护投资比投资额最高项目的投资少68万元。问投资额第二高的项目投入了多少万元？</p><p>A、178</p><p>B、180</p><p>C、182</p><p>D、184</p>",
       "image_urls_in_range": [],
-      "correct_option": null
+      "correct_option": "A"
     },
     {
       "original_question_no": 84,
@@ -923,7 +923,7 @@
       "image_urls_in_range": [
         "https://www.aipta.com/uploadfile/doc/202211/ad36216dc66db6d/phpyuf085_html_7a35ad878df6cf00.png"
       ],
-      "correct_option": null
+      "correct_option": "C"
     },
     {
       "original_question_no": 85,
@@ -933,7 +933,7 @@
       "source_block_end_exclusive": 510,
       "raw_source_html_fragment": "<p>85.某工厂的工号为5位数字。甲乙两个工人工号五位数字连乘之积都等于1764，但是甲的工号五位连加之和比乙的大4。问乙的工号为：</p><p>A、13677</p><p>B、22779</p><p>C、23677</p><p>D、33477</p><p>四、判断推理。本部分包括图形推理、定义判断、与演绎推理三种类型的试题。</p>",
       "image_urls_in_range": [],
-      "correct_option": null
+      "correct_option": "D"
     },
     {
       "original_question_no": 86,
@@ -1511,7 +1511,8 @@
     "原始 Aipta 题页已按字节保存；结构化区块对应题号和模块，题面来源仍以原页面为准。",
     "常识判断1–25题的题干、选项、答案与解析已核验；第17题图由华图同题页恢复，18–21题及22–25题按共用材料题组归组。",
     "常识判断共用材料中的两张行内图片已按图面转录为19.79%和32%；言语题36–70及六组共用材料已核验，第36题两张公式图已转录。",
-    "常识判断26–35题为多选题，暂未接入当前单选练习；其他题段仍待题面、答案、解析和图像逐题核验。"
+    "常识判断26–35题为多选题，暂未接入当前单选练习；其他题段仍待题面、答案、解析和图像逐题核验。",
+    "数量关系71–85题题干与选项按 Aipta 原始 HTML 区块及原始行内图片核对；15张公式/选项图已镜像并读数转录。答案与解析按星光公考“2021北京区级”同题标签逐题核验，已批量接入。"
   ],
   "recovered_assets": [
     {
@@ -1537,6 +1538,84 @@
         "32%"
       ],
       "note": "两张行内图片按原图数字转录到共享材料文本。"
+    },
+    {
+      "question_nos": [
+        73,
+        74,
+        76,
+        81,
+        82,
+        84
+      ],
+      "source_image_urls": [
+        "https://www.aipta.com/uploadfile/doc/202211/ad36216dc66db6d/phpyuf085_html_c039ea99c3ed4a69.png",
+        "https://www.aipta.com/uploadfile/doc/202211/ad36216dc66db6d/phpyuf085_html_de6d42c5e7b5b1ab.png",
+        "https://www.aipta.com/uploadfile/doc/202211/ad36216dc66db6d/phpyuf085_html_bbd510742fe78946.png",
+        "https://www.aipta.com/uploadfile/doc/202211/ad36216dc66db6d/phpyuf085_html_2288d89b2cece145.png",
+        "https://www.aipta.com/uploadfile/doc/202211/ad36216dc66db6d/phpyuf085_html_eb846c3a404c6bc0.png",
+        "https://www.aipta.com/uploadfile/doc/202211/ad36216dc66db6d/phpyuf085_html_1129455851f736d.png",
+        "https://www.aipta.com/uploadfile/doc/202211/ad36216dc66db6d/phpyuf085_html_8cbe7ca305bb4445.png",
+        "https://www.aipta.com/uploadfile/doc/202211/ad36216dc66db6d/phpyuf085_html_43e6fec94d24a87a.png",
+        "https://www.aipta.com/uploadfile/doc/202211/ad36216dc66db6d/phpyuf085_html_bbd510742fe78946.png",
+        "https://www.aipta.com/uploadfile/doc/202211/ad36216dc66db6d/phpyuf085_html_63531f06c1efd5ae.png",
+        "https://www.aipta.com/uploadfile/doc/202211/ad36216dc66db6d/phpyuf085_html_de6d42c5e7b5b1ab.png",
+        "https://www.aipta.com/uploadfile/doc/202211/ad36216dc66db6d/phpyuf085_html_d831d02fb785598b.png",
+        "https://www.aipta.com/uploadfile/doc/202211/ad36216dc66db6d/phpyuf085_html_48f4b1a7da10dcf8.png",
+        "https://www.aipta.com/uploadfile/doc/202211/ad36216dc66db6d/phpyuf085_html_1a278fc1381e2916.png",
+        "https://www.aipta.com/uploadfile/doc/202211/ad36216dc66db6d/phpyuf085_html_7a35ad878df6cf00.png"
+      ],
+      "local_paths": [
+        "public/question-assets/beijing-2021-district-quantitative/q73-image-1.png",
+        "public/question-assets/beijing-2021-district-quantitative/q74-image-1.png",
+        "public/question-assets/beijing-2021-district-quantitative/q74-image-2.png",
+        "public/question-assets/beijing-2021-district-quantitative/q76-image-1.png",
+        "public/question-assets/beijing-2021-district-quantitative/q76-image-2.png",
+        "public/question-assets/beijing-2021-district-quantitative/q76-image-3.png",
+        "public/question-assets/beijing-2021-district-quantitative/q81-image-1.png",
+        "public/question-assets/beijing-2021-district-quantitative/q81-image-2.png",
+        "public/question-assets/beijing-2021-district-quantitative/q81-image-3.png",
+        "public/question-assets/beijing-2021-district-quantitative/q81-image-4.png",
+        "public/question-assets/beijing-2021-district-quantitative/q82-image-1.png",
+        "public/question-assets/beijing-2021-district-quantitative/q82-image-2.png",
+        "public/question-assets/beijing-2021-district-quantitative/q82-image-3.png",
+        "public/question-assets/beijing-2021-district-quantitative/q82-image-4.png",
+        "public/question-assets/beijing-2021-district-quantitative/q84-image-1.png"
+      ],
+      "rendered_values": {
+        "73": [
+          "1/3"
+        ],
+        "74": [
+          "25%",
+          "40%"
+        ],
+        "76": [
+          "x",
+          "x",
+          "x",
+          "5/3",
+          "10/3"
+        ],
+        "81": [
+          "20%",
+          "30%",
+          "40%",
+          "50%"
+        ],
+        "82": [
+          "25%",
+          "48%",
+          "10%",
+          "15%",
+          "10%",
+          "15%"
+        ],
+        "84": [
+          "46%"
+        ]
+      },
+      "note": "15张原始行内公式/选项 PNG 已从 Aipta 题面镜像并逐张核读；对应数值按题面位置转录到模块题干/选项，原图留存于本地题源资产目录。"
     }
   ]
 }

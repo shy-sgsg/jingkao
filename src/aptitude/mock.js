@@ -137,6 +137,7 @@ const PAPER_CATALOG = [
     sourceType: 'recalled',
     ranges: {
       verbal: [36, 70],
+      quantitative: [71, 85],
     },
   },
   {
