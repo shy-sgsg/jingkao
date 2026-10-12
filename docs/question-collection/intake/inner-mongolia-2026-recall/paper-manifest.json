@@ -1,0 +1,51 @@
+{
+  "paperId": "inner-mongolia-2026-recall-candidate",
+  "title": "2026年内蒙古公务员录用考试《行测》题（考生回忆版）",
+  "variant": "2026年3月14日统一卷；考生回忆版",
+  "questionCount": 125,
+  "publishedQuestionNumbers": [1, 2, 3, 4, 5, 6, 7],
+  "pendingQuestionRange": [8, 125],
+  "releaseStatus": "partial_batch_published",
+  "copyrightStatus": "licensed",
+  "authorizationNote": "paper-index.csv records user-confirmed republication authorization.",
+  "verificationStatus": "verified_for_questions_1_to_7",
+  "wholePaperMockEligibility": "held_until_questions_8_to_125_and_required_assets_are_audited",
+  "sources": [
+    {
+      "role": "recalled_question_page",
+      "url": "https://gwy.gkzhenti.cn/paper/1775360734939"
+    },
+    {
+      "role": "question_answer_and_explanation_page",
+      "url": "https://www.cgzj.com/sk/5578.html"
+    },
+    {
+      "role": "independent_answer_explanation_page",
+      "url": "https://www.kkgwy.com/e/extend/exam/paper.php?id=10458",
+      "accessStatus": "credit_gated; used as a listed source, not as evidence for the published seven items"
+    },
+    {
+      "role": "official_cross_checks",
+      "urls": [
+        "https://www.ccdi.gov.cn/yaowenn/202512/t20251218_465042.html",
+        "https://www.xizang.gov.cn/xwzx_406/bmkx/202512/t20251212_513789.html",
+        "https://www.ynxc.gov.cn/html/2026/shekedongtai_0123/3031801.html",
+        "https://www.nopss.gov.cn/n1/2025/1027/c219544-40590131.html",
+        "https://www.mee.gov.cn/ywgz/ydqhbh/qhbhlf/202511/t20251108_1132414.shtml",
+        "https://www.forestry.gov.cn/c/www/sdgjdt/659382.jhtml",
+        "https://www.npc.gov.cn/c2/c188/c216/201905/t20190523_14834.html",
+        "https://www.12371.gov.cn/h5/article/1438702208736301056/h5/content_1438702208736301056.html"
+      ]
+    }
+  ],
+  "auditNotes": [
+    "Questions 1–7 are complete text-only single-choice items; their stems and option order were compared against the public recalled paper and solution page.",
+    "Answers and concise explanations were cross-checked against official policy and history references listed above.",
+    "The source page has a typo in question 7, using “中流舐柱”; the site copy restores the standard phrase “中流砥柱” and records the correction in the question source note.",
+    "Questions 8–125 remain pending item, version, answer, image, and shared-stimulus audits."
+  ],
+  "archiveFiles": {
+    "questions": "questions.json",
+    "answersAndExplanations": "answers-and-explanations.json"
+  }
+}

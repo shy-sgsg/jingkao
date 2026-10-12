@@ -1,0 +1,62 @@
+[
+  {
+    "id": "im2026-q001",
+    "originalQuestionNo": 1,
+    "correctAnswer": "D",
+    "explanation": "五项表述均对应党的自我革命“五个进一步到位”，因此正确项共5项。",
+    "answerSourceUrl": "https://www.cgzj.com/sk/5578.html",
+    "verificationSourceUrls": ["https://www.ccdi.gov.cn/yaowenn/202512/t20251218_465042.html"]
+  },
+  {
+    "id": "im2026-q002",
+    "originalQuestionNo": 2,
+    "correctAnswer": "C",
+    "explanation": "①②④⑤符合会议提出的“五个必须”；③把市场在资源配置中的决定性作用错写为政府的决定作用，故正确项共4项。",
+    "answerSourceUrl": "https://www.cgzj.com/sk/5578.html",
+    "verificationSourceUrls": ["https://www.xizang.gov.cn/xwzx_406/bmkx/202512/t20251212_513789.html"]
+  },
+  {
+    "id": "im2026-q003",
+    "originalQuestionNo": 3,
+    "correctAnswer": "D",
+    "explanation": "中国式现代化的战略依托是强大国内市场；D项将“国内市场”换成“国际市场”，表述错误。",
+    "answerSourceUrl": "https://www.cgzj.com/sk/5578.html",
+    "verificationSourceUrls": ["https://www.ynxc.gov.cn/html/2026/shekedongtai_0123/3031801.html"]
+  },
+  {
+    "id": "im2026-q004",
+    "originalQuestionNo": 4,
+    "correctAnswer": "D",
+    "explanation": "关于政治能力的四项表述均与权威理论文章中的相关论述一致，正确项共4项。",
+    "answerSourceUrl": "https://www.cgzj.com/sk/5578.html",
+    "verificationSourceUrls": ["https://www.nopss.gov.cn/n1/2025/1027/c219544-40590131.html"]
+  },
+  {
+    "id": "im2026-q005",
+    "originalQuestionNo": 5,
+    "correctAnswer": "C",
+    "explanation": "官方白皮书确认①—④为绿色低碳转型成果；我国湿地面积居亚洲第一、世界第四，⑤的“全球最大”说法错误，故正确项共4项。",
+    "answerSourceUrl": "https://www.cgzj.com/sk/5578.html",
+    "verificationSourceUrls": [
+      "https://www.mee.gov.cn/ywgz/ydqhbh/qhbhlf/202511/t20251108_1132414.shtml",
+      "https://www.forestry.gov.cn/c/www/sdgjdt/659382.jhtml"
+    ]
+  },
+  {
+    "id": "im2026-q006",
+    "originalQuestionNo": 6,
+    "correctAnswer": "C",
+    "explanation": "人民代表大会制度正式建立以1954年第一届全国人民代表大会召开为标志；党的八大召开于1956年，因此C项错误。",
+    "answerSourceUrl": "https://www.cgzj.com/sk/5578.html",
+    "verificationSourceUrls": ["https://www.npc.gov.cn/c2/c188/c216/201905/t20190523_14834.html"]
+  },
+  {
+    "id": "im2026-q007",
+    "originalQuestionNo": 7,
+    "correctAnswer": "C",
+    "explanation": "①②④⑤正确；中国共产党在抗战中确立的基本作战形式是游击战，③颠倒了运动战与游击战的关系，故正确项共4项。",
+    "answerSourceUrl": "https://www.cgzj.com/sk/5578.html",
+    "verificationSourceUrls": ["https://www.12371.gov.cn/h5/article/1438702208736301056/h5/content_1438702208736301056.html"],
+    "transcriptionNote": "原题面网页此处误写“中流舐柱”；按同句引语及规范成语校正为“中流砥柱”。"
+  }
+]
