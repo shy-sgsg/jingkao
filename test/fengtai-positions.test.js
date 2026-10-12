@@ -17,12 +17,13 @@ test('Fengtai position candidates preserve row-level sources and visible coverag
   assert.deepEqual(byYear, {
     2024: { positions: 2, recruits: 3 },
     2025: { positions: 10, recruits: 66 },
-    2026: { positions: 52, recruits: 136 },
+    2026: { positions: 53, recruits: 138 },
   });
   assert.equal(new Set(rows.map((position) => `${position.year}:${position.code}`)).size, rows.length);
   for (const row of rows) {
     assert.equal(row.sourceLevel, 'secondary');
     assert.equal(row.verification, '待官方逐码复核');
-    assert.ok(row.sources.some((sourceId) => sourceId.startsWith('fengtai-')));
+    assert.ok(row.sources.some((sourceId) => sourceId.startsWith('fengtai-')
+      || sourceId === 'gwyzwb-2026-fengtai-qingta-230741502'));
   }
 });

@@ -88836,6 +88836,44 @@
       ],
       "districtId": "chaoyang",
       "districtMatch": "朝阳分局"
+    },
+    {
+      "year": 2026,
+      "code": "230741502",
+      "unit": "北京市丰台区青塔街道>综合行政执法队",
+      "title": "综合执法岗",
+      "orgType": "街道",
+      "jobType": "行政执法",
+      "recruitCount": 2,
+      "districtId": "fengtai",
+      "sourceLevel": "secondary",
+      "verification": "待官方逐码复核",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "仅补录职位身份与招录数以关联最低进面分；完整资格条件以官方职位表为准。",
+      "sources": [
+        "gwyzwb-2026-fengtai-qingta-230741502"
+      ],
+      "districtMatch": "丰台区"
+    },
+    {
+      "year": 2026,
+      "code": "230530001",
+      "unit": "北京市朝阳区潘家园街道>综合行政执法队",
+      "title": "行政执法岗",
+      "orgType": "街道",
+      "jobType": "行政执法",
+      "recruitCount": 2,
+      "districtId": "chaoyang",
+      "sourceLevel": "secondary",
+      "verification": "待官方逐码复核",
+      "crossVerified": false,
+      "eligibilityComplete": false,
+      "eligibilityText": "仅补录职位身份与招录数以关联最低进面分；完整资格条件以官方职位表为准。",
+      "sources": [
+        "huatu-2026-chaoyang-panjiayuan-230530001"
+      ],
+      "districtMatch": "朝阳区"
     }
   ],
   "observations": [
@@ -125971,12 +126009,12 @@
       "url": "https://www.cgzj.com/sk/12695.html",
       "publishedAt": "2026-06-05",
       "accessedAt": "2026-10-12",
-      "samplePositions": 7,
+      "samplePositions": 9,
       "intervieweeCount": 262,
       "minimum": 101.5,
       "maximum": 138.25,
       "scope": "北京街道",
-      "notes": "页面称2026京考街道共有262人进面，可见表格列29条岗位分数并明确为部分样本。为避免与已有区级分数记录重复计数，本库当前新增其中7条此前未收录、且可按同年度单位和岗位名唯一匹配本地职位镜像的街道分数：海淀5条、门头沟大台街道1条、丰台石榴庄街道1条；职位代码来自第三方镜像，非官方逐代码核验。其余可见行若与已有同分记录重叠则不重复录入，存在同名歧义或未能与本地职位唯一匹配的行不挂代码。街道表与区级表可能重叠，262为页面汇总进面人数，不与区级分数样本人数相加。"
+      "notes": "页面称2026京考街道共有262人进面，可见表格列29条岗位分数并明确为部分样本。本库已将其中9条此前未收录且可按同年度单位和岗位名唯一匹配本地职位镜像的街道分数关联到岗位：海淀5条、门头沟大台街道1条、丰台石榴庄与青塔街道2条、朝阳潘家园街道1条。职位代码由第三方职位详情镜像补充，未与官方职位表逐代码核验；青塔与潘家园两岗位暂未找到同代码报名人数快照，不计算其报名竞争比。其余可见行若与已有区级分数重叠则不重复录入，存在同名歧义或未能与本地职位唯一匹配的行不挂代码。街道表与区级表可能重叠，262为页面汇总进面人数，不与区级分数样本人数相加。"
     },
     {
       "sourceId": "gwyzwb-2026-mentougou-240948402",
@@ -131870,6 +131908,40 @@
       "publishedAt": "2025-12-04",
       "accessedAt": "2026-10-12",
       "notes": "页面标题指向2025，正文模板误称2026考试即将开始，并明确写北京市公安局丰台分局“一线执法岗”最低54.7分。北京市公务员局公告显示2026年度笔试成绩于2026-01-05公布，故该2025-12-04页面不可能记录2026进面结果，按2025历史样本处理。成公未列职位代码且未显示名称末尾编号；本地第三方2025职位镜像中同单位仅有一个“一线执法岗1”候选（代码232502002，计划52人），按单位与基础职位名唯一关联；编号和代码未由成公页面直列，仍待官方逐码核验。公安职位含专业科目，不宜与普通职位原始分数直接横比。"
+    },
+    {
+      "sourceId": "gwyzwb-2026-fengtai-qingta-230741502",
+      "title": "京考职位网：2026丰台区青塔街道综合执法岗职位详情（230741502）",
+      "publisher": "京考职位网",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "districtId": "fengtai",
+      "geographicScope": "丰台区青塔街道",
+      "url": "https://bj.gwyzwb.com/2026/879.html",
+      "accessedAt": "2026-10-12",
+      "positionCode": "230741502",
+      "unit": "北京市丰台区青塔街道>综合行政执法队",
+      "positionTitle": "综合执法岗",
+      "reportedRecruitCount": 2,
+      "notes": "职位详情列出代码230741502、青塔街道综合行政执法队综合执法岗、招录2人；仅用于与成公街道部分进面分样本匹配，第三方职位镜像尚未与官方职位表逐代码核验。"
+    },
+    {
+      "sourceId": "huatu-2026-chaoyang-panjiayuan-230530001",
+      "title": "华图：2026朝阳区潘家园街道行政执法岗职位详情（230530001）",
+      "publisher": "华图教育",
+      "level": "secondary",
+      "evidenceType": "position_mirror",
+      "year": 2026,
+      "districtId": "chaoyang",
+      "geographicScope": "朝阳区潘家园街道",
+      "url": "https://ah.huatu.com/zw/bjgwy/2026/1561.html",
+      "accessedAt": "2026-10-12",
+      "positionCode": "230530001",
+      "unit": "北京市朝阳区潘家园街道>综合行政执法队",
+      "positionTitle": "行政执法岗",
+      "reportedRecruitCount": 2,
+      "notes": "职位详情列出代码230530001、潘家园街道综合行政执法队行政执法岗、招录2人；仅用于与成公街道部分进面分样本匹配，第三方职位镜像尚未与官方职位表逐代码核验。"
     }
   ],
   "studyPlan": [
@@ -133738,14 +133810,14 @@
     {
       "year": 2026,
       "scope": "北京街道",
-      "samplePositions": 7,
+      "samplePositions": 9,
       "sampleRecruits": null,
       "minimum": 101.5,
       "maximum": 138.25,
       "sourceId": "cgzj-2026-street-cutoff-sample",
       "sourceLevel": "secondary",
       "complete": false,
-      "notes": "页面称2026京考街道共有262人进面，可见表格列29条岗位分数并明确为部分样本。为避免与已有区级分数记录重复计数，本库当前新增其中7条此前未收录、且可按同年度单位和岗位名唯一匹配本地职位镜像的街道分数：海淀5条、门头沟大台街道1条、丰台石榴庄街道1条；职位代码来自第三方镜像，非官方逐代码核验。其余可见行若与已有同分记录重叠则不重复录入，存在同名歧义或未能与本地职位唯一匹配的行不挂代码。街道表与区级表可能重叠，262为页面汇总进面人数，不与区级分数样本人数相加。"
+      "notes": "页面称2026京考街道共有262人进面，可见表格列29条岗位分数并明确为部分样本。本库已将其中9条此前未收录且可按同年度单位和岗位名唯一匹配本地职位镜像的街道分数关联到岗位：海淀5条、门头沟大台街道1条、丰台石榴庄与青塔街道2条、朝阳潘家园街道1条。职位代码由第三方职位详情镜像补充，未与官方职位表逐代码核验；青塔与潘家园两岗位暂未找到同代码报名人数快照，不计算其报名竞争比。其余可见行若与已有区级分数重叠则不重复录入，存在同名歧义或未能与本地职位唯一匹配的行不挂代码。街道表与区级表可能重叠，262为页面汇总进面人数，不与区级分数样本人数相加。"
     },
     {
       "year": 2026,
@@ -139670,6 +139742,38 @@
       "notes": "成公页面明确列丰台公安分局“一线执法岗”最低54.7分，但未给代码且未显示职位编号；标题年份为2025，正文模板误写2026。北京市2026年度笔试成绩于2026-01-05公布，故按2025处理。本地同年度第三方职位镜像中该单位只有一个基础名称相符的候选“一线执法岗1”（代码232502002，计划52人）；末尾编号与代码未由分数来源直列，待官方核验。公安职位含专业科目，勿与普通职位原始分数直接横比。",
       "mappingConfidence": "high",
       "sourceId": "cgzj-2025-fengtai-minimum-year-conflict",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-fengtai-qingta-01",
+      "year": 2026,
+      "unit": "北京市丰台区青塔街道>综合行政执法队",
+      "sourceUnit": "北京市丰台区青塔街道",
+      "title": "综合执法岗",
+      "name": "北京市丰台区青塔街道｜综合执法岗",
+      "positionCode": "230741502",
+      "orgType": "街道",
+      "score": 104.75,
+      "notes": "成公街道部分表列青塔街道综合执法岗最低进面分104.75，未列职位代码；同年度单位和职位名唯一对应职位镜像代码230741502、计划招录2人。代码来自第三方镜像，尚未官方逐码核验；未找到同代码报名人数快照，不计算报名竞争比。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-street-cutoff-sample",
+      "sourceLevel": "secondary",
+      "verification": "年度、单位与岗位名唯一匹配"
+    },
+    {
+      "id": "2026-cgzj-chaoyang-panjiayuan-01",
+      "year": 2026,
+      "unit": "北京市朝阳区潘家园街道>综合行政执法队",
+      "sourceUnit": "北京市朝阳区潘家园街道",
+      "title": "行政执法岗",
+      "name": "北京市朝阳区潘家园街道｜行政执法岗",
+      "positionCode": "230530001",
+      "orgType": "街道",
+      "score": 104.5,
+      "notes": "成公街道部分表列潘家园街道行政执法岗最低进面分104.5，未列职位代码；同年度单位和职位名唯一对应职位镜像代码230530001、计划招录2人。代码来自第三方镜像，尚未官方逐码核验；未找到同代码报名人数快照，不计算报名竞争比。",
+      "mappingConfidence": "high",
+      "sourceId": "cgzj-2026-street-cutoff-sample",
       "sourceLevel": "secondary",
       "verification": "年度、单位与岗位名唯一匹配"
     }

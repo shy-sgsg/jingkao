@@ -170,7 +170,7 @@ test('Fengtai police post receives the exact 2026 interview cutoff exposed in th
   assert.deepEqual(evidence.cutoffSourceIds, ['cgzj-2026-fengtai-cutoff-sample']);
 });
 
-test('the 2026 street cutoff sample exposes exact Haidian, Mentougou, and Fengtai position cutoffs', async () => {
+test('the 2026 street cutoff sample exposes exact cross-district position cutoffs', async () => {
   const data = JSON.parse(await readFile(new URL('../public/data.json', import.meta.url), 'utf8'));
   const source = data.sources.find((item) => item.sourceId === 'cgzj-2026-street-cutoff-sample');
   const expected = [
@@ -181,9 +181,11 @@ test('the 2026 street cutoff sample exposes exact Haidian, Mentougou, and Fengta
     ['230638302', 101.5],
     ['240948402', 102.75],
     ['230742504', 104.5],
+    ['230741502', 104.75],
+    ['230530001', 104.5],
   ];
 
-  assert.equal(source.samplePositions, 7);
+  assert.equal(source.samplePositions, 9);
   assert.equal(source.intervieweeCount, 262);
   for (const [code, score] of expected) {
     const position = data.positions.find((row) => row.year === 2026 && row.code === code);

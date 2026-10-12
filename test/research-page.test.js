@@ -23,28 +23,28 @@ test('research findings derive sample coverage, score distribution, and evidence
     reportedRecruits: [138, 138],
   });
   assert.deepEqual(byId['score-sample-2026'].facts, {
-    sampleRows: 381,
+    sampleRows: 383,
     sampleRecruits: 853,
     minimum: 52.15,
     maximum: 142,
     median: 126,
-    linkedRows: 311,
+    linkedRows: 313,
     ambiguousRows: 55,
     unmatchedRows: 15,
     scope: '朝阳区岗位最低进面分部分样本、昌平区、大兴区岗位最低进面分部分样本、东城区部分职位的最低进面分；非全区完整名册、房山区、丰台区、海淀区、怀柔区、密云区岗位最低进面分部分样本、平谷区、石景山区、顺义区、北京街道、北京市财政局岗位最低进面线部分样本（本库当前已映射6岗）、西城区、延庆区岗位最低进面线部分样本',
   });
   assert.deepEqual(byId['qualification-coverage'].facts, {
-    positions: 893,
+    positions: 895,
     structuredRequirements: 12,
     completeEligibility: 0,
     officialPositionRows: 0,
   });
   assert.deepEqual(byId['competition-grain'].facts, {
-    observations: 1048,
-    jobLevelObservations: 1005,
+    observations: 1049,
+    jobLevelObservations: 1006,
     aggregateObservations: 43,
     jobLevelPositions: 808,
-    qualificationSnapshots: 232,
+    qualificationSnapshots: 233,
     reportedApplicationSnapshots: 773,
   });
   assert.match(byId['competition-grain'].title, /岗位级竞争观察/);
@@ -112,7 +112,7 @@ test('the research route presents expandable source lineage and its topic filter
   await listeners.click({ target: { closest: (selector) => selector === '[data-action]' ? scoreFilter : null } });
 
   assert.match(root.innerHTML, /data-topic="分数样本" aria-pressed="true">/);
-  assert.match(root.innerHTML, /381 条/);
+  assert.match(root.innerHTML, /383 条/);
   assert.match(root.innerHTML, /报考人数 773 条/);
   assert.doesNotMatch(root.innerHTML, /class="research-finding[^\"]*"[^>]*data-topic="岗位覆盖"/);
 });
