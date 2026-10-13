@@ -1,11 +1,34 @@
 {
   "schemaVersion": 1,
   "backupId": "6968ebc3-fd8c-4a7a-8d1c-49919ca0967d",
-  "updatedAt": "2026-10-13T10:07:39.986Z",
+  "updatedAt": "2026-10-13T12:59:06.027Z",
   "data": {
     "profile": {
       "major": "公共管理",
-      "degree": ""
+      "degree": "硕士研究生",
+      "undergraduateMajor": "公共管理",
+      "undergraduateMajorCode": "1204",
+      "graduateMajor": "公共管理",
+      "graduateMajorCode": "1204",
+      "degreeTitle": "公共管理硕士",
+      "degreeType": "学术学位",
+      "graduationStatus": "应届毕业生",
+      "graduationYear": "",
+      "politicalStatus": "共青团员",
+      "hukou": "",
+      "studentOrigin": "",
+      "grassrootsYears": "0",
+      "credentials": "",
+      "retiredStatus": "",
+      "grassrootsProjectStatus": "",
+      "preferredTypes": "",
+      "preferredLocation": "",
+      "acceptAdministrativeEnforcement": "",
+      "acceptPhysicalTest": "",
+      "acceptNightShift": "",
+      "acceptTown": "",
+      "prioritizeStreet": "",
+      "prioritizeDistrict": ""
     },
     "dayLogs": {},
     "planOverrides": {
@@ -4103,6 +4126,314 @@
       "jobSort": "year-desc",
       "scenarioYear": "2026",
       "scenarioScope": "all"
+    },
+    "nationalWorkspace": {
+      "filters": {
+        "keyword": "",
+        "majorQuery": "公共管理",
+        "majorPreset": "",
+        "departmentQuery": "",
+        "departmentQueries": [],
+        "departments": [],
+        "workProvinces": [
+          "北京市",
+          "重庆市",
+          "广东省",
+          "江苏省",
+          "上海市",
+          "天津市",
+          "浙江省"
+        ],
+        "workCities": [],
+        "workDistricts": [],
+        "sourceSheets": [],
+        "educationRequirements": [],
+        "degrees": [],
+        "politicalStatuses": [],
+        "grassrootsRequirements": [],
+        "examCategories": [],
+        "qualificationStatuses": [],
+        "minRecruitCount": "",
+        "maxRecruitCount": "",
+        "sort": "recruit-desc",
+        "page": 2,
+        "excludeNeedsReview": false,
+        "excludeMaleOnly": true,
+        "onlyInitialMatch": false,
+        "onlyUnrestrictedMajor": false,
+        "excludeExplicitMismatch": false,
+        "excludeMajorMismatch": false,
+        "excludeEducationMismatch": true,
+        "excludePoliticalMismatch": true,
+        "excludeGrassrootsMismatch": true,
+        "excludeSpecialReview": false,
+        "onlyRecruitAtLeastTwo": false,
+        "onlyWithCompleteRawFields": false
+      },
+      "visibleColumns": [
+        "favorite",
+        "organizationName",
+        "positionTitle",
+        "workLocation",
+        "recruitCount",
+        "educationRaw",
+        "majorRaw"
+      ],
+      "savedFilters": [],
+      "favorites": [
+        {
+          "id": "national:2027:130132:300110103003",
+          "positionId": "national:2027:130132:300110103003",
+          "addedAt": "2026-10-13T12:30:53.420Z",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130132:300110115009",
+          "positionId": "national:2027:130132:300110115009",
+          "addedAt": "2026-10-13T12:31:00.999Z",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:102000:200110001006",
+          "positionId": "national:2027:102000:200110001006",
+          "addedAt": "2026-10-13T12:31:31.138Z",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130118:300110291001",
+          "positionId": "national:2027:130118:300110291001",
+          "addedAt": "2026-10-13T12:32:56.588Z",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130101:300110001006",
+          "positionId": "national:2027:130101:300110001006",
+          "addedAt": "2026-10-13T12:34:55.468Z",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130107:300110001013",
+          "positionId": "national:2027:130107:300110001013",
+          "addedAt": "2026-10-13T12:35:11.550Z",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130101:300110002006",
+          "positionId": "national:2027:130101:300110002006",
+          "addedAt": "2026-10-13T12:35:24.872Z",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130124:300110002012",
+          "positionId": "national:2027:130124:300110002012",
+          "addedAt": "2026-10-13T12:35:28.282Z",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130124:300110003008",
+          "positionId": "national:2027:130124:300110003008",
+          "addedAt": "2026-10-13T12:35:35.743Z",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130101:300110003011",
+          "positionId": "national:2027:130101:300110003011",
+          "addedAt": "2026-10-13T12:35:38.494Z",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130124:300110005009",
+          "positionId": "national:2027:130124:300110005009",
+          "addedAt": "2026-10-13T12:36:01.614Z",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130124:300110007003",
+          "positionId": "national:2027:130124:300110007003",
+          "addedAt": "2026-10-13T12:36:04.500Z",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130123:300110015006",
+          "positionId": "national:2027:130123:300110015006",
+          "addedAt": "2026-10-13T12:36:15.237Z",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130118:300110023003",
+          "positionId": "national:2027:130118:300110023003",
+          "addedAt": "2026-10-13T12:36:27.900Z",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130118:300110024001",
+          "positionId": "national:2027:130118:300110024001",
+          "addedAt": "2026-10-13T12:36:31.229Z",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130123:300110085006",
+          "positionId": "national:2027:130123:300110085006",
+          "addedAt": "2026-10-13T12:38:13.541Z",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130132:300110102004",
+          "positionId": "national:2027:130132:300110102004",
+          "addedAt": "2026-10-13T12:38:24.500Z",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130115:300110115004",
+          "positionId": "national:2027:130115:300110115004",
+          "addedAt": "2026-10-13T12:38:40.200Z",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130115:300110510001",
+          "positionId": "national:2027:130115:300110510001",
+          "addedAt": "2026-10-13T12:41:07.433Z",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130124:300110003002",
+          "positionId": "national:2027:130124:300110003002",
+          "addedAt": "2026-10-13T12:41:25.262Z",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130124:300110002006",
+          "positionId": "national:2027:130124:300110002006",
+          "addedAt": "2026-10-13T12:41:26.522Z",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130124:300110001019",
+          "positionId": "national:2027:130124:300110001019",
+          "addedAt": "2026-10-13T12:41:32.615Z",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:109000:200149114007",
+          "positionId": "national:2027:109000:200149114007",
+          "addedAt": "2026-10-13T12:41:52.768Z",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:109000:200149114004",
+          "positionId": "national:2027:109000:200149114004",
+          "addedAt": "2026-10-13T12:42:55.127Z",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130124:300110005002",
+          "positionId": "national:2027:130124:300110005002",
+          "addedAt": "2026-10-13T12:44:00.772Z",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130124:300110010001",
+          "positionId": "national:2027:130124:300110010001",
+          "addedAt": "2026-10-13T12:44:14.680Z",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130124:300110011006",
+          "positionId": "national:2027:130124:300110011006",
+          "addedAt": "2026-10-13T12:44:27.926Z",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130112:300110020004",
+          "positionId": "national:2027:130112:300110020004",
+          "addedAt": "2026-10-13T12:44:41.773Z",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130120:300110037006",
+          "positionId": "national:2027:130120:300110037006",
+          "addedAt": "2026-10-13T12:44:57.765Z",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:129131:300110108014",
+          "positionId": "national:2027:129131:300110108014",
+          "addedAt": "2026-10-13T12:45:21.672Z",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:129131:300110113003",
+          "positionId": "national:2027:129131:300110113003",
+          "addedAt": "2026-10-13T12:45:29.620Z",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:158105:300130265018",
+          "positionId": "national:2027:158105:300130265018",
+          "addedAt": "2026-10-13T12:52:16.920Z",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130123:300110036005",
+          "positionId": "national:2027:130123:300110036005",
+          "addedAt": "2026-10-13T12:54:49.673Z",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130123:300110043003",
+          "positionId": "national:2027:130123:300110043003",
+          "addedAt": "2026-10-13T12:55:03.121Z",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130123:300110050003",
+          "positionId": "national:2027:130123:300110050003",
+          "addedAt": "2026-10-13T12:55:05.933Z",
+          "note": "",
+          "priority": "normal"
+        }
+      ],
+      "comparisons": [
+        "national:2027:130101:300110004011"
+      ],
+      "notes": {},
+      "favoriteQuery": "",
+      "favoritePriority": "all",
+      "comparisonOnlyDifferences": false
     },
     "onboarding": {
       "step": 0,
