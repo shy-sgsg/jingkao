@@ -3409,6 +3409,16 @@ document.addEventListener('click', async (event) => {
     await persistAndRender('已切换职位页');
     return;
   }
+  if (action === 'national-toggle-major-preset') {
+    const currentFilters = storage.nationalWorkspace.filters || {};
+    const isActive = currentFilters.majorPreset === 'public-administration';
+    const nextFilters = { ...currentFilters, page: 1 };
+    if (isActive) delete nextFilters.majorPreset;
+    else nextFilters.majorPreset = 'public-administration';
+    storage.nationalWorkspace = normalizeNationalWorkspace({ ...storage.nationalWorkspace, filters: nextFilters });
+    await persistAndRender(isActive ? '已取消公共管理专业筛选' : '已启用公共管理专业一键筛选');
+    return;
+  }
   if (action === 'national-remove-filter') {
     const key = actionEl.dataset.filterKey;
     const value = actionEl.dataset.filterValue ?? '';
@@ -4376,7 +4386,7 @@ document.addEventListener('submit', async (event) => {
     const selectedValues = (key) => formData.getAll(key).map((item) => String(item).trim()).filter(Boolean);
     const parentRegionChanged = ['workProvinces', 'workCities'].includes(nationalFilterFocusName);
     const nextFilters = {
-      keyword: pick('keyword'), majorQuery: pick('majorQuery'), departmentQuery: '',
+      keyword: pick('keyword'), majorQuery: pick('majorQuery'), majorPreset: pick('majorPreset'), departmentQuery: '',
       departmentQueries: splitValues(values.departmentQuery),
       departments: selectedValues('departments'),
       workProvinces: selectedValues('workProvinces'),
@@ -4392,6 +4402,7 @@ document.addEventListener('submit', async (event) => {
       minRecruitCount: pick('minRecruitCount'), maxRecruitCount: pick('maxRecruitCount'),
       sort: pick('sort') || 'recruit-desc', page: 1,
       excludeNeedsReview: Object.hasOwn(values, 'excludeNeedsReview'),
+      excludeMaleOnly: Object.hasOwn(values, 'excludeMaleOnly'),
       onlyInitialMatch: Object.hasOwn(values, 'onlyInitialMatch'),
       onlyUnrestrictedMajor: Object.hasOwn(values, 'onlyUnrestrictedMajor'),
       excludeExplicitMismatch: Object.hasOwn(values, 'excludeExplicitMismatch'),

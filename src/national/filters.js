@@ -26,6 +26,18 @@ function hasAnyProfileValue(profile) {
   return keys.some((key) => String(profile?.[key] ?? '').trim());
 }
 
+function isMaleOnly(position) {
+  const remark = String(position.remarkRaw || '');
+  return /(?<!不)(?:仅限|只限|仅招|只招|限于|限)\s*(?:男性|男生|男)(?!优先|和女性|或女性|、女性|女性均可|男女不限)(?:报考|报名|应聘)?/u.test(remark);
+}
+
+function matchesPublicAdministrationMajor(position) {
+  const raw = String(position.majorRaw || '');
+  if (/管理学类?|公共管理|土地资源管理/u.test(raw)) return true;
+  const codes = [...raw.matchAll(/(?:^|[^\d])(\d{2,6})(?=$|[^\d])/gu)].map((match) => match[1]);
+  return codes.some((code) => code.startsWith('12'));
+}
+
 export function filterNationalPositions(positions, filters = {}, profile = null, eligibilityCache = null) {
   const rows = Array.isArray(positions) ? positions : [];
   const keyword = normalize(filters.keyword);
@@ -51,6 +63,8 @@ export function filterNationalPositions(positions, filters = {}, profile = null,
     ? Number(filters.maxRecruitCount) : null;
 
   return rows.filter((position) => {
+    if (filters.excludeMaleOnly && isMaleOnly(position)) return false;
+    if (filters.majorPreset === 'public-administration' && !matchesPublicAdministrationMajor(position)) return false;
     if (workProvinces.length && !workProvinces.includes(String(position.workProvince || ''))) return false;
     if (workCities.length && !workCities.includes(String(position.workCity || ''))) return false;
     if (workDistricts.length && !workDistricts.includes(String(position.workDistrict || ''))) return false;

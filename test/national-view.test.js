@@ -102,6 +102,24 @@ test('filter dimensions render multi-select controls and show saved selections',
   assert.match(html, /name="qualificationStatuses" value="initialMatch" checked/u);
 });
 
+test('the preliminary-match checkbox is clearly labeled as a quick filter', () => {
+  const html = renderNationalWorkspace({ positions: [position(1)], profile: {} });
+  assert.match(html, /快速筛选：只看初步符合岗位/u);
+});
+
+test('gender exclusion and public-administration preset expose their saved active states', () => {
+  const html = renderNationalWorkspace({
+    positions: [position(1)],
+    workspace: normalizeNationalWorkspace({ filters: { excludeMaleOnly: true, majorPreset: 'public-administration' } }),
+    profile: {},
+  });
+
+  assert.match(html, /name="excludeMaleOnly" type="checkbox" checked/u);
+  assert.match(html, /data-action="national-toggle-major-preset"[^>]*aria-pressed="true"/u);
+  assert.match(html, /公共管理专业一键筛选/u);
+  assert.match(html, /公共管理相关专业/u);
+});
+
 test('region selectors narrow cities by province and districts by selected cities', () => {
   const alternate = position(2, {
     id: 'national:2027:000002:0002', workProvince: '河南省', workCity: '郑州市',

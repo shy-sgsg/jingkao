@@ -65,6 +65,95 @@ test('national manual major search finds raw terms without turning text hits int
   assert.notEqual(assessment.checks.major.status, 'match');
 });
 
+test('degree requirement corresponding to highest education passes without requiring degree-title parsing', () => {
+  const assessment = evaluateNationalEligibility(positions[0], {
+    degree: '本科', undergraduateMajor: '公共管理', undergraduateMajorCode: '120401',
+    politicalStatus: '群众', grassrootsYears: '0',
+  });
+
+  assert.equal(assessment.checks.degree.status, 'match');
+});
+
+test('remark-only manual review remains preliminary and appears in the quick preliminary-match filter', () => {
+  const remarkOnly = {
+    ...positions[0],
+    id: 'national:2027:009:0009',
+    remarkRaw: '职位备注中的特殊条件请报考者自行核对。',
+  };
+  const profile = {
+    degree: '本科', undergraduateMajor: '公共管理', undergraduateMajorCode: '120401',
+    politicalStatus: '群众', grassrootsYears: '0',
+  };
+
+  const assessment = evaluateNationalEligibility(remarkOnly, profile);
+  assert.equal(assessment.checks.specialRequirements.status, 'review');
+  assert.deepEqual(
+    Object.entries(assessment.checks).filter(([key]) => key !== 'specialRequirements').map(([, item]) => item.status),
+    ['match', 'match', 'match', 'match', 'match', 'match'],
+  );
+  assert.equal(assessment.status, 'initialMatch');
+  assert.deepEqual(
+    filterNationalPositions([remarkOnly], { onlyInitialMatch: true }, profile).map((item) => item.id),
+    [remarkOnly.id],
+  );
+});
+
+test('a non-remark special-condition review does not become preliminary', () => {
+  const serviceProjectPosition = {
+    ...positions[0],
+    serviceProjectRaw: '大学生村官项目人员',
+    remarkRaw: '无',
+  };
+  const profile = {
+    degree: '本科', undergraduateMajor: '公共管理', undergraduateMajorCode: '120401',
+    politicalStatus: '群众', grassrootsYears: '0', grassrootsProjectStatus: '是',
+  };
+
+  const assessment = evaluateNationalEligibility(serviceProjectPosition, profile);
+  assert.equal(assessment.checks.specialRequirements.status, 'review');
+  assert.equal(assessment.status, 'needsReview');
+});
+
+test('male-only exclusion removes explicit male limits but keeps preferences, female limits, and unrestricted posts', () => {
+  const rows = [
+    { ...positions[0], id: 'national:2027:010:0010', remarkRaw: '限男性。' },
+    { ...positions[0], id: 'national:2027:011:0011', remarkRaw: '仅限男性报考。' },
+    { ...positions[0], id: 'national:2027:012:0012', remarkRaw: '只限男生报名。' },
+    { ...positions[0], id: 'national:2027:013:0013', remarkRaw: '男性优先。' },
+    { ...positions[0], id: 'national:2027:014:0014', remarkRaw: '仅限女性报考。' },
+    { ...positions[0], id: 'national:2027:015:0015', remarkRaw: '性别不限。' },
+    { ...positions[0], id: 'national:2027:016:0016', remarkRaw: '不限男性。' },
+  ];
+
+  assert.deepEqual(
+    filterNationalPositions(rows, { excludeMaleOnly: true }).map((item) => item.id),
+    ['national:2027:013:0013', 'national:2027:014:0014', 'national:2027:015:0015', 'national:2027:016:0016'],
+  );
+});
+
+test('public-administration quick filter matches management names and 12-prefixed major codes', () => {
+  const rows = [
+    { ...positions[0], id: 'national:2027:020:0020', majorRaw: '本科：管理学类' },
+    { ...positions[0], id: 'national:2027:021:0021', majorRaw: '本科：公共管理' },
+    { ...positions[0], id: 'national:2027:022:0022', majorRaw: '本科：土地资源管理' },
+    { ...positions[0], id: 'national:2027:023:0023', majorRaw: '本科：12' },
+    { ...positions[0], id: 'national:2027:024:0024', majorRaw: '本科：1204公共管理类' },
+    { ...positions[0], id: 'national:2027:025:0025', majorRaw: '研究生：1252公共管理硕士' },
+    { ...positions[0], id: 'national:2027:026:0026', majorRaw: '本科：120405土地资源管理' },
+    { ...positions[0], id: 'national:2027:027:0027', majorRaw: '本科：财政学（020203）' },
+    { ...positions[0], id: 'national:2027:028:0028', majorRaw: '本科：1120405其他专业' },
+  ];
+
+  assert.deepEqual(
+    filterNationalPositions(rows, { majorPreset: 'public-administration' }).map((item) => item.id),
+    [
+      'national:2027:020:0020', 'national:2027:021:0021', 'national:2027:022:0022',
+      'national:2027:023:0023', 'national:2027:024:0024', 'national:2027:025:0025',
+      'national:2027:026:0026',
+    ],
+  );
+});
+
 test('department text filter matches the hiring department independently from broad keyword search', () => {
   const rows = filterNationalPositions(positions, { departmentQuery: '国家统计局' });
   assert.deepEqual(rows.map((item) => item.id), ['national:2027:003:0003']);
@@ -125,6 +214,16 @@ test('saved filter names can be changed without altering their stored conditions
   assert.deepEqual(renamed.savedFilters[0].filters, { workProvinces: ['湖北省'] });
 });
 
+test('gender exclusion and public-administration quick filters persist with the national workspace', () => {
+  const workspace = normalizeNationalWorkspace({
+    filters: { excludeMaleOnly: true, majorPreset: 'public-administration' },
+    savedFilters: [{ id: 'saved-major', name: '公共管理岗位', filters: { excludeMaleOnly: true, majorPreset: 'public-administration' } }],
+  });
+
+  assert.deepEqual(workspace.filters, { excludeMaleOnly: true, majorPreset: 'public-administration' });
+  assert.deepEqual(workspace.savedFilters[0].filters, { excludeMaleOnly: true, majorPreset: 'public-administration' });
+});
+
 test('national table column preferences retain only supported selectable fields', () => {
   const workspace = normalizeNationalWorkspace({ visibleColumns: ['majorMatch', 'bad-column', 'majorMatch', 'actions'] });
   assert.deepEqual(workspace.visibleColumns, ['majorMatch']);
@@ -160,7 +259,7 @@ test('education matching distinguishes only-bachelor from bachelor-and-above', (
   assert.equal(bachelorAndAbove.checks.education.status, 'match');
 });
 
-test('degree title recognizes specialist degree names and reports missing titles without inference', () => {
+test('degree title matches explicit degree names while corresponding-highest-education requirements pass without inference', () => {
   const bachelor = evaluateNationalEligibility(positions[0], {
     degree: '本科', undergraduateMajor: '行政管理', undergraduateMajorCode: '120402',
     degreeTitle: '文学学士', politicalStatus: '群众', grassrootsYears: '0',
@@ -170,7 +269,7 @@ test('degree title recognizes specialist degree names and reports missing titles
     degree: '本科', undergraduateMajor: '行政管理', undergraduateMajorCode: '120402',
     politicalStatus: '群众', grassrootsYears: '0',
   });
-  assert.equal(missing.checks.degree.status, 'missing');
+  assert.equal(missing.checks.degree.status, 'match');
 });
 
 test('national qualification reports explicit political and grassroots mismatches', () => {
@@ -184,12 +283,12 @@ test('national qualification reports explicit political and grassroots mismatche
   assert.equal(assessment.status, 'incompatible');
 });
 
-test('unknown remark restrictions and missing profile fields remain review or incomplete', () => {
+test('remark restrictions remain visible for manual review without blocking an otherwise preliminary match', () => {
   const needsReview = evaluateNationalEligibility({
     ...positions[0], remarkRaw: '具有两年以上基层工作经历，需在报名备注中说明。',
   }, { degree: '本科', undergraduateMajor: '行政管理', undergraduateMajorCode: '120402', politicalStatus: '群众', grassrootsYears: '3' });
   assert.equal(needsReview.checks.specialRequirements.status, 'review');
-  assert.equal(needsReview.status, 'needsReview');
+  assert.equal(needsReview.status, 'initialMatch');
 
   const incomplete = evaluateNationalEligibility(positions[0], {});
   assert.equal(incomplete.status, 'incomplete');

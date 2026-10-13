@@ -119,16 +119,11 @@ function matchEducation(raw, profile) {
 function matchDegree(raw, profile) {
   const requirement = normalizeText(raw);
   if (!requirement || /不限|无要求/u.test(requirement)) return check('match', '职位表未限制学位。');
+  if (/与最高学历对应/u.test(requirement)) {
+    return check('match', '职位要求学位与最高学历对应，本项按符合处理。');
+  }
   const degreeTitle = normalizeText(profile.degreeTitle);
   if (!degreeTitle) return check('missing', '请补充已取得的学位名称。');
-  if (/与最高学历对应/u.test(requirement)) {
-    const educationRank = rankForEducation(profile.degree);
-    const degreeRank = rankForDegree(degreeTitle);
-    if (!educationRank || !degreeRank) return check('review', '学历与学位对应关系需要人工确认。');
-    return educationRank === degreeRank
-      ? check('match', '填写的学位层级与最高学历层级一致。')
-      : check('mismatch', '职位要求学位与最高学历对应，当前填写层级不同。');
-  }
   if (/学士|硕士|博士/u.test(requirement)) {
     const required = requirement.includes('博士') ? 4 : requirement.includes('硕士') ? 3 : 2;
     const provided = rankForDegree(degreeTitle);
@@ -212,7 +207,10 @@ function matchSpecialRequirements(position, profile) {
   if (!remark || /^无[。.]?$/u.test(remark)) return check('match', '备注没有额外资格限制。');
   remark = remark.replace(/咨询电话[：:]\s*[\d\-、，,\s]+[。；;]?/gu, '');
   if (!remark.trim()) return check('match', '备注仅含咨询电话，没有额外资格限制。');
-  return check('review', '职位备注包含需人工确认的条件，已保留原文供核对。', { raw: position.remarkRaw });
+  return check('review', '职位备注包含需人工确认的条件，已保留原文供核对。', {
+    raw: position.remarkRaw,
+    reviewScope: 'remark',
+  });
 }
 
 export function evaluateNationalEligibility(position, profile = {}) {
@@ -225,7 +223,9 @@ export function evaluateNationalEligibility(position, profile = {}) {
     grassrootsExperience: matchGrassrootsExperience(position.experienceRaw, profile),
     specialRequirements: matchSpecialRequirements(position, profile),
   };
-  const statuses = Object.values(checks).map((item) => item.status);
+  const statuses = Object.entries(checks).map(([key, item]) => (
+    key === 'specialRequirements' && item.reviewScope === 'remark' ? 'match' : item.status
+  ));
   const status = statuses.includes('mismatch') ? 'incompatible'
     : statuses.includes('review') ? 'needsReview'
       : statuses.includes('missing') ? 'incomplete' : 'initialMatch';
