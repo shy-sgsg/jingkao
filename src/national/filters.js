@@ -27,8 +27,28 @@ function hasAnyProfileValue(profile) {
 }
 
 function isMaleOnly(position) {
-  const remark = String(position.remarkRaw || '');
-  return /(?<!不)(?:仅限|只限|仅招|只招|限于|限)\s*(?:男性|男生|男)(?!优先|和女性|或女性|、女性|女性均可|男女不限)(?:报考|报名|应聘)?/u.test(remark);
+  const rawFields = position.rawFields && typeof position.rawFields === 'object'
+    ? Object.entries(position.rawFields) : [];
+  const sources = [
+    position.remarkRaw, position.freshGraduateRaw, position.positionDescription,
+    position.positionAttribute, position.positionDistribution, position.majorRaw,
+    position.educationRaw, position.degreeRaw, position.politicalStatusRaw,
+    position.experienceRaw, position.serviceProjectRaw,
+    ...rawFields.map(([, value]) => value),
+  ].map((value) => String(value || '')).filter(Boolean);
+  const maleLimit = /(?<!不)(?:仅限|只限|仅招|只招|限于|限)\s*(?:男性|男生|男)(?!优先|和女性|或女性|、女性|女性均可|男女不限)(?:报考|报名|应聘)?/u;
+  const bothAllowed = /(?:男女不限|不限男女|男女均可|男性(?:和|或|、|\/)女性(?:均可|皆可)(?:报考|报名)?|男生(?:和|或|、|\/)女生(?:均可|皆可)(?:报考|报名)?)/u;
+  if (sources.some((source) => maleLimit.test(source) && !bothAllowed.test(source))) return true;
+
+  const separateGenderRequirement = /(?:^|[\s，,、；;。:：/（）()])(?:男性|男生|男)(?=$|[\s，,、；;。:：/（）()])/u;
+  const genderRequirementSources = [
+    position.freshGraduateRaw,
+    ...rawFields.filter(([field]) => /要求|条件|资格|备注/u.test(field)).map(([, value]) => value),
+  ];
+  return genderRequirementSources.some((value) => {
+    const source = String(value || '');
+    return !/(?:女性|女生)/u.test(source) && separateGenderRequirement.test(source);
+  });
 }
 
 function matchesPublicAdministrationMajor(position) {

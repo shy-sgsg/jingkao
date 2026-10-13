@@ -42,6 +42,20 @@ test('national desktop results expose table headings and paginate instead of ren
   assert.match(html, /下一页/u);
 });
 
+test('public-administration text match displays a preliminary major and overall qualification', () => {
+  const html = renderNationalWorkspace({
+    positions: [position(1, { majorRaw: '本科：管理学类相关专业', remarkRaw: '职位备注中的条件需核对。' })],
+    workspace: normalizeNationalWorkspace({ visibleColumns: ['majorMatch', 'eligibility'] }),
+    profile: {
+      degree: '本科', undergraduateMajor: '公共管理', undergraduateMajorCode: '120401',
+      degreeTitle: '学士学位', politicalStatus: '群众', grassrootsYears: '0',
+    },
+  });
+
+  const preliminaryBadges = html.match(/class="national-badge is-initialMatch">初步符合<\/span>/gu) || [];
+  assert.ok(preliminaryBadges.length >= 2);
+});
+
 test('position results show removable filter chips, live summary counts, and column controls', () => {
   const positions = [
     position(1, { workProvince: '湖北省' }),

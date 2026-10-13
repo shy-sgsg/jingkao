@@ -52,6 +52,18 @@ function parseMajorTokens(raw) {
   });
 }
 
+function hasPublicAdministrationFamily(value, code = '') {
+  const normalizedCode = String(code || '').replace(/\D/gu, '');
+  return /管理学类?|公共管理|行政管理|公共事业管理|土地资源管理/u.test(String(value || ''))
+    || /^12\d{0,4}$/u.test(normalizedCode);
+}
+
+function requirementHasPublicAdministrationFamily(raw, tokens) {
+  return /管理学类?|公共管理|行政管理|公共事业管理|土地资源管理/u.test(String(raw || ''))
+    || tokens.some((token) => token.code?.startsWith('12'))
+    || /(?<!\d)12\d{0,4}(?!\d)/u.test(String(raw || ''));
+}
+
 function matchMajor(position, profile) {
   const raw = String(position.majorRaw || '').trim();
   if (!raw) return check('review', '职位表专业字段为空，需回到原表确认。');
@@ -79,6 +91,10 @@ function matchMajor(position, profile) {
     if (normalizedCode && token.code?.length === 4 && normalizedCode.startsWith(token.code)) {
       return check('match', `职位表列出专业类代码 ${token.code}，个人专业代码 ${normalizedCode} 属于该代码范围。`, { matchType: 'category' });
     }
+  }
+  if (hasPublicAdministrationFamily(name, normalizedCode)
+    && requirementHasPublicAdministrationFamily(requirement, tokens)) {
+    return check('match', '职位表专业原文命中管理学、公共管理或土地资源管理相关范围，与个人专业方向相符。', { matchType: 'related' });
   }
   if (tokens.some((token) => token.code || (token.name && !/类|相关|等|范围|目录|方向/u.test(token.name)))) {
     return check('mismatch', '个人专业名称或代码未与该学历阶段的职位要求精确对应。', { matchType: 'none' });
@@ -227,7 +243,7 @@ export function evaluateNationalEligibility(position, profile = {}) {
     key === 'specialRequirements' && item.reviewScope === 'remark' ? 'match' : item.status
   ));
   const status = statuses.includes('mismatch') ? 'incompatible'
-    : statuses.includes('review') ? 'needsReview'
+    : statuses.includes('review') && checks.major.status !== 'match' ? 'needsReview'
       : statuses.includes('missing') ? 'incomplete' : 'initialMatch';
   const labels = {
     initialMatch: '初步符合', incompatible: '明确不符合',

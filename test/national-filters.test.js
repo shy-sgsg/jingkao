@@ -53,7 +53,7 @@ test('national filters AND distinct dimensions and OR selected values within one
   assert.deepEqual(result.map((position) => position.id), ['national:2027:001:0001']);
 });
 
-test('national manual major search finds raw terms without turning text hits into eligibility matches', () => {
+test('public-administration text requirements count as a preliminary major match', () => {
   const result = filterNationalPositions(positions, { majorQuery: '管理学' });
   assert.deepEqual(result.map((position) => position.id), ['national:2027:003:0003']);
 
@@ -61,8 +61,16 @@ test('national manual major search finds raw terms without turning text hits int
     degree: '硕士研究生', graduateMajor: '土地资源管理', graduateMajorCode: '120404',
     degreeTitle: '硕士学位', politicalStatus: '共青团员', grassrootsYears: '0',
   });
-  assert.equal(assessment.checks.major.status, 'review');
-  assert.notEqual(assessment.checks.major.status, 'match');
+  assert.equal(assessment.checks.major.status, 'match');
+  assert.equal(assessment.status, 'initialMatch');
+
+  const professionalDegree = evaluateNationalEligibility({
+    ...positions[2], majorRaw: '研究生：1252公共管理硕士',
+  }, {
+    degree: '硕士研究生', graduateMajor: '公共管理', graduateMajorCode: '1204',
+    degreeTitle: '硕士学位', politicalStatus: '共青团员', grassrootsYears: '0',
+  });
+  assert.equal(professionalDegree.checks.major.status, 'match');
 });
 
 test('degree requirement corresponding to highest education passes without requiring degree-title parsing', () => {
@@ -98,7 +106,7 @@ test('remark-only manual review remains preliminary and appears in the quick pre
   );
 });
 
-test('a non-remark special-condition review does not become preliminary', () => {
+test('a matched major makes complete overall qualifications preliminary while preserving manual details', () => {
   const serviceProjectPosition = {
     ...positions[0],
     serviceProjectRaw: '大学生村官项目人员',
@@ -111,7 +119,7 @@ test('a non-remark special-condition review does not become preliminary', () => 
 
   const assessment = evaluateNationalEligibility(serviceProjectPosition, profile);
   assert.equal(assessment.checks.specialRequirements.status, 'review');
-  assert.equal(assessment.status, 'needsReview');
+  assert.equal(assessment.status, 'initialMatch');
 });
 
 test('male-only exclusion removes explicit male limits but keeps preferences, female limits, and unrestricted posts', () => {
@@ -123,11 +131,17 @@ test('male-only exclusion removes explicit male limits but keeps preferences, fe
     { ...positions[0], id: 'national:2027:014:0014', remarkRaw: '仅限女性报考。' },
     { ...positions[0], id: 'national:2027:015:0015', remarkRaw: '性别不限。' },
     { ...positions[0], id: 'national:2027:016:0016', remarkRaw: '不限男性。' },
+    { ...positions[0], id: 'national:2027:018:0018', remarkRaw: '无', freshGraduateRaw: '应届毕业生，男性' },
+    { ...positions[0], id: 'national:2027:019:0019', remarkRaw: '无', rawFields: { 职位要求: '男性' } },
+    { ...positions[0], id: 'national:2027:020:0020', remarkRaw: '无', rawFields: { 职位要求: '限男性报考' } },
+    { ...positions[0], id: 'national:2027:021:0021', remarkRaw: '无', freshGraduateRaw: '应届毕业生，女性' },
+    { ...positions[0], id: 'national:2027:022:0022', remarkRaw: '无', rawFields: { 职位要求: '男性优先' } },
+    { ...positions[0], id: 'national:2027:023:0023', remarkRaw: '无', rawFields: { 职位要求: '男性、女性均可报考' } },
   ];
 
   assert.deepEqual(
     filterNationalPositions(rows, { excludeMaleOnly: true }).map((item) => item.id),
-    ['national:2027:013:0013', 'national:2027:014:0014', 'national:2027:015:0015', 'national:2027:016:0016'],
+    ['national:2027:013:0013', 'national:2027:014:0014', 'national:2027:015:0015', 'national:2027:016:0016', 'national:2027:021:0021', 'national:2027:022:0022', 'national:2027:023:0023'],
   );
 });
 
