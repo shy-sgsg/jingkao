@@ -5,6 +5,23 @@ import { NATIONAL_DEFAULT_VISIBLE_COLUMNS } from './storage.js';
 const escapeNationalHtml = (value) => String(value ?? '').replace(/[&<>"']/gu, (char) => ({
   '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
 })[char]);
+const nationalEligibilityCaches = new WeakMap();
+
+function eligibilityCacheFor(positions, profile) {
+  const profileRecord = profile && typeof profile === 'object' ? profile : {};
+  const signature = JSON.stringify(profileRecord);
+  let profileCaches = nationalEligibilityCaches.get(profileRecord);
+  if (!profileCaches || profileCaches.signature !== signature) {
+    profileCaches = { signature, positions: new WeakMap() };
+    nationalEligibilityCaches.set(profileRecord, profileCaches);
+  }
+  let cache = profileCaches.positions.get(positions);
+  if (!cache) {
+    cache = new Map();
+    profileCaches.positions.set(positions, cache);
+  }
+  return cache;
+}
 
 const labelMap = {
   initialMatch: '初步符合', incompatible: '明确不符合', needsReview: '需要人工核验', incomplete: '资料不完整',
@@ -298,15 +315,22 @@ function renderComparisonTab({ positions, workspace, profile }) {
 export function renderNationalWorkspace({ positions = [], metadata = {}, profile = {}, workspace, tab = 'positions' }) {
   const state = workspace || { filters: {}, savedFilters: [], favorites: [], comparisons: [], notes: {} };
   const filters = state.filters || {};
-  const eligibilityCache = new Map();
+  const eligibilityCache = eligibilityCacheFor(positions, profile);
   const filtered = filterNationalPositions(positions, filters, profile, eligibilityCache);
   const qualificationFilters = {
     ...filters, qualificationStatuses: [], onlyInitialMatch: false, excludeNeedsReview: false,
     excludeExplicitMismatch: false, excludeMajorMismatch: false, excludeEducationMismatch: false,
     excludePoliticalMismatch: false, excludeGrassrootsMismatch: false, excludeSpecialReview: false,
   };
+  const qualificationFiltersActive = (Array.isArray(filters.qualificationStatuses) && filters.qualificationStatuses.length > 0)
+    || ['onlyInitialMatch', 'excludeNeedsReview', 'excludeExplicitMismatch', 'excludeMajorMismatch',
+      'excludeEducationMismatch', 'excludePoliticalMismatch', 'excludeGrassrootsMismatch', 'excludeSpecialReview']
+      .some((key) => filters[key]);
   const qualificationRows = hasNationalProfile(profile)
-    ? filterNationalPositions(positions, qualificationFilters, profile, eligibilityCache) : [];
+    ? qualificationFiltersActive
+      ? filterNationalPositions(positions, qualificationFilters, profile, eligibilityCache)
+      : filtered
+    : [];
   const counts = hasNationalProfile(profile) ? { initialMatch: 0, incompatible: 0, needsReview: 0, incomplete: 0, majorMatches: 0 } : null;
   if (counts) {
     for (const position of qualificationRows) {
