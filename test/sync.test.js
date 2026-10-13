@@ -45,6 +45,33 @@ test('backup carries position filters and accepts older schema-1 files without t
   assert.equal(upgraded.schemaVersion, 1);
   assert.equal(upgraded.data.positionPreferences.filters.districtId, 'all');
   assert.equal(upgraded.data.positionPreferences.jobSort, 'year-desc');
+  assert.deepEqual(upgraded.data.nationalWorkspace, { filters: {}, visibleColumns: null, savedFilters: [], favorites: [], comparisons: [], notes: {}, favoriteQuery: '', favoritePriority: 'all', comparisonOnlyDifferences: false });
+});
+
+test('national workspace is included in cloud backup and merges with Beijing job state isolated', () => {
+  const nationalId = 'national:2027:002000:100110001001';
+  const local = makeBackup({
+    favorites: ['231260001'], compared: ['231260001'],
+    nationalWorkspace: {
+      filters: { province: ['湖北省'] }, savedFilters: [],
+      favorites: [{ id: nationalId, positionId: nationalId, note: '查公告', priority: 'high' }],
+      comparisons: [nationalId], notes: { [nationalId]: '电话核实' },
+    },
+  });
+  const remote = makeBackup({
+    favorites: ['231260001'], compared: ['231260001'],
+    nationalWorkspace: {
+      filters: { province: ['河南省'] }, savedFilters: [{ id: 'remote-filter', name: '河南', filters: { province: ['河南省'] } }],
+      favorites: [], comparisons: [], notes: {},
+    },
+  });
+  const merged = mergeUserData({ base: null, local: local.data, remote: remote.data }).data;
+  assert.deepEqual(merged.nationalWorkspace.comparisons, [nationalId]);
+  assert.deepEqual(merged.nationalWorkspace.favorites.map((item) => item.positionId), [nationalId]);
+  assert.equal(merged.nationalWorkspace.notes[nationalId], '电话核实');
+  assert.equal(merged.nationalWorkspace.savedFilters.some((filter) => filter.id === 'remote-filter'), true);
+  assert.deepEqual(merged.favorites, ['231260001']);
+  assert.deepEqual(merged.compared, ['231260001']);
 });
 
 test('position competition evidence filters and sorts survive preference normalization', () => {

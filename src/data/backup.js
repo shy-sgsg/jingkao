@@ -5,6 +5,7 @@ export const ENCRYPTED_BACKUP_VERSION = 1;
 
 const ENVELOPE_FIELDS = ['cipher', 'ciphertext', 'iterations', 'iv', 'kdf', 'salt', 'version'];
 import { APTITUDE_MODULES } from '../aptitude/modules.js';
+import { emptyNationalWorkspace, normalizeNationalWorkspace } from '../national/storage.js';
 
 function base64ByteLength(value) {
   if (typeof value !== 'string' || value.length === 0 || value.length % 4 !== 0
@@ -191,6 +192,7 @@ export function parseUserBackup(input) {
       mocks: state.mocks,
       favorites: state.favorites,
       compared: state.compared,
+      nationalWorkspace: normalizeNationalWorkspace(state.nationalWorkspace || emptyNationalWorkspace()),
       settings: displaySettings,
       onboarding: state.onboarding,
     },

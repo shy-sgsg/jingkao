@@ -1,5 +1,7 @@
 export const USER_DATA_SCHEMA_VERSION = 1;
 
+import { emptyNationalWorkspace, normalizeNationalWorkspace } from '../national/storage.js';
+
 export function studyLogKey(type, item) {
   if (!isRecord(item) || !['aptitude', 'essay'].includes(type)) throw new Error('训练记录类型或内容无效。');
   const title = type === 'aptitude' ? item.item : item.practice;
@@ -12,10 +14,10 @@ export function studyLogKey(type, item) {
 const DATA_FIELDS = [
   'profile', 'dayLogs', 'planOverrides', 'studyPlanTasks', 'scienceStudy',
   'generalKnowledgeStudy', 'aptitudeModuleStudies', 'aptitudeLogs', 'essayLogs',
-  'mocks', 'favorites', 'compared', 'settings', 'positionPreferences', 'onboarding',
+  'mocks', 'favorites', 'compared', 'settings', 'positionPreferences', 'nationalWorkspace', 'onboarding',
 ];
 
-const OPTIONAL_BACKUP_FIELDS = new Set(['positionPreferences']);
+const OPTIONAL_BACKUP_FIELDS = new Set(['positionPreferences', 'nationalWorkspace']);
 const DEFAULT_POSITION_FILTERS = Object.freeze({
   districtId: 'all', year: 'all', orgType: 'all', jobType: 'all', majorTopic: 'all', sourceLevel: 'all',
   unit: 'all', education: 'all', politicalStatus: 'all', freshGraduate: 'all',
@@ -53,7 +55,8 @@ const EMPTY_DATA = {
     favoriteKnowledgePointIds: [], unclearKnowledgePointIds: [], flashcards: [], flashcardReviews: [],
   },
   aptitudeModuleStudies: {}, aptitudeLogs: {}, essayLogs: {}, mocks: [], favorites: [], compared: [],
-  settings: {}, positionPreferences: normalizePositionPreferences(), onboarding: {},
+  settings: {}, positionPreferences: normalizePositionPreferences(),
+  nationalWorkspace: emptyNationalWorkspace(), onboarding: {},
 };
 
 const RECORD_COLLECTIONS = [
@@ -210,6 +213,7 @@ function projectUserData(source = {}) {
   merged.compared = normalizeSet(merged.compared, 'compared');
   merged.settings = requireRecord(merged.settings, 'settings');
   merged.positionPreferences = normalizePositionPreferences(merged.positionPreferences);
+  merged.nationalWorkspace = normalizeNationalWorkspace(merged.nationalWorkspace);
   merged.onboarding = requireRecord(merged.onboarding, 'onboarding');
 
   for (const collection of RECORD_COLLECTIONS) {

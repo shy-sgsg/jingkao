@@ -38,8 +38,15 @@ import { setAptitudeModulePointStatus, toggleAptitudeModuleFavorite, toggleAptit
 import { renderAptitudeModuleLaunchButtons } from './aptitude/launch.js';
 import { renderEligibilityChecks } from './ui/eligibility.js';
 import { renderScoreBreakdown } from './ui/scoreBreakdown.js';
+import { emptyNationalWorkspace, normalizeNationalWorkspace, renameNationalSavedFilter, toggleNationalComparison, toggleNationalFavorite, updateNationalFavorite } from './national/storage.js';
+import { filterNationalPositions, sortNationalPositions } from './national/filters.js';
+import { evaluateNationalEligibility } from './national/eligibility.js';
+import { nationalComparisonToCsv, nationalPositionsToCsv } from './national/export.js';
+import { renderNationalWorkspace } from './national/view.js';
 
 const DATA_URL = './public/data.json';
+const NATIONAL_POSITIONS_URL = './public/national/positions-2027.json';
+const NATIONAL_METADATA_URL = './public/national/metadata-2027.json';
 const FIXED_ACCESS_PASSWORD = '1234567890123';
 const FIXED_PROFILE_NAME = '京考个人学习记录';
 const FIXED_PROFILE_ID_KEY = 'changping-jingkao-dashboard:fixed-profile-id:v1';
@@ -51,7 +58,7 @@ let displayDensity = 'comfortable';
 document.documentElement.dataset.density = displayDensity;
 document.documentElement.classList.toggle('has-view-transition-api', typeof document.startViewTransition === 'function');
 const icons = {
-  overview: '◫', guide: '✦', plan: '▦', science: '⚗', aptitude: '⌁', essay: '✎', mocks: '⌂', positions: '▤', compare: '⇄', assistant: '✧', scenarios: '◉', matrix: '▦', profile: '♙', research: '✧', evidence: '⌁', sources: 'ⓘ', settings: '⚙',
+  overview: '◫', guide: '✦', plan: '▦', science: '⚗', aptitude: '⌁', essay: '✎', mocks: '⌂', positions: '▤', compare: '⇄', assistant: '✧', scenarios: '◉', matrix: '▦', national: '国', profile: '♙', research: '✧', evidence: '⌁', sources: 'ⓘ', settings: '⚙',
 };
 const pageMeta = {
   overview: ['备考总览', '查看今天的复习任务、目标分差和北京京考职位决策证据。'],
@@ -68,6 +75,7 @@ const pageMeta = {
   assistant: ['选岗助手', '先做条件完整度检查；资料或岗位条件不全时明确停在“待核验”。'],
   scenarios: ['分数情景', '将目标分与已收录的历史样本范围对照，不输出进面或录取概率。'],
   matrix: ['北京京考竞争矩阵', '按北京市 16 区和年度查看职位样例覆盖；不把样例数解释为竞争率或年度总量。'],
+  national: ['2027 国考职位筛选', '按职位表条件查找、核对和比较 2027 年中央机关及直属机构招录职位。'],
   profile: ['个人报考资料', '在本机填写。专业预置为公共管理；其他信息不会由系统推断。'],
   research: ['研究结论', '把当前可支持的结论、证据与限制集中查看。'],
   evidence: ['数据覆盖与核验', '查看年度职位样例覆盖、来源差异与数据边界。'],
@@ -78,11 +86,22 @@ const navGroups = [
   { label: '工作台', items: [['overview', '备考总览'], ['guide', '使用指南'], ['plan', '学习计划']] },
   { label: '备考复盘', items: [['aptitude', '行测能力'], ['essay', '申论训练'], ['mocks', '模考记录']] },
   { label: '北京京考职位决策', items: [['positions', '职位库'], ['compare', '岗位比较'], ['assistant', '选岗助手'], ['scenarios', '分数情景'], ['matrix', '竞争矩阵']] },
+  { label: '中央机关国考', items: [['national', '2027 国考职位']] },
   { label: '个人与数据', items: [['profile', '个人资料'], ['research', '研究结论'], ['evidence', '数据覆盖'], ['sources', '数据与来源'], ['settings', '设置与显示']] },
 ];
 const mockModules = getAptitudeMockModules();
 
 let dataset;
+let nationalPositions = null;
+let nationalMetadata = null;
+let nationalLoadPromise = null;
+let nationalLoadError = '';
+let nationalFilterFocusName = '';
+let nationalFilterOpenName = '';
+let nationalFilterDrawerOpenAfterRender = false;
+let nationalFilterSelectionRange = null;
+let nationalFilterDebounceTimer = null;
+let nationalColumnSettingsOpenAfterRender = false;
 function readRoute(hash = location.hash) {
   const route = String(hash || '').replace(/^#\/?/u, '');
   const queryStart = route.indexOf('?');
@@ -97,6 +116,7 @@ function readRoute(hash = location.hash) {
   const aptitudeRoute = resolveAptitudeModuleRoute(routePage);
   return {
     page: aptitudeRoute?.page || pageAliases[routePage] || routePage,
+    nationalTab: ['positions', 'overview', 'favorites', 'comparison'].includes(value('tab')) ? value('tab') : 'positions',
     aptitudeModuleId: aptitudeRoute?.moduleId || null,
     taskId: value('task'), knowledgePointId: value('knowledge'), sessionId: value('session'),
     reviewQuestionId: value('review'),
@@ -109,6 +129,7 @@ function routeTaskIdForScience() {
 
 const initialRoute = readRoute();
 let page = initialRoute.page;
+let nationalTab = initialRoute.nationalTab || 'positions';
 let activeAptitudeModuleId = initialRoute.aptitudeModuleId;
 let activeAptitudeOverallSessionId = initialRoute.page === 'aptitude' ? initialRoute.sessionId : null;
 let activeReviewQuestionId = initialRoute.reviewQuestionId;
@@ -171,6 +192,7 @@ function emptyStorage() {
     mocks: [], favorites: [], compared: [],
     settings: { density: 'comfortable', fontSize: 'standard', motion: 'enhanced' },
     positionPreferences: normalizePositionPreferences(),
+    nationalWorkspace: emptyNationalWorkspace(),
     onboarding: { step: 0, hidden: false, completed: false },
     cloudSync: { baseline: null, lastSyncedAt: null, publicNoticeAccepted: false },
   };
@@ -214,6 +236,7 @@ function readStorage(source = {}, densityFallback = 'comfortable') {
         motion: settings.motion === 'immersive' ? 'immersive' : 'enhanced',
       },
       positionPreferences: normalizePositionPreferences(parsed.positionPreferences),
+      nationalWorkspace: normalizeNationalWorkspace(parsed.nationalWorkspace),
       onboarding: parsed.onboarding && typeof parsed.onboarding === 'object'
         ? { step: Number.isInteger(parsed.onboarding.step) ? parsed.onboarding.step : 0, hidden: parsed.onboarding.hidden === true, completed: parsed.onboarding.completed === true }
         : { step: 0, hidden: false, completed: false },
@@ -238,8 +261,8 @@ async function persist() {
 }
 
 function renderAccountGate(error = '') {
-  root.innerHTML = `<main class="account-gate"><section class="account-gate-card"><div class="account-gate-brand"><span>京</span><div><strong>京考备考台</strong><small>PERSONAL STUDY DESK</small></div></div><div class="account-gate-copy"><div class="eyebrow muted">欢迎回来</div><h1>继续你的备考</h1><p>请输入访问密码，进入学习工作台。</p></div>${error ? `<div class="account-gate-error" role="alert">${escapeHtml(error)}</div>` : ''}<section class="account-panel account-first-create"><form id="site-access-form" class="account-create-form"><label class="form-field"><span>访问密码</span><input name="password" type="password" autocomplete="current-password" required/></label><div class="access-gate-actions"><button type="button" class="button button-quiet" data-action="toggle-site-password">显示密码</button><button type="button" class="button button-quiet" data-action="clear-site-password">清空</button></div><button type="submit" class="button button-primary">进入网站</button></form></section><div class="account-gate-footnote"><span>ⓘ</span><p><strong>这是单人使用的前端访问入口</strong><br/>学习记录会自动保存在当前设备；需要换设备时，可在网站内手动进行云端同步。</p></div></section></main>`;
-  document.title = '访问验证 · 京考备考台';
+  root.innerHTML = `<main class="account-gate"><section class="account-gate-card"><div class="account-gate-brand"><span>考</span><div><strong>公考备考工作台</strong><small>JINGKAO + NATIONAL · 2027</small></div></div><div class="account-gate-copy"><div class="eyebrow muted">欢迎回来</div><h1>继续你的备考</h1><p>请输入访问密码，进入学习工作台。</p></div>${error ? `<div class="account-gate-error" role="alert">${escapeHtml(error)}</div>` : ''}<section class="account-panel account-first-create"><form id="site-access-form" class="account-create-form"><label class="form-field"><span>访问密码</span><input name="password" type="password" autocomplete="current-password" required/></label><div class="access-gate-actions"><button type="button" class="button button-quiet" data-action="toggle-site-password">显示密码</button><button type="button" class="button button-quiet" data-action="clear-site-password">清空</button></div><button type="submit" class="button button-primary">进入网站</button></form></section><div class="account-gate-footnote"><span>ⓘ</span><p><strong>这是单人使用的前端访问入口</strong><br/>学习记录会自动保存在当前设备；需要换设备时，可在网站内手动进行云端同步。</p></div></section></main>`;
+  document.title = '访问验证 · 公考备考工作台';
 }
 
 function showAccountGate(error = '') {
@@ -586,7 +609,7 @@ function renderSidebar() {
     const active = page === id || (id === 'aptitude' && ['science', 'generalKnowledge', 'aptitudeModule'].includes(page));
     return `<a href="#/${id}" class="nav-item ${active ? 'active' : ''}" ${active ? 'aria-current="page"' : ''}><span class="nav-icon">${icons[id]}</span><span>${escapeHtml(label)}</span>${id === 'positions' ? `<span class="nav-count">${dataset.positions.length}</span>` : ''}</a>`;
   }).join('')}</div>`).join('');
-  return `<aside class="sidebar" id="sidebar"><a class="brand" href="#/overview"><span class="brand-mark">京</span><span><strong>京考备考台</strong><small>BEIJING · 2027</small></span></a><div class="data-status"><span class="status-dot"></span><span>本地运行 · 数据基准 ${escapeHtml(dataset.dataAsOf)}</span></div><nav aria-label="主导航">${nav}</nav><div class="sidebar-bottom"><div class="sidebar-note"><span class="lock-icon">▣</span><div><strong>本机加密保存</strong><small>仅手动确认后同步</small></div></div><div class="sidebar-version">个人备考工作台 <span>v1.0</span></div></div></aside>`;
+  return `<aside class="sidebar" id="sidebar"><a class="brand" href="#/overview"><span class="brand-mark">考</span><span><strong>公考备考工作台</strong><small>JINGKAO + NATIONAL · 2027</small></span></a><div class="data-status"><span class="status-dot"></span><span>本地运行 · 数据基准 ${escapeHtml(dataset.dataAsOf)}</span></div><nav aria-label="主导航">${nav}</nav><div class="sidebar-bottom"><div class="sidebar-note"><span class="lock-icon">▣</span><div><strong>本机加密保存</strong><small>仅手动确认后同步</small></div></div><div class="sidebar-version">个人备考工作台 <span>v1.0</span></div></div></aside>`;
 }
 
 function renderDensityControl() {
@@ -602,12 +625,22 @@ function renderSettings() {
   return `<div class="page-body settings-page"><div class="page-heading-row"><div><div class="eyebrow muted">PERSONAL DISPLAY</div><h1>设置与显示</h1><p>按自己的阅读习惯调整全站字号、动效和页面密度，修改会立即应用。</p></div><a class="button button-secondary" href="#/overview">返回工作台</a></div><section class="panel settings-panel"><div class="settings-panel-heading"><span class="settings-heading-icon">✦</span><div><h2>阅读与动效偏好</h2><p>设置保存在本机浏览器，并会包含在个人数据备份中。</p></div></div>${renderSettingOptions('fontSize', '字号', [['small', '偏小', '更多内容同时显示'], ['standard', '标准', '保持当前默认字号'], ['large', '大号', '提高正文与界面文字大小']])}${renderSettingOptions('motion', '动效强度', [['enhanced', '增强', '清晰的页面切换、错峰入场与卡片反馈；遵循系统“减少动态效果”偏好'], ['immersive', '沉浸', '选择沉浸后覆盖系统的“减少动态效果”偏好；更明显的空间过渡、层次入场与悬浮反馈']])}${renderSettingOptions('density', '页面密度', [['comfortable', '舒适', '留白更多，适合连续阅读'], ['compact', '紧凑', '减少间距，一屏呈现更多内容']])}<div class="notice notice-soft settings-note"><span>▣</span><p>个人偏好默认保存在本机；确认云端同步后会随备份上传。不会修改原始 Excel。</p></div></section></div>`;
 }
 
+function renderNationalPage() {
+  if (!nationalPositions) {
+    return `<div class="page-body national-page"><section class="panel national-load-state"><h1>${nationalLoadError ? '国考职位数据暂时无法载入' : '正在载入 2027 国考职位表'}</h1><p>${escapeHtml(nationalLoadError || '首次打开需要读取职位数据；北京京考和学习页面使用独立数据。')}</p>${nationalLoadError ? '<button type="button" class="button button-secondary" data-action="national-retry-load">重试</button>' : ''}</section></div>`;
+  }
+  return renderNationalWorkspace({
+    positions: nationalPositions, metadata: nationalMetadata, profile: storage.profile,
+    workspace: storage.nationalWorkspace, tab: nationalTab,
+  });
+}
+
 function renderLayout() {
   const aptitudeModule = page === 'aptitudeModule' ? APTITUDE_MODULES.find((module) => module.id === activeAptitudeModuleId) : null;
   const [title, subtitle] = aptitudeModule
     ? [aptitudeModule.area, `${aptitudeModule.hint} · 学习、练习与手动记录`]
     : pageMeta[page] || pageMeta.overview;
-  const pageScope = ['positions', 'compare', 'assistant', 'scenarios', 'matrix'].includes(page) ? '北京京考职位决策' : ['aptitude', 'aptitudeModule', 'science', 'generalKnowledge'].includes(page) ? '行测能力' : page === 'overview' ? '备考工作台' : '昌平区';
+  const pageScope = ['positions', 'compare', 'assistant', 'scenarios', 'matrix'].includes(page) ? '北京京考职位决策' : page === 'national' ? '中央机关国考' : ['aptitude', 'aptitudeModule', 'science', 'generalKnowledge'].includes(page) ? '行测能力' : page === 'overview' ? '备考工作台' : '昌平区';
   return `${renderSidebar()}<div class="main-shell"><header class="topbar"><div class="topbar-left"><button class="mobile-menu" type="button" aria-label="打开导航" data-action="mobile-menu">☰</button><div><div class="breadcrumb">${pageScope} <span>/</span> <strong>${escapeHtml(title)}</strong></div><p class="page-subtitle">${escapeHtml(subtitle)}</p></div></div><div class="topbar-right"><button class="button button-secondary cloud-sync-trigger" type="button" data-action="open-cloud-sync">☁ 云端同步</button><a class="button button-secondary guide-trigger" href="#/guide">使用指南</a>${renderDensityControl()}<span class="today-pill"><span class="today-dot"></span>${escapeHtml(fmtDate(todayString()))}</span><button class="button button-quiet account-lock-button" type="button" data-action="account-lock" aria-label="锁定当前页面">锁定</button></div></header><main id="page-content" tabindex="-1">${renderPage()}</main><footer class="page-footer"><span>资料更新至 ${escapeHtml(dataset.dataAsOf)} · 使用前请回看官方当年职位表</span><a href="#/sources">数据口径说明 →</a></footer></div><div class="sidebar-scrim" data-action="close-menu"></div>`;
 }
 
@@ -633,7 +666,7 @@ function renderOverview() {
   const todayGeneralKnowledgeTasks = getTasksForDate(storage.studyPlanTasks, todayString())
     .filter((task) => task.taskType === 'general_knowledge' && task.status !== 'completed');
   const generalKnowledgeReminder = todayGeneralKnowledgeTasks.length ? `<section class="panel science-reminder-panel general-knowledge-reminder"><div class="panel-heading"><div><div class="eyebrow muted">TODAY · GENERAL KNOWLEDGE</div><h2>今天的常识判断任务</h2><p>${todayGeneralKnowledgeTasks.length} 项待完成；从这里直接进入知识点或训练。</p></div><a class="panel-link" href="#/plan">管理计划 →</a></div><div class="science-reminder-list">${todayGeneralKnowledgeTasks.map((task) => `<a class="science-reminder-item" href="#/aptitude/general-knowledge?task=${encodeURIComponent(task.id)}"><span class="science-reminder-icon">常</span><span><strong>${escapeHtml(task.title)}</strong><small>${escapeHtml(planTaskTypeLabel(task))} · ${escapeHtml(planTaskStatusLabel(task.status))}${task.estimatedMinutes ? ` · ${task.estimatedMinutes} 分钟` : ''}</small></span><b>开始 ↗</b></a>`).join('')}</div></section>` : '';
-  const profileFields = ['undergraduateMajor', 'undergraduateMajorCode', 'graduateMajor', 'graduateMajorCode', 'degree', 'degreeType', 'graduationStatus', 'graduationYear', 'politicalStatus', 'hukou', 'studentOrigin', 'grassrootsYears', 'credentials', 'retiredStatus', 'grassrootsProjectStatus'];
+  const profileFields = ['undergraduateMajor', 'undergraduateMajorCode', 'graduateMajor', 'graduateMajorCode', 'degree', 'degreeTitle', 'degreeType', 'graduationStatus', 'graduationYear', 'politicalStatus', 'hukou', 'studentOrigin', 'grassrootsYears', 'credentials', 'retiredStatus', 'grassrootsProjectStatus'];
   const completedProfileFields = profileFields.filter((key) => storage.profile[key] !== null
     && storage.profile[key] !== undefined && String(storage.profile[key]).trim() !== '').length;
   const scoreTargets = [135, 138, 140].map((targetScore, index) => {
@@ -665,7 +698,7 @@ function renderOverview() {
     <section class="welcome-banner"><div class="welcome-copy"><div class="eyebrow"><span class="eyebrow-dot"></span> PERSONALISED STUDY DESK <span class="eyebrow-date">数据基准 ${escapeHtml(dataset.dataAsOf)}</span></div><h1>把每一步，变成<br/><em>有依据的进步。</em></h1><p>今天先做好计划里的下一件事。分数趋势和岗位判断，等你的真实数据到位再说。</p><div class="welcome-actions"><a class="button button-light" href="#/plan">打开今日计划 <span>↗</span></a><a class="welcome-link" href="#/profile">完善个人条件 <span>→</span></a></div></div><div class="welcome-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="art-sun"></div><div class="art-line art-line-one"></div><div class="art-line art-line-two"></div><div class="art-label">PLAN · PRACTICE<br/>· REFLECT</div><span class="art-star star-one">✦</span><span class="art-star star-two">✧</span></div></section>
     <section class="metric-grid">${metric('复习计划完成度', fmtPct(progress), `${done} / ${days.length} 天标记完成`, '↗', 'blue')}${metric('计划训练量', `${plannedTotals.questions.toLocaleString('zh-CN')}<small>题</small>`, `${fmt(plannedTotals.hours)} 小时计划投入`, '⌁', 'mint')}${metric('有效模考', `${mocks.length}<small> / 12</small>`, mocks.length ? `最近总分 ${fmt(latest.total, 1)} · 目标 ${fmt(target)}` : '尚无真实成绩记录', '◉', 'amber')}${coverageTile}</section>
     <section class="score-target-section" aria-label="真实模考与目标分差距"><div class="score-target-heading"><div><div class="eyebrow muted">REAL MOCK · TARGET DISTANCE</div><h2>离目标分还有多远？</h2><p>${latest ? `最近一次真实模考：${escapeHtml(latest.date || '日期待定')} · ${fmt(latest.total, 1)} 分` : '录入模考后，按真实总分计算目标差距；空白不会当作 0 分。'}</p></div><a class="panel-link" href="#/mocks">记录或复盘成绩 →</a></div><div class="score-target-grid">${scoreTargets}</div></section>
-    <section class="quick-start-section"><div class="quick-start-heading"><div><div class="eyebrow muted">QUICK START</div><h2>我应该先做什么？</h2></div><button type="button" class="text-button" data-action="open-onboarding">第一次使用？3 分钟完成初始化 →</button></div><div class="quick-start-grid"><a class="quick-start-card" href="#/profile"><span class="quick-start-icon icon-profile">01</span><span class="quick-start-copy"><strong>完善个人报考条件</strong><small>${completedProfileFields} / ${profileFields.length} 项有内容</small></span><span class="quick-start-arrow">↗</span></a><a class="quick-start-card" href="#/plan"><span class="quick-start-icon icon-plan">02</span><span class="quick-start-copy"><strong>安排今天的学习</strong><small>${todayPlan ? `从 Day ${todayPlan.day} 开始 · ${escapeHtml(todayPlan.focus)}` : '打开 50 天学习计划'}</small></span><span class="quick-start-arrow">↗</span></a><button type="button" class="quick-start-card" data-action="add-mock"><span class="quick-start-icon icon-mock">03</span><span class="quick-start-copy"><strong>记录一次模考</strong><small>${mocks.length ? `已有 ${mocks.length} 次真实记录，继续复盘` : '录入首场成绩，建立自己的起点'}</small></span><span class="quick-start-arrow">↗</span></button><a class="quick-start-card" href="#/positions"><span class="quick-start-icon icon-jobs">04</span><span class="quick-start-copy"><strong>浏览北京京考职位库</strong><small>${dataset.positions.length} 条有来源样例 · 当前覆盖 ${new Set(dataset.positions.map((position) => position.districtId).filter(Boolean)).size} 个区县</small></span><span class="quick-start-arrow">↗</span></a></div></section>
+    <section class="quick-start-section"><div class="quick-start-heading"><div><div class="eyebrow muted">QUICK START</div><h2>我应该先做什么？</h2></div><button type="button" class="text-button" data-action="open-onboarding">第一次使用？3 分钟完成初始化 →</button></div><div class="quick-start-grid"><a class="quick-start-card" href="#/profile"><span class="quick-start-icon icon-profile">01</span><span class="quick-start-copy"><strong>完善个人报考条件</strong><small>${completedProfileFields} / ${profileFields.length} 项有内容</small></span><span class="quick-start-arrow">↗</span></a><a class="quick-start-card" href="#/plan"><span class="quick-start-icon icon-plan">02</span><span class="quick-start-copy"><strong>安排今天的学习</strong><small>${todayPlan ? `从 Day ${todayPlan.day} 开始 · ${escapeHtml(todayPlan.focus)}` : '打开 50 天学习计划'}</small></span><span class="quick-start-arrow">↗</span></a><button type="button" class="quick-start-card" data-action="add-mock"><span class="quick-start-icon icon-mock">03</span><span class="quick-start-copy"><strong>记录一次模考</strong><small>${mocks.length ? `已有 ${mocks.length} 次真实记录，继续复盘` : '录入首场成绩，建立自己的起点'}</small></span><span class="quick-start-arrow">↗</span></button><a class="quick-start-card" href="#/positions"><span class="quick-start-icon icon-jobs">04</span><span class="quick-start-copy"><strong>浏览北京京考职位库</strong><small>${dataset.positions.length} 条有来源样例 · 当前覆盖 ${new Set(dataset.positions.map((position) => position.districtId).filter(Boolean)).size} 个区县</small></span><span class="quick-start-arrow">↗</span></a><a class="quick-start-card" href="#/national"><span class="quick-start-icon icon-jobs">05</span><span class="quick-start-copy"><strong>筛选 2027 国考职位</strong><small>19,426 个职位 · 国考与京考清单独立</small></span><span class="quick-start-arrow">↗</span></a></div></section>
     ${scienceReminder}${generalKnowledgeReminder}<section class="content-grid overview-grid"><article class="panel next-task-panel"><div class="panel-heading"><div><div class="eyebrow muted">STUDY PLAN</div><h2>${escapeHtml(dateNote)}</h2></div><a class="panel-link" href="#/plan">查看全部 50 天 →</a></div>${todayPlan ? `<div class="next-day"><div class="day-date"><strong>${String(todayPlan.day).padStart(2, '0')}</strong><small>${escapeHtml(fmtDate(todayPlan.date))}</small></div><div class="next-day-content"><div class="next-day-title"><strong>${escapeHtml(todayPlan.focus)}</strong>${chip(todayPlan.status, statusTone(todayPlan.status))}</div><p>${escapeHtml(todayPlan.coreTask)}</p><div class="task-tags"><span>▣ ${fmt(todayPlan.plannedQuestions)} 题</span><span>◷ ${fmt(todayPlan.plannedHours, 1)} 小时</span>${todayPlan.stage ? `<span>${escapeHtml(todayPlan.stage.replace(/^阶段\d+：/, ''))}</span>` : ''}</div></div></div><div class="task-footer"><span class="mini-progress-label">本日记录完成度</span><strong>${fmtPct(calculateDayCompletion(todayPlan))}</strong></div><div class="progress-track"><span style="width:${Math.round(calculateDayCompletion(todayPlan) * 100)}%"></span></div><a class="task-open" href="#/plan">记录今天的进度 <span>↗</span></a>` : `<div class="empty-state">工作簿中没有可显示的计划数据。</div>`}</article>
       ${cityCoveragePanel}
     </section>
@@ -2024,7 +2057,7 @@ function renderProfile() {
   const graduateMajorCode = profile.graduateMajorCode || (isGraduate ? profile.majorCode : '');
   const legacyMajor = !isUndergraduate && !isGraduate && (profile.major || profile.majorCode);
   const avatarText = graduateMajor || undergraduateMajor || profile.major || '考';
-  return `<div class="page-body"><div class="page-heading-row"><div><div class="eyebrow muted">PERSONAL PROFILE · MANUAL SYNC</div><h1>个人报考资料</h1><p>默认在这台设备加密保存；确认云端同步后会上传到公开仓库，不回写原始工作簿。</p></div><span class="private-pill">▣ 本机加密</span></div><div class="profile-layout"><form id="profile-form" class="panel profile-form"><div class="panel-heading"><div><div class="eyebrow muted">BASIC INFORMATION</div><h2>基本条件</h2></div>${chip('由你确认', 'blue-soft')}</div><div class="form-grid">${field('undergraduateMajor', '本科专业', '按本科毕业证 / 学位材料填写。')}${field('undergraduateMajorCode', '本科专业代码', '例如 1204；请核对官方专业目录，不自动推断。')}${field('graduateMajor', '研究生专业', '无研究生学历可留空。')}${field('graduateMajorCode', '研究生专业代码', '例如 1204 或 1252；按研究生阶段填写。')}${field('degree', '最高学历', '建议填写：大专、本科、硕士研究生或博士研究生。')}${field('degreeType', '最高学位类型', '', 'select', ['学术学位', '专业学位', '其他'])}${field('graduationStatus', '毕业身份', '', 'select', ['应届毕业生', '非应届 / 社会人员', '留学回国人员', '其他'])}${field('graduationYear', '毕业年份', '', 'number')}${field('politicalStatus', '政治面貌', '', 'select', ['中共党员', '共青团员', '群众', '其他'])}${field('hukou', '户籍', '按职位表口径填写；未知时留空。')}${field('studentOrigin', '生源地', '与户籍分开记录；职位要求不明确时人工核对。')}${field('grassrootsYears', '基层工作经历（年）', '', 'number')}${field('credentials', '资格证书 / 职业资质', '多个项目可用逗号分隔。')}${field('retiredStatus', '退役身份', '', 'select', ['是', '否'])}${field('grassrootsProjectStatus', '服务基层项目人员资格', '如不确定请留空并人工核对。', 'select', ['是', '否'])}</div><div class="profile-preferences"><div class="eyebrow muted">PREFERENCES · NOT ELIGIBILITY</div><div class="form-grid">${field('preferredTypes', '偏好的岗位类型', '偏好不会替代硬性资格审查。')}${field('preferredLocation', '地点偏好', '', 'text')}${field('acceptAdministrativeEnforcement', '是否接受行政执法岗', '', 'select', ['接受', '不接受', '待确认'])}${field('acceptPhysicalTest', '是否接受体测', '', 'select', ['接受', '不接受', '待确认'])}${field('acceptNightShift', '是否接受夜班', '', 'select', ['接受', '不接受', '待确认'])}${field('acceptTown', '是否接受镇', '', 'select', ['接受', '不接受', '待确认'])}${field('prioritizeStreet', '是否优先街道', '', 'select', ['优先', '不优先', '待确认'])}${field('prioritizeDistrict', '是否优先区直', '', 'select', ['优先', '不优先', '待确认'])}</div></div><div class="form-actions"><button type="submit" class="button button-primary">加密保存</button><span id="profile-save-status">${Object.keys(profile).filter((key) => profile[key]).length} 项已有内容</span></div></form><aside class="profile-aside"><div class="panel profile-summary"><span class="summary-avatar">${escapeHtml(avatarText.slice(0, 1))}</span><div><strong>个人条件摘要</strong><small>不会自动判定岗位资格</small></div><div class="summary-line"><span>本科专业</span><strong>${escapeHtml(undergraduateMajor || '待补充')}</strong></div><div class="summary-line"><span>本科代码</span><strong>${escapeHtml(undergraduateMajorCode || '待补充')}</strong></div><div class="summary-line"><span>研究生专业</span><strong>${escapeHtml(graduateMajor || '待补充')}</strong></div><div class="summary-line"><span>研究生代码</span><strong>${escapeHtml(graduateMajorCode || '待补充')}</strong></div><div class="summary-line"><span>最高学历</span><strong>${escapeHtml(profile.degree || '待补充')}</strong></div>${legacyMajor ? `<div class="notice notice-soft compact-notice"><span>ⓘ</span><p>检测到未分层的旧专业记录“${escapeHtml([profile.major, profile.majorCode].filter(Boolean).join(' · '))}”；请核实学历层级后手动填入对应栏，系统不会自动归类。</p></div>` : ''}<div class="summary-line"><span>服务基层项目</span><strong>${escapeHtml(profile.grassrootsProjectStatus || '待确认')}</strong></div><div class="summary-line"><span>身份 / 户籍 / 生源</span><strong>${profile.graduationStatus || profile.hukou || profile.studentOrigin ? '部分填写' : '待补充'}</strong></div><div class="notice notice-soft compact-notice"><span>ⓘ</span><p>专业资格按最高学历对应代码核对；该层级缺代码时保持待核，不借用另一学历阶段的代码。</p></div></div><div class="panel privacy-card"><span>▣</span><strong>本机加密保存，默认不上传</strong><p>解锁期间数据在内存中明文使用；localStorage 保存加密信封。只有在同步面板明确确认后，个人记录才会上传到公开仓库。清理浏览器数据会删除本地档案。</p></div><section class="panel backup-panel"><div class="backup-panel-heading"><div><strong>个人数据加密备份</strong><small>备份需档案密码才能恢复；不含职位库或原始 Excel</small></div><span aria-hidden="true">↗</span></div><div class="backup-actions"><button type="button" class="button button-secondary" data-action="backup-export">下载加密备份</button><button type="button" class="button button-quiet" data-action="backup-choose">恢复备份</button><input id="backup-import-file" type="file" accept="application/json,.json" hidden/></div></section></aside></div></div>`;
+  return `<div class="page-body"><div class="page-heading-row"><div><div class="eyebrow muted">PERSONAL PROFILE · MANUAL SYNC</div><h1>个人报考资料</h1><p>默认在这台设备加密保存；确认云端同步后会上传到公开仓库，不回写原始工作簿。</p></div><span class="private-pill">▣ 本机加密</span></div><div class="profile-layout"><form id="profile-form" class="panel profile-form"><div class="panel-heading"><div><div class="eyebrow muted">BASIC INFORMATION</div><h2>基本条件</h2></div>${chip('由你确认', 'blue-soft')}</div><div class="form-grid">${field('undergraduateMajor', '本科专业', '按本科毕业证 / 学位材料填写。')}${field('undergraduateMajorCode', '本科专业代码', '例如 1204；请核对官方专业目录，不自动推断。')}${field('graduateMajor', '研究生专业', '无研究生学历可留空。')}${field('graduateMajorCode', '研究生专业代码', '例如 1204 或 1252；按研究生阶段填写。')}${field('degree', '最高学历', '建议填写：大专、本科、硕士研究生或博士研究生。')}${field('degreeTitle', '已取得的学位名称', '按证书填写，例如：文学学士、法律硕士、工学博士。')}${field('degreeType', '最高学位类型', '', 'select', ['学术学位', '专业学位', '其他'])}${field('graduationStatus', '毕业身份', '', 'select', ['应届毕业生', '非应届 / 社会人员', '留学回国人员', '其他'])}${field('graduationYear', '毕业年份', '', 'number')}${field('politicalStatus', '政治面貌', '', 'select', ['中共党员', '共青团员', '群众', '其他'])}${field('hukou', '户籍', '按职位表口径填写；未知时留空。')}${field('studentOrigin', '生源地', '与户籍分开记录；职位要求不明确时人工核对。')}${field('grassrootsYears', '基层工作经历（年）', '', 'number')}${field('credentials', '资格证书 / 职业资质', '多个项目可用逗号分隔。')}${field('retiredStatus', '退役身份', '', 'select', ['是', '否'])}${field('grassrootsProjectStatus', '服务基层项目人员资格', '如不确定请留空并人工核对。', 'select', ['是', '否'])}</div><div class="profile-preferences"><div class="eyebrow muted">PREFERENCES · NOT ELIGIBILITY</div><div class="form-grid">${field('preferredTypes', '偏好的岗位类型', '偏好不会替代硬性资格审查。')}${field('preferredLocation', '地点偏好', '', 'text')}${field('acceptAdministrativeEnforcement', '是否接受行政执法岗', '', 'select', ['接受', '不接受', '待确认'])}${field('acceptPhysicalTest', '是否接受体测', '', 'select', ['接受', '不接受', '待确认'])}${field('acceptNightShift', '是否接受夜班', '', 'select', ['接受', '不接受', '待确认'])}${field('acceptTown', '是否接受镇', '', 'select', ['接受', '不接受', '待确认'])}${field('prioritizeStreet', '是否优先街道', '', 'select', ['优先', '不优先', '待确认'])}${field('prioritizeDistrict', '是否优先区直', '', 'select', ['优先', '不优先', '待确认'])}</div></div><div class="form-actions"><button type="submit" class="button button-primary">加密保存</button><span id="profile-save-status">${Object.keys(profile).filter((key) => profile[key]).length} 项已有内容</span></div></form><aside class="profile-aside"><div class="panel profile-summary"><span class="summary-avatar">${escapeHtml(avatarText.slice(0, 1))}</span><div><strong>个人条件摘要</strong><small>不会自动判定岗位资格</small></div><div class="summary-line"><span>本科专业</span><strong>${escapeHtml(undergraduateMajor || '待补充')}</strong></div><div class="summary-line"><span>本科代码</span><strong>${escapeHtml(undergraduateMajorCode || '待补充')}</strong></div><div class="summary-line"><span>研究生专业</span><strong>${escapeHtml(graduateMajor || '待补充')}</strong></div><div class="summary-line"><span>研究生代码</span><strong>${escapeHtml(graduateMajorCode || '待补充')}</strong></div><div class="summary-line"><span>最高学历</span><strong>${escapeHtml(profile.degree || '待补充')}</strong></div><div class="summary-line"><span>已取得学位</span><strong>${escapeHtml(profile.degreeTitle || '待补充')}</strong></div>${legacyMajor ? `<div class="notice notice-soft compact-notice"><span>ⓘ</span><p>检测到未分层的旧专业记录“${escapeHtml([profile.major, profile.majorCode].filter(Boolean).join(' · '))}”；请核实学历层级后手动填入对应栏，系统不会自动归类。</p></div>` : ''}<div class="summary-line"><span>服务基层项目</span><strong>${escapeHtml(profile.grassrootsProjectStatus || '待确认')}</strong></div><div class="summary-line"><span>身份 / 户籍 / 生源</span><strong>${profile.graduationStatus || profile.hukou || profile.studentOrigin ? '部分填写' : '待补充'}</strong></div><div class="notice notice-soft compact-notice"><span>ⓘ</span><p>专业资格按最高学历对应代码核对；该层级缺代码时保持待核，不借用另一学历阶段的代码。</p></div></div><div class="panel privacy-card"><span>▣</span><strong>本机加密保存，默认不上传</strong><p>解锁期间数据在内存中明文使用；localStorage 保存加密信封。只有在同步面板明确确认后，个人记录才会上传到公开仓库。清理浏览器数据会删除本地档案。</p></div><section class="panel backup-panel"><div class="backup-panel-heading"><div><strong>个人数据加密备份</strong><small>备份需档案密码才能恢复；不含职位库或原始 Excel</small></div><span aria-hidden="true">↗</span></div><div class="backup-actions"><button type="button" class="button button-secondary" data-action="backup-export">下载加密备份</button><button type="button" class="button button-quiet" data-action="backup-choose">恢复备份</button><input id="backup-import-file" type="file" accept="application/json,.json" hidden/></div></section></aside></div></div>`;
 }
 
 function renderCoveragePanel() {
@@ -2275,7 +2308,7 @@ function renderSources() {
 }
 
 function renderPage() {
-  const pages = { overview: renderOverview, guide: renderGuide, plan: renderPlan, science: renderScience, aptitude: renderAptitude, generalKnowledge: renderGeneralKnowledge, essay: renderEssay, mocks: renderMocks, positions: renderPositions, compare: renderCompare, assistant: renderAssistant, scenarios: renderScenarios, matrix: renderMatrix, profile: renderProfile, research: renderResearch, evidence: renderEvidence, sources: renderSources, settings: renderSettings };
+  const pages = { overview: renderOverview, guide: renderGuide, plan: renderPlan, science: renderScience, aptitude: renderAptitude, generalKnowledge: renderGeneralKnowledge, essay: renderEssay, mocks: renderMocks, positions: renderPositions, compare: renderCompare, assistant: renderAssistant, scenarios: renderScenarios, matrix: renderMatrix, national: renderNationalPage, profile: renderProfile, research: renderResearch, evidence: renderEvidence, sources: renderSources, settings: renderSettings };
   const help = getPageHelp(page === 'aptitudeModule' ? 'aptitudeModule' : page);
   let content = page === 'aptitudeModule' ? renderAptitudeModule(activeAptitudeModuleId) : (pages[page] || renderOverview)();
   const aptitudeModuleChild = page === 'science' || page === 'generalKnowledge'
@@ -2690,7 +2723,8 @@ function getAptitudeModulePracticeCandidates(moduleId, values = {}) {
 
 function syncAptitudeModulePracticeSetup(form) {
   if (!form) return;
-  const values = Object.fromEntries(new FormData(form).entries());
+  const formData = new FormData(form);
+  const values = Object.fromEntries(formData.entries());
   const candidates = getAptitudeModulePracticeCandidates(form.dataset.moduleId, values);
   const countNote = form.querySelector('[data-aptitude-module-question-count]');
   const targetCount = form.querySelector('[name="targetQuestionCount"]');
@@ -2957,11 +2991,69 @@ function notify(message) {
   notify.timer = setTimeout(() => toastRoot.classList.remove('visible'), 2400);
 }
 
+function downloadNationalCsv(csv, suffix) {
+  const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = `national-2027-${suffix}-${todayString()}.csv`;
+  link.click();
+  setTimeout(() => URL.revokeObjectURL(url), 0);
+}
+
+function sortedNationalResults(rows, sort) {
+  return sortNationalPositions(rows, sort);
+}
+
+function exportNationalSelection(kind) {
+  if (!nationalPositions) { notify('职位数据尚未载入。'); return; }
+  const workspace = storage.nationalWorkspace;
+  const includeNotes = (items) => items.map((position) => ({
+    ...position,
+    personalNote: workspace.notes[position.id]
+      || workspace.favorites.find((item) => item.positionId === position.id)?.note || '',
+    eligibilitySummary: ['degree', 'degreeTitle', 'undergraduateMajor', 'undergraduateMajorCode', 'graduateMajor', 'graduateMajorCode',
+      'politicalStatus', 'graduationStatus', 'graduationYear', 'grassrootsYears', 'grassrootsProjectStatus']
+      .some((key) => String(storage.profile?.[key] ?? '').trim())
+      ? evaluateNationalEligibility(position, storage.profile).label : '未填写个人资料',
+  }));
+  if (kind === 'comparison') {
+    const ids = new Set(workspace.comparisons);
+    const selected = nationalPositions.filter((position) => ids.has(position.id));
+    downloadNationalCsv(nationalComparisonToCsv(includeNotes(selected)), 'comparison');
+    return;
+  }
+  if (kind === 'favorites') {
+    const ids = new Set(workspace.favorites.map((item) => item.positionId));
+    downloadNationalCsv(nationalPositionsToCsv(includeNotes(nationalPositions.filter((position) => ids.has(position.id)))), 'favorites');
+    return;
+  }
+  const selected = filterNationalPositions(nationalPositions, workspace.filters, storage.profile);
+  downloadNationalCsv(nationalPositionsToCsv(includeNotes(sortedNationalResults(selected, workspace.filters.sort))), 'filtered');
+}
+
 function render() {
   if (!pageMeta[page]) page = 'overview';
+  if (page === 'national' && !nationalPositions) void loadNationalWorkspaceData();
   pageRevealObserver?.disconnect();
   const enteringPage = pageTransition;
   root.innerHTML = renderLayout();
+  if (page === 'national' && nationalFilterOpenName) {
+    const details = [...root.querySelectorAll('.national-multi-select')]
+      .find((item) => item.dataset.filterName === nationalFilterOpenName);
+    if (details) details.open = true;
+    nationalFilterOpenName = '';
+  }
+  if (page === 'national' && window.matchMedia?.('(max-width: 760px)').matches) {
+    const drawer = document.querySelector('#national-filter-drawer');
+    if (drawer) drawer.open = nationalFilterDrawerOpenAfterRender;
+  }
+  nationalFilterDrawerOpenAfterRender = false;
+  if (page === 'national' && nationalColumnSettingsOpenAfterRender) {
+    const settings = document.querySelector('.national-column-settings');
+    if (settings) settings.open = true;
+  }
+  nationalColumnSettingsOpenAfterRender = false;
   startScienceExamClock();
   startGeneralKnowledgeExamClock();
   startAptitudeModuleExamClock();
@@ -2979,7 +3071,31 @@ function render() {
   pageTransition = false;
   resultTransition = false;
   assistantFilterChanged = false;
-  document.title = `${pageMeta[page][0]} · 京考备考台`;
+  document.title = `${pageMeta[page][0]} · 公考备考工作台`;
+}
+
+async function loadNationalWorkspaceData() {
+  if (nationalLoadPromise) return nationalLoadPromise;
+  nationalLoadError = '';
+  nationalLoadPromise = (async () => {
+    const [positionsResponse, metadataResponse] = await Promise.all([
+      fetch(NATIONAL_POSITIONS_URL), fetch(NATIONAL_METADATA_URL),
+    ]);
+    if (!positionsResponse.ok) throw new Error(`职位数据载入失败（HTTP ${positionsResponse.status}）`);
+    if (!metadataResponse.ok) throw new Error(`数据说明载入失败（HTTP ${metadataResponse.status}）`);
+    const [positions, metadata] = await Promise.all([positionsResponse.json(), metadataResponse.json()]);
+    if (!Array.isArray(positions) || !metadata || metadata.examType !== 'national' || metadata.year !== 2027) {
+      throw new Error('职位数据格式或年度不匹配。');
+    }
+    nationalPositions = positions;
+    nationalMetadata = metadata;
+  })().catch((error) => {
+    nationalLoadError = error.message || '职位数据载入失败。';
+  }).finally(() => {
+    nationalLoadPromise = null;
+    if (page === 'national' && accountSession) render();
+  });
+  return nationalLoadPromise;
 }
 
 function startScienceExamClock() {
@@ -3133,12 +3249,14 @@ function scrollToTop() {
 function navigate(id, query = '', aptitudeModuleId = null) {
   page = pageMeta[id] ? id : 'overview';
   if (page === 'aptitudeModule' && aptitudeModuleId) activeAptitudeModuleId = aptitudeModuleId;
-  const querySuffix = ['aptitude', 'science', 'generalKnowledge', 'aptitudeModule'].includes(page) && query ? `?${query}` : '';
+  const querySuffix = (['aptitude', 'science', 'generalKnowledge', 'aptitudeModule'].includes(page)
+    || page === 'national') && query ? `?${query}` : '';
   const routePath = page === 'science' ? 'aptitude/science'
     : page === 'generalKnowledge' ? 'aptitude/general-knowledge'
       : page === 'aptitudeModule' ? `aptitude/${activeAptitudeModuleId}` : page;
   const route = `#/${routePath}${querySuffix}`;
   const parsedRoute = readRoute(route);
+  nationalTab = parsedRoute.nationalTab;
   activeReviewQuestionId = parsedRoute.reviewQuestionId;
   activeSciencePlanTaskId = parsedRoute.taskId;
   selectedScienceKnowledgePointId = parsedRoute.knowledgePointId;
@@ -3234,6 +3352,125 @@ document.addEventListener('click', async (event) => {
   const actionEl = event.target.closest('[data-action]');
   if (!actionEl) return;
   const { action, code } = actionEl.dataset;
+  if (action === 'national-retry-load') {
+    nationalLoadPromise = null;
+    nationalLoadError = '';
+    void loadNationalWorkspaceData();
+    render();
+    return;
+  }
+  if (action === 'national-toggle-favorite') {
+    const id = actionEl.dataset.positionId;
+    const wasSaved = storage.nationalWorkspace.favorites.some((item) => item.positionId === id);
+    storage.nationalWorkspace = toggleNationalFavorite(storage.nationalWorkspace, id);
+    if (!wasSaved) {
+      const favorite = storage.nationalWorkspace.favorites.find((item) => item.positionId === id);
+      favorite.addedAt = new Date().toISOString();
+    }
+    await persistAndRender(wasSaved ? '已取消国考职位收藏' : '国考职位已收藏');
+    return;
+  }
+  if (action === 'national-toggle-compare') {
+    try {
+      storage.nationalWorkspace = toggleNationalComparison(storage.nationalWorkspace, actionEl.dataset.positionId);
+      await persistAndRender('国考比较清单已更新');
+    } catch (error) { notify(error.message); }
+    return;
+  }
+  if (action === 'national-toggle-difference-only') {
+    storage.nationalWorkspace = normalizeNationalWorkspace({
+      ...storage.nationalWorkspace,
+      comparisonOnlyDifferences: !storage.nationalWorkspace.comparisonOnlyDifferences,
+    });
+    await persistAndRender('比较视图已更新');
+    return;
+  }
+  if (action === 'national-clear-comparison') {
+    storage.nationalWorkspace = normalizeNationalWorkspace({ ...storage.nationalWorkspace, comparisons: [] });
+    await persistAndRender('已清空国考比较清单');
+    return;
+  }
+  if (action === 'national-move-compare') {
+    const workspace = normalizeNationalWorkspace(storage.nationalWorkspace);
+    const index = workspace.comparisons.indexOf(actionEl.dataset.positionId);
+    const target = index + Number(actionEl.dataset.direction);
+    if (index >= 0 && target >= 0 && target < workspace.comparisons.length) {
+      [workspace.comparisons[index], workspace.comparisons[target]] = [workspace.comparisons[target], workspace.comparisons[index]];
+      storage.nationalWorkspace = workspace;
+      await persistAndRender('比较顺序已更新');
+    }
+    return;
+  }
+  if (action === 'national-page') {
+    storage.nationalWorkspace = normalizeNationalWorkspace({
+      ...storage.nationalWorkspace,
+      filters: { ...storage.nationalWorkspace.filters, page: Number(actionEl.dataset.page) || 1 },
+    });
+    await persistAndRender('已切换职位页');
+    return;
+  }
+  if (action === 'national-remove-filter') {
+    const key = actionEl.dataset.filterKey;
+    const value = actionEl.dataset.filterValue ?? '';
+    const filters = { ...storage.nationalWorkspace.filters, page: 1 };
+    if (Array.isArray(filters[key])) {
+      filters[key] = filters[key].filter((item) => String(item) !== value);
+      if (key === 'departmentQueries' && filters.departmentQueries.length === 0) filters.departmentQuery = '';
+    } else if (['hasProfessionalTest', 'hasSpecialRequirement'].includes(key)) {
+      delete filters[key];
+    } else if (typeof filters[key] === 'boolean') {
+      filters[key] = false;
+    } else {
+      filters[key] = '';
+      if (key === 'departmentQueries') filters.departmentQuery = '';
+    }
+    if (key === 'workProvinces') {
+      filters.workCities = [];
+      filters.workDistricts = [];
+    }
+    if (key === 'workCities') filters.workDistricts = [];
+    storage.nationalWorkspace = normalizeNationalWorkspace({ ...storage.nationalWorkspace, filters });
+    await persistAndRender('已移除筛选条件');
+    return;
+  }
+  if (action === 'national-clear-filters') {
+    storage.nationalWorkspace = normalizeNationalWorkspace({
+      ...storage.nationalWorkspace, filters: { sort: 'recruit-desc', page: 1 },
+    });
+    await persistAndRender('已清除职位筛选条件');
+    return;
+  }
+  if (action === 'national-apply-saved-filter') {
+    const saved = storage.nationalWorkspace.savedFilters.find((item) => item.id === actionEl.dataset.filterId);
+    if (!saved) { notify('找不到这条已保存筛选。'); return; }
+    storage.nationalWorkspace = normalizeNationalWorkspace({
+      ...storage.nationalWorkspace, filters: { ...saved.filters, page: 1 },
+    });
+    await persistAndRender(`已应用筛选：${saved.name}`);
+    return;
+  }
+  if (action === 'national-delete-saved-filter') {
+    storage.nationalWorkspace = normalizeNationalWorkspace({
+      ...storage.nationalWorkspace,
+      savedFilters: storage.nationalWorkspace.savedFilters.filter((item) => item.id !== actionEl.dataset.filterId),
+    });
+    await persistAndRender('已删除筛选方案');
+    return;
+  }
+  if (action === 'national-export-filtered') { exportNationalSelection('filtered'); return; }
+  if (action === 'national-export-comparison') { exportNationalSelection('comparison'); return; }
+  if (action === 'national-export-favorites') { exportNationalSelection('favorites'); return; }
+  if (action === 'national-copy-position') {
+    const position = nationalPositions?.find((item) => item.id === actionEl.dataset.positionId);
+    if (!position) { notify('找不到这条国考职位。'); return; }
+    const text = Object.entries(position.rawFields || {}).map(([field, value]) => `${field}：${value || '原表为空'}`).join('\n');
+    try {
+      if (!navigator.clipboard?.writeText) throw new Error('当前浏览器未开放剪贴板权限。');
+      await navigator.clipboard.writeText(text);
+      notify('职位表原文已复制');
+    } catch (error) { notify(error.message || '复制失败，请检查浏览器剪贴板权限。'); }
+    return;
+  }
   const positionReference = actionEl.dataset.positionKey || code;
   if (action === 'set-question-review-kind') {
     const selection = actionEl.closest('[data-question-review-selection]');
@@ -4066,7 +4303,8 @@ document.addEventListener('submit', async (event) => {
   const form = event.target;
   if (!(form instanceof HTMLFormElement)) return;
   event.preventDefault();
-  const values = Object.fromEntries(new FormData(form).entries());
+  const formData = new FormData(form);
+  const values = Object.fromEntries(formData.entries());
   if (form.id === 'site-access-form') {
     if (values.password !== FIXED_ACCESS_PASSWORD) {
       showAccountGate('密码不正确，请重新输入。');
@@ -4111,6 +4349,112 @@ document.addEventListener('submit', async (event) => {
     return;
   }
   if (!accountSession) return;
+  if (form.id === 'national-column-form') {
+    nationalColumnSettingsOpenAfterRender = true;
+    storage.nationalWorkspace = normalizeNationalWorkspace({
+      ...storage.nationalWorkspace,
+      visibleColumns: formData.getAll('visibleColumns').map((item) => String(item)),
+    });
+    await persistAndRender('表格列设置已保存');
+    return;
+  }
+  if (form.dataset.form === 'national-rename-filter') {
+    try {
+      storage.nationalWorkspace = renameNationalSavedFilter(storage.nationalWorkspace, form.dataset.filterId, values.name);
+      await persistAndRender('筛选方案名称已更新');
+    } catch (error) { notify(error.message); }
+    return;
+  }
+  if (form.id === 'national-filter-form') {
+    if (page !== 'national') return;
+    if (nationalFilterDebounceTimer !== null) {
+      window.clearTimeout(nationalFilterDebounceTimer);
+      nationalFilterDebounceTimer = null;
+    }
+    const splitValues = (value) => String(value || '').split(/[、,，]/u).map((item) => item.trim()).filter(Boolean);
+    const pick = (key) => String(values[key] || '').trim();
+    const selectedValues = (key) => formData.getAll(key).map((item) => String(item).trim()).filter(Boolean);
+    const parentRegionChanged = ['workProvinces', 'workCities'].includes(nationalFilterFocusName);
+    const nextFilters = {
+      keyword: pick('keyword'), majorQuery: pick('majorQuery'), departmentQuery: '',
+      departmentQueries: splitValues(values.departmentQuery),
+      departments: selectedValues('departments'),
+      workProvinces: selectedValues('workProvinces'),
+      workCities: nationalFilterFocusName === 'workProvinces' ? [] : selectedValues('workCities'),
+      workDistricts: parentRegionChanged ? [] : selectedValues('workDistricts'),
+      sourceSheets: selectedValues('sourceSheets'),
+      educationRequirements: selectedValues('educationRequirements'),
+      degrees: selectedValues('degrees'),
+      politicalStatuses: selectedValues('politicalStatuses'),
+      grassrootsRequirements: selectedValues('grassrootsRequirements'),
+      examCategories: selectedValues('examCategories'),
+      qualificationStatuses: selectedValues('qualificationStatuses'),
+      minRecruitCount: pick('minRecruitCount'), maxRecruitCount: pick('maxRecruitCount'),
+      sort: pick('sort') || 'recruit-desc', page: 1,
+      excludeNeedsReview: Object.hasOwn(values, 'excludeNeedsReview'),
+      onlyInitialMatch: Object.hasOwn(values, 'onlyInitialMatch'),
+      onlyUnrestrictedMajor: Object.hasOwn(values, 'onlyUnrestrictedMajor'),
+      excludeExplicitMismatch: Object.hasOwn(values, 'excludeExplicitMismatch'),
+      excludeMajorMismatch: Object.hasOwn(values, 'excludeMajorMismatch'),
+      excludeEducationMismatch: Object.hasOwn(values, 'excludeEducationMismatch'),
+      excludePoliticalMismatch: Object.hasOwn(values, 'excludePoliticalMismatch'),
+      excludeGrassrootsMismatch: Object.hasOwn(values, 'excludeGrassrootsMismatch'),
+      excludeSpecialReview: Object.hasOwn(values, 'excludeSpecialReview'),
+      onlyRecruitAtLeastTwo: Object.hasOwn(values, 'onlyRecruitAtLeastTwo'),
+      onlyWithCompleteRawFields: Object.hasOwn(values, 'onlyWithCompleteRawFields'),
+    };
+    if (pick('hasProfessionalTest')) nextFilters.hasProfessionalTest = pick('hasProfessionalTest') === 'true';
+    if (pick('hasSpecialRequirement')) nextFilters.hasSpecialRequirement = pick('hasSpecialRequirement') === 'true';
+    storage.nationalWorkspace = normalizeNationalWorkspace({ ...storage.nationalWorkspace, filters: nextFilters });
+    await persistAndRender('筛选条件已加密保存在本机');
+    if (nationalFilterFocusName) {
+      const focused = document.querySelector(`#national-filter-form [name="${nationalFilterFocusName}"]`);
+      focused?.focus({ preventScroll: true });
+      if (focused && nationalFilterSelectionRange && typeof focused.setSelectionRange === 'function') {
+        focused.setSelectionRange(...nationalFilterSelectionRange);
+      }
+      nationalFilterFocusName = '';
+      nationalFilterSelectionRange = null;
+    }
+    nationalFilterOpenName = '';
+    return;
+  }
+  if (form.id === 'national-save-filter-form') {
+    const name = String(values.name || '').trim();
+    if (!name) { notify('请输入筛选方案名称。'); return; }
+    const id = `national-filter-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`;
+    const filtersToSave = { ...storage.nationalWorkspace.filters };
+    delete filtersToSave.page;
+    storage.nationalWorkspace = normalizeNationalWorkspace({
+      ...storage.nationalWorkspace,
+      savedFilters: [...storage.nationalWorkspace.savedFilters, { id, name, filters: filtersToSave }],
+    });
+    await persistAndRender(`已保存筛选方案：${name}`);
+    return;
+  }
+  if (form.id === 'national-note-form') {
+    const id = form.dataset.positionId;
+    const note = String(values.note || '').slice(0, 2000);
+    const priority = ['high', 'normal', 'watch'].includes(values.priority) ? values.priority : 'normal';
+    const workspace = normalizeNationalWorkspace(storage.nationalWorkspace);
+    workspace.notes[id] = note;
+    if (workspace.favorites.some((item) => item.positionId === id)) {
+      storage.nationalWorkspace = updateNationalFavorite(workspace, id, { note, priority });
+    } else {
+      storage.nationalWorkspace = workspace;
+    }
+    await persistAndRender('职位备注已加密保存在本机');
+    return;
+  }
+  if (form.id === 'national-favorite-search-form') {
+    storage.nationalWorkspace = normalizeNationalWorkspace({
+      ...storage.nationalWorkspace,
+      favoriteQuery: String(values.query || '').trim(),
+      favoritePriority: ['all', 'high', 'normal', 'watch'].includes(values.priority) ? values.priority : 'all',
+    });
+    await persistAndRender('收藏筛选已更新');
+    return;
+  }
   if (form.id === 'onboarding-profile-form') {
     storage.profile = { ...storage.profile, major: values.major.trim() || '公共管理', degree: values.degree.trim() };
     storage.onboarding = advanceOnboarding(storage.onboarding.step);
@@ -4389,6 +4733,19 @@ document.addEventListener('submit', async (event) => {
 
 document.addEventListener('input', (event) => {
   if (!accountSession) return;
+  if (page === 'national' && event.target.closest?.('#national-filter-form')
+    && event.target.matches?.('input[type="text"], input[type="number"]')) {
+    nationalFilterFocusName = event.target.name;
+    nationalFilterOpenName = '';
+    nationalFilterSelectionRange = event.target.type === 'text' && typeof event.target.selectionStart === 'number'
+      ? [event.target.selectionStart, event.target.selectionEnd] : null;
+    nationalFilterDrawerOpenAfterRender = document.querySelector('#national-filter-drawer')?.open === true;
+    if (nationalFilterDebounceTimer !== null) window.clearTimeout(nationalFilterDebounceTimer);
+    nationalFilterDebounceTimer = window.setTimeout(() => {
+      nationalFilterDebounceTimer = null;
+      event.target.form?.requestSubmit();
+    }, 350);
+  }
   if (event.target.name === 'title' && event.target.closest('#plan-task-form')) {
     const preview = modalRoot.querySelector('[data-plan-task-preview]');
     if (preview) preview.textContent = event.target.value.trim() || '未命名任务';
@@ -4445,6 +4802,14 @@ document.addEventListener('input', (event) => {
 
 document.addEventListener('change', async (event) => {
   if (!accountSession) return;
+  if (page === 'national' && event.target.closest?.('#national-filter-form') && event.target.name) {
+    nationalFilterFocusName = event.target.name;
+    nationalFilterOpenName = event.target.closest('.national-multi-select')?.dataset.filterName || '';
+    nationalFilterSelectionRange = event.target.type === 'text' && typeof event.target.selectionStart === 'number'
+      ? [event.target.selectionStart, event.target.selectionEnd] : null;
+    nationalFilterDrawerOpenAfterRender = document.querySelector('#national-filter-drawer')?.open === true;
+    event.target.form?.requestSubmit();
+  }
   if (event.target.matches?.('[data-question-review-checkbox]')) {
     const panel = event.target.closest('[data-question-review-kind-panel]');
     const groupId = event.target.dataset.reviewGroup;
@@ -4533,6 +4898,7 @@ window.addEventListener('hashchange', () => {
   if (!accountSession) return;
   const route = readRoute();
   page = pageMeta[route.page] ? route.page : 'overview';
+  nationalTab = route.nationalTab;
   activeAptitudeModuleId = route.aptitudeModuleId;
   activeReviewQuestionId = route.reviewQuestionId;
   activeSciencePlanTaskId = route.taskId;
