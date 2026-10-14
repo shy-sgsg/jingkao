@@ -43,7 +43,7 @@ function isMaleOnly(position) {
   const separateGenderRequirement = /(?:^|[\s，,、；;。:：/（）()])(?:男性|男生|男)(?=$|[\s，,、；;。:：/（）()])/u;
   const genderRequirementSources = [
     position.freshGraduateRaw,
-    ...rawFields.filter(([field]) => /要求|条件|资格|备注/u.test(field)).map(([, value]) => value),
+    ...rawFields.filter(([field]) => /要求|条件|资格|备注|性别/u.test(field)).map(([, value]) => value),
   ];
   return genderRequirementSources.some((value) => {
     const source = String(value || '');
