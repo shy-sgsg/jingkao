@@ -41,13 +41,18 @@ function isMaleOnly(position) {
   if (sources.some((source) => maleLimit.test(source) && !bothAllowed.test(source))) return true;
 
   const separateGenderRequirement = /(?:^|[\s，,、；;。:：/（）()])(?:男性|男生|男)(?=$|[\s，,、；;。:：/（）()])/u;
+  const maleMention = /男性|男生/u;
+  const malePreference = /(?:男性|男生)\s*优先/u;
   const genderRequirementSources = [
+    position.positionDescription,
     position.freshGraduateRaw,
-    ...rawFields.filter(([field]) => /要求|条件|资格|备注|性别/u.test(field)).map(([, value]) => value),
+    ...rawFields.filter(([field]) => /要求|条件|资格|备注|性别|职位简介/u.test(field)).map(([, value]) => value),
   ];
   return genderRequirementSources.some((value) => {
     const source = String(value || '');
-    return !/(?:女性|女生)/u.test(source) && separateGenderRequirement.test(source);
+    return !/(?:女性|女生)/u.test(source)
+      && !malePreference.test(source)
+      && (separateGenderRequirement.test(source) || maleMention.test(source));
   });
 }
 
