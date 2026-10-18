@@ -5,7 +5,7 @@ import { buildGuideGroups, getPageHelp } from './data/pageHelp.js';
 import { createEncryptedUserBackup, parseEncryptedUserBackup, parseUserBackup } from './data/backup.js';
 import { createStoredAccount, openStoredAccount, saveStoredAccount, unlockEncryptedAccount } from './data/encryptedStore.js';
 import { createUserDataBackup, mergeUserData, normalizePositionPreferences, resolveUserDataConflicts, studyLogKey, validateUserDataBackup } from './data/sync.js';
-import { createSyncBranch, GITHUB_SYNC_TARGET, readRemoteBackup, writeUserDataBackup } from './data/github.js';
+import { createSyncBranch, GITHUB_SYNC_TARGET, readPublicRemoteBackup, readRemoteBackup, writeUserDataBackup } from './data/github.js';
 import { clearGitHubToken, loadGitHubToken, saveGitHubToken } from './data/githubTokenStore.js';
 import { getPositionDataCompleteness, summarizePositionCoverage } from './data/coverage.js';
 import { buildResearchFindings, summarizeAnnualConflicts } from './data/findings.js';
@@ -3408,7 +3408,7 @@ document.addEventListener('click', async (event) => {
     nationalMonitorCloudImportPreview = { loading: true };
     render();
     try {
-      const remote = await readRemoteBackup();
+      const remote = await readPublicRemoteBackup();
       if (!remote.backup?.data?.nationalWorkspace) {
         throw new Error('sync-data 分支中没有可读取的个人备份。');
       }

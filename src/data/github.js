@@ -9,6 +9,7 @@ export const GITHUB_SYNC_TARGET = Object.freeze({
 });
 
 const API_ROOT = 'https://api.github.com';
+const RAW_CONTENTS_ROOT = 'https://raw.githubusercontent.com';
 const API_VERSION = '2026-03-10';
 
 export class GitHubSyncError extends Error {
@@ -93,6 +94,11 @@ function contentsUrl(branch) {
   return `${API_ROOT}/repos/${GITHUB_SYNC_TARGET.owner}/${GITHUB_SYNC_TARGET.repo}/contents/${path}?ref=${encodeURIComponent(branch)}`;
 }
 
+function rawContentsUrl() {
+  const path = GITHUB_SYNC_TARGET.path.split('/').map(encodeURIComponent).join('/');
+  return `${RAW_CONTENTS_ROOT}/${GITHUB_SYNC_TARGET.owner}/${GITHUB_SYNC_TARGET.repo}/${encodeURIComponent(GITHUB_SYNC_TARGET.branch)}/${path}`;
+}
+
 function requireFetch(fetchImpl) {
   if (typeof fetchImpl !== 'function') throw new GitHubSyncError('network', '当前浏览器无法连接 GitHub。');
 }
@@ -127,6 +133,31 @@ export async function readRemoteBackup({ token = null, fetchImpl = globalThis.fe
   try { backup = validateUserDataBackup(parsed); }
   catch (error) { throw new GitHubSyncError('invalid_backup', error.message); }
   return { branchExists: true, backup, sha: fileBody.sha };
+}
+
+export async function readPublicRemoteBackup({ fetchImpl = globalThis.fetch } = {}) {
+  requireFetch(fetchImpl);
+  let response;
+  try {
+    response = await fetchImpl(rawContentsUrl(), { method: 'GET', cache: 'no-store' });
+  } catch {
+    throw new GitHubSyncError('network', '无法连接 GitHub 公开备份，请检查网络后手动重试。');
+  }
+  if (response.status === 404) return { branchExists: false, backup: null, sha: null };
+  if (!response.ok) {
+    const rateLimited = response.status === 403 || response.status === 429;
+    const message = rateLimited
+      ? 'GitHub 暂时拒绝读取公开同步备份，请稍后再试。'
+      : `读取公开同步备份失败（HTTP ${response.status}）。`;
+    throw new GitHubSyncError(rateLimited ? 'rate_limited' : 'http', message, response.status);
+  }
+  let parsed;
+  try { parsed = await response.json(); }
+  catch { throw new GitHubSyncError('invalid_backup', 'GitHub 公开备份不是有效 JSON；为保护本机数据，已停止导入。'); }
+  let backup;
+  try { backup = validateUserDataBackup(parsed); }
+  catch (error) { throw new GitHubSyncError('invalid_backup', error.message); }
+  return { branchExists: true, backup, sha: null };
 }
 
 export async function createSyncBranch({ token, fetchImpl = globalThis.fetch } = {}) {
