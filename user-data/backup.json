@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "backupId": "6968ebc3-fd8c-4a7a-8d1c-49919ca0967d",
-  "updatedAt": "2026-10-13T12:59:06.027Z",
+  "backupId": "19ab9a98-4aee-498a-81ac-cded3a3c2ba7",
+  "updatedAt": "2026-10-18T07:49:25.421Z",
   "data": {
     "profile": {
       "major": "公共管理",
@@ -4425,6 +4425,272 @@
           "addedAt": "2026-10-13T12:55:05.933Z",
           "note": "",
           "priority": "normal"
+        },
+        {
+          "id": "national:2027:130101:300110004011",
+          "positionId": "national:2027:130101:300110004011",
+          "addedAt": "2026-10-18T15:49:25+08:00",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130128:300110022003",
+          "positionId": "national:2027:130128:300110022003",
+          "addedAt": "2026-10-18T15:49:25+08:00",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:109210:300130850004",
+          "positionId": "national:2027:109210:300130850004",
+          "addedAt": "2026-10-18T15:49:25+08:00",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130132:300110115006",
+          "positionId": "national:2027:130132:300110115006",
+          "addedAt": "2026-10-18T15:49:25+08:00",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130118:300110021001",
+          "positionId": "national:2027:130118:300110021001",
+          "addedAt": "2026-10-18T15:49:25+08:00",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130118:300110022001",
+          "positionId": "national:2027:130118:300110022001",
+          "addedAt": "2026-10-18T15:49:25+08:00",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:129119:300110001006",
+          "positionId": "national:2027:129119:300110001006",
+          "addedAt": "2026-10-18T15:49:25+08:00",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130109:300110005007",
+          "positionId": "national:2027:130109:300110005007",
+          "addedAt": "2026-10-18T15:49:25+08:00",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130125:300110023028",
+          "positionId": "national:2027:130125:300110023028",
+          "addedAt": "2026-10-18T15:49:25+08:00",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130125:300110024011",
+          "positionId": "national:2027:130125:300110024011",
+          "addedAt": "2026-10-18T15:49:25+08:00",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130125:300110026016",
+          "positionId": "national:2027:130125:300110026016",
+          "addedAt": "2026-10-18T15:49:25+08:00",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130125:300110022004",
+          "positionId": "national:2027:130125:300110022004",
+          "addedAt": "2026-10-18T15:49:25+08:00",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130125:300110024009",
+          "positionId": "national:2027:130125:300110024009",
+          "addedAt": "2026-10-18T15:49:25+08:00",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130125:300110035004",
+          "positionId": "national:2027:130125:300110035004",
+          "addedAt": "2026-10-18T15:49:25+08:00",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130125:300110021007",
+          "positionId": "national:2027:130125:300110021007",
+          "addedAt": "2026-10-18T15:49:25+08:00",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130125:300110023021",
+          "positionId": "national:2027:130125:300110023021",
+          "addedAt": "2026-10-18T15:49:25+08:00",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130125:300110026012",
+          "positionId": "national:2027:130125:300110026012",
+          "addedAt": "2026-10-18T15:49:25+08:00",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130125:300110027010",
+          "positionId": "national:2027:130125:300110027010",
+          "addedAt": "2026-10-18T15:49:25+08:00",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130125:300110032013",
+          "positionId": "national:2027:130125:300110032013",
+          "addedAt": "2026-10-18T15:49:25+08:00",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130125:300110033014",
+          "positionId": "national:2027:130125:300110033014",
+          "addedAt": "2026-10-18T15:49:25+08:00",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130125:300110034006",
+          "positionId": "national:2027:130125:300110034006",
+          "addedAt": "2026-10-18T15:49:25+08:00",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130125:300110033016",
+          "positionId": "national:2027:130125:300110033016",
+          "addedAt": "2026-10-18T15:49:25+08:00",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130108:300110111001",
+          "positionId": "national:2027:130108:300110111001",
+          "addedAt": "2026-10-18T15:49:25+08:00",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130117:300110013002",
+          "positionId": "national:2027:130117:300110013002",
+          "addedAt": "2026-10-18T15:49:25+08:00",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130117:300110015005",
+          "positionId": "national:2027:130117:300110015005",
+          "addedAt": "2026-10-18T15:49:25+08:00",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130117:300110001008",
+          "positionId": "national:2027:130117:300110001008",
+          "addedAt": "2026-10-18T15:49:25+08:00",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130104:300110020001",
+          "positionId": "national:2027:130104:300110020001",
+          "addedAt": "2026-10-18T15:49:25+08:00",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130104:300110021001",
+          "positionId": "national:2027:130104:300110021001",
+          "addedAt": "2026-10-18T15:49:25+08:00",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130104:300110022002",
+          "positionId": "national:2027:130104:300110022002",
+          "addedAt": "2026-10-18T15:49:25+08:00",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130104:300110023001",
+          "positionId": "national:2027:130104:300110023001",
+          "addedAt": "2026-10-18T15:49:25+08:00",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130104:300110015005",
+          "positionId": "national:2027:130104:300110015005",
+          "addedAt": "2026-10-18T15:49:25+08:00",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130118:300110238002",
+          "positionId": "national:2027:130118:300110238002",
+          "addedAt": "2026-10-18T15:49:25+08:00",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130123:300110085002",
+          "positionId": "national:2027:130123:300110085002",
+          "addedAt": "2026-10-18T15:49:25+08:00",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:158106:300130266001",
+          "positionId": "national:2027:158106:300130266001",
+          "addedAt": "2026-10-18T15:49:25+08:00",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:158106:300130266002",
+          "positionId": "national:2027:158106:300130266002",
+          "addedAt": "2026-10-18T15:49:25+08:00",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130120:300110100003",
+          "positionId": "national:2027:130120:300110100003",
+          "addedAt": "2026-10-18T15:49:25+08:00",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130118:300110118001",
+          "positionId": "national:2027:130118:300110118001",
+          "addedAt": "2026-10-18T15:49:25+08:00",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130118:300110121001",
+          "positionId": "national:2027:130118:300110121001",
+          "addedAt": "2026-10-18T15:49:25+08:00",
+          "note": "",
+          "priority": "normal"
         }
       ],
       "comparisons": [
@@ -4433,7 +4699,594 @@
       "notes": {},
       "favoriteQuery": "",
       "favoritePriority": "all",
-      "comparisonOnlyDifferences": false
+      "comparisonOnlyDifferences": false,
+      "monitoringSnapshots": {
+        "national:2027:130101:300110001006": {
+          "applications": 255,
+          "qualified": 19,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/beijing/2027_50.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130101:300110002006": {
+          "applications": 196,
+          "qualified": 17,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/beijing/2027_50.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130101:300110003011": {
+          "applications": 289,
+          "qualified": 22,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/beijing/2027_50.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130101:300110004011": {
+          "applications": 221,
+          "qualified": 32,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/beijing/2027_50.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130123:300110043003": {
+          "applications": 24,
+          "qualified": 6,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/2027_6.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130123:300110050003": {
+          "applications": 27,
+          "qualified": 22,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/2027_6.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130123:300110036005": {
+          "applications": 34,
+          "qualified": 26,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/2027_6.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130123:300110015006": {
+          "applications": 67,
+          "qualified": 55,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/2027_6.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130124:300110010001": {
+          "applications": 25,
+          "qualified": 0,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/2027_40.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130124:300110001019": {
+          "applications": 18,
+          "qualified": 4,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/2027_40.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130124:300110007003": {
+          "applications": 84,
+          "qualified": 0,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/2027_40.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130124:300110005009": {
+          "applications": 57,
+          "qualified": 7,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/2027_40.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130124:300110003002": {
+          "applications": 23,
+          "qualified": 11,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/2027_40.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130124:300110005002": {
+          "applications": 13,
+          "qualified": 2,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/2027_40.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130124:300110003008": {
+          "applications": 32,
+          "qualified": 27,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/2027_40.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130124:300110011006": {
+          "applications": 5,
+          "qualified": 2,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/2027_40.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130124:300110002012": {
+          "applications": 33,
+          "qualified": 9,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/2027_40.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130124:300110002006": {
+          "applications": 27,
+          "qualified": 1,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/2027_40.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130128:300110022003": {
+          "applications": 167,
+          "qualified": 12,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/sichuan/2027_2.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:109210:300130850004": {
+          "applications": 117,
+          "qualified": 0,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/zhejiang/2027_3.html",
+          "sourceUpdatedAt": "2026-10-17T17:33:00+08:00",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130112:300110020004": {
+          "applications": 68,
+          "qualified": 38,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/zhejiang/2027_8.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130132:300110103003": {
+          "applications": 108,
+          "qualified": 104,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/shanxisheng/2027_2.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130132:300110115009": {
+          "applications": 879,
+          "qualified": 812,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/shanxisheng/2027_2.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130132:300110115006": {
+          "applications": 64,
+          "qualified": 46,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/shanxisheng/2027_2.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130132:300110102004": {
+          "applications": 38,
+          "qualified": 14,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/shanxisheng/2027_2.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130120:300110037006": {
+          "applications": 266,
+          "qualified": 91,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/henan/2027_4.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130118:300110021001": {
+          "applications": 10,
+          "qualified": 10,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/shandong/2027_5.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130118:300110022001": {
+          "applications": 38,
+          "qualified": 8,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/shandong/2027_5.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130118:300110024001": {
+          "applications": 39,
+          "qualified": 28,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/shandong/2027_5.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130118:300110023003": {
+          "applications": 84,
+          "qualified": 31,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/shandong/2027_5.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130115:300110115004": {
+          "applications": 51,
+          "qualified": 21,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/fujian/2027_6.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:129119:300110001006": {
+          "applications": 40,
+          "qualified": 37,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/fujian/2027_5.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130107:300110001013": {
+          "applications": 52,
+          "qualified": 45,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/liaoning/2027_13.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130109:300110005007": {
+          "applications": 293,
+          "qualified": 197,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/heilongjiang/2027_2.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130125:300110023028": {
+          "applications": 45,
+          "qualified": 12,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangxi/2027_3.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130125:300110024011": {
+          "applications": 9,
+          "qualified": 1,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangxi/2027_3.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130125:300110026016": {
+          "applications": 7,
+          "qualified": 3,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangxi/2027_3.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130125:300110022004": {
+          "applications": 95,
+          "qualified": 62,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangxi/2027_3.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130125:300110024009": {
+          "applications": 23,
+          "qualified": 14,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangxi/2027_3.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130125:300110035004": {
+          "applications": 202,
+          "qualified": 37,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangxi/2027_3.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130125:300110021007": {
+          "applications": 35,
+          "qualified": 13,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangxi/2027_3.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130125:300110023021": {
+          "applications": 35,
+          "qualified": 20,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangxi/2027_3.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130125:300110026012": {
+          "applications": 14,
+          "qualified": 8,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangxi/2027_3.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130125:300110027010": {
+          "applications": 23,
+          "qualified": 18,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangxi/2027_3.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130125:300110032013": {
+          "applications": 14,
+          "qualified": 8,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangxi/2027_3.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130125:300110033014": {
+          "applications": 13,
+          "qualified": 11,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangxi/2027_3.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130125:300110034006": {
+          "applications": 12,
+          "qualified": 7,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangxi/2027_3.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130125:300110033016": {
+          "applications": 15,
+          "qualified": 10,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangxi/2027_3.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130108:300110111001": {
+          "applications": 158,
+          "qualified": 101,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/jilin/2027_3.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130117:300110013002": {
+          "applications": 15,
+          "qualified": 13,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/jiangxi/2027_3.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130117:300110015005": {
+          "applications": 26,
+          "qualified": 22,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/jiangxi/2027_3.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130117:300110001008": {
+          "applications": 27,
+          "qualified": 24,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/jiangxi/2027_3.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130104:300110020001": {
+          "applications": 12,
+          "qualified": 1,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/shanxi/2027_2.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130104:300110021001": {
+          "applications": 27,
+          "qualified": 8,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/shanxi/2027_2.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130104:300110022002": {
+          "applications": 17,
+          "qualified": 16,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/shanxi/2027_2.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130104:300110023001": {
+          "applications": 76,
+          "qualified": 9,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/shanxi/2027_2.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130104:300110015005": {
+          "applications": 384,
+          "qualified": 39,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/shanxi/2027_2.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130118:300110238002": {
+          "applications": 100,
+          "qualified": 12,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/shandong/2027_5.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130123:300110085002": {
+          "applications": 202,
+          "qualified": 13,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/2027_6.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130123:300110085006": {
+          "applications": 85,
+          "qualified": 63,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/2027_6.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:158106:300130266001": {
+          "applications": 105,
+          "qualified": 69,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/2027_30.html",
+          "sourceUpdatedAt": "2026-10-17T17:32:00+08:00",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:158106:300130266002": {
+          "applications": 119,
+          "qualified": 56,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/2027_30.html",
+          "sourceUpdatedAt": "2026-10-17T17:32:00+08:00",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130120:300110100003": {
+          "applications": 481,
+          "qualified": 7,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/henan/2027_4.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130118:300110118001": {
+          "applications": 27,
+          "qualified": 9,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/shandong/2027_5.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        },
+        "national:2027:130118:300110121001": {
+          "applications": 26,
+          "qualified": 8,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/shandong/2027_5.html",
+          "sourceUpdatedAt": "",
+          "observedAt": "2026-10-18T11:24:36.000+08:00",
+          "importedAt": "2026-10-18T15:49:25+08:00"
+        }
+      }
     },
     "onboarding": {
       "step": 0,
