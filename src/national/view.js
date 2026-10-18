@@ -1,5 +1,6 @@
 import { evaluateNationalEligibility } from './eligibility.js';
 import { filterNationalPositions, sortNationalPositions } from './filters.js';
+import { calculateCompetitionRatios, classifyFreshGraduateRequirement } from './monitoring.js';
 import { NATIONAL_DEFAULT_VISIBLE_COLUMNS } from './storage.js';
 
 const escapeNationalHtml = (value) => String(value ?? '').replace(/[&<>"']/gu, (char) => ({
@@ -180,7 +181,7 @@ function renderPositionTableRows(position, workspace, profile, columns, eligibil
 }
 
 function renderTabs(tab, workspace) {
-  const tabs = [['positions', '职位筛选'], ['overview', '数据概览'], ['favorites', `我的收藏 ${workspace.favorites.length}`], ['comparison', `并排比较 ${workspace.comparisons.length}`]];
+  const tabs = [['positions', '职位筛选'], ['overview', '数据概览'], ['favorites', `我的收藏 ${workspace.favorites.length}`], ['monitor', `岗位监控 ${workspace.favorites.length}`], ['comparison', `并排比较 ${workspace.comparisons.length}`]];
   return `<nav class="national-tabs" aria-label="国考职位工具">${tabs.map(([key, label]) => `<a class="national-tab ${tab === key ? 'is-active' : ''}" href="#/national?tab=${key}" ${tab === key ? 'aria-current="page"' : ''}>${label}</a>`).join('')}</nav>`;
 }
 
@@ -317,7 +318,84 @@ function renderComparisonTab({ positions, workspace, profile }) {
   }).join('')}</tbody></table></div>` : '<div class="empty-state">加入 2–6 个职位后，可以在此并排核对核心条件。</div>'}</section>`;
 }
 
-export function renderNationalWorkspace({ positions = [], metadata = {}, profile = {}, workspace, tab = 'positions' }) {
+function monitorDate(value) {
+  if (!value) return '';
+  const date = new Date(value);
+  return Number.isFinite(date.getTime()) ? date.toLocaleString('zh-CN', { hour12: false }) : value;
+}
+
+function monitorNumber(value) {
+  return Number.isSafeInteger(value) && value >= 0 ? value.toLocaleString('zh-CN') : '';
+}
+
+function monitorRatio(value) {
+  return typeof value === 'number' && Number.isFinite(value) ? value.toFixed(2) : '';
+}
+
+function monitorSourceLink(url, name) {
+  try {
+    const parsed = new URL(url);
+    if (!['http:', 'https:'].includes(parsed.protocol)) return '';
+    return `<a href="${escapeNationalHtml(parsed.href)}" target="_blank" rel="noreferrer">${escapeNationalHtml(name || '查看来源')} ↗</a>`;
+  } catch {
+    return '';
+  }
+}
+
+function renderMonitorPreview(preview) {
+  if (!preview) return '';
+  const summary = preview.summary || {};
+  const counts = [
+    ['新增收藏', summary.newFavorites], ['已存在收藏', summary.existingFavorites],
+    ['有效快照行', summary.validSnapshots], ['重复复合键', summary.duplicateKeys],
+    ['未知职位', summary.unknownPositions], ['格式错误行', summary.formatErrors],
+  ];
+  const errors = [
+    ...(preview.errors || []).map((message) => `<li>${escapeNationalHtml(message)}</li>`),
+    ...(preview.rows || []).flatMap((row) => row.errors.map((message) => `<li>第 ${row.line} 行：${escapeNationalHtml(message)}</li>`)),
+  ];
+  return `<section class="national-monitor-preview" id="national-monitor-preview" aria-live="polite"><div class="national-monitor-preview-heading"><h3>CSV 导入预览</h3><button type="button" class="button button-quiet" data-action="national-monitor-clear-preview">取消预览</button></div><div class="national-monitor-preview-counts">${counts.map(([label, value]) => `<div><strong>${Number(value || 0).toLocaleString('zh-CN')}</strong><span>${label}</span></div>`).join('')}</div>${errors.length ? `<ul class="national-monitor-errors">${errors.map((error) => typeof error === 'string' ? error : '').join('')}</ul>` : '<p class="national-monitor-valid">数据格式有效，可以确认导入。</p>'}<div class="national-monitor-preview-actions"><button type="button" class="button button-primary" data-action="national-monitor-import-confirm" ${preview.canImport ? '' : 'disabled'}>确认并保存到本机</button></div></section>`;
+}
+
+function renderPositionMonitoringTab({ positions, workspace, profile, importPreview }) {
+  const positionById = new Map(positions.map((position) => [position.id, position]));
+  const favorites = workspace.favorites || [];
+  const favoritesWithPosition = favorites.map((favorite) => ({ favorite, position: positionById.get(favorite.positionId) }))
+    .filter((item) => item.position);
+  const cities = [...new Set(favoritesWithPosition.map(({ position }) => position.workCity).filter(Boolean))]
+    .sort((left, right) => left.localeCompare(right, 'zh-CN'));
+  const query = String(workspace.monitorQuery || '').trim().toLocaleLowerCase('zh-CN');
+  const filtered = favoritesWithPosition.filter(({ favorite, position }) => {
+    const graduate = classifyFreshGraduateRequirement(position);
+    const haystack = [position.searchText, position.departmentName, position.organizationName, position.positionTitle,
+      position.departmentCode, position.positionCode, position.workCity, favorite.note].join(' ').toLocaleLowerCase('zh-CN');
+    return (!query || haystack.includes(query))
+      && (workspace.monitorCity === 'all' || position.workCity === workspace.monitorCity)
+      && (workspace.monitorFreshGraduate === 'all' || graduate.key === workspace.monitorFreshGraduate)
+      && (workspace.monitorPriority === 'all' || favorite.priority === workspace.monitorPriority);
+  });
+  const sort = workspace.monitorSort || 'applicationsRatio-desc';
+  const sorted = filtered.map((item) => ({ ...item, ratios: calculateCompetitionRatios(item.position, workspace.monitoringSnapshots?.[item.position.id]) }));
+  const [sortKey, sortDirection] = sort.split('-');
+  sorted.sort((left, right) => {
+    const a = left.ratios[sortKey];
+    const b = right.ratios[sortKey];
+    if (a === null && b !== null) return 1;
+    if (b === null && a !== null) return -1;
+    return (Number(b) - Number(a)) * (sortDirection === 'asc' ? -1 : 1);
+  });
+  const cityOptions = cities.map((city) => `<option value="${escapeNationalHtml(city)}" ${workspace.monitorCity === city ? 'selected' : ''}>${escapeNationalHtml(city)}</option>`).join('');
+  const rows = sorted.map(({ favorite, position, ratios }) => {
+    const snapshot = workspace.monitoringSnapshots?.[position.id] || null;
+    const eligibility = evaluateNationalEligibility(position, profile).label || '未填写个人条件';
+    const graduate = classifyFreshGraduateRequirement(position);
+    return `<tr><td>${escapeNationalHtml(position.workCity || '')}</td><td>${escapeNationalHtml(position.departmentName || '')}</td><td>${escapeNationalHtml(position.organizationName || '')}</td><td><strong>${escapeNationalHtml(position.positionTitle || '')}</strong><small>${escapeNationalHtml(position.positionCode || '')} · ${escapeNationalHtml(position.departmentCode || '')}</small></td><td>${monitorNumber(position.recruitCount)}</td><td>${monitorNumber(snapshot?.applications)}</td><td>${monitorNumber(snapshot?.qualified)}</td><td>${monitorRatio(ratios.applicationsRatio)}</td><td>${monitorRatio(ratios.qualifiedRatio)}</td><td>${escapeNationalHtml(graduate.label)}</td><td>${escapeNationalHtml(eligibility)}</td><td>${snapshot?.sourceUpdatedAt ? escapeNationalHtml(monitorDate(snapshot.sourceUpdatedAt)) : '来源未标注更新时间'}</td><td>${escapeNationalHtml(monitorDate(snapshot?.observedAt))}</td><td>${escapeNationalHtml(monitorDate(snapshot?.importedAt))}</td><td>${monitorSourceLink(snapshot?.sourceUrl, snapshot?.sourceName)}</td></tr>`;
+  }).join('');
+  const sortLabel = (key, title) => `<button type="button" class="national-monitor-sort ${sortKey === key ? 'is-active' : ''}" data-action="national-monitor-sort" data-sort-key="${key}" aria-label="按${title}排序">${title}${sortKey === key ? (sortDirection === 'asc' ? ' ↑' : ' ↓') : ''}</button>`;
+  return `<section class="national-monitor"><form id="national-monitor-filter-form" class="national-monitor-filters"><label class="form-field"><span>关键词</span><input name="query" value="${escapeNationalHtml(workspace.monitorQuery || '')}" placeholder="部门、单位、职位或代码"/></label><label class="form-field"><span>工作城市</span><select name="city"><option value="all">全部城市</option>${cityOptions}</select></label><label class="form-field"><span>应届要求原文</span><select name="freshGraduate"><option value="all">全部类别</option><option value="required" ${workspace.monitorFreshGraduate === 'required' ? 'selected' : ''}>职位原文明确要求应届</option><option value="not-mentioned" ${workspace.monitorFreshGraduate === 'not-mentioned' ? 'selected' : ''}>原文未明确提及应届限制</option><option value="review" ${workspace.monitorFreshGraduate === 'review' ? 'selected' : ''}>待人工核验</option></select></label><label class="form-field"><span>收藏优先级</span><select name="priority"><option value="all">全部优先级</option><option value="high" ${workspace.monitorPriority === 'high' ? 'selected' : ''}>重点关注</option><option value="normal" ${workspace.monitorPriority === 'normal' ? 'selected' : ''}>普通备选</option><option value="watch" ${workspace.monitorPriority === 'watch' ? 'selected' : ''}>暂时观察</option></select></label><button type="submit" class="button button-secondary">筛选岗位</button></form><section class="national-monitor-import"><div><h2>导入报名数据</h2><p>选择岗位级 CSV；预览通过后才写入本机加密账户。</p></div><form id="national-monitor-import-form"><label class="form-field"><span>CSV 文件</span><input id="national-monitor-file" name="file" type="file" accept=".csv,text/csv" required/></label><button type="submit" class="button button-secondary">读取并预览</button></form><p class="national-monitor-csv-hint">列名：department_code、position_code、applications、qualified、source_name、source_url、source_updated_at、observed_at；计数留空表示未知，0 表示明确为零。</p>${renderMonitorPreview(importPreview)}</section><div class="national-results-summary"><div><strong>${sorted.length.toLocaleString('zh-CN')}</strong><span> / ${favorites.length.toLocaleString('zh-CN')} 个收藏职位</span><small>报名/计划与过审/计划为两种独立口径；缺少数据时留空。</small></div></div>${sorted.length ? `<div class="national-monitor-table-scroll"><table class="national-monitor-table"><thead><tr><th>城市</th><th>招录部门</th><th>用人司局</th><th>职位名称/代码</th><th>计划招录</th><th>最新报名</th><th>最新过审</th><th>${sortLabel('applicationsRatio', '报名/计划')}</th><th>${sortLabel('qualifiedRatio', '过审/计划')}</th><th>应届原文分类</th><th>个人资格初核</th><th>来源更新时间</th><th>数据采集时间</th><th>本机导入时间</th><th>来源</th></tr></thead><tbody>${rows}</tbody></table></div>` : '<div class="empty-state">没有匹配的收藏职位。可调整城市、应届要求或优先级筛选。</div>'}</section>`;
+}
+
+export function renderNationalWorkspace({ positions = [], metadata = {}, profile = {}, workspace, tab = 'positions', monitorImportPreview = null }) {
   const state = workspace || { filters: {}, savedFilters: [], favorites: [], comparisons: [], notes: {} };
   const filters = state.filters || {};
   const eligibilityCache = eligibilityCacheFor(positions, profile);
@@ -354,9 +432,10 @@ export function renderNationalWorkspace({ positions = [], metadata = {}, profile
   const regionCount = filterNationalPositions(positions, regionFilters).length;
   const sort = filters.sort || 'recruit-desc';
   const sorted = sortNationalPositions(filtered, sort);
-  const currentTab = ['positions', 'overview', 'favorites', 'comparison'].includes(tab) ? tab : 'positions';
+  const currentTab = ['positions', 'overview', 'favorites', 'monitor', 'comparison'].includes(tab) ? tab : 'positions';
   const content = currentTab === 'overview' ? renderOverviewTab(metadata, positions, filtered.length, state)
     : currentTab === 'favorites' ? renderFavoritesTab({ positions, workspace: state, profile })
+      : currentTab === 'monitor' ? renderPositionMonitoringTab({ positions, workspace: state, profile, importPreview: monitorImportPreview })
       : currentTab === 'comparison' ? renderComparisonTab({ positions, workspace: state, profile })
       : renderPositionsTab({ positions, filtered: sorted, counts, excludedReviewCount, regionCount, page: Math.max(1, Number(filters.page) || 1), pageSize: 30, workspace: state, profile, eligibilityCache });
   return `<div class="page-body national-page"><div class="page-heading-row"><div><div class="eyebrow muted">NATIONAL CIVIL SERVICE EXAM · 2027</div><h1>2027 国考职位筛选</h1><p>19,426 个职位 · 计划招录 35,691 人 · 原始字段可逐条核对 · 选择结果仅作初步参考</p></div><a class="button button-secondary" href="#/profile">完善个人报考资料</a></div>${renderTabs(currentTab, state)}${content}</div>`;

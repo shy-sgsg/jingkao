@@ -45,7 +45,11 @@ test('backup carries position filters and accepts older schema-1 files without t
   assert.equal(upgraded.schemaVersion, 1);
   assert.equal(upgraded.data.positionPreferences.filters.districtId, 'all');
   assert.equal(upgraded.data.positionPreferences.jobSort, 'year-desc');
-  assert.deepEqual(upgraded.data.nationalWorkspace, { filters: {}, visibleColumns: null, savedFilters: [], favorites: [], comparisons: [], notes: {}, favoriteQuery: '', favoritePriority: 'all', comparisonOnlyDifferences: false });
+  assert.deepEqual(upgraded.data.nationalWorkspace, {
+    filters: {}, visibleColumns: null, savedFilters: [], favorites: [], comparisons: [], notes: {}, monitoringSnapshots: {},
+    favoriteQuery: '', favoritePriority: 'all', monitorQuery: '', monitorCity: 'all', monitorFreshGraduate: 'all',
+    monitorPriority: 'all', monitorSort: 'applicationsRatio-desc', comparisonOnlyDifferences: false,
+  });
 });
 
 test('national workspace is included in cloud backup and merges with Beijing job state isolated', () => {

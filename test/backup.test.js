@@ -28,7 +28,11 @@ const state = {
   aptitudeLogs: {}, essayLogs: {},
   mocks: [{ aptitude: 72, essay: 68, total: 140, date: '2026-10-08' }],
   favorites: ['231260001'], compared: ['231260001'],
-  nationalWorkspace: { filters: {}, visibleColumns: null, savedFilters: [], favorites: [], comparisons: [], notes: {}, favoriteQuery: '', favoritePriority: 'all', comparisonOnlyDifferences: false },
+  nationalWorkspace: {
+    filters: {}, visibleColumns: null, savedFilters: [], favorites: [], comparisons: [], notes: {}, monitoringSnapshots: {},
+    favoriteQuery: '', favoritePriority: 'all', monitorQuery: '', monitorCity: 'all', monitorFreshGraduate: 'all',
+    monitorPriority: 'all', monitorSort: 'applicationsRatio-desc', comparisonOnlyDifferences: false,
+  },
   settings: { density: 'compact', fontSize: 'large', motion: 'immersive' },
   onboarding: { step: 0, hidden: true, completed: true },
 };
@@ -63,7 +67,11 @@ test('older personal backups remain importable and receive empty plan edits and 
     knowledgeProgress: {}, sessions: [], answers: [], mistakes: {}, favorites: [], favoriteKnowledgePointIds: [], unclearKnowledgePointIds: [],
   });
   assert.deepEqual(parsed.state.settings, { density: 'comfortable', fontSize: 'standard', motion: 'enhanced' });
-  assert.deepEqual(parsed.state.nationalWorkspace, { filters: {}, visibleColumns: null, savedFilters: [], favorites: [], comparisons: [], notes: {}, favoriteQuery: '', favoritePriority: 'all', comparisonOnlyDifferences: false });
+  assert.deepEqual(parsed.state.nationalWorkspace, {
+    filters: {}, visibleColumns: null, savedFilters: [], favorites: [], comparisons: [], notes: {}, monitoringSnapshots: {},
+    favoriteQuery: '', favoritePriority: 'all', monitorQuery: '', monitorCity: 'all', monitorFreshGraduate: 'all',
+    monitorPriority: 'all', monitorSort: 'applicationsRatio-desc', comparisonOnlyDifferences: false,
+  });
 });
 
 test('personal backup restores national favorites, notes, filters, and comparisons independently', () => {
@@ -71,10 +79,11 @@ test('personal backup restores national favorites, notes, filters, and compariso
     filters: { province: ['湖北省'] },
     visibleColumns: null,
     savedFilters: [{ id: 'saved-1', name: '湖北基层', filters: { province: ['湖北省'] } }],
-    favorites: [{ id: 'national:2027:002000:100110001001', positionId: 'national:2027:002000:100110001001', addedAt: '', note: '核对专业', priority: 'high' }],
+    favorites: [{ id: 'national:2027:002000:100110001001', positionId: 'national:2027:002000:100110001001', addedAt: '', note: '核对专业', priority: 'high', localOnly: false }],
     comparisons: ['national:2027:002000:100110001001'],
     notes: { 'national:2027:002000:100110001001': '面试地点待查' },
-    favoriteQuery: '', favoritePriority: 'all', comparisonOnlyDifferences: false,
+    monitoringSnapshots: {}, favoriteQuery: '', favoritePriority: 'all', monitorQuery: '', monitorCity: 'all',
+    monitorFreshGraduate: 'all', monitorPriority: 'all', monitorSort: 'applicationsRatio-desc', comparisonOnlyDifferences: false,
   };
   const parsed = parseUserBackup(createUserBackup({ ...state, nationalWorkspace }));
   assert.equal(parsed.ok, true);

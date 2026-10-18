@@ -2140,6 +2140,39 @@ button.science-answer-option:hover { border-color: #c9d9ee; background: #f7faff;
 .national-compare-table thead th small { display: block; margin: 3px 0 5px; color: #8995a5; font-size: 15px; font-weight: 400; }
 .national-compare-table thead th button { border: 0; background: transparent; color: #6d82a5; font: inherit; font-size: 15px; cursor: pointer; }
 .national-compare-table .has-difference td { background: #fffbf3; }
+.national-monitor { display: grid; gap: 16px; min-width: 0; }
+.national-monitor-filters { display: grid; grid-template-columns: minmax(220px, 1.5fr) repeat(3, minmax(155px, 1fr)) auto; align-items: end; gap: 10px; padding: 14px; border: 1px solid #e6ebf1; border-radius: 12px; background: #fff; }
+.national-monitor-import { display: grid; gap: 10px; padding: 16px; border: 1px solid #e6ebf1; border-radius: 12px; background: #f9fbfd; }
+.national-monitor-import h2, .national-monitor-preview h3 { margin: 0; color: #273b55; font-size: 18px; }
+.national-monitor-import p { margin: 4px 0 0; color: #68788e; font-size: 14px; }
+.national-monitor-import form { display: flex; flex-wrap: wrap; align-items: end; gap: 10px; }
+.national-monitor-import form .form-field { min-width: min(420px, 100%); }
+.national-monitor-csv-hint { overflow-wrap: anywhere; }
+.national-monitor-preview { display: grid; gap: 12px; padding: 14px; border: 1px solid #dce5ef; border-radius: 10px; background: #fff; }
+.national-monitor-preview-heading, .national-monitor-preview-actions { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.national-monitor-preview-counts { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; }
+.national-monitor-preview-counts > div { display: grid; gap: 3px; padding: 10px; border-radius: 8px; background: #f4f7fa; }
+.national-monitor-preview-counts strong { color: #273b55; font-size: 20px; }
+.national-monitor-preview-counts span { color: #68788e; font-size: 13px; }
+.national-monitor-errors { display: grid; gap: 5px; max-height: 190px; margin: 0; padding: 12px 12px 12px 30px; overflow: auto; border-radius: 8px; background: #fff4f2; color: #923d32; font-size: 14px; }
+.national-monitor-valid { color: #28734b !important; }
+.national-monitor-table-scroll { width: 100%; overflow: auto; border: 1px solid #e5eaf0; border-radius: 12px; background: #fff; }
+.national-monitor-table { width: 100%; min-width: 1780px; border-collapse: collapse; }
+.national-monitor-table th, .national-monitor-table td { min-width: 105px; padding: 9px 10px; border-right: 1px solid #edf0f4; border-bottom: 1px solid #edf0f4; text-align: left; vertical-align: top; font-size: 13px; white-space: pre-wrap; overflow-wrap: anywhere; }
+.national-monitor-table th { position: sticky; top: 0; z-index: 1; background: #f8fafc; color: #415670; }
+.national-monitor-table th:nth-child(4) { min-width: 230px; }
+.national-monitor-table th:nth-child(n+12) { min-width: 150px; }
+.national-monitor-table td small { display: block; margin-top: 4px; color: #8290a2; }
+.national-monitor-table a { color: #416a9d; }
+.national-monitor-sort { padding: 0; border: 0; background: transparent; color: inherit; font: inherit; font-weight: 600; cursor: pointer; }
+.national-monitor-sort.is-active { color: #315f96; }
+@media (max-width: 980px) {
+  .national-monitor-filters { grid-template-columns: repeat(2, minmax(160px, 1fr)); }
+}
+@media (max-width: 560px) {
+  .national-monitor-filters { grid-template-columns: minmax(0, 1fr); }
+  .national-monitor-preview-heading, .national-monitor-preview-actions { align-items: stretch; flex-direction: column; }
+}
 .national-comparison .empty-state { padding: 35px 15px; border: 1px dashed #dbe2eb; border-radius: 12px; background: #fff; }
 
 @media (max-width: 1080px) {

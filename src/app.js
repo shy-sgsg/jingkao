@@ -39,6 +39,7 @@ import { renderAptitudeModuleLaunchButtons } from './aptitude/launch.js';
 import { renderEligibilityChecks } from './ui/eligibility.js';
 import { renderScoreBreakdown } from './ui/scoreBreakdown.js';
 import { emptyNationalWorkspace, normalizeNationalWorkspace, renameNationalSavedFilter, toggleNationalComparison, toggleNationalFavorite, updateNationalFavorite } from './national/storage.js';
+import { applyPositionMonitorImport, parsePositionMonitorCsv, previewPositionMonitorImport } from './national/monitoring.js';
 import { filterNationalPositions, sortNationalPositions } from './national/filters.js';
 import { evaluateNationalEligibility } from './national/eligibility.js';
 import { nationalComparisonToCsv, nationalPositionsToCsv } from './national/export.js';
@@ -116,7 +117,7 @@ function readRoute(hash = location.hash) {
   const aptitudeRoute = resolveAptitudeModuleRoute(routePage);
   return {
     page: aptitudeRoute?.page || pageAliases[routePage] || routePage,
-    nationalTab: ['positions', 'overview', 'favorites', 'comparison'].includes(value('tab')) ? value('tab') : 'positions',
+    nationalTab: ['positions', 'overview', 'favorites', 'monitor', 'comparison'].includes(value('tab')) ? value('tab') : 'positions',
     aptitudeModuleId: aptitudeRoute?.moduleId || null,
     taskId: value('task'), knowledgePointId: value('knowledge'), sessionId: value('session'),
     reviewQuestionId: value('review'),
@@ -172,6 +173,7 @@ let accountSession = null;
 let githubTokenMemory = null;
 let cloudSyncUi = { screen: 'panel', busy: false, pending: null, choices: {}, error: '', result: null, returnScreen: 'panel', tokenPersistence: 'none' };
 let cloudSyncStatus = 'not_synced';
+let nationalMonitorImportPreview = null;
 let storage = emptyStorage();
 
 function applyDisplaySettings() {
@@ -631,7 +633,7 @@ function renderNationalPage() {
   }
   return renderNationalWorkspace({
     positions: nationalPositions, metadata: nationalMetadata, profile: storage.profile,
-    workspace: storage.nationalWorkspace, tab: nationalTab,
+    workspace: storage.nationalWorkspace, tab: nationalTab, monitorImportPreview: nationalMonitorImportPreview,
   });
 }
 
@@ -2478,6 +2480,10 @@ async function confirmCloudSync() {
     renderCloudSyncModal();
     return;
   }
+  resolved = {
+    ...resolved,
+    data: prepareNationalWorkspaceForSync(resolved.data),
+  };
   const remoteBackup = pending.remote.backup;
   const mergedContent = { data: resolved.data, tombstones: resolved.tombstones };
   const needsWrite = !remoteBackup
@@ -2520,8 +2526,13 @@ async function confirmCloudSync() {
     }
 
     const previousStorage = storage;
+    const syncedNationalWorkspace = preserveLocalNationalMonitoringWorkspace(
+      previousStorage.nationalWorkspace,
+      outputBackup.data.nationalWorkspace,
+    );
     storage = readStorage({
       ...outputBackup.data,
+      nationalWorkspace: syncedNationalWorkspace,
       cloudSync: {
         ...previousStorage.cloudSync,
         baseline: outputBackup,
@@ -2548,6 +2559,39 @@ async function confirmCloudSync() {
     cloudSyncUi.busy = false;
     renderCloudSyncModal();
   }
+}
+
+function preserveLocalNationalMonitoringWorkspace(localSource, synchronizedSource) {
+  const local = normalizeNationalWorkspace(localSource);
+  const synchronized = normalizeNationalWorkspace(synchronizedSource);
+  return normalizeNationalWorkspace({
+    ...synchronized,
+    monitorQuery: local.monitorQuery,
+    monitorCity: local.monitorCity,
+    monitorFreshGraduate: local.monitorFreshGraduate,
+    monitorPriority: local.monitorPriority,
+    monitorSort: local.monitorSort,
+  });
+}
+
+function prepareNationalWorkspaceForSync(source) {
+  const nationalWorkspace = normalizeNationalWorkspace(source?.nationalWorkspace);
+  return {
+    ...source,
+    nationalWorkspace: {
+      ...nationalWorkspace,
+      favorites: nationalWorkspace.favorites.map((favorite) => {
+        const syncedFavorite = { ...favorite };
+        delete syncedFavorite.localOnly;
+        return syncedFavorite;
+      }),
+      monitorQuery: '',
+      monitorCity: 'all',
+      monitorFreshGraduate: 'all',
+      monitorPriority: 'all',
+      monitorSort: 'applicationsRatio-desc',
+    },
+  };
 }
 
 function renderBackupPreview(state, { exportedAt = null, kind = 'encrypted', sourceName = '' } = {}) {
@@ -3352,6 +3396,46 @@ document.addEventListener('click', async (event) => {
   const actionEl = event.target.closest('[data-action]');
   if (!actionEl) return;
   const { action, code } = actionEl.dataset;
+  if (action === 'national-monitor-clear-preview') {
+    nationalMonitorImportPreview = null;
+    render();
+    return;
+  }
+  if (action === 'national-monitor-import-confirm') {
+    const previousWorkspace = storage.nationalWorkspace;
+    try {
+      storage.nationalWorkspace = applyPositionMonitorImport(
+        storage.nationalWorkspace,
+        nationalMonitorImportPreview,
+        new Date().toISOString(),
+      );
+      if (!await persist()) {
+        storage.nationalWorkspace = previousWorkspace;
+        render();
+        return;
+      }
+      nationalMonitorImportPreview = null;
+      render();
+      notify('岗位快照和收藏已加密保存在本机');
+    } catch (error) {
+      storage.nationalWorkspace = previousWorkspace;
+      notify(error.message || '岗位快照导入失败。');
+    }
+    return;
+  }
+  if (action === 'national-monitor-sort') {
+    const key = actionEl.dataset.sortKey;
+    if (!['applicationsRatio', 'qualifiedRatio'].includes(key)) return;
+    const current = storage.nationalWorkspace.monitorSort || 'applicationsRatio-desc';
+    const [currentKey, currentDirection] = current.split('-');
+    const nextDirection = currentKey === key && currentDirection === 'desc' ? 'asc' : 'desc';
+    storage.nationalWorkspace = normalizeNationalWorkspace({
+      ...storage.nationalWorkspace,
+      monitorSort: `${key}-${nextDirection}`,
+    });
+    await persistAndRender('岗位监控排序已更新');
+    return;
+  }
   if (action === 'national-retry-load') {
     nationalLoadPromise = null;
     nationalLoadError = '';
@@ -4315,6 +4399,35 @@ document.addEventListener('submit', async (event) => {
   event.preventDefault();
   const formData = new FormData(form);
   const values = Object.fromEntries(formData.entries());
+  if (form.id === 'national-monitor-filter-form') {
+    storage.nationalWorkspace = normalizeNationalWorkspace({
+      ...storage.nationalWorkspace,
+      monitorQuery: String(values.query || '').trim(),
+      monitorCity: String(values.city || 'all'),
+      monitorFreshGraduate: ['all', 'required', 'not-mentioned', 'review'].includes(values.freshGraduate) ? values.freshGraduate : 'all',
+      monitorPriority: ['all', 'high', 'normal', 'watch'].includes(values.priority) ? values.priority : 'all',
+    });
+    await persistAndRender('岗位监控筛选已更新');
+    return;
+  }
+  if (form.id === 'national-monitor-import-form') {
+    const file = formData.get('file');
+    if (!file || typeof file.text !== 'function') {
+      nationalMonitorImportPreview = { rows: [], errors: ['请选择 CSV 文件。'], summary: {}, canImport: false };
+      render();
+      return;
+    }
+    try {
+      const parsed = parsePositionMonitorCsv(await file.text(), nationalPositions || []);
+      nationalMonitorImportPreview = previewPositionMonitorImport(parsed, storage.nationalWorkspace, nationalPositions || []);
+      render();
+      notify(nationalMonitorImportPreview.canImport ? 'CSV 预览已生成，请核对后确认导入。' : 'CSV 存在问题，请先修正后重新选择。');
+    } catch (error) {
+      nationalMonitorImportPreview = { rows: [], errors: [error.message || 'CSV 文件读取失败。'], summary: {}, canImport: false };
+      render();
+    }
+    return;
+  }
   if (form.id === 'site-access-form') {
     if (values.password !== FIXED_ACCESS_PASSWORD) {
       showAccountGate('密码不正确，请重新输入。');
@@ -4813,6 +4926,10 @@ document.addEventListener('input', (event) => {
 
 document.addEventListener('change', async (event) => {
   if (!accountSession) return;
+  if (event.target.id === 'national-monitor-file') {
+    nationalMonitorImportPreview = null;
+    document.querySelector('#national-monitor-preview')?.remove();
+  }
   if (page === 'national' && event.target.closest?.('#national-filter-form') && event.target.name) {
     nationalFilterFocusName = event.target.name;
     nationalFilterOpenName = event.target.closest('.national-multi-select')?.dataset.filterName || '';

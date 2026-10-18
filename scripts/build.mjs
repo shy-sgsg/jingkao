@@ -17,6 +17,7 @@ const appModules = [
   '../src/data/onboarding.js',
   '../src/data/pageHelp.js',
   '../src/national/storage.js',
+  '../src/national/monitoring.js',
   '../src/national/eligibility.js',
   '../src/national/filters.js',
   '../src/national/export.js',

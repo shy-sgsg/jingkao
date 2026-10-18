@@ -213,7 +213,20 @@ function projectUserData(source = {}) {
   merged.compared = normalizeSet(merged.compared, 'compared');
   merged.settings = requireRecord(merged.settings, 'settings');
   merged.positionPreferences = normalizePositionPreferences(merged.positionPreferences);
-  merged.nationalWorkspace = normalizeNationalWorkspace(merged.nationalWorkspace);
+  const nationalWorkspace = normalizeNationalWorkspace(merged.nationalWorkspace);
+  merged.nationalWorkspace = {
+    ...nationalWorkspace,
+    favorites: nationalWorkspace.favorites.map((favorite) => {
+      const syncedFavorite = { ...favorite };
+      delete syncedFavorite.localOnly;
+      return syncedFavorite;
+    }),
+    monitorQuery: '',
+    monitorCity: 'all',
+    monitorFreshGraduate: 'all',
+    monitorPriority: 'all',
+    monitorSort: 'applicationsRatio-desc',
+  };
   merged.onboarding = requireRecord(merged.onboarding, 'onboarding');
 
   for (const collection of RECORD_COLLECTIONS) {

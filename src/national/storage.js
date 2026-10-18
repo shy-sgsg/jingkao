@@ -23,8 +23,10 @@ export function isNationalPositionId(value) {
 
 export function emptyNationalWorkspace() {
   return {
-    filters: {}, savedFilters: [], favorites: [], comparisons: [], notes: {},
+    filters: {}, savedFilters: [], favorites: [], comparisons: [], notes: {}, monitoringSnapshots: {},
     favoriteQuery: '', favoritePriority: 'all', comparisonOnlyDifferences: false,
+    monitorQuery: '', monitorCity: 'all', monitorFreshGraduate: 'all', monitorPriority: 'all',
+    monitorSort: 'applicationsRatio-desc',
   };
 }
 
@@ -41,6 +43,7 @@ export function normalizeNationalWorkspace(source) {
       addedAt: typeof record.addedAt === 'string' ? record.addedAt : '',
       note: typeof record.note === 'string' ? record.note.slice(0, 2000) : '',
       priority: ['high', 'normal', 'watch'].includes(record.priority) ? record.priority : 'normal',
+      localOnly: record.localOnly === true,
     });
   }
   const comparisons = [...new Set((Array.isArray(value.comparisons) ? value.comparisons : [])
@@ -54,6 +57,17 @@ export function normalizeNationalWorkspace(source) {
   const notes = Object.fromEntries(Object.entries(isRecord(value.notes) ? value.notes : {})
     .filter(([id, note]) => isNationalPositionId(id) && typeof note === 'string')
     .map(([id, note]) => [id, note.slice(0, 2000)]));
+  const monitoringSnapshots = Object.fromEntries(Object.entries(isRecord(value.monitoringSnapshots) ? value.monitoringSnapshots : {})
+    .filter(([id, snapshot]) => isNationalPositionId(id) && isRecord(snapshot))
+    .map(([id, snapshot]) => [id, {
+      applications: Number.isSafeInteger(snapshot.applications) && snapshot.applications >= 0 ? snapshot.applications : null,
+      qualified: Number.isSafeInteger(snapshot.qualified) && snapshot.qualified >= 0 ? snapshot.qualified : null,
+      sourceName: typeof snapshot.sourceName === 'string' ? snapshot.sourceName.slice(0, 240) : '',
+      sourceUrl: typeof snapshot.sourceUrl === 'string' ? snapshot.sourceUrl.slice(0, 2000) : '',
+      sourceUpdatedAt: typeof snapshot.sourceUpdatedAt === 'string' ? snapshot.sourceUpdatedAt.slice(0, 120) : '',
+      observedAt: typeof snapshot.observedAt === 'string' ? snapshot.observedAt.slice(0, 120) : '',
+      importedAt: typeof snapshot.importedAt === 'string' ? snapshot.importedAt.slice(0, 120) : '',
+    }]));
   return {
     filters: isRecord(value.filters) ? value.filters : {},
     visibleColumns: value.visibleColumns === undefined || value.visibleColumns === null
@@ -64,8 +78,15 @@ export function normalizeNationalWorkspace(source) {
     favorites: [...favoritesById.values()],
     comparisons,
     notes,
+    monitoringSnapshots,
     favoriteQuery: typeof value.favoriteQuery === 'string' ? value.favoriteQuery.slice(0, 160) : '',
     favoritePriority: ['all', 'high', 'normal', 'watch'].includes(value.favoritePriority) ? value.favoritePriority : 'all',
+    monitorQuery: typeof value.monitorQuery === 'string' ? value.monitorQuery.slice(0, 160) : '',
+    monitorCity: typeof value.monitorCity === 'string' ? value.monitorCity.slice(0, 80) : 'all',
+    monitorFreshGraduate: ['all', 'required', 'not-mentioned', 'review'].includes(value.monitorFreshGraduate) ? value.monitorFreshGraduate : 'all',
+    monitorPriority: ['all', 'high', 'normal', 'watch'].includes(value.monitorPriority) ? value.monitorPriority : 'all',
+    monitorSort: ['applicationsRatio-desc', 'applicationsRatio-asc', 'qualifiedRatio-desc', 'qualifiedRatio-asc'].includes(value.monitorSort)
+      ? value.monitorSort : 'applicationsRatio-desc',
     comparisonOnlyDifferences: value.comparisonOnlyDifferences === true,
   };
 }
@@ -76,7 +97,10 @@ export function toggleNationalFavorite(source, positionId) {
   const existing = workspace.favorites.findIndex((item) => item.positionId === positionId);
   workspace.favorites = existing >= 0
     ? workspace.favorites.filter((item) => item.positionId !== positionId)
-    : [...workspace.favorites, { id: positionId, positionId, addedAt: '', note: '', priority: 'normal' }];
+    : [...workspace.favorites, {
+      id: positionId, positionId, addedAt: '', note: '', priority: 'normal',
+      localOnly: false,
+    }];
   return workspace;
 }
 
@@ -96,7 +120,10 @@ export function updateNationalFavorite(source, positionId, patch = {}) {
   if (!isNationalPositionId(positionId)) throw new Error('只能修改国考职位收藏。');
   const workspace = normalizeNationalWorkspace(source);
   const current = workspace.favorites.find((item) => item.positionId === positionId)
-    || { id: positionId, positionId, addedAt: '', note: '', priority: 'normal' };
+    || {
+      id: positionId, positionId, addedAt: '', note: '', priority: 'normal',
+      localOnly: false,
+    };
   const updated = {
     ...current,
     note: typeof patch.note === 'string' ? patch.note.slice(0, 2000) : current.note,
