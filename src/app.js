@@ -39,13 +39,7 @@ import { renderAptitudeModuleLaunchButtons } from './aptitude/launch.js';
 import { renderEligibilityChecks } from './ui/eligibility.js';
 import { renderScoreBreakdown } from './ui/scoreBreakdown.js';
 import { emptyNationalWorkspace, normalizeNationalWorkspace, renameNationalSavedFilter, toggleNationalComparison, toggleNationalFavorite, updateNationalFavorite } from './national/storage.js';
-import {
-  applyPositionMonitorCloudImport,
-  applyPositionMonitorImport,
-  parsePositionMonitorCsv,
-  previewPositionMonitorCloudImport,
-  previewPositionMonitorImport,
-} from './national/monitoring.js';
+import { applyPositionMonitorCloudImport, applyPositionMonitorImport, parsePositionMonitorCsv, previewPositionMonitorCloudImport, previewPositionMonitorImport } from './national/monitoring.js';
 import { filterNationalPositions, sortNationalPositions } from './national/filters.js';
 import { evaluateNationalEligibility } from './national/eligibility.js';
 import { nationalComparisonToCsv, nationalPositionsToCsv } from './national/export.js';
