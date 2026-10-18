@@ -2143,6 +2143,9 @@ button.science-answer-option:hover { border-color: #c9d9ee; background: #f7faff;
 .national-monitor { display: grid; gap: 16px; min-width: 0; }
 .national-monitor-filters { display: grid; grid-template-columns: minmax(220px, 1.5fr) repeat(3, minmax(155px, 1fr)) auto; align-items: end; gap: 10px; padding: 14px; border: 1px solid #e6ebf1; border-radius: 12px; background: #fff; }
 .national-monitor-import { display: grid; gap: 10px; padding: 16px; border: 1px solid #e6ebf1; border-radius: 12px; background: #f9fbfd; }
+.national-monitor-import-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.national-monitor-import-heading > div { min-width: 0; }
+.national-monitor-import-heading .button { flex: 0 0 auto; }
 .national-monitor-import h2, .national-monitor-preview h3 { margin: 0; color: #273b55; font-size: 18px; }
 .national-monitor-import p { margin: 4px 0 0; color: #68788e; font-size: 14px; }
 .national-monitor-import form { display: flex; flex-wrap: wrap; align-items: end; gap: 10px; }
@@ -2172,6 +2175,7 @@ button.science-answer-option:hover { border-color: #c9d9ee; background: #f7faff;
 @media (max-width: 560px) {
   .national-monitor-filters { grid-template-columns: minmax(0, 1fr); }
   .national-monitor-preview-heading, .national-monitor-preview-actions { align-items: stretch; flex-direction: column; }
+  .national-monitor-import-heading { align-items: stretch; flex-direction: column; }
 }
 .national-comparison .empty-state { padding: 35px 15px; border: 1px dashed #dbe2eb; border-radius: 12px; background: #fff; }
 

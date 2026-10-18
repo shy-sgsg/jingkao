@@ -240,6 +240,77 @@ export function applyPositionMonitorImport(workspace, preview, importedAt) {
   });
 }
 
+function isSnapshotNewer(candidate, current) {
+  if (!current) return true;
+  const candidateObservedAt = Date.parse(candidate?.observedAt || '');
+  const currentObservedAt = Date.parse(current?.observedAt || '');
+  if (Number.isFinite(candidateObservedAt) && Number.isFinite(currentObservedAt)
+    && candidateObservedAt !== currentObservedAt) return candidateObservedAt > currentObservedAt;
+  if (Number.isFinite(candidateObservedAt) && !Number.isFinite(currentObservedAt)) return true;
+  if (!Number.isFinite(candidateObservedAt) && Number.isFinite(currentObservedAt)) return false;
+  const candidateImportedAt = Date.parse(candidate?.importedAt || '');
+  const currentImportedAt = Date.parse(current?.importedAt || '');
+  return Number.isFinite(candidateImportedAt)
+    && (!Number.isFinite(currentImportedAt) || candidateImportedAt > currentImportedAt);
+}
+
+export function previewPositionMonitorCloudImport(remoteWorkspace, currentWorkspace, positions) {
+  const remote = normalizeNationalWorkspace(remoteWorkspace);
+  const current = normalizeNationalWorkspace(currentWorkspace);
+  const knownPositionIds = new Set((Array.isArray(positions) ? positions : []).map((position) => position?.id).filter(Boolean));
+  const remoteFavorites = new Map(remote.favorites.map((favorite) => [favorite.positionId, favorite]));
+  const currentFavoriteIds = new Set(current.favorites.map((favorite) => favorite.positionId));
+  const entries = Object.entries(remote.monitoringSnapshots);
+  const rows = entries.filter(([positionId]) => knownPositionIds.has(positionId)).map(([positionId, snapshot]) => ({
+    positionId,
+    snapshot,
+    favorite: remoteFavorites.get(positionId) || null,
+  }));
+  const snapshotsToUpdate = rows.filter((row) => isSnapshotNewer(row.snapshot, current.monitoringSnapshots[row.positionId])).length;
+  const favoritesToAdd = rows.filter((row) => !currentFavoriteIds.has(row.positionId)).length;
+  const summary = {
+    validSnapshots: rows.length,
+    snapshotsToUpdate,
+    favoritesToAdd,
+    unknownPositions: entries.length - rows.length,
+  };
+  return {
+    rows,
+    summary,
+    canImport: snapshotsToUpdate > 0 || favoritesToAdd > 0,
+  };
+}
+
+export function applyPositionMonitorCloudImport(workspace, preview) {
+  if (!preview?.canImport || !Array.isArray(preview.rows)) throw new Error('云端预览没有可合并的新岗位数据。');
+  const next = normalizeNationalWorkspace(workspace);
+  const favoritesById = new Map(next.favorites.map((favorite) => [favorite.positionId, favorite]));
+  const snapshots = { ...next.monitoringSnapshots };
+  for (const row of preview.rows) {
+    if (!isNationalPositionId(row.positionId) || !row.snapshot || typeof row.snapshot !== 'object') {
+      throw new Error('云端岗位快照格式无效，请重新读取。');
+    }
+    const favorite = favoritesById.get(row.positionId);
+    const remoteFavorite = row.favorite?.positionId === row.positionId ? row.favorite : null;
+    favoritesById.set(row.positionId, favorite
+      ? { ...favorite, localOnly: false }
+      : {
+        id: row.positionId,
+        positionId: row.positionId,
+        addedAt: remoteFavorite?.addedAt || '',
+        note: remoteFavorite?.note || '',
+        priority: ['high', 'normal', 'watch'].includes(remoteFavorite?.priority) ? remoteFavorite.priority : 'normal',
+        localOnly: false,
+      });
+    if (isSnapshotNewer(row.snapshot, snapshots[row.positionId])) snapshots[row.positionId] = row.snapshot;
+  }
+  return normalizeNationalWorkspace({
+    ...next,
+    favorites: [...favoritesById.values()],
+    monitoringSnapshots: snapshots,
+  });
+}
+
 export function classifyFreshGraduateRequirement(position) {
   const text = `${position?.freshGraduateRaw || ''} ${position?.remarkRaw || ''}`.replace(/\s+/gu, ' ');
   if (!text.includes('应届')) return { key: 'not-mentioned', label: '原文未明确提及应届限制' };

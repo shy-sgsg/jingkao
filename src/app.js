@@ -39,7 +39,13 @@ import { renderAptitudeModuleLaunchButtons } from './aptitude/launch.js';
 import { renderEligibilityChecks } from './ui/eligibility.js';
 import { renderScoreBreakdown } from './ui/scoreBreakdown.js';
 import { emptyNationalWorkspace, normalizeNationalWorkspace, renameNationalSavedFilter, toggleNationalComparison, toggleNationalFavorite, updateNationalFavorite } from './national/storage.js';
-import { applyPositionMonitorImport, parsePositionMonitorCsv, previewPositionMonitorImport } from './national/monitoring.js';
+import {
+  applyPositionMonitorCloudImport,
+  applyPositionMonitorImport,
+  parsePositionMonitorCsv,
+  previewPositionMonitorCloudImport,
+  previewPositionMonitorImport,
+} from './national/monitoring.js';
 import { filterNationalPositions, sortNationalPositions } from './national/filters.js';
 import { evaluateNationalEligibility } from './national/eligibility.js';
 import { nationalComparisonToCsv, nationalPositionsToCsv } from './national/export.js';
@@ -174,6 +180,7 @@ let githubTokenMemory = null;
 let cloudSyncUi = { screen: 'panel', busy: false, pending: null, choices: {}, error: '', result: null, returnScreen: 'panel', tokenPersistence: 'none' };
 let cloudSyncStatus = 'not_synced';
 let nationalMonitorImportPreview = null;
+let nationalMonitorCloudImportPreview = null;
 let storage = emptyStorage();
 
 function applyDisplaySettings() {
@@ -634,6 +641,7 @@ function renderNationalPage() {
   return renderNationalWorkspace({
     positions: nationalPositions, metadata: nationalMetadata, profile: storage.profile,
     workspace: storage.nationalWorkspace, tab: nationalTab, monitorImportPreview: nationalMonitorImportPreview,
+    monitorCloudImportPreview: nationalMonitorCloudImportPreview,
   });
 }
 
@@ -3396,6 +3404,57 @@ document.addEventListener('click', async (event) => {
   const actionEl = event.target.closest('[data-action]');
   if (!actionEl) return;
   const { action, code } = actionEl.dataset;
+  if (action === 'national-monitor-cloud-cancel') {
+    nationalMonitorCloudImportPreview = null;
+    render();
+    return;
+  }
+  if (action === 'national-monitor-cloud-read') {
+    if (nationalMonitorCloudImportPreview?.loading) return;
+    nationalMonitorCloudImportPreview = { loading: true };
+    render();
+    try {
+      const remote = await readRemoteBackup();
+      if (!remote.backup?.data?.nationalWorkspace) {
+        throw new Error('sync-data 分支中没有可读取的个人备份。');
+      }
+      nationalMonitorCloudImportPreview = {
+        ...previewPositionMonitorCloudImport(
+          remote.backup.data.nationalWorkspace,
+          storage.nationalWorkspace,
+          nationalPositions || [],
+        ),
+        loading: false,
+      };
+    } catch (error) {
+      nationalMonitorCloudImportPreview = { loading: false, error: error.message || '读取同步分支失败。' };
+    }
+    render();
+    return;
+  }
+  if (action === 'national-monitor-cloud-confirm') {
+    if (!nationalMonitorCloudImportPreview?.canImport) return;
+    const previousWorkspace = storage.nationalWorkspace;
+    try {
+      storage.nationalWorkspace = applyPositionMonitorCloudImport(
+        storage.nationalWorkspace,
+        nationalMonitorCloudImportPreview,
+      );
+      if (!await persist()) {
+        storage.nationalWorkspace = previousWorkspace;
+        render();
+        return;
+      }
+      nationalMonitorCloudImportPreview = null;
+      render();
+      notify('云端岗位快照和对应收藏已合并到本机');
+    } catch (error) {
+      storage.nationalWorkspace = previousWorkspace;
+      render();
+      notify(error.message || '云端岗位数据合并失败。');
+    }
+    return;
+  }
   if (action === 'national-monitor-clear-preview') {
     nationalMonitorImportPreview = null;
     render();
