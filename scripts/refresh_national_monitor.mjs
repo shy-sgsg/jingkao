@@ -160,9 +160,7 @@ function parseTableRows(html, sourceUrl, catalog) {
     const titleIndex = headers.findIndex((header) => header.includes('职位名称') || header.includes('招考职位'));
     const applicationsIndex = headers.findIndex((header) => header.includes('报名人数'));
     const qualifiedIndex = headers.findIndex((header) => header.includes('合格人数'));
-    if (organizationIndex < 0 || titleIndex < 0) {
-      throw new Error(`华图职位表缺少用人司局或职位名称列，停止发布：${sourceUrl}`);
-    }
+    if (organizationIndex < 0 || titleIndex < 0) continue;
     const pageDepartmentName = departmentIndex < 0
       ? parseDepartmentName(html, catalog.departmentNames, sourceUrl)
       : '';
