@@ -311,6 +311,84 @@ export function applyPositionMonitorCloudImport(workspace, preview) {
   });
 }
 
+export function previewPositionMonitorWebsiteRefresh(snapshot, workspace, positions) {
+  const current = normalizeNationalWorkspace(workspace);
+  const sourceRecords = new Map((Array.isArray(snapshot?.records) ? snapshot.records : [])
+    .filter((record) => typeof record?.positionCode === 'string')
+    .map((record) => [record.positionCode, record]));
+  const positionsByCode = new Map();
+  for (const position of Array.isArray(positions) ? positions : []) {
+    if (!position?.positionCode || !position?.id) continue;
+    positionsByCode.set(position.positionCode, [...(positionsByCode.get(position.positionCode) || []), position]);
+  }
+
+  const rows = [];
+  for (const favorite of current.favorites) {
+    const localMatches = positionsByCode.get(favorite.positionId.split(':').at(-1)) || [];
+    if (localMatches.length !== 1 || localMatches[0].id !== favorite.positionId) continue;
+    const source = sourceRecords.get(localMatches[0].positionCode);
+    if (!source) continue;
+    rows.push({
+      positionId: favorite.positionId,
+      snapshot: {
+        applications: source.applications ?? null,
+        qualified: source.qualified ?? null,
+        sourceName: '华图教育',
+        sourceUrl: source.sourceUrl,
+        sourceUpdatedAt: snapshot.sourceUpdatedAt || '',
+        observedAt: snapshot.fetchedAt,
+      },
+    });
+  }
+
+  return {
+    rows,
+    requestId: snapshot.requestId,
+    fetchedAt: snapshot.fetchedAt,
+    sourceUpdatedAt: snapshot.sourceUpdatedAt || '',
+    summary: {
+      totalFavorites: current.favorites.length,
+      matched: rows.length,
+      missing: current.favorites.length - rows.length,
+    },
+    canImport: rows.length > 0,
+  };
+}
+
+export function applyPositionMonitorWebsiteRefresh(workspace, preview, importedAt) {
+  if (!preview?.canImport || !Array.isArray(preview.rows) || !preview.rows.length) {
+    throw new Error('没有可更新的本机收藏岗位监控数据。');
+  }
+  if (!Number.isFinite(Date.parse(importedAt))) throw new Error('导入时间无效。');
+  const next = normalizeNationalWorkspace(workspace);
+  const favorites = new Set(next.favorites.map((favorite) => favorite.positionId));
+  const snapshots = { ...next.monitoringSnapshots };
+  for (const row of preview.rows) {
+    const snapshot = row?.snapshot;
+    if (!isNationalPositionId(row?.positionId) || !favorites.has(row.positionId)
+      || !snapshot || typeof snapshot !== 'object'
+      || ![null, undefined].includes(snapshot.applications)
+        && (!Number.isSafeInteger(snapshot.applications) || snapshot.applications < 0)
+      || ![null, undefined].includes(snapshot.qualified)
+        && (!Number.isSafeInteger(snapshot.qualified) || snapshot.qualified < 0)
+      || typeof snapshot.sourceUrl !== 'string'
+      || typeof snapshot.sourceUpdatedAt !== 'string'
+      || !Number.isFinite(Date.parse(snapshot.observedAt))) {
+      throw new Error('岗位监控预览已失效，请重新获取最新数据。');
+    }
+    snapshots[row.positionId] = {
+      applications: snapshot.applications ?? null,
+      qualified: snapshot.qualified ?? null,
+      sourceName: '华图教育',
+      sourceUrl: snapshot.sourceUrl,
+      sourceUpdatedAt: snapshot.sourceUpdatedAt,
+      observedAt: snapshot.observedAt,
+      importedAt,
+    };
+  }
+  return normalizeNationalWorkspace({ ...next, monitoringSnapshots: snapshots });
+}
+
 export function classifyFreshGraduateRequirement(position) {
   const text = `${position?.freshGraduateRaw || ''} ${position?.remarkRaw || ''}`.replace(/\s+/gu, ' ');
   if (!text.includes('应届')) return { key: 'not-mentioned', label: '原文未明确提及应届限制' };

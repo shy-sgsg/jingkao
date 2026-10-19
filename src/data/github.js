@@ -99,6 +99,10 @@ function rawContentsUrl() {
   return `${RAW_CONTENTS_ROOT}/${GITHUB_SYNC_TARGET.owner}/${GITHUB_SYNC_TARGET.repo}/${encodeURIComponent(GITHUB_SYNC_TARGET.branch)}/${path}`;
 }
 
+function nationalMonitorRawUrl(requestId) {
+  return `${RAW_CONTENTS_ROOT}/${GITHUB_SYNC_TARGET.owner}/${GITHUB_SYNC_TARGET.repo}/${encodeURIComponent(GITHUB_SYNC_TARGET.branch)}/monitoring/national-2027.json?requestId=${encodeURIComponent(requestId)}&t=${Date.now()}`;
+}
+
 function requireFetch(fetchImpl) {
   if (typeof fetchImpl !== 'function') throw new GitHubSyncError('network', '当前浏览器无法连接 GitHub。');
 }
@@ -158,6 +162,102 @@ export async function readPublicRemoteBackup({ fetchImpl = globalThis.fetch } = 
   try { backup = validateUserDataBackup(parsed); }
   catch (error) { throw new GitHubSyncError('invalid_backup', error.message); }
   return { branchExists: true, backup, sha: null };
+}
+
+function requireMonitorRequestId(requestId) {
+  if (typeof requestId !== 'string' || !/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/iu.test(requestId)) {
+    throw new GitHubSyncError('invalid_request', '岗位监控刷新请求编号无效，请重新发起更新。');
+  }
+}
+
+export async function dispatchNationalMonitorRefresh({ token, requestId, fetchImpl = globalThis.fetch } = {}) {
+  if (!token) throw new GitHubSyncError('unauthorized', '请先在同步设置中配置具有 Contents 写入权限的 GitHub Token。');
+  requireMonitorRequestId(requestId);
+  requireFetch(fetchImpl);
+  await requestJson(`${API_ROOT}/repos/${GITHUB_SYNC_TARGET.owner}/${GITHUB_SYNC_TARGET.repo}/dispatches`, {
+    method: 'POST',
+    headers: { ...headers(token), 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      event_type: 'national-monitor-refresh',
+      client_payload: { requestId },
+    }),
+    signal: AbortSignal.timeout(15000),
+  }, fetchImpl);
+  return { requestId };
+}
+
+function invalidMonitorSnapshot(message = '华图监控快照格式无效，本机数据未更改。') {
+  return new GitHubSyncError('invalid_monitor_snapshot', message);
+}
+
+function validatePublicNationalMonitorSnapshot(value, requestId) {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) throw invalidMonitorSnapshot();
+  if (value.requestId !== requestId) return null;
+  if (value.schemaVersion !== 1 || value.year !== 2027
+    || !Number.isFinite(Date.parse(value.fetchedAt))
+    || typeof value.sourceUpdatedAt !== 'string'
+    || !Number.isSafeInteger(value.expectedPositionCount) || value.expectedPositionCount < 0
+    || !Array.isArray(value.records)) throw invalidMonitorSnapshot();
+
+  const seen = new Set();
+  const records = value.records.map((record) => {
+    if (!record || typeof record !== 'object' || Array.isArray(record)
+      || typeof record.positionCode !== 'string' || !/^\d{8,20}$/u.test(record.positionCode)
+      || seen.has(record.positionCode)
+      || ![null, undefined].includes(record.applications)
+        && (!Number.isSafeInteger(record.applications) || record.applications < 0)
+      || ![null, undefined].includes(record.qualified)
+        && (!Number.isSafeInteger(record.qualified) || record.qualified < 0)
+      || typeof record.sourceUrl !== 'string') throw invalidMonitorSnapshot();
+    let sourceUrl;
+    try { sourceUrl = new URL(record.sourceUrl); } catch { throw invalidMonitorSnapshot(); }
+    if (sourceUrl.protocol !== 'https:' || sourceUrl.hostname !== 'ah.huatu.com') throw invalidMonitorSnapshot();
+    seen.add(record.positionCode);
+    return {
+      positionCode: record.positionCode,
+      applications: record.applications ?? null,
+      qualified: record.qualified ?? null,
+      sourceUrl: sourceUrl.href,
+    };
+  });
+  if (records.length !== value.expectedPositionCount) throw invalidMonitorSnapshot('华图监控快照的职位覆盖数不完整，本机数据未更改。');
+  return {
+    schemaVersion: 1,
+    year: 2027,
+    requestId,
+    fetchedAt: value.fetchedAt,
+    sourceUpdatedAt: value.sourceUpdatedAt,
+    expectedPositionCount: value.expectedPositionCount,
+    records,
+  };
+}
+
+export async function readPublicNationalMonitorSnapshot({ requestId, fetchImpl = globalThis.fetch } = {}) {
+  requireMonitorRequestId(requestId);
+  requireFetch(fetchImpl);
+  let response;
+  try {
+    response = await fetchImpl(nationalMonitorRawUrl(requestId), {
+      method: 'GET',
+      cache: 'no-store',
+      signal: AbortSignal.timeout(12000),
+    });
+  } catch {
+    return null;
+  }
+  if (response.status === 404) return null;
+  if (!response.ok) {
+    const rateLimited = response.status === 403 || response.status === 429;
+    throw new GitHubSyncError(
+      rateLimited ? 'rate_limited' : 'http',
+      rateLimited ? 'GitHub 暂时限制读取公开监控快照，请稍后重试。' : `读取公开岗位监控快照失败（HTTP ${response.status}）。`,
+      response.status,
+    );
+  }
+  let parsed;
+  try { parsed = await response.json(); }
+  catch { throw invalidMonitorSnapshot(); }
+  return validatePublicNationalMonitorSnapshot(parsed, requestId);
 }
 
 export async function createSyncBranch({ token, fetchImpl = globalThis.fetch } = {}) {

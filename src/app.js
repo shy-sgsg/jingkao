@@ -5,7 +5,7 @@ import { buildGuideGroups, getPageHelp } from './data/pageHelp.js';
 import { createEncryptedUserBackup, parseEncryptedUserBackup, parseUserBackup } from './data/backup.js';
 import { createStoredAccount, openStoredAccount, saveStoredAccount, unlockEncryptedAccount } from './data/encryptedStore.js';
 import { createUserDataBackup, mergeUserData, normalizePositionPreferences, resolveUserDataConflicts, studyLogKey, validateUserDataBackup } from './data/sync.js';
-import { createSyncBranch, GITHUB_SYNC_TARGET, readPublicRemoteBackup, readRemoteBackup, writeUserDataBackup } from './data/github.js';
+import { createSyncBranch, dispatchNationalMonitorRefresh, GITHUB_SYNC_TARGET, readPublicNationalMonitorSnapshot, readPublicRemoteBackup, readRemoteBackup, writeUserDataBackup } from './data/github.js';
 import { clearGitHubToken, loadGitHubToken, saveGitHubToken } from './data/githubTokenStore.js';
 import { getPositionDataCompleteness, summarizePositionCoverage } from './data/coverage.js';
 import { buildResearchFindings, summarizeAnnualConflicts } from './data/findings.js';
@@ -39,7 +39,7 @@ import { renderAptitudeModuleLaunchButtons } from './aptitude/launch.js';
 import { renderEligibilityChecks } from './ui/eligibility.js';
 import { renderScoreBreakdown } from './ui/scoreBreakdown.js';
 import { emptyNationalWorkspace, normalizeNationalWorkspace, renameNationalSavedFilter, toggleNationalComparison, toggleNationalFavorite, updateNationalFavorite } from './national/storage.js';
-import { applyPositionMonitorCloudImport, applyPositionMonitorImport, parsePositionMonitorCsv, previewPositionMonitorCloudImport, previewPositionMonitorImport } from './national/monitoring.js';
+import { applyPositionMonitorCloudImport, applyPositionMonitorImport, applyPositionMonitorWebsiteRefresh, parsePositionMonitorCsv, previewPositionMonitorCloudImport, previewPositionMonitorImport, previewPositionMonitorWebsiteRefresh } from './national/monitoring.js';
 import { filterNationalPositions, sortNationalPositions } from './national/filters.js';
 import { evaluateNationalEligibility } from './national/eligibility.js';
 import { nationalComparisonToCsv, nationalPositionsToCsv } from './national/export.js';
@@ -175,6 +175,7 @@ let cloudSyncUi = { screen: 'panel', busy: false, pending: null, choices: {}, er
 let cloudSyncStatus = 'not_synced';
 let nationalMonitorImportPreview = null;
 let nationalMonitorCloudImportPreview = null;
+let nationalMonitorWebsiteRefreshPreview = null;
 let storage = emptyStorage();
 
 function applyDisplaySettings() {
@@ -636,6 +637,7 @@ function renderNationalPage() {
     positions: nationalPositions, metadata: nationalMetadata, profile: storage.profile,
     workspace: storage.nationalWorkspace, tab: nationalTab, monitorImportPreview: nationalMonitorImportPreview,
     monitorCloudImportPreview: nationalMonitorCloudImportPreview,
+    monitorWebsiteRefreshPreview: nationalMonitorWebsiteRefreshPreview,
   });
 }
 
@@ -2438,6 +2440,53 @@ async function loadCloudSyncToken() {
   return saved;
 }
 
+async function startNationalMonitorWebsiteRefresh() {
+  if (nationalMonitorWebsiteRefreshPreview?.loading) return;
+  if (!storage.nationalWorkspace.favorites.length) {
+    nationalMonitorWebsiteRefreshPreview = { error: '当前没有收藏岗位，请先收藏需要监控的职位。' };
+    render();
+    return;
+  }
+  nationalMonitorWebsiteRefreshPreview = { loading: true, message: '正在准备访问华图公开岗位统计…' };
+  render();
+  try {
+    const tokenState = await loadCloudSyncToken();
+    if (!tokenState?.token) {
+      nationalMonitorWebsiteRefreshPreview = {
+        error: '请先在同步设置中配置具有 jingkao 仓库 Contents 写入权限的 GitHub Token。',
+        requiresToken: true,
+      };
+      render();
+      return;
+    }
+    const requestId = globalThis.crypto?.randomUUID?.();
+    if (!requestId) throw new Error('当前浏览器无法生成安全刷新编号，请使用较新的浏览器重试。');
+    await dispatchNationalMonitorRefresh({ token: tokenState.token, requestId });
+    nationalMonitorWebsiteRefreshPreview = { loading: true, message: '已提交刷新任务，GitHub Actions 正在抓取华图数据…' };
+    render();
+
+    const deadline = Date.now() + 8 * 60 * 1000;
+    let snapshot = null;
+    while (Date.now() < deadline) {
+      snapshot = await readPublicNationalMonitorSnapshot({ requestId });
+      if (snapshot) break;
+      await new Promise((resolve) => setTimeout(resolve, 3000));
+    }
+    if (!snapshot) throw new Error('华图数据刷新仍未完成，请稍后再试；本机监控数据未更改。');
+    nationalMonitorWebsiteRefreshPreview = {
+      ...previewPositionMonitorWebsiteRefresh(snapshot, storage.nationalWorkspace, nationalPositions || []),
+      loading: false,
+    };
+  } catch (error) {
+    nationalMonitorWebsiteRefreshPreview = {
+      loading: false,
+      error: error.message || '获取华图监控数据失败，本机数据未更改。',
+      requiresToken: error.code === 'unauthorized' || error.code === 'forbidden',
+    };
+  }
+  render();
+}
+
 async function startCloudSync() {
   if (cloudSyncUi.busy) return;
   cloudSyncUi.busy = true;
@@ -3398,6 +3447,39 @@ document.addEventListener('click', async (event) => {
   const actionEl = event.target.closest('[data-action]');
   if (!actionEl) return;
   const { action, code } = actionEl.dataset;
+  if (action === 'national-monitor-refresh-cancel') {
+    nationalMonitorWebsiteRefreshPreview = null;
+    render();
+    return;
+  }
+  if (action === 'national-monitor-refresh') {
+    await startNationalMonitorWebsiteRefresh();
+    return;
+  }
+  if (action === 'national-monitor-refresh-confirm') {
+    if (!nationalMonitorWebsiteRefreshPreview?.canImport) return;
+    const previousWorkspace = storage.nationalWorkspace;
+    try {
+      storage.nationalWorkspace = applyPositionMonitorWebsiteRefresh(
+        storage.nationalWorkspace,
+        nationalMonitorWebsiteRefreshPreview,
+        new Date().toISOString(),
+      );
+      if (!await persist()) {
+        storage.nationalWorkspace = previousWorkspace;
+        render();
+        return;
+      }
+      nationalMonitorWebsiteRefreshPreview = null;
+      render();
+      notify('华图最新岗位监控数据已保存到本机');
+    } catch (error) {
+      storage.nationalWorkspace = previousWorkspace;
+      render();
+      notify(error.message || '岗位监控数据保存失败。');
+    }
+    return;
+  }
   if (action === 'national-monitor-cloud-cancel') {
     nationalMonitorCloudImportPreview = null;
     render();

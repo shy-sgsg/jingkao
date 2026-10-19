@@ -1,0 +1,50 @@
+name: Refresh national position monitoring snapshot
+
+on:
+  repository_dispatch:
+    types:
+      - national-monitor-refresh
+
+permissions:
+  contents: write
+
+concurrency:
+  group: national-monitor-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check out application source
+        uses: actions/checkout@v6
+        with:
+          ref: main
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          package-manager-cache: false
+
+      - name: Check out public sync-data branch
+        uses: actions/checkout@v6
+        with:
+          ref: sync-data
+          path: public-data
+          fetch-depth: 0
+
+      - name: Collect and validate public position statistics
+        env:
+          REQUEST_ID: ${{ github.event.client_payload.requestId }}
+        run: node scripts/refresh_national_monitor.mjs --request-id "$REQUEST_ID" --output public-data/monitoring/national-2027.json
+
+      - name: Publish snapshot to sync-data
+        working-directory: public-data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add monitoring/national-2027.json
+          git commit -m "Refresh public national position monitoring snapshot"
+          git push origin HEAD:sync-data
