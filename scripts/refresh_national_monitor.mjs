@@ -1,4 +1,4 @@
-import { mkdir, rename, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, rename, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 
 const SOURCE_ORIGIN = 'https://ah.huatu.com';
@@ -80,17 +80,66 @@ function parseDeclaredPositionCount(html) {
   return Number.isSafeInteger(count) && count >= 0 ? count : null;
 }
 
-function parseCount(value) {
+function parseCount(value, label, positionCode, sourceUrl) {
   const clean = textContent(value).replace(/,/gu, '').replace(/人$/u, '').trim();
   if (!clean || /^(?:--|—|-|暂无|未知)$/u.test(clean)) return null;
-  return /^\d+$/u.test(clean) && Number.isSafeInteger(Number(clean)) ? Number(clean) : null;
+  if (/^\d+$/u.test(clean) && Number.isSafeInteger(Number(clean))) return Number(clean);
+  throw new Error(`华图职位 ${positionCode} 的${label}无法识别（${sourceUrl}）：${clean.slice(0, 80)}`);
 }
 
 function normalizedHeader(value) {
   return textContent(value).replace(/[\s\u3000:：/（）()]+/gu, '');
 }
 
-function parseTableRows(html, sourceUrl) {
+function sourceIdentityKey({ departmentName, organizationName, positionCode, positionTitle }) {
+  return JSON.stringify([departmentName, organizationName, positionCode, positionTitle]);
+}
+
+function buildPositionCatalog(positions) {
+  if (!Array.isArray(positions) || !positions.length) {
+    throw new Error('国考职位目录为空或格式无效，无法可靠识别华图页面中的部门。');
+  }
+  const bySourceIdentity = new Map();
+  const departmentNames = new Set();
+  for (const position of positions) {
+    if (typeof position?.departmentCode !== 'string'
+      || typeof position?.departmentName !== 'string'
+      || typeof position?.organizationName !== 'string'
+      || typeof position?.positionCode !== 'string'
+      || typeof position?.positionTitle !== 'string') continue;
+    const departmentName = textContent(position.departmentName);
+    const organizationName = textContent(position.organizationName);
+    const positionCode = textContent(position.positionCode);
+    const positionTitle = textContent(position.positionTitle);
+    const key = sourceIdentityKey({ departmentName, organizationName, positionCode, positionTitle });
+    bySourceIdentity.set(key, [...(bySourceIdentity.get(key) || []), position.departmentCode]);
+    departmentNames.add(departmentName);
+  }
+  if (!bySourceIdentity.size || !departmentNames.size) {
+    throw new Error('国考职位目录缺少部门、司局或职位字段，无法匹配华图数据。');
+  }
+  return { bySourceIdentity, departmentNames };
+}
+
+function parseDepartmentName(html, departmentNames, sourceUrl) {
+  const headingMatch = html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1\s*>/iu);
+  const heading = textContent(headingMatch?.[1] || '');
+  const headingSuffix = '国家公务员职位表';
+  const suffixIndex = heading.lastIndexOf(headingSuffix);
+  if (!heading || suffixIndex < 0) {
+    throw new Error(`华图职位页标题格式无法识别，停止发布：${sourceUrl}`);
+  }
+  const titlePrefix = heading.slice(0, suffixIndex).trim();
+  const candidates = [...departmentNames].filter((name) => titlePrefix.endsWith(name));
+  const longestLength = Math.max(0, ...candidates.map((name) => name.length));
+  const longest = candidates.filter((name) => name.length === longestLength);
+  if (longest.length !== 1) {
+    throw new Error(`无法从华图职位页标题唯一识别招录部门，停止发布：${sourceUrl}`);
+  }
+  return longest[0];
+}
+
+function parseTableRows(html, sourceUrl, catalog) {
   const records = [];
   for (const tableMatch of html.matchAll(/<table\b[^>]*>([\s\S]*?)<\/table\s*>/giu)) {
     const rows = [...tableMatch[1].matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr\s*>/giu)]
@@ -106,16 +155,37 @@ function parseTableRows(html, sourceUrl) {
 
     const headers = rows[headerIndex].map(normalizedHeader);
     const codeIndex = headers.findIndex((header) => header.includes('岗位代码') || header.includes('职位代码'));
+    const departmentIndex = headers.findIndex((header) => header.includes('招录机关') || header.includes('招录单位'));
+    const organizationIndex = headers.findIndex((header) => header.includes('用人司局'));
+    const titleIndex = headers.findIndex((header) => header.includes('职位名称') || header.includes('招考职位'));
     const applicationsIndex = headers.findIndex((header) => header.includes('报名人数'));
     const qualifiedIndex = headers.findIndex((header) => header.includes('合格人数'));
+    if (organizationIndex < 0 || titleIndex < 0) {
+      throw new Error(`华图职位表缺少用人司局或职位名称列，停止发布：${sourceUrl}`);
+    }
+    const pageDepartmentName = departmentIndex < 0
+      ? parseDepartmentName(html, catalog.departmentNames, sourceUrl)
+      : '';
     for (const row of rows.slice(headerIndex + 1)) {
-      if (row.length <= Math.max(codeIndex, applicationsIndex, qualifiedIndex)) continue;
+      if (row.length <= Math.max(codeIndex, departmentIndex, organizationIndex, titleIndex, applicationsIndex, qualifiedIndex)) continue;
       const positionCode = textContent(row[codeIndex]);
       if (!/^\d{8,20}$/u.test(positionCode)) continue;
+      const departmentName = departmentIndex < 0 ? pageDepartmentName : textContent(row[departmentIndex]);
+      const organizationName = textContent(row[organizationIndex]);
+      const positionTitle = textContent(row[titleIndex]);
+      if (!departmentName || !organizationName || !positionTitle) {
+        throw new Error(`华图职位 ${positionCode} 缺少招录机关、用人司局或职位名称，停止发布：${sourceUrl}`);
+      }
+      const identity = { departmentName, organizationName, positionCode, positionTitle };
+      const departmentCodes = catalog.bySourceIdentity.get(sourceIdentityKey(identity)) || [];
+      if (departmentCodes.length !== 1) {
+        throw new Error(`华图职位 ${positionCode} 无法与本地公开职位目录唯一匹配，停止发布：${sourceUrl}`);
+      }
       records.push({
+        departmentCode: departmentCodes[0],
         positionCode,
-        applications: parseCount(row[applicationsIndex]),
-        qualified: parseCount(row[qualifiedIndex]),
+        applications: parseCount(row[applicationsIndex], '报名人数', positionCode, sourceUrl),
+        qualified: parseCount(row[qualifiedIndex], '合格人数', positionCode, sourceUrl),
         sourceUrl,
       });
     }
@@ -152,7 +222,7 @@ async function fetchBatch(urls) {
   return results;
 }
 
-async function crawl() {
+async function crawl(catalog) {
   const expectedByProvince = new Map();
   const visited = new Set();
   const queued = new Set(PROVINCES.map((province) => `${SOURCE_ORIGIN}/zw/${province}/`));
@@ -177,13 +247,14 @@ async function crawl() {
         expectedByProvince.set(province, expected);
       }
 
-      for (const record of parseTableRows(html, pageUrl)) {
-        if (conflicts.has(record.positionCode)) continue;
-        const prior = collected.get(record.positionCode);
-        if (!prior) collected.set(record.positionCode, record);
+      for (const record of parseTableRows(html, pageUrl, catalog)) {
+        const identityKey = `${record.departmentCode}\u0000${record.positionCode}`;
+        if (conflicts.has(identityKey)) continue;
+        const prior = collected.get(identityKey);
+        if (!prior) collected.set(identityKey, record);
         else if (prior.applications !== record.applications || prior.qualified !== record.qualified) {
-          collected.delete(record.positionCode);
-          conflicts.add(record.positionCode);
+          collected.delete(identityKey);
+          conflicts.add(identityKey);
         }
       }
 
@@ -198,10 +269,14 @@ async function crawl() {
   }
   const expectedPositionCount = [...expectedByProvince.values()].reduce((total, count) => total + count, 0);
   if (collected.size !== expectedPositionCount) {
-    throw new Error(`职位覆盖数不匹配：华图声明 ${expectedPositionCount} 个职位，当前解析 ${collected.size} 个，另有 ${conflicts.size} 个冲突代码。`);
+    throw new Error(`职位覆盖数不匹配：华图声明 ${expectedPositionCount} 个职位，当前解析 ${collected.size} 个唯一部门与职位代码组合，另有 ${conflicts.size} 个冲突组合。`);
   }
 
-  return { records: [...collected.values()].sort((left, right) => left.positionCode.localeCompare(right.positionCode)), expectedPositionCount };
+  return {
+    records: [...collected.values()].sort((left, right) => left.departmentCode.localeCompare(right.departmentCode)
+      || left.positionCode.localeCompare(right.positionCode)),
+    expectedPositionCount,
+  };
 }
 
 function sourceUpdatedAt(html) {
@@ -221,11 +296,16 @@ async function writeSnapshot(outputPath, value) {
 async function main() {
   const requestId = argument('--request-id');
   const outputPath = argument('--output', 'monitoring/national-2027.json');
+  const catalogPath = argument('--catalog', 'public/national/positions-2027.json');
   if (!/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/iu.test(requestId)) {
     throw new Error('repository_dispatch 缺少有效的随机 requestId。');
   }
 
-  const [result, statsHtml] = await Promise.all([crawl(), fetchHtml(STATS_URL)]);
+  let catalogData;
+  try { catalogData = JSON.parse(await readFile(resolve(catalogPath), 'utf8')); }
+  catch { throw new Error(`无法读取国考职位目录：${catalogPath}`); }
+  const catalog = buildPositionCatalog(Array.isArray(catalogData) ? catalogData : catalogData?.positions);
+  const [result, statsHtml] = await Promise.all([crawl(catalog), fetchHtml(STATS_URL)]);
   const snapshot = {
     schemaVersion: 1,
     year: 2027,

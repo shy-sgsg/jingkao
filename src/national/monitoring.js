@@ -314,19 +314,19 @@ export function applyPositionMonitorCloudImport(workspace, preview) {
 export function previewPositionMonitorWebsiteRefresh(snapshot, workspace, positions) {
   const current = normalizeNationalWorkspace(workspace);
   const sourceRecords = new Map((Array.isArray(snapshot?.records) ? snapshot.records : [])
-    .filter((record) => typeof record?.positionCode === 'string')
-    .map((record) => [record.positionCode, record]));
-  const positionsByCode = new Map();
+    .filter((record) => typeof record?.departmentCode === 'string' && typeof record?.positionCode === 'string')
+    .map((record) => [compositeKey(record.departmentCode, record.positionCode), record]));
+  const positionsById = new Map();
   for (const position of Array.isArray(positions) ? positions : []) {
-    if (!position?.positionCode || !position?.id) continue;
-    positionsByCode.set(position.positionCode, [...(positionsByCode.get(position.positionCode) || []), position]);
+    if (!position?.departmentCode || !position?.positionCode || !position?.id) continue;
+    positionsById.set(position.id, position);
   }
 
   const rows = [];
   for (const favorite of current.favorites) {
-    const localMatches = positionsByCode.get(favorite.positionId.split(':').at(-1)) || [];
-    if (localMatches.length !== 1 || localMatches[0].id !== favorite.positionId) continue;
-    const source = sourceRecords.get(localMatches[0].positionCode);
+    const position = positionsById.get(favorite.positionId);
+    if (!position) continue;
+    const source = sourceRecords.get(compositeKey(position.departmentCode, position.positionCode));
     if (!source) continue;
     rows.push({
       positionId: favorite.positionId,

@@ -38,7 +38,7 @@ jobs:
       - name: Collect and validate public position statistics
         env:
           REQUEST_ID: ${{ github.event.client_payload.requestId }}
-        run: node scripts/refresh_national_monitor.mjs --request-id "$REQUEST_ID" --output public-data/monitoring/national-2027.json
+        run: node scripts/refresh_national_monitor.mjs --request-id "$REQUEST_ID" --catalog public/national/positions-2027.json --output public-data/monitoring/national-2027.json
 
       - name: Publish snapshot to sync-data
         working-directory: public-data

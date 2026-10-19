@@ -4,7 +4,7 @@
 
 **Goal:** 增加一个从华图获取最新逐岗统计、并只更新本机收藏岗位监控快照的按钮。
 
-**Architecture:** 页面用现有仓库 Contents 写令牌发送不含收藏信息的 `repository_dispatch` 请求。GitHub Actions 抓取华图 2027 省级页及其子页面，将完整公开统计快照写到 `sync-data` 的独立文件；页面读取后本机匹配职位代码，预览后确认写入加密档案。
+**Architecture:** 页面用现有仓库 Contents 写令牌发送不含收藏信息的 `repository_dispatch` 请求。GitHub Actions 抓取华图 2027 省级页及其子页面，以华图部门、司局、职位代码、职位名称匹配仓库中的公开职位目录并取得部门代码，将完整公开统计快照写到 `sync-data` 的独立文件；页面读取后本机按部门代码与职位代码匹配收藏，预览后确认写入加密档案。
 
 **Tech Stack:** GitHub Pages, GitHub REST API, GitHub Actions, Node.js 22, 原生 `fetch` 与 JavaScript。
 
@@ -22,7 +22,8 @@
 ## Review Focus
 
 - 华图页面改版、缺页或返回错误时，Action 必须失败且不覆盖可用快照。
-- 相同职位代码在多个页面出现且数值冲突时，不应任意选值。
+- 相同职位代码可属于不同部门；用部门代码与职位代码组合区分职位。同一组合在多个页面出现且数值冲突时，不应任意选值。
+- 城市页从行内“招录机关”列读取部门，部门页从标题读取部门；华图无法匹配到唯一公开职位目录记录，或非空计数格式无法识别时，Action 必须失败并保留旧快照。
 - 用户收藏代码未出现在华图快照中时，应计入未匹配并保持该职位本机旧快照。
 - Action 仍在排队或超时、raw 文件被缓存时，按钮不能误读旧请求快照。
 - Token 缺失或权限不足时，应给出可操作提示且不改本机数据。
@@ -37,10 +38,11 @@
 
 **Interfaces:**
 - Consumes: `repository_dispatch` event `national-monitor-refresh` with `client_payload.requestId` only.
-- Produces: public `sync-data/monitoring/national-2027.json` containing `schemaVersion`, `year`, `requestId`, `fetchedAt`, `sourceUpdatedAt`, `expectedPositionCount`, and `records`; each record has `positionCode`, nullable `applications`, nullable `qualified`, and `sourceUrl`.
+- Produces: public `sync-data/monitoring/national-2027.json` containing `schemaVersion`, `year`, `requestId`, `fetchedAt`, `sourceUpdatedAt`, `expectedPositionCount`, and `records`; each record has `departmentCode`, `positionCode`, nullable `applications`, nullable `qualified`, and `sourceUrl`.
 
 - [x] Build a bounded same-host crawler for Huatu `/zw/<province>/` pages and linked city/unit pages; parse job table columns by header labels.
-- [x] Collect provincial declared position totals and require unique parsed position codes to cover the declared total before writing output.
+- [x] Resolve each scraped row to one public catalog identity using department name, organization name, position code and position title; require unique department-code and position-code pairs to cover the declared total before writing output.
+- [x] Treat explicit blank/unknown counts as `null`; reject unrecognized nonempty count text with its page and position context.
 - [x] Fetch the national statistics page to capture its displayed update timestamp; leave it blank only when the source omits it.
 - [x] Add an Actions workflow triggered only by the approved dispatch event; write the generated public snapshot to `sync-data` with `contents: write`, leaving `user-data/backup.json` untouched.
 - [x] Verify the script's syntax and the site build; do not run tests.
@@ -69,7 +71,7 @@
 - Consumes: validated public snapshot from Task 2, all `nationalPositions`, local `nationalWorkspace`, and existing encrypted `persist()`.
 - Produces: `previewPositionMonitorWebsiteRefresh(snapshot, workspace, positions)` and `applyPositionMonitorWebsiteRefresh(workspace, preview, importedAt)`; preview includes matches and missing count, apply touches only `monitoringSnapshots` for existing favorites.
 
-- [x] Add a button that triggers the server refresh, polls until its request ID appears or a fixed timeout expires, then presents a preview with source timestamp and matched/missing counts.
+- [x] Add a button that triggers the server refresh, polls until its request ID appears or a fixed timeout expires, then presents a preview with source timestamp and matched/missing counts; match local positions by department-code and position-code pair.
 - [x] Add a confirmation action that applies matched snapshots to the local encrypted workspace and reports completion; preserve old snapshots for unmatched positions.
 - [x] Handle no favorites, absent token, permission failure, workflow timeout, invalid source data, and persistence failure without modifying existing favorites or snapshots.
 - [x] Verify the site build; do not run tests.

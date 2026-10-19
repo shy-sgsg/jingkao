@@ -202,8 +202,9 @@ function validatePublicNationalMonitorSnapshot(value, requestId) {
   const seen = new Set();
   const records = value.records.map((record) => {
     if (!record || typeof record !== 'object' || Array.isArray(record)
+      || typeof record.departmentCode !== 'string' || !/^\d{4,20}$/u.test(record.departmentCode)
       || typeof record.positionCode !== 'string' || !/^\d{8,20}$/u.test(record.positionCode)
-      || seen.has(record.positionCode)
+      || seen.has(`${record.departmentCode}\u0000${record.positionCode}`)
       || ![null, undefined].includes(record.applications)
         && (!Number.isSafeInteger(record.applications) || record.applications < 0)
       || ![null, undefined].includes(record.qualified)
@@ -212,8 +213,9 @@ function validatePublicNationalMonitorSnapshot(value, requestId) {
     let sourceUrl;
     try { sourceUrl = new URL(record.sourceUrl); } catch { throw invalidMonitorSnapshot(); }
     if (sourceUrl.protocol !== 'https:' || sourceUrl.hostname !== 'ah.huatu.com') throw invalidMonitorSnapshot();
-    seen.add(record.positionCode);
+    seen.add(`${record.departmentCode}\u0000${record.positionCode}`);
     return {
+      departmentCode: record.departmentCode,
       positionCode: record.positionCode,
       applications: record.applications ?? null,
       qualified: record.qualified ?? null,
