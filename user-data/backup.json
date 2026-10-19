@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "backupId": "19ab9a98-4aee-498a-81ac-cded3a3c2ba7",
-  "updatedAt": "2026-10-18T08:41:21.650Z",
+  "updatedAt": "2026-10-19T14:21:14.200Z",
   "data": {
     "profile": {
       "major": "公共管理",
@@ -4725,7 +4725,684 @@
       "notes": {},
       "favoriteQuery": "北京",
       "favoritePriority": "all",
-      "comparisonOnlyDifferences": true
+      "comparisonOnlyDifferences": true,
+      "monitoringSnapshots": {
+        "national:2027:130132:300110103003": {
+          "applications": 234,
+          "qualified": 205,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/shanxisheng/xianshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130132:300110115009": {
+          "applications": 1648,
+          "qualified": 1418,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/shanxisheng/xianshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:102000:200110001006": {
+          "applications": 583,
+          "qualified": 340,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/beijing/beijingshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130118:300110291001": {
+          "applications": 55,
+          "qualified": 33,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/shandong/binzhoushi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130101:300110001006": {
+          "applications": 509,
+          "qualified": 182,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/beijing/dongchengqu/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130107:300110001013": {
+          "applications": 111,
+          "qualified": 73,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/liaoning/dalianshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130101:300110002006": {
+          "applications": 497,
+          "qualified": 183,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/beijing/xichengqu/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130124:300110002012": {
+          "applications": 106,
+          "qualified": 66,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/shenzhenshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130124:300110003008": {
+          "applications": 95,
+          "qualified": 86,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/shenzhenshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130101:300110003011": {
+          "applications": 525,
+          "qualified": 260,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/beijing/chaoyangqu/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130124:300110005009": {
+          "applications": 103,
+          "qualified": 26,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/shenzhenshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130124:300110007003": {
+          "applications": 97,
+          "qualified": 2,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/shenzhenshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130123:300110015006": {
+          "applications": 117,
+          "qualified": 97,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/guangzhoushi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130118:300110023003": {
+          "applications": 145,
+          "qualified": 102,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/shandong/jinanshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130118:300110024001": {
+          "applications": 78,
+          "qualified": 70,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/shandong/jinanshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130123:300110085006": {
+          "applications": 199,
+          "qualified": 151,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/zhuhaishi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130132:300110102004": {
+          "applications": 127,
+          "qualified": 67,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/shanxisheng/xianshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130115:300110115004": {
+          "applications": 100,
+          "qualified": 44,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/fujian/fuzhou/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130115:300110510001": {
+          "applications": 466,
+          "qualified": 278,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/fujian/putianshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130124:300110003002": {
+          "applications": 43,
+          "qualified": 36,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/shenzhenshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130124:300110002006": {
+          "applications": 42,
+          "qualified": 8,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/shenzhenshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130124:300110001019": {
+          "applications": 46,
+          "qualified": 13,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/shenzhenshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:109000:200149114007": {
+          "applications": 11,
+          "qualified": 0,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/beijing/beijingshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:109000:200149114004": {
+          "applications": 12,
+          "qualified": 0,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/beijing/beijingshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130124:300110005002": {
+          "applications": 48,
+          "qualified": 5,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/shenzhenshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130124:300110010001": {
+          "applications": 34,
+          "qualified": 21,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/shenzhenshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130124:300110011006": {
+          "applications": 41,
+          "qualified": 26,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/shenzhenshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130112:300110020004": {
+          "applications": 139,
+          "qualified": 104,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/zhejiang/hangzhoushi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130120:300110037006": {
+          "applications": 506,
+          "qualified": 321,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/henan/zhengzhoushi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:129131:300110108014": {
+          "applications": 68,
+          "qualified": 25,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/guangzhoushi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:129131:300110113003": {
+          "applications": 46,
+          "qualified": 15,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/guangzhoushi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:158105:300130265018": {
+          "applications": 1458,
+          "qualified": 716,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/shenzhenshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130123:300110036005": {
+          "applications": 72,
+          "qualified": 60,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/guangzhoushi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130123:300110043003": {
+          "applications": 73,
+          "qualified": 48,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/guangzhoushi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130123:300110050003": {
+          "applications": 75,
+          "qualified": 60,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/guangzhoushi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130101:300110004011": {
+          "applications": 483,
+          "qualified": 271,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/beijing/haidianqu/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130128:300110022003": {
+          "applications": 272,
+          "qualified": 142,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/sichuan/chengdushi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:109210:300130850004": {
+          "applications": 144,
+          "qualified": 19,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/zhejiang/hangzhoushi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130132:300110115006": {
+          "applications": 136,
+          "qualified": 123,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/shanxisheng/xianshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130118:300110021001": {
+          "applications": 40,
+          "qualified": 15,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/shandong/jinanshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130118:300110022001": {
+          "applications": 93,
+          "qualified": 34,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/shandong/jinanshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:129119:300110001006": {
+          "applications": 119,
+          "qualified": 119,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/fujian/fuzhou/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130109:300110005007": {
+          "applications": 722,
+          "qualified": 717,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/heilongjiang/haerbinshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130125:300110023028": {
+          "applications": 93,
+          "qualified": 56,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130125:300110024011": {
+          "applications": 33,
+          "qualified": 18,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130125:300110026016": {
+          "applications": 30,
+          "qualified": 24,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130125:300110022004": {
+          "applications": 200,
+          "qualified": 125,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130125:300110024009": {
+          "applications": 58,
+          "qualified": 39,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130125:300110035004": {
+          "applications": 330,
+          "qualified": 128,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130125:300110021007": {
+          "applications": 70,
+          "qualified": 50,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130125:300110023021": {
+          "applications": 67,
+          "qualified": 45,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130125:300110026012": {
+          "applications": 48,
+          "qualified": 27,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130125:300110027010": {
+          "applications": 72,
+          "qualified": 45,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130125:300110032013": {
+          "applications": 37,
+          "qualified": 28,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangxi/guangxizhuangzuzizhiqu/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130125:300110033014": {
+          "applications": 37,
+          "qualified": 23,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130125:300110034006": {
+          "applications": 39,
+          "qualified": 19,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130125:300110033016": {
+          "applications": 26,
+          "qualified": 19,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130108:300110111001": {
+          "applications": 287,
+          "qualified": 236,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/jilin/changchunshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130117:300110013002": {
+          "applications": 44,
+          "qualified": 43,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/jiangxi/nanchangshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130117:300110015005": {
+          "applications": 46,
+          "qualified": 44,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/jiangxi/nanchangshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130117:300110001008": {
+          "applications": 58,
+          "qualified": 52,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/jiangxi/nanchangshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130104:300110020001": {
+          "applications": 27,
+          "qualified": 23,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/shanxi/taiyuanshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130104:300110021001": {
+          "applications": 59,
+          "qualified": 42,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/shanxi/taiyuanshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130104:300110022002": {
+          "applications": 34,
+          "qualified": 29,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/shanxi/taiyuanshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130104:300110023001": {
+          "applications": 157,
+          "qualified": 71,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/shanxi/taiyuanshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130104:300110015005": {
+          "applications": 681,
+          "qualified": 331,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/shanxi/taiyuanshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130118:300110238002": {
+          "applications": 198,
+          "qualified": 147,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/shandong/linyishi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130123:300110085002": {
+          "applications": 446,
+          "qualified": 127,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/zhuhaishi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:158106:300130266001": {
+          "applications": 215,
+          "qualified": 142,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/zhuhaishi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:158106:300130266002": {
+          "applications": 189,
+          "qualified": 92,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/zhuhaishi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130120:300110100003": {
+          "applications": 763,
+          "qualified": 116,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/henan/luoyangshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130118:300110118001": {
+          "applications": 59,
+          "qualified": 45,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/shandong/weifangshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130118:300110121001": {
+          "applications": 41,
+          "qualified": 32,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/shandong/weifangshi/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130101:300110003009": {
+          "applications": 143,
+          "qualified": 92,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/beijing/chaoyangqu/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        },
+        "national:2027:130101:300110004009": {
+          "applications": 139,
+          "qualified": 99,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/beijing/haidianqu/",
+          "sourceUpdatedAt": "2026-10-19 17:29",
+          "observedAt": "2026-10-19T14:17:25.752Z",
+          "importedAt": "2026-10-19T14:21:14.200Z"
+        }
+      }
     },
     "onboarding": {
       "step": 0,
