@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "backupId": "19ab9a98-4aee-498a-81ac-cded3a3c2ba7",
-  "updatedAt": "2026-10-20T12:10:40.073Z",
+  "updatedAt": "2026-10-20T12:21:08.972Z",
   "data": {
     "profile": {
       "major": "公共管理",
@@ -4723,7 +4723,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/beijing/beijingshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:109000:200149114004": {
           "applications": 13,
@@ -4732,7 +4732,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/beijing/beijingshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:109000:200149114007": {
           "applications": 31,
@@ -4741,7 +4741,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/beijing/beijingshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:109210:300130850004": {
           "applications": 202,
@@ -4750,7 +4750,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/zhejiang/hangzhoushi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:129119:300110001006": {
           "applications": 165,
@@ -4759,7 +4759,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/fujian/fuzhou/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:129131:300110108014": {
           "applications": 107,
@@ -4768,7 +4768,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangdong/guangzhoushi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:129131:300110113003": {
           "applications": 81,
@@ -4777,7 +4777,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangdong/guangzhoushi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130101:300110001006": {
           "applications": 731,
@@ -4786,7 +4786,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/beijing/dongchengqu/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130101:300110002006": {
           "applications": 708,
@@ -4795,7 +4795,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/beijing/xichengqu/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130101:300110003009": {
           "applications": 229,
@@ -4804,7 +4804,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/beijing/chaoyangqu/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130101:300110003011": {
           "applications": 728,
@@ -4813,7 +4813,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/beijing/chaoyangqu/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130101:300110004009": {
           "applications": 224,
@@ -4822,7 +4822,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/beijing/haidianqu/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130101:300110004011": {
           "applications": 721,
@@ -4831,7 +4831,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/beijing/haidianqu/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130104:300110015005": {
           "applications": 944,
@@ -4840,7 +4840,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/shanxi/taiyuanshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130104:300110020001": {
           "applications": 55,
@@ -4849,7 +4849,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/shanxi/taiyuanshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130104:300110021001": {
           "applications": 95,
@@ -4858,7 +4858,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/shanxi/taiyuanshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130104:300110022002": {
           "applications": 59,
@@ -4867,7 +4867,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/shanxi/taiyuanshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130104:300110023001": {
           "applications": 235,
@@ -4876,7 +4876,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/shanxi/taiyuanshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130107:300110001013": {
           "applications": 163,
@@ -4885,7 +4885,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/liaoning/dalianshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130108:300110111001": {
           "applications": 382,
@@ -4894,7 +4894,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/jilin/changchunshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130109:300110005007": {
           "applications": 1001,
@@ -4903,7 +4903,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/heilongjiang/haerbinshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130112:300110020004": {
           "applications": 187,
@@ -4912,7 +4912,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/zhejiang/hangzhoushi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130115:300110115004": {
           "applications": 153,
@@ -4921,7 +4921,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/fujian/fuzhou/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130115:300110510001": {
           "applications": 660,
@@ -4930,7 +4930,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/fujian/putianshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130117:300110001008": {
           "applications": 87,
@@ -4939,7 +4939,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/jiangxi/nanchangshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130117:300110013002": {
           "applications": 74,
@@ -4948,7 +4948,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/jiangxi/nanchangshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130117:300110015005": {
           "applications": 73,
@@ -4957,7 +4957,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/jiangxi/nanchangshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130118:300110021001": {
           "applications": 60,
@@ -4966,7 +4966,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/shandong/jinanshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130118:300110022001": {
           "applications": 142,
@@ -4975,7 +4975,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/shandong/jinanshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130118:300110023003": {
           "applications": 263,
@@ -4984,7 +4984,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/shandong/jinanshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130118:300110024001": {
           "applications": 111,
@@ -4993,7 +4993,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/shandong/jinanshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130118:300110118001": {
           "applications": 84,
@@ -5002,7 +5002,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/shandong/weifangshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130118:300110121001": {
           "applications": 74,
@@ -5011,7 +5011,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/shandong/weifangshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130118:300110238002": {
           "applications": 302,
@@ -5020,7 +5020,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/shandong/linyishi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130118:300110291001": {
           "applications": 76,
@@ -5029,7 +5029,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/shandong/binzhoushi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130120:300110037006": {
           "applications": 660,
@@ -5038,7 +5038,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/henan/zhengzhoushi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130120:300110100003": {
           "applications": 1088,
@@ -5047,7 +5047,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/henan/luoyangshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130123:300110015006": {
           "applications": 177,
@@ -5056,7 +5056,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangdong/guangzhoushi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130123:300110036005": {
           "applications": 134,
@@ -5065,7 +5065,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangdong/guangzhoushi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130123:300110043003": {
           "applications": 132,
@@ -5074,7 +5074,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangdong/guangzhoushi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130123:300110050003": {
           "applications": 134,
@@ -5083,7 +5083,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangdong/guangzhoushi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130123:300110085002": {
           "applications": 643,
@@ -5092,7 +5092,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangdong/zhuhaishi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130123:300110085006": {
           "applications": 323,
@@ -5101,7 +5101,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangdong/zhuhaishi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130124:300110001019": {
           "applications": 75,
@@ -5110,7 +5110,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangdong/shenzhenshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130124:300110002006": {
           "applications": 82,
@@ -5119,7 +5119,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangdong/shenzhenshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130124:300110002012": {
           "applications": 189,
@@ -5128,7 +5128,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangdong/shenzhenshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130124:300110003002": {
           "applications": 71,
@@ -5137,7 +5137,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangdong/shenzhenshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130124:300110003008": {
           "applications": 159,
@@ -5146,7 +5146,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangdong/shenzhenshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130124:300110005002": {
           "applications": 76,
@@ -5155,7 +5155,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangdong/shenzhenshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130124:300110005009": {
           "applications": 182,
@@ -5164,7 +5164,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangdong/shenzhenshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130124:300110007003": {
           "applications": 163,
@@ -5173,7 +5173,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangdong/shenzhenshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130124:300110010001": {
           "applications": 78,
@@ -5182,7 +5182,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangdong/shenzhenshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130124:300110011006": {
           "applications": 83,
@@ -5191,7 +5191,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangdong/shenzhenshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130125:300110021007": {
           "applications": 118,
@@ -5200,7 +5200,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130125:300110022004": {
           "applications": 295,
@@ -5209,7 +5209,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130125:300110023021": {
           "applications": 99,
@@ -5218,7 +5218,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130125:300110023028": {
           "applications": 128,
@@ -5227,7 +5227,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130125:300110024009": {
           "applications": 95,
@@ -5236,7 +5236,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130125:300110024011": {
           "applications": 54,
@@ -5245,7 +5245,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130125:300110026012": {
           "applications": 94,
@@ -5254,7 +5254,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130125:300110026016": {
           "applications": 60,
@@ -5263,7 +5263,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130125:300110027010": {
           "applications": 126,
@@ -5272,7 +5272,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130125:300110032013": {
           "applications": 81,
@@ -5281,7 +5281,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangxi/guangxizhuangzuzizhiqu/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130125:300110033014": {
           "applications": 81,
@@ -5290,7 +5290,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130125:300110033016": {
           "applications": 48,
@@ -5299,7 +5299,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130125:300110034006": {
           "applications": 75,
@@ -5308,7 +5308,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130125:300110035004": {
           "applications": 500,
@@ -5317,7 +5317,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130128:300110022003": {
           "applications": 441,
@@ -5326,7 +5326,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/sichuan/chengdushi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130132:300110102004": {
           "applications": 227,
@@ -5335,7 +5335,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/shanxisheng/xianshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130132:300110103003": {
           "applications": 388,
@@ -5344,7 +5344,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/shanxisheng/xianshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130132:300110115006": {
           "applications": 230,
@@ -5353,7 +5353,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/shanxisheng/xianshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:130132:300110115009": {
           "applications": 2208,
@@ -5362,7 +5362,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/shanxisheng/xianshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:158105:300130265018": {
           "applications": 1797,
@@ -5371,7 +5371,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangdong/shenzhenshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:158106:300130266001": {
           "applications": 348,
@@ -5380,7 +5380,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangdong/zhuhaishi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         },
         "national:2027:158106:300130266002": {
           "applications": 278,
@@ -5389,7 +5389,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangdong/zhuhaishi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
+          "importedAt": "2026-10-20T12:20:45.922Z"
         }
       },
       "favoriteQuery": "北京",
