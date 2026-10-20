@@ -3566,7 +3566,7 @@ document.addEventListener('click', async (event) => {
   }
   if (action === 'national-monitor-sort') {
     const key = actionEl.dataset.sortKey;
-    if (!['applicationsRatio', 'qualifiedRatio'].includes(key)) return;
+    if (!['applications', 'qualified', 'applicationsRatio', 'qualifiedRatio'].includes(key)) return;
     const current = storage.nationalWorkspace.monitorSort || 'applicationsRatio-desc';
     const [currentKey, currentDirection] = current.split('-');
     const nextDirection = currentKey === key && currentDirection === 'desc' ? 'asc' : 'desc';

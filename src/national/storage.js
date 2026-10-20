@@ -85,7 +85,10 @@ export function normalizeNationalWorkspace(source) {
     monitorCity: typeof value.monitorCity === 'string' ? value.monitorCity.slice(0, 80) : 'all',
     monitorFreshGraduate: ['all', 'required', 'not-mentioned', 'review'].includes(value.monitorFreshGraduate) ? value.monitorFreshGraduate : 'all',
     monitorPriority: ['all', 'high', 'normal', 'watch'].includes(value.monitorPriority) ? value.monitorPriority : 'all',
-    monitorSort: ['applicationsRatio-desc', 'applicationsRatio-asc', 'qualifiedRatio-desc', 'qualifiedRatio-asc'].includes(value.monitorSort)
+    monitorSort: [
+      'applications-desc', 'applications-asc', 'qualified-desc', 'qualified-asc',
+      'applicationsRatio-desc', 'applicationsRatio-asc', 'qualifiedRatio-desc', 'qualifiedRatio-asc',
+    ].includes(value.monitorSort)
       ? value.monitorSort : 'applicationsRatio-desc',
     comparisonOnlyDifferences: value.comparisonOnlyDifferences === true,
   };
