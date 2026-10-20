@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "backupId": "19ab9a98-4aee-498a-81ac-cded3a3c2ba7",
-  "updatedAt": "2026-10-20T12:21:08.972Z",
+  "updatedAt": "2026-10-20T12:41:18.274Z",
   "data": {
     "profile": {
       "major": "公共管理",
@@ -4469,104 +4469,6 @@
           "priority": "normal"
         },
         {
-          "id": "national:2027:130125:300110023028",
-          "positionId": "national:2027:130125:300110023028",
-          "addedAt": "2026-10-18T15:49:25+08:00",
-          "note": "",
-          "priority": "normal"
-        },
-        {
-          "id": "national:2027:130125:300110024011",
-          "positionId": "national:2027:130125:300110024011",
-          "addedAt": "2026-10-18T15:49:25+08:00",
-          "note": "",
-          "priority": "normal"
-        },
-        {
-          "id": "national:2027:130125:300110026016",
-          "positionId": "national:2027:130125:300110026016",
-          "addedAt": "2026-10-18T15:49:25+08:00",
-          "note": "",
-          "priority": "normal"
-        },
-        {
-          "id": "national:2027:130125:300110022004",
-          "positionId": "national:2027:130125:300110022004",
-          "addedAt": "2026-10-18T15:49:25+08:00",
-          "note": "",
-          "priority": "normal"
-        },
-        {
-          "id": "national:2027:130125:300110024009",
-          "positionId": "national:2027:130125:300110024009",
-          "addedAt": "2026-10-18T15:49:25+08:00",
-          "note": "",
-          "priority": "normal"
-        },
-        {
-          "id": "national:2027:130125:300110035004",
-          "positionId": "national:2027:130125:300110035004",
-          "addedAt": "2026-10-18T15:49:25+08:00",
-          "note": "",
-          "priority": "normal"
-        },
-        {
-          "id": "national:2027:130125:300110021007",
-          "positionId": "national:2027:130125:300110021007",
-          "addedAt": "2026-10-18T15:49:25+08:00",
-          "note": "",
-          "priority": "normal"
-        },
-        {
-          "id": "national:2027:130125:300110023021",
-          "positionId": "national:2027:130125:300110023021",
-          "addedAt": "2026-10-18T15:49:25+08:00",
-          "note": "",
-          "priority": "normal"
-        },
-        {
-          "id": "national:2027:130125:300110026012",
-          "positionId": "national:2027:130125:300110026012",
-          "addedAt": "2026-10-18T15:49:25+08:00",
-          "note": "",
-          "priority": "normal"
-        },
-        {
-          "id": "national:2027:130125:300110027010",
-          "positionId": "national:2027:130125:300110027010",
-          "addedAt": "2026-10-18T15:49:25+08:00",
-          "note": "",
-          "priority": "normal"
-        },
-        {
-          "id": "national:2027:130125:300110032013",
-          "positionId": "national:2027:130125:300110032013",
-          "addedAt": "2026-10-18T15:49:25+08:00",
-          "note": "",
-          "priority": "normal"
-        },
-        {
-          "id": "national:2027:130125:300110033014",
-          "positionId": "national:2027:130125:300110033014",
-          "addedAt": "2026-10-18T15:49:25+08:00",
-          "note": "",
-          "priority": "normal"
-        },
-        {
-          "id": "national:2027:130125:300110034006",
-          "positionId": "national:2027:130125:300110034006",
-          "addedAt": "2026-10-18T15:49:25+08:00",
-          "note": "",
-          "priority": "normal"
-        },
-        {
-          "id": "national:2027:130125:300110033016",
-          "positionId": "national:2027:130125:300110033016",
-          "addedAt": "2026-10-18T15:49:25+08:00",
-          "note": "",
-          "priority": "normal"
-        },
-        {
           "id": "national:2027:130108:300110111001",
           "positionId": "national:2027:130108:300110111001",
           "addedAt": "2026-10-18T15:49:25+08:00",
@@ -4590,41 +4492,6 @@
         {
           "id": "national:2027:130117:300110001008",
           "positionId": "national:2027:130117:300110001008",
-          "addedAt": "2026-10-18T15:49:25+08:00",
-          "note": "",
-          "priority": "normal"
-        },
-        {
-          "id": "national:2027:130104:300110020001",
-          "positionId": "national:2027:130104:300110020001",
-          "addedAt": "2026-10-18T15:49:25+08:00",
-          "note": "",
-          "priority": "normal"
-        },
-        {
-          "id": "national:2027:130104:300110021001",
-          "positionId": "national:2027:130104:300110021001",
-          "addedAt": "2026-10-18T15:49:25+08:00",
-          "note": "",
-          "priority": "normal"
-        },
-        {
-          "id": "national:2027:130104:300110022002",
-          "positionId": "national:2027:130104:300110022002",
-          "addedAt": "2026-10-18T15:49:25+08:00",
-          "note": "",
-          "priority": "normal"
-        },
-        {
-          "id": "national:2027:130104:300110023001",
-          "positionId": "national:2027:130104:300110023001",
-          "addedAt": "2026-10-18T15:49:25+08:00",
-          "note": "",
-          "priority": "normal"
-        },
-        {
-          "id": "national:2027:130104:300110015005",
-          "positionId": "national:2027:130104:300110015005",
           "addedAt": "2026-10-18T15:49:25+08:00",
           "note": "",
           "priority": "normal"
@@ -4708,11 +4575,9 @@
         }
       ],
       "comparisons": [
-        "national:2027:130101:300110001006",
-        "national:2027:130101:300110002002",
-        "national:2027:130101:300110002006",
-        "national:2027:130101:300110003011",
-        "national:2027:130101:300110004011"
+        "national:2027:130101:300110004011",
+        "national:2027:130123:300110015006",
+        "national:2027:130123:300110036005"
       ],
       "notes": {},
       "monitoringSnapshots": {
@@ -5392,7 +5257,7 @@
           "importedAt": "2026-10-20T12:20:45.922Z"
         }
       },
-      "favoriteQuery": "北京",
+      "favoriteQuery": "山西",
       "favoritePriority": "all",
       "monitorQuery": "",
       "monitorCity": "all",
@@ -5408,6 +5273,121 @@
     }
   },
   "tombstones": [
+    {
+      "collection": "nationalWorkspace/comparisons",
+      "id": "national:2027:130101:300110001006",
+      "deletedAt": "2026-10-20T12:41:07.929Z"
+    },
+    {
+      "collection": "nationalWorkspace/comparisons",
+      "id": "national:2027:130101:300110002002",
+      "deletedAt": "2026-10-20T12:41:07.929Z"
+    },
+    {
+      "collection": "nationalWorkspace/comparisons",
+      "id": "national:2027:130101:300110002006",
+      "deletedAt": "2026-10-20T12:41:07.929Z"
+    },
+    {
+      "collection": "nationalWorkspace/comparisons",
+      "id": "national:2027:130101:300110003011",
+      "deletedAt": "2026-10-20T12:41:07.929Z"
+    },
+    {
+      "collection": "nationalWorkspace/favorites",
+      "id": "national:2027:130104:300110015005",
+      "deletedAt": "2026-10-20T12:41:07.929Z"
+    },
+    {
+      "collection": "nationalWorkspace/favorites",
+      "id": "national:2027:130104:300110020001",
+      "deletedAt": "2026-10-20T12:41:07.929Z"
+    },
+    {
+      "collection": "nationalWorkspace/favorites",
+      "id": "national:2027:130104:300110021001",
+      "deletedAt": "2026-10-20T12:41:07.929Z"
+    },
+    {
+      "collection": "nationalWorkspace/favorites",
+      "id": "national:2027:130104:300110022002",
+      "deletedAt": "2026-10-20T12:41:07.929Z"
+    },
+    {
+      "collection": "nationalWorkspace/favorites",
+      "id": "national:2027:130104:300110023001",
+      "deletedAt": "2026-10-20T12:41:07.929Z"
+    },
+    {
+      "collection": "nationalWorkspace/favorites",
+      "id": "national:2027:130125:300110021007",
+      "deletedAt": "2026-10-20T12:41:07.929Z"
+    },
+    {
+      "collection": "nationalWorkspace/favorites",
+      "id": "national:2027:130125:300110022004",
+      "deletedAt": "2026-10-20T12:41:07.929Z"
+    },
+    {
+      "collection": "nationalWorkspace/favorites",
+      "id": "national:2027:130125:300110023021",
+      "deletedAt": "2026-10-20T12:41:07.929Z"
+    },
+    {
+      "collection": "nationalWorkspace/favorites",
+      "id": "national:2027:130125:300110023028",
+      "deletedAt": "2026-10-20T12:41:07.929Z"
+    },
+    {
+      "collection": "nationalWorkspace/favorites",
+      "id": "national:2027:130125:300110024009",
+      "deletedAt": "2026-10-20T12:41:07.929Z"
+    },
+    {
+      "collection": "nationalWorkspace/favorites",
+      "id": "national:2027:130125:300110024011",
+      "deletedAt": "2026-10-20T12:41:07.929Z"
+    },
+    {
+      "collection": "nationalWorkspace/favorites",
+      "id": "national:2027:130125:300110026012",
+      "deletedAt": "2026-10-20T12:41:07.929Z"
+    },
+    {
+      "collection": "nationalWorkspace/favorites",
+      "id": "national:2027:130125:300110026016",
+      "deletedAt": "2026-10-20T12:41:07.929Z"
+    },
+    {
+      "collection": "nationalWorkspace/favorites",
+      "id": "national:2027:130125:300110027010",
+      "deletedAt": "2026-10-20T12:41:07.929Z"
+    },
+    {
+      "collection": "nationalWorkspace/favorites",
+      "id": "national:2027:130125:300110032013",
+      "deletedAt": "2026-10-20T12:41:07.929Z"
+    },
+    {
+      "collection": "nationalWorkspace/favorites",
+      "id": "national:2027:130125:300110033014",
+      "deletedAt": "2026-10-20T12:41:07.929Z"
+    },
+    {
+      "collection": "nationalWorkspace/favorites",
+      "id": "national:2027:130125:300110033016",
+      "deletedAt": "2026-10-20T12:41:07.929Z"
+    },
+    {
+      "collection": "nationalWorkspace/favorites",
+      "id": "national:2027:130125:300110034006",
+      "deletedAt": "2026-10-20T12:41:07.929Z"
+    },
+    {
+      "collection": "nationalWorkspace/favorites",
+      "id": "national:2027:130125:300110035004",
+      "deletedAt": "2026-10-20T12:41:07.929Z"
+    },
     {
       "collection": "nationalWorkspace/filters/workCities",
       "id": "深圳市",
