@@ -119,9 +119,11 @@ function renderPositionDetails(position, workspace, profile, favorite, eligibili
 function renderPositionCard(position, workspace, profile, eligibilityCache = null) {
   const favorite = workspace.favorites.find((item) => item.positionId === position.id);
   const compared = workspace.comparisons.includes(position.id);
+  const snapshot = workspace.monitoringSnapshots?.[position.id];
+  const competitionRatio = calculateCompetitionRatios(position, snapshot).applicationsRatio;
   return `<article class="national-position-card" data-position-id="${escapeNationalHtml(position.id)}">
     <div class="national-position-head"><div><div class="national-kicker">${escapeNationalHtml(position.departmentCode)} · ${escapeNationalHtml(position.positionCode)} · ${escapeNationalHtml(position.sourceSheet)}</div><h3>${escapeNationalHtml(position.positionTitle)}</h3><p>${escapeNationalHtml(position.departmentName)} · ${escapeNationalHtml(position.organizationName)}</p></div>${eligibilityBadge(position, profile)}</div>
-    <div class="national-position-meta"><span>工作地点：${escapeNationalHtml(position.workLocation || '原表为空')}</span><span>计划招录：${escapeNationalHtml(position.recruitCount)} 人</span><span>考试类别：${escapeNationalHtml(position.examCategory || '原表为空')}</span><span>报名 / 竞争数据：暂未填入</span></div>
+    <div class="national-position-meta"><span>工作地点：${escapeNationalHtml(position.workLocation || '原表为空')}</span><span>计划招录：${escapeNationalHtml(position.recruitCount)} 人</span><span>考试类别：${escapeNationalHtml(position.examCategory || '原表为空')}</span><span>最新报名：${monitorNumber(snapshot?.applications) || '暂未填入'}</span><span>报名/计划竞争比：${monitorRatio(competitionRatio) || '暂未填入'}</span></div>
     <div class="national-position-actions"><button type="button" class="button button-secondary button-small" data-action="national-toggle-favorite" data-position-id="${escapeNationalHtml(position.id)}">${favorite ? '★ 已收藏' : '☆ 收藏'}</button><button type="button" class="button button-quiet button-small" data-action="national-toggle-compare" data-position-id="${escapeNationalHtml(position.id)}">${compared ? '✓ 已加入比较' : '＋ 加入比较'}</button><button type="button" class="button button-quiet button-small" data-action="national-copy-position" data-position-id="${escapeNationalHtml(position.id)}">复制职位信息</button></div>
     ${renderPositionDetails(position, workspace, profile, favorite, eligibilityCache)}
   </article>`;
@@ -302,19 +304,30 @@ function renderComparisonTab({ positions, workspace, profile }) {
   const items = workspace.comparisons.map((id) => byId.get(id)).filter(Boolean);
   const rows = [
     ['职位名称', 'positionTitle'], ['部门', 'departmentName'], ['用人司局', 'organizationName'],
-    ['工作地点', 'workLocation'], ['落户地点', 'settlementLocation'], ['职位代码', 'positionCode'], ['招录人数', 'recruitCount'], ['专业原文', 'majorRaw'],
+    ['工作地点', 'workLocation'], ['落户地点', 'settlementLocation'], ['职位代码', 'positionCode'], ['招录人数', 'recruitCount'],
+    ['最新报名人数', 'monitorApplications'], ['报名/计划竞争比', 'monitorApplicationsRatio'], ['专业原文', 'majorRaw'],
     ['学历', 'educationRaw'], ['学位', 'degreeRaw'], ['政治面貌', 'politicalStatusRaw'],
     ['基层工作年限', 'experienceRaw'], ['服务基层项目', 'serviceProjectRaw'], ['职位简介', 'positionDescription'], ['考试类别', 'examCategory'],
     ['面试专业测试', 'professionalTestRaw'], ['面试人员比例', 'interviewRatioRaw'], ['备注', 'remarkRaw'], ['资格初步核对', 'eligibility'],
   ];
+  const comparisonValue = (position, key) => {
+    const snapshot = workspace.monitoringSnapshots?.[position.id];
+    if (key === 'monitorApplications') return monitorNumber(snapshot?.applications);
+    if (key === 'monitorApplicationsRatio') {
+      return monitorRatio(calculateCompetitionRatios(position, snapshot).applicationsRatio);
+    }
+    if (key === 'eligibility') return evaluateNationalEligibility(position, profile).label;
+    return String(position[key] ?? '');
+  };
   const tableRows = workspace.comparisonOnlyDifferences ? rows.filter(([, key]) => {
-    const values = items.map((position) => key === 'eligibility' ? evaluateNationalEligibility(position, profile).label : String(position[key] ?? ''));
+    const values = items.map((position) => comparisonValue(position, key));
     return new Set(values).size > 1;
   }) : rows;
-  return `<section class="national-comparison"><div class="national-results-summary"><div><strong>${items.length}</strong><span> / 6 个职位</span><small>逐项对照职位表原文；报名数和竞争比暂未填入。</small></div><div class="national-comparison-actions"><button type="button" class="button button-quiet" data-action="national-toggle-difference-only">${workspace.comparisonOnlyDifferences ? '显示全部项目' : '只看差异项'}</button><button type="button" class="button button-secondary" data-action="national-clear-comparison" ${items.length ? '' : 'disabled'}>清空比较</button><button type="button" class="button button-secondary" data-action="national-export-comparison" ${items.length ? '' : 'disabled'}>导出比较 CSV</button></div></div>${items.length ? `<div class="national-compare-scroll"><table class="national-compare-table"><thead><tr><th>比较项目</th>${items.map((position, index) => `<th>${escapeNationalHtml(position.positionTitle)}<small>${escapeNationalHtml(position.departmentName)}</small><span class="national-compare-reorder"><button type="button" aria-label="上移岗位" data-action="national-move-compare" data-position-id="${escapeNationalHtml(position.id)}" data-direction="-1" ${index === 0 ? 'disabled' : ''}>↑</button><button type="button" aria-label="下移岗位" data-action="national-move-compare" data-position-id="${escapeNationalHtml(position.id)}" data-direction="1" ${index === items.length - 1 ? 'disabled' : ''}>↓</button></span><button type="button" data-action="national-toggle-compare" data-position-id="${escapeNationalHtml(position.id)}">移出比较</button></th>`).join('')}</tr></thead><tbody>${tableRows.map(([label, key]) => {
-    const values = items.map((position) => key === 'eligibility' ? evaluateNationalEligibility(position, profile).label : String(position[key] ?? ''));
+  return `<section class="national-comparison"><div class="national-results-summary"><div><strong>${items.length}</strong><span> / 6 个职位</span><small>报名/计划竞争比按最新报名人数除以计划招录人数计算；数值来自岗位监控快照。</small></div><div class="national-comparison-actions"><button type="button" class="button button-quiet" data-action="national-toggle-difference-only">${workspace.comparisonOnlyDifferences ? '显示全部项目' : '只看差异项'}</button><button type="button" class="button button-secondary" data-action="national-clear-comparison" ${items.length ? '' : 'disabled'}>清空比较</button><button type="button" class="button button-secondary" data-action="national-export-comparison" ${items.length ? '' : 'disabled'}>导出比较 CSV</button></div></div>${items.length ? `<div class="national-compare-scroll"><table class="national-compare-table"><thead><tr><th>比较项目</th>${items.map((position, index) => `<th>${escapeNationalHtml(position.positionTitle)}<small>${escapeNationalHtml(position.departmentName)}</small><span class="national-compare-reorder"><button type="button" aria-label="上移岗位" data-action="national-move-compare" data-position-id="${escapeNationalHtml(position.id)}" data-direction="-1" ${index === 0 ? 'disabled' : ''}>↑</button><button type="button" aria-label="下移岗位" data-action="national-move-compare" data-position-id="${escapeNationalHtml(position.id)}" data-direction="1" ${index === items.length - 1 ? 'disabled' : ''}>↓</button></span><button type="button" data-action="national-toggle-compare" data-position-id="${escapeNationalHtml(position.id)}">移出比较</button></th>`).join('')}</tr></thead><tbody>${tableRows.map(([label, key]) => {
+    const values = items.map((position) => comparisonValue(position, key));
     const different = new Set(values).size > 1;
-    return `<tr class="${different ? 'has-difference' : ''}"><th>${label}</th>${values.map((value) => `<td>${value ? escapeNationalHtml(value) : '<span class="national-empty-value">原表为空</span>'}</td>`).join('')}</tr>`;
+    const emptyLabel = key.startsWith('monitor') ? '暂未填入' : '原表为空';
+    return `<tr class="${different ? 'has-difference' : ''}"><th>${label}</th>${values.map((value) => `<td>${value !== '' ? escapeNationalHtml(value) : `<span class="national-empty-value">${emptyLabel}</span>`}</td>`).join('')}</tr>`;
   }).join('')}</tbody></table></div>` : '<div class="empty-state">加入 2–6 个职位后，可以在此并排核对核心条件。</div>'}</section>`;
 }
 

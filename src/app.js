@@ -2420,15 +2420,21 @@ function renderCloudSyncPreviewContent(error = '') {
       ? '云端备份文件缺失；本次以此设备上次确认的基线参与合并，并在确认后尝试恢复云端文件。'
       : !pending.remote.backup ? '分支存在但还没有个人数据文件；确认后会创建备份文件。'
         : '已读取现有云端备份；确认前不会写入 GitHub。';
-  const conflicts = pending.preview.conflicts.map((conflict, index) => {
+  const conflictItems = pending.preview.conflicts;
+  const conflicts = conflictItems.map((conflict, index) => {
     const selected = cloudSyncUi.choices[conflict.path];
     return `<article class="sync-conflict"><div class="sync-conflict-heading"><strong>冲突 ${index + 1}</strong><code>${escapeHtml(conflict.path)}</code></div><div class="sync-conflict-values"><div><span>本机</span><pre>${conflictValueMarkup(conflict.local, conflict.localMissing)}</pre></div><div><span>云端</span><pre>${conflictValueMarkup(conflict.remote, conflict.remoteMissing)}</pre></div></div><div class="sync-conflict-choices"><button type="button" class="button ${selected === 'local' ? 'button-primary' : 'button-secondary'}" data-action="choose-sync-conflict" data-path="${escapeHtml(conflict.path)}" data-side="local" aria-pressed="${selected === 'local'}">保留本机</button><button type="button" class="button ${selected === 'remote' ? 'button-primary' : 'button-secondary'}" data-action="choose-sync-conflict" data-path="${escapeHtml(conflict.path)}" data-side="remote" aria-pressed="${selected === 'remote'}">保留云端</button></div></article>`;
   }).join('');
-  const unresolved = pending.preview.conflicts.filter((conflict) => !['local', 'remote'].includes(cloudSyncUi.choices[conflict.path])).length;
+  const allLocal = conflictItems.length > 0 && conflictItems.every((conflict) => cloudSyncUi.choices[conflict.path] === 'local');
+  const allRemote = conflictItems.length > 0 && conflictItems.every((conflict) => cloudSyncUi.choices[conflict.path] === 'remote');
+  const bulkConflictActions = conflictItems.length
+    ? `<div class="sync-conflict-bulk-actions"><strong>一键处理全部 ${conflictItems.length} 项冲突</strong><button type="button" class="button ${allLocal ? 'button-primary' : 'button-secondary'}" data-action="choose-all-sync-conflicts" data-side="local" aria-pressed="${allLocal}">一键保留本机</button><button type="button" class="button ${allRemote ? 'button-primary' : 'button-secondary'}" data-action="choose-all-sync-conflicts" data-side="remote" aria-pressed="${allRemote}">一键保留云端</button><small>此操作只统一选择冲突项；仍可逐项调整，最后点击下方按钮确认同步。</small></div>`
+    : '';
+  const unresolved = conflictItems.filter((conflict) => !['local', 'remote'].includes(cloudSyncUi.choices[conflict.path])).length;
   const summary = pending.preview.summary;
   const tokenNotice = cloudSyncUi.tokenPersistence === 'session'
     ? '<p class="sync-token-state sync-token-session">Token 仅本次页面保存。下次刷新或打开页面需要重新输入。</p>' : '';
-  return `<div class="modal-body">${error}<div class="sync-preview-status"><strong>${escapeHtml(branchText)}</strong><span>读取时间：${escapeHtml(formatSyncTimestamp(pending.readAt))}</span></div>${tokenNotice}<div class="backup-preview-grid"><div><strong>${summary.localAdded}</strong><span>本机新增</span></div><div><strong>${summary.cloudAdded}</strong><span>云端新增</span></div><div><strong>${summary.updated}</strong><span>合并更新</span></div><div><strong>${summary.deleted}</strong><span>删除记录</span></div></div><div class="sync-conflicts">${conflicts || '<div class="sync-no-conflicts">没有字段冲突；双方独立改动可以直接合并。</div>'}</div><p class="sync-confirm-copy">确认后会将合并结果写入公开仓库，并更新此设备的加密记录。${pending.remote.branchExists ? '' : '这也会新建个人数据分支。'}取消不会更改本机记录。</p><div class="sync-preview-actions"><button type="button" class="button button-quiet" data-action="cloud-sync-settings">同步设置</button><button type="button" class="button button-secondary" data-action="start-cloud-sync" ${cloudSyncUi.busy ? 'disabled' : ''}>重新读取云端</button><button type="button" class="button button-quiet" data-action="cancel-cloud-preview">取消此次预览</button><button type="button" class="button button-primary" data-action="confirm-cloud-sync" ${unresolved || cloudSyncUi.busy ? 'disabled' : ''}>${cloudSyncUi.busy ? '正在同步…' : unresolved ? `先处理 ${unresolved} 项冲突` : '确认合并并同步'}</button></div></div>`;
+  return `<div class="modal-body">${error}<div class="sync-preview-status"><strong>${escapeHtml(branchText)}</strong><span>读取时间：${escapeHtml(formatSyncTimestamp(pending.readAt))}</span></div>${tokenNotice}<div class="backup-preview-grid"><div><strong>${summary.localAdded}</strong><span>本机新增</span></div><div><strong>${summary.cloudAdded}</strong><span>云端新增</span></div><div><strong>${summary.updated}</strong><span>合并更新</span></div><div><strong>${summary.deleted}</strong><span>删除记录</span></div></div>${bulkConflictActions}<div class="sync-conflicts">${conflicts || '<div class="sync-no-conflicts">没有字段冲突；双方独立改动可以直接合并。</div>'}</div><p class="sync-confirm-copy">确认后会将合并结果写入公开仓库，并更新此设备的加密记录。${pending.remote.branchExists ? '' : '这也会新建个人数据分支。'}取消不会更改本机记录。</p><div class="sync-preview-actions"><button type="button" class="button button-quiet" data-action="cloud-sync-settings">同步设置</button><button type="button" class="button button-secondary" data-action="start-cloud-sync" ${cloudSyncUi.busy ? 'disabled' : ''}>重新读取云端</button><button type="button" class="button button-quiet" data-action="cancel-cloud-preview">取消此次预览</button><button type="button" class="button button-primary" data-action="confirm-cloud-sync" ${unresolved || cloudSyncUi.busy ? 'disabled' : ''}>${cloudSyncUi.busy ? '正在同步…' : unresolved ? `先处理 ${unresolved} 项冲突` : '确认合并并同步'}</button></div></div>`;
 }
 
 async function loadCloudSyncToken() {
@@ -3784,6 +3790,16 @@ document.addEventListener('click', async (event) => {
   }
   if (action === 'start-cloud-sync') {
     await startCloudSync();
+    return;
+  }
+  if (action === 'choose-all-sync-conflicts') {
+    const side = actionEl.dataset.side;
+    const conflicts = cloudSyncUi.pending?.preview?.conflicts || [];
+    if (['local', 'remote'].includes(side) && conflicts.length) {
+      cloudSyncUi.choices = Object.fromEntries(conflicts.map((conflict) => [conflict.path, side]));
+      cloudSyncUi.error = '';
+      renderCloudSyncModal();
+    }
     return;
   }
   if (action === 'choose-sync-conflict') {
