@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "backupId": "19ab9a98-4aee-498a-81ac-cded3a3c2ba7",
-  "updatedAt": "2026-10-20T11:45:55.088Z",
+  "updatedAt": "2026-10-20T12:10:40.073Z",
   "data": {
     "profile": {
       "major": "公共管理",
@@ -2392,60 +2392,6 @@
       "unclearKnowledgePointIds": []
     },
     "aptitudeModuleStudies": {
-      "data-analysis": {
-        "knowledgeProgress": {},
-        "sessions": [
-          {
-            "id": "apt_data-analysis_mv1uqfgl_22wv9n",
-            "mode": "practice",
-            "status": "completed",
-            "planTaskId": null,
-            "questionIds": [
-              "ah2026-outline-data-1"
-            ],
-            "currentIndex": 1,
-            "correctCount": 1,
-            "reviewingAnswerId": null,
-            "draftAnswers": {},
-            "startedAt": "2026-10-10T03:45:50.277Z",
-            "deadline": null,
-            "durationSeconds": null,
-            "filters": {
-              "onlyUnanswered": false,
-              "onlyMistakes": false,
-              "onlyFavorites": false,
-              "excludeQuestionIds": [],
-              "answeredQuestionIds": [],
-              "mistakeQuestionIds": [],
-              "favoriteQuestionIds": []
-            },
-            "moduleId": "data-analysis",
-            "completedAt": "2026-10-10T03:46:26.371Z",
-            "session_id": "apt_data-analysis_mv1uqfgl_22wv9n"
-          }
-        ],
-        "answers": [
-          {
-            "id": "answer_apt_data-analysis_mv1uqfgl_22wv9n_1",
-            "sessionId": "apt_data-analysis_mv1uqfgl_22wv9n",
-            "questionId": "ah2026-outline-data-1",
-            "selectedOptionId": "D",
-            "correctAnswer": "D",
-            "isCorrect": true,
-            "mode": "practice",
-            "answeredAt": "2026-10-10T03:46:21.631Z",
-            "knowledgePointIds": [
-              "data-analysis:share-change"
-            ],
-            "moduleId": "data-analysis",
-            "attempt_id": "answer_apt_data-analysis_mv1uqfgl_22wv9n_1"
-          }
-        ],
-        "mistakes": {},
-        "favorites": [],
-        "favoriteKnowledgePointIds": [],
-        "unclearKnowledgePointIds": []
-      },
       "political-theory": {
         "knowledgeProgress": {},
         "sessions": [
@@ -2622,6 +2568,529 @@
             "lastSelectedOptionId": "C",
             "correctAnswer": "B",
             "moduleId": "political-theory"
+          }
+        },
+        "favorites": [],
+        "favoriteKnowledgePointIds": [],
+        "unclearKnowledgePointIds": []
+      },
+      "verbal": {
+        "knowledgeProgress": {},
+        "sessions": [
+          {
+            "id": "apt_verbal_mv1unywd_y4c7et",
+            "mode": "practice",
+            "status": "completed",
+            "planTaskId": null,
+            "questionIds": [
+              "ah2026-outline-verbal-1"
+            ],
+            "currentIndex": 1,
+            "correctCount": 1,
+            "reviewingAnswerId": null,
+            "draftAnswers": {},
+            "startedAt": "2026-10-10T03:43:55.501Z",
+            "deadline": null,
+            "durationSeconds": null,
+            "filters": {
+              "onlyUnanswered": false,
+              "onlyMistakes": false,
+              "onlyFavorites": false,
+              "excludeQuestionIds": [],
+              "answeredQuestionIds": [],
+              "mistakeQuestionIds": [],
+              "favoriteQuestionIds": []
+            },
+            "moduleId": "verbal",
+            "completedAt": "2026-10-10T03:44:06.669Z",
+            "session_id": "apt_verbal_mv1unywd_y4c7et"
+          },
+          {
+            "id": "apt_verbal_mv1vb8zf_mslzwa",
+            "mode": "practice",
+            "status": "completed",
+            "planTaskId": null,
+            "questionIds": [
+              "ah2026-outline-verbal-1",
+              "ah2026-outline-verbal-2",
+              "ah2026-outline-verbal-3",
+              "ah2026-outline-verbal-4",
+              "js2024a-q016",
+              "js2024a-q017",
+              "js2024a-q018",
+              "js2024a-q019",
+              "js2024a-q020",
+              "js2024a-q021",
+              "js2024a-q022",
+              "js2024a-q023",
+              "js2024a-q024",
+              "js2024a-q026",
+              "js2024a-q027"
+            ],
+            "currentIndex": 15,
+            "correctCount": 8,
+            "reviewingAnswerId": null,
+            "draftAnswers": {},
+            "startedAt": "2026-10-10T04:02:01.659Z",
+            "deadline": null,
+            "durationSeconds": null,
+            "filters": {
+              "onlyUnanswered": false,
+              "onlyMistakes": false,
+              "onlyFavorites": false,
+              "excludeQuestionIds": [],
+              "answeredQuestionIds": [
+                "ah2026-outline-verbal-1"
+              ],
+              "mistakeQuestionIds": [],
+              "favoriteQuestionIds": []
+            },
+            "moduleId": "verbal",
+            "completedAt": "2026-10-10T04:08:36.462Z",
+            "session_id": "apt_verbal_mv1vb8zf_mslzwa"
+          },
+          {
+            "id": "apt_verbal_mv1xyl9g_pxx4xg",
+            "mode": "exam",
+            "status": "completed",
+            "planTaskId": null,
+            "questionIds": [
+              "zj2023a-q050",
+              "zh2025c-q021",
+              "js2024a-q017",
+              "apt-verbal-002",
+              "zj2023a-q044"
+            ],
+            "currentIndex": 5,
+            "correctCount": 5,
+            "reviewingAnswerId": null,
+            "draftAnswers": {
+              "zj2023a-q050": {
+                "optionId": "C",
+                "selectedAt": "2026-10-10T05:16:56.102Z"
+              },
+              "zh2025c-q021": {
+                "optionId": "B",
+                "selectedAt": "2026-10-10T05:17:19.433Z"
+              },
+              "js2024a-q017": {
+                "optionId": "C",
+                "selectedAt": "2026-10-10T05:17:55.848Z"
+              },
+              "apt-verbal-002": {
+                "optionId": "B",
+                "selectedAt": "2026-10-10T05:18:07.892Z"
+              },
+              "zj2023a-q044": {
+                "optionId": "A",
+                "selectedAt": "2026-10-10T05:18:43.006Z"
+              }
+            },
+            "startedAt": "2026-10-10T05:16:09.892Z",
+            "deadline": "2026-10-10T05:21:09.892Z",
+            "durationSeconds": 300,
+            "filters": {
+              "onlyUnanswered": false,
+              "onlyMistakes": false,
+              "onlyFavorites": false,
+              "excludeQuestionIds": [],
+              "answeredQuestionIds": [],
+              "mistakeQuestionIds": [],
+              "favoriteQuestionIds": []
+            },
+            "moduleId": "verbal",
+            "answeredCount": 5,
+            "unansweredCount": 0,
+            "scoreRate": 1,
+            "answeredAccuracy": 1,
+            "submittedAt": "2026-10-10T05:18:49.159Z",
+            "completedAt": "2026-10-10T05:18:49.159Z",
+            "session_id": "apt_verbal_mv1xyl9g_pxx4xg"
+          }
+        ],
+        "answers": [
+          {
+            "id": "answer_apt_verbal_mv1unywd_y4c7et_1",
+            "sessionId": "apt_verbal_mv1unywd_y4c7et",
+            "questionId": "ah2026-outline-verbal-1",
+            "selectedOptionId": "C",
+            "correctAnswer": "C",
+            "isCorrect": true,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T03:44:00.012Z",
+            "knowledgePointIds": [
+              "verbal:context"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1unywd_y4c7et_1"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_1",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "ah2026-outline-verbal-1",
+            "selectedOptionId": "C",
+            "correctAnswer": "C",
+            "isCorrect": true,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T04:02:03.969Z",
+            "knowledgePointIds": [
+              "verbal:context"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_1"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_2",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "ah2026-outline-verbal-2",
+            "selectedOptionId": "A",
+            "correctAnswer": "A",
+            "isCorrect": true,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T04:03:44.325Z",
+            "knowledgePointIds": [
+              "verbal:main-idea"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_2"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_3",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "ah2026-outline-verbal-3",
+            "selectedOptionId": "A",
+            "correctAnswer": "A",
+            "isCorrect": true,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T04:04:03.652Z",
+            "knowledgePointIds": [
+              "verbal:context"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_3"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_4",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "ah2026-outline-verbal-4",
+            "selectedOptionId": "A",
+            "correctAnswer": "C",
+            "isCorrect": false,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T04:05:27.807Z",
+            "knowledgePointIds": [
+              "verbal:sentence-order"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_4"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_5",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "js2024a-q016",
+            "selectedOptionId": "D",
+            "correctAnswer": "D",
+            "isCorrect": true,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T04:05:46.068Z",
+            "knowledgePointIds": [
+              "verbal:main-idea"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_5"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_6",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "js2024a-q017",
+            "selectedOptionId": "C",
+            "correctAnswer": "C",
+            "isCorrect": true,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T04:06:01.047Z",
+            "knowledgePointIds": [
+              "verbal:main-idea"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_6"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_7",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "js2024a-q018",
+            "selectedOptionId": "A",
+            "correctAnswer": "B",
+            "isCorrect": false,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T04:06:22.511Z",
+            "knowledgePointIds": [
+              "verbal:detail"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_7"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_8",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "js2024a-q019",
+            "selectedOptionId": "D",
+            "correctAnswer": "C",
+            "isCorrect": false,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T04:06:51.667Z",
+            "knowledgePointIds": [
+              "verbal:main-idea"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_8"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_9",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "js2024a-q020",
+            "selectedOptionId": "B",
+            "correctAnswer": "B",
+            "isCorrect": true,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T04:07:03.596Z",
+            "knowledgePointIds": [
+              "verbal:main-idea"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_9"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_10",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "js2024a-q021",
+            "selectedOptionId": "D",
+            "correctAnswer": "C",
+            "isCorrect": false,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T04:07:12.488Z",
+            "knowledgePointIds": [
+              "verbal:detail"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_10"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_11",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "js2024a-q022",
+            "selectedOptionId": "A",
+            "correctAnswer": "A",
+            "isCorrect": true,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T04:07:24.129Z",
+            "knowledgePointIds": [
+              "verbal:context"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_11"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_12",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "js2024a-q023",
+            "selectedOptionId": "A",
+            "correctAnswer": "D",
+            "isCorrect": false,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T04:07:32.909Z",
+            "knowledgePointIds": [
+              "verbal:main-idea"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_12"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_13",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "js2024a-q024",
+            "selectedOptionId": "B",
+            "correctAnswer": "B",
+            "isCorrect": true,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T04:07:47.583Z",
+            "knowledgePointIds": [
+              "verbal:main-idea"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_13"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_14",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "js2024a-q026",
+            "selectedOptionId": "C",
+            "correctAnswer": "D",
+            "isCorrect": false,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T04:08:18.320Z",
+            "knowledgePointIds": [
+              "verbal:main-idea"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_14"
+          },
+          {
+            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_15",
+            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
+            "questionId": "js2024a-q027",
+            "selectedOptionId": "B",
+            "correctAnswer": "C",
+            "isCorrect": false,
+            "mode": "practice",
+            "answeredAt": "2026-10-10T04:08:34.775Z",
+            "knowledgePointIds": [
+              "verbal:detail"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_15"
+          },
+          {
+            "id": "answer_apt_verbal_mv1xyl9g_pxx4xg_zj2023a-q050",
+            "sessionId": "apt_verbal_mv1xyl9g_pxx4xg",
+            "questionId": "zj2023a-q050",
+            "selectedOptionId": "C",
+            "correctAnswer": "C",
+            "isCorrect": true,
+            "mode": "exam",
+            "answeredAt": "2026-10-10T05:16:56.102Z",
+            "submittedAt": "2026-10-10T05:18:49.159Z",
+            "questionIndex": 0,
+            "knowledgePointIds": [
+              "verbal:detail"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1xyl9g_pxx4xg_zj2023a-q050"
+          },
+          {
+            "id": "answer_apt_verbal_mv1xyl9g_pxx4xg_zh2025c-q021",
+            "sessionId": "apt_verbal_mv1xyl9g_pxx4xg",
+            "questionId": "zh2025c-q021",
+            "selectedOptionId": "B",
+            "correctAnswer": "B",
+            "isCorrect": true,
+            "mode": "exam",
+            "answeredAt": "2026-10-10T05:17:19.433Z",
+            "submittedAt": "2026-10-10T05:18:49.159Z",
+            "questionIndex": 1,
+            "knowledgePointIds": [
+              "verbal:context"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1xyl9g_pxx4xg_zh2025c-q021"
+          },
+          {
+            "id": "answer_apt_verbal_mv1xyl9g_pxx4xg_js2024a-q017",
+            "sessionId": "apt_verbal_mv1xyl9g_pxx4xg",
+            "questionId": "js2024a-q017",
+            "selectedOptionId": "C",
+            "correctAnswer": "C",
+            "isCorrect": true,
+            "mode": "exam",
+            "answeredAt": "2026-10-10T05:17:55.848Z",
+            "submittedAt": "2026-10-10T05:18:49.159Z",
+            "questionIndex": 2,
+            "knowledgePointIds": [
+              "verbal:main-idea"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1xyl9g_pxx4xg_js2024a-q017"
+          },
+          {
+            "id": "answer_apt_verbal_mv1xyl9g_pxx4xg_apt-verbal-002",
+            "sessionId": "apt_verbal_mv1xyl9g_pxx4xg",
+            "questionId": "apt-verbal-002",
+            "selectedOptionId": "B",
+            "correctAnswer": "B",
+            "isCorrect": true,
+            "mode": "exam",
+            "answeredAt": "2026-10-10T05:18:07.892Z",
+            "submittedAt": "2026-10-10T05:18:49.159Z",
+            "questionIndex": 3,
+            "knowledgePointIds": [
+              "verbal:context"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1xyl9g_pxx4xg_apt-verbal-002"
+          },
+          {
+            "id": "answer_apt_verbal_mv1xyl9g_pxx4xg_zj2023a-q044",
+            "sessionId": "apt_verbal_mv1xyl9g_pxx4xg",
+            "questionId": "zj2023a-q044",
+            "selectedOptionId": "A",
+            "correctAnswer": "A",
+            "isCorrect": true,
+            "mode": "exam",
+            "answeredAt": "2026-10-10T05:18:43.006Z",
+            "submittedAt": "2026-10-10T05:18:49.159Z",
+            "questionIndex": 4,
+            "knowledgePointIds": [
+              "verbal:detail"
+            ],
+            "moduleId": "verbal",
+            "attempt_id": "answer_apt_verbal_mv1xyl9g_pxx4xg_zj2023a-q044"
+          }
+        ],
+        "mistakes": {
+          "ah2026-outline-verbal-4": {
+            "count": 1,
+            "firstMissedAt": "2026-10-10T04:05:27.807Z",
+            "lastMissedAt": "2026-10-10T04:05:27.807Z",
+            "lastSelectedOptionId": "A",
+            "correctAnswer": "C",
+            "moduleId": "verbal"
+          },
+          "js2024a-q018": {
+            "count": 1,
+            "firstMissedAt": "2026-10-10T04:06:22.511Z",
+            "lastMissedAt": "2026-10-10T04:06:22.511Z",
+            "lastSelectedOptionId": "A",
+            "correctAnswer": "B",
+            "moduleId": "verbal"
+          },
+          "js2024a-q019": {
+            "count": 1,
+            "firstMissedAt": "2026-10-10T04:06:51.667Z",
+            "lastMissedAt": "2026-10-10T04:06:51.667Z",
+            "lastSelectedOptionId": "D",
+            "correctAnswer": "C",
+            "moduleId": "verbal"
+          },
+          "js2024a-q021": {
+            "count": 1,
+            "firstMissedAt": "2026-10-10T04:07:12.488Z",
+            "lastMissedAt": "2026-10-10T04:07:12.488Z",
+            "lastSelectedOptionId": "D",
+            "correctAnswer": "C",
+            "moduleId": "verbal"
+          },
+          "js2024a-q023": {
+            "count": 1,
+            "firstMissedAt": "2026-10-10T04:07:32.909Z",
+            "lastMissedAt": "2026-10-10T04:07:32.909Z",
+            "lastSelectedOptionId": "A",
+            "correctAnswer": "D",
+            "moduleId": "verbal"
+          },
+          "js2024a-q026": {
+            "count": 1,
+            "firstMissedAt": "2026-10-10T04:08:18.320Z",
+            "lastMissedAt": "2026-10-10T04:08:18.320Z",
+            "lastSelectedOptionId": "C",
+            "correctAnswer": "D",
+            "moduleId": "verbal"
+          },
+          "js2024a-q027": {
+            "count": 1,
+            "firstMissedAt": "2026-10-10T04:08:34.775Z",
+            "lastMissedAt": "2026-10-10T04:08:34.775Z",
+            "lastSelectedOptionId": "B",
+            "correctAnswer": "C",
+            "moduleId": "verbal"
           }
         },
         "favorites": [],
@@ -3544,22 +4013,22 @@
         "favoriteKnowledgePointIds": [],
         "unclearKnowledgePointIds": []
       },
-      "verbal": {
+      "data-analysis": {
         "knowledgeProgress": {},
         "sessions": [
           {
-            "id": "apt_verbal_mv1unywd_y4c7et",
+            "id": "apt_data-analysis_mv1uqfgl_22wv9n",
             "mode": "practice",
             "status": "completed",
             "planTaskId": null,
             "questionIds": [
-              "ah2026-outline-verbal-1"
+              "ah2026-outline-data-1"
             ],
             "currentIndex": 1,
             "correctCount": 1,
             "reviewingAnswerId": null,
             "draftAnswers": {},
-            "startedAt": "2026-10-10T03:43:55.501Z",
+            "startedAt": "2026-10-10T03:45:50.277Z",
             "deadline": null,
             "durationSeconds": null,
             "filters": {
@@ -3571,498 +4040,29 @@
               "mistakeQuestionIds": [],
               "favoriteQuestionIds": []
             },
-            "moduleId": "verbal",
-            "completedAt": "2026-10-10T03:44:06.669Z",
-            "session_id": "apt_verbal_mv1unywd_y4c7et"
-          },
-          {
-            "id": "apt_verbal_mv1vb8zf_mslzwa",
-            "mode": "practice",
-            "status": "completed",
-            "planTaskId": null,
-            "questionIds": [
-              "ah2026-outline-verbal-1",
-              "ah2026-outline-verbal-2",
-              "ah2026-outline-verbal-3",
-              "ah2026-outline-verbal-4",
-              "js2024a-q016",
-              "js2024a-q017",
-              "js2024a-q018",
-              "js2024a-q019",
-              "js2024a-q020",
-              "js2024a-q021",
-              "js2024a-q022",
-              "js2024a-q023",
-              "js2024a-q024",
-              "js2024a-q026",
-              "js2024a-q027"
-            ],
-            "currentIndex": 15,
-            "correctCount": 8,
-            "reviewingAnswerId": null,
-            "draftAnswers": {},
-            "startedAt": "2026-10-10T04:02:01.659Z",
-            "deadline": null,
-            "durationSeconds": null,
-            "filters": {
-              "onlyUnanswered": false,
-              "onlyMistakes": false,
-              "onlyFavorites": false,
-              "excludeQuestionIds": [],
-              "answeredQuestionIds": [
-                "ah2026-outline-verbal-1"
-              ],
-              "mistakeQuestionIds": [],
-              "favoriteQuestionIds": []
-            },
-            "moduleId": "verbal",
-            "completedAt": "2026-10-10T04:08:36.462Z",
-            "session_id": "apt_verbal_mv1vb8zf_mslzwa"
-          },
-          {
-            "id": "apt_verbal_mv1xyl9g_pxx4xg",
-            "mode": "exam",
-            "status": "completed",
-            "planTaskId": null,
-            "questionIds": [
-              "zj2023a-q050",
-              "zh2025c-q021",
-              "js2024a-q017",
-              "apt-verbal-002",
-              "zj2023a-q044"
-            ],
-            "currentIndex": 5,
-            "correctCount": 5,
-            "reviewingAnswerId": null,
-            "draftAnswers": {
-              "zj2023a-q050": {
-                "optionId": "C",
-                "selectedAt": "2026-10-10T05:16:56.102Z"
-              },
-              "zh2025c-q021": {
-                "optionId": "B",
-                "selectedAt": "2026-10-10T05:17:19.433Z"
-              },
-              "js2024a-q017": {
-                "optionId": "C",
-                "selectedAt": "2026-10-10T05:17:55.848Z"
-              },
-              "apt-verbal-002": {
-                "optionId": "B",
-                "selectedAt": "2026-10-10T05:18:07.892Z"
-              },
-              "zj2023a-q044": {
-                "optionId": "A",
-                "selectedAt": "2026-10-10T05:18:43.006Z"
-              }
-            },
-            "startedAt": "2026-10-10T05:16:09.892Z",
-            "deadline": "2026-10-10T05:21:09.892Z",
-            "durationSeconds": 300,
-            "filters": {
-              "onlyUnanswered": false,
-              "onlyMistakes": false,
-              "onlyFavorites": false,
-              "excludeQuestionIds": [],
-              "answeredQuestionIds": [],
-              "mistakeQuestionIds": [],
-              "favoriteQuestionIds": []
-            },
-            "moduleId": "verbal",
-            "answeredCount": 5,
-            "unansweredCount": 0,
-            "scoreRate": 1,
-            "answeredAccuracy": 1,
-            "submittedAt": "2026-10-10T05:18:49.159Z",
-            "completedAt": "2026-10-10T05:18:49.159Z",
-            "session_id": "apt_verbal_mv1xyl9g_pxx4xg"
+            "moduleId": "data-analysis",
+            "completedAt": "2026-10-10T03:46:26.371Z",
+            "session_id": "apt_data-analysis_mv1uqfgl_22wv9n"
           }
         ],
         "answers": [
           {
-            "id": "answer_apt_verbal_mv1unywd_y4c7et_1",
-            "sessionId": "apt_verbal_mv1unywd_y4c7et",
-            "questionId": "ah2026-outline-verbal-1",
-            "selectedOptionId": "C",
-            "correctAnswer": "C",
-            "isCorrect": true,
-            "mode": "practice",
-            "answeredAt": "2026-10-10T03:44:00.012Z",
-            "knowledgePointIds": [
-              "verbal:context"
-            ],
-            "moduleId": "verbal",
-            "attempt_id": "answer_apt_verbal_mv1unywd_y4c7et_1"
-          },
-          {
-            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_1",
-            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
-            "questionId": "ah2026-outline-verbal-1",
-            "selectedOptionId": "C",
-            "correctAnswer": "C",
-            "isCorrect": true,
-            "mode": "practice",
-            "answeredAt": "2026-10-10T04:02:03.969Z",
-            "knowledgePointIds": [
-              "verbal:context"
-            ],
-            "moduleId": "verbal",
-            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_1"
-          },
-          {
-            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_2",
-            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
-            "questionId": "ah2026-outline-verbal-2",
-            "selectedOptionId": "A",
-            "correctAnswer": "A",
-            "isCorrect": true,
-            "mode": "practice",
-            "answeredAt": "2026-10-10T04:03:44.325Z",
-            "knowledgePointIds": [
-              "verbal:main-idea"
-            ],
-            "moduleId": "verbal",
-            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_2"
-          },
-          {
-            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_3",
-            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
-            "questionId": "ah2026-outline-verbal-3",
-            "selectedOptionId": "A",
-            "correctAnswer": "A",
-            "isCorrect": true,
-            "mode": "practice",
-            "answeredAt": "2026-10-10T04:04:03.652Z",
-            "knowledgePointIds": [
-              "verbal:context"
-            ],
-            "moduleId": "verbal",
-            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_3"
-          },
-          {
-            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_4",
-            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
-            "questionId": "ah2026-outline-verbal-4",
-            "selectedOptionId": "A",
-            "correctAnswer": "C",
-            "isCorrect": false,
-            "mode": "practice",
-            "answeredAt": "2026-10-10T04:05:27.807Z",
-            "knowledgePointIds": [
-              "verbal:sentence-order"
-            ],
-            "moduleId": "verbal",
-            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_4"
-          },
-          {
-            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_5",
-            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
-            "questionId": "js2024a-q016",
+            "id": "answer_apt_data-analysis_mv1uqfgl_22wv9n_1",
+            "sessionId": "apt_data-analysis_mv1uqfgl_22wv9n",
+            "questionId": "ah2026-outline-data-1",
             "selectedOptionId": "D",
             "correctAnswer": "D",
             "isCorrect": true,
             "mode": "practice",
-            "answeredAt": "2026-10-10T04:05:46.068Z",
+            "answeredAt": "2026-10-10T03:46:21.631Z",
             "knowledgePointIds": [
-              "verbal:main-idea"
+              "data-analysis:share-change"
             ],
-            "moduleId": "verbal",
-            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_5"
-          },
-          {
-            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_6",
-            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
-            "questionId": "js2024a-q017",
-            "selectedOptionId": "C",
-            "correctAnswer": "C",
-            "isCorrect": true,
-            "mode": "practice",
-            "answeredAt": "2026-10-10T04:06:01.047Z",
-            "knowledgePointIds": [
-              "verbal:main-idea"
-            ],
-            "moduleId": "verbal",
-            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_6"
-          },
-          {
-            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_7",
-            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
-            "questionId": "js2024a-q018",
-            "selectedOptionId": "A",
-            "correctAnswer": "B",
-            "isCorrect": false,
-            "mode": "practice",
-            "answeredAt": "2026-10-10T04:06:22.511Z",
-            "knowledgePointIds": [
-              "verbal:detail"
-            ],
-            "moduleId": "verbal",
-            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_7"
-          },
-          {
-            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_8",
-            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
-            "questionId": "js2024a-q019",
-            "selectedOptionId": "D",
-            "correctAnswer": "C",
-            "isCorrect": false,
-            "mode": "practice",
-            "answeredAt": "2026-10-10T04:06:51.667Z",
-            "knowledgePointIds": [
-              "verbal:main-idea"
-            ],
-            "moduleId": "verbal",
-            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_8"
-          },
-          {
-            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_9",
-            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
-            "questionId": "js2024a-q020",
-            "selectedOptionId": "B",
-            "correctAnswer": "B",
-            "isCorrect": true,
-            "mode": "practice",
-            "answeredAt": "2026-10-10T04:07:03.596Z",
-            "knowledgePointIds": [
-              "verbal:main-idea"
-            ],
-            "moduleId": "verbal",
-            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_9"
-          },
-          {
-            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_10",
-            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
-            "questionId": "js2024a-q021",
-            "selectedOptionId": "D",
-            "correctAnswer": "C",
-            "isCorrect": false,
-            "mode": "practice",
-            "answeredAt": "2026-10-10T04:07:12.488Z",
-            "knowledgePointIds": [
-              "verbal:detail"
-            ],
-            "moduleId": "verbal",
-            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_10"
-          },
-          {
-            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_11",
-            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
-            "questionId": "js2024a-q022",
-            "selectedOptionId": "A",
-            "correctAnswer": "A",
-            "isCorrect": true,
-            "mode": "practice",
-            "answeredAt": "2026-10-10T04:07:24.129Z",
-            "knowledgePointIds": [
-              "verbal:context"
-            ],
-            "moduleId": "verbal",
-            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_11"
-          },
-          {
-            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_12",
-            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
-            "questionId": "js2024a-q023",
-            "selectedOptionId": "A",
-            "correctAnswer": "D",
-            "isCorrect": false,
-            "mode": "practice",
-            "answeredAt": "2026-10-10T04:07:32.909Z",
-            "knowledgePointIds": [
-              "verbal:main-idea"
-            ],
-            "moduleId": "verbal",
-            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_12"
-          },
-          {
-            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_13",
-            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
-            "questionId": "js2024a-q024",
-            "selectedOptionId": "B",
-            "correctAnswer": "B",
-            "isCorrect": true,
-            "mode": "practice",
-            "answeredAt": "2026-10-10T04:07:47.583Z",
-            "knowledgePointIds": [
-              "verbal:main-idea"
-            ],
-            "moduleId": "verbal",
-            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_13"
-          },
-          {
-            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_14",
-            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
-            "questionId": "js2024a-q026",
-            "selectedOptionId": "C",
-            "correctAnswer": "D",
-            "isCorrect": false,
-            "mode": "practice",
-            "answeredAt": "2026-10-10T04:08:18.320Z",
-            "knowledgePointIds": [
-              "verbal:main-idea"
-            ],
-            "moduleId": "verbal",
-            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_14"
-          },
-          {
-            "id": "answer_apt_verbal_mv1vb8zf_mslzwa_15",
-            "sessionId": "apt_verbal_mv1vb8zf_mslzwa",
-            "questionId": "js2024a-q027",
-            "selectedOptionId": "B",
-            "correctAnswer": "C",
-            "isCorrect": false,
-            "mode": "practice",
-            "answeredAt": "2026-10-10T04:08:34.775Z",
-            "knowledgePointIds": [
-              "verbal:detail"
-            ],
-            "moduleId": "verbal",
-            "attempt_id": "answer_apt_verbal_mv1vb8zf_mslzwa_15"
-          },
-          {
-            "id": "answer_apt_verbal_mv1xyl9g_pxx4xg_zj2023a-q050",
-            "sessionId": "apt_verbal_mv1xyl9g_pxx4xg",
-            "questionId": "zj2023a-q050",
-            "selectedOptionId": "C",
-            "correctAnswer": "C",
-            "isCorrect": true,
-            "mode": "exam",
-            "answeredAt": "2026-10-10T05:16:56.102Z",
-            "submittedAt": "2026-10-10T05:18:49.159Z",
-            "questionIndex": 0,
-            "knowledgePointIds": [
-              "verbal:detail"
-            ],
-            "moduleId": "verbal",
-            "attempt_id": "answer_apt_verbal_mv1xyl9g_pxx4xg_zj2023a-q050"
-          },
-          {
-            "id": "answer_apt_verbal_mv1xyl9g_pxx4xg_zh2025c-q021",
-            "sessionId": "apt_verbal_mv1xyl9g_pxx4xg",
-            "questionId": "zh2025c-q021",
-            "selectedOptionId": "B",
-            "correctAnswer": "B",
-            "isCorrect": true,
-            "mode": "exam",
-            "answeredAt": "2026-10-10T05:17:19.433Z",
-            "submittedAt": "2026-10-10T05:18:49.159Z",
-            "questionIndex": 1,
-            "knowledgePointIds": [
-              "verbal:context"
-            ],
-            "moduleId": "verbal",
-            "attempt_id": "answer_apt_verbal_mv1xyl9g_pxx4xg_zh2025c-q021"
-          },
-          {
-            "id": "answer_apt_verbal_mv1xyl9g_pxx4xg_js2024a-q017",
-            "sessionId": "apt_verbal_mv1xyl9g_pxx4xg",
-            "questionId": "js2024a-q017",
-            "selectedOptionId": "C",
-            "correctAnswer": "C",
-            "isCorrect": true,
-            "mode": "exam",
-            "answeredAt": "2026-10-10T05:17:55.848Z",
-            "submittedAt": "2026-10-10T05:18:49.159Z",
-            "questionIndex": 2,
-            "knowledgePointIds": [
-              "verbal:main-idea"
-            ],
-            "moduleId": "verbal",
-            "attempt_id": "answer_apt_verbal_mv1xyl9g_pxx4xg_js2024a-q017"
-          },
-          {
-            "id": "answer_apt_verbal_mv1xyl9g_pxx4xg_apt-verbal-002",
-            "sessionId": "apt_verbal_mv1xyl9g_pxx4xg",
-            "questionId": "apt-verbal-002",
-            "selectedOptionId": "B",
-            "correctAnswer": "B",
-            "isCorrect": true,
-            "mode": "exam",
-            "answeredAt": "2026-10-10T05:18:07.892Z",
-            "submittedAt": "2026-10-10T05:18:49.159Z",
-            "questionIndex": 3,
-            "knowledgePointIds": [
-              "verbal:context"
-            ],
-            "moduleId": "verbal",
-            "attempt_id": "answer_apt_verbal_mv1xyl9g_pxx4xg_apt-verbal-002"
-          },
-          {
-            "id": "answer_apt_verbal_mv1xyl9g_pxx4xg_zj2023a-q044",
-            "sessionId": "apt_verbal_mv1xyl9g_pxx4xg",
-            "questionId": "zj2023a-q044",
-            "selectedOptionId": "A",
-            "correctAnswer": "A",
-            "isCorrect": true,
-            "mode": "exam",
-            "answeredAt": "2026-10-10T05:18:43.006Z",
-            "submittedAt": "2026-10-10T05:18:49.159Z",
-            "questionIndex": 4,
-            "knowledgePointIds": [
-              "verbal:detail"
-            ],
-            "moduleId": "verbal",
-            "attempt_id": "answer_apt_verbal_mv1xyl9g_pxx4xg_zj2023a-q044"
+            "moduleId": "data-analysis",
+            "attempt_id": "answer_apt_data-analysis_mv1uqfgl_22wv9n_1"
           }
         ],
-        "mistakes": {
-          "ah2026-outline-verbal-4": {
-            "count": 1,
-            "firstMissedAt": "2026-10-10T04:05:27.807Z",
-            "lastMissedAt": "2026-10-10T04:05:27.807Z",
-            "lastSelectedOptionId": "A",
-            "correctAnswer": "C",
-            "moduleId": "verbal"
-          },
-          "js2024a-q018": {
-            "count": 1,
-            "firstMissedAt": "2026-10-10T04:06:22.511Z",
-            "lastMissedAt": "2026-10-10T04:06:22.511Z",
-            "lastSelectedOptionId": "A",
-            "correctAnswer": "B",
-            "moduleId": "verbal"
-          },
-          "js2024a-q019": {
-            "count": 1,
-            "firstMissedAt": "2026-10-10T04:06:51.667Z",
-            "lastMissedAt": "2026-10-10T04:06:51.667Z",
-            "lastSelectedOptionId": "D",
-            "correctAnswer": "C",
-            "moduleId": "verbal"
-          },
-          "js2024a-q021": {
-            "count": 1,
-            "firstMissedAt": "2026-10-10T04:07:12.488Z",
-            "lastMissedAt": "2026-10-10T04:07:12.488Z",
-            "lastSelectedOptionId": "D",
-            "correctAnswer": "C",
-            "moduleId": "verbal"
-          },
-          "js2024a-q023": {
-            "count": 1,
-            "firstMissedAt": "2026-10-10T04:07:32.909Z",
-            "lastMissedAt": "2026-10-10T04:07:32.909Z",
-            "lastSelectedOptionId": "A",
-            "correctAnswer": "D",
-            "moduleId": "verbal"
-          },
-          "js2024a-q026": {
-            "count": 1,
-            "firstMissedAt": "2026-10-10T04:08:18.320Z",
-            "lastMissedAt": "2026-10-10T04:08:18.320Z",
-            "lastSelectedOptionId": "C",
-            "correctAnswer": "D",
-            "moduleId": "verbal"
-          },
-          "js2024a-q027": {
-            "count": 1,
-            "firstMissedAt": "2026-10-10T04:08:34.775Z",
-            "lastMissedAt": "2026-10-10T04:08:34.775Z",
-            "lastSelectedOptionId": "B",
-            "correctAnswer": "C",
-            "moduleId": "verbal"
-          }
-        },
+        "mistakes": {},
         "favorites": [],
         "favoriteKnowledgePointIds": [],
         "unclearKnowledgePointIds": []
@@ -4135,48 +4135,40 @@
     },
     "nationalWorkspace": {
       "filters": {
-        "degrees": [],
-        "departmentQueries": [],
-        "departmentQuery": "",
-        "departments": [],
-        "educationRequirements": [],
-        "examCategories": [],
-        "excludeEducationMismatch": true,
-        "excludeExplicitMismatch": false,
-        "excludeGrassrootsMismatch": true,
-        "excludeMajorMismatch": false,
-        "excludeMaleOnly": true,
-        "excludeNeedsReview": false,
-        "excludePoliticalMismatch": true,
-        "excludeSpecialReview": false,
-        "grassrootsRequirements": [],
-        "keyword": "",
+        "keyword": "税务",
+        "majorQuery": "",
         "majorPreset": "",
-        "majorQuery": "公共管理",
-        "maxRecruitCount": "",
-        "minRecruitCount": "",
-        "onlyInitialMatch": false,
-        "onlyRecruitAtLeastTwo": false,
-        "onlyUnrestrictedMajor": false,
-        "onlyWithCompleteRawFields": false,
-        "page": 2,
-        "politicalStatuses": [],
-        "qualificationStatuses": [],
-        "sort": "recruit-desc",
-        "sourceSheets": [],
-        "workCities": [
-          "深圳市"
-        ],
-        "workDistricts": [],
+        "departmentQuery": "",
+        "departmentQueries": [],
+        "departments": [],
         "workProvinces": [
-          "上海市",
-          "北京市",
-          "天津市",
-          "广东省",
-          "江苏省",
-          "浙江省",
-          "重庆市"
-        ]
+          "北京市"
+        ],
+        "workCities": [],
+        "workDistricts": [],
+        "sourceSheets": [],
+        "educationRequirements": [],
+        "degrees": [],
+        "politicalStatuses": [],
+        "grassrootsRequirements": [],
+        "examCategories": [],
+        "qualificationStatuses": [],
+        "minRecruitCount": "",
+        "maxRecruitCount": "",
+        "sort": "recruit-desc",
+        "page": 1,
+        "excludeNeedsReview": false,
+        "excludeMaleOnly": true,
+        "onlyInitialMatch": false,
+        "onlyUnrestrictedMajor": false,
+        "excludeExplicitMismatch": true,
+        "excludeMajorMismatch": false,
+        "excludeEducationMismatch": true,
+        "excludePoliticalMismatch": true,
+        "excludeGrassrootsMismatch": true,
+        "excludeSpecialReview": false,
+        "onlyRecruitAtLeastTwo": false,
+        "onlyWithCompleteRawFields": false
       },
       "visibleColumns": [
         "favorite",
@@ -4340,20 +4332,6 @@
           "id": "national:2027:130124:300110001019",
           "positionId": "national:2027:130124:300110001019",
           "addedAt": "2026-10-13T12:41:32.615Z",
-          "note": "",
-          "priority": "normal"
-        },
-        {
-          "id": "national:2027:109000:200149114007",
-          "positionId": "national:2027:109000:200149114007",
-          "addedAt": "2026-10-13T12:41:52.768Z",
-          "note": "",
-          "priority": "normal"
-        },
-        {
-          "id": "national:2027:109000:200149114004",
-          "positionId": "national:2027:109000:200149114004",
-          "addedAt": "2026-10-13T12:42:55.127Z",
           "note": "",
           "priority": "normal"
         },
@@ -4701,16 +4679,30 @@
           "priority": "normal"
         },
         {
+          "id": "national:2027:109000:200149114007",
+          "positionId": "national:2027:109000:200149114007",
+          "addedAt": "2026-10-19T14:35:37.624Z",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:109000:200149114004",
+          "positionId": "national:2027:109000:200149114004",
+          "addedAt": "2026-10-19T14:35:37.624Z",
+          "note": "",
+          "priority": "normal"
+        },
+        {
           "id": "national:2027:130101:300110003009",
           "positionId": "national:2027:130101:300110003009",
-          "addedAt": "2026-10-13T14:05:56.693Z",
+          "addedAt": "2026-10-19T14:35:37.624Z",
           "note": "",
           "priority": "normal"
         },
         {
           "id": "national:2027:130101:300110004009",
           "positionId": "national:2027:130101:300110004009",
-          "addedAt": "2026-10-13T14:05:58.155Z",
+          "addedAt": "2026-10-19T14:35:37.624Z",
           "note": "",
           "priority": "normal"
         }
@@ -4723,211 +4715,10 @@
         "national:2027:130101:300110004011"
       ],
       "notes": {},
-      "favoriteQuery": "北京",
-      "favoritePriority": "all",
-      "comparisonOnlyDifferences": true,
       "monitoringSnapshots": {
-        "national:2027:130132:300110103003": {
-          "applications": 388,
-          "qualified": 287,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/shanxisheng/xianshi/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:130132:300110115009": {
-          "applications": 2208,
-          "qualified": 2005,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/shanxisheng/xianshi/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
         "national:2027:102000:200110001006": {
           "applications": 740,
           "qualified": 424,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/beijing/beijingshi/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:130118:300110291001": {
-          "applications": 76,
-          "qualified": 61,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/shandong/binzhoushi/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:130101:300110001006": {
-          "applications": 731,
-          "qualified": 273,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/beijing/dongchengqu/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:130107:300110001013": {
-          "applications": 163,
-          "qualified": 96,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/liaoning/dalianshi/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:130101:300110002006": {
-          "applications": 708,
-          "qualified": 278,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/beijing/xichengqu/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:130124:300110002012": {
-          "applications": 189,
-          "qualified": 84,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/guangdong/shenzhenshi/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:130124:300110003008": {
-          "applications": 159,
-          "qualified": 140,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/guangdong/shenzhenshi/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:130101:300110003011": {
-          "applications": 728,
-          "qualified": 364,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/beijing/chaoyangqu/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:130124:300110005009": {
-          "applications": 182,
-          "qualified": 49,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/guangdong/shenzhenshi/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:130124:300110007003": {
-          "applications": 163,
-          "qualified": 12,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/guangdong/shenzhenshi/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:130123:300110015006": {
-          "applications": 177,
-          "qualified": 145,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/guangdong/guangzhoushi/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:130118:300110023003": {
-          "applications": 263,
-          "qualified": 102,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/shandong/jinanshi/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:130118:300110024001": {
-          "applications": 111,
-          "qualified": 94,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/shandong/jinanshi/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:130123:300110085006": {
-          "applications": 323,
-          "qualified": 223,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/guangdong/zhuhaishi/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:130132:300110102004": {
-          "applications": 227,
-          "qualified": 121,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/shanxisheng/xianshi/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:130115:300110115004": {
-          "applications": 153,
-          "qualified": 116,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/fujian/fuzhou/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:130115:300110510001": {
-          "applications": 660,
-          "qualified": 425,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/fujian/putianshi/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:130124:300110003002": {
-          "applications": 71,
-          "qualified": 54,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/guangdong/shenzhenshi/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:130124:300110002006": {
-          "applications": 82,
-          "qualified": 19,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/guangdong/shenzhenshi/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:130124:300110001019": {
-          "applications": 75,
-          "qualified": 15,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/guangdong/shenzhenshi/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:109000:200149114007": {
-          "applications": 31,
-          "qualified": 4,
           "sourceName": "华图教育",
           "sourceUrl": "https://ah.huatu.com/zw/beijing/beijingshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
@@ -4943,47 +4734,29 @@
           "observedAt": "2026-10-20T11:42:41.236Z",
           "importedAt": "2026-10-20T11:45:55.088Z"
         },
-        "national:2027:130124:300110005002": {
-          "applications": 76,
-          "qualified": 20,
+        "national:2027:109000:200149114007": {
+          "applications": 31,
+          "qualified": 4,
           "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/guangdong/shenzhenshi/",
+          "sourceUrl": "https://ah.huatu.com/zw/beijing/beijingshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
           "importedAt": "2026-10-20T11:45:55.088Z"
         },
-        "national:2027:130124:300110010001": {
-          "applications": 78,
-          "qualified": 21,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/guangdong/shenzhenshi/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:130124:300110011006": {
-          "applications": 83,
-          "qualified": 34,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/guangdong/shenzhenshi/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:130112:300110020004": {
-          "applications": 187,
-          "qualified": 151,
+        "national:2027:109210:300130850004": {
+          "applications": 202,
+          "qualified": 51,
           "sourceName": "华图教育",
           "sourceUrl": "https://ah.huatu.com/zw/zhejiang/hangzhoushi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
           "importedAt": "2026-10-20T11:45:55.088Z"
         },
-        "national:2027:130120:300110037006": {
-          "applications": 660,
-          "qualified": 432,
+        "national:2027:129119:300110001006": {
+          "applications": 165,
+          "qualified": 163,
           "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/henan/zhengzhoushi/",
+          "sourceUrl": "https://ah.huatu.com/zw/fujian/fuzhou/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
           "importedAt": "2026-10-20T11:45:55.088Z"
@@ -5006,38 +4779,47 @@
           "observedAt": "2026-10-20T11:42:41.236Z",
           "importedAt": "2026-10-20T11:45:55.088Z"
         },
-        "national:2027:158105:300130265018": {
-          "applications": 1797,
-          "qualified": 1047,
+        "national:2027:130101:300110001006": {
+          "applications": 731,
+          "qualified": 273,
           "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/guangdong/shenzhenshi/",
+          "sourceUrl": "https://ah.huatu.com/zw/beijing/dongchengqu/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
           "importedAt": "2026-10-20T11:45:55.088Z"
         },
-        "national:2027:130123:300110036005": {
-          "applications": 134,
-          "qualified": 112,
+        "national:2027:130101:300110002006": {
+          "applications": 708,
+          "qualified": 278,
           "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/guangdong/guangzhoushi/",
+          "sourceUrl": "https://ah.huatu.com/zw/beijing/xichengqu/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
           "importedAt": "2026-10-20T11:45:55.088Z"
         },
-        "national:2027:130123:300110043003": {
-          "applications": 132,
-          "qualified": 71,
+        "national:2027:130101:300110003009": {
+          "applications": 229,
+          "qualified": 132,
           "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/guangdong/guangzhoushi/",
+          "sourceUrl": "https://ah.huatu.com/zw/beijing/chaoyangqu/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
           "importedAt": "2026-10-20T11:45:55.088Z"
         },
-        "national:2027:130123:300110050003": {
-          "applications": 134,
-          "qualified": 117,
+        "national:2027:130101:300110003011": {
+          "applications": 728,
+          "qualified": 364,
           "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/guangdong/guangzhoushi/",
+          "sourceUrl": "https://ah.huatu.com/zw/beijing/chaoyangqu/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130101:300110004009": {
+          "applications": 224,
+          "qualified": 144,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/beijing/haidianqu/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
           "importedAt": "2026-10-20T11:45:55.088Z"
@@ -5051,227 +4833,11 @@
           "observedAt": "2026-10-20T11:42:41.236Z",
           "importedAt": "2026-10-20T11:45:55.088Z"
         },
-        "national:2027:130128:300110022003": {
-          "applications": 441,
-          "qualified": 169,
+        "national:2027:130104:300110015005": {
+          "applications": 944,
+          "qualified": 491,
           "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/sichuan/chengdushi/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:109210:300130850004": {
-          "applications": 202,
-          "qualified": 51,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/zhejiang/hangzhoushi/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:130132:300110115006": {
-          "applications": 230,
-          "qualified": 163,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/shanxisheng/xianshi/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:130118:300110021001": {
-          "applications": 60,
-          "qualified": 44,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/shandong/jinanshi/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:130118:300110022001": {
-          "applications": 142,
-          "qualified": 65,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/shandong/jinanshi/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:129119:300110001006": {
-          "applications": 165,
-          "qualified": 163,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/fujian/fuzhou/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:130109:300110005007": {
-          "applications": 1001,
-          "qualified": 987,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/heilongjiang/haerbinshi/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:130125:300110023028": {
-          "applications": 128,
-          "qualified": 83,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:130125:300110024011": {
-          "applications": 54,
-          "qualified": 29,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:130125:300110026016": {
-          "applications": 60,
-          "qualified": 43,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:130125:300110022004": {
-          "applications": 295,
-          "qualified": 179,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:130125:300110024009": {
-          "applications": 95,
-          "qualified": 58,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:130125:300110035004": {
-          "applications": 500,
-          "qualified": 220,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:130125:300110021007": {
-          "applications": 118,
-          "qualified": 74,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:130125:300110023021": {
-          "applications": 99,
-          "qualified": 65,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:130125:300110026012": {
-          "applications": 94,
-          "qualified": 42,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:130125:300110027010": {
-          "applications": 126,
-          "qualified": 66,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:130125:300110032013": {
-          "applications": 81,
-          "qualified": 32,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/guangxi/guangxizhuangzuzizhiqu/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:130125:300110033014": {
-          "applications": 81,
-          "qualified": 27,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:130125:300110034006": {
-          "applications": 75,
-          "qualified": 22,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:130125:300110033016": {
-          "applications": 48,
-          "qualified": 24,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:130108:300110111001": {
-          "applications": 382,
-          "qualified": 304,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/jilin/changchunshi/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:130117:300110013002": {
-          "applications": 74,
-          "qualified": 65,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/jiangxi/nanchangshi/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:130117:300110015005": {
-          "applications": 73,
-          "qualified": 60,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/jiangxi/nanchangshi/",
-          "sourceUpdatedAt": "2026-10-20 16:55",
-          "observedAt": "2026-10-20T11:42:41.236Z",
-          "importedAt": "2026-10-20T11:45:55.088Z"
-        },
-        "national:2027:130117:300110001008": {
-          "applications": 87,
-          "qualified": 71,
-          "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/jiangxi/nanchangshi/",
+          "sourceUrl": "https://ah.huatu.com/zw/shanxi/taiyuanshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
           "importedAt": "2026-10-20T11:45:55.088Z"
@@ -5312,56 +4878,119 @@
           "observedAt": "2026-10-20T11:42:41.236Z",
           "importedAt": "2026-10-20T11:45:55.088Z"
         },
-        "national:2027:130104:300110015005": {
-          "applications": 944,
-          "qualified": 491,
+        "national:2027:130107:300110001013": {
+          "applications": 163,
+          "qualified": 96,
           "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/shanxi/taiyuanshi/",
+          "sourceUrl": "https://ah.huatu.com/zw/liaoning/dalianshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
           "importedAt": "2026-10-20T11:45:55.088Z"
         },
-        "national:2027:130118:300110238002": {
-          "applications": 302,
-          "qualified": 168,
+        "national:2027:130108:300110111001": {
+          "applications": 382,
+          "qualified": 304,
           "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/shandong/linyishi/",
+          "sourceUrl": "https://ah.huatu.com/zw/jilin/changchunshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
           "importedAt": "2026-10-20T11:45:55.088Z"
         },
-        "national:2027:130123:300110085002": {
-          "applications": 643,
-          "qualified": 210,
+        "national:2027:130109:300110005007": {
+          "applications": 1001,
+          "qualified": 987,
           "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/guangdong/zhuhaishi/",
+          "sourceUrl": "https://ah.huatu.com/zw/heilongjiang/haerbinshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
           "importedAt": "2026-10-20T11:45:55.088Z"
         },
-        "national:2027:158106:300130266001": {
-          "applications": 348,
-          "qualified": 201,
+        "national:2027:130112:300110020004": {
+          "applications": 187,
+          "qualified": 151,
           "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/guangdong/zhuhaishi/",
+          "sourceUrl": "https://ah.huatu.com/zw/zhejiang/hangzhoushi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
           "importedAt": "2026-10-20T11:45:55.088Z"
         },
-        "national:2027:158106:300130266002": {
-          "applications": 278,
-          "qualified": 166,
+        "national:2027:130115:300110115004": {
+          "applications": 153,
+          "qualified": 116,
           "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/guangdong/zhuhaishi/",
+          "sourceUrl": "https://ah.huatu.com/zw/fujian/fuzhou/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
           "importedAt": "2026-10-20T11:45:55.088Z"
         },
-        "national:2027:130120:300110100003": {
-          "applications": 1088,
-          "qualified": 266,
+        "national:2027:130115:300110510001": {
+          "applications": 660,
+          "qualified": 425,
           "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/henan/luoyangshi/",
+          "sourceUrl": "https://ah.huatu.com/zw/fujian/putianshi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130117:300110001008": {
+          "applications": 87,
+          "qualified": 71,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/jiangxi/nanchangshi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130117:300110013002": {
+          "applications": 74,
+          "qualified": 65,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/jiangxi/nanchangshi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130117:300110015005": {
+          "applications": 73,
+          "qualified": 60,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/jiangxi/nanchangshi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130118:300110021001": {
+          "applications": 60,
+          "qualified": 44,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/shandong/jinanshi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130118:300110022001": {
+          "applications": 142,
+          "qualified": 65,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/shandong/jinanshi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130118:300110023003": {
+          "applications": 263,
+          "qualified": 102,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/shandong/jinanshi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130118:300110024001": {
+          "applications": 111,
+          "qualified": 94,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/shandong/jinanshi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
           "importedAt": "2026-10-20T11:45:55.088Z"
@@ -5384,25 +5013,393 @@
           "observedAt": "2026-10-20T11:42:41.236Z",
           "importedAt": "2026-10-20T11:45:55.088Z"
         },
-        "national:2027:130101:300110003009": {
-          "applications": 229,
-          "qualified": 132,
+        "national:2027:130118:300110238002": {
+          "applications": 302,
+          "qualified": 168,
           "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/beijing/chaoyangqu/",
+          "sourceUrl": "https://ah.huatu.com/zw/shandong/linyishi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
           "importedAt": "2026-10-20T11:45:55.088Z"
         },
-        "national:2027:130101:300110004009": {
-          "applications": 224,
-          "qualified": 144,
+        "national:2027:130118:300110291001": {
+          "applications": 76,
+          "qualified": 61,
           "sourceName": "华图教育",
-          "sourceUrl": "https://ah.huatu.com/zw/beijing/haidianqu/",
+          "sourceUrl": "https://ah.huatu.com/zw/shandong/binzhoushi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130120:300110037006": {
+          "applications": 660,
+          "qualified": 432,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/henan/zhengzhoushi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130120:300110100003": {
+          "applications": 1088,
+          "qualified": 266,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/henan/luoyangshi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130123:300110015006": {
+          "applications": 177,
+          "qualified": 145,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/guangzhoushi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130123:300110036005": {
+          "applications": 134,
+          "qualified": 112,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/guangzhoushi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130123:300110043003": {
+          "applications": 132,
+          "qualified": 71,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/guangzhoushi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130123:300110050003": {
+          "applications": 134,
+          "qualified": 117,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/guangzhoushi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130123:300110085002": {
+          "applications": 643,
+          "qualified": 210,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/zhuhaishi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130123:300110085006": {
+          "applications": 323,
+          "qualified": 223,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/zhuhaishi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130124:300110001019": {
+          "applications": 75,
+          "qualified": 15,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/shenzhenshi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130124:300110002006": {
+          "applications": 82,
+          "qualified": 19,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/shenzhenshi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130124:300110002012": {
+          "applications": 189,
+          "qualified": 84,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/shenzhenshi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130124:300110003002": {
+          "applications": 71,
+          "qualified": 54,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/shenzhenshi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130124:300110003008": {
+          "applications": 159,
+          "qualified": 140,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/shenzhenshi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130124:300110005002": {
+          "applications": 76,
+          "qualified": 20,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/shenzhenshi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130124:300110005009": {
+          "applications": 182,
+          "qualified": 49,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/shenzhenshi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130124:300110007003": {
+          "applications": 163,
+          "qualified": 12,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/shenzhenshi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130124:300110010001": {
+          "applications": 78,
+          "qualified": 21,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/shenzhenshi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130124:300110011006": {
+          "applications": 83,
+          "qualified": 34,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/shenzhenshi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130125:300110021007": {
+          "applications": 118,
+          "qualified": 74,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130125:300110022004": {
+          "applications": 295,
+          "qualified": 179,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130125:300110023021": {
+          "applications": 99,
+          "qualified": 65,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130125:300110023028": {
+          "applications": 128,
+          "qualified": 83,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130125:300110024009": {
+          "applications": 95,
+          "qualified": 58,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130125:300110024011": {
+          "applications": 54,
+          "qualified": 29,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130125:300110026012": {
+          "applications": 94,
+          "qualified": 42,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130125:300110026016": {
+          "applications": 60,
+          "qualified": 43,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130125:300110027010": {
+          "applications": 126,
+          "qualified": 66,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130125:300110032013": {
+          "applications": 81,
+          "qualified": 32,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangxi/guangxizhuangzuzizhiqu/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130125:300110033014": {
+          "applications": 81,
+          "qualified": 27,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130125:300110033016": {
+          "applications": 48,
+          "qualified": 24,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130125:300110034006": {
+          "applications": 75,
+          "qualified": 22,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130125:300110035004": {
+          "applications": 500,
+          "qualified": 220,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangxi/nanningshi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130128:300110022003": {
+          "applications": 441,
+          "qualified": 169,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/sichuan/chengdushi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130132:300110102004": {
+          "applications": 227,
+          "qualified": 121,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/shanxisheng/xianshi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130132:300110103003": {
+          "applications": 388,
+          "qualified": 287,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/shanxisheng/xianshi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130132:300110115006": {
+          "applications": 230,
+          "qualified": 163,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/shanxisheng/xianshi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:130132:300110115009": {
+          "applications": 2208,
+          "qualified": 2005,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/shanxisheng/xianshi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:158105:300130265018": {
+          "applications": 1797,
+          "qualified": 1047,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/shenzhenshi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:158106:300130266001": {
+          "applications": 348,
+          "qualified": 201,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/zhuhaishi/",
+          "sourceUpdatedAt": "2026-10-20 16:55",
+          "observedAt": "2026-10-20T11:42:41.236Z",
+          "importedAt": "2026-10-20T11:45:55.088Z"
+        },
+        "national:2027:158106:300130266002": {
+          "applications": 278,
+          "qualified": 166,
+          "sourceName": "华图教育",
+          "sourceUrl": "https://ah.huatu.com/zw/guangdong/zhuhaishi/",
           "sourceUpdatedAt": "2026-10-20 16:55",
           "observedAt": "2026-10-20T11:42:41.236Z",
           "importedAt": "2026-10-20T11:45:55.088Z"
         }
-      }
+      },
+      "favoriteQuery": "北京",
+      "favoritePriority": "all",
+      "monitorQuery": "",
+      "monitorCity": "all",
+      "monitorFreshGraduate": "all",
+      "monitorPriority": "all",
+      "monitorSort": "applicationsRatio-desc",
+      "comparisonOnlyDifferences": true
     },
     "onboarding": {
       "step": 0,
@@ -5410,5 +5407,41 @@
       "completed": true
     }
   },
-  "tombstones": []
+  "tombstones": [
+    {
+      "collection": "nationalWorkspace/filters/workCities",
+      "id": "深圳市",
+      "deletedAt": "2026-10-20T12:02:20.947Z"
+    },
+    {
+      "collection": "nationalWorkspace/filters/workProvinces",
+      "id": "上海市",
+      "deletedAt": "2026-10-20T12:02:20.947Z"
+    },
+    {
+      "collection": "nationalWorkspace/filters/workProvinces",
+      "id": "天津市",
+      "deletedAt": "2026-10-20T12:02:20.947Z"
+    },
+    {
+      "collection": "nationalWorkspace/filters/workProvinces",
+      "id": "广东省",
+      "deletedAt": "2026-10-20T12:02:20.947Z"
+    },
+    {
+      "collection": "nationalWorkspace/filters/workProvinces",
+      "id": "江苏省",
+      "deletedAt": "2026-10-20T12:02:20.947Z"
+    },
+    {
+      "collection": "nationalWorkspace/filters/workProvinces",
+      "id": "浙江省",
+      "deletedAt": "2026-10-20T12:02:20.947Z"
+    },
+    {
+      "collection": "nationalWorkspace/filters/workProvinces",
+      "id": "重庆市",
+      "deletedAt": "2026-10-20T12:02:20.947Z"
+    }
+  ]
 }
