@@ -577,6 +577,29 @@ button { color: inherit; }
 @media (max-width: 760px) {
   .assistant-score-overview { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+
+.zhejiang-profile { margin-bottom: 12px; }
+.zhejiang-profile > summary { padding: 5px 2px; color: #455a75; font-size: 15px; font-weight: 700; cursor: pointer; }
+.zhejiang-profile-form { display: grid; gap: 12px; padding-top: 12px; }
+.zhejiang-profile-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.zhejiang-profile-grid .form-field { min-width: 0; }
+.zhejiang-profile-grid input, .zhejiang-profile-grid select { width: 100%; min-height: 39px; padding: 8px 9px; border: 1px solid #e2e7ee; border-radius: 8px; background: #fbfcfe; color: #35445d; font-size: 15px; }
+.zhejiang-major-path { margin: 0; color: #60738f; font-size: 14px; line-height: 1.5; }
+.zhejiang-page .national-eligibility li { flex-direction: row; align-items: flex-start; gap: 9px; }
+.zhejiang-page .national-eligibility li > div { display: grid; gap: 2px; min-width: 0; }
+.zhejiang-page .national-eligibility li > .national-badge { margin-top: 1px; }
+
+@media (max-width: 1040px) {
+  .zhejiang-profile-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 760px) {
+  .zhejiang-profile-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 480px) {
+  .zhejiang-profile-grid { grid-template-columns: minmax(0, 1fr); }
+}
 @media (max-width: 650px) {
   .assistant-scores { grid-template-columns: 1fr; }
 }

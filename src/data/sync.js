@@ -1,6 +1,7 @@
 export const USER_DATA_SCHEMA_VERSION = 1;
 
 import { emptyNationalWorkspace, normalizeNationalWorkspace } from '../national/storage.js';
+import { emptyZhejiangWorkspace, normalizeZhejiangWorkspace } from '../zhejiang/storage.js';
 
 export function studyLogKey(type, item) {
   if (!isRecord(item) || !['aptitude', 'essay'].includes(type)) throw new Error('训练记录类型或内容无效。');
@@ -14,10 +15,10 @@ export function studyLogKey(type, item) {
 const DATA_FIELDS = [
   'profile', 'dayLogs', 'planOverrides', 'studyPlanTasks', 'scienceStudy',
   'generalKnowledgeStudy', 'aptitudeModuleStudies', 'aptitudeLogs', 'essayLogs',
-  'mocks', 'favorites', 'compared', 'settings', 'positionPreferences', 'nationalWorkspace', 'onboarding',
+  'mocks', 'favorites', 'compared', 'settings', 'positionPreferences', 'nationalWorkspace', 'zhejiangWorkspace', 'onboarding',
 ];
 
-const OPTIONAL_BACKUP_FIELDS = new Set(['positionPreferences', 'nationalWorkspace']);
+const OPTIONAL_BACKUP_FIELDS = new Set(['positionPreferences', 'nationalWorkspace', 'zhejiangWorkspace']);
 const DEFAULT_POSITION_FILTERS = Object.freeze({
   districtId: 'all', year: 'all', orgType: 'all', jobType: 'all', majorTopic: 'all', sourceLevel: 'all',
   unit: 'all', education: 'all', politicalStatus: 'all', freshGraduate: 'all',
@@ -56,7 +57,7 @@ const EMPTY_DATA = {
   },
   aptitudeModuleStudies: {}, aptitudeLogs: {}, essayLogs: {}, mocks: [], favorites: [], compared: [],
   settings: {}, positionPreferences: normalizePositionPreferences(),
-  nationalWorkspace: emptyNationalWorkspace(), onboarding: {},
+  nationalWorkspace: emptyNationalWorkspace(), zhejiangWorkspace: emptyZhejiangWorkspace(), onboarding: {},
 };
 
 const RECORD_COLLECTIONS = [
@@ -227,6 +228,7 @@ function projectUserData(source = {}) {
     monitorPriority: 'all',
     monitorSort: 'applicationsRatio-desc',
   };
+  merged.zhejiangWorkspace = normalizeZhejiangWorkspace(merged.zhejiangWorkspace);
   merged.onboarding = requireRecord(merged.onboarding, 'onboarding');
 
   for (const collection of RECORD_COLLECTIONS) {
@@ -267,12 +269,13 @@ function makeBackupId() {
 export function createUserDataBackup(state, { backupId = makeBackupId(), updatedAt = new Date().toISOString(), tombstones = [] } = {}) {
   if (typeof backupId !== 'string' || !backupId.trim()) throw new Error('备份编号无效。');
   if (typeof updatedAt !== 'string' || !Number.isFinite(Date.parse(updatedAt))) throw new Error('备份时间无效。');
+  const data = projectUserData(state);
   const backup = {
     schemaVersion: USER_DATA_SCHEMA_VERSION,
     backupId,
     updatedAt: new Date(updatedAt).toISOString(),
-    data: projectUserData(state),
-    tombstones: normalizeTombstones(tombstones),
+    data,
+    tombstones: cleanTombstones(data, tombstones),
   };
   assertNoTombstoneRecords(backup.data, backup.tombstones);
   return backup;

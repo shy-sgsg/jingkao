@@ -8,6 +8,7 @@ import {
   parseUserBackup,
 } from '../src/data/backup.js';
 import { createEncryptedAccount, unlockEncryptedAccount } from '../src/data/encryptedStore.js';
+import { emptyZhejiangWorkspace, normalizeZhejiangWorkspace } from '../src/zhejiang/storage.js';
 
 const state = {
   profile: { major: '公共管理', degree: '硕士' },
@@ -33,6 +34,7 @@ const state = {
     favoriteQuery: '', favoritePriority: 'all', monitorQuery: '', monitorCity: 'all', monitorFreshGraduate: 'all',
     monitorPriority: 'all', monitorSort: 'applicationsRatio-desc', comparisonOnlyDifferences: false,
   },
+  zhejiangWorkspace: normalizeZhejiangWorkspace(emptyZhejiangWorkspace()),
   settings: { density: 'compact', fontSize: 'large', motion: 'immersive' },
   onboarding: { step: 0, hidden: true, completed: true },
 };

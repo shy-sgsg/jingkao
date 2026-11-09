@@ -13,6 +13,7 @@
     "data:refresh": "bash scripts/rebuild_data.sh",
     "national:import": "python3 scripts/national/import_positions.py",
     "national:check": "python3 scripts/national/validate_positions.py",
-    "national:test": "python3 tests/test_national_import.py && python3 tests/test_national_validate.py"
+    "national:test": "python3 tests/test_national_import.py && python3 tests/test_national_validate.py",
+    "zhejiang:import": "python3 scripts/zhejiang/import_positions.py"
   }
 }

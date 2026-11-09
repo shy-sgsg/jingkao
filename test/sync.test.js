@@ -78,6 +78,21 @@ test('national workspace is included in cloud backup and merges with Beijing job
   assert.deepEqual(merged.compared, ['231260001']);
 });
 
+test('creating a backup clears an old deletion marker when a favorite is added back locally', () => {
+  const positionId = 'national:2027:002000:100110001001';
+  const tombstone = {
+    collection: 'nationalWorkspace/favorites',
+    id: positionId,
+    deletedAt: '2026-10-31T00:00:00.000Z',
+  };
+  const backup = makeBackup({ nationalWorkspace: {
+    favorites: [{ id: positionId, positionId, addedAt: '2026-11-01T00:00:00.000Z', note: '', priority: 'normal' }],
+  } }, { tombstones: [tombstone] });
+
+  assert.deepEqual(backup.tombstones, []);
+  assert.doesNotThrow(() => validateUserDataBackup(backup));
+});
+
 test('position competition evidence filters and sorts survive preference normalization', () => {
   const preferences = normalizePositionPreferences({
     filters: { competitionEvidence: 'has', cutoffEvidence: 'missing' },

@@ -44,10 +44,17 @@ import { filterNationalPositions, sortNationalPositions } from './national/filte
 import { evaluateNationalEligibility } from './national/eligibility.js';
 import { nationalComparisonToCsv, nationalPositionsToCsv } from './national/export.js';
 import { renderNationalWorkspace } from './national/view.js';
+import { emptyZhejiangWorkspace, normalizeZhejiangWorkspace, toggleZhejiangComparison, toggleZhejiangFavorite, updateZhejiangFavorite } from './zhejiang/storage.js';
+import { filterZhejiangPositions, sortZhejiangPositions } from './zhejiang/filters.js';
+import { zhejiangComparisonToCsv, zhejiangPositionsToCsv } from './zhejiang/export.js';
+import { renderZhejiangWorkspace } from './zhejiang/view.js';
 
 const DATA_URL = './public/data.json';
 const NATIONAL_POSITIONS_URL = './public/national/positions-2027.json';
 const NATIONAL_METADATA_URL = './public/national/metadata-2027.json';
+const ZHEJIANG_POSITIONS_URL = './public/zhejiang/positions-2027.json';
+const ZHEJIANG_METADATA_URL = './public/zhejiang/metadata-2027.json';
+const ZHEJIANG_MAJOR_CATALOG_URL = './public/zhejiang/major-catalog-2027.json';
 const FIXED_ACCESS_PASSWORD = '1234567890123';
 const FIXED_PROFILE_NAME = '京考个人学习记录';
 const FIXED_PROFILE_ID_KEY = 'changping-jingkao-dashboard:fixed-profile-id:v1';
@@ -59,7 +66,7 @@ let displayDensity = 'comfortable';
 document.documentElement.dataset.density = displayDensity;
 document.documentElement.classList.toggle('has-view-transition-api', typeof document.startViewTransition === 'function');
 const icons = {
-  overview: '◫', guide: '✦', plan: '▦', science: '⚗', aptitude: '⌁', essay: '✎', mocks: '⌂', positions: '▤', compare: '⇄', assistant: '✧', scenarios: '◉', matrix: '▦', national: '国', profile: '♙', research: '✧', evidence: '⌁', sources: 'ⓘ', settings: '⚙',
+  overview: '◫', guide: '✦', plan: '▦', science: '⚗', aptitude: '⌁', essay: '✎', mocks: '⌂', positions: '▤', compare: '⇄', assistant: '✧', scenarios: '◉', matrix: '▦', national: '国', zhejiang: '浙', profile: '♙', research: '✧', evidence: '⌁', sources: 'ⓘ', settings: '⚙',
 };
 const pageMeta = {
   overview: ['备考总览', '查看今天的复习任务、目标分差和北京京考职位决策证据。'],
@@ -77,6 +84,7 @@ const pageMeta = {
   scenarios: ['分数情景', '将目标分与已收录的历史样本范围对照，不输出进面或录取概率。'],
   matrix: ['北京京考竞争矩阵', '按北京市 16 区和年度查看职位样例覆盖；不把样例数解释为竞争率或年度总量。'],
   national: ['2027 国考职位筛选', '按职位表条件查找、核对和比较 2027 年中央机关及直属机构招录职位。'],
+  zhejiang: ['2027 浙江省考职位筛选', '按浙江省职位表和个人条件筛选、核对与比较招录职位。'],
   profile: ['个人报考资料', '在本机填写。专业预置为公共管理；其他信息不会由系统推断。'],
   research: ['研究结论', '把当前可支持的结论、证据与限制集中查看。'],
   evidence: ['数据覆盖与核验', '查看年度职位样例覆盖、来源差异与数据边界。'],
@@ -88,6 +96,7 @@ const navGroups = [
   { label: '备考复盘', items: [['aptitude', '行测能力'], ['essay', '申论训练'], ['mocks', '模考记录']] },
   { label: '北京京考职位决策', items: [['positions', '职位库'], ['compare', '岗位比较'], ['assistant', '选岗助手'], ['scenarios', '分数情景'], ['matrix', '竞争矩阵']] },
   { label: '中央机关国考', items: [['national', '2027 国考职位']] },
+  { label: '浙江省考', items: [['zhejiang', '2027 浙江省考职位']] },
   { label: '个人与数据', items: [['profile', '个人资料'], ['research', '研究结论'], ['evidence', '数据覆盖'], ['sources', '数据与来源'], ['settings', '设置与显示']] },
 ];
 const mockModules = getAptitudeMockModules();
@@ -97,6 +106,11 @@ let nationalPositions = null;
 let nationalMetadata = null;
 let nationalLoadPromise = null;
 let nationalLoadError = '';
+let zhejiangPositions = null;
+let zhejiangMetadata = null;
+let zhejiangMajorCatalog = null;
+let zhejiangLoadPromise = null;
+let zhejiangLoadError = '';
 let nationalFilterFocusName = '';
 let nationalFilterOpenName = '';
 let nationalFilterDrawerOpenAfterRender = false;
@@ -118,6 +132,7 @@ function readRoute(hash = location.hash) {
   return {
     page: aptitudeRoute?.page || pageAliases[routePage] || routePage,
     nationalTab: ['positions', 'overview', 'favorites', 'monitor', 'comparison'].includes(value('tab')) ? value('tab') : 'positions',
+    zhejiangTab: ['positions', 'overview', 'favorites', 'comparison'].includes(value('tab')) ? value('tab') : 'positions',
     aptitudeModuleId: aptitudeRoute?.moduleId || null,
     taskId: value('task'), knowledgePointId: value('knowledge'), sessionId: value('session'),
     reviewQuestionId: value('review'),
@@ -131,6 +146,7 @@ function routeTaskIdForScience() {
 const initialRoute = readRoute();
 let page = initialRoute.page;
 let nationalTab = initialRoute.nationalTab || 'positions';
+let zhejiangTab = initialRoute.zhejiangTab || 'positions';
 let activeAptitudeModuleId = initialRoute.aptitudeModuleId;
 let activeAptitudeOverallSessionId = initialRoute.page === 'aptitude' ? initialRoute.sessionId : null;
 let activeReviewQuestionId = initialRoute.reviewQuestionId;
@@ -197,6 +213,7 @@ function emptyStorage() {
     settings: { density: 'comfortable', fontSize: 'standard', motion: 'enhanced' },
     positionPreferences: normalizePositionPreferences(),
     nationalWorkspace: emptyNationalWorkspace(),
+    zhejiangWorkspace: emptyZhejiangWorkspace(),
     onboarding: { step: 0, hidden: false, completed: false },
     cloudSync: { baseline: null, lastSyncedAt: null, publicNoticeAccepted: false },
   };
@@ -241,6 +258,7 @@ function readStorage(source = {}, densityFallback = 'comfortable') {
       },
       positionPreferences: normalizePositionPreferences(parsed.positionPreferences),
       nationalWorkspace: normalizeNationalWorkspace(parsed.nationalWorkspace),
+      zhejiangWorkspace: normalizeZhejiangWorkspace(parsed.zhejiangWorkspace),
       onboarding: parsed.onboarding && typeof parsed.onboarding === 'object'
         ? { step: Number.isInteger(parsed.onboarding.step) ? parsed.onboarding.step : 0, hidden: parsed.onboarding.hidden === true, completed: parsed.onboarding.completed === true }
         : { step: 0, hidden: false, completed: false },
@@ -641,12 +659,26 @@ function renderNationalPage() {
   });
 }
 
+function renderZhejiangPage() {
+  if (!zhejiangPositions || !zhejiangMajorCatalog) {
+    return `<div class="page-body national-page zhejiang-page"><section class="panel national-load-state"><h1>${zhejiangLoadError ? '浙江省考职位数据暂时无法载入' : '正在载入 2027 浙江省考职位表'}</h1><p>${escapeHtml(zhejiangLoadError || '首次打开需要读取职位表和专业目录；其他备考页面使用独立数据。')}</p>${zhejiangLoadError ? '<button type="button" class="button button-secondary" data-action="zhejiang-retry-load">重试</button>' : ''}</section></div>`;
+  }
+  return renderZhejiangWorkspace({
+    positions: zhejiangPositions,
+    metadata: zhejiangMetadata,
+    profile: storage.zhejiangWorkspace.profile,
+    majorCatalog: zhejiangMajorCatalog,
+    workspace: storage.zhejiangWorkspace,
+    tab: zhejiangTab,
+  });
+}
+
 function renderLayout() {
   const aptitudeModule = page === 'aptitudeModule' ? APTITUDE_MODULES.find((module) => module.id === activeAptitudeModuleId) : null;
   const [title, subtitle] = aptitudeModule
     ? [aptitudeModule.area, `${aptitudeModule.hint} · 学习、练习与手动记录`]
     : pageMeta[page] || pageMeta.overview;
-  const pageScope = ['positions', 'compare', 'assistant', 'scenarios', 'matrix'].includes(page) ? '北京京考职位决策' : page === 'national' ? '中央机关国考' : ['aptitude', 'aptitudeModule', 'science', 'generalKnowledge'].includes(page) ? '行测能力' : page === 'overview' ? '备考工作台' : '昌平区';
+  const pageScope = ['positions', 'compare', 'assistant', 'scenarios', 'matrix'].includes(page) ? '北京京考职位决策' : page === 'national' ? '中央机关国考' : page === 'zhejiang' ? '浙江省考' : ['aptitude', 'aptitudeModule', 'science', 'generalKnowledge'].includes(page) ? '行测能力' : page === 'overview' ? '备考工作台' : '昌平区';
   return `${renderSidebar()}<div class="main-shell"><header class="topbar"><div class="topbar-left"><button class="mobile-menu" type="button" aria-label="打开导航" data-action="mobile-menu">☰</button><div><div class="breadcrumb">${pageScope} <span>/</span> <strong>${escapeHtml(title)}</strong></div><p class="page-subtitle">${escapeHtml(subtitle)}</p></div></div><div class="topbar-right"><button class="button button-secondary cloud-sync-trigger" type="button" data-action="open-cloud-sync">☁ 云端同步</button><a class="button button-secondary guide-trigger" href="#/guide">使用指南</a>${renderDensityControl()}<span class="today-pill"><span class="today-dot"></span>${escapeHtml(fmtDate(todayString()))}</span><button class="button button-quiet account-lock-button" type="button" data-action="account-lock" aria-label="锁定当前页面">锁定</button></div></header><main id="page-content" tabindex="-1">${renderPage()}</main><footer class="page-footer"><span>资料更新至 ${escapeHtml(dataset.dataAsOf)} · 使用前请回看官方当年职位表</span><a href="#/sources">数据口径说明 →</a></footer></div><div class="sidebar-scrim" data-action="close-menu"></div>`;
 }
 
@@ -2314,7 +2346,7 @@ function renderSources() {
 }
 
 function renderPage() {
-  const pages = { overview: renderOverview, guide: renderGuide, plan: renderPlan, science: renderScience, aptitude: renderAptitude, generalKnowledge: renderGeneralKnowledge, essay: renderEssay, mocks: renderMocks, positions: renderPositions, compare: renderCompare, assistant: renderAssistant, scenarios: renderScenarios, matrix: renderMatrix, national: renderNationalPage, profile: renderProfile, research: renderResearch, evidence: renderEvidence, sources: renderSources, settings: renderSettings };
+  const pages = { overview: renderOverview, guide: renderGuide, plan: renderPlan, science: renderScience, aptitude: renderAptitude, generalKnowledge: renderGeneralKnowledge, essay: renderEssay, mocks: renderMocks, positions: renderPositions, compare: renderCompare, assistant: renderAssistant, scenarios: renderScenarios, matrix: renderMatrix, national: renderNationalPage, zhejiang: renderZhejiangPage, profile: renderProfile, research: renderResearch, evidence: renderEvidence, sources: renderSources, settings: renderSettings };
   const help = getPageHelp(page === 'aptitudeModule' ? 'aptitudeModule' : page);
   let content = page === 'aptitudeModule' ? renderAptitudeModule(activeAptitudeModuleId) : (pages[page] || renderOverview)();
   const aptitudeModuleChild = page === 'science' || page === 'generalKnowledge'
@@ -3133,9 +3165,39 @@ function exportNationalSelection(kind) {
   downloadNationalCsv(nationalPositionsToCsv(includeNotes(sortedNationalResults(selected, workspace.filters.sort))), 'filtered');
 }
 
+function downloadZhejiangCsv(csv, suffix) {
+  const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = `zhejiang-2027-${suffix}-${todayString()}.csv`;
+  link.click();
+  setTimeout(() => URL.revokeObjectURL(url), 0);
+}
+
+function exportZhejiangSelection(kind) {
+  if (!zhejiangPositions) { notify('浙江省考职位数据尚未载入。'); return; }
+  const workspace = storage.zhejiangWorkspace;
+  if (kind === 'comparison') {
+    const ids = new Set(workspace.comparisons);
+    const selected = zhejiangPositions.filter((position) => ids.has(position.id));
+    downloadZhejiangCsv(zhejiangComparisonToCsv(selected, workspace.profile, zhejiangMajorCatalog, workspace), 'comparison');
+    return;
+  }
+  if (kind === 'favorites') {
+    const ids = new Set(workspace.favorites.map((item) => item.positionId));
+    const selected = zhejiangPositions.filter((position) => ids.has(position.id));
+    downloadZhejiangCsv(zhejiangPositionsToCsv(selected, workspace.profile, zhejiangMajorCatalog, workspace), 'favorites');
+    return;
+  }
+  const selected = filterZhejiangPositions(zhejiangPositions, workspace.filters, workspace.profile, zhejiangMajorCatalog);
+  downloadZhejiangCsv(zhejiangPositionsToCsv(sortZhejiangPositions(selected, workspace.filters.sort), workspace.profile, zhejiangMajorCatalog, workspace), 'filtered');
+}
+
 function render() {
   if (!pageMeta[page]) page = 'overview';
   if (page === 'national' && !nationalPositions) void loadNationalWorkspaceData();
+  if (page === 'zhejiang' && !zhejiangPositions) void loadZhejiangWorkspaceData();
   pageRevealObserver?.disconnect();
   const enteringPage = pageTransition;
   root.innerHTML = renderLayout();
@@ -3197,6 +3259,35 @@ async function loadNationalWorkspaceData() {
     if (page === 'national' && accountSession) render();
   });
   return nationalLoadPromise;
+}
+
+async function loadZhejiangWorkspaceData() {
+  if (zhejiangLoadPromise) return zhejiangLoadPromise;
+  zhejiangLoadError = '';
+  zhejiangLoadPromise = (async () => {
+    const [positionsResponse, metadataResponse, catalogResponse] = await Promise.all([
+      fetch(ZHEJIANG_POSITIONS_URL), fetch(ZHEJIANG_METADATA_URL), fetch(ZHEJIANG_MAJOR_CATALOG_URL),
+    ]);
+    if (!positionsResponse.ok) throw new Error(`职位数据载入失败（HTTP ${positionsResponse.status}）`);
+    if (!metadataResponse.ok) throw new Error(`数据说明载入失败（HTTP ${metadataResponse.status}）`);
+    if (!catalogResponse.ok) throw new Error(`专业目录载入失败（HTTP ${catalogResponse.status}）`);
+    const [positions, metadata, catalog] = await Promise.all([
+      positionsResponse.json(), metadataResponse.json(), catalogResponse.json(),
+    ]);
+    if (!Array.isArray(positions) || !Array.isArray(catalog) || !metadata
+      || metadata.examType !== 'zhejiang' || metadata.year !== 2027) {
+      throw new Error('浙江省考职位数据、专业目录或年度格式不匹配。');
+    }
+    zhejiangPositions = positions;
+    zhejiangMetadata = metadata;
+    zhejiangMajorCatalog = catalog;
+  })().catch((error) => {
+    zhejiangLoadError = error.message || '浙江省考职位数据载入失败。';
+  }).finally(() => {
+    zhejiangLoadPromise = null;
+    if (page === 'zhejiang' && accountSession) render();
+  });
+  return zhejiangLoadPromise;
 }
 
 function startScienceExamClock() {
@@ -3350,14 +3441,14 @@ function scrollToTop() {
 function navigate(id, query = '', aptitudeModuleId = null) {
   page = pageMeta[id] ? id : 'overview';
   if (page === 'aptitudeModule' && aptitudeModuleId) activeAptitudeModuleId = aptitudeModuleId;
-  const querySuffix = (['aptitude', 'science', 'generalKnowledge', 'aptitudeModule'].includes(page)
-    || page === 'national') && query ? `?${query}` : '';
+  const querySuffix = (['aptitude', 'science', 'generalKnowledge', 'aptitudeModule', 'national', 'zhejiang'].includes(page)) && query ? `?${query}` : '';
   const routePath = page === 'science' ? 'aptitude/science'
     : page === 'generalKnowledge' ? 'aptitude/general-knowledge'
       : page === 'aptitudeModule' ? `aptitude/${activeAptitudeModuleId}` : page;
   const route = `#/${routePath}${querySuffix}`;
   const parsedRoute = readRoute(route);
   nationalTab = parsedRoute.nationalTab;
+  zhejiangTab = parsedRoute.zhejiangTab;
   activeReviewQuestionId = parsedRoute.reviewQuestionId;
   activeSciencePlanTaskId = parsedRoute.taskId;
   selectedScienceKnowledgePointId = parsedRoute.knowledgePointId;
@@ -3698,6 +3789,106 @@ document.addEventListener('click', async (event) => {
   if (action === 'national-copy-position') {
     const position = nationalPositions?.find((item) => item.id === actionEl.dataset.positionId);
     if (!position) { notify('找不到这条国考职位。'); return; }
+    const text = Object.entries(position.rawFields || {}).map(([field, value]) => `${field}：${value || '原表为空'}`).join('\n');
+    try {
+      if (!navigator.clipboard?.writeText) throw new Error('当前浏览器未开放剪贴板权限。');
+      await navigator.clipboard.writeText(text);
+      notify('职位表原文已复制');
+    } catch (error) { notify(error.message || '复制失败，请检查浏览器剪贴板权限。'); }
+    return;
+  }
+  if (action === 'zhejiang-retry-load') {
+    zhejiangLoadPromise = null;
+    zhejiangLoadError = '';
+    void loadZhejiangWorkspaceData();
+    render();
+    return;
+  }
+  if (action === 'zhejiang-go-positions') {
+    navigate('zhejiang', 'tab=positions');
+    return;
+  }
+  if (action === 'zhejiang-toggle-favorite') {
+    const id = actionEl.dataset.positionId;
+    const wasSaved = storage.zhejiangWorkspace.favorites.some((item) => item.positionId === id);
+    storage.zhejiangWorkspace = toggleZhejiangFavorite(storage.zhejiangWorkspace, id);
+    if (!wasSaved) {
+      const favorite = storage.zhejiangWorkspace.favorites.find((item) => item.positionId === id);
+      if (favorite) favorite.addedAt = new Date().toISOString();
+    }
+    await persistAndRender(wasSaved ? '已取消浙江省考职位收藏' : '浙江省考职位已收藏');
+    return;
+  }
+  if (action === 'zhejiang-toggle-compare') {
+    try {
+      storage.zhejiangWorkspace = toggleZhejiangComparison(storage.zhejiangWorkspace, actionEl.dataset.positionId);
+      await persistAndRender('浙江省考比较清单已更新');
+    } catch (error) { notify(error.message); }
+    return;
+  }
+  if (action === 'zhejiang-toggle-difference-only') {
+    storage.zhejiangWorkspace = normalizeZhejiangWorkspace({
+      ...storage.zhejiangWorkspace,
+      comparisonOnlyDifferences: !storage.zhejiangWorkspace.comparisonOnlyDifferences,
+    });
+    await persistAndRender('比较视图已更新');
+    return;
+  }
+  if (action === 'zhejiang-clear-comparison') {
+    storage.zhejiangWorkspace = normalizeZhejiangWorkspace({ ...storage.zhejiangWorkspace, comparisons: [] });
+    await persistAndRender('已清空浙江省考比较清单');
+    return;
+  }
+  if (action === 'zhejiang-move-compare') {
+    const workspace = normalizeZhejiangWorkspace(storage.zhejiangWorkspace);
+    const index = workspace.comparisons.indexOf(actionEl.dataset.positionId);
+    const target = index + Number(actionEl.dataset.direction);
+    if (index >= 0 && target >= 0 && target < workspace.comparisons.length) {
+      [workspace.comparisons[index], workspace.comparisons[target]] = [workspace.comparisons[target], workspace.comparisons[index]];
+      storage.zhejiangWorkspace = workspace;
+      await persistAndRender('比较顺序已更新');
+    }
+    return;
+  }
+  if (action === 'zhejiang-page') {
+    storage.zhejiangWorkspace = normalizeZhejiangWorkspace({
+      ...storage.zhejiangWorkspace,
+      filters: { ...storage.zhejiangWorkspace.filters, page: Number(actionEl.dataset.page) || 1 },
+    });
+    await persistAndRender('已切换职位页');
+    return;
+  }
+  if (action === 'zhejiang-clear-filters') {
+    storage.zhejiangWorkspace = normalizeZhejiangWorkspace({
+      ...storage.zhejiangWorkspace,
+      filters: { sort: 'recruit-desc', page: 1, excludeExplicitMismatch: true },
+    });
+    await persistAndRender('已清除浙江省考职位筛选条件');
+    return;
+  }
+  if (action === 'zhejiang-apply-saved-filter') {
+    const saved = storage.zhejiangWorkspace.savedFilters.find((item) => item.id === actionEl.dataset.filterId);
+    if (!saved) { notify('找不到这条已保存筛选。'); return; }
+    storage.zhejiangWorkspace = normalizeZhejiangWorkspace({
+      ...storage.zhejiangWorkspace, filters: { ...saved.filters, page: 1 },
+    });
+    await persistAndRender(`已应用筛选：${saved.name}`);
+    return;
+  }
+  if (action === 'zhejiang-delete-saved-filter') {
+    storage.zhejiangWorkspace = normalizeZhejiangWorkspace({
+      ...storage.zhejiangWorkspace,
+      savedFilters: storage.zhejiangWorkspace.savedFilters.filter((item) => item.id !== actionEl.dataset.filterId),
+    });
+    await persistAndRender('已删除筛选方案');
+    return;
+  }
+  if (action === 'zhejiang-export-filtered') { exportZhejiangSelection('filtered'); return; }
+  if (action === 'zhejiang-export-comparison') { exportZhejiangSelection('comparison'); return; }
+  if (action === 'zhejiang-export-favorites') { exportZhejiangSelection('favorites'); return; }
+  if (action === 'zhejiang-copy-position') {
+    const position = zhejiangPositions?.find((item) => item.id === actionEl.dataset.positionId);
+    if (!position) { notify('找不到这条浙江省考职位。'); return; }
     const text = Object.entries(position.rawFields || {}).map(([field, value]) => `${field}：${value || '原表为空'}`).join('\n');
     try {
       if (!navigator.clipboard?.writeText) throw new Error('当前浏览器未开放剪贴板权限。');
@@ -4623,6 +4814,68 @@ document.addEventListener('submit', async (event) => {
     return;
   }
   if (!accountSession) return;
+  if (form.id === 'zhejiang-profile-form') {
+    const profile = Object.fromEntries(Object.entries(values).map(([key, value]) => [key, String(value).trim()]));
+    profile.degreeTitle = '';
+    profile.graduationYear = '';
+    storage.zhejiangWorkspace = normalizeZhejiangWorkspace({
+      ...storage.zhejiangWorkspace,
+      profile: { ...storage.zhejiangWorkspace.profile, ...profile },
+    });
+    await persistAndRender('浙江省考报考条件已加密保存在本机');
+    return;
+  }
+  if (form.id === 'zhejiang-filter-form') {
+    const pick = (key) => String(values[key] || '').trim();
+    const filters = {
+      keyword: pick('keyword'), sourceSheet: pick('sourceSheet'), positionAttribute: pick('positionAttribute'),
+      positionType: pick('positionType'), educationRaw: pick('educationRaw'),
+      politicalStatusRaw: pick('politicalStatusRaw'), existingIdentityRaw: pick('existingIdentityRaw'),
+      qualificationStatus: pick('qualificationStatus'), minRecruitCount: pick('minRecruitCount'),
+      sort: pick('sort') || 'recruit-desc', page: 1,
+      excludeExplicitMismatch: Object.hasOwn(values, 'excludeExplicitMismatch'),
+      onlyMajorMatch: Object.hasOwn(values, 'onlyMajorMatch'),
+    };
+    storage.zhejiangWorkspace = normalizeZhejiangWorkspace({ ...storage.zhejiangWorkspace, filters });
+    await persistAndRender('浙江省考筛选条件已加密保存在本机');
+    return;
+  }
+  if (form.id === 'zhejiang-save-filter-form') {
+    const name = String(values.name || '').trim();
+    if (!name) { notify('请输入筛选方案名称。'); return; }
+    const id = `zhejiang-filter-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 8)}`;
+    const filtersToSave = { ...storage.zhejiangWorkspace.filters };
+    delete filtersToSave.page;
+    storage.zhejiangWorkspace = normalizeZhejiangWorkspace({
+      ...storage.zhejiangWorkspace,
+      savedFilters: [...storage.zhejiangWorkspace.savedFilters, { id, name, filters: filtersToSave }],
+    });
+    await persistAndRender(`已保存筛选方案：${name}`);
+    return;
+  }
+  if (form.dataset.form === 'zhejiang-note') {
+    const id = form.dataset.positionId;
+    const note = String(values.note || '').slice(0, 2000);
+    const priority = ['high', 'normal', 'watch'].includes(values.priority) ? values.priority : 'normal';
+    const workspace = normalizeZhejiangWorkspace(storage.zhejiangWorkspace);
+    workspace.notes[id] = note;
+    if (workspace.favorites.some((item) => item.positionId === id)) {
+      storage.zhejiangWorkspace = updateZhejiangFavorite(workspace, id, { note, priority });
+    } else {
+      storage.zhejiangWorkspace = workspace;
+    }
+    await persistAndRender('浙江省考职位备注已加密保存在本机');
+    return;
+  }
+  if (form.id === 'zhejiang-favorite-search-form') {
+    storage.zhejiangWorkspace = normalizeZhejiangWorkspace({
+      ...storage.zhejiangWorkspace,
+      favoriteQuery: String(values.query || '').trim(),
+      favoritePriority: ['all', 'high', 'normal', 'watch'].includes(values.priority) ? values.priority : 'all',
+    });
+    await persistAndRender('浙江省考收藏筛选已更新');
+    return;
+  }
   if (form.id === 'national-column-form') {
     nationalColumnSettingsOpenAfterRender = true;
     storage.nationalWorkspace = normalizeNationalWorkspace({
@@ -5178,6 +5431,7 @@ window.addEventListener('hashchange', () => {
   const route = readRoute();
   page = pageMeta[route.page] ? route.page : 'overview';
   nationalTab = route.nationalTab;
+  zhejiangTab = route.zhejiangTab;
   activeAptitudeModuleId = route.aptitudeModuleId;
   activeReviewQuestionId = route.reviewQuestionId;
   activeSciencePlanTaskId = route.taskId;

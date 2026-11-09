@@ -1,6 +1,6 @@
 # 公考备考工作台
 
-本项目在保留原北京京考选岗和备考记录的基础上，新增 2027 年中央机关国考职位筛选、收藏、比较和 CSV 导出。国考数据按需载入；北京京考和学习页面不加载国考职位 JSON。
+本项目在保留原北京京考选岗和备考记录的基础上，新增 2027 年中央机关国考与浙江省考职位筛选、收藏、比较和 CSV 导出。两地职位数据按需载入；北京京考和学习页面不加载这些职位 JSON。
 
 国考使用说明、更新流程与本次验收结果见 [`docs/national/使用手册.md`](docs/national/使用手册.md)、[`docs/national/更新说明.md`](docs/national/更新说明.md) 和 [`docs/national/验收报告.md`](docs/national/验收报告.md)。
 
@@ -41,7 +41,7 @@ GitHub Actions 会运行测试并构建网站，只把 `dist/` 上传到 GitHub 
 
 ## 更新数据
 
-将经核验的新职位或观察补充到 `data/positions_seed.json`、`data/source_registry.json`，再运行 `npm run data:refresh`。不要用职位总量或区级报名快照填充到岗位级记录。
+将经核验的新职位或观察补充到 `data/positions_seed.json`、`data/source_registry.json`，再运行 `npm run data:refresh`。浙江省考数据从项目同级 `浙江省考/zj.xlsx` 和 `ml.xlsx` 生成，运行 `npm run zhejiang:import` 更新 `public/zhejiang/`。不要用职位总量或区级报名快照填充到岗位级记录。
 
 ## 当前覆盖限制
 

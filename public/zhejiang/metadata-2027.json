@@ -1,0 +1,27 @@
+{
+  "examType": "zhejiang",
+  "year": 2027,
+  "title": "浙江省各级机关单位2027年度考试录用公务员职位表",
+  "positionSource": "浙江省考/zj.xlsx",
+  "majorCatalogSource": "浙江省考/ml.xlsx",
+  "positionCount": 3298,
+  "recruitCount": 4223,
+  "majorCount": 5585,
+  "sheets": [
+    {
+      "name": "综合管理类",
+      "positionCount": 1979,
+      "recruitCount": 2338
+    },
+    {
+      "name": "行政执法类",
+      "positionCount": 1310,
+      "recruitCount": 1874
+    },
+    {
+      "name": "专业技术类",
+      "positionCount": 9,
+      "recruitCount": 11
+    }
+  ]
+}
