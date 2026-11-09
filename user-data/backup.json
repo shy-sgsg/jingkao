@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "backupId": "19ab9a98-4aee-498a-81ac-cded3a3c2ba7",
-  "updatedAt": "2026-11-09T14:56:39.836Z",
+  "updatedAt": "2026-11-09T15:04:46.880Z",
   "data": {
     "profile": {
       "major": "公共管理",
@@ -8002,17 +8002,17 @@
     {
       "collection": "beijingWorkspace/comparisons",
       "id": "beijing:2027:220943901",
-      "deletedAt": "2026-11-09T14:56:38.655Z"
+      "deletedAt": "2026-11-09T15:04:45.955Z"
     },
     {
       "collection": "beijingWorkspace/comparisons",
       "id": "beijing:2027:223106502",
-      "deletedAt": "2026-11-09T14:56:38.655Z"
+      "deletedAt": "2026-11-09T15:04:45.955Z"
     },
     {
       "collection": "beijingWorkspace/comparisons",
       "id": "beijing:2027:233106901",
-      "deletedAt": "2026-11-09T14:56:38.655Z"
+      "deletedAt": "2026-11-09T15:04:45.955Z"
     },
     {
       "collection": "nationalWorkspace/comparisons",
