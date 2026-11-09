@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "backupId": "19ab9a98-4aee-498a-81ac-cded3a3c2ba7",
-  "updatedAt": "2026-11-09T09:31:25.046Z",
+  "updatedAt": "2026-11-09T09:36:45.098Z",
   "data": {
     "profile": {
       "major": "公共管理",
@@ -7680,7 +7680,7 @@
           "positionId": "beijing:2027:823106802",
           "addedAt": "2026-11-09T09:15:06.930Z",
           "note": "",
-          "priority": "normal"
+          "priority": "high"
         },
         {
           "id": "beijing:2027:720523401",
@@ -7692,17 +7692,18 @@
       ],
       "comparisons": [
         "beijing:2027:220221501",
+        "beijing:2027:220632001",
         "beijing:2027:220943901",
         "beijing:2027:223106001",
         "beijing:2027:223106502",
-        "beijing:2027:233106901",
-        "beijing:2027:823106501"
+        "beijing:2027:233106901"
       ],
       "notes": {
         "beijing:2027:220221501": "",
         "beijing:2027:223106502": "",
         "beijing:2027:233106901": "",
-        "beijing:2027:823106501": ""
+        "beijing:2027:823106501": "",
+        "beijing:2027:823106802": ""
       },
       "manualReviews": {
         "beijing:2027:820220501": {
@@ -7978,7 +7979,7 @@
       },
       "favoriteQuery": "",
       "favoritePriority": "all",
-      "comparisonOnlyDifferences": false
+      "comparisonOnlyDifferences": true
     },
     "onboarding": {
       "step": 0,
