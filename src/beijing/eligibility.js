@@ -87,12 +87,10 @@ function beijingMajorMatches(requirement, own) {
   const ownCode = own.code;
   return terms.some((term) => {
     const code = term.match(/[（(]([\da-z]{2,8})[）)]/iu)?.[1]?.toUpperCase() || '';
-    if (code && ownCode && ownCode.startsWith(code)) return true;
+    if (code && ownCode) return ownCode.startsWith(code);
     const name = beijingNormalizeMajorName(term.replace(/[（(].*?[）)]/gu, ''));
     if (!name) return false;
-    return ownPath.some((candidate) => candidate === name
-      || (name.length >= 3 && candidate.includes(name))
-      || (candidate.length >= 3 && name.includes(candidate)));
+    return ownPath.some((candidate) => candidate === name);
   });
 }
 
@@ -413,6 +411,7 @@ function beijingMatchSpecialRequirements(position, profile) {
   }
 
   const residual = raw
+    .replace(/按?(?:照)?男女比例(?:为)?\s*\d+\s*[:：]\s*\d+\s*录取[。；;]?/gu, '')
     .replace(/政治面貌要求为[^；;。\n]*/gu, '')
     .replace(/参照公务员法管理[。；;]?/gu, '')
     .replace(/(?:限|仅限|只限|要求为|计划招录)[^；;。\n]*(?:男性|女性|男生|女生|男女不限)[^；;。\n]*/gu, '')
@@ -436,7 +435,40 @@ function beijingMatchSpecialRequirements(position, profile) {
   return checks.find((item) => item.status === 'review') || beijingCheck('match', '已列明的其他条件未发现未处理项。');
 }
 
-export function evaluateBeijingEligibility(position, profile = {}, majorCatalog = []) {
+const BEIJING_MANUAL_REVIEW_PROFILE_FIELDS = {
+  major: ['degree', 'graduateMajor', 'graduateMajorCode', 'undergraduateMajor', 'undergraduateMajorCode'],
+  education: ['degree'],
+  degree: ['degree'],
+  politicalStatus: ['politicalStatus'],
+  gender: ['gender'],
+  ethnicity: ['ethnicity'],
+  graduation: ['graduationStatus'],
+  grassrootsExperience: ['grassrootsYears', 'grassrootsProjectStatus'],
+  age: ['age', 'degree', 'graduationStatus'],
+  locality: ['hukou', 'studentOrigin'],
+  targetedIdentity: ['retiredUniversityStudentSoldier', 'serviceProjectStatus', 'disabilityStatus',
+    'disabilityType', 'disabilityLevel', 'disabilityCertificate'],
+  specialRequirements: ['credentials', 'acceptPhysicalTest', 'acceptPsychologicalTest',
+    'acceptProfessionalTest', 'acceptServiceDuration', 'highestDegreeNoResit',
+    'freshGraduateNoEmployment', 'policeSpecialtyGraduate'],
+};
+const BEIJING_MANUAL_REVIEW_POSITION_FIELDS = [
+  'id', 'sourceSheet', 'majorRaw', 'educationRaw', 'degreeRaw', 'politicalStatusRaw',
+  'ethnicityRaw', 'existingIdentityRaw', 'grassrootsRequirementRaw', 'ageRaw',
+  'otherConditionsRaw', 'remarkRaw', 'physicalTestRaw', 'psychologicalTestRaw',
+  'professionalTestRaw', 'specialRequirementRaw',
+];
+
+export function getBeijingManualReviewBasis(position = {}, profile = {}, checkKey, check) {
+  const profileFields = BEIJING_MANUAL_REVIEW_PROFILE_FIELDS[checkKey] || [];
+  const profileSnapshot = Object.fromEntries(profileFields.map((key) => [key, profile[key] ?? '']));
+  const positionSnapshot = Object.fromEntries(BEIJING_MANUAL_REVIEW_POSITION_FIELDS
+    .map((key) => [key, position[key] ?? '']));
+  positionSnapshot.rawFields = position.rawFields || {};
+  return JSON.stringify({ checkKey, reason: check?.reason || '', profile: profileSnapshot, position: positionSnapshot });
+}
+
+export function evaluateBeijingEligibility(position, profile = {}, majorCatalog = [], manualReviews = {}) {
   const checks = {
     major: beijingMatchMajor(position, profile, majorCatalog),
     education: beijingMatchEducation(position, profile),
@@ -451,6 +483,18 @@ export function evaluateBeijingEligibility(position, profile = {}, majorCatalog 
     targetedIdentity: beijingMatchTargetedIdentity(position, profile),
     specialRequirements: beijingMatchSpecialRequirements(position, profile),
   };
+  for (const [key, check] of Object.entries(checks)) {
+    const manual = manualReviews?.[key];
+    if (check.status !== 'review' || !manual || !['match', 'mismatch'].includes(manual.status)
+      || manual.basis !== getBeijingManualReviewBasis(position, profile, key, check)) continue;
+    const outcome = manual.status === 'match' ? '符合' : '不符合';
+    checks[key] = {
+      ...check,
+      status: manual.status,
+      manual: true,
+      reason: `个人已人工核验为${outcome}。原判断：${check.reason}`,
+    };
+  }
   const statuses = Object.values(checks).map((item) => item.status);
   const status = statuses.includes('mismatch') ? 'incompatible'
     : statuses.includes('missing') ? 'incomplete'

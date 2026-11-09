@@ -4,7 +4,7 @@ function beijingNormalizeSearch(value) {
   return String(value ?? '').trim().toLocaleLowerCase('zh-CN');
 }
 
-export function filterBeijingPositions(positions, filters = {}, profile = {}, majorCatalog = [], eligibilityCache = null) {
+export function filterBeijingPositions(positions, filters = {}, profile = {}, majorCatalog = [], eligibilityCache = null, manualReviews = {}) {
   const rows = Array.isArray(positions) ? positions : [];
   const keyword = beijingNormalizeSearch(filters.keyword);
   const minRecruitCount = filters.minRecruitCount === '' || filters.minRecruitCount === undefined
@@ -29,7 +29,7 @@ export function filterBeijingPositions(positions, filters = {}, profile = {}, ma
     if (keyword && !searchable.includes(keyword)) return false;
 
     const cached = eligibilityCache?.get(position);
-    const eligibility = cached || evaluateBeijingEligibility(position, profile, majorCatalog);
+    const eligibility = cached || evaluateBeijingEligibility(position, profile, majorCatalog, manualReviews?.[position.id]);
     if (!cached) eligibilityCache?.set(position, eligibility);
     if (filters.qualificationStatus && eligibility.status !== filters.qualificationStatus) return false;
     if (filters.excludeExplicitMismatch && eligibility.status === 'incompatible') return false;

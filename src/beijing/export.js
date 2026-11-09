@@ -10,7 +10,7 @@ export function beijingPositionsToCsv(positions, profile = {}, majorCatalog = []
   const headers = [...rawHeaders, '个人资格初核', '个人备注'];
   const rows = [headers.map(beijingCsvCell).join(',')];
   for (const position of items) {
-    const eligibility = evaluateBeijingEligibility(position, profile, majorCatalog);
+    const eligibility = evaluateBeijingEligibility(position, profile, majorCatalog, workspace?.manualReviews?.[position.id]);
     const note = workspace?.notes?.[position.id]
       || workspace?.favorites?.find((item) => item.positionId === position.id)?.note || '';
     rows.push([

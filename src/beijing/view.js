@@ -88,24 +88,32 @@ function beijingRequirementValue(key, position) {
   return values[key] || '';
 }
 
-function beijingEligibilityPanel(position, profile, majorCatalog, result) {
+function beijingEligibilityPanel(position, workspace, profile, majorCatalog, result) {
+  const automatic = evaluateBeijingEligibility(position, profile, majorCatalog);
+  const savedReviews = workspace.manualReviews?.[position.id] || {};
   const checks = Object.entries(result.checks).map(([key, item]) => {
     const kind = item.status === 'match' ? 'initialMatch' : item.status === 'mismatch' ? 'incompatible'
       : item.status === 'missing' ? 'incomplete' : 'needsReview';
-    return `<li>${beijingBadge(item.status === 'match' ? '符合' : item.status === 'mismatch' ? '不符合' : item.status === 'missing' ? '待补资料' : '待核验', kind)}<div><strong>${escapeBeijingHtml(BEIJING_CHECK_LABELS[key] || key)}</strong><small>职位要求：${escapeBeijingHtml(beijingRequirementValue(key, position) || '原表为空')}</small><small>个人资料：${escapeBeijingHtml(beijingPersonalCheckValue(key, profile) || '未填写')}</small><span>判断依据：${escapeBeijingHtml(item.reason)}</span></div></li>`;
+    const label = item.manual ? `人工核验${item.status === 'match' ? '符合' : '不符合'}`
+      : item.status === 'match' ? '符合' : item.status === 'mismatch' ? '不符合'
+        : item.status === 'missing' ? '待补资料' : '待核验';
+    const savedReview = savedReviews[key];
+    const canReview = automatic.checks[key].status === 'review';
+    const manualActions = canReview || savedReview ? `<div class="beijing-manual-review-actions">${savedReview && !item.manual ? '<small>岗位条件或个人资料已变化，之前的人工结论未应用。</small>' : ''}${canReview ? `<button type="button" class="button button-quiet button-small" data-action="beijing-set-manual-review" data-position-id="${escapeBeijingHtml(position.id)}" data-check-key="${escapeBeijingHtml(key)}" data-outcome="match" aria-pressed="${item.manual && item.status === 'match' ? 'true' : 'false'}">人工核验为符合</button><button type="button" class="button button-quiet button-small" data-action="beijing-set-manual-review" data-position-id="${escapeBeijingHtml(position.id)}" data-check-key="${escapeBeijingHtml(key)}" data-outcome="mismatch" aria-pressed="${item.manual && item.status === 'mismatch' ? 'true' : 'false'}">人工核验为不符合</button>` : ''}${savedReview ? `<button type="button" class="button button-quiet button-small" data-action="beijing-clear-manual-review" data-position-id="${escapeBeijingHtml(position.id)}" data-check-key="${escapeBeijingHtml(key)}">撤销人工核验</button>` : ''}</div>` : '';
+    return `<li>${beijingBadge(label, kind)}<div><strong>${escapeBeijingHtml(BEIJING_CHECK_LABELS[key] || key)}</strong><small>职位要求：${escapeBeijingHtml(beijingRequirementValue(key, position) || '原表为空')}</small><small>个人资料：${escapeBeijingHtml(beijingPersonalCheckValue(key, profile) || '未填写')}</small><span>判断依据：${escapeBeijingHtml(item.reason)}</span>${manualActions}</div></li>`;
   }).join('');
   const path = getBeijingMajorCatalogPath(profile, majorCatalog);
-  return `<section class="national-eligibility"><h4>逐项资格初核 · ${escapeBeijingHtml(result.label)}</h4>${path.length ? `<p>专业目录路径：${escapeBeijingHtml([profile.degree, ...path].join(' → '))}</p>` : ''}<ul>${checks}</ul><p>按北京报考指南使用最高学历核对学历与专业；学位按最高学历推定。未明确写入岗位条件的毕业年份和证书名称不单独触发待核验。</p></section>`;
+  return `<section class="national-eligibility"><h4>逐项资格初核 · ${escapeBeijingHtml(result.label)}</h4>${path.length ? `<p>专业目录路径：${escapeBeijingHtml([profile.degree, ...path].join(' → '))}</p>` : ''}<ul>${checks}</ul><p>按北京报考指南使用最高学历核对学历与专业；学位按最高学历推定。未明确写入岗位条件的毕业年份和证书名称不单独触发待核验。人工结论仅用于你的个人筛选，可随时撤销。</p></section>`;
 }
 
 function beijingPositionDetails(position, workspace, profile, majorCatalog, eligibility) {
   const favorite = workspace.favorites.find((item) => item.positionId === position.id);
   const note = favorite?.note || workspace.notes[position.id] || '';
-  return `<details class="national-position-details"><summary>查看资格初核与职位表原文</summary>${beijingEligibilityPanel(position, profile, majorCatalog, eligibility)}<dl class="national-raw-grid">${beijingRawFields(position)}</dl><form class="national-note-form" data-form="beijing-note" data-position-id="${escapeBeijingHtml(position.id)}"><label class="form-field"><span>个人备注</span><textarea name="note" rows="2" maxlength="2000" placeholder="例如：向招录机关核对专业口径或应届身份">${escapeBeijingHtml(note)}</textarea></label><label class="form-field"><span>优先级</span><select name="priority"><option value="normal" ${favorite?.priority !== 'high' && favorite?.priority !== 'watch' ? 'selected' : ''}>普通</option><option value="high" ${favorite?.priority === 'high' ? 'selected' : ''}>优先核对</option><option value="watch" ${favorite?.priority === 'watch' ? 'selected' : ''}>继续关注</option></select></label><button type="submit" class="button button-secondary button-small">保存备注</button></form></details>`;
+  return `<details class="national-position-details"><summary>查看资格初核与职位表原文</summary>${beijingEligibilityPanel(position, workspace, profile, majorCatalog, eligibility)}<dl class="national-raw-grid">${beijingRawFields(position)}</dl><form class="national-note-form" data-form="beijing-note" data-position-id="${escapeBeijingHtml(position.id)}"><label class="form-field"><span>个人备注</span><textarea name="note" rows="2" maxlength="2000" placeholder="例如：向招录机关核对专业口径或应届身份">${escapeBeijingHtml(note)}</textarea></label><label class="form-field"><span>优先级</span><select name="priority"><option value="normal" ${favorite?.priority !== 'high' && favorite?.priority !== 'watch' ? 'selected' : ''}>普通</option><option value="high" ${favorite?.priority === 'high' ? 'selected' : ''}>优先核对</option><option value="watch" ${favorite?.priority === 'watch' ? 'selected' : ''}>继续关注</option></select></label><button type="submit" class="button button-secondary button-small">保存备注</button></form></details>`;
 }
 
 function beijingPositionCard(position, workspace, profile, majorCatalog, eligibilityCache) {
-  const eligibility = eligibilityCache.get(position) || evaluateBeijingEligibility(position, profile, majorCatalog);
+  const eligibility = eligibilityCache.get(position) || evaluateBeijingEligibility(position, profile, majorCatalog, workspace.manualReviews?.[position.id]);
   const favorite = workspace.favorites.find((item) => item.positionId === position.id);
   const compared = workspace.comparisons.includes(position.id);
   const kind = eligibility.status === 'initialMatch' ? 'initialMatch' : eligibility.status === 'incompatible'
@@ -182,7 +190,7 @@ function beijingComparisonTab({ positions, workspace, profile, majorCatalog, eli
   ];
   const valueFor = (position, key) => {
     if (key === 'tests') return [`心理 ${position.psychologicalTestRaw || '未注明'}`, `体能 ${position.physicalTestRaw || '未注明'}`, `专业 ${position.professionalTestRaw || '未注明'}`].join(' / ');
-    if (key === 'eligibility') return (eligibilityCache.get(position) || evaluateBeijingEligibility(position, profile, majorCatalog)).label;
+    if (key === 'eligibility') return (eligibilityCache.get(position) || evaluateBeijingEligibility(position, profile, majorCatalog, workspace.manualReviews?.[position.id])).label;
     return String(position[key] ?? '');
   };
   const visibleRows = workspace.comparisonOnlyDifferences ? rows.filter(([, key]) => new Set(items.map((position) => valueFor(position, key))).size > 1) : rows;
@@ -231,14 +239,14 @@ function beijingTabs(tab, workspace) {
 }
 
 export function renderBeijingWorkspace({ positions = [], metadata = {}, profile = {}, majorCatalog = [], workspace, tab = 'positions' }) {
-  const state = workspace || { filters: {}, savedFilters: [], favorites: [], comparisons: [], notes: {} };
+  const state = workspace || { filters: {}, savedFilters: [], favorites: [], comparisons: [], notes: {}, manualReviews: {} };
   const eligibilityCache = new Map();
-  const filtered = filterBeijingPositions(positions, state.filters, profile, majorCatalog, eligibilityCache);
+  const filtered = filterBeijingPositions(positions, state.filters, profile, majorCatalog, eligibilityCache, state.manualReviews);
   const counts = hasBeijingEligibilityProfile(profile)
     ? { initialMatch: 0, incompatible: 0, needsReview: 0, incomplete: 0, majorMatches: 0 } : null;
   if (counts) {
     for (const position of positions) {
-      const result = eligibilityCache.get(position) || evaluateBeijingEligibility(position, profile, majorCatalog);
+      const result = eligibilityCache.get(position) || evaluateBeijingEligibility(position, profile, majorCatalog, state.manualReviews?.[position.id]);
       eligibilityCache.set(position, result);
       counts[result.status] += 1;
       if (result.checks.major.status === 'match') counts.majorMatches += 1;

@@ -109,6 +109,18 @@ test('legacy synced data seeds the Beijing profile from Zhejiang when Beijing st
   assert.equal(restored.data.beijingWorkspace.profile.graduationYear, undefined);
 });
 
+test('manual Beijing qualification decisions merge and sync by position and check', () => {
+  const positionId = 'beijing:2027:819900501';
+  const review = { status: 'match', basis: '个人已核对职位备注。' };
+  const local = makeBackup({ beijingWorkspace: {
+    manualReviews: { [positionId]: { specialRequirements: review } },
+  } });
+  const remote = makeBackup({});
+  const merged = mergeUserData({ base: null, local: local.data, remote: remote.data }).data;
+
+  assert.deepEqual(merged.beijingWorkspace.manualReviews[positionId].specialRequirements, review);
+});
+
 test('position competition evidence filters and sorts survive preference normalization', () => {
   const preferences = normalizePositionPreferences({
     filters: { competitionEvidence: 'has', cutoffEvidence: 'missing' },

@@ -96,6 +96,18 @@ test('legacy Zhejiang profile fields seed Beijing without asking for certificate
   assert.equal(parsed.state.beijingWorkspace.profile.graduationYear, undefined);
 });
 
+test('personal backups preserve manual Beijing qualification decisions', () => {
+  const positionId = 'beijing:2027:819900501';
+  const manualReviews = { [positionId]: {
+    specialRequirements: { status: 'match', basis: '个人已核对职位备注。' },
+  } };
+  const beijingWorkspace = normalizeBeijingWorkspace({ ...state.beijingWorkspace, manualReviews });
+  const parsed = parseUserBackup(createUserBackup({ ...state, beijingWorkspace }));
+
+  assert.equal(parsed.ok, true);
+  assert.deepEqual(parsed.state.beijingWorkspace.manualReviews, manualReviews);
+});
+
 test('personal backup restores national favorites, notes, filters, and comparisons independently', () => {
   const nationalWorkspace = {
     filters: { province: ['湖北省'] },

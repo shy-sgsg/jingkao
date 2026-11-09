@@ -48,7 +48,8 @@ import { emptyZhejiangWorkspace, normalizeZhejiangWorkspace, toggleZhejiangCompa
 import { filterZhejiangPositions, sortZhejiangPositions } from './zhejiang/filters.js';
 import { zhejiangComparisonToCsv, zhejiangPositionsToCsv } from './zhejiang/export.js';
 import { renderZhejiangWorkspace } from './zhejiang/view.js';
-import { emptyBeijingWorkspace, normalizeBeijingWorkspace, toggleBeijingComparison, toggleBeijingFavorite, updateBeijingFavorite } from './beijing/storage.js';
+import { clearBeijingManualReview, emptyBeijingWorkspace, normalizeBeijingWorkspace, setBeijingManualReview, toggleBeijingComparison, toggleBeijingFavorite, updateBeijingFavorite } from './beijing/storage.js';
+import { evaluateBeijingEligibility, getBeijingManualReviewBasis } from './beijing/eligibility.js';
 import { filterBeijingPositions, sortBeijingPositions } from './beijing/filters.js';
 import { beijingComparisonToCsv, beijingPositionsToCsv } from './beijing/export.js';
 import { renderBeijingWorkspace } from './beijing/view.js';
@@ -3254,7 +3255,7 @@ function exportBeijingSelection(kind) {
     downloadBeijingCsv(beijingPositionsToCsv(selected, workspace.profile, beijingMajorCatalog, workspace), 'favorites');
     return;
   }
-  const selected = filterBeijingPositions(beijingPositions, workspace.filters, workspace.profile, beijingMajorCatalog);
+  const selected = filterBeijingPositions(beijingPositions, workspace.filters, workspace.profile, beijingMajorCatalog, null, workspace.manualReviews);
   downloadBeijingCsv(beijingPositionsToCsv(sortBeijingPositions(selected, workspace.filters.sort), workspace.profile, beijingMajorCatalog, workspace), 'filtered');
 }
 
@@ -4121,6 +4122,36 @@ document.addEventListener('click', async (event) => {
       savedFilters: storage.beijingWorkspace.savedFilters.filter((item) => item.id !== actionEl.dataset.filterId),
     });
     await persistAndRender('已删除筛选方案');
+    return;
+  }
+  if (action === 'beijing-set-manual-review') {
+    const positionId = actionEl.dataset.positionId;
+    const checkKey = actionEl.dataset.checkKey;
+    const outcome = actionEl.dataset.outcome;
+    const position = beijingPositions?.find((item) => item.id === positionId);
+    const check = position
+      ? evaluateBeijingEligibility(position, storage.beijingWorkspace.profile, beijingMajorCatalog).checks[checkKey]
+      : null;
+    if (!check || check.status !== 'review') {
+      notify('该项目前不需要人工核验，请刷新页面后重试。');
+      return;
+    }
+    try {
+      storage.beijingWorkspace = setBeijingManualReview(
+        storage.beijingWorkspace, positionId, checkKey, outcome,
+        getBeijingManualReviewBasis(position, storage.beijingWorkspace.profile, checkKey, check),
+      );
+      await persistAndRender(outcome === 'match' ? '已人工核验为符合，岗位分类已更新' : '已人工核验为不符合，岗位分类已更新');
+    } catch (error) { notify(error.message || '人工核验保存失败。'); }
+    return;
+  }
+  if (action === 'beijing-clear-manual-review') {
+    try {
+      storage.beijingWorkspace = clearBeijingManualReview(
+        storage.beijingWorkspace, actionEl.dataset.positionId, actionEl.dataset.checkKey,
+      );
+      await persistAndRender('已撤销人工核验，岗位分类已按职位表重新判断');
+    } catch (error) { notify(error.message || '撤销人工核验失败。'); }
     return;
   }
   if (action === 'beijing-export-filtered') { exportBeijingSelection('filtered'); return; }

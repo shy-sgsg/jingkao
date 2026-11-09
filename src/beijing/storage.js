@@ -9,6 +9,10 @@ const BEIJING_PROFILE_TEXT_FIELDS = [
   'disabilityLevel', 'disabilityCertificate', 'freshGraduateNoEmployment', 'highestDegreeNoResit',
   'policeSpecialtyGraduate',
 ];
+const BEIJING_MANUAL_REVIEW_CHECKS = new Set([
+  'major', 'education', 'degree', 'politicalStatus', 'gender', 'ethnicity', 'graduation',
+  'grassrootsExperience', 'age', 'locality', 'targetedIdentity', 'specialRequirements',
+]);
 
 function beijingIsRecord(value) {
   return Boolean(value) && typeof value === 'object' && !Array.isArray(value);
@@ -27,7 +31,7 @@ export function emptyBeijingWorkspace() {
   return {
     profile: Object.fromEntries(BEIJING_PROFILE_TEXT_FIELDS.map((key) => [key, ''])),
     filters: { sort: 'recruit-desc', page: 1, excludeExplicitMismatch: true },
-    savedFilters: [], favorites: [], comparisons: [], notes: {},
+    savedFilters: [], favorites: [], comparisons: [], notes: {}, manualReviews: {},
     favoriteQuery: '', favoritePriority: 'all', comparisonOnlyDifferences: false,
   };
 }
@@ -104,6 +108,17 @@ export function normalizeBeijingWorkspace(source) {
   const notes = Object.fromEntries(Object.entries(beijingIsRecord(value.notes) ? value.notes : {})
     .filter(([id, note]) => isBeijingPositionId(id) && typeof note === 'string')
     .map(([id, note]) => [id, note.slice(0, 2000)]));
+  const manualReviews = Object.fromEntries(Object.entries(beijingIsRecord(value.manualReviews) ? value.manualReviews : {})
+    .flatMap(([positionId, checks]) => {
+      if (!isBeijingPositionId(positionId) || !beijingIsRecord(checks)) return [];
+      const normalizedChecks = Object.fromEntries(Object.entries(checks).flatMap(([key, review]) => {
+        if (!BEIJING_MANUAL_REVIEW_CHECKS.has(key) || !beijingIsRecord(review)
+          || !['match', 'mismatch'].includes(review.status)) return [];
+        const basis = beijingText(review.basis, 20000);
+        return basis ? [[key, { status: review.status, basis }]] : [];
+      }));
+      return Object.keys(normalizedChecks).length ? [[positionId, normalizedChecks]] : [];
+    }));
 
   return {
     profile,
@@ -112,6 +127,7 @@ export function normalizeBeijingWorkspace(source) {
     favorites: [...favoritesById.values()],
     comparisons,
     notes,
+    manualReviews,
     favoriteQuery: beijingText(value.favoriteQuery, 160),
     favoritePriority: ['all', 'high', 'normal', 'watch'].includes(value.favoritePriority) ? value.favoritePriority : 'all',
     comparisonOnlyDifferences: value.comparisonOnlyDifferences === true,
@@ -153,5 +169,30 @@ export function updateBeijingFavorite(source, positionId, patch = {}) {
   };
   workspace.notes[positionId] = note;
   workspace.favorites = [...workspace.favorites.filter((item) => item.positionId !== positionId), updated];
+  return workspace;
+}
+
+export function setBeijingManualReview(source, positionId, checkKey, status, basis) {
+  if (!isBeijingPositionId(positionId) || !BEIJING_MANUAL_REVIEW_CHECKS.has(checkKey)
+    || !['match', 'mismatch'].includes(status) || !beijingText(basis, 20000)) {
+    throw new Error('人工核验记录无效。');
+  }
+  const workspace = normalizeBeijingWorkspace(source);
+  workspace.manualReviews[positionId] = {
+    ...(workspace.manualReviews[positionId] || {}),
+    [checkKey]: { status, basis: beijingText(basis, 20000) },
+  };
+  return workspace;
+}
+
+export function clearBeijingManualReview(source, positionId, checkKey) {
+  if (!isBeijingPositionId(positionId) || !BEIJING_MANUAL_REVIEW_CHECKS.has(checkKey)) {
+    throw new Error('人工核验记录无效。');
+  }
+  const workspace = normalizeBeijingWorkspace(source);
+  const checks = { ...(workspace.manualReviews[positionId] || {}) };
+  delete checks[checkKey];
+  if (Object.keys(checks).length) workspace.manualReviews[positionId] = checks;
+  else delete workspace.manualReviews[positionId];
   return workspace;
 }

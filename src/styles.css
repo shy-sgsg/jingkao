@@ -598,6 +598,8 @@ button { color: inherit; }
 .beijing-page .national-eligibility li { flex-direction: row; align-items: flex-start; gap: 9px; }
 .beijing-page .national-eligibility li > div { display: grid; gap: 2px; min-width: 0; }
 .beijing-page .national-eligibility li > .national-badge { margin-top: 1px; }
+.beijing-page .beijing-manual-review-actions { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.beijing-page .beijing-manual-review-actions small { flex-basis: 100%; }
 
 @media (max-width: 1040px) {
   .zhejiang-profile-grid, .beijing-profile-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
