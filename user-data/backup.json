@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "backupId": "19ab9a98-4aee-498a-81ac-cded3a3c2ba7",
-  "updatedAt": "2026-10-31T06:26:56.443Z",
+  "updatedAt": "2026-11-09T04:12:09.055Z",
   "data": {
     "profile": {
       "major": "公共管理",
@@ -4551,6 +4551,27 @@
           "addedAt": "2026-10-19T14:35:37.624Z",
           "note": "",
           "priority": "normal"
+        },
+        {
+          "id": "national:2027:102000:200110001006",
+          "positionId": "national:2027:102000:200110001006",
+          "addedAt": "2026-10-31T06:28:01.296Z",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:109000:200149114007",
+          "positionId": "national:2027:109000:200149114007",
+          "addedAt": "2026-10-31T06:28:01.296Z",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:109000:200149114004",
+          "positionId": "national:2027:109000:200149114004",
+          "addedAt": "2026-10-31T06:28:01.296Z",
+          "note": "",
+          "priority": "normal"
         }
       ],
       "comparisons": [
@@ -4567,7 +4588,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/beijing/2027_12.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:109000:200149114004": {
           "applications": 12,
@@ -4576,7 +4597,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/beijing/2027_18.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:109000:200149114007": {
           "applications": 16,
@@ -4585,7 +4606,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/beijing/2027_18.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:109210:300130850004": {
           "applications": 273,
@@ -4594,7 +4615,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/zhejiang/2027_3.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:129119:300110001006": {
           "applications": 443,
@@ -4603,7 +4624,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/fujian/2027_5.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:129131:300110108014": {
           "applications": 219,
@@ -4612,7 +4633,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangdong/2027_21.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:129131:300110113003": {
           "applications": 186,
@@ -4621,7 +4642,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangdong/2027_21.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130101:300110001006": {
           "applications": 1601,
@@ -4630,7 +4651,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/beijing/2027_50.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130101:300110002006": {
           "applications": 1616,
@@ -4639,7 +4660,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/beijing/2027_50.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130101:300110003009": {
           "applications": 590,
@@ -4648,7 +4669,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/beijing/2027_50.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130101:300110003011": {
           "applications": 1619,
@@ -4657,7 +4678,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/beijing/2027_50.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130101:300110004009": {
           "applications": 583,
@@ -4666,7 +4687,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/beijing/2027_50.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130101:300110004011": {
           "applications": 1572,
@@ -4675,7 +4696,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/beijing/2027_50.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130104:300110015005": {
           "applications": 944,
@@ -4729,7 +4750,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/liaoning/2027_13.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130108:300110111001": {
           "applications": 838,
@@ -4738,7 +4759,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/jilin/2027_3.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130109:300110005007": {
           "applications": 1926,
@@ -4747,7 +4768,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/heilongjiang/2027_2.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130112:300110020004": {
           "applications": 383,
@@ -4756,7 +4777,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/zhejiang/2027_8.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130115:300110115004": {
           "applications": 318,
@@ -4765,7 +4786,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/fujian/2027_6.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130115:300110510001": {
           "applications": 1372,
@@ -4774,7 +4795,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/fujian/2027_6.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130117:300110001008": {
           "applications": 218,
@@ -4783,7 +4804,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/jiangxi/2027_3.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130117:300110013002": {
           "applications": 178,
@@ -4792,7 +4813,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/jiangxi/2027_3.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130117:300110015005": {
           "applications": 141,
@@ -4801,7 +4822,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/jiangxi/2027_3.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130118:300110021001": {
           "applications": 128,
@@ -4810,7 +4831,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/shandong/2027_5.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130118:300110022001": {
           "applications": 337,
@@ -4819,7 +4840,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/shandong/2027_5.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130118:300110023003": {
           "applications": 545,
@@ -4828,7 +4849,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/shandong/2027_5.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130118:300110024001": {
           "applications": 240,
@@ -4837,7 +4858,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/shandong/2027_5.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130118:300110118001": {
           "applications": 157,
@@ -4846,7 +4867,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/shandong/2027_5.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130118:300110121001": {
           "applications": 159,
@@ -4855,7 +4876,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/shandong/2027_5.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130118:300110238002": {
           "applications": 700,
@@ -4864,7 +4885,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/shandong/2027_5.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130118:300110291001": {
           "applications": 149,
@@ -4873,7 +4894,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/shandong/2027_5.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130120:300110037006": {
           "applications": 1131,
@@ -4882,7 +4903,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/henan/2027_4.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130120:300110100003": {
           "applications": 2428,
@@ -4891,7 +4912,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/henan/2027_4.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130123:300110015006": {
           "applications": 454,
@@ -4900,7 +4921,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangdong/2027_6.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130123:300110036005": {
           "applications": 412,
@@ -4909,7 +4930,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangdong/2027_6.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130123:300110043003": {
           "applications": 392,
@@ -4918,7 +4939,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangdong/2027_6.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130123:300110050003": {
           "applications": 384,
@@ -4927,7 +4948,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangdong/2027_6.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130123:300110085002": {
           "applications": 1315,
@@ -4936,7 +4957,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangdong/2027_6.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130123:300110085006": {
           "applications": 719,
@@ -4945,7 +4966,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangdong/2027_6.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130124:300110001019": {
           "applications": 173,
@@ -4954,7 +4975,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangdong/2027_40.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130124:300110002006": {
           "applications": 170,
@@ -4963,7 +4984,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangdong/2027_40.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130124:300110002012": {
           "applications": 406,
@@ -4972,7 +4993,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangdong/2027_40.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130124:300110003002": {
           "applications": 191,
@@ -4981,7 +5002,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangdong/2027_40.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130124:300110003008": {
           "applications": 413,
@@ -4990,7 +5011,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangdong/2027_40.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130124:300110005002": {
           "applications": 180,
@@ -4999,7 +5020,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangdong/2027_40.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130124:300110005009": {
           "applications": 407,
@@ -5008,7 +5029,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangdong/2027_40.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130124:300110007003": {
           "applications": 373,
@@ -5017,7 +5038,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangdong/2027_40.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130124:300110010001": {
           "applications": 186,
@@ -5026,7 +5047,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangdong/2027_40.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130124:300110011006": {
           "applications": 215,
@@ -5035,7 +5056,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangdong/2027_40.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130125:300110021007": {
           "applications": 118,
@@ -5170,7 +5191,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/sichuan/2027_2.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130132:300110102004": {
           "applications": 616,
@@ -5179,7 +5200,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/shanxisheng/2027_2.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130132:300110103003": {
           "applications": 1074,
@@ -5188,7 +5209,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/shanxisheng/2027_2.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130132:300110115006": {
           "applications": 472,
@@ -5197,7 +5218,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/shanxisheng/2027_2.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:130132:300110115009": {
           "applications": 4462,
@@ -5206,7 +5227,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/shanxisheng/2027_2.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:158105:300130265018": {
           "applications": 4024,
@@ -5215,7 +5236,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangdong/2027_8.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:158106:300130266001": {
           "applications": 766,
@@ -5224,7 +5245,7 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangdong/2027_30.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         },
         "national:2027:158106:300130266002": {
           "applications": 578,
@@ -5233,16 +5254,63 @@
           "sourceUrl": "https://ah.huatu.com/zw/guangdong/2027_30.html",
           "sourceUpdatedAt": "2026-10-24 16:17",
           "observedAt": "2026-10-31T06:13:38.398Z",
-          "importedAt": "2026-10-20T12:20:45.922Z"
+          "importedAt": "2026-10-31T06:28:13.464Z"
         }
       },
-      "favoriteQuery": "一级警长",
+      "favoriteQuery": "海淀",
       "favoritePriority": "all",
       "monitorQuery": "",
       "monitorCity": "all",
       "monitorFreshGraduate": "all",
       "monitorPriority": "all",
       "monitorSort": "applicationsRatio-desc",
+      "comparisonOnlyDifferences": false
+    },
+    "zhejiangWorkspace": {
+      "profile": {
+        "degree": "硕士研究生",
+        "degreeTitle": "",
+        "graduateMajor": "土地资源管理",
+        "graduateMajorCode": "",
+        "undergraduateMajor": "土地资源管理",
+        "undergraduateMajorCode": "",
+        "politicalStatus": "共青团员",
+        "graduationStatus": "应届毕业生",
+        "graduationYear": "",
+        "gender": "女性",
+        "ethnicity": "汉族",
+        "age": "24",
+        "grassrootsYears": "0",
+        "grassrootsProjectStatus": "否",
+        "hukou": "江西省上饶市余干县",
+        "studentOrigin": "北京市",
+        "credentials": "无",
+        "acceptPhysicalTest": "接受",
+        "acceptPsychologicalTest": "接受",
+        "acceptProfessionalTest": "接受",
+        "acceptServiceDuration": "接受"
+      },
+      "filters": {
+        "keyword": "",
+        "sourceSheet": "",
+        "positionAttribute": "",
+        "positionType": "",
+        "educationRaw": "",
+        "politicalStatusRaw": "",
+        "existingIdentityRaw": "",
+        "qualificationStatus": "initialMatch",
+        "minRecruitCount": "",
+        "sort": "recruit-desc",
+        "page": 1,
+        "excludeExplicitMismatch": true,
+        "onlyMajorMatch": true
+      },
+      "savedFilters": [],
+      "favorites": [],
+      "comparisons": [],
+      "notes": {},
+      "favoriteQuery": "",
+      "favoritePriority": "all",
       "comparisonOnlyDifferences": false
     },
     "onboarding": {
@@ -5270,21 +5338,6 @@
     {
       "collection": "nationalWorkspace/comparisons",
       "id": "national:2027:130101:300110003011",
-      "deletedAt": "2026-10-31T06:24:13.632Z"
-    },
-    {
-      "collection": "nationalWorkspace/favorites",
-      "id": "national:2027:102000:200110001006",
-      "deletedAt": "2026-10-31T06:24:13.632Z"
-    },
-    {
-      "collection": "nationalWorkspace/favorites",
-      "id": "national:2027:109000:200149114004",
-      "deletedAt": "2026-10-31T06:24:13.632Z"
-    },
-    {
-      "collection": "nationalWorkspace/favorites",
-      "id": "national:2027:109000:200149114007",
       "deletedAt": "2026-10-31T06:24:13.632Z"
     },
     {
