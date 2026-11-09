@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "backupId": "19ab9a98-4aee-498a-81ac-cded3a3c2ba7",
-  "updatedAt": "2026-11-09T04:58:42.511Z",
+  "updatedAt": "2026-11-09T08:55:09.403Z",
   "data": {
     "profile": {
       "major": "公共管理",
@@ -7478,6 +7478,73 @@
       "favoritePriority": "all",
       "comparisonOnlyDifferences": false
     },
+    "beijingWorkspace": {
+      "profile": {
+        "degree": "硕士研究生",
+        "graduateMajor": "土地资源管理",
+        "graduateMajorCode": "",
+        "undergraduateMajor": "土地资源管理",
+        "undergraduateMajorCode": "",
+        "politicalStatus": "共青团员",
+        "graduationStatus": "应届毕业生",
+        "gender": "女性",
+        "ethnicity": "汉族",
+        "age": "24",
+        "grassrootsYears": "0",
+        "grassrootsProjectStatus": "否",
+        "hukou": "江西省上饶市余干县",
+        "studentOrigin": "北京市",
+        "credentials": "无",
+        "acceptPhysicalTest": "不接受",
+        "acceptPsychologicalTest": "接受",
+        "acceptProfessionalTest": "接受",
+        "acceptServiceDuration": "接受",
+        "retiredUniversityStudentSoldier": "否",
+        "serviceProjectStatus": "否",
+        "disabilityStatus": "否",
+        "disabilityType": "",
+        "disabilityLevel": "",
+        "disabilityCertificate": "否",
+        "freshGraduateNoEmployment": "没有",
+        "highestDegreeNoResit": "是",
+        "policeSpecialtyGraduate": "否"
+      },
+      "filters": {
+        "keyword": "",
+        "sourceSheet": "",
+        "positionAttribute": "",
+        "positionType": "",
+        "positionSubType": "",
+        "educationRaw": "",
+        "politicalStatusRaw": "",
+        "existingIdentityRaw": "",
+        "workDistrict": "",
+        "qualificationStatus": "needsReview",
+        "minRecruitCount": "",
+        "sort": "recruit-desc",
+        "page": 1,
+        "excludeExplicitMismatch": false,
+        "onlyMajorMatch": false
+      },
+      "savedFilters": [],
+      "favorites": [
+        {
+          "id": "beijing:2027:223106001",
+          "positionId": "beijing:2027:223106001",
+          "addedAt": "2026-11-09T07:14:02.849Z",
+          "note": "",
+          "priority": "normal"
+        }
+      ],
+      "comparisons": [
+        "beijing:2027:223106001"
+      ],
+      "notes": {},
+      "manualReviews": {},
+      "favoriteQuery": "",
+      "favoritePriority": "all",
+      "comparisonOnlyDifferences": false
+    },
     "onboarding": {
       "step": 0,
       "hidden": true,
@@ -7607,7 +7674,12 @@
     },
     {
       "collection": "nationalWorkspace/filters/workProvinces",
-      "id": "重庆市",
+      "id": "上海市",
+      "deletedAt": "2026-11-09T04:57:17.144Z"
+    },
+    {
+      "collection": "nationalWorkspace/filters/workProvinces",
+      "id": "天津市",
       "deletedAt": "2026-11-09T04:57:17.144Z"
     },
     {
@@ -7622,17 +7694,12 @@
     },
     {
       "collection": "nationalWorkspace/filters/workProvinces",
-      "id": "上海市",
-      "deletedAt": "2026-11-09T04:57:17.144Z"
-    },
-    {
-      "collection": "nationalWorkspace/filters/workProvinces",
-      "id": "天津市",
-      "deletedAt": "2026-11-09T04:57:17.144Z"
-    },
-    {
-      "collection": "nationalWorkspace/filters/workProvinces",
       "id": "浙江省",
+      "deletedAt": "2026-11-09T04:57:17.144Z"
+    },
+    {
+      "collection": "nationalWorkspace/filters/workProvinces",
+      "id": "重庆市",
       "deletedAt": "2026-11-09T04:57:17.144Z"
     }
   ]
