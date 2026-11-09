@@ -8,6 +8,7 @@ import {
   parseUserBackup,
 } from '../src/data/backup.js';
 import { createEncryptedAccount, unlockEncryptedAccount } from '../src/data/encryptedStore.js';
+import { emptyBeijingWorkspace, normalizeBeijingWorkspace } from '../src/beijing/storage.js';
 import { emptyZhejiangWorkspace, normalizeZhejiangWorkspace } from '../src/zhejiang/storage.js';
 
 const state = {
@@ -35,6 +36,7 @@ const state = {
     monitorPriority: 'all', monitorSort: 'applicationsRatio-desc', comparisonOnlyDifferences: false,
   },
   zhejiangWorkspace: normalizeZhejiangWorkspace(emptyZhejiangWorkspace()),
+  beijingWorkspace: normalizeBeijingWorkspace(emptyBeijingWorkspace()),
   settings: { density: 'compact', fontSize: 'large', motion: 'immersive' },
   onboarding: { step: 0, hidden: true, completed: true },
 };
@@ -59,7 +61,7 @@ test('restore rejects mock scores that are not actual numeric records', () => {
 });
 
 test('older personal backups remain importable and receive empty plan edits and default display settings', () => {
-  const { planOverrides, settings, studyPlanTasks, scienceStudy, generalKnowledgeStudy, nationalWorkspace, ...olderState } = state;
+  const { planOverrides, settings, studyPlanTasks, scienceStudy, generalKnowledgeStudy, nationalWorkspace, beijingWorkspace, ...olderState } = state;
   const parsed = parseUserBackup(createUserBackup(olderState));
 
   assert.equal(parsed.ok, true);
@@ -74,6 +76,24 @@ test('older personal backups remain importable and receive empty plan edits and 
     favoriteQuery: '', favoritePriority: 'all', monitorQuery: '', monitorCity: 'all', monitorFreshGraduate: 'all',
     monitorPriority: 'all', monitorSort: 'applicationsRatio-desc', comparisonOnlyDifferences: false,
   });
+  assert.deepEqual(parsed.state.beijingWorkspace, normalizeBeijingWorkspace(emptyBeijingWorkspace()));
+});
+
+test('legacy Zhejiang profile fields seed Beijing without asking for certificate titles or graduation years', () => {
+  const { beijingWorkspace, ...legacyState } = state;
+  legacyState.zhejiangWorkspace = normalizeZhejiangWorkspace({ profile: {
+    degree: '硕士研究生', degreeTitle: '管理学硕士', graduateMajor: '土地资源管理',
+    graduationStatus: '应届毕业生', graduationYear: '2027', politicalStatus: '共青团员',
+  } });
+  const parsed = parseUserBackup(createUserBackup(legacyState));
+
+  assert.equal(parsed.ok, true);
+  assert.equal(parsed.state.beijingWorkspace.profile.degree, '硕士研究生');
+  assert.equal(parsed.state.beijingWorkspace.profile.graduateMajor, '土地资源管理');
+  assert.equal(parsed.state.beijingWorkspace.profile.graduationStatus, '应届毕业生');
+  assert.equal(parsed.state.beijingWorkspace.profile.politicalStatus, '共青团员');
+  assert.equal(parsed.state.beijingWorkspace.profile.degreeTitle, undefined);
+  assert.equal(parsed.state.beijingWorkspace.profile.graduationYear, undefined);
 });
 
 test('personal backup restores national favorites, notes, filters, and comparisons independently', () => {

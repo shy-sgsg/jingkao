@@ -7,6 +7,7 @@ const ENVELOPE_FIELDS = ['cipher', 'ciphertext', 'iterations', 'iv', 'kdf', 'sal
 import { APTITUDE_MODULES } from '../aptitude/modules.js';
 import { emptyNationalWorkspace, normalizeNationalWorkspace } from '../national/storage.js';
 import { emptyZhejiangWorkspace, normalizeZhejiangWorkspace } from '../zhejiang/storage.js';
+import { normalizeBeijingWorkspace } from '../beijing/storage.js';
 
 function base64ByteLength(value) {
   if (typeof value !== 'string' || value.length === 0 || value.length % 4 !== 0
@@ -177,6 +178,10 @@ export function parseUserBackup(input) {
     || typeof onboarding.hidden !== 'boolean' || typeof onboarding.completed !== 'boolean') {
     return { ok: false, error: '备份中的引导状态格式异常，未修改本机数据。' };
   }
+  const zhejiangWorkspace = normalizeZhejiangWorkspace(state.zhejiangWorkspace || emptyZhejiangWorkspace());
+  const beijingWorkspace = state.beijingWorkspace === undefined
+    ? normalizeBeijingWorkspace({ profile: zhejiangWorkspace.profile })
+    : normalizeBeijingWorkspace(state.beijingWorkspace);
   return {
     ok: true,
     state: {
@@ -194,7 +199,8 @@ export function parseUserBackup(input) {
       favorites: state.favorites,
       compared: state.compared,
       nationalWorkspace: normalizeNationalWorkspace(state.nationalWorkspace || emptyNationalWorkspace()),
-      zhejiangWorkspace: normalizeZhejiangWorkspace(state.zhejiangWorkspace || emptyZhejiangWorkspace()),
+      zhejiangWorkspace,
+      beijingWorkspace,
       settings: displaySettings,
       onboarding: state.onboarding,
     },

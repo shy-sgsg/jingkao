@@ -93,6 +93,22 @@ test('creating a backup clears an old deletion marker when a favorite is added b
   assert.doesNotThrow(() => validateUserDataBackup(backup));
 });
 
+test('legacy synced data seeds the Beijing profile from Zhejiang when Beijing state is absent', () => {
+  const backup = makeBackup({ zhejiangWorkspace: { profile: {
+    degree: '硕士研究生', degreeTitle: '管理学硕士', graduateMajor: '土地资源管理',
+    graduationStatus: '应届毕业生', graduationYear: '2027', politicalStatus: '共青团员',
+  } } });
+  delete backup.data.beijingWorkspace;
+
+  const restored = validateUserDataBackup(backup);
+
+  assert.equal(restored.data.beijingWorkspace.profile.degree, '硕士研究生');
+  assert.equal(restored.data.beijingWorkspace.profile.graduateMajor, '土地资源管理');
+  assert.equal(restored.data.beijingWorkspace.profile.graduationStatus, '应届毕业生');
+  assert.equal(restored.data.beijingWorkspace.profile.degreeTitle, undefined);
+  assert.equal(restored.data.beijingWorkspace.profile.graduationYear, undefined);
+});
+
 test('position competition evidence filters and sorts survive preference normalization', () => {
   const preferences = normalizePositionPreferences({
     filters: { competitionEvidence: 'has', cutoffEvidence: 'missing' },

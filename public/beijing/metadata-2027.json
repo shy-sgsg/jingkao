@@ -1,0 +1,36 @@
+{
+  "examType": "beijing",
+  "year": 2027,
+  "title": "北京市各级机关2027年度考试录用公务员职位表",
+  "positionSource": "北京市考/P020261109404659110579.xls",
+  "guideSource": "北京市考/P020261109404659566645.docx",
+  "positionCount": 1446,
+  "recruitCount": 3054,
+  "sheets": [
+    {
+      "name": "普通职位",
+      "positionCount": 1287,
+      "recruitCount": 2809
+    },
+    {
+      "name": "面向退役大学生士兵职位",
+      "positionCount": 93,
+      "recruitCount": 142
+    },
+    {
+      "name": "面向乡村振兴协理员等服务基层项目人员职位",
+      "positionCount": 36,
+      "recruitCount": 38
+    },
+    {
+      "name": "面向残疾人职位",
+      "positionCount": 14,
+      "recruitCount": 14
+    },
+    {
+      "name": "特殊职位",
+      "positionCount": 16,
+      "recruitCount": 51
+    }
+  ]
+}

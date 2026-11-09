@@ -2,6 +2,7 @@ export const USER_DATA_SCHEMA_VERSION = 1;
 
 import { emptyNationalWorkspace, normalizeNationalWorkspace } from '../national/storage.js';
 import { emptyZhejiangWorkspace, normalizeZhejiangWorkspace } from '../zhejiang/storage.js';
+import { emptyBeijingWorkspace, normalizeBeijingWorkspace } from '../beijing/storage.js';
 
 export function studyLogKey(type, item) {
   if (!isRecord(item) || !['aptitude', 'essay'].includes(type)) throw new Error('训练记录类型或内容无效。');
@@ -15,10 +16,10 @@ export function studyLogKey(type, item) {
 const DATA_FIELDS = [
   'profile', 'dayLogs', 'planOverrides', 'studyPlanTasks', 'scienceStudy',
   'generalKnowledgeStudy', 'aptitudeModuleStudies', 'aptitudeLogs', 'essayLogs',
-  'mocks', 'favorites', 'compared', 'settings', 'positionPreferences', 'nationalWorkspace', 'zhejiangWorkspace', 'onboarding',
+  'mocks', 'favorites', 'compared', 'settings', 'positionPreferences', 'nationalWorkspace', 'zhejiangWorkspace', 'beijingWorkspace', 'onboarding',
 ];
 
-const OPTIONAL_BACKUP_FIELDS = new Set(['positionPreferences', 'nationalWorkspace', 'zhejiangWorkspace']);
+const OPTIONAL_BACKUP_FIELDS = new Set(['positionPreferences', 'nationalWorkspace', 'zhejiangWorkspace', 'beijingWorkspace']);
 const DEFAULT_POSITION_FILTERS = Object.freeze({
   districtId: 'all', year: 'all', orgType: 'all', jobType: 'all', majorTopic: 'all', sourceLevel: 'all',
   unit: 'all', education: 'all', politicalStatus: 'all', freshGraduate: 'all',
@@ -57,7 +58,8 @@ const EMPTY_DATA = {
   },
   aptitudeModuleStudies: {}, aptitudeLogs: {}, essayLogs: {}, mocks: [], favorites: [], compared: [],
   settings: {}, positionPreferences: normalizePositionPreferences(),
-  nationalWorkspace: emptyNationalWorkspace(), zhejiangWorkspace: emptyZhejiangWorkspace(), onboarding: {},
+  nationalWorkspace: emptyNationalWorkspace(), zhejiangWorkspace: emptyZhejiangWorkspace(),
+  beijingWorkspace: emptyBeijingWorkspace(), onboarding: {},
 };
 
 const RECORD_COLLECTIONS = [
@@ -196,6 +198,7 @@ function normalizeAptitudeStudies(value) {
 
 function projectUserData(source = {}) {
   if (!isRecord(source)) throw new Error('个人数据格式无效，无法同步。');
+  const hasBeijingWorkspace = Object.hasOwn(source, 'beijingWorkspace');
   const merged = { ...EMPTY_DATA };
   for (const field of DATA_FIELDS) {
     if (Object.hasOwn(source, field)) merged[field] = clone(source[field]);
@@ -229,6 +232,9 @@ function projectUserData(source = {}) {
     monitorSort: 'applicationsRatio-desc',
   };
   merged.zhejiangWorkspace = normalizeZhejiangWorkspace(merged.zhejiangWorkspace);
+  merged.beijingWorkspace = hasBeijingWorkspace
+    ? normalizeBeijingWorkspace(merged.beijingWorkspace)
+    : normalizeBeijingWorkspace({ profile: merged.zhejiangWorkspace.profile });
   merged.onboarding = requireRecord(merged.onboarding, 'onboarding');
 
   for (const collection of RECORD_COLLECTIONS) {
