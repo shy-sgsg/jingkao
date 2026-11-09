@@ -630,24 +630,24 @@ button { color: inherit; }
 .beijing-history-section { display: grid; gap: 9px; margin-top: 15px; }
 .beijing-history-heading { display: flex; justify-content: space-between; align-items: center; }
 .beijing-history-heading h3 { margin: 0; font-size: 15px; }
-.beijing-history-heading > span { color: #65738a; font-size: 12px; }
+.beijing-history-heading > span { color: #65738a; font-size: 13px; }
 .beijing-history-match { border: 1px solid #e0e7ef; border-radius: 10px; background: #fff; }
 .beijing-history-match > summary { display: grid; gap: 4px; cursor: pointer; padding: 11px 13px; color: #253a56; font-weight: 650; }
 .beijing-history-match > summary small { color: #68768b; font-weight: 400; }
 .beijing-history-match-body { display: grid; gap: 11px; padding: 0 13px 13px; }
 .beijing-history-reasons { display: flex; flex-wrap: wrap; gap: 6px; }
-.beijing-history-reasons span { padding: 4px 7px; border-radius: 20px; background: #eef4ff; color: #365e8a; font-size: 11px; }
-.beijing-history-conditions { display: flex; flex-wrap: wrap; gap: 6px 15px; color: #65738a; font-size: 12px; }
+.beijing-history-reasons span { padding: 4px 7px; border-radius: 20px; background: #eef4ff; color: #365e8a; font-size: 13px; }
+.beijing-history-conditions { display: flex; flex-wrap: wrap; gap: 6px 15px; color: #65738a; font-size: 13px; }
 .beijing-history-metrics { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
-.beijing-history-metrics article, .beijing-history-scores article { display: grid; gap: 5px; padding: 10px; border-radius: 8px; background: #f6f8fb; color: #4d5d73; font-size: 12px; }
+.beijing-history-metrics article, .beijing-history-scores article { display: grid; gap: 5px; padding: 10px; border-radius: 8px; background: #f6f8fb; color: #4d5d73; font-size: 13px; }
 .beijing-history-metrics article > strong { color: #203754; font-size: 13px; }
 .beijing-history-metrics small, .beijing-history-scores small, .beijing-history-position-sources span { color: #768297; line-height: 1.5; }
 .beijing-history-metrics a, .beijing-history-scores a, .beijing-history-position-sources a { color: #356f9c; text-decoration: underline; text-underline-offset: 2px; }
 .beijing-history-scores, .beijing-history-position-sources { display: grid; gap: 7px; }
 .beijing-history-scores > strong, .beijing-history-position-sources > strong { color: #263a55; font-size: 13px; }
 .beijing-history-scores article > span { color: #1d6848; font-size: 18px; font-weight: 700; }
-.beijing-history-position-sources span { display: block; font-size: 12px; }
-.beijing-history-empty, .beijing-history-caution { margin: 0; color: #788498; font-size: 12px; line-height: 1.6; }
+.beijing-history-position-sources span { display: block; font-size: 13px; }
+.beijing-history-empty, .beijing-history-caution { margin: 0; color: #788498; font-size: 13px; line-height: 1.6; }
 .beijing-history-caution { margin-top: 13px; padding: 10px 12px; border-radius: 8px; background: #fff8e9; color: #806632; }
 .beijing-pick-actions { display: flex; justify-content: end; }
 
@@ -2273,7 +2273,7 @@ button.science-answer-option:hover { border-color: #c9d9ee; background: #f7faff;
 .national-monitor-table a { color: #416a9d; }
 .beijing-monitor { display: grid; gap: 16px; min-width: 0; }
 .beijing-monitor-table { min-width: 1180px; }
-.beijing-monitor-provenance { max-width: 220px; color: #768398 !important; font-size: 11px; line-height: 1.5; }
+.beijing-monitor-provenance { max-width: 220px; color: #768398 !important; font-size: 13px; line-height: 1.5; }
 .national-monitor-sort { padding: 0; border: 0; background: transparent; color: inherit; font: inherit; font-weight: 600; cursor: pointer; }
 .national-monitor-sort.is-active { color: #315f96; }
 @media (max-width: 980px) {

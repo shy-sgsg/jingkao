@@ -354,8 +354,8 @@ export function buildBeijingHistoricalComparisons(position, dataset = {}) {
       },
     }];
   }).sort((left, right) => {
-    return right.similarityRank.department - left.similarityRank.department
-      || right.similarityRank.conditions - left.similarityRank.conditions
+    return right.similarityRank.conditions - left.similarityRank.conditions
+      || right.similarityRank.department - left.similarityRank.department
       || right.similarityRank.evidence - left.similarityRank.evidence
       || right.year - left.year || left.positionCode.localeCompare(right.positionCode);
   });

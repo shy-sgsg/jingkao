@@ -324,9 +324,9 @@ test('national state defaults preserve legacy Beijing data while rejecting cross
   assert.equal(toggleNationalFavorite(toggleNationalFavorite(next, 'national:2027:002:0002'), 'national:2027:002:0002').favorites.length, 1);
   assert.throws(() => toggleNationalFavorite(next, '231260001'), /国考/);
 
-  const six = Array.from({ length: 6 }, (_, index) => `national:2027:00000${index + 1}:000${index + 1}`);
-  const full = normalizeNationalWorkspace({ comparisons: six });
-  assert.throws(() => toggleNationalComparison(full, 'national:2027:000007:000007'), /最多比较 6 个/u);
+  const ten = Array.from({ length: 10 }, (_, index) => `national:2027:00000${index + 1}:000${index + 1}`);
+  const full = normalizeNationalWorkspace({ comparisons: ten });
+  assert.throws(() => toggleNationalComparison(full, 'national:2027:000011:0011'), /最多比较 10 个/u);
 });
 
 test('national CSV export retains official text, escapes delimiters, and neutralizes formulas', () => {

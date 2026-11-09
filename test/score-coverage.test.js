@@ -249,7 +249,7 @@ test('the 2026 Dongcheng cutoff table is captured and only uniquely matched jobs
   const unresolved = rows.filter((row) => row.mappingConfidence === 'ambiguous');
   assert.ok(unresolved.every((row) => row.positionCode === null));
   assert.ok(unresolved.some((row) => row.title === '纪检监察岗'));
-  assert.equal(data.positions.filter((row) => row.year === 2026 && row.districtId === 'dongcheng').length, 23);
+  assert.equal(data.positions.filter((row) => row.year === 2026 && row.districtId === 'dongcheng').length, 24);
 });
 
 test('Daxing cutoff rows attach to unique positions while repeated names remain unresolved', async () => {

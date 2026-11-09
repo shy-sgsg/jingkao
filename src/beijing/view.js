@@ -2,6 +2,7 @@ import { evaluateBeijingEligibility, getBeijingMajorCatalogPath, hasBeijingEligi
 import { filterBeijingPositions, sortBeijingPositions } from './filters.js';
 import { buildBeijingHistoricalComparisons } from './history.js';
 import { BEIJING_REGISTRATION_START, filterAndSortBeijingMonitorRows } from './monitoring.js';
+import { normalizeBeijingWorkspace } from './storage.js';
 
 const historicalComparisonCache = new WeakMap();
 
@@ -386,7 +387,7 @@ function renderBeijingMonitoringTab({ positions, workspace, importPreview, refre
 }
 
 export function renderBeijingWorkspace({ positions = [], metadata = {}, profile = {}, majorCatalog = [], workspace, tab = 'positions', monitorImportPreview = null, monitorRefreshPreview = null }) {
-  const state = workspace || { filters: {}, savedFilters: [], favorites: [], comparisons: [], notes: {}, manualReviews: {} };
+  const state = normalizeBeijingWorkspace(workspace);
   const eligibilityCache = new Map();
   const filtered = filterBeijingPositions(positions, state.filters, profile, majorCatalog, eligibilityCache, state.manualReviews);
   const counts = hasBeijingEligibilityProfile(profile)
