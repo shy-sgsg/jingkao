@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "backupId": "19ab9a98-4aee-498a-81ac-cded3a3c2ba7",
-  "updatedAt": "2026-11-09T04:12:09.055Z",
+  "updatedAt": "2026-11-09T04:58:42.511Z",
   "data": {
     "profile": {
       "major": "公共管理",
@@ -1060,6 +1060,507 @@
               "sh-2026-outline-hall-effect"
             ]
           }
+        },
+        {
+          "id": "science_mw7w2psq_jamcya",
+          "mode": "practice",
+          "status": "completed",
+          "planTaskId": null,
+          "questionIds": [
+            "sh-2026-outline-hall-effect",
+            "gd-2025-outline-grain-storage",
+            "sh-2020-outline-bicycle-friction",
+            "gd-2026-outline-slope-forces",
+            "beijing-2026-outline-dragonfly",
+            "gd-2021-outline-ladder-climber"
+          ],
+          "randomizedQuestionOrder": true,
+          "currentIndex": 6,
+          "correctCount": 5,
+          "reviewingAnswerId": null,
+          "draftAnswers": {},
+          "startedAt": "2026-11-08T13:49:42.554Z",
+          "deadline": null,
+          "durationSeconds": null,
+          "filters": {
+            "sourceType": "official",
+            "onlyUnanswered": false,
+            "onlyMistakes": false,
+            "onlyFavorites": false,
+            "excludeQuestionIds": [],
+            "answeredQuestionIds": [
+              "beijing-2026-outline-dragonfly",
+              "beijing-2026-outline-dragonfly",
+              "sh-2020-outline-bicycle-friction",
+              "sh-2026-outline-hall-effect",
+              "gd-2025-outline-grain-storage",
+              "gd-2026-outline-slope-forces",
+              "gd-2021-outline-ladder-climber",
+              "gd-2019-township-wind-energy",
+              "gd-2019-township-ear-pressure",
+              "gd-2019-township-hammer-lever",
+              "gd-2021-township-steelmaking",
+              "gd-2021-township-cooling-rate",
+              "gd-2023-township-karting-friction",
+              "gd-2023-township-sunlit-city",
+              "gd-2020-township-seed-storage",
+              "gd-2020-township-snowline",
+              "beijing-2026-outline-dragonfly",
+              "sh-2020-outline-bicycle-friction",
+              "gd-2023-township-greenhouse-yield",
+              "science-chemistry-007",
+              "science-physics-005",
+              "sh-2014-a-wetting-adhesion",
+              "science-chemistry-009",
+              "science-geography-025",
+              "science-geography-029",
+              "science-biology-023",
+              "science-chemistry-032",
+              "gd-2020-township-seed-storage",
+              "science-chemistry-037",
+              "science-chemistry-003",
+              "sh-2026-click-chemistry",
+              "science-biology-005",
+              "science-biology-026",
+              "beijing-2026-outline-dragonfly",
+              "beijing-2026-outline-dragonfly",
+              "sh-2020-outline-bicycle-friction",
+              "sh-2026-outline-hall-effect",
+              "gd-2020-township-seawater-density",
+              "gd-2020-township-acid-indicator"
+            ],
+            "mistakeQuestionIds": [
+              "beijing-2026-outline-dragonfly",
+              "sh-2014-a-wetting-adhesion",
+              "sh-2020-outline-bicycle-friction"
+            ],
+            "favoriteQuestionIds": [
+              "sh-2026-outline-hall-effect"
+            ]
+          },
+          "completedAt": "2026-11-08T14:10:24.772Z"
+        },
+        {
+          "id": "science_mw7wtttn_5egn6y",
+          "mode": "practice",
+          "status": "active",
+          "planTaskId": null,
+          "questionIds": [
+            "sh-2025-b-charging-work",
+            "gd-2023-township-polar-star",
+            "gd-2026-recall-front-rain",
+            "gd-2024-insulin-glucose",
+            "sh-2022-b-ship-buoyancy",
+            "zj-2024-c-high-power-appliances",
+            "sh-2020-b-binary-star-force",
+            "gd-2019-township-hammer-lever",
+            "gd-2023-township-household-electricity",
+            "sh-2026-mask-layers",
+            "zj-2025-c-stork-migration",
+            "sh-2025-b-boiling-points",
+            "gd-2021-township-steelmaking",
+            "sh-2025-b-absorption-spectrum",
+            "sh-2019-b-single-photon-interference"
+          ],
+          "randomizedQuestionOrder": true,
+          "currentIndex": 0,
+          "correctCount": 0,
+          "reviewingAnswerId": null,
+          "draftAnswers": {},
+          "startedAt": "2026-11-08T14:10:47.483Z",
+          "deadline": null,
+          "durationSeconds": null,
+          "filters": {
+            "sourceType": "recalled",
+            "onlyUnanswered": false,
+            "onlyMistakes": false,
+            "onlyFavorites": false,
+            "excludeQuestionIds": [],
+            "answeredQuestionIds": [
+              "beijing-2026-outline-dragonfly",
+              "beijing-2026-outline-dragonfly",
+              "sh-2020-outline-bicycle-friction",
+              "sh-2026-outline-hall-effect",
+              "gd-2025-outline-grain-storage",
+              "gd-2026-outline-slope-forces",
+              "gd-2021-outline-ladder-climber",
+              "gd-2019-township-wind-energy",
+              "gd-2019-township-ear-pressure",
+              "gd-2019-township-hammer-lever",
+              "gd-2021-township-steelmaking",
+              "gd-2021-township-cooling-rate",
+              "gd-2023-township-karting-friction",
+              "gd-2023-township-sunlit-city",
+              "gd-2020-township-seed-storage",
+              "gd-2020-township-snowline",
+              "beijing-2026-outline-dragonfly",
+              "sh-2020-outline-bicycle-friction",
+              "gd-2023-township-greenhouse-yield",
+              "science-chemistry-007",
+              "science-physics-005",
+              "sh-2014-a-wetting-adhesion",
+              "science-chemistry-009",
+              "science-geography-025",
+              "science-geography-029",
+              "science-biology-023",
+              "science-chemistry-032",
+              "gd-2020-township-seed-storage",
+              "science-chemistry-037",
+              "science-chemistry-003",
+              "sh-2026-click-chemistry",
+              "science-biology-005",
+              "science-biology-026",
+              "beijing-2026-outline-dragonfly",
+              "beijing-2026-outline-dragonfly",
+              "sh-2020-outline-bicycle-friction",
+              "sh-2026-outline-hall-effect",
+              "gd-2020-township-seawater-density",
+              "gd-2020-township-acid-indicator",
+              "sh-2026-outline-hall-effect",
+              "gd-2025-outline-grain-storage",
+              "sh-2020-outline-bicycle-friction",
+              "gd-2026-outline-slope-forces",
+              "beijing-2026-outline-dragonfly",
+              "gd-2021-outline-ladder-climber"
+            ],
+            "mistakeQuestionIds": [
+              "beijing-2026-outline-dragonfly",
+              "sh-2014-a-wetting-adhesion",
+              "sh-2020-outline-bicycle-friction"
+            ],
+            "favoriteQuestionIds": [
+              "sh-2026-outline-hall-effect"
+            ]
+          }
+        },
+        {
+          "id": "science_mw7wu8z6_n0v0sg",
+          "mode": "practice",
+          "status": "active",
+          "planTaskId": null,
+          "questionIds": [
+            "sh-2025-b-mountain-height",
+            "zj-2025-c-stork-migration",
+            "sh-2026-bowl-water-resonance",
+            "sh-2022-b-ship-buoyancy",
+            "gd-2023-township-household-electricity",
+            "gd-2022-recall-floating-density",
+            "sh-2020-b-peroxide-concentration",
+            "sh-2026-click-chemistry",
+            "sh-2022-b-microgravity-filtering",
+            "gd-2024-insulin-glucose",
+            "zj-2024-c-breath-biometrics",
+            "sh-2018-b-camera-lens",
+            "sh-2025-b-boiling-points",
+            "gd-2023-township-greenhouse-yield",
+            "sh-2020-b-food-allergy-protein",
+            "sh-2025-b-charging-work",
+            "sh-2019-b-water-bath-boiling",
+            "gd-2022-recall-thermal-expansion",
+            "gd-2023-township-asexual-reproduction",
+            "gd-2025-recall-bacteria",
+            "sh-2018-b-earth-magnetic-force",
+            "gd-2025-recall-ph-neutralization",
+            "gd-2021-township-cooling-rate",
+            "sh-2022-b-washer-resonance",
+            "gd-2023-township-graphite-diamond",
+            "sh-2025-b-railway-resonance",
+            "gd-2023-township-green-glass",
+            "sh-2020-b-binary-star-force",
+            "zj-2024-c-cholera-transmission",
+            "sh-2021-b-pressure-estimate",
+            "sh-2026-bci-decoding",
+            "gd-2020-township-electric-charge",
+            "gd-2023-township-5g-wavelength",
+            "sh-2026-bladeless-fan-airflow",
+            "sh-2020-b-metal-smelting-order",
+            "sh-2025-b-quantum-tunneling",
+            "gd-2022-recall-excavator-tracks",
+            "sh-2025-b-membrane-filtration",
+            "sh-2026-mask-layers",
+            "sh-2026-vr-force-feedback",
+            "gd-2020-township-gas-properties",
+            "gd-2020-township-reverse-bearing",
+            "gd-2022-recall-water-purification",
+            "gd-2023-township-fertilizer-use",
+            "gd-2019-township-wind-energy",
+            "sh-2026-capacitive-touchscreen",
+            "sh-2026-infrared-thermal-imaging",
+            "gd-2019-township-hammer-lever",
+            "gd-2020-township-seed-storage",
+            "zj-2026-c-hair-follicle-stem-cells",
+            "gd-2021-township-steelmaking",
+            "zj-2024-c-knuckle-evidence",
+            "gd-2023-township-sunlit-city",
+            "sh-2014-a-wetting-adhesion",
+            "gd-2020-township-saline-concentration",
+            "zj-2026-c-corn-rows",
+            "gd-2023-township-formic-acid-hydrogen",
+            "gd-2023-township-karting-friction",
+            "sh-2025-b-space-elevator",
+            "sh-2018-b-jump-landing-force",
+            "gd-2020-township-everyday-materials",
+            "gd-2023-township-grain-storage",
+            "gd-2026-recall-front-rain",
+            "gd-2025-recall-sea-land-breeze",
+            "zj-2024-c-high-power-appliances",
+            "zj-2024-c-animal-aging",
+            "gd-2023-township-sucrose-crystallization",
+            "gd-2020-township-snowline",
+            "sh-2019-b-exposure-time",
+            "gd-2019-township-ear-pressure",
+            "sh-2019-b-single-photon-interference",
+            "gd-2024-soot-ink",
+            "gd-2020-township-acid-indicator",
+            "sh-2022-b-powerbank-capacity",
+            "gd-2022-recall-pendulum-energy",
+            "gd-2021-county-foam-extinguisher",
+            "sh-2026-fast-charging-battery",
+            "gd-2020-township-seawater-density",
+            "gd-2023-township-polar-star",
+            "gd-2023-township-reflex",
+            "sh-2019-b-slide-kinetic-energy",
+            "sh-2020-b-ultrasound-vacuum",
+            "sh-2019-b-semi-submersible-loading",
+            "sh-2025-b-absorption-spectrum",
+            "gd-2021-county-curving-car",
+            "gd-2021-county-plate-boundary"
+          ],
+          "randomizedQuestionOrder": true,
+          "currentIndex": 0,
+          "correctCount": 0,
+          "reviewingAnswerId": null,
+          "draftAnswers": {},
+          "startedAt": "2026-11-08T14:11:07.122Z",
+          "deadline": null,
+          "durationSeconds": null,
+          "filters": {
+            "sourceType": "recalled",
+            "onlyUnanswered": false,
+            "onlyMistakes": false,
+            "onlyFavorites": false,
+            "excludeQuestionIds": [],
+            "answeredQuestionIds": [
+              "beijing-2026-outline-dragonfly",
+              "beijing-2026-outline-dragonfly",
+              "sh-2020-outline-bicycle-friction",
+              "sh-2026-outline-hall-effect",
+              "gd-2025-outline-grain-storage",
+              "gd-2026-outline-slope-forces",
+              "gd-2021-outline-ladder-climber",
+              "gd-2019-township-wind-energy",
+              "gd-2019-township-ear-pressure",
+              "gd-2019-township-hammer-lever",
+              "gd-2021-township-steelmaking",
+              "gd-2021-township-cooling-rate",
+              "gd-2023-township-karting-friction",
+              "gd-2023-township-sunlit-city",
+              "gd-2020-township-seed-storage",
+              "gd-2020-township-snowline",
+              "beijing-2026-outline-dragonfly",
+              "sh-2020-outline-bicycle-friction",
+              "gd-2023-township-greenhouse-yield",
+              "science-chemistry-007",
+              "science-physics-005",
+              "sh-2014-a-wetting-adhesion",
+              "science-chemistry-009",
+              "science-geography-025",
+              "science-geography-029",
+              "science-biology-023",
+              "science-chemistry-032",
+              "gd-2020-township-seed-storage",
+              "science-chemistry-037",
+              "science-chemistry-003",
+              "sh-2026-click-chemistry",
+              "science-biology-005",
+              "science-biology-026",
+              "beijing-2026-outline-dragonfly",
+              "beijing-2026-outline-dragonfly",
+              "sh-2020-outline-bicycle-friction",
+              "sh-2026-outline-hall-effect",
+              "gd-2020-township-seawater-density",
+              "gd-2020-township-acid-indicator",
+              "sh-2026-outline-hall-effect",
+              "gd-2025-outline-grain-storage",
+              "sh-2020-outline-bicycle-friction",
+              "gd-2026-outline-slope-forces",
+              "beijing-2026-outline-dragonfly",
+              "gd-2021-outline-ladder-climber"
+            ],
+            "mistakeQuestionIds": [
+              "beijing-2026-outline-dragonfly",
+              "sh-2014-a-wetting-adhesion",
+              "sh-2020-outline-bicycle-friction"
+            ],
+            "favoriteQuestionIds": [
+              "sh-2026-outline-hall-effect"
+            ]
+          }
+        },
+        {
+          "id": "science_mw7xzk4n_evm9f3",
+          "mode": "practice",
+          "status": "completed",
+          "planTaskId": null,
+          "questionIds": [
+            "gd-2023-township-asexual-reproduction",
+            "gd-2023-township-karting-friction",
+            "gd-2020-township-saline-concentration",
+            "sh-2025-b-quantum-tunneling",
+            "gd-2019-township-hammer-lever",
+            "zj-2025-c-stork-migration",
+            "gd-2021-township-cooling-rate",
+            "gd-2022-recall-pendulum-energy",
+            "gd-2023-township-reflex",
+            "sh-2026-vr-force-feedback",
+            "gd-2023-township-polar-star",
+            "gd-2023-township-household-electricity",
+            "gd-2020-township-gas-properties",
+            "gd-2024-insulin-glucose",
+            "gd-2023-township-green-glass",
+            "gd-2025-recall-bacteria",
+            "gd-2023-township-formic-acid-hydrogen",
+            "sh-2020-b-binary-star-force",
+            "sh-2026-bowl-water-resonance",
+            "gd-2020-township-snowline",
+            "zj-2024-c-knuckle-evidence",
+            "gd-2023-township-sunlit-city",
+            "sh-2018-b-jump-landing-force",
+            "sh-2025-b-space-elevator",
+            "gd-2021-township-steelmaking",
+            "sh-2021-b-pressure-estimate",
+            "gd-2022-recall-thermal-expansion",
+            "gd-2019-township-wind-energy",
+            "zj-2026-c-corn-rows",
+            "gd-2023-township-grain-storage",
+            "gd-2020-township-reverse-bearing",
+            "sh-2026-mask-layers",
+            "gd-2021-county-foam-extinguisher",
+            "gd-2020-township-acid-indicator",
+            "sh-2026-click-chemistry",
+            "sh-2019-b-semi-submersible-loading",
+            "sh-2026-fast-charging-battery",
+            "sh-2026-capacitive-touchscreen",
+            "gd-2023-township-greenhouse-yield",
+            "gd-2021-county-curving-car",
+            "sh-2026-bladeless-fan-airflow",
+            "sh-2025-b-charging-work",
+            "gd-2023-township-fertilizer-use",
+            "gd-2019-township-ear-pressure",
+            "sh-2022-b-washer-resonance",
+            "gd-2021-county-plate-boundary",
+            "sh-2018-b-camera-lens",
+            "zj-2024-c-cholera-transmission",
+            "zj-2024-c-animal-aging",
+            "sh-2022-b-powerbank-capacity",
+            "gd-2020-township-seawater-density",
+            "gd-2023-township-sucrose-crystallization",
+            "zj-2026-c-hair-follicle-stem-cells",
+            "sh-2020-b-food-allergy-protein",
+            "sh-2022-b-microgravity-filtering",
+            "sh-2025-b-mountain-height",
+            "sh-2014-a-wetting-adhesion",
+            "sh-2020-b-metal-smelting-order",
+            "gd-2022-recall-floating-density",
+            "gd-2025-recall-sea-land-breeze",
+            "gd-2020-township-electric-charge",
+            "sh-2020-b-ultrasound-vacuum",
+            "zj-2024-c-high-power-appliances",
+            "gd-2024-soot-ink",
+            "gd-2026-recall-front-rain",
+            "sh-2025-b-boiling-points",
+            "gd-2020-township-everyday-materials",
+            "gd-2023-township-graphite-diamond",
+            "sh-2025-b-railway-resonance",
+            "sh-2019-b-water-bath-boiling",
+            "sh-2025-b-absorption-spectrum",
+            "gd-2023-township-5g-wavelength",
+            "sh-2025-b-membrane-filtration",
+            "sh-2019-b-single-photon-interference",
+            "gd-2020-township-seed-storage",
+            "sh-2022-b-ship-buoyancy",
+            "sh-2020-b-peroxide-concentration",
+            "gd-2022-recall-excavator-tracks",
+            "gd-2025-recall-ph-neutralization",
+            "sh-2026-bci-decoding",
+            "sh-2018-b-earth-magnetic-force",
+            "zj-2024-c-breath-biometrics",
+            "sh-2019-b-slide-kinetic-energy",
+            "sh-2019-b-exposure-time",
+            "gd-2022-recall-water-purification",
+            "sh-2026-infrared-thermal-imaging"
+          ],
+          "randomizedQuestionOrder": true,
+          "currentIndex": 86,
+          "correctCount": 24,
+          "reviewingAnswerId": null,
+          "draftAnswers": {},
+          "startedAt": "2026-11-08T14:43:14.471Z",
+          "deadline": null,
+          "durationSeconds": null,
+          "filters": {
+            "sourceType": "recalled",
+            "onlyUnanswered": false,
+            "onlyMistakes": false,
+            "onlyFavorites": false,
+            "excludeQuestionIds": [],
+            "answeredQuestionIds": [
+              "beijing-2026-outline-dragonfly",
+              "beijing-2026-outline-dragonfly",
+              "sh-2020-outline-bicycle-friction",
+              "sh-2026-outline-hall-effect",
+              "gd-2025-outline-grain-storage",
+              "gd-2026-outline-slope-forces",
+              "gd-2021-outline-ladder-climber",
+              "gd-2019-township-wind-energy",
+              "gd-2019-township-ear-pressure",
+              "gd-2019-township-hammer-lever",
+              "gd-2021-township-steelmaking",
+              "gd-2021-township-cooling-rate",
+              "gd-2023-township-karting-friction",
+              "gd-2023-township-sunlit-city",
+              "gd-2020-township-seed-storage",
+              "gd-2020-township-snowline",
+              "beijing-2026-outline-dragonfly",
+              "sh-2020-outline-bicycle-friction",
+              "gd-2023-township-greenhouse-yield",
+              "science-chemistry-007",
+              "science-physics-005",
+              "sh-2014-a-wetting-adhesion",
+              "science-chemistry-009",
+              "science-geography-025",
+              "science-geography-029",
+              "science-biology-023",
+              "science-chemistry-032",
+              "gd-2020-township-seed-storage",
+              "science-chemistry-037",
+              "science-chemistry-003",
+              "sh-2026-click-chemistry",
+              "science-biology-005",
+              "science-biology-026",
+              "beijing-2026-outline-dragonfly",
+              "beijing-2026-outline-dragonfly",
+              "sh-2020-outline-bicycle-friction",
+              "sh-2026-outline-hall-effect",
+              "gd-2020-township-seawater-density",
+              "gd-2020-township-acid-indicator",
+              "sh-2026-outline-hall-effect",
+              "gd-2025-outline-grain-storage",
+              "sh-2020-outline-bicycle-friction",
+              "gd-2026-outline-slope-forces",
+              "beijing-2026-outline-dragonfly",
+              "gd-2021-outline-ladder-climber"
+            ],
+            "mistakeQuestionIds": [
+              "beijing-2026-outline-dragonfly",
+              "sh-2014-a-wetting-adhesion",
+              "sh-2020-outline-bicycle-friction"
+            ],
+            "favoriteQuestionIds": [
+              "sh-2026-outline-hall-effect"
+            ]
+          },
+          "completedAt": "2026-11-08T14:48:17.691Z"
         }
       ],
       "answers": [
@@ -1604,6 +2105,1221 @@
           "knowledgePointIds": [
             "chemistry:ph"
           ]
+        },
+        {
+          "id": "answer_science_mw7w2psq_jamcya_1",
+          "sessionId": "science_mw7w2psq_jamcya",
+          "questionId": "sh-2026-outline-hall-effect",
+          "selectedOptionId": "C",
+          "correctAnswer": "C",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T13:53:08.807Z",
+          "knowledgePointIds": [
+            "physics:magnetic-field"
+          ]
+        },
+        {
+          "id": "answer_science_mw7w2psq_jamcya_2",
+          "sessionId": "science_mw7w2psq_jamcya",
+          "questionId": "gd-2025-outline-grain-storage",
+          "selectedOptionId": "C",
+          "correctAnswer": "C",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T13:53:42.636Z",
+          "knowledgePointIds": [
+            "biology:plant-growth"
+          ]
+        },
+        {
+          "id": "answer_science_mw7w2psq_jamcya_3",
+          "sessionId": "science_mw7w2psq_jamcya",
+          "questionId": "sh-2020-outline-bicycle-friction",
+          "selectedOptionId": "B",
+          "correctAnswer": "A",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T13:55:32.438Z",
+          "knowledgePointIds": [
+            "physics:friction"
+          ]
+        },
+        {
+          "id": "answer_science_mw7w2psq_jamcya_4",
+          "sessionId": "science_mw7w2psq_jamcya",
+          "questionId": "gd-2026-outline-slope-forces",
+          "selectedOptionId": "D",
+          "correctAnswer": "D",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:02:40.412Z",
+          "knowledgePointIds": [
+            "physics:friction",
+            "physics:work",
+            "physics:mechanical-energy"
+          ]
+        },
+        {
+          "id": "answer_science_mw7w2psq_jamcya_5",
+          "sessionId": "science_mw7w2psq_jamcya",
+          "questionId": "beijing-2026-outline-dragonfly",
+          "selectedOptionId": "A",
+          "correctAnswer": "A",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:04:27.729Z",
+          "knowledgePointIds": [
+            "physics:uniform-motion"
+          ]
+        },
+        {
+          "id": "answer_science_mw7w2psq_jamcya_6",
+          "sessionId": "science_mw7w2psq_jamcya",
+          "questionId": "gd-2021-outline-ladder-climber",
+          "selectedOptionId": "B",
+          "correctAnswer": "B",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:05:43.045Z",
+          "knowledgePointIds": [
+            "physics:levers",
+            "physics:force-equilibrium",
+            "physics:force-analysis"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_1",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "gd-2023-township-asexual-reproduction",
+          "selectedOptionId": "C",
+          "correctAnswer": "A",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:43:19.155Z",
+          "knowledgePointIds": [
+            "biology:reproduction-inheritance"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_2",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "gd-2023-township-karting-friction",
+          "selectedOptionId": "D",
+          "correctAnswer": "C",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:43:21.518Z",
+          "knowledgePointIds": [
+            "physics:friction"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_3",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "gd-2020-township-saline-concentration",
+          "selectedOptionId": "D",
+          "correctAnswer": "C",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:43:23.030Z",
+          "knowledgePointIds": [
+            "chemistry:solutions"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_4",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "sh-2025-b-quantum-tunneling",
+          "selectedOptionId": "A",
+          "correctAnswer": "A",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:43:27.082Z",
+          "knowledgePointIds": [
+            "physics:quantum-tunneling"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_5",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "gd-2019-township-hammer-lever",
+          "selectedOptionId": "D",
+          "correctAnswer": "A",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:43:31.479Z",
+          "knowledgePointIds": [
+            "physics:levers"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_6",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "zj-2025-c-stork-migration",
+          "selectedOptionId": "D",
+          "correctAnswer": "D",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:43:33.932Z",
+          "knowledgePointIds": [
+            "biology:organisms-environment"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_7",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "gd-2021-township-cooling-rate",
+          "selectedOptionId": "D",
+          "correctAnswer": "B",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:43:36.397Z",
+          "knowledgePointIds": [
+            "physics:heat-transfer"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_8",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "gd-2022-recall-pendulum-energy",
+          "selectedOptionId": "D",
+          "correctAnswer": "D",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:43:38.266Z",
+          "knowledgePointIds": [
+            "physics:mechanical-energy"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_9",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "gd-2023-township-reflex",
+          "selectedOptionId": "D",
+          "correctAnswer": "D",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:43:39.413Z",
+          "knowledgePointIds": [
+            "biology:nervous-regulation",
+            "biology:microorganisms"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_10",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "sh-2026-vr-force-feedback",
+          "selectedOptionId": "D",
+          "correctAnswer": "B",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:43:49.321Z",
+          "knowledgePointIds": [
+            "physics:motors-generators"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_11",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "gd-2023-township-polar-star",
+          "selectedOptionId": "D",
+          "correctAnswer": "A",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:43:52.453Z",
+          "knowledgePointIds": [
+            "geography:rotation"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_12",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "gd-2023-township-household-electricity",
+          "selectedOptionId": "D",
+          "correctAnswer": "D",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:43:54.146Z",
+          "knowledgePointIds": [
+            "physics:circuit-faults",
+            "physics:parallel-circuits"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_13",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "gd-2020-township-gas-properties",
+          "selectedOptionId": "D",
+          "correctAnswer": "A",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:43:56.272Z",
+          "knowledgePointIds": [
+            "chemistry:common-gases"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_14",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "gd-2024-insulin-glucose",
+          "selectedOptionId": "D",
+          "correctAnswer": "D",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:43:58.202Z",
+          "knowledgePointIds": [
+            "biology:hormonal-regulation"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_15",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "gd-2023-township-green-glass",
+          "selectedOptionId": "D",
+          "correctAnswer": "B",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:43:59.874Z",
+          "knowledgePointIds": [
+            "physics:optical-phenomena"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_16",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "gd-2025-recall-bacteria",
+          "selectedOptionId": "D",
+          "correctAnswer": "D",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:44:01.934Z",
+          "knowledgePointIds": [
+            "biology:microorganisms"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_17",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "gd-2023-township-formic-acid-hydrogen",
+          "selectedOptionId": "D",
+          "correctAnswer": "A",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:44:03.268Z",
+          "knowledgePointIds": [
+            "chemistry:common-reactions"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_18",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "sh-2020-b-binary-star-force",
+          "selectedOptionId": "D",
+          "correctAnswer": "A",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:44:07.208Z",
+          "knowledgePointIds": [
+            "physics:centripetal-force"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_19",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "sh-2026-bowl-water-resonance",
+          "selectedOptionId": "D",
+          "correctAnswer": "B",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:44:10.621Z",
+          "knowledgePointIds": [
+            "physics:pitch-loudness"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_20",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "gd-2020-township-snowline",
+          "selectedOptionId": "D",
+          "correctAnswer": "D",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:44:11.925Z",
+          "knowledgePointIds": [
+            "geography:snowline"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_21",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "zj-2024-c-knuckle-evidence",
+          "selectedOptionId": "D",
+          "correctAnswer": "D",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:44:13.683Z",
+          "knowledgePointIds": [
+            "biology:musculoskeletal-system"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_22",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "gd-2023-township-sunlit-city",
+          "selectedOptionId": "D",
+          "correctAnswer": "A",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:44:16.646Z",
+          "knowledgePointIds": [
+            "geography:solar-altitude"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_23",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "sh-2018-b-jump-landing-force",
+          "selectedOptionId": "C",
+          "correctAnswer": "C",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:44:18.241Z",
+          "knowledgePointIds": [
+            "physics:mechanical-energy"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_24",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "sh-2025-b-space-elevator",
+          "selectedOptionId": "A",
+          "correctAnswer": "D",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:44:27.539Z",
+          "knowledgePointIds": [
+            "physics:gravity"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_25",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "gd-2021-township-steelmaking",
+          "selectedOptionId": "D",
+          "correctAnswer": "B",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:44:58.741Z",
+          "knowledgePointIds": [
+            "chemistry:physical-chemical-change"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_26",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "sh-2021-b-pressure-estimate",
+          "selectedOptionId": "D",
+          "correctAnswer": "B",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:45:01.791Z",
+          "knowledgePointIds": [
+            "physics:solid-pressure"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_27",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "gd-2022-recall-thermal-expansion",
+          "selectedOptionId": "D",
+          "correctAnswer": "A",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:45:03.118Z",
+          "knowledgePointIds": [
+            "physics:thermal-expansion"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_28",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "gd-2019-township-wind-energy",
+          "selectedOptionId": "D",
+          "correctAnswer": "D",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:45:04.153Z",
+          "knowledgePointIds": [
+            "physics:mechanical-energy"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_29",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "zj-2026-c-corn-rows",
+          "selectedOptionId": "D",
+          "correctAnswer": "D",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:45:05.492Z",
+          "knowledgePointIds": [
+            "biology:reproduction-inheritance"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_30",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "gd-2023-township-grain-storage",
+          "selectedOptionId": "D",
+          "correctAnswer": "C",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:45:08.270Z",
+          "knowledgePointIds": [
+            "biology:respiration",
+            "biology:microorganisms"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_31",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "gd-2020-township-reverse-bearing",
+          "selectedOptionId": "D",
+          "correctAnswer": "A",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:45:09.589Z",
+          "knowledgePointIds": [
+            "geography:map-directions"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_32",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "sh-2026-mask-layers",
+          "selectedOptionId": "D",
+          "correctAnswer": "B",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:45:10.879Z",
+          "knowledgePointIds": [
+            "chemistry:polymer-materials"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_33",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "gd-2021-county-foam-extinguisher",
+          "selectedOptionId": "D",
+          "correctAnswer": "B",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:45:12.565Z",
+          "knowledgePointIds": [
+            "chemistry:combustion"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_34",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "gd-2020-township-acid-indicator",
+          "selectedOptionId": "D",
+          "correctAnswer": "C",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:45:14.503Z",
+          "knowledgePointIds": [
+            "chemistry:ph"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_35",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "sh-2026-click-chemistry",
+          "selectedOptionId": "D",
+          "correctAnswer": "C",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:45:16.025Z",
+          "knowledgePointIds": [
+            "chemistry:common-reactions"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_36",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "sh-2019-b-semi-submersible-loading",
+          "selectedOptionId": "D",
+          "correctAnswer": "B",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:45:19.091Z",
+          "knowledgePointIds": [
+            "physics:buoyancy"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_37",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "sh-2026-fast-charging-battery",
+          "selectedOptionId": "D",
+          "correctAnswer": "B",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:45:20.819Z",
+          "knowledgePointIds": [
+            "chemistry:electrochemical-cells"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_38",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "sh-2026-capacitive-touchscreen",
+          "selectedOptionId": "D",
+          "correctAnswer": "D",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:45:22.012Z",
+          "knowledgePointIds": [
+            "physics:electrostatics"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_39",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "gd-2023-township-greenhouse-yield",
+          "selectedOptionId": "D",
+          "correctAnswer": "B",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:45:23.356Z",
+          "knowledgePointIds": [
+            "biology:photosynthesis",
+            "biology:respiration"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_40",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "gd-2021-county-curving-car",
+          "selectedOptionId": "D",
+          "correctAnswer": "B",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:45:25.948Z",
+          "knowledgePointIds": [
+            "physics:centripetal-force"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_41",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "sh-2026-bladeless-fan-airflow",
+          "selectedOptionId": "D",
+          "correctAnswer": "C",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:45:27.500Z",
+          "knowledgePointIds": [
+            "physics:fluid-flow"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_42",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "sh-2025-b-charging-work",
+          "selectedOptionId": "D",
+          "correctAnswer": "D",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:45:33.192Z",
+          "knowledgePointIds": [
+            "physics:electric-work"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_43",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "gd-2023-township-fertilizer-use",
+          "selectedOptionId": "D",
+          "correctAnswer": "A",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:45:53.098Z",
+          "knowledgePointIds": [
+            "biology:plant-growth",
+            "biology:photosynthesis"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_44",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "gd-2019-township-ear-pressure",
+          "selectedOptionId": "D",
+          "correctAnswer": "C",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:45:54.453Z",
+          "knowledgePointIds": [
+            "physics:atmospheric-pressure"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_45",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "sh-2022-b-washer-resonance",
+          "selectedOptionId": "D",
+          "correctAnswer": "A",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:45:56.010Z",
+          "knowledgePointIds": [
+            "physics:elastic-force"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_46",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "gd-2021-county-plate-boundary",
+          "selectedOptionId": "D",
+          "correctAnswer": "A",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:45:57.685Z",
+          "knowledgePointIds": [
+            "geography:plate-tectonics"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_47",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "sh-2018-b-camera-lens",
+          "selectedOptionId": "D",
+          "correctAnswer": "B",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:45:59.239Z",
+          "knowledgePointIds": [
+            "physics:lens-imaging"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_48",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "zj-2024-c-cholera-transmission",
+          "selectedOptionId": "D",
+          "correctAnswer": "B",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:46:01.454Z",
+          "knowledgePointIds": [
+            "biology:microorganisms"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_49",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "zj-2024-c-animal-aging",
+          "selectedOptionId": "D",
+          "correctAnswer": "B",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:46:02.614Z",
+          "knowledgePointIds": [
+            "biology:organisms-environment"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_50",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "sh-2022-b-powerbank-capacity",
+          "selectedOptionId": "D",
+          "correctAnswer": "C",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:46:03.732Z",
+          "knowledgePointIds": [
+            "physics:electric-work"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_51",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "gd-2020-township-seawater-density",
+          "selectedOptionId": "D",
+          "correctAnswer": "B",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:46:05.499Z",
+          "knowledgePointIds": [
+            "physics:density"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_52",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "gd-2023-township-sucrose-crystallization",
+          "selectedOptionId": "D",
+          "correctAnswer": "D",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:46:07.121Z",
+          "knowledgePointIds": [
+            "chemistry:solutions",
+            "chemistry:solubility"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_53",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "zj-2026-c-hair-follicle-stem-cells",
+          "selectedOptionId": "D",
+          "correctAnswer": "D",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:46:09.312Z",
+          "knowledgePointIds": [
+            "biology:stem-cell-regeneration"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_54",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "sh-2020-b-food-allergy-protein",
+          "selectedOptionId": "D",
+          "correctAnswer": "A",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:46:10.864Z",
+          "knowledgePointIds": [
+            "biology:immunity"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_55",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "sh-2022-b-microgravity-filtering",
+          "selectedOptionId": "D",
+          "correctAnswer": "C",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:46:12.129Z",
+          "knowledgePointIds": [
+            "physics:gravity"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_56",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "sh-2025-b-mountain-height",
+          "selectedOptionId": "B",
+          "correctAnswer": "B",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:46:15.509Z",
+          "knowledgePointIds": [
+            "physics:solid-pressure",
+            "physics:density"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_57",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "sh-2014-a-wetting-adhesion",
+          "selectedOptionId": "D",
+          "correctAnswer": "C",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:46:20.574Z",
+          "knowledgePointIds": [
+            "physics:wetting-adhesion"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_58",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "sh-2020-b-metal-smelting-order",
+          "selectedOptionId": "D",
+          "correctAnswer": "B",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:46:22.176Z",
+          "knowledgePointIds": [
+            "chemistry:metal-activity"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_59",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "gd-2022-recall-floating-density",
+          "selectedOptionId": "D",
+          "correctAnswer": "B",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:46:23.517Z",
+          "knowledgePointIds": [
+            "physics:buoyancy",
+            "physics:floating-sinking"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_60",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "gd-2025-recall-sea-land-breeze",
+          "selectedOptionId": "D",
+          "correctAnswer": "A",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:46:26.228Z",
+          "knowledgePointIds": [
+            "geography:wind",
+            "geography:atmospheric-motion"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_61",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "gd-2020-township-electric-charge",
+          "selectedOptionId": "D",
+          "correctAnswer": "D",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:46:27.573Z",
+          "knowledgePointIds": [
+            "physics:electrostatics"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_62",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "sh-2020-b-ultrasound-vacuum",
+          "selectedOptionId": "D",
+          "correctAnswer": "C",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:46:28.838Z",
+          "knowledgePointIds": [
+            "physics:sound-propagation"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_63",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "zj-2024-c-high-power-appliances",
+          "selectedOptionId": "D",
+          "correctAnswer": "C",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:46:33.593Z",
+          "knowledgePointIds": [
+            "physics:electric-power",
+            "physics:electromagnetic-induction"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_64",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "gd-2024-soot-ink",
+          "selectedOptionId": "D",
+          "correctAnswer": "A",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:46:35.062Z",
+          "knowledgePointIds": [
+            "chemistry:combustion"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_65",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "gd-2026-recall-front-rain",
+          "selectedOptionId": "D",
+          "correctAnswer": "D",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:46:37.222Z",
+          "knowledgePointIds": [
+            "geography:fronts-precipitation"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_66",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "sh-2025-b-boiling-points",
+          "selectedOptionId": "D",
+          "correctAnswer": "D",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:46:46.436Z",
+          "knowledgePointIds": [
+            "chemistry:boiling-point"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_67",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "gd-2020-township-everyday-materials",
+          "selectedOptionId": "D",
+          "correctAnswer": "B",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:46:52.243Z",
+          "knowledgePointIds": [
+            "chemistry:everyday-chemistry"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_68",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "gd-2023-township-graphite-diamond",
+          "selectedOptionId": "D",
+          "correctAnswer": "B",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:46:53.501Z",
+          "knowledgePointIds": [
+            "chemistry:physical-chemical-change"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_69",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "sh-2025-b-railway-resonance",
+          "selectedOptionId": "D",
+          "correctAnswer": "A",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:47:18.181Z",
+          "knowledgePointIds": [
+            "physics:elastic-force"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_70",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "sh-2019-b-water-bath-boiling",
+          "selectedOptionId": "D",
+          "correctAnswer": "B",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:47:34.018Z",
+          "knowledgePointIds": [
+            "physics:phase-change",
+            "physics:heat-transfer"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_71",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "sh-2025-b-absorption-spectrum",
+          "selectedOptionId": "A",
+          "correctAnswer": "A",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:47:39.507Z",
+          "knowledgePointIds": [
+            "physics:optical-phenomena"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_72",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "gd-2023-township-5g-wavelength",
+          "selectedOptionId": "D",
+          "correctAnswer": "C",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:47:43.364Z",
+          "knowledgePointIds": [
+            "physics:electromagnetic-waves"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_73",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "sh-2025-b-membrane-filtration",
+          "selectedOptionId": "B",
+          "correctAnswer": "B",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:47:50.925Z",
+          "knowledgePointIds": [
+            "chemistry:water-purification"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_74",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "sh-2019-b-single-photon-interference",
+          "selectedOptionId": "D",
+          "correctAnswer": "B",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:47:54.265Z",
+          "knowledgePointIds": [
+            "physics:optical-phenomena"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_75",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "gd-2020-township-seed-storage",
+          "selectedOptionId": "D",
+          "correctAnswer": "B",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:47:55.548Z",
+          "knowledgePointIds": [
+            "biology:plant-growth"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_76",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "sh-2022-b-ship-buoyancy",
+          "selectedOptionId": "D",
+          "correctAnswer": "A",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:47:56.890Z",
+          "knowledgePointIds": [
+            "physics:gravity",
+            "physics:buoyancy",
+            "physics:floating-sinking"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_77",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "sh-2020-b-peroxide-concentration",
+          "selectedOptionId": "D",
+          "correctAnswer": "B",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:47:58.097Z",
+          "knowledgePointIds": [
+            "chemistry:boiling-point"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_78",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "gd-2022-recall-excavator-tracks",
+          "selectedOptionId": "D",
+          "correctAnswer": "A",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:47:59.340Z",
+          "knowledgePointIds": [
+            "physics:solid-pressure"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_79",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "gd-2025-recall-ph-neutralization",
+          "selectedOptionId": "D",
+          "correctAnswer": "D",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:48:01.029Z",
+          "knowledgePointIds": [
+            "chemistry:ph",
+            "chemistry:neutralization",
+            "chemistry:acids-bases-salts"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_80",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "sh-2026-bci-decoding",
+          "selectedOptionId": "D",
+          "correctAnswer": "A",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:48:05.716Z",
+          "knowledgePointIds": [
+            "biology:nervous-regulation"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_81",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "sh-2018-b-earth-magnetic-force",
+          "selectedOptionId": "D",
+          "correctAnswer": "A",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:48:07.572Z",
+          "knowledgePointIds": [
+            "physics:magnetic-field"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_82",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "zj-2024-c-breath-biometrics",
+          "selectedOptionId": "D",
+          "correctAnswer": "B",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:48:08.877Z",
+          "knowledgePointIds": [
+            "biology:respiratory-circulatory-systems"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_83",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "sh-2019-b-slide-kinetic-energy",
+          "selectedOptionId": "D",
+          "correctAnswer": "B",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:48:11.732Z",
+          "knowledgePointIds": [
+            "physics:mechanical-energy"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_84",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "sh-2019-b-exposure-time",
+          "selectedOptionId": "D",
+          "correctAnswer": "A",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:48:13.966Z",
+          "knowledgePointIds": [
+            "physics:speed"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_85",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "gd-2022-recall-water-purification",
+          "selectedOptionId": "D",
+          "correctAnswer": "D",
+          "isCorrect": true,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:48:15.478Z",
+          "knowledgePointIds": [
+            "chemistry:water-purification"
+          ]
+        },
+        {
+          "id": "answer_science_mw7xzk4n_evm9f3_86",
+          "sessionId": "science_mw7xzk4n_evm9f3",
+          "questionId": "sh-2026-infrared-thermal-imaging",
+          "selectedOptionId": "D",
+          "correctAnswer": "B",
+          "isCorrect": false,
+          "mode": "practice",
+          "answeredAt": "2026-11-08T14:48:17.058Z",
+          "knowledgePointIds": [
+            "physics:thermal-radiation"
+          ]
         }
       ],
       "mistakes": {
@@ -1615,18 +3331,445 @@
           "correctAnswer": "A"
         },
         "sh-2014-a-wetting-adhesion": {
-          "count": 1,
+          "count": 2,
           "firstMissedAt": "2026-10-10T03:22:34.168Z",
-          "lastMissedAt": "2026-10-10T03:22:34.168Z",
+          "lastMissedAt": "2026-11-08T14:46:20.574Z",
           "lastSelectedOptionId": "D",
           "correctAnswer": "C"
         },
         "sh-2020-outline-bicycle-friction": {
-          "count": 1,
+          "count": 2,
           "firstMissedAt": "2026-10-09T15:45:26.131Z",
-          "lastMissedAt": "2026-10-09T15:45:26.131Z",
+          "lastMissedAt": "2026-11-08T13:55:32.438Z",
+          "lastSelectedOptionId": "B",
+          "correctAnswer": "A"
+        },
+        "gd-2023-township-asexual-reproduction": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:43:19.155Z",
+          "lastMissedAt": "2026-11-08T14:43:19.155Z",
           "lastSelectedOptionId": "C",
           "correctAnswer": "A"
+        },
+        "gd-2023-township-karting-friction": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:43:21.518Z",
+          "lastMissedAt": "2026-11-08T14:43:21.518Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "C"
+        },
+        "gd-2020-township-saline-concentration": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:43:23.030Z",
+          "lastMissedAt": "2026-11-08T14:43:23.030Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "C"
+        },
+        "gd-2019-township-hammer-lever": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:43:31.479Z",
+          "lastMissedAt": "2026-11-08T14:43:31.479Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "A"
+        },
+        "gd-2021-township-cooling-rate": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:43:36.397Z",
+          "lastMissedAt": "2026-11-08T14:43:36.397Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "B"
+        },
+        "sh-2026-vr-force-feedback": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:43:49.321Z",
+          "lastMissedAt": "2026-11-08T14:43:49.321Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "B"
+        },
+        "gd-2023-township-polar-star": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:43:52.453Z",
+          "lastMissedAt": "2026-11-08T14:43:52.453Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "A"
+        },
+        "gd-2020-township-gas-properties": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:43:56.272Z",
+          "lastMissedAt": "2026-11-08T14:43:56.272Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "A"
+        },
+        "gd-2023-township-green-glass": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:43:59.874Z",
+          "lastMissedAt": "2026-11-08T14:43:59.874Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "B"
+        },
+        "gd-2023-township-formic-acid-hydrogen": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:44:03.268Z",
+          "lastMissedAt": "2026-11-08T14:44:03.268Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "A"
+        },
+        "sh-2020-b-binary-star-force": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:44:07.208Z",
+          "lastMissedAt": "2026-11-08T14:44:07.208Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "A"
+        },
+        "sh-2026-bowl-water-resonance": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:44:10.621Z",
+          "lastMissedAt": "2026-11-08T14:44:10.621Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "B"
+        },
+        "gd-2023-township-sunlit-city": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:44:16.646Z",
+          "lastMissedAt": "2026-11-08T14:44:16.646Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "A"
+        },
+        "sh-2025-b-space-elevator": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:44:27.539Z",
+          "lastMissedAt": "2026-11-08T14:44:27.539Z",
+          "lastSelectedOptionId": "A",
+          "correctAnswer": "D"
+        },
+        "gd-2021-township-steelmaking": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:44:58.741Z",
+          "lastMissedAt": "2026-11-08T14:44:58.741Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "B"
+        },
+        "sh-2021-b-pressure-estimate": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:45:01.791Z",
+          "lastMissedAt": "2026-11-08T14:45:01.791Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "B"
+        },
+        "gd-2022-recall-thermal-expansion": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:45:03.118Z",
+          "lastMissedAt": "2026-11-08T14:45:03.118Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "A"
+        },
+        "gd-2023-township-grain-storage": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:45:08.270Z",
+          "lastMissedAt": "2026-11-08T14:45:08.270Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "C"
+        },
+        "gd-2020-township-reverse-bearing": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:45:09.589Z",
+          "lastMissedAt": "2026-11-08T14:45:09.589Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "A"
+        },
+        "sh-2026-mask-layers": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:45:10.879Z",
+          "lastMissedAt": "2026-11-08T14:45:10.879Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "B"
+        },
+        "gd-2021-county-foam-extinguisher": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:45:12.565Z",
+          "lastMissedAt": "2026-11-08T14:45:12.565Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "B"
+        },
+        "gd-2020-township-acid-indicator": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:45:14.503Z",
+          "lastMissedAt": "2026-11-08T14:45:14.503Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "C"
+        },
+        "sh-2026-click-chemistry": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:45:16.025Z",
+          "lastMissedAt": "2026-11-08T14:45:16.025Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "C"
+        },
+        "sh-2019-b-semi-submersible-loading": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:45:19.091Z",
+          "lastMissedAt": "2026-11-08T14:45:19.091Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "B"
+        },
+        "sh-2026-fast-charging-battery": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:45:20.819Z",
+          "lastMissedAt": "2026-11-08T14:45:20.819Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "B"
+        },
+        "gd-2023-township-greenhouse-yield": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:45:23.356Z",
+          "lastMissedAt": "2026-11-08T14:45:23.356Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "B"
+        },
+        "gd-2021-county-curving-car": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:45:25.948Z",
+          "lastMissedAt": "2026-11-08T14:45:25.948Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "B"
+        },
+        "sh-2026-bladeless-fan-airflow": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:45:27.500Z",
+          "lastMissedAt": "2026-11-08T14:45:27.500Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "C"
+        },
+        "gd-2023-township-fertilizer-use": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:45:53.098Z",
+          "lastMissedAt": "2026-11-08T14:45:53.098Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "A"
+        },
+        "gd-2019-township-ear-pressure": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:45:54.453Z",
+          "lastMissedAt": "2026-11-08T14:45:54.453Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "C"
+        },
+        "sh-2022-b-washer-resonance": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:45:56.010Z",
+          "lastMissedAt": "2026-11-08T14:45:56.010Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "A"
+        },
+        "gd-2021-county-plate-boundary": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:45:57.685Z",
+          "lastMissedAt": "2026-11-08T14:45:57.685Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "A"
+        },
+        "sh-2018-b-camera-lens": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:45:59.239Z",
+          "lastMissedAt": "2026-11-08T14:45:59.239Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "B"
+        },
+        "zj-2024-c-cholera-transmission": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:46:01.454Z",
+          "lastMissedAt": "2026-11-08T14:46:01.454Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "B"
+        },
+        "zj-2024-c-animal-aging": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:46:02.614Z",
+          "lastMissedAt": "2026-11-08T14:46:02.614Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "B"
+        },
+        "sh-2022-b-powerbank-capacity": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:46:03.732Z",
+          "lastMissedAt": "2026-11-08T14:46:03.732Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "C"
+        },
+        "gd-2020-township-seawater-density": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:46:05.499Z",
+          "lastMissedAt": "2026-11-08T14:46:05.499Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "B"
+        },
+        "sh-2020-b-food-allergy-protein": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:46:10.864Z",
+          "lastMissedAt": "2026-11-08T14:46:10.864Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "A"
+        },
+        "sh-2022-b-microgravity-filtering": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:46:12.129Z",
+          "lastMissedAt": "2026-11-08T14:46:12.129Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "C"
+        },
+        "sh-2020-b-metal-smelting-order": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:46:22.176Z",
+          "lastMissedAt": "2026-11-08T14:46:22.176Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "B"
+        },
+        "gd-2022-recall-floating-density": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:46:23.517Z",
+          "lastMissedAt": "2026-11-08T14:46:23.517Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "B"
+        },
+        "gd-2025-recall-sea-land-breeze": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:46:26.228Z",
+          "lastMissedAt": "2026-11-08T14:46:26.228Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "A"
+        },
+        "sh-2020-b-ultrasound-vacuum": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:46:28.838Z",
+          "lastMissedAt": "2026-11-08T14:46:28.838Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "C"
+        },
+        "zj-2024-c-high-power-appliances": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:46:33.593Z",
+          "lastMissedAt": "2026-11-08T14:46:33.593Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "C"
+        },
+        "gd-2024-soot-ink": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:46:35.062Z",
+          "lastMissedAt": "2026-11-08T14:46:35.062Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "A"
+        },
+        "gd-2020-township-everyday-materials": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:46:52.243Z",
+          "lastMissedAt": "2026-11-08T14:46:52.243Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "B"
+        },
+        "gd-2023-township-graphite-diamond": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:46:53.501Z",
+          "lastMissedAt": "2026-11-08T14:46:53.501Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "B"
+        },
+        "sh-2025-b-railway-resonance": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:47:18.181Z",
+          "lastMissedAt": "2026-11-08T14:47:18.181Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "A"
+        },
+        "sh-2019-b-water-bath-boiling": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:47:34.018Z",
+          "lastMissedAt": "2026-11-08T14:47:34.018Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "B"
+        },
+        "gd-2023-township-5g-wavelength": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:47:43.364Z",
+          "lastMissedAt": "2026-11-08T14:47:43.364Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "C"
+        },
+        "sh-2019-b-single-photon-interference": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:47:54.265Z",
+          "lastMissedAt": "2026-11-08T14:47:54.265Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "B"
+        },
+        "gd-2020-township-seed-storage": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:47:55.548Z",
+          "lastMissedAt": "2026-11-08T14:47:55.548Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "B"
+        },
+        "sh-2022-b-ship-buoyancy": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:47:56.890Z",
+          "lastMissedAt": "2026-11-08T14:47:56.890Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "A"
+        },
+        "sh-2020-b-peroxide-concentration": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:47:58.097Z",
+          "lastMissedAt": "2026-11-08T14:47:58.097Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "B"
+        },
+        "gd-2022-recall-excavator-tracks": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:47:59.340Z",
+          "lastMissedAt": "2026-11-08T14:47:59.340Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "A"
+        },
+        "sh-2026-bci-decoding": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:48:05.716Z",
+          "lastMissedAt": "2026-11-08T14:48:05.716Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "A"
+        },
+        "sh-2018-b-earth-magnetic-force": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:48:07.572Z",
+          "lastMissedAt": "2026-11-08T14:48:07.572Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "A"
+        },
+        "zj-2024-c-breath-biometrics": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:48:08.877Z",
+          "lastMissedAt": "2026-11-08T14:48:08.877Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "B"
+        },
+        "sh-2019-b-slide-kinetic-energy": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:48:11.732Z",
+          "lastMissedAt": "2026-11-08T14:48:11.732Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "B"
+        },
+        "sh-2019-b-exposure-time": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:48:13.966Z",
+          "lastMissedAt": "2026-11-08T14:48:13.966Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "A"
+        },
+        "sh-2026-infrared-thermal-imaging": {
+          "count": 1,
+          "firstMissedAt": "2026-11-08T14:48:17.058Z",
+          "lastMissedAt": "2026-11-08T14:48:17.058Z",
+          "lastSelectedOptionId": "D",
+          "correctAnswer": "B"
         }
       },
       "favorites": [
@@ -4095,7 +6238,29 @@
       }
     },
     "essayLogs": {},
-    "mocks": [],
+    "mocks": [
+      {
+        "id": "mock_2cc5916a-08a1-4b09-891a-0616c0241a0a",
+        "mock_id": "mock_2cc5916a-08a1-4b09-891a-0616c0241a0a",
+        "number": 1,
+        "date": "2026-10-20",
+        "aptitude": 64.6,
+        "essay": 0,
+        "total": 64.6,
+        "aptitudeMinutes": 120,
+        "essayMinutes": null,
+        "target": 138,
+        "review": "成语，削弱，常识，数量关系",
+        "accuracy": {
+          "dataAnalysis": 0.95,
+          "reasoning": 0.69,
+          "science": null,
+          "quantitative": 0.2,
+          "verbal": 0.7,
+          "politicalAndGeneral": 0.46
+        }
+      }
+    ],
     "favorites": [
       "2024:221256601",
       "2025:221460701",
@@ -5323,152 +7488,152 @@
     {
       "collection": "nationalWorkspace/comparisons",
       "id": "national:2027:130101:300110001006",
-      "deletedAt": "2026-10-31T06:24:13.632Z"
+      "deletedAt": "2026-11-09T04:57:17.144Z"
     },
     {
       "collection": "nationalWorkspace/comparisons",
       "id": "national:2027:130101:300110002002",
-      "deletedAt": "2026-10-31T06:24:13.632Z"
+      "deletedAt": "2026-11-09T04:57:17.144Z"
     },
     {
       "collection": "nationalWorkspace/comparisons",
       "id": "national:2027:130101:300110002006",
-      "deletedAt": "2026-10-31T06:24:13.632Z"
+      "deletedAt": "2026-11-09T04:57:17.144Z"
     },
     {
       "collection": "nationalWorkspace/comparisons",
       "id": "national:2027:130101:300110003011",
-      "deletedAt": "2026-10-31T06:24:13.632Z"
+      "deletedAt": "2026-11-09T04:57:17.144Z"
     },
     {
       "collection": "nationalWorkspace/favorites",
       "id": "national:2027:130104:300110015005",
-      "deletedAt": "2026-10-31T06:24:13.632Z"
+      "deletedAt": "2026-11-09T04:57:17.144Z"
     },
     {
       "collection": "nationalWorkspace/favorites",
       "id": "national:2027:130104:300110020001",
-      "deletedAt": "2026-10-31T06:24:13.632Z"
+      "deletedAt": "2026-11-09T04:57:17.144Z"
     },
     {
       "collection": "nationalWorkspace/favorites",
       "id": "national:2027:130104:300110021001",
-      "deletedAt": "2026-10-31T06:24:13.632Z"
+      "deletedAt": "2026-11-09T04:57:17.144Z"
     },
     {
       "collection": "nationalWorkspace/favorites",
       "id": "national:2027:130104:300110022002",
-      "deletedAt": "2026-10-31T06:24:13.632Z"
+      "deletedAt": "2026-11-09T04:57:17.144Z"
     },
     {
       "collection": "nationalWorkspace/favorites",
       "id": "national:2027:130104:300110023001",
-      "deletedAt": "2026-10-31T06:24:13.632Z"
+      "deletedAt": "2026-11-09T04:57:17.144Z"
     },
     {
       "collection": "nationalWorkspace/favorites",
       "id": "national:2027:130125:300110021007",
-      "deletedAt": "2026-10-31T06:24:13.632Z"
+      "deletedAt": "2026-11-09T04:57:17.144Z"
     },
     {
       "collection": "nationalWorkspace/favorites",
       "id": "national:2027:130125:300110022004",
-      "deletedAt": "2026-10-31T06:24:13.632Z"
+      "deletedAt": "2026-11-09T04:57:17.144Z"
     },
     {
       "collection": "nationalWorkspace/favorites",
       "id": "national:2027:130125:300110023021",
-      "deletedAt": "2026-10-31T06:24:13.632Z"
+      "deletedAt": "2026-11-09T04:57:17.144Z"
     },
     {
       "collection": "nationalWorkspace/favorites",
       "id": "national:2027:130125:300110023028",
-      "deletedAt": "2026-10-31T06:24:13.632Z"
+      "deletedAt": "2026-11-09T04:57:17.144Z"
     },
     {
       "collection": "nationalWorkspace/favorites",
       "id": "national:2027:130125:300110024009",
-      "deletedAt": "2026-10-31T06:24:13.632Z"
+      "deletedAt": "2026-11-09T04:57:17.144Z"
     },
     {
       "collection": "nationalWorkspace/favorites",
       "id": "national:2027:130125:300110024011",
-      "deletedAt": "2026-10-31T06:24:13.632Z"
+      "deletedAt": "2026-11-09T04:57:17.144Z"
     },
     {
       "collection": "nationalWorkspace/favorites",
       "id": "national:2027:130125:300110026012",
-      "deletedAt": "2026-10-31T06:24:13.632Z"
+      "deletedAt": "2026-11-09T04:57:17.144Z"
     },
     {
       "collection": "nationalWorkspace/favorites",
       "id": "national:2027:130125:300110026016",
-      "deletedAt": "2026-10-31T06:24:13.632Z"
+      "deletedAt": "2026-11-09T04:57:17.144Z"
     },
     {
       "collection": "nationalWorkspace/favorites",
       "id": "national:2027:130125:300110027010",
-      "deletedAt": "2026-10-31T06:24:13.632Z"
+      "deletedAt": "2026-11-09T04:57:17.144Z"
     },
     {
       "collection": "nationalWorkspace/favorites",
       "id": "national:2027:130125:300110032013",
-      "deletedAt": "2026-10-31T06:24:13.632Z"
+      "deletedAt": "2026-11-09T04:57:17.144Z"
     },
     {
       "collection": "nationalWorkspace/favorites",
       "id": "national:2027:130125:300110033014",
-      "deletedAt": "2026-10-31T06:24:13.632Z"
+      "deletedAt": "2026-11-09T04:57:17.144Z"
     },
     {
       "collection": "nationalWorkspace/favorites",
       "id": "national:2027:130125:300110033016",
-      "deletedAt": "2026-10-31T06:24:13.632Z"
+      "deletedAt": "2026-11-09T04:57:17.144Z"
     },
     {
       "collection": "nationalWorkspace/favorites",
       "id": "national:2027:130125:300110034006",
-      "deletedAt": "2026-10-31T06:24:13.632Z"
+      "deletedAt": "2026-11-09T04:57:17.144Z"
     },
     {
       "collection": "nationalWorkspace/favorites",
       "id": "national:2027:130125:300110035004",
-      "deletedAt": "2026-10-31T06:24:13.632Z"
+      "deletedAt": "2026-11-09T04:57:17.144Z"
     },
     {
       "collection": "nationalWorkspace/filters/workCities",
       "id": "深圳市",
-      "deletedAt": "2026-10-20T12:02:20.947Z"
-    },
-    {
-      "collection": "nationalWorkspace/filters/workProvinces",
-      "id": "上海市",
-      "deletedAt": "2026-10-20T12:02:20.947Z"
-    },
-    {
-      "collection": "nationalWorkspace/filters/workProvinces",
-      "id": "天津市",
-      "deletedAt": "2026-10-20T12:02:20.947Z"
-    },
-    {
-      "collection": "nationalWorkspace/filters/workProvinces",
-      "id": "广东省",
-      "deletedAt": "2026-10-20T12:02:20.947Z"
-    },
-    {
-      "collection": "nationalWorkspace/filters/workProvinces",
-      "id": "江苏省",
-      "deletedAt": "2026-10-20T12:02:20.947Z"
-    },
-    {
-      "collection": "nationalWorkspace/filters/workProvinces",
-      "id": "浙江省",
-      "deletedAt": "2026-10-20T12:02:20.947Z"
+      "deletedAt": "2026-11-09T04:57:17.144Z"
     },
     {
       "collection": "nationalWorkspace/filters/workProvinces",
       "id": "重庆市",
-      "deletedAt": "2026-10-20T12:02:20.947Z"
+      "deletedAt": "2026-11-09T04:57:17.144Z"
+    },
+    {
+      "collection": "nationalWorkspace/filters/workProvinces",
+      "id": "广东省",
+      "deletedAt": "2026-11-09T04:57:17.144Z"
+    },
+    {
+      "collection": "nationalWorkspace/filters/workProvinces",
+      "id": "江苏省",
+      "deletedAt": "2026-11-09T04:57:17.144Z"
+    },
+    {
+      "collection": "nationalWorkspace/filters/workProvinces",
+      "id": "上海市",
+      "deletedAt": "2026-11-09T04:57:17.144Z"
+    },
+    {
+      "collection": "nationalWorkspace/filters/workProvinces",
+      "id": "天津市",
+      "deletedAt": "2026-11-09T04:57:17.144Z"
+    },
+    {
+      "collection": "nationalWorkspace/filters/workProvinces",
+      "id": "浙江省",
+      "deletedAt": "2026-11-09T04:57:17.144Z"
     }
   ]
 }
