@@ -103,6 +103,10 @@ function nationalMonitorRawUrl(requestId) {
   return `${RAW_CONTENTS_ROOT}/${GITHUB_SYNC_TARGET.owner}/${GITHUB_SYNC_TARGET.repo}/${encodeURIComponent(GITHUB_SYNC_TARGET.branch)}/monitoring/national-2027.json?requestId=${encodeURIComponent(requestId)}&t=${Date.now()}`;
 }
 
+function beijingMonitorRawUrl(requestId) {
+  return `${RAW_CONTENTS_ROOT}/${GITHUB_SYNC_TARGET.owner}/${GITHUB_SYNC_TARGET.repo}/${encodeURIComponent(GITHUB_SYNC_TARGET.branch)}/monitoring/beijing-2027.json?requestId=${encodeURIComponent(requestId)}&t=${Date.now()}`;
+}
+
 function requireFetch(fetchImpl) {
   if (typeof fetchImpl !== 'function') throw new GitHubSyncError('network', '当前浏览器无法连接 GitHub。');
 }
@@ -186,6 +190,22 @@ export async function dispatchNationalMonitorRefresh({ token, requestId, fetchIm
   return { requestId };
 }
 
+export async function dispatchBeijingMonitorRefresh({ token, requestId, fetchImpl = globalThis.fetch } = {}) {
+  if (!token) throw new GitHubSyncError('unauthorized', '请先在同步设置中配置具有 Contents 写入权限的 GitHub Token。');
+  requireMonitorRequestId(requestId);
+  requireFetch(fetchImpl);
+  await requestJson(`${API_ROOT}/repos/${GITHUB_SYNC_TARGET.owner}/${GITHUB_SYNC_TARGET.repo}/dispatches`, {
+    method: 'POST',
+    headers: { ...headers(token), 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      event_type: 'beijing-monitor-refresh',
+      client_payload: { requestId },
+    }),
+    signal: AbortSignal.timeout(15000),
+  }, fetchImpl);
+  return { requestId };
+}
+
 function invalidMonitorSnapshot(message = '华图监控快照格式无效，本机数据未更改。') {
   return new GitHubSyncError('invalid_monitor_snapshot', message);
 }
@@ -260,6 +280,81 @@ export async function readPublicNationalMonitorSnapshot({ requestId, fetchImpl =
   try { parsed = await response.json(); }
   catch { throw invalidMonitorSnapshot(); }
   return validatePublicNationalMonitorSnapshot(parsed, requestId);
+}
+
+function validatePublicBeijingMonitorSnapshot(value, requestId) {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) throw invalidMonitorSnapshot('华图北京市考监控快照格式无效，本机数据未更改。');
+  if (value.requestId !== requestId) return null;
+  if (value.schemaVersion !== 1 || value.year !== 2027
+    || !Number.isFinite(Date.parse(value.fetchedAt))
+    || typeof value.sourceUpdatedAt !== 'string'
+    || typeof value.preRegistration !== 'boolean'
+    || !Number.isSafeInteger(value.expectedPositionCount) || value.expectedPositionCount !== 1446
+    || !Array.isArray(value.records)) throw invalidMonitorSnapshot('华图北京市考监控快照格式无效，本机数据未更改。');
+
+  const seen = new Set();
+  const records = value.records.map((record) => {
+    if (!record || typeof record !== 'object' || Array.isArray(record)
+      || typeof record.positionCode !== 'string' || !/^\d{9}$/u.test(record.positionCode)
+      || seen.has(record.positionCode)
+      || ![null, undefined].includes(record.applications)
+        && (!Number.isSafeInteger(record.applications) || record.applications < 0)
+      || ![null, undefined].includes(record.qualified)
+        && (!Number.isSafeInteger(record.qualified) || record.qualified < 0)
+      || typeof record.sourceUrl !== 'string') throw invalidMonitorSnapshot('华图北京市考监控快照含无效职位记录，本机数据未更改。');
+    let sourceUrl;
+    try { sourceUrl = new URL(record.sourceUrl); } catch { throw invalidMonitorSnapshot(); }
+    if (sourceUrl.protocol !== 'https:' || sourceUrl.hostname !== 'ah.huatu.com'
+      || !sourceUrl.pathname.startsWith('/zw/bjgwy/')) throw invalidMonitorSnapshot();
+    const applications = record.applications ?? null;
+    const qualified = record.qualified ?? null;
+    if (value.preRegistration && (applications !== null || qualified !== null)) {
+      throw invalidMonitorSnapshot('报名尚未开始，华图快照却含有人数；本机数据未更改。');
+    }
+    seen.add(record.positionCode);
+    return { positionCode: record.positionCode, applications, qualified, sourceUrl: sourceUrl.href };
+  });
+  if (records.length !== value.expectedPositionCount) {
+    throw invalidMonitorSnapshot('华图北京市考监控快照职位覆盖数不完整，本机数据未更改。');
+  }
+  return {
+    schemaVersion: 1,
+    year: 2027,
+    requestId,
+    fetchedAt: value.fetchedAt,
+    sourceUpdatedAt: value.sourceUpdatedAt,
+    expectedPositionCount: value.expectedPositionCount,
+    preRegistration: value.preRegistration,
+    records,
+  };
+}
+
+export async function readPublicBeijingMonitorSnapshot({ requestId, fetchImpl = globalThis.fetch } = {}) {
+  requireMonitorRequestId(requestId);
+  requireFetch(fetchImpl);
+  let response;
+  try {
+    response = await fetchImpl(beijingMonitorRawUrl(requestId), {
+      method: 'GET',
+      cache: 'no-store',
+      signal: AbortSignal.timeout(12000),
+    });
+  } catch {
+    return null;
+  }
+  if (response.status === 404) return null;
+  if (!response.ok) {
+    const rateLimited = response.status === 403 || response.status === 429;
+    throw new GitHubSyncError(
+      rateLimited ? 'rate_limited' : 'http',
+      rateLimited ? 'GitHub 暂时限制读取公开北京市考监控快照，请稍后重试。' : `读取公开北京市考监控快照失败（HTTP ${response.status}）。`,
+      response.status,
+    );
+  }
+  let parsed;
+  try { parsed = await response.json(); }
+  catch { throw invalidMonitorSnapshot('华图北京市考监控快照不是有效 JSON，本机数据未更改。'); }
+  return validatePublicBeijingMonitorSnapshot(parsed, requestId);
 }
 
 export async function createSyncBranch({ token, fetchImpl = globalThis.fetch } = {}) {

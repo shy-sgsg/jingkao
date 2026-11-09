@@ -20129,5 +20129,137 @@
     "positionTitle": "行政执法岗",
     "reportedRecruitCount": 2,
     "notes": "职位详情列出代码230530001、潘家园街道综合行政执法队行政执法岗、招录2人；仅用于与成公街道部分进面分样本匹配，第三方职位镜像尚未与官方职位表逐代码核验。"
+  },
+  {
+    "sourceId": "fenbi-2025-beijing-page-14",
+    "title": "粉笔职位库：2025北京公务员职位列表第14页",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2025,
+    "geographicScope": "2025北京职位列表第14页；仅记录代码和招录数与历史职位词条精确匹配的岗位",
+    "url": "https://www.fenbi.com/page/positions/1/293319?page=14&region=160",
+    "accessedAt": "2026-11-09",
+    "positionSnapshots": [
+      {
+        "positionCode": "243105802",
+        "scope": "position-level",
+        "applicantsRegistered": 13,
+        "recruitCount": 2
+      }
+    ],
+    "notes": "页面逐岗表头为‘报考人数’，代码243105802与历史职位单位、职位名及计划数精确匹配；页面未注明逐岗统计时间或字段具体定义，页头另将汇总标为‘过审人数’。该行只作为第三方报名人数参考，不等同官方资格审查通过人数、最终缴费人数或实考人数。"
+  },
+  {
+    "sourceId": "fenbi-2025-beijing-page-15",
+    "title": "粉笔职位库：2025北京公务员职位列表第15页",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2025,
+    "geographicScope": "2025北京职位列表第15页；仅记录代码和招录数与历史职位词条精确匹配的岗位",
+    "url": "https://www.fenbi.com/page/positions/1/293319?page=15&region=160",
+    "accessedAt": "2026-11-09",
+    "positionSnapshots": [
+      {
+        "positionCode": "223106102",
+        "scope": "position-level",
+        "applicantsRegistered": 18,
+        "recruitCount": 2
+      }
+    ],
+    "notes": "页面逐岗表头为‘报考人数’，代码223106102与历史职位单位、职位名及计划数精确匹配；页面未注明逐岗统计时间或字段具体定义，页头另将汇总标为‘过审人数’。该行只作为第三方报名人数参考，不等同官方资格审查通过人数、最终缴费人数或实考人数。"
+  },
+  {
+    "sourceId": "fenbi-2025-beijing-page-25",
+    "title": "粉笔职位库：2025北京公务员职位列表第25页",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2025,
+    "geographicScope": "2025北京职位列表第25页；仅记录代码和招录数与历史职位词条精确匹配的岗位",
+    "url": "https://www.fenbi.com/page/positions/1/293319?page=25&region=160",
+    "accessedAt": "2026-11-09",
+    "positionSnapshots": [
+      {
+        "positionCode": "219910201",
+        "scope": "position-level",
+        "applicantsRegistered": 49,
+        "recruitCount": 6
+      }
+    ],
+    "notes": "页面逐岗表头为‘报考人数’，代码219910201与历史职位单位、职位名及计划数精确匹配；页面未注明逐岗统计时间或字段具体定义，页头另将汇总标为‘过审人数’。该行只作为第三方报名人数参考，不等同官方资格审查通过人数、最终缴费人数或实考人数。"
+  },
+  {
+    "sourceId": "fenbi-2024-chaoyang-page-12",
+    "title": "粉笔职位库：2024北京朝阳区职位列表第12页",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2024,
+    "districtId": "chaoyang",
+    "geographicScope": "2024朝阳区职位列表第12页；职位代码及招录数与历史职位词条精确匹配",
+    "url": "https://www.fenbi.com/page/positions/1/178342?page=12&region=179",
+    "accessedAt": "2026-11-09",
+    "positionSnapshots": [
+      {
+        "positionCode": "230527501",
+        "scope": "position-level",
+        "applicantsRegistered": 447,
+        "recruitCount": 2
+      }
+    ],
+    "notes": "页面逐岗表头为‘报考人数’，代码230527501与历史职位单位、职位名及计划数精确匹配；页面未注明逐岗统计时间或字段具体定义，页头另将区级汇总标为‘过审人数’。该行只作为第三方报名人数参考，不等同官方资格审查通过人数、最终缴费人数或实考人数。"
+  },
+  {
+    "sourceId": "gwyzwb-2026-dongcheng-820117004-detail",
+    "title": "京考职位网：2026东城区人社局劳动能力鉴定岗职位详情",
+    "publisher": "京考职位网",
+    "level": "secondary",
+    "evidenceType": "position_detail",
+    "year": 2026,
+    "districtId": "dongcheng",
+    "geographicScope": "东城区",
+    "url": "https://bj.gwyzwb.com/2026/405.html",
+    "accessedAt": "2026-11-09",
+    "reportedPositionCount": 1,
+    "notes": "详情页逐字段列出职位代码、单位、用人部门、职位名、计划、学历、专业、政治面貌、其他条件及应届要求；第三方镜像，未与北京市官方职位简章逐代码核验。"
+  },
+  {
+    "sourceId": "huatu-2026-pinggu-821368902-detail",
+    "title": "华图：2026平谷区人社局社保综合岗职位详情",
+    "publisher": "华图教育",
+    "level": "secondary",
+    "evidenceType": "position_detail",
+    "year": 2026,
+    "districtId": "pinggu",
+    "geographicScope": "平谷区",
+    "url": "https://ah.huatu.com/zw/bjgwy/2026/1343.html",
+    "accessedAt": "2026-11-09",
+    "reportedPositionCount": 1,
+    "notes": "职位详情逐字段列出计划、学历、专业、政治面貌、男女比例、应届要求及附加条件；第三方职位镜像，未与北京市官方职位简章逐代码核验。"
+  },
+  {
+    "sourceId": "fenbi-2026-dongcheng-page-13",
+    "title": "粉笔职位库：2026东城区职位列表第13页",
+    "publisher": "粉笔职位库",
+    "level": "secondary",
+    "evidenceType": "application_count_snapshot",
+    "year": 2026,
+    "districtId": "dongcheng",
+    "geographicScope": "东城区2026职位列表第13页",
+    "url": "https://www.fenbi.com/page/positions/1/438923?page=13&region=163",
+    "accessedAt": "2026-11-09",
+    "reportedPositionCount": 10,
+    "positionSnapshots": [
+      {
+        "positionCode": "230120501",
+        "scope": "position-level",
+        "applicantsRegistered": 0,
+        "recruitCount": 1,
+        "observedAt": null
+      }
+    ],
+    "notes": "粉笔2026东城区职位列表第13页：表头将逐岗字段标为“报考人数”，该行代码230120501显示0、计划招录1；页面页首另将区级汇总标为“过审人数”。页面未注明该逐岗字段的统计时点或定义，保留为第三方报名人数零值参考，不等同资格审查通过人数、最终缴费人数或实考人数。"
   }
 ]

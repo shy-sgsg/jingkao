@@ -47,7 +47,7 @@ export function normalizeNationalWorkspace(source) {
     });
   }
   const comparisons = [...new Set((Array.isArray(value.comparisons) ? value.comparisons : [])
-    .filter(isNationalPositionId))].slice(0, 6);
+    .filter(isNationalPositionId))].slice(0, 10);
   const savedById = new Map();
   for (const item of Array.isArray(value.savedFilters) ? value.savedFilters : []) {
     if (!isRecord(item) || typeof item.id !== 'string' || !item.id.trim()
@@ -113,7 +113,7 @@ export function toggleNationalComparison(source, positionId) {
   if (workspace.comparisons.includes(positionId)) {
     workspace.comparisons = workspace.comparisons.filter((id) => id !== positionId);
   } else {
-    if (workspace.comparisons.length >= 6) throw new Error('一次最多比较 6 个国考职位。');
+    if (workspace.comparisons.length >= 10) throw new Error('一次最多比较 10 个国考职位。');
     workspace.comparisons.push(positionId);
   }
   return workspace;

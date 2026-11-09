@@ -77,7 +77,7 @@ export function normalizeZhejiangWorkspace(source) {
     });
   }
   const comparisons = [...new Set((Array.isArray(value.comparisons) ? value.comparisons : [])
-    .filter(isZhejiangPositionId))].slice(0, 6);
+    .filter(isZhejiangPositionId))].slice(0, 10);
   const savedFiltersById = new Map();
   for (const item of Array.isArray(value.savedFilters) ? value.savedFilters : []) {
     if (!zhejiangIsRecord(item) || typeof item.id !== 'string' || !item.id.trim()
@@ -121,7 +121,7 @@ export function toggleZhejiangComparison(source, positionId) {
   if (workspace.comparisons.includes(positionId)) {
     workspace.comparisons = workspace.comparisons.filter((id) => id !== positionId);
   } else {
-    if (workspace.comparisons.length >= 6) throw new Error('一次最多比较 6 个浙江省考职位。');
+    if (workspace.comparisons.length >= 10) throw new Error('一次最多比较 10 个浙江省考职位。');
     workspace.comparisons.push(positionId);
   }
   return workspace;

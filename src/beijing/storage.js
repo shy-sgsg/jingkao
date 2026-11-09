@@ -13,6 +13,11 @@ const BEIJING_MANUAL_REVIEW_CHECKS = new Set([
   'major', 'education', 'degree', 'politicalStatus', 'gender', 'ethnicity', 'graduation',
   'grassrootsExperience', 'age', 'locality', 'targetedIdentity', 'specialRequirements',
 ]);
+const BEIJING_MONITOR_METRICS = ['applications', 'qualified'];
+const BEIJING_MONITOR_SORTS = [
+  'applications-desc', 'applications-asc', 'qualified-desc', 'qualified-asc',
+  'applicationsRatio-desc', 'applicationsRatio-asc', 'qualifiedRatio-desc', 'qualifiedRatio-asc',
+];
 
 function beijingIsRecord(value) {
   return Boolean(value) && typeof value === 'object' && !Array.isArray(value);
@@ -23,6 +28,37 @@ function beijingText(value, limit = 200) {
     ? String(value).trim().slice(0, limit) : '';
 }
 
+function beijingMonitorMetric(value) {
+  if (!beijingIsRecord(value) || !Number.isSafeInteger(value.value) || value.value < 0
+    || !['official', 'third-party'].includes(value.sourceType)
+    || !beijingText(value.sourceName, 240)
+    || !Number.isFinite(Date.parse(beijingText(value.observedAt, 120)))) return null;
+  let sourceUrl = '';
+  try {
+    const parsed = new URL(beijingText(value.sourceUrl, 2000));
+    if (!['http:', 'https:'].includes(parsed.protocol)) return null;
+    sourceUrl = parsed.href;
+  } catch {
+    return null;
+  }
+  return {
+    value: value.value,
+    sourceType: value.sourceType,
+    sourceName: beijingText(value.sourceName, 240),
+    sourceUrl,
+    sourceUpdatedAt: beijingText(value.sourceUpdatedAt, 120),
+    observedAt: beijingText(value.observedAt, 120),
+    importedAt: beijingText(value.importedAt, 120),
+  };
+}
+
+function beijingMonitorThreshold(value) {
+  const text = beijingText(value, 24);
+  if (!text) return '';
+  const number = Number(text);
+  return /^\d+(?:\.\d{1,2})?$/u.test(text) && Number.isFinite(number) && number >= 0 ? text : '';
+}
+
 export function isBeijingPositionId(value) {
   return typeof value === 'string' && /^beijing:2027:[^:]+$/u.test(value);
 }
@@ -31,8 +67,10 @@ export function emptyBeijingWorkspace() {
   return {
     profile: Object.fromEntries(BEIJING_PROFILE_TEXT_FIELDS.map((key) => [key, ''])),
     filters: { sort: 'recruit-desc', page: 1, excludeExplicitMismatch: true },
-    savedFilters: [], favorites: [], comparisons: [], notes: {}, manualReviews: {},
+    savedFilters: [], favorites: [], myPicks: [], comparisons: [], notes: {}, manualReviews: {}, monitoringSnapshots: {},
     favoriteQuery: '', favoritePriority: 'all', comparisonOnlyDifferences: false,
+    monitorFilters: { query: '', minApplications: '', minQualified: '', minApplicationsRatio: '', minQualifiedRatio: '', dataStatus: 'all' },
+    monitorSort: 'applicationsRatio-desc',
   };
 }
 
@@ -94,7 +132,28 @@ export function normalizeBeijingWorkspace(source) {
     });
   }
   const comparisons = [...new Set((Array.isArray(value.comparisons) ? value.comparisons : [])
-    .filter(isBeijingPositionId))].slice(0, 6);
+    .filter(isBeijingPositionId))].slice(0, 10);
+  const myPicks = [...new Set((Array.isArray(value.myPicks) ? value.myPicks : [])
+    .filter(isBeijingPositionId))].slice(0, 60);
+  const monitoringSnapshots = Object.fromEntries(Object.entries(
+    beijingIsRecord(value.monitoringSnapshots) ? value.monitoringSnapshots : {},
+  ).flatMap(([positionId, snapshot]) => {
+    if (!isBeijingPositionId(positionId) || !beijingIsRecord(snapshot)) return [];
+    const metrics = Object.fromEntries(BEIJING_MONITOR_METRICS
+      .map((key) => [key, beijingMonitorMetric(snapshot[key])])
+      .filter(([, metric]) => metric));
+    return Object.keys(metrics).length ? [[positionId, metrics]] : [];
+  }));
+  const incomingMonitorFilters = beijingIsRecord(value.monitorFilters) ? value.monitorFilters : {};
+  const monitorFilters = {
+    query: beijingText(incomingMonitorFilters.query, 160),
+    minApplications: beijingMonitorThreshold(incomingMonitorFilters.minApplications),
+    minQualified: beijingMonitorThreshold(incomingMonitorFilters.minQualified),
+    minApplicationsRatio: beijingMonitorThreshold(incomingMonitorFilters.minApplicationsRatio),
+    minQualifiedRatio: beijingMonitorThreshold(incomingMonitorFilters.minQualifiedRatio),
+    dataStatus: ['all', 'has-data', 'missing'].includes(incomingMonitorFilters.dataStatus)
+      ? incomingMonitorFilters.dataStatus : 'all',
+  };
   const savedFiltersById = new Map();
   for (const item of Array.isArray(value.savedFilters) ? value.savedFilters : []) {
     if (!beijingIsRecord(item) || typeof item.id !== 'string' || !item.id.trim()
@@ -125,12 +184,16 @@ export function normalizeBeijingWorkspace(source) {
     filters,
     savedFilters: [...savedFiltersById.values()],
     favorites: [...favoritesById.values()],
+    myPicks,
     comparisons,
     notes,
     manualReviews,
+    monitoringSnapshots,
     favoriteQuery: beijingText(value.favoriteQuery, 160),
     favoritePriority: ['all', 'high', 'normal', 'watch'].includes(value.favoritePriority) ? value.favoritePriority : 'all',
     comparisonOnlyDifferences: value.comparisonOnlyDifferences === true,
+    monitorFilters,
+    monitorSort: BEIJING_MONITOR_SORTS.includes(value.monitorSort) ? value.monitorSort : 'applicationsRatio-desc',
   };
 }
 
@@ -150,7 +213,7 @@ export function toggleBeijingComparison(source, positionId) {
   if (workspace.comparisons.includes(positionId)) {
     workspace.comparisons = workspace.comparisons.filter((id) => id !== positionId);
   } else {
-    if (workspace.comparisons.length >= 6) throw new Error('一次最多比较 6 个北京市考职位。');
+    if (workspace.comparisons.length >= 10) throw new Error('一次最多比较 10 个北京市考职位。');
     workspace.comparisons.push(positionId);
   }
   return workspace;

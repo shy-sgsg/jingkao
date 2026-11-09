@@ -232,9 +232,10 @@ function projectUserData(source = {}) {
     monitorSort: 'applicationsRatio-desc',
   };
   merged.zhejiangWorkspace = normalizeZhejiangWorkspace(merged.zhejiangWorkspace);
-  merged.beijingWorkspace = hasBeijingWorkspace
+  const beijingWorkspace = hasBeijingWorkspace
     ? normalizeBeijingWorkspace(merged.beijingWorkspace)
     : normalizeBeijingWorkspace({ profile: merged.zhejiangWorkspace.profile });
+  merged.beijingWorkspace = { ...beijingWorkspace, myPicks: [], monitoringSnapshots: {} };
   merged.onboarding = requireRecord(merged.onboarding, 'onboarding');
 
   for (const collection of RECORD_COLLECTIONS) {

@@ -1,0 +1,50 @@
+name: Refresh Beijing civil service monitoring snapshot
+
+on:
+  repository_dispatch:
+    types:
+      - beijing-monitor-refresh
+
+permissions:
+  contents: write
+
+concurrency:
+  group: beijing-monitor-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out application source
+        uses: actions/checkout@v6
+        with:
+          ref: main
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          package-manager-cache: false
+
+      - name: Check out public sync-data branch
+        uses: actions/checkout@v6
+        with:
+          ref: sync-data
+          path: public-data
+          fetch-depth: 0
+
+      - name: Collect and validate public Beijing position statistics
+        env:
+          REQUEST_ID: ${{ github.event.client_payload.requestId }}
+        run: node scripts/refresh_beijing_monitor.mjs --request-id "$REQUEST_ID" --catalog public/beijing/positions-2027.json --output public-data/monitoring/beijing-2027.json
+
+      - name: Publish snapshot to sync-data
+        working-directory: public-data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add monitoring/beijing-2027.json
+          git commit -m "Refresh public Beijing position monitoring snapshot"
+          git push origin HEAD:sync-data

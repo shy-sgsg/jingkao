@@ -1,5 +1,9 @@
 import { evaluateBeijingEligibility, getBeijingMajorCatalogPath, hasBeijingEligibilityProfile } from './eligibility.js';
 import { filterBeijingPositions, sortBeijingPositions } from './filters.js';
+import { buildBeijingHistoricalComparisons } from './history.js';
+import { BEIJING_REGISTRATION_START, filterAndSortBeijingMonitorRows } from './monitoring.js';
+
+const historicalComparisonCache = new WeakMap();
 
 function escapeBeijingHtml(value) {
   return String(value ?? '').replace(/[&<>"']/gu, (character) => ({
@@ -121,6 +125,81 @@ function beijingPositionCard(position, workspace, profile, majorCatalog, eligibi
   return `<article class="national-position-card" data-position-id="${escapeBeijingHtml(position.id)}"><div class="national-position-head"><div><div class="national-kicker">${escapeBeijingHtml(position.sourceSheet)} · ${escapeBeijingHtml(position.positionCode)}</div><h3>${escapeBeijingHtml(position.positionTitle)}</h3><p>${escapeBeijingHtml(position.departmentName)} · ${escapeBeijingHtml(position.hiringDepartment || '')}</p></div>${beijingBadge(eligibility.label, kind)}</div><div class="national-position-meta"><span>机构性质：${escapeBeijingHtml(position.positionAttribute || '原表为空')}</span><span>职位类别：${escapeBeijingHtml(position.positionType || '原表为空')}</span><span>职位层级：${escapeBeijingHtml(position.positionSubType || '原表为空')}</span><span>招录人数：${escapeBeijingHtml(position.recruitCount ?? '原表为空')}</span><span>学历：${escapeBeijingHtml(position.educationRaw || '原表为空')}</span><span>政治面貌：${escapeBeijingHtml(position.politicalStatusRaw || '原表为空')}</span></div><div class="national-position-actions"><button type="button" class="button button-secondary button-small" data-action="beijing-toggle-favorite" data-position-id="${escapeBeijingHtml(position.id)}">${favorite ? '★ 已收藏' : '☆ 收藏'}</button><button type="button" class="button button-quiet button-small" data-action="beijing-toggle-compare" data-position-id="${escapeBeijingHtml(position.id)}">${compared ? '✓ 已加入比较' : '＋ 加入比较'}</button><button type="button" class="button button-quiet button-small" data-action="beijing-copy-position" data-position-id="${escapeBeijingHtml(position.id)}">复制原文</button></div>${beijingPositionDetails(position, workspace, profile, majorCatalog, eligibility)}</article>`;
 }
 
+function historySourceLink(source) {
+  const url = String(source?.url || '').trim();
+  const safeHref = /^https?:\/\//iu.test(url) ? url : '';
+  const title = safeHref
+    ? `<a href="${escapeBeijingHtml(safeHref)}" target="_blank" rel="noreferrer">${escapeBeijingHtml(source.title || '打开来源')} ↗</a>`
+    : escapeBeijingHtml(source?.title || '来源信息待补');
+  const metadata = [source?.publisher, source?.level === 'official' ? '官方' : source?.level === 'secondary' ? '第三方' : '', source?.accessedAt]
+    .filter(Boolean).map(escapeBeijingHtml).join(' · ');
+  return `${title}${metadata ? ` · ${metadata}` : ''}`;
+}
+
+function historyRatio(ratio) {
+  if (!Number.isFinite(ratio)) return '暂无可计算比值';
+  const rounded = Number(ratio.toFixed(1));
+  return `${rounded.toLocaleString('zh-CN')} : 1`;
+}
+
+function historicalMatchMarkup(match) {
+  const observations = match.observations.length
+    ? `<div class="beijing-history-metrics">${match.observations.map((item) => `<article><strong>${escapeBeijingHtml(item.label)}</strong><span>人数：${item.count === null ? '未提供' : `${item.count.toLocaleString('zh-CN')} 人`}</span><span>计划招录：${item.recruitCount === null ? '未提供' : `${item.recruitCount} 人`}</span><span>人数 / 计划：${historyRatio(item.ratio)}</span><small>${escapeBeijingHtml(item.observedAt || '统计时点未注明')}${item.notes ? ` · ${escapeBeijingHtml(item.notes)}` : ''}</small><small>${historySourceLink(item.source)}</small></article>`).join('')}</div>`
+    : '<p class="beijing-history-empty">暂无可追溯的岗位级报名或资格审查快照；不以区级、单位级汇总替代。</p>';
+  const scores = match.scores.length
+    ? `<div class="beijing-history-scores"><strong>第三方公开进面分样本</strong>${match.scores.map((item) => `<article><span>${item.score === null ? '未提供分数' : `${item.score} 分`}</span><small>${escapeBeijingHtml(item.notes || '具体统计口径以来源页面为准')}</small><small>${historySourceLink(item.source)}</small></article>`).join('')}</div>`
+    : '<p class="beijing-history-empty">暂无能唯一对应到该历史职位的高置信进面分样本。</p>';
+  const sources = match.positionSources.length
+    ? `<div class="beijing-history-position-sources"><strong>历史职位信息来源</strong>${match.positionSources.map((source) => `<span>${historySourceLink(source)}${source.level ? ` · ${escapeBeijingHtml(source.level === 'official' ? '官方' : '第三方')}` : ''}</span>`).join('')}</div>`
+    : '';
+  return `<details class="beijing-history-match"><summary><span>${match.year} · ${escapeBeijingHtml(match.unit)} · ${escapeBeijingHtml(match.title)}</span><small>代码 ${escapeBeijingHtml(match.positionCode)} · 计划招录 ${match.recruitCount === null ? '未提供' : `${match.recruitCount} 人`}</small></summary><div class="beijing-history-match-body"><div class="beijing-history-reasons">${match.matchReasons.map((reason) => `<span>${escapeBeijingHtml(reason)}</span>`).join('')}</div><div class="beijing-history-conditions"><span>学历：${escapeBeijingHtml(match.education || '未提供')}</span><span>专业：${escapeBeijingHtml(match.majorText || '未提供')}</span><span>区县：${escapeBeijingHtml(match.district || '未识别')}</span><span>${escapeBeijingHtml(match.departmentNote)}</span></div>${observations}${scores}${sources}</div></details>`;
+}
+
+function beijingPicksImportPanel(importPreview) {
+  const preview = importPreview ? `<section class="beijing-picks-preview" id="beijing-picks-preview"><div class="panel-heading"><div><h2>导入预览</h2><p>只使用“职位代码”匹配职位；不会读取或展示 CSV 中的个人资格初核和个人备注。</p></div><span>${importPreview.summary?.validPositions || 0} / 60 个有效岗位</span></div>${importPreview.errors?.length ? `<ul class="beijing-picks-errors">${importPreview.errors.map((error) => `<li>${escapeBeijingHtml(error)}</li>`).join('')}</ul>` : ''}${importPreview.rows?.length ? `<div class="beijing-picks-preview-list">${importPreview.rows.map((row) => `<div class="beijing-picks-preview-row ${row.errors.length ? 'has-error' : ''}"><span>${escapeBeijingHtml(row.code || '缺少代码')}</span><span>${row.position ? `${escapeBeijingHtml(row.position.departmentName)} · ${escapeBeijingHtml(row.position.positionTitle)}` : '未匹配到职位'}</span><small>${row.errors.length ? escapeBeijingHtml(row.errors.join('；')) : '可导入'}</small></div>`).join('')}</div>` : ''}<div class="form-actions"><button type="button" class="button button-primary" data-action="beijing-picks-confirm-import" ${importPreview.canImport ? '' : 'disabled'}>确认并保存到本机加密档案</button><button type="button" class="button button-quiet" data-action="beijing-picks-cancel-import">取消预览</button></div></section>` : '';
+  return `<section class="panel beijing-picks-import"><div class="panel-heading"><div><div class="eyebrow muted">PRIVATE POSITION LIST</div><h2>导入我的 60 个选岗</h2><p>选择职位筛选导出的 CSV。确认后只把 60 个职位代码保存在本机加密档案。</p></div></div><form id="beijing-picks-import-form"><label class="form-field"><span>CSV 文件</span><input id="beijing-picks-csv" name="file" type="file" accept=".csv,text/csv" required/></label><div class="form-actions"><button type="submit" class="button button-secondary">读取并预览</button><a class="button button-quiet" href="#/beijing">打开 2027 北京市考职位库</a></div></form>${preview}</section>`;
+}
+
+function beijingHistoricalSection(title, matches, emptyText, { positionId = '', limit = Infinity, expanded = false } = {}) {
+  const visible = expanded ? matches : matches.slice(0, limit);
+  const partial = visible.length < matches.length;
+  const action = matches.length > limit
+    ? `<button type="button" class="button button-quiet button-small" data-action="beijing-picks-expand-similar" data-position-id="${escapeBeijingHtml(positionId)}">${expanded ? '收起' : `展开其余 ${matches.length - visible.length} 条`}</button>`
+    : '';
+  return `<section class="beijing-history-section"><div class="beijing-history-heading"><h3>${escapeBeijingHtml(title)}</h3><span>${visible.length}${partial ? ` / ${matches.length}` : ''} 条</span></div>${matches.length ? visible.map(historicalMatchMarkup).join('') : `<p class="beijing-history-empty">${escapeBeijingHtml(emptyText)}</p>`}${action}</section>`;
+}
+
+export function renderBeijingPicksPage({ positions = [], workspace = {}, dataset = {}, importPreview = null, expandedSimilarIds = [] }) {
+  const byId = new Map(positions.map((position) => [position.id, position]));
+  const picked = (Array.isArray(workspace.myPicks) ? workspace.myPicks : [])
+    .map((id) => byId.get(id)).filter(Boolean);
+  let cachedById = historicalComparisonCache.get(dataset);
+  if (!cachedById) {
+    cachedById = new Map();
+    historicalComparisonCache.set(dataset, cachedById);
+  }
+  const comparisons = picked.map((position) => {
+    if (!cachedById.has(position.id)) cachedById.set(position.id, buildBeijingHistoricalComparisons(position, dataset));
+    return { position, evidence: cachedById.get(position.id) };
+  });
+  const withCompetition = comparisons.filter(({ evidence }) => [...evidence.directMatches, ...evidence.similarMatches]
+    .some((match) => match.observations.length || match.scores.length)).length;
+  const withDirectHistory = comparisons.filter(({ evidence }) => evidence.directMatches.length).length;
+  const cards = comparisons.map(({ position, evidence }) => {
+    const direct = beijingHistoricalSection('同单位、同职位名称', evidence.directMatches, '历史职位库没有找到单位名称和职位名称都相同的岗位。');
+    const similar = beijingHistoricalSection('报名条件与招录部门 / 工作区县相近', evidence.similarMatches, '当前历史记录中没有找到报名条件与招录部门或工作区县都相近、且有竞争数据的岗位。', {
+      positionId: position.id,
+      limit: 8,
+      expanded: expandedSimilarIds.includes(position.id),
+    });
+    return `<article class="panel beijing-pick-history-card"><header><div><div class="eyebrow muted">${escapeBeijingHtml(position.positionCode)} · ${escapeBeijingHtml(position.sourceSheet)}</div><h2>${escapeBeijingHtml(position.positionTitle)}</h2><p>${escapeBeijingHtml(position.departmentName)} · ${escapeBeijingHtml(position.hiringDepartment || '')}</p></div><span class="national-badge">招录 ${escapeBeijingHtml(position.recruitCount ?? '未提供')} 人</span></header><div class="beijing-pick-current-conditions"><span>学历：${escapeBeijingHtml(position.educationRaw || '原表为空')}</span><span>专业：${escapeBeijingHtml(position.majorRaw || '原表为空')}</span><span>政治面貌：${escapeBeijingHtml(position.politicalStatusRaw || '原表为空')}</span><span>应届 / 身份：${escapeBeijingHtml(position.existingIdentityRaw || '原表未注明')}</span><span>备注：${escapeBeijingHtml(position.remarkRaw || '原表未注明')}</span></div><details class="beijing-pick-history-details"><summary>往届竞争数据 · ${evidence.directMatches.length} 条同岗 · ${evidence.similarMatches.length} 条近似</summary>${direct}${similar}<p class="beijing-history-caution">往届职位名称相同不代表招录科室或资格条件完全相同。报考人数与资格审查人数分开列示，快照比值按人数 ÷ 计划招录计算；公开分数只作样本参考。空值表示当前没有可追溯记录，不是 0。</p></details><div class="beijing-pick-actions"><button type="button" class="button button-quiet button-small" data-action="beijing-toggle-compare" data-position-id="${escapeBeijingHtml(position.id)}">加入岗位比较 ⇄</button></div></article>`;
+  }).join('');
+  const content = picked.length
+    ? `<div class="beijing-picks-summary"><article><span>已选职位</span><strong>${picked.length} / 60</strong></article><article><span>找到同岗历史记录</span><strong>${withDirectHistory}</strong></article><article><span>有岗位级竞争 / 分数证据</span><strong>${withCompetition}</strong></article></div><div class="beijing-picks-list">${cards}</div>`
+    : '<div class="empty-state">尚未导入选岗清单。选择包含 60 个唯一“职位代码”的 CSV 后，可查看每个岗位对应的历年竞争资料。</div>';
+  return `<div class="page-body national-page beijing-page beijing-picks-page"><div class="page-heading-row"><div><div class="eyebrow muted">BEIJING · MY PICKS & HISTORICAL COMPETITION</div><h1>我的选岗与往届竞争资料</h1><p>同岗按招录单位和职位名称核对；近似岗位主要看报名条件及招录部门 / 工作区县关系，职位名称和职能词只作补充。竞争人数、比例和进面分均保留来源口径。</p></div><a class="button button-secondary" href="#/beijing">打开 2027 职位库</a></div>${beijingPicksImportPanel(importPreview)}${content}</div>`;
+}
+
 function beijingOptions(positions, key) {
   return [...new Set(positions.map((position) => position[key]).filter(Boolean))].sort((left, right) => left.localeCompare(right, 'zh-CN'));
 }
@@ -194,7 +273,7 @@ function beijingComparisonTab({ positions, workspace, profile, majorCatalog, eli
     return String(position[key] ?? '');
   };
   const visibleRows = workspace.comparisonOnlyDifferences ? rows.filter(([, key]) => new Set(items.map((position) => valueFor(position, key))).size > 1) : rows;
-  return `<section class="national-comparison"><div class="national-results-summary"><div><strong>${items.length}</strong><span> / 6 个职位</span><small>逐项比较职位表字段和个人资格初核。</small></div><div class="national-comparison-actions"><button type="button" class="button button-quiet" data-action="beijing-toggle-difference-only">${workspace.comparisonOnlyDifferences ? '显示全部字段' : '只看差异'}</button><button type="button" class="button button-secondary" data-action="beijing-clear-comparison" ${items.length ? '' : 'disabled'}>清空比较</button><button type="button" class="button button-secondary" data-action="beijing-export-comparison" ${items.length ? '' : 'disabled'}>导出 CSV</button></div></div>${items.length ? `<div class="national-compare-scroll"><table class="national-compare-table"><thead><tr><th>比较项目</th>${items.map((position, index) => `<th>${escapeBeijingHtml(position.positionTitle)}<small>${escapeBeijingHtml(position.departmentName)}</small><span class="national-compare-reorder"><button type="button" aria-label="上移职位" data-action="beijing-move-compare" data-position-id="${escapeBeijingHtml(position.id)}" data-direction="-1" ${index === 0 ? 'disabled' : ''}>↑</button><button type="button" aria-label="下移职位" data-action="beijing-move-compare" data-position-id="${escapeBeijingHtml(position.id)}" data-direction="1" ${index === items.length - 1 ? 'disabled' : ''}>↓</button></span><button type="button" data-action="beijing-toggle-compare" data-position-id="${escapeBeijingHtml(position.id)}">移出比较</button></th>`).join('')}</tr></thead><tbody>${visibleRows.map(([label, key]) => {
+  return `<section class="national-comparison"><div class="national-results-summary"><div><strong>${items.length}</strong><span> / 10 个职位</span><small>逐项比较职位表字段和个人资格初核。</small></div><div class="national-comparison-actions"><button type="button" class="button button-quiet" data-action="beijing-toggle-difference-only">${workspace.comparisonOnlyDifferences ? '显示全部字段' : '只看差异'}</button><button type="button" class="button button-secondary" data-action="beijing-clear-comparison" ${items.length ? '' : 'disabled'}>清空比较</button><button type="button" class="button button-secondary" data-action="beijing-export-comparison" ${items.length ? '' : 'disabled'}>导出 CSV</button></div></div>${items.length ? `<div class="national-compare-scroll"><table class="national-compare-table"><thead><tr><th>比较项目</th>${items.map((position, index) => `<th>${escapeBeijingHtml(position.positionTitle)}<small>${escapeBeijingHtml(position.departmentName)}</small><span class="national-compare-reorder"><button type="button" aria-label="上移职位" data-action="beijing-move-compare" data-position-id="${escapeBeijingHtml(position.id)}" data-direction="-1" ${index === 0 ? 'disabled' : ''}>↑</button><button type="button" aria-label="下移职位" data-action="beijing-move-compare" data-position-id="${escapeBeijingHtml(position.id)}" data-direction="1" ${index === items.length - 1 ? 'disabled' : ''}>↓</button></span><button type="button" data-action="beijing-toggle-compare" data-position-id="${escapeBeijingHtml(position.id)}">移出比较</button></th>`).join('')}</tr></thead><tbody>${visibleRows.map(([label, key]) => {
     const values = items.map((position) => valueFor(position, key));
     const different = new Set(values).size > 1;
     return `<tr class="${different ? 'has-difference' : ''}"><th>${escapeBeijingHtml(label)}</th>${values.map((value) => `<td>${value ? escapeBeijingHtml(value) : '<span class="national-empty-value">原表为空</span>'}</td>`).join('')}</tr>`;
@@ -234,11 +313,79 @@ function beijingProfileForm(profile, majorCatalog) {
   </div>${path.length ? `<p class="beijing-major-path">专业目录路径：${escapeBeijingHtml([profile.degree || '学历未填', ...path].join(' → '))}</p>` : ''}<div class="form-actions"><button type="submit" class="button button-primary">保存个人条件</button><span>按最高学历核对学历与专业；学位根据学历层级推定。无岗位明文要求时不要求填写毕业年份或学位证书名称。资料保存在本机加密档案。</span></div></form></details>`;
 }
 function beijingTabs(tab, workspace) {
-  const tabs = [['positions', '职位筛选'], ['overview', '数据概览'], ['favorites', `我的收藏 ${workspace.favorites.length}`], ['comparison', `并排比较 ${workspace.comparisons.length}`]];
+  const tabs = [['positions', '职位筛选'], ['overview', '数据概览'], ['favorites', `我的收藏 ${workspace.favorites.length}`], ['monitor', `我的选岗监控 ${workspace.myPicks.length}`], ['comparison', `并排比较 ${workspace.comparisons.length}`]];
   return `<nav class="national-tabs" aria-label="北京市考职位工具">${tabs.map(([key, label]) => `<a class="national-tab ${tab === key ? 'is-active' : ''}" href="#/beijing?tab=${key}" ${tab === key ? 'aria-current="page"' : ''}>${label}</a>`).join('')}</nav>`;
 }
 
-export function renderBeijingWorkspace({ positions = [], metadata = {}, profile = {}, majorCatalog = [], workspace, tab = 'positions' }) {
+function beijingMonitorDate(value) {
+  if (!String(value || '').trim()) return '未提供';
+  const parsed = Date.parse(value || '');
+  return Number.isFinite(parsed) ? new Date(parsed).toLocaleString('zh-CN', { hour12: false }) : String(value);
+}
+
+function beijingMonitorSource(metric) {
+  if (!metric) return '<span class="national-empty-value">暂无数据</span>';
+  const name = escapeBeijingHtml(metric.sourceName || (metric.sourceType === 'official' ? '官方补录' : '第三方'));
+  const link = /^https:\/\//u.test(metric.sourceUrl || '')
+    ? `<a href="${escapeBeijingHtml(metric.sourceUrl)}" target="_blank" rel="noreferrer">${name}</a>` : name;
+  const sourceType = metric.sourceType === 'official' ? '官方' : '第三方';
+  return `<small class="beijing-monitor-provenance">${link} · ${sourceType}<br/>观测时间 ${escapeBeijingHtml(beijingMonitorDate(metric.observedAt))}${metric.sourceUpdatedAt ? `<br/>来源更新时间 ${escapeBeijingHtml(beijingMonitorDate(metric.sourceUpdatedAt))}` : ''}</small>`;
+}
+
+function beijingMonitorCount(metric) {
+  return Number.isSafeInteger(metric?.value) ? Number(metric.value).toLocaleString('zh-CN') : '暂无';
+}
+
+function beijingMonitorRatio(value) {
+  return Number.isFinite(value) ? `${value.toFixed(1)} : 1` : '暂无';
+}
+
+function beijingMonitorPreview(preview, kind) {
+  if (!preview) return '';
+  const isRefresh = kind === 'refresh';
+  const previewId = isRefresh ? 'beijing-monitor-refresh-preview' : 'beijing-monitor-import-preview';
+  const cancelAction = isRefresh ? 'beijing-monitor-refresh-cancel' : 'beijing-monitor-clear-preview';
+  const confirmAction = isRefresh ? 'beijing-monitor-refresh-confirm' : 'beijing-monitor-import-confirm';
+  const summary = preview.summary || {};
+  if (preview.loading) {
+    return `<section id="${previewId}" class="national-monitor-preview" aria-live="polite"><p>${escapeBeijingHtml(preview.message || '正在处理北京市考岗位数据…')}</p></section>`;
+  }
+  if (preview.error) {
+    const settingsAction = isRefresh && preview.requiresToken
+      ? '<button type="button" class="button button-secondary" data-action="cloud-sync-settings">打开同步设置</button>' : '';
+    return `<section id="${previewId}" class="national-monitor-preview" aria-live="polite"><p class="national-monitor-errors">${escapeBeijingHtml(preview.error)}</p><div class="national-monitor-preview-actions">${settingsAction}<button type="button" class="button button-quiet" data-action="${cancelAction}">关闭</button></div></section>`;
+  }
+  const counts = isRefresh
+    ? [['选岗', summary.selectedPositions], ['匹配岗位', summary.matched], ['待更新人数项', summary.metricsToUpdate], ['无数据人数项', summary.missingMetrics]]
+    : [['CSV 行', summary.totalRows], ['有效行', summary.validRows], ['待更新人数项', summary.metricsToUpdate], ['留空人数项', summary.missingMetrics]];
+  const errors = [...(Array.isArray(preview.errors) ? preview.errors : []),
+    ...(Array.isArray(preview.rows) ? preview.rows.flatMap((row) => (row.errors || []).map((error) => `第 ${row.line || ''} 行：${error}`)) : [])];
+  const status = preview.canImport
+    ? '人数和岗位代码校验通过。确认后按报名人数、过审人数分别合并到本机。'
+    : isRefresh && preview.preRegistration
+      ? '报名尚未开始；第三方页面中的占位 0 不会写入为真实人数。'
+      : '没有可更新的人数项，或预览中存在需要修正的问题。';
+  return `<section id="${previewId}" class="national-monitor-preview" aria-live="polite"><div class="national-monitor-preview-heading"><h3>${isRefresh ? '华图公开数据预览' : '官方 CSV 导入预览'}</h3><button type="button" class="button button-quiet" data-action="${cancelAction}">取消预览</button></div><div class="national-monitor-preview-counts">${counts.map(([label, value]) => `<div><strong>${Number(value || 0).toLocaleString('zh-CN')}</strong><span>${escapeBeijingHtml(label)}</span></div>`).join('')}</div>${isRefresh ? `<p>采集时间：${escapeBeijingHtml(beijingMonitorDate(preview.fetchedAt))} · 来源更新时间：${escapeBeijingHtml(preview.sourceUpdatedAt || '未提供')}</p>` : ''}<p>${escapeBeijingHtml(status)}</p>${errors.length ? `<details><summary>查看 ${errors.length} 条问题</summary><ul class="national-monitor-errors">${errors.map((error) => `<li>${escapeBeijingHtml(error)}</li>`).join('')}</ul></details>` : ''}<div class="national-monitor-preview-actions"><button type="button" class="button button-primary" data-action="${confirmAction}" ${preview.canImport ? '' : 'disabled'}>确认并保存到本机</button></div></section>`;
+}
+
+function renderBeijingMonitoringTab({ positions, workspace, importPreview, refreshPreview }) {
+  const rows = filterAndSortBeijingMonitorRows(positions, workspace);
+  const filters = workspace.monitorFilters;
+  const allRows = (workspace.myPicks || []).map((id) => workspace.monitoringSnapshots?.[id] || {});
+  const applicationsCount = allRows.filter((snapshot) => Number.isSafeInteger(snapshot.applications?.value)).length;
+  const qualifiedCount = allRows.filter((snapshot) => Number.isSafeInteger(snapshot.qualified?.value)).length;
+  const sortLabel = (key, label) => {
+    const [currentKey, direction] = (workspace.monitorSort || 'applicationsRatio-desc').split(/-(?=[^-]+$)/u);
+    return `<button type="button" class="national-monitor-sort ${currentKey === key ? 'is-active' : ''}" data-action="beijing-monitor-sort" data-sort-key="${key}">${escapeBeijingHtml(label)}${currentKey === key ? (direction === 'asc' ? ' ↑' : ' ↓') : ''}</button>`;
+  };
+  const tableRows = rows.map(({ position, snapshot, ratios }) => `<tr><td>${escapeBeijingHtml(position.workDistrict || position.workLocation || '未注明')}<small>${escapeBeijingHtml(position.workCity || '')}</small></td><td>${escapeBeijingHtml(position.departmentName || '')}<small>${escapeBeijingHtml(position.hiringDepartment || '')}</small></td><td><strong>${escapeBeijingHtml(position.positionTitle || '')}</strong><small>${escapeBeijingHtml(position.positionCode || '')}</small></td><td>${escapeBeijingHtml(position.recruitCount ?? '未提供')}</td><td><strong>${beijingMonitorCount(snapshot.applications)}</strong>${beijingMonitorSource(snapshot.applications)}</td><td>${beijingMonitorRatio(ratios.applicationsRatio)}</td><td><strong>${beijingMonitorCount(snapshot.qualified)}</strong>${beijingMonitorSource(snapshot.qualified)}</td><td>${beijingMonitorRatio(ratios.qualifiedRatio)}</td></tr>`).join('');
+  const registrationStart = new Date(BEIJING_REGISTRATION_START).toLocaleString('zh-CN', { hour12: false });
+  const registrationNote = `<p class="national-monitor-csv-hint">华图来源：<a href="https://ah.huatu.com/zw/bjgwy/bmrs/" target="_blank" rel="noreferrer">2027 北京市考报名统计</a>；<a href="https://fuwu.rsj.beijing.gov.cn/gwyquery/publicQuery/gzwbkrssscx" target="_blank" rel="noreferrer">北京人社各职位报考人数查询</a>。华图目前只在“招聘人数最多的十大职位”表中公开职位级报名人数（10 个岗位），其他岗位暂无华图人数；华图没有提供岗位级过审人数。官方查询按职位代码并需验证码。2027 报名开始时间：${escapeBeijingHtml(registrationStart)}；官方 CSV 仅接受此时间之后的观测记录。各人数项分别保留来源和观测时间，较旧数据不会覆盖较新记录。</p>`;
+  const csvHint = '列名：position_code,applications,qualified,source_name,source_url,source_updated_at,observed_at。人数未知留空，0 表示来源明确显示为零；source_url 必须是北京市政府网站 HTTPS 链接。';
+  return `<section class="beijing-monitor"><div class="beijing-picks-summary"><article><span>当前选岗</span><strong>${workspace.myPicks.length} / 60</strong></article><article><span>有报名人数</span><strong>${applicationsCount}</strong></article><article><span>有过审人数</span><strong>${qualifiedCount}</strong></article></div>${registrationNote}<section class="national-monitor-import"><div class="national-monitor-refresh"><div><strong>自动更新第三方数据</strong><span>读取华图公开页面的 2027 岗位统计；只把我的选岗数据保存到本机。</span></div><button type="button" class="button button-primary" data-action="beijing-monitor-refresh" ${refreshPreview?.loading || !workspace.myPicks.length ? 'disabled' : ''}>${refreshPreview?.loading ? '正在更新…' : '从华图更新我的选岗'}</button></div>${beijingMonitorPreview(refreshPreview, 'refresh')}<div class="national-monitor-import-heading"><div><h2>补录官方数据</h2><p>官方查询页须逐个输入职位代码并完成验证码；CSV 预览后再保存。</p></div></div><form id="beijing-monitor-import-form"><label class="form-field"><span>官方数据 CSV</span><input id="beijing-monitor-file" name="file" type="file" accept=".csv,text/csv" required/></label><button type="submit" class="button button-secondary">读取并预览</button></form><p class="national-monitor-csv-hint">${escapeBeijingHtml(csvHint)}</p>${beijingMonitorPreview(importPreview, 'import')}</section><form id="beijing-monitor-filter-form" class="national-monitor-filters"><label class="form-field"><span>关键词</span><input name="query" value="${escapeBeijingHtml(filters.query)}" placeholder="部门、职位、区县或代码"/></label><label class="form-field"><span>报名人数至少</span><input name="minApplications" type="number" min="0" step="1" value="${escapeBeijingHtml(filters.minApplications)}"/></label><label class="form-field"><span>过审人数至少</span><input name="minQualified" type="number" min="0" step="1" value="${escapeBeijingHtml(filters.minQualified)}"/></label><label class="form-field"><span>报名/计划至少</span><input name="minApplicationsRatio" type="number" min="0" step="0.1" value="${escapeBeijingHtml(filters.minApplicationsRatio)}" placeholder="例如 10"/></label><label class="form-field"><span>过审/计划至少</span><input name="minQualifiedRatio" type="number" min="0" step="0.1" value="${escapeBeijingHtml(filters.minQualifiedRatio)}" placeholder="例如 5"/></label><label class="form-field"><span>数据状态</span><select name="dataStatus"><option value="all" ${filters.dataStatus === 'all' ? 'selected' : ''}>全部</option><option value="has-data" ${filters.dataStatus === 'has-data' ? 'selected' : ''}>至少一项有数据</option><option value="missing" ${filters.dataStatus === 'missing' ? 'selected' : ''}>两项都无数据</option></select></label><button type="submit" class="button button-secondary">筛选岗位</button></form><div class="national-results-summary"><div><strong>${rows.length}</strong><span> / ${workspace.myPicks.length} 个选岗</span><small>人数比值 = 报考 / 资格审查通过人数 ÷ 招录计划；缺数据时显示“暂无”。</small></div></div>${rows.length ? `<div class="national-monitor-table-scroll"><table class="national-monitor-table beijing-monitor-table"><thead><tr><th>工作区县</th><th>招录部门 / 用人部门</th><th>职位名称 / 代码</th><th>计划</th><th>${sortLabel('applications', '报名人数')}</th><th>${sortLabel('applicationsRatio', '报名/计划')}</th><th>${sortLabel('qualified', '过审人数')}</th><th>${sortLabel('qualifiedRatio', '过审/计划')}</th></tr></thead><tbody>${tableRows}</tbody></table></div>` : '<div class="empty-state">没有符合条件的选岗。可清除筛选条件，或先导入 60 个职位代码。</div>'}</section>`;
+}
+
+export function renderBeijingWorkspace({ positions = [], metadata = {}, profile = {}, majorCatalog = [], workspace, tab = 'positions', monitorImportPreview = null, monitorRefreshPreview = null }) {
   const state = workspace || { filters: {}, savedFilters: [], favorites: [], comparisons: [], notes: {}, manualReviews: {} };
   const eligibilityCache = new Map();
   const filtered = filterBeijingPositions(positions, state.filters, profile, majorCatalog, eligibilityCache, state.manualReviews);
@@ -252,10 +399,11 @@ export function renderBeijingWorkspace({ positions = [], metadata = {}, profile 
       if (result.checks.major.status === 'match') counts.majorMatches += 1;
     }
   }
-  const currentTab = ['positions', 'overview', 'favorites', 'comparison'].includes(tab) ? tab : 'positions';
+  const currentTab = ['positions', 'overview', 'favorites', 'monitor', 'comparison'].includes(tab) ? tab : 'positions';
   const content = currentTab === 'overview' ? beijingOverviewTab(metadata, filtered.length, counts)
     : currentTab === 'favorites' ? beijingFavoritesTab({ positions, workspace: state, profile, majorCatalog, eligibilityCache })
       : currentTab === 'comparison' ? beijingComparisonTab({ positions, workspace: state, profile, majorCatalog, eligibilityCache })
+        : currentTab === 'monitor' ? renderBeijingMonitoringTab({ positions, workspace: state, importPreview: monitorImportPreview, refreshPreview: monitorRefreshPreview })
         : beijingPositionsTab({ positions, filtered: sortBeijingPositions(filtered, state.filters.sort), counts, workspace: state, profile, majorCatalog, eligibilityCache });
   return `<div class="page-body national-page beijing-page"><div class="page-heading-row"><div><div class="eyebrow muted">BEIJING CIVIL SERVICE EXAM · 2027</div><h1>2027 北京市考职位筛选</h1><p>${Number(metadata.positionCount || positions.length).toLocaleString('zh-CN')} 个职位 · 计划招录 ${Number(metadata.recruitCount || 0).toLocaleString('zh-CN')} 人 · 保留职位表原文与逐项资格初核</p></div><a class="button button-secondary" href="#/profile">查看个人资料</a></div>${beijingProfileForm(profile, majorCatalog)}${beijingTabs(currentTab, state)}${content}</div>`;
 }
