@@ -107,7 +107,7 @@ function zhejiangMajorMatchesRequirement(requirement, path, code) {
 function zhejiangMatchMajor(position, profile, majorCatalog) {
   const raw = String(position.majorRaw || '').trim();
   if (!raw) return zhejiangCheck('review', '职位表专业字段为空，需回到原表确认。');
-  if (/不限专业|专业不限|不限制专业/u.test(raw)) return zhejiangCheck('match', '职位表明确标注专业不限。');
+  if (/不限专业|专业不限|不限制专业|^不限$/u.test(raw)) return zhejiangCheck('match', '职位表明确标注专业不限。');
 
   const rank = zhejiangEducationRank(profile.degree);
   if (rank === null) return zhejiangCheck('missing', '请补充最高学历后再匹配专业目录。');
@@ -131,6 +131,17 @@ function zhejiangMatchMajor(position, profile, majorCatalog) {
   if (zhejiangMajorMatchesRequirement(group.text, own.path, own.code)) {
     const path = [...own.path].filter(Boolean).join(' → ');
     return zhejiangCheck('match', `职位表专业条件命中个人专业目录路径：${path}。`);
+  }
+  const undergraduateGroup = rank >= 3 ? group.groups?.find((item) => item.rank === 2) : null;
+  if (undergraduateGroup && /本科|大学本科/u.test(String(position.educationRaw || ''))) {
+    if (!profile.undergraduateMajor && !profile.undergraduateMajorCode) {
+      return zhejiangCheck('review', '研究生专业未命中职位列出的研究生范围；职位也列出本科专业条件，请补充本科专业后核对。');
+    }
+    const undergraduatePath = zhejiangMajorPath(profile, majorCatalog, '本科');
+    if (zhejiangMajorMatchesRequirement(undergraduateGroup.text, undergraduatePath.path, undergraduatePath.code)) {
+      const path = [...undergraduatePath.path].filter(Boolean).join(' → ');
+      return zhejiangCheck('match', `职位表本科专业条件命中个人本科专业目录路径：${path}；职位学历条件包含本科及以上。`);
+    }
   }
   const terms = group.text.split(/[、，,；;\n\r]+/u).map((item) => item.trim()).filter(Boolean);
   if (terms.some((term) => /类|门类/u.test(term))) {
@@ -189,7 +200,7 @@ function zhejiangMatchPoliticalStatus(position, profile) {
   }
   const accepted = ['中共党员', '共青团员', '群众', '民进会员', '无党派人士']
     .filter((candidate) => requirement.includes(zhejiangNormalize(candidate)));
-  if (accepted.includes(profile.politicalStatus)) return zhejiangCheck('match', '个人政治面貌属于职位表列出的范围。');
+  if (accepted.some((candidate) => zhejiangNormalize(candidate) === own)) return zhejiangCheck('match', '个人政治面貌属于职位表列出的范围。');
   if (accepted.length) return zhejiangCheck('mismatch', '个人政治面貌不在职位表列出的范围内。');
   return zhejiangCheck('review', `无法自动解析政治面貌要求“${zhejiangPoliticalRequirement(position)}”。`);
 }
@@ -300,6 +311,7 @@ function zhejiangMatchSpecialRequirements(position, profile) {
   }
 
   const residual = note
+    .replace(/(^|[；;。\n])\s*(?:\d+|[一二三四五六七八九十]+)[.．、)）]\s*/gu, '$1')
     .replace(/参照公务员法管理[。；;]?/gu, '')
     .replace(/(?:要求|限|仅限|只限|性别要求为|性别不限)[^；;。\n]*(?:男性|女性|男生|女生|男女不限|性别不限)[^；;。\n]*/gu, '')
     .replace(/政治面貌要求为[^；;。\n]*/gu, '')

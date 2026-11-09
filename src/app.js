@@ -3808,6 +3808,28 @@ document.addEventListener('click', async (event) => {
     navigate('zhejiang', 'tab=positions');
     return;
   }
+  if (action === 'zhejiang-filter-count') {
+    const category = actionEl.dataset.filter;
+    const statusCategories = new Set(['initialMatch', 'needsReview', 'incomplete', 'incompatible']);
+    const valid = category === 'majorMatch' || statusCategories.has(category);
+    if (!valid) return;
+    const currentFilters = storage.zhejiangWorkspace.filters;
+    const active = category === 'majorMatch'
+      ? currentFilters.onlyMajorMatch && !currentFilters.qualificationStatus
+      : currentFilters.qualificationStatus === category;
+    storage.zhejiangWorkspace = normalizeZhejiangWorkspace({
+      ...storage.zhejiangWorkspace,
+      filters: active
+        ? { sort: currentFilters.sort || 'recruit-desc', page: 1, excludeExplicitMismatch: true }
+        : {
+          sort: currentFilters.sort || 'recruit-desc', page: 1, excludeExplicitMismatch: false,
+          qualificationStatus: category === 'majorMatch' ? '' : category,
+          onlyMajorMatch: category === 'majorMatch',
+        },
+    });
+    await persistAndRender(active ? '已清除快速筛选' : `已筛选${category === 'majorMatch' ? '专业初核匹配' : ({ initialMatch: '初步符合', needsReview: '需人工核验', incomplete: '资料不完整', incompatible: '明确不符合' })[category]}职位`);
+    return;
+  }
   if (action === 'zhejiang-toggle-favorite') {
     const id = actionEl.dataset.positionId;
     const wasSaved = storage.zhejiangWorkspace.favorites.some((item) => item.positionId === id);

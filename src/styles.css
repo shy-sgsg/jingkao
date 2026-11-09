@@ -2097,7 +2097,10 @@ button.science-answer-option:hover { border-color: #c9d9ee; background: #f7faff;
 .national-results-summary span { color: #65748b; font-size: 15px; }
 .national-results-summary small { display: block; margin-top: 3px; color: #8d98a7; font-size: 15px; }
 .national-filter-counts { display: grid; grid-template-columns: repeat(auto-fit, minmax(112px, 1fr)); gap: 7px; margin-bottom: 10px; }
-.national-filter-counts article { display: grid; gap: 3px; min-width: 0; padding: 9px 11px; border: 1px solid #e6ebf1; border-radius: 10px; background: #fff; }
+.national-filter-counts > button { display: grid; gap: 3px; min-width: 0; padding: 9px 11px; border: 1px solid #e6ebf1; border-radius: 10px; background: #fff; color: inherit; font: inherit; text-align: left; cursor: pointer; }
+.national-filter-counts > button:hover { border-color: #a8bdd8; background: #f8fbff; }
+.national-filter-counts > button:focus-visible { outline: 2px solid #4778b8; outline-offset: 2px; }
+.national-filter-counts > button[aria-pressed="true"] { border-color: #6c93c3; background: #eff5fc; }
 .national-filter-counts span { color: #7a8799; font-size: 13px; }
 .national-filter-counts strong { color: #354d70; font-size: 18px; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
 .national-active-filters { display: grid; gap: 7px; margin-bottom: 10px; padding: 11px 13px; border: 1px solid #e6ebf1; border-radius: 10px; background: #fff; }

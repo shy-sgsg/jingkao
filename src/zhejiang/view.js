@@ -44,7 +44,9 @@ function zhejiangPersonalCheckValue(key, profile) {
     : /硕士|研究生/u.test(profile.degree || '') ? '硕士'
       : /本科/u.test(profile.degree || '') ? '学士' : '');
   const values = {
-    major: [profile.graduateMajor, profile.graduateMajorCode].filter(Boolean).join(' · '),
+    major: [profile.graduateMajor && `研究生：${[profile.graduateMajor, profile.graduateMajorCode].filter(Boolean).join(' · ')}`,
+      profile.undergraduateMajor && `本科：${[profile.undergraduateMajor, profile.undergraduateMajorCode].filter(Boolean).join(' · ')}`]
+      .filter(Boolean).join('；'),
     education: profile.degree,
     degree: inferredDegree,
     politicalStatus: profile.politicalStatus,
@@ -130,7 +132,14 @@ function zhejiangPositionList({ positions, page, pageSize, workspace, profile, m
 }
 
 function zhejiangPositionsTab({ positions, filtered, counts, workspace, profile, majorCatalog, eligibilityCache }) {
-  const countCards = counts ? `<div class="national-filter-counts"><article><span>专业初核匹配</span><strong>${counts.majorMatches.toLocaleString('zh-CN')}</strong></article><article><span>初步符合</span><strong>${counts.initialMatch.toLocaleString('zh-CN')}</strong></article><article><span>需人工核验</span><strong>${counts.needsReview.toLocaleString('zh-CN')}</strong></article><article><span>资料不完整</span><strong>${counts.incomplete.toLocaleString('zh-CN')}</strong></article><article><span>明确不符合</span><strong>${counts.incompatible.toLocaleString('zh-CN')}</strong></article></div>` : '';
+  const countItems = counts ? [
+    ['majorMatch', '专业初核匹配', counts.majorMatches, workspace.filters.onlyMajorMatch && !workspace.filters.qualificationStatus],
+    ['initialMatch', '初步符合', counts.initialMatch, workspace.filters.qualificationStatus === 'initialMatch'],
+    ['needsReview', '需人工核验', counts.needsReview, workspace.filters.qualificationStatus === 'needsReview'],
+    ['incomplete', '资料不完整', counts.incomplete, workspace.filters.qualificationStatus === 'incomplete'],
+    ['incompatible', '明确不符合', counts.incompatible, workspace.filters.qualificationStatus === 'incompatible'],
+  ] : [];
+  const countCards = counts ? `<div class="national-filter-counts">${countItems.map(([filter, label, count, active]) => `<button type="button" class="national-filter-count" data-action="zhejiang-filter-count" data-filter="${filter}" aria-pressed="${active ? 'true' : 'false'}" title="点击查看此类职位；再点一次清除快速筛选"><span>${label}</span><strong>${count.toLocaleString('zh-CN')}</strong></button>`).join('')}</div>` : '';
   const profileNote = hasZhejiangEligibilityProfile(profile) ? '' : '<div class="notice notice-soft"><span>ⓘ</span><p>先填写本页的个人条件，职位卡片会按学历、专业目录、性别、政治面貌、应届身份和基层经历逐项初核。</p></div>';
   return `<div class="national-results-layout"><aside class="national-filters-column"><details class="national-filter-drawer" open><summary class="national-filter-drawer-toggle">职位筛选条件</summary><div class="national-filter-drawer-content">${zhejiangFilterForm(positions, workspace.filters)}${zhejiangSavedFilters(workspace)}</div></details></aside><section class="national-results-column">${profileNote}<div class="national-results-summary"><div><strong>${filtered.length.toLocaleString('zh-CN')}</strong><span> / ${positions.length.toLocaleString('zh-CN')} 个职位</span><small>资格状态仅作初步核对；计划招录人数来自用户提供的职位表。</small></div></div>${countCards}${zhejiangPositionList({ positions: filtered, page: workspace.filters.page || 1, pageSize: 30, workspace, profile, majorCatalog, eligibilityCache })}</section></div>`;
 }

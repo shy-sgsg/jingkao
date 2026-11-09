@@ -1,7 +1,7 @@
 const normalizeText = (value) => String(value ?? '').replace(/[\s　]+/gu, '').toLocaleLowerCase('zh-CN');
 
 const EDUCATION_RANK = new Map([
-  ['大专', 1], ['专科', 1], ['本科', 2], ['大学本科', 2],
+  ['高中', 0], ['中专', 0], ['大专', 1], ['专科', 1], ['本科', 2], ['大学本科', 2],
   ['硕士', 3], ['硕士研究生', 3], ['研究生', 3], ['博士', 4], ['博士研究生', 4],
 ]);
 
