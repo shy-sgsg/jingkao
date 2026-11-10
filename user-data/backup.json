@@ -1,7 +1,7 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "backupId": "19ab9a98-4aee-498a-81ac-cded3a3c2ba7",
-  "updatedAt": "2026-11-10T11:19:53.613Z",
+  "updatedAt": "2026-11-10T12:02:15.573Z",
   "data": {
     "profile": {
       "major": "公共管理",
@@ -6211,6 +6211,11 @@
         "unclearKnowledgePointIds": []
       }
     },
+    "aptitudeOverallStudy": {
+      "sessions": [],
+      "answers": [],
+      "mistakes": {}
+    },
     "aptitudeLogs": {
       "aptitude:%E5%88%A4%E6%96%AD%E6%8E%A8%E7%90%86:%E5%9B%BE%E5%BD%A2%E6%8E%A8%E7%90%86": {
         "attempted": 50,
@@ -6351,392 +6356,448 @@
           "positionId": "national:2027:130132:300110103003",
           "addedAt": "2026-10-13T12:30:53.420Z",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:130132:300110115009",
           "positionId": "national:2027:130132:300110115009",
           "addedAt": "2026-10-13T12:31:00.999Z",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:102000:200110001006",
           "positionId": "national:2027:102000:200110001006",
           "addedAt": "2026-10-31T06:28:01.296Z",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:130118:300110291001",
           "positionId": "national:2027:130118:300110291001",
           "addedAt": "2026-10-13T12:32:56.588Z",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:130101:300110001006",
           "positionId": "national:2027:130101:300110001006",
           "addedAt": "2026-10-13T12:34:55.468Z",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:130107:300110001013",
           "positionId": "national:2027:130107:300110001013",
           "addedAt": "2026-10-13T12:35:11.550Z",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:130101:300110002006",
           "positionId": "national:2027:130101:300110002006",
           "addedAt": "2026-10-13T12:35:24.872Z",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:130124:300110002012",
           "positionId": "national:2027:130124:300110002012",
           "addedAt": "2026-10-13T12:35:28.282Z",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:130124:300110003008",
           "positionId": "national:2027:130124:300110003008",
           "addedAt": "2026-10-13T12:35:35.743Z",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:130101:300110003011",
           "positionId": "national:2027:130101:300110003011",
           "addedAt": "2026-10-13T12:35:38.494Z",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:130124:300110005009",
           "positionId": "national:2027:130124:300110005009",
           "addedAt": "2026-10-13T12:36:01.614Z",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:130124:300110007003",
           "positionId": "national:2027:130124:300110007003",
           "addedAt": "2026-10-13T12:36:04.500Z",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:130123:300110015006",
           "positionId": "national:2027:130123:300110015006",
           "addedAt": "2026-10-13T12:36:15.237Z",
           "note": "",
-          "priority": "high"
+          "priority": "high",
+          "localOnly": false
         },
         {
           "id": "national:2027:130118:300110023003",
           "positionId": "national:2027:130118:300110023003",
           "addedAt": "2026-10-13T12:36:27.900Z",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:130118:300110024001",
           "positionId": "national:2027:130118:300110024001",
           "addedAt": "2026-10-13T12:36:31.229Z",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:130123:300110085006",
           "positionId": "national:2027:130123:300110085006",
           "addedAt": "2026-10-13T12:38:13.541Z",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:130132:300110102004",
           "positionId": "national:2027:130132:300110102004",
           "addedAt": "2026-10-13T12:38:24.500Z",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:130115:300110115004",
           "positionId": "national:2027:130115:300110115004",
           "addedAt": "2026-10-13T12:38:40.200Z",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:130115:300110510001",
           "positionId": "national:2027:130115:300110510001",
           "addedAt": "2026-10-13T12:41:07.433Z",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:130124:300110003002",
           "positionId": "national:2027:130124:300110003002",
           "addedAt": "2026-10-13T12:41:25.262Z",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:130124:300110002006",
           "positionId": "national:2027:130124:300110002006",
           "addedAt": "2026-10-13T12:41:26.522Z",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:130124:300110001019",
           "positionId": "national:2027:130124:300110001019",
           "addedAt": "2026-10-13T12:41:32.615Z",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:130124:300110005002",
           "positionId": "national:2027:130124:300110005002",
           "addedAt": "2026-10-13T12:44:00.772Z",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:130124:300110010001",
           "positionId": "national:2027:130124:300110010001",
           "addedAt": "2026-10-13T12:44:14.680Z",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:130124:300110011006",
           "positionId": "national:2027:130124:300110011006",
           "addedAt": "2026-10-13T12:44:27.926Z",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:130112:300110020004",
           "positionId": "national:2027:130112:300110020004",
           "addedAt": "2026-10-13T12:44:41.773Z",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:130120:300110037006",
           "positionId": "national:2027:130120:300110037006",
           "addedAt": "2026-10-13T12:44:57.765Z",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:129131:300110108014",
           "positionId": "national:2027:129131:300110108014",
           "addedAt": "2026-10-13T12:45:21.672Z",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:129131:300110113003",
           "positionId": "national:2027:129131:300110113003",
           "addedAt": "2026-10-13T12:45:29.620Z",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:158105:300130265018",
           "positionId": "national:2027:158105:300130265018",
           "addedAt": "2026-10-13T12:52:16.920Z",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:130123:300110036005",
           "positionId": "national:2027:130123:300110036005",
           "addedAt": "2026-10-13T12:54:49.673Z",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:130123:300110043003",
           "positionId": "national:2027:130123:300110043003",
           "addedAt": "2026-10-13T12:55:03.121Z",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:130123:300110050003",
           "positionId": "national:2027:130123:300110050003",
           "addedAt": "2026-10-13T12:55:05.933Z",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:130101:300110004011",
           "positionId": "national:2027:130101:300110004011",
           "addedAt": "2026-10-18T15:49:25+08:00",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:130128:300110022003",
           "positionId": "national:2027:130128:300110022003",
           "addedAt": "2026-10-18T15:49:25+08:00",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:109210:300130850004",
           "positionId": "national:2027:109210:300130850004",
           "addedAt": "2026-10-18T15:49:25+08:00",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:130132:300110115006",
           "positionId": "national:2027:130132:300110115006",
           "addedAt": "2026-10-18T15:49:25+08:00",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:130118:300110021001",
           "positionId": "national:2027:130118:300110021001",
           "addedAt": "2026-10-18T15:49:25+08:00",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:130118:300110022001",
           "positionId": "national:2027:130118:300110022001",
           "addedAt": "2026-10-18T15:49:25+08:00",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:129119:300110001006",
           "positionId": "national:2027:129119:300110001006",
           "addedAt": "2026-10-18T15:49:25+08:00",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:130109:300110005007",
           "positionId": "national:2027:130109:300110005007",
           "addedAt": "2026-10-18T15:49:25+08:00",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:130108:300110111001",
           "positionId": "national:2027:130108:300110111001",
           "addedAt": "2026-10-18T15:49:25+08:00",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:130117:300110013002",
           "positionId": "national:2027:130117:300110013002",
           "addedAt": "2026-10-18T15:49:25+08:00",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:130117:300110015005",
           "positionId": "national:2027:130117:300110015005",
           "addedAt": "2026-10-18T15:49:25+08:00",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:130117:300110001008",
           "positionId": "national:2027:130117:300110001008",
           "addedAt": "2026-10-18T15:49:25+08:00",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:130118:300110238002",
           "positionId": "national:2027:130118:300110238002",
           "addedAt": "2026-10-18T15:49:25+08:00",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:130123:300110085002",
           "positionId": "national:2027:130123:300110085002",
           "addedAt": "2026-10-18T15:49:25+08:00",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:158106:300130266001",
           "positionId": "national:2027:158106:300130266001",
           "addedAt": "2026-10-18T15:49:25+08:00",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:158106:300130266002",
           "positionId": "national:2027:158106:300130266002",
           "addedAt": "2026-10-18T15:49:25+08:00",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:130120:300110100003",
           "positionId": "national:2027:130120:300110100003",
           "addedAt": "2026-10-18T15:49:25+08:00",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:130118:300110118001",
           "positionId": "national:2027:130118:300110118001",
           "addedAt": "2026-10-18T15:49:25+08:00",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:130118:300110121001",
           "positionId": "national:2027:130118:300110121001",
           "addedAt": "2026-10-18T15:49:25+08:00",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:109000:200149114007",
           "positionId": "national:2027:109000:200149114007",
           "addedAt": "2026-10-31T06:28:01.296Z",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:109000:200149114004",
           "positionId": "national:2027:109000:200149114004",
           "addedAt": "2026-10-31T06:28:01.296Z",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:130101:300110003009",
           "positionId": "national:2027:130101:300110003009",
           "addedAt": "2026-10-19T14:35:37.624Z",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         },
         {
           "id": "national:2027:130101:300110004009",
           "positionId": "national:2027:130101:300110004009",
           "addedAt": "2026-10-19T14:35:37.624Z",
           "note": "",
-          "priority": "normal"
+          "priority": "normal",
+          "localOnly": false
         }
       ],
       "comparisons": [
@@ -7430,7 +7491,7 @@
       "monitorCity": "all",
       "monitorFreshGraduate": "all",
       "monitorPriority": "all",
-      "monitorSort": "applicationsRatio-desc",
+      "monitorSort": "qualifiedRatio-desc",
       "comparisonOnlyDifferences": false
     },
     "zhejiangWorkspace": {
@@ -7699,7 +7760,79 @@
           "priority": "normal"
         }
       ],
-      "myPicks": [],
+      "myPicks": [
+        "beijing:2027:820220501",
+        "beijing:2027:821775501",
+        "beijing:2027:219910302",
+        "beijing:2027:220116004",
+        "beijing:2027:220221501",
+        "beijing:2027:220632001",
+        "beijing:2027:220736402",
+        "beijing:2027:221046701",
+        "beijing:2027:221258402",
+        "beijing:2027:221366103",
+        "beijing:2027:221366601",
+        "beijing:2027:221669901",
+        "beijing:2027:221670601",
+        "beijing:2027:221775101",
+        "beijing:2027:221775201",
+        "beijing:2027:221775803",
+        "beijing:2027:223106001",
+        "beijing:2027:223106004",
+        "beijing:2027:223106502",
+        "beijing:2027:223106701",
+        "beijing:2027:230119103",
+        "beijing:2027:230119601",
+        "beijing:2027:230527902",
+        "beijing:2027:230634602",
+        "beijing:2027:230740501",
+        "beijing:2027:231563407",
+        "beijing:2027:233106901",
+        "beijing:2027:241046808",
+        "beijing:2027:241046809",
+        "beijing:2027:241671402",
+        "beijing:2027:241671901",
+        "beijing:2027:241778002",
+        "beijing:2027:241778302",
+        "beijing:2027:243106401",
+        "beijing:2027:243107001",
+        "beijing:2027:820222201",
+        "beijing:2027:820524403",
+        "beijing:2027:820738401",
+        "beijing:2027:820840801",
+        "beijing:2027:821366101",
+        "beijing:2027:821366102",
+        "beijing:2027:821563901",
+        "beijing:2027:821669501",
+        "beijing:2027:821670001",
+        "beijing:2027:823106501",
+        "beijing:2027:823106802",
+        "beijing:2027:220943901",
+        "beijing:2027:221049501",
+        "beijing:2027:221150401",
+        "beijing:2027:223106202",
+        "beijing:2027:230527401",
+        "beijing:2027:231047602",
+        "beijing:2027:231049507",
+        "beijing:2027:231457302",
+        "beijing:2027:240945401",
+        "beijing:2027:720523401",
+        "beijing:2027:820736703",
+        "beijing:2027:820738601",
+        "beijing:2027:821777301",
+        "beijing:2027:823106201"
+      ],
+      "pickPriorities": [],
+      "pickFilters": {
+        "keyword": "",
+        "workDistrict": "",
+        "majorRaw": "",
+        "educationRaw": "",
+        "politicalStatusRaw": "",
+        "freshGraduateRaw": "",
+        "existingIdentityRaw": "",
+        "onlyPriority": false
+      },
       "comparisons": [
         "beijing:2027:223106001",
         "beijing:2027:823106802",
@@ -8011,17 +8144,17 @@
     {
       "collection": "beijingWorkspace/comparisons",
       "id": "beijing:2027:220943901",
-      "deletedAt": "2026-11-10T11:19:34.760Z"
+      "deletedAt": "2026-11-10T12:02:12.008Z"
     },
     {
       "collection": "beijingWorkspace/comparisons",
       "id": "beijing:2027:223106502",
-      "deletedAt": "2026-11-10T11:19:34.760Z"
+      "deletedAt": "2026-11-10T12:02:12.008Z"
     },
     {
       "collection": "beijingWorkspace/comparisons",
       "id": "beijing:2027:233106901",
-      "deletedAt": "2026-11-10T11:19:34.760Z"
+      "deletedAt": "2026-11-10T12:02:12.008Z"
     },
     {
       "collection": "nationalWorkspace/comparisons",
