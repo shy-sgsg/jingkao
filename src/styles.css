@@ -632,7 +632,7 @@ button { color: inherit; }
 .beijing-pick-history-card.is-priority { border-color: #d9b56a; box-shadow: inset 3px 0 #c89635; }
 .beijing-pick-history-card > header { display: flex; justify-content: space-between; align-items: start; gap: 14px; }
 .beijing-pick-history-card > header h2 { margin: 4px 0; font-size: 20px; }
-.beijing-pick-priority-badge { display: inline-block; margin-left: 5px; padding: 2px 7px; border-radius: 12px; background: #fff3d3; color: #805e1d; font-size: 12px; vertical-align: middle; }
+.beijing-pick-priority-badge { display: inline-block; margin-left: 5px; padding: 2px 7px; border-radius: 12px; background: #fff3d3; color: #805e1d; font-size: 13px; vertical-align: middle; }
 .beijing-pick-history-card > header p { margin: 0; color: #66748a; }
 .beijing-pick-current-conditions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px 14px; padding: 12px; border-radius: 10px; background: #f6f8fb; color: #4f5e73; font-size: 13px; }
 .beijing-pick-history-details { border-top: 1px solid #e4e9f0; padding-top: 12px; }
