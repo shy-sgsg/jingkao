@@ -527,7 +527,7 @@ test('sync preview blocks unresolved conflicts and applies the selected cloud va
     initialState: {
       ...baseState,
       profile: { ...baseState.profile, degree: '本机版本' },
-      cloudSync: { baseline, lastSyncedAt: baseline.updatedAt, publicNoticeAccepted: true },
+      cloudSync: { baseline, lastSyncedAt: baseline.updatedAt, publicNoticeVersion: 2 },
     },
     fetchImpl: fakeGitHubApi(shared),
   });
