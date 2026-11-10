@@ -64,6 +64,7 @@ const ZHEJIANG_METADATA_URL = './public/zhejiang/metadata-2027.json';
 const ZHEJIANG_MAJOR_CATALOG_URL = './public/zhejiang/major-catalog-2027.json';
 const BEIJING_POSITIONS_URL = './public/beijing/positions-2027.json';
 const BEIJING_METADATA_URL = './public/beijing/metadata-2027.json';
+const CLOUD_SYNC_PUBLIC_NOTICE_VERSION = 2;
 const FIXED_ACCESS_PASSWORD = '1234567890123';
 const FIXED_PROFILE_NAME = '京考个人学习记录';
 const FIXED_PROFILE_ID_KEY = 'changping-jingkao-dashboard:fixed-profile-id:v1';
@@ -240,7 +241,7 @@ function emptyStorage() {
     zhejiangWorkspace: emptyZhejiangWorkspace(),
     beijingWorkspace: emptyBeijingWorkspace(),
     onboarding: { step: 0, hidden: false, completed: false },
-    cloudSync: { baseline: null, lastSyncedAt: null, publicNoticeAccepted: false },
+    cloudSync: { baseline: null, lastSyncedAt: null, publicNoticeVersion: 0 },
   };
 }
 
@@ -253,7 +254,8 @@ function normalizeCloudSyncState(source) {
   return {
     baseline,
     lastSyncedAt: typeof value.lastSyncedAt === 'string' ? value.lastSyncedAt : null,
-    publicNoticeAccepted: value.publicNoticeAccepted === true,
+    publicNoticeVersion: Number.isInteger(value.publicNoticeVersion) && value.publicNoticeVersion >= 0
+      ? value.publicNoticeVersion : 0,
   };
 }
 
@@ -2465,8 +2467,8 @@ function formatSyncTimestamp(value) {
 }
 
 function syncNoticeMarkup() {
-  if (storage.cloudSync.publicNoticeAccepted) return '';
-  return `<div class="notice notice-warning sync-public-warning"><span>!</span><p><strong>仓库公开，确认同步后任何人都可以查看备份。</strong>当前 jingkao 仓库是公开的。同步后的学习记录可以通过 GitHub 查看；网站访问密码不保护仓库公开文件。请勿同步不希望公开的内容。</p><button type="button" class="button button-secondary" data-action="accept-cloud-public-warning">我已了解，继续</button></div>`;
+  if (storage.cloudSync.publicNoticeVersion >= CLOUD_SYNC_PUBLIC_NOTICE_VERSION) return '';
+  return `<div class="notice notice-warning sync-public-warning"><span>!</span><p><strong>仓库公开，确认同步后任何人都可以查看完整个人档案。</strong>同步文件包含个人资料、学习记录、职位收藏、选岗、比较、备注和监控数据；网站访问密码不保护仓库公开文件。请勿同步不希望公开的内容。</p><button type="button" class="button button-secondary" data-action="accept-cloud-public-warning">我已了解，继续</button></div>`;
 }
 
 function renderCloudSyncModal() {
@@ -2480,14 +2482,14 @@ function renderCloudSyncModal() {
     : 'MANUAL · TWO-WAY · USER DATA ONLY';
   let body = '';
   if (screen === 'warning') {
-    body = `<div class="modal-body"><div class="notice notice-warning sync-public-warning"><span>!</span><p><strong>仓库公开，确认同步后任何人都可以查看备份。</strong>当前 jingkao 仓库是公开的。同步后的学习记录可以通过 GitHub 查看；网站访问密码不保护仓库公开文件。请勿同步不希望公开的内容。</p></div><p>同步只会在你点击“开始双向同步”后读取 GitHub；写入或新建数据分支还需要再次确认。</p></div><div class="modal-footer"><button type="button" class="button button-quiet" data-action="close-cloud-sync">关闭</button><button type="button" class="button button-primary" data-action="accept-cloud-public-warning">我已了解，继续</button></div>`;
+    body = `<div class="modal-body"><div class="notice notice-warning sync-public-warning"><span>!</span><p><strong>仓库公开，确认同步后任何人都可以查看完整个人档案。</strong>同步文件包含个人资料、学习记录、职位收藏、选岗、比较、备注和监控数据；网站访问密码不保护仓库公开文件。请勿同步不希望公开的内容。</p></div><p>同步只会在你点击“开始双向同步”后读取 GitHub；写入或新建数据分支还需要再次确认。</p></div><div class="modal-footer"><button type="button" class="button button-quiet" data-action="close-cloud-sync">关闭</button><button type="button" class="button button-primary" data-action="accept-cloud-public-warning">我已了解，继续</button></div>`;
   } else if (screen === 'panel') {
     const summary = cloudSyncPendingCount();
     const savedStatus = storageUnavailable ? '本机保存遇到问题' : '本机记录已加密保存';
     const changeStatus = summary
       ? (summary.localAdded || summary.updated || summary.deleted ? '有尚未同步的本机改动' : '与上次同步基线一致')
       : '本机数据格式需要检查';
-    body = `<div class="modal-body">${error}${syncNoticeMarkup()}<div class="sync-target-card"><div><span>GitHub 仓库</span><strong>${GITHUB_SYNC_TARGET.owner}/${GITHUB_SYNC_TARGET.repo}</strong></div><div><span>个人数据分支</span><strong>${GITHUB_SYNC_TARGET.branch}</strong></div><div><span>本机状态</span><strong>${escapeHtml(savedStatus)}</strong></div><div><span>待同步状态</span><strong>${escapeHtml(changeStatus)}</strong></div><div><span>上次确认同步</span><strong>${escapeHtml(formatSyncTimestamp(storage.cloudSync.lastSyncedAt))}</strong></div><div><span>数据文件</span><strong>${escapeHtml(GITHUB_SYNC_TARGET.path)}</strong></div></div><p class="sync-explainer">每次同步都会先读取云端并展示合并预览。没有自动后台上传；本机学习记录继续保存在当前设备。</p></div><div class="modal-footer"><button type="button" class="button button-quiet" data-action="close-cloud-sync">关闭</button><button type="button" class="button button-secondary" data-action="cloud-sync-settings">同步设置</button><button type="button" class="button button-primary" data-action="start-cloud-sync" ${cloudSyncUi.busy ? 'disabled' : ''}>${cloudSyncUi.busy ? '正在读取…' : '开始双向同步'}</button></div>`;
+    body = `<div class="modal-body">${error}${syncNoticeMarkup()}<div class="sync-target-card"><div><span>GitHub 仓库</span><strong>${GITHUB_SYNC_TARGET.owner}/${GITHUB_SYNC_TARGET.repo}</strong></div><div><span>个人数据分支</span><strong>${GITHUB_SYNC_TARGET.branch}</strong></div><div><span>本机状态</span><strong>${escapeHtml(savedStatus)}</strong></div><div><span>待同步状态</span><strong>${escapeHtml(changeStatus)}</strong></div><div><span>上次确认同步</span><strong>${escapeHtml(formatSyncTimestamp(storage.cloudSync.lastSyncedAt))}</strong></div><div><span>数据文件</span><strong>${escapeHtml(GITHUB_SYNC_TARGET.path)}</strong></div></div><p class="sync-explainer">不会自动后台上传。只有确认双向同步后，完整个人档案才会写入公开仓库。</p></div><div class="modal-footer"><button type="button" class="button button-quiet" data-action="close-cloud-sync">关闭</button><button type="button" class="button button-secondary" data-action="cloud-sync-settings">同步设置</button><button type="button" class="button button-primary" data-action="start-cloud-sync" ${cloudSyncUi.busy ? 'disabled' : ''}>${cloudSyncUi.busy ? '正在读取…' : '开始双向同步'}</button></div>`;
   } else if (screen === 'settings') {
     const tokenState = cloudSyncUi.tokenPersistence === 'device'
       ? '<div class="sync-token-state">Token 已加密保存在此设备。</div>'
@@ -2687,10 +2689,6 @@ async function confirmCloudSync() {
     renderCloudSyncModal();
     return;
   }
-  resolved = {
-    ...resolved,
-    data: prepareNationalWorkspaceForSync(resolved.data),
-  };
   const remoteBackup = pending.remote.backup;
   const mergedContent = { data: resolved.data, tombstones: resolved.tombstones };
   const needsWrite = !remoteBackup
@@ -2733,23 +2731,13 @@ async function confirmCloudSync() {
     }
 
     const previousStorage = storage;
-    const syncedNationalWorkspace = preserveLocalNationalMonitoringWorkspace(
-      previousStorage.nationalWorkspace,
-      outputBackup.data.nationalWorkspace,
-    );
-    const syncedBeijingWorkspace = preserveLocalBeijingPrivateData(
-      previousStorage.beijingWorkspace,
-      outputBackup.data.beijingWorkspace,
-    );
     storage = readStorage({
       ...outputBackup.data,
-      nationalWorkspace: syncedNationalWorkspace,
-      beijingWorkspace: syncedBeijingWorkspace,
       cloudSync: {
         ...previousStorage.cloudSync,
         baseline: outputBackup,
         lastSyncedAt: new Date().toISOString(),
-        publicNoticeAccepted: true,
+        publicNoticeVersion: CLOUD_SYNC_PUBLIC_NOTICE_VERSION,
       },
     });
     if (!await persist()) {
@@ -2771,51 +2759,6 @@ async function confirmCloudSync() {
     cloudSyncUi.busy = false;
     renderCloudSyncModal();
   }
-}
-
-function preserveLocalNationalMonitoringWorkspace(localSource, synchronizedSource) {
-  const local = normalizeNationalWorkspace(localSource);
-  const synchronized = normalizeNationalWorkspace(synchronizedSource);
-  return normalizeNationalWorkspace({
-    ...synchronized,
-    monitorQuery: local.monitorQuery,
-    monitorCity: local.monitorCity,
-    monitorFreshGraduate: local.monitorFreshGraduate,
-    monitorPriority: local.monitorPriority,
-    monitorSort: local.monitorSort,
-  });
-}
-
-function preserveLocalBeijingPrivateData(localSource, synchronizedSource) {
-  const local = normalizeBeijingWorkspace(localSource);
-  const synchronized = normalizeBeijingWorkspace(synchronizedSource);
-  return normalizeBeijingWorkspace({
-    ...synchronized,
-    myPicks: local.myPicks,
-    pickPriorities: local.pickPriorities,
-    pickFilters: local.pickFilters,
-    monitoringSnapshots: local.monitoringSnapshots,
-  });
-}
-
-function prepareNationalWorkspaceForSync(source) {
-  const nationalWorkspace = normalizeNationalWorkspace(source?.nationalWorkspace);
-  return {
-    ...source,
-    nationalWorkspace: {
-      ...nationalWorkspace,
-      favorites: nationalWorkspace.favorites.map((favorite) => {
-        const syncedFavorite = { ...favorite };
-        delete syncedFavorite.localOnly;
-        return syncedFavorite;
-      }),
-      monitorQuery: '',
-      monitorCity: 'all',
-      monitorFreshGraduate: 'all',
-      monitorPriority: 'all',
-      monitorSort: 'applicationsRatio-desc',
-    },
-  };
 }
 
 function renderBackupPreview(state, { exportedAt = null, kind = 'encrypted', sourceName = '' } = {}) {
@@ -4448,7 +4391,7 @@ document.addEventListener('click', async (event) => {
   if (action === 'account-lock') { lockAccount(); return; }
   if (action === 'open-cloud-sync') {
     if (!accountSession) return;
-    cloudSyncUi = { screen: storage.cloudSync.publicNoticeAccepted ? 'panel' : 'warning', busy: false, pending: null, choices: {}, error: '', result: null, returnScreen: 'panel', tokenPersistence: cloudSyncUi.tokenPersistence || 'none' };
+    cloudSyncUi = { screen: storage.cloudSync.publicNoticeVersion >= CLOUD_SYNC_PUBLIC_NOTICE_VERSION ? 'panel' : 'warning', busy: false, pending: null, choices: {}, error: '', result: null, returnScreen: 'panel', tokenPersistence: cloudSyncUi.tokenPersistence || 'none' };
     renderCloudSyncModal();
     return;
   }
@@ -4459,7 +4402,7 @@ document.addEventListener('click', async (event) => {
     return;
   }
   if (action === 'accept-cloud-public-warning') {
-    storage.cloudSync.publicNoticeAccepted = true;
+    storage.cloudSync.publicNoticeVersion = CLOUD_SYNC_PUBLIC_NOTICE_VERSION;
     await persist();
     cloudSyncUi.screen = 'panel';
     cloudSyncUi.error = '';

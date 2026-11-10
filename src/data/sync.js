@@ -1,5 +1,6 @@
-export const USER_DATA_SCHEMA_VERSION = 1;
+export const USER_DATA_SCHEMA_VERSION = 2;
 
+import { emptyAptitudeOverallStudy, normalizeAptitudeOverallStudy } from '../aptitude/persistence.js';
 import { emptyNationalWorkspace, normalizeNationalWorkspace } from '../national/storage.js';
 import { emptyZhejiangWorkspace, normalizeZhejiangWorkspace } from '../zhejiang/storage.js';
 import { emptyBeijingWorkspace, normalizeBeijingWorkspace } from '../beijing/storage.js';
@@ -15,11 +16,12 @@ export function studyLogKey(type, item) {
 
 const DATA_FIELDS = [
   'profile', 'dayLogs', 'planOverrides', 'studyPlanTasks', 'scienceStudy',
-  'generalKnowledgeStudy', 'aptitudeModuleStudies', 'aptitudeLogs', 'essayLogs',
+  'generalKnowledgeStudy', 'aptitudeModuleStudies', 'aptitudeOverallStudy', 'aptitudeLogs', 'essayLogs',
   'mocks', 'favorites', 'compared', 'settings', 'positionPreferences', 'nationalWorkspace', 'zhejiangWorkspace', 'beijingWorkspace', 'onboarding',
 ];
 
 const OPTIONAL_BACKUP_FIELDS = new Set(['positionPreferences', 'nationalWorkspace', 'zhejiangWorkspace', 'beijingWorkspace']);
+const LEGACY_OPTIONAL_BACKUP_FIELDS = new Set([...OPTIONAL_BACKUP_FIELDS, 'aptitudeOverallStudy']);
 const DEFAULT_POSITION_FILTERS = Object.freeze({
   districtId: 'all', year: 'all', orgType: 'all', jobType: 'all', majorTopic: 'all', sourceLevel: 'all',
   unit: 'all', education: 'all', politicalStatus: 'all', freshGraduate: 'all',
@@ -56,7 +58,8 @@ const EMPTY_DATA = {
     knowledgeProgress: {}, sessions: [], answers: [], mistakes: {}, favorites: [],
     favoriteKnowledgePointIds: [], unclearKnowledgePointIds: [], flashcards: [], flashcardReviews: [],
   },
-  aptitudeModuleStudies: {}, aptitudeLogs: {}, essayLogs: {}, mocks: [], favorites: [], compared: [],
+  aptitudeModuleStudies: {}, aptitudeOverallStudy: emptyAptitudeOverallStudy(),
+  aptitudeLogs: {}, essayLogs: {}, mocks: [], favorites: [], compared: [],
   settings: {}, positionPreferences: normalizePositionPreferences(),
   nationalWorkspace: emptyNationalWorkspace(), zhejiangWorkspace: emptyZhejiangWorkspace(),
   beijingWorkspace: emptyBeijingWorkspace(), onboarding: {},
@@ -70,6 +73,8 @@ const RECORD_COLLECTIONS = [
   { path: ['generalKnowledgeStudy', 'answers'], alias: 'attempt_id' },
   { path: ['generalKnowledgeStudy', 'flashcards'], alias: 'id' },
   { path: ['generalKnowledgeStudy', 'flashcardReviews'], alias: 'id' },
+  { path: ['aptitudeOverallStudy', 'sessions'], alias: 'session_id' },
+  { path: ['aptitudeOverallStudy', 'answers'], alias: 'attempt_id' },
   { path: ['mocks'], alias: 'mock_id' },
 ];
 
@@ -210,6 +215,12 @@ function projectUserData(source = {}) {
   merged.scienceStudy = normalizeStudy(merged.scienceStudy, 'scienceStudy');
   merged.generalKnowledgeStudy = normalizeStudy(merged.generalKnowledgeStudy, 'generalKnowledgeStudy', { general: true });
   merged.aptitudeModuleStudies = normalizeAptitudeStudies(merged.aptitudeModuleStudies);
+  const aptitudeOverallStudy = normalizeAptitudeOverallStudy(merged.aptitudeOverallStudy);
+  merged.aptitudeOverallStudy = {
+    ...aptitudeOverallStudy,
+    sessions: normalizeRecordArray(aptitudeOverallStudy.sessions, 'session_id', 'aptitudeOverallStudy.sessions'),
+    answers: normalizeRecordArray(aptitudeOverallStudy.answers, 'attempt_id', 'aptitudeOverallStudy.answers'),
+  };
   merged.aptitudeLogs = requireRecord(merged.aptitudeLogs, 'aptitudeLogs');
   merged.essayLogs = requireRecord(merged.essayLogs, 'essayLogs');
   merged.mocks = normalizeRecordArray(merged.mocks, 'mock_id', 'mocks');
@@ -217,31 +228,12 @@ function projectUserData(source = {}) {
   merged.compared = normalizeSet(merged.compared, 'compared');
   merged.settings = requireRecord(merged.settings, 'settings');
   merged.positionPreferences = normalizePositionPreferences(merged.positionPreferences);
-  const nationalWorkspace = normalizeNationalWorkspace(merged.nationalWorkspace);
-  merged.nationalWorkspace = {
-    ...nationalWorkspace,
-    favorites: nationalWorkspace.favorites.map((favorite) => {
-      const syncedFavorite = { ...favorite };
-      delete syncedFavorite.localOnly;
-      return syncedFavorite;
-    }),
-    monitorQuery: '',
-    monitorCity: 'all',
-    monitorFreshGraduate: 'all',
-    monitorPriority: 'all',
-    monitorSort: 'applicationsRatio-desc',
-  };
+  merged.nationalWorkspace = normalizeNationalWorkspace(merged.nationalWorkspace);
   merged.zhejiangWorkspace = normalizeZhejiangWorkspace(merged.zhejiangWorkspace);
   const beijingWorkspace = hasBeijingWorkspace
     ? normalizeBeijingWorkspace(merged.beijingWorkspace)
     : normalizeBeijingWorkspace({ profile: merged.zhejiangWorkspace.profile });
-  merged.beijingWorkspace = {
-    ...beijingWorkspace,
-    myPicks: [],
-    pickPriorities: [],
-    pickFilters: {},
-    monitoringSnapshots: {},
-  };
+  merged.beijingWorkspace = beijingWorkspace;
   merged.onboarding = requireRecord(merged.onboarding, 'onboarding');
 
   for (const collection of RECORD_COLLECTIONS) {
@@ -323,7 +315,7 @@ function liveEntityKeys(data) {
 }
 
 export function validateUserDataBackup(value) {
-  if (!isRecord(value) || value.schemaVersion !== USER_DATA_SCHEMA_VERSION) {
+  if (!isRecord(value) || ![1, USER_DATA_SCHEMA_VERSION].includes(value.schemaVersion)) {
     throw new Error('远端备份数据版本不受支持。');
   }
   if (typeof value.backupId !== 'string' || !value.backupId.trim()
@@ -333,13 +325,14 @@ export function validateUserDataBackup(value) {
   const data = requireRecord(value.data, 'data');
   const unknownFields = Object.keys(data).filter((field) => !DATA_FIELDS.includes(field));
   if (unknownFields.length) throw new Error('远端备份格式无效：包含不支持的数据字段。');
+  const optionalFields = value.schemaVersion === 1 ? LEGACY_OPTIONAL_BACKUP_FIELDS : OPTIONAL_BACKUP_FIELDS;
   for (const field of DATA_FIELDS) {
-    if (!Object.hasOwn(data, field) && !OPTIONAL_BACKUP_FIELDS.has(field)) {
+    if (!Object.hasOwn(data, field) && !optionalFields.has(field)) {
       throw new Error(`远端备份格式无效：缺少 ${field}。`);
     }
   }
   const normalized = {
-    schemaVersion: value.schemaVersion,
+    schemaVersion: USER_DATA_SCHEMA_VERSION,
     backupId: value.backupId,
     updatedAt: new Date(value.updatedAt).toISOString(),
     data: projectUserData(data),
@@ -471,7 +464,12 @@ function mergeValue(base, local, remote, path, context) {
   if (Array.isArray(local) && Array.isArray(remote) && (base === MISSING || Array.isArray(base))) {
     const allValues = [...(base === MISSING ? [] : base), ...local, ...remote];
     if (allValues.every((item) => typeof item === 'string')) {
-      return mergeStringSets(base, local, remote, path, context);
+      const merged = mergeStringSets(base, local, remote, path, context);
+      if (collectionPath(path) === 'beijingWorkspace/myPicks' && merged.length > 60) {
+        appendConflict(context, path, base, local, remote);
+        return clone(local);
+      }
+      return merged;
     }
     const recordArrays = allValues.every((item) => isRecord(item) && recordId(item));
     if (recordArrays) return mergeRecordArrays(base, local, remote, path, context);
