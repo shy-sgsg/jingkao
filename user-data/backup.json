@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "backupId": "19ab9a98-4aee-498a-81ac-cded3a3c2ba7",
-  "updatedAt": "2026-11-10T12:54:34.045Z",
+  "updatedAt": "2026-11-10T12:57:06.755Z",
   "data": {
     "profile": {
       "major": "公共管理",
@@ -7485,7 +7485,7 @@
           "importedAt": "2026-10-31T06:28:13.464Z"
         }
       },
-      "favoriteQuery": "海淀",
+      "favoriteQuery": "广州",
       "favoritePriority": "all",
       "monitorQuery": "",
       "monitorCity": "all",
@@ -7556,7 +7556,7 @@
         "grassrootsYears": "0",
         "grassrootsProjectStatus": "否",
         "hukou": "江西省上饶市余干县",
-        "studentOrigin": "北京市",
+        "studentOrigin": "江西省",
         "credentials": "无",
         "acceptPhysicalTest": "不接受",
         "acceptPsychologicalTest": "接受",
