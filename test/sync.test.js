@@ -20,7 +20,7 @@ test('backup schema includes stable task, session, and attempt identifiers and e
     cloudSync: { token: 'MUST NOT BE BACKED UP', baseSnapshot: { secret: true } },
   });
 
-  assert.equal(backup.schemaVersion, 1);
+  assert.equal(backup.schemaVersion, 2);
   assert.equal(backup.data.studyPlanTasks[0].task_id, 'task-1');
   assert.equal(backup.data.scienceStudy.sessions[0].session_id, 'session-1');
   assert.equal(backup.data.scienceStudy.answers[0].attempt_id, 'answer-1');
@@ -42,7 +42,7 @@ test('backup carries position filters and accepts older schema-1 files without t
   const olderBackup = makeBackup({});
   delete olderBackup.data.positionPreferences;
   const upgraded = validateUserDataBackup(olderBackup);
-  assert.equal(upgraded.schemaVersion, 1);
+  assert.equal(upgraded.schemaVersion, 2);
   assert.equal(upgraded.data.positionPreferences.filters.districtId, 'all');
   assert.equal(upgraded.data.positionPreferences.jobSort, 'year-desc');
   assert.deepEqual(upgraded.data.nationalWorkspace, {
