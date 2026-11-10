@@ -606,6 +606,7 @@ button { color: inherit; }
 .beijing-picks-import .panel-heading { margin: 0; }
 .beijing-picks-import form { display: flex; flex-wrap: wrap; align-items: end; gap: 12px; }
 .beijing-picks-import form .form-field { flex: 1 1 320px; }
+.beijing-picks-partial-warning { margin: 0; padding: 10px 12px; border: 1px solid #ead294; border-radius: 8px; background: #fff8e7; color: #765f27; }
 .beijing-picks-preview { display: grid; gap: 12px; border-top: 1px solid #e4e9f0; padding-top: 16px; }
 .beijing-picks-preview .panel-heading { display: flex; justify-content: space-between; align-items: start; gap: 14px; }
 .beijing-picks-preview-list { display: grid; gap: 6px; max-height: 320px; overflow: auto; padding: 2px; }
@@ -615,14 +616,23 @@ button { color: inherit; }
 .beijing-picks-preview-row.has-error { border-color: #e9b6ad; background: #fff8f6; }
 .beijing-picks-preview-row.has-error small, .beijing-picks-errors { color: #a33d32; }
 .beijing-picks-errors { margin: 0; padding-left: 20px; }
-.beijing-picks-summary { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.beijing-picks-summary { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
 .beijing-picks-summary article { display: grid; gap: 4px; padding: 16px; border: 1px solid #e0e7ef; border-radius: 12px; background: #fff; }
 .beijing-picks-summary span { color: #65738a; font-size: 13px; }
 .beijing-picks-summary strong { color: #1b2e47; font-size: 23px; font-variant-numeric: tabular-nums; }
+.beijing-picks-filter { display: grid; gap: 14px; }
+.beijing-picks-filter .panel-heading { margin: 0; }
+.beijing-picks-filter .panel-heading > strong { color: #356f9c; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.beijing-picks-filter-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; align-items: end; }
+.beijing-picks-filter-grid .form-field { min-width: 0; }
+.beijing-picks-only-priority { display: flex; align-items: center; gap: 8px; min-height: 42px; color: #374a64; }
+.beijing-picks-only-priority input { accent-color: #b27c22; }
 .beijing-picks-list { display: grid; gap: 14px; }
 .beijing-pick-history-card { display: grid; gap: 14px; }
+.beijing-pick-history-card.is-priority { border-color: #d9b56a; box-shadow: inset 3px 0 #c89635; }
 .beijing-pick-history-card > header { display: flex; justify-content: space-between; align-items: start; gap: 14px; }
 .beijing-pick-history-card > header h2 { margin: 4px 0; font-size: 20px; }
+.beijing-pick-priority-badge { display: inline-block; margin-left: 5px; padding: 2px 7px; border-radius: 12px; background: #fff3d3; color: #805e1d; font-size: 12px; vertical-align: middle; }
 .beijing-pick-history-card > header p { margin: 0; color: #66748a; }
 .beijing-pick-current-conditions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px 14px; padding: 12px; border-radius: 10px; background: #f6f8fb; color: #4f5e73; font-size: 13px; }
 .beijing-pick-history-details { border-top: 1px solid #e4e9f0; padding-top: 12px; }
@@ -649,14 +659,20 @@ button { color: inherit; }
 .beijing-history-position-sources span { display: block; font-size: 13px; }
 .beijing-history-empty, .beijing-history-caution { margin: 0; color: #788498; font-size: 13px; line-height: 1.6; }
 .beijing-history-caution { margin-top: 13px; padding: 10px 12px; border-radius: 8px; background: #fff8e9; color: #806632; }
-.beijing-pick-actions { display: flex; justify-content: end; }
+.beijing-pick-actions { display: flex; flex-wrap: wrap; justify-content: end; gap: 8px; }
 
 @media (max-width: 720px) {
   .beijing-picks-summary { grid-template-columns: 1fr; }
+  .beijing-picks-filter-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .beijing-picks-filter .panel-heading { flex-direction: column; }
   .beijing-picks-preview-row { grid-template-columns: minmax(78px, auto) 1fr; }
   .beijing-picks-preview-row small { grid-column: 1 / -1; }
   .beijing-pick-current-conditions, .beijing-history-metrics { grid-template-columns: 1fr; }
   .beijing-pick-history-card > header { flex-direction: column; }
+}
+
+@media (max-width: 480px) {
+  .beijing-picks-filter-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 1040px) {

@@ -138,19 +138,24 @@ export function previewBeijingPicksImport(parsed, workspace, positions) {
   const unknownCount = rows.filter((row) => row.errors.some((error) => error.includes('未匹配'))).length;
   const formatErrorCount = rows.filter((row) => row.errors.some((error) => !error.includes('未匹配'))).length;
   const fileErrors = Array.isArray(parsed?.errors) ? parsed.errors : [];
+  const isPartial = rows.length > 0 && rows.length < EXPECTED_PICK_COUNT;
   const canImport = fileErrors.length === 0
-    && rows.length === EXPECTED_PICK_COUNT
-    && validRows.length === EXPECTED_PICK_COUNT
-    && distinctPositionIds.length === EXPECTED_PICK_COUNT;
+    && rows.length > 0
+    && rows.length <= EXPECTED_PICK_COUNT
+    && validRows.length === rows.length
+    && distinctPositionIds.length === rows.length;
   const errors = [...fileErrors];
-  if (!fileErrors.length && rows.length !== EXPECTED_PICK_COUNT) {
-    errors.push(`当前清单应有 ${EXPECTED_PICK_COUNT} 个职位，文件中识别到 ${rows.length} 行。`);
+  if (!fileErrors.length && rows.length === 0) {
+    errors.push('CSV 中没有职位数据行。');
+  } else if (!fileErrors.length && rows.length > EXPECTED_PICK_COUNT) {
+    errors.push(`最多导入 ${EXPECTED_PICK_COUNT} 个职位，文件中识别到 ${rows.length} 行。`);
   }
 
   return {
     rows,
     positionIds: distinctPositionIds,
     errors,
+    isPartial,
     summary: {
       totalRows: rows.length,
       validPositions: distinctPositionIds.length,
@@ -165,11 +170,18 @@ export function previewBeijingPicksImport(parsed, workspace, positions) {
 
 export function applyBeijingPicksImport(workspace, preview) {
   const ids = Array.isArray(preview?.positionIds) ? preview.positionIds : [];
+  const current = normalizeBeijingWorkspace(workspace);
   if (!preview?.canImport || !Array.isArray(preview.positionIds)
-    || ids.length !== EXPECTED_PICK_COUNT
-    || new Set(ids).size !== EXPECTED_PICK_COUNT
+    || ids.length < 1
+    || ids.length > EXPECTED_PICK_COUNT
+    || new Set(ids).size !== ids.length
     || ids.some((id) => !isBeijingPositionId(id))) {
     throw new Error('选岗导入预览无效；请修正 CSV 后重新预览。');
   }
-  return normalizeBeijingWorkspace({ ...normalizeBeijingWorkspace(workspace), myPicks: ids });
+  return normalizeBeijingWorkspace({
+    ...current,
+    myPicks: ids,
+    pickPriorities: current.pickPriorities.filter((id) => ids.includes(id)),
+    pickFilters: {},
+  });
 }

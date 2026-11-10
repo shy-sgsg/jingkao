@@ -67,7 +67,12 @@ export function emptyBeijingWorkspace() {
   return {
     profile: Object.fromEntries(BEIJING_PROFILE_TEXT_FIELDS.map((key) => [key, ''])),
     filters: { sort: 'recruit-desc', page: 1, excludeExplicitMismatch: true },
-    savedFilters: [], favorites: [], myPicks: [], comparisons: [], notes: {}, manualReviews: {}, monitoringSnapshots: {},
+    savedFilters: [], favorites: [], myPicks: [], pickPriorities: [],
+    pickFilters: {
+      keyword: '', workDistrict: '', majorRaw: '', educationRaw: '', politicalStatusRaw: '',
+      freshGraduateRaw: '', existingIdentityRaw: '', onlyPriority: false,
+    },
+    comparisons: [], notes: {}, manualReviews: {}, monitoringSnapshots: {},
     favoriteQuery: '', favoritePriority: 'all', comparisonOnlyDifferences: false,
     monitorFilters: { query: '', minApplications: '', minQualified: '', minApplicationsRatio: '', minQualifiedRatio: '', dataStatus: 'all' },
     monitorSort: 'applicationsRatio-desc',
@@ -135,6 +140,19 @@ export function normalizeBeijingWorkspace(source) {
     .filter(isBeijingPositionId))].slice(0, 10);
   const myPicks = [...new Set((Array.isArray(value.myPicks) ? value.myPicks : [])
     .filter(isBeijingPositionId))].slice(0, 60);
+  const pickPriorities = [...new Set((Array.isArray(value.pickPriorities) ? value.pickPriorities : [])
+    .filter(isBeijingPositionId))].filter((positionId) => myPicks.includes(positionId)).slice(0, 60);
+  const incomingPickFilters = beijingIsRecord(value.pickFilters) ? value.pickFilters : {};
+  const pickFilters = {
+    keyword: beijingText(incomingPickFilters.keyword, 160),
+    workDistrict: beijingText(incomingPickFilters.workDistrict, 200),
+    majorRaw: beijingText(incomingPickFilters.majorRaw, 2000),
+    educationRaw: beijingText(incomingPickFilters.educationRaw, 500),
+    politicalStatusRaw: beijingText(incomingPickFilters.politicalStatusRaw, 500),
+    freshGraduateRaw: beijingText(incomingPickFilters.freshGraduateRaw, 1000),
+    existingIdentityRaw: beijingText(incomingPickFilters.existingIdentityRaw, 2000),
+    onlyPriority: incomingPickFilters.onlyPriority === true,
+  };
   const monitoringSnapshots = Object.fromEntries(Object.entries(
     beijingIsRecord(value.monitoringSnapshots) ? value.monitoringSnapshots : {},
   ).flatMap(([positionId, snapshot]) => {
@@ -185,6 +203,8 @@ export function normalizeBeijingWorkspace(source) {
     savedFilters: [...savedFiltersById.values()],
     favorites: [...favoritesById.values()],
     myPicks,
+    pickPriorities,
+    pickFilters,
     comparisons,
     notes,
     manualReviews,

@@ -214,6 +214,8 @@ let beijingMonitorImportPreview = null;
 let beijingMonitorRefreshPreview = null;
 let beijingPicksImportPreview = null;
 let beijingExpandedSimilarIds = new Set();
+let beijingPicksFilterDebounceTimer = null;
+let beijingPicksKeywordComposing = false;
 let storage = emptyStorage();
 
 function applyDisplaySettings() {
@@ -253,6 +255,18 @@ function normalizeCloudSyncState(source) {
     lastSyncedAt: typeof value.lastSyncedAt === 'string' ? value.lastSyncedAt : null,
     publicNoticeAccepted: value.publicNoticeAccepted === true,
   };
+}
+
+function scheduleBeijingPicksFilterSubmit(form) {
+  if (beijingPicksFilterDebounceTimer !== null) window.clearTimeout(beijingPicksFilterDebounceTimer);
+  beijingPicksFilterDebounceTimer = window.setTimeout(() => {
+    beijingPicksFilterDebounceTimer = null;
+    if (page === 'myBeijingPicks' && form?.isConnected) {
+      if (!beijingPicksKeywordComposing) form.requestSubmit();
+    } else {
+      void persist();
+    }
+  }, 180);
 }
 
 function readStorage(source = {}, densityFallback = 'comfortable') {
@@ -2778,6 +2792,8 @@ function preserveLocalBeijingPrivateData(localSource, synchronizedSource) {
   return normalizeBeijingWorkspace({
     ...synchronized,
     myPicks: local.myPicks,
+    pickPriorities: local.pickPriorities,
+    pickFilters: local.pickFilters,
     monitoringSnapshots: local.monitoringSnapshots,
   });
 }
@@ -3730,6 +3746,25 @@ document.addEventListener('click', async (event) => {
     render();
     return;
   }
+  if (action === 'beijing-picks-toggle-priority') {
+    const positionId = actionEl.dataset.positionId;
+    const workspace = normalizeBeijingWorkspace(storage.beijingWorkspace);
+    const wasPriority = workspace.pickPriorities.includes(positionId);
+    workspace.pickPriorities = workspace.pickPriorities.includes(positionId)
+      ? workspace.pickPriorities.filter((id) => id !== positionId)
+      : [...workspace.pickPriorities, positionId];
+    storage.beijingWorkspace = normalizeBeijingWorkspace(workspace);
+    await persistAndRender(wasPriority ? '已取消岗位重点标记' : '已标记为重点岗位');
+    return;
+  }
+  if (action === 'beijing-picks-clear-filters') {
+    storage.beijingWorkspace = normalizeBeijingWorkspace({
+      ...storage.beijingWorkspace,
+      pickFilters: {},
+    });
+    await persistAndRender('已清除选岗筛选条件');
+    return;
+  }
   if (action === 'beijing-picks-cancel-import') {
     beijingPicksImportPreview = null;
     render();
@@ -3737,6 +3772,10 @@ document.addEventListener('click', async (event) => {
   }
   if (action === 'beijing-picks-confirm-import') {
     if (!beijingPicksImportPreview?.canImport) return;
+    if (beijingPicksFilterDebounceTimer !== null) {
+      window.clearTimeout(beijingPicksFilterDebounceTimer);
+      beijingPicksFilterDebounceTimer = null;
+    }
     const previousWorkspace = storage.beijingWorkspace;
     const previousPreview = beijingPicksImportPreview;
     try {
@@ -3750,7 +3789,7 @@ document.addEventListener('click', async (event) => {
         return;
       }
       render();
-      notify('60 个选岗代码已保存在本机加密档案');
+      notify(`${storage.beijingWorkspace.myPicks.length} 个选岗代码已保存在本机加密档案`);
     } catch (error) {
       storage.beijingWorkspace = previousWorkspace;
       beijingPicksImportPreview = previousPreview;
@@ -5204,6 +5243,39 @@ document.addEventListener('submit', async (event) => {
   event.preventDefault();
   const formData = new FormData(form);
   const values = Object.fromEntries(formData.entries());
+  if (form.id === 'beijing-picks-filter-form') {
+    if (beijingPicksFilterDebounceTimer !== null) {
+      window.clearTimeout(beijingPicksFilterDebounceTimer);
+      beijingPicksFilterDebounceTimer = null;
+    }
+    const activeElement = document.activeElement;
+    const activeFilterName = activeElement?.closest?.('#beijing-picks-filter-form') === form
+      ? activeElement.dataset.pickFilter : '';
+    const selection = activeFilterName && activeElement.type === 'search'
+      && typeof activeElement.selectionStart === 'number'
+      ? [activeElement.selectionStart, activeElement.selectionEnd] : null;
+    storage.beijingWorkspace = normalizeBeijingWorkspace({
+      ...storage.beijingWorkspace,
+      pickFilters: {
+        keyword: String(values.keyword || ''),
+        workDistrict: String(values.workDistrict || ''),
+        majorRaw: String(values.majorRaw || ''),
+        educationRaw: String(values.educationRaw || ''),
+        politicalStatusRaw: String(values.politicalStatusRaw || ''),
+        freshGraduateRaw: String(values.freshGraduateRaw || ''),
+        existingIdentityRaw: String(values.existingIdentityRaw || ''),
+        onlyPriority: Object.hasOwn(values, 'onlyPriority'),
+      },
+    });
+    render();
+    if (activeFilterName) {
+      const replacement = document.querySelector(`[data-pick-filter="${activeFilterName}"]`);
+      replacement?.focus({ preventScroll: true });
+      if (selection && replacement?.setSelectionRange) replacement.setSelectionRange(...selection);
+    }
+    await persist();
+    return;
+  }
   if (form.id === 'beijing-monitor-filter-form') {
     storage.beijingWorkspace = normalizeBeijingWorkspace({
       ...storage.beijingWorkspace,
@@ -5321,7 +5393,9 @@ document.addEventListener('submit', async (event) => {
       const parsed = parseBeijingPicksCsv(await file.text(), beijingPositions || []);
       beijingPicksImportPreview = previewBeijingPicksImport(parsed, storage.beijingWorkspace, beijingPositions || []);
       render();
-      notify(beijingPicksImportPreview.canImport ? '清单预览已生成，请核对后确认。' : 'CSV 中有重复、缺失或无法匹配的职位，请修正后重新预览。');
+      notify(beijingPicksImportPreview.canImport
+        ? '清单预览已生成，请核对后确认。'
+        : 'CSV 中有重复、缺失、无效、未知或超过 60 个职位的情况，请修正后重新预览。');
     } catch (error) {
       beijingPicksImportPreview = { rows: [], errors: [error.message || 'CSV 文件读取失败。'], summary: {}, canImport: false };
       render();
@@ -5834,6 +5908,27 @@ document.addEventListener('submit', async (event) => {
   }
 });
 
+document.addEventListener('compositionstart', (event) => {
+  if (page !== 'myBeijingPicks' || event.target.id !== 'beijing-picks-keyword') return;
+  beijingPicksKeywordComposing = true;
+  if (beijingPicksFilterDebounceTimer !== null) {
+    window.clearTimeout(beijingPicksFilterDebounceTimer);
+    beijingPicksFilterDebounceTimer = null;
+  }
+});
+
+document.addEventListener('compositionend', (event) => {
+  if (event.target.id !== 'beijing-picks-keyword') return;
+  beijingPicksKeywordComposing = false;
+  if (!accountSession) return;
+  storage.beijingWorkspace = normalizeBeijingWorkspace({
+    ...storage.beijingWorkspace,
+    pickFilters: { ...storage.beijingWorkspace.pickFilters, keyword: event.target.value },
+  });
+  if (page === 'myBeijingPicks') scheduleBeijingPicksFilterSubmit(event.target.form);
+  else void persist();
+});
+
 document.addEventListener('input', (event) => {
   if (!accountSession) return;
   if (page === 'national' && event.target.closest?.('#national-filter-form')
@@ -5848,6 +5943,15 @@ document.addEventListener('input', (event) => {
       nationalFilterDebounceTimer = null;
       event.target.form?.requestSubmit();
     }, 350);
+  }
+  if (page === 'myBeijingPicks' && event.target.id === 'beijing-picks-keyword') {
+    const form = event.target.form;
+    storage.beijingWorkspace = normalizeBeijingWorkspace({
+      ...storage.beijingWorkspace,
+      pickFilters: { ...storage.beijingWorkspace.pickFilters, keyword: event.target.value },
+    });
+    if (event.isComposing || beijingPicksKeywordComposing) return;
+    scheduleBeijingPicksFilterSubmit(form);
   }
   if (event.target.name === 'title' && event.target.closest('#plan-task-form')) {
     const preview = modalRoot.querySelector('[data-plan-task-preview]');
@@ -5912,6 +6016,14 @@ document.addEventListener('change', async (event) => {
   if (event.target.id === 'national-monitor-file') {
     nationalMonitorImportPreview = null;
     document.querySelector('#national-monitor-preview')?.remove();
+  }
+  if (page === 'myBeijingPicks' && event.target.form?.id === 'beijing-picks-filter-form'
+    && event.target.matches?.('select, input[type="checkbox"]')) {
+    if (beijingPicksFilterDebounceTimer !== null) {
+      window.clearTimeout(beijingPicksFilterDebounceTimer);
+      beijingPicksFilterDebounceTimer = null;
+    }
+    event.target.form.requestSubmit();
   }
   if (page === 'national' && event.target.closest?.('#national-filter-form') && event.target.name) {
     nationalFilterFocusName = event.target.name;
