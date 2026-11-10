@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "backupId": "19ab9a98-4aee-498a-81ac-cded3a3c2ba7",
-  "updatedAt": "2026-11-10T05:49:05.808Z",
+  "updatedAt": "2026-11-10T09:49:02.827Z",
   "data": {
     "profile": {
       "major": "公共管理",
@@ -8011,17 +8011,17 @@
     {
       "collection": "beijingWorkspace/comparisons",
       "id": "beijing:2027:220943901",
-      "deletedAt": "2026-11-10T03:33:13.749Z"
+      "deletedAt": "2026-11-10T09:49:01.300Z"
     },
     {
       "collection": "beijingWorkspace/comparisons",
       "id": "beijing:2027:223106502",
-      "deletedAt": "2026-11-10T03:33:13.749Z"
+      "deletedAt": "2026-11-10T09:49:01.300Z"
     },
     {
       "collection": "beijingWorkspace/comparisons",
       "id": "beijing:2027:233106901",
-      "deletedAt": "2026-11-10T03:33:13.749Z"
+      "deletedAt": "2026-11-10T09:49:01.300Z"
     },
     {
       "collection": "nationalWorkspace/comparisons",
@@ -8145,7 +8145,12 @@
     },
     {
       "collection": "nationalWorkspace/filters/workProvinces",
-      "id": "重庆市",
+      "id": "上海市",
+      "deletedAt": "2026-11-09T04:57:17.144Z"
+    },
+    {
+      "collection": "nationalWorkspace/filters/workProvinces",
+      "id": "天津市",
       "deletedAt": "2026-11-09T04:57:17.144Z"
     },
     {
@@ -8160,17 +8165,12 @@
     },
     {
       "collection": "nationalWorkspace/filters/workProvinces",
-      "id": "上海市",
-      "deletedAt": "2026-11-09T04:57:17.144Z"
-    },
-    {
-      "collection": "nationalWorkspace/filters/workProvinces",
-      "id": "天津市",
-      "deletedAt": "2026-11-09T04:57:17.144Z"
-    },
-    {
-      "collection": "nationalWorkspace/filters/workProvinces",
       "id": "浙江省",
+      "deletedAt": "2026-11-09T04:57:17.144Z"
+    },
+    {
+      "collection": "nationalWorkspace/filters/workProvinces",
+      "id": "重庆市",
       "deletedAt": "2026-11-09T04:57:17.144Z"
     }
   ]
