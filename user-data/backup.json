@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "backupId": "19ab9a98-4aee-498a-81ac-cded3a3c2ba7",
-  "updatedAt": "2026-11-10T03:33:15.701Z",
+  "updatedAt": "2026-11-10T05:49:05.808Z",
   "data": {
     "profile": {
       "major": "公共管理",
@@ -6361,6 +6361,13 @@
           "priority": "normal"
         },
         {
+          "id": "national:2027:102000:200110001006",
+          "positionId": "national:2027:102000:200110001006",
+          "addedAt": "2026-10-31T06:28:01.296Z",
+          "note": "",
+          "priority": "normal"
+        },
+        {
           "id": "national:2027:130118:300110291001",
           "positionId": "national:2027:130118:300110291001",
           "addedAt": "2026-10-13T12:32:56.588Z",
@@ -6428,7 +6435,7 @@
           "positionId": "national:2027:130123:300110015006",
           "addedAt": "2026-10-13T12:36:15.237Z",
           "note": "",
-          "priority": "normal"
+          "priority": "high"
         },
         {
           "id": "national:2027:130118:300110023003",
@@ -6704,27 +6711,6 @@
           "priority": "normal"
         },
         {
-          "id": "national:2027:130101:300110003009",
-          "positionId": "national:2027:130101:300110003009",
-          "addedAt": "2026-10-19T14:35:37.624Z",
-          "note": "",
-          "priority": "normal"
-        },
-        {
-          "id": "national:2027:130101:300110004009",
-          "positionId": "national:2027:130101:300110004009",
-          "addedAt": "2026-10-19T14:35:37.624Z",
-          "note": "",
-          "priority": "normal"
-        },
-        {
-          "id": "national:2027:102000:200110001006",
-          "positionId": "national:2027:102000:200110001006",
-          "addedAt": "2026-10-31T06:28:01.296Z",
-          "note": "",
-          "priority": "normal"
-        },
-        {
           "id": "national:2027:109000:200149114007",
           "positionId": "national:2027:109000:200149114007",
           "addedAt": "2026-10-31T06:28:01.296Z",
@@ -6737,6 +6723,20 @@
           "addedAt": "2026-10-31T06:28:01.296Z",
           "note": "",
           "priority": "normal"
+        },
+        {
+          "id": "national:2027:130101:300110003009",
+          "positionId": "national:2027:130101:300110003009",
+          "addedAt": "2026-10-19T14:35:37.624Z",
+          "note": "",
+          "priority": "normal"
+        },
+        {
+          "id": "national:2027:130101:300110004009",
+          "positionId": "national:2027:130101:300110004009",
+          "addedAt": "2026-10-19T14:35:37.624Z",
+          "note": "",
+          "priority": "normal"
         }
       ],
       "comparisons": [
@@ -6744,7 +6744,9 @@
         "national:2027:130123:300110015006",
         "national:2027:130123:300110036005"
       ],
-      "notes": {},
+      "notes": {
+        "national:2027:130123:300110015006": ""
+      },
       "monitoringSnapshots": {
         "national:2027:102000:200110001006": {
           "applications": 1257,
@@ -8143,12 +8145,7 @@
     },
     {
       "collection": "nationalWorkspace/filters/workProvinces",
-      "id": "上海市",
-      "deletedAt": "2026-11-09T04:57:17.144Z"
-    },
-    {
-      "collection": "nationalWorkspace/filters/workProvinces",
-      "id": "天津市",
+      "id": "重庆市",
       "deletedAt": "2026-11-09T04:57:17.144Z"
     },
     {
@@ -8163,12 +8160,17 @@
     },
     {
       "collection": "nationalWorkspace/filters/workProvinces",
-      "id": "浙江省",
+      "id": "上海市",
       "deletedAt": "2026-11-09T04:57:17.144Z"
     },
     {
       "collection": "nationalWorkspace/filters/workProvinces",
-      "id": "重庆市",
+      "id": "天津市",
+      "deletedAt": "2026-11-09T04:57:17.144Z"
+    },
+    {
+      "collection": "nationalWorkspace/filters/workProvinces",
+      "id": "浙江省",
       "deletedAt": "2026-11-09T04:57:17.144Z"
     }
   ]
