@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "backupId": "19ab9a98-4aee-498a-81ac-cded3a3c2ba7",
-  "updatedAt": "2026-11-13T07:15:09.820Z",
+  "updatedAt": "2026-11-13T09:58:41.728Z",
   "data": {
     "profile": {
       "major": "公共管理",
@@ -8143,6 +8143,72 @@
             "importedAt": "2026-11-13T07:08:39.643Z"
           }
         },
+        "beijing:2027:220221501": {
+          "applications": {
+            "value": 0,
+            "sourceType": "manual",
+            "sourceName": "手动填写",
+            "sourceUrl": "",
+            "sourceUpdatedAt": "",
+            "observedAt": "2026-11-13T07:15:37.909Z",
+            "importedAt": "2026-11-13T07:15:37.909Z"
+          }
+        },
+        "beijing:2027:220632001": {
+          "applications": {
+            "value": 0,
+            "sourceType": "manual",
+            "sourceName": "手动填写",
+            "sourceUrl": "",
+            "sourceUpdatedAt": "",
+            "observedAt": "2026-11-13T07:15:40.066Z",
+            "importedAt": "2026-11-13T07:15:40.066Z"
+          }
+        },
+        "beijing:2027:220736402": {
+          "applications": {
+            "value": 0,
+            "sourceType": "manual",
+            "sourceName": "手动填写",
+            "sourceUrl": "",
+            "sourceUpdatedAt": "",
+            "observedAt": "2026-11-13T07:15:41.918Z",
+            "importedAt": "2026-11-13T07:15:41.918Z"
+          }
+        },
+        "beijing:2027:220943901": {
+          "applications": {
+            "value": 0,
+            "sourceType": "manual",
+            "sourceName": "手动填写",
+            "sourceUrl": "",
+            "sourceUpdatedAt": "",
+            "observedAt": "2026-11-13T07:15:44.091Z",
+            "importedAt": "2026-11-13T07:15:44.091Z"
+          }
+        },
+        "beijing:2027:221046701": {
+          "applications": {
+            "value": 0,
+            "sourceType": "manual",
+            "sourceName": "手动填写",
+            "sourceUrl": "",
+            "sourceUpdatedAt": "",
+            "observedAt": "2026-11-13T07:15:45.801Z",
+            "importedAt": "2026-11-13T07:15:45.801Z"
+          }
+        },
+        "beijing:2027:221049501": {
+          "applications": {
+            "value": 0,
+            "sourceType": "manual",
+            "sourceName": "手动填写",
+            "sourceUrl": "",
+            "sourceUpdatedAt": "",
+            "observedAt": "2026-11-13T07:15:48.186Z",
+            "importedAt": "2026-11-13T07:15:48.186Z"
+          }
+        },
         "beijing:2027:221150401": {
           "applications": {
             "value": 11,
@@ -8152,6 +8218,17 @@
             "sourceUpdatedAt": "",
             "observedAt": "2026-11-13T07:09:21.589Z",
             "importedAt": "2026-11-13T07:09:21.589Z"
+          }
+        },
+        "beijing:2027:221258402": {
+          "applications": {
+            "value": 0,
+            "sourceType": "manual",
+            "sourceName": "手动填写",
+            "sourceUrl": "",
+            "sourceUpdatedAt": "",
+            "observedAt": "2026-11-13T07:15:49.872Z",
+            "importedAt": "2026-11-13T07:15:49.872Z"
           }
         },
         "beijing:2027:221366103": {
@@ -8176,6 +8253,17 @@
             "importedAt": "2026-11-13T07:09:34.813Z"
           }
         },
+        "beijing:2027:221669901": {
+          "applications": {
+            "value": 0,
+            "sourceType": "manual",
+            "sourceName": "手动填写",
+            "sourceUrl": "",
+            "sourceUpdatedAt": "",
+            "observedAt": "2026-11-13T07:15:54.573Z",
+            "importedAt": "2026-11-13T07:15:54.573Z"
+          }
+        },
         "beijing:2027:221670601": {
           "applications": {
             "value": 1,
@@ -8198,6 +8286,17 @@
             "importedAt": "2026-11-13T07:10:13.436Z"
           }
         },
+        "beijing:2027:221775201": {
+          "applications": {
+            "value": 0,
+            "sourceType": "manual",
+            "sourceName": "手动填写",
+            "sourceUrl": "",
+            "sourceUpdatedAt": "",
+            "observedAt": "2026-11-13T07:15:56.440Z",
+            "importedAt": "2026-11-13T07:15:56.440Z"
+          }
+        },
         "beijing:2027:221775803": {
           "applications": {
             "value": 3,
@@ -8209,6 +8308,39 @@
             "importedAt": "2026-11-13T07:10:21.938Z"
           }
         },
+        "beijing:2027:223106001": {
+          "applications": {
+            "value": 0,
+            "sourceType": "manual",
+            "sourceName": "手动填写",
+            "sourceUrl": "",
+            "sourceUpdatedAt": "",
+            "observedAt": "2026-11-13T07:15:59.266Z",
+            "importedAt": "2026-11-13T07:15:59.266Z"
+          }
+        },
+        "beijing:2027:223106004": {
+          "applications": {
+            "value": 0,
+            "sourceType": "manual",
+            "sourceName": "手动填写",
+            "sourceUrl": "",
+            "sourceUpdatedAt": "",
+            "observedAt": "2026-11-13T07:16:00.801Z",
+            "importedAt": "2026-11-13T07:16:00.801Z"
+          }
+        },
+        "beijing:2027:223106202": {
+          "applications": {
+            "value": 0,
+            "sourceType": "manual",
+            "sourceName": "手动填写",
+            "sourceUrl": "",
+            "sourceUpdatedAt": "",
+            "observedAt": "2026-11-13T07:16:03.322Z",
+            "importedAt": "2026-11-13T07:16:03.322Z"
+          }
+        },
         "beijing:2027:223106502": {
           "applications": {
             "value": 1,
@@ -8218,6 +8350,28 @@
             "sourceUpdatedAt": "",
             "observedAt": "2026-11-13T07:10:36.722Z",
             "importedAt": "2026-11-13T07:10:36.722Z"
+          }
+        },
+        "beijing:2027:223106701": {
+          "applications": {
+            "value": 0,
+            "sourceType": "manual",
+            "sourceName": "手动填写",
+            "sourceUrl": "",
+            "sourceUpdatedAt": "",
+            "observedAt": "2026-11-13T07:16:04.866Z",
+            "importedAt": "2026-11-13T07:16:04.866Z"
+          }
+        },
+        "beijing:2027:230119103": {
+          "applications": {
+            "value": 0,
+            "sourceType": "manual",
+            "sourceName": "手动填写",
+            "sourceUrl": "",
+            "sourceUpdatedAt": "",
+            "observedAt": "2026-11-13T07:16:07.301Z",
+            "importedAt": "2026-11-13T07:16:07.301Z"
           }
         },
         "beijing:2027:230119601": {
@@ -8253,6 +8407,17 @@
             "importedAt": "2026-11-13T07:11:29.959Z"
           }
         },
+        "beijing:2027:230634602": {
+          "applications": {
+            "value": 0,
+            "sourceType": "manual",
+            "sourceName": "手动填写",
+            "sourceUrl": "",
+            "sourceUpdatedAt": "",
+            "observedAt": "2026-11-13T07:16:09.003Z",
+            "importedAt": "2026-11-13T07:16:09.003Z"
+          }
+        },
         "beijing:2027:230740501": {
           "applications": {
             "value": 3,
@@ -8264,6 +8429,17 @@
             "importedAt": "2026-11-13T07:11:40.553Z"
           }
         },
+        "beijing:2027:231047602": {
+          "applications": {
+            "value": 0,
+            "sourceType": "manual",
+            "sourceName": "手动填写",
+            "sourceUrl": "",
+            "sourceUpdatedAt": "",
+            "observedAt": "2026-11-13T07:16:11.014Z",
+            "importedAt": "2026-11-13T07:16:11.014Z"
+          }
+        },
         "beijing:2027:231049507": {
           "applications": {
             "value": 1,
@@ -8273,6 +8449,17 @@
             "sourceUpdatedAt": "",
             "observedAt": "2026-11-13T07:11:59.636Z",
             "importedAt": "2026-11-13T07:11:59.636Z"
+          }
+        },
+        "beijing:2027:231457302": {
+          "applications": {
+            "value": 0,
+            "sourceType": "manual",
+            "sourceName": "手动填写",
+            "sourceUrl": "",
+            "sourceUpdatedAt": "",
+            "observedAt": "2026-11-13T07:16:12.639Z",
+            "importedAt": "2026-11-13T07:16:12.639Z"
           }
         },
         "beijing:2027:231563407": {
@@ -8308,6 +8495,17 @@
             "importedAt": "2026-11-13T07:12:18.271Z"
           }
         },
+        "beijing:2027:241046808": {
+          "applications": {
+            "value": 0,
+            "sourceType": "manual",
+            "sourceName": "手动填写",
+            "sourceUrl": "",
+            "sourceUpdatedAt": "",
+            "observedAt": "2026-11-13T07:16:14.521Z",
+            "importedAt": "2026-11-13T07:16:14.521Z"
+          }
+        },
         "beijing:2027:241046809": {
           "applications": {
             "value": 14,
@@ -8317,6 +8515,17 @@
             "sourceUpdatedAt": "",
             "observedAt": "2026-11-13T07:12:27.708Z",
             "importedAt": "2026-11-13T07:12:27.708Z"
+          }
+        },
+        "beijing:2027:241671402": {
+          "applications": {
+            "value": 5,
+            "sourceType": "manual",
+            "sourceName": "手动填写",
+            "sourceUrl": "",
+            "sourceUpdatedAt": "",
+            "observedAt": "2026-11-13T07:12:44.495Z",
+            "importedAt": "2026-11-13T07:12:44.495Z"
           }
         },
         "beijing:2027:241671901": {
@@ -8330,15 +8539,15 @@
             "importedAt": "2026-11-13T07:12:42.065Z"
           }
         },
-        "beijing:2027:241671402": {
+        "beijing:2027:241778002": {
           "applications": {
-            "value": 5,
+            "value": 0,
             "sourceType": "manual",
             "sourceName": "手动填写",
             "sourceUrl": "",
             "sourceUpdatedAt": "",
-            "observedAt": "2026-11-13T07:12:44.495Z",
-            "importedAt": "2026-11-13T07:12:44.495Z"
+            "observedAt": "2026-11-13T07:16:16.981Z",
+            "importedAt": "2026-11-13T07:16:16.981Z"
           }
         },
         "beijing:2027:241778302": {
@@ -8407,6 +8616,17 @@
             "importedAt": "2026-11-13T07:13:26.358Z"
           }
         },
+        "beijing:2027:820524403": {
+          "applications": {
+            "value": 0,
+            "sourceType": "manual",
+            "sourceName": "手动填写",
+            "sourceUrl": "",
+            "sourceUpdatedAt": "",
+            "observedAt": "2026-11-13T07:16:19.126Z",
+            "importedAt": "2026-11-13T07:16:19.126Z"
+          }
+        },
         "beijing:2027:820736703": {
           "applications": {
             "value": 2,
@@ -8429,6 +8649,17 @@
             "importedAt": "2026-11-13T07:13:34.888Z"
           }
         },
+        "beijing:2027:820738601": {
+          "applications": {
+            "value": 0,
+            "sourceType": "manual",
+            "sourceName": "手动填写",
+            "sourceUrl": "",
+            "sourceUpdatedAt": "",
+            "observedAt": "2026-11-13T07:16:20.692Z",
+            "importedAt": "2026-11-13T07:16:20.692Z"
+          }
+        },
         "beijing:2027:820840801": {
           "applications": {
             "value": 1,
@@ -8440,6 +8671,17 @@
             "importedAt": "2026-11-13T07:13:51.429Z"
           }
         },
+        "beijing:2027:821366101": {
+          "applications": {
+            "value": 0,
+            "sourceType": "manual",
+            "sourceName": "手动填写",
+            "sourceUrl": "",
+            "sourceUpdatedAt": "",
+            "observedAt": "2026-11-13T07:16:22.439Z",
+            "importedAt": "2026-11-13T07:16:22.439Z"
+          }
+        },
         "beijing:2027:821366102": {
           "applications": {
             "value": 1,
@@ -8449,6 +8691,28 @@
             "sourceUpdatedAt": "",
             "observedAt": "2026-11-13T07:13:57.102Z",
             "importedAt": "2026-11-13T07:13:57.102Z"
+          }
+        },
+        "beijing:2027:821563901": {
+          "applications": {
+            "value": 0,
+            "sourceType": "manual",
+            "sourceName": "手动填写",
+            "sourceUrl": "",
+            "sourceUpdatedAt": "",
+            "observedAt": "2026-11-13T07:16:23.893Z",
+            "importedAt": "2026-11-13T07:16:23.893Z"
+          }
+        },
+        "beijing:2027:821669501": {
+          "applications": {
+            "value": 0,
+            "sourceType": "manual",
+            "sourceName": "手动填写",
+            "sourceUrl": "",
+            "sourceUpdatedAt": "",
+            "observedAt": "2026-11-13T07:16:25.459Z",
+            "importedAt": "2026-11-13T07:16:25.459Z"
           }
         },
         "beijing:2027:821670001": {
@@ -8484,6 +8748,17 @@
             "importedAt": "2026-11-13T07:14:12.943Z"
           }
         },
+        "beijing:2027:823106201": {
+          "applications": {
+            "value": 0,
+            "sourceType": "manual",
+            "sourceName": "手动填写",
+            "sourceUrl": "",
+            "sourceUpdatedAt": "",
+            "observedAt": "2026-11-13T07:16:26.870Z",
+            "importedAt": "2026-11-13T07:16:26.870Z"
+          }
+        },
         "beijing:2027:823106501": {
           "applications": {
             "value": 3,
@@ -8512,6 +8787,8 @@
       "comparisonOnlyDifferences": false,
       "monitorFilters": {
         "query": "",
+        "district": "",
+        "favoritesOnly": false,
         "minApplications": "",
         "minQualified": "",
         "minApplicationsRatio": "",
@@ -8530,17 +8807,17 @@
     {
       "collection": "beijingWorkspace/comparisons",
       "id": "beijing:2027:220943901",
-      "deletedAt": "2026-11-13T07:14:50.574Z"
+      "deletedAt": "2026-11-13T09:58:30.280Z"
     },
     {
       "collection": "beijingWorkspace/comparisons",
       "id": "beijing:2027:223106502",
-      "deletedAt": "2026-11-13T07:14:50.574Z"
+      "deletedAt": "2026-11-13T09:58:30.280Z"
     },
     {
       "collection": "beijingWorkspace/comparisons",
       "id": "beijing:2027:233106901",
-      "deletedAt": "2026-11-13T07:14:50.574Z"
+      "deletedAt": "2026-11-13T09:58:30.280Z"
     },
     {
       "collection": "nationalWorkspace/comparisons",
