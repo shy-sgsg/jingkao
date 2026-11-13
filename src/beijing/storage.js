@@ -78,7 +78,7 @@ export function emptyBeijingWorkspace() {
     },
     comparisons: [], notes: {}, manualReviews: {}, monitoringSnapshots: {},
     favoriteQuery: '', favoritePriority: 'all', comparisonOnlyDifferences: false,
-    monitorFilters: { query: '', minApplications: '', minQualified: '', minApplicationsRatio: '', minQualifiedRatio: '', dataStatus: 'all' },
+    monitorFilters: { query: '', district: '', favoritesOnly: false, minApplications: '', minQualified: '', minApplicationsRatio: '', minQualifiedRatio: '', dataStatus: 'all' },
     monitorSort: 'applicationsRatio-desc',
   };
 }
@@ -169,6 +169,8 @@ export function normalizeBeijingWorkspace(source) {
   const incomingMonitorFilters = beijingIsRecord(value.monitorFilters) ? value.monitorFilters : {};
   const monitorFilters = {
     query: beijingText(incomingMonitorFilters.query, 160),
+    district: beijingText(incomingMonitorFilters.district, 100),
+    favoritesOnly: incomingMonitorFilters.favoritesOnly === true,
     minApplications: beijingMonitorThreshold(incomingMonitorFilters.minApplications),
     minQualified: beijingMonitorThreshold(incomingMonitorFilters.minQualified),
     minApplicationsRatio: beijingMonitorThreshold(incomingMonitorFilters.minApplicationsRatio),

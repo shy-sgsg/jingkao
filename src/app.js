@@ -52,7 +52,7 @@ import { clearBeijingManualReview, emptyBeijingWorkspace, normalizeBeijingWorksp
 import { evaluateBeijingEligibility, getBeijingManualReviewBasis } from './beijing/eligibility.js';
 import { filterBeijingPositions, sortBeijingPositions } from './beijing/filters.js';
 import { beijingComparisonToCsv, beijingPositionsToCsv } from './beijing/export.js';
-import { renderBeijingPicksPage, renderBeijingWorkspace } from './beijing/view.js';
+import { renderBeijingPicksPage, renderBeijingPositionDetailsModal, renderBeijingWorkspace } from './beijing/view.js';
 import { applyBeijingPicksImport, parseBeijingPicksCsv, previewBeijingPicksImport } from './beijing/picks.js';
 import { applyBeijingMonitorImport, applyBeijingMonitorRefresh, applyManualBeijingApplicationCount, parseBeijingMonitorCsv, previewBeijingMonitorImport, previewBeijingMonitorRefresh } from './beijing/monitoring.js';
 
@@ -4264,6 +4264,14 @@ document.addEventListener('click', async (event) => {
     await persistAndRender(wasSaved ? '已取消北京市考职位收藏' : '北京市考职位已收藏');
     return;
   }
+  if (action === 'beijing-open-monitor-position') {
+    const position = beijingPositions?.find((item) => item.id === actionEl.dataset.positionId);
+    if (!position) { notify('找不到这条北京市考职位。'); return; }
+    renderModal(renderBeijingPositionDetailsModal(
+      position, storage.beijingWorkspace, storage.beijingWorkspace.profile, beijingMajorCatalog,
+    ));
+    return;
+  }
   if (action === 'beijing-toggle-compare') {
     try {
       storage.beijingWorkspace = toggleBeijingComparison(storage.beijingWorkspace, actionEl.dataset.positionId);
@@ -5254,6 +5262,8 @@ document.addEventListener('submit', async (event) => {
       ...storage.beijingWorkspace,
       monitorFilters: {
         query: String(values.query || '').trim(),
+        district: String(values.district || '').trim(),
+        favoritesOnly: Object.hasOwn(values, 'favoritesOnly'),
         minApplications: String(values.minApplications || '').trim(),
         minQualified: String(values.minQualified || '').trim(),
         minApplicationsRatio: String(values.minApplicationsRatio || '').trim(),

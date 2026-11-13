@@ -414,6 +414,7 @@ export function filterAndSortBeijingMonitorRows(positions, workspace) {
   const current = normalizeBeijingWorkspace(workspace);
   const filters = current.monitorFilters;
   const positionById = new Map((Array.isArray(positions) ? positions : []).map((position) => [position.id, position]));
+  const favoriteIds = new Set(current.favorites.map((item) => item.positionId));
   const query = filters.query.toLocaleLowerCase('zh-CN');
   const items = current.myPicks.map((positionId) => positionById.get(positionId)).filter(Boolean)
     .map((position) => {
@@ -422,7 +423,11 @@ export function filterAndSortBeijingMonitorRows(positions, workspace) {
     })
     .filter((row) => {
       const { position, snapshot, ratios } = row;
-      if (query && ![position.departmentName, position.hiringDepartment, position.positionTitle, position.positionCode]
+      const district = position.workDistrict || position.workLocation || '未注明';
+      if (filters.district && district !== filters.district) return false;
+      if (filters.favoritesOnly && !favoriteIds.has(position.id)) return false;
+      if (query && ![position.departmentName, position.hiringDepartment, position.positionTitle, position.positionCode,
+        position.workDistrict, position.workLocation, position.workCity]
         .some((value) => text(value).toLocaleLowerCase('zh-CN').includes(query))) return false;
       const hasData = METRIC_KEYS.some((key) => Number.isSafeInteger(snapshot[key]?.value));
       if (filters.dataStatus === 'has-data' && !hasData || filters.dataStatus === 'missing' && hasData) return false;

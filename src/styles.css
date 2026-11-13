@@ -2257,6 +2257,8 @@ button.science-answer-option:hover { border-color: #c9d9ee; background: #f7faff;
 .national-compare-table .has-difference td { background: #fffbf3; }
 .national-monitor { display: grid; gap: 16px; min-width: 0; }
 .national-monitor-filters { display: grid; grid-template-columns: minmax(220px, 1.5fr) repeat(3, minmax(155px, 1fr)) auto; align-items: end; gap: 10px; padding: 14px; border: 1px solid #e6ebf1; border-radius: 12px; background: #fff; }
+.beijing-monitor-favorite-filter { display: flex; align-items: center; gap: 7px; min-height: 38px; padding: 0 5px 6px; color: #415670; font-size: 13px; white-space: nowrap; }
+.beijing-monitor-favorite-filter input { width: 16px; height: 16px; margin: 0; accent-color: #416a9d; }
 .national-monitor-import { display: grid; gap: 10px; padding: 16px; border: 1px solid #e6ebf1; border-radius: 12px; background: #f9fbfd; }
 .national-monitor-import-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .national-monitor-import-heading > div { min-width: 0; }
