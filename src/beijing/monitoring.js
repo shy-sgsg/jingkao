@@ -272,6 +272,34 @@ export function applyBeijingMonitorImport(workspace, preview, importedAt) {
   return normalizeBeijingWorkspace({ ...next, monitoringSnapshots });
 }
 
+export function applyManualBeijingApplicationCount(workspace, positionId, applications, observedAt) {
+  const next = normalizeBeijingWorkspace(workspace);
+  if (!isBeijingPositionId(positionId) || !next.myPicks.includes(positionId)) {
+    throw new Error('只能为已选岗位填写报名人数。');
+  }
+  if (!Number.isSafeInteger(applications) || applications < 0) {
+    throw new Error('报名人数必须是非负整数。');
+  }
+  if (!Number.isFinite(Date.parse(observedAt || ''))) {
+    throw new Error('无法记录观测时间，请重试。');
+  }
+
+  const monitoringSnapshots = { ...next.monitoringSnapshots };
+  const current = monitoringSnapshots[positionId] || {};
+  const source = {
+    sourceType: 'manual',
+    sourceName: '手动填写',
+    sourceUrl: '',
+    sourceUpdatedAt: '',
+    observedAt,
+  };
+  monitoringSnapshots[positionId] = {
+    ...current,
+    applications: metricRecord(applications, source, observedAt),
+  };
+  return normalizeBeijingWorkspace({ ...next, monitoringSnapshots });
+}
+
 function publicSnapshotUrl(url) {
   try {
     const parsed = new URL(url);

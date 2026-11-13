@@ -54,7 +54,7 @@ import { filterBeijingPositions, sortBeijingPositions } from './beijing/filters.
 import { beijingComparisonToCsv, beijingPositionsToCsv } from './beijing/export.js';
 import { renderBeijingPicksPage, renderBeijingWorkspace } from './beijing/view.js';
 import { applyBeijingPicksImport, parseBeijingPicksCsv, previewBeijingPicksImport } from './beijing/picks.js';
-import { applyBeijingMonitorImport, applyBeijingMonitorRefresh, parseBeijingMonitorCsv, previewBeijingMonitorImport, previewBeijingMonitorRefresh } from './beijing/monitoring.js';
+import { applyBeijingMonitorImport, applyBeijingMonitorRefresh, applyManualBeijingApplicationCount, parseBeijingMonitorCsv, previewBeijingMonitorImport, previewBeijingMonitorRefresh } from './beijing/monitoring.js';
 
 const DATA_URL = './public/data.json';
 const NATIONAL_POSITIONS_URL = './public/national/positions-2027.json';
@@ -3748,6 +3748,36 @@ document.addEventListener('click', async (event) => {
   }
   if (action === 'beijing-monitor-refresh') {
     await startBeijingMonitorRefresh();
+    return;
+  }
+  if (action === 'beijing-monitor-manual-save') {
+    const input = actionEl.closest('td')?.querySelector('[data-manual-applications]');
+    const rawCount = String(input?.value || '').trim();
+    if (!/^\d+$/u.test(rawCount) || !Number.isSafeInteger(Number(rawCount))) {
+      notify('请填写非负整数报名人数；留空不会保存为 0。');
+      input?.focus({ preventScroll: true });
+      return;
+    }
+    const previousWorkspace = storage.beijingWorkspace;
+    try {
+      storage.beijingWorkspace = applyManualBeijingApplicationCount(
+        storage.beijingWorkspace,
+        actionEl.dataset.positionId,
+        Number(rawCount),
+        new Date().toISOString(),
+      );
+      if (!await persist()) {
+        storage.beijingWorkspace = previousWorkspace;
+        render();
+        return;
+      }
+      render();
+      notify('报名人数已手动保存到个人档案');
+    } catch (error) {
+      storage.beijingWorkspace = previousWorkspace;
+      render();
+      notify(error.message || '报名人数保存失败。');
+    }
     return;
   }
   if (action === 'beijing-monitor-refresh-confirm') {

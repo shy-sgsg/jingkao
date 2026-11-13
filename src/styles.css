@@ -2290,6 +2290,10 @@ button.science-answer-option:hover { border-color: #c9d9ee; background: #f7faff;
 .beijing-monitor { display: grid; gap: 16px; min-width: 0; }
 .beijing-monitor-table { min-width: 1180px; }
 .beijing-monitor-provenance { max-width: 220px; color: #768398 !important; font-size: 13px; line-height: 1.5; }
+.beijing-monitor-manual-entry { display: flex; align-items: center; gap: 6px; margin-top: 8px; }
+.beijing-monitor-manual-entry input { width: 105px; min-width: 0; min-height: 32px; padding: 5px 7px; border: 1px solid #d8e0ea; border-radius: 6px; color: #314761; font: inherit; font-variant-numeric: tabular-nums; }
+.beijing-monitor-manual-entry input:focus { border-color: #7797c2; outline: 2px solid #7797c233; }
+.beijing-monitor-manual-entry .button { flex: 0 0 auto; }
 .national-monitor-sort { padding: 0; border: 0; background: transparent; color: inherit; font: inherit; font-weight: 600; cursor: pointer; }
 .national-monitor-sort.is-active { color: #315f96; }
 @media (max-width: 980px) {

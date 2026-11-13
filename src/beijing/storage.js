@@ -30,16 +30,20 @@ function beijingText(value, limit = 200) {
 
 function beijingMonitorMetric(value) {
   if (!beijingIsRecord(value) || !Number.isSafeInteger(value.value) || value.value < 0
-    || !['official', 'third-party'].includes(value.sourceType)
+    || !['official', 'third-party', 'manual'].includes(value.sourceType)
     || !beijingText(value.sourceName, 240)
     || !Number.isFinite(Date.parse(beijingText(value.observedAt, 120)))) return null;
   let sourceUrl = '';
-  try {
-    const parsed = new URL(beijingText(value.sourceUrl, 2000));
-    if (!['http:', 'https:'].includes(parsed.protocol)) return null;
-    sourceUrl = parsed.href;
-  } catch {
-    return null;
+  const rawSourceUrl = beijingText(value.sourceUrl, 2000);
+  if (!rawSourceUrl && value.sourceType !== 'manual') return null;
+  if (rawSourceUrl) {
+    try {
+      const parsed = new URL(rawSourceUrl);
+      if (!['http:', 'https:'].includes(parsed.protocol)) return null;
+      sourceUrl = parsed.href;
+    } catch {
+      return null;
+    }
   }
   return {
     value: value.value,
